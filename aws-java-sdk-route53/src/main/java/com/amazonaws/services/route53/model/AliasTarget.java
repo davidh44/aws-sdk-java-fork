@@ -114,8 +114,9 @@ public class AliasTarget implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <b>Management Console</b>: Go to the Amazon EC2 page, choose <b>Load Balancers</b> in the navigation pane, select
-     * the load balancer, and get the value of the <b>Hosted zone</b> field on the <b>Description</b> tab.
+     * <b>Amazon Web Services Management Console</b>: Go to the Amazon EC2 page, choose <b>Load Balancers</b> in the
+     * navigation pane, select the load balancer, and get the value of the <b>Hosted zone</b> field on the
+     * <b>Description</b> tab.
      * </p>
      * </li>
      * <li>
@@ -276,8 +277,8 @@ public class AliasTarget implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <i>Management Console</i>: For information about how to get the value by using the console, see <a
-     * href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customdomains.html">Using Custom Domains with
+     * <i>Amazon Web Services Management Console</i>: For information about how to get the value by using the console,
+     * see <a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customdomains.html">Using Custom Domains with
      * Elastic Beanstalk</a> in the <i>Elastic Beanstalk Developer Guide</i>.
      * </p>
      * </li>
@@ -302,14 +303,15 @@ public class AliasTarget implements Serializable, Cloneable {
      * <dt>ELB load balancer</dt>
      * <dd>
      * <p>
-     * Specify the DNS name that is associated with the load balancer. Get the DNS name by using the Management Console,
-     * the ELB API, or the CLI.
+     * Specify the DNS name that is associated with the load balancer. Get the DNS name by using the Amazon Web Services
+     * Management Console, the ELB API, or the CLI.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <b>Management Console</b>: Go to the EC2 page, choose <b>Load Balancers</b> in the navigation pane, choose the
-     * load balancer, choose the <b>Description</b> tab, and get the value of the <b>DNS name</b> field.
+     * <b>Amazon Web Services Management Console</b>: Go to the EC2 page, choose <b>Load Balancers</b> in the navigation
+     * pane, choose the load balancer, choose the <b>Description</b> tab, and get the value of the <b>DNS name</b>
+     * field.
      * </p>
      * <p>
      * If you're routing traffic to a Classic Load Balancer, get the value that begins with <b>dualstack</b>. If you're
@@ -592,8 +594,9 @@ public class AliasTarget implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Management Console</b>: Go to the Amazon EC2 page, choose <b>Load Balancers</b> in the navigation pane,
-     *        select the load balancer, and get the value of the <b>Hosted zone</b> field on the <b>Description</b> tab.
+     *        <b>Amazon Web Services Management Console</b>: Go to the Amazon EC2 page, choose <b>Load Balancers</b> in
+     *        the navigation pane, select the load balancer, and get the value of the <b>Hosted zone</b> field on the
+     *        <b>Description</b> tab.
      *        </p>
      *        </li>
      *        <li>
@@ -754,9 +757,9 @@ public class AliasTarget implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        <i>Management Console</i>: For information about how to get the value by using the console, see <a
-     *        href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customdomains.html">Using Custom Domains with
-     *        Elastic Beanstalk</a> in the <i>Elastic Beanstalk Developer Guide</i>.
+     *        <i>Amazon Web Services Management Console</i>: For information about how to get the value by using the
+     *        console, see <a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customdomains.html">Using
+     *        Custom Domains with Elastic Beanstalk</a> in the <i>Elastic Beanstalk Developer Guide</i>.
      *        </p>
      *        </li>
      *        <li>
@@ -780,14 +783,15 @@ public class AliasTarget implements Serializable, Cloneable {
      *        <dt>ELB load balancer</dt>
      *        <dd>
      *        <p>
-     *        Specify the DNS name that is associated with the load balancer. Get the DNS name by using the Management
-     *        Console, the ELB API, or the CLI.
+     *        Specify the DNS name that is associated with the load balancer. Get the DNS name by using the Amazon Web
+     *        Services Management Console, the ELB API, or the CLI.
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>Management Console</b>: Go to the EC2 page, choose <b>Load Balancers</b> in the navigation pane, choose
-     *        the load balancer, choose the <b>Description</b> tab, and get the value of the <b>DNS name</b> field.
+     *        <b>Amazon Web Services Management Console</b>: Go to the EC2 page, choose <b>Load Balancers</b> in the
+     *        navigation pane, choose the load balancer, choose the <b>Description</b> tab, and get the value of the
+     *        <b>DNS name</b> field.
      *        </p>
      *        <p>
      *        If you're routing traffic to a Classic Load Balancer, get the value that begins with <b>dualstack</b>. If
@@ -963,8 +967,9 @@ public class AliasTarget implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <b>Management Console</b>: Go to the Amazon EC2 page, choose <b>Load Balancers</b> in the navigation pane, select
-     * the load balancer, and get the value of the <b>Hosted zone</b> field on the <b>Description</b> tab.
+     * <b>Amazon Web Services Management Console</b>: Go to the Amazon EC2 page, choose <b>Load Balancers</b> in the
+     * navigation pane, select the load balancer, and get the value of the <b>Hosted zone</b> field on the
+     * <b>Description</b> tab.
      * </p>
      * </li>
      * <li>
@@ -1105,8 +1110,9 @@ public class AliasTarget implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Management Console</b>: Go to the Amazon EC2 page, choose <b>Load Balancers</b> in the navigation pane,
-     *        select the load balancer, and get the value of the <b>Hosted zone</b> field on the <b>Description</b> tab.
+     *        <b>Amazon Web Services Management Console</b>: Go to the Amazon EC2 page, choose <b>Load Balancers</b> in
+     *        the navigation pane, select the load balancer, and get the value of the <b>Hosted zone</b> field on the
+     *        <b>Description</b> tab.
      *        </p>
      *        </li>
      *        <li>
@@ -1252,8 +1258,9 @@ public class AliasTarget implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <b>Management Console</b>: Go to the Amazon EC2 page, choose <b>Load Balancers</b> in the navigation pane, select
-     * the load balancer, and get the value of the <b>Hosted zone</b> field on the <b>Description</b> tab.
+     * <b>Amazon Web Services Management Console</b>: Go to the Amazon EC2 page, choose <b>Load Balancers</b> in the
+     * navigation pane, select the load balancer, and get the value of the <b>Hosted zone</b> field on the
+     * <b>Description</b> tab.
      * </p>
      * </li>
      * <li>
@@ -1393,8 +1400,8 @@ public class AliasTarget implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         <b>Management Console</b>: Go to the Amazon EC2 page, choose <b>Load Balancers</b> in the navigation
-     *         pane, select the load balancer, and get the value of the <b>Hosted zone</b> field on the
+     *         <b>Amazon Web Services Management Console</b>: Go to the Amazon EC2 page, choose <b>Load Balancers</b> in
+     *         the navigation pane, select the load balancer, and get the value of the <b>Hosted zone</b> field on the
      *         <b>Description</b> tab.
      *         </p>
      *         </li>
@@ -1541,8 +1548,9 @@ public class AliasTarget implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <b>Management Console</b>: Go to the Amazon EC2 page, choose <b>Load Balancers</b> in the navigation pane, select
-     * the load balancer, and get the value of the <b>Hosted zone</b> field on the <b>Description</b> tab.
+     * <b>Amazon Web Services Management Console</b>: Go to the Amazon EC2 page, choose <b>Load Balancers</b> in the
+     * navigation pane, select the load balancer, and get the value of the <b>Hosted zone</b> field on the
+     * <b>Description</b> tab.
      * </p>
      * </li>
      * <li>
@@ -1683,8 +1691,9 @@ public class AliasTarget implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Management Console</b>: Go to the Amazon EC2 page, choose <b>Load Balancers</b> in the navigation pane,
-     *        select the load balancer, and get the value of the <b>Hosted zone</b> field on the <b>Description</b> tab.
+     *        <b>Amazon Web Services Management Console</b>: Go to the Amazon EC2 page, choose <b>Load Balancers</b> in
+     *        the navigation pane, select the load balancer, and get the value of the <b>Hosted zone</b> field on the
+     *        <b>Description</b> tab.
      *        </p>
      *        </li>
      *        <li>
@@ -1850,8 +1859,8 @@ public class AliasTarget implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <i>Management Console</i>: For information about how to get the value by using the console, see <a
-     * href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customdomains.html">Using Custom Domains with
+     * <i>Amazon Web Services Management Console</i>: For information about how to get the value by using the console,
+     * see <a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customdomains.html">Using Custom Domains with
      * Elastic Beanstalk</a> in the <i>Elastic Beanstalk Developer Guide</i>.
      * </p>
      * </li>
@@ -1876,14 +1885,15 @@ public class AliasTarget implements Serializable, Cloneable {
      * <dt>ELB load balancer</dt>
      * <dd>
      * <p>
-     * Specify the DNS name that is associated with the load balancer. Get the DNS name by using the Management Console,
-     * the ELB API, or the CLI.
+     * Specify the DNS name that is associated with the load balancer. Get the DNS name by using the Amazon Web Services
+     * Management Console, the ELB API, or the CLI.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <b>Management Console</b>: Go to the EC2 page, choose <b>Load Balancers</b> in the navigation pane, choose the
-     * load balancer, choose the <b>Description</b> tab, and get the value of the <b>DNS name</b> field.
+     * <b>Amazon Web Services Management Console</b>: Go to the EC2 page, choose <b>Load Balancers</b> in the navigation
+     * pane, choose the load balancer, choose the <b>Description</b> tab, and get the value of the <b>DNS name</b>
+     * field.
      * </p>
      * <p>
      * If you're routing traffic to a Classic Load Balancer, get the value that begins with <b>dualstack</b>. If you're
@@ -2075,9 +2085,9 @@ public class AliasTarget implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        <i>Management Console</i>: For information about how to get the value by using the console, see <a
-     *        href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customdomains.html">Using Custom Domains with
-     *        Elastic Beanstalk</a> in the <i>Elastic Beanstalk Developer Guide</i>.
+     *        <i>Amazon Web Services Management Console</i>: For information about how to get the value by using the
+     *        console, see <a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customdomains.html">Using
+     *        Custom Domains with Elastic Beanstalk</a> in the <i>Elastic Beanstalk Developer Guide</i>.
      *        </p>
      *        </li>
      *        <li>
@@ -2101,14 +2111,15 @@ public class AliasTarget implements Serializable, Cloneable {
      *        <dt>ELB load balancer</dt>
      *        <dd>
      *        <p>
-     *        Specify the DNS name that is associated with the load balancer. Get the DNS name by using the Management
-     *        Console, the ELB API, or the CLI.
+     *        Specify the DNS name that is associated with the load balancer. Get the DNS name by using the Amazon Web
+     *        Services Management Console, the ELB API, or the CLI.
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>Management Console</b>: Go to the EC2 page, choose <b>Load Balancers</b> in the navigation pane, choose
-     *        the load balancer, choose the <b>Description</b> tab, and get the value of the <b>DNS name</b> field.
+     *        <b>Amazon Web Services Management Console</b>: Go to the EC2 page, choose <b>Load Balancers</b> in the
+     *        navigation pane, choose the load balancer, choose the <b>Description</b> tab, and get the value of the
+     *        <b>DNS name</b> field.
      *        </p>
      *        <p>
      *        If you're routing traffic to a Classic Load Balancer, get the value that begins with <b>dualstack</b>. If
@@ -2302,8 +2313,8 @@ public class AliasTarget implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <i>Management Console</i>: For information about how to get the value by using the console, see <a
-     * href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customdomains.html">Using Custom Domains with
+     * <i>Amazon Web Services Management Console</i>: For information about how to get the value by using the console,
+     * see <a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customdomains.html">Using Custom Domains with
      * Elastic Beanstalk</a> in the <i>Elastic Beanstalk Developer Guide</i>.
      * </p>
      * </li>
@@ -2328,14 +2339,15 @@ public class AliasTarget implements Serializable, Cloneable {
      * <dt>ELB load balancer</dt>
      * <dd>
      * <p>
-     * Specify the DNS name that is associated with the load balancer. Get the DNS name by using the Management Console,
-     * the ELB API, or the CLI.
+     * Specify the DNS name that is associated with the load balancer. Get the DNS name by using the Amazon Web Services
+     * Management Console, the ELB API, or the CLI.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <b>Management Console</b>: Go to the EC2 page, choose <b>Load Balancers</b> in the navigation pane, choose the
-     * load balancer, choose the <b>Description</b> tab, and get the value of the <b>DNS name</b> field.
+     * <b>Amazon Web Services Management Console</b>: Go to the EC2 page, choose <b>Load Balancers</b> in the navigation
+     * pane, choose the load balancer, choose the <b>Description</b> tab, and get the value of the <b>DNS name</b>
+     * field.
      * </p>
      * <p>
      * If you're routing traffic to a Classic Load Balancer, get the value that begins with <b>dualstack</b>. If you're
@@ -2527,9 +2539,9 @@ public class AliasTarget implements Serializable, Cloneable {
      *         <ul>
      *         <li>
      *         <p>
-     *         <i>Management Console</i>: For information about how to get the value by using the console, see <a
-     *         href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customdomains.html">Using Custom Domains
-     *         with Elastic Beanstalk</a> in the <i>Elastic Beanstalk Developer Guide</i>.
+     *         <i>Amazon Web Services Management Console</i>: For information about how to get the value by using the
+     *         console, see <a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customdomains.html">Using
+     *         Custom Domains with Elastic Beanstalk</a> in the <i>Elastic Beanstalk Developer Guide</i>.
      *         </p>
      *         </li>
      *         <li>
@@ -2553,15 +2565,15 @@ public class AliasTarget implements Serializable, Cloneable {
      *         <dt>ELB load balancer</dt>
      *         <dd>
      *         <p>
-     *         Specify the DNS name that is associated with the load balancer. Get the DNS name by using the Management
-     *         Console, the ELB API, or the CLI.
+     *         Specify the DNS name that is associated with the load balancer. Get the DNS name by using the Amazon Web
+     *         Services Management Console, the ELB API, or the CLI.
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <b>Management Console</b>: Go to the EC2 page, choose <b>Load Balancers</b> in the navigation pane,
-     *         choose the load balancer, choose the <b>Description</b> tab, and get the value of the <b>DNS name</b>
-     *         field.
+     *         <b>Amazon Web Services Management Console</b>: Go to the EC2 page, choose <b>Load Balancers</b> in the
+     *         navigation pane, choose the load balancer, choose the <b>Description</b> tab, and get the value of the
+     *         <b>DNS name</b> field.
      *         </p>
      *         <p>
      *         If you're routing traffic to a Classic Load Balancer, get the value that begins with <b>dualstack</b>. If
@@ -2756,8 +2768,8 @@ public class AliasTarget implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <i>Management Console</i>: For information about how to get the value by using the console, see <a
-     * href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customdomains.html">Using Custom Domains with
+     * <i>Amazon Web Services Management Console</i>: For information about how to get the value by using the console,
+     * see <a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customdomains.html">Using Custom Domains with
      * Elastic Beanstalk</a> in the <i>Elastic Beanstalk Developer Guide</i>.
      * </p>
      * </li>
@@ -2782,14 +2794,15 @@ public class AliasTarget implements Serializable, Cloneable {
      * <dt>ELB load balancer</dt>
      * <dd>
      * <p>
-     * Specify the DNS name that is associated with the load balancer. Get the DNS name by using the Management Console,
-     * the ELB API, or the CLI.
+     * Specify the DNS name that is associated with the load balancer. Get the DNS name by using the Amazon Web Services
+     * Management Console, the ELB API, or the CLI.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <b>Management Console</b>: Go to the EC2 page, choose <b>Load Balancers</b> in the navigation pane, choose the
-     * load balancer, choose the <b>Description</b> tab, and get the value of the <b>DNS name</b> field.
+     * <b>Amazon Web Services Management Console</b>: Go to the EC2 page, choose <b>Load Balancers</b> in the navigation
+     * pane, choose the load balancer, choose the <b>Description</b> tab, and get the value of the <b>DNS name</b>
+     * field.
      * </p>
      * <p>
      * If you're routing traffic to a Classic Load Balancer, get the value that begins with <b>dualstack</b>. If you're
@@ -2981,9 +2994,9 @@ public class AliasTarget implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        <i>Management Console</i>: For information about how to get the value by using the console, see <a
-     *        href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customdomains.html">Using Custom Domains with
-     *        Elastic Beanstalk</a> in the <i>Elastic Beanstalk Developer Guide</i>.
+     *        <i>Amazon Web Services Management Console</i>: For information about how to get the value by using the
+     *        console, see <a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customdomains.html">Using
+     *        Custom Domains with Elastic Beanstalk</a> in the <i>Elastic Beanstalk Developer Guide</i>.
      *        </p>
      *        </li>
      *        <li>
@@ -3007,14 +3020,15 @@ public class AliasTarget implements Serializable, Cloneable {
      *        <dt>ELB load balancer</dt>
      *        <dd>
      *        <p>
-     *        Specify the DNS name that is associated with the load balancer. Get the DNS name by using the Management
-     *        Console, the ELB API, or the CLI.
+     *        Specify the DNS name that is associated with the load balancer. Get the DNS name by using the Amazon Web
+     *        Services Management Console, the ELB API, or the CLI.
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>Management Console</b>: Go to the EC2 page, choose <b>Load Balancers</b> in the navigation pane, choose
-     *        the load balancer, choose the <b>Description</b> tab, and get the value of the <b>DNS name</b> field.
+     *        <b>Amazon Web Services Management Console</b>: Go to the EC2 page, choose <b>Load Balancers</b> in the
+     *        navigation pane, choose the load balancer, choose the <b>Description</b> tab, and get the value of the
+     *        <b>DNS name</b> field.
      *        </p>
      *        <p>
      *        If you're routing traffic to a Classic Load Balancer, get the value that begins with <b>dualstack</b>. If

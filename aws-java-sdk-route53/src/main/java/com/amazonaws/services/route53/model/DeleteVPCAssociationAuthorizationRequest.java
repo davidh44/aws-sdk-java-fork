@@ -20,7 +20,8 @@ import com.amazonaws.AmazonWebServiceRequest;
 /**
  * <p>
  * A complex type that contains information about the request to remove authorization to associate a VPC that was
- * created by one account with a hosted zone that was created with a different account.
+ * created by one Amazon Web Services account with a hosted zone that was created with a different Amazon Web Services
+ * account.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/DeleteVPCAssociationAuthorization"
@@ -31,28 +32,29 @@ public class DeleteVPCAssociationAuthorizationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * When removing authorization to associate a VPC that was created by one account with a hosted zone that was
-     * created with a different account, the ID of the hosted zone.
+     * When removing authorization to associate a VPC that was created by one Amazon Web Services account with a hosted
+     * zone that was created with a different Amazon Web Services account, the ID of the hosted zone.
      * </p>
      */
     private String hostedZoneId;
     /**
      * <p>
-     * When removing authorization to associate a VPC that was created by one account with a hosted zone that was
-     * created with a different account, a complex type that includes the ID and region of the VPC.
+     * When removing authorization to associate a VPC that was created by one Amazon Web Services account with a hosted
+     * zone that was created with a different Amazon Web Services account, a complex type that includes the ID and
+     * region of the VPC.
      * </p>
      */
     private VPC vPC;
 
     /**
      * <p>
-     * When removing authorization to associate a VPC that was created by one account with a hosted zone that was
-     * created with a different account, the ID of the hosted zone.
+     * When removing authorization to associate a VPC that was created by one Amazon Web Services account with a hosted
+     * zone that was created with a different Amazon Web Services account, the ID of the hosted zone.
      * </p>
      * 
      * @param hostedZoneId
-     *        When removing authorization to associate a VPC that was created by one account with a hosted zone that was
-     *        created with a different account, the ID of the hosted zone.
+     *        When removing authorization to associate a VPC that was created by one Amazon Web Services account with a
+     *        hosted zone that was created with a different Amazon Web Services account, the ID of the hosted zone.
      */
 
     public void setHostedZoneId(String hostedZoneId) {
@@ -61,12 +63,12 @@ public class DeleteVPCAssociationAuthorizationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * When removing authorization to associate a VPC that was created by one account with a hosted zone that was
-     * created with a different account, the ID of the hosted zone.
+     * When removing authorization to associate a VPC that was created by one Amazon Web Services account with a hosted
+     * zone that was created with a different Amazon Web Services account, the ID of the hosted zone.
      * </p>
      * 
-     * @return When removing authorization to associate a VPC that was created by one account with a hosted zone that
-     *         was created with a different account, the ID of the hosted zone.
+     * @return When removing authorization to associate a VPC that was created by one Amazon Web Services account with a
+     *         hosted zone that was created with a different Amazon Web Services account, the ID of the hosted zone.
      */
 
     public String getHostedZoneId() {
@@ -75,13 +77,13 @@ public class DeleteVPCAssociationAuthorizationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * When removing authorization to associate a VPC that was created by one account with a hosted zone that was
-     * created with a different account, the ID of the hosted zone.
+     * When removing authorization to associate a VPC that was created by one Amazon Web Services account with a hosted
+     * zone that was created with a different Amazon Web Services account, the ID of the hosted zone.
      * </p>
      * 
      * @param hostedZoneId
-     *        When removing authorization to associate a VPC that was created by one account with a hosted zone that was
-     *        created with a different account, the ID of the hosted zone.
+     *        When removing authorization to associate a VPC that was created by one Amazon Web Services account with a
+     *        hosted zone that was created with a different Amazon Web Services account, the ID of the hosted zone.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -92,13 +94,15 @@ public class DeleteVPCAssociationAuthorizationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * When removing authorization to associate a VPC that was created by one account with a hosted zone that was
-     * created with a different account, a complex type that includes the ID and region of the VPC.
+     * When removing authorization to associate a VPC that was created by one Amazon Web Services account with a hosted
+     * zone that was created with a different Amazon Web Services account, a complex type that includes the ID and
+     * region of the VPC.
      * </p>
      * 
      * @param vPC
-     *        When removing authorization to associate a VPC that was created by one account with a hosted zone that was
-     *        created with a different account, a complex type that includes the ID and region of the VPC.
+     *        When removing authorization to associate a VPC that was created by one Amazon Web Services account with a
+     *        hosted zone that was created with a different Amazon Web Services account, a complex type that includes
+     *        the ID and region of the VPC.
      */
 
     public void setVPC(VPC vPC) {
@@ -107,12 +111,14 @@ public class DeleteVPCAssociationAuthorizationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * When removing authorization to associate a VPC that was created by one account with a hosted zone that was
-     * created with a different account, a complex type that includes the ID and region of the VPC.
+     * When removing authorization to associate a VPC that was created by one Amazon Web Services account with a hosted
+     * zone that was created with a different Amazon Web Services account, a complex type that includes the ID and
+     * region of the VPC.
      * </p>
      * 
-     * @return When removing authorization to associate a VPC that was created by one account with a hosted zone that
-     *         was created with a different account, a complex type that includes the ID and region of the VPC.
+     * @return When removing authorization to associate a VPC that was created by one Amazon Web Services account with a
+     *         hosted zone that was created with a different Amazon Web Services account, a complex type that includes
+     *         the ID and region of the VPC.
      */
 
     public VPC getVPC() {
@@ -121,13 +127,15 @@ public class DeleteVPCAssociationAuthorizationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * When removing authorization to associate a VPC that was created by one account with a hosted zone that was
-     * created with a different account, a complex type that includes the ID and region of the VPC.
+     * When removing authorization to associate a VPC that was created by one Amazon Web Services account with a hosted
+     * zone that was created with a different Amazon Web Services account, a complex type that includes the ID and
+     * region of the VPC.
      * </p>
      * 
      * @param vPC
-     *        When removing authorization to associate a VPC that was created by one account with a hosted zone that was
-     *        created with a different account, a complex type that includes the ID and region of the VPC.
+     *        When removing authorization to associate a VPC that was created by one Amazon Web Services account with a
+     *        hosted zone that was created with a different Amazon Web Services account, a complex type that includes
+     *        the ID and region of the VPC.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

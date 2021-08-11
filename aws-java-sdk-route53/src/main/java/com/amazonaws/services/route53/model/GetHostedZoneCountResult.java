@@ -28,18 +28,21 @@ public class GetHostedZoneCountResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The total number of public and private hosted zones that are associated with the current account.
+     * The total number of public and private hosted zones that are associated with the current Amazon Web Services
+     * account.
      * </p>
      */
     private Long hostedZoneCount;
 
     /**
      * <p>
-     * The total number of public and private hosted zones that are associated with the current account.
+     * The total number of public and private hosted zones that are associated with the current Amazon Web Services
+     * account.
      * </p>
      * 
      * @param hostedZoneCount
-     *        The total number of public and private hosted zones that are associated with the current account.
+     *        The total number of public and private hosted zones that are associated with the current Amazon Web
+     *        Services account.
      */
 
     public void setHostedZoneCount(Long hostedZoneCount) {
@@ -48,10 +51,12 @@ public class GetHostedZoneCountResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The total number of public and private hosted zones that are associated with the current account.
+     * The total number of public and private hosted zones that are associated with the current Amazon Web Services
+     * account.
      * </p>
      * 
-     * @return The total number of public and private hosted zones that are associated with the current account.
+     * @return The total number of public and private hosted zones that are associated with the current Amazon Web
+     *         Services account.
      */
 
     public Long getHostedZoneCount() {
@@ -60,11 +65,13 @@ public class GetHostedZoneCountResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The total number of public and private hosted zones that are associated with the current account.
+     * The total number of public and private hosted zones that are associated with the current Amazon Web Services
+     * account.
      * </p>
      * 
      * @param hostedZoneCount
-     *        The total number of public and private hosted zones that are associated with the current account.
+     *        The total number of public and private hosted zones that are associated with the current Amazon Web
+     *        Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

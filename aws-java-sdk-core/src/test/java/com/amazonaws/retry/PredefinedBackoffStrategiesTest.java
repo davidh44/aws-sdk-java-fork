@@ -18,11 +18,12 @@
  */
 package com.amazonaws.retry;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class PredefinedBackoffStrategiesTest {
 
@@ -111,7 +112,7 @@ public class PredefinedBackoffStrategiesTest {
     public void test_MaxValue_Returned_InExponentialBackoffDelay_IsEqualTo_IntegerMax() {
         int maxInt = Integer.MAX_VALUE;
         RetryPolicy.BackoffStrategy exponential = new PredefinedBackoffStrategies.ExponentialBackoffStrategy(maxInt, maxInt);
-        Assert.assertEquals(maxInt, exponential.delayBeforeNextRetry(null, null, 40));
+        assertEquals(maxInt, exponential.delayBeforeNextRetry(null, null, 40));
     }
 
     private void expectInRange(RetryPolicy.BackoffStrategy strategy, int[] expectedLowerBound, int[] expectedUpperBound) {

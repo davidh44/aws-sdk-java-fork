@@ -45,10 +45,11 @@ public class PlacementConstraint implements Serializable, Cloneable, StructuredP
     private String type;
     /**
      * <p>
-     * A cluster query language expression to apply to the constraint. You cannot specify an expression if the
-     * constraint type is <code>distinctInstance</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html">Cluster Query
-     * Language</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * A cluster query language expression to apply to the constraint. The expression can have a maximum length of 2000
+     * characters. You can't specify an expression if the constraint type is <code>distinctInstance</code>. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html">Cluster query
+     * language</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      */
     private String expression;
@@ -148,17 +149,19 @@ public class PlacementConstraint implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * A cluster query language expression to apply to the constraint. You cannot specify an expression if the
-     * constraint type is <code>distinctInstance</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html">Cluster Query
-     * Language</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * A cluster query language expression to apply to the constraint. The expression can have a maximum length of 2000
+     * characters. You can't specify an expression if the constraint type is <code>distinctInstance</code>. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html">Cluster query
+     * language</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param expression
-     *        A cluster query language expression to apply to the constraint. You cannot specify an expression if the
-     *        constraint type is <code>distinctInstance</code>. For more information, see <a
+     *        A cluster query language expression to apply to the constraint. The expression can have a maximum length
+     *        of 2000 characters. You can't specify an expression if the constraint type is
+     *        <code>distinctInstance</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html">Cluster
-     *        Query Language</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *        query language</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      */
 
     public void setExpression(String expression) {
@@ -167,16 +170,18 @@ public class PlacementConstraint implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * A cluster query language expression to apply to the constraint. You cannot specify an expression if the
-     * constraint type is <code>distinctInstance</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html">Cluster Query
-     * Language</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * A cluster query language expression to apply to the constraint. The expression can have a maximum length of 2000
+     * characters. You can't specify an expression if the constraint type is <code>distinctInstance</code>. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html">Cluster query
+     * language</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
-     * @return A cluster query language expression to apply to the constraint. You cannot specify an expression if the
-     *         constraint type is <code>distinctInstance</code>. For more information, see <a
+     * @return A cluster query language expression to apply to the constraint. The expression can have a maximum length
+     *         of 2000 characters. You can't specify an expression if the constraint type is
+     *         <code>distinctInstance</code>. For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html">Cluster
-     *         Query Language</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *         query language</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      */
 
     public String getExpression() {
@@ -185,17 +190,19 @@ public class PlacementConstraint implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * A cluster query language expression to apply to the constraint. You cannot specify an expression if the
-     * constraint type is <code>distinctInstance</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html">Cluster Query
-     * Language</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * A cluster query language expression to apply to the constraint. The expression can have a maximum length of 2000
+     * characters. You can't specify an expression if the constraint type is <code>distinctInstance</code>. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html">Cluster query
+     * language</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param expression
-     *        A cluster query language expression to apply to the constraint. You cannot specify an expression if the
-     *        constraint type is <code>distinctInstance</code>. For more information, see <a
+     *        A cluster query language expression to apply to the constraint. The expression can have a maximum length
+     *        of 2000 characters. You can't specify an expression if the constraint type is
+     *        <code>distinctInstance</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html">Cluster
-     *        Query Language</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *        query language</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

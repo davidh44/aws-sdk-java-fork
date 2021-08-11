@@ -19,8 +19,8 @@ import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * <p>
- * Lists all the private hosted zones that a specified VPC is associated with, regardless of which account created the
- * hosted zones.
+ * Lists all the private hosted zones that a specified VPC is associated with, regardless of which Amazon Web Services
+ * account created the hosted zones.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListHostedZonesByVPC" target="_top">AWS API

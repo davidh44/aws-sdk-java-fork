@@ -59,7 +59,8 @@ public class PutSnapshotBlockRequest extends com.amazonaws.AmazonWebServiceReque
     private java.io.InputStream blockData;
     /**
      * <p>
-     * The size of the data to write to the block, in bytes. Currently, the only supported size is <code>524288</code>.
+     * The size of the data to write to the block, in bytes. Currently, the only supported size is <code>524288</code>
+     * bytes.
      * </p>
      * <p>
      * Valid values: <code>524288</code>
@@ -282,7 +283,8 @@ public class PutSnapshotBlockRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The size of the data to write to the block, in bytes. Currently, the only supported size is <code>524288</code>.
+     * The size of the data to write to the block, in bytes. Currently, the only supported size is <code>524288</code>
+     * bytes.
      * </p>
      * <p>
      * Valid values: <code>524288</code>
@@ -290,7 +292,7 @@ public class PutSnapshotBlockRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @param dataLength
      *        The size of the data to write to the block, in bytes. Currently, the only supported size is
-     *        <code>524288</code>.</p>
+     *        <code>524288</code> bytes.</p>
      *        <p>
      *        Valid values: <code>524288</code>
      */
@@ -301,14 +303,15 @@ public class PutSnapshotBlockRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The size of the data to write to the block, in bytes. Currently, the only supported size is <code>524288</code>.
+     * The size of the data to write to the block, in bytes. Currently, the only supported size is <code>524288</code>
+     * bytes.
      * </p>
      * <p>
      * Valid values: <code>524288</code>
      * </p>
      * 
      * @return The size of the data to write to the block, in bytes. Currently, the only supported size is
-     *         <code>524288</code>.</p>
+     *         <code>524288</code> bytes.</p>
      *         <p>
      *         Valid values: <code>524288</code>
      */
@@ -319,7 +322,8 @@ public class PutSnapshotBlockRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The size of the data to write to the block, in bytes. Currently, the only supported size is <code>524288</code>.
+     * The size of the data to write to the block, in bytes. Currently, the only supported size is <code>524288</code>
+     * bytes.
      * </p>
      * <p>
      * Valid values: <code>524288</code>
@@ -327,7 +331,7 @@ public class PutSnapshotBlockRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @param dataLength
      *        The size of the data to write to the block, in bytes. Currently, the only supported size is
-     *        <code>524288</code>.</p>
+     *        <code>524288</code> bytes.</p>
      *        <p>
      *        Valid values: <code>524288</code>
      * @return Returns a reference to this object so that method calls can be chained together.

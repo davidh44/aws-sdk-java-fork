@@ -32,14 +32,14 @@ public class ListQueryLoggingConfigsRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * <p>
      * If you don't specify a hosted zone ID, <code>ListQueryLoggingConfigs</code> returns all of the configurations
-     * that are associated with the current account.
+     * that are associated with the current Amazon Web Services account.
      * </p>
      */
     private String hostedZoneId;
     /**
      * <p>
-     * (Optional) If the current account has more than <code>MaxResults</code> query logging configurations, use
-     * <code>NextToken</code> to get the second and subsequent pages of results.
+     * (Optional) If the current Amazon Web Services account has more than <code>MaxResults</code> query logging
+     * configurations, use <code>NextToken</code> to get the second and subsequent pages of results.
      * </p>
      * <p>
      * For the first <code>ListQueryLoggingConfigs</code> request, omit this value.
@@ -53,8 +53,8 @@ public class ListQueryLoggingConfigsRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * (Optional) The maximum number of query logging configurations that you want Amazon Route 53 to return in response
-     * to the current request. If the current account has more than <code>MaxResults</code> configurations, use the
-     * value of <a href=
+     * to the current request. If the current Amazon Web Services account has more than <code>MaxResults</code>
+     * configurations, use the value of <a href=
      * "https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListQueryLoggingConfigs.html#API_ListQueryLoggingConfigs_RequestSyntax"
      * >NextToken</a> in the response to get the next page of results.
      * </p>
@@ -71,7 +71,7 @@ public class ListQueryLoggingConfigsRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * <p>
      * If you don't specify a hosted zone ID, <code>ListQueryLoggingConfigs</code> returns all of the configurations
-     * that are associated with the current account.
+     * that are associated with the current Amazon Web Services account.
      * </p>
      * 
      * @param hostedZoneId
@@ -79,7 +79,7 @@ public class ListQueryLoggingConfigsRequest extends com.amazonaws.AmazonWebServi
      *        specify the ID in <code>HostedZoneId</code>. </p>
      *        <p>
      *        If you don't specify a hosted zone ID, <code>ListQueryLoggingConfigs</code> returns all of the
-     *        configurations that are associated with the current account.
+     *        configurations that are associated with the current Amazon Web Services account.
      */
 
     public void setHostedZoneId(String hostedZoneId) {
@@ -93,14 +93,14 @@ public class ListQueryLoggingConfigsRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * <p>
      * If you don't specify a hosted zone ID, <code>ListQueryLoggingConfigs</code> returns all of the configurations
-     * that are associated with the current account.
+     * that are associated with the current Amazon Web Services account.
      * </p>
      * 
      * @return (Optional) If you want to list the query logging configuration that is associated with a hosted zone,
      *         specify the ID in <code>HostedZoneId</code>. </p>
      *         <p>
      *         If you don't specify a hosted zone ID, <code>ListQueryLoggingConfigs</code> returns all of the
-     *         configurations that are associated with the current account.
+     *         configurations that are associated with the current Amazon Web Services account.
      */
 
     public String getHostedZoneId() {
@@ -114,7 +114,7 @@ public class ListQueryLoggingConfigsRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * <p>
      * If you don't specify a hosted zone ID, <code>ListQueryLoggingConfigs</code> returns all of the configurations
-     * that are associated with the current account.
+     * that are associated with the current Amazon Web Services account.
      * </p>
      * 
      * @param hostedZoneId
@@ -122,7 +122,7 @@ public class ListQueryLoggingConfigsRequest extends com.amazonaws.AmazonWebServi
      *        specify the ID in <code>HostedZoneId</code>. </p>
      *        <p>
      *        If you don't specify a hosted zone ID, <code>ListQueryLoggingConfigs</code> returns all of the
-     *        configurations that are associated with the current account.
+     *        configurations that are associated with the current Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -133,8 +133,8 @@ public class ListQueryLoggingConfigsRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * (Optional) If the current account has more than <code>MaxResults</code> query logging configurations, use
-     * <code>NextToken</code> to get the second and subsequent pages of results.
+     * (Optional) If the current Amazon Web Services account has more than <code>MaxResults</code> query logging
+     * configurations, use <code>NextToken</code> to get the second and subsequent pages of results.
      * </p>
      * <p>
      * For the first <code>ListQueryLoggingConfigs</code> request, omit this value.
@@ -145,8 +145,8 @@ public class ListQueryLoggingConfigsRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param nextToken
-     *        (Optional) If the current account has more than <code>MaxResults</code> query logging configurations, use
-     *        <code>NextToken</code> to get the second and subsequent pages of results.</p>
+     *        (Optional) If the current Amazon Web Services account has more than <code>MaxResults</code> query logging
+     *        configurations, use <code>NextToken</code> to get the second and subsequent pages of results.</p>
      *        <p>
      *        For the first <code>ListQueryLoggingConfigs</code> request, omit this value.
      *        </p>
@@ -161,8 +161,8 @@ public class ListQueryLoggingConfigsRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * (Optional) If the current account has more than <code>MaxResults</code> query logging configurations, use
-     * <code>NextToken</code> to get the second and subsequent pages of results.
+     * (Optional) If the current Amazon Web Services account has more than <code>MaxResults</code> query logging
+     * configurations, use <code>NextToken</code> to get the second and subsequent pages of results.
      * </p>
      * <p>
      * For the first <code>ListQueryLoggingConfigs</code> request, omit this value.
@@ -172,8 +172,8 @@ public class ListQueryLoggingConfigsRequest extends com.amazonaws.AmazonWebServi
      * specify that value for <code>NextToken</code> in the request.
      * </p>
      * 
-     * @return (Optional) If the current account has more than <code>MaxResults</code> query logging configurations, use
-     *         <code>NextToken</code> to get the second and subsequent pages of results.</p>
+     * @return (Optional) If the current Amazon Web Services account has more than <code>MaxResults</code> query logging
+     *         configurations, use <code>NextToken</code> to get the second and subsequent pages of results.</p>
      *         <p>
      *         For the first <code>ListQueryLoggingConfigs</code> request, omit this value.
      *         </p>
@@ -188,8 +188,8 @@ public class ListQueryLoggingConfigsRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * (Optional) If the current account has more than <code>MaxResults</code> query logging configurations, use
-     * <code>NextToken</code> to get the second and subsequent pages of results.
+     * (Optional) If the current Amazon Web Services account has more than <code>MaxResults</code> query logging
+     * configurations, use <code>NextToken</code> to get the second and subsequent pages of results.
      * </p>
      * <p>
      * For the first <code>ListQueryLoggingConfigs</code> request, omit this value.
@@ -200,8 +200,8 @@ public class ListQueryLoggingConfigsRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param nextToken
-     *        (Optional) If the current account has more than <code>MaxResults</code> query logging configurations, use
-     *        <code>NextToken</code> to get the second and subsequent pages of results.</p>
+     *        (Optional) If the current Amazon Web Services account has more than <code>MaxResults</code> query logging
+     *        configurations, use <code>NextToken</code> to get the second and subsequent pages of results.</p>
      *        <p>
      *        For the first <code>ListQueryLoggingConfigs</code> request, omit this value.
      *        </p>
@@ -219,8 +219,8 @@ public class ListQueryLoggingConfigsRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * (Optional) The maximum number of query logging configurations that you want Amazon Route 53 to return in response
-     * to the current request. If the current account has more than <code>MaxResults</code> configurations, use the
-     * value of <a href=
+     * to the current request. If the current Amazon Web Services account has more than <code>MaxResults</code>
+     * configurations, use the value of <a href=
      * "https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListQueryLoggingConfigs.html#API_ListQueryLoggingConfigs_RequestSyntax"
      * >NextToken</a> in the response to get the next page of results.
      * </p>
@@ -230,8 +230,8 @@ public class ListQueryLoggingConfigsRequest extends com.amazonaws.AmazonWebServi
      * 
      * @param maxResults
      *        (Optional) The maximum number of query logging configurations that you want Amazon Route 53 to return in
-     *        response to the current request. If the current account has more than <code>MaxResults</code>
-     *        configurations, use the value of <a href=
+     *        response to the current request. If the current Amazon Web Services account has more than
+     *        <code>MaxResults</code> configurations, use the value of <a href=
      *        "https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListQueryLoggingConfigs.html#API_ListQueryLoggingConfigs_RequestSyntax"
      *        >NextToken</a> in the response to get the next page of results.</p>
      *        <p>
@@ -245,8 +245,8 @@ public class ListQueryLoggingConfigsRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * (Optional) The maximum number of query logging configurations that you want Amazon Route 53 to return in response
-     * to the current request. If the current account has more than <code>MaxResults</code> configurations, use the
-     * value of <a href=
+     * to the current request. If the current Amazon Web Services account has more than <code>MaxResults</code>
+     * configurations, use the value of <a href=
      * "https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListQueryLoggingConfigs.html#API_ListQueryLoggingConfigs_RequestSyntax"
      * >NextToken</a> in the response to get the next page of results.
      * </p>
@@ -255,8 +255,8 @@ public class ListQueryLoggingConfigsRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @return (Optional) The maximum number of query logging configurations that you want Amazon Route 53 to return in
-     *         response to the current request. If the current account has more than <code>MaxResults</code>
-     *         configurations, use the value of <a href=
+     *         response to the current request. If the current Amazon Web Services account has more than
+     *         <code>MaxResults</code> configurations, use the value of <a href=
      *         "https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListQueryLoggingConfigs.html#API_ListQueryLoggingConfigs_RequestSyntax"
      *         >NextToken</a> in the response to get the next page of results.</p>
      *         <p>
@@ -270,8 +270,8 @@ public class ListQueryLoggingConfigsRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * (Optional) The maximum number of query logging configurations that you want Amazon Route 53 to return in response
-     * to the current request. If the current account has more than <code>MaxResults</code> configurations, use the
-     * value of <a href=
+     * to the current request. If the current Amazon Web Services account has more than <code>MaxResults</code>
+     * configurations, use the value of <a href=
      * "https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListQueryLoggingConfigs.html#API_ListQueryLoggingConfigs_RequestSyntax"
      * >NextToken</a> in the response to get the next page of results.
      * </p>
@@ -281,8 +281,8 @@ public class ListQueryLoggingConfigsRequest extends com.amazonaws.AmazonWebServi
      * 
      * @param maxResults
      *        (Optional) The maximum number of query logging configurations that you want Amazon Route 53 to return in
-     *        response to the current request. If the current account has more than <code>MaxResults</code>
-     *        configurations, use the value of <a href=
+     *        response to the current request. If the current Amazon Web Services account has more than
+     *        <code>MaxResults</code> configurations, use the value of <a href=
      *        "https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListQueryLoggingConfigs.html#API_ListQueryLoggingConfigs_RequestSyntax"
      *        >NextToken</a> in the response to get the next page of results.</p>
      *        <p>

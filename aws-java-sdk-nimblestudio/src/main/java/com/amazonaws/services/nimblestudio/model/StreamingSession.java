@@ -57,6 +57,12 @@ public class StreamingSession implements Serializable, Cloneable, StructuredPojo
     private String launchProfileId;
     /**
      * <p>
+     * The user ID of the user that owns the streaming session.
+     * </p>
+     */
+    private String ownedBy;
+    /**
+     * <p>
      * The session ID.
      * </p>
      */
@@ -307,6 +313,46 @@ public class StreamingSession implements Serializable, Cloneable, StructuredPojo
 
     public StreamingSession withLaunchProfileId(String launchProfileId) {
         setLaunchProfileId(launchProfileId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The user ID of the user that owns the streaming session.
+     * </p>
+     * 
+     * @param ownedBy
+     *        The user ID of the user that owns the streaming session.
+     */
+
+    public void setOwnedBy(String ownedBy) {
+        this.ownedBy = ownedBy;
+    }
+
+    /**
+     * <p>
+     * The user ID of the user that owns the streaming session.
+     * </p>
+     * 
+     * @return The user ID of the user that owns the streaming session.
+     */
+
+    public String getOwnedBy() {
+        return this.ownedBy;
+    }
+
+    /**
+     * <p>
+     * The user ID of the user that owns the streaming session.
+     * </p>
+     * 
+     * @param ownedBy
+     *        The user ID of the user that owns the streaming session.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StreamingSession withOwnedBy(String ownedBy) {
+        setOwnedBy(ownedBy);
         return this;
     }
 
@@ -758,6 +804,8 @@ public class StreamingSession implements Serializable, Cloneable, StructuredPojo
             sb.append("Ec2InstanceType: ").append(getEc2InstanceType()).append(",");
         if (getLaunchProfileId() != null)
             sb.append("LaunchProfileId: ").append(getLaunchProfileId()).append(",");
+        if (getOwnedBy() != null)
+            sb.append("OwnedBy: ").append(getOwnedBy()).append(",");
         if (getSessionId() != null)
             sb.append("SessionId: ").append(getSessionId()).append(",");
         if (getState() != null)
@@ -810,6 +858,10 @@ public class StreamingSession implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getLaunchProfileId() != null && other.getLaunchProfileId().equals(this.getLaunchProfileId()) == false)
             return false;
+        if (other.getOwnedBy() == null ^ this.getOwnedBy() == null)
+            return false;
+        if (other.getOwnedBy() != null && other.getOwnedBy().equals(this.getOwnedBy()) == false)
+            return false;
         if (other.getSessionId() == null ^ this.getSessionId() == null)
             return false;
         if (other.getSessionId() != null && other.getSessionId().equals(this.getSessionId()) == false)
@@ -859,6 +911,7 @@ public class StreamingSession implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getCreatedBy() == null) ? 0 : getCreatedBy().hashCode());
         hashCode = prime * hashCode + ((getEc2InstanceType() == null) ? 0 : getEc2InstanceType().hashCode());
         hashCode = prime * hashCode + ((getLaunchProfileId() == null) ? 0 : getLaunchProfileId().hashCode());
+        hashCode = prime * hashCode + ((getOwnedBy() == null) ? 0 : getOwnedBy().hashCode());
         hashCode = prime * hashCode + ((getSessionId() == null) ? 0 : getSessionId().hashCode());
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
         hashCode = prime * hashCode + ((getStatusCode() == null) ? 0 : getStatusCode().hashCode());

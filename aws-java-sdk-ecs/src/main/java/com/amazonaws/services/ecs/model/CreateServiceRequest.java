@@ -171,6 +171,9 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * If no <code>capacityProviderStrategy</code> or <code>launchType</code> is specified, the
      * <code>defaultCapacityProviderStrategy</code> for the cluster is used.
      * </p>
+     * <p>
+     * A capacity provider strategy may contain a maximum of 6 capacity providers.
+     * </p>
      */
     private com.amazonaws.internal.SdkInternalList<CapacityProviderStrategyItem> capacityProviderStrategy;
     /**
@@ -227,7 +230,7 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
     private com.amazonaws.internal.SdkInternalList<PlacementConstraint> placementConstraints;
     /**
      * <p>
-     * The placement strategy objects to use for tasks in your service. You can specify a maximum of five strategy rules
+     * The placement strategy objects to use for tasks in your service. You can specify a maximum of 5 strategy rules
      * per service.
      * </p>
      */
@@ -1469,12 +1472,18 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * If no <code>capacityProviderStrategy</code> or <code>launchType</code> is specified, the
      * <code>defaultCapacityProviderStrategy</code> for the cluster is used.
      * </p>
+     * <p>
+     * A capacity provider strategy may contain a maximum of 6 capacity providers.
+     * </p>
      * 
      * @return The capacity provider strategy to use for the service.</p>
      *         <p>
      *         If a <code>capacityProviderStrategy</code> is specified, the <code>launchType</code> parameter must be
      *         omitted. If no <code>capacityProviderStrategy</code> or <code>launchType</code> is specified, the
      *         <code>defaultCapacityProviderStrategy</code> for the cluster is used.
+     *         </p>
+     *         <p>
+     *         A capacity provider strategy may contain a maximum of 6 capacity providers.
      */
 
     public java.util.List<CapacityProviderStrategyItem> getCapacityProviderStrategy() {
@@ -1493,6 +1502,9 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * If no <code>capacityProviderStrategy</code> or <code>launchType</code> is specified, the
      * <code>defaultCapacityProviderStrategy</code> for the cluster is used.
      * </p>
+     * <p>
+     * A capacity provider strategy may contain a maximum of 6 capacity providers.
+     * </p>
      * 
      * @param capacityProviderStrategy
      *        The capacity provider strategy to use for the service.</p>
@@ -1500,6 +1512,9 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        If a <code>capacityProviderStrategy</code> is specified, the <code>launchType</code> parameter must be
      *        omitted. If no <code>capacityProviderStrategy</code> or <code>launchType</code> is specified, the
      *        <code>defaultCapacityProviderStrategy</code> for the cluster is used.
+     *        </p>
+     *        <p>
+     *        A capacity provider strategy may contain a maximum of 6 capacity providers.
      */
 
     public void setCapacityProviderStrategy(java.util.Collection<CapacityProviderStrategyItem> capacityProviderStrategy) {
@@ -1521,6 +1536,9 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <code>defaultCapacityProviderStrategy</code> for the cluster is used.
      * </p>
      * <p>
+     * A capacity provider strategy may contain a maximum of 6 capacity providers.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCapacityProviderStrategy(java.util.Collection)} or
      * {@link #withCapacityProviderStrategy(java.util.Collection)} if you want to override the existing values.
@@ -1532,6 +1550,9 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        If a <code>capacityProviderStrategy</code> is specified, the <code>launchType</code> parameter must be
      *        omitted. If no <code>capacityProviderStrategy</code> or <code>launchType</code> is specified, the
      *        <code>defaultCapacityProviderStrategy</code> for the cluster is used.
+     *        </p>
+     *        <p>
+     *        A capacity provider strategy may contain a maximum of 6 capacity providers.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1554,6 +1575,9 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * If no <code>capacityProviderStrategy</code> or <code>launchType</code> is specified, the
      * <code>defaultCapacityProviderStrategy</code> for the cluster is used.
      * </p>
+     * <p>
+     * A capacity provider strategy may contain a maximum of 6 capacity providers.
+     * </p>
      * 
      * @param capacityProviderStrategy
      *        The capacity provider strategy to use for the service.</p>
@@ -1561,6 +1585,9 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        If a <code>capacityProviderStrategy</code> is specified, the <code>launchType</code> parameter must be
      *        omitted. If no <code>capacityProviderStrategy</code> or <code>launchType</code> is specified, the
      *        <code>defaultCapacityProviderStrategy</code> for the cluster is used.
+     *        </p>
+     *        <p>
+     *        A capacity provider strategy may contain a maximum of 6 capacity providers.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1935,12 +1962,12 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The placement strategy objects to use for tasks in your service. You can specify a maximum of five strategy rules
+     * The placement strategy objects to use for tasks in your service. You can specify a maximum of 5 strategy rules
      * per service.
      * </p>
      * 
-     * @return The placement strategy objects to use for tasks in your service. You can specify a maximum of five
-     *         strategy rules per service.
+     * @return The placement strategy objects to use for tasks in your service. You can specify a maximum of 5 strategy
+     *         rules per service.
      */
 
     public java.util.List<PlacementStrategy> getPlacementStrategy() {
@@ -1952,13 +1979,13 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The placement strategy objects to use for tasks in your service. You can specify a maximum of five strategy rules
+     * The placement strategy objects to use for tasks in your service. You can specify a maximum of 5 strategy rules
      * per service.
      * </p>
      * 
      * @param placementStrategy
-     *        The placement strategy objects to use for tasks in your service. You can specify a maximum of five
-     *        strategy rules per service.
+     *        The placement strategy objects to use for tasks in your service. You can specify a maximum of 5 strategy
+     *        rules per service.
      */
 
     public void setPlacementStrategy(java.util.Collection<PlacementStrategy> placementStrategy) {
@@ -1972,7 +1999,7 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The placement strategy objects to use for tasks in your service. You can specify a maximum of five strategy rules
+     * The placement strategy objects to use for tasks in your service. You can specify a maximum of 5 strategy rules
      * per service.
      * </p>
      * <p>
@@ -1982,8 +2009,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param placementStrategy
-     *        The placement strategy objects to use for tasks in your service. You can specify a maximum of five
-     *        strategy rules per service.
+     *        The placement strategy objects to use for tasks in your service. You can specify a maximum of 5 strategy
+     *        rules per service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1999,13 +2026,13 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The placement strategy objects to use for tasks in your service. You can specify a maximum of five strategy rules
+     * The placement strategy objects to use for tasks in your service. You can specify a maximum of 5 strategy rules
      * per service.
      * </p>
      * 
      * @param placementStrategy
-     *        The placement strategy objects to use for tasks in your service. You can specify a maximum of five
-     *        strategy rules per service.
+     *        The placement strategy objects to use for tasks in your service. You can specify a maximum of 5 strategy
+     *        rules per service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

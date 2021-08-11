@@ -73,6 +73,11 @@ public final class RetryPolicy {
     private final boolean fastFailRateLimiting;
 
     /**
+     * Whether it should honor the default backoff strategy in {@link RetryMode}
+     */
+    private final boolean honorBackoffStrategyInRetryMode;
+
+    /**
      * Constructs a new retry policy. See {@link PredefinedRetryPolicies} for
      * some pre-defined policy components, and also the default policies used by
      * SDK.
@@ -97,7 +102,7 @@ public final class RetryPolicy {
                        BackoffStrategy backoffStrategy,
                        int maxErrorRetry,
                        boolean honorMaxErrorRetryInClientConfig) {
-        this(retryCondition, backoffStrategy, maxErrorRetry, honorMaxErrorRetryInClientConfig, false);
+        this(retryCondition, backoffStrategy, maxErrorRetry, honorMaxErrorRetryInClientConfig, false, false);
     }
 
     @SdkInternalApi
@@ -105,8 +110,10 @@ public final class RetryPolicy {
                        BackoffStrategy backoffStrategy,
                        int maxErrorRetry,
                        boolean honorMaxErrorRetryInClientConfig,
-                       boolean honorDefaultMaxErrorRetryInRetryMode) {
-        this(retryCondition, backoffStrategy, maxErrorRetry, honorMaxErrorRetryInClientConfig, null, honorDefaultMaxErrorRetryInRetryMode, false);
+                       boolean honorDefaultMaxErrorRetryInRetryMode,
+                       boolean honorBackoffStrategyInRetryMode) {
+        this(retryCondition, backoffStrategy, maxErrorRetry, honorMaxErrorRetryInClientConfig, null,
+             honorDefaultMaxErrorRetryInRetryMode, false, honorBackoffStrategyInRetryMode);
     }
 
     public RetryPolicy(RetryCondition retryCondition,
@@ -114,7 +121,7 @@ public final class RetryPolicy {
                        int maxErrorRetry,
                        boolean honorMaxErrorRetryInClientConfig,
                        RetryMode retryMode) {
-        this(retryCondition, backoffStrategy, maxErrorRetry, honorMaxErrorRetryInClientConfig, retryMode, false, false);
+        this(retryCondition, backoffStrategy, maxErrorRetry, honorMaxErrorRetryInClientConfig, retryMode, false, false, false);
     }
 
     private RetryPolicy(RetryPolicyBuilder builder) {
@@ -124,7 +131,8 @@ public final class RetryPolicy {
              builder.honorMaxErrorRetryInClientConfig,
              builder.retryMode,
              builder.honorDefaultMaxErrorRetryInRetryMode,
-             builder.fastFailRateLimiting);
+             builder.fastFailRateLimiting,
+             builder.honorBackOffStrategyInRetryMode);
     }
 
     @SdkInternalApi
@@ -134,23 +142,32 @@ public final class RetryPolicy {
                 boolean honorMaxErrorRetryInClientConfig,
                 RetryMode retryMode,
                 boolean honorDefaultMaxErrorRetryInRetryMode,
-                boolean fastFailRateLimiting) {
+                boolean fastFailRateLimiting,
+                boolean honorBackoffStrategyInRetryMode) {
         if (retryCondition == null) {
             retryCondition = PredefinedRetryPolicies.DEFAULT_RETRY_CONDITION;
         }
-        if (backoffStrategy == null) {
-            backoffStrategy = PredefinedRetryPolicies.DEFAULT_BACKOFF_STRATEGY;
-        }
+
         if (maxErrorRetry < 0) {
             throw new IllegalArgumentException("Please provide a non-negative value for maxErrorRetry.");
         }
 
+        if (backoffStrategy == null) {
+            backoffStrategy = PredefinedRetryPolicies.DEFAULT_BACKOFF_STRATEGY;
+        }
+
         this.honorDefaultMaxErrorRetryInRetryMode = honorDefaultMaxErrorRetryInRetryMode;
         this.retryCondition = retryCondition;
-        this.backoffStrategy = backoffStrategy;
         this.maxErrorRetry = maxErrorRetry;
         this.honorMaxErrorRetryInClientConfig = honorMaxErrorRetryInClientConfig;
         this.retryMode = retryMode != null ? retryMode : RETRY_MODE_RESOLVER.retryMode();
+        this.honorBackoffStrategyInRetryMode = honorBackoffStrategyInRetryMode;
+        if (honorBackoffStrategyInRetryMode) {
+            this.backoffStrategy = PredefinedRetryPolicies.getDefaultBackoffStrategy(this.retryMode);
+        } else {
+            this.backoffStrategy = backoffStrategy;
+        }
+
         this.fastFailRateLimiting = fastFailRateLimiting;
     }
 
@@ -223,6 +240,13 @@ public final class RetryPolicy {
     }
 
     /**
+     * @return Whether the default backoff strategy in retry mode should be honored.
+     */
+    boolean isBackoffStrategyInRetryModeHonored() {
+        return honorBackoffStrategyInRetryMode;
+    }
+
+    /**
      * @return A builder for conveniently building a retry policy.
      */
     public static RetryPolicyBuilder builder() {
@@ -237,6 +261,7 @@ public final class RetryPolicy {
         private RetryMode retryMode;
         private boolean honorDefaultMaxErrorRetryInRetryMode;
         private boolean fastFailRateLimiting;
+        private boolean honorBackOffStrategyInRetryMode;
 
         /**
          * Set the retry condition on whether a specific request and exception should be retried. If null value is
@@ -351,6 +376,22 @@ public final class RetryPolicy {
 
         public void setFastFailRateLimiting(boolean fastFailRateLimiting) {
             withFastFailRateLimiting(fastFailRateLimiting);
+        }
+
+        /**
+         * Whether the policy should honor the backoff strategy dictated by the configured retry mode.
+         *
+         * @param honorBackOffStrategyInRetryMode Whether the policy should honor the backoff strategy dictated
+         *                                             by the configured retry mode.
+         * @return This object for method chaining.
+         */
+        public RetryPolicyBuilder withHonorDefaultBackoffStrategyInRetryMode(boolean honorBackOffStrategyInRetryMode) {
+            this.honorBackOffStrategyInRetryMode = honorBackOffStrategyInRetryMode;
+            return this;
+        }
+
+        public void setHonorDefaultBackoffStrategyInRetryMode(boolean honorBackOffStrategyInRetryMode) {
+            withHonorDefaultBackoffStrategyInRetryMode(honorBackOffStrategyInRetryMode);
         }
 
         public RetryPolicy build() {

@@ -48,10 +48,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -77,10 +78,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -106,10 +108,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -138,10 +141,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -171,10 +175,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -210,11 +215,12 @@ public interface AmazonNimbleStudio {
      * </p>
      * <p>
      * In Nimble Studio, resource names, descriptions, initialization scripts, and other data you provide are always
-     * encrypted at rest using an AWS KMS key. By default, this key is owned by AWS and managed on your behalf. You may
-     * provide your own AWS KMS key when calling CreateStudio to encrypt this data using a key you own and manage.
+     * encrypted at rest using an KMS key. By default, this key is owned by Amazon Web Services and managed on your
+     * behalf. You may provide your own KMS key when calling CreateStudio to encrypt this data using a key you own and
+     * manage.
      * </p>
      * <p>
-     * When providing an AWS KMS key during studio creation, Nimble Studio creates KMS grants in your account to provide
+     * When providing an KMS key during studio creation, Nimble Studio creates KMS grants in your account to provide
      * your studio user and admin roles access to these KMS keys.
      * </p>
      * <p>
@@ -230,10 +236,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -259,10 +266,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -287,10 +295,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -315,10 +324,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -343,10 +353,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -378,10 +389,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -406,10 +418,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -434,10 +447,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -462,10 +476,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -490,10 +505,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -518,10 +534,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -548,10 +565,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -576,10 +594,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -604,10 +623,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -632,10 +652,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -663,10 +684,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -698,10 +720,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -726,10 +749,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -754,10 +778,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -782,10 +807,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -810,10 +836,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -838,10 +865,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -866,10 +894,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -894,10 +923,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -917,8 +947,8 @@ public interface AmazonNimbleStudio {
      * List the streaming image resources available to this studio.
      * </p>
      * <p>
-     * This list will contain both images provided by AWS, as well as streaming images that you have created in your
-     * studio.
+     * This list will contain both images provided by Amazon Web Services, as well as streaming images that you have
+     * created in your studio.
      * </p>
      * 
      * @param listStreamingImagesRequest
@@ -926,10 +956,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -954,10 +985,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -982,10 +1014,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -1010,10 +1043,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -1030,7 +1064,7 @@ public interface AmazonNimbleStudio {
 
     /**
      * <p>
-     * List studios in your AWS account in the requested AWS Region.
+     * List studios in your Amazon Web Services account in the requested Amazon Web Services Region.
      * </p>
      * 
      * @param listStudiosRequest
@@ -1038,10 +1072,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -1071,10 +1106,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -1100,10 +1136,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -1129,10 +1166,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -1152,16 +1190,16 @@ public interface AmazonNimbleStudio {
      * Repairs the SSO configuration for a given studio.
      * </p>
      * <p>
-     * If the studio has a valid AWS SSO configuration currently associated with it, this operation will fail with a
-     * validation error.
+     * If the studio has a valid Amazon Web Services SSO configuration currently associated with it, this operation will
+     * fail with a validation error.
      * </p>
      * <p>
-     * If the studio does not have a valid AWS SSO configuration currently associated with it, then a new AWS SSO
-     * application is created for the studio and the studio is changed to the READY state.
+     * If the studio does not have a valid Amazon Web Services SSO configuration currently associated with it, then a
+     * new Amazon Web Services SSO application is created for the studio and the studio is changed to the READY state.
      * </p>
      * <p>
-     * After the AWS SSO application is repaired, you must use the Amazon Nimble Studio console to add administrators
-     * and users to your studio.
+     * After the Amazon Web Services SSO application is repaired, you must use the Amazon Nimble Studio console to add
+     * administrators and users to your studio.
      * </p>
      * 
      * @param startStudioSSOConfigurationRepairRequest
@@ -1169,10 +1207,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -1198,10 +1237,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -1226,10 +1266,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -1255,10 +1296,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -1284,10 +1326,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -1313,10 +1356,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -1345,10 +1389,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException
@@ -1374,10 +1419,11 @@ public interface AmazonNimbleStudio {
      * @throws ValidationException
      *         One of the parameters in the request is invalid.
      * @throws InternalServerErrorException
-     *         A service fault has occurred. Please retry your request and contact AWS support if this error continues.
+     *         A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this
+     *         error continues.
      * @throws ServiceQuotaExceededException
-     *         This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to
-     *         request an increase.
+     *         This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service
+     *         Quotas console to request an increase.
      * @throws AccessDeniedException
      *         You do not have permission to perform this action.
      * @throws ResourceNotFoundException

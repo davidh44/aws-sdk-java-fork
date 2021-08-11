@@ -33,7 +33,7 @@ public class LaunchProfileInitializationActiveDirectory implements Serializable,
     private java.util.List<ActiveDirectoryComputerAttribute> computerAttributes;
     /**
      * <p>
-     * The directory ID of the AWS Directory Service for Microsoft AD to access using this launch profile.
+     * The directory ID of the Directory Service for Microsoft Active Directory to access using this launch profile.
      * </p>
      */
     private String directoryId;
@@ -140,11 +140,12 @@ public class LaunchProfileInitializationActiveDirectory implements Serializable,
 
     /**
      * <p>
-     * The directory ID of the AWS Directory Service for Microsoft AD to access using this launch profile.
+     * The directory ID of the Directory Service for Microsoft Active Directory to access using this launch profile.
      * </p>
      * 
      * @param directoryId
-     *        The directory ID of the AWS Directory Service for Microsoft AD to access using this launch profile.
+     *        The directory ID of the Directory Service for Microsoft Active Directory to access using this launch
+     *        profile.
      */
 
     public void setDirectoryId(String directoryId) {
@@ -153,10 +154,11 @@ public class LaunchProfileInitializationActiveDirectory implements Serializable,
 
     /**
      * <p>
-     * The directory ID of the AWS Directory Service for Microsoft AD to access using this launch profile.
+     * The directory ID of the Directory Service for Microsoft Active Directory to access using this launch profile.
      * </p>
      * 
-     * @return The directory ID of the AWS Directory Service for Microsoft AD to access using this launch profile.
+     * @return The directory ID of the Directory Service for Microsoft Active Directory to access using this launch
+     *         profile.
      */
 
     public String getDirectoryId() {
@@ -165,11 +167,12 @@ public class LaunchProfileInitializationActiveDirectory implements Serializable,
 
     /**
      * <p>
-     * The directory ID of the AWS Directory Service for Microsoft AD to access using this launch profile.
+     * The directory ID of the Directory Service for Microsoft Active Directory to access using this launch profile.
      * </p>
      * 
      * @param directoryId
-     *        The directory ID of the AWS Directory Service for Microsoft AD to access using this launch profile.
+     *        The directory ID of the Directory Service for Microsoft Active Directory to access using this launch
+     *        profile.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -28,19 +28,21 @@ public class GetHealthCheckResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * A complex type that contains information about one health check that is associated with the current account.
+     * A complex type that contains information about one health check that is associated with the current Amazon Web
+     * Services account.
      * </p>
      */
     private HealthCheck healthCheck;
 
     /**
      * <p>
-     * A complex type that contains information about one health check that is associated with the current account.
+     * A complex type that contains information about one health check that is associated with the current Amazon Web
+     * Services account.
      * </p>
      * 
      * @param healthCheck
-     *        A complex type that contains information about one health check that is associated with the current
-     *        account.
+     *        A complex type that contains information about one health check that is associated with the current Amazon
+     *        Web Services account.
      */
 
     public void setHealthCheck(HealthCheck healthCheck) {
@@ -49,11 +51,12 @@ public class GetHealthCheckResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * A complex type that contains information about one health check that is associated with the current account.
+     * A complex type that contains information about one health check that is associated with the current Amazon Web
+     * Services account.
      * </p>
      * 
      * @return A complex type that contains information about one health check that is associated with the current
-     *         account.
+     *         Amazon Web Services account.
      */
 
     public HealthCheck getHealthCheck() {
@@ -62,12 +65,13 @@ public class GetHealthCheckResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * A complex type that contains information about one health check that is associated with the current account.
+     * A complex type that contains information about one health check that is associated with the current Amazon Web
+     * Services account.
      * </p>
      * 
      * @param healthCheck
-     *        A complex type that contains information about one health check that is associated with the current
-     *        account.
+     *        A complex type that contains information about one health check that is associated with the current Amazon
+     *        Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

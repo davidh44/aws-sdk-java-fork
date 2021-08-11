@@ -45,6 +45,9 @@ public class DescribeClustersRequest extends com.amazonaws.AmazonWebServiceReque
      * If <code>SETTINGS</code> is specified, the settings for the cluster are included.
      * </p>
      * <p>
+     * If <code>CONFIGURATIONS</code> is specified, the configuration for the cluster is included.
+     * </p>
+     * <p>
      * If <code>STATISTICS</code> is specified, the task and service count is included, separated by launch type.
      * </p>
      * <p>
@@ -147,6 +150,9 @@ public class DescribeClustersRequest extends com.amazonaws.AmazonWebServiceReque
      * If <code>SETTINGS</code> is specified, the settings for the cluster are included.
      * </p>
      * <p>
+     * If <code>CONFIGURATIONS</code> is specified, the configuration for the cluster is included.
+     * </p>
+     * <p>
      * If <code>STATISTICS</code> is specified, the task and service count is included, separated by launch type.
      * </p>
      * <p>
@@ -161,6 +167,9 @@ public class DescribeClustersRequest extends com.amazonaws.AmazonWebServiceReque
      *         </p>
      *         <p>
      *         If <code>SETTINGS</code> is specified, the settings for the cluster are included.
+     *         </p>
+     *         <p>
+     *         If <code>CONFIGURATIONS</code> is specified, the configuration for the cluster is included.
      *         </p>
      *         <p>
      *         If <code>STATISTICS</code> is specified, the task and service count is included, separated by launch
@@ -191,6 +200,9 @@ public class DescribeClustersRequest extends com.amazonaws.AmazonWebServiceReque
      * If <code>SETTINGS</code> is specified, the settings for the cluster are included.
      * </p>
      * <p>
+     * If <code>CONFIGURATIONS</code> is specified, the configuration for the cluster is included.
+     * </p>
+     * <p>
      * If <code>STATISTICS</code> is specified, the task and service count is included, separated by launch type.
      * </p>
      * <p>
@@ -206,6 +218,9 @@ public class DescribeClustersRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <p>
      *        If <code>SETTINGS</code> is specified, the settings for the cluster are included.
+     *        </p>
+     *        <p>
+     *        If <code>CONFIGURATIONS</code> is specified, the configuration for the cluster is included.
      *        </p>
      *        <p>
      *        If <code>STATISTICS</code> is specified, the task and service count is included, separated by launch type.
@@ -237,6 +252,9 @@ public class DescribeClustersRequest extends com.amazonaws.AmazonWebServiceReque
      * If <code>SETTINGS</code> is specified, the settings for the cluster are included.
      * </p>
      * <p>
+     * If <code>CONFIGURATIONS</code> is specified, the configuration for the cluster is included.
+     * </p>
+     * <p>
      * If <code>STATISTICS</code> is specified, the task and service count is included, separated by launch type.
      * </p>
      * <p>
@@ -257,6 +275,9 @@ public class DescribeClustersRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <p>
      *        If <code>SETTINGS</code> is specified, the settings for the cluster are included.
+     *        </p>
+     *        <p>
+     *        If <code>CONFIGURATIONS</code> is specified, the configuration for the cluster is included.
      *        </p>
      *        <p>
      *        If <code>STATISTICS</code> is specified, the task and service count is included, separated by launch type.
@@ -290,6 +311,9 @@ public class DescribeClustersRequest extends com.amazonaws.AmazonWebServiceReque
      * If <code>SETTINGS</code> is specified, the settings for the cluster are included.
      * </p>
      * <p>
+     * If <code>CONFIGURATIONS</code> is specified, the configuration for the cluster is included.
+     * </p>
+     * <p>
      * If <code>STATISTICS</code> is specified, the task and service count is included, separated by launch type.
      * </p>
      * <p>
@@ -305,6 +329,9 @@ public class DescribeClustersRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <p>
      *        If <code>SETTINGS</code> is specified, the settings for the cluster are included.
+     *        </p>
+     *        <p>
+     *        If <code>CONFIGURATIONS</code> is specified, the configuration for the cluster is included.
      *        </p>
      *        <p>
      *        If <code>STATISTICS</code> is specified, the task and service count is included, separated by launch type.
@@ -333,6 +360,9 @@ public class DescribeClustersRequest extends com.amazonaws.AmazonWebServiceReque
      * If <code>SETTINGS</code> is specified, the settings for the cluster are included.
      * </p>
      * <p>
+     * If <code>CONFIGURATIONS</code> is specified, the configuration for the cluster is included.
+     * </p>
+     * <p>
      * If <code>STATISTICS</code> is specified, the task and service count is included, separated by launch type.
      * </p>
      * <p>
@@ -348,6 +378,9 @@ public class DescribeClustersRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <p>
      *        If <code>SETTINGS</code> is specified, the settings for the cluster are included.
+     *        </p>
+     *        <p>
+     *        If <code>CONFIGURATIONS</code> is specified, the configuration for the cluster is included.
      *        </p>
      *        <p>
      *        If <code>STATISTICS</code> is specified, the task and service count is included, separated by launch type.

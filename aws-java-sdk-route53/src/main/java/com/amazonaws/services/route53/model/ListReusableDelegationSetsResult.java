@@ -18,7 +18,7 @@ import javax.annotation.Generated;
 /**
  * <p>
  * A complex type that contains information about the reusable delegation sets that are associated with the current
- * account.
+ * Amazon Web Services account.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListReusableDelegationSets" target="_top">AWS
@@ -30,7 +30,7 @@ public class ListReusableDelegationSetsResult extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * A complex type that contains one <code>DelegationSet</code> element for each reusable delegation set that was
-     * created by the current account.
+     * created by the current Amazon Web Services account.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<DelegationSet> delegationSets;
@@ -67,11 +67,11 @@ public class ListReusableDelegationSetsResult extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * A complex type that contains one <code>DelegationSet</code> element for each reusable delegation set that was
-     * created by the current account.
+     * created by the current Amazon Web Services account.
      * </p>
      * 
      * @return A complex type that contains one <code>DelegationSet</code> element for each reusable delegation set that
-     *         was created by the current account.
+     *         was created by the current Amazon Web Services account.
      */
 
     public java.util.List<DelegationSet> getDelegationSets() {
@@ -84,12 +84,12 @@ public class ListReusableDelegationSetsResult extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * A complex type that contains one <code>DelegationSet</code> element for each reusable delegation set that was
-     * created by the current account.
+     * created by the current Amazon Web Services account.
      * </p>
      * 
      * @param delegationSets
      *        A complex type that contains one <code>DelegationSet</code> element for each reusable delegation set that
-     *        was created by the current account.
+     *        was created by the current Amazon Web Services account.
      */
 
     public void setDelegationSets(java.util.Collection<DelegationSet> delegationSets) {
@@ -104,7 +104,7 @@ public class ListReusableDelegationSetsResult extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * A complex type that contains one <code>DelegationSet</code> element for each reusable delegation set that was
-     * created by the current account.
+     * created by the current Amazon Web Services account.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -114,7 +114,7 @@ public class ListReusableDelegationSetsResult extends com.amazonaws.AmazonWebSer
      * 
      * @param delegationSets
      *        A complex type that contains one <code>DelegationSet</code> element for each reusable delegation set that
-     *        was created by the current account.
+     *        was created by the current Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -131,12 +131,12 @@ public class ListReusableDelegationSetsResult extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * A complex type that contains one <code>DelegationSet</code> element for each reusable delegation set that was
-     * created by the current account.
+     * created by the current Amazon Web Services account.
      * </p>
      * 
      * @param delegationSets
      *        A complex type that contains one <code>DelegationSet</code> element for each reusable delegation set that
-     *        was created by the current account.
+     *        was created by the current Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -18,7 +18,7 @@ import javax.annotation.Generated;
 /**
  * <p>
  * A complex type that contains information about the latest version of one traffic policy that is associated with the
- * current account.
+ * current Amazon Web Services account.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/TrafficPolicySummary" target="_top">AWS API
@@ -54,7 +54,7 @@ public class TrafficPolicySummary implements Serializable, Cloneable {
     private Integer latestVersion;
     /**
      * <p>
-     * The number of traffic policies that are associated with the current account.
+     * The number of traffic policies that are associated with the current Amazon Web Services account.
      * </p>
      */
     private Integer trafficPolicyCount;
@@ -264,11 +264,11 @@ public class TrafficPolicySummary implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The number of traffic policies that are associated with the current account.
+     * The number of traffic policies that are associated with the current Amazon Web Services account.
      * </p>
      * 
      * @param trafficPolicyCount
-     *        The number of traffic policies that are associated with the current account.
+     *        The number of traffic policies that are associated with the current Amazon Web Services account.
      */
 
     public void setTrafficPolicyCount(Integer trafficPolicyCount) {
@@ -277,10 +277,10 @@ public class TrafficPolicySummary implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The number of traffic policies that are associated with the current account.
+     * The number of traffic policies that are associated with the current Amazon Web Services account.
      * </p>
      * 
-     * @return The number of traffic policies that are associated with the current account.
+     * @return The number of traffic policies that are associated with the current Amazon Web Services account.
      */
 
     public Integer getTrafficPolicyCount() {
@@ -289,11 +289,11 @@ public class TrafficPolicySummary implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The number of traffic policies that are associated with the current account.
+     * The number of traffic policies that are associated with the current Amazon Web Services account.
      * </p>
      * 
      * @param trafficPolicyCount
-     *        The number of traffic policies that are associated with the current account.
+     *        The number of traffic policies that are associated with the current Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

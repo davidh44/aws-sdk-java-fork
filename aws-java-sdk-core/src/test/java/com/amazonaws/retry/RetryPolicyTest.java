@@ -15,6 +15,8 @@
 package com.amazonaws.retry;
 
 import static com.amazonaws.SDKGlobalConfiguration.AWS_RETRY_MODE_SYSTEM_PROPERTY;
+import static com.amazonaws.retry.PredefinedBackoffStrategies.STANDARD_BACKOFF_STRATEGY;
+import static com.amazonaws.retry.PredefinedRetryPolicies.DEFAULT_BACKOFF_STRATEGY;
 import static org.hamcrest.CoreMatchers.sameInstance;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
@@ -22,7 +24,6 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 
-import org.hamcrest.CoreMatchers;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -56,6 +57,40 @@ public class RetryPolicyTest {
 
         assertEquals(RetryMode.LEGACY, retryPolicy.getRetryMode());
     }
+
+    @Test
+    public void honorBackoffStrategyInRetryModeTrue_standardMode_shouldHonor() {
+        RetryPolicy retryPolicy = honorBackoffStrategyTrue(RetryMode.STANDARD);
+        assertEquals(STANDARD_BACKOFF_STRATEGY, retryPolicy.getBackoffStrategy());
+    }
+
+    @Test
+    public void honorBackoffStrategyInRetryModeTrue_adaptiveMode_shouldHonor() {
+        RetryPolicy retryPolicy = honorBackoffStrategyTrue(RetryMode.ADAPTIVE);
+        assertEquals(STANDARD_BACKOFF_STRATEGY, retryPolicy.getBackoffStrategy());
+    }
+
+    @Test
+    public void honorBackoffStrategyInRetryModeTrue_legacyMode_shouldHonor() {
+        RetryPolicy retryPolicy = honorBackoffStrategyTrue(RetryMode.LEGACY);
+        assertEquals(DEFAULT_BACKOFF_STRATEGY, retryPolicy.getBackoffStrategy());
+    }
+
+    @Test
+    public void honorBackoffStrategyInRetryModeFalse_standard_shouldUseTheProvidedOne() {
+        verifyProvidedBackoffStrategy(RetryMode.STANDARD);
+    }
+
+    @Test
+    public void honorBackoffStrategyInRetryModeFalse_adaptive_shouldUseTheProvidedOne() {
+        verifyProvidedBackoffStrategy(RetryMode.ADAPTIVE);
+    }
+
+    @Test
+    public void honorBackoffStrategyInRetryModeFalse_legacy_shouldUseTheProvidedOne() {
+        verifyProvidedBackoffStrategy(RetryMode.LEGACY);
+    }
+
 
     @Test
     public void fastFailRateLimiting_defaultToFalse() {
@@ -99,5 +134,25 @@ public class RetryPolicyTest {
         assertTrue(retryPolicy.isMaxErrorRetryInClientConfigHonored());
         assertTrue(retryPolicy.isDefaultMaxErrorRetryInRetryModeHonored());
         assertEquals(RetryMode.ADAPTIVE, retryPolicy.getRetryMode());
+    }
+
+    private RetryPolicy honorBackoffStrategyTrue(RetryMode retryMode) {
+        RetryPolicy defaultPolicies = PredefinedRetryPolicies.getDefaultRetryPolicy();
+        return RetryPolicy.builder()
+                          .withRetryMode(retryMode)
+                          .withBackoffStrategy(defaultPolicies.getBackoffStrategy())
+                          .withHonorDefaultBackoffStrategyInRetryMode(true)
+                          .build();
+    }
+
+    private void verifyProvidedBackoffStrategy(RetryMode retryMode) {
+        RetryPolicy defaultPolicies = PredefinedRetryPolicies.getDefaultRetryPolicy();
+        RetryPolicy retryPolicy = RetryPolicy.builder()
+                                             .withRetryMode(retryMode)
+                                             .withBackoffStrategy(defaultPolicies.getBackoffStrategy())
+                                             .withHonorDefaultBackoffStrategyInRetryMode(false)
+                                             .build();
+
+        assertEquals(defaultPolicies.getBackoffStrategy(), retryPolicy.getBackoffStrategy());
     }
 }

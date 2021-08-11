@@ -45,6 +45,12 @@ public class StreamingSessionStream implements Serializable, Cloneable, Structur
     private java.util.Date expiresAt;
     /**
      * <p>
+     * The user ID of the user that owns the streaming session.
+     * </p>
+     */
+    private String ownedBy;
+    /**
+     * <p>
      * The current state.
      * </p>
      */
@@ -185,6 +191,46 @@ public class StreamingSessionStream implements Serializable, Cloneable, Structur
 
     public StreamingSessionStream withExpiresAt(java.util.Date expiresAt) {
         setExpiresAt(expiresAt);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The user ID of the user that owns the streaming session.
+     * </p>
+     * 
+     * @param ownedBy
+     *        The user ID of the user that owns the streaming session.
+     */
+
+    public void setOwnedBy(String ownedBy) {
+        this.ownedBy = ownedBy;
+    }
+
+    /**
+     * <p>
+     * The user ID of the user that owns the streaming session.
+     * </p>
+     * 
+     * @return The user ID of the user that owns the streaming session.
+     */
+
+    public String getOwnedBy() {
+        return this.ownedBy;
+    }
+
+    /**
+     * <p>
+     * The user ID of the user that owns the streaming session.
+     * </p>
+     * 
+     * @param ownedBy
+     *        The user ID of the user that owns the streaming session.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StreamingSessionStream withOwnedBy(String ownedBy) {
+        setOwnedBy(ownedBy);
         return this;
     }
 
@@ -404,6 +450,8 @@ public class StreamingSessionStream implements Serializable, Cloneable, Structur
             sb.append("CreatedBy: ").append(getCreatedBy()).append(",");
         if (getExpiresAt() != null)
             sb.append("ExpiresAt: ").append(getExpiresAt()).append(",");
+        if (getOwnedBy() != null)
+            sb.append("OwnedBy: ").append(getOwnedBy()).append(",");
         if (getState() != null)
             sb.append("State: ").append(getState()).append(",");
         if (getStatusCode() != null)
@@ -438,6 +486,10 @@ public class StreamingSessionStream implements Serializable, Cloneable, Structur
             return false;
         if (other.getExpiresAt() != null && other.getExpiresAt().equals(this.getExpiresAt()) == false)
             return false;
+        if (other.getOwnedBy() == null ^ this.getOwnedBy() == null)
+            return false;
+        if (other.getOwnedBy() != null && other.getOwnedBy().equals(this.getOwnedBy()) == false)
+            return false;
         if (other.getState() == null ^ this.getState() == null)
             return false;
         if (other.getState() != null && other.getState().equals(this.getState()) == false)
@@ -465,6 +517,7 @@ public class StreamingSessionStream implements Serializable, Cloneable, Structur
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getCreatedBy() == null) ? 0 : getCreatedBy().hashCode());
         hashCode = prime * hashCode + ((getExpiresAt() == null) ? 0 : getExpiresAt().hashCode());
+        hashCode = prime * hashCode + ((getOwnedBy() == null) ? 0 : getOwnedBy().hashCode());
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
         hashCode = prime * hashCode + ((getStatusCode() == null) ? 0 : getStatusCode().hashCode());
         hashCode = prime * hashCode + ((getStreamId() == null) ? 0 : getStreamId().hashCode());

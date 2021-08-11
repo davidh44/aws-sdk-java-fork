@@ -103,11 +103,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -164,11 +164,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -225,11 +225,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -286,11 +286,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -347,11 +347,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -397,7 +397,7 @@
       "asyncReturnType" : "CreateStudioResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Create a new Studio.</p> <p>When creating a Studio, two IAM roles must be provided: the admin role and the user Role. These roles are assumed by your users when they log in to the Nimble Studio portal.</p> <p>The user role must have the AmazonNimbleStudio-StudioUser managed policy attached for the portal to function properly.</p> <p>The Admin Role must have the AmazonNimbleStudio-StudioAdmin managed policy attached for the portal to function properly.</p> <p>You may optionally specify a KMS key in the StudioEncryptionConfiguration.</p> <p>In Nimble Studio, resource names, descriptions, initialization scripts, and other data you provide are always encrypted at rest using an AWS KMS key. By default, this key is owned by AWS and managed on your behalf. You may provide your own AWS KMS key when calling CreateStudio to encrypt this data using a key you own and manage.</p> <p>When providing an AWS KMS key during studio creation, Nimble Studio creates KMS grants in your account to provide your studio user and admin roles access to these KMS keys.</p> <p>If you delete this grant, the studio will no longer be accessible to your portal users.</p> <p>If you delete the studio KMS key, your studio will no longer be accessible.</p>",
+      "documentation" : "<p>Create a new Studio.</p> <p>When creating a Studio, two IAM roles must be provided: the admin role and the user Role. These roles are assumed by your users when they log in to the Nimble Studio portal.</p> <p>The user role must have the AmazonNimbleStudio-StudioUser managed policy attached for the portal to function properly.</p> <p>The Admin Role must have the AmazonNimbleStudio-StudioAdmin managed policy attached for the portal to function properly.</p> <p>You may optionally specify a KMS key in the StudioEncryptionConfiguration.</p> <p>In Nimble Studio, resource names, descriptions, initialization scripts, and other data you provide are always encrypted at rest using an KMS key. By default, this key is owned by Amazon Web Services and managed on your behalf. You may provide your own KMS key when calling CreateStudio to encrypt this data using a key you own and manage.</p> <p>When providing an KMS key during studio creation, Nimble Studio creates KMS grants in your account to provide your studio user and admin roles access to these KMS keys.</p> <p>If you delete this grant, the studio will no longer be accessible to your portal users.</p> <p>If you delete the studio KMS key, your studio will no longer be accessible.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -408,11 +408,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -469,11 +469,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -530,11 +530,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -591,11 +591,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -652,11 +652,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -713,11 +713,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -774,11 +774,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -835,11 +835,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -896,11 +896,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -957,11 +957,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -1018,11 +1018,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -1079,11 +1079,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -1140,11 +1140,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -1201,11 +1201,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -1262,11 +1262,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -1323,11 +1323,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -1384,11 +1384,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -1445,11 +1445,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -1506,11 +1506,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -1567,11 +1567,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -1628,11 +1628,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -1689,11 +1689,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -1750,11 +1750,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -1811,11 +1811,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -1861,7 +1861,7 @@
       "asyncReturnType" : "ListStreamingImagesResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>List the streaming image resources available to this studio.</p> <p>This list will contain both images provided by AWS, as well as streaming images that you have created in your studio.</p>",
+      "documentation" : "<p>List the streaming image resources available to this studio.</p> <p>This list will contain both images provided by Amazon Web Services, as well as streaming images that you have created in your studio.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -1872,11 +1872,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -1933,11 +1933,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -1994,11 +1994,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -2055,11 +2055,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -2105,7 +2105,7 @@
       "asyncReturnType" : "ListStudiosResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>List studios in your AWS account in the requested AWS Region.</p>",
+      "documentation" : "<p>List studios in your Amazon Web Services account in the requested Amazon Web Services Region.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -2116,11 +2116,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -2177,11 +2177,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -2238,11 +2238,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -2299,11 +2299,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -2349,7 +2349,7 @@
       "asyncReturnType" : "StartStudioSSOConfigurationRepairResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Repairs the SSO configuration for a given studio.</p> <p>If the studio has a valid AWS SSO configuration currently associated with it, this operation will fail with a validation error.</p> <p>If the studio does not have a valid AWS SSO configuration currently associated with it, then a new AWS SSO application is created for the studio and the studio is changed to the READY state.</p> <p>After the AWS SSO application is repaired, you must use the Amazon Nimble Studio console to add administrators and users to your studio.</p>",
+      "documentation" : "<p>Repairs the SSO configuration for a given studio.</p> <p>If the studio has a valid Amazon Web Services SSO configuration currently associated with it, this operation will fail with a validation error.</p> <p>If the studio does not have a valid Amazon Web Services SSO configuration currently associated with it, then a new Amazon Web Services SSO application is created for the studio and the studio is changed to the READY state.</p> <p>After the Amazon Web Services SSO application is repaired, you must use the Amazon Nimble Studio console to add administrators and users to your studio.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -2360,11 +2360,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -2421,11 +2421,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -2482,11 +2482,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -2543,11 +2543,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -2604,11 +2604,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -2665,11 +2665,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -2726,11 +2726,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -2787,11 +2787,11 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
-        "documentation" : "<p>A service fault has occurred. Please retry your request and contact AWS support if this error continues.</p>",
+        "documentation" : "<p>A service fault has occurred. Please retry your request and contact Amazon Web Services Support if this error continues.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the AWS Service Quotas console to request an increase.</p>",
+        "documentation" : "<p>This request would cause a service quota to be exceeded. Please use the Amazon Web Services Service Quotas console to request an increase.</p>",
         "httpStatusCode" : 402
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -4806,12 +4806,12 @@
         "c2jName" : "directoryId",
         "c2jShape" : "DirectoryId",
         "deprecated" : false,
-        "documentation" : "<p>The directory ID of the AWS Directory Service for Microsoft AD to access using this studio component.</p>",
+        "documentation" : "<p>The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>The directory ID of the AWS Directory Service for Microsoft AD to access using this studio component.</p>\n@param directoryId The directory ID of the AWS Directory Service for Microsoft AD to access using this studio component.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.</p>\n@param directoryId The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withDirectoryId",
-        "getterDocumentation" : "/**<p>The directory ID of the AWS Directory Service for Microsoft AD to access using this studio component.</p>\n@return The directory ID of the AWS Directory Service for Microsoft AD to access using this studio component.*/",
+        "getterDocumentation" : "/**<p>The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.</p>\n@return The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.*/",
         "getterMethodName" : "getDirectoryId",
         "getterModel" : {
           "returnType" : "String",
@@ -4845,7 +4845,7 @@
         "marshallingType" : "STRING",
         "name" : "DirectoryId",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The directory ID of the AWS Directory Service for Microsoft AD to access using this studio component.</p>\n@param directoryId The directory ID of the AWS Directory Service for Microsoft AD to access using this studio component.*/",
+        "setterDocumentation" : "/**<p>The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.</p>\n@param directoryId The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.*/",
         "setterMethodName" : "setDirectoryId",
         "setterModel" : {
           "timestampFormat" : null,
@@ -4860,13 +4860,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The directory ID of the AWS Directory Service for Microsoft AD to access using this studio component.</p>\n@param directoryId The directory ID of the AWS Directory Service for Microsoft AD to access using this studio component.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.</p>\n@param directoryId The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "directoryId",
           "variableType" : "String",
-          "documentation" : "<p>The directory ID of the AWS Directory Service for Microsoft AD to access using this studio component.</p>",
+          "documentation" : "<p>The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -5100,12 +5100,12 @@
           "c2jName" : "directoryId",
           "c2jShape" : "DirectoryId",
           "deprecated" : false,
-          "documentation" : "<p>The directory ID of the AWS Directory Service for Microsoft AD to access using this studio component.</p>",
+          "documentation" : "<p>The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>The directory ID of the AWS Directory Service for Microsoft AD to access using this studio component.</p>\n@param directoryId The directory ID of the AWS Directory Service for Microsoft AD to access using this studio component.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.</p>\n@param directoryId The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withDirectoryId",
-          "getterDocumentation" : "/**<p>The directory ID of the AWS Directory Service for Microsoft AD to access using this studio component.</p>\n@return The directory ID of the AWS Directory Service for Microsoft AD to access using this studio component.*/",
+          "getterDocumentation" : "/**<p>The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.</p>\n@return The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.*/",
           "getterMethodName" : "getDirectoryId",
           "getterModel" : {
             "returnType" : "String",
@@ -5139,7 +5139,7 @@
           "marshallingType" : "STRING",
           "name" : "DirectoryId",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The directory ID of the AWS Directory Service for Microsoft AD to access using this studio component.</p>\n@param directoryId The directory ID of the AWS Directory Service for Microsoft AD to access using this studio component.*/",
+          "setterDocumentation" : "/**<p>The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.</p>\n@param directoryId The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.*/",
           "setterMethodName" : "setDirectoryId",
           "setterModel" : {
             "timestampFormat" : null,
@@ -5154,13 +5154,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The directory ID of the AWS Directory Service for Microsoft AD to access using this studio component.</p>\n@param directoryId The directory ID of the AWS Directory Service for Microsoft AD to access using this studio component.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.</p>\n@param directoryId The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "directoryId",
             "variableType" : "String",
-            "documentation" : "<p>The directory ID of the AWS Directory Service for Microsoft AD to access using this studio component.</p>",
+            "documentation" : "<p>The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -9696,6 +9696,75 @@
         },
         "xmlNameSpaceUri" : null
       }, {
+        "c2jName" : "ownedBy",
+        "c2jShape" : "__string",
+        "deprecated" : false,
+        "documentation" : "<p>The user ID of the user that owns the streaming session.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@param ownedBy The user ID of the user that owns the streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withOwnedBy",
+        "getterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@return The user ID of the user that owns the streaming session.*/",
+        "getterMethodName" : "getOwnedBy",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "ownedBy",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "ownedBy",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "OwnedBy",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@param ownedBy The user ID of the user that owns the streaming session.*/",
+        "setterMethodName" : "setOwnedBy",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "ownedBy",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@param ownedBy The user ID of the user that owns the streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "ownedBy",
+          "variableType" : "String",
+          "documentation" : "<p>The user ID of the user that owns the streaming session.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
+      }, {
         "c2jName" : "streamingImageId",
         "c2jShape" : "StreamingImageId",
         "deprecated" : false,
@@ -10193,6 +10262,76 @@
             "variableName" : "launchProfileId",
             "variableType" : "String",
             "documentation" : "<p>The launch profile ID.</p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        },
+        "OwnedBy" : {
+          "c2jName" : "ownedBy",
+          "c2jShape" : "__string",
+          "deprecated" : false,
+          "documentation" : "<p>The user ID of the user that owns the streaming session.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@param ownedBy The user ID of the user that owns the streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withOwnedBy",
+          "getterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@return The user ID of the user that owns the streaming session.*/",
+          "getterMethodName" : "getOwnedBy",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "ownedBy",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "ownedBy",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "OwnedBy",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@param ownedBy The user ID of the user that owns the streaming session.*/",
+          "setterMethodName" : "setOwnedBy",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "ownedBy",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@param ownedBy The user ID of the user that owns the streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "ownedBy",
+            "variableType" : "String",
+            "documentation" : "<p>The user ID of the user that owns the streaming session.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -33269,12 +33408,12 @@
         "c2jName" : "directoryId",
         "c2jShape" : "DirectoryId",
         "deprecated" : false,
-        "documentation" : "<p>The directory ID of the AWS Directory Service for Microsoft AD to access using this launch profile.</p>",
+        "documentation" : "<p>The directory ID of the Directory Service for Microsoft Active Directory to access using this launch profile.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>The directory ID of the AWS Directory Service for Microsoft AD to access using this launch profile.</p>\n@param directoryId The directory ID of the AWS Directory Service for Microsoft AD to access using this launch profile.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>The directory ID of the Directory Service for Microsoft Active Directory to access using this launch profile.</p>\n@param directoryId The directory ID of the Directory Service for Microsoft Active Directory to access using this launch profile.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withDirectoryId",
-        "getterDocumentation" : "/**<p>The directory ID of the AWS Directory Service for Microsoft AD to access using this launch profile.</p>\n@return The directory ID of the AWS Directory Service for Microsoft AD to access using this launch profile.*/",
+        "getterDocumentation" : "/**<p>The directory ID of the Directory Service for Microsoft Active Directory to access using this launch profile.</p>\n@return The directory ID of the Directory Service for Microsoft Active Directory to access using this launch profile.*/",
         "getterMethodName" : "getDirectoryId",
         "getterModel" : {
           "returnType" : "String",
@@ -33308,7 +33447,7 @@
         "marshallingType" : "STRING",
         "name" : "DirectoryId",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The directory ID of the AWS Directory Service for Microsoft AD to access using this launch profile.</p>\n@param directoryId The directory ID of the AWS Directory Service for Microsoft AD to access using this launch profile.*/",
+        "setterDocumentation" : "/**<p>The directory ID of the Directory Service for Microsoft Active Directory to access using this launch profile.</p>\n@param directoryId The directory ID of the Directory Service for Microsoft Active Directory to access using this launch profile.*/",
         "setterMethodName" : "setDirectoryId",
         "setterModel" : {
           "timestampFormat" : null,
@@ -33323,13 +33462,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The directory ID of the AWS Directory Service for Microsoft AD to access using this launch profile.</p>\n@param directoryId The directory ID of the AWS Directory Service for Microsoft AD to access using this launch profile.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The directory ID of the Directory Service for Microsoft Active Directory to access using this launch profile.</p>\n@param directoryId The directory ID of the Directory Service for Microsoft Active Directory to access using this launch profile.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "directoryId",
           "variableType" : "String",
-          "documentation" : "<p>The directory ID of the AWS Directory Service for Microsoft AD to access using this launch profile.</p>",
+          "documentation" : "<p>The directory ID of the Directory Service for Microsoft Active Directory to access using this launch profile.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -33923,12 +34062,12 @@
           "c2jName" : "directoryId",
           "c2jShape" : "DirectoryId",
           "deprecated" : false,
-          "documentation" : "<p>The directory ID of the AWS Directory Service for Microsoft AD to access using this launch profile.</p>",
+          "documentation" : "<p>The directory ID of the Directory Service for Microsoft Active Directory to access using this launch profile.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>The directory ID of the AWS Directory Service for Microsoft AD to access using this launch profile.</p>\n@param directoryId The directory ID of the AWS Directory Service for Microsoft AD to access using this launch profile.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>The directory ID of the Directory Service for Microsoft Active Directory to access using this launch profile.</p>\n@param directoryId The directory ID of the Directory Service for Microsoft Active Directory to access using this launch profile.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withDirectoryId",
-          "getterDocumentation" : "/**<p>The directory ID of the AWS Directory Service for Microsoft AD to access using this launch profile.</p>\n@return The directory ID of the AWS Directory Service for Microsoft AD to access using this launch profile.*/",
+          "getterDocumentation" : "/**<p>The directory ID of the Directory Service for Microsoft Active Directory to access using this launch profile.</p>\n@return The directory ID of the Directory Service for Microsoft Active Directory to access using this launch profile.*/",
           "getterMethodName" : "getDirectoryId",
           "getterModel" : {
             "returnType" : "String",
@@ -33962,7 +34101,7 @@
           "marshallingType" : "STRING",
           "name" : "DirectoryId",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The directory ID of the AWS Directory Service for Microsoft AD to access using this launch profile.</p>\n@param directoryId The directory ID of the AWS Directory Service for Microsoft AD to access using this launch profile.*/",
+          "setterDocumentation" : "/**<p>The directory ID of the Directory Service for Microsoft Active Directory to access using this launch profile.</p>\n@param directoryId The directory ID of the Directory Service for Microsoft Active Directory to access using this launch profile.*/",
           "setterMethodName" : "setDirectoryId",
           "setterModel" : {
             "timestampFormat" : null,
@@ -33977,13 +34116,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The directory ID of the AWS Directory Service for Microsoft AD to access using this launch profile.</p>\n@param directoryId The directory ID of the AWS Directory Service for Microsoft AD to access using this launch profile.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>The directory ID of the Directory Service for Microsoft Active Directory to access using this launch profile.</p>\n@param directoryId The directory ID of the Directory Service for Microsoft Active Directory to access using this launch profile.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "directoryId",
             "variableType" : "String",
-            "documentation" : "<p>The directory ID of the AWS Directory Service for Microsoft AD to access using this launch profile.</p>",
+            "documentation" : "<p>The directory ID of the Directory Service for Microsoft Active Directory to access using this launch profile.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -41400,12 +41539,12 @@
         "c2jName" : "createdBy",
         "c2jShape" : "__string",
         "deprecated" : false,
-        "documentation" : "<p>The user ID.</p>",
+        "documentation" : "<p>The user ID of the user that created the streaming session.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>The user ID.</p>\n@param createdBy The user ID.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>The user ID of the user that created the streaming session.</p>\n@param createdBy The user ID of the user that created the streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withCreatedBy",
-        "getterDocumentation" : "/**<p>The user ID.</p>\n@return The user ID.*/",
+        "getterDocumentation" : "/**<p>The user ID of the user that created the streaming session.</p>\n@return The user ID of the user that created the streaming session.*/",
         "getterMethodName" : "getCreatedBy",
         "getterModel" : {
           "returnType" : "String",
@@ -41439,7 +41578,7 @@
         "marshallingType" : "STRING",
         "name" : "CreatedBy",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The user ID.</p>\n@param createdBy The user ID.*/",
+        "setterDocumentation" : "/**<p>The user ID of the user that created the streaming session.</p>\n@param createdBy The user ID of the user that created the streaming session.*/",
         "setterMethodName" : "setCreatedBy",
         "setterModel" : {
           "timestampFormat" : null,
@@ -41454,13 +41593,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The user ID.</p>\n@param createdBy The user ID.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The user ID of the user that created the streaming session.</p>\n@param createdBy The user ID of the user that created the streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "createdBy",
           "variableType" : "String",
-          "documentation" : "<p>The user ID.</p>",
+          "documentation" : "<p>The user ID of the user that created the streaming session.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -41530,6 +41669,75 @@
           "variableName" : "nextToken",
           "variableType" : "String",
           "documentation" : "<p>The token for the next set of results, or null if there are no more results.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
+      }, {
+        "c2jName" : "ownedBy",
+        "c2jShape" : "__string",
+        "deprecated" : false,
+        "documentation" : "<p>The user ID of the user that owns the streaming session.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@param ownedBy The user ID of the user that owns the streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withOwnedBy",
+        "getterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@return The user ID of the user that owns the streaming session.*/",
+        "getterMethodName" : "getOwnedBy",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : "querystring",
+          "marshallLocation" : "QUERY_PARAM",
+          "marshallLocationName" : "ownedBy",
+          "queryString" : true,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "ownedBy",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "OwnedBy",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@param ownedBy The user ID of the user that owns the streaming session.*/",
+        "setterMethodName" : "setOwnedBy",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "ownedBy",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@param ownedBy The user ID of the user that owns the streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "ownedBy",
+          "variableType" : "String",
+          "documentation" : "<p>The user ID of the user that owns the streaming session.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -41678,12 +41886,12 @@
           "c2jName" : "createdBy",
           "c2jShape" : "__string",
           "deprecated" : false,
-          "documentation" : "<p>The user ID.</p>",
+          "documentation" : "<p>The user ID of the user that created the streaming session.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>The user ID.</p>\n@param createdBy The user ID.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>The user ID of the user that created the streaming session.</p>\n@param createdBy The user ID of the user that created the streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withCreatedBy",
-          "getterDocumentation" : "/**<p>The user ID.</p>\n@return The user ID.*/",
+          "getterDocumentation" : "/**<p>The user ID of the user that created the streaming session.</p>\n@return The user ID of the user that created the streaming session.*/",
           "getterMethodName" : "getCreatedBy",
           "getterModel" : {
             "returnType" : "String",
@@ -41717,7 +41925,7 @@
           "marshallingType" : "STRING",
           "name" : "CreatedBy",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The user ID.</p>\n@param createdBy The user ID.*/",
+          "setterDocumentation" : "/**<p>The user ID of the user that created the streaming session.</p>\n@param createdBy The user ID of the user that created the streaming session.*/",
           "setterMethodName" : "setCreatedBy",
           "setterModel" : {
             "timestampFormat" : null,
@@ -41732,13 +41940,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The user ID.</p>\n@param createdBy The user ID.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>The user ID of the user that created the streaming session.</p>\n@param createdBy The user ID of the user that created the streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "createdBy",
             "variableType" : "String",
-            "documentation" : "<p>The user ID.</p>",
+            "documentation" : "<p>The user ID of the user that created the streaming session.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -41809,6 +42017,76 @@
             "variableName" : "nextToken",
             "variableType" : "String",
             "documentation" : "<p>The token for the next set of results, or null if there are no more results.</p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        },
+        "OwnedBy" : {
+          "c2jName" : "ownedBy",
+          "c2jShape" : "__string",
+          "deprecated" : false,
+          "documentation" : "<p>The user ID of the user that owns the streaming session.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@param ownedBy The user ID of the user that owns the streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withOwnedBy",
+          "getterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@return The user ID of the user that owns the streaming session.*/",
+          "getterMethodName" : "getOwnedBy",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : "querystring",
+            "marshallLocation" : "QUERY_PARAM",
+            "marshallLocationName" : "ownedBy",
+            "queryString" : true,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "ownedBy",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "OwnedBy",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@param ownedBy The user ID of the user that owns the streaming session.*/",
+          "setterMethodName" : "setOwnedBy",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "ownedBy",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@param ownedBy The user ID of the user that owns the streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "ownedBy",
+            "variableType" : "String",
+            "documentation" : "<p>The user ID of the user that owns the streaming session.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -56221,8 +56499,77 @@
         },
         "xmlNameSpaceUri" : null
       }, {
+        "c2jName" : "ownedBy",
+        "c2jShape" : "__string",
+        "deprecated" : false,
+        "documentation" : "<p>The user ID of the user that owns the streaming session.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@param ownedBy The user ID of the user that owns the streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withOwnedBy",
+        "getterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@return The user ID of the user that owns the streaming session.*/",
+        "getterMethodName" : "getOwnedBy",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "ownedBy",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "ownedBy",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "OwnedBy",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@param ownedBy The user ID of the user that owns the streaming session.*/",
+        "setterMethodName" : "setOwnedBy",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "ownedBy",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@param ownedBy The user ID of the user that owns the streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "ownedBy",
+          "variableType" : "String",
+          "documentation" : "<p>The user ID of the user that owns the streaming session.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
+      }, {
         "c2jName" : "sessionId",
-        "c2jShape" : "StreamingImageSessionId",
+        "c2jShape" : "StreamingSessionId",
         "deprecated" : false,
         "documentation" : "<p>The session ID.</p>",
         "endpointDiscoveryId" : false,
@@ -57277,9 +57624,79 @@
           },
           "xmlNameSpaceUri" : null
         },
+        "OwnedBy" : {
+          "c2jName" : "ownedBy",
+          "c2jShape" : "__string",
+          "deprecated" : false,
+          "documentation" : "<p>The user ID of the user that owns the streaming session.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@param ownedBy The user ID of the user that owns the streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withOwnedBy",
+          "getterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@return The user ID of the user that owns the streaming session.*/",
+          "getterMethodName" : "getOwnedBy",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "ownedBy",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "ownedBy",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "OwnedBy",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@param ownedBy The user ID of the user that owns the streaming session.*/",
+          "setterMethodName" : "setOwnedBy",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "ownedBy",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@param ownedBy The user ID of the user that owns the streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "ownedBy",
+            "variableType" : "String",
+            "documentation" : "<p>The user ID of the user that owns the streaming session.</p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        },
         "SessionId" : {
           "c2jName" : "sessionId",
-          "c2jShape" : "StreamingImageSessionId",
+          "c2jShape" : "StreamingSessionId",
           "deprecated" : false,
           "documentation" : "<p>The session ID.</p>",
           "endpointDiscoveryId" : false,
@@ -58381,6 +58798,75 @@
         },
         "xmlNameSpaceUri" : null
       }, {
+        "c2jName" : "ownedBy",
+        "c2jShape" : "__string",
+        "deprecated" : false,
+        "documentation" : "<p>The user ID of the user that owns the streaming session.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@param ownedBy The user ID of the user that owns the streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withOwnedBy",
+        "getterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@return The user ID of the user that owns the streaming session.*/",
+        "getterMethodName" : "getOwnedBy",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "ownedBy",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "ownedBy",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "OwnedBy",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@param ownedBy The user ID of the user that owns the streaming session.*/",
+        "setterMethodName" : "setOwnedBy",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "ownedBy",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@param ownedBy The user ID of the user that owns the streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "ownedBy",
+          "variableType" : "String",
+          "documentation" : "<p>The user ID of the user that owns the streaming session.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
+      }, {
         "c2jName" : "state",
         "c2jShape" : "StreamingSessionStreamState",
         "deprecated" : false,
@@ -58865,6 +59351,76 @@
             "documentation" : "<p>The Unix epoch timestamp in seconds for when the resource expires.</p>",
             "simpleType" : "Date",
             "variableSetterType" : "java.util.Date"
+          },
+          "xmlNameSpaceUri" : null
+        },
+        "OwnedBy" : {
+          "c2jName" : "ownedBy",
+          "c2jShape" : "__string",
+          "deprecated" : false,
+          "documentation" : "<p>The user ID of the user that owns the streaming session.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@param ownedBy The user ID of the user that owns the streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withOwnedBy",
+          "getterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@return The user ID of the user that owns the streaming session.*/",
+          "getterMethodName" : "getOwnedBy",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "ownedBy",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "ownedBy",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "OwnedBy",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@param ownedBy The user ID of the user that owns the streaming session.*/",
+          "setterMethodName" : "setOwnedBy",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "ownedBy",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>The user ID of the user that owns the streaming session.</p>\n@param ownedBy The user ID of the user that owns the streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "ownedBy",
+            "variableType" : "String",
+            "documentation" : "<p>The user ID of the user that owns the streaming session.</p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
           },
           "xmlNameSpaceUri" : null
         },
@@ -59595,12 +60151,12 @@
         "c2jName" : "homeRegion",
         "c2jShape" : "Region",
         "deprecated" : false,
-        "documentation" : "<p>The AWS region where the studio resource is located.</p>",
+        "documentation" : "<p>The Amazon Web Services Region where the studio resource is located.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>The AWS region where the studio resource is located.</p>\n@param homeRegion The AWS region where the studio resource is located.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>The Amazon Web Services Region where the studio resource is located.</p>\n@param homeRegion The Amazon Web Services Region where the studio resource is located.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withHomeRegion",
-        "getterDocumentation" : "/**<p>The AWS region where the studio resource is located.</p>\n@return The AWS region where the studio resource is located.*/",
+        "getterDocumentation" : "/**<p>The Amazon Web Services Region where the studio resource is located.</p>\n@return The Amazon Web Services Region where the studio resource is located.*/",
         "getterMethodName" : "getHomeRegion",
         "getterModel" : {
           "returnType" : "String",
@@ -59634,7 +60190,7 @@
         "marshallingType" : "STRING",
         "name" : "HomeRegion",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The AWS region where the studio resource is located.</p>\n@param homeRegion The AWS region where the studio resource is located.*/",
+        "setterDocumentation" : "/**<p>The Amazon Web Services Region where the studio resource is located.</p>\n@param homeRegion The Amazon Web Services Region where the studio resource is located.*/",
         "setterMethodName" : "setHomeRegion",
         "setterModel" : {
           "timestampFormat" : null,
@@ -59649,13 +60205,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The AWS region where the studio resource is located.</p>\n@param homeRegion The AWS region where the studio resource is located.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The Amazon Web Services Region where the studio resource is located.</p>\n@param homeRegion The Amazon Web Services Region where the studio resource is located.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "homeRegion",
           "variableType" : "String",
-          "documentation" : "<p>The AWS region where the studio resource is located.</p>",
+          "documentation" : "<p>The Amazon Web Services Region where the studio resource is located.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -59664,12 +60220,12 @@
         "c2jName" : "ssoClientId",
         "c2jShape" : "__string",
         "deprecated" : false,
-        "documentation" : "<p>The AWS SSO application client ID used to integrate with AWS SSO to enable AWS SSO users to log in to Nimble portal.</p>",
+        "documentation" : "<p>The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble portal.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>The AWS SSO application client ID used to integrate with AWS SSO to enable AWS SSO users to log in to Nimble portal.</p>\n@param ssoClientId The AWS SSO application client ID used to integrate with AWS SSO to enable AWS SSO users to log in to Nimble portal.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble portal.</p>\n@param ssoClientId The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble portal.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withSsoClientId",
-        "getterDocumentation" : "/**<p>The AWS SSO application client ID used to integrate with AWS SSO to enable AWS SSO users to log in to Nimble portal.</p>\n@return The AWS SSO application client ID used to integrate with AWS SSO to enable AWS SSO users to log in to Nimble portal.*/",
+        "getterDocumentation" : "/**<p>The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble portal.</p>\n@return The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble portal.*/",
         "getterMethodName" : "getSsoClientId",
         "getterModel" : {
           "returnType" : "String",
@@ -59703,7 +60259,7 @@
         "marshallingType" : "STRING",
         "name" : "SsoClientId",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The AWS SSO application client ID used to integrate with AWS SSO to enable AWS SSO users to log in to Nimble portal.</p>\n@param ssoClientId The AWS SSO application client ID used to integrate with AWS SSO to enable AWS SSO users to log in to Nimble portal.*/",
+        "setterDocumentation" : "/**<p>The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble portal.</p>\n@param ssoClientId The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble portal.*/",
         "setterMethodName" : "setSsoClientId",
         "setterModel" : {
           "timestampFormat" : null,
@@ -59718,13 +60274,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The AWS SSO application client ID used to integrate with AWS SSO to enable AWS SSO users to log in to Nimble portal.</p>\n@param ssoClientId The AWS SSO application client ID used to integrate with AWS SSO to enable AWS SSO users to log in to Nimble portal.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble portal.</p>\n@param ssoClientId The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble portal.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "ssoClientId",
           "variableType" : "String",
-          "documentation" : "<p>The AWS SSO application client ID used to integrate with AWS SSO to enable AWS SSO users to log in to Nimble portal.</p>",
+          "documentation" : "<p>The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble portal.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -60789,12 +61345,12 @@
           "c2jName" : "homeRegion",
           "c2jShape" : "Region",
           "deprecated" : false,
-          "documentation" : "<p>The AWS region where the studio resource is located.</p>",
+          "documentation" : "<p>The Amazon Web Services Region where the studio resource is located.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>The AWS region where the studio resource is located.</p>\n@param homeRegion The AWS region where the studio resource is located.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>The Amazon Web Services Region where the studio resource is located.</p>\n@param homeRegion The Amazon Web Services Region where the studio resource is located.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withHomeRegion",
-          "getterDocumentation" : "/**<p>The AWS region where the studio resource is located.</p>\n@return The AWS region where the studio resource is located.*/",
+          "getterDocumentation" : "/**<p>The Amazon Web Services Region where the studio resource is located.</p>\n@return The Amazon Web Services Region where the studio resource is located.*/",
           "getterMethodName" : "getHomeRegion",
           "getterModel" : {
             "returnType" : "String",
@@ -60828,7 +61384,7 @@
           "marshallingType" : "STRING",
           "name" : "HomeRegion",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The AWS region where the studio resource is located.</p>\n@param homeRegion The AWS region where the studio resource is located.*/",
+          "setterDocumentation" : "/**<p>The Amazon Web Services Region where the studio resource is located.</p>\n@param homeRegion The Amazon Web Services Region where the studio resource is located.*/",
           "setterMethodName" : "setHomeRegion",
           "setterModel" : {
             "timestampFormat" : null,
@@ -60843,13 +61399,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The AWS region where the studio resource is located.</p>\n@param homeRegion The AWS region where the studio resource is located.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>The Amazon Web Services Region where the studio resource is located.</p>\n@param homeRegion The Amazon Web Services Region where the studio resource is located.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "homeRegion",
             "variableType" : "String",
-            "documentation" : "<p>The AWS region where the studio resource is located.</p>",
+            "documentation" : "<p>The Amazon Web Services Region where the studio resource is located.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -60859,12 +61415,12 @@
           "c2jName" : "ssoClientId",
           "c2jShape" : "__string",
           "deprecated" : false,
-          "documentation" : "<p>The AWS SSO application client ID used to integrate with AWS SSO to enable AWS SSO users to log in to Nimble portal.</p>",
+          "documentation" : "<p>The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble portal.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>The AWS SSO application client ID used to integrate with AWS SSO to enable AWS SSO users to log in to Nimble portal.</p>\n@param ssoClientId The AWS SSO application client ID used to integrate with AWS SSO to enable AWS SSO users to log in to Nimble portal.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble portal.</p>\n@param ssoClientId The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble portal.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withSsoClientId",
-          "getterDocumentation" : "/**<p>The AWS SSO application client ID used to integrate with AWS SSO to enable AWS SSO users to log in to Nimble portal.</p>\n@return The AWS SSO application client ID used to integrate with AWS SSO to enable AWS SSO users to log in to Nimble portal.*/",
+          "getterDocumentation" : "/**<p>The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble portal.</p>\n@return The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble portal.*/",
           "getterMethodName" : "getSsoClientId",
           "getterModel" : {
             "returnType" : "String",
@@ -60898,7 +61454,7 @@
           "marshallingType" : "STRING",
           "name" : "SsoClientId",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The AWS SSO application client ID used to integrate with AWS SSO to enable AWS SSO users to log in to Nimble portal.</p>\n@param ssoClientId The AWS SSO application client ID used to integrate with AWS SSO to enable AWS SSO users to log in to Nimble portal.*/",
+          "setterDocumentation" : "/**<p>The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble portal.</p>\n@param ssoClientId The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble portal.*/",
           "setterMethodName" : "setSsoClientId",
           "setterModel" : {
             "timestampFormat" : null,
@@ -60913,13 +61469,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The AWS SSO application client ID used to integrate with AWS SSO to enable AWS SSO users to log in to Nimble portal.</p>\n@param ssoClientId The AWS SSO application client ID used to integrate with AWS SSO to enable AWS SSO users to log in to Nimble portal.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble portal.</p>\n@param ssoClientId The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble portal.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "ssoClientId",
             "variableType" : "String",
-            "documentation" : "<p>The AWS SSO application client ID used to integrate with AWS SSO to enable AWS SSO users to log in to Nimble portal.</p>",
+            "documentation" : "<p>The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble portal.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },

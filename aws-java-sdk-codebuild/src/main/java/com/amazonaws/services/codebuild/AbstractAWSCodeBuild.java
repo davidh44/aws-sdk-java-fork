@@ -248,6 +248,11 @@ public class AbstractAWSCodeBuild implements AWSCodeBuild {
     }
 
     @Override
+    public UpdateProjectVisibilityResult updateProjectVisibility(UpdateProjectVisibilityRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateReportGroupResult updateReportGroup(UpdateReportGroupRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

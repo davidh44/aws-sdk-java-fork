@@ -30,18 +30,18 @@ public class GetTrafficPolicyInstanceCountResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The number of traffic policy instances that are associated with the current account.
+     * The number of traffic policy instances that are associated with the current Amazon Web Services account.
      * </p>
      */
     private Integer trafficPolicyInstanceCount;
 
     /**
      * <p>
-     * The number of traffic policy instances that are associated with the current account.
+     * The number of traffic policy instances that are associated with the current Amazon Web Services account.
      * </p>
      * 
      * @param trafficPolicyInstanceCount
-     *        The number of traffic policy instances that are associated with the current account.
+     *        The number of traffic policy instances that are associated with the current Amazon Web Services account.
      */
 
     public void setTrafficPolicyInstanceCount(Integer trafficPolicyInstanceCount) {
@@ -50,10 +50,10 @@ public class GetTrafficPolicyInstanceCountResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The number of traffic policy instances that are associated with the current account.
+     * The number of traffic policy instances that are associated with the current Amazon Web Services account.
      * </p>
      * 
-     * @return The number of traffic policy instances that are associated with the current account.
+     * @return The number of traffic policy instances that are associated with the current Amazon Web Services account.
      */
 
     public Integer getTrafficPolicyInstanceCount() {
@@ -62,11 +62,11 @@ public class GetTrafficPolicyInstanceCountResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The number of traffic policy instances that are associated with the current account.
+     * The number of traffic policy instances that are associated with the current Amazon Web Services account.
      * </p>
      * 
      * @param trafficPolicyInstanceCount
-     *        The number of traffic policy instances that are associated with the current account.
+     *        The number of traffic policy instances that are associated with the current Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -474,7 +474,12 @@ public class HealthCheckConfig implements Serializable, Cloneable {
     private String insufficientDataHealthStatus;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for Route53 Application Recovery Controller routing control.
+     * The Amazon Resource Name (ARN) for the Route 53 Application Recovery Controller routing control.
+     * </p>
+     * <p>
+     * For more information about Route 53 Application Recovery Controller, see <a
+     * href="https://docs.aws.amazon.com/r53recovery/latest/dg/what-is-route-53-recovery.html">Route 53 Application
+     * Recovery Controller Developer Guide.</a>.
      * </p>
      */
     private String routingControlArn;
@@ -3934,11 +3939,20 @@ public class HealthCheckConfig implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for Route53 Application Recovery Controller routing control.
+     * The Amazon Resource Name (ARN) for the Route 53 Application Recovery Controller routing control.
+     * </p>
+     * <p>
+     * For more information about Route 53 Application Recovery Controller, see <a
+     * href="https://docs.aws.amazon.com/r53recovery/latest/dg/what-is-route-53-recovery.html">Route 53 Application
+     * Recovery Controller Developer Guide.</a>.
      * </p>
      * 
      * @param routingControlArn
-     *        The Amazon Resource Name (ARN) for Route53 Application Recovery Controller routing control.
+     *        The Amazon Resource Name (ARN) for the Route 53 Application Recovery Controller routing control.</p>
+     *        <p>
+     *        For more information about Route 53 Application Recovery Controller, see <a
+     *        href="https://docs.aws.amazon.com/r53recovery/latest/dg/what-is-route-53-recovery.html">Route 53
+     *        Application Recovery Controller Developer Guide.</a>.
      */
 
     public void setRoutingControlArn(String routingControlArn) {
@@ -3947,10 +3961,19 @@ public class HealthCheckConfig implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for Route53 Application Recovery Controller routing control.
+     * The Amazon Resource Name (ARN) for the Route 53 Application Recovery Controller routing control.
+     * </p>
+     * <p>
+     * For more information about Route 53 Application Recovery Controller, see <a
+     * href="https://docs.aws.amazon.com/r53recovery/latest/dg/what-is-route-53-recovery.html">Route 53 Application
+     * Recovery Controller Developer Guide.</a>.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) for Route53 Application Recovery Controller routing control.
+     * @return The Amazon Resource Name (ARN) for the Route 53 Application Recovery Controller routing control.</p>
+     *         <p>
+     *         For more information about Route 53 Application Recovery Controller, see <a
+     *         href="https://docs.aws.amazon.com/r53recovery/latest/dg/what-is-route-53-recovery.html">Route 53
+     *         Application Recovery Controller Developer Guide.</a>.
      */
 
     public String getRoutingControlArn() {
@@ -3959,11 +3982,20 @@ public class HealthCheckConfig implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for Route53 Application Recovery Controller routing control.
+     * The Amazon Resource Name (ARN) for the Route 53 Application Recovery Controller routing control.
+     * </p>
+     * <p>
+     * For more information about Route 53 Application Recovery Controller, see <a
+     * href="https://docs.aws.amazon.com/r53recovery/latest/dg/what-is-route-53-recovery.html">Route 53 Application
+     * Recovery Controller Developer Guide.</a>.
      * </p>
      * 
      * @param routingControlArn
-     *        The Amazon Resource Name (ARN) for Route53 Application Recovery Controller routing control.
+     *        The Amazon Resource Name (ARN) for the Route 53 Application Recovery Controller routing control.</p>
+     *        <p>
+     *        For more information about Route 53 Application Recovery Controller, see <a
+     *        href="https://docs.aws.amazon.com/r53recovery/latest/dg/what-is-route-53-recovery.html">Route 53
+     *        Application Recovery Controller Developer Guide.</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

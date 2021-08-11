@@ -60,6 +60,10 @@ public class StreamingSessionStreamJsonUnmarshaller implements Unmarshaller<Stre
                     context.nextToken();
                     streamingSessionStream.setExpiresAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
+                if (context.testExpression("ownedBy", targetDepth)) {
+                    context.nextToken();
+                    streamingSessionStream.setOwnedBy(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("state", targetDepth)) {
                     context.nextToken();
                     streamingSessionStream.setState(context.getUnmarshaller(String.class).unmarshall(context));

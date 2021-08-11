@@ -43,8 +43,8 @@ public class HostedZoneSummary implements Serializable, Cloneable {
     private String name;
     /**
      * <p>
-     * The owner of a private hosted zone that the specified VPC is associated with. The owner can be either an account
-     * or an Amazon Web Services service.
+     * The owner of a private hosted zone that the specified VPC is associated with. The owner can be either an Amazon
+     * Web Services account or an Amazon Web Services service.
      * </p>
      */
     private HostedZoneOwner owner;
@@ -131,13 +131,13 @@ public class HostedZoneSummary implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The owner of a private hosted zone that the specified VPC is associated with. The owner can be either an account
-     * or an Amazon Web Services service.
+     * The owner of a private hosted zone that the specified VPC is associated with. The owner can be either an Amazon
+     * Web Services account or an Amazon Web Services service.
      * </p>
      * 
      * @param owner
      *        The owner of a private hosted zone that the specified VPC is associated with. The owner can be either an
-     *        account or an Amazon Web Services service.
+     *        Amazon Web Services account or an Amazon Web Services service.
      */
 
     public void setOwner(HostedZoneOwner owner) {
@@ -146,12 +146,12 @@ public class HostedZoneSummary implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The owner of a private hosted zone that the specified VPC is associated with. The owner can be either an account
-     * or an Amazon Web Services service.
+     * The owner of a private hosted zone that the specified VPC is associated with. The owner can be either an Amazon
+     * Web Services account or an Amazon Web Services service.
      * </p>
      * 
      * @return The owner of a private hosted zone that the specified VPC is associated with. The owner can be either an
-     *         account or an Amazon Web Services service.
+     *         Amazon Web Services account or an Amazon Web Services service.
      */
 
     public HostedZoneOwner getOwner() {
@@ -160,13 +160,13 @@ public class HostedZoneSummary implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The owner of a private hosted zone that the specified VPC is associated with. The owner can be either an account
-     * or an Amazon Web Services service.
+     * The owner of a private hosted zone that the specified VPC is associated with. The owner can be either an Amazon
+     * Web Services account or an Amazon Web Services service.
      * </p>
      * 
      * @param owner
      *        The owner of a private hosted zone that the specified VPC is associated with. The owner can be either an
-     *        account or an Amazon Web Services service.
+     *        Amazon Web Services account or an Amazon Web Services service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -29,7 +29,7 @@ public class ListHealthChecksResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * A complex type that contains one <code>HealthCheck</code> element for each health check that is associated with
-     * the current account.
+     * the current Amazon Web Services account.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<HealthCheck> healthChecks;
@@ -67,11 +67,11 @@ public class ListHealthChecksResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * A complex type that contains one <code>HealthCheck</code> element for each health check that is associated with
-     * the current account.
+     * the current Amazon Web Services account.
      * </p>
      * 
      * @return A complex type that contains one <code>HealthCheck</code> element for each health check that is
-     *         associated with the current account.
+     *         associated with the current Amazon Web Services account.
      */
 
     public java.util.List<HealthCheck> getHealthChecks() {
@@ -84,12 +84,12 @@ public class ListHealthChecksResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * A complex type that contains one <code>HealthCheck</code> element for each health check that is associated with
-     * the current account.
+     * the current Amazon Web Services account.
      * </p>
      * 
      * @param healthChecks
      *        A complex type that contains one <code>HealthCheck</code> element for each health check that is associated
-     *        with the current account.
+     *        with the current Amazon Web Services account.
      */
 
     public void setHealthChecks(java.util.Collection<HealthCheck> healthChecks) {
@@ -104,7 +104,7 @@ public class ListHealthChecksResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * A complex type that contains one <code>HealthCheck</code> element for each health check that is associated with
-     * the current account.
+     * the current Amazon Web Services account.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -114,7 +114,7 @@ public class ListHealthChecksResult extends com.amazonaws.AmazonWebServiceResult
      * 
      * @param healthChecks
      *        A complex type that contains one <code>HealthCheck</code> element for each health check that is associated
-     *        with the current account.
+     *        with the current Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -131,12 +131,12 @@ public class ListHealthChecksResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * A complex type that contains one <code>HealthCheck</code> element for each health check that is associated with
-     * the current account.
+     * the current Amazon Web Services account.
      * </p>
      * 
      * @param healthChecks
      *        A complex type that contains one <code>HealthCheck</code> element for each health check that is associated
-     *        with the current account.
+     *        with the current Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

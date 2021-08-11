@@ -37,6 +37,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * providers. The Fargate capacity providers are available to all accounts and only need to be associated with a cluster
  * to be used in a capacity provider strategy.
  * </p>
+ * <p>
+ * A capacity provider strategy may contain a maximum of 6 capacity providers.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/CapacityProviderStrategyItem" target="_top">AWS
  *      API Documentation</a>

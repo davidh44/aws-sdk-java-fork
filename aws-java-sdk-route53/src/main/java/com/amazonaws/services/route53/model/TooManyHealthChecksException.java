@@ -31,8 +31,8 @@ import javax.annotation.Generated;
  * Services Support Center.
  * </p>
  * <p>
- * You have reached the maximum number of active health checks for an account. To request a higher limit, <a
- * href="http://aws.amazon.com/route53-request">create a case</a> with the Amazon Web Services Support Center.
+ * You have reached the maximum number of active health checks for an Amazon Web Services account. To request a higher
+ * limit, <a href="http://aws.amazon.com/route53-request">create a case</a> with the Amazon Web Services Support Center.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

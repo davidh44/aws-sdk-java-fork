@@ -29,7 +29,7 @@ public class ListTrafficPoliciesResult extends com.amazonaws.AmazonWebServiceRes
     /**
      * <p>
      * A list that contains one <code>TrafficPolicySummary</code> element for each traffic policy that was created by
-     * the current account.
+     * the current Amazon Web Services account.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<TrafficPolicySummary> trafficPolicySummaries;
@@ -60,11 +60,11 @@ public class ListTrafficPoliciesResult extends com.amazonaws.AmazonWebServiceRes
     /**
      * <p>
      * A list that contains one <code>TrafficPolicySummary</code> element for each traffic policy that was created by
-     * the current account.
+     * the current Amazon Web Services account.
      * </p>
      * 
      * @return A list that contains one <code>TrafficPolicySummary</code> element for each traffic policy that was
-     *         created by the current account.
+     *         created by the current Amazon Web Services account.
      */
 
     public java.util.List<TrafficPolicySummary> getTrafficPolicySummaries() {
@@ -77,12 +77,12 @@ public class ListTrafficPoliciesResult extends com.amazonaws.AmazonWebServiceRes
     /**
      * <p>
      * A list that contains one <code>TrafficPolicySummary</code> element for each traffic policy that was created by
-     * the current account.
+     * the current Amazon Web Services account.
      * </p>
      * 
      * @param trafficPolicySummaries
      *        A list that contains one <code>TrafficPolicySummary</code> element for each traffic policy that was
-     *        created by the current account.
+     *        created by the current Amazon Web Services account.
      */
 
     public void setTrafficPolicySummaries(java.util.Collection<TrafficPolicySummary> trafficPolicySummaries) {
@@ -97,7 +97,7 @@ public class ListTrafficPoliciesResult extends com.amazonaws.AmazonWebServiceRes
     /**
      * <p>
      * A list that contains one <code>TrafficPolicySummary</code> element for each traffic policy that was created by
-     * the current account.
+     * the current Amazon Web Services account.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -107,7 +107,7 @@ public class ListTrafficPoliciesResult extends com.amazonaws.AmazonWebServiceRes
      * 
      * @param trafficPolicySummaries
      *        A list that contains one <code>TrafficPolicySummary</code> element for each traffic policy that was
-     *        created by the current account.
+     *        created by the current Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -124,12 +124,12 @@ public class ListTrafficPoliciesResult extends com.amazonaws.AmazonWebServiceRes
     /**
      * <p>
      * A list that contains one <code>TrafficPolicySummary</code> element for each traffic policy that was created by
-     * the current account.
+     * the current Amazon Web Services account.
      * </p>
      * 
      * @param trafficPolicySummaries
      *        A list that contains one <code>TrafficPolicySummary</code> element for each traffic policy that was
-     *        created by the current account.
+     *        created by the current Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -52,6 +52,12 @@ public class CreateStreamingSessionRequest extends com.amazonaws.AmazonWebServic
     private String launchProfileId;
     /**
      * <p>
+     * The user ID of the user that owns the streaming session.
+     * </p>
+     */
+    private String ownedBy;
+    /**
+     * <p>
      * The ID of the streaming image.
      * </p>
      */
@@ -234,6 +240,46 @@ public class CreateStreamingSessionRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
+     * The user ID of the user that owns the streaming session.
+     * </p>
+     * 
+     * @param ownedBy
+     *        The user ID of the user that owns the streaming session.
+     */
+
+    public void setOwnedBy(String ownedBy) {
+        this.ownedBy = ownedBy;
+    }
+
+    /**
+     * <p>
+     * The user ID of the user that owns the streaming session.
+     * </p>
+     * 
+     * @return The user ID of the user that owns the streaming session.
+     */
+
+    public String getOwnedBy() {
+        return this.ownedBy;
+    }
+
+    /**
+     * <p>
+     * The user ID of the user that owns the streaming session.
+     * </p>
+     * 
+     * @param ownedBy
+     *        The user ID of the user that owns the streaming session.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateStreamingSessionRequest withOwnedBy(String ownedBy) {
+        setOwnedBy(ownedBy);
+        return this;
+    }
+
+    /**
+     * <p>
      * The ID of the streaming image.
      * </p>
      * 
@@ -398,6 +444,8 @@ public class CreateStreamingSessionRequest extends com.amazonaws.AmazonWebServic
             sb.append("Ec2InstanceType: ").append(getEc2InstanceType()).append(",");
         if (getLaunchProfileId() != null)
             sb.append("LaunchProfileId: ").append(getLaunchProfileId()).append(",");
+        if (getOwnedBy() != null)
+            sb.append("OwnedBy: ").append(getOwnedBy()).append(",");
         if (getStreamingImageId() != null)
             sb.append("StreamingImageId: ").append(getStreamingImageId()).append(",");
         if (getStudioId() != null)
@@ -430,6 +478,10 @@ public class CreateStreamingSessionRequest extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getLaunchProfileId() != null && other.getLaunchProfileId().equals(this.getLaunchProfileId()) == false)
             return false;
+        if (other.getOwnedBy() == null ^ this.getOwnedBy() == null)
+            return false;
+        if (other.getOwnedBy() != null && other.getOwnedBy().equals(this.getOwnedBy()) == false)
+            return false;
         if (other.getStreamingImageId() == null ^ this.getStreamingImageId() == null)
             return false;
         if (other.getStreamingImageId() != null && other.getStreamingImageId().equals(this.getStreamingImageId()) == false)
@@ -453,6 +505,7 @@ public class CreateStreamingSessionRequest extends com.amazonaws.AmazonWebServic
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getEc2InstanceType() == null) ? 0 : getEc2InstanceType().hashCode());
         hashCode = prime * hashCode + ((getLaunchProfileId() == null) ? 0 : getLaunchProfileId().hashCode());
+        hashCode = prime * hashCode + ((getOwnedBy() == null) ? 0 : getOwnedBy().hashCode());
         hashCode = prime * hashCode + ((getStreamingImageId() == null) ? 0 : getStreamingImageId().hashCode());
         hashCode = prime * hashCode + ((getStudioId() == null) ? 0 : getStudioId().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());

@@ -78,6 +78,12 @@ public class ProjectMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("buildBatchConfig").build();
     private static final MarshallingInfo<Integer> CONCURRENTBUILDLIMIT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("concurrentBuildLimit").build();
+    private static final MarshallingInfo<String> PROJECTVISIBILITY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("projectVisibility").build();
+    private static final MarshallingInfo<String> PUBLICPROJECTALIAS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("publicProjectAlias").build();
+    private static final MarshallingInfo<String> RESOURCEACCESSROLE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resourceAccessRole").build();
 
     private static final ProjectMarshaller instance = new ProjectMarshaller();
 
@@ -120,6 +126,9 @@ public class ProjectMarshaller {
             protocolMarshaller.marshall(project.getFileSystemLocations(), FILESYSTEMLOCATIONS_BINDING);
             protocolMarshaller.marshall(project.getBuildBatchConfig(), BUILDBATCHCONFIG_BINDING);
             protocolMarshaller.marshall(project.getConcurrentBuildLimit(), CONCURRENTBUILDLIMIT_BINDING);
+            protocolMarshaller.marshall(project.getProjectVisibility(), PROJECTVISIBILITY_BINDING);
+            protocolMarshaller.marshall(project.getPublicProjectAlias(), PUBLICPROJECTALIAS_BINDING);
+            protocolMarshaller.marshall(project.getResourceAccessRole(), RESOURCEACCESSROLE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

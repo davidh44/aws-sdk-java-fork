@@ -52,14 +52,14 @@ public class Studio implements Serializable, Cloneable, StructuredPojo {
     private String displayName;
     /**
      * <p>
-     * The AWS region where the studio resource is located.
+     * The Amazon Web Services Region where the studio resource is located.
      * </p>
      */
     private String homeRegion;
     /**
      * <p>
-     * The AWS SSO application client ID used to integrate with AWS SSO to enable AWS SSO users to log in to Nimble
-     * portal.
+     * The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon
+     * Web Services SSO users to log in to Nimble portal.
      * </p>
      */
     private String ssoClientId;
@@ -293,11 +293,11 @@ public class Studio implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS region where the studio resource is located.
+     * The Amazon Web Services Region where the studio resource is located.
      * </p>
      * 
      * @param homeRegion
-     *        The AWS region where the studio resource is located.
+     *        The Amazon Web Services Region where the studio resource is located.
      */
 
     public void setHomeRegion(String homeRegion) {
@@ -306,10 +306,10 @@ public class Studio implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS region where the studio resource is located.
+     * The Amazon Web Services Region where the studio resource is located.
      * </p>
      * 
-     * @return The AWS region where the studio resource is located.
+     * @return The Amazon Web Services Region where the studio resource is located.
      */
 
     public String getHomeRegion() {
@@ -318,11 +318,11 @@ public class Studio implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS region where the studio resource is located.
+     * The Amazon Web Services Region where the studio resource is located.
      * </p>
      * 
      * @param homeRegion
-     *        The AWS region where the studio resource is located.
+     *        The Amazon Web Services Region where the studio resource is located.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -333,13 +333,13 @@ public class Studio implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS SSO application client ID used to integrate with AWS SSO to enable AWS SSO users to log in to Nimble
-     * portal.
+     * The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon
+     * Web Services SSO users to log in to Nimble portal.
      * </p>
      * 
      * @param ssoClientId
-     *        The AWS SSO application client ID used to integrate with AWS SSO to enable AWS SSO users to log in to
-     *        Nimble portal.
+     *        The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable
+     *        Amazon Web Services SSO users to log in to Nimble portal.
      */
 
     public void setSsoClientId(String ssoClientId) {
@@ -348,12 +348,12 @@ public class Studio implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS SSO application client ID used to integrate with AWS SSO to enable AWS SSO users to log in to Nimble
-     * portal.
+     * The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon
+     * Web Services SSO users to log in to Nimble portal.
      * </p>
      * 
-     * @return The AWS SSO application client ID used to integrate with AWS SSO to enable AWS SSO users to log in to
-     *         Nimble portal.
+     * @return The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to
+     *         enable Amazon Web Services SSO users to log in to Nimble portal.
      */
 
     public String getSsoClientId() {
@@ -362,13 +362,13 @@ public class Studio implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS SSO application client ID used to integrate with AWS SSO to enable AWS SSO users to log in to Nimble
-     * portal.
+     * The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon
+     * Web Services SSO users to log in to Nimble portal.
      * </p>
      * 
      * @param ssoClientId
-     *        The AWS SSO application client ID used to integrate with AWS SSO to enable AWS SSO users to log in to
-     *        Nimble portal.
+     *        The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable
+     *        Amazon Web Services SSO users to log in to Nimble portal.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -33,16 +33,18 @@ public class RetryPolicyAdapter implements com.amazonaws.retry.v2.RetryPolicy {
     private final RetryPolicy legacyRetryPolicy;
     private final ClientConfiguration clientConfiguration;
     private final int maxErrorRetry;
+    private final RetryPolicy.BackoffStrategy backoffStrategy;
 
     public RetryPolicyAdapter(RetryPolicy legacyRetryPolicy, ClientConfiguration clientConfiguration) {
         this.legacyRetryPolicy = assertNotNull(legacyRetryPolicy, "legacyRetryPolicy");
         this.clientConfiguration = assertNotNull(clientConfiguration, "clientConfiguration");
         this.maxErrorRetry = resolveMaxErrorRetry();
+        this.backoffStrategy = resolveBackoffStrategy();
     }
 
     @Override
     public long computeDelayBeforeNextRetry(RetryPolicyContext context) {
-        return legacyRetryPolicy.getBackoffStrategy().delayBeforeNextRetry(
+        return backoffStrategy.delayBeforeNextRetry(
                 (AmazonWebServiceRequest) context.originalRequest(),
                 (AmazonClientException) context.exception(),
                 context.retriesAttempted());
@@ -62,6 +64,21 @@ public class RetryPolicyAdapter implements com.amazonaws.retry.v2.RetryPolicy {
 
     public RetryPolicy getLegacyRetryPolicy() {
         return this.legacyRetryPolicy;
+    }
+
+    private RetryPolicy.BackoffStrategy resolveBackoffStrategy() {
+        if (legacyRetryPolicy.isBackoffStrategyInRetryModeHonored()) {
+            return backoffStrategyByRetryMode();
+        }
+
+        return legacyRetryPolicy.getBackoffStrategy();
+    }
+
+    private RetryPolicy.BackoffStrategy backoffStrategyByRetryMode() {
+        RetryMode retryMode = clientConfiguration.getRetryMode() == null ? legacyRetryPolicy.getRetryMode()
+                                                                         : clientConfiguration.getRetryMode();
+
+        return PredefinedRetryPolicies.getDefaultBackoffStrategy(retryMode);
     }
 
     private int resolveMaxErrorRetry() {
@@ -101,5 +118,9 @@ public class RetryPolicyAdapter implements com.amazonaws.retry.v2.RetryPolicy {
 
     public int getMaxErrorRetry() {
         return maxErrorRetry;
+    }
+
+    public RetryPolicy.BackoffStrategy getBackoffStrategy() {
+        return backoffStrategy;
     }
 }

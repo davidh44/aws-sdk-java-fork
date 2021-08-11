@@ -37,6 +37,9 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * When you use cluster auto scaling, you must specify <code>capacityProviderStrategy</code> and not
      * <code>launchType</code>.
      * </p>
+     * <p>
+     * A capacity provider strategy may contain a maximum of 6 capacity providers.
+     * </p>
      */
     private com.amazonaws.internal.SdkInternalList<CapacityProviderStrategyItem> capacityProviderStrategy;
     /**
@@ -71,7 +74,7 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
     /**
      * <p>
      * The name of the task group to associate with the task. The default value is the family name of the task
-     * definition (for example, family:my-family-name).
+     * definition (for example, <code>family:my-family-name</code>).
      * </p>
      */
     private String group;
@@ -114,7 +117,7 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * The network configuration for the task. This parameter is required for task definitions that use the
      * <code>awsvpc</code> network mode to receive their own elastic network interface, and it is not supported for
      * other network modes. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task Networking</a> in
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task networking</a> in
      * the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      */
@@ -127,12 +130,10 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * existing environment variables (that are specified in the task definition or Docker image) on a container or add
      * new environment variables to it with an <code>environment</code> override.
      * </p>
-     * <note>
      * <p>
      * A total of 8192 characters are allowed for overrides. This limit includes the JSON formatting characters of the
      * override structure.
      * </p>
-     * </note>
      */
     private TaskOverride overrides;
     /**
@@ -144,16 +145,16 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
     private com.amazonaws.internal.SdkInternalList<PlacementConstraint> placementConstraints;
     /**
      * <p>
-     * The placement strategy objects to use for the task. You can specify a maximum of five strategy rules per task.
+     * The placement strategy objects to use for the task. You can specify a maximum of 5 strategy rules per task.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<PlacementStrategy> placementStrategy;
     /**
      * <p>
-     * The platform version the task should run. A platform version is only specified for tasks using the Fargate launch
-     * type. If one is not specified, the <code>LATEST</code> platform version is used by default. For more information,
-     * see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate Platform
-     * Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * The platform version the task should use. A platform version is only specified for tasks hosted on Fargate. If
+     * one is not specified, the <code>LATEST</code> platform version is used by default. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate platform
+     * versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      */
     private String platformVersion;
@@ -172,7 +173,7 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
     private String propagateTags;
     /**
      * <p>
-     * The reference ID to use for the task.
+     * The reference ID to use for the task. The reference ID can have a maximum length of 1024 characters.
      * </p>
      */
     private String referenceId;
@@ -262,6 +263,9 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * When you use cluster auto scaling, you must specify <code>capacityProviderStrategy</code> and not
      * <code>launchType</code>.
      * </p>
+     * <p>
+     * A capacity provider strategy may contain a maximum of 6 capacity providers.
+     * </p>
      * 
      * @return The capacity provider strategy to use for the task.</p>
      *         <p>
@@ -272,6 +276,9 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *         <p>
      *         When you use cluster auto scaling, you must specify <code>capacityProviderStrategy</code> and not
      *         <code>launchType</code>.
+     *         </p>
+     *         <p>
+     *         A capacity provider strategy may contain a maximum of 6 capacity providers.
      */
 
     public java.util.List<CapacityProviderStrategyItem> getCapacityProviderStrategy() {
@@ -294,6 +301,9 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * When you use cluster auto scaling, you must specify <code>capacityProviderStrategy</code> and not
      * <code>launchType</code>.
      * </p>
+     * <p>
+     * A capacity provider strategy may contain a maximum of 6 capacity providers.
+     * </p>
      * 
      * @param capacityProviderStrategy
      *        The capacity provider strategy to use for the task.</p>
@@ -305,6 +315,9 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        <p>
      *        When you use cluster auto scaling, you must specify <code>capacityProviderStrategy</code> and not
      *        <code>launchType</code>.
+     *        </p>
+     *        <p>
+     *        A capacity provider strategy may contain a maximum of 6 capacity providers.
      */
 
     public void setCapacityProviderStrategy(java.util.Collection<CapacityProviderStrategyItem> capacityProviderStrategy) {
@@ -330,6 +343,9 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * <code>launchType</code>.
      * </p>
      * <p>
+     * A capacity provider strategy may contain a maximum of 6 capacity providers.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCapacityProviderStrategy(java.util.Collection)} or
      * {@link #withCapacityProviderStrategy(java.util.Collection)} if you want to override the existing values.
@@ -345,6 +361,9 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        <p>
      *        When you use cluster auto scaling, you must specify <code>capacityProviderStrategy</code> and not
      *        <code>launchType</code>.
+     *        </p>
+     *        <p>
+     *        A capacity provider strategy may contain a maximum of 6 capacity providers.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -371,6 +390,9 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * When you use cluster auto scaling, you must specify <code>capacityProviderStrategy</code> and not
      * <code>launchType</code>.
      * </p>
+     * <p>
+     * A capacity provider strategy may contain a maximum of 6 capacity providers.
+     * </p>
      * 
      * @param capacityProviderStrategy
      *        The capacity provider strategy to use for the task.</p>
@@ -382,6 +404,9 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        <p>
      *        When you use cluster auto scaling, you must specify <code>capacityProviderStrategy</code> and not
      *        <code>launchType</code>.
+     *        </p>
+     *        <p>
+     *        A capacity provider strategy may contain a maximum of 6 capacity providers.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -613,12 +638,12 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
     /**
      * <p>
      * The name of the task group to associate with the task. The default value is the family name of the task
-     * definition (for example, family:my-family-name).
+     * definition (for example, <code>family:my-family-name</code>).
      * </p>
      * 
      * @param group
      *        The name of the task group to associate with the task. The default value is the family name of the task
-     *        definition (for example, family:my-family-name).
+     *        definition (for example, <code>family:my-family-name</code>).
      */
 
     public void setGroup(String group) {
@@ -628,11 +653,11 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
     /**
      * <p>
      * The name of the task group to associate with the task. The default value is the family name of the task
-     * definition (for example, family:my-family-name).
+     * definition (for example, <code>family:my-family-name</code>).
      * </p>
      * 
      * @return The name of the task group to associate with the task. The default value is the family name of the task
-     *         definition (for example, family:my-family-name).
+     *         definition (for example, <code>family:my-family-name</code>).
      */
 
     public String getGroup() {
@@ -642,12 +667,12 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
     /**
      * <p>
      * The name of the task group to associate with the task. The default value is the family name of the task
-     * definition (for example, family:my-family-name).
+     * definition (for example, <code>family:my-family-name</code>).
      * </p>
      * 
      * @param group
      *        The name of the task group to associate with the task. The default value is the family name of the task
-     *        definition (for example, family:my-family-name).
+     *        definition (for example, <code>family:my-family-name</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -940,7 +965,7 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * The network configuration for the task. This parameter is required for task definitions that use the
      * <code>awsvpc</code> network mode to receive their own elastic network interface, and it is not supported for
      * other network modes. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task Networking</a> in
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task networking</a> in
      * the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
@@ -949,7 +974,7 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        <code>awsvpc</code> network mode to receive their own elastic network interface, and it is not supported
      *        for other network modes. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task
-     *        Networking</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *        networking</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      */
 
     public void setNetworkConfiguration(NetworkConfiguration networkConfiguration) {
@@ -961,7 +986,7 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * The network configuration for the task. This parameter is required for task definitions that use the
      * <code>awsvpc</code> network mode to receive their own elastic network interface, and it is not supported for
      * other network modes. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task Networking</a> in
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task networking</a> in
      * the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
@@ -969,7 +994,7 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *         <code>awsvpc</code> network mode to receive their own elastic network interface, and it is not supported
      *         for other network modes. For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task
-     *         Networking</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *         networking</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      */
 
     public NetworkConfiguration getNetworkConfiguration() {
@@ -981,7 +1006,7 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * The network configuration for the task. This parameter is required for task definitions that use the
      * <code>awsvpc</code> network mode to receive their own elastic network interface, and it is not supported for
      * other network modes. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task Networking</a> in
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task networking</a> in
      * the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
@@ -990,7 +1015,7 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        <code>awsvpc</code> network mode to receive their own elastic network interface, and it is not supported
      *        for other network modes. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task
-     *        Networking</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *        networking</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1007,23 +1032,20 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * existing environment variables (that are specified in the task definition or Docker image) on a container or add
      * new environment variables to it with an <code>environment</code> override.
      * </p>
-     * <note>
      * <p>
      * A total of 8192 characters are allowed for overrides. This limit includes the JSON formatting characters of the
      * override structure.
      * </p>
-     * </note>
      * 
      * @param overrides
      *        A list of container overrides in JSON format that specify the name of a container in the specified task
      *        definition and the overrides it should receive. You can override the default command for a container (that
      *        is specified in the task definition or Docker image) with a <code>command</code> override. You can also
      *        override existing environment variables (that are specified in the task definition or Docker image) on a
-     *        container or add new environment variables to it with an <code>environment</code> override.</p> <note>
+     *        container or add new environment variables to it with an <code>environment</code> override.</p>
      *        <p>
      *        A total of 8192 characters are allowed for overrides. This limit includes the JSON formatting characters
      *        of the override structure.
-     *        </p>
      */
 
     public void setOverrides(TaskOverride overrides) {
@@ -1038,23 +1060,19 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * existing environment variables (that are specified in the task definition or Docker image) on a container or add
      * new environment variables to it with an <code>environment</code> override.
      * </p>
-     * <note>
      * <p>
      * A total of 8192 characters are allowed for overrides. This limit includes the JSON formatting characters of the
      * override structure.
      * </p>
-     * </note>
      * 
      * @return A list of container overrides in JSON format that specify the name of a container in the specified task
      *         definition and the overrides it should receive. You can override the default command for a container
      *         (that is specified in the task definition or Docker image) with a <code>command</code> override. You can
      *         also override existing environment variables (that are specified in the task definition or Docker image)
      *         on a container or add new environment variables to it with an <code>environment</code> override.</p>
-     *         <note>
      *         <p>
      *         A total of 8192 characters are allowed for overrides. This limit includes the JSON formatting characters
      *         of the override structure.
-     *         </p>
      */
 
     public TaskOverride getOverrides() {
@@ -1069,23 +1087,20 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * existing environment variables (that are specified in the task definition or Docker image) on a container or add
      * new environment variables to it with an <code>environment</code> override.
      * </p>
-     * <note>
      * <p>
      * A total of 8192 characters are allowed for overrides. This limit includes the JSON formatting characters of the
      * override structure.
      * </p>
-     * </note>
      * 
      * @param overrides
      *        A list of container overrides in JSON format that specify the name of a container in the specified task
      *        definition and the overrides it should receive. You can override the default command for a container (that
      *        is specified in the task definition or Docker image) with a <code>command</code> override. You can also
      *        override existing environment variables (that are specified in the task definition or Docker image) on a
-     *        container or add new environment variables to it with an <code>environment</code> override.</p> <note>
+     *        container or add new environment variables to it with an <code>environment</code> override.</p>
      *        <p>
      *        A total of 8192 characters are allowed for overrides. This limit includes the JSON formatting characters
      *        of the override structure.
-     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1177,10 +1192,10 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * The placement strategy objects to use for the task. You can specify a maximum of five strategy rules per task.
+     * The placement strategy objects to use for the task. You can specify a maximum of 5 strategy rules per task.
      * </p>
      * 
-     * @return The placement strategy objects to use for the task. You can specify a maximum of five strategy rules per
+     * @return The placement strategy objects to use for the task. You can specify a maximum of 5 strategy rules per
      *         task.
      */
 
@@ -1193,11 +1208,11 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * The placement strategy objects to use for the task. You can specify a maximum of five strategy rules per task.
+     * The placement strategy objects to use for the task. You can specify a maximum of 5 strategy rules per task.
      * </p>
      * 
      * @param placementStrategy
-     *        The placement strategy objects to use for the task. You can specify a maximum of five strategy rules per
+     *        The placement strategy objects to use for the task. You can specify a maximum of 5 strategy rules per
      *        task.
      */
 
@@ -1212,7 +1227,7 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * The placement strategy objects to use for the task. You can specify a maximum of five strategy rules per task.
+     * The placement strategy objects to use for the task. You can specify a maximum of 5 strategy rules per task.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1221,7 +1236,7 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * </p>
      * 
      * @param placementStrategy
-     *        The placement strategy objects to use for the task. You can specify a maximum of five strategy rules per
+     *        The placement strategy objects to use for the task. You can specify a maximum of 5 strategy rules per
      *        task.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1238,11 +1253,11 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * The placement strategy objects to use for the task. You can specify a maximum of five strategy rules per task.
+     * The placement strategy objects to use for the task. You can specify a maximum of 5 strategy rules per task.
      * </p>
      * 
      * @param placementStrategy
-     *        The placement strategy objects to use for the task. You can specify a maximum of five strategy rules per
+     *        The placement strategy objects to use for the task. You can specify a maximum of 5 strategy rules per
      *        task.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1254,18 +1269,18 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * The platform version the task should run. A platform version is only specified for tasks using the Fargate launch
-     * type. If one is not specified, the <code>LATEST</code> platform version is used by default. For more information,
-     * see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate Platform
-     * Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * The platform version the task should use. A platform version is only specified for tasks hosted on Fargate. If
+     * one is not specified, the <code>LATEST</code> platform version is used by default. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate platform
+     * versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param platformVersion
-     *        The platform version the task should run. A platform version is only specified for tasks using the Fargate
-     *        launch type. If one is not specified, the <code>LATEST</code> platform version is used by default. For
-     *        more information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate Platform
-     *        Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *        The platform version the task should use. A platform version is only specified for tasks hosted on
+     *        Fargate. If one is not specified, the <code>LATEST</code> platform version is used by default. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate platform
+     *        versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      */
 
     public void setPlatformVersion(String platformVersion) {
@@ -1274,17 +1289,17 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * The platform version the task should run. A platform version is only specified for tasks using the Fargate launch
-     * type. If one is not specified, the <code>LATEST</code> platform version is used by default. For more information,
-     * see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate Platform
-     * Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * The platform version the task should use. A platform version is only specified for tasks hosted on Fargate. If
+     * one is not specified, the <code>LATEST</code> platform version is used by default. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate platform
+     * versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
-     * @return The platform version the task should run. A platform version is only specified for tasks using the
-     *         Fargate launch type. If one is not specified, the <code>LATEST</code> platform version is used by
-     *         default. For more information, see <a
+     * @return The platform version the task should use. A platform version is only specified for tasks hosted on
+     *         Fargate. If one is not specified, the <code>LATEST</code> platform version is used by default. For more
+     *         information, see <a
      *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate
-     *         Platform Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *         platform versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      */
 
     public String getPlatformVersion() {
@@ -1293,18 +1308,18 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * The platform version the task should run. A platform version is only specified for tasks using the Fargate launch
-     * type. If one is not specified, the <code>LATEST</code> platform version is used by default. For more information,
-     * see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate Platform
-     * Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * The platform version the task should use. A platform version is only specified for tasks hosted on Fargate. If
+     * one is not specified, the <code>LATEST</code> platform version is used by default. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate platform
+     * versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param platformVersion
-     *        The platform version the task should run. A platform version is only specified for tasks using the Fargate
-     *        launch type. If one is not specified, the <code>LATEST</code> platform version is used by default. For
-     *        more information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate Platform
-     *        Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *        The platform version the task should use. A platform version is only specified for tasks hosted on
+     *        Fargate. If one is not specified, the <code>LATEST</code> platform version is used by default. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate platform
+     *        versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1422,11 +1437,11 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * The reference ID to use for the task.
+     * The reference ID to use for the task. The reference ID can have a maximum length of 1024 characters.
      * </p>
      * 
      * @param referenceId
-     *        The reference ID to use for the task.
+     *        The reference ID to use for the task. The reference ID can have a maximum length of 1024 characters.
      */
 
     public void setReferenceId(String referenceId) {
@@ -1435,10 +1450,10 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * The reference ID to use for the task.
+     * The reference ID to use for the task. The reference ID can have a maximum length of 1024 characters.
      * </p>
      * 
-     * @return The reference ID to use for the task.
+     * @return The reference ID to use for the task. The reference ID can have a maximum length of 1024 characters.
      */
 
     public String getReferenceId() {
@@ -1447,11 +1462,11 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * The reference ID to use for the task.
+     * The reference ID to use for the task. The reference ID can have a maximum length of 1024 characters.
      * </p>
      * 
      * @param referenceId
-     *        The reference ID to use for the task.
+     *        The reference ID to use for the task. The reference ID can have a maximum length of 1024 characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

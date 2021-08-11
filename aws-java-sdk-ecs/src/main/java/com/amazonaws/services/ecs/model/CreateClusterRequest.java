@@ -122,7 +122,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The capacity provider strategy to set as the default for the cluster. When a default capacity provider strategy
-     * is set for a cluster, when calling the <a>RunTask</a> or <a>CreateService</a> APIs wtih no capacity provider
+     * is set for a cluster, when calling the <a>RunTask</a> or <a>CreateService</a> APIs with no capacity provider
      * strategy or launch type specified, the default capacity provider strategy for the cluster is used.
      * </p>
      * <p>
@@ -944,7 +944,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The capacity provider strategy to set as the default for the cluster. When a default capacity provider strategy
-     * is set for a cluster, when calling the <a>RunTask</a> or <a>CreateService</a> APIs wtih no capacity provider
+     * is set for a cluster, when calling the <a>RunTask</a> or <a>CreateService</a> APIs with no capacity provider
      * strategy or launch type specified, the default capacity provider strategy for the cluster is used.
      * </p>
      * <p>
@@ -953,7 +953,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @return The capacity provider strategy to set as the default for the cluster. When a default capacity provider
-     *         strategy is set for a cluster, when calling the <a>RunTask</a> or <a>CreateService</a> APIs wtih no
+     *         strategy is set for a cluster, when calling the <a>RunTask</a> or <a>CreateService</a> APIs with no
      *         capacity provider strategy or launch type specified, the default capacity provider strategy for the
      *         cluster is used.</p>
      *         <p>
@@ -971,7 +971,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The capacity provider strategy to set as the default for the cluster. When a default capacity provider strategy
-     * is set for a cluster, when calling the <a>RunTask</a> or <a>CreateService</a> APIs wtih no capacity provider
+     * is set for a cluster, when calling the <a>RunTask</a> or <a>CreateService</a> APIs with no capacity provider
      * strategy or launch type specified, the default capacity provider strategy for the cluster is used.
      * </p>
      * <p>
@@ -981,7 +981,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * 
      * @param defaultCapacityProviderStrategy
      *        The capacity provider strategy to set as the default for the cluster. When a default capacity provider
-     *        strategy is set for a cluster, when calling the <a>RunTask</a> or <a>CreateService</a> APIs wtih no
+     *        strategy is set for a cluster, when calling the <a>RunTask</a> or <a>CreateService</a> APIs with no
      *        capacity provider strategy or launch type specified, the default capacity provider strategy for the
      *        cluster is used.</p>
      *        <p>
@@ -1001,7 +1001,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The capacity provider strategy to set as the default for the cluster. When a default capacity provider strategy
-     * is set for a cluster, when calling the <a>RunTask</a> or <a>CreateService</a> APIs wtih no capacity provider
+     * is set for a cluster, when calling the <a>RunTask</a> or <a>CreateService</a> APIs with no capacity provider
      * strategy or launch type specified, the default capacity provider strategy for the cluster is used.
      * </p>
      * <p>
@@ -1016,7 +1016,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * 
      * @param defaultCapacityProviderStrategy
      *        The capacity provider strategy to set as the default for the cluster. When a default capacity provider
-     *        strategy is set for a cluster, when calling the <a>RunTask</a> or <a>CreateService</a> APIs wtih no
+     *        strategy is set for a cluster, when calling the <a>RunTask</a> or <a>CreateService</a> APIs with no
      *        capacity provider strategy or launch type specified, the default capacity provider strategy for the
      *        cluster is used.</p>
      *        <p>
@@ -1038,7 +1038,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The capacity provider strategy to set as the default for the cluster. When a default capacity provider strategy
-     * is set for a cluster, when calling the <a>RunTask</a> or <a>CreateService</a> APIs wtih no capacity provider
+     * is set for a cluster, when calling the <a>RunTask</a> or <a>CreateService</a> APIs with no capacity provider
      * strategy or launch type specified, the default capacity provider strategy for the cluster is used.
      * </p>
      * <p>
@@ -1048,7 +1048,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * 
      * @param defaultCapacityProviderStrategy
      *        The capacity provider strategy to set as the default for the cluster. When a default capacity provider
-     *        strategy is set for a cluster, when calling the <a>RunTask</a> or <a>CreateService</a> APIs wtih no
+     *        strategy is set for a cluster, when calling the <a>RunTask</a> or <a>CreateService</a> APIs with no
      *        capacity provider strategy or launch type specified, the default capacity provider strategy for the
      *        cluster is used.</p>
      *        <p>

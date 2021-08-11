@@ -37,7 +37,7 @@ public class StartSnapshotResult extends com.amazonaws.AmazonWebServiceResult<co
     private String snapshotId;
     /**
      * <p>
-     * The AWS account ID of the snapshot owner.
+     * The Amazon Web Services account ID of the snapshot owner.
      * </p>
      */
     private String ownerId;
@@ -81,8 +81,7 @@ public class StartSnapshotResult extends com.amazonaws.AmazonWebServiceResult<co
     private String parentSnapshotId;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Key Management Service (AWS KMS) customer master key (CMK) used to
-     * encrypt the snapshot.
+     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) key used to encrypt the snapshot.
      * </p>
      */
     private String kmsKeyArn;
@@ -169,11 +168,11 @@ public class StartSnapshotResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The AWS account ID of the snapshot owner.
+     * The Amazon Web Services account ID of the snapshot owner.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID of the snapshot owner.
+     *        The Amazon Web Services account ID of the snapshot owner.
      */
 
     public void setOwnerId(String ownerId) {
@@ -182,10 +181,10 @@ public class StartSnapshotResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The AWS account ID of the snapshot owner.
+     * The Amazon Web Services account ID of the snapshot owner.
      * </p>
      * 
-     * @return The AWS account ID of the snapshot owner.
+     * @return The Amazon Web Services account ID of the snapshot owner.
      */
 
     public String getOwnerId() {
@@ -194,11 +193,11 @@ public class StartSnapshotResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The AWS account ID of the snapshot owner.
+     * The Amazon Web Services account ID of the snapshot owner.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID of the snapshot owner.
+     *        The Amazon Web Services account ID of the snapshot owner.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -514,13 +513,11 @@ public class StartSnapshotResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Key Management Service (AWS KMS) customer master key (CMK) used to
-     * encrypt the snapshot.
+     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) key used to encrypt the snapshot.
      * </p>
      * 
      * @param kmsKeyArn
-     *        The Amazon Resource Name (ARN) of the AWS Key Management Service (AWS KMS) customer master key (CMK) used
-     *        to encrypt the snapshot.
+     *        The Amazon Resource Name (ARN) of the Key Management Service (KMS) key used to encrypt the snapshot.
      */
 
     public void setKmsKeyArn(String kmsKeyArn) {
@@ -529,12 +526,10 @@ public class StartSnapshotResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Key Management Service (AWS KMS) customer master key (CMK) used to
-     * encrypt the snapshot.
+     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) key used to encrypt the snapshot.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Key Management Service (AWS KMS) customer master key (CMK) used
-     *         to encrypt the snapshot.
+     * @return The Amazon Resource Name (ARN) of the Key Management Service (KMS) key used to encrypt the snapshot.
      */
 
     public String getKmsKeyArn() {
@@ -543,13 +538,11 @@ public class StartSnapshotResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Key Management Service (AWS KMS) customer master key (CMK) used to
-     * encrypt the snapshot.
+     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) key used to encrypt the snapshot.
      * </p>
      * 
      * @param kmsKeyArn
-     *        The Amazon Resource Name (ARN) of the AWS Key Management Service (AWS KMS) customer master key (CMK) used
-     *        to encrypt the snapshot.
+     *        The Amazon Resource Name (ARN) of the Key Management Service (KMS) key used to encrypt the snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

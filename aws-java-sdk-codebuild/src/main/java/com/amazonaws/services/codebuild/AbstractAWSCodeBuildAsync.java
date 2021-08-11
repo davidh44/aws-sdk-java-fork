@@ -574,6 +574,19 @@ public class AbstractAWSCodeBuildAsync extends AbstractAWSCodeBuild implements A
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateProjectVisibilityResult> updateProjectVisibilityAsync(UpdateProjectVisibilityRequest request) {
+
+        return updateProjectVisibilityAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateProjectVisibilityResult> updateProjectVisibilityAsync(UpdateProjectVisibilityRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateProjectVisibilityRequest, UpdateProjectVisibilityResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateReportGroupResult> updateReportGroupAsync(UpdateReportGroupRequest request) {
 
         return updateReportGroupAsync(request, null);

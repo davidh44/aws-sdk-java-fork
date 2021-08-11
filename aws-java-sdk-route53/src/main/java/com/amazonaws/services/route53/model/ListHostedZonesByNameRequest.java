@@ -19,8 +19,8 @@ import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * <p>
- * Retrieves a list of the public and private hosted zones that are associated with the current account in ASCII order
- * by domain name.
+ * Retrieves a list of the public and private hosted zones that are associated with the current Amazon Web Services
+ * account in ASCII order by domain name.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListHostedZonesByName" target="_top">AWS API
@@ -34,8 +34,9 @@ public class ListHostedZonesByNameRequest extends com.amazonaws.AmazonWebService
      * (Optional) For your first request to <code>ListHostedZonesByName</code>, include the <code>dnsname</code>
      * parameter only if you want to specify the name of the first hosted zone in the response. If you don't include the
      * <code>dnsname</code> parameter, Amazon Route 53 returns all of the hosted zones that were created by the current
-     * account, in ASCII order. For subsequent requests, include both <code>dnsname</code> and <code>hostedzoneid</code>
-     * parameters. For <code>dnsname</code>, specify the value of <code>NextDNSName</code> from the previous response.
+     * Amazon Web Services account, in ASCII order. For subsequent requests, include both <code>dnsname</code> and
+     * <code>hostedzoneid</code> parameters. For <code>dnsname</code>, specify the value of <code>NextDNSName</code>
+     * from the previous response.
      * </p>
      */
     private String dNSName;
@@ -68,17 +69,18 @@ public class ListHostedZonesByNameRequest extends com.amazonaws.AmazonWebService
      * (Optional) For your first request to <code>ListHostedZonesByName</code>, include the <code>dnsname</code>
      * parameter only if you want to specify the name of the first hosted zone in the response. If you don't include the
      * <code>dnsname</code> parameter, Amazon Route 53 returns all of the hosted zones that were created by the current
-     * account, in ASCII order. For subsequent requests, include both <code>dnsname</code> and <code>hostedzoneid</code>
-     * parameters. For <code>dnsname</code>, specify the value of <code>NextDNSName</code> from the previous response.
+     * Amazon Web Services account, in ASCII order. For subsequent requests, include both <code>dnsname</code> and
+     * <code>hostedzoneid</code> parameters. For <code>dnsname</code>, specify the value of <code>NextDNSName</code>
+     * from the previous response.
      * </p>
      * 
      * @param dNSName
      *        (Optional) For your first request to <code>ListHostedZonesByName</code>, include the <code>dnsname</code>
      *        parameter only if you want to specify the name of the first hosted zone in the response. If you don't
      *        include the <code>dnsname</code> parameter, Amazon Route 53 returns all of the hosted zones that were
-     *        created by the current account, in ASCII order. For subsequent requests, include both <code>dnsname</code>
-     *        and <code>hostedzoneid</code> parameters. For <code>dnsname</code>, specify the value of
-     *        <code>NextDNSName</code> from the previous response.
+     *        created by the current Amazon Web Services account, in ASCII order. For subsequent requests, include both
+     *        <code>dnsname</code> and <code>hostedzoneid</code> parameters. For <code>dnsname</code>, specify the value
+     *        of <code>NextDNSName</code> from the previous response.
      */
 
     public void setDNSName(String dNSName) {
@@ -90,14 +92,15 @@ public class ListHostedZonesByNameRequest extends com.amazonaws.AmazonWebService
      * (Optional) For your first request to <code>ListHostedZonesByName</code>, include the <code>dnsname</code>
      * parameter only if you want to specify the name of the first hosted zone in the response. If you don't include the
      * <code>dnsname</code> parameter, Amazon Route 53 returns all of the hosted zones that were created by the current
-     * account, in ASCII order. For subsequent requests, include both <code>dnsname</code> and <code>hostedzoneid</code>
-     * parameters. For <code>dnsname</code>, specify the value of <code>NextDNSName</code> from the previous response.
+     * Amazon Web Services account, in ASCII order. For subsequent requests, include both <code>dnsname</code> and
+     * <code>hostedzoneid</code> parameters. For <code>dnsname</code>, specify the value of <code>NextDNSName</code>
+     * from the previous response.
      * </p>
      * 
      * @return (Optional) For your first request to <code>ListHostedZonesByName</code>, include the <code>dnsname</code>
      *         parameter only if you want to specify the name of the first hosted zone in the response. If you don't
      *         include the <code>dnsname</code> parameter, Amazon Route 53 returns all of the hosted zones that were
-     *         created by the current account, in ASCII order. For subsequent requests, include both
+     *         created by the current Amazon Web Services account, in ASCII order. For subsequent requests, include both
      *         <code>dnsname</code> and <code>hostedzoneid</code> parameters. For <code>dnsname</code>, specify the
      *         value of <code>NextDNSName</code> from the previous response.
      */
@@ -111,17 +114,18 @@ public class ListHostedZonesByNameRequest extends com.amazonaws.AmazonWebService
      * (Optional) For your first request to <code>ListHostedZonesByName</code>, include the <code>dnsname</code>
      * parameter only if you want to specify the name of the first hosted zone in the response. If you don't include the
      * <code>dnsname</code> parameter, Amazon Route 53 returns all of the hosted zones that were created by the current
-     * account, in ASCII order. For subsequent requests, include both <code>dnsname</code> and <code>hostedzoneid</code>
-     * parameters. For <code>dnsname</code>, specify the value of <code>NextDNSName</code> from the previous response.
+     * Amazon Web Services account, in ASCII order. For subsequent requests, include both <code>dnsname</code> and
+     * <code>hostedzoneid</code> parameters. For <code>dnsname</code>, specify the value of <code>NextDNSName</code>
+     * from the previous response.
      * </p>
      * 
      * @param dNSName
      *        (Optional) For your first request to <code>ListHostedZonesByName</code>, include the <code>dnsname</code>
      *        parameter only if you want to specify the name of the first hosted zone in the response. If you don't
      *        include the <code>dnsname</code> parameter, Amazon Route 53 returns all of the hosted zones that were
-     *        created by the current account, in ASCII order. For subsequent requests, include both <code>dnsname</code>
-     *        and <code>hostedzoneid</code> parameters. For <code>dnsname</code>, specify the value of
-     *        <code>NextDNSName</code> from the previous response.
+     *        created by the current Amazon Web Services account, in ASCII order. For subsequent requests, include both
+     *        <code>dnsname</code> and <code>hostedzoneid</code> parameters. For <code>dnsname</code>, specify the value
+     *        of <code>NextDNSName</code> from the previous response.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -30,8 +30,9 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The ARN that identifies the service. The ARN contains the <code>arn:aws:ecs</code> namespace, followed by the
-     * Region of the service, the account ID of the service owner, the <code>service</code> namespace, and then the
-     * service name. For example, <code>arn:aws:ecs:region:012345678910:service/my-service</code>.
+     * Region of the service, the Amazon Web Services account ID of the service owner, the <code>service</code>
+     * namespace, and then the service name. For example,
+     * <code>arn:aws:ecs:region:012345678910:service/my-service</code>.
      * </p>
      */
     private String serviceArn;
@@ -308,14 +309,16 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The ARN that identifies the service. The ARN contains the <code>arn:aws:ecs</code> namespace, followed by the
-     * Region of the service, the account ID of the service owner, the <code>service</code> namespace, and then the
-     * service name. For example, <code>arn:aws:ecs:region:012345678910:service/my-service</code>.
+     * Region of the service, the Amazon Web Services account ID of the service owner, the <code>service</code>
+     * namespace, and then the service name. For example,
+     * <code>arn:aws:ecs:region:012345678910:service/my-service</code>.
      * </p>
      * 
      * @param serviceArn
      *        The ARN that identifies the service. The ARN contains the <code>arn:aws:ecs</code> namespace, followed by
-     *        the Region of the service, the account ID of the service owner, the <code>service</code> namespace, and
-     *        then the service name. For example, <code>arn:aws:ecs:region:012345678910:service/my-service</code>.
+     *        the Region of the service, the Amazon Web Services account ID of the service owner, the
+     *        <code>service</code> namespace, and then the service name. For example,
+     *        <code>arn:aws:ecs:region:012345678910:service/my-service</code>.
      */
 
     public void setServiceArn(String serviceArn) {
@@ -325,13 +328,15 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The ARN that identifies the service. The ARN contains the <code>arn:aws:ecs</code> namespace, followed by the
-     * Region of the service, the account ID of the service owner, the <code>service</code> namespace, and then the
-     * service name. For example, <code>arn:aws:ecs:region:012345678910:service/my-service</code>.
+     * Region of the service, the Amazon Web Services account ID of the service owner, the <code>service</code>
+     * namespace, and then the service name. For example,
+     * <code>arn:aws:ecs:region:012345678910:service/my-service</code>.
      * </p>
      * 
      * @return The ARN that identifies the service. The ARN contains the <code>arn:aws:ecs</code> namespace, followed by
-     *         the Region of the service, the account ID of the service owner, the <code>service</code> namespace, and
-     *         then the service name. For example, <code>arn:aws:ecs:region:012345678910:service/my-service</code>.
+     *         the Region of the service, the Amazon Web Services account ID of the service owner, the
+     *         <code>service</code> namespace, and then the service name. For example,
+     *         <code>arn:aws:ecs:region:012345678910:service/my-service</code>.
      */
 
     public String getServiceArn() {
@@ -341,14 +346,16 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The ARN that identifies the service. The ARN contains the <code>arn:aws:ecs</code> namespace, followed by the
-     * Region of the service, the account ID of the service owner, the <code>service</code> namespace, and then the
-     * service name. For example, <code>arn:aws:ecs:region:012345678910:service/my-service</code>.
+     * Region of the service, the Amazon Web Services account ID of the service owner, the <code>service</code>
+     * namespace, and then the service name. For example,
+     * <code>arn:aws:ecs:region:012345678910:service/my-service</code>.
      * </p>
      * 
      * @param serviceArn
      *        The ARN that identifies the service. The ARN contains the <code>arn:aws:ecs</code> namespace, followed by
-     *        the Region of the service, the account ID of the service owner, the <code>service</code> namespace, and
-     *        then the service name. For example, <code>arn:aws:ecs:region:012345678910:service/my-service</code>.
+     *        the Region of the service, the Amazon Web Services account ID of the service owner, the
+     *        <code>service</code> namespace, and then the service name. For example,
+     *        <code>arn:aws:ecs:region:012345678910:service/my-service</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

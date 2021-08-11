@@ -39,6 +39,8 @@ public class StreamingSessionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ec2InstanceType").build();
     private static final MarshallingInfo<String> LAUNCHPROFILEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("launchProfileId").build();
+    private static final MarshallingInfo<String> OWNEDBY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("ownedBy").build();
     private static final MarshallingInfo<String> SESSIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("sessionId").build();
     private static final MarshallingInfo<String> STATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -79,6 +81,7 @@ public class StreamingSessionMarshaller {
             protocolMarshaller.marshall(streamingSession.getCreatedBy(), CREATEDBY_BINDING);
             protocolMarshaller.marshall(streamingSession.getEc2InstanceType(), EC2INSTANCETYPE_BINDING);
             protocolMarshaller.marshall(streamingSession.getLaunchProfileId(), LAUNCHPROFILEID_BINDING);
+            protocolMarshaller.marshall(streamingSession.getOwnedBy(), OWNEDBY_BINDING);
             protocolMarshaller.marshall(streamingSession.getSessionId(), SESSIONID_BINDING);
             protocolMarshaller.marshall(streamingSession.getState(), STATE_BINDING);
             protocolMarshaller.marshall(streamingSession.getStatusCode(), STATUSCODE_BINDING);

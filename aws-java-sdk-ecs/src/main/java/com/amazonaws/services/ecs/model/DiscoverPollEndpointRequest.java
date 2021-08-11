@@ -28,8 +28,8 @@ public class DiscoverPollEndpointRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * The container instance ID or full ARN of the container instance. The ARN contains the <code>arn:aws:ecs</code>
-     * namespace, followed by the Region of the container instance, the account ID of the container instance owner, the
-     * <code>container-instance</code> namespace, and then the container instance ID. For example,
+     * namespace, followed by the Region of the container instance, the Amazon Web Services account ID of the container
+     * instance owner, the <code>container-instance</code> namespace, and then the container instance ID. For example,
      * <code>arn:aws:ecs:region:aws_account_id:container-instance/container_instance_ID</code>.
      * </p>
      */
@@ -44,16 +44,16 @@ public class DiscoverPollEndpointRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * The container instance ID or full ARN of the container instance. The ARN contains the <code>arn:aws:ecs</code>
-     * namespace, followed by the Region of the container instance, the account ID of the container instance owner, the
-     * <code>container-instance</code> namespace, and then the container instance ID. For example,
+     * namespace, followed by the Region of the container instance, the Amazon Web Services account ID of the container
+     * instance owner, the <code>container-instance</code> namespace, and then the container instance ID. For example,
      * <code>arn:aws:ecs:region:aws_account_id:container-instance/container_instance_ID</code>.
      * </p>
      * 
      * @param containerInstance
      *        The container instance ID or full ARN of the container instance. The ARN contains the
-     *        <code>arn:aws:ecs</code> namespace, followed by the Region of the container instance, the account ID of
-     *        the container instance owner, the <code>container-instance</code> namespace, and then the container
-     *        instance ID. For example,
+     *        <code>arn:aws:ecs</code> namespace, followed by the Region of the container instance, the Amazon Web
+     *        Services account ID of the container instance owner, the <code>container-instance</code> namespace, and
+     *        then the container instance ID. For example,
      *        <code>arn:aws:ecs:region:aws_account_id:container-instance/container_instance_ID</code>.
      */
 
@@ -64,15 +64,15 @@ public class DiscoverPollEndpointRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * The container instance ID or full ARN of the container instance. The ARN contains the <code>arn:aws:ecs</code>
-     * namespace, followed by the Region of the container instance, the account ID of the container instance owner, the
-     * <code>container-instance</code> namespace, and then the container instance ID. For example,
+     * namespace, followed by the Region of the container instance, the Amazon Web Services account ID of the container
+     * instance owner, the <code>container-instance</code> namespace, and then the container instance ID. For example,
      * <code>arn:aws:ecs:region:aws_account_id:container-instance/container_instance_ID</code>.
      * </p>
      * 
      * @return The container instance ID or full ARN of the container instance. The ARN contains the
-     *         <code>arn:aws:ecs</code> namespace, followed by the Region of the container instance, the account ID of
-     *         the container instance owner, the <code>container-instance</code> namespace, and then the container
-     *         instance ID. For example,
+     *         <code>arn:aws:ecs</code> namespace, followed by the Region of the container instance, the Amazon Web
+     *         Services account ID of the container instance owner, the <code>container-instance</code> namespace, and
+     *         then the container instance ID. For example,
      *         <code>arn:aws:ecs:region:aws_account_id:container-instance/container_instance_ID</code>.
      */
 
@@ -83,16 +83,16 @@ public class DiscoverPollEndpointRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * The container instance ID or full ARN of the container instance. The ARN contains the <code>arn:aws:ecs</code>
-     * namespace, followed by the Region of the container instance, the account ID of the container instance owner, the
-     * <code>container-instance</code> namespace, and then the container instance ID. For example,
+     * namespace, followed by the Region of the container instance, the Amazon Web Services account ID of the container
+     * instance owner, the <code>container-instance</code> namespace, and then the container instance ID. For example,
      * <code>arn:aws:ecs:region:aws_account_id:container-instance/container_instance_ID</code>.
      * </p>
      * 
      * @param containerInstance
      *        The container instance ID or full ARN of the container instance. The ARN contains the
-     *        <code>arn:aws:ecs</code> namespace, followed by the Region of the container instance, the account ID of
-     *        the container instance owner, the <code>container-instance</code> namespace, and then the container
-     *        instance ID. For example,
+     *        <code>arn:aws:ecs</code> namespace, followed by the Region of the container instance, the Amazon Web
+     *        Services account ID of the container instance owner, the <code>container-instance</code> namespace, and
+     *        then the container instance ID. For example,
      *        <code>arn:aws:ecs:region:aws_account_id:container-instance/container_instance_ID</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

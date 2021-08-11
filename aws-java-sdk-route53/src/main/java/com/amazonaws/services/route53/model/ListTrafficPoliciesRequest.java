@@ -20,7 +20,7 @@ import com.amazonaws.AmazonWebServiceRequest;
 /**
  * <p>
  * A complex type that contains the information about the request to list the traffic policies that are associated with
- * the current account.
+ * the current Amazon Web Services account.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListTrafficPolicies" target="_top">AWS API

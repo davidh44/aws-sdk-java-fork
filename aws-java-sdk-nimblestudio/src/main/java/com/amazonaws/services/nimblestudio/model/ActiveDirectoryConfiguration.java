@@ -36,7 +36,7 @@ public class ActiveDirectoryConfiguration implements Serializable, Cloneable, St
     private java.util.List<ActiveDirectoryComputerAttribute> computerAttributes;
     /**
      * <p>
-     * The directory ID of the AWS Directory Service for Microsoft AD to access using this studio component.
+     * The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.
      * </p>
      */
     private String directoryId;
@@ -119,11 +119,12 @@ public class ActiveDirectoryConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The directory ID of the AWS Directory Service for Microsoft AD to access using this studio component.
+     * The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.
      * </p>
      * 
      * @param directoryId
-     *        The directory ID of the AWS Directory Service for Microsoft AD to access using this studio component.
+     *        The directory ID of the Directory Service for Microsoft Active Directory to access using this studio
+     *        component.
      */
 
     public void setDirectoryId(String directoryId) {
@@ -132,10 +133,11 @@ public class ActiveDirectoryConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The directory ID of the AWS Directory Service for Microsoft AD to access using this studio component.
+     * The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.
      * </p>
      * 
-     * @return The directory ID of the AWS Directory Service for Microsoft AD to access using this studio component.
+     * @return The directory ID of the Directory Service for Microsoft Active Directory to access using this studio
+     *         component.
      */
 
     public String getDirectoryId() {
@@ -144,11 +146,12 @@ public class ActiveDirectoryConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The directory ID of the AWS Directory Service for Microsoft AD to access using this studio component.
+     * The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.
      * </p>
      * 
      * @param directoryId
-     *        The directory ID of the AWS Directory Service for Microsoft AD to access using this studio component.
+     *        The directory ID of the Directory Service for Microsoft Active Directory to access using this studio
+     *        component.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

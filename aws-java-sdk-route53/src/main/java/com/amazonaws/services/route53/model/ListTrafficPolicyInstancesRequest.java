@@ -19,7 +19,8 @@ import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * <p>
- * A request to get information about the traffic policy instances that you created by using the current account.
+ * A request to get information about the traffic policy instances that you created by using the current Amazon Web
+ * Services account.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListTrafficPolicyInstances" target="_top">AWS

@@ -68,6 +68,10 @@ public class StreamingSessionJsonUnmarshaller implements Unmarshaller<StreamingS
                     context.nextToken();
                     streamingSession.setLaunchProfileId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ownedBy", targetDepth)) {
+                    context.nextToken();
+                    streamingSession.setOwnedBy(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("sessionId", targetDepth)) {
                     context.nextToken();
                     streamingSession.setSessionId(context.getUnmarshaller(String.class).unmarshall(context));

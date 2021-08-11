@@ -32,8 +32,9 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (ARN) that identifies the cluster. The ARN contains the <code>arn:aws:ecs</code>
-     * namespace, followed by the Region of the cluster, the account ID of the cluster owner, the <code>cluster</code>
-     * namespace, and then the cluster name. For example, <code>arn:aws:ecs:region:012345678910:cluster/test</code>.
+     * namespace, followed by the Region of the cluster, the Amazon Web Services account ID of the cluster owner, the
+     * <code>cluster</code> namespace, and then the cluster name. For example,
+     * <code>arn:aws:ecs:region:012345678910:cluster/test</code>.
      * </p>
      */
     private String clusterArn;
@@ -276,14 +277,15 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (ARN) that identifies the cluster. The ARN contains the <code>arn:aws:ecs</code>
-     * namespace, followed by the Region of the cluster, the account ID of the cluster owner, the <code>cluster</code>
-     * namespace, and then the cluster name. For example, <code>arn:aws:ecs:region:012345678910:cluster/test</code>.
+     * namespace, followed by the Region of the cluster, the Amazon Web Services account ID of the cluster owner, the
+     * <code>cluster</code> namespace, and then the cluster name. For example,
+     * <code>arn:aws:ecs:region:012345678910:cluster/test</code>.
      * </p>
      * 
      * @param clusterArn
      *        The Amazon Resource Name (ARN) that identifies the cluster. The ARN contains the <code>arn:aws:ecs</code>
-     *        namespace, followed by the Region of the cluster, the account ID of the cluster owner, the
-     *        <code>cluster</code> namespace, and then the cluster name. For example,
+     *        namespace, followed by the Region of the cluster, the Amazon Web Services account ID of the cluster owner,
+     *        the <code>cluster</code> namespace, and then the cluster name. For example,
      *        <code>arn:aws:ecs:region:012345678910:cluster/test</code>.
      */
 
@@ -294,13 +296,14 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (ARN) that identifies the cluster. The ARN contains the <code>arn:aws:ecs</code>
-     * namespace, followed by the Region of the cluster, the account ID of the cluster owner, the <code>cluster</code>
-     * namespace, and then the cluster name. For example, <code>arn:aws:ecs:region:012345678910:cluster/test</code>.
+     * namespace, followed by the Region of the cluster, the Amazon Web Services account ID of the cluster owner, the
+     * <code>cluster</code> namespace, and then the cluster name. For example,
+     * <code>arn:aws:ecs:region:012345678910:cluster/test</code>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) that identifies the cluster. The ARN contains the <code>arn:aws:ecs</code>
-     *         namespace, followed by the Region of the cluster, the account ID of the cluster owner, the
-     *         <code>cluster</code> namespace, and then the cluster name. For example,
+     *         namespace, followed by the Region of the cluster, the Amazon Web Services account ID of the cluster
+     *         owner, the <code>cluster</code> namespace, and then the cluster name. For example,
      *         <code>arn:aws:ecs:region:012345678910:cluster/test</code>.
      */
 
@@ -311,14 +314,15 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (ARN) that identifies the cluster. The ARN contains the <code>arn:aws:ecs</code>
-     * namespace, followed by the Region of the cluster, the account ID of the cluster owner, the <code>cluster</code>
-     * namespace, and then the cluster name. For example, <code>arn:aws:ecs:region:012345678910:cluster/test</code>.
+     * namespace, followed by the Region of the cluster, the Amazon Web Services account ID of the cluster owner, the
+     * <code>cluster</code> namespace, and then the cluster name. For example,
+     * <code>arn:aws:ecs:region:012345678910:cluster/test</code>.
      * </p>
      * 
      * @param clusterArn
      *        The Amazon Resource Name (ARN) that identifies the cluster. The ARN contains the <code>arn:aws:ecs</code>
-     *        namespace, followed by the Region of the cluster, the account ID of the cluster owner, the
-     *        <code>cluster</code> namespace, and then the cluster name. For example,
+     *        namespace, followed by the Region of the cluster, the Amazon Web Services account ID of the cluster owner,
+     *        the <code>cluster</code> namespace, and then the cluster name. For example,
      *        <code>arn:aws:ecs:region:012345678910:cluster/test</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -33,6 +33,8 @@ public class StreamingSessionStreamMarshaller {
             .marshallLocationName("createdBy").build();
     private static final MarshallingInfo<java.util.Date> EXPIRESAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("expiresAt").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<String> OWNEDBY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("ownedBy").build();
     private static final MarshallingInfo<String> STATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("state").build();
     private static final MarshallingInfo<String> STATUSCODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -61,6 +63,7 @@ public class StreamingSessionStreamMarshaller {
             protocolMarshaller.marshall(streamingSessionStream.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(streamingSessionStream.getCreatedBy(), CREATEDBY_BINDING);
             protocolMarshaller.marshall(streamingSessionStream.getExpiresAt(), EXPIRESAT_BINDING);
+            protocolMarshaller.marshall(streamingSessionStream.getOwnedBy(), OWNEDBY_BINDING);
             protocolMarshaller.marshall(streamingSessionStream.getState(), STATE_BINDING);
             protocolMarshaller.marshall(streamingSessionStream.getStatusCode(), STATUSCODE_BINDING);
             protocolMarshaller.marshall(streamingSessionStream.getStreamId(), STREAMID_BINDING);

@@ -27,7 +27,7 @@ public class ListStreamingSessionsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The user ID.
+     * The user ID of the user that created the streaming session.
      * </p>
      */
     private String createdBy;
@@ -37,6 +37,12 @@ public class ListStreamingSessionsRequest extends com.amazonaws.AmazonWebService
      * </p>
      */
     private String nextToken;
+    /**
+     * <p>
+     * The user ID of the user that owns the streaming session.
+     * </p>
+     */
+    private String ownedBy;
     /**
      * <p>
      * A collection of session IDs.
@@ -52,11 +58,11 @@ public class ListStreamingSessionsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The user ID.
+     * The user ID of the user that created the streaming session.
      * </p>
      * 
      * @param createdBy
-     *        The user ID.
+     *        The user ID of the user that created the streaming session.
      */
 
     public void setCreatedBy(String createdBy) {
@@ -65,10 +71,10 @@ public class ListStreamingSessionsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The user ID.
+     * The user ID of the user that created the streaming session.
      * </p>
      * 
-     * @return The user ID.
+     * @return The user ID of the user that created the streaming session.
      */
 
     public String getCreatedBy() {
@@ -77,11 +83,11 @@ public class ListStreamingSessionsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The user ID.
+     * The user ID of the user that created the streaming session.
      * </p>
      * 
      * @param createdBy
-     *        The user ID.
+     *        The user ID of the user that created the streaming session.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -127,6 +133,46 @@ public class ListStreamingSessionsRequest extends com.amazonaws.AmazonWebService
 
     public ListStreamingSessionsRequest withNextToken(String nextToken) {
         setNextToken(nextToken);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The user ID of the user that owns the streaming session.
+     * </p>
+     * 
+     * @param ownedBy
+     *        The user ID of the user that owns the streaming session.
+     */
+
+    public void setOwnedBy(String ownedBy) {
+        this.ownedBy = ownedBy;
+    }
+
+    /**
+     * <p>
+     * The user ID of the user that owns the streaming session.
+     * </p>
+     * 
+     * @return The user ID of the user that owns the streaming session.
+     */
+
+    public String getOwnedBy() {
+        return this.ownedBy;
+    }
+
+    /**
+     * <p>
+     * The user ID of the user that owns the streaming session.
+     * </p>
+     * 
+     * @param ownedBy
+     *        The user ID of the user that owns the streaming session.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListStreamingSessionsRequest withOwnedBy(String ownedBy) {
+        setOwnedBy(ownedBy);
         return this;
     }
 
@@ -226,6 +272,8 @@ public class ListStreamingSessionsRequest extends com.amazonaws.AmazonWebService
             sb.append("CreatedBy: ").append(getCreatedBy()).append(",");
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getOwnedBy() != null)
+            sb.append("OwnedBy: ").append(getOwnedBy()).append(",");
         if (getSessionIds() != null)
             sb.append("SessionIds: ").append(getSessionIds()).append(",");
         if (getStudioId() != null)
@@ -252,6 +300,10 @@ public class ListStreamingSessionsRequest extends com.amazonaws.AmazonWebService
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
+        if (other.getOwnedBy() == null ^ this.getOwnedBy() == null)
+            return false;
+        if (other.getOwnedBy() != null && other.getOwnedBy().equals(this.getOwnedBy()) == false)
+            return false;
         if (other.getSessionIds() == null ^ this.getSessionIds() == null)
             return false;
         if (other.getSessionIds() != null && other.getSessionIds().equals(this.getSessionIds()) == false)
@@ -270,6 +322,7 @@ public class ListStreamingSessionsRequest extends com.amazonaws.AmazonWebService
 
         hashCode = prime * hashCode + ((getCreatedBy() == null) ? 0 : getCreatedBy().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getOwnedBy() == null) ? 0 : getOwnedBy().hashCode());
         hashCode = prime * hashCode + ((getSessionIds() == null) ? 0 : getSessionIds().hashCode());
         hashCode = prime * hashCode + ((getStudioId() == null) ? 0 : getStudioId().hashCode());
         return hashCode;

@@ -43,7 +43,7 @@ public class ListChangedBlocksResult extends com.amazonaws.AmazonWebServiceResul
     private Long volumeSize;
     /**
      * <p>
-     * The size of the block.
+     * The size of the blocks in the snapshot, in bytes.
      * </p>
      */
     private Integer blockSize;
@@ -207,11 +207,11 @@ public class ListChangedBlocksResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The size of the block.
+     * The size of the blocks in the snapshot, in bytes.
      * </p>
      * 
      * @param blockSize
-     *        The size of the block.
+     *        The size of the blocks in the snapshot, in bytes.
      */
 
     public void setBlockSize(Integer blockSize) {
@@ -220,10 +220,10 @@ public class ListChangedBlocksResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The size of the block.
+     * The size of the blocks in the snapshot, in bytes.
      * </p>
      * 
-     * @return The size of the block.
+     * @return The size of the blocks in the snapshot, in bytes.
      */
 
     public Integer getBlockSize() {
@@ -232,11 +232,11 @@ public class ListChangedBlocksResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The size of the block.
+     * The size of the blocks in the snapshot, in bytes.
      * </p>
      * 
      * @param blockSize
-     *        The size of the block.
+     *        The size of the blocks in the snapshot, in bytes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

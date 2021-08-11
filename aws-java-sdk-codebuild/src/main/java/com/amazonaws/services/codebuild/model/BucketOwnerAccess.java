@@ -16,11 +16,18 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Specifies the access for objects that are uploaded to an Amazon S3 bucket that is owned by another account.
+ * Specifies the bucket owner's access for objects that another account uploads to their Amazon S3 bucket. By default,
+ * only the account that uploads the objects to the bucket has access to these objects. This property allows you to give
+ * the bucket owner access to these objects.
  * </p>
+ * <note>
  * <p>
- * By default, only the account that uploads the objects to the bucket has access to these objects. This property allows
- * you to give the bucket owner access to these objects.
+ * To use this property, your CodeBuild service role must have the <code>s3:PutBucketAcl</code> permission. This
+ * permission allows CodeBuild to modify the access control list for the bucket.
+ * </p>
+ * </note>
+ * <p>
+ * This property can be one of the following values:
  * </p>
  * <dl>
  * <dt>NONE</dt>
@@ -32,7 +39,7 @@ import javax.annotation.Generated;
  * <dt>READ_ONLY</dt>
  * <dd>
  * <p>
- * The bucket owner has read only access to the objects. The uploading account retains ownership of the objects.
+ * The bucket owner has read-only access to the objects. The uploading account retains ownership of the objects.
  * </p>
  * </dd>
  * <dt>FULL</dt>

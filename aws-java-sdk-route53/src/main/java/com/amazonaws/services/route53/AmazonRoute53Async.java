@@ -76,10 +76,10 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
      * </p>
      * </important> <note>
      * <p>
-     * If you want to associate a VPC that was created by using one account with a private hosted zone that was created
-     * by using a different account, the account that created the private hosted zone must first submit a
-     * <code>CreateVPCAssociationAuthorization</code> request. Then the account that created the VPC must submit an
-     * <code>AssociateVPCWithHostedZone</code> request.
+     * If you want to associate a VPC that was created by using one Amazon Web Services account with a private hosted
+     * zone that was created by using a different account, the Amazon Web Services account that created the private
+     * hosted zone must first submit a <code>CreateVPCAssociationAuthorization</code> request. Then the account that
+     * created the VPC must submit an <code>AssociateVPCWithHostedZone</code> request.
      * </p>
      * </note>
      * 
@@ -104,10 +104,10 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
      * </p>
      * </important> <note>
      * <p>
-     * If you want to associate a VPC that was created by using one account with a private hosted zone that was created
-     * by using a different account, the account that created the private hosted zone must first submit a
-     * <code>CreateVPCAssociationAuthorization</code> request. Then the account that created the VPC must submit an
-     * <code>AssociateVPCWithHostedZone</code> request.
+     * If you want to associate a VPC that was created by using one Amazon Web Services account with a private hosted
+     * zone that was created by using a different account, the Amazon Web Services account that created the private
+     * hosted zone must first submit a <code>CreateVPCAssociationAuthorization</code> request. Then the account that
+     * created the VPC must submit an <code>AssociateVPCWithHostedZone</code> request.
      * </p>
      * </note>
      * 
@@ -758,8 +758,8 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
      * </li>
      * <li>
      * <p>
-     * You must use the same account to create the log group and the hosted zone that you want to configure query
-     * logging for.
+     * You must use the same Amazon Web Services account to create the log group and the hosted zone that you want to
+     * configure query logging for.
      * </p>
      * </li>
      * <li>
@@ -933,8 +933,8 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
      * </li>
      * <li>
      * <p>
-     * You must use the same account to create the log group and the hosted zone that you want to configure query
-     * logging for.
+     * You must use the same Amazon Web Services account to create the log group and the hosted zone that you want to
+     * configure query logging for.
      * </p>
      * </li>
      * <li>
@@ -1059,7 +1059,7 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
     /**
      * <p>
      * Creates a delegation set (a group of four name servers) that can be reused by multiple hosted zones that were
-     * created by the same account.
+     * created by the same Amazon Web Services account.
      * </p>
      * <p>
      * You can also create a reusable delegation set that uses the four name servers that are associated with an
@@ -1150,7 +1150,7 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
     /**
      * <p>
      * Creates a delegation set (a group of four name servers) that can be reused by multiple hosted zones that were
-     * created by the same account.
+     * created by the same Amazon Web Services account.
      * </p>
      * <p>
      * You can also create a reusable delegation set that uses the four name servers that are associated with an
@@ -1372,11 +1372,11 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
 
     /**
      * <p>
-     * Authorizes the account that created a specified VPC to submit an <code>AssociateVPCWithHostedZone</code> request
-     * to associate the VPC with a specified hosted zone that was created by a different account. To submit a
-     * <code>CreateVPCAssociationAuthorization</code> request, you must use the account that created the hosted zone.
-     * After you authorize the association, use the account that created the VPC to submit an
-     * <code>AssociateVPCWithHostedZone</code> request.
+     * Authorizes the Amazon Web Services account that created a specified VPC to submit an
+     * <code>AssociateVPCWithHostedZone</code> request to associate the VPC with a specified hosted zone that was
+     * created by a different account. To submit a <code>CreateVPCAssociationAuthorization</code> request, you must use
+     * the account that created the hosted zone. After you authorize the association, use the account that created the
+     * VPC to submit an <code>AssociateVPCWithHostedZone</code> request.
      * </p>
      * <note>
      * <p>
@@ -1400,11 +1400,11 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
 
     /**
      * <p>
-     * Authorizes the account that created a specified VPC to submit an <code>AssociateVPCWithHostedZone</code> request
-     * to associate the VPC with a specified hosted zone that was created by a different account. To submit a
-     * <code>CreateVPCAssociationAuthorization</code> request, you must use the account that created the hosted zone.
-     * After you authorize the association, use the account that created the VPC to submit an
-     * <code>AssociateVPCWithHostedZone</code> request.
+     * Authorizes the Amazon Web Services account that created a specified VPC to submit an
+     * <code>AssociateVPCWithHostedZone</code> request to associate the VPC with a specified hosted zone that was
+     * created by a different account. To submit a <code>CreateVPCAssociationAuthorization</code> request, you must use
+     * the account that created the hosted zone. After you authorize the association, use the account that created the
+     * VPC to submit an <code>AssociateVPCWithHostedZone</code> request.
      * </p>
      * <note>
      * <p>
@@ -1583,8 +1583,8 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
      * </li>
      * <li>
      * <p>
-     * Use the <code>ListHostedZones</code> action to get a list of the hosted zones associated with the current
-     * account.
+     * Use the <code>ListHostedZones</code> action to get a list of the hosted zones associated with the current Amazon
+     * Web Services account.
      * </p>
      * </li>
      * </ul>
@@ -1652,8 +1652,8 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
      * </li>
      * <li>
      * <p>
-     * Use the <code>ListHostedZones</code> action to get a list of the hosted zones associated with the current
-     * account.
+     * Use the <code>ListHostedZones</code> action to get a list of the hosted zones associated with the current Amazon
+     * Web Services account.
      * </p>
      * </li>
      * </ul>
@@ -1941,8 +1941,8 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
      * </p>
      * <important>
      * <p>
-     * Sending this request only prevents the account that created the VPC from associating the VPC with the Amazon
-     * Route 53 hosted zone in the future. If the VPC is already associated with the hosted zone,
+     * Sending this request only prevents the Amazon Web Services account that created the VPC from associating the VPC
+     * with the Amazon Route 53 hosted zone in the future. If the VPC is already associated with the hosted zone,
      * <code>DeleteVPCAssociationAuthorization</code> won't disassociate the VPC from the hosted zone. If you want to
      * delete an existing association, use <code>DisassociateVPCFromHostedZone</code>.
      * </p>
@@ -1950,7 +1950,8 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
      * 
      * @param deleteVPCAssociationAuthorizationRequest
      *        A complex type that contains information about the request to remove authorization to associate a VPC that
-     *        was created by one account with a hosted zone that was created with a different account.
+     *        was created by one Amazon Web Services account with a hosted zone that was created with a different Amazon
+     *        Web Services account.
      * @return A Java Future containing the result of the DeleteVPCAssociationAuthorization operation returned by the
      *         service.
      * @sample AmazonRoute53Async.DeleteVPCAssociationAuthorization
@@ -1968,8 +1969,8 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
      * </p>
      * <important>
      * <p>
-     * Sending this request only prevents the account that created the VPC from associating the VPC with the Amazon
-     * Route 53 hosted zone in the future. If the VPC is already associated with the hosted zone,
+     * Sending this request only prevents the Amazon Web Services account that created the VPC from associating the VPC
+     * with the Amazon Route 53 hosted zone in the future. If the VPC is already associated with the hosted zone,
      * <code>DeleteVPCAssociationAuthorization</code> won't disassociate the VPC from the hosted zone. If you want to
      * delete an existing association, use <code>DisassociateVPCFromHostedZone</code>.
      * </p>
@@ -1977,7 +1978,8 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
      * 
      * @param deleteVPCAssociationAuthorizationRequest
      *        A complex type that contains information about the request to remove authorization to associate a VPC that
-     *        was created by one account with a hosted zone that was created with a different account.
+     *        was created by one Amazon Web Services account with a hosted zone that was created with a different Amazon
+     *        Web Services account.
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -2175,8 +2177,8 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
      * </p>
      * <note>
      * <p>
-     * You can also view account limits in Amazon Web Services Trusted Advisor. Sign in to the Management Console and
-     * open the Trusted Advisor console at <a
+     * You can also view account limits in Amazon Web Services Trusted Advisor. Sign in to the Amazon Web Services
+     * Management Console and open the Trusted Advisor console at <a
      * href="https://console.aws.amazon.com/trustedadvisor">https://console.aws.amazon.com/trustedadvisor/</a>. Then
      * choose <b>Service limits</b> in the navigation pane.
      * </p>
@@ -2205,8 +2207,8 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
      * </p>
      * <note>
      * <p>
-     * You can also view account limits in Amazon Web Services Trusted Advisor. Sign in to the Management Console and
-     * open the Trusted Advisor console at <a
+     * You can also view account limits in Amazon Web Services Trusted Advisor. Sign in to the Amazon Web Services
+     * Management Console and open the Trusted Advisor console at <a
      * href="https://console.aws.amazon.com/trustedadvisor">https://console.aws.amazon.com/trustedadvisor/</a>. Then
      * choose <b>Service limits</b> in the navigation pane.
      * </p>
@@ -2515,11 +2517,12 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
 
     /**
      * <p>
-     * Retrieves the number of health checks that are associated with the current account.
+     * Retrieves the number of health checks that are associated with the current Amazon Web Services account.
      * </p>
      * 
      * @param getHealthCheckCountRequest
-     *        A request for the number of health checks that are associated with the current account.
+     *        A request for the number of health checks that are associated with the current Amazon Web Services
+     *        account.
      * @return A Java Future containing the result of the GetHealthCheckCount operation returned by the service.
      * @sample AmazonRoute53Async.GetHealthCheckCount
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetHealthCheckCount" target="_top">AWS
@@ -2529,11 +2532,12 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
 
     /**
      * <p>
-     * Retrieves the number of health checks that are associated with the current account.
+     * Retrieves the number of health checks that are associated with the current Amazon Web Services account.
      * </p>
      * 
      * @param getHealthCheckCountRequest
-     *        A request for the number of health checks that are associated with the current account.
+     *        A request for the number of health checks that are associated with the current Amazon Web Services
+     *        account.
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -2678,11 +2682,12 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
 
     /**
      * <p>
-     * Retrieves the number of hosted zones that are associated with the current account.
+     * Retrieves the number of hosted zones that are associated with the current Amazon Web Services account.
      * </p>
      * 
      * @param getHostedZoneCountRequest
-     *        A request to retrieve a count of all the hosted zones that are associated with the current account.
+     *        A request to retrieve a count of all the hosted zones that are associated with the current Amazon Web
+     *        Services account.
      * @return A Java Future containing the result of the GetHostedZoneCount operation returned by the service.
      * @sample AmazonRoute53Async.GetHostedZoneCount
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetHostedZoneCount" target="_top">AWS API
@@ -2692,11 +2697,12 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
 
     /**
      * <p>
-     * Retrieves the number of hosted zones that are associated with the current account.
+     * Retrieves the number of hosted zones that are associated with the current Amazon Web Services account.
      * </p>
      * 
      * @param getHostedZoneCountRequest
-     *        A request to retrieve a count of all the hosted zones that are associated with the current account.
+     *        A request to retrieve a count of all the hosted zones that are associated with the current Amazon Web
+     *        Services account.
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -3004,11 +3010,12 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
 
     /**
      * <p>
-     * Gets the number of traffic policy instances that are associated with the current account.
+     * Gets the number of traffic policy instances that are associated with the current Amazon Web Services account.
      * </p>
      * 
      * @param getTrafficPolicyInstanceCountRequest
-     *        Request to get the number of traffic policy instances that are associated with the current account.
+     *        Request to get the number of traffic policy instances that are associated with the current Amazon Web
+     *        Services account.
      * @return A Java Future containing the result of the GetTrafficPolicyInstanceCount operation returned by the
      *         service.
      * @sample AmazonRoute53Async.GetTrafficPolicyInstanceCount
@@ -3020,11 +3027,12 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
 
     /**
      * <p>
-     * Gets the number of traffic policy instances that are associated with the current account.
+     * Gets the number of traffic policy instances that are associated with the current Amazon Web Services account.
      * </p>
      * 
      * @param getTrafficPolicyInstanceCountRequest
-     *        Request to get the number of traffic policy instances that are associated with the current account.
+     *        Request to get the number of traffic policy instances that are associated with the current Amazon Web
+     *        Services account.
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -3133,11 +3141,12 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
 
     /**
      * <p>
-     * Retrieve a list of the health checks that are associated with the current account.
+     * Retrieve a list of the health checks that are associated with the current Amazon Web Services account.
      * </p>
      * 
      * @param listHealthChecksRequest
-     *        A request to retrieve a list of the health checks that are associated with the current account.
+     *        A request to retrieve a list of the health checks that are associated with the current Amazon Web Services
+     *        account.
      * @return A Java Future containing the result of the ListHealthChecks operation returned by the service.
      * @sample AmazonRoute53Async.ListHealthChecks
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListHealthChecks" target="_top">AWS API
@@ -3147,11 +3156,12 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
 
     /**
      * <p>
-     * Retrieve a list of the health checks that are associated with the current account.
+     * Retrieve a list of the health checks that are associated with the current Amazon Web Services account.
      * </p>
      * 
      * @param listHealthChecksRequest
-     *        A request to retrieve a list of the health checks that are associated with the current account.
+     *        A request to retrieve a list of the health checks that are associated with the current Amazon Web Services
+     *        account.
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -3181,8 +3191,8 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
 
     /**
      * <p>
-     * Retrieves a list of the public and private hosted zones that are associated with the current account. The
-     * response includes a <code>HostedZones</code> child element for each hosted zone.
+     * Retrieves a list of the public and private hosted zones that are associated with the current Amazon Web Services
+     * account. The response includes a <code>HostedZones</code> child element for each hosted zone.
      * </p>
      * <p>
      * Amazon Route 53 returns a maximum of 100 items in each response. If you have a lot of hosted zones, you can use
@@ -3191,7 +3201,7 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
      * 
      * @param listHostedZonesRequest
      *        A request to retrieve a list of the public and private hosted zones that are associated with the current
-     *        account.
+     *        Amazon Web Services account.
      * @return A Java Future containing the result of the ListHostedZones operation returned by the service.
      * @sample AmazonRoute53Async.ListHostedZones
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListHostedZones" target="_top">AWS API
@@ -3201,8 +3211,8 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
 
     /**
      * <p>
-     * Retrieves a list of the public and private hosted zones that are associated with the current account. The
-     * response includes a <code>HostedZones</code> child element for each hosted zone.
+     * Retrieves a list of the public and private hosted zones that are associated with the current Amazon Web Services
+     * account. The response includes a <code>HostedZones</code> child element for each hosted zone.
      * </p>
      * <p>
      * Amazon Route 53 returns a maximum of 100 items in each response. If you have a lot of hosted zones, you can use
@@ -3211,7 +3221,7 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
      * 
      * @param listHostedZonesRequest
      *        A request to retrieve a list of the public and private hosted zones that are associated with the current
-     *        account.
+     *        Amazon Web Services account.
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -3242,7 +3252,7 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
     /**
      * <p>
      * Retrieves a list of your hosted zones in lexicographic order. The response includes a <code>HostedZones</code>
-     * child element for each hosted zone created by the current account.
+     * child element for each hosted zone created by the current Amazon Web Services account.
      * </p>
      * <p>
      * <code>ListHostedZonesByName</code> sorts hosted zones by name with the labels reversed. For example:
@@ -3290,7 +3300,7 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
      * <li>
      * <p>
      * If the value of <code>IsTruncated</code> in the response is true, there are more hosted zones associated with the
-     * current account.
+     * current Amazon Web Services account.
      * </p>
      * <p>
      * If <code>IsTruncated</code> is false, this response includes the last hosted zone that is associated with the
@@ -3301,17 +3311,17 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
      * <li>
      * <p>
      * The <code>NextDNSName</code> and <code>NextHostedZoneId</code> elements in the response contain the domain name
-     * and the hosted zone ID of the next hosted zone that is associated with the current account. If you want to list
-     * more hosted zones, make another call to <code>ListHostedZonesByName</code>, and specify the value of
-     * <code>NextDNSName</code> and <code>NextHostedZoneId</code> in the <code>dnsname</code> and
+     * and the hosted zone ID of the next hosted zone that is associated with the current Amazon Web Services account.
+     * If you want to list more hosted zones, make another call to <code>ListHostedZonesByName</code>, and specify the
+     * value of <code>NextDNSName</code> and <code>NextHostedZoneId</code> in the <code>dnsname</code> and
      * <code>hostedzoneid</code> parameters, respectively.
      * </p>
      * </li>
      * </ul>
      * 
      * @param listHostedZonesByNameRequest
-     *        Retrieves a list of the public and private hosted zones that are associated with the current account in
-     *        ASCII order by domain name.
+     *        Retrieves a list of the public and private hosted zones that are associated with the current Amazon Web
+     *        Services account in ASCII order by domain name.
      * @return A Java Future containing the result of the ListHostedZonesByName operation returned by the service.
      * @sample AmazonRoute53Async.ListHostedZonesByName
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListHostedZonesByName" target="_top">AWS
@@ -3322,7 +3332,7 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
     /**
      * <p>
      * Retrieves a list of your hosted zones in lexicographic order. The response includes a <code>HostedZones</code>
-     * child element for each hosted zone created by the current account.
+     * child element for each hosted zone created by the current Amazon Web Services account.
      * </p>
      * <p>
      * <code>ListHostedZonesByName</code> sorts hosted zones by name with the labels reversed. For example:
@@ -3370,7 +3380,7 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
      * <li>
      * <p>
      * If the value of <code>IsTruncated</code> in the response is true, there are more hosted zones associated with the
-     * current account.
+     * current Amazon Web Services account.
      * </p>
      * <p>
      * If <code>IsTruncated</code> is false, this response includes the last hosted zone that is associated with the
@@ -3381,17 +3391,17 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
      * <li>
      * <p>
      * The <code>NextDNSName</code> and <code>NextHostedZoneId</code> elements in the response contain the domain name
-     * and the hosted zone ID of the next hosted zone that is associated with the current account. If you want to list
-     * more hosted zones, make another call to <code>ListHostedZonesByName</code>, and specify the value of
-     * <code>NextDNSName</code> and <code>NextHostedZoneId</code> in the <code>dnsname</code> and
+     * and the hosted zone ID of the next hosted zone that is associated with the current Amazon Web Services account.
+     * If you want to list more hosted zones, make another call to <code>ListHostedZonesByName</code>, and specify the
+     * value of <code>NextDNSName</code> and <code>NextHostedZoneId</code> in the <code>dnsname</code> and
      * <code>hostedzoneid</code> parameters, respectively.
      * </p>
      * </li>
      * </ul>
      * 
      * @param listHostedZonesByNameRequest
-     *        Retrieves a list of the public and private hosted zones that are associated with the current account in
-     *        ASCII order by domain name.
+     *        Retrieves a list of the public and private hosted zones that are associated with the current Amazon Web
+     *        Services account in ASCII order by domain name.
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -3421,15 +3431,16 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
 
     /**
      * <p>
-     * Lists all the private hosted zones that a specified VPC is associated with, regardless of which account or Amazon
-     * Web Services service owns the hosted zones. The <code>HostedZoneOwner</code> structure in the response contains
-     * one of the following values:
+     * Lists all the private hosted zones that a specified VPC is associated with, regardless of which Amazon Web
+     * Services account or Amazon Web Services service owns the hosted zones. The <code>HostedZoneOwner</code> structure
+     * in the response contains one of the following values:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * An <code>OwningAccount</code> element, which contains the account number of either the current account or another
-     * account. Some services, such as Cloud Map, create hosted zones using the current account.
+     * An <code>OwningAccount</code> element, which contains the account number of either the current Amazon Web
+     * Services account or another Amazon Web Services account. Some services, such as Cloud Map, create hosted zones
+     * using the current account.
      * </p>
      * </li>
      * <li>
@@ -3442,8 +3453,8 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
      * </ul>
      * 
      * @param listHostedZonesByVPCRequest
-     *        Lists all the private hosted zones that a specified VPC is associated with, regardless of which account
-     *        created the hosted zones.
+     *        Lists all the private hosted zones that a specified VPC is associated with, regardless of which Amazon Web
+     *        Services account created the hosted zones.
      * @return A Java Future containing the result of the ListHostedZonesByVPC operation returned by the service.
      * @sample AmazonRoute53Async.ListHostedZonesByVPC
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListHostedZonesByVPC" target="_top">AWS
@@ -3453,15 +3464,16 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
 
     /**
      * <p>
-     * Lists all the private hosted zones that a specified VPC is associated with, regardless of which account or Amazon
-     * Web Services service owns the hosted zones. The <code>HostedZoneOwner</code> structure in the response contains
-     * one of the following values:
+     * Lists all the private hosted zones that a specified VPC is associated with, regardless of which Amazon Web
+     * Services account or Amazon Web Services service owns the hosted zones. The <code>HostedZoneOwner</code> structure
+     * in the response contains one of the following values:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * An <code>OwningAccount</code> element, which contains the account number of either the current account or another
-     * account. Some services, such as Cloud Map, create hosted zones using the current account.
+     * An <code>OwningAccount</code> element, which contains the account number of either the current Amazon Web
+     * Services account or another Amazon Web Services account. Some services, such as Cloud Map, create hosted zones
+     * using the current account.
      * </p>
      * </li>
      * <li>
@@ -3474,8 +3486,8 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
      * </ul>
      * 
      * @param listHostedZonesByVPCRequest
-     *        Lists all the private hosted zones that a specified VPC is associated with, regardless of which account
-     *        created the hosted zones.
+     *        Lists all the private hosted zones that a specified VPC is associated with, regardless of which Amazon Web
+     *        Services account created the hosted zones.
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -3490,8 +3502,8 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
 
     /**
      * <p>
-     * Lists the configurations for DNS query logging that are associated with the current account or the configuration
-     * that is associated with a specified hosted zone.
+     * Lists the configurations for DNS query logging that are associated with the current Amazon Web Services account
+     * or the configuration that is associated with a specified hosted zone.
      * </p>
      * <p>
      * For more information about DNS query logs, see <a
@@ -3511,8 +3523,8 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
 
     /**
      * <p>
-     * Lists the configurations for DNS query logging that are associated with the current account or the configuration
-     * that is associated with a specified hosted zone.
+     * Lists the configurations for DNS query logging that are associated with the current Amazon Web Services account
+     * or the configuration that is associated with a specified hosted zone.
      * </p>
      * <p>
      * For more information about DNS query logs, see <a
@@ -3734,11 +3746,13 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
 
     /**
      * <p>
-     * Retrieves a list of the reusable delegation sets that are associated with the current account.
+     * Retrieves a list of the reusable delegation sets that are associated with the current Amazon Web Services
+     * account.
      * </p>
      * 
      * @param listReusableDelegationSetsRequest
-     *        A request to get a list of the reusable delegation sets that are associated with the current account.
+     *        A request to get a list of the reusable delegation sets that are associated with the current Amazon Web
+     *        Services account.
      * @return A Java Future containing the result of the ListReusableDelegationSets operation returned by the service.
      * @sample AmazonRoute53Async.ListReusableDelegationSets
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListReusableDelegationSets"
@@ -3749,11 +3763,13 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
 
     /**
      * <p>
-     * Retrieves a list of the reusable delegation sets that are associated with the current account.
+     * Retrieves a list of the reusable delegation sets that are associated with the current Amazon Web Services
+     * account.
      * </p>
      * 
      * @param listReusableDelegationSetsRequest
-     *        A request to get a list of the reusable delegation sets that are associated with the current account.
+     *        A request to get a list of the reusable delegation sets that are associated with the current Amazon Web
+     *        Services account.
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -3874,8 +3890,8 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
 
     /**
      * <p>
-     * Gets information about the latest version for every traffic policy that is associated with the current account.
-     * Policies are listed in the order that they were created in.
+     * Gets information about the latest version for every traffic policy that is associated with the current Amazon Web
+     * Services account. Policies are listed in the order that they were created in.
      * </p>
      * <p>
      * For information about how of deleting a traffic policy affects the response from <code>ListTrafficPolicies</code>
@@ -3886,7 +3902,7 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
      * 
      * @param listTrafficPoliciesRequest
      *        A complex type that contains the information about the request to list the traffic policies that are
-     *        associated with the current account.
+     *        associated with the current Amazon Web Services account.
      * @return A Java Future containing the result of the ListTrafficPolicies operation returned by the service.
      * @sample AmazonRoute53Async.ListTrafficPolicies
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListTrafficPolicies" target="_top">AWS
@@ -3896,8 +3912,8 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
 
     /**
      * <p>
-     * Gets information about the latest version for every traffic policy that is associated with the current account.
-     * Policies are listed in the order that they were created in.
+     * Gets information about the latest version for every traffic policy that is associated with the current Amazon Web
+     * Services account. Policies are listed in the order that they were created in.
      * </p>
      * <p>
      * For information about how of deleting a traffic policy affects the response from <code>ListTrafficPolicies</code>
@@ -3908,7 +3924,7 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
      * 
      * @param listTrafficPoliciesRequest
      *        A complex type that contains the information about the request to list the traffic policies that are
-     *        associated with the current account.
+     *        associated with the current Amazon Web Services account.
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -3938,7 +3954,8 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
 
     /**
      * <p>
-     * Gets information about the traffic policy instances that you created by using the current account.
+     * Gets information about the traffic policy instances that you created by using the current Amazon Web Services
+     * account.
      * </p>
      * <note>
      * <p>
@@ -3954,7 +3971,7 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
      * 
      * @param listTrafficPolicyInstancesRequest
      *        A request to get information about the traffic policy instances that you created by using the current
-     *        account.
+     *        Amazon Web Services account.
      * @return A Java Future containing the result of the ListTrafficPolicyInstances operation returned by the service.
      * @sample AmazonRoute53Async.ListTrafficPolicyInstances
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListTrafficPolicyInstances"
@@ -3965,7 +3982,8 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
 
     /**
      * <p>
-     * Gets information about the traffic policy instances that you created by using the current account.
+     * Gets information about the traffic policy instances that you created by using the current Amazon Web Services
+     * account.
      * </p>
      * <note>
      * <p>
@@ -3981,7 +3999,7 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
      * 
      * @param listTrafficPolicyInstancesRequest
      *        A request to get information about the traffic policy instances that you created by using the current
-     *        account.
+     *        Amazon Web Services account.
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or

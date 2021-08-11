@@ -14,6 +14,8 @@
  */
 package com.amazonaws.retry;
 
+import static com.amazonaws.retry.PredefinedBackoffStrategies.STANDARD_BACKOFF_STRATEGY;
+
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.AmazonWebServiceRequest;
@@ -102,6 +104,18 @@ public class PredefinedRetryPolicies {
         DYNAMODB_DEFAULT = getDynamoDBDefaultRetryPolicy();
     }
 
+    public static RetryPolicy.BackoffStrategy getDefaultBackoffStrategy(RetryMode retryMode) {
+        switch (retryMode) {
+            case LEGACY:
+                return DEFAULT_BACKOFF_STRATEGY;
+            case ADAPTIVE:
+            case STANDARD:
+                return STANDARD_BACKOFF_STRATEGY;
+            default:
+                throw new IllegalStateException("Unsupported RetryMode: " + retryMode);
+        }
+    }
+
     /**
      * Returns the SDK default retry policy. This policy will honor the
      * maxErrorRetry set in ClientConfiguration.
@@ -112,6 +126,7 @@ public class PredefinedRetryPolicies {
         return new RetryPolicy(DEFAULT_RETRY_CONDITION,
                                DEFAULT_BACKOFF_STRATEGY,
                                DEFAULT_MAX_ERROR_RETRY,
+                               true,
                                true,
                                true);
     }
@@ -130,7 +145,8 @@ public class PredefinedRetryPolicies {
                                DYNAMODB_DEFAULT_BACKOFF_STRATEGY,
                                DYNAMODB_STANDARD_DEFAULT_MAX_ERROR_RETRY,
                                true,
-                               false);
+                               false,
+                               true);
     }
 
     /**

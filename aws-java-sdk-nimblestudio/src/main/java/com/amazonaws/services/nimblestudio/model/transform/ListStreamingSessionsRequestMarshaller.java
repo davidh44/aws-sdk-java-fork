@@ -31,6 +31,8 @@ public class ListStreamingSessionsRequestMarshaller {
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("createdBy").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("nextToken").build();
+    private static final MarshallingInfo<String> OWNEDBY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("ownedBy").build();
     private static final MarshallingInfo<String> SESSIONIDS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("sessionIds").build();
     private static final MarshallingInfo<String> STUDIOID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
@@ -54,6 +56,7 @@ public class ListStreamingSessionsRequestMarshaller {
         try {
             protocolMarshaller.marshall(listStreamingSessionsRequest.getCreatedBy(), CREATEDBY_BINDING);
             protocolMarshaller.marshall(listStreamingSessionsRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(listStreamingSessionsRequest.getOwnedBy(), OWNEDBY_BINDING);
             protocolMarshaller.marshall(listStreamingSessionsRequest.getSessionIds(), SESSIONIDS_BINDING);
             protocolMarshaller.marshall(listStreamingSessionsRequest.getStudioId(), STUDIOID_BINDING);
         } catch (Exception e) {
