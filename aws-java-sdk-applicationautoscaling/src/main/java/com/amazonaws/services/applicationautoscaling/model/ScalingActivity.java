@@ -36,7 +36,7 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
     private String activityId;
     /**
      * <p>
-     * The namespace of the AWS service that provides the resource, or a <code>custom-resource</code>.
+     * The namespace of the Amazon Web Services service that provides the resource, or a <code>custom-resource</code>.
      * </p>
      */
     private String serviceNamespace;
@@ -134,6 +134,12 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      * <code>arn:aws:kafka:us-east-1:123456789012:cluster/demo-cluster-1/6357e0b2-0e6a-4b86-a0b4-70df934c2e31-5</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Amazon ElastiCache replication group - The resource type is <code>replication-group</code> and the unique
+     * identifier is the replication group name. Example: <code>replication-group/mycluster</code>.
+     * </p>
+     * </li>
      * </ul>
      */
     private String resourceId;
@@ -149,12 +155,12 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      * </li>
      * <li>
      * <p>
-     * <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
+     * <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
+     * <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
      * </p>
      * </li>
      * <li>
@@ -233,6 +239,18 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * <code>kafka:broker-storage:VolumeSize</code> - The provisioned volume size (in GiB) for brokers in an Amazon MSK
      * cluster.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>elasticache:replication-group:NodeGroups</code> - The number of node groups for an Amazon ElastiCache
+     * replication group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>elasticache:replication-group:Replicas</code> - The number of replicas per node group for an Amazon
+     * ElastiCache replication group.
      * </p>
      * </li>
      * </ul>
@@ -323,11 +341,12 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The namespace of the AWS service that provides the resource, or a <code>custom-resource</code>.
+     * The namespace of the Amazon Web Services service that provides the resource, or a <code>custom-resource</code>.
      * </p>
      * 
      * @param serviceNamespace
-     *        The namespace of the AWS service that provides the resource, or a <code>custom-resource</code>.
+     *        The namespace of the Amazon Web Services service that provides the resource, or a
+     *        <code>custom-resource</code>.
      * @see ServiceNamespace
      */
 
@@ -337,10 +356,11 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The namespace of the AWS service that provides the resource, or a <code>custom-resource</code>.
+     * The namespace of the Amazon Web Services service that provides the resource, or a <code>custom-resource</code>.
      * </p>
      * 
-     * @return The namespace of the AWS service that provides the resource, or a <code>custom-resource</code>.
+     * @return The namespace of the Amazon Web Services service that provides the resource, or a
+     *         <code>custom-resource</code>.
      * @see ServiceNamespace
      */
 
@@ -350,11 +370,12 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The namespace of the AWS service that provides the resource, or a <code>custom-resource</code>.
+     * The namespace of the Amazon Web Services service that provides the resource, or a <code>custom-resource</code>.
      * </p>
      * 
      * @param serviceNamespace
-     *        The namespace of the AWS service that provides the resource, or a <code>custom-resource</code>.
+     *        The namespace of the Amazon Web Services service that provides the resource, or a
+     *        <code>custom-resource</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceNamespace
      */
@@ -366,11 +387,12 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The namespace of the AWS service that provides the resource, or a <code>custom-resource</code>.
+     * The namespace of the Amazon Web Services service that provides the resource, or a <code>custom-resource</code>.
      * </p>
      * 
      * @param serviceNamespace
-     *        The namespace of the AWS service that provides the resource, or a <code>custom-resource</code>.
+     *        The namespace of the Amazon Web Services service that provides the resource, or a
+     *        <code>custom-resource</code>.
      * @see ServiceNamespace
      */
 
@@ -380,11 +402,12 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The namespace of the AWS service that provides the resource, or a <code>custom-resource</code>.
+     * The namespace of the Amazon Web Services service that provides the resource, or a <code>custom-resource</code>.
      * </p>
      * 
      * @param serviceNamespace
-     *        The namespace of the AWS service that provides the resource, or a <code>custom-resource</code>.
+     *        The namespace of the Amazon Web Services service that provides the resource, or a
+     *        <code>custom-resource</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceNamespace
      */
@@ -488,6 +511,12 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      * <code>arn:aws:kafka:us-east-1:123456789012:cluster/demo-cluster-1/6357e0b2-0e6a-4b86-a0b4-70df934c2e31-5</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Amazon ElastiCache replication group - The resource type is <code>replication-group</code> and the unique
+     * identifier is the replication group name. Example: <code>replication-group/mycluster</code>.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param resourceId
@@ -582,6 +611,12 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      *        Amazon MSK cluster - The resource type and unique identifier are specified using the cluster ARN. Example:
      *        <code>arn:aws:kafka:us-east-1:123456789012:cluster/demo-cluster-1/6357e0b2-0e6a-4b86-a0b4-70df934c2e31-5</code>
      *        .
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Amazon ElastiCache replication group - The resource type is <code>replication-group</code> and the unique
+     *        identifier is the replication group name. Example: <code>replication-group/mycluster</code>.
      *        </p>
      *        </li>
      */
@@ -684,6 +719,12 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      * <code>arn:aws:kafka:us-east-1:123456789012:cluster/demo-cluster-1/6357e0b2-0e6a-4b86-a0b4-70df934c2e31-5</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Amazon ElastiCache replication group - The resource type is <code>replication-group</code> and the unique
+     * identifier is the replication group name. Example: <code>replication-group/mycluster</code>.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return The identifier of the resource associated with the scaling activity. This string consists of the resource
@@ -779,6 +820,12 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      *         Example:
      *         <code>arn:aws:kafka:us-east-1:123456789012:cluster/demo-cluster-1/6357e0b2-0e6a-4b86-a0b4-70df934c2e31-5</code>
      *         .
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Amazon ElastiCache replication group - The resource type is <code>replication-group</code> and the unique
+     *         identifier is the replication group name. Example: <code>replication-group/mycluster</code>.
      *         </p>
      *         </li>
      */
@@ -881,6 +928,12 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      * <code>arn:aws:kafka:us-east-1:123456789012:cluster/demo-cluster-1/6357e0b2-0e6a-4b86-a0b4-70df934c2e31-5</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Amazon ElastiCache replication group - The resource type is <code>replication-group</code> and the unique
+     * identifier is the replication group name. Example: <code>replication-group/mycluster</code>.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param resourceId
@@ -977,6 +1030,12 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      *        .
      *        </p>
      *        </li>
+     *        <li>
+     *        <p>
+     *        Amazon ElastiCache replication group - The resource type is <code>replication-group</code> and the unique
+     *        identifier is the replication group name. Example: <code>replication-group/mycluster</code>.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -997,12 +1056,12 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      * </li>
      * <li>
      * <p>
-     * <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
+     * <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
+     * <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
      * </p>
      * </li>
      * <li>
@@ -1083,6 +1142,18 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      * cluster.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>elasticache:replication-group:NodeGroups</code> - The number of node groups for an Amazon ElastiCache
+     * replication group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>elasticache:replication-group:Replicas</code> - The number of replicas per node group for an Amazon
+     * ElastiCache replication group.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param scalableDimension
@@ -1096,12 +1167,12 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
+     *        <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
+     *        <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
      *        </p>
      *        </li>
      *        <li>
@@ -1184,6 +1255,18 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      *        Amazon MSK cluster.
      *        </p>
      *        </li>
+     *        <li>
+     *        <p>
+     *        <code>elasticache:replication-group:NodeGroups</code> - The number of node groups for an Amazon
+     *        ElastiCache replication group.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>elasticache:replication-group:Replicas</code> - The number of replicas per node group for an Amazon
+     *        ElastiCache replication group.
+     *        </p>
+     *        </li>
      * @see ScalableDimension
      */
 
@@ -1203,12 +1286,12 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      * </li>
      * <li>
      * <p>
-     * <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
+     * <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
+     * <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
      * </p>
      * </li>
      * <li>
@@ -1289,6 +1372,18 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      * cluster.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>elasticache:replication-group:NodeGroups</code> - The number of node groups for an Amazon ElastiCache
+     * replication group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>elasticache:replication-group:Replicas</code> - The number of replicas per node group for an Amazon
+     * ElastiCache replication group.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return The scalable dimension. This string consists of the service namespace, resource type, and scaling
@@ -1301,12 +1396,12 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      *         </li>
      *         <li>
      *         <p>
-     *         <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
+     *         <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
+     *         <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
      *         </p>
      *         </li>
      *         <li>
@@ -1389,6 +1484,18 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      *         Amazon MSK cluster.
      *         </p>
      *         </li>
+     *         <li>
+     *         <p>
+     *         <code>elasticache:replication-group:NodeGroups</code> - The number of node groups for an Amazon
+     *         ElastiCache replication group.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>elasticache:replication-group:Replicas</code> - The number of replicas per node group for an Amazon
+     *         ElastiCache replication group.
+     *         </p>
+     *         </li>
      * @see ScalableDimension
      */
 
@@ -1408,12 +1515,12 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      * </li>
      * <li>
      * <p>
-     * <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
+     * <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
+     * <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
      * </p>
      * </li>
      * <li>
@@ -1494,6 +1601,18 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      * cluster.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>elasticache:replication-group:NodeGroups</code> - The number of node groups for an Amazon ElastiCache
+     * replication group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>elasticache:replication-group:Replicas</code> - The number of replicas per node group for an Amazon
+     * ElastiCache replication group.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param scalableDimension
@@ -1507,12 +1626,12 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
+     *        <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
+     *        <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
      *        </p>
      *        </li>
      *        <li>
@@ -1593,6 +1712,18 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      *        <p>
      *        <code>kafka:broker-storage:VolumeSize</code> - The provisioned volume size (in GiB) for brokers in an
      *        Amazon MSK cluster.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>elasticache:replication-group:NodeGroups</code> - The number of node groups for an Amazon
+     *        ElastiCache replication group.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>elasticache:replication-group:Replicas</code> - The number of replicas per node group for an Amazon
+     *        ElastiCache replication group.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1616,12 +1747,12 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      * </li>
      * <li>
      * <p>
-     * <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
+     * <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
+     * <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
      * </p>
      * </li>
      * <li>
@@ -1702,6 +1833,18 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      * cluster.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>elasticache:replication-group:NodeGroups</code> - The number of node groups for an Amazon ElastiCache
+     * replication group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>elasticache:replication-group:Replicas</code> - The number of replicas per node group for an Amazon
+     * ElastiCache replication group.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param scalableDimension
@@ -1715,12 +1858,12 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
+     *        <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
+     *        <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
      *        </p>
      *        </li>
      *        <li>
@@ -1801,6 +1944,18 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      *        <p>
      *        <code>kafka:broker-storage:VolumeSize</code> - The provisioned volume size (in GiB) for brokers in an
      *        Amazon MSK cluster.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>elasticache:replication-group:NodeGroups</code> - The number of node groups for an Amazon
+     *        ElastiCache replication group.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>elasticache:replication-group:Replicas</code> - The number of replicas per node group for an Amazon
+     *        ElastiCache replication group.
      *        </p>
      *        </li>
      * @see ScalableDimension
@@ -1822,12 +1977,12 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      * </li>
      * <li>
      * <p>
-     * <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
+     * <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
+     * <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
      * </p>
      * </li>
      * <li>
@@ -1908,6 +2063,18 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      * cluster.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>elasticache:replication-group:NodeGroups</code> - The number of node groups for an Amazon ElastiCache
+     * replication group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>elasticache:replication-group:Replicas</code> - The number of replicas per node group for an Amazon
+     * ElastiCache replication group.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param scalableDimension
@@ -1921,12 +2088,12 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
+     *        <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
+     *        <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
      *        </p>
      *        </li>
      *        <li>
@@ -2007,6 +2174,18 @@ public class ScalingActivity implements Serializable, Cloneable, StructuredPojo 
      *        <p>
      *        <code>kafka:broker-storage:VolumeSize</code> - The provisioned volume size (in GiB) for brokers in an
      *        Amazon MSK cluster.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>elasticache:replication-group:NodeGroups</code> - The number of node groups for an Amazon
+     *        ElastiCache replication group.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>elasticache:replication-group:Replicas</code> - The number of replicas per node group for an Amazon
+     *        ElastiCache replication group.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

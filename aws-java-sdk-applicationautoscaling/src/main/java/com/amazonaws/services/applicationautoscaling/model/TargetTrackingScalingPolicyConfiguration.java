@@ -62,7 +62,8 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      * the initiating scale-out activity is calculated as part of the desired capacity for the next scale-out activity.
      * </p>
      * <p>
-     * Application Auto Scaling provides a default value of 300 for the following scalable targets:
+     * Application Auto Scaling provides a default value of 600 for Amazon ElastiCache replication groups and a default
+     * value of 300 for the following scalable targets:
      * </p>
      * <ul>
      * <li>
@@ -149,7 +150,8 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      * out the target immediately. In this case, the scale-in cooldown period stops and doesn't complete.
      * </p>
      * <p>
-     * Application Auto Scaling provides a default value of 300 for the following scalable targets:
+     * Application Auto Scaling provides a default value of 600 for Amazon ElastiCache replication groups and a default
+     * value of 300 for the following scalable targets:
      * </p>
      * <ul>
      * <li>
@@ -385,7 +387,8 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      * the initiating scale-out activity is calculated as part of the desired capacity for the next scale-out activity.
      * </p>
      * <p>
-     * Application Auto Scaling provides a default value of 300 for the following scalable targets:
+     * Application Auto Scaling provides a default value of 600 for Amazon ElastiCache replication groups and a default
+     * value of 300 for the following scalable targets:
      * </p>
      * <ul>
      * <li>
@@ -471,7 +474,8 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      *        capacity for the next scale-out activity.
      *        </p>
      *        <p>
-     *        Application Auto Scaling provides a default value of 300 for the following scalable targets:
+     *        Application Auto Scaling provides a default value of 600 for Amazon ElastiCache replication groups and a
+     *        default value of 300 for the following scalable targets:
      *        </p>
      *        <ul>
      *        <li>
@@ -562,7 +566,8 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      * the initiating scale-out activity is calculated as part of the desired capacity for the next scale-out activity.
      * </p>
      * <p>
-     * Application Auto Scaling provides a default value of 300 for the following scalable targets:
+     * Application Auto Scaling provides a default value of 600 for Amazon ElastiCache replication groups and a default
+     * value of 300 for the following scalable targets:
      * </p>
      * <ul>
      * <li>
@@ -647,7 +652,8 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      *         capacity for the next scale-out activity.
      *         </p>
      *         <p>
-     *         Application Auto Scaling provides a default value of 300 for the following scalable targets:
+     *         Application Auto Scaling provides a default value of 600 for Amazon ElastiCache replication groups and a
+     *         default value of 300 for the following scalable targets:
      *         </p>
      *         <ul>
      *         <li>
@@ -738,7 +744,8 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      * the initiating scale-out activity is calculated as part of the desired capacity for the next scale-out activity.
      * </p>
      * <p>
-     * Application Auto Scaling provides a default value of 300 for the following scalable targets:
+     * Application Auto Scaling provides a default value of 600 for Amazon ElastiCache replication groups and a default
+     * value of 300 for the following scalable targets:
      * </p>
      * <ul>
      * <li>
@@ -824,7 +831,8 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      *        capacity for the next scale-out activity.
      *        </p>
      *        <p>
-     *        Application Auto Scaling provides a default value of 300 for the following scalable targets:
+     *        Application Auto Scaling provides a default value of 600 for Amazon ElastiCache replication groups and a
+     *        default value of 300 for the following scalable targets:
      *        </p>
      *        <ul>
      *        <li>
@@ -916,7 +924,8 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      * out the target immediately. In this case, the scale-in cooldown period stops and doesn't complete.
      * </p>
      * <p>
-     * Application Auto Scaling provides a default value of 300 for the following scalable targets:
+     * Application Auto Scaling provides a default value of 600 for Amazon ElastiCache replication groups and a default
+     * value of 300 for the following scalable targets:
      * </p>
      * <ul>
      * <li>
@@ -1002,7 +1011,8 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      *        doesn't complete.
      *        </p>
      *        <p>
-     *        Application Auto Scaling provides a default value of 300 for the following scalable targets:
+     *        Application Auto Scaling provides a default value of 600 for Amazon ElastiCache replication groups and a
+     *        default value of 300 for the following scalable targets:
      *        </p>
      *        <ul>
      *        <li>
@@ -1092,7 +1102,8 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      * out the target immediately. In this case, the scale-in cooldown period stops and doesn't complete.
      * </p>
      * <p>
-     * Application Auto Scaling provides a default value of 300 for the following scalable targets:
+     * Application Auto Scaling provides a default value of 600 for Amazon ElastiCache replication groups and a default
+     * value of 300 for the following scalable targets:
      * </p>
      * <ul>
      * <li>
@@ -1177,7 +1188,8 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      *         doesn't complete.
      *         </p>
      *         <p>
-     *         Application Auto Scaling provides a default value of 300 for the following scalable targets:
+     *         Application Auto Scaling provides a default value of 600 for Amazon ElastiCache replication groups and a
+     *         default value of 300 for the following scalable targets:
      *         </p>
      *         <ul>
      *         <li>
@@ -1267,7 +1279,8 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      * out the target immediately. In this case, the scale-in cooldown period stops and doesn't complete.
      * </p>
      * <p>
-     * Application Auto Scaling provides a default value of 300 for the following scalable targets:
+     * Application Auto Scaling provides a default value of 600 for Amazon ElastiCache replication groups and a default
+     * value of 300 for the following scalable targets:
      * </p>
      * <ul>
      * <li>
@@ -1353,7 +1366,8 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      *        doesn't complete.
      *        </p>
      *        <p>
-     *        Application Auto Scaling provides a default value of 300 for the following scalable targets:
+     *        Application Auto Scaling provides a default value of 600 for Amazon ElastiCache replication groups and a
+     *        default value of 300 for the following scalable targets:
      *        </p>
      *        <ul>
      *        <li>

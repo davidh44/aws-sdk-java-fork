@@ -52,8 +52,7 @@ public class SnapshotTaskDetail implements Serializable, Cloneable {
     private String format;
     /**
      * <p>
-     * The identifier for the AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to create the
-     * encrypted snapshot.
+     * The identifier for the KMS key that was used to create the encrypted snapshot.
      * </p>
      */
     private String kmsKeyId;
@@ -268,13 +267,11 @@ public class SnapshotTaskDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The identifier for the AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to create the
-     * encrypted snapshot.
+     * The identifier for the KMS key that was used to create the encrypted snapshot.
      * </p>
      * 
      * @param kmsKeyId
-     *        The identifier for the AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to
-     *        create the encrypted snapshot.
+     *        The identifier for the KMS key that was used to create the encrypted snapshot.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -283,12 +280,10 @@ public class SnapshotTaskDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The identifier for the AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to create the
-     * encrypted snapshot.
+     * The identifier for the KMS key that was used to create the encrypted snapshot.
      * </p>
      * 
-     * @return The identifier for the AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to
-     *         create the encrypted snapshot.
+     * @return The identifier for the KMS key that was used to create the encrypted snapshot.
      */
 
     public String getKmsKeyId() {
@@ -297,13 +292,11 @@ public class SnapshotTaskDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The identifier for the AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to create the
-     * encrypted snapshot.
+     * The identifier for the KMS key that was used to create the encrypted snapshot.
      * </p>
      * 
      * @param kmsKeyId
-     *        The identifier for the AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to
-     *        create the encrypted snapshot.
+     *        The identifier for the KMS key that was used to create the encrypted snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

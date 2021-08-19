@@ -67,6 +67,8 @@ public class ConnectorMetadataMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomerProfiles").build();
     private static final MarshallingInfo<StructuredPojo> HONEYCODE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Honeycode").build();
+    private static final MarshallingInfo<StructuredPojo> SAPODATA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SAPOData").build();
 
     private static final ConnectorMetadataMarshaller instance = new ConnectorMetadataMarshaller();
 
@@ -104,6 +106,7 @@ public class ConnectorMetadataMarshaller {
             protocolMarshaller.marshall(connectorMetadata.getUpsolver(), UPSOLVER_BINDING);
             protocolMarshaller.marshall(connectorMetadata.getCustomerProfiles(), CUSTOMERPROFILES_BINDING);
             protocolMarshaller.marshall(connectorMetadata.getHoneycode(), HONEYCODE_BINDING);
+            protocolMarshaller.marshall(connectorMetadata.getSAPOData(), SAPODATA_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

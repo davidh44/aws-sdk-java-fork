@@ -36,7 +36,8 @@ public class DestinationFlowConfig implements Serializable, Cloneable, Structure
     private String connectorType;
     /**
      * <p>
-     * The name of the connector profile. This name must be unique for each connector profile in the AWS account.
+     * The name of the connector profile. This name must be unique for each connector profile in the Amazon Web Services
+     * account.
      * </p>
      */
     private String connectorProfileName;
@@ -108,11 +109,13 @@ public class DestinationFlowConfig implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The name of the connector profile. This name must be unique for each connector profile in the AWS account.
+     * The name of the connector profile. This name must be unique for each connector profile in the Amazon Web Services
+     * account.
      * </p>
      * 
      * @param connectorProfileName
-     *        The name of the connector profile. This name must be unique for each connector profile in the AWS account.
+     *        The name of the connector profile. This name must be unique for each connector profile in the Amazon Web
+     *        Services account.
      */
 
     public void setConnectorProfileName(String connectorProfileName) {
@@ -121,11 +124,12 @@ public class DestinationFlowConfig implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The name of the connector profile. This name must be unique for each connector profile in the AWS account.
+     * The name of the connector profile. This name must be unique for each connector profile in the Amazon Web Services
+     * account.
      * </p>
      * 
-     * @return The name of the connector profile. This name must be unique for each connector profile in the AWS
-     *         account.
+     * @return The name of the connector profile. This name must be unique for each connector profile in the Amazon Web
+     *         Services account.
      */
 
     public String getConnectorProfileName() {
@@ -134,11 +138,13 @@ public class DestinationFlowConfig implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The name of the connector profile. This name must be unique for each connector profile in the AWS account.
+     * The name of the connector profile. This name must be unique for each connector profile in the Amazon Web Services
+     * account.
      * </p>
      * 
      * @param connectorProfileName
-     *        The name of the connector profile. This name must be unique for each connector profile in the AWS account.
+     *        The name of the connector profile. This name must be unique for each connector profile in the Amazon Web
+     *        Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

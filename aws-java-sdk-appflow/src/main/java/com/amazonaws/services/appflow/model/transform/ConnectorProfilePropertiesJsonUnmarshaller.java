@@ -112,6 +112,10 @@ public class ConnectorProfilePropertiesJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     connectorProfileProperties.setZendesk(ZendeskConnectorProfilePropertiesJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("SAPOData", targetDepth)) {
+                    context.nextToken();
+                    connectorProfileProperties.setSAPOData(SAPODataConnectorProfilePropertiesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

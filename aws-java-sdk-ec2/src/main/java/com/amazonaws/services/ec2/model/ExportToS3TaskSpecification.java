@@ -42,7 +42,7 @@ public class ExportToS3TaskSpecification implements Serializable, Cloneable {
     /**
      * <p>
      * The Amazon S3 bucket for the destination image. The destination bucket must exist and grant WRITE and READ_ACP
-     * permissions to the AWS account <code>vm-import-export@amazon.com</code>.
+     * permissions to the Amazon Web Services account <code>vm-import-export@amazon.com</code>.
      * </p>
      */
     private String s3Bucket;
@@ -213,12 +213,12 @@ public class ExportToS3TaskSpecification implements Serializable, Cloneable {
     /**
      * <p>
      * The Amazon S3 bucket for the destination image. The destination bucket must exist and grant WRITE and READ_ACP
-     * permissions to the AWS account <code>vm-import-export@amazon.com</code>.
+     * permissions to the Amazon Web Services account <code>vm-import-export@amazon.com</code>.
      * </p>
      * 
      * @param s3Bucket
      *        The Amazon S3 bucket for the destination image. The destination bucket must exist and grant WRITE and
-     *        READ_ACP permissions to the AWS account <code>vm-import-export@amazon.com</code>.
+     *        READ_ACP permissions to the Amazon Web Services account <code>vm-import-export@amazon.com</code>.
      */
 
     public void setS3Bucket(String s3Bucket) {
@@ -228,11 +228,11 @@ public class ExportToS3TaskSpecification implements Serializable, Cloneable {
     /**
      * <p>
      * The Amazon S3 bucket for the destination image. The destination bucket must exist and grant WRITE and READ_ACP
-     * permissions to the AWS account <code>vm-import-export@amazon.com</code>.
+     * permissions to the Amazon Web Services account <code>vm-import-export@amazon.com</code>.
      * </p>
      * 
      * @return The Amazon S3 bucket for the destination image. The destination bucket must exist and grant WRITE and
-     *         READ_ACP permissions to the AWS account <code>vm-import-export@amazon.com</code>.
+     *         READ_ACP permissions to the Amazon Web Services account <code>vm-import-export@amazon.com</code>.
      */
 
     public String getS3Bucket() {
@@ -242,12 +242,12 @@ public class ExportToS3TaskSpecification implements Serializable, Cloneable {
     /**
      * <p>
      * The Amazon S3 bucket for the destination image. The destination bucket must exist and grant WRITE and READ_ACP
-     * permissions to the AWS account <code>vm-import-export@amazon.com</code>.
+     * permissions to the Amazon Web Services account <code>vm-import-export@amazon.com</code>.
      * </p>
      * 
      * @param s3Bucket
      *        The Amazon S3 bucket for the destination image. The destination bucket must exist and grant WRITE and
-     *        READ_ACP permissions to the AWS account <code>vm-import-export@amazon.com</code>.
+     *        READ_ACP permissions to the Amazon Web Services account <code>vm-import-export@amazon.com</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

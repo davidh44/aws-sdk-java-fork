@@ -1,3 +1,20 @@
+# __1.12.51__ __2021-08-19__
+## __Amazon Appflow__
+  - ### Features
+    - This release adds support for SAPOData connector and extends Veeva connector for document extraction.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - The ImportImage API now supports the ability to create AMIs with AWS-managed licenses for Microsoft SQL Server for both Windows and Linux.
+
+## __Amazon MemoryDB__
+  - ### Features
+    - AWS MemoryDB  SDK now supports all APIs for newly launched MemoryDB service.
+
+## __Application Auto Scaling__
+  - ### Features
+    - This release extends Application Auto Scaling support for replication group of Amazon ElastiCache Redis clusters. Auto Scaling monitors and automatically expands node group count and number of replicas per node group when a critical usage threshold is met or according to customer-defined schedule.
+
 # __1.12.50__ __2021-08-18__
 ## __AWS CodeBuild__
   - ### Features

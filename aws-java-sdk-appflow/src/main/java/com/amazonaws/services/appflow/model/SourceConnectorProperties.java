@@ -113,6 +113,8 @@ public class SourceConnectorProperties implements Serializable, Cloneable, Struc
      */
     private ZendeskSourceProperties zendesk;
 
+    private SAPODataSourceProperties sAPOData;
+
     /**
      * <p>
      * Specifies the information that is required for querying Amplitude.
@@ -674,6 +676,32 @@ public class SourceConnectorProperties implements Serializable, Cloneable, Struc
     }
 
     /**
+     * @param sAPOData
+     */
+
+    public void setSAPOData(SAPODataSourceProperties sAPOData) {
+        this.sAPOData = sAPOData;
+    }
+
+    /**
+     * @return
+     */
+
+    public SAPODataSourceProperties getSAPOData() {
+        return this.sAPOData;
+    }
+
+    /**
+     * @param sAPOData
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SourceConnectorProperties withSAPOData(SAPODataSourceProperties sAPOData) {
+        setSAPOData(sAPOData);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -712,7 +740,9 @@ public class SourceConnectorProperties implements Serializable, Cloneable, Struc
         if (getVeeva() != null)
             sb.append("Veeva: ").append(getVeeva()).append(",");
         if (getZendesk() != null)
-            sb.append("Zendesk: ").append(getZendesk());
+            sb.append("Zendesk: ").append(getZendesk()).append(",");
+        if (getSAPOData() != null)
+            sb.append("SAPOData: ").append(getSAPOData());
         sb.append("}");
         return sb.toString();
     }
@@ -783,6 +813,10 @@ public class SourceConnectorProperties implements Serializable, Cloneable, Struc
             return false;
         if (other.getZendesk() != null && other.getZendesk().equals(this.getZendesk()) == false)
             return false;
+        if (other.getSAPOData() == null ^ this.getSAPOData() == null)
+            return false;
+        if (other.getSAPOData() != null && other.getSAPOData().equals(this.getSAPOData()) == false)
+            return false;
         return true;
     }
 
@@ -805,6 +839,7 @@ public class SourceConnectorProperties implements Serializable, Cloneable, Struc
         hashCode = prime * hashCode + ((getTrendmicro() == null) ? 0 : getTrendmicro().hashCode());
         hashCode = prime * hashCode + ((getVeeva() == null) ? 0 : getVeeva().hashCode());
         hashCode = prime * hashCode + ((getZendesk() == null) ? 0 : getZendesk().hashCode());
+        hashCode = prime * hashCode + ((getSAPOData() == null) ? 0 : getSAPOData().hashCode());
         return hashCode;
     }
 

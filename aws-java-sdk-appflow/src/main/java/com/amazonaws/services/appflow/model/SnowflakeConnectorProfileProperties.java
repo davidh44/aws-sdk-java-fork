@@ -67,7 +67,7 @@ public class SnowflakeConnectorProfileProperties implements Serializable, Clonea
     private String accountName;
     /**
      * <p>
-     * The AWS Region of the Snowflake account.
+     * The Amazon Web Services Region of the Snowflake account.
      * </p>
      */
     private String region;
@@ -320,11 +320,11 @@ public class SnowflakeConnectorProfileProperties implements Serializable, Clonea
 
     /**
      * <p>
-     * The AWS Region of the Snowflake account.
+     * The Amazon Web Services Region of the Snowflake account.
      * </p>
      * 
      * @param region
-     *        The AWS Region of the Snowflake account.
+     *        The Amazon Web Services Region of the Snowflake account.
      */
 
     public void setRegion(String region) {
@@ -333,10 +333,10 @@ public class SnowflakeConnectorProfileProperties implements Serializable, Clonea
 
     /**
      * <p>
-     * The AWS Region of the Snowflake account.
+     * The Amazon Web Services Region of the Snowflake account.
      * </p>
      * 
-     * @return The AWS Region of the Snowflake account.
+     * @return The Amazon Web Services Region of the Snowflake account.
      */
 
     public String getRegion() {
@@ -345,11 +345,11 @@ public class SnowflakeConnectorProfileProperties implements Serializable, Clonea
 
     /**
      * <p>
-     * The AWS Region of the Snowflake account.
+     * The Amazon Web Services Region of the Snowflake account.
      * </p>
      * 
      * @param region
-     *        The AWS Region of the Snowflake account.
+     *        The Amazon Web Services Region of the Snowflake account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

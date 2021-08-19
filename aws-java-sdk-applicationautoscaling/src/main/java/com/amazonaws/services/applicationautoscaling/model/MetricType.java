@@ -36,7 +36,10 @@ public enum MetricType {
     LambdaProvisionedConcurrencyUtilization("LambdaProvisionedConcurrencyUtilization"),
     CassandraReadCapacityUtilization("CassandraReadCapacityUtilization"),
     CassandraWriteCapacityUtilization("CassandraWriteCapacityUtilization"),
-    KafkaBrokerStorageUtilization("KafkaBrokerStorageUtilization");
+    KafkaBrokerStorageUtilization("KafkaBrokerStorageUtilization"),
+    ElastiCachePrimaryEngineCPUUtilization("ElastiCachePrimaryEngineCPUUtilization"),
+    ElastiCacheReplicaEngineCPUUtilization("ElastiCacheReplicaEngineCPUUtilization"),
+    ElastiCacheDatabaseMemoryUsageCountedForEvictPercentage("ElastiCacheDatabaseMemoryUsageCountedForEvictPercentage");
 
     private String value;
 

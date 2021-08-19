@@ -39,7 +39,8 @@ public class ConnectorProfile implements Serializable, Cloneable, StructuredPojo
     private String connectorProfileArn;
     /**
      * <p>
-     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS account.
+     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the Amazon Web
+     * Services account.
      * </p>
      */
     private String connectorProfileName;
@@ -79,6 +80,12 @@ public class ConnectorProfile implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private java.util.Date lastUpdatedAt;
+    /**
+     * <p>
+     * Specifies the private connection provisioning state.
+     * </p>
+     */
+    private PrivateConnectionProvisioningState privateConnectionProvisioningState;
 
     /**
      * <p>
@@ -122,12 +129,13 @@ public class ConnectorProfile implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS account.
+     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the Amazon Web
+     * Services account.
      * </p>
      * 
      * @param connectorProfileName
-     *        The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS
-     *        account.
+     *        The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the Amazon
+     *        Web Services account.
      */
 
     public void setConnectorProfileName(String connectorProfileName) {
@@ -136,11 +144,12 @@ public class ConnectorProfile implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS account.
+     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the Amazon Web
+     * Services account.
      * </p>
      * 
-     * @return The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS
-     *         account.
+     * @return The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the
+     *         Amazon Web Services account.
      */
 
     public String getConnectorProfileName() {
@@ -149,12 +158,13 @@ public class ConnectorProfile implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS account.
+     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the Amazon Web
+     * Services account.
      * </p>
      * 
      * @param connectorProfileName
-     *        The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS
-     *        account.
+     *        The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the Amazon
+     *        Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -442,6 +452,46 @@ public class ConnectorProfile implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * Specifies the private connection provisioning state.
+     * </p>
+     * 
+     * @param privateConnectionProvisioningState
+     *        Specifies the private connection provisioning state.
+     */
+
+    public void setPrivateConnectionProvisioningState(PrivateConnectionProvisioningState privateConnectionProvisioningState) {
+        this.privateConnectionProvisioningState = privateConnectionProvisioningState;
+    }
+
+    /**
+     * <p>
+     * Specifies the private connection provisioning state.
+     * </p>
+     * 
+     * @return Specifies the private connection provisioning state.
+     */
+
+    public PrivateConnectionProvisioningState getPrivateConnectionProvisioningState() {
+        return this.privateConnectionProvisioningState;
+    }
+
+    /**
+     * <p>
+     * Specifies the private connection provisioning state.
+     * </p>
+     * 
+     * @param privateConnectionProvisioningState
+     *        Specifies the private connection provisioning state.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConnectorProfile withPrivateConnectionProvisioningState(PrivateConnectionProvisioningState privateConnectionProvisioningState) {
+        setPrivateConnectionProvisioningState(privateConnectionProvisioningState);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -468,7 +518,9 @@ public class ConnectorProfile implements Serializable, Cloneable, StructuredPojo
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getLastUpdatedAt() != null)
-            sb.append("LastUpdatedAt: ").append(getLastUpdatedAt());
+            sb.append("LastUpdatedAt: ").append(getLastUpdatedAt()).append(",");
+        if (getPrivateConnectionProvisioningState() != null)
+            sb.append("PrivateConnectionProvisioningState: ").append(getPrivateConnectionProvisioningState());
         sb.append("}");
         return sb.toString();
     }
@@ -515,6 +567,11 @@ public class ConnectorProfile implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getLastUpdatedAt() != null && other.getLastUpdatedAt().equals(this.getLastUpdatedAt()) == false)
             return false;
+        if (other.getPrivateConnectionProvisioningState() == null ^ this.getPrivateConnectionProvisioningState() == null)
+            return false;
+        if (other.getPrivateConnectionProvisioningState() != null
+                && other.getPrivateConnectionProvisioningState().equals(this.getPrivateConnectionProvisioningState()) == false)
+            return false;
         return true;
     }
 
@@ -531,6 +588,7 @@ public class ConnectorProfile implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getConnectorProfileProperties() == null) ? 0 : getConnectorProfileProperties().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedAt() == null) ? 0 : getLastUpdatedAt().hashCode());
+        hashCode = prime * hashCode + ((getPrivateConnectionProvisioningState() == null) ? 0 : getPrivateConnectionProvisioningState().hashCode());
         return hashCode;
     }
 

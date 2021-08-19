@@ -150,6 +150,8 @@ public class ConnectorMetadata implements Serializable, Cloneable, StructuredPoj
      */
     private HoneycodeMetadata honeycode;
 
+    private SAPODataMetadata sAPOData;
+
     /**
      * <p>
      * The connector metadata specific to Amplitude.
@@ -951,6 +953,32 @@ public class ConnectorMetadata implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * @param sAPOData
+     */
+
+    public void setSAPOData(SAPODataMetadata sAPOData) {
+        this.sAPOData = sAPOData;
+    }
+
+    /**
+     * @return
+     */
+
+    public SAPODataMetadata getSAPOData() {
+        return this.sAPOData;
+    }
+
+    /**
+     * @param sAPOData
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConnectorMetadata withSAPOData(SAPODataMetadata sAPOData) {
+        setSAPOData(sAPOData);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1001,7 +1029,9 @@ public class ConnectorMetadata implements Serializable, Cloneable, StructuredPoj
         if (getCustomerProfiles() != null)
             sb.append("CustomerProfiles: ").append(getCustomerProfiles()).append(",");
         if (getHoneycode() != null)
-            sb.append("Honeycode: ").append(getHoneycode());
+            sb.append("Honeycode: ").append(getHoneycode()).append(",");
+        if (getSAPOData() != null)
+            sb.append("SAPOData: ").append(getSAPOData());
         sb.append("}");
         return sb.toString();
     }
@@ -1096,6 +1126,10 @@ public class ConnectorMetadata implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getHoneycode() != null && other.getHoneycode().equals(this.getHoneycode()) == false)
             return false;
+        if (other.getSAPOData() == null ^ this.getSAPOData() == null)
+            return false;
+        if (other.getSAPOData() != null && other.getSAPOData().equals(this.getSAPOData()) == false)
+            return false;
         return true;
     }
 
@@ -1124,6 +1158,7 @@ public class ConnectorMetadata implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getUpsolver() == null) ? 0 : getUpsolver().hashCode());
         hashCode = prime * hashCode + ((getCustomerProfiles() == null) ? 0 : getCustomerProfiles().hashCode());
         hashCode = prime * hashCode + ((getHoneycode() == null) ? 0 : getHoneycode().hashCode());
+        hashCode = prime * hashCode + ((getSAPOData() == null) ? 0 : getSAPOData().hashCode());
         return hashCode;
     }
 

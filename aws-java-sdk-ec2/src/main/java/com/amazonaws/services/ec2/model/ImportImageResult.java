@@ -61,8 +61,7 @@ public class ImportImageResult extends com.amazonaws.AmazonWebServiceResult<com.
     private String importTaskId;
     /**
      * <p>
-     * The identifier for the symmetric AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to
-     * create the encrypted AMI.
+     * The identifier for the symmetric KMS key that was used to create the encrypted AMI.
      * </p>
      */
     private String kmsKeyId;
@@ -114,6 +113,12 @@ public class ImportImageResult extends com.amazonaws.AmazonWebServiceResult<com.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
+    /**
+     * <p>
+     * The usage operation value.
+     * </p>
+     */
+    private String usageOperation;
 
     /**
      * <p>
@@ -369,13 +374,11 @@ public class ImportImageResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The identifier for the symmetric AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to
-     * create the encrypted AMI.
+     * The identifier for the symmetric KMS key that was used to create the encrypted AMI.
      * </p>
      * 
      * @param kmsKeyId
-     *        The identifier for the symmetric AWS Key Management Service (AWS KMS) customer master key (CMK) that was
-     *        used to create the encrypted AMI.
+     *        The identifier for the symmetric KMS key that was used to create the encrypted AMI.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -384,12 +387,10 @@ public class ImportImageResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The identifier for the symmetric AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to
-     * create the encrypted AMI.
+     * The identifier for the symmetric KMS key that was used to create the encrypted AMI.
      * </p>
      * 
-     * @return The identifier for the symmetric AWS Key Management Service (AWS KMS) customer master key (CMK) that was
-     *         used to create the encrypted AMI.
+     * @return The identifier for the symmetric KMS key that was used to create the encrypted AMI.
      */
 
     public String getKmsKeyId() {
@@ -398,13 +399,11 @@ public class ImportImageResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The identifier for the symmetric AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to
-     * create the encrypted AMI.
+     * The identifier for the symmetric KMS key that was used to create the encrypted AMI.
      * </p>
      * 
      * @param kmsKeyId
-     *        The identifier for the symmetric AWS Key Management Service (AWS KMS) customer master key (CMK) that was
-     *        used to create the encrypted AMI.
+     *        The identifier for the symmetric KMS key that was used to create the encrypted AMI.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -833,6 +832,46 @@ public class ImportImageResult extends com.amazonaws.AmazonWebServiceResult<com.
     }
 
     /**
+     * <p>
+     * The usage operation value.
+     * </p>
+     * 
+     * @param usageOperation
+     *        The usage operation value.
+     */
+
+    public void setUsageOperation(String usageOperation) {
+        this.usageOperation = usageOperation;
+    }
+
+    /**
+     * <p>
+     * The usage operation value.
+     * </p>
+     * 
+     * @return The usage operation value.
+     */
+
+    public String getUsageOperation() {
+        return this.usageOperation;
+    }
+
+    /**
+     * <p>
+     * The usage operation value.
+     * </p>
+     * 
+     * @param usageOperation
+     *        The usage operation value.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImportImageResult withUsageOperation(String usageOperation) {
+        setUsageOperation(usageOperation);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -873,7 +912,9 @@ public class ImportImageResult extends com.amazonaws.AmazonWebServiceResult<com.
         if (getLicenseSpecifications() != null)
             sb.append("LicenseSpecifications: ").append(getLicenseSpecifications()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getUsageOperation() != null)
+            sb.append("UsageOperation: ").append(getUsageOperation());
         sb.append("}");
         return sb.toString();
     }
@@ -948,6 +989,10 @@ public class ImportImageResult extends com.amazonaws.AmazonWebServiceResult<com.
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getUsageOperation() == null ^ this.getUsageOperation() == null)
+            return false;
+        if (other.getUsageOperation() != null && other.getUsageOperation().equals(this.getUsageOperation()) == false)
+            return false;
         return true;
     }
 
@@ -971,6 +1016,7 @@ public class ImportImageResult extends com.amazonaws.AmazonWebServiceResult<com.
         hashCode = prime * hashCode + ((getStatusMessage() == null) ? 0 : getStatusMessage().hashCode());
         hashCode = prime * hashCode + ((getLicenseSpecifications() == null) ? 0 : getLicenseSpecifications().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getUsageOperation() == null) ? 0 : getUsageOperation().hashCode());
         return hashCode;
     }
 

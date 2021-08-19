@@ -27,8 +27,8 @@ public class ListConnectorEntitiesRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS account,
-     * and is used to query the downstream connector.
+     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the Amazon Web
+     * Services account, and is used to query the downstream connector.
      * </p>
      */
     private String connectorProfileName;
@@ -50,13 +50,13 @@ public class ListConnectorEntitiesRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS account,
-     * and is used to query the downstream connector.
+     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the Amazon Web
+     * Services account, and is used to query the downstream connector.
      * </p>
      * 
      * @param connectorProfileName
-     *        The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS
-     *        account, and is used to query the downstream connector.
+     *        The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the Amazon
+     *        Web Services account, and is used to query the downstream connector.
      */
 
     public void setConnectorProfileName(String connectorProfileName) {
@@ -65,12 +65,12 @@ public class ListConnectorEntitiesRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS account,
-     * and is used to query the downstream connector.
+     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the Amazon Web
+     * Services account, and is used to query the downstream connector.
      * </p>
      * 
-     * @return The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS
-     *         account, and is used to query the downstream connector.
+     * @return The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the
+     *         Amazon Web Services account, and is used to query the downstream connector.
      */
 
     public String getConnectorProfileName() {
@@ -79,13 +79,13 @@ public class ListConnectorEntitiesRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS account,
-     * and is used to query the downstream connector.
+     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the Amazon Web
+     * Services account, and is used to query the downstream connector.
      * </p>
      * 
      * @param connectorProfileName
-     *        The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS
-     *        account, and is used to query the downstream connector.
+     *        The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the Amazon
+     *        Web Services account, and is used to query the downstream connector.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

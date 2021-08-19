@@ -82,7 +82,8 @@ public class StepScalingPolicyConfiguration implements Serializable, Cloneable, 
      * target immediately. In this case, the cooldown period for the scale-in activity stops and doesn't complete.
      * </p>
      * <p>
-     * Application Auto Scaling provides a default value of 300 for the following scalable targets:
+     * Application Auto Scaling provides a default value of 600 for Amazon ElastiCache replication groups and a default
+     * value of 300 for the following scalable targets:
      * </p>
      * <ul>
      * <li>
@@ -471,7 +472,8 @@ public class StepScalingPolicyConfiguration implements Serializable, Cloneable, 
      * target immediately. In this case, the cooldown period for the scale-in activity stops and doesn't complete.
      * </p>
      * <p>
-     * Application Auto Scaling provides a default value of 300 for the following scalable targets:
+     * Application Auto Scaling provides a default value of 600 for Amazon ElastiCache replication groups and a default
+     * value of 300 for the following scalable targets:
      * </p>
      * <ul>
      * <li>
@@ -567,7 +569,8 @@ public class StepScalingPolicyConfiguration implements Serializable, Cloneable, 
      *        scale-in activity stops and doesn't complete.
      *        </p>
      *        <p>
-     *        Application Auto Scaling provides a default value of 300 for the following scalable targets:
+     *        Application Auto Scaling provides a default value of 600 for Amazon ElastiCache replication groups and a
+     *        default value of 300 for the following scalable targets:
      *        </p>
      *        <ul>
      *        <li>
@@ -668,7 +671,8 @@ public class StepScalingPolicyConfiguration implements Serializable, Cloneable, 
      * target immediately. In this case, the cooldown period for the scale-in activity stops and doesn't complete.
      * </p>
      * <p>
-     * Application Auto Scaling provides a default value of 300 for the following scalable targets:
+     * Application Auto Scaling provides a default value of 600 for Amazon ElastiCache replication groups and a default
+     * value of 300 for the following scalable targets:
      * </p>
      * <ul>
      * <li>
@@ -763,7 +767,8 @@ public class StepScalingPolicyConfiguration implements Serializable, Cloneable, 
      *         scale-in activity stops and doesn't complete.
      *         </p>
      *         <p>
-     *         Application Auto Scaling provides a default value of 300 for the following scalable targets:
+     *         Application Auto Scaling provides a default value of 600 for Amazon ElastiCache replication groups and a
+     *         default value of 300 for the following scalable targets:
      *         </p>
      *         <ul>
      *         <li>
@@ -864,7 +869,8 @@ public class StepScalingPolicyConfiguration implements Serializable, Cloneable, 
      * target immediately. In this case, the cooldown period for the scale-in activity stops and doesn't complete.
      * </p>
      * <p>
-     * Application Auto Scaling provides a default value of 300 for the following scalable targets:
+     * Application Auto Scaling provides a default value of 600 for Amazon ElastiCache replication groups and a default
+     * value of 300 for the following scalable targets:
      * </p>
      * <ul>
      * <li>
@@ -960,7 +966,8 @@ public class StepScalingPolicyConfiguration implements Serializable, Cloneable, 
      *        scale-in activity stops and doesn't complete.
      *        </p>
      *        <p>
-     *        Application Auto Scaling provides a default value of 300 for the following scalable targets:
+     *        Application Auto Scaling provides a default value of 600 for Amazon ElastiCache replication groups and a
+     *        default value of 300 for the following scalable targets:
      *        </p>
      *        <ul>
      *        <li>

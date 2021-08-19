@@ -56,8 +56,8 @@ import com.amazonaws.services.appflow.model.transform.*;
  * </p>
  * <p>
  * Amazon AppFlow is a fully managed integration service that enables you to securely transfer data between software as
- * a service (SaaS) applications like Salesforce, Marketo, Slack, and ServiceNow, and AWS services like Amazon S3 and
- * Amazon Redshift.
+ * a service (SaaS) applications like Salesforce, Marketo, Slack, and ServiceNow, and Amazon Web Services like Amazon S3
+ * and Amazon Redshift.
  * </p>
  * <p>
  * Use the following links to get started on the Amazon AppFlow API:
@@ -125,17 +125,11 @@ public class AmazonAppflowClient extends AmazonWebServiceClient implements Amazo
                     .withSupportsIon(false)
                     .withContentTypeOverride("")
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ConnectorServerException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.appflow.model.transform.ConnectorServerExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.appflow.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
                                     com.amazonaws.services.appflow.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.appflow.model.transform.ConflictExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.appflow.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
@@ -148,6 +142,12 @@ public class AmazonAppflowClient extends AmazonWebServiceClient implements Amazo
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConnectorAuthenticationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.appflow.model.transform.ConnectorAuthenticationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ConnectorServerException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.appflow.model.transform.ConnectorServerExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.appflow.model.transform.ConflictExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.appflow.model.AmazonAppflowException.class));
 
     public static AmazonAppflowClientBuilder builder() {
@@ -198,9 +198,9 @@ public class AmazonAppflowClient extends AmazonWebServiceClient implements Amazo
 
     /**
      * <p>
-     * Creates a new connector profile associated with your AWS account. There is a soft quota of 100 connector profiles
-     * per AWS account. If you need more connector profiles than this quota allows, you can submit a request to the
-     * Amazon AppFlow team through the Amazon AppFlow support channel.
+     * Creates a new connector profile associated with your Amazon Web Services account. There is a soft quota of 100
+     * connector profiles per Amazon Web Services account. If you need more connector profiles than this quota allows,
+     * you can submit a request to the Amazon AppFlow team through the Amazon AppFlow support channel.
      * </p>
      * 
      * @param createConnectorProfileRequest

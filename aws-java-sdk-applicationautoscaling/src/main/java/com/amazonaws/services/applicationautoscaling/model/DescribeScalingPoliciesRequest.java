@@ -33,8 +33,8 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
     private java.util.List<String> policyNames;
     /**
      * <p>
-     * The namespace of the AWS service that provides the resource. For a resource provided by your own application or
-     * service, use <code>custom-resource</code> instead.
+     * The namespace of the Amazon Web Services service that provides the resource. For a resource provided by your own
+     * application or service, use <code>custom-resource</code> instead.
      * </p>
      */
     private String serviceNamespace;
@@ -132,6 +132,12 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      * <code>arn:aws:kafka:us-east-1:123456789012:cluster/demo-cluster-1/6357e0b2-0e6a-4b86-a0b4-70df934c2e31-5</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Amazon ElastiCache replication group - The resource type is <code>replication-group</code> and the unique
+     * identifier is the replication group name. Example: <code>replication-group/mycluster</code>.
+     * </p>
+     * </li>
      * </ul>
      */
     private String resourceId;
@@ -148,12 +154,12 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      * </li>
      * <li>
      * <p>
-     * <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
+     * <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
+     * <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
      * </p>
      * </li>
      * <li>
@@ -232,6 +238,18 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      * <p>
      * <code>kafka:broker-storage:VolumeSize</code> - The provisioned volume size (in GiB) for brokers in an Amazon MSK
      * cluster.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>elasticache:replication-group:NodeGroups</code> - The number of node groups for an Amazon ElastiCache
+     * replication group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>elasticache:replication-group:Replicas</code> - The number of replicas per node group for an Amazon
+     * ElastiCache replication group.
      * </p>
      * </li>
      * </ul>
@@ -328,13 +346,13 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The namespace of the AWS service that provides the resource. For a resource provided by your own application or
-     * service, use <code>custom-resource</code> instead.
+     * The namespace of the Amazon Web Services service that provides the resource. For a resource provided by your own
+     * application or service, use <code>custom-resource</code> instead.
      * </p>
      * 
      * @param serviceNamespace
-     *        The namespace of the AWS service that provides the resource. For a resource provided by your own
-     *        application or service, use <code>custom-resource</code> instead.
+     *        The namespace of the Amazon Web Services service that provides the resource. For a resource provided by
+     *        your own application or service, use <code>custom-resource</code> instead.
      * @see ServiceNamespace
      */
 
@@ -344,12 +362,12 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The namespace of the AWS service that provides the resource. For a resource provided by your own application or
-     * service, use <code>custom-resource</code> instead.
+     * The namespace of the Amazon Web Services service that provides the resource. For a resource provided by your own
+     * application or service, use <code>custom-resource</code> instead.
      * </p>
      * 
-     * @return The namespace of the AWS service that provides the resource. For a resource provided by your own
-     *         application or service, use <code>custom-resource</code> instead.
+     * @return The namespace of the Amazon Web Services service that provides the resource. For a resource provided by
+     *         your own application or service, use <code>custom-resource</code> instead.
      * @see ServiceNamespace
      */
 
@@ -359,13 +377,13 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The namespace of the AWS service that provides the resource. For a resource provided by your own application or
-     * service, use <code>custom-resource</code> instead.
+     * The namespace of the Amazon Web Services service that provides the resource. For a resource provided by your own
+     * application or service, use <code>custom-resource</code> instead.
      * </p>
      * 
      * @param serviceNamespace
-     *        The namespace of the AWS service that provides the resource. For a resource provided by your own
-     *        application or service, use <code>custom-resource</code> instead.
+     *        The namespace of the Amazon Web Services service that provides the resource. For a resource provided by
+     *        your own application or service, use <code>custom-resource</code> instead.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceNamespace
      */
@@ -377,13 +395,13 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The namespace of the AWS service that provides the resource. For a resource provided by your own application or
-     * service, use <code>custom-resource</code> instead.
+     * The namespace of the Amazon Web Services service that provides the resource. For a resource provided by your own
+     * application or service, use <code>custom-resource</code> instead.
      * </p>
      * 
      * @param serviceNamespace
-     *        The namespace of the AWS service that provides the resource. For a resource provided by your own
-     *        application or service, use <code>custom-resource</code> instead.
+     *        The namespace of the Amazon Web Services service that provides the resource. For a resource provided by
+     *        your own application or service, use <code>custom-resource</code> instead.
      * @see ServiceNamespace
      */
 
@@ -393,13 +411,13 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The namespace of the AWS service that provides the resource. For a resource provided by your own application or
-     * service, use <code>custom-resource</code> instead.
+     * The namespace of the Amazon Web Services service that provides the resource. For a resource provided by your own
+     * application or service, use <code>custom-resource</code> instead.
      * </p>
      * 
      * @param serviceNamespace
-     *        The namespace of the AWS service that provides the resource. For a resource provided by your own
-     *        application or service, use <code>custom-resource</code> instead.
+     *        The namespace of the Amazon Web Services service that provides the resource. For a resource provided by
+     *        your own application or service, use <code>custom-resource</code> instead.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceNamespace
      */
@@ -503,6 +521,12 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      * <code>arn:aws:kafka:us-east-1:123456789012:cluster/demo-cluster-1/6357e0b2-0e6a-4b86-a0b4-70df934c2e31-5</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Amazon ElastiCache replication group - The resource type is <code>replication-group</code> and the unique
+     * identifier is the replication group name. Example: <code>replication-group/mycluster</code>.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param resourceId
@@ -597,6 +621,12 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      *        Amazon MSK cluster - The resource type and unique identifier are specified using the cluster ARN. Example:
      *        <code>arn:aws:kafka:us-east-1:123456789012:cluster/demo-cluster-1/6357e0b2-0e6a-4b86-a0b4-70df934c2e31-5</code>
      *        .
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Amazon ElastiCache replication group - The resource type is <code>replication-group</code> and the unique
+     *        identifier is the replication group name. Example: <code>replication-group/mycluster</code>.
      *        </p>
      *        </li>
      */
@@ -699,6 +729,12 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      * <code>arn:aws:kafka:us-east-1:123456789012:cluster/demo-cluster-1/6357e0b2-0e6a-4b86-a0b4-70df934c2e31-5</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Amazon ElastiCache replication group - The resource type is <code>replication-group</code> and the unique
+     * identifier is the replication group name. Example: <code>replication-group/mycluster</code>.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return The identifier of the resource associated with the scaling policy. This string consists of the resource
@@ -794,6 +830,12 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      *         Example:
      *         <code>arn:aws:kafka:us-east-1:123456789012:cluster/demo-cluster-1/6357e0b2-0e6a-4b86-a0b4-70df934c2e31-5</code>
      *         .
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Amazon ElastiCache replication group - The resource type is <code>replication-group</code> and the unique
+     *         identifier is the replication group name. Example: <code>replication-group/mycluster</code>.
      *         </p>
      *         </li>
      */
@@ -896,6 +938,12 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      * <code>arn:aws:kafka:us-east-1:123456789012:cluster/demo-cluster-1/6357e0b2-0e6a-4b86-a0b4-70df934c2e31-5</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Amazon ElastiCache replication group - The resource type is <code>replication-group</code> and the unique
+     * identifier is the replication group name. Example: <code>replication-group/mycluster</code>.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param resourceId
@@ -992,6 +1040,12 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      *        .
      *        </p>
      *        </li>
+     *        <li>
+     *        <p>
+     *        Amazon ElastiCache replication group - The resource type is <code>replication-group</code> and the unique
+     *        identifier is the replication group name. Example: <code>replication-group/mycluster</code>.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1013,12 +1067,12 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      * </li>
      * <li>
      * <p>
-     * <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
+     * <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
+     * <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
      * </p>
      * </li>
      * <li>
@@ -1099,6 +1153,18 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      * cluster.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>elasticache:replication-group:NodeGroups</code> - The number of node groups for an Amazon ElastiCache
+     * replication group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>elasticache:replication-group:Replicas</code> - The number of replicas per node group for an Amazon
+     * ElastiCache replication group.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param scalableDimension
@@ -1112,12 +1178,12 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
+     *        <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
+     *        <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
      *        </p>
      *        </li>
      *        <li>
@@ -1200,6 +1266,18 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      *        Amazon MSK cluster.
      *        </p>
      *        </li>
+     *        <li>
+     *        <p>
+     *        <code>elasticache:replication-group:NodeGroups</code> - The number of node groups for an Amazon
+     *        ElastiCache replication group.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>elasticache:replication-group:Replicas</code> - The number of replicas per node group for an Amazon
+     *        ElastiCache replication group.
+     *        </p>
+     *        </li>
      * @see ScalableDimension
      */
 
@@ -1220,12 +1298,12 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      * </li>
      * <li>
      * <p>
-     * <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
+     * <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
+     * <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
      * </p>
      * </li>
      * <li>
@@ -1306,6 +1384,18 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      * cluster.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>elasticache:replication-group:NodeGroups</code> - The number of node groups for an Amazon ElastiCache
+     * replication group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>elasticache:replication-group:Replicas</code> - The number of replicas per node group for an Amazon
+     * ElastiCache replication group.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return The scalable dimension. This string consists of the service namespace, resource type, and scaling
@@ -1318,12 +1408,12 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      *         </li>
      *         <li>
      *         <p>
-     *         <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
+     *         <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
+     *         <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
      *         </p>
      *         </li>
      *         <li>
@@ -1406,6 +1496,18 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      *         Amazon MSK cluster.
      *         </p>
      *         </li>
+     *         <li>
+     *         <p>
+     *         <code>elasticache:replication-group:NodeGroups</code> - The number of node groups for an Amazon
+     *         ElastiCache replication group.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>elasticache:replication-group:Replicas</code> - The number of replicas per node group for an Amazon
+     *         ElastiCache replication group.
+     *         </p>
+     *         </li>
      * @see ScalableDimension
      */
 
@@ -1426,12 +1528,12 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      * </li>
      * <li>
      * <p>
-     * <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
+     * <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
+     * <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
      * </p>
      * </li>
      * <li>
@@ -1512,6 +1614,18 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      * cluster.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>elasticache:replication-group:NodeGroups</code> - The number of node groups for an Amazon ElastiCache
+     * replication group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>elasticache:replication-group:Replicas</code> - The number of replicas per node group for an Amazon
+     * ElastiCache replication group.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param scalableDimension
@@ -1525,12 +1639,12 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
+     *        <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
+     *        <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
      *        </p>
      *        </li>
      *        <li>
@@ -1611,6 +1725,18 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      *        <p>
      *        <code>kafka:broker-storage:VolumeSize</code> - The provisioned volume size (in GiB) for brokers in an
      *        Amazon MSK cluster.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>elasticache:replication-group:NodeGroups</code> - The number of node groups for an Amazon
+     *        ElastiCache replication group.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>elasticache:replication-group:Replicas</code> - The number of replicas per node group for an Amazon
+     *        ElastiCache replication group.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1635,12 +1761,12 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      * </li>
      * <li>
      * <p>
-     * <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
+     * <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
+     * <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
      * </p>
      * </li>
      * <li>
@@ -1721,6 +1847,18 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      * cluster.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>elasticache:replication-group:NodeGroups</code> - The number of node groups for an Amazon ElastiCache
+     * replication group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>elasticache:replication-group:Replicas</code> - The number of replicas per node group for an Amazon
+     * ElastiCache replication group.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param scalableDimension
@@ -1734,12 +1872,12 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
+     *        <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
+     *        <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
      *        </p>
      *        </li>
      *        <li>
@@ -1820,6 +1958,18 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      *        <p>
      *        <code>kafka:broker-storage:VolumeSize</code> - The provisioned volume size (in GiB) for brokers in an
      *        Amazon MSK cluster.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>elasticache:replication-group:NodeGroups</code> - The number of node groups for an Amazon
+     *        ElastiCache replication group.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>elasticache:replication-group:Replicas</code> - The number of replicas per node group for an Amazon
+     *        ElastiCache replication group.
      *        </p>
      *        </li>
      * @see ScalableDimension
@@ -1842,12 +1992,12 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      * </li>
      * <li>
      * <p>
-     * <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
+     * <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
+     * <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
      * </p>
      * </li>
      * <li>
@@ -1928,6 +2078,18 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      * cluster.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>elasticache:replication-group:NodeGroups</code> - The number of node groups for an Amazon ElastiCache
+     * replication group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>elasticache:replication-group:Replicas</code> - The number of replicas per node group for an Amazon
+     * ElastiCache replication group.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param scalableDimension
@@ -1941,12 +2103,12 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
+     *        <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>elasticmapreduce:instancegroup:InstanceCount</code> - The instance count of an EMR Instance Group.
+     *        <code>ec2:spot-fleet-request:TargetCapacity</code> - The target capacity of a Spot Fleet request.
      *        </p>
      *        </li>
      *        <li>
@@ -2027,6 +2189,18 @@ public class DescribeScalingPoliciesRequest extends com.amazonaws.AmazonWebServi
      *        <p>
      *        <code>kafka:broker-storage:VolumeSize</code> - The provisioned volume size (in GiB) for brokers in an
      *        Amazon MSK cluster.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>elasticache:replication-group:NodeGroups</code> - The number of node groups for an Amazon
+     *        ElastiCache replication group.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>elasticache:replication-group:Replicas</code> - The number of replicas per node group for an Amazon
+     *        ElastiCache replication group.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

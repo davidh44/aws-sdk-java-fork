@@ -52,7 +52,7 @@ public class ExportImageRequest extends AmazonWebServiceRequest implements Seria
     /**
      * <p>
      * Information about the destination Amazon S3 bucket. The bucket must exist and grant WRITE and READ_ACP
-     * permissions to the AWS account vm-import-export@amazon.com.
+     * permissions to the Amazon Web Services account vm-import-export@amazon.com.
      * </p>
      */
     private ExportTaskS3LocationRequest s3ExportLocation;
@@ -252,12 +252,12 @@ public class ExportImageRequest extends AmazonWebServiceRequest implements Seria
     /**
      * <p>
      * Information about the destination Amazon S3 bucket. The bucket must exist and grant WRITE and READ_ACP
-     * permissions to the AWS account vm-import-export@amazon.com.
+     * permissions to the Amazon Web Services account vm-import-export@amazon.com.
      * </p>
      * 
      * @param s3ExportLocation
      *        Information about the destination Amazon S3 bucket. The bucket must exist and grant WRITE and READ_ACP
-     *        permissions to the AWS account vm-import-export@amazon.com.
+     *        permissions to the Amazon Web Services account vm-import-export@amazon.com.
      */
 
     public void setS3ExportLocation(ExportTaskS3LocationRequest s3ExportLocation) {
@@ -267,11 +267,11 @@ public class ExportImageRequest extends AmazonWebServiceRequest implements Seria
     /**
      * <p>
      * Information about the destination Amazon S3 bucket. The bucket must exist and grant WRITE and READ_ACP
-     * permissions to the AWS account vm-import-export@amazon.com.
+     * permissions to the Amazon Web Services account vm-import-export@amazon.com.
      * </p>
      * 
      * @return Information about the destination Amazon S3 bucket. The bucket must exist and grant WRITE and READ_ACP
-     *         permissions to the AWS account vm-import-export@amazon.com.
+     *         permissions to the Amazon Web Services account vm-import-export@amazon.com.
      */
 
     public ExportTaskS3LocationRequest getS3ExportLocation() {
@@ -281,12 +281,12 @@ public class ExportImageRequest extends AmazonWebServiceRequest implements Seria
     /**
      * <p>
      * Information about the destination Amazon S3 bucket. The bucket must exist and grant WRITE and READ_ACP
-     * permissions to the AWS account vm-import-export@amazon.com.
+     * permissions to the Amazon Web Services account vm-import-export@amazon.com.
      * </p>
      * 
      * @param s3ExportLocation
      *        Information about the destination Amazon S3 bucket. The bucket must exist and grant WRITE and READ_ACP
-     *        permissions to the AWS account vm-import-export@amazon.com.
+     *        permissions to the Amazon Web Services account vm-import-export@amazon.com.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

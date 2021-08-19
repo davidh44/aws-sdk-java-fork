@@ -22,9 +22,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * Represents a predefined metric for a target tracking scaling policy to use with Application Auto Scaling.
  * </p>
  * <p>
- * Only the AWS services that you're using send metrics to Amazon CloudWatch. To determine whether a desired metric
- * already exists by looking up its namespace and dimension using the CloudWatch metrics dashboard in the console,
- * follow the procedure in <a
+ * Only the Amazon Web Services that you're using send metrics to Amazon CloudWatch. To determine whether a desired
+ * metric already exists by looking up its namespace and dimension using the CloudWatch metrics dashboard in the
+ * console, follow the procedure in <a
  * href="https://docs.aws.amazon.com/autoscaling/application/userguide/monitoring-cloudwatch.html">Building dashboards
  * with CloudWatch</a> in the <i>Application Auto Scaling User Guide</i>.
  * </p>
@@ -51,9 +51,13 @@ public class PredefinedMetricSpecification implements Serializable, Cloneable, S
      * </p>
      * <p>
      * You create the resource label by appending the final portion of the load balancer ARN and the final portion of
-     * the target group ARN into a single value, separated by a forward slash (/). The format is
-     * app/&lt;load-balancer-name
-     * &gt;/&lt;load-balancer-id&gt;/targetgroup/&lt;target-group-name&gt;/&lt;target-group-id&gt;, where:
+     * the target group ARN into a single value, separated by a forward slash (/). The format of the resource label is:
+     * </p>
+     * <p>
+     * <code>app/my-alb/778d41231b141a0f/targetgroup/my-alb-target-group/943f017f100becff</code>.
+     * </p>
+     * <p>
+     * Where:
      * </p>
      * <ul>
      * <li>
@@ -67,10 +71,6 @@ public class PredefinedMetricSpecification implements Serializable, Cloneable, S
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * This is an example:
-     * app/EC2Co-EcsEl-1TKLTMITMM0EO/f37c06a68c1748aa/targetgroup/EC2Co-Defau-LDNM7Q3ZH1ZN/6d4ea56ca2d6a18d.
-     * </p>
      * <p>
      * To find the ARN for an Application Load Balancer, use the <a
      * href="https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html"
@@ -172,9 +172,13 @@ public class PredefinedMetricSpecification implements Serializable, Cloneable, S
      * </p>
      * <p>
      * You create the resource label by appending the final portion of the load balancer ARN and the final portion of
-     * the target group ARN into a single value, separated by a forward slash (/). The format is
-     * app/&lt;load-balancer-name
-     * &gt;/&lt;load-balancer-id&gt;/targetgroup/&lt;target-group-name&gt;/&lt;target-group-id&gt;, where:
+     * the target group ARN into a single value, separated by a forward slash (/). The format of the resource label is:
+     * </p>
+     * <p>
+     * <code>app/my-alb/778d41231b141a0f/targetgroup/my-alb-target-group/943f017f100becff</code>.
+     * </p>
+     * <p>
+     * Where:
      * </p>
      * <ul>
      * <li>
@@ -189,10 +193,6 @@ public class PredefinedMetricSpecification implements Serializable, Cloneable, S
      * </li>
      * </ul>
      * <p>
-     * This is an example:
-     * app/EC2Co-EcsEl-1TKLTMITMM0EO/f37c06a68c1748aa/targetgroup/EC2Co-Defau-LDNM7Q3ZH1ZN/6d4ea56ca2d6a18d.
-     * </p>
-     * <p>
      * To find the ARN for an Application Load Balancer, use the <a
      * href="https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html"
      * >DescribeLoadBalancers</a> API operation. To find the ARN for the target group, use the <a
@@ -206,10 +206,14 @@ public class PredefinedMetricSpecification implements Serializable, Cloneable, S
      *        Fleet request or ECS service.</p>
      *        <p>
      *        You create the resource label by appending the final portion of the load balancer ARN and the final
-     *        portion of the target group ARN into a single value, separated by a forward slash (/). The format is
-     *        app/&lt
-     *        ;load-balancer-name&gt;/&lt;load-balancer-id&gt;/targetgroup/&lt;target-group-name&gt;/&lt;target-group
-     *        -id&gt;, where:
+     *        portion of the target group ARN into a single value, separated by a forward slash (/). The format of the
+     *        resource label is:
+     *        </p>
+     *        <p>
+     *        <code>app/my-alb/778d41231b141a0f/targetgroup/my-alb-target-group/943f017f100becff</code>.
+     *        </p>
+     *        <p>
+     *        Where:
      *        </p>
      *        <ul>
      *        <li>
@@ -224,10 +228,6 @@ public class PredefinedMetricSpecification implements Serializable, Cloneable, S
      *        </p>
      *        </li>
      *        </ul>
-     *        <p>
-     *        This is an example:
-     *        app/EC2Co-EcsEl-1TKLTMITMM0EO/f37c06a68c1748aa/targetgroup/EC2Co-Defau-LDNM7Q3ZH1ZN/6d4ea56ca2d6a18d.
-     *        </p>
      *        <p>
      *        To find the ARN for an Application Load Balancer, use the <a href=
      *        "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html"
@@ -248,9 +248,13 @@ public class PredefinedMetricSpecification implements Serializable, Cloneable, S
      * </p>
      * <p>
      * You create the resource label by appending the final portion of the load balancer ARN and the final portion of
-     * the target group ARN into a single value, separated by a forward slash (/). The format is
-     * app/&lt;load-balancer-name
-     * &gt;/&lt;load-balancer-id&gt;/targetgroup/&lt;target-group-name&gt;/&lt;target-group-id&gt;, where:
+     * the target group ARN into a single value, separated by a forward slash (/). The format of the resource label is:
+     * </p>
+     * <p>
+     * <code>app/my-alb/778d41231b141a0f/targetgroup/my-alb-target-group/943f017f100becff</code>.
+     * </p>
+     * <p>
+     * Where:
      * </p>
      * <ul>
      * <li>
@@ -265,10 +269,6 @@ public class PredefinedMetricSpecification implements Serializable, Cloneable, S
      * </li>
      * </ul>
      * <p>
-     * This is an example:
-     * app/EC2Co-EcsEl-1TKLTMITMM0EO/f37c06a68c1748aa/targetgroup/EC2Co-Defau-LDNM7Q3ZH1ZN/6d4ea56ca2d6a18d.
-     * </p>
-     * <p>
      * To find the ARN for an Application Load Balancer, use the <a
      * href="https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html"
      * >DescribeLoadBalancers</a> API operation. To find the ARN for the target group, use the <a
@@ -281,9 +281,14 @@ public class PredefinedMetricSpecification implements Serializable, Cloneable, S
      *         Fleet request or ECS service.</p>
      *         <p>
      *         You create the resource label by appending the final portion of the load balancer ARN and the final
-     *         portion of the target group ARN into a single value, separated by a forward slash (/). The format is
-     *         app/&lt;load-balancer-name&gt;/&lt;load-balancer-id&gt;/targetgroup/&lt;target-group-name&gt;/&lt;target-
-     *         group-id&gt;, where:
+     *         portion of the target group ARN into a single value, separated by a forward slash (/). The format of the
+     *         resource label is:
+     *         </p>
+     *         <p>
+     *         <code>app/my-alb/778d41231b141a0f/targetgroup/my-alb-target-group/943f017f100becff</code>.
+     *         </p>
+     *         <p>
+     *         Where:
      *         </p>
      *         <ul>
      *         <li>
@@ -298,10 +303,6 @@ public class PredefinedMetricSpecification implements Serializable, Cloneable, S
      *         </p>
      *         </li>
      *         </ul>
-     *         <p>
-     *         This is an example:
-     *         app/EC2Co-EcsEl-1TKLTMITMM0EO/f37c06a68c1748aa/targetgroup/EC2Co-Defau-LDNM7Q3ZH1ZN/6d4ea56ca2d6a18d.
-     *         </p>
      *         <p>
      *         To find the ARN for an Application Load Balancer, use the <a href=
      *         "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html"
@@ -322,9 +323,13 @@ public class PredefinedMetricSpecification implements Serializable, Cloneable, S
      * </p>
      * <p>
      * You create the resource label by appending the final portion of the load balancer ARN and the final portion of
-     * the target group ARN into a single value, separated by a forward slash (/). The format is
-     * app/&lt;load-balancer-name
-     * &gt;/&lt;load-balancer-id&gt;/targetgroup/&lt;target-group-name&gt;/&lt;target-group-id&gt;, where:
+     * the target group ARN into a single value, separated by a forward slash (/). The format of the resource label is:
+     * </p>
+     * <p>
+     * <code>app/my-alb/778d41231b141a0f/targetgroup/my-alb-target-group/943f017f100becff</code>.
+     * </p>
+     * <p>
+     * Where:
      * </p>
      * <ul>
      * <li>
@@ -339,10 +344,6 @@ public class PredefinedMetricSpecification implements Serializable, Cloneable, S
      * </li>
      * </ul>
      * <p>
-     * This is an example:
-     * app/EC2Co-EcsEl-1TKLTMITMM0EO/f37c06a68c1748aa/targetgroup/EC2Co-Defau-LDNM7Q3ZH1ZN/6d4ea56ca2d6a18d.
-     * </p>
-     * <p>
      * To find the ARN for an Application Load Balancer, use the <a
      * href="https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html"
      * >DescribeLoadBalancers</a> API operation. To find the ARN for the target group, use the <a
@@ -356,10 +357,14 @@ public class PredefinedMetricSpecification implements Serializable, Cloneable, S
      *        Fleet request or ECS service.</p>
      *        <p>
      *        You create the resource label by appending the final portion of the load balancer ARN and the final
-     *        portion of the target group ARN into a single value, separated by a forward slash (/). The format is
-     *        app/&lt
-     *        ;load-balancer-name&gt;/&lt;load-balancer-id&gt;/targetgroup/&lt;target-group-name&gt;/&lt;target-group
-     *        -id&gt;, where:
+     *        portion of the target group ARN into a single value, separated by a forward slash (/). The format of the
+     *        resource label is:
+     *        </p>
+     *        <p>
+     *        <code>app/my-alb/778d41231b141a0f/targetgroup/my-alb-target-group/943f017f100becff</code>.
+     *        </p>
+     *        <p>
+     *        Where:
      *        </p>
      *        <ul>
      *        <li>
@@ -374,10 +379,6 @@ public class PredefinedMetricSpecification implements Serializable, Cloneable, S
      *        </p>
      *        </li>
      *        </ul>
-     *        <p>
-     *        This is an example:
-     *        app/EC2Co-EcsEl-1TKLTMITMM0EO/f37c06a68c1748aa/targetgroup/EC2Co-Defau-LDNM7Q3ZH1ZN/6d4ea56ca2d6a18d.
-     *        </p>
      *        <p>
      *        To find the ARN for an Application Load Balancer, use the <a href=
      *        "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html"

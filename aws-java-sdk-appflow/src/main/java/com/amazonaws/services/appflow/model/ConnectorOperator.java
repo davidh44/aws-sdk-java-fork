@@ -112,6 +112,12 @@ public class ConnectorOperator implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private String zendesk;
+    /**
+     * <p>
+     * The operation to be performed on the provided SAPOData source fields.
+     * </p>
+     */
+    private String sAPOData;
 
     /**
      * <p>
@@ -940,6 +946,65 @@ public class ConnectorOperator implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The operation to be performed on the provided SAPOData source fields.
+     * </p>
+     * 
+     * @param sAPOData
+     *        The operation to be performed on the provided SAPOData source fields.
+     * @see SAPODataConnectorOperator
+     */
+
+    public void setSAPOData(String sAPOData) {
+        this.sAPOData = sAPOData;
+    }
+
+    /**
+     * <p>
+     * The operation to be performed on the provided SAPOData source fields.
+     * </p>
+     * 
+     * @return The operation to be performed on the provided SAPOData source fields.
+     * @see SAPODataConnectorOperator
+     */
+
+    public String getSAPOData() {
+        return this.sAPOData;
+    }
+
+    /**
+     * <p>
+     * The operation to be performed on the provided SAPOData source fields.
+     * </p>
+     * 
+     * @param sAPOData
+     *        The operation to be performed on the provided SAPOData source fields.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see SAPODataConnectorOperator
+     */
+
+    public ConnectorOperator withSAPOData(String sAPOData) {
+        setSAPOData(sAPOData);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The operation to be performed on the provided SAPOData source fields.
+     * </p>
+     * 
+     * @param sAPOData
+     *        The operation to be performed on the provided SAPOData source fields.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see SAPODataConnectorOperator
+     */
+
+    public ConnectorOperator withSAPOData(SAPODataConnectorOperator sAPOData) {
+        this.sAPOData = sAPOData.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -978,7 +1043,9 @@ public class ConnectorOperator implements Serializable, Cloneable, StructuredPoj
         if (getVeeva() != null)
             sb.append("Veeva: ").append(getVeeva()).append(",");
         if (getZendesk() != null)
-            sb.append("Zendesk: ").append(getZendesk());
+            sb.append("Zendesk: ").append(getZendesk()).append(",");
+        if (getSAPOData() != null)
+            sb.append("SAPOData: ").append(getSAPOData());
         sb.append("}");
         return sb.toString();
     }
@@ -1049,6 +1116,10 @@ public class ConnectorOperator implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getZendesk() != null && other.getZendesk().equals(this.getZendesk()) == false)
             return false;
+        if (other.getSAPOData() == null ^ this.getSAPOData() == null)
+            return false;
+        if (other.getSAPOData() != null && other.getSAPOData().equals(this.getSAPOData()) == false)
+            return false;
         return true;
     }
 
@@ -1071,6 +1142,7 @@ public class ConnectorOperator implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getTrendmicro() == null) ? 0 : getTrendmicro().hashCode());
         hashCode = prime * hashCode + ((getVeeva() == null) ? 0 : getVeeva().hashCode());
         hashCode = prime * hashCode + ((getZendesk() == null) ? 0 : getZendesk().hashCode());
+        hashCode = prime * hashCode + ((getSAPOData() == null) ? 0 : getSAPOData().hashCode());
         return hashCode;
     }
 

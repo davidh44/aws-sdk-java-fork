@@ -52,6 +52,22 @@ public class VeevaSourcePropertiesJsonUnmarshaller implements Unmarshaller<Veeva
                     context.nextToken();
                     veevaSourceProperties.setObject(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("documentType", targetDepth)) {
+                    context.nextToken();
+                    veevaSourceProperties.setDocumentType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("includeSourceFiles", targetDepth)) {
+                    context.nextToken();
+                    veevaSourceProperties.setIncludeSourceFiles(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("includeRenditions", targetDepth)) {
+                    context.nextToken();
+                    veevaSourceProperties.setIncludeRenditions(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("includeAllVersions", targetDepth)) {
+                    context.nextToken();
+                    veevaSourceProperties.setIncludeAllVersions(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

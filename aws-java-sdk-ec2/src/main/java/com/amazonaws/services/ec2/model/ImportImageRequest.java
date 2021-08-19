@@ -60,10 +60,10 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
     private com.amazonaws.internal.SdkInternalList<ImageDiskContainer> diskContainers;
     /**
      * <p>
-     * Specifies whether the destination AMI of the imported image should be encrypted. The default CMK for EBS is used
-     * unless you specify a non-default AWS Key Management Service (AWS KMS) CMK using <code>KmsKeyId</code>. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS
-     * Encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * Specifies whether the destination AMI of the imported image should be encrypted. The default KMS key for EBS is
+     * used unless you specify a non-default KMS key using <code>KmsKeyId</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS Encryption</a> in the
+     * <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      */
     private Boolean encrypted;
@@ -78,13 +78,12 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
     private String hypervisor;
     /**
      * <p>
-     * An identifier for the symmetric AWS Key Management Service (AWS KMS) customer master key (CMK) to use when
-     * creating the encrypted AMI. This parameter is only required if you want to use a non-default CMK; if this
-     * parameter is not specified, the default CMK for EBS is used. If a <code>KmsKeyId</code> is specified, the
-     * <code>Encrypted</code> flag must also be set.
+     * An identifier for the symmetric KMS key to use when creating the encrypted AMI. This parameter is only required
+     * if you want to use a non-default KMS key; if this parameter is not specified, the default KMS key for EBS is
+     * used. If a <code>KmsKeyId</code> is specified, the <code>Encrypted</code> flag must also be set.
      * </p>
      * <p>
-     * The CMK identifier may be provided in any of the following formats:
+     * The KMS key identifier may be provided in any of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -94,35 +93,35 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
      * </li>
      * <li>
      * <p>
-     * Key alias. The alias ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region of the CMK, the
-     * AWS account ID of the CMK owner, the <code>alias</code> namespace, and then the CMK alias. For example,
-     * arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
+     * Key alias. The alias ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region of the key, the
+     * Amazon Web Services account ID of the key owner, the <code>alias</code> namespace, and then the key alias. For
+     * example, arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * ARN using key ID. The ID ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region of the CMK,
-     * the AWS account ID of the CMK owner, the <code>key</code> namespace, and then the CMK ID. For example,
-     * arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:key/<i>abcd1234-a123-456a-a12b-a123b4cd56ef</i>.
+     * ARN using key ID. The ID ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region of the key,
+     * the Amazon Web Services account ID of the key owner, the <code>key</code> namespace, and then the key ID. For
+     * example, arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:key/<i>abcd1234-a123-456a-a12b-a123b4cd56ef</i>.
      * </p>
      * </li>
      * <li>
      * <p>
      * ARN using key alias. The alias ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region of the
-     * CMK, the AWS account ID of the CMK owner, the <code>alias</code> namespace, and then the CMK alias. For example,
-     * arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
+     * key, the Amazon Web Services account ID of the key owner, the <code>alias</code> namespace, and then the key
+     * alias. For example, arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * AWS parses <code>KmsKeyId</code> asynchronously, meaning that the action you call may appear to complete even
-     * though you provided an invalid identifier. This action will eventually report failure.
+     * Amazon Web Services parses <code>KmsKeyId</code> asynchronously, meaning that the action you call may appear to
+     * complete even though you provided an invalid identifier. This action will eventually report failure.
      * </p>
      * <p>
-     * The specified CMK must exist in the Region that the AMI is being copied to.
+     * The specified KMS key must exist in the Region that the AMI is being copied to.
      * </p>
      * <p>
-     * Amazon EBS does not support asymmetric CMKs.
+     * Amazon EBS does not support asymmetric KMS keys.
      * </p>
      */
     private String kmsKeyId;
@@ -132,12 +131,12 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
      * </p>
      * <p>
      * By default, we detect the source-system operating system (OS) and apply the appropriate license. Specify
-     * <code>AWS</code> to replace the source-system license with an AWS license, if appropriate. Specify
-     * <code>BYOL</code> to retain the source-system license, if appropriate.
+     * <code>AWS</code> to replace the source-system license with an Amazon Web Services license, if appropriate.
+     * Specify <code>BYOL</code> to retain the source-system license, if appropriate.
      * </p>
      * <p>
      * To use <code>BYOL</code>, you must have existing licenses with rights to use these licenses in a third party
-     * cloud, such as AWS. For more information, see <a
+     * cloud, such as Amazon Web Services. For more information, see <a
      * href="https://docs.aws.amazon.com/vm-import/latest/userguide/vmimport-image-import.html#prerequisites-image"
      * >Prerequisites</a> in the VM Import/Export User Guide.
      * </p>
@@ -170,6 +169,14 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<TagSpecification> tagSpecifications;
+    /**
+     * <p>
+     * The usage operation value. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing information
+     * fields</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     */
+    private String usageOperation;
 
     /**
      * <p>
@@ -421,18 +428,17 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
 
     /**
      * <p>
-     * Specifies whether the destination AMI of the imported image should be encrypted. The default CMK for EBS is used
-     * unless you specify a non-default AWS Key Management Service (AWS KMS) CMK using <code>KmsKeyId</code>. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS
-     * Encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * Specifies whether the destination AMI of the imported image should be encrypted. The default KMS key for EBS is
+     * used unless you specify a non-default KMS key using <code>KmsKeyId</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS Encryption</a> in the
+     * <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param encrypted
-     *        Specifies whether the destination AMI of the imported image should be encrypted. The default CMK for EBS
-     *        is used unless you specify a non-default AWS Key Management Service (AWS KMS) CMK using
-     *        <code>KmsKeyId</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS Encryption</a> in
-     *        the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        Specifies whether the destination AMI of the imported image should be encrypted. The default KMS key for
+     *        EBS is used unless you specify a non-default KMS key using <code>KmsKeyId</code>. For more information,
+     *        see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS
+     *        Encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      */
 
     public void setEncrypted(Boolean encrypted) {
@@ -441,17 +447,16 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
 
     /**
      * <p>
-     * Specifies whether the destination AMI of the imported image should be encrypted. The default CMK for EBS is used
-     * unless you specify a non-default AWS Key Management Service (AWS KMS) CMK using <code>KmsKeyId</code>. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS
-     * Encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * Specifies whether the destination AMI of the imported image should be encrypted. The default KMS key for EBS is
+     * used unless you specify a non-default KMS key using <code>KmsKeyId</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS Encryption</a> in the
+     * <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
-     * @return Specifies whether the destination AMI of the imported image should be encrypted. The default CMK for EBS
-     *         is used unless you specify a non-default AWS Key Management Service (AWS KMS) CMK using
-     *         <code>KmsKeyId</code>. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS Encryption</a>
-     *         in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * @return Specifies whether the destination AMI of the imported image should be encrypted. The default KMS key for
+     *         EBS is used unless you specify a non-default KMS key using <code>KmsKeyId</code>. For more information,
+     *         see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS
+     *         Encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      */
 
     public Boolean getEncrypted() {
@@ -460,18 +465,17 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
 
     /**
      * <p>
-     * Specifies whether the destination AMI of the imported image should be encrypted. The default CMK for EBS is used
-     * unless you specify a non-default AWS Key Management Service (AWS KMS) CMK using <code>KmsKeyId</code>. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS
-     * Encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * Specifies whether the destination AMI of the imported image should be encrypted. The default KMS key for EBS is
+     * used unless you specify a non-default KMS key using <code>KmsKeyId</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS Encryption</a> in the
+     * <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param encrypted
-     *        Specifies whether the destination AMI of the imported image should be encrypted. The default CMK for EBS
-     *        is used unless you specify a non-default AWS Key Management Service (AWS KMS) CMK using
-     *        <code>KmsKeyId</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS Encryption</a> in
-     *        the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        Specifies whether the destination AMI of the imported image should be encrypted. The default KMS key for
+     *        EBS is used unless you specify a non-default KMS key using <code>KmsKeyId</code>. For more information,
+     *        see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS
+     *        Encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -482,17 +486,16 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
 
     /**
      * <p>
-     * Specifies whether the destination AMI of the imported image should be encrypted. The default CMK for EBS is used
-     * unless you specify a non-default AWS Key Management Service (AWS KMS) CMK using <code>KmsKeyId</code>. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS
-     * Encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * Specifies whether the destination AMI of the imported image should be encrypted. The default KMS key for EBS is
+     * used unless you specify a non-default KMS key using <code>KmsKeyId</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS Encryption</a> in the
+     * <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
-     * @return Specifies whether the destination AMI of the imported image should be encrypted. The default CMK for EBS
-     *         is used unless you specify a non-default AWS Key Management Service (AWS KMS) CMK using
-     *         <code>KmsKeyId</code>. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS Encryption</a>
-     *         in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * @return Specifies whether the destination AMI of the imported image should be encrypted. The default KMS key for
+     *         EBS is used unless you specify a non-default KMS key using <code>KmsKeyId</code>. For more information,
+     *         see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS
+     *         Encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      */
 
     public Boolean isEncrypted() {
@@ -556,13 +559,12 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
 
     /**
      * <p>
-     * An identifier for the symmetric AWS Key Management Service (AWS KMS) customer master key (CMK) to use when
-     * creating the encrypted AMI. This parameter is only required if you want to use a non-default CMK; if this
-     * parameter is not specified, the default CMK for EBS is used. If a <code>KmsKeyId</code> is specified, the
-     * <code>Encrypted</code> flag must also be set.
+     * An identifier for the symmetric KMS key to use when creating the encrypted AMI. This parameter is only required
+     * if you want to use a non-default KMS key; if this parameter is not specified, the default KMS key for EBS is
+     * used. If a <code>KmsKeyId</code> is specified, the <code>Encrypted</code> flag must also be set.
      * </p>
      * <p>
-     * The CMK identifier may be provided in any of the following formats:
+     * The KMS key identifier may be provided in any of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -572,44 +574,44 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
      * </li>
      * <li>
      * <p>
-     * Key alias. The alias ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region of the CMK, the
-     * AWS account ID of the CMK owner, the <code>alias</code> namespace, and then the CMK alias. For example,
-     * arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
+     * Key alias. The alias ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region of the key, the
+     * Amazon Web Services account ID of the key owner, the <code>alias</code> namespace, and then the key alias. For
+     * example, arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * ARN using key ID. The ID ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region of the CMK,
-     * the AWS account ID of the CMK owner, the <code>key</code> namespace, and then the CMK ID. For example,
-     * arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:key/<i>abcd1234-a123-456a-a12b-a123b4cd56ef</i>.
+     * ARN using key ID. The ID ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region of the key,
+     * the Amazon Web Services account ID of the key owner, the <code>key</code> namespace, and then the key ID. For
+     * example, arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:key/<i>abcd1234-a123-456a-a12b-a123b4cd56ef</i>.
      * </p>
      * </li>
      * <li>
      * <p>
      * ARN using key alias. The alias ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region of the
-     * CMK, the AWS account ID of the CMK owner, the <code>alias</code> namespace, and then the CMK alias. For example,
-     * arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
+     * key, the Amazon Web Services account ID of the key owner, the <code>alias</code> namespace, and then the key
+     * alias. For example, arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * AWS parses <code>KmsKeyId</code> asynchronously, meaning that the action you call may appear to complete even
-     * though you provided an invalid identifier. This action will eventually report failure.
+     * Amazon Web Services parses <code>KmsKeyId</code> asynchronously, meaning that the action you call may appear to
+     * complete even though you provided an invalid identifier. This action will eventually report failure.
      * </p>
      * <p>
-     * The specified CMK must exist in the Region that the AMI is being copied to.
+     * The specified KMS key must exist in the Region that the AMI is being copied to.
      * </p>
      * <p>
-     * Amazon EBS does not support asymmetric CMKs.
+     * Amazon EBS does not support asymmetric KMS keys.
      * </p>
      * 
      * @param kmsKeyId
-     *        An identifier for the symmetric AWS Key Management Service (AWS KMS) customer master key (CMK) to use when
-     *        creating the encrypted AMI. This parameter is only required if you want to use a non-default CMK; if this
-     *        parameter is not specified, the default CMK for EBS is used. If a <code>KmsKeyId</code> is specified, the
-     *        <code>Encrypted</code> flag must also be set. </p>
+     *        An identifier for the symmetric KMS key to use when creating the encrypted AMI. This parameter is only
+     *        required if you want to use a non-default KMS key; if this parameter is not specified, the default KMS key
+     *        for EBS is used. If a <code>KmsKeyId</code> is specified, the <code>Encrypted</code> flag must also be
+     *        set. </p>
      *        <p>
-     *        The CMK identifier may be provided in any of the following formats:
+     *        The KMS key identifier may be provided in any of the following formats:
      *        </p>
      *        <ul>
      *        <li>
@@ -620,34 +622,37 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
      *        <li>
      *        <p>
      *        Key alias. The alias ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region of the
-     *        CMK, the AWS account ID of the CMK owner, the <code>alias</code> namespace, and then the CMK alias. For
-     *        example, arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
+     *        key, the Amazon Web Services account ID of the key owner, the <code>alias</code> namespace, and then the
+     *        key alias. For example, arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        ARN using key ID. The ID ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region of
-     *        the CMK, the AWS account ID of the CMK owner, the <code>key</code> namespace, and then the CMK ID. For
-     *        example, arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:key/<i>abcd1234-a123-456a-a12b-a123b4cd56ef</i>.
+     *        the key, the Amazon Web Services account ID of the key owner, the <code>key</code> namespace, and then the
+     *        key ID. For example,
+     *        arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:key/<i>abcd1234-a123-456a-a12b-a123b4cd56ef</i>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        ARN using key alias. The alias ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region
-     *        of the CMK, the AWS account ID of the CMK owner, the <code>alias</code> namespace, and then the CMK alias.
-     *        For example, arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
+     *        of the key, the Amazon Web Services account ID of the key owner, the <code>alias</code> namespace, and
+     *        then the key alias. For example,
+     *        arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        AWS parses <code>KmsKeyId</code> asynchronously, meaning that the action you call may appear to complete
-     *        even though you provided an invalid identifier. This action will eventually report failure.
+     *        Amazon Web Services parses <code>KmsKeyId</code> asynchronously, meaning that the action you call may
+     *        appear to complete even though you provided an invalid identifier. This action will eventually report
+     *        failure.
      *        </p>
      *        <p>
-     *        The specified CMK must exist in the Region that the AMI is being copied to.
+     *        The specified KMS key must exist in the Region that the AMI is being copied to.
      *        </p>
      *        <p>
-     *        Amazon EBS does not support asymmetric CMKs.
+     *        Amazon EBS does not support asymmetric KMS keys.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -656,13 +661,12 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
 
     /**
      * <p>
-     * An identifier for the symmetric AWS Key Management Service (AWS KMS) customer master key (CMK) to use when
-     * creating the encrypted AMI. This parameter is only required if you want to use a non-default CMK; if this
-     * parameter is not specified, the default CMK for EBS is used. If a <code>KmsKeyId</code> is specified, the
-     * <code>Encrypted</code> flag must also be set.
+     * An identifier for the symmetric KMS key to use when creating the encrypted AMI. This parameter is only required
+     * if you want to use a non-default KMS key; if this parameter is not specified, the default KMS key for EBS is
+     * used. If a <code>KmsKeyId</code> is specified, the <code>Encrypted</code> flag must also be set.
      * </p>
      * <p>
-     * The CMK identifier may be provided in any of the following formats:
+     * The KMS key identifier may be provided in any of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -672,43 +676,43 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
      * </li>
      * <li>
      * <p>
-     * Key alias. The alias ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region of the CMK, the
-     * AWS account ID of the CMK owner, the <code>alias</code> namespace, and then the CMK alias. For example,
-     * arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
+     * Key alias. The alias ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region of the key, the
+     * Amazon Web Services account ID of the key owner, the <code>alias</code> namespace, and then the key alias. For
+     * example, arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * ARN using key ID. The ID ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region of the CMK,
-     * the AWS account ID of the CMK owner, the <code>key</code> namespace, and then the CMK ID. For example,
-     * arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:key/<i>abcd1234-a123-456a-a12b-a123b4cd56ef</i>.
+     * ARN using key ID. The ID ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region of the key,
+     * the Amazon Web Services account ID of the key owner, the <code>key</code> namespace, and then the key ID. For
+     * example, arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:key/<i>abcd1234-a123-456a-a12b-a123b4cd56ef</i>.
      * </p>
      * </li>
      * <li>
      * <p>
      * ARN using key alias. The alias ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region of the
-     * CMK, the AWS account ID of the CMK owner, the <code>alias</code> namespace, and then the CMK alias. For example,
-     * arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
+     * key, the Amazon Web Services account ID of the key owner, the <code>alias</code> namespace, and then the key
+     * alias. For example, arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * AWS parses <code>KmsKeyId</code> asynchronously, meaning that the action you call may appear to complete even
-     * though you provided an invalid identifier. This action will eventually report failure.
+     * Amazon Web Services parses <code>KmsKeyId</code> asynchronously, meaning that the action you call may appear to
+     * complete even though you provided an invalid identifier. This action will eventually report failure.
      * </p>
      * <p>
-     * The specified CMK must exist in the Region that the AMI is being copied to.
+     * The specified KMS key must exist in the Region that the AMI is being copied to.
      * </p>
      * <p>
-     * Amazon EBS does not support asymmetric CMKs.
+     * Amazon EBS does not support asymmetric KMS keys.
      * </p>
      * 
-     * @return An identifier for the symmetric AWS Key Management Service (AWS KMS) customer master key (CMK) to use
-     *         when creating the encrypted AMI. This parameter is only required if you want to use a non-default CMK; if
-     *         this parameter is not specified, the default CMK for EBS is used. If a <code>KmsKeyId</code> is
-     *         specified, the <code>Encrypted</code> flag must also be set. </p>
+     * @return An identifier for the symmetric KMS key to use when creating the encrypted AMI. This parameter is only
+     *         required if you want to use a non-default KMS key; if this parameter is not specified, the default KMS
+     *         key for EBS is used. If a <code>KmsKeyId</code> is specified, the <code>Encrypted</code> flag must also
+     *         be set. </p>
      *         <p>
-     *         The CMK identifier may be provided in any of the following formats:
+     *         The KMS key identifier may be provided in any of the following formats:
      *         </p>
      *         <ul>
      *         <li>
@@ -719,35 +723,37 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
      *         <li>
      *         <p>
      *         Key alias. The alias ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region of the
-     *         CMK, the AWS account ID of the CMK owner, the <code>alias</code> namespace, and then the CMK alias. For
-     *         example, arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
+     *         key, the Amazon Web Services account ID of the key owner, the <code>alias</code> namespace, and then the
+     *         key alias. For example, arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         ARN using key ID. The ID ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region of
-     *         the CMK, the AWS account ID of the CMK owner, the <code>key</code> namespace, and then the CMK ID. For
-     *         example,
+     *         the key, the Amazon Web Services account ID of the key owner, the <code>key</code> namespace, and then
+     *         the key ID. For example,
      *         arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:key/<i>abcd1234-a123-456a-a12b-a123b4cd56ef</i>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         ARN using key alias. The alias ARN contains the <code>arn:aws:kms</code> namespace, followed by the
-     *         Region of the CMK, the AWS account ID of the CMK owner, the <code>alias</code> namespace, and then the
-     *         CMK alias. For example, arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
+     *         Region of the key, the Amazon Web Services account ID of the key owner, the <code>alias</code> namespace,
+     *         and then the key alias. For example,
+     *         arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
      *         </p>
      *         </li>
      *         </ul>
      *         <p>
-     *         AWS parses <code>KmsKeyId</code> asynchronously, meaning that the action you call may appear to complete
-     *         even though you provided an invalid identifier. This action will eventually report failure.
+     *         Amazon Web Services parses <code>KmsKeyId</code> asynchronously, meaning that the action you call may
+     *         appear to complete even though you provided an invalid identifier. This action will eventually report
+     *         failure.
      *         </p>
      *         <p>
-     *         The specified CMK must exist in the Region that the AMI is being copied to.
+     *         The specified KMS key must exist in the Region that the AMI is being copied to.
      *         </p>
      *         <p>
-     *         Amazon EBS does not support asymmetric CMKs.
+     *         Amazon EBS does not support asymmetric KMS keys.
      */
 
     public String getKmsKeyId() {
@@ -756,13 +762,12 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
 
     /**
      * <p>
-     * An identifier for the symmetric AWS Key Management Service (AWS KMS) customer master key (CMK) to use when
-     * creating the encrypted AMI. This parameter is only required if you want to use a non-default CMK; if this
-     * parameter is not specified, the default CMK for EBS is used. If a <code>KmsKeyId</code> is specified, the
-     * <code>Encrypted</code> flag must also be set.
+     * An identifier for the symmetric KMS key to use when creating the encrypted AMI. This parameter is only required
+     * if you want to use a non-default KMS key; if this parameter is not specified, the default KMS key for EBS is
+     * used. If a <code>KmsKeyId</code> is specified, the <code>Encrypted</code> flag must also be set.
      * </p>
      * <p>
-     * The CMK identifier may be provided in any of the following formats:
+     * The KMS key identifier may be provided in any of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -772,44 +777,44 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
      * </li>
      * <li>
      * <p>
-     * Key alias. The alias ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region of the CMK, the
-     * AWS account ID of the CMK owner, the <code>alias</code> namespace, and then the CMK alias. For example,
-     * arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
+     * Key alias. The alias ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region of the key, the
+     * Amazon Web Services account ID of the key owner, the <code>alias</code> namespace, and then the key alias. For
+     * example, arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * ARN using key ID. The ID ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region of the CMK,
-     * the AWS account ID of the CMK owner, the <code>key</code> namespace, and then the CMK ID. For example,
-     * arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:key/<i>abcd1234-a123-456a-a12b-a123b4cd56ef</i>.
+     * ARN using key ID. The ID ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region of the key,
+     * the Amazon Web Services account ID of the key owner, the <code>key</code> namespace, and then the key ID. For
+     * example, arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:key/<i>abcd1234-a123-456a-a12b-a123b4cd56ef</i>.
      * </p>
      * </li>
      * <li>
      * <p>
      * ARN using key alias. The alias ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region of the
-     * CMK, the AWS account ID of the CMK owner, the <code>alias</code> namespace, and then the CMK alias. For example,
-     * arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
+     * key, the Amazon Web Services account ID of the key owner, the <code>alias</code> namespace, and then the key
+     * alias. For example, arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * AWS parses <code>KmsKeyId</code> asynchronously, meaning that the action you call may appear to complete even
-     * though you provided an invalid identifier. This action will eventually report failure.
+     * Amazon Web Services parses <code>KmsKeyId</code> asynchronously, meaning that the action you call may appear to
+     * complete even though you provided an invalid identifier. This action will eventually report failure.
      * </p>
      * <p>
-     * The specified CMK must exist in the Region that the AMI is being copied to.
+     * The specified KMS key must exist in the Region that the AMI is being copied to.
      * </p>
      * <p>
-     * Amazon EBS does not support asymmetric CMKs.
+     * Amazon EBS does not support asymmetric KMS keys.
      * </p>
      * 
      * @param kmsKeyId
-     *        An identifier for the symmetric AWS Key Management Service (AWS KMS) customer master key (CMK) to use when
-     *        creating the encrypted AMI. This parameter is only required if you want to use a non-default CMK; if this
-     *        parameter is not specified, the default CMK for EBS is used. If a <code>KmsKeyId</code> is specified, the
-     *        <code>Encrypted</code> flag must also be set. </p>
+     *        An identifier for the symmetric KMS key to use when creating the encrypted AMI. This parameter is only
+     *        required if you want to use a non-default KMS key; if this parameter is not specified, the default KMS key
+     *        for EBS is used. If a <code>KmsKeyId</code> is specified, the <code>Encrypted</code> flag must also be
+     *        set. </p>
      *        <p>
-     *        The CMK identifier may be provided in any of the following formats:
+     *        The KMS key identifier may be provided in any of the following formats:
      *        </p>
      *        <ul>
      *        <li>
@@ -820,34 +825,37 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
      *        <li>
      *        <p>
      *        Key alias. The alias ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region of the
-     *        CMK, the AWS account ID of the CMK owner, the <code>alias</code> namespace, and then the CMK alias. For
-     *        example, arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
+     *        key, the Amazon Web Services account ID of the key owner, the <code>alias</code> namespace, and then the
+     *        key alias. For example, arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        ARN using key ID. The ID ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region of
-     *        the CMK, the AWS account ID of the CMK owner, the <code>key</code> namespace, and then the CMK ID. For
-     *        example, arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:key/<i>abcd1234-a123-456a-a12b-a123b4cd56ef</i>.
+     *        the key, the Amazon Web Services account ID of the key owner, the <code>key</code> namespace, and then the
+     *        key ID. For example,
+     *        arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:key/<i>abcd1234-a123-456a-a12b-a123b4cd56ef</i>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        ARN using key alias. The alias ARN contains the <code>arn:aws:kms</code> namespace, followed by the Region
-     *        of the CMK, the AWS account ID of the CMK owner, the <code>alias</code> namespace, and then the CMK alias.
-     *        For example, arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
+     *        of the key, the Amazon Web Services account ID of the key owner, the <code>alias</code> namespace, and
+     *        then the key alias. For example,
+     *        arn:aws:kms:<i>us-east-1</i>:<i>012345678910</i>:alias/<i>ExampleAlias</i>.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        AWS parses <code>KmsKeyId</code> asynchronously, meaning that the action you call may appear to complete
-     *        even though you provided an invalid identifier. This action will eventually report failure.
+     *        Amazon Web Services parses <code>KmsKeyId</code> asynchronously, meaning that the action you call may
+     *        appear to complete even though you provided an invalid identifier. This action will eventually report
+     *        failure.
      *        </p>
      *        <p>
-     *        The specified CMK must exist in the Region that the AMI is being copied to.
+     *        The specified KMS key must exist in the Region that the AMI is being copied to.
      *        </p>
      *        <p>
-     *        Amazon EBS does not support asymmetric CMKs.
+     *        Amazon EBS does not support asymmetric KMS keys.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -862,12 +870,12 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
      * </p>
      * <p>
      * By default, we detect the source-system operating system (OS) and apply the appropriate license. Specify
-     * <code>AWS</code> to replace the source-system license with an AWS license, if appropriate. Specify
-     * <code>BYOL</code> to retain the source-system license, if appropriate.
+     * <code>AWS</code> to replace the source-system license with an Amazon Web Services license, if appropriate.
+     * Specify <code>BYOL</code> to retain the source-system license, if appropriate.
      * </p>
      * <p>
      * To use <code>BYOL</code>, you must have existing licenses with rights to use these licenses in a third party
-     * cloud, such as AWS. For more information, see <a
+     * cloud, such as Amazon Web Services. For more information, see <a
      * href="https://docs.aws.amazon.com/vm-import/latest/userguide/vmimport-image-import.html#prerequisites-image"
      * >Prerequisites</a> in the VM Import/Export User Guide.
      * </p>
@@ -876,12 +884,12 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
      *        The license type to be used for the Amazon Machine Image (AMI) after importing.</p>
      *        <p>
      *        By default, we detect the source-system operating system (OS) and apply the appropriate license. Specify
-     *        <code>AWS</code> to replace the source-system license with an AWS license, if appropriate. Specify
-     *        <code>BYOL</code> to retain the source-system license, if appropriate.
+     *        <code>AWS</code> to replace the source-system license with an Amazon Web Services license, if appropriate.
+     *        Specify <code>BYOL</code> to retain the source-system license, if appropriate.
      *        </p>
      *        <p>
      *        To use <code>BYOL</code>, you must have existing licenses with rights to use these licenses in a third
-     *        party cloud, such as AWS. For more information, see <a href=
+     *        party cloud, such as Amazon Web Services. For more information, see <a href=
      *        "https://docs.aws.amazon.com/vm-import/latest/userguide/vmimport-image-import.html#prerequisites-image"
      *        >Prerequisites</a> in the VM Import/Export User Guide.
      */
@@ -896,12 +904,12 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
      * </p>
      * <p>
      * By default, we detect the source-system operating system (OS) and apply the appropriate license. Specify
-     * <code>AWS</code> to replace the source-system license with an AWS license, if appropriate. Specify
-     * <code>BYOL</code> to retain the source-system license, if appropriate.
+     * <code>AWS</code> to replace the source-system license with an Amazon Web Services license, if appropriate.
+     * Specify <code>BYOL</code> to retain the source-system license, if appropriate.
      * </p>
      * <p>
      * To use <code>BYOL</code>, you must have existing licenses with rights to use these licenses in a third party
-     * cloud, such as AWS. For more information, see <a
+     * cloud, such as Amazon Web Services. For more information, see <a
      * href="https://docs.aws.amazon.com/vm-import/latest/userguide/vmimport-image-import.html#prerequisites-image"
      * >Prerequisites</a> in the VM Import/Export User Guide.
      * </p>
@@ -909,12 +917,12 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
      * @return The license type to be used for the Amazon Machine Image (AMI) after importing.</p>
      *         <p>
      *         By default, we detect the source-system operating system (OS) and apply the appropriate license. Specify
-     *         <code>AWS</code> to replace the source-system license with an AWS license, if appropriate. Specify
-     *         <code>BYOL</code> to retain the source-system license, if appropriate.
+     *         <code>AWS</code> to replace the source-system license with an Amazon Web Services license, if
+     *         appropriate. Specify <code>BYOL</code> to retain the source-system license, if appropriate.
      *         </p>
      *         <p>
      *         To use <code>BYOL</code>, you must have existing licenses with rights to use these licenses in a third
-     *         party cloud, such as AWS. For more information, see <a href=
+     *         party cloud, such as Amazon Web Services. For more information, see <a href=
      *         "https://docs.aws.amazon.com/vm-import/latest/userguide/vmimport-image-import.html#prerequisites-image"
      *         >Prerequisites</a> in the VM Import/Export User Guide.
      */
@@ -929,12 +937,12 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
      * </p>
      * <p>
      * By default, we detect the source-system operating system (OS) and apply the appropriate license. Specify
-     * <code>AWS</code> to replace the source-system license with an AWS license, if appropriate. Specify
-     * <code>BYOL</code> to retain the source-system license, if appropriate.
+     * <code>AWS</code> to replace the source-system license with an Amazon Web Services license, if appropriate.
+     * Specify <code>BYOL</code> to retain the source-system license, if appropriate.
      * </p>
      * <p>
      * To use <code>BYOL</code>, you must have existing licenses with rights to use these licenses in a third party
-     * cloud, such as AWS. For more information, see <a
+     * cloud, such as Amazon Web Services. For more information, see <a
      * href="https://docs.aws.amazon.com/vm-import/latest/userguide/vmimport-image-import.html#prerequisites-image"
      * >Prerequisites</a> in the VM Import/Export User Guide.
      * </p>
@@ -943,12 +951,12 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
      *        The license type to be used for the Amazon Machine Image (AMI) after importing.</p>
      *        <p>
      *        By default, we detect the source-system operating system (OS) and apply the appropriate license. Specify
-     *        <code>AWS</code> to replace the source-system license with an AWS license, if appropriate. Specify
-     *        <code>BYOL</code> to retain the source-system license, if appropriate.
+     *        <code>AWS</code> to replace the source-system license with an Amazon Web Services license, if appropriate.
+     *        Specify <code>BYOL</code> to retain the source-system license, if appropriate.
      *        </p>
      *        <p>
      *        To use <code>BYOL</code>, you must have existing licenses with rights to use these licenses in a third
-     *        party cloud, such as AWS. For more information, see <a href=
+     *        party cloud, such as Amazon Web Services. For more information, see <a href=
      *        "https://docs.aws.amazon.com/vm-import/latest/userguide/vmimport-image-import.html#prerequisites-image"
      *        >Prerequisites</a> in the VM Import/Export User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1201,6 +1209,58 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
     }
 
     /**
+     * <p>
+     * The usage operation value. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing information
+     * fields</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param usageOperation
+     *        The usage operation value. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing
+     *        information fields</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     */
+
+    public void setUsageOperation(String usageOperation) {
+        this.usageOperation = usageOperation;
+    }
+
+    /**
+     * <p>
+     * The usage operation value. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing information
+     * fields</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @return The usage operation value. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing
+     *         information fields</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     */
+
+    public String getUsageOperation() {
+        return this.usageOperation;
+    }
+
+    /**
+     * <p>
+     * The usage operation value. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing information
+     * fields</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param usageOperation
+     *        The usage operation value. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing
+     *        information fields</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImportImageRequest withUsageOperation(String usageOperation) {
+        setUsageOperation(usageOperation);
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -1248,7 +1308,9 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
         if (getLicenseSpecifications() != null)
             sb.append("LicenseSpecifications: ").append(getLicenseSpecifications()).append(",");
         if (getTagSpecifications() != null)
-            sb.append("TagSpecifications: ").append(getTagSpecifications());
+            sb.append("TagSpecifications: ").append(getTagSpecifications()).append(",");
+        if (getUsageOperation() != null)
+            sb.append("UsageOperation: ").append(getUsageOperation());
         sb.append("}");
         return sb.toString();
     }
@@ -1315,6 +1377,10 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
             return false;
         if (other.getTagSpecifications() != null && other.getTagSpecifications().equals(this.getTagSpecifications()) == false)
             return false;
+        if (other.getUsageOperation() == null ^ this.getUsageOperation() == null)
+            return false;
+        if (other.getUsageOperation() != null && other.getUsageOperation().equals(this.getUsageOperation()) == false)
+            return false;
         return true;
     }
 
@@ -1336,6 +1402,7 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
         hashCode = prime * hashCode + ((getRoleName() == null) ? 0 : getRoleName().hashCode());
         hashCode = prime * hashCode + ((getLicenseSpecifications() == null) ? 0 : getLicenseSpecifications().hashCode());
         hashCode = prime * hashCode + ((getTagSpecifications() == null) ? 0 : getTagSpecifications().hashCode());
+        hashCode = prime * hashCode + ((getUsageOperation() == null) ? 0 : getUsageOperation().hashCode());
         return hashCode;
     }
 

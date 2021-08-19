@@ -30,17 +30,17 @@ public class SnowflakeMetadata implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specifies the supported AWS Regions when using Snowflake.
+     * Specifies the supported Amazon Web Services Regions when using Snowflake.
      * </p>
      */
     private java.util.List<String> supportedRegions;
 
     /**
      * <p>
-     * Specifies the supported AWS Regions when using Snowflake.
+     * Specifies the supported Amazon Web Services Regions when using Snowflake.
      * </p>
      * 
-     * @return Specifies the supported AWS Regions when using Snowflake.
+     * @return Specifies the supported Amazon Web Services Regions when using Snowflake.
      */
 
     public java.util.List<String> getSupportedRegions() {
@@ -49,11 +49,11 @@ public class SnowflakeMetadata implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specifies the supported AWS Regions when using Snowflake.
+     * Specifies the supported Amazon Web Services Regions when using Snowflake.
      * </p>
      * 
      * @param supportedRegions
-     *        Specifies the supported AWS Regions when using Snowflake.
+     *        Specifies the supported Amazon Web Services Regions when using Snowflake.
      */
 
     public void setSupportedRegions(java.util.Collection<String> supportedRegions) {
@@ -67,7 +67,7 @@ public class SnowflakeMetadata implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specifies the supported AWS Regions when using Snowflake.
+     * Specifies the supported Amazon Web Services Regions when using Snowflake.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -76,7 +76,7 @@ public class SnowflakeMetadata implements Serializable, Cloneable, StructuredPoj
      * </p>
      * 
      * @param supportedRegions
-     *        Specifies the supported AWS Regions when using Snowflake.
+     *        Specifies the supported Amazon Web Services Regions when using Snowflake.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -92,11 +92,11 @@ public class SnowflakeMetadata implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specifies the supported AWS Regions when using Snowflake.
+     * Specifies the supported Amazon Web Services Regions when using Snowflake.
      * </p>
      * 
      * @param supportedRegions
-     *        Specifies the supported AWS Regions when using Snowflake.
+     *        Specifies the supported Amazon Web Services Regions when using Snowflake.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -135,6 +135,10 @@ public class ImportImageResultStaxUnmarshaller implements Unmarshaller<ImportIma
                     continue;
                 }
 
+                if (context.testExpression("usageOperation", targetDepth)) {
+                    importImageResult.setUsageOperation(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return importImageResult;

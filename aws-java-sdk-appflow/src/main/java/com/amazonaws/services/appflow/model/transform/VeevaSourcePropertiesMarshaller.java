@@ -29,6 +29,14 @@ public class VeevaSourcePropertiesMarshaller {
 
     private static final MarshallingInfo<String> OBJECT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("object").build();
+    private static final MarshallingInfo<String> DOCUMENTTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("documentType").build();
+    private static final MarshallingInfo<Boolean> INCLUDESOURCEFILES_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("includeSourceFiles").build();
+    private static final MarshallingInfo<Boolean> INCLUDERENDITIONS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("includeRenditions").build();
+    private static final MarshallingInfo<Boolean> INCLUDEALLVERSIONS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("includeAllVersions").build();
 
     private static final VeevaSourcePropertiesMarshaller instance = new VeevaSourcePropertiesMarshaller();
 
@@ -47,6 +55,10 @@ public class VeevaSourcePropertiesMarshaller {
 
         try {
             protocolMarshaller.marshall(veevaSourceProperties.getObject(), OBJECT_BINDING);
+            protocolMarshaller.marshall(veevaSourceProperties.getDocumentType(), DOCUMENTTYPE_BINDING);
+            protocolMarshaller.marshall(veevaSourceProperties.getIncludeSourceFiles(), INCLUDESOURCEFILES_BINDING);
+            protocolMarshaller.marshall(veevaSourceProperties.getIncludeRenditions(), INCLUDERENDITIONS_BINDING);
+            protocolMarshaller.marshall(veevaSourceProperties.getIncludeAllVersions(), INCLUDEALLVERSIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

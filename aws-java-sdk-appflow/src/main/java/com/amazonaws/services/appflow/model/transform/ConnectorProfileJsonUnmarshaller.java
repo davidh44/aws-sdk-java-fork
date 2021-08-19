@@ -80,6 +80,11 @@ public class ConnectorProfileJsonUnmarshaller implements Unmarshaller<ConnectorP
                     context.nextToken();
                     connectorProfile.setLastUpdatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("privateConnectionProvisioningState", targetDepth)) {
+                    context.nextToken();
+                    connectorProfile
+                            .setPrivateConnectionProvisioningState(PrivateConnectionProvisioningStateJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -27,7 +27,8 @@ public class CreateConnectorProfileRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in your AWS account.
+     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in your Amazon Web
+     * Services account.
      * </p>
      */
     private String connectorProfileName;
@@ -47,8 +48,9 @@ public class CreateConnectorProfileRequest extends com.amazonaws.AmazonWebServic
     private String connectorType;
     /**
      * <p>
-     * Indicates the connection mode and specifies whether it is public or private. Private flows use AWS PrivateLink to
-     * route data over AWS infrastructure without exposing it to the public internet.
+     * Indicates the connection mode and specifies whether it is public or private. Private flows use Amazon Web
+     * Services PrivateLink to route data over Amazon Web Services infrastructure without exposing it to the public
+     * internet.
      * </p>
      */
     private String connectionMode;
@@ -61,12 +63,13 @@ public class CreateConnectorProfileRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in your AWS account.
+     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in your Amazon Web
+     * Services account.
      * </p>
      * 
      * @param connectorProfileName
-     *        The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in your AWS
-     *        account.
+     *        The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in your
+     *        Amazon Web Services account.
      */
 
     public void setConnectorProfileName(String connectorProfileName) {
@@ -75,11 +78,12 @@ public class CreateConnectorProfileRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in your AWS account.
+     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in your Amazon Web
+     * Services account.
      * </p>
      * 
-     * @return The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in your AWS
-     *         account.
+     * @return The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in your
+     *         Amazon Web Services account.
      */
 
     public String getConnectorProfileName() {
@@ -88,12 +92,13 @@ public class CreateConnectorProfileRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in your AWS account.
+     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in your Amazon Web
+     * Services account.
      * </p>
      * 
      * @param connectorProfileName
-     *        The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in your AWS
-     *        account.
+     *        The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in your
+     *        Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -215,13 +220,15 @@ public class CreateConnectorProfileRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Indicates the connection mode and specifies whether it is public or private. Private flows use AWS PrivateLink to
-     * route data over AWS infrastructure without exposing it to the public internet.
+     * Indicates the connection mode and specifies whether it is public or private. Private flows use Amazon Web
+     * Services PrivateLink to route data over Amazon Web Services infrastructure without exposing it to the public
+     * internet.
      * </p>
      * 
      * @param connectionMode
-     *        Indicates the connection mode and specifies whether it is public or private. Private flows use AWS
-     *        PrivateLink to route data over AWS infrastructure without exposing it to the public internet.
+     *        Indicates the connection mode and specifies whether it is public or private. Private flows use Amazon Web
+     *        Services PrivateLink to route data over Amazon Web Services infrastructure without exposing it to the
+     *        public internet.
      * @see ConnectionMode
      */
 
@@ -231,12 +238,14 @@ public class CreateConnectorProfileRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Indicates the connection mode and specifies whether it is public or private. Private flows use AWS PrivateLink to
-     * route data over AWS infrastructure without exposing it to the public internet.
+     * Indicates the connection mode and specifies whether it is public or private. Private flows use Amazon Web
+     * Services PrivateLink to route data over Amazon Web Services infrastructure without exposing it to the public
+     * internet.
      * </p>
      * 
-     * @return Indicates the connection mode and specifies whether it is public or private. Private flows use AWS
-     *         PrivateLink to route data over AWS infrastructure without exposing it to the public internet.
+     * @return Indicates the connection mode and specifies whether it is public or private. Private flows use Amazon Web
+     *         Services PrivateLink to route data over Amazon Web Services infrastructure without exposing it to the
+     *         public internet.
      * @see ConnectionMode
      */
 
@@ -246,13 +255,15 @@ public class CreateConnectorProfileRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Indicates the connection mode and specifies whether it is public or private. Private flows use AWS PrivateLink to
-     * route data over AWS infrastructure without exposing it to the public internet.
+     * Indicates the connection mode and specifies whether it is public or private. Private flows use Amazon Web
+     * Services PrivateLink to route data over Amazon Web Services infrastructure without exposing it to the public
+     * internet.
      * </p>
      * 
      * @param connectionMode
-     *        Indicates the connection mode and specifies whether it is public or private. Private flows use AWS
-     *        PrivateLink to route data over AWS infrastructure without exposing it to the public internet.
+     *        Indicates the connection mode and specifies whether it is public or private. Private flows use Amazon Web
+     *        Services PrivateLink to route data over Amazon Web Services infrastructure without exposing it to the
+     *        public internet.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ConnectionMode
      */
@@ -264,13 +275,15 @@ public class CreateConnectorProfileRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Indicates the connection mode and specifies whether it is public or private. Private flows use AWS PrivateLink to
-     * route data over AWS infrastructure without exposing it to the public internet.
+     * Indicates the connection mode and specifies whether it is public or private. Private flows use Amazon Web
+     * Services PrivateLink to route data over Amazon Web Services infrastructure without exposing it to the public
+     * internet.
      * </p>
      * 
      * @param connectionMode
-     *        Indicates the connection mode and specifies whether it is public or private. Private flows use AWS
-     *        PrivateLink to route data over AWS infrastructure without exposing it to the public internet.
+     *        Indicates the connection mode and specifies whether it is public or private. Private flows use Amazon Web
+     *        Services PrivateLink to route data over Amazon Web Services infrastructure without exposing it to the
+     *        public internet.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ConnectionMode
      */

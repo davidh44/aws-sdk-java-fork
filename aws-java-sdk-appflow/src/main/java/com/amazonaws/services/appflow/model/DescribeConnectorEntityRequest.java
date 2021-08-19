@@ -39,7 +39,8 @@ public class DescribeConnectorEntityRequest extends com.amazonaws.AmazonWebServi
     private String connectorType;
     /**
      * <p>
-     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS account.
+     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the Amazon Web
+     * Services account.
      * </p>
      */
     private String connectorProfileName;
@@ -145,12 +146,13 @@ public class DescribeConnectorEntityRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS account.
+     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the Amazon Web
+     * Services account.
      * </p>
      * 
      * @param connectorProfileName
-     *        The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS
-     *        account.
+     *        The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the Amazon
+     *        Web Services account.
      */
 
     public void setConnectorProfileName(String connectorProfileName) {
@@ -159,11 +161,12 @@ public class DescribeConnectorEntityRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS account.
+     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the Amazon Web
+     * Services account.
      * </p>
      * 
-     * @return The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS
-     *         account.
+     * @return The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the
+     *         Amazon Web Services account.
      */
 
     public String getConnectorProfileName() {
@@ -172,12 +175,13 @@ public class DescribeConnectorEntityRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS account.
+     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the Amazon Web
+     * Services account.
      * </p>
      * 
      * @param connectorProfileName
-     *        The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS
-     *        account.
+     *        The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the Amazon
+     *        Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

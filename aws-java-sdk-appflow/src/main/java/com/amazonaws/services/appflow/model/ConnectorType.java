@@ -40,7 +40,8 @@ public enum ConnectorType {
     LookoutMetrics("LookoutMetrics"),
     Upsolver("Upsolver"),
     Honeycode("Honeycode"),
-    CustomerProfiles("CustomerProfiles");
+    CustomerProfiles("CustomerProfiles"),
+    SAPOData("SAPOData");
 
     private String value;
 

@@ -43,6 +43,8 @@ public class ConnectorProfileMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> LASTUPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lastUpdatedAt").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<StructuredPojo> PRIVATECONNECTIONPROVISIONINGSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("privateConnectionProvisioningState").build();
 
     private static final ConnectorProfileMarshaller instance = new ConnectorProfileMarshaller();
 
@@ -68,6 +70,7 @@ public class ConnectorProfileMarshaller {
             protocolMarshaller.marshall(connectorProfile.getConnectorProfileProperties(), CONNECTORPROFILEPROPERTIES_BINDING);
             protocolMarshaller.marshall(connectorProfile.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(connectorProfile.getLastUpdatedAt(), LASTUPDATEDAT_BINDING);
+            protocolMarshaller.marshall(connectorProfile.getPrivateConnectionProvisioningState(), PRIVATECONNECTIONPROVISIONINGSTATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

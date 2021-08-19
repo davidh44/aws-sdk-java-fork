@@ -27,7 +27,8 @@ public class DescribeConnectorProfilesRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS account.
+     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the Amazon Web
+     * Services account.
      * </p>
      */
     private java.util.List<String> connectorProfileNames;
@@ -53,11 +54,12 @@ public class DescribeConnectorProfilesRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS account.
+     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the Amazon Web
+     * Services account.
      * </p>
      * 
-     * @return The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS
-     *         account.
+     * @return The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the
+     *         Amazon Web Services account.
      */
 
     public java.util.List<String> getConnectorProfileNames() {
@@ -66,12 +68,13 @@ public class DescribeConnectorProfilesRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS account.
+     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the Amazon Web
+     * Services account.
      * </p>
      * 
      * @param connectorProfileNames
-     *        The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS
-     *        account.
+     *        The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the Amazon
+     *        Web Services account.
      */
 
     public void setConnectorProfileNames(java.util.Collection<String> connectorProfileNames) {
@@ -85,7 +88,8 @@ public class DescribeConnectorProfilesRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS account.
+     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the Amazon Web
+     * Services account.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -94,8 +98,8 @@ public class DescribeConnectorProfilesRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * 
      * @param connectorProfileNames
-     *        The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS
-     *        account.
+     *        The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the Amazon
+     *        Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -111,12 +115,13 @@ public class DescribeConnectorProfilesRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS account.
+     * The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the Amazon Web
+     * Services account.
      * </p>
      * 
      * @param connectorProfileNames
-     *        The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the AWS
-     *        account.
+     *        The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the Amazon
+     *        Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

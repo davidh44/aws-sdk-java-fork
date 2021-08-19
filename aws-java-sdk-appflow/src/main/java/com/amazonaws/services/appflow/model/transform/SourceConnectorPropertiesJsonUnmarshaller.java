@@ -104,6 +104,10 @@ public class SourceConnectorPropertiesJsonUnmarshaller implements Unmarshaller<S
                     context.nextToken();
                     sourceConnectorProperties.setZendesk(ZendeskSourcePropertiesJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("SAPOData", targetDepth)) {
+                    context.nextToken();
+                    sourceConnectorProperties.setSAPOData(SAPODataSourcePropertiesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

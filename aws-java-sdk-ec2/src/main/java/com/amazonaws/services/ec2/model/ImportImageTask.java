@@ -70,8 +70,7 @@ public class ImportImageTask implements Serializable, Cloneable {
     private String importTaskId;
     /**
      * <p>
-     * The identifier for the AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to create the
-     * encrypted image.
+     * The identifier for the KMS key that was used to create the encrypted image.
      * </p>
      */
     private String kmsKeyId;
@@ -123,6 +122,12 @@ public class ImportImageTask implements Serializable, Cloneable {
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<ImportImageLicenseConfigurationResponse> licenseSpecifications;
+    /**
+     * <p>
+     * The usage operation value.
+     * </p>
+     */
+    private String usageOperation;
 
     /**
      * <p>
@@ -408,13 +413,11 @@ public class ImportImageTask implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The identifier for the AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to create the
-     * encrypted image.
+     * The identifier for the KMS key that was used to create the encrypted image.
      * </p>
      * 
      * @param kmsKeyId
-     *        The identifier for the AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to
-     *        create the encrypted image.
+     *        The identifier for the KMS key that was used to create the encrypted image.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -423,12 +426,10 @@ public class ImportImageTask implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The identifier for the AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to create the
-     * encrypted image.
+     * The identifier for the KMS key that was used to create the encrypted image.
      * </p>
      * 
-     * @return The identifier for the AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to
-     *         create the encrypted image.
+     * @return The identifier for the KMS key that was used to create the encrypted image.
      */
 
     public String getKmsKeyId() {
@@ -437,13 +438,11 @@ public class ImportImageTask implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The identifier for the AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to create the
-     * encrypted image.
+     * The identifier for the KMS key that was used to create the encrypted image.
      * </p>
      * 
      * @param kmsKeyId
-     *        The identifier for the AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to
-     *        create the encrypted image.
+     *        The identifier for the KMS key that was used to create the encrypted image.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -872,6 +871,46 @@ public class ImportImageTask implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The usage operation value.
+     * </p>
+     * 
+     * @param usageOperation
+     *        The usage operation value.
+     */
+
+    public void setUsageOperation(String usageOperation) {
+        this.usageOperation = usageOperation;
+    }
+
+    /**
+     * <p>
+     * The usage operation value.
+     * </p>
+     * 
+     * @return The usage operation value.
+     */
+
+    public String getUsageOperation() {
+        return this.usageOperation;
+    }
+
+    /**
+     * <p>
+     * The usage operation value.
+     * </p>
+     * 
+     * @param usageOperation
+     *        The usage operation value.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImportImageTask withUsageOperation(String usageOperation) {
+        setUsageOperation(usageOperation);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -912,7 +951,9 @@ public class ImportImageTask implements Serializable, Cloneable {
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getLicenseSpecifications() != null)
-            sb.append("LicenseSpecifications: ").append(getLicenseSpecifications());
+            sb.append("LicenseSpecifications: ").append(getLicenseSpecifications()).append(",");
+        if (getUsageOperation() != null)
+            sb.append("UsageOperation: ").append(getUsageOperation());
         sb.append("}");
         return sb.toString();
     }
@@ -987,6 +1028,10 @@ public class ImportImageTask implements Serializable, Cloneable {
             return false;
         if (other.getLicenseSpecifications() != null && other.getLicenseSpecifications().equals(this.getLicenseSpecifications()) == false)
             return false;
+        if (other.getUsageOperation() == null ^ this.getUsageOperation() == null)
+            return false;
+        if (other.getUsageOperation() != null && other.getUsageOperation().equals(this.getUsageOperation()) == false)
+            return false;
         return true;
     }
 
@@ -1010,6 +1055,7 @@ public class ImportImageTask implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getStatusMessage() == null) ? 0 : getStatusMessage().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getLicenseSpecifications() == null) ? 0 : getLicenseSpecifications().hashCode());
+        hashCode = prime * hashCode + ((getUsageOperation() == null) ? 0 : getUsageOperation().hashCode());
         return hashCode;
     }
 

@@ -27,7 +27,8 @@ public class UpdateConnectorProfileRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the connector profile and is unique for each <code>ConnectorProfile</code> in the AWS Account.
+     * The name of the connector profile and is unique for each <code>ConnectorProfile</code> in the Amazon Web Services
+     * account.
      * </p>
      */
     private String connectorProfileName;
@@ -46,11 +47,13 @@ public class UpdateConnectorProfileRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the connector profile and is unique for each <code>ConnectorProfile</code> in the AWS Account.
+     * The name of the connector profile and is unique for each <code>ConnectorProfile</code> in the Amazon Web Services
+     * account.
      * </p>
      * 
      * @param connectorProfileName
-     *        The name of the connector profile and is unique for each <code>ConnectorProfile</code> in the AWS Account.
+     *        The name of the connector profile and is unique for each <code>ConnectorProfile</code> in the Amazon Web
+     *        Services account.
      */
 
     public void setConnectorProfileName(String connectorProfileName) {
@@ -59,11 +62,12 @@ public class UpdateConnectorProfileRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the connector profile and is unique for each <code>ConnectorProfile</code> in the AWS Account.
+     * The name of the connector profile and is unique for each <code>ConnectorProfile</code> in the Amazon Web Services
+     * account.
      * </p>
      * 
-     * @return The name of the connector profile and is unique for each <code>ConnectorProfile</code> in the AWS
-     *         Account.
+     * @return The name of the connector profile and is unique for each <code>ConnectorProfile</code> in the Amazon Web
+     *         Services account.
      */
 
     public String getConnectorProfileName() {
@@ -72,11 +76,13 @@ public class UpdateConnectorProfileRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the connector profile and is unique for each <code>ConnectorProfile</code> in the AWS Account.
+     * The name of the connector profile and is unique for each <code>ConnectorProfile</code> in the Amazon Web Services
+     * account.
      * </p>
      * 
      * @param connectorProfileName
-     *        The name of the connector profile and is unique for each <code>ConnectorProfile</code> in the AWS Account.
+     *        The name of the connector profile and is unique for each <code>ConnectorProfile</code> in the Amazon Web
+     *        Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

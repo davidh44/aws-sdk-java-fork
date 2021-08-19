@@ -27,21 +27,21 @@ public class UserData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The user data. If you are using an AWS SDK or command line tool, Base64-encoding is performed for you, and you
-     * can load the text from a file. Otherwise, you must provide Base64-encoded text.
+     * The user data. If you are using an Amazon Web Services SDK or command line tool, Base64-encoding is performed for
+     * you, and you can load the text from a file. Otherwise, you must provide Base64-encoded text.
      * </p>
      */
     private String data;
 
     /**
      * <p>
-     * The user data. If you are using an AWS SDK or command line tool, Base64-encoding is performed for you, and you
-     * can load the text from a file. Otherwise, you must provide Base64-encoded text.
+     * The user data. If you are using an Amazon Web Services SDK or command line tool, Base64-encoding is performed for
+     * you, and you can load the text from a file. Otherwise, you must provide Base64-encoded text.
      * </p>
      * 
      * @param data
-     *        The user data. If you are using an AWS SDK or command line tool, Base64-encoding is performed for you, and
-     *        you can load the text from a file. Otherwise, you must provide Base64-encoded text.
+     *        The user data. If you are using an Amazon Web Services SDK or command line tool, Base64-encoding is
+     *        performed for you, and you can load the text from a file. Otherwise, you must provide Base64-encoded text.
      */
 
     public void setData(String data) {
@@ -50,12 +50,13 @@ public class UserData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The user data. If you are using an AWS SDK or command line tool, Base64-encoding is performed for you, and you
-     * can load the text from a file. Otherwise, you must provide Base64-encoded text.
+     * The user data. If you are using an Amazon Web Services SDK or command line tool, Base64-encoding is performed for
+     * you, and you can load the text from a file. Otherwise, you must provide Base64-encoded text.
      * </p>
      * 
-     * @return The user data. If you are using an AWS SDK or command line tool, Base64-encoding is performed for you,
-     *         and you can load the text from a file. Otherwise, you must provide Base64-encoded text.
+     * @return The user data. If you are using an Amazon Web Services SDK or command line tool, Base64-encoding is
+     *         performed for you, and you can load the text from a file. Otherwise, you must provide Base64-encoded
+     *         text.
      */
 
     public String getData() {
@@ -64,13 +65,13 @@ public class UserData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The user data. If you are using an AWS SDK or command line tool, Base64-encoding is performed for you, and you
-     * can load the text from a file. Otherwise, you must provide Base64-encoded text.
+     * The user data. If you are using an Amazon Web Services SDK or command line tool, Base64-encoding is performed for
+     * you, and you can load the text from a file. Otherwise, you must provide Base64-encoded text.
      * </p>
      * 
      * @param data
-     *        The user data. If you are using an AWS SDK or command line tool, Base64-encoding is performed for you, and
-     *        you can load the text from a file. Otherwise, you must provide Base64-encoded text.
+     *        The user data. If you are using an Amazon Web Services SDK or command line tool, Base64-encoding is
+     *        performed for you, and you can load the text from a file. Otherwise, you must provide Base64-encoded text.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

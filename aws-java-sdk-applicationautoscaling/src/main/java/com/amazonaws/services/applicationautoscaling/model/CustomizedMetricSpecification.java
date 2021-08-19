@@ -24,8 +24,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </p>
  * <p>
  * For information about the available metrics for a service, see <a
- * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html">AWS
- * Services That Publish CloudWatch Metrics</a> in the <i>Amazon CloudWatch User Guide</i>.
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html">Amazon Web
+ * Services Services That Publish CloudWatch Metrics</a> in the <i>Amazon CloudWatch User Guide</i>.
  * </p>
  * <p>
  * To create your customized metric specification:

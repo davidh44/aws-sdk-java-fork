@@ -128,6 +128,10 @@ public class ConnectorMetadataJsonUnmarshaller implements Unmarshaller<Connector
                     context.nextToken();
                     connectorMetadata.setHoneycode(HoneycodeMetadataJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("SAPOData", targetDepth)) {
+                    context.nextToken();
+                    connectorMetadata.setSAPOData(SAPODataMetadataJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -36,7 +36,9 @@ public enum ScalableDimension {
     LambdaFunctionProvisionedConcurrency("lambda:function:ProvisionedConcurrency"),
     CassandraTableReadCapacityUnits("cassandra:table:ReadCapacityUnits"),
     CassandraTableWriteCapacityUnits("cassandra:table:WriteCapacityUnits"),
-    KafkaBrokerStorageVolumeSize("kafka:broker-storage:VolumeSize");
+    KafkaBrokerStorageVolumeSize("kafka:broker-storage:VolumeSize"),
+    ElasticacheReplicationGroupNodeGroups("elasticache:replication-group:NodeGroups"),
+    ElasticacheReplicationGroupReplicas("elasticache:replication-group:Replicas");
 
     private String value;
 
