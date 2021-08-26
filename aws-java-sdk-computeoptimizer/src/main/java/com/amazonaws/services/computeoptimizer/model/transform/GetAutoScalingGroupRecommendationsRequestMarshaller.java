@@ -38,6 +38,8 @@ public class GetAutoScalingGroupRecommendationsRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
     private static final MarshallingInfo<List> FILTERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("filters").build();
+    private static final MarshallingInfo<StructuredPojo> RECOMMENDATIONPREFERENCES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recommendationPreferences").build();
 
     private static final GetAutoScalingGroupRecommendationsRequestMarshaller instance = new GetAutoScalingGroupRecommendationsRequestMarshaller();
 
@@ -60,6 +62,7 @@ public class GetAutoScalingGroupRecommendationsRequestMarshaller {
             protocolMarshaller.marshall(getAutoScalingGroupRecommendationsRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(getAutoScalingGroupRecommendationsRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(getAutoScalingGroupRecommendationsRequest.getFilters(), FILTERS_BINDING);
+            protocolMarshaller.marshall(getAutoScalingGroupRecommendationsRequest.getRecommendationPreferences(), RECOMMENDATIONPREFERENCES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

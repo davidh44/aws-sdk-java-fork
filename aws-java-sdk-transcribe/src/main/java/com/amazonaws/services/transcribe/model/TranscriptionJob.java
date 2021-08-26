@@ -84,7 +84,7 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
     private java.util.Date creationTime;
     /**
      * <p>
-     * A timestamp that shows when the job was completed.
+     * A timestamp that shows when the job completed.
      * </p>
      */
     private java.util.Date completionTime;
@@ -615,11 +615,11 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A timestamp that shows when the job was completed.
+     * A timestamp that shows when the job completed.
      * </p>
      * 
      * @param completionTime
-     *        A timestamp that shows when the job was completed.
+     *        A timestamp that shows when the job completed.
      */
 
     public void setCompletionTime(java.util.Date completionTime) {
@@ -628,10 +628,10 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A timestamp that shows when the job was completed.
+     * A timestamp that shows when the job completed.
      * </p>
      * 
-     * @return A timestamp that shows when the job was completed.
+     * @return A timestamp that shows when the job completed.
      */
 
     public java.util.Date getCompletionTime() {
@@ -640,11 +640,11 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A timestamp that shows when the job was completed.
+     * A timestamp that shows when the job completed.
      * </p>
      * 
      * @param completionTime
-     *        A timestamp that shows when the job was completed.
+     *        A timestamp that shows when the job completed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

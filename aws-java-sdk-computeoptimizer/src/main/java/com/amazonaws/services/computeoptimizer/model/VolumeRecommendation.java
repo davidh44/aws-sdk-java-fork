@@ -36,7 +36,7 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
     private String volumeArn;
     /**
      * <p>
-     * The AWS account ID of the volume.
+     * The Amazon Web Services account ID of the volume.
      * </p>
      */
     private String accountId;
@@ -56,7 +56,7 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
      * <ul>
      * <li>
      * <p>
-     * <b> <code>NotOptimized</code> </b>—A volume is considered not optimized when AWS Compute Optimizer identifies a
+     * <b> <code>NotOptimized</code> </b>—A volume is considered not optimized when Compute Optimizer identifies a
      * recommendation that can provide better performance for your workload.
      * </p>
      * </li>
@@ -90,7 +90,7 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
     private java.util.List<VolumeRecommendationOption> volumeRecommendationOptions;
     /**
      * <p>
-     * The time stamp of when the volume recommendation was last refreshed.
+     * The timestamp of when the volume recommendation was last refreshed.
      * </p>
      */
     private java.util.Date lastRefreshTimestamp;
@@ -137,11 +137,11 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The AWS account ID of the volume.
+     * The Amazon Web Services account ID of the volume.
      * </p>
      * 
      * @param accountId
-     *        The AWS account ID of the volume.
+     *        The Amazon Web Services account ID of the volume.
      */
 
     public void setAccountId(String accountId) {
@@ -150,10 +150,10 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The AWS account ID of the volume.
+     * The Amazon Web Services account ID of the volume.
      * </p>
      * 
-     * @return The AWS account ID of the volume.
+     * @return The Amazon Web Services account ID of the volume.
      */
 
     public String getAccountId() {
@@ -162,11 +162,11 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The AWS account ID of the volume.
+     * The Amazon Web Services account ID of the volume.
      * </p>
      * 
      * @param accountId
-     *        The AWS account ID of the volume.
+     *        The Amazon Web Services account ID of the volume.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -225,7 +225,7 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
      * <ul>
      * <li>
      * <p>
-     * <b> <code>NotOptimized</code> </b>—A volume is considered not optimized when AWS Compute Optimizer identifies a
+     * <b> <code>NotOptimized</code> </b>—A volume is considered not optimized when Compute Optimizer identifies a
      * recommendation that can provide better performance for your workload.
      * </p>
      * </li>
@@ -246,8 +246,8 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
      *        <ul>
      *        <li>
      *        <p>
-     *        <b> <code>NotOptimized</code> </b>—A volume is considered not optimized when AWS Compute Optimizer
-     *        identifies a recommendation that can provide better performance for your workload.
+     *        <b> <code>NotOptimized</code> </b>—A volume is considered not optimized when Compute Optimizer identifies
+     *        a recommendation that can provide better performance for your workload.
      *        </p>
      *        </li>
      *        <li>
@@ -274,7 +274,7 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
      * <ul>
      * <li>
      * <p>
-     * <b> <code>NotOptimized</code> </b>—A volume is considered not optimized when AWS Compute Optimizer identifies a
+     * <b> <code>NotOptimized</code> </b>—A volume is considered not optimized when Compute Optimizer identifies a
      * recommendation that can provide better performance for your workload.
      * </p>
      * </li>
@@ -294,8 +294,8 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
      *         <ul>
      *         <li>
      *         <p>
-     *         <b> <code>NotOptimized</code> </b>—A volume is considered not optimized when AWS Compute Optimizer
-     *         identifies a recommendation that can provide better performance for your workload.
+     *         <b> <code>NotOptimized</code> </b>—A volume is considered not optimized when Compute Optimizer identifies
+     *         a recommendation that can provide better performance for your workload.
      *         </p>
      *         </li>
      *         <li>
@@ -322,7 +322,7 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
      * <ul>
      * <li>
      * <p>
-     * <b> <code>NotOptimized</code> </b>—A volume is considered not optimized when AWS Compute Optimizer identifies a
+     * <b> <code>NotOptimized</code> </b>—A volume is considered not optimized when Compute Optimizer identifies a
      * recommendation that can provide better performance for your workload.
      * </p>
      * </li>
@@ -343,8 +343,8 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
      *        <ul>
      *        <li>
      *        <p>
-     *        <b> <code>NotOptimized</code> </b>—A volume is considered not optimized when AWS Compute Optimizer
-     *        identifies a recommendation that can provide better performance for your workload.
+     *        <b> <code>NotOptimized</code> </b>—A volume is considered not optimized when Compute Optimizer identifies
+     *        a recommendation that can provide better performance for your workload.
      *        </p>
      *        </li>
      *        <li>
@@ -373,7 +373,7 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
      * <ul>
      * <li>
      * <p>
-     * <b> <code>NotOptimized</code> </b>—A volume is considered not optimized when AWS Compute Optimizer identifies a
+     * <b> <code>NotOptimized</code> </b>—A volume is considered not optimized when Compute Optimizer identifies a
      * recommendation that can provide better performance for your workload.
      * </p>
      * </li>
@@ -394,8 +394,8 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
      *        <ul>
      *        <li>
      *        <p>
-     *        <b> <code>NotOptimized</code> </b>—A volume is considered not optimized when AWS Compute Optimizer
-     *        identifies a recommendation that can provide better performance for your workload.
+     *        <b> <code>NotOptimized</code> </b>—A volume is considered not optimized when Compute Optimizer identifies
+     *        a recommendation that can provide better performance for your workload.
      *        </p>
      *        </li>
      *        <li>
@@ -596,11 +596,11 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The time stamp of when the volume recommendation was last refreshed.
+     * The timestamp of when the volume recommendation was last refreshed.
      * </p>
      * 
      * @param lastRefreshTimestamp
-     *        The time stamp of when the volume recommendation was last refreshed.
+     *        The timestamp of when the volume recommendation was last refreshed.
      */
 
     public void setLastRefreshTimestamp(java.util.Date lastRefreshTimestamp) {
@@ -609,10 +609,10 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The time stamp of when the volume recommendation was last refreshed.
+     * The timestamp of when the volume recommendation was last refreshed.
      * </p>
      * 
-     * @return The time stamp of when the volume recommendation was last refreshed.
+     * @return The timestamp of when the volume recommendation was last refreshed.
      */
 
     public java.util.Date getLastRefreshTimestamp() {
@@ -621,11 +621,11 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The time stamp of when the volume recommendation was last refreshed.
+     * The timestamp of when the volume recommendation was last refreshed.
      * </p>
      * 
      * @param lastRefreshTimestamp
-     *        The time stamp of when the volume recommendation was last refreshed.
+     *        The timestamp of when the volume recommendation was last refreshed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

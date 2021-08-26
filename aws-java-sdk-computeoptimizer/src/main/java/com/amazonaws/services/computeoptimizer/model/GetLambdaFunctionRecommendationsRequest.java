@@ -35,13 +35,13 @@ public class GetLambdaFunctionRecommendationsRequest extends com.amazonaws.Amazo
      * function. If you specify a qualified ARN with a version suffix, Compute Optimizer will return recommendations for
      * the specified function version. For more information about using function versions, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html#versioning-versions-using">Using
-     * versions</a> in the <i>AWS Lambda Developer Guide</i>.
+     * versions</a> in the <i>Lambda Developer Guide</i>.
      * </p>
      */
     private java.util.List<String> functionArns;
     /**
      * <p>
-     * The ID of the AWS account for which to return function recommendations.
+     * The ID of the Amazon Web Services account for which to return function recommendations.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -54,7 +54,7 @@ public class GetLambdaFunctionRecommendationsRequest extends com.amazonaws.Amazo
     private java.util.List<String> accountIds;
     /**
      * <p>
-     * An array of objects that describe a filter that returns a more specific list of function recommendations.
+     * An array of objects to specify a filter that returns a more specific list of function recommendations.
      * </p>
      */
     private java.util.List<LambdaFunctionRecommendationFilter> filters;
@@ -69,7 +69,7 @@ public class GetLambdaFunctionRecommendationsRequest extends com.amazonaws.Amazo
      * The maximum number of function recommendations to return with a single request.
      * </p>
      * <p>
-     * To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     * To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * </p>
      */
     private Integer maxResults;
@@ -84,7 +84,7 @@ public class GetLambdaFunctionRecommendationsRequest extends com.amazonaws.Amazo
      * function. If you specify a qualified ARN with a version suffix, Compute Optimizer will return recommendations for
      * the specified function version. For more information about using function versions, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html#versioning-versions-using">Using
-     * versions</a> in the <i>AWS Lambda Developer Guide</i>.
+     * versions</a> in the <i>Lambda Developer Guide</i>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the functions for which to return recommendations.</p>
@@ -95,7 +95,7 @@ public class GetLambdaFunctionRecommendationsRequest extends com.amazonaws.Amazo
      *         return recommendations for the specified function version. For more information about using function
      *         versions, see <a href=
      *         "https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html#versioning-versions-using"
-     *         >Using versions</a> in the <i>AWS Lambda Developer Guide</i>.
+     *         >Using versions</a> in the <i>Lambda Developer Guide</i>.
      */
 
     public java.util.List<String> getFunctionArns() {
@@ -112,7 +112,7 @@ public class GetLambdaFunctionRecommendationsRequest extends com.amazonaws.Amazo
      * function. If you specify a qualified ARN with a version suffix, Compute Optimizer will return recommendations for
      * the specified function version. For more information about using function versions, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html#versioning-versions-using">Using
-     * versions</a> in the <i>AWS Lambda Developer Guide</i>.
+     * versions</a> in the <i>Lambda Developer Guide</i>.
      * </p>
      * 
      * @param functionArns
@@ -124,7 +124,7 @@ public class GetLambdaFunctionRecommendationsRequest extends com.amazonaws.Amazo
      *        return recommendations for the specified function version. For more information about using function
      *        versions, see <a href=
      *        "https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html#versioning-versions-using">Using
-     *        versions</a> in the <i>AWS Lambda Developer Guide</i>.
+     *        versions</a> in the <i>Lambda Developer Guide</i>.
      */
 
     public void setFunctionArns(java.util.Collection<String> functionArns) {
@@ -146,7 +146,7 @@ public class GetLambdaFunctionRecommendationsRequest extends com.amazonaws.Amazo
      * function. If you specify a qualified ARN with a version suffix, Compute Optimizer will return recommendations for
      * the specified function version. For more information about using function versions, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html#versioning-versions-using">Using
-     * versions</a> in the <i>AWS Lambda Developer Guide</i>.
+     * versions</a> in the <i>Lambda Developer Guide</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -163,7 +163,7 @@ public class GetLambdaFunctionRecommendationsRequest extends com.amazonaws.Amazo
      *        return recommendations for the specified function version. For more information about using function
      *        versions, see <a href=
      *        "https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html#versioning-versions-using">Using
-     *        versions</a> in the <i>AWS Lambda Developer Guide</i>.
+     *        versions</a> in the <i>Lambda Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -187,7 +187,7 @@ public class GetLambdaFunctionRecommendationsRequest extends com.amazonaws.Amazo
      * function. If you specify a qualified ARN with a version suffix, Compute Optimizer will return recommendations for
      * the specified function version. For more information about using function versions, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html#versioning-versions-using">Using
-     * versions</a> in the <i>AWS Lambda Developer Guide</i>.
+     * versions</a> in the <i>Lambda Developer Guide</i>.
      * </p>
      * 
      * @param functionArns
@@ -199,7 +199,7 @@ public class GetLambdaFunctionRecommendationsRequest extends com.amazonaws.Amazo
      *        return recommendations for the specified function version. For more information about using function
      *        versions, see <a href=
      *        "https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html#versioning-versions-using">Using
-     *        versions</a> in the <i>AWS Lambda Developer Guide</i>.
+     *        versions</a> in the <i>Lambda Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -210,7 +210,7 @@ public class GetLambdaFunctionRecommendationsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The ID of the AWS account for which to return function recommendations.
+     * The ID of the Amazon Web Services account for which to return function recommendations.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -220,7 +220,7 @@ public class GetLambdaFunctionRecommendationsRequest extends com.amazonaws.Amazo
      * Only one account ID can be specified per request.
      * </p>
      * 
-     * @return The ID of the AWS account for which to return function recommendations.</p>
+     * @return The ID of the Amazon Web Services account for which to return function recommendations.</p>
      *         <p>
      *         If your account is the management account of an organization, use this parameter to specify the member
      *         account for which you want to return function recommendations.
@@ -235,7 +235,7 @@ public class GetLambdaFunctionRecommendationsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The ID of the AWS account for which to return function recommendations.
+     * The ID of the Amazon Web Services account for which to return function recommendations.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -246,7 +246,7 @@ public class GetLambdaFunctionRecommendationsRequest extends com.amazonaws.Amazo
      * </p>
      * 
      * @param accountIds
-     *        The ID of the AWS account for which to return function recommendations.</p>
+     *        The ID of the Amazon Web Services account for which to return function recommendations.</p>
      *        <p>
      *        If your account is the management account of an organization, use this parameter to specify the member
      *        account for which you want to return function recommendations.
@@ -266,7 +266,7 @@ public class GetLambdaFunctionRecommendationsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The ID of the AWS account for which to return function recommendations.
+     * The ID of the Amazon Web Services account for which to return function recommendations.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -282,7 +282,7 @@ public class GetLambdaFunctionRecommendationsRequest extends com.amazonaws.Amazo
      * </p>
      * 
      * @param accountIds
-     *        The ID of the AWS account for which to return function recommendations.</p>
+     *        The ID of the Amazon Web Services account for which to return function recommendations.</p>
      *        <p>
      *        If your account is the management account of an organization, use this parameter to specify the member
      *        account for which you want to return function recommendations.
@@ -304,7 +304,7 @@ public class GetLambdaFunctionRecommendationsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The ID of the AWS account for which to return function recommendations.
+     * The ID of the Amazon Web Services account for which to return function recommendations.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -315,7 +315,7 @@ public class GetLambdaFunctionRecommendationsRequest extends com.amazonaws.Amazo
      * </p>
      * 
      * @param accountIds
-     *        The ID of the AWS account for which to return function recommendations.</p>
+     *        The ID of the Amazon Web Services account for which to return function recommendations.</p>
      *        <p>
      *        If your account is the management account of an organization, use this parameter to specify the member
      *        account for which you want to return function recommendations.
@@ -332,10 +332,10 @@ public class GetLambdaFunctionRecommendationsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * An array of objects that describe a filter that returns a more specific list of function recommendations.
+     * An array of objects to specify a filter that returns a more specific list of function recommendations.
      * </p>
      * 
-     * @return An array of objects that describe a filter that returns a more specific list of function recommendations.
+     * @return An array of objects to specify a filter that returns a more specific list of function recommendations.
      */
 
     public java.util.List<LambdaFunctionRecommendationFilter> getFilters() {
@@ -344,11 +344,11 @@ public class GetLambdaFunctionRecommendationsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * An array of objects that describe a filter that returns a more specific list of function recommendations.
+     * An array of objects to specify a filter that returns a more specific list of function recommendations.
      * </p>
      * 
      * @param filters
-     *        An array of objects that describe a filter that returns a more specific list of function recommendations.
+     *        An array of objects to specify a filter that returns a more specific list of function recommendations.
      */
 
     public void setFilters(java.util.Collection<LambdaFunctionRecommendationFilter> filters) {
@@ -362,7 +362,7 @@ public class GetLambdaFunctionRecommendationsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * An array of objects that describe a filter that returns a more specific list of function recommendations.
+     * An array of objects to specify a filter that returns a more specific list of function recommendations.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -371,7 +371,7 @@ public class GetLambdaFunctionRecommendationsRequest extends com.amazonaws.Amazo
      * </p>
      * 
      * @param filters
-     *        An array of objects that describe a filter that returns a more specific list of function recommendations.
+     *        An array of objects to specify a filter that returns a more specific list of function recommendations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -387,11 +387,11 @@ public class GetLambdaFunctionRecommendationsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * An array of objects that describe a filter that returns a more specific list of function recommendations.
+     * An array of objects to specify a filter that returns a more specific list of function recommendations.
      * </p>
      * 
      * @param filters
-     *        An array of objects that describe a filter that returns a more specific list of function recommendations.
+     *        An array of objects to specify a filter that returns a more specific list of function recommendations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -445,13 +445,13 @@ public class GetLambdaFunctionRecommendationsRequest extends com.amazonaws.Amazo
      * The maximum number of function recommendations to return with a single request.
      * </p>
      * <p>
-     * To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     * To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * </p>
      * 
      * @param maxResults
      *        The maximum number of function recommendations to return with a single request.</p>
      *        <p>
-     *        To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     *        To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -463,12 +463,12 @@ public class GetLambdaFunctionRecommendationsRequest extends com.amazonaws.Amazo
      * The maximum number of function recommendations to return with a single request.
      * </p>
      * <p>
-     * To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     * To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * </p>
      * 
      * @return The maximum number of function recommendations to return with a single request.</p>
      *         <p>
-     *         To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     *         To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      */
 
     public Integer getMaxResults() {
@@ -480,13 +480,13 @@ public class GetLambdaFunctionRecommendationsRequest extends com.amazonaws.Amazo
      * The maximum number of function recommendations to return with a single request.
      * </p>
      * <p>
-     * To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     * To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * </p>
      * 
      * @param maxResults
      *        The maximum number of function recommendations to return with a single request.</p>
      *        <p>
-     *        To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     *        To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

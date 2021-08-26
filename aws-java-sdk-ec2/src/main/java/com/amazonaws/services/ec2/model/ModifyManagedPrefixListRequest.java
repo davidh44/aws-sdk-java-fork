@@ -56,6 +56,13 @@ public class ModifyManagedPrefixListRequest extends AmazonWebServiceRequest impl
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<RemovePrefixListEntry> removeEntries;
+    /**
+     * <p>
+     * The maximum number of entries for the prefix list. You cannot modify the entries of a prefix list and modify the
+     * size of a prefix list at the same time.
+     * </p>
+     */
+    private Integer maxEntries;
 
     /**
      * <p>
@@ -324,6 +331,52 @@ public class ModifyManagedPrefixListRequest extends AmazonWebServiceRequest impl
     }
 
     /**
+     * <p>
+     * The maximum number of entries for the prefix list. You cannot modify the entries of a prefix list and modify the
+     * size of a prefix list at the same time.
+     * </p>
+     * 
+     * @param maxEntries
+     *        The maximum number of entries for the prefix list. You cannot modify the entries of a prefix list and
+     *        modify the size of a prefix list at the same time.
+     */
+
+    public void setMaxEntries(Integer maxEntries) {
+        this.maxEntries = maxEntries;
+    }
+
+    /**
+     * <p>
+     * The maximum number of entries for the prefix list. You cannot modify the entries of a prefix list and modify the
+     * size of a prefix list at the same time.
+     * </p>
+     * 
+     * @return The maximum number of entries for the prefix list. You cannot modify the entries of a prefix list and
+     *         modify the size of a prefix list at the same time.
+     */
+
+    public Integer getMaxEntries() {
+        return this.maxEntries;
+    }
+
+    /**
+     * <p>
+     * The maximum number of entries for the prefix list. You cannot modify the entries of a prefix list and modify the
+     * size of a prefix list at the same time.
+     * </p>
+     * 
+     * @param maxEntries
+     *        The maximum number of entries for the prefix list. You cannot modify the entries of a prefix list and
+     *        modify the size of a prefix list at the same time.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyManagedPrefixListRequest withMaxEntries(Integer maxEntries) {
+        setMaxEntries(maxEntries);
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -355,7 +408,9 @@ public class ModifyManagedPrefixListRequest extends AmazonWebServiceRequest impl
         if (getAddEntries() != null)
             sb.append("AddEntries: ").append(getAddEntries()).append(",");
         if (getRemoveEntries() != null)
-            sb.append("RemoveEntries: ").append(getRemoveEntries());
+            sb.append("RemoveEntries: ").append(getRemoveEntries()).append(",");
+        if (getMaxEntries() != null)
+            sb.append("MaxEntries: ").append(getMaxEntries());
         sb.append("}");
         return sb.toString();
     }
@@ -390,6 +445,10 @@ public class ModifyManagedPrefixListRequest extends AmazonWebServiceRequest impl
             return false;
         if (other.getRemoveEntries() != null && other.getRemoveEntries().equals(this.getRemoveEntries()) == false)
             return false;
+        if (other.getMaxEntries() == null ^ this.getMaxEntries() == null)
+            return false;
+        if (other.getMaxEntries() != null && other.getMaxEntries().equals(this.getMaxEntries()) == false)
+            return false;
         return true;
     }
 
@@ -403,6 +462,7 @@ public class ModifyManagedPrefixListRequest extends AmazonWebServiceRequest impl
         hashCode = prime * hashCode + ((getPrefixListName() == null) ? 0 : getPrefixListName().hashCode());
         hashCode = prime * hashCode + ((getAddEntries() == null) ? 0 : getAddEntries().hashCode());
         hashCode = prime * hashCode + ((getRemoveEntries() == null) ? 0 : getRemoveEntries().hashCode());
+        hashCode = prime * hashCode + ((getMaxEntries() == null) ? 0 : getMaxEntries().hashCode());
         return hashCode;
     }
 

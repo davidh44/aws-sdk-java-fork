@@ -36,7 +36,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
     private String instanceArn;
     /**
      * <p>
-     * The AWS account ID of the instance.
+     * The Amazon Web Services account ID of the instance.
      * </p>
      */
     private String accountId;
@@ -79,7 +79,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <p>
      * <b> <code>Optimized</code> </b>—An instance is considered optimized when all specifications of your instance,
      * such as CPU, memory, and network, meet the performance requirements of your workload and is not over provisioned.
-     * For optimized resources, AWS Compute Optimizer might recommend a new generation instance type.
+     * For optimized resources, Compute Optimizer might recommend a new generation instance type.
      * </p>
      * </li>
      * </ul>
@@ -127,7 +127,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * Memory utilization is analyzed only for resources that have the unified CloudWatch agent installed on them. For
      * more information, see <a
      * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/metrics.html#cw-agent">Enabling memory utilization
-     * with the Amazon CloudWatch Agent</a> in the <i>AWS Compute Optimizer User Guide</i>. On Linux instances, Compute
+     * with the Amazon CloudWatch Agent</a> in the <i>Compute Optimizer User Guide</i>. On Linux instances, Compute
      * Optimizer analyses the <code>mem_used_percent</code> metric in the <code>CWAgent</code> namespace, or the legacy
      * <code>MemoryUtilization</code> metric in the <code>System/Linux</code> namespace. On Windows instances, Compute
      * Optimizer analyses the <code>Memory % Committed Bytes In Use</code> metric in the <code>CWAgent</code> namespace.
@@ -268,7 +268,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
     private java.util.List<RecommendationSource> recommendationSources;
     /**
      * <p>
-     * The time stamp of when the instance recommendation was last refreshed.
+     * The timestamp of when the instance recommendation was last refreshed.
      * </p>
      */
     private java.util.Date lastRefreshTimestamp;
@@ -315,11 +315,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The AWS account ID of the instance.
+     * The Amazon Web Services account ID of the instance.
      * </p>
      * 
      * @param accountId
-     *        The AWS account ID of the instance.
+     *        The Amazon Web Services account ID of the instance.
      */
 
     public void setAccountId(String accountId) {
@@ -328,10 +328,10 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The AWS account ID of the instance.
+     * The Amazon Web Services account ID of the instance.
      * </p>
      * 
-     * @return The AWS account ID of the instance.
+     * @return The Amazon Web Services account ID of the instance.
      */
 
     public String getAccountId() {
@@ -340,11 +340,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The AWS account ID of the instance.
+     * The Amazon Web Services account ID of the instance.
      * </p>
      * 
      * @param accountId
-     *        The AWS account ID of the instance.
+     *        The Amazon Web Services account ID of the instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -460,7 +460,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <p>
      * <b> <code>Optimized</code> </b>—An instance is considered optimized when all specifications of your instance,
      * such as CPU, memory, and network, meet the performance requirements of your workload and is not over provisioned.
-     * For optimized resources, AWS Compute Optimizer might recommend a new generation instance type.
+     * For optimized resources, Compute Optimizer might recommend a new generation instance type.
      * </p>
      * </li>
      * </ul>
@@ -490,7 +490,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *        <p>
      *        <b> <code>Optimized</code> </b>—An instance is considered optimized when all specifications of your
      *        instance, such as CPU, memory, and network, meet the performance requirements of your workload and is not
-     *        over provisioned. For optimized resources, AWS Compute Optimizer might recommend a new generation instance
+     *        over provisioned. For optimized resources, Compute Optimizer might recommend a new generation instance
      *        type.
      *        </p>
      *        </li>
@@ -528,7 +528,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <p>
      * <b> <code>Optimized</code> </b>—An instance is considered optimized when all specifications of your instance,
      * such as CPU, memory, and network, meet the performance requirements of your workload and is not over provisioned.
-     * For optimized resources, AWS Compute Optimizer might recommend a new generation instance type.
+     * For optimized resources, Compute Optimizer might recommend a new generation instance type.
      * </p>
      * </li>
      * </ul>
@@ -557,8 +557,8 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *         <p>
      *         <b> <code>Optimized</code> </b>—An instance is considered optimized when all specifications of your
      *         instance, such as CPU, memory, and network, meet the performance requirements of your workload and is not
-     *         over provisioned. For optimized resources, AWS Compute Optimizer might recommend a new generation
-     *         instance type.
+     *         over provisioned. For optimized resources, Compute Optimizer might recommend a new generation instance
+     *         type.
      *         </p>
      *         </li>
      * @see Finding
@@ -595,7 +595,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <p>
      * <b> <code>Optimized</code> </b>—An instance is considered optimized when all specifications of your instance,
      * such as CPU, memory, and network, meet the performance requirements of your workload and is not over provisioned.
-     * For optimized resources, AWS Compute Optimizer might recommend a new generation instance type.
+     * For optimized resources, Compute Optimizer might recommend a new generation instance type.
      * </p>
      * </li>
      * </ul>
@@ -625,7 +625,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *        <p>
      *        <b> <code>Optimized</code> </b>—An instance is considered optimized when all specifications of your
      *        instance, such as CPU, memory, and network, meet the performance requirements of your workload and is not
-     *        over provisioned. For optimized resources, AWS Compute Optimizer might recommend a new generation instance
+     *        over provisioned. For optimized resources, Compute Optimizer might recommend a new generation instance
      *        type.
      *        </p>
      *        </li>
@@ -665,7 +665,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <p>
      * <b> <code>Optimized</code> </b>—An instance is considered optimized when all specifications of your instance,
      * such as CPU, memory, and network, meet the performance requirements of your workload and is not over provisioned.
-     * For optimized resources, AWS Compute Optimizer might recommend a new generation instance type.
+     * For optimized resources, Compute Optimizer might recommend a new generation instance type.
      * </p>
      * </li>
      * </ul>
@@ -695,7 +695,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *        <p>
      *        <b> <code>Optimized</code> </b>—An instance is considered optimized when all specifications of your
      *        instance, such as CPU, memory, and network, meet the performance requirements of your workload and is not
-     *        over provisioned. For optimized resources, AWS Compute Optimizer might recommend a new generation instance
+     *        over provisioned. For optimized resources, Compute Optimizer might recommend a new generation instance
      *        type.
      *        </p>
      *        </li>
@@ -750,7 +750,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * Memory utilization is analyzed only for resources that have the unified CloudWatch agent installed on them. For
      * more information, see <a
      * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/metrics.html#cw-agent">Enabling memory utilization
-     * with the Amazon CloudWatch Agent</a> in the <i>AWS Compute Optimizer User Guide</i>. On Linux instances, Compute
+     * with the Amazon CloudWatch Agent</a> in the <i>Compute Optimizer User Guide</i>. On Linux instances, Compute
      * Optimizer analyses the <code>mem_used_percent</code> metric in the <code>CWAgent</code> namespace, or the legacy
      * <code>MemoryUtilization</code> metric in the <code>System/Linux</code> namespace. On Windows instances, Compute
      * Optimizer analyses the <code>Memory % Committed Bytes In Use</code> metric in the <code>CWAgent</code> namespace.
@@ -903,7 +903,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *         Memory utilization is analyzed only for resources that have the unified CloudWatch agent installed on
      *         them. For more information, see <a
      *         href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/metrics.html#cw-agent">Enabling memory
-     *         utilization with the Amazon CloudWatch Agent</a> in the <i>AWS Compute Optimizer User Guide</i>. On Linux
+     *         utilization with the Amazon CloudWatch Agent</a> in the <i>Compute Optimizer User Guide</i>. On Linux
      *         instances, Compute Optimizer analyses the <code>mem_used_percent</code> metric in the
      *         <code>CWAgent</code> namespace, or the legacy <code>MemoryUtilization</code> metric in the
      *         <code>System/Linux</code> namespace. On Windows instances, Compute Optimizer analyses the
@@ -1071,7 +1071,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * Memory utilization is analyzed only for resources that have the unified CloudWatch agent installed on them. For
      * more information, see <a
      * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/metrics.html#cw-agent">Enabling memory utilization
-     * with the Amazon CloudWatch Agent</a> in the <i>AWS Compute Optimizer User Guide</i>. On Linux instances, Compute
+     * with the Amazon CloudWatch Agent</a> in the <i>Compute Optimizer User Guide</i>. On Linux instances, Compute
      * Optimizer analyses the <code>mem_used_percent</code> metric in the <code>CWAgent</code> namespace, or the legacy
      * <code>MemoryUtilization</code> metric in the <code>System/Linux</code> namespace. On Windows instances, Compute
      * Optimizer analyses the <code>Memory % Committed Bytes In Use</code> metric in the <code>CWAgent</code> namespace.
@@ -1225,7 +1225,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *        Memory utilization is analyzed only for resources that have the unified CloudWatch agent installed on
      *        them. For more information, see <a
      *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/metrics.html#cw-agent">Enabling memory
-     *        utilization with the Amazon CloudWatch Agent</a> in the <i>AWS Compute Optimizer User Guide</i>. On Linux
+     *        utilization with the Amazon CloudWatch Agent</a> in the <i>Compute Optimizer User Guide</i>. On Linux
      *        instances, Compute Optimizer analyses the <code>mem_used_percent</code> metric in the <code>CWAgent</code>
      *        namespace, or the legacy <code>MemoryUtilization</code> metric in the <code>System/Linux</code> namespace.
      *        On Windows instances, Compute Optimizer analyses the <code>Memory % Committed Bytes In Use</code> metric
@@ -1398,7 +1398,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * Memory utilization is analyzed only for resources that have the unified CloudWatch agent installed on them. For
      * more information, see <a
      * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/metrics.html#cw-agent">Enabling memory utilization
-     * with the Amazon CloudWatch Agent</a> in the <i>AWS Compute Optimizer User Guide</i>. On Linux instances, Compute
+     * with the Amazon CloudWatch Agent</a> in the <i>Compute Optimizer User Guide</i>. On Linux instances, Compute
      * Optimizer analyses the <code>mem_used_percent</code> metric in the <code>CWAgent</code> namespace, or the legacy
      * <code>MemoryUtilization</code> metric in the <code>System/Linux</code> namespace. On Windows instances, Compute
      * Optimizer analyses the <code>Memory % Committed Bytes In Use</code> metric in the <code>CWAgent</code> namespace.
@@ -1557,7 +1557,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *        Memory utilization is analyzed only for resources that have the unified CloudWatch agent installed on
      *        them. For more information, see <a
      *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/metrics.html#cw-agent">Enabling memory
-     *        utilization with the Amazon CloudWatch Agent</a> in the <i>AWS Compute Optimizer User Guide</i>. On Linux
+     *        utilization with the Amazon CloudWatch Agent</a> in the <i>Compute Optimizer User Guide</i>. On Linux
      *        instances, Compute Optimizer analyses the <code>mem_used_percent</code> metric in the <code>CWAgent</code>
      *        namespace, or the legacy <code>MemoryUtilization</code> metric in the <code>System/Linux</code> namespace.
      *        On Windows instances, Compute Optimizer analyses the <code>Memory % Committed Bytes In Use</code> metric
@@ -1732,7 +1732,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * Memory utilization is analyzed only for resources that have the unified CloudWatch agent installed on them. For
      * more information, see <a
      * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/metrics.html#cw-agent">Enabling memory utilization
-     * with the Amazon CloudWatch Agent</a> in the <i>AWS Compute Optimizer User Guide</i>. On Linux instances, Compute
+     * with the Amazon CloudWatch Agent</a> in the <i>Compute Optimizer User Guide</i>. On Linux instances, Compute
      * Optimizer analyses the <code>mem_used_percent</code> metric in the <code>CWAgent</code> namespace, or the legacy
      * <code>MemoryUtilization</code> metric in the <code>System/Linux</code> namespace. On Windows instances, Compute
      * Optimizer analyses the <code>Memory % Committed Bytes In Use</code> metric in the <code>CWAgent</code> namespace.
@@ -1886,7 +1886,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *        Memory utilization is analyzed only for resources that have the unified CloudWatch agent installed on
      *        them. For more information, see <a
      *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/metrics.html#cw-agent">Enabling memory
-     *        utilization with the Amazon CloudWatch Agent</a> in the <i>AWS Compute Optimizer User Guide</i>. On Linux
+     *        utilization with the Amazon CloudWatch Agent</a> in the <i>Compute Optimizer User Guide</i>. On Linux
      *        instances, Compute Optimizer analyses the <code>mem_used_percent</code> metric in the <code>CWAgent</code>
      *        namespace, or the legacy <code>MemoryUtilization</code> metric in the <code>System/Linux</code> namespace.
      *        On Windows instances, Compute Optimizer analyses the <code>Memory % Committed Bytes In Use</code> metric
@@ -2056,7 +2056,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * Memory utilization is analyzed only for resources that have the unified CloudWatch agent installed on them. For
      * more information, see <a
      * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/metrics.html#cw-agent">Enabling memory utilization
-     * with the Amazon CloudWatch Agent</a> in the <i>AWS Compute Optimizer User Guide</i>. On Linux instances, Compute
+     * with the Amazon CloudWatch Agent</a> in the <i>Compute Optimizer User Guide</i>. On Linux instances, Compute
      * Optimizer analyses the <code>mem_used_percent</code> metric in the <code>CWAgent</code> namespace, or the legacy
      * <code>MemoryUtilization</code> metric in the <code>System/Linux</code> namespace. On Windows instances, Compute
      * Optimizer analyses the <code>Memory % Committed Bytes In Use</code> metric in the <code>CWAgent</code> namespace.
@@ -2210,7 +2210,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *        Memory utilization is analyzed only for resources that have the unified CloudWatch agent installed on
      *        them. For more information, see <a
      *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/metrics.html#cw-agent">Enabling memory
-     *        utilization with the Amazon CloudWatch Agent</a> in the <i>AWS Compute Optimizer User Guide</i>. On Linux
+     *        utilization with the Amazon CloudWatch Agent</a> in the <i>Compute Optimizer User Guide</i>. On Linux
      *        instances, Compute Optimizer analyses the <code>mem_used_percent</code> metric in the <code>CWAgent</code>
      *        namespace, or the legacy <code>MemoryUtilization</code> metric in the <code>System/Linux</code> namespace.
      *        On Windows instances, Compute Optimizer analyses the <code>Memory % Committed Bytes In Use</code> metric
@@ -2598,11 +2598,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The time stamp of when the instance recommendation was last refreshed.
+     * The timestamp of when the instance recommendation was last refreshed.
      * </p>
      * 
      * @param lastRefreshTimestamp
-     *        The time stamp of when the instance recommendation was last refreshed.
+     *        The timestamp of when the instance recommendation was last refreshed.
      */
 
     public void setLastRefreshTimestamp(java.util.Date lastRefreshTimestamp) {
@@ -2611,10 +2611,10 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The time stamp of when the instance recommendation was last refreshed.
+     * The timestamp of when the instance recommendation was last refreshed.
      * </p>
      * 
-     * @return The time stamp of when the instance recommendation was last refreshed.
+     * @return The timestamp of when the instance recommendation was last refreshed.
      */
 
     public java.util.Date getLastRefreshTimestamp() {
@@ -2623,11 +2623,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The time stamp of when the instance recommendation was last refreshed.
+     * The timestamp of when the instance recommendation was last refreshed.
      * </p>
      * 
      * @param lastRefreshTimestamp
-     *        The time stamp of when the instance recommendation was last refreshed.
+     *        The timestamp of when the instance recommendation was last refreshed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

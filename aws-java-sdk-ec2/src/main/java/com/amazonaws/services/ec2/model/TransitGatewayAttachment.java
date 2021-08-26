@@ -40,13 +40,13 @@ public class TransitGatewayAttachment implements Serializable, Cloneable {
     private String transitGatewayId;
     /**
      * <p>
-     * The ID of the AWS account that owns the transit gateway.
+     * The ID of the Amazon Web Services account that owns the transit gateway.
      * </p>
      */
     private String transitGatewayOwnerId;
     /**
      * <p>
-     * The ID of the AWS account that owns the resource.
+     * The ID of the Amazon Web Services account that owns the resource.
      * </p>
      */
     private String resourceOwnerId;
@@ -169,11 +169,11 @@ public class TransitGatewayAttachment implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ID of the AWS account that owns the transit gateway.
+     * The ID of the Amazon Web Services account that owns the transit gateway.
      * </p>
      * 
      * @param transitGatewayOwnerId
-     *        The ID of the AWS account that owns the transit gateway.
+     *        The ID of the Amazon Web Services account that owns the transit gateway.
      */
 
     public void setTransitGatewayOwnerId(String transitGatewayOwnerId) {
@@ -182,10 +182,10 @@ public class TransitGatewayAttachment implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ID of the AWS account that owns the transit gateway.
+     * The ID of the Amazon Web Services account that owns the transit gateway.
      * </p>
      * 
-     * @return The ID of the AWS account that owns the transit gateway.
+     * @return The ID of the Amazon Web Services account that owns the transit gateway.
      */
 
     public String getTransitGatewayOwnerId() {
@@ -194,11 +194,11 @@ public class TransitGatewayAttachment implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ID of the AWS account that owns the transit gateway.
+     * The ID of the Amazon Web Services account that owns the transit gateway.
      * </p>
      * 
      * @param transitGatewayOwnerId
-     *        The ID of the AWS account that owns the transit gateway.
+     *        The ID of the Amazon Web Services account that owns the transit gateway.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -209,11 +209,11 @@ public class TransitGatewayAttachment implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ID of the AWS account that owns the resource.
+     * The ID of the Amazon Web Services account that owns the resource.
      * </p>
      * 
      * @param resourceOwnerId
-     *        The ID of the AWS account that owns the resource.
+     *        The ID of the Amazon Web Services account that owns the resource.
      */
 
     public void setResourceOwnerId(String resourceOwnerId) {
@@ -222,10 +222,10 @@ public class TransitGatewayAttachment implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ID of the AWS account that owns the resource.
+     * The ID of the Amazon Web Services account that owns the resource.
      * </p>
      * 
-     * @return The ID of the AWS account that owns the resource.
+     * @return The ID of the Amazon Web Services account that owns the resource.
      */
 
     public String getResourceOwnerId() {
@@ -234,11 +234,11 @@ public class TransitGatewayAttachment implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ID of the AWS account that owns the resource.
+     * The ID of the Amazon Web Services account that owns the resource.
      * </p>
      * 
      * @param resourceOwnerId
-     *        The ID of the AWS account that owns the resource.
+     *        The ID of the Amazon Web Services account that owns the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -28,7 +28,7 @@ public class DisassociateTrunkInterfaceRequest extends AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The ID ofthe association
+     * The ID of the association
      * </p>
      */
     private String associationId;
@@ -43,11 +43,11 @@ public class DisassociateTrunkInterfaceRequest extends AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The ID ofthe association
+     * The ID of the association
      * </p>
      * 
      * @param associationId
-     *        The ID ofthe association
+     *        The ID of the association
      */
 
     public void setAssociationId(String associationId) {
@@ -56,10 +56,10 @@ public class DisassociateTrunkInterfaceRequest extends AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The ID ofthe association
+     * The ID of the association
      * </p>
      * 
-     * @return The ID ofthe association
+     * @return The ID of the association
      */
 
     public String getAssociationId() {
@@ -68,11 +68,11 @@ public class DisassociateTrunkInterfaceRequest extends AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The ID ofthe association
+     * The ID of the association
      * </p>
      * 
      * @param associationId
-     *        The ID ofthe association
+     *        The ID of the association
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

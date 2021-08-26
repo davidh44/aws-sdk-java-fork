@@ -38,6 +38,8 @@ public class GetEC2InstanceRecommendationsRequestMarshaller {
             .marshallLocationName("filters").build();
     private static final MarshallingInfo<List> ACCOUNTIDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("accountIds").build();
+    private static final MarshallingInfo<StructuredPojo> RECOMMENDATIONPREFERENCES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recommendationPreferences").build();
 
     private static final GetEC2InstanceRecommendationsRequestMarshaller instance = new GetEC2InstanceRecommendationsRequestMarshaller();
 
@@ -60,6 +62,7 @@ public class GetEC2InstanceRecommendationsRequestMarshaller {
             protocolMarshaller.marshall(getEC2InstanceRecommendationsRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(getEC2InstanceRecommendationsRequest.getFilters(), FILTERS_BINDING);
             protocolMarshaller.marshall(getEC2InstanceRecommendationsRequest.getAccountIds(), ACCOUNTIDS_BINDING);
+            protocolMarshaller.marshall(getEC2InstanceRecommendationsRequest.getRecommendationPreferences(), RECOMMENDATIONPREFERENCES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

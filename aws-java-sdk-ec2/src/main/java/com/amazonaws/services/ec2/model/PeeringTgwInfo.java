@@ -34,7 +34,7 @@ public class PeeringTgwInfo implements Serializable, Cloneable {
     private String transitGatewayId;
     /**
      * <p>
-     * The AWS account ID of the owner of the transit gateway.
+     * The ID of the Amazon Web Services account that owns the transit gateway.
      * </p>
      */
     private String ownerId;
@@ -87,11 +87,11 @@ public class PeeringTgwInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID of the owner of the transit gateway.
+     * The ID of the Amazon Web Services account that owns the transit gateway.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID of the owner of the transit gateway.
+     *        The ID of the Amazon Web Services account that owns the transit gateway.
      */
 
     public void setOwnerId(String ownerId) {
@@ -100,10 +100,10 @@ public class PeeringTgwInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID of the owner of the transit gateway.
+     * The ID of the Amazon Web Services account that owns the transit gateway.
      * </p>
      * 
-     * @return The AWS account ID of the owner of the transit gateway.
+     * @return The ID of the Amazon Web Services account that owns the transit gateway.
      */
 
     public String getOwnerId() {
@@ -112,11 +112,11 @@ public class PeeringTgwInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID of the owner of the transit gateway.
+     * The ID of the Amazon Web Services account that owns the transit gateway.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID of the owner of the transit gateway.
+     *        The ID of the Amazon Web Services account that owns the transit gateway.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -46,16 +46,23 @@ public class GetEC2RecommendationProjectedMetricsRequest extends com.amazonaws.A
     private Integer period;
     /**
      * <p>
-     * The time stamp of the first projected metrics data point to return.
+     * The timestamp of the first projected metrics data point to return.
      * </p>
      */
     private java.util.Date startTime;
     /**
      * <p>
-     * The time stamp of the last projected metrics data point to return.
+     * The timestamp of the last projected metrics data point to return.
      * </p>
      */
     private java.util.Date endTime;
+    /**
+     * <p>
+     * An object to specify the preferences for the Amazon EC2 recommendation projected metrics to return in the
+     * response.
+     * </p>
+     */
+    private RecommendationPreferences recommendationPreferences;
 
     /**
      * <p>
@@ -198,11 +205,11 @@ public class GetEC2RecommendationProjectedMetricsRequest extends com.amazonaws.A
 
     /**
      * <p>
-     * The time stamp of the first projected metrics data point to return.
+     * The timestamp of the first projected metrics data point to return.
      * </p>
      * 
      * @param startTime
-     *        The time stamp of the first projected metrics data point to return.
+     *        The timestamp of the first projected metrics data point to return.
      */
 
     public void setStartTime(java.util.Date startTime) {
@@ -211,10 +218,10 @@ public class GetEC2RecommendationProjectedMetricsRequest extends com.amazonaws.A
 
     /**
      * <p>
-     * The time stamp of the first projected metrics data point to return.
+     * The timestamp of the first projected metrics data point to return.
      * </p>
      * 
-     * @return The time stamp of the first projected metrics data point to return.
+     * @return The timestamp of the first projected metrics data point to return.
      */
 
     public java.util.Date getStartTime() {
@@ -223,11 +230,11 @@ public class GetEC2RecommendationProjectedMetricsRequest extends com.amazonaws.A
 
     /**
      * <p>
-     * The time stamp of the first projected metrics data point to return.
+     * The timestamp of the first projected metrics data point to return.
      * </p>
      * 
      * @param startTime
-     *        The time stamp of the first projected metrics data point to return.
+     *        The timestamp of the first projected metrics data point to return.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -238,11 +245,11 @@ public class GetEC2RecommendationProjectedMetricsRequest extends com.amazonaws.A
 
     /**
      * <p>
-     * The time stamp of the last projected metrics data point to return.
+     * The timestamp of the last projected metrics data point to return.
      * </p>
      * 
      * @param endTime
-     *        The time stamp of the last projected metrics data point to return.
+     *        The timestamp of the last projected metrics data point to return.
      */
 
     public void setEndTime(java.util.Date endTime) {
@@ -251,10 +258,10 @@ public class GetEC2RecommendationProjectedMetricsRequest extends com.amazonaws.A
 
     /**
      * <p>
-     * The time stamp of the last projected metrics data point to return.
+     * The timestamp of the last projected metrics data point to return.
      * </p>
      * 
-     * @return The time stamp of the last projected metrics data point to return.
+     * @return The timestamp of the last projected metrics data point to return.
      */
 
     public java.util.Date getEndTime() {
@@ -263,16 +270,62 @@ public class GetEC2RecommendationProjectedMetricsRequest extends com.amazonaws.A
 
     /**
      * <p>
-     * The time stamp of the last projected metrics data point to return.
+     * The timestamp of the last projected metrics data point to return.
      * </p>
      * 
      * @param endTime
-     *        The time stamp of the last projected metrics data point to return.
+     *        The timestamp of the last projected metrics data point to return.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public GetEC2RecommendationProjectedMetricsRequest withEndTime(java.util.Date endTime) {
         setEndTime(endTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An object to specify the preferences for the Amazon EC2 recommendation projected metrics to return in the
+     * response.
+     * </p>
+     * 
+     * @param recommendationPreferences
+     *        An object to specify the preferences for the Amazon EC2 recommendation projected metrics to return in the
+     *        response.
+     */
+
+    public void setRecommendationPreferences(RecommendationPreferences recommendationPreferences) {
+        this.recommendationPreferences = recommendationPreferences;
+    }
+
+    /**
+     * <p>
+     * An object to specify the preferences for the Amazon EC2 recommendation projected metrics to return in the
+     * response.
+     * </p>
+     * 
+     * @return An object to specify the preferences for the Amazon EC2 recommendation projected metrics to return in the
+     *         response.
+     */
+
+    public RecommendationPreferences getRecommendationPreferences() {
+        return this.recommendationPreferences;
+    }
+
+    /**
+     * <p>
+     * An object to specify the preferences for the Amazon EC2 recommendation projected metrics to return in the
+     * response.
+     * </p>
+     * 
+     * @param recommendationPreferences
+     *        An object to specify the preferences for the Amazon EC2 recommendation projected metrics to return in the
+     *        response.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetEC2RecommendationProjectedMetricsRequest withRecommendationPreferences(RecommendationPreferences recommendationPreferences) {
+        setRecommendationPreferences(recommendationPreferences);
         return this;
     }
 
@@ -297,7 +350,9 @@ public class GetEC2RecommendationProjectedMetricsRequest extends com.amazonaws.A
         if (getStartTime() != null)
             sb.append("StartTime: ").append(getStartTime()).append(",");
         if (getEndTime() != null)
-            sb.append("EndTime: ").append(getEndTime());
+            sb.append("EndTime: ").append(getEndTime()).append(",");
+        if (getRecommendationPreferences() != null)
+            sb.append("RecommendationPreferences: ").append(getRecommendationPreferences());
         sb.append("}");
         return sb.toString();
     }
@@ -332,6 +387,10 @@ public class GetEC2RecommendationProjectedMetricsRequest extends com.amazonaws.A
             return false;
         if (other.getEndTime() != null && other.getEndTime().equals(this.getEndTime()) == false)
             return false;
+        if (other.getRecommendationPreferences() == null ^ this.getRecommendationPreferences() == null)
+            return false;
+        if (other.getRecommendationPreferences() != null && other.getRecommendationPreferences().equals(this.getRecommendationPreferences()) == false)
+            return false;
         return true;
     }
 
@@ -345,6 +404,7 @@ public class GetEC2RecommendationProjectedMetricsRequest extends com.amazonaws.A
         hashCode = prime * hashCode + ((getPeriod() == null) ? 0 : getPeriod().hashCode());
         hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
         hashCode = prime * hashCode + ((getEndTime() == null) ? 0 : getEndTime().hashCode());
+        hashCode = prime * hashCode + ((getRecommendationPreferences() == null) ? 0 : getRecommendationPreferences().hashCode());
         return hashCode;
     }
 

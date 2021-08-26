@@ -40,7 +40,7 @@ public class CreateTransitGatewayPeeringAttachmentRequest extends AmazonWebServi
     private String peerTransitGatewayId;
     /**
      * <p>
-     * The AWS account ID of the owner of the peer transit gateway.
+     * The ID of the Amazon Web Services account that owns the peer transit gateway.
      * </p>
      */
     private String peerAccountId;
@@ -139,11 +139,11 @@ public class CreateTransitGatewayPeeringAttachmentRequest extends AmazonWebServi
 
     /**
      * <p>
-     * The AWS account ID of the owner of the peer transit gateway.
+     * The ID of the Amazon Web Services account that owns the peer transit gateway.
      * </p>
      * 
      * @param peerAccountId
-     *        The AWS account ID of the owner of the peer transit gateway.
+     *        The ID of the Amazon Web Services account that owns the peer transit gateway.
      */
 
     public void setPeerAccountId(String peerAccountId) {
@@ -152,10 +152,10 @@ public class CreateTransitGatewayPeeringAttachmentRequest extends AmazonWebServi
 
     /**
      * <p>
-     * The AWS account ID of the owner of the peer transit gateway.
+     * The ID of the Amazon Web Services account that owns the peer transit gateway.
      * </p>
      * 
-     * @return The AWS account ID of the owner of the peer transit gateway.
+     * @return The ID of the Amazon Web Services account that owns the peer transit gateway.
      */
 
     public String getPeerAccountId() {
@@ -164,11 +164,11 @@ public class CreateTransitGatewayPeeringAttachmentRequest extends AmazonWebServi
 
     /**
      * <p>
-     * The AWS account ID of the owner of the peer transit gateway.
+     * The ID of the Amazon Web Services account that owns the peer transit gateway.
      * </p>
      * 
      * @param peerAccountId
-     *        The AWS account ID of the owner of the peer transit gateway.
+     *        The ID of the Amazon Web Services account that owns the peer transit gateway.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

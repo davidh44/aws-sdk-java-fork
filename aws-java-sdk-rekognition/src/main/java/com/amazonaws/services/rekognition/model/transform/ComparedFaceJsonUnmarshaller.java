@@ -70,6 +70,16 @@ public class ComparedFaceJsonUnmarshaller implements Unmarshaller<ComparedFace, 
                     context.nextToken();
                     comparedFace.setQuality(ImageQualityJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("Emotions", targetDepth)) {
+                    context.nextToken();
+                    comparedFace.setEmotions(new ListUnmarshaller<Emotion>(EmotionJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("Smile", targetDepth)) {
+                    context.nextToken();
+                    comparedFace.setSmile(SmileJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

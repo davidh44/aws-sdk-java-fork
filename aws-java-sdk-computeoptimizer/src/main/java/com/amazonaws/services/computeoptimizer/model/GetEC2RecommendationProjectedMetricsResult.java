@@ -27,17 +27,17 @@ public class GetEC2RecommendationProjectedMetricsResult extends com.amazonaws.Am
 
     /**
      * <p>
-     * An array of objects that describe a projected metrics.
+     * An array of objects that describes projected metrics.
      * </p>
      */
     private java.util.List<RecommendedOptionProjectedMetric> recommendedOptionProjectedMetrics;
 
     /**
      * <p>
-     * An array of objects that describe a projected metrics.
+     * An array of objects that describes projected metrics.
      * </p>
      * 
-     * @return An array of objects that describe a projected metrics.
+     * @return An array of objects that describes projected metrics.
      */
 
     public java.util.List<RecommendedOptionProjectedMetric> getRecommendedOptionProjectedMetrics() {
@@ -46,11 +46,11 @@ public class GetEC2RecommendationProjectedMetricsResult extends com.amazonaws.Am
 
     /**
      * <p>
-     * An array of objects that describe a projected metrics.
+     * An array of objects that describes projected metrics.
      * </p>
      * 
      * @param recommendedOptionProjectedMetrics
-     *        An array of objects that describe a projected metrics.
+     *        An array of objects that describes projected metrics.
      */
 
     public void setRecommendedOptionProjectedMetrics(java.util.Collection<RecommendedOptionProjectedMetric> recommendedOptionProjectedMetrics) {
@@ -64,7 +64,7 @@ public class GetEC2RecommendationProjectedMetricsResult extends com.amazonaws.Am
 
     /**
      * <p>
-     * An array of objects that describe a projected metrics.
+     * An array of objects that describes projected metrics.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -73,7 +73,7 @@ public class GetEC2RecommendationProjectedMetricsResult extends com.amazonaws.Am
      * </p>
      * 
      * @param recommendedOptionProjectedMetrics
-     *        An array of objects that describe a projected metrics.
+     *        An array of objects that describes projected metrics.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -90,11 +90,11 @@ public class GetEC2RecommendationProjectedMetricsResult extends com.amazonaws.Am
 
     /**
      * <p>
-     * An array of objects that describe a projected metrics.
+     * An array of objects that describes projected metrics.
      * </p>
      * 
      * @param recommendedOptionProjectedMetrics
-     *        An array of objects that describe a projected metrics.
+     *        An array of objects that describes projected metrics.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

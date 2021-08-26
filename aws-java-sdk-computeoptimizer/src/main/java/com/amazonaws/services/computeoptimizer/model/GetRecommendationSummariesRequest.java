@@ -27,7 +27,7 @@ public class GetRecommendationSummariesRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ID of the AWS account for which to return recommendation summaries.
+     * The ID of the Amazon Web Services account for which to return recommendation summaries.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -49,14 +49,14 @@ public class GetRecommendationSummariesRequest extends com.amazonaws.AmazonWebSe
      * The maximum number of recommendation summaries to return with a single request.
      * </p>
      * <p>
-     * To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     * To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * </p>
      */
     private Integer maxResults;
 
     /**
      * <p>
-     * The ID of the AWS account for which to return recommendation summaries.
+     * The ID of the Amazon Web Services account for which to return recommendation summaries.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -66,7 +66,7 @@ public class GetRecommendationSummariesRequest extends com.amazonaws.AmazonWebSe
      * Only one account ID can be specified per request.
      * </p>
      * 
-     * @return The ID of the AWS account for which to return recommendation summaries.</p>
+     * @return The ID of the Amazon Web Services account for which to return recommendation summaries.</p>
      *         <p>
      *         If your account is the management account of an organization, use this parameter to specify the member
      *         account for which you want to return recommendation summaries.
@@ -81,7 +81,7 @@ public class GetRecommendationSummariesRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ID of the AWS account for which to return recommendation summaries.
+     * The ID of the Amazon Web Services account for which to return recommendation summaries.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -92,7 +92,7 @@ public class GetRecommendationSummariesRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * 
      * @param accountIds
-     *        The ID of the AWS account for which to return recommendation summaries.</p>
+     *        The ID of the Amazon Web Services account for which to return recommendation summaries.</p>
      *        <p>
      *        If your account is the management account of an organization, use this parameter to specify the member
      *        account for which you want to return recommendation summaries.
@@ -112,7 +112,7 @@ public class GetRecommendationSummariesRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ID of the AWS account for which to return recommendation summaries.
+     * The ID of the Amazon Web Services account for which to return recommendation summaries.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -128,7 +128,7 @@ public class GetRecommendationSummariesRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * 
      * @param accountIds
-     *        The ID of the AWS account for which to return recommendation summaries.</p>
+     *        The ID of the Amazon Web Services account for which to return recommendation summaries.</p>
      *        <p>
      *        If your account is the management account of an organization, use this parameter to specify the member
      *        account for which you want to return recommendation summaries.
@@ -150,7 +150,7 @@ public class GetRecommendationSummariesRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ID of the AWS account for which to return recommendation summaries.
+     * The ID of the Amazon Web Services account for which to return recommendation summaries.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -161,7 +161,7 @@ public class GetRecommendationSummariesRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * 
      * @param accountIds
-     *        The ID of the AWS account for which to return recommendation summaries.</p>
+     *        The ID of the Amazon Web Services account for which to return recommendation summaries.</p>
      *        <p>
      *        If your account is the management account of an organization, use this parameter to specify the member
      *        account for which you want to return recommendation summaries.
@@ -221,13 +221,13 @@ public class GetRecommendationSummariesRequest extends com.amazonaws.AmazonWebSe
      * The maximum number of recommendation summaries to return with a single request.
      * </p>
      * <p>
-     * To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     * To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * </p>
      * 
      * @param maxResults
      *        The maximum number of recommendation summaries to return with a single request.</p>
      *        <p>
-     *        To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     *        To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -239,12 +239,12 @@ public class GetRecommendationSummariesRequest extends com.amazonaws.AmazonWebSe
      * The maximum number of recommendation summaries to return with a single request.
      * </p>
      * <p>
-     * To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     * To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * </p>
      * 
      * @return The maximum number of recommendation summaries to return with a single request.</p>
      *         <p>
-     *         To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     *         To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      */
 
     public Integer getMaxResults() {
@@ -256,13 +256,13 @@ public class GetRecommendationSummariesRequest extends com.amazonaws.AmazonWebSe
      * The maximum number of recommendation summaries to return with a single request.
      * </p>
      * <p>
-     * To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     * To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * </p>
      * 
      * @param maxResults
      *        The maximum number of recommendation summaries to return with a single request.</p>
      *        <p>
-     *        To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     *        To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

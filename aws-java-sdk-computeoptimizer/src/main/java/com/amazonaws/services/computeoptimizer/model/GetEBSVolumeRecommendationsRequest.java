@@ -42,19 +42,19 @@ public class GetEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonWebS
      * The maximum number of volume recommendations to return with a single request.
      * </p>
      * <p>
-     * To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     * To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * </p>
      */
     private Integer maxResults;
     /**
      * <p>
-     * An array of objects that describe a filter that returns a more specific list of volume recommendations.
+     * An array of objects to specify a filter that returns a more specific list of volume recommendations.
      * </p>
      */
     private java.util.List<EBSFilter> filters;
     /**
      * <p>
-     * The ID of the AWS account for which to return volume recommendations.
+     * The ID of the Amazon Web Services account for which to return volume recommendations.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -181,13 +181,13 @@ public class GetEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonWebS
      * The maximum number of volume recommendations to return with a single request.
      * </p>
      * <p>
-     * To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     * To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * </p>
      * 
      * @param maxResults
      *        The maximum number of volume recommendations to return with a single request.</p>
      *        <p>
-     *        To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     *        To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -199,12 +199,12 @@ public class GetEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonWebS
      * The maximum number of volume recommendations to return with a single request.
      * </p>
      * <p>
-     * To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     * To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * </p>
      * 
      * @return The maximum number of volume recommendations to return with a single request.</p>
      *         <p>
-     *         To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     *         To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      */
 
     public Integer getMaxResults() {
@@ -216,13 +216,13 @@ public class GetEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonWebS
      * The maximum number of volume recommendations to return with a single request.
      * </p>
      * <p>
-     * To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     * To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * </p>
      * 
      * @param maxResults
      *        The maximum number of volume recommendations to return with a single request.</p>
      *        <p>
-     *        To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     *        To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -233,10 +233,10 @@ public class GetEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * An array of objects that describe a filter that returns a more specific list of volume recommendations.
+     * An array of objects to specify a filter that returns a more specific list of volume recommendations.
      * </p>
      * 
-     * @return An array of objects that describe a filter that returns a more specific list of volume recommendations.
+     * @return An array of objects to specify a filter that returns a more specific list of volume recommendations.
      */
 
     public java.util.List<EBSFilter> getFilters() {
@@ -245,11 +245,11 @@ public class GetEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * An array of objects that describe a filter that returns a more specific list of volume recommendations.
+     * An array of objects to specify a filter that returns a more specific list of volume recommendations.
      * </p>
      * 
      * @param filters
-     *        An array of objects that describe a filter that returns a more specific list of volume recommendations.
+     *        An array of objects to specify a filter that returns a more specific list of volume recommendations.
      */
 
     public void setFilters(java.util.Collection<EBSFilter> filters) {
@@ -263,7 +263,7 @@ public class GetEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * An array of objects that describe a filter that returns a more specific list of volume recommendations.
+     * An array of objects to specify a filter that returns a more specific list of volume recommendations.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -272,7 +272,7 @@ public class GetEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param filters
-     *        An array of objects that describe a filter that returns a more specific list of volume recommendations.
+     *        An array of objects to specify a filter that returns a more specific list of volume recommendations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -288,11 +288,11 @@ public class GetEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * An array of objects that describe a filter that returns a more specific list of volume recommendations.
+     * An array of objects to specify a filter that returns a more specific list of volume recommendations.
      * </p>
      * 
      * @param filters
-     *        An array of objects that describe a filter that returns a more specific list of volume recommendations.
+     *        An array of objects to specify a filter that returns a more specific list of volume recommendations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -303,7 +303,7 @@ public class GetEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The ID of the AWS account for which to return volume recommendations.
+     * The ID of the Amazon Web Services account for which to return volume recommendations.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -313,7 +313,7 @@ public class GetEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonWebS
      * Only one account ID can be specified per request.
      * </p>
      * 
-     * @return The ID of the AWS account for which to return volume recommendations.</p>
+     * @return The ID of the Amazon Web Services account for which to return volume recommendations.</p>
      *         <p>
      *         If your account is the management account of an organization, use this parameter to specify the member
      *         account for which you want to return volume recommendations.
@@ -328,7 +328,7 @@ public class GetEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The ID of the AWS account for which to return volume recommendations.
+     * The ID of the Amazon Web Services account for which to return volume recommendations.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -339,7 +339,7 @@ public class GetEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param accountIds
-     *        The ID of the AWS account for which to return volume recommendations.</p>
+     *        The ID of the Amazon Web Services account for which to return volume recommendations.</p>
      *        <p>
      *        If your account is the management account of an organization, use this parameter to specify the member
      *        account for which you want to return volume recommendations.
@@ -359,7 +359,7 @@ public class GetEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The ID of the AWS account for which to return volume recommendations.
+     * The ID of the Amazon Web Services account for which to return volume recommendations.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -375,7 +375,7 @@ public class GetEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param accountIds
-     *        The ID of the AWS account for which to return volume recommendations.</p>
+     *        The ID of the Amazon Web Services account for which to return volume recommendations.</p>
      *        <p>
      *        If your account is the management account of an organization, use this parameter to specify the member
      *        account for which you want to return volume recommendations.
@@ -397,7 +397,7 @@ public class GetEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The ID of the AWS account for which to return volume recommendations.
+     * The ID of the Amazon Web Services account for which to return volume recommendations.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -408,7 +408,7 @@ public class GetEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param accountIds
-     *        The ID of the AWS account for which to return volume recommendations.</p>
+     *        The ID of the Amazon Web Services account for which to return volume recommendations.</p>
      *        <p>
      *        If your account is the management account of an organization, use this parameter to specify the member
      *        account for which you want to return volume recommendations.

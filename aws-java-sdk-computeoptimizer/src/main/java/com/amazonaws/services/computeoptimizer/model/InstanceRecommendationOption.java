@@ -80,11 +80,10 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * <p>
      * <b> <code>NetworkInterface</code> </b> — The network interface of the recommended instance type is different than
      * that of the current instance. For example, the recommended instance type supports enhanced networking and the
-     * current instance might not. To enable enhanced networking for the recommended instance type, you will need to
-     * install the Elastic Network Adapter (ENA) driver or the Intel 82599 Virtual Function driver. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage"
-     * >Networking and storage features</a> and <a
+     * current instance might not. To enable enhanced networking for the recommended instance type, you must install the
+     * Elastic Network Adapter (ENA) driver or the Intel 82599 Virtual Function driver. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage">
+     * Networking and storage features</a> and <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/enhanced-networking.html">Enhanced networking on
      * Linux</a> in the <i>Amazon EC2 User Guide for Linux</i>, or <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/instance-types.html#instance-networking-storage"
@@ -115,8 +114,8 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * volumes and the current instance does. Before migrating, you might need to back up the data on your instance
      * store volumes if you want to preserve them. For more information, see <a
      * href="https://aws.amazon.com/premiumsupport/knowledge-center/back-up-instance-store-ebs/">How do I back up an
-     * instance store volume on my Amazon EC2 instance to Amazon EBS?</a> in the <i>AWS Premium Support Knowledge
-     * Base</i>. For more information, see <a
+     * instance store volume on my Amazon EC2 instance to Amazon EBS?</a> in the <i>Amazon Web Services Premium Support
+     * Knowledge Base</i>. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage"
      * >Networking and storage features</a> and <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html">Amazon EC2 instance store</a> in
@@ -136,6 +135,16 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * types</a> in the <i>Amazon EC2 User Guide for Linux</i>, or <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/windows-ami-version-history.html#virtualization-types"
      * >Windows AMI virtualization types</a> in the <i>Amazon EC2 User Guide for Windows</i>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b> <code>Architecture</code> </b> — The CPU architecture between the recommended instance type and the current
+     * instance is different. For example, the recommended instance type might use an x86 CPU architecture and the
+     * current instance type might use a different one, such as ARM. Before migrating, you should consider recompiling
+     * the software on your instance for the new architecture. Alternatively, you might switch to an Amazon Machine
+     * Image (AMI) that supports the new architecture. For more information about the CPU architecture for each instance
+     * type, see <a href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a>.
      * </p>
      * </li>
      * </ul>
@@ -379,11 +388,10 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * <p>
      * <b> <code>NetworkInterface</code> </b> — The network interface of the recommended instance type is different than
      * that of the current instance. For example, the recommended instance type supports enhanced networking and the
-     * current instance might not. To enable enhanced networking for the recommended instance type, you will need to
-     * install the Elastic Network Adapter (ENA) driver or the Intel 82599 Virtual Function driver. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage"
-     * >Networking and storage features</a> and <a
+     * current instance might not. To enable enhanced networking for the recommended instance type, you must install the
+     * Elastic Network Adapter (ENA) driver or the Intel 82599 Virtual Function driver. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage">
+     * Networking and storage features</a> and <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/enhanced-networking.html">Enhanced networking on
      * Linux</a> in the <i>Amazon EC2 User Guide for Linux</i>, or <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/instance-types.html#instance-networking-storage"
@@ -414,8 +422,8 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * volumes and the current instance does. Before migrating, you might need to back up the data on your instance
      * store volumes if you want to preserve them. For more information, see <a
      * href="https://aws.amazon.com/premiumsupport/knowledge-center/back-up-instance-store-ebs/">How do I back up an
-     * instance store volume on my Amazon EC2 instance to Amazon EBS?</a> in the <i>AWS Premium Support Knowledge
-     * Base</i>. For more information, see <a
+     * instance store volume on my Amazon EC2 instance to Amazon EBS?</a> in the <i>Amazon Web Services Premium Support
+     * Knowledge Base</i>. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage"
      * >Networking and storage features</a> and <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html">Amazon EC2 instance store</a> in
@@ -435,6 +443,16 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * types</a> in the <i>Amazon EC2 User Guide for Linux</i>, or <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/windows-ami-version-history.html#virtualization-types"
      * >Windows AMI virtualization types</a> in the <i>Amazon EC2 User Guide for Windows</i>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b> <code>Architecture</code> </b> — The CPU architecture between the recommended instance type and the current
+     * instance is different. For example, the recommended instance type might use an x86 CPU architecture and the
+     * current instance type might use a different one, such as ARM. Before migrating, you should consider recompiling
+     * the software on your instance for the new architecture. Alternatively, you might switch to an Amazon Machine
+     * Image (AMI) that supports the new architecture. For more information about the CPU architecture for each instance
+     * type, see <a href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a>.
      * </p>
      * </li>
      * </ul>
@@ -469,8 +487,8 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      *         <b> <code>NetworkInterface</code> </b> — The network interface of the recommended instance type is
      *         different than that of the current instance. For example, the recommended instance type supports enhanced
      *         networking and the current instance might not. To enable enhanced networking for the recommended instance
-     *         type, you will need to install the Elastic Network Adapter (ENA) driver or the Intel 82599 Virtual
-     *         Function driver. For more information, see <a href=
+     *         type, you must install the Elastic Network Adapter (ENA) driver or the Intel 82599 Virtual Function
+     *         driver. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage"
      *         >Networking and storage features</a> and <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/enhanced-networking.html">Enhanced networking
@@ -503,8 +521,8 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      *         store volumes and the current instance does. Before migrating, you might need to back up the data on your
      *         instance store volumes if you want to preserve them. For more information, see <a
      *         href="https://aws.amazon.com/premiumsupport/knowledge-center/back-up-instance-store-ebs/">How do I back
-     *         up an instance store volume on my Amazon EC2 instance to Amazon EBS?</a> in the <i>AWS Premium Support
-     *         Knowledge Base</i>. For more information, see <a href=
+     *         up an instance store volume on my Amazon EC2 instance to Amazon EBS?</a> in the <i>Amazon Web Services
+     *         Premium Support Knowledge Base</i>. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage"
      *         >Networking and storage features</a> and <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html">Amazon EC2 instance
@@ -524,6 +542,17 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      *         virtualization types</a> in the <i>Amazon EC2 User Guide for Linux</i>, or <a href=
      *         "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/windows-ami-version-history.html#virtualization-types"
      *         >Windows AMI virtualization types</a> in the <i>Amazon EC2 User Guide for Windows</i>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b> <code>Architecture</code> </b> — The CPU architecture between the recommended instance type and the
+     *         current instance is different. For example, the recommended instance type might use an x86 CPU
+     *         architecture and the current instance type might use a different one, such as ARM. Before migrating, you
+     *         should consider recompiling the software on your instance for the new architecture. Alternatively, you
+     *         might switch to an Amazon Machine Image (AMI) that supports the new architecture. For more information
+     *         about the CPU architecture for each instance type, see <a
+     *         href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a>.
      *         </p>
      *         </li>
      * @see PlatformDifference
@@ -564,11 +593,10 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * <p>
      * <b> <code>NetworkInterface</code> </b> — The network interface of the recommended instance type is different than
      * that of the current instance. For example, the recommended instance type supports enhanced networking and the
-     * current instance might not. To enable enhanced networking for the recommended instance type, you will need to
-     * install the Elastic Network Adapter (ENA) driver or the Intel 82599 Virtual Function driver. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage"
-     * >Networking and storage features</a> and <a
+     * current instance might not. To enable enhanced networking for the recommended instance type, you must install the
+     * Elastic Network Adapter (ENA) driver or the Intel 82599 Virtual Function driver. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage">
+     * Networking and storage features</a> and <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/enhanced-networking.html">Enhanced networking on
      * Linux</a> in the <i>Amazon EC2 User Guide for Linux</i>, or <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/instance-types.html#instance-networking-storage"
@@ -599,8 +627,8 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * volumes and the current instance does. Before migrating, you might need to back up the data on your instance
      * store volumes if you want to preserve them. For more information, see <a
      * href="https://aws.amazon.com/premiumsupport/knowledge-center/back-up-instance-store-ebs/">How do I back up an
-     * instance store volume on my Amazon EC2 instance to Amazon EBS?</a> in the <i>AWS Premium Support Knowledge
-     * Base</i>. For more information, see <a
+     * instance store volume on my Amazon EC2 instance to Amazon EBS?</a> in the <i>Amazon Web Services Premium Support
+     * Knowledge Base</i>. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage"
      * >Networking and storage features</a> and <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html">Amazon EC2 instance store</a> in
@@ -620,6 +648,16 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * types</a> in the <i>Amazon EC2 User Guide for Linux</i>, or <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/windows-ami-version-history.html#virtualization-types"
      * >Windows AMI virtualization types</a> in the <i>Amazon EC2 User Guide for Windows</i>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b> <code>Architecture</code> </b> — The CPU architecture between the recommended instance type and the current
+     * instance is different. For example, the recommended instance type might use an x86 CPU architecture and the
+     * current instance type might use a different one, such as ARM. Before migrating, you should consider recompiling
+     * the software on your instance for the new architecture. Alternatively, you might switch to an Amazon Machine
+     * Image (AMI) that supports the new architecture. For more information about the CPU architecture for each instance
+     * type, see <a href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a>.
      * </p>
      * </li>
      * </ul>
@@ -654,8 +692,8 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      *        <b> <code>NetworkInterface</code> </b> — The network interface of the recommended instance type is
      *        different than that of the current instance. For example, the recommended instance type supports enhanced
      *        networking and the current instance might not. To enable enhanced networking for the recommended instance
-     *        type, you will need to install the Elastic Network Adapter (ENA) driver or the Intel 82599 Virtual
-     *        Function driver. For more information, see <a href=
+     *        type, you must install the Elastic Network Adapter (ENA) driver or the Intel 82599 Virtual Function
+     *        driver. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage"
      *        >Networking and storage features</a> and <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/enhanced-networking.html">Enhanced networking on
@@ -688,8 +726,8 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      *        store volumes and the current instance does. Before migrating, you might need to back up the data on your
      *        instance store volumes if you want to preserve them. For more information, see <a
      *        href="https://aws.amazon.com/premiumsupport/knowledge-center/back-up-instance-store-ebs/">How do I back up
-     *        an instance store volume on my Amazon EC2 instance to Amazon EBS?</a> in the <i>AWS Premium Support
-     *        Knowledge Base</i>. For more information, see <a href=
+     *        an instance store volume on my Amazon EC2 instance to Amazon EBS?</a> in the <i>Amazon Web Services
+     *        Premium Support Knowledge Base</i>. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage"
      *        >Networking and storage features</a> and <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html">Amazon EC2 instance
@@ -709,6 +747,17 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      *        virtualization types</a> in the <i>Amazon EC2 User Guide for Linux</i>, or <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/windows-ami-version-history.html#virtualization-types"
      *        >Windows AMI virtualization types</a> in the <i>Amazon EC2 User Guide for Windows</i>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b> <code>Architecture</code> </b> — The CPU architecture between the recommended instance type and the
+     *        current instance is different. For example, the recommended instance type might use an x86 CPU
+     *        architecture and the current instance type might use a different one, such as ARM. Before migrating, you
+     *        should consider recompiling the software on your instance for the new architecture. Alternatively, you
+     *        might switch to an Amazon Machine Image (AMI) that supports the new architecture. For more information
+     *        about the CPU architecture for each instance type, see <a
+     *        href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a>.
      *        </p>
      *        </li>
      * @see PlatformDifference
@@ -754,11 +803,10 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * <p>
      * <b> <code>NetworkInterface</code> </b> — The network interface of the recommended instance type is different than
      * that of the current instance. For example, the recommended instance type supports enhanced networking and the
-     * current instance might not. To enable enhanced networking for the recommended instance type, you will need to
-     * install the Elastic Network Adapter (ENA) driver or the Intel 82599 Virtual Function driver. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage"
-     * >Networking and storage features</a> and <a
+     * current instance might not. To enable enhanced networking for the recommended instance type, you must install the
+     * Elastic Network Adapter (ENA) driver or the Intel 82599 Virtual Function driver. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage">
+     * Networking and storage features</a> and <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/enhanced-networking.html">Enhanced networking on
      * Linux</a> in the <i>Amazon EC2 User Guide for Linux</i>, or <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/instance-types.html#instance-networking-storage"
@@ -789,8 +837,8 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * volumes and the current instance does. Before migrating, you might need to back up the data on your instance
      * store volumes if you want to preserve them. For more information, see <a
      * href="https://aws.amazon.com/premiumsupport/knowledge-center/back-up-instance-store-ebs/">How do I back up an
-     * instance store volume on my Amazon EC2 instance to Amazon EBS?</a> in the <i>AWS Premium Support Knowledge
-     * Base</i>. For more information, see <a
+     * instance store volume on my Amazon EC2 instance to Amazon EBS?</a> in the <i>Amazon Web Services Premium Support
+     * Knowledge Base</i>. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage"
      * >Networking and storage features</a> and <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html">Amazon EC2 instance store</a> in
@@ -810,6 +858,16 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * types</a> in the <i>Amazon EC2 User Guide for Linux</i>, or <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/windows-ami-version-history.html#virtualization-types"
      * >Windows AMI virtualization types</a> in the <i>Amazon EC2 User Guide for Windows</i>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b> <code>Architecture</code> </b> — The CPU architecture between the recommended instance type and the current
+     * instance is different. For example, the recommended instance type might use an x86 CPU architecture and the
+     * current instance type might use a different one, such as ARM. Before migrating, you should consider recompiling
+     * the software on your instance for the new architecture. Alternatively, you might switch to an Amazon Machine
+     * Image (AMI) that supports the new architecture. For more information about the CPU architecture for each instance
+     * type, see <a href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a>.
      * </p>
      * </li>
      * </ul>
@@ -849,8 +907,8 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      *        <b> <code>NetworkInterface</code> </b> — The network interface of the recommended instance type is
      *        different than that of the current instance. For example, the recommended instance type supports enhanced
      *        networking and the current instance might not. To enable enhanced networking for the recommended instance
-     *        type, you will need to install the Elastic Network Adapter (ENA) driver or the Intel 82599 Virtual
-     *        Function driver. For more information, see <a href=
+     *        type, you must install the Elastic Network Adapter (ENA) driver or the Intel 82599 Virtual Function
+     *        driver. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage"
      *        >Networking and storage features</a> and <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/enhanced-networking.html">Enhanced networking on
@@ -883,8 +941,8 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      *        store volumes and the current instance does. Before migrating, you might need to back up the data on your
      *        instance store volumes if you want to preserve them. For more information, see <a
      *        href="https://aws.amazon.com/premiumsupport/knowledge-center/back-up-instance-store-ebs/">How do I back up
-     *        an instance store volume on my Amazon EC2 instance to Amazon EBS?</a> in the <i>AWS Premium Support
-     *        Knowledge Base</i>. For more information, see <a href=
+     *        an instance store volume on my Amazon EC2 instance to Amazon EBS?</a> in the <i>Amazon Web Services
+     *        Premium Support Knowledge Base</i>. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage"
      *        >Networking and storage features</a> and <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html">Amazon EC2 instance
@@ -904,6 +962,17 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      *        virtualization types</a> in the <i>Amazon EC2 User Guide for Linux</i>, or <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/windows-ami-version-history.html#virtualization-types"
      *        >Windows AMI virtualization types</a> in the <i>Amazon EC2 User Guide for Windows</i>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b> <code>Architecture</code> </b> — The CPU architecture between the recommended instance type and the
+     *        current instance is different. For example, the recommended instance type might use an x86 CPU
+     *        architecture and the current instance type might use a different one, such as ARM. Before migrating, you
+     *        should consider recompiling the software on your instance for the new architecture. Alternatively, you
+     *        might switch to an Amazon Machine Image (AMI) that supports the new architecture. For more information
+     *        about the CPU architecture for each instance type, see <a
+     *        href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -951,11 +1020,10 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * <p>
      * <b> <code>NetworkInterface</code> </b> — The network interface of the recommended instance type is different than
      * that of the current instance. For example, the recommended instance type supports enhanced networking and the
-     * current instance might not. To enable enhanced networking for the recommended instance type, you will need to
-     * install the Elastic Network Adapter (ENA) driver or the Intel 82599 Virtual Function driver. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage"
-     * >Networking and storage features</a> and <a
+     * current instance might not. To enable enhanced networking for the recommended instance type, you must install the
+     * Elastic Network Adapter (ENA) driver or the Intel 82599 Virtual Function driver. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage">
+     * Networking and storage features</a> and <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/enhanced-networking.html">Enhanced networking on
      * Linux</a> in the <i>Amazon EC2 User Guide for Linux</i>, or <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/instance-types.html#instance-networking-storage"
@@ -986,8 +1054,8 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * volumes and the current instance does. Before migrating, you might need to back up the data on your instance
      * store volumes if you want to preserve them. For more information, see <a
      * href="https://aws.amazon.com/premiumsupport/knowledge-center/back-up-instance-store-ebs/">How do I back up an
-     * instance store volume on my Amazon EC2 instance to Amazon EBS?</a> in the <i>AWS Premium Support Knowledge
-     * Base</i>. For more information, see <a
+     * instance store volume on my Amazon EC2 instance to Amazon EBS?</a> in the <i>Amazon Web Services Premium Support
+     * Knowledge Base</i>. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage"
      * >Networking and storage features</a> and <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html">Amazon EC2 instance store</a> in
@@ -1007,6 +1075,16 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * types</a> in the <i>Amazon EC2 User Guide for Linux</i>, or <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/windows-ami-version-history.html#virtualization-types"
      * >Windows AMI virtualization types</a> in the <i>Amazon EC2 User Guide for Windows</i>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b> <code>Architecture</code> </b> — The CPU architecture between the recommended instance type and the current
+     * instance is different. For example, the recommended instance type might use an x86 CPU architecture and the
+     * current instance type might use a different one, such as ARM. Before migrating, you should consider recompiling
+     * the software on your instance for the new architecture. Alternatively, you might switch to an Amazon Machine
+     * Image (AMI) that supports the new architecture. For more information about the CPU architecture for each instance
+     * type, see <a href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a>.
      * </p>
      * </li>
      * </ul>
@@ -1041,8 +1119,8 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      *        <b> <code>NetworkInterface</code> </b> — The network interface of the recommended instance type is
      *        different than that of the current instance. For example, the recommended instance type supports enhanced
      *        networking and the current instance might not. To enable enhanced networking for the recommended instance
-     *        type, you will need to install the Elastic Network Adapter (ENA) driver or the Intel 82599 Virtual
-     *        Function driver. For more information, see <a href=
+     *        type, you must install the Elastic Network Adapter (ENA) driver or the Intel 82599 Virtual Function
+     *        driver. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage"
      *        >Networking and storage features</a> and <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/enhanced-networking.html">Enhanced networking on
@@ -1075,8 +1153,8 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      *        store volumes and the current instance does. Before migrating, you might need to back up the data on your
      *        instance store volumes if you want to preserve them. For more information, see <a
      *        href="https://aws.amazon.com/premiumsupport/knowledge-center/back-up-instance-store-ebs/">How do I back up
-     *        an instance store volume on my Amazon EC2 instance to Amazon EBS?</a> in the <i>AWS Premium Support
-     *        Knowledge Base</i>. For more information, see <a href=
+     *        an instance store volume on my Amazon EC2 instance to Amazon EBS?</a> in the <i>Amazon Web Services
+     *        Premium Support Knowledge Base</i>. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage"
      *        >Networking and storage features</a> and <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html">Amazon EC2 instance
@@ -1096,6 +1174,17 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      *        virtualization types</a> in the <i>Amazon EC2 User Guide for Linux</i>, or <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/windows-ami-version-history.html#virtualization-types"
      *        >Windows AMI virtualization types</a> in the <i>Amazon EC2 User Guide for Windows</i>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b> <code>Architecture</code> </b> — The CPU architecture between the recommended instance type and the
+     *        current instance is different. For example, the recommended instance type might use an x86 CPU
+     *        architecture and the current instance type might use a different one, such as ARM. Before migrating, you
+     *        should consider recompiling the software on your instance for the new architecture. Alternatively, you
+     *        might switch to an Amazon Machine Image (AMI) that supports the new architecture. For more information
+     *        about the CPU architecture for each instance type, see <a
+     *        href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1138,11 +1227,10 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * <p>
      * <b> <code>NetworkInterface</code> </b> — The network interface of the recommended instance type is different than
      * that of the current instance. For example, the recommended instance type supports enhanced networking and the
-     * current instance might not. To enable enhanced networking for the recommended instance type, you will need to
-     * install the Elastic Network Adapter (ENA) driver or the Intel 82599 Virtual Function driver. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage"
-     * >Networking and storage features</a> and <a
+     * current instance might not. To enable enhanced networking for the recommended instance type, you must install the
+     * Elastic Network Adapter (ENA) driver or the Intel 82599 Virtual Function driver. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage">
+     * Networking and storage features</a> and <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/enhanced-networking.html">Enhanced networking on
      * Linux</a> in the <i>Amazon EC2 User Guide for Linux</i>, or <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/instance-types.html#instance-networking-storage"
@@ -1173,8 +1261,8 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * volumes and the current instance does. Before migrating, you might need to back up the data on your instance
      * store volumes if you want to preserve them. For more information, see <a
      * href="https://aws.amazon.com/premiumsupport/knowledge-center/back-up-instance-store-ebs/">How do I back up an
-     * instance store volume on my Amazon EC2 instance to Amazon EBS?</a> in the <i>AWS Premium Support Knowledge
-     * Base</i>. For more information, see <a
+     * instance store volume on my Amazon EC2 instance to Amazon EBS?</a> in the <i>Amazon Web Services Premium Support
+     * Knowledge Base</i>. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage"
      * >Networking and storage features</a> and <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html">Amazon EC2 instance store</a> in
@@ -1194,6 +1282,16 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * types</a> in the <i>Amazon EC2 User Guide for Linux</i>, or <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/windows-ami-version-history.html#virtualization-types"
      * >Windows AMI virtualization types</a> in the <i>Amazon EC2 User Guide for Windows</i>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b> <code>Architecture</code> </b> — The CPU architecture between the recommended instance type and the current
+     * instance is different. For example, the recommended instance type might use an x86 CPU architecture and the
+     * current instance type might use a different one, such as ARM. Before migrating, you should consider recompiling
+     * the software on your instance for the new architecture. Alternatively, you might switch to an Amazon Machine
+     * Image (AMI) that supports the new architecture. For more information about the CPU architecture for each instance
+     * type, see <a href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a>.
      * </p>
      * </li>
      * </ul>
@@ -1228,8 +1326,8 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      *        <b> <code>NetworkInterface</code> </b> — The network interface of the recommended instance type is
      *        different than that of the current instance. For example, the recommended instance type supports enhanced
      *        networking and the current instance might not. To enable enhanced networking for the recommended instance
-     *        type, you will need to install the Elastic Network Adapter (ENA) driver or the Intel 82599 Virtual
-     *        Function driver. For more information, see <a href=
+     *        type, you must install the Elastic Network Adapter (ENA) driver or the Intel 82599 Virtual Function
+     *        driver. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage"
      *        >Networking and storage features</a> and <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/enhanced-networking.html">Enhanced networking on
@@ -1262,8 +1360,8 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      *        store volumes and the current instance does. Before migrating, you might need to back up the data on your
      *        instance store volumes if you want to preserve them. For more information, see <a
      *        href="https://aws.amazon.com/premiumsupport/knowledge-center/back-up-instance-store-ebs/">How do I back up
-     *        an instance store volume on my Amazon EC2 instance to Amazon EBS?</a> in the <i>AWS Premium Support
-     *        Knowledge Base</i>. For more information, see <a href=
+     *        an instance store volume on my Amazon EC2 instance to Amazon EBS?</a> in the <i>Amazon Web Services
+     *        Premium Support Knowledge Base</i>. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-networking-storage"
      *        >Networking and storage features</a> and <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html">Amazon EC2 instance
@@ -1283,6 +1381,17 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      *        virtualization types</a> in the <i>Amazon EC2 User Guide for Linux</i>, or <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/windows-ami-version-history.html#virtualization-types"
      *        >Windows AMI virtualization types</a> in the <i>Amazon EC2 User Guide for Windows</i>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b> <code>Architecture</code> </b> — The CPU architecture between the recommended instance type and the
+     *        current instance is different. For example, the recommended instance type might use an x86 CPU
+     *        architecture and the current instance type might use a different one, such as ARM. Before migrating, you
+     *        should consider recompiling the software on your instance for the new architecture. Alternatively, you
+     *        might switch to an Amazon Machine Image (AMI) that supports the new architecture. For more information
+     *        about the CPU architecture for each instance type, see <a
+     *        href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

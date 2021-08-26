@@ -77,12 +77,6 @@ public class SearchTransitGatewayMulticastGroupsRequest extends AmazonWebService
      * </li>
      * <li>
      * <p>
-     * <code>state</code> - The state of the subnet association. Valid values are <code>associated</code> |
-     * <code>associated</code> | <code>disassociated</code> | <code>disassociating</code>.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>subnet-id</code> - The ID of the subnet.
      * </p>
      * </li>
@@ -193,12 +187,6 @@ public class SearchTransitGatewayMulticastGroupsRequest extends AmazonWebService
      * </li>
      * <li>
      * <p>
-     * <code>state</code> - The state of the subnet association. Valid values are <code>associated</code> |
-     * <code>associated</code> | <code>disassociated</code> | <code>disassociating</code>.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>subnet-id</code> - The ID of the subnet.
      * </p>
      * </li>
@@ -247,12 +235,6 @@ public class SearchTransitGatewayMulticastGroupsRequest extends AmazonWebService
      *         <li>
      *         <p>
      *         <code>source-type</code> - The source type. Valid values are <code>igmp</code> | <code>static</code>.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>state</code> - The state of the subnet association. Valid values are <code>associated</code> |
-     *         <code>associated</code> | <code>disassociated</code> | <code>disassociating</code>.
      *         </p>
      *         </li>
      *         <li>
@@ -319,12 +301,6 @@ public class SearchTransitGatewayMulticastGroupsRequest extends AmazonWebService
      * </li>
      * <li>
      * <p>
-     * <code>state</code> - The state of the subnet association. Valid values are <code>associated</code> |
-     * <code>associated</code> | <code>disassociated</code> | <code>disassociating</code>.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>subnet-id</code> - The ID of the subnet.
      * </p>
      * </li>
@@ -374,12 +350,6 @@ public class SearchTransitGatewayMulticastGroupsRequest extends AmazonWebService
      *        <li>
      *        <p>
      *        <code>source-type</code> - The source type. Valid values are <code>igmp</code> | <code>static</code>.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>state</code> - The state of the subnet association. Valid values are <code>associated</code> |
-     *        <code>associated</code> | <code>disassociated</code> | <code>disassociating</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -448,12 +418,6 @@ public class SearchTransitGatewayMulticastGroupsRequest extends AmazonWebService
      * </li>
      * <li>
      * <p>
-     * <code>state</code> - The state of the subnet association. Valid values are <code>associated</code> |
-     * <code>associated</code> | <code>disassociated</code> | <code>disassociating</code>.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>subnet-id</code> - The ID of the subnet.
      * </p>
      * </li>
@@ -508,12 +472,6 @@ public class SearchTransitGatewayMulticastGroupsRequest extends AmazonWebService
      *        <li>
      *        <p>
      *        <code>source-type</code> - The source type. Valid values are <code>igmp</code> | <code>static</code>.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>state</code> - The state of the subnet association. Valid values are <code>associated</code> |
-     *        <code>associated</code> | <code>disassociated</code> | <code>disassociating</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -584,12 +542,6 @@ public class SearchTransitGatewayMulticastGroupsRequest extends AmazonWebService
      * </li>
      * <li>
      * <p>
-     * <code>state</code> - The state of the subnet association. Valid values are <code>associated</code> |
-     * <code>associated</code> | <code>disassociated</code> | <code>disassociating</code>.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>subnet-id</code> - The ID of the subnet.
      * </p>
      * </li>
@@ -639,12 +591,6 @@ public class SearchTransitGatewayMulticastGroupsRequest extends AmazonWebService
      *        <li>
      *        <p>
      *        <code>source-type</code> - The source type. Valid values are <code>igmp</code> | <code>static</code>.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>state</code> - The state of the subnet association. Valid values are <code>associated</code> |
-     *        <code>associated</code> | <code>disassociated</code> | <code>disassociating</code>.
      *        </p>
      *        </li>
      *        <li>

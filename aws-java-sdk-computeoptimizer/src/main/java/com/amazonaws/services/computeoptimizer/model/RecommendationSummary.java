@@ -42,7 +42,7 @@ public class RecommendationSummary implements Serializable, Cloneable, Structure
     private String recommendationResourceType;
     /**
      * <p>
-     * The AWS account ID of the recommendation summary.
+     * The Amazon Web Services account ID of the recommendation summary.
      * </p>
      */
     private String accountId;
@@ -178,11 +178,11 @@ public class RecommendationSummary implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The AWS account ID of the recommendation summary.
+     * The Amazon Web Services account ID of the recommendation summary.
      * </p>
      * 
      * @param accountId
-     *        The AWS account ID of the recommendation summary.
+     *        The Amazon Web Services account ID of the recommendation summary.
      */
 
     public void setAccountId(String accountId) {
@@ -191,10 +191,10 @@ public class RecommendationSummary implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The AWS account ID of the recommendation summary.
+     * The Amazon Web Services account ID of the recommendation summary.
      * </p>
      * 
-     * @return The AWS account ID of the recommendation summary.
+     * @return The Amazon Web Services account ID of the recommendation summary.
      */
 
     public String getAccountId() {
@@ -203,11 +203,11 @@ public class RecommendationSummary implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The AWS account ID of the recommendation summary.
+     * The Amazon Web Services account ID of the recommendation summary.
      * </p>
      * 
      * @param accountId
-     *        The AWS account ID of the recommendation summary.
+     *        The Amazon Web Services account ID of the recommendation summary.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

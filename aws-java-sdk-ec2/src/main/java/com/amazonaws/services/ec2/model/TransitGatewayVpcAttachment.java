@@ -46,7 +46,7 @@ public class TransitGatewayVpcAttachment implements Serializable, Cloneable {
     private String vpcId;
     /**
      * <p>
-     * The ID of the AWS account that owns the VPC.
+     * The ID of the Amazon Web Services account that owns the VPC.
      * </p>
      */
     private String vpcOwnerId;
@@ -203,11 +203,11 @@ public class TransitGatewayVpcAttachment implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ID of the AWS account that owns the VPC.
+     * The ID of the Amazon Web Services account that owns the VPC.
      * </p>
      * 
      * @param vpcOwnerId
-     *        The ID of the AWS account that owns the VPC.
+     *        The ID of the Amazon Web Services account that owns the VPC.
      */
 
     public void setVpcOwnerId(String vpcOwnerId) {
@@ -216,10 +216,10 @@ public class TransitGatewayVpcAttachment implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ID of the AWS account that owns the VPC.
+     * The ID of the Amazon Web Services account that owns the VPC.
      * </p>
      * 
-     * @return The ID of the AWS account that owns the VPC.
+     * @return The ID of the Amazon Web Services account that owns the VPC.
      */
 
     public String getVpcOwnerId() {
@@ -228,11 +228,11 @@ public class TransitGatewayVpcAttachment implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ID of the AWS account that owns the VPC.
+     * The ID of the Amazon Web Services account that owns the VPC.
      * </p>
      * 
      * @param vpcOwnerId
-     *        The ID of the AWS account that owns the VPC.
+     *        The ID of the Amazon Web Services account that owns the VPC.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

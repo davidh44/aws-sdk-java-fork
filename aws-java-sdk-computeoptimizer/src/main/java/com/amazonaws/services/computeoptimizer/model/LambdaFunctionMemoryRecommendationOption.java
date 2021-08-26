@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes a recommendation option for an AWS Lambda function.
+ * Describes a recommendation option for an Lambda function.
  * </p>
  * 
  * @see <a

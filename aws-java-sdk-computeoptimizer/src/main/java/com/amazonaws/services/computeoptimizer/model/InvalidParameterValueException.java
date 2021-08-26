@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * An invalid or out-of-range value was supplied for the input parameter.
+ * The value supplied for the input parameter is out of range or not valid.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

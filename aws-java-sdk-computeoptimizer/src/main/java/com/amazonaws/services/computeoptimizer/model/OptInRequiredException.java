@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The account is not opted in to AWS Compute Optimizer.
+ * The account is not opted in to Compute Optimizer.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

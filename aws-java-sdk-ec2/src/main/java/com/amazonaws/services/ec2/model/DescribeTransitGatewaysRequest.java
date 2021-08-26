@@ -84,7 +84,7 @@ public class DescribeTransitGatewaysRequest extends AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * <code>owner-id</code> - The ID of the AWS account that owns the transit gateway.
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the transit gateway.
      * </p>
      * </li>
      * <li>
@@ -240,7 +240,7 @@ public class DescribeTransitGatewaysRequest extends AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * <code>owner-id</code> - The ID of the AWS account that owns the transit gateway.
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the transit gateway.
      * </p>
      * </li>
      * <li>
@@ -307,7 +307,7 @@ public class DescribeTransitGatewaysRequest extends AmazonWebServiceRequest impl
      *         </li>
      *         <li>
      *         <p>
-     *         <code>owner-id</code> - The ID of the AWS account that owns the transit gateway.
+     *         <code>owner-id</code> - The ID of the Amazon Web Services account that owns the transit gateway.
      *         </p>
      *         </li>
      *         <li>
@@ -382,7 +382,7 @@ public class DescribeTransitGatewaysRequest extends AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * <code>owner-id</code> - The ID of the AWS account that owns the transit gateway.
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the transit gateway.
      * </p>
      * </li>
      * <li>
@@ -450,7 +450,7 @@ public class DescribeTransitGatewaysRequest extends AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        <code>owner-id</code> - The ID of the AWS account that owns the transit gateway.
+     *        <code>owner-id</code> - The ID of the Amazon Web Services account that owns the transit gateway.
      *        </p>
      *        </li>
      *        <li>
@@ -527,7 +527,7 @@ public class DescribeTransitGatewaysRequest extends AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * <code>owner-id</code> - The ID of the AWS account that owns the transit gateway.
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the transit gateway.
      * </p>
      * </li>
      * <li>
@@ -600,7 +600,7 @@ public class DescribeTransitGatewaysRequest extends AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        <code>owner-id</code> - The ID of the AWS account that owns the transit gateway.
+     *        <code>owner-id</code> - The ID of the Amazon Web Services account that owns the transit gateway.
      *        </p>
      *        </li>
      *        <li>
@@ -679,7 +679,7 @@ public class DescribeTransitGatewaysRequest extends AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * <code>owner-id</code> - The ID of the AWS account that owns the transit gateway.
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the transit gateway.
      * </p>
      * </li>
      * <li>
@@ -747,7 +747,7 @@ public class DescribeTransitGatewaysRequest extends AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        <code>owner-id</code> - The ID of the AWS account that owns the transit gateway.
+     *        <code>owner-id</code> - The ID of the Amazon Web Services account that owns the transit gateway.
      *        </p>
      *        </li>
      *        <li>

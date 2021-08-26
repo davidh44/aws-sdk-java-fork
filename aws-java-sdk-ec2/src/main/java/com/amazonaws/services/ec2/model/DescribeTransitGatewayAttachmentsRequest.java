@@ -55,7 +55,7 @@ public class DescribeTransitGatewayAttachmentsRequest extends AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * <code>resource-owner-id</code> - The ID of the AWS account that owns the resource.
+     * <code>resource-owner-id</code> - The ID of the Amazon Web Services account that owns the resource.
      * </p>
      * </li>
      * <li>
@@ -84,7 +84,7 @@ public class DescribeTransitGatewayAttachmentsRequest extends AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * <code>transit-gateway-owner-id</code> - The ID of the AWS account that owns the transit gateway.
+     * <code>transit-gateway-owner-id</code> - The ID of the Amazon Web Services account that owns the transit gateway.
      * </p>
      * </li>
      * </ul>
@@ -200,7 +200,7 @@ public class DescribeTransitGatewayAttachmentsRequest extends AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * <code>resource-owner-id</code> - The ID of the AWS account that owns the resource.
+     * <code>resource-owner-id</code> - The ID of the Amazon Web Services account that owns the resource.
      * </p>
      * </li>
      * <li>
@@ -229,7 +229,7 @@ public class DescribeTransitGatewayAttachmentsRequest extends AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * <code>transit-gateway-owner-id</code> - The ID of the AWS account that owns the transit gateway.
+     * <code>transit-gateway-owner-id</code> - The ID of the Amazon Web Services account that owns the transit gateway.
      * </p>
      * </li>
      * </ul>
@@ -255,7 +255,7 @@ public class DescribeTransitGatewayAttachmentsRequest extends AmazonWebServiceRe
      *         </li>
      *         <li>
      *         <p>
-     *         <code>resource-owner-id</code> - The ID of the AWS account that owns the resource.
+     *         <code>resource-owner-id</code> - The ID of the Amazon Web Services account that owns the resource.
      *         </p>
      *         </li>
      *         <li>
@@ -284,7 +284,8 @@ public class DescribeTransitGatewayAttachmentsRequest extends AmazonWebServiceRe
      *         </li>
      *         <li>
      *         <p>
-     *         <code>transit-gateway-owner-id</code> - The ID of the AWS account that owns the transit gateway.
+     *         <code>transit-gateway-owner-id</code> - The ID of the Amazon Web Services account that owns the transit
+     *         gateway.
      *         </p>
      *         </li>
      */
@@ -319,7 +320,7 @@ public class DescribeTransitGatewayAttachmentsRequest extends AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * <code>resource-owner-id</code> - The ID of the AWS account that owns the resource.
+     * <code>resource-owner-id</code> - The ID of the Amazon Web Services account that owns the resource.
      * </p>
      * </li>
      * <li>
@@ -348,7 +349,7 @@ public class DescribeTransitGatewayAttachmentsRequest extends AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * <code>transit-gateway-owner-id</code> - The ID of the AWS account that owns the transit gateway.
+     * <code>transit-gateway-owner-id</code> - The ID of the Amazon Web Services account that owns the transit gateway.
      * </p>
      * </li>
      * </ul>
@@ -375,7 +376,7 @@ public class DescribeTransitGatewayAttachmentsRequest extends AmazonWebServiceRe
      *        </li>
      *        <li>
      *        <p>
-     *        <code>resource-owner-id</code> - The ID of the AWS account that owns the resource.
+     *        <code>resource-owner-id</code> - The ID of the Amazon Web Services account that owns the resource.
      *        </p>
      *        </li>
      *        <li>
@@ -404,7 +405,8 @@ public class DescribeTransitGatewayAttachmentsRequest extends AmazonWebServiceRe
      *        </li>
      *        <li>
      *        <p>
-     *        <code>transit-gateway-owner-id</code> - The ID of the AWS account that owns the transit gateway.
+     *        <code>transit-gateway-owner-id</code> - The ID of the Amazon Web Services account that owns the transit
+     *        gateway.
      *        </p>
      *        </li>
      */
@@ -441,7 +443,7 @@ public class DescribeTransitGatewayAttachmentsRequest extends AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * <code>resource-owner-id</code> - The ID of the AWS account that owns the resource.
+     * <code>resource-owner-id</code> - The ID of the Amazon Web Services account that owns the resource.
      * </p>
      * </li>
      * <li>
@@ -470,7 +472,7 @@ public class DescribeTransitGatewayAttachmentsRequest extends AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * <code>transit-gateway-owner-id</code> - The ID of the AWS account that owns the transit gateway.
+     * <code>transit-gateway-owner-id</code> - The ID of the Amazon Web Services account that owns the transit gateway.
      * </p>
      * </li>
      * </ul>
@@ -502,7 +504,7 @@ public class DescribeTransitGatewayAttachmentsRequest extends AmazonWebServiceRe
      *        </li>
      *        <li>
      *        <p>
-     *        <code>resource-owner-id</code> - The ID of the AWS account that owns the resource.
+     *        <code>resource-owner-id</code> - The ID of the Amazon Web Services account that owns the resource.
      *        </p>
      *        </li>
      *        <li>
@@ -531,7 +533,8 @@ public class DescribeTransitGatewayAttachmentsRequest extends AmazonWebServiceRe
      *        </li>
      *        <li>
      *        <p>
-     *        <code>transit-gateway-owner-id</code> - The ID of the AWS account that owns the transit gateway.
+     *        <code>transit-gateway-owner-id</code> - The ID of the Amazon Web Services account that owns the transit
+     *        gateway.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -570,7 +573,7 @@ public class DescribeTransitGatewayAttachmentsRequest extends AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * <code>resource-owner-id</code> - The ID of the AWS account that owns the resource.
+     * <code>resource-owner-id</code> - The ID of the Amazon Web Services account that owns the resource.
      * </p>
      * </li>
      * <li>
@@ -599,7 +602,7 @@ public class DescribeTransitGatewayAttachmentsRequest extends AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * <code>transit-gateway-owner-id</code> - The ID of the AWS account that owns the transit gateway.
+     * <code>transit-gateway-owner-id</code> - The ID of the Amazon Web Services account that owns the transit gateway.
      * </p>
      * </li>
      * </ul>
@@ -626,7 +629,7 @@ public class DescribeTransitGatewayAttachmentsRequest extends AmazonWebServiceRe
      *        </li>
      *        <li>
      *        <p>
-     *        <code>resource-owner-id</code> - The ID of the AWS account that owns the resource.
+     *        <code>resource-owner-id</code> - The ID of the Amazon Web Services account that owns the resource.
      *        </p>
      *        </li>
      *        <li>
@@ -655,7 +658,8 @@ public class DescribeTransitGatewayAttachmentsRequest extends AmazonWebServiceRe
      *        </li>
      *        <li>
      *        <p>
-     *        <code>transit-gateway-owner-id</code> - The ID of the AWS account that owns the transit gateway.
+     *        <code>transit-gateway-owner-id</code> - The ID of the Amazon Web Services account that owns the transit
+     *        gateway.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

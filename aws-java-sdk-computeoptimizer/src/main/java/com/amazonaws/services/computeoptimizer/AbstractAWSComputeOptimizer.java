@@ -78,6 +78,11 @@ public class AbstractAWSComputeOptimizer implements AWSComputeOptimizer {
     }
 
     @Override
+    public GetEnrollmentStatusesForOrganizationResult getEnrollmentStatusesForOrganization(GetEnrollmentStatusesForOrganizationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetLambdaFunctionRecommendationsResult getLambdaFunctionRecommendations(GetLambdaFunctionRecommendationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

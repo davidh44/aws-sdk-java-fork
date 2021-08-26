@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes a utilization metric of an AWS Lambda function.
+ * Describes a utilization metric of an Lambda function.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/LambdaFunctionUtilizationMetric"
@@ -54,16 +54,16 @@ public class LambdaFunctionUtilizationMetric implements Serializable, Cloneable,
      * The statistic of the utilization metric.
      * </p>
      * <p>
-     * The Compute Optimizer API, AWS Command Line Interface (AWS CLI), and SDKs return utilization metrics using only
-     * the <code>Maximum</code> statistic, which is the highest value observed during the specified period.
+     * The Compute Optimizer API, Command Line Interface (CLI), and SDKs return utilization metrics using only the
+     * <code>Maximum</code> statistic, which is the highest value observed during the specified period.
      * </p>
      * <p>
      * The Compute Optimizer console displays graphs for some utilization metrics using the <code>Average</code>
      * statistic, which is the value of <code>Sum</code> / <code>SampleCount</code> during the specified period. For
      * more information, see <a
      * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/viewing-recommendations.html">Viewing resource
-     * recommendations</a> in the <i>AWS Compute Optimizer User Guide</i>. You can also get averaged utilization metric
-     * data for your resources using Amazon CloudWatch. For more information, see the <a
+     * recommendations</a> in the <i>Compute Optimizer User Guide</i>. You can also get averaged utilization metric data
+     * for your resources using Amazon CloudWatch. For more information, see the <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html">Amazon CloudWatch
      * User Guide</a>.
      * </p>
@@ -256,16 +256,16 @@ public class LambdaFunctionUtilizationMetric implements Serializable, Cloneable,
      * The statistic of the utilization metric.
      * </p>
      * <p>
-     * The Compute Optimizer API, AWS Command Line Interface (AWS CLI), and SDKs return utilization metrics using only
-     * the <code>Maximum</code> statistic, which is the highest value observed during the specified period.
+     * The Compute Optimizer API, Command Line Interface (CLI), and SDKs return utilization metrics using only the
+     * <code>Maximum</code> statistic, which is the highest value observed during the specified period.
      * </p>
      * <p>
      * The Compute Optimizer console displays graphs for some utilization metrics using the <code>Average</code>
      * statistic, which is the value of <code>Sum</code> / <code>SampleCount</code> during the specified period. For
      * more information, see <a
      * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/viewing-recommendations.html">Viewing resource
-     * recommendations</a> in the <i>AWS Compute Optimizer User Guide</i>. You can also get averaged utilization metric
-     * data for your resources using Amazon CloudWatch. For more information, see the <a
+     * recommendations</a> in the <i>Compute Optimizer User Guide</i>. You can also get averaged utilization metric data
+     * for your resources using Amazon CloudWatch. For more information, see the <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html">Amazon CloudWatch
      * User Guide</a>.
      * </p>
@@ -273,15 +273,15 @@ public class LambdaFunctionUtilizationMetric implements Serializable, Cloneable,
      * @param statistic
      *        The statistic of the utilization metric.</p>
      *        <p>
-     *        The Compute Optimizer API, AWS Command Line Interface (AWS CLI), and SDKs return utilization metrics using
-     *        only the <code>Maximum</code> statistic, which is the highest value observed during the specified period.
+     *        The Compute Optimizer API, Command Line Interface (CLI), and SDKs return utilization metrics using only
+     *        the <code>Maximum</code> statistic, which is the highest value observed during the specified period.
      *        </p>
      *        <p>
      *        The Compute Optimizer console displays graphs for some utilization metrics using the <code>Average</code>
      *        statistic, which is the value of <code>Sum</code> / <code>SampleCount</code> during the specified period.
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/viewing-recommendations.html">Viewing
-     *        resource recommendations</a> in the <i>AWS Compute Optimizer User Guide</i>. You can also get averaged
+     *        resource recommendations</a> in the <i>Compute Optimizer User Guide</i>. You can also get averaged
      *        utilization metric data for your resources using Amazon CloudWatch. For more information, see the <a
      *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html">Amazon
      *        CloudWatch User Guide</a>.
@@ -297,32 +297,31 @@ public class LambdaFunctionUtilizationMetric implements Serializable, Cloneable,
      * The statistic of the utilization metric.
      * </p>
      * <p>
-     * The Compute Optimizer API, AWS Command Line Interface (AWS CLI), and SDKs return utilization metrics using only
-     * the <code>Maximum</code> statistic, which is the highest value observed during the specified period.
+     * The Compute Optimizer API, Command Line Interface (CLI), and SDKs return utilization metrics using only the
+     * <code>Maximum</code> statistic, which is the highest value observed during the specified period.
      * </p>
      * <p>
      * The Compute Optimizer console displays graphs for some utilization metrics using the <code>Average</code>
      * statistic, which is the value of <code>Sum</code> / <code>SampleCount</code> during the specified period. For
      * more information, see <a
      * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/viewing-recommendations.html">Viewing resource
-     * recommendations</a> in the <i>AWS Compute Optimizer User Guide</i>. You can also get averaged utilization metric
-     * data for your resources using Amazon CloudWatch. For more information, see the <a
+     * recommendations</a> in the <i>Compute Optimizer User Guide</i>. You can also get averaged utilization metric data
+     * for your resources using Amazon CloudWatch. For more information, see the <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html">Amazon CloudWatch
      * User Guide</a>.
      * </p>
      * 
      * @return The statistic of the utilization metric.</p>
      *         <p>
-     *         The Compute Optimizer API, AWS Command Line Interface (AWS CLI), and SDKs return utilization metrics
-     *         using only the <code>Maximum</code> statistic, which is the highest value observed during the specified
-     *         period.
+     *         The Compute Optimizer API, Command Line Interface (CLI), and SDKs return utilization metrics using only
+     *         the <code>Maximum</code> statistic, which is the highest value observed during the specified period.
      *         </p>
      *         <p>
      *         The Compute Optimizer console displays graphs for some utilization metrics using the <code>Average</code>
      *         statistic, which is the value of <code>Sum</code> / <code>SampleCount</code> during the specified period.
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/viewing-recommendations.html">Viewing
-     *         resource recommendations</a> in the <i>AWS Compute Optimizer User Guide</i>. You can also get averaged
+     *         resource recommendations</a> in the <i>Compute Optimizer User Guide</i>. You can also get averaged
      *         utilization metric data for your resources using Amazon CloudWatch. For more information, see the <a
      *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html">Amazon
      *         CloudWatch User Guide</a>.
@@ -338,16 +337,16 @@ public class LambdaFunctionUtilizationMetric implements Serializable, Cloneable,
      * The statistic of the utilization metric.
      * </p>
      * <p>
-     * The Compute Optimizer API, AWS Command Line Interface (AWS CLI), and SDKs return utilization metrics using only
-     * the <code>Maximum</code> statistic, which is the highest value observed during the specified period.
+     * The Compute Optimizer API, Command Line Interface (CLI), and SDKs return utilization metrics using only the
+     * <code>Maximum</code> statistic, which is the highest value observed during the specified period.
      * </p>
      * <p>
      * The Compute Optimizer console displays graphs for some utilization metrics using the <code>Average</code>
      * statistic, which is the value of <code>Sum</code> / <code>SampleCount</code> during the specified period. For
      * more information, see <a
      * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/viewing-recommendations.html">Viewing resource
-     * recommendations</a> in the <i>AWS Compute Optimizer User Guide</i>. You can also get averaged utilization metric
-     * data for your resources using Amazon CloudWatch. For more information, see the <a
+     * recommendations</a> in the <i>Compute Optimizer User Guide</i>. You can also get averaged utilization metric data
+     * for your resources using Amazon CloudWatch. For more information, see the <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html">Amazon CloudWatch
      * User Guide</a>.
      * </p>
@@ -355,15 +354,15 @@ public class LambdaFunctionUtilizationMetric implements Serializable, Cloneable,
      * @param statistic
      *        The statistic of the utilization metric.</p>
      *        <p>
-     *        The Compute Optimizer API, AWS Command Line Interface (AWS CLI), and SDKs return utilization metrics using
-     *        only the <code>Maximum</code> statistic, which is the highest value observed during the specified period.
+     *        The Compute Optimizer API, Command Line Interface (CLI), and SDKs return utilization metrics using only
+     *        the <code>Maximum</code> statistic, which is the highest value observed during the specified period.
      *        </p>
      *        <p>
      *        The Compute Optimizer console displays graphs for some utilization metrics using the <code>Average</code>
      *        statistic, which is the value of <code>Sum</code> / <code>SampleCount</code> during the specified period.
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/viewing-recommendations.html">Viewing
-     *        resource recommendations</a> in the <i>AWS Compute Optimizer User Guide</i>. You can also get averaged
+     *        resource recommendations</a> in the <i>Compute Optimizer User Guide</i>. You can also get averaged
      *        utilization metric data for your resources using Amazon CloudWatch. For more information, see the <a
      *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html">Amazon
      *        CloudWatch User Guide</a>.
@@ -381,16 +380,16 @@ public class LambdaFunctionUtilizationMetric implements Serializable, Cloneable,
      * The statistic of the utilization metric.
      * </p>
      * <p>
-     * The Compute Optimizer API, AWS Command Line Interface (AWS CLI), and SDKs return utilization metrics using only
-     * the <code>Maximum</code> statistic, which is the highest value observed during the specified period.
+     * The Compute Optimizer API, Command Line Interface (CLI), and SDKs return utilization metrics using only the
+     * <code>Maximum</code> statistic, which is the highest value observed during the specified period.
      * </p>
      * <p>
      * The Compute Optimizer console displays graphs for some utilization metrics using the <code>Average</code>
      * statistic, which is the value of <code>Sum</code> / <code>SampleCount</code> during the specified period. For
      * more information, see <a
      * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/viewing-recommendations.html">Viewing resource
-     * recommendations</a> in the <i>AWS Compute Optimizer User Guide</i>. You can also get averaged utilization metric
-     * data for your resources using Amazon CloudWatch. For more information, see the <a
+     * recommendations</a> in the <i>Compute Optimizer User Guide</i>. You can also get averaged utilization metric data
+     * for your resources using Amazon CloudWatch. For more information, see the <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html">Amazon CloudWatch
      * User Guide</a>.
      * </p>
@@ -398,15 +397,15 @@ public class LambdaFunctionUtilizationMetric implements Serializable, Cloneable,
      * @param statistic
      *        The statistic of the utilization metric.</p>
      *        <p>
-     *        The Compute Optimizer API, AWS Command Line Interface (AWS CLI), and SDKs return utilization metrics using
-     *        only the <code>Maximum</code> statistic, which is the highest value observed during the specified period.
+     *        The Compute Optimizer API, Command Line Interface (CLI), and SDKs return utilization metrics using only
+     *        the <code>Maximum</code> statistic, which is the highest value observed during the specified period.
      *        </p>
      *        <p>
      *        The Compute Optimizer console displays graphs for some utilization metrics using the <code>Average</code>
      *        statistic, which is the value of <code>Sum</code> / <code>SampleCount</code> during the specified period.
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/viewing-recommendations.html">Viewing
-     *        resource recommendations</a> in the <i>AWS Compute Optimizer User Guide</i>. You can also get averaged
+     *        resource recommendations</a> in the <i>Compute Optimizer User Guide</i>. You can also get averaged
      *        utilization metric data for your resources using Amazon CloudWatch. For more information, see the <a
      *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html">Amazon
      *        CloudWatch User Guide</a>.

@@ -70,6 +70,10 @@ public class CelebrityJsonUnmarshaller implements Unmarshaller<Celebrity, JsonUn
                     context.nextToken();
                     celebrity.setMatchConfidence(context.getUnmarshaller(Float.class).unmarshall(context));
                 }
+                if (context.testExpression("KnownGender", targetDepth)) {
+                    context.nextToken();
+                    celebrity.setKnownGender(KnownGenderJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

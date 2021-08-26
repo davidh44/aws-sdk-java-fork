@@ -60,6 +60,14 @@ public class GetEnrollmentStatusResultJsonUnmarshaller implements Unmarshaller<G
                     context.nextToken();
                     getEnrollmentStatusResult.setMemberAccountsEnrolled(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("lastUpdatedTimestamp", targetDepth)) {
+                    context.nextToken();
+                    getEnrollmentStatusResult.setLastUpdatedTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("numberOfMemberAccountsOptedIn", targetDepth)) {
+                    context.nextToken();
+                    getEnrollmentStatusResult.setNumberOfMemberAccountsOptedIn(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

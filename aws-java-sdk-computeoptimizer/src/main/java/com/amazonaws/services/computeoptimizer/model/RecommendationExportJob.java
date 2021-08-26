@@ -22,11 +22,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * Describes a recommendation export job.
  * </p>
  * <p>
- * Use the <code>DescribeRecommendationExportJobs</code> action to view your recommendation export jobs.
+ * Use the <a>DescribeRecommendationExportJobs</a> action to view your recommendation export jobs.
  * </p>
  * <p>
- * Use the <code>ExportAutoScalingGroupRecommendations</code> or <code>ExportEC2InstanceRecommendations</code> actions
- * to request an export of your recommendations.
+ * Use the <a>ExportAutoScalingGroupRecommendations</a> or <a>ExportEC2InstanceRecommendations</a> actions to request an
+ * export of your recommendations.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/RecommendationExportJob"

@@ -70,7 +70,7 @@ public class TrunkInterfaceAssociation implements Serializable, Cloneable {
     private Integer greKey;
     /**
      * <p>
-     * The tags for the trunk interface associaton.
+     * The tags for the trunk interface association.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
@@ -336,10 +336,10 @@ public class TrunkInterfaceAssociation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tags for the trunk interface associaton.
+     * The tags for the trunk interface association.
      * </p>
      * 
-     * @return The tags for the trunk interface associaton.
+     * @return The tags for the trunk interface association.
      */
 
     public java.util.List<Tag> getTags() {
@@ -351,11 +351,11 @@ public class TrunkInterfaceAssociation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tags for the trunk interface associaton.
+     * The tags for the trunk interface association.
      * </p>
      * 
      * @param tags
-     *        The tags for the trunk interface associaton.
+     *        The tags for the trunk interface association.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -369,7 +369,7 @@ public class TrunkInterfaceAssociation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tags for the trunk interface associaton.
+     * The tags for the trunk interface association.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -378,7 +378,7 @@ public class TrunkInterfaceAssociation implements Serializable, Cloneable {
      * </p>
      * 
      * @param tags
-     *        The tags for the trunk interface associaton.
+     *        The tags for the trunk interface association.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -394,11 +394,11 @@ public class TrunkInterfaceAssociation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tags for the trunk interface associaton.
+     * The tags for the trunk interface association.
      * </p>
      * 
      * @param tags
-     *        The tags for the trunk interface associaton.
+     *        The tags for the trunk interface association.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -87,6 +87,10 @@ public class ModifyManagedPrefixListRequestMarshaller implements Marshaller<Requ
             }
         }
 
+        if (modifyManagedPrefixListRequest.getMaxEntries() != null) {
+            request.addParameter("MaxEntries", StringUtils.fromInteger(modifyManagedPrefixListRequest.getMaxEntries()));
+        }
+
         return request;
     }
 

@@ -29,8 +29,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <note>
  * <p>
  * The <code>Cpu</code> and <code>Memory</code> metrics are the only projected utilization metrics returned when you run
- * the <code>GetEC2RecommendationProjectedMetrics</code> action. Additionally, the <code>Memory</code> metric is
- * returned only for resources that have the unified CloudWatch agent installed on them. For more information, see <a
+ * the <a>GetEC2RecommendationProjectedMetrics</a> action. Additionally, the <code>Memory</code> metric is returned only
+ * for resources that have the unified CloudWatch agent installed on them. For more information, see <a
  * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/metrics.html#cw-agent">Enabling Memory Utilization with
  * the CloudWatch Agent</a>.
  * </p>
@@ -86,7 +86,7 @@ public class ProjectedMetric implements Serializable, Cloneable, StructuredPojo 
     private String name;
     /**
      * <p>
-     * The time stamps of the projected utilization metric.
+     * The timestamps of the projected utilization metric.
      * </p>
      */
     private java.util.List<java.util.Date> timestamps;
@@ -442,10 +442,10 @@ public class ProjectedMetric implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The time stamps of the projected utilization metric.
+     * The timestamps of the projected utilization metric.
      * </p>
      * 
-     * @return The time stamps of the projected utilization metric.
+     * @return The timestamps of the projected utilization metric.
      */
 
     public java.util.List<java.util.Date> getTimestamps() {
@@ -454,11 +454,11 @@ public class ProjectedMetric implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The time stamps of the projected utilization metric.
+     * The timestamps of the projected utilization metric.
      * </p>
      * 
      * @param timestamps
-     *        The time stamps of the projected utilization metric.
+     *        The timestamps of the projected utilization metric.
      */
 
     public void setTimestamps(java.util.Collection<java.util.Date> timestamps) {
@@ -472,7 +472,7 @@ public class ProjectedMetric implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The time stamps of the projected utilization metric.
+     * The timestamps of the projected utilization metric.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -481,7 +481,7 @@ public class ProjectedMetric implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param timestamps
-     *        The time stamps of the projected utilization metric.
+     *        The timestamps of the projected utilization metric.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -497,11 +497,11 @@ public class ProjectedMetric implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The time stamps of the projected utilization metric.
+     * The timestamps of the projected utilization metric.
      * </p>
      * 
      * @param timestamps
-     *        The time stamps of the projected utilization metric.
+     *        The timestamps of the projected utilization metric.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

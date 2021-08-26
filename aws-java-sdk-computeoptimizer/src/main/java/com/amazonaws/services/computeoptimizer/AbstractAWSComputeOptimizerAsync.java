@@ -170,6 +170,21 @@ public class AbstractAWSComputeOptimizerAsync extends AbstractAWSComputeOptimize
     }
 
     @Override
+    public java.util.concurrent.Future<GetEnrollmentStatusesForOrganizationResult> getEnrollmentStatusesForOrganizationAsync(
+            GetEnrollmentStatusesForOrganizationRequest request) {
+
+        return getEnrollmentStatusesForOrganizationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEnrollmentStatusesForOrganizationResult> getEnrollmentStatusesForOrganizationAsync(
+            GetEnrollmentStatusesForOrganizationRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetEnrollmentStatusesForOrganizationRequest, GetEnrollmentStatusesForOrganizationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetLambdaFunctionRecommendationsResult> getLambdaFunctionRecommendationsAsync(
             GetLambdaFunctionRecommendationsRequest request) {
 

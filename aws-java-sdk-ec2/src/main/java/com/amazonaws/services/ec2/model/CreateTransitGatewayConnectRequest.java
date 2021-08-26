@@ -28,7 +28,8 @@ public class CreateTransitGatewayConnectRequest extends AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The ID of the transit gateway attachment. You can specify a VPC attachment or a AWS Direct Connect attachment.
+     * The ID of the transit gateway attachment. You can specify a VPC attachment or Amazon Web Services Direct Connect
+     * attachment.
      * </p>
      */
     private String transportTransitGatewayAttachmentId;
@@ -47,12 +48,13 @@ public class CreateTransitGatewayConnectRequest extends AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The ID of the transit gateway attachment. You can specify a VPC attachment or a AWS Direct Connect attachment.
+     * The ID of the transit gateway attachment. You can specify a VPC attachment or Amazon Web Services Direct Connect
+     * attachment.
      * </p>
      * 
      * @param transportTransitGatewayAttachmentId
-     *        The ID of the transit gateway attachment. You can specify a VPC attachment or a AWS Direct Connect
-     *        attachment.
+     *        The ID of the transit gateway attachment. You can specify a VPC attachment or Amazon Web Services Direct
+     *        Connect attachment.
      */
 
     public void setTransportTransitGatewayAttachmentId(String transportTransitGatewayAttachmentId) {
@@ -61,11 +63,12 @@ public class CreateTransitGatewayConnectRequest extends AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The ID of the transit gateway attachment. You can specify a VPC attachment or a AWS Direct Connect attachment.
+     * The ID of the transit gateway attachment. You can specify a VPC attachment or Amazon Web Services Direct Connect
+     * attachment.
      * </p>
      * 
-     * @return The ID of the transit gateway attachment. You can specify a VPC attachment or a AWS Direct Connect
-     *         attachment.
+     * @return The ID of the transit gateway attachment. You can specify a VPC attachment or Amazon Web Services Direct
+     *         Connect attachment.
      */
 
     public String getTransportTransitGatewayAttachmentId() {
@@ -74,12 +77,13 @@ public class CreateTransitGatewayConnectRequest extends AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The ID of the transit gateway attachment. You can specify a VPC attachment or a AWS Direct Connect attachment.
+     * The ID of the transit gateway attachment. You can specify a VPC attachment or Amazon Web Services Direct Connect
+     * attachment.
      * </p>
      * 
      * @param transportTransitGatewayAttachmentId
-     *        The ID of the transit gateway attachment. You can specify a VPC attachment or a AWS Direct Connect
-     *        attachment.
+     *        The ID of the transit gateway attachment. You can specify a VPC attachment or Amazon Web Services Direct
+     *        Connect attachment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

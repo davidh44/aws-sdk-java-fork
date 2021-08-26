@@ -55,7 +55,11 @@ public enum LanguageCode {
     TaIN("ta-IN"),
     TeIN("te-IN"),
     TrTR("tr-TR"),
-    ZhCN("zh-CN");
+    ZhCN("zh-CN"),
+    ZhTW("zh-TW"),
+    ThTH("th-TH"),
+    EnZA("en-ZA"),
+    EnNZ("en-NZ");
 
     private String value;
 

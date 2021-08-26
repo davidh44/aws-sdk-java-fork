@@ -27,7 +27,7 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The IDs of the AWS accounts for which to export instance recommendations.
+     * The IDs of the Amazon Web Services accounts for which to export instance recommendations.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -48,7 +48,7 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
     private java.util.List<String> accountIds;
     /**
      * <p>
-     * An array of objects that describe a filter to export a more specific set of instance recommendations.
+     * An array of objects to specify a filter that exports a more specific set of instance recommendations.
      * </p>
      */
     private java.util.List<Filter> filters;
@@ -69,11 +69,11 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      * <p>
      * You must create the destination Amazon S3 bucket for your recommendations export before you create the export
      * job. Compute Optimizer does not create the S3 bucket for you. After you create the S3 bucket, ensure that it has
-     * the required permission policy to allow Compute Optimizer to write the export file to it. If you plan to specify
-     * an object prefix when you create the export job, you must include the object prefix in the policy that you add to
-     * the S3 bucket. For more information, see <a href=
+     * the required permissions policy policy to allow Compute Optimizer to write the export file to it. If you plan to
+     * specify an object prefix when you create the export job, you must include the object prefix in the that you add
+     * to the S3 bucket. For more information, see <a href=
      * "https://docs.aws.amazon.com/compute-optimizer/latest/ug/create-s3-bucket-policy-for-compute-optimizer.html"
-     * >Amazon S3 Bucket Policy for Compute Optimizer</a> in the <i>Compute Optimizer user guide</i>.
+     * >Amazon S3 Bucket Policy for Compute Optimizer</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      */
     private S3DestinationConfig s3DestinationConfig;
@@ -95,7 +95,7 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      * The member accounts must also be opted in to Compute Optimizer, and trusted access for Compute Optimizer must be
      * enabled in the organization account. For more information, see <a
      * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/security-iam.html#trusted-service-access">Compute
-     * Optimizer and AWS Organizations trusted access</a> in the <i>AWS Compute Optimizer User Guide</i>.
+     * Optimizer and Amazon Web Services Organizations trusted access</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      * <p>
      * Recommendations for member accounts of the organization are not included in the export file if this parameter is
@@ -107,10 +107,16 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      * </p>
      */
     private Boolean includeMemberAccounts;
+    /**
+     * <p>
+     * An object to specify the preferences for the Amazon EC2 instance recommendations to export.
+     * </p>
+     */
+    private RecommendationPreferences recommendationPreferences;
 
     /**
      * <p>
-     * The IDs of the AWS accounts for which to export instance recommendations.
+     * The IDs of the Amazon Web Services accounts for which to export instance recommendations.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -128,7 +134,7 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      * You can specify multiple account IDs per request.
      * </p>
      * 
-     * @return The IDs of the AWS accounts for which to export instance recommendations.</p>
+     * @return The IDs of the Amazon Web Services accounts for which to export instance recommendations.</p>
      *         <p>
      *         If your account is the management account of an organization, use this parameter to specify the member
      *         account for which you want to export recommendations.
@@ -151,7 +157,7 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The IDs of the AWS accounts for which to export instance recommendations.
+     * The IDs of the Amazon Web Services accounts for which to export instance recommendations.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -170,7 +176,7 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      * </p>
      * 
      * @param accountIds
-     *        The IDs of the AWS accounts for which to export instance recommendations.</p>
+     *        The IDs of the Amazon Web Services accounts for which to export instance recommendations.</p>
      *        <p>
      *        If your account is the management account of an organization, use this parameter to specify the member
      *        account for which you want to export recommendations.
@@ -198,7 +204,7 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The IDs of the AWS accounts for which to export instance recommendations.
+     * The IDs of the Amazon Web Services accounts for which to export instance recommendations.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -222,7 +228,7 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      * </p>
      * 
      * @param accountIds
-     *        The IDs of the AWS accounts for which to export instance recommendations.</p>
+     *        The IDs of the Amazon Web Services accounts for which to export instance recommendations.</p>
      *        <p>
      *        If your account is the management account of an organization, use this parameter to specify the member
      *        account for which you want to export recommendations.
@@ -252,7 +258,7 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The IDs of the AWS accounts for which to export instance recommendations.
+     * The IDs of the Amazon Web Services accounts for which to export instance recommendations.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -271,7 +277,7 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      * </p>
      * 
      * @param accountIds
-     *        The IDs of the AWS accounts for which to export instance recommendations.</p>
+     *        The IDs of the Amazon Web Services accounts for which to export instance recommendations.</p>
      *        <p>
      *        If your account is the management account of an organization, use this parameter to specify the member
      *        account for which you want to export recommendations.
@@ -296,10 +302,10 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * An array of objects that describe a filter to export a more specific set of instance recommendations.
+     * An array of objects to specify a filter that exports a more specific set of instance recommendations.
      * </p>
      * 
-     * @return An array of objects that describe a filter to export a more specific set of instance recommendations.
+     * @return An array of objects to specify a filter that exports a more specific set of instance recommendations.
      */
 
     public java.util.List<Filter> getFilters() {
@@ -308,11 +314,11 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * An array of objects that describe a filter to export a more specific set of instance recommendations.
+     * An array of objects to specify a filter that exports a more specific set of instance recommendations.
      * </p>
      * 
      * @param filters
-     *        An array of objects that describe a filter to export a more specific set of instance recommendations.
+     *        An array of objects to specify a filter that exports a more specific set of instance recommendations.
      */
 
     public void setFilters(java.util.Collection<Filter> filters) {
@@ -326,7 +332,7 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * An array of objects that describe a filter to export a more specific set of instance recommendations.
+     * An array of objects to specify a filter that exports a more specific set of instance recommendations.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -335,7 +341,7 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      * </p>
      * 
      * @param filters
-     *        An array of objects that describe a filter to export a more specific set of instance recommendations.
+     *        An array of objects to specify a filter that exports a more specific set of instance recommendations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -351,11 +357,11 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * An array of objects that describe a filter to export a more specific set of instance recommendations.
+     * An array of objects to specify a filter that exports a more specific set of instance recommendations.
      * </p>
      * 
      * @param filters
-     *        An array of objects that describe a filter to export a more specific set of instance recommendations.
+     *        An array of objects to specify a filter that exports a more specific set of instance recommendations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -500,11 +506,11 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      * <p>
      * You must create the destination Amazon S3 bucket for your recommendations export before you create the export
      * job. Compute Optimizer does not create the S3 bucket for you. After you create the S3 bucket, ensure that it has
-     * the required permission policy to allow Compute Optimizer to write the export file to it. If you plan to specify
-     * an object prefix when you create the export job, you must include the object prefix in the policy that you add to
-     * the S3 bucket. For more information, see <a href=
+     * the required permissions policy policy to allow Compute Optimizer to write the export file to it. If you plan to
+     * specify an object prefix when you create the export job, you must include the object prefix in the that you add
+     * to the S3 bucket. For more information, see <a href=
      * "https://docs.aws.amazon.com/compute-optimizer/latest/ug/create-s3-bucket-policy-for-compute-optimizer.html"
-     * >Amazon S3 Bucket Policy for Compute Optimizer</a> in the <i>Compute Optimizer user guide</i>.
+     * >Amazon S3 Bucket Policy for Compute Optimizer</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      * 
      * @param s3DestinationConfig
@@ -513,11 +519,11 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      *        <p>
      *        You must create the destination Amazon S3 bucket for your recommendations export before you create the
      *        export job. Compute Optimizer does not create the S3 bucket for you. After you create the S3 bucket,
-     *        ensure that it has the required permission policy to allow Compute Optimizer to write the export file to
-     *        it. If you plan to specify an object prefix when you create the export job, you must include the object
-     *        prefix in the policy that you add to the S3 bucket. For more information, see <a href=
+     *        ensure that it has the required permissions policy policy to allow Compute Optimizer to write the export
+     *        file to it. If you plan to specify an object prefix when you create the export job, you must include the
+     *        object prefix in the that you add to the S3 bucket. For more information, see <a href=
      *        "https://docs.aws.amazon.com/compute-optimizer/latest/ug/create-s3-bucket-policy-for-compute-optimizer.html"
-     *        >Amazon S3 Bucket Policy for Compute Optimizer</a> in the <i>Compute Optimizer user guide</i>.
+     *        >Amazon S3 Bucket Policy for Compute Optimizer</a> in the <i>Compute Optimizer User Guide</i>.
      */
 
     public void setS3DestinationConfig(S3DestinationConfig s3DestinationConfig) {
@@ -532,11 +538,11 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      * <p>
      * You must create the destination Amazon S3 bucket for your recommendations export before you create the export
      * job. Compute Optimizer does not create the S3 bucket for you. After you create the S3 bucket, ensure that it has
-     * the required permission policy to allow Compute Optimizer to write the export file to it. If you plan to specify
-     * an object prefix when you create the export job, you must include the object prefix in the policy that you add to
-     * the S3 bucket. For more information, see <a href=
+     * the required permissions policy policy to allow Compute Optimizer to write the export file to it. If you plan to
+     * specify an object prefix when you create the export job, you must include the object prefix in the that you add
+     * to the S3 bucket. For more information, see <a href=
      * "https://docs.aws.amazon.com/compute-optimizer/latest/ug/create-s3-bucket-policy-for-compute-optimizer.html"
-     * >Amazon S3 Bucket Policy for Compute Optimizer</a> in the <i>Compute Optimizer user guide</i>.
+     * >Amazon S3 Bucket Policy for Compute Optimizer</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      * 
      * @return An object to specify the destination Amazon Simple Storage Service (Amazon S3) bucket name and key prefix
@@ -544,11 +550,11 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      *         <p>
      *         You must create the destination Amazon S3 bucket for your recommendations export before you create the
      *         export job. Compute Optimizer does not create the S3 bucket for you. After you create the S3 bucket,
-     *         ensure that it has the required permission policy to allow Compute Optimizer to write the export file to
-     *         it. If you plan to specify an object prefix when you create the export job, you must include the object
-     *         prefix in the policy that you add to the S3 bucket. For more information, see <a href=
+     *         ensure that it has the required permissions policy policy to allow Compute Optimizer to write the export
+     *         file to it. If you plan to specify an object prefix when you create the export job, you must include the
+     *         object prefix in the that you add to the S3 bucket. For more information, see <a href=
      *         "https://docs.aws.amazon.com/compute-optimizer/latest/ug/create-s3-bucket-policy-for-compute-optimizer.html"
-     *         >Amazon S3 Bucket Policy for Compute Optimizer</a> in the <i>Compute Optimizer user guide</i>.
+     *         >Amazon S3 Bucket Policy for Compute Optimizer</a> in the <i>Compute Optimizer User Guide</i>.
      */
 
     public S3DestinationConfig getS3DestinationConfig() {
@@ -563,11 +569,11 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      * <p>
      * You must create the destination Amazon S3 bucket for your recommendations export before you create the export
      * job. Compute Optimizer does not create the S3 bucket for you. After you create the S3 bucket, ensure that it has
-     * the required permission policy to allow Compute Optimizer to write the export file to it. If you plan to specify
-     * an object prefix when you create the export job, you must include the object prefix in the policy that you add to
-     * the S3 bucket. For more information, see <a href=
+     * the required permissions policy policy to allow Compute Optimizer to write the export file to it. If you plan to
+     * specify an object prefix when you create the export job, you must include the object prefix in the that you add
+     * to the S3 bucket. For more information, see <a href=
      * "https://docs.aws.amazon.com/compute-optimizer/latest/ug/create-s3-bucket-policy-for-compute-optimizer.html"
-     * >Amazon S3 Bucket Policy for Compute Optimizer</a> in the <i>Compute Optimizer user guide</i>.
+     * >Amazon S3 Bucket Policy for Compute Optimizer</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      * 
      * @param s3DestinationConfig
@@ -576,11 +582,11 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      *        <p>
      *        You must create the destination Amazon S3 bucket for your recommendations export before you create the
      *        export job. Compute Optimizer does not create the S3 bucket for you. After you create the S3 bucket,
-     *        ensure that it has the required permission policy to allow Compute Optimizer to write the export file to
-     *        it. If you plan to specify an object prefix when you create the export job, you must include the object
-     *        prefix in the policy that you add to the S3 bucket. For more information, see <a href=
+     *        ensure that it has the required permissions policy policy to allow Compute Optimizer to write the export
+     *        file to it. If you plan to specify an object prefix when you create the export job, you must include the
+     *        object prefix in the that you add to the S3 bucket. For more information, see <a href=
      *        "https://docs.aws.amazon.com/compute-optimizer/latest/ug/create-s3-bucket-policy-for-compute-optimizer.html"
-     *        >Amazon S3 Bucket Policy for Compute Optimizer</a> in the <i>Compute Optimizer user guide</i>.
+     *        >Amazon S3 Bucket Policy for Compute Optimizer</a> in the <i>Compute Optimizer User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -677,7 +683,7 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      * The member accounts must also be opted in to Compute Optimizer, and trusted access for Compute Optimizer must be
      * enabled in the organization account. For more information, see <a
      * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/security-iam.html#trusted-service-access">Compute
-     * Optimizer and AWS Organizations trusted access</a> in the <i>AWS Compute Optimizer User Guide</i>.
+     * Optimizer and Amazon Web Services Organizations trusted access</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      * <p>
      * Recommendations for member accounts of the organization are not included in the export file if this parameter is
@@ -695,8 +701,8 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      *        The member accounts must also be opted in to Compute Optimizer, and trusted access for Compute Optimizer
      *        must be enabled in the organization account. For more information, see <a
      *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/security-iam.html#trusted-service-access"
-     *        >Compute Optimizer and AWS Organizations trusted access</a> in the <i>AWS Compute Optimizer User
-     *        Guide</i>.
+     *        >Compute Optimizer and Amazon Web Services Organizations trusted access</a> in the <i>Compute Optimizer
+     *        User Guide</i>.
      *        </p>
      *        <p>
      *        Recommendations for member accounts of the organization are not included in the export file if this
@@ -720,7 +726,7 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      * The member accounts must also be opted in to Compute Optimizer, and trusted access for Compute Optimizer must be
      * enabled in the organization account. For more information, see <a
      * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/security-iam.html#trusted-service-access">Compute
-     * Optimizer and AWS Organizations trusted access</a> in the <i>AWS Compute Optimizer User Guide</i>.
+     * Optimizer and Amazon Web Services Organizations trusted access</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      * <p>
      * Recommendations for member accounts of the organization are not included in the export file if this parameter is
@@ -737,8 +743,8 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      *         The member accounts must also be opted in to Compute Optimizer, and trusted access for Compute Optimizer
      *         must be enabled in the organization account. For more information, see <a
      *         href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/security-iam.html#trusted-service-access"
-     *         >Compute Optimizer and AWS Organizations trusted access</a> in the <i>AWS Compute Optimizer User
-     *         Guide</i>.
+     *         >Compute Optimizer and Amazon Web Services Organizations trusted access</a> in the <i>Compute Optimizer
+     *         User Guide</i>.
      *         </p>
      *         <p>
      *         Recommendations for member accounts of the organization are not included in the export file if this
@@ -762,7 +768,7 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      * The member accounts must also be opted in to Compute Optimizer, and trusted access for Compute Optimizer must be
      * enabled in the organization account. For more information, see <a
      * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/security-iam.html#trusted-service-access">Compute
-     * Optimizer and AWS Organizations trusted access</a> in the <i>AWS Compute Optimizer User Guide</i>.
+     * Optimizer and Amazon Web Services Organizations trusted access</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      * <p>
      * Recommendations for member accounts of the organization are not included in the export file if this parameter is
@@ -780,8 +786,8 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      *        The member accounts must also be opted in to Compute Optimizer, and trusted access for Compute Optimizer
      *        must be enabled in the organization account. For more information, see <a
      *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/security-iam.html#trusted-service-access"
-     *        >Compute Optimizer and AWS Organizations trusted access</a> in the <i>AWS Compute Optimizer User
-     *        Guide</i>.
+     *        >Compute Optimizer and Amazon Web Services Organizations trusted access</a> in the <i>Compute Optimizer
+     *        User Guide</i>.
      *        </p>
      *        <p>
      *        Recommendations for member accounts of the organization are not included in the export file if this
@@ -807,7 +813,7 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      * The member accounts must also be opted in to Compute Optimizer, and trusted access for Compute Optimizer must be
      * enabled in the organization account. For more information, see <a
      * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/security-iam.html#trusted-service-access">Compute
-     * Optimizer and AWS Organizations trusted access</a> in the <i>AWS Compute Optimizer User Guide</i>.
+     * Optimizer and Amazon Web Services Organizations trusted access</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      * <p>
      * Recommendations for member accounts of the organization are not included in the export file if this parameter is
@@ -824,8 +830,8 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      *         The member accounts must also be opted in to Compute Optimizer, and trusted access for Compute Optimizer
      *         must be enabled in the organization account. For more information, see <a
      *         href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/security-iam.html#trusted-service-access"
-     *         >Compute Optimizer and AWS Organizations trusted access</a> in the <i>AWS Compute Optimizer User
-     *         Guide</i>.
+     *         >Compute Optimizer and Amazon Web Services Organizations trusted access</a> in the <i>Compute Optimizer
+     *         User Guide</i>.
      *         </p>
      *         <p>
      *         Recommendations for member accounts of the organization are not included in the export file if this
@@ -838,6 +844,46 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
 
     public Boolean isIncludeMemberAccounts() {
         return this.includeMemberAccounts;
+    }
+
+    /**
+     * <p>
+     * An object to specify the preferences for the Amazon EC2 instance recommendations to export.
+     * </p>
+     * 
+     * @param recommendationPreferences
+     *        An object to specify the preferences for the Amazon EC2 instance recommendations to export.
+     */
+
+    public void setRecommendationPreferences(RecommendationPreferences recommendationPreferences) {
+        this.recommendationPreferences = recommendationPreferences;
+    }
+
+    /**
+     * <p>
+     * An object to specify the preferences for the Amazon EC2 instance recommendations to export.
+     * </p>
+     * 
+     * @return An object to specify the preferences for the Amazon EC2 instance recommendations to export.
+     */
+
+    public RecommendationPreferences getRecommendationPreferences() {
+        return this.recommendationPreferences;
+    }
+
+    /**
+     * <p>
+     * An object to specify the preferences for the Amazon EC2 instance recommendations to export.
+     * </p>
+     * 
+     * @param recommendationPreferences
+     *        An object to specify the preferences for the Amazon EC2 instance recommendations to export.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ExportEC2InstanceRecommendationsRequest withRecommendationPreferences(RecommendationPreferences recommendationPreferences) {
+        setRecommendationPreferences(recommendationPreferences);
+        return this;
     }
 
     /**
@@ -863,7 +909,9 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
         if (getFileFormat() != null)
             sb.append("FileFormat: ").append(getFileFormat()).append(",");
         if (getIncludeMemberAccounts() != null)
-            sb.append("IncludeMemberAccounts: ").append(getIncludeMemberAccounts());
+            sb.append("IncludeMemberAccounts: ").append(getIncludeMemberAccounts()).append(",");
+        if (getRecommendationPreferences() != null)
+            sb.append("RecommendationPreferences: ").append(getRecommendationPreferences());
         sb.append("}");
         return sb.toString();
     }
@@ -902,6 +950,10 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
             return false;
         if (other.getIncludeMemberAccounts() != null && other.getIncludeMemberAccounts().equals(this.getIncludeMemberAccounts()) == false)
             return false;
+        if (other.getRecommendationPreferences() == null ^ this.getRecommendationPreferences() == null)
+            return false;
+        if (other.getRecommendationPreferences() != null && other.getRecommendationPreferences().equals(this.getRecommendationPreferences()) == false)
+            return false;
         return true;
     }
 
@@ -916,6 +968,7 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
         hashCode = prime * hashCode + ((getS3DestinationConfig() == null) ? 0 : getS3DestinationConfig().hashCode());
         hashCode = prime * hashCode + ((getFileFormat() == null) ? 0 : getFileFormat().hashCode());
         hashCode = prime * hashCode + ((getIncludeMemberAccounts() == null) ? 0 : getIncludeMemberAccounts().hashCode());
+        hashCode = prime * hashCode + ((getRecommendationPreferences() == null) ? 0 : getRecommendationPreferences().hashCode());
         return hashCode;
     }
 

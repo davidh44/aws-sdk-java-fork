@@ -41,11 +41,24 @@ public class GetEnrollmentStatusResult extends com.amazonaws.AmazonWebServiceRes
     private String statusReason;
     /**
      * <p>
-     * Confirms the enrollment status of member accounts within the organization, if the account is a management account
-     * of an organization.
+     * Confirms the enrollment status of member accounts of the organization, if the account is a management account of
+     * an organization.
      * </p>
      */
     private Boolean memberAccountsEnrolled;
+    /**
+     * <p>
+     * The Unix epoch timestamp, in seconds, of when the account enrollment status was last updated.
+     * </p>
+     */
+    private java.util.Date lastUpdatedTimestamp;
+    /**
+     * <p>
+     * The count of organization member accounts that are opted in to the service, if your account is an organization
+     * management account.
+     * </p>
+     */
+    private Integer numberOfMemberAccountsOptedIn;
 
     /**
      * <p>
@@ -169,12 +182,12 @@ public class GetEnrollmentStatusResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Confirms the enrollment status of member accounts within the organization, if the account is a management account
-     * of an organization.
+     * Confirms the enrollment status of member accounts of the organization, if the account is a management account of
+     * an organization.
      * </p>
      * 
      * @param memberAccountsEnrolled
-     *        Confirms the enrollment status of member accounts within the organization, if the account is a management
+     *        Confirms the enrollment status of member accounts of the organization, if the account is a management
      *        account of an organization.
      */
 
@@ -184,11 +197,11 @@ public class GetEnrollmentStatusResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Confirms the enrollment status of member accounts within the organization, if the account is a management account
-     * of an organization.
+     * Confirms the enrollment status of member accounts of the organization, if the account is a management account of
+     * an organization.
      * </p>
      * 
-     * @return Confirms the enrollment status of member accounts within the organization, if the account is a management
+     * @return Confirms the enrollment status of member accounts of the organization, if the account is a management
      *         account of an organization.
      */
 
@@ -198,12 +211,12 @@ public class GetEnrollmentStatusResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Confirms the enrollment status of member accounts within the organization, if the account is a management account
-     * of an organization.
+     * Confirms the enrollment status of member accounts of the organization, if the account is a management account of
+     * an organization.
      * </p>
      * 
      * @param memberAccountsEnrolled
-     *        Confirms the enrollment status of member accounts within the organization, if the account is a management
+     *        Confirms the enrollment status of member accounts of the organization, if the account is a management
      *        account of an organization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -215,16 +228,102 @@ public class GetEnrollmentStatusResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Confirms the enrollment status of member accounts within the organization, if the account is a management account
-     * of an organization.
+     * Confirms the enrollment status of member accounts of the organization, if the account is a management account of
+     * an organization.
      * </p>
      * 
-     * @return Confirms the enrollment status of member accounts within the organization, if the account is a management
+     * @return Confirms the enrollment status of member accounts of the organization, if the account is a management
      *         account of an organization.
      */
 
     public Boolean isMemberAccountsEnrolled() {
         return this.memberAccountsEnrolled;
+    }
+
+    /**
+     * <p>
+     * The Unix epoch timestamp, in seconds, of when the account enrollment status was last updated.
+     * </p>
+     * 
+     * @param lastUpdatedTimestamp
+     *        The Unix epoch timestamp, in seconds, of when the account enrollment status was last updated.
+     */
+
+    public void setLastUpdatedTimestamp(java.util.Date lastUpdatedTimestamp) {
+        this.lastUpdatedTimestamp = lastUpdatedTimestamp;
+    }
+
+    /**
+     * <p>
+     * The Unix epoch timestamp, in seconds, of when the account enrollment status was last updated.
+     * </p>
+     * 
+     * @return The Unix epoch timestamp, in seconds, of when the account enrollment status was last updated.
+     */
+
+    public java.util.Date getLastUpdatedTimestamp() {
+        return this.lastUpdatedTimestamp;
+    }
+
+    /**
+     * <p>
+     * The Unix epoch timestamp, in seconds, of when the account enrollment status was last updated.
+     * </p>
+     * 
+     * @param lastUpdatedTimestamp
+     *        The Unix epoch timestamp, in seconds, of when the account enrollment status was last updated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetEnrollmentStatusResult withLastUpdatedTimestamp(java.util.Date lastUpdatedTimestamp) {
+        setLastUpdatedTimestamp(lastUpdatedTimestamp);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The count of organization member accounts that are opted in to the service, if your account is an organization
+     * management account.
+     * </p>
+     * 
+     * @param numberOfMemberAccountsOptedIn
+     *        The count of organization member accounts that are opted in to the service, if your account is an
+     *        organization management account.
+     */
+
+    public void setNumberOfMemberAccountsOptedIn(Integer numberOfMemberAccountsOptedIn) {
+        this.numberOfMemberAccountsOptedIn = numberOfMemberAccountsOptedIn;
+    }
+
+    /**
+     * <p>
+     * The count of organization member accounts that are opted in to the service, if your account is an organization
+     * management account.
+     * </p>
+     * 
+     * @return The count of organization member accounts that are opted in to the service, if your account is an
+     *         organization management account.
+     */
+
+    public Integer getNumberOfMemberAccountsOptedIn() {
+        return this.numberOfMemberAccountsOptedIn;
+    }
+
+    /**
+     * <p>
+     * The count of organization member accounts that are opted in to the service, if your account is an organization
+     * management account.
+     * </p>
+     * 
+     * @param numberOfMemberAccountsOptedIn
+     *        The count of organization member accounts that are opted in to the service, if your account is an
+     *        organization management account.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetEnrollmentStatusResult withNumberOfMemberAccountsOptedIn(Integer numberOfMemberAccountsOptedIn) {
+        setNumberOfMemberAccountsOptedIn(numberOfMemberAccountsOptedIn);
+        return this;
     }
 
     /**
@@ -244,7 +343,11 @@ public class GetEnrollmentStatusResult extends com.amazonaws.AmazonWebServiceRes
         if (getStatusReason() != null)
             sb.append("StatusReason: ").append(getStatusReason()).append(",");
         if (getMemberAccountsEnrolled() != null)
-            sb.append("MemberAccountsEnrolled: ").append(getMemberAccountsEnrolled());
+            sb.append("MemberAccountsEnrolled: ").append(getMemberAccountsEnrolled()).append(",");
+        if (getLastUpdatedTimestamp() != null)
+            sb.append("LastUpdatedTimestamp: ").append(getLastUpdatedTimestamp()).append(",");
+        if (getNumberOfMemberAccountsOptedIn() != null)
+            sb.append("NumberOfMemberAccountsOptedIn: ").append(getNumberOfMemberAccountsOptedIn());
         sb.append("}");
         return sb.toString();
     }
@@ -271,6 +374,15 @@ public class GetEnrollmentStatusResult extends com.amazonaws.AmazonWebServiceRes
             return false;
         if (other.getMemberAccountsEnrolled() != null && other.getMemberAccountsEnrolled().equals(this.getMemberAccountsEnrolled()) == false)
             return false;
+        if (other.getLastUpdatedTimestamp() == null ^ this.getLastUpdatedTimestamp() == null)
+            return false;
+        if (other.getLastUpdatedTimestamp() != null && other.getLastUpdatedTimestamp().equals(this.getLastUpdatedTimestamp()) == false)
+            return false;
+        if (other.getNumberOfMemberAccountsOptedIn() == null ^ this.getNumberOfMemberAccountsOptedIn() == null)
+            return false;
+        if (other.getNumberOfMemberAccountsOptedIn() != null
+                && other.getNumberOfMemberAccountsOptedIn().equals(this.getNumberOfMemberAccountsOptedIn()) == false)
+            return false;
         return true;
     }
 
@@ -282,6 +394,8 @@ public class GetEnrollmentStatusResult extends com.amazonaws.AmazonWebServiceRes
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getStatusReason() == null) ? 0 : getStatusReason().hashCode());
         hashCode = prime * hashCode + ((getMemberAccountsEnrolled() == null) ? 0 : getMemberAccountsEnrolled().hashCode());
+        hashCode = prime * hashCode + ((getLastUpdatedTimestamp() == null) ? 0 : getLastUpdatedTimestamp().hashCode());
+        hashCode = prime * hashCode + ((getNumberOfMemberAccountsOptedIn() == null) ? 0 : getNumberOfMemberAccountsOptedIn().hashCode());
         return hashCode;
     }
 

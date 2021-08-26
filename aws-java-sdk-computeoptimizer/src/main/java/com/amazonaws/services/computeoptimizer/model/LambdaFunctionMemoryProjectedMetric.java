@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes a projected utilization metric of an AWS Lambda function recommendation option.
+ * Describes a projected utilization metric of an Lambda function recommendation option.
  * </p>
  * 
  * @see <a

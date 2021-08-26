@@ -24126,6 +24126,18 @@
       }, {
         "name" : "ZhCN",
         "value" : "zh-CN"
+      }, {
+        "name" : "ZhTW",
+        "value" : "zh-TW"
+      }, {
+        "name" : "ThTH",
+        "value" : "th-TH"
+      }, {
+        "name" : "EnZA",
+        "value" : "en-ZA"
+      }, {
+        "name" : "EnNZ",
+        "value" : "en-NZ"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.transcribe.enum.LanguageCode",
@@ -31963,12 +31975,12 @@
         "c2jName" : "NextToken",
         "c2jShape" : "NextToken",
         "deprecated" : false,
-        "documentation" : "<p>If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated, include the <code>NextToken</code> to fetch the next set of jobs.</p>",
+        "documentation" : "<p>If the result of the previous request to <code>ListTranscriptionJobs</code> is truncated, include the <code>NextToken</code> to fetch the next set of jobs.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated, include the <code>NextToken</code> to fetch the next set of jobs.</p>\n@param nextToken If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated, include the <code>NextToken</code> to fetch the next set of jobs.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>If the result of the previous request to <code>ListTranscriptionJobs</code> is truncated, include the <code>NextToken</code> to fetch the next set of jobs.</p>\n@param nextToken If the result of the previous request to <code>ListTranscriptionJobs</code> is truncated, include the <code>NextToken</code> to fetch the next set of jobs.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withNextToken",
-        "getterDocumentation" : "/**<p>If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated, include the <code>NextToken</code> to fetch the next set of jobs.</p>\n@return If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated, include the <code>NextToken</code> to fetch the next set of jobs.*/",
+        "getterDocumentation" : "/**<p>If the result of the previous request to <code>ListTranscriptionJobs</code> is truncated, include the <code>NextToken</code> to fetch the next set of jobs.</p>\n@return If the result of the previous request to <code>ListTranscriptionJobs</code> is truncated, include the <code>NextToken</code> to fetch the next set of jobs.*/",
         "getterMethodName" : "getNextToken",
         "getterModel" : {
           "returnType" : "String",
@@ -32002,7 +32014,7 @@
         "marshallingType" : "STRING",
         "name" : "NextToken",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated, include the <code>NextToken</code> to fetch the next set of jobs.</p>\n@param nextToken If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated, include the <code>NextToken</code> to fetch the next set of jobs.*/",
+        "setterDocumentation" : "/**<p>If the result of the previous request to <code>ListTranscriptionJobs</code> is truncated, include the <code>NextToken</code> to fetch the next set of jobs.</p>\n@param nextToken If the result of the previous request to <code>ListTranscriptionJobs</code> is truncated, include the <code>NextToken</code> to fetch the next set of jobs.*/",
         "setterMethodName" : "setNextToken",
         "setterModel" : {
           "timestampFormat" : null,
@@ -32017,13 +32029,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated, include the <code>NextToken</code> to fetch the next set of jobs.</p>\n@param nextToken If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated, include the <code>NextToken</code> to fetch the next set of jobs.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>If the result of the previous request to <code>ListTranscriptionJobs</code> is truncated, include the <code>NextToken</code> to fetch the next set of jobs.</p>\n@param nextToken If the result of the previous request to <code>ListTranscriptionJobs</code> is truncated, include the <code>NextToken</code> to fetch the next set of jobs.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "nextToken",
           "variableType" : "String",
-          "documentation" : "<p>If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated, include the <code>NextToken</code> to fetch the next set of jobs.</p>",
+          "documentation" : "<p>If the result of the previous request to <code>ListTranscriptionJobs</code> is truncated, include the <code>NextToken</code> to fetch the next set of jobs.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -32243,12 +32255,12 @@
           "c2jName" : "NextToken",
           "c2jShape" : "NextToken",
           "deprecated" : false,
-          "documentation" : "<p>If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated, include the <code>NextToken</code> to fetch the next set of jobs.</p>",
+          "documentation" : "<p>If the result of the previous request to <code>ListTranscriptionJobs</code> is truncated, include the <code>NextToken</code> to fetch the next set of jobs.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated, include the <code>NextToken</code> to fetch the next set of jobs.</p>\n@param nextToken If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated, include the <code>NextToken</code> to fetch the next set of jobs.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>If the result of the previous request to <code>ListTranscriptionJobs</code> is truncated, include the <code>NextToken</code> to fetch the next set of jobs.</p>\n@param nextToken If the result of the previous request to <code>ListTranscriptionJobs</code> is truncated, include the <code>NextToken</code> to fetch the next set of jobs.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withNextToken",
-          "getterDocumentation" : "/**<p>If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated, include the <code>NextToken</code> to fetch the next set of jobs.</p>\n@return If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated, include the <code>NextToken</code> to fetch the next set of jobs.*/",
+          "getterDocumentation" : "/**<p>If the result of the previous request to <code>ListTranscriptionJobs</code> is truncated, include the <code>NextToken</code> to fetch the next set of jobs.</p>\n@return If the result of the previous request to <code>ListTranscriptionJobs</code> is truncated, include the <code>NextToken</code> to fetch the next set of jobs.*/",
           "getterMethodName" : "getNextToken",
           "getterModel" : {
             "returnType" : "String",
@@ -32282,7 +32294,7 @@
           "marshallingType" : "STRING",
           "name" : "NextToken",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated, include the <code>NextToken</code> to fetch the next set of jobs.</p>\n@param nextToken If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated, include the <code>NextToken</code> to fetch the next set of jobs.*/",
+          "setterDocumentation" : "/**<p>If the result of the previous request to <code>ListTranscriptionJobs</code> is truncated, include the <code>NextToken</code> to fetch the next set of jobs.</p>\n@param nextToken If the result of the previous request to <code>ListTranscriptionJobs</code> is truncated, include the <code>NextToken</code> to fetch the next set of jobs.*/",
           "setterMethodName" : "setNextToken",
           "setterModel" : {
             "timestampFormat" : null,
@@ -32297,13 +32309,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated, include the <code>NextToken</code> to fetch the next set of jobs.</p>\n@param nextToken If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated, include the <code>NextToken</code> to fetch the next set of jobs.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>If the result of the previous request to <code>ListTranscriptionJobs</code> is truncated, include the <code>NextToken</code> to fetch the next set of jobs.</p>\n@param nextToken If the result of the previous request to <code>ListTranscriptionJobs</code> is truncated, include the <code>NextToken</code> to fetch the next set of jobs.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "nextToken",
             "variableType" : "String",
-            "documentation" : "<p>If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated, include the <code>NextToken</code> to fetch the next set of jobs.</p>",
+            "documentation" : "<p>If the result of the previous request to <code>ListTranscriptionJobs</code> is truncated, include the <code>NextToken</code> to fetch the next set of jobs.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -54336,12 +54348,12 @@
         "c2jName" : "CompletionTime",
         "c2jShape" : "DateTime",
         "deprecated" : false,
-        "documentation" : "<p>A timestamp that shows when the job was completed.</p>",
+        "documentation" : "<p>A timestamp that shows when the job completed.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>A timestamp that shows when the job was completed.</p>\n@param completionTime A timestamp that shows when the job was completed.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>A timestamp that shows when the job completed.</p>\n@param completionTime A timestamp that shows when the job completed.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withCompletionTime",
-        "getterDocumentation" : "/**<p>A timestamp that shows when the job was completed.</p>\n@return A timestamp that shows when the job was completed.*/",
+        "getterDocumentation" : "/**<p>A timestamp that shows when the job completed.</p>\n@return A timestamp that shows when the job completed.*/",
         "getterMethodName" : "getCompletionTime",
         "getterModel" : {
           "returnType" : "java.util.Date",
@@ -54375,7 +54387,7 @@
         "marshallingType" : "DATE",
         "name" : "CompletionTime",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>A timestamp that shows when the job was completed.</p>\n@param completionTime A timestamp that shows when the job was completed.*/",
+        "setterDocumentation" : "/**<p>A timestamp that shows when the job completed.</p>\n@param completionTime A timestamp that shows when the job completed.*/",
         "setterMethodName" : "setCompletionTime",
         "setterModel" : {
           "timestampFormat" : null,
@@ -54390,13 +54402,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>A timestamp that shows when the job was completed.</p>\n@param completionTime A timestamp that shows when the job was completed.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>A timestamp that shows when the job completed.</p>\n@param completionTime A timestamp that shows when the job completed.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : "unixTimestamp",
           "variableDeclarationType" : "java.util.Date",
           "variableName" : "completionTime",
           "variableType" : "java.util.Date",
-          "documentation" : "<p>A timestamp that shows when the job was completed.</p>",
+          "documentation" : "<p>A timestamp that shows when the job completed.</p>",
           "simpleType" : "Date",
           "variableSetterType" : "java.util.Date"
         },
@@ -55196,12 +55208,12 @@
           "c2jName" : "CompletionTime",
           "c2jShape" : "DateTime",
           "deprecated" : false,
-          "documentation" : "<p>A timestamp that shows when the job was completed.</p>",
+          "documentation" : "<p>A timestamp that shows when the job completed.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>A timestamp that shows when the job was completed.</p>\n@param completionTime A timestamp that shows when the job was completed.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>A timestamp that shows when the job completed.</p>\n@param completionTime A timestamp that shows when the job completed.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withCompletionTime",
-          "getterDocumentation" : "/**<p>A timestamp that shows when the job was completed.</p>\n@return A timestamp that shows when the job was completed.*/",
+          "getterDocumentation" : "/**<p>A timestamp that shows when the job completed.</p>\n@return A timestamp that shows when the job completed.*/",
           "getterMethodName" : "getCompletionTime",
           "getterModel" : {
             "returnType" : "java.util.Date",
@@ -55235,7 +55247,7 @@
           "marshallingType" : "DATE",
           "name" : "CompletionTime",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>A timestamp that shows when the job was completed.</p>\n@param completionTime A timestamp that shows when the job was completed.*/",
+          "setterDocumentation" : "/**<p>A timestamp that shows when the job completed.</p>\n@param completionTime A timestamp that shows when the job completed.*/",
           "setterMethodName" : "setCompletionTime",
           "setterModel" : {
             "timestampFormat" : null,
@@ -55250,13 +55262,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>A timestamp that shows when the job was completed.</p>\n@param completionTime A timestamp that shows when the job was completed.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>A timestamp that shows when the job completed.</p>\n@param completionTime A timestamp that shows when the job completed.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : "unixTimestamp",
             "variableDeclarationType" : "java.util.Date",
             "variableName" : "completionTime",
             "variableType" : "java.util.Date",
-            "documentation" : "<p>A timestamp that shows when the job was completed.</p>",
+            "documentation" : "<p>A timestamp that shows when the job completed.</p>",
             "simpleType" : "Date",
             "variableSetterType" : "java.util.Date"
           },

@@ -46,7 +46,7 @@ public class TransitGatewayMulticastDomain implements Serializable, Cloneable {
     private String transitGatewayMulticastDomainArn;
     /**
      * <p>
-     * The ID of the AWS account that owns the transit gateway multiicast domain.
+     * The ID of the Amazon Web Services account that owns the transit gateway multicast domain.
      * </p>
      */
     private String ownerId;
@@ -197,11 +197,11 @@ public class TransitGatewayMulticastDomain implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ID of the AWS account that owns the transit gateway multiicast domain.
+     * The ID of the Amazon Web Services account that owns the transit gateway multicast domain.
      * </p>
      * 
      * @param ownerId
-     *        The ID of the AWS account that owns the transit gateway multiicast domain.
+     *        The ID of the Amazon Web Services account that owns the transit gateway multicast domain.
      */
 
     public void setOwnerId(String ownerId) {
@@ -210,10 +210,10 @@ public class TransitGatewayMulticastDomain implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ID of the AWS account that owns the transit gateway multiicast domain.
+     * The ID of the Amazon Web Services account that owns the transit gateway multicast domain.
      * </p>
      * 
-     * @return The ID of the AWS account that owns the transit gateway multiicast domain.
+     * @return The ID of the Amazon Web Services account that owns the transit gateway multicast domain.
      */
 
     public String getOwnerId() {
@@ -222,11 +222,11 @@ public class TransitGatewayMulticastDomain implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ID of the AWS account that owns the transit gateway multiicast domain.
+     * The ID of the Amazon Web Services account that owns the transit gateway multicast domain.
      * </p>
      * 
      * @param ownerId
-     *        The ID of the AWS account that owns the transit gateway multiicast domain.
+     *        The ID of the Amazon Web Services account that owns the transit gateway multicast domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -30,7 +30,7 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The AWS account ID of the Auto Scaling group.
+     * The Amazon Web Services account ID of the Auto Scaling group.
      * </p>
      */
     private String accountId;
@@ -56,7 +56,7 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
      * <ul>
      * <li>
      * <p>
-     * <b> <code>NotOptimized</code> </b>—An Auto Scaling group is considered not optimized when AWS Compute Optimizer
+     * <b> <code>NotOptimized</code> </b>—An Auto Scaling group is considered not optimized when Compute Optimizer
      * identifies a recommendation that can provide better performance for your workload.
      * </p>
      * </li>
@@ -96,18 +96,18 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
     private java.util.List<AutoScalingGroupRecommendationOption> recommendationOptions;
     /**
      * <p>
-     * The time stamp of when the Auto Scaling group recommendation was last refreshed.
+     * The timestamp of when the Auto Scaling group recommendation was last refreshed.
      * </p>
      */
     private java.util.Date lastRefreshTimestamp;
 
     /**
      * <p>
-     * The AWS account ID of the Auto Scaling group.
+     * The Amazon Web Services account ID of the Auto Scaling group.
      * </p>
      * 
      * @param accountId
-     *        The AWS account ID of the Auto Scaling group.
+     *        The Amazon Web Services account ID of the Auto Scaling group.
      */
 
     public void setAccountId(String accountId) {
@@ -116,10 +116,10 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The AWS account ID of the Auto Scaling group.
+     * The Amazon Web Services account ID of the Auto Scaling group.
      * </p>
      * 
-     * @return The AWS account ID of the Auto Scaling group.
+     * @return The Amazon Web Services account ID of the Auto Scaling group.
      */
 
     public String getAccountId() {
@@ -128,11 +128,11 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The AWS account ID of the Auto Scaling group.
+     * The Amazon Web Services account ID of the Auto Scaling group.
      * </p>
      * 
      * @param accountId
-     *        The AWS account ID of the Auto Scaling group.
+     *        The Amazon Web Services account ID of the Auto Scaling group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -231,7 +231,7 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
      * <ul>
      * <li>
      * <p>
-     * <b> <code>NotOptimized</code> </b>—An Auto Scaling group is considered not optimized when AWS Compute Optimizer
+     * <b> <code>NotOptimized</code> </b>—An Auto Scaling group is considered not optimized when Compute Optimizer
      * identifies a recommendation that can provide better performance for your workload.
      * </p>
      * </li>
@@ -252,7 +252,7 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
      *        <ul>
      *        <li>
      *        <p>
-     *        <b> <code>NotOptimized</code> </b>—An Auto Scaling group is considered not optimized when AWS Compute
+     *        <b> <code>NotOptimized</code> </b>—An Auto Scaling group is considered not optimized when Compute
      *        Optimizer identifies a recommendation that can provide better performance for your workload.
      *        </p>
      *        </li>
@@ -280,7 +280,7 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
      * <ul>
      * <li>
      * <p>
-     * <b> <code>NotOptimized</code> </b>—An Auto Scaling group is considered not optimized when AWS Compute Optimizer
+     * <b> <code>NotOptimized</code> </b>—An Auto Scaling group is considered not optimized when Compute Optimizer
      * identifies a recommendation that can provide better performance for your workload.
      * </p>
      * </li>
@@ -300,7 +300,7 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
      *         <ul>
      *         <li>
      *         <p>
-     *         <b> <code>NotOptimized</code> </b>—An Auto Scaling group is considered not optimized when AWS Compute
+     *         <b> <code>NotOptimized</code> </b>—An Auto Scaling group is considered not optimized when Compute
      *         Optimizer identifies a recommendation that can provide better performance for your workload.
      *         </p>
      *         </li>
@@ -328,7 +328,7 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
      * <ul>
      * <li>
      * <p>
-     * <b> <code>NotOptimized</code> </b>—An Auto Scaling group is considered not optimized when AWS Compute Optimizer
+     * <b> <code>NotOptimized</code> </b>—An Auto Scaling group is considered not optimized when Compute Optimizer
      * identifies a recommendation that can provide better performance for your workload.
      * </p>
      * </li>
@@ -349,7 +349,7 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
      *        <ul>
      *        <li>
      *        <p>
-     *        <b> <code>NotOptimized</code> </b>—An Auto Scaling group is considered not optimized when AWS Compute
+     *        <b> <code>NotOptimized</code> </b>—An Auto Scaling group is considered not optimized when Compute
      *        Optimizer identifies a recommendation that can provide better performance for your workload.
      *        </p>
      *        </li>
@@ -379,7 +379,7 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
      * <ul>
      * <li>
      * <p>
-     * <b> <code>NotOptimized</code> </b>—An Auto Scaling group is considered not optimized when AWS Compute Optimizer
+     * <b> <code>NotOptimized</code> </b>—An Auto Scaling group is considered not optimized when Compute Optimizer
      * identifies a recommendation that can provide better performance for your workload.
      * </p>
      * </li>
@@ -400,7 +400,7 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
      *        <ul>
      *        <li>
      *        <p>
-     *        <b> <code>NotOptimized</code> </b>—An Auto Scaling group is considered not optimized when AWS Compute
+     *        <b> <code>NotOptimized</code> </b>—An Auto Scaling group is considered not optimized when Compute
      *        Optimizer identifies a recommendation that can provide better performance for your workload.
      *        </p>
      *        </li>
@@ -642,11 +642,11 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The time stamp of when the Auto Scaling group recommendation was last refreshed.
+     * The timestamp of when the Auto Scaling group recommendation was last refreshed.
      * </p>
      * 
      * @param lastRefreshTimestamp
-     *        The time stamp of when the Auto Scaling group recommendation was last refreshed.
+     *        The timestamp of when the Auto Scaling group recommendation was last refreshed.
      */
 
     public void setLastRefreshTimestamp(java.util.Date lastRefreshTimestamp) {
@@ -655,10 +655,10 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The time stamp of when the Auto Scaling group recommendation was last refreshed.
+     * The timestamp of when the Auto Scaling group recommendation was last refreshed.
      * </p>
      * 
-     * @return The time stamp of when the Auto Scaling group recommendation was last refreshed.
+     * @return The timestamp of when the Auto Scaling group recommendation was last refreshed.
      */
 
     public java.util.Date getLastRefreshTimestamp() {
@@ -667,11 +667,11 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The time stamp of when the Auto Scaling group recommendation was last refreshed.
+     * The timestamp of when the Auto Scaling group recommendation was last refreshed.
      * </p>
      * 
      * @param lastRefreshTimestamp
-     *        The time stamp of when the Auto Scaling group recommendation was last refreshed.
+     *        The timestamp of when the Auto Scaling group recommendation was last refreshed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

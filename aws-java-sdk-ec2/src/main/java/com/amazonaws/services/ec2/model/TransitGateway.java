@@ -46,7 +46,7 @@ public class TransitGateway implements Serializable, Cloneable {
     private String state;
     /**
      * <p>
-     * The ID of the AWS account ID that owns the transit gateway.
+     * The ID of the Amazon Web Services account that owns the transit gateway.
      * </p>
      */
     private String ownerId;
@@ -216,11 +216,11 @@ public class TransitGateway implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ID of the AWS account ID that owns the transit gateway.
+     * The ID of the Amazon Web Services account that owns the transit gateway.
      * </p>
      * 
      * @param ownerId
-     *        The ID of the AWS account ID that owns the transit gateway.
+     *        The ID of the Amazon Web Services account that owns the transit gateway.
      */
 
     public void setOwnerId(String ownerId) {
@@ -229,10 +229,10 @@ public class TransitGateway implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ID of the AWS account ID that owns the transit gateway.
+     * The ID of the Amazon Web Services account that owns the transit gateway.
      * </p>
      * 
-     * @return The ID of the AWS account ID that owns the transit gateway.
+     * @return The ID of the Amazon Web Services account that owns the transit gateway.
      */
 
     public String getOwnerId() {
@@ -241,11 +241,11 @@ public class TransitGateway implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ID of the AWS account ID that owns the transit gateway.
+     * The ID of the Amazon Web Services account that owns the transit gateway.
      * </p>
      * 
      * @param ownerId
-     *        The ID of the AWS account ID that owns the transit gateway.
+     *        The ID of the Amazon Web Services account that owns the transit gateway.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

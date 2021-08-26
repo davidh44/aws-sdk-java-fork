@@ -40,6 +40,8 @@ public class ExportAutoScalingGroupRecommendationsRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fileFormat").build();
     private static final MarshallingInfo<Boolean> INCLUDEMEMBERACCOUNTS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("includeMemberAccounts").build();
+    private static final MarshallingInfo<StructuredPojo> RECOMMENDATIONPREFERENCES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recommendationPreferences").build();
 
     private static final ExportAutoScalingGroupRecommendationsRequestMarshaller instance = new ExportAutoScalingGroupRecommendationsRequestMarshaller();
 
@@ -63,6 +65,7 @@ public class ExportAutoScalingGroupRecommendationsRequestMarshaller {
             protocolMarshaller.marshall(exportAutoScalingGroupRecommendationsRequest.getS3DestinationConfig(), S3DESTINATIONCONFIG_BINDING);
             protocolMarshaller.marshall(exportAutoScalingGroupRecommendationsRequest.getFileFormat(), FILEFORMAT_BINDING);
             protocolMarshaller.marshall(exportAutoScalingGroupRecommendationsRequest.getIncludeMemberAccounts(), INCLUDEMEMBERACCOUNTS_BINDING);
+            protocolMarshaller.marshall(exportAutoScalingGroupRecommendationsRequest.getRecommendationPreferences(), RECOMMENDATIONPREFERENCES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

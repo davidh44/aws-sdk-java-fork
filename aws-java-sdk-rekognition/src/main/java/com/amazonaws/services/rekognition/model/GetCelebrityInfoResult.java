@@ -30,6 +30,12 @@ public class GetCelebrityInfoResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      */
     private String name;
+    /**
+     * <p>
+     * Retrieves the known gender for the celebrity.
+     * </p>
+     */
+    private KnownGender knownGender;
 
     /**
      * <p>
@@ -142,6 +148,46 @@ public class GetCelebrityInfoResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
+     * <p>
+     * Retrieves the known gender for the celebrity.
+     * </p>
+     * 
+     * @param knownGender
+     *        Retrieves the known gender for the celebrity.
+     */
+
+    public void setKnownGender(KnownGender knownGender) {
+        this.knownGender = knownGender;
+    }
+
+    /**
+     * <p>
+     * Retrieves the known gender for the celebrity.
+     * </p>
+     * 
+     * @return Retrieves the known gender for the celebrity.
+     */
+
+    public KnownGender getKnownGender() {
+        return this.knownGender;
+    }
+
+    /**
+     * <p>
+     * Retrieves the known gender for the celebrity.
+     * </p>
+     * 
+     * @param knownGender
+     *        Retrieves the known gender for the celebrity.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetCelebrityInfoResult withKnownGender(KnownGender knownGender) {
+        setKnownGender(knownGender);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -156,7 +202,9 @@ public class GetCelebrityInfoResult extends com.amazonaws.AmazonWebServiceResult
         if (getUrls() != null)
             sb.append("Urls: ").append(getUrls()).append(",");
         if (getName() != null)
-            sb.append("Name: ").append(getName());
+            sb.append("Name: ").append(getName()).append(",");
+        if (getKnownGender() != null)
+            sb.append("KnownGender: ").append(getKnownGender());
         sb.append("}");
         return sb.toString();
     }
@@ -179,6 +227,10 @@ public class GetCelebrityInfoResult extends com.amazonaws.AmazonWebServiceResult
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
+        if (other.getKnownGender() == null ^ this.getKnownGender() == null)
+            return false;
+        if (other.getKnownGender() != null && other.getKnownGender().equals(this.getKnownGender()) == false)
+            return false;
         return true;
     }
 
@@ -189,6 +241,7 @@ public class GetCelebrityInfoResult extends com.amazonaws.AmazonWebServiceResult
 
         hashCode = prime * hashCode + ((getUrls() == null) ? 0 : getUrls().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getKnownGender() == null) ? 0 : getKnownGender().hashCode());
         return hashCode;
     }
 

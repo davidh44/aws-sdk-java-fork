@@ -42,19 +42,19 @@ public class GetEC2InstanceRecommendationsRequest extends com.amazonaws.AmazonWe
      * The maximum number of instance recommendations to return with a single request.
      * </p>
      * <p>
-     * To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     * To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * </p>
      */
     private Integer maxResults;
     /**
      * <p>
-     * An array of objects that describe a filter that returns a more specific list of instance recommendations.
+     * An array of objects to specify a filter that returns a more specific list of instance recommendations.
      * </p>
      */
     private java.util.List<Filter> filters;
     /**
      * <p>
-     * The ID of the AWS account for which to return instance recommendations.
+     * The ID of the Amazon Web Services account for which to return instance recommendations.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -65,6 +65,12 @@ public class GetEC2InstanceRecommendationsRequest extends com.amazonaws.AmazonWe
      * </p>
      */
     private java.util.List<String> accountIds;
+    /**
+     * <p>
+     * An object to specify the preferences for the Amazon EC2 instance recommendations to return in the response.
+     * </p>
+     */
+    private RecommendationPreferences recommendationPreferences;
 
     /**
      * <p>
@@ -181,13 +187,13 @@ public class GetEC2InstanceRecommendationsRequest extends com.amazonaws.AmazonWe
      * The maximum number of instance recommendations to return with a single request.
      * </p>
      * <p>
-     * To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     * To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * </p>
      * 
      * @param maxResults
      *        The maximum number of instance recommendations to return with a single request.</p>
      *        <p>
-     *        To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     *        To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -199,12 +205,12 @@ public class GetEC2InstanceRecommendationsRequest extends com.amazonaws.AmazonWe
      * The maximum number of instance recommendations to return with a single request.
      * </p>
      * <p>
-     * To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     * To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * </p>
      * 
      * @return The maximum number of instance recommendations to return with a single request.</p>
      *         <p>
-     *         To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     *         To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      */
 
     public Integer getMaxResults() {
@@ -216,13 +222,13 @@ public class GetEC2InstanceRecommendationsRequest extends com.amazonaws.AmazonWe
      * The maximum number of instance recommendations to return with a single request.
      * </p>
      * <p>
-     * To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     * To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * </p>
      * 
      * @param maxResults
      *        The maximum number of instance recommendations to return with a single request.</p>
      *        <p>
-     *        To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     *        To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -233,10 +239,10 @@ public class GetEC2InstanceRecommendationsRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * An array of objects that describe a filter that returns a more specific list of instance recommendations.
+     * An array of objects to specify a filter that returns a more specific list of instance recommendations.
      * </p>
      * 
-     * @return An array of objects that describe a filter that returns a more specific list of instance recommendations.
+     * @return An array of objects to specify a filter that returns a more specific list of instance recommendations.
      */
 
     public java.util.List<Filter> getFilters() {
@@ -245,11 +251,11 @@ public class GetEC2InstanceRecommendationsRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * An array of objects that describe a filter that returns a more specific list of instance recommendations.
+     * An array of objects to specify a filter that returns a more specific list of instance recommendations.
      * </p>
      * 
      * @param filters
-     *        An array of objects that describe a filter that returns a more specific list of instance recommendations.
+     *        An array of objects to specify a filter that returns a more specific list of instance recommendations.
      */
 
     public void setFilters(java.util.Collection<Filter> filters) {
@@ -263,7 +269,7 @@ public class GetEC2InstanceRecommendationsRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * An array of objects that describe a filter that returns a more specific list of instance recommendations.
+     * An array of objects to specify a filter that returns a more specific list of instance recommendations.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -272,7 +278,7 @@ public class GetEC2InstanceRecommendationsRequest extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @param filters
-     *        An array of objects that describe a filter that returns a more specific list of instance recommendations.
+     *        An array of objects to specify a filter that returns a more specific list of instance recommendations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -288,11 +294,11 @@ public class GetEC2InstanceRecommendationsRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * An array of objects that describe a filter that returns a more specific list of instance recommendations.
+     * An array of objects to specify a filter that returns a more specific list of instance recommendations.
      * </p>
      * 
      * @param filters
-     *        An array of objects that describe a filter that returns a more specific list of instance recommendations.
+     *        An array of objects to specify a filter that returns a more specific list of instance recommendations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -303,7 +309,7 @@ public class GetEC2InstanceRecommendationsRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The ID of the AWS account for which to return instance recommendations.
+     * The ID of the Amazon Web Services account for which to return instance recommendations.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -313,7 +319,7 @@ public class GetEC2InstanceRecommendationsRequest extends com.amazonaws.AmazonWe
      * Only one account ID can be specified per request.
      * </p>
      * 
-     * @return The ID of the AWS account for which to return instance recommendations.</p>
+     * @return The ID of the Amazon Web Services account for which to return instance recommendations.</p>
      *         <p>
      *         If your account is the management account of an organization, use this parameter to specify the member
      *         account for which you want to return instance recommendations.
@@ -328,7 +334,7 @@ public class GetEC2InstanceRecommendationsRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The ID of the AWS account for which to return instance recommendations.
+     * The ID of the Amazon Web Services account for which to return instance recommendations.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -339,7 +345,7 @@ public class GetEC2InstanceRecommendationsRequest extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @param accountIds
-     *        The ID of the AWS account for which to return instance recommendations.</p>
+     *        The ID of the Amazon Web Services account for which to return instance recommendations.</p>
      *        <p>
      *        If your account is the management account of an organization, use this parameter to specify the member
      *        account for which you want to return instance recommendations.
@@ -359,7 +365,7 @@ public class GetEC2InstanceRecommendationsRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The ID of the AWS account for which to return instance recommendations.
+     * The ID of the Amazon Web Services account for which to return instance recommendations.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -375,7 +381,7 @@ public class GetEC2InstanceRecommendationsRequest extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @param accountIds
-     *        The ID of the AWS account for which to return instance recommendations.</p>
+     *        The ID of the Amazon Web Services account for which to return instance recommendations.</p>
      *        <p>
      *        If your account is the management account of an organization, use this parameter to specify the member
      *        account for which you want to return instance recommendations.
@@ -397,7 +403,7 @@ public class GetEC2InstanceRecommendationsRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The ID of the AWS account for which to return instance recommendations.
+     * The ID of the Amazon Web Services account for which to return instance recommendations.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -408,7 +414,7 @@ public class GetEC2InstanceRecommendationsRequest extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @param accountIds
-     *        The ID of the AWS account for which to return instance recommendations.</p>
+     *        The ID of the Amazon Web Services account for which to return instance recommendations.</p>
      *        <p>
      *        If your account is the management account of an organization, use this parameter to specify the member
      *        account for which you want to return instance recommendations.
@@ -420,6 +426,49 @@ public class GetEC2InstanceRecommendationsRequest extends com.amazonaws.AmazonWe
 
     public GetEC2InstanceRecommendationsRequest withAccountIds(java.util.Collection<String> accountIds) {
         setAccountIds(accountIds);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An object to specify the preferences for the Amazon EC2 instance recommendations to return in the response.
+     * </p>
+     * 
+     * @param recommendationPreferences
+     *        An object to specify the preferences for the Amazon EC2 instance recommendations to return in the
+     *        response.
+     */
+
+    public void setRecommendationPreferences(RecommendationPreferences recommendationPreferences) {
+        this.recommendationPreferences = recommendationPreferences;
+    }
+
+    /**
+     * <p>
+     * An object to specify the preferences for the Amazon EC2 instance recommendations to return in the response.
+     * </p>
+     * 
+     * @return An object to specify the preferences for the Amazon EC2 instance recommendations to return in the
+     *         response.
+     */
+
+    public RecommendationPreferences getRecommendationPreferences() {
+        return this.recommendationPreferences;
+    }
+
+    /**
+     * <p>
+     * An object to specify the preferences for the Amazon EC2 instance recommendations to return in the response.
+     * </p>
+     * 
+     * @param recommendationPreferences
+     *        An object to specify the preferences for the Amazon EC2 instance recommendations to return in the
+     *        response.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetEC2InstanceRecommendationsRequest withRecommendationPreferences(RecommendationPreferences recommendationPreferences) {
+        setRecommendationPreferences(recommendationPreferences);
         return this;
     }
 
@@ -444,7 +493,9 @@ public class GetEC2InstanceRecommendationsRequest extends com.amazonaws.AmazonWe
         if (getFilters() != null)
             sb.append("Filters: ").append(getFilters()).append(",");
         if (getAccountIds() != null)
-            sb.append("AccountIds: ").append(getAccountIds());
+            sb.append("AccountIds: ").append(getAccountIds()).append(",");
+        if (getRecommendationPreferences() != null)
+            sb.append("RecommendationPreferences: ").append(getRecommendationPreferences());
         sb.append("}");
         return sb.toString();
     }
@@ -479,6 +530,10 @@ public class GetEC2InstanceRecommendationsRequest extends com.amazonaws.AmazonWe
             return false;
         if (other.getAccountIds() != null && other.getAccountIds().equals(this.getAccountIds()) == false)
             return false;
+        if (other.getRecommendationPreferences() == null ^ this.getRecommendationPreferences() == null)
+            return false;
+        if (other.getRecommendationPreferences() != null && other.getRecommendationPreferences().equals(this.getRecommendationPreferences()) == false)
+            return false;
         return true;
     }
 
@@ -492,6 +547,7 @@ public class GetEC2InstanceRecommendationsRequest extends com.amazonaws.AmazonWe
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getFilters() == null) ? 0 : getFilters().hashCode());
         hashCode = prime * hashCode + ((getAccountIds() == null) ? 0 : getAccountIds().hashCode());
+        hashCode = prime * hashCode + ((getRecommendationPreferences() == null) ? 0 : getRecommendationPreferences().hashCode());
         return hashCode;
     }
 

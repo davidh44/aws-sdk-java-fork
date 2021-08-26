@@ -20,12 +20,12 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Describes a filter that returns a more specific list of recommendations. Use this filter with the
- * <code>GetAutoScalingGroupRecommendations</code> and <code>GetEC2InstanceRecommendations</code> actions.
+ * <a>GetAutoScalingGroupRecommendations</a> and <a>GetEC2InstanceRecommendations</a> actions.
  * </p>
  * <p>
- * You can use <code>EBSFilter</code> with the <code>GetEBSVolumeRecommendations</code> action,
- * <code>LambdaFunctionRecommendationFilter</code> with the <code>GetLambdaFunctionRecommendations</code> action, and
- * <code>JobFilter</code> with the <code>DescribeRecommendationExportJobs</code> action.
+ * You can use <code>EBSFilter</code> with the <a>GetEBSVolumeRecommendations</a> action,
+ * <code>LambdaFunctionRecommendationFilter</code> with the <a>GetLambdaFunctionRecommendations</a> action, and
+ * <code>JobFilter</code> with the <a>DescribeRecommendationExportJobs</a> action.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/Filter" target="_top">AWS API
@@ -39,16 +39,16 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      * The name of the filter.
      * </p>
      * <p>
-     * Specify <code>Finding</code> to return recommendations with a specific finding classification (e.g.,
+     * Specify <code>Finding</code> to return recommendations with a specific finding classification (for example,
      * <code>Underprovisioned</code>).
      * </p>
      * <p>
-     * Specify <code>RecommendationSourceType</code> to return recommendations of a specific resource type (e.g.,
+     * Specify <code>RecommendationSourceType</code> to return recommendations of a specific resource type (for example,
      * <code>Ec2Instance</code>).
      * </p>
      * <p>
-     * Specify <code>FindingReasonCodes</code> to return recommendations with a specific finding reason code (e.g.,
-     * <code>CPUUnderprovisioned</code>).
+     * Specify <code>FindingReasonCodes</code> to return recommendations with a specific finding reason code (for
+     * example, <code>CPUUnderprovisioned</code>).
      * </p>
      */
     private String name;
@@ -199,31 +199,31 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      * The name of the filter.
      * </p>
      * <p>
-     * Specify <code>Finding</code> to return recommendations with a specific finding classification (e.g.,
+     * Specify <code>Finding</code> to return recommendations with a specific finding classification (for example,
      * <code>Underprovisioned</code>).
      * </p>
      * <p>
-     * Specify <code>RecommendationSourceType</code> to return recommendations of a specific resource type (e.g.,
+     * Specify <code>RecommendationSourceType</code> to return recommendations of a specific resource type (for example,
      * <code>Ec2Instance</code>).
      * </p>
      * <p>
-     * Specify <code>FindingReasonCodes</code> to return recommendations with a specific finding reason code (e.g.,
-     * <code>CPUUnderprovisioned</code>).
+     * Specify <code>FindingReasonCodes</code> to return recommendations with a specific finding reason code (for
+     * example, <code>CPUUnderprovisioned</code>).
      * </p>
      * 
      * @param name
      *        The name of the filter.</p>
      *        <p>
-     *        Specify <code>Finding</code> to return recommendations with a specific finding classification (e.g.,
-     *        <code>Underprovisioned</code>).
+     *        Specify <code>Finding</code> to return recommendations with a specific finding classification (for
+     *        example, <code>Underprovisioned</code>).
      *        </p>
      *        <p>
-     *        Specify <code>RecommendationSourceType</code> to return recommendations of a specific resource type (e.g.,
-     *        <code>Ec2Instance</code>).
+     *        Specify <code>RecommendationSourceType</code> to return recommendations of a specific resource type (for
+     *        example, <code>Ec2Instance</code>).
      *        </p>
      *        <p>
-     *        Specify <code>FindingReasonCodes</code> to return recommendations with a specific finding reason code
-     *        (e.g., <code>CPUUnderprovisioned</code>).
+     *        Specify <code>FindingReasonCodes</code> to return recommendations with a specific finding reason code (for
+     *        example, <code>CPUUnderprovisioned</code>).
      * @see FilterName
      */
 
@@ -236,30 +236,30 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      * The name of the filter.
      * </p>
      * <p>
-     * Specify <code>Finding</code> to return recommendations with a specific finding classification (e.g.,
+     * Specify <code>Finding</code> to return recommendations with a specific finding classification (for example,
      * <code>Underprovisioned</code>).
      * </p>
      * <p>
-     * Specify <code>RecommendationSourceType</code> to return recommendations of a specific resource type (e.g.,
+     * Specify <code>RecommendationSourceType</code> to return recommendations of a specific resource type (for example,
      * <code>Ec2Instance</code>).
      * </p>
      * <p>
-     * Specify <code>FindingReasonCodes</code> to return recommendations with a specific finding reason code (e.g.,
-     * <code>CPUUnderprovisioned</code>).
+     * Specify <code>FindingReasonCodes</code> to return recommendations with a specific finding reason code (for
+     * example, <code>CPUUnderprovisioned</code>).
      * </p>
      * 
      * @return The name of the filter.</p>
      *         <p>
-     *         Specify <code>Finding</code> to return recommendations with a specific finding classification (e.g.,
-     *         <code>Underprovisioned</code>).
+     *         Specify <code>Finding</code> to return recommendations with a specific finding classification (for
+     *         example, <code>Underprovisioned</code>).
      *         </p>
      *         <p>
-     *         Specify <code>RecommendationSourceType</code> to return recommendations of a specific resource type
-     *         (e.g., <code>Ec2Instance</code>).
+     *         Specify <code>RecommendationSourceType</code> to return recommendations of a specific resource type (for
+     *         example, <code>Ec2Instance</code>).
      *         </p>
      *         <p>
      *         Specify <code>FindingReasonCodes</code> to return recommendations with a specific finding reason code
-     *         (e.g., <code>CPUUnderprovisioned</code>).
+     *         (for example, <code>CPUUnderprovisioned</code>).
      * @see FilterName
      */
 
@@ -272,31 +272,31 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      * The name of the filter.
      * </p>
      * <p>
-     * Specify <code>Finding</code> to return recommendations with a specific finding classification (e.g.,
+     * Specify <code>Finding</code> to return recommendations with a specific finding classification (for example,
      * <code>Underprovisioned</code>).
      * </p>
      * <p>
-     * Specify <code>RecommendationSourceType</code> to return recommendations of a specific resource type (e.g.,
+     * Specify <code>RecommendationSourceType</code> to return recommendations of a specific resource type (for example,
      * <code>Ec2Instance</code>).
      * </p>
      * <p>
-     * Specify <code>FindingReasonCodes</code> to return recommendations with a specific finding reason code (e.g.,
-     * <code>CPUUnderprovisioned</code>).
+     * Specify <code>FindingReasonCodes</code> to return recommendations with a specific finding reason code (for
+     * example, <code>CPUUnderprovisioned</code>).
      * </p>
      * 
      * @param name
      *        The name of the filter.</p>
      *        <p>
-     *        Specify <code>Finding</code> to return recommendations with a specific finding classification (e.g.,
-     *        <code>Underprovisioned</code>).
+     *        Specify <code>Finding</code> to return recommendations with a specific finding classification (for
+     *        example, <code>Underprovisioned</code>).
      *        </p>
      *        <p>
-     *        Specify <code>RecommendationSourceType</code> to return recommendations of a specific resource type (e.g.,
-     *        <code>Ec2Instance</code>).
+     *        Specify <code>RecommendationSourceType</code> to return recommendations of a specific resource type (for
+     *        example, <code>Ec2Instance</code>).
      *        </p>
      *        <p>
-     *        Specify <code>FindingReasonCodes</code> to return recommendations with a specific finding reason code
-     *        (e.g., <code>CPUUnderprovisioned</code>).
+     *        Specify <code>FindingReasonCodes</code> to return recommendations with a specific finding reason code (for
+     *        example, <code>CPUUnderprovisioned</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FilterName
      */
@@ -311,31 +311,31 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      * The name of the filter.
      * </p>
      * <p>
-     * Specify <code>Finding</code> to return recommendations with a specific finding classification (e.g.,
+     * Specify <code>Finding</code> to return recommendations with a specific finding classification (for example,
      * <code>Underprovisioned</code>).
      * </p>
      * <p>
-     * Specify <code>RecommendationSourceType</code> to return recommendations of a specific resource type (e.g.,
+     * Specify <code>RecommendationSourceType</code> to return recommendations of a specific resource type (for example,
      * <code>Ec2Instance</code>).
      * </p>
      * <p>
-     * Specify <code>FindingReasonCodes</code> to return recommendations with a specific finding reason code (e.g.,
-     * <code>CPUUnderprovisioned</code>).
+     * Specify <code>FindingReasonCodes</code> to return recommendations with a specific finding reason code (for
+     * example, <code>CPUUnderprovisioned</code>).
      * </p>
      * 
      * @param name
      *        The name of the filter.</p>
      *        <p>
-     *        Specify <code>Finding</code> to return recommendations with a specific finding classification (e.g.,
-     *        <code>Underprovisioned</code>).
+     *        Specify <code>Finding</code> to return recommendations with a specific finding classification (for
+     *        example, <code>Underprovisioned</code>).
      *        </p>
      *        <p>
-     *        Specify <code>RecommendationSourceType</code> to return recommendations of a specific resource type (e.g.,
-     *        <code>Ec2Instance</code>).
+     *        Specify <code>RecommendationSourceType</code> to return recommendations of a specific resource type (for
+     *        example, <code>Ec2Instance</code>).
      *        </p>
      *        <p>
-     *        Specify <code>FindingReasonCodes</code> to return recommendations with a specific finding reason code
-     *        (e.g., <code>CPUUnderprovisioned</code>).
+     *        Specify <code>FindingReasonCodes</code> to return recommendations with a specific finding reason code (for
+     *        example, <code>CPUUnderprovisioned</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FilterName
      */

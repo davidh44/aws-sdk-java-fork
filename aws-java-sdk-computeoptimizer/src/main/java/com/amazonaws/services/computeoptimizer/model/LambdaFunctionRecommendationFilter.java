@@ -19,13 +19,13 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes a filter that returns a more specific list of AWS Lambda function recommendations. Use this filter with the
- * <code>GetLambdaFunctionRecommendations</code> action.
+ * Describes a filter that returns a more specific list of Lambda function recommendations. Use this filter with the
+ * <a>GetLambdaFunctionRecommendations</a> action.
  * </p>
  * <p>
- * You can use <code>EBSFilter</code> with the <code>GetEBSVolumeRecommendations</code> action, <code>JobFilter</code>
- * with the <code>DescribeRecommendationExportJobs</code> action, and <code>Filter</code> with the
- * <code>GetAutoScalingGroupRecommendations</code> and <code>GetEC2InstanceRecommendations</code> actions.
+ * You can use <code>EBSFilter</code> with the <a>GetEBSVolumeRecommendations</a> action, <code>JobFilter</code> with
+ * the <a>DescribeRecommendationExportJobs</a> action, and <code>Filter</code> with the
+ * <a>GetAutoScalingGroupRecommendations</a> and <a>GetEC2InstanceRecommendations</a> actions.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/LambdaFunctionRecommendationFilter"
@@ -39,12 +39,12 @@ public class LambdaFunctionRecommendationFilter implements Serializable, Cloneab
      * The name of the filter.
      * </p>
      * <p>
-     * Specify <code>Finding</code> to return recommendations with a specific finding classification (e.g.,
+     * Specify <code>Finding</code> to return recommendations with a specific finding classification (for example,
      * <code>NotOptimized</code>).
      * </p>
      * <p>
-     * Specify <code>FindingReasonCode</code> to return recommendations with a specific finding reason code (e.g.,
-     * <code>MemoryUnderprovisioned</code>).
+     * Specify <code>FindingReasonCode</code> to return recommendations with a specific finding reason code (for
+     * example, <code>MemoryUnderprovisioned</code>).
      * </p>
      */
     private String name;
@@ -78,23 +78,23 @@ public class LambdaFunctionRecommendationFilter implements Serializable, Cloneab
      * The name of the filter.
      * </p>
      * <p>
-     * Specify <code>Finding</code> to return recommendations with a specific finding classification (e.g.,
+     * Specify <code>Finding</code> to return recommendations with a specific finding classification (for example,
      * <code>NotOptimized</code>).
      * </p>
      * <p>
-     * Specify <code>FindingReasonCode</code> to return recommendations with a specific finding reason code (e.g.,
-     * <code>MemoryUnderprovisioned</code>).
+     * Specify <code>FindingReasonCode</code> to return recommendations with a specific finding reason code (for
+     * example, <code>MemoryUnderprovisioned</code>).
      * </p>
      * 
      * @param name
      *        The name of the filter.</p>
      *        <p>
-     *        Specify <code>Finding</code> to return recommendations with a specific finding classification (e.g.,
-     *        <code>NotOptimized</code>).
+     *        Specify <code>Finding</code> to return recommendations with a specific finding classification (for
+     *        example, <code>NotOptimized</code>).
      *        </p>
      *        <p>
-     *        Specify <code>FindingReasonCode</code> to return recommendations with a specific finding reason code
-     *        (e.g., <code>MemoryUnderprovisioned</code>).
+     *        Specify <code>FindingReasonCode</code> to return recommendations with a specific finding reason code (for
+     *        example, <code>MemoryUnderprovisioned</code>).
      * @see LambdaFunctionRecommendationFilterName
      */
 
@@ -107,22 +107,22 @@ public class LambdaFunctionRecommendationFilter implements Serializable, Cloneab
      * The name of the filter.
      * </p>
      * <p>
-     * Specify <code>Finding</code> to return recommendations with a specific finding classification (e.g.,
+     * Specify <code>Finding</code> to return recommendations with a specific finding classification (for example,
      * <code>NotOptimized</code>).
      * </p>
      * <p>
-     * Specify <code>FindingReasonCode</code> to return recommendations with a specific finding reason code (e.g.,
-     * <code>MemoryUnderprovisioned</code>).
+     * Specify <code>FindingReasonCode</code> to return recommendations with a specific finding reason code (for
+     * example, <code>MemoryUnderprovisioned</code>).
      * </p>
      * 
      * @return The name of the filter.</p>
      *         <p>
-     *         Specify <code>Finding</code> to return recommendations with a specific finding classification (e.g.,
-     *         <code>NotOptimized</code>).
+     *         Specify <code>Finding</code> to return recommendations with a specific finding classification (for
+     *         example, <code>NotOptimized</code>).
      *         </p>
      *         <p>
-     *         Specify <code>FindingReasonCode</code> to return recommendations with a specific finding reason code
-     *         (e.g., <code>MemoryUnderprovisioned</code>).
+     *         Specify <code>FindingReasonCode</code> to return recommendations with a specific finding reason code (for
+     *         example, <code>MemoryUnderprovisioned</code>).
      * @see LambdaFunctionRecommendationFilterName
      */
 
@@ -135,23 +135,23 @@ public class LambdaFunctionRecommendationFilter implements Serializable, Cloneab
      * The name of the filter.
      * </p>
      * <p>
-     * Specify <code>Finding</code> to return recommendations with a specific finding classification (e.g.,
+     * Specify <code>Finding</code> to return recommendations with a specific finding classification (for example,
      * <code>NotOptimized</code>).
      * </p>
      * <p>
-     * Specify <code>FindingReasonCode</code> to return recommendations with a specific finding reason code (e.g.,
-     * <code>MemoryUnderprovisioned</code>).
+     * Specify <code>FindingReasonCode</code> to return recommendations with a specific finding reason code (for
+     * example, <code>MemoryUnderprovisioned</code>).
      * </p>
      * 
      * @param name
      *        The name of the filter.</p>
      *        <p>
-     *        Specify <code>Finding</code> to return recommendations with a specific finding classification (e.g.,
-     *        <code>NotOptimized</code>).
+     *        Specify <code>Finding</code> to return recommendations with a specific finding classification (for
+     *        example, <code>NotOptimized</code>).
      *        </p>
      *        <p>
-     *        Specify <code>FindingReasonCode</code> to return recommendations with a specific finding reason code
-     *        (e.g., <code>MemoryUnderprovisioned</code>).
+     *        Specify <code>FindingReasonCode</code> to return recommendations with a specific finding reason code (for
+     *        example, <code>MemoryUnderprovisioned</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LambdaFunctionRecommendationFilterName
      */
@@ -166,23 +166,23 @@ public class LambdaFunctionRecommendationFilter implements Serializable, Cloneab
      * The name of the filter.
      * </p>
      * <p>
-     * Specify <code>Finding</code> to return recommendations with a specific finding classification (e.g.,
+     * Specify <code>Finding</code> to return recommendations with a specific finding classification (for example,
      * <code>NotOptimized</code>).
      * </p>
      * <p>
-     * Specify <code>FindingReasonCode</code> to return recommendations with a specific finding reason code (e.g.,
-     * <code>MemoryUnderprovisioned</code>).
+     * Specify <code>FindingReasonCode</code> to return recommendations with a specific finding reason code (for
+     * example, <code>MemoryUnderprovisioned</code>).
      * </p>
      * 
      * @param name
      *        The name of the filter.</p>
      *        <p>
-     *        Specify <code>Finding</code> to return recommendations with a specific finding classification (e.g.,
-     *        <code>NotOptimized</code>).
+     *        Specify <code>Finding</code> to return recommendations with a specific finding classification (for
+     *        example, <code>NotOptimized</code>).
      *        </p>
      *        <p>
-     *        Specify <code>FindingReasonCode</code> to return recommendations with a specific finding reason code
-     *        (e.g., <code>MemoryUnderprovisioned</code>).
+     *        Specify <code>FindingReasonCode</code> to return recommendations with a specific finding reason code (for
+     *        example, <code>MemoryUnderprovisioned</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LambdaFunctionRecommendationFilterName
      */

@@ -20,13 +20,13 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Describes a filter that returns a more specific list of recommendation export jobs. Use this filter with the
- * <code>DescribeRecommendationExportJobs</code> action.
+ * <a>DescribeRecommendationExportJobs</a> action.
  * </p>
  * <p>
- * You can use <code>EBSFilter</code> with the <code>GetEBSVolumeRecommendations</code> action,
- * <code>LambdaFunctionRecommendationFilter</code> with the <code>GetLambdaFunctionRecommendations</code> action, and
- * <code>Filter</code> with the <code>GetAutoScalingGroupRecommendations</code> and
- * <code>GetEC2InstanceRecommendations</code> actions.
+ * You can use <code>EBSFilter</code> with the <a>GetEBSVolumeRecommendations</a> action,
+ * <code>LambdaFunctionRecommendationFilter</code> with the <a>GetLambdaFunctionRecommendations</a> action, and
+ * <code>Filter</code> with the <a>GetAutoScalingGroupRecommendations</a> and <a>GetEC2InstanceRecommendations</a>
+ * actions.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/JobFilter" target="_top">AWS API
@@ -40,7 +40,7 @@ public class JobFilter implements Serializable, Cloneable, StructuredPojo {
      * The name of the filter.
      * </p>
      * <p>
-     * Specify <code>ResourceType</code> to return export jobs of a specific resource type (e.g.,
+     * Specify <code>ResourceType</code> to return export jobs of a specific resource type (for example,
      * <code>Ec2Instance</code>).
      * </p>
      * <p>
@@ -79,7 +79,7 @@ public class JobFilter implements Serializable, Cloneable, StructuredPojo {
      * The name of the filter.
      * </p>
      * <p>
-     * Specify <code>ResourceType</code> to return export jobs of a specific resource type (e.g.,
+     * Specify <code>ResourceType</code> to return export jobs of a specific resource type (for example,
      * <code>Ec2Instance</code>).
      * </p>
      * <p>
@@ -89,7 +89,7 @@ public class JobFilter implements Serializable, Cloneable, StructuredPojo {
      * @param name
      *        The name of the filter.</p>
      *        <p>
-     *        Specify <code>ResourceType</code> to return export jobs of a specific resource type (e.g.,
+     *        Specify <code>ResourceType</code> to return export jobs of a specific resource type (for example,
      *        <code>Ec2Instance</code>).
      *        </p>
      *        <p>
@@ -106,7 +106,7 @@ public class JobFilter implements Serializable, Cloneable, StructuredPojo {
      * The name of the filter.
      * </p>
      * <p>
-     * Specify <code>ResourceType</code> to return export jobs of a specific resource type (e.g.,
+     * Specify <code>ResourceType</code> to return export jobs of a specific resource type (for example,
      * <code>Ec2Instance</code>).
      * </p>
      * <p>
@@ -115,7 +115,7 @@ public class JobFilter implements Serializable, Cloneable, StructuredPojo {
      * 
      * @return The name of the filter.</p>
      *         <p>
-     *         Specify <code>ResourceType</code> to return export jobs of a specific resource type (e.g.,
+     *         Specify <code>ResourceType</code> to return export jobs of a specific resource type (for example,
      *         <code>Ec2Instance</code>).
      *         </p>
      *         <p>
@@ -132,7 +132,7 @@ public class JobFilter implements Serializable, Cloneable, StructuredPojo {
      * The name of the filter.
      * </p>
      * <p>
-     * Specify <code>ResourceType</code> to return export jobs of a specific resource type (e.g.,
+     * Specify <code>ResourceType</code> to return export jobs of a specific resource type (for example,
      * <code>Ec2Instance</code>).
      * </p>
      * <p>
@@ -142,7 +142,7 @@ public class JobFilter implements Serializable, Cloneable, StructuredPojo {
      * @param name
      *        The name of the filter.</p>
      *        <p>
-     *        Specify <code>ResourceType</code> to return export jobs of a specific resource type (e.g.,
+     *        Specify <code>ResourceType</code> to return export jobs of a specific resource type (for example,
      *        <code>Ec2Instance</code>).
      *        </p>
      *        <p>
@@ -161,7 +161,7 @@ public class JobFilter implements Serializable, Cloneable, StructuredPojo {
      * The name of the filter.
      * </p>
      * <p>
-     * Specify <code>ResourceType</code> to return export jobs of a specific resource type (e.g.,
+     * Specify <code>ResourceType</code> to return export jobs of a specific resource type (for example,
      * <code>Ec2Instance</code>).
      * </p>
      * <p>
@@ -171,7 +171,7 @@ public class JobFilter implements Serializable, Cloneable, StructuredPojo {
      * @param name
      *        The name of the filter.</p>
      *        <p>
-     *        Specify <code>ResourceType</code> to return export jobs of a specific resource type (e.g.,
+     *        Specify <code>ResourceType</code> to return export jobs of a specific resource type (for example,
      *        <code>Ec2Instance</code>).
      *        </p>
      *        <p>

@@ -46,7 +46,7 @@ public class TransitGatewayMulticastDomainAssociation implements Serializable, C
     private String resourceType;
     /**
      * <p>
-     * The ID of the AWS account that owns the transit gateway multicast domain association resource.
+     * The ID of the Amazon Web Services account that owns the transit gateway multicast domain association resource.
      * </p>
      */
     private String resourceOwnerId;
@@ -198,11 +198,12 @@ public class TransitGatewayMulticastDomainAssociation implements Serializable, C
 
     /**
      * <p>
-     * The ID of the AWS account that owns the transit gateway multicast domain association resource.
+     * The ID of the Amazon Web Services account that owns the transit gateway multicast domain association resource.
      * </p>
      * 
      * @param resourceOwnerId
-     *        The ID of the AWS account that owns the transit gateway multicast domain association resource.
+     *        The ID of the Amazon Web Services account that owns the transit gateway multicast domain association
+     *        resource.
      */
 
     public void setResourceOwnerId(String resourceOwnerId) {
@@ -211,10 +212,11 @@ public class TransitGatewayMulticastDomainAssociation implements Serializable, C
 
     /**
      * <p>
-     * The ID of the AWS account that owns the transit gateway multicast domain association resource.
+     * The ID of the Amazon Web Services account that owns the transit gateway multicast domain association resource.
      * </p>
      * 
-     * @return The ID of the AWS account that owns the transit gateway multicast domain association resource.
+     * @return The ID of the Amazon Web Services account that owns the transit gateway multicast domain association
+     *         resource.
      */
 
     public String getResourceOwnerId() {
@@ -223,11 +225,12 @@ public class TransitGatewayMulticastDomainAssociation implements Serializable, C
 
     /**
      * <p>
-     * The ID of the AWS account that owns the transit gateway multicast domain association resource.
+     * The ID of the Amazon Web Services account that owns the transit gateway multicast domain association resource.
      * </p>
      * 
      * @param resourceOwnerId
-     *        The ID of the AWS account that owns the transit gateway multicast domain association resource.
+     *        The ID of the Amazon Web Services account that owns the transit gateway multicast domain association
+     *        resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

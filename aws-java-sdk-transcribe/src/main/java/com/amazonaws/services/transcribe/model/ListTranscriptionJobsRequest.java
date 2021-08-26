@@ -41,7 +41,7 @@ public class ListTranscriptionJobsRequest extends com.amazonaws.AmazonWebService
     private String jobNameContains;
     /**
      * <p>
-     * If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated, include the
+     * If the result of the previous request to <code>ListTranscriptionJobs</code> is truncated, include the
      * <code>NextToken</code> to fetch the next set of jobs.
      * </p>
      */
@@ -174,12 +174,12 @@ public class ListTranscriptionJobsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated, include the
+     * If the result of the previous request to <code>ListTranscriptionJobs</code> is truncated, include the
      * <code>NextToken</code> to fetch the next set of jobs.
      * </p>
      * 
      * @param nextToken
-     *        If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated, include the
+     *        If the result of the previous request to <code>ListTranscriptionJobs</code> is truncated, include the
      *        <code>NextToken</code> to fetch the next set of jobs.
      */
 
@@ -189,11 +189,11 @@ public class ListTranscriptionJobsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated, include the
+     * If the result of the previous request to <code>ListTranscriptionJobs</code> is truncated, include the
      * <code>NextToken</code> to fetch the next set of jobs.
      * </p>
      * 
-     * @return If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated, include the
+     * @return If the result of the previous request to <code>ListTranscriptionJobs</code> is truncated, include the
      *         <code>NextToken</code> to fetch the next set of jobs.
      */
 
@@ -203,12 +203,12 @@ public class ListTranscriptionJobsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated, include the
+     * If the result of the previous request to <code>ListTranscriptionJobs</code> is truncated, include the
      * <code>NextToken</code> to fetch the next set of jobs.
      * </p>
      * 
      * @param nextToken
-     *        If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated, include the
+     *        If the result of the previous request to <code>ListTranscriptionJobs</code> is truncated, include the
      *        <code>NextToken</code> to fetch the next set of jobs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

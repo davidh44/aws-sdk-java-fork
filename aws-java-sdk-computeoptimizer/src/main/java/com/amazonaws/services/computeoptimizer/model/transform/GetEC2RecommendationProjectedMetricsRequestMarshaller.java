@@ -37,6 +37,8 @@ public class GetEC2RecommendationProjectedMetricsRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("startTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> ENDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("endTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<StructuredPojo> RECOMMENDATIONPREFERENCES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recommendationPreferences").build();
 
     private static final GetEC2RecommendationProjectedMetricsRequestMarshaller instance = new GetEC2RecommendationProjectedMetricsRequestMarshaller();
 
@@ -59,6 +61,7 @@ public class GetEC2RecommendationProjectedMetricsRequestMarshaller {
             protocolMarshaller.marshall(getEC2RecommendationProjectedMetricsRequest.getPeriod(), PERIOD_BINDING);
             protocolMarshaller.marshall(getEC2RecommendationProjectedMetricsRequest.getStartTime(), STARTTIME_BINDING);
             protocolMarshaller.marshall(getEC2RecommendationProjectedMetricsRequest.getEndTime(), ENDTIME_BINDING);
+            protocolMarshaller.marshall(getEC2RecommendationProjectedMetricsRequest.getRecommendationPreferences(), RECOMMENDATIONPREFERENCES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

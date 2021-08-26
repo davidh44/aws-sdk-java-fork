@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The request must contain either a valid (registered) AWS access key ID or X.509 certificate.
+ * The request must contain either a valid (registered) Amazon Web Services access key ID or X.509 certificate.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -24,7 +24,8 @@ public enum PlatformDifference {
     NetworkInterface("NetworkInterface"),
     StorageInterface("StorageInterface"),
     InstanceStoreAvailability("InstanceStoreAvailability"),
-    VirtualizationType("VirtualizationType");
+    VirtualizationType("VirtualizationType"),
+    Architecture("Architecture");
 
     private String value;
 

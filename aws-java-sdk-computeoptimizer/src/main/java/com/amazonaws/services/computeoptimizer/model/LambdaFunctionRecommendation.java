@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes an AWS Lambda function recommendation.
+ * Describes an Lambda function recommendation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/LambdaFunctionRecommendation"
@@ -42,7 +42,7 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
     private String functionVersion;
     /**
      * <p>
-     * The AWS account ID of the function.
+     * The Amazon Web Services account ID of the function.
      * </p>
      */
     private String accountId;
@@ -54,7 +54,7 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
     private Integer currentMemorySize;
     /**
      * <p>
-     * The number of times your function code was executed during the look-back period.
+     * The number of times your function code was applied during the look-back period.
      * </p>
      */
     private Long numberOfInvocations;
@@ -72,7 +72,7 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
     private Double lookbackPeriodInDays;
     /**
      * <p>
-     * The time stamp of when the function recommendation was last refreshed.
+     * The timestamp of when the function recommendation was last refreshed.
      * </p>
      */
     private java.util.Date lastRefreshTimestamp;
@@ -149,7 +149,7 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
      * <b> <code>InsufficientData</code> </b> — The function does not have sufficient metric data for Compute Optimizer
      * to generate a recommendation. For more information, see the <a
      * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/requirements.html">Supported resources and
-     * requirements</a> in the <i>AWS Compute Optimizer User Guide</i>. This finding reason code is part of the
+     * requirements</a> in the <i>Compute Optimizer User Guide</i>. This finding reason code is part of the
      * <code>Unavailable</code> finding classification.
      * </p>
      * </li>
@@ -252,11 +252,11 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The AWS account ID of the function.
+     * The Amazon Web Services account ID of the function.
      * </p>
      * 
      * @param accountId
-     *        The AWS account ID of the function.
+     *        The Amazon Web Services account ID of the function.
      */
 
     public void setAccountId(String accountId) {
@@ -265,10 +265,10 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The AWS account ID of the function.
+     * The Amazon Web Services account ID of the function.
      * </p>
      * 
-     * @return The AWS account ID of the function.
+     * @return The Amazon Web Services account ID of the function.
      */
 
     public String getAccountId() {
@@ -277,11 +277,11 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The AWS account ID of the function.
+     * The Amazon Web Services account ID of the function.
      * </p>
      * 
      * @param accountId
-     *        The AWS account ID of the function.
+     *        The Amazon Web Services account ID of the function.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -332,11 +332,11 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The number of times your function code was executed during the look-back period.
+     * The number of times your function code was applied during the look-back period.
      * </p>
      * 
      * @param numberOfInvocations
-     *        The number of times your function code was executed during the look-back period.
+     *        The number of times your function code was applied during the look-back period.
      */
 
     public void setNumberOfInvocations(Long numberOfInvocations) {
@@ -345,10 +345,10 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The number of times your function code was executed during the look-back period.
+     * The number of times your function code was applied during the look-back period.
      * </p>
      * 
-     * @return The number of times your function code was executed during the look-back period.
+     * @return The number of times your function code was applied during the look-back period.
      */
 
     public Long getNumberOfInvocations() {
@@ -357,11 +357,11 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The number of times your function code was executed during the look-back period.
+     * The number of times your function code was applied during the look-back period.
      * </p>
      * 
      * @param numberOfInvocations
-     *        The number of times your function code was executed during the look-back period.
+     *        The number of times your function code was applied during the look-back period.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -482,11 +482,11 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The time stamp of when the function recommendation was last refreshed.
+     * The timestamp of when the function recommendation was last refreshed.
      * </p>
      * 
      * @param lastRefreshTimestamp
-     *        The time stamp of when the function recommendation was last refreshed.
+     *        The timestamp of when the function recommendation was last refreshed.
      */
 
     public void setLastRefreshTimestamp(java.util.Date lastRefreshTimestamp) {
@@ -495,10 +495,10 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The time stamp of when the function recommendation was last refreshed.
+     * The timestamp of when the function recommendation was last refreshed.
      * </p>
      * 
-     * @return The time stamp of when the function recommendation was last refreshed.
+     * @return The timestamp of when the function recommendation was last refreshed.
      */
 
     public java.util.Date getLastRefreshTimestamp() {
@@ -507,11 +507,11 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The time stamp of when the function recommendation was last refreshed.
+     * The timestamp of when the function recommendation was last refreshed.
      * </p>
      * 
      * @param lastRefreshTimestamp
-     *        The time stamp of when the function recommendation was last refreshed.
+     *        The timestamp of when the function recommendation was last refreshed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -882,7 +882,7 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
      * <b> <code>InsufficientData</code> </b> — The function does not have sufficient metric data for Compute Optimizer
      * to generate a recommendation. For more information, see the <a
      * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/requirements.html">Supported resources and
-     * requirements</a> in the <i>AWS Compute Optimizer User Guide</i>. This finding reason code is part of the
+     * requirements</a> in the <i>Compute Optimizer User Guide</i>. This finding reason code is part of the
      * <code>Unavailable</code> finding classification.
      * </p>
      * </li>
@@ -925,7 +925,7 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
      *         <b> <code>InsufficientData</code> </b> — The function does not have sufficient metric data for Compute
      *         Optimizer to generate a recommendation. For more information, see the <a
      *         href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/requirements.html">Supported resources and
-     *         requirements</a> in the <i>AWS Compute Optimizer User Guide</i>. This finding reason code is part of the
+     *         requirements</a> in the <i>Compute Optimizer User Guide</i>. This finding reason code is part of the
      *         <code>Unavailable</code> finding classification.
      *         </p>
      *         </li>
@@ -977,7 +977,7 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
      * <b> <code>InsufficientData</code> </b> — The function does not have sufficient metric data for Compute Optimizer
      * to generate a recommendation. For more information, see the <a
      * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/requirements.html">Supported resources and
-     * requirements</a> in the <i>AWS Compute Optimizer User Guide</i>. This finding reason code is part of the
+     * requirements</a> in the <i>Compute Optimizer User Guide</i>. This finding reason code is part of the
      * <code>Unavailable</code> finding classification.
      * </p>
      * </li>
@@ -1021,7 +1021,7 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
      *        <b> <code>InsufficientData</code> </b> — The function does not have sufficient metric data for Compute
      *        Optimizer to generate a recommendation. For more information, see the <a
      *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/requirements.html">Supported resources and
-     *        requirements</a> in the <i>AWS Compute Optimizer User Guide</i>. This finding reason code is part of the
+     *        requirements</a> in the <i>Compute Optimizer User Guide</i>. This finding reason code is part of the
      *        <code>Unavailable</code> finding classification.
      *        </p>
      *        </li>
@@ -1078,7 +1078,7 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
      * <b> <code>InsufficientData</code> </b> — The function does not have sufficient metric data for Compute Optimizer
      * to generate a recommendation. For more information, see the <a
      * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/requirements.html">Supported resources and
-     * requirements</a> in the <i>AWS Compute Optimizer User Guide</i>. This finding reason code is part of the
+     * requirements</a> in the <i>Compute Optimizer User Guide</i>. This finding reason code is part of the
      * <code>Unavailable</code> finding classification.
      * </p>
      * </li>
@@ -1127,7 +1127,7 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
      *        <b> <code>InsufficientData</code> </b> — The function does not have sufficient metric data for Compute
      *        Optimizer to generate a recommendation. For more information, see the <a
      *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/requirements.html">Supported resources and
-     *        requirements</a> in the <i>AWS Compute Optimizer User Guide</i>. This finding reason code is part of the
+     *        requirements</a> in the <i>Compute Optimizer User Guide</i>. This finding reason code is part of the
      *        <code>Unavailable</code> finding classification.
      *        </p>
      *        </li>
@@ -1186,7 +1186,7 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
      * <b> <code>InsufficientData</code> </b> — The function does not have sufficient metric data for Compute Optimizer
      * to generate a recommendation. For more information, see the <a
      * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/requirements.html">Supported resources and
-     * requirements</a> in the <i>AWS Compute Optimizer User Guide</i>. This finding reason code is part of the
+     * requirements</a> in the <i>Compute Optimizer User Guide</i>. This finding reason code is part of the
      * <code>Unavailable</code> finding classification.
      * </p>
      * </li>
@@ -1230,7 +1230,7 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
      *        <b> <code>InsufficientData</code> </b> — The function does not have sufficient metric data for Compute
      *        Optimizer to generate a recommendation. For more information, see the <a
      *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/requirements.html">Supported resources and
-     *        requirements</a> in the <i>AWS Compute Optimizer User Guide</i>. This finding reason code is part of the
+     *        requirements</a> in the <i>Compute Optimizer User Guide</i>. This finding reason code is part of the
      *        <code>Unavailable</code> finding classification.
      *        </p>
      *        </li>
@@ -1284,7 +1284,7 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
      * <b> <code>InsufficientData</code> </b> — The function does not have sufficient metric data for Compute Optimizer
      * to generate a recommendation. For more information, see the <a
      * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/requirements.html">Supported resources and
-     * requirements</a> in the <i>AWS Compute Optimizer User Guide</i>. This finding reason code is part of the
+     * requirements</a> in the <i>Compute Optimizer User Guide</i>. This finding reason code is part of the
      * <code>Unavailable</code> finding classification.
      * </p>
      * </li>
@@ -1328,7 +1328,7 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
      *        <b> <code>InsufficientData</code> </b> — The function does not have sufficient metric data for Compute
      *        Optimizer to generate a recommendation. For more information, see the <a
      *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/requirements.html">Supported resources and
-     *        requirements</a> in the <i>AWS Compute Optimizer User Guide</i>. This finding reason code is part of the
+     *        requirements</a> in the <i>Compute Optimizer User Guide</i>. This finding reason code is part of the
      *        <code>Unavailable</code> finding classification.
      *        </p>
      *        </li>

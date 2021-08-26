@@ -38,6 +38,10 @@ public class ComparedFaceMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Pose").build();
     private static final MarshallingInfo<StructuredPojo> QUALITY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Quality").build();
+    private static final MarshallingInfo<List> EMOTIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Emotions").build();
+    private static final MarshallingInfo<StructuredPojo> SMILE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Smile").build();
 
     private static final ComparedFaceMarshaller instance = new ComparedFaceMarshaller();
 
@@ -60,6 +64,8 @@ public class ComparedFaceMarshaller {
             protocolMarshaller.marshall(comparedFace.getLandmarks(), LANDMARKS_BINDING);
             protocolMarshaller.marshall(comparedFace.getPose(), POSE_BINDING);
             protocolMarshaller.marshall(comparedFace.getQuality(), QUALITY_BINDING);
+            protocolMarshaller.marshall(comparedFace.getEmotions(), EMOTIONS_BINDING);
+            protocolMarshaller.marshall(comparedFace.getSmile(), SMILE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

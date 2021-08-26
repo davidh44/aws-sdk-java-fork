@@ -26,15 +26,15 @@ import java.util.concurrent.ExecutorService;
  * notification when an asynchronous operation completes.
  * <p>
  * <p>
- * AWS Compute Optimizer is a service that analyzes the configuration and utilization metrics of your AWS compute
- * resources, such as EC2 instances, Auto Scaling groups, AWS Lambda functions, and Amazon EBS volumes. It reports
- * whether your resources are optimal, and generates optimization recommendations to reduce the cost and improve the
- * performance of your workloads. Compute Optimizer also provides recent utilization metric data, as well as projected
- * utilization metric data for the recommendations, which you can use to evaluate which recommendation provides the best
- * price-performance trade-off. The analysis of your usage patterns can help you decide when to move or resize your
- * running resources, and still meet your performance and capacity requirements. For more information about Compute
- * Optimizer, including the required permissions to use the service, see the <a
- * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/">AWS Compute Optimizer User Guide</a>.
+ * Compute Optimizer is a service that analyzes the configuration and utilization metrics of your Amazon Web Services
+ * compute resources, such as Amazon EC2 instances, Amazon EC2 Auto Scaling groups, Lambda functions, and Amazon EBS
+ * volumes. It reports whether your resources are optimal, and generates optimization recommendations to reduce the cost
+ * and improve the performance of your workloads. Compute Optimizer also provides recent utilization metric data, in
+ * addition to projected utilization metric data for the recommendations, which you can use to evaluate which
+ * recommendation provides the best price-performance trade-off. The analysis of your usage patterns can help you decide
+ * when to move or resize your running resources, and still meet your performance and capacity requirements. For more
+ * information about Compute Optimizer, including the required permissions to use the service, see the <a
+ * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/">Compute Optimizer User Guide</a>.
  * </p>
  */
 @ThreadSafe
@@ -412,6 +412,41 @@ public class AWSComputeOptimizerAsyncClient extends AWSComputeOptimizerClient im
 
                 try {
                     result = executeGetEnrollmentStatus(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEnrollmentStatusesForOrganizationResult> getEnrollmentStatusesForOrganizationAsync(
+            GetEnrollmentStatusesForOrganizationRequest request) {
+
+        return getEnrollmentStatusesForOrganizationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEnrollmentStatusesForOrganizationResult> getEnrollmentStatusesForOrganizationAsync(
+            final GetEnrollmentStatusesForOrganizationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetEnrollmentStatusesForOrganizationRequest, GetEnrollmentStatusesForOrganizationResult> asyncHandler) {
+        final GetEnrollmentStatusesForOrganizationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetEnrollmentStatusesForOrganizationResult>() {
+            @Override
+            public GetEnrollmentStatusesForOrganizationResult call() throws Exception {
+                GetEnrollmentStatusesForOrganizationResult result = null;
+
+                try {
+                    result = executeGetEnrollmentStatusesForOrganization(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

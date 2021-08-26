@@ -27,7 +27,7 @@ public class ExportEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The IDs of the AWS accounts for which to export Amazon EBS volume recommendations.
+     * The IDs of the Amazon Web Services accounts for which to export Amazon EBS volume recommendations.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -48,7 +48,7 @@ public class ExportEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonW
     private java.util.List<String> accountIds;
     /**
      * <p>
-     * An array of objects that describe a filter to export a more specific set of Amazon EBS volume recommendations.
+     * An array of objects to specify a filter that exports a more specific set of Amazon EBS volume recommendations.
      * </p>
      */
     private java.util.List<EBSFilter> filters;
@@ -81,7 +81,7 @@ public class ExportEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonW
      * The member accounts must also be opted in to Compute Optimizer, and trusted access for Compute Optimizer must be
      * enabled in the organization account. For more information, see <a
      * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/security-iam.html#trusted-service-access">Compute
-     * Optimizer and AWS Organizations trusted access</a> in the <i>AWS Compute Optimizer User Guide</i>.
+     * Optimizer and Amazon Web Services Organizations trusted access</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      * <p>
      * Recommendations for member accounts of the organization are not included in the export file if this parameter is
@@ -100,7 +100,7 @@ public class ExportEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The IDs of the AWS accounts for which to export Amazon EBS volume recommendations.
+     * The IDs of the Amazon Web Services accounts for which to export Amazon EBS volume recommendations.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -118,7 +118,7 @@ public class ExportEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonW
      * You can specify multiple account IDs per request.
      * </p>
      * 
-     * @return The IDs of the AWS accounts for which to export Amazon EBS volume recommendations.</p>
+     * @return The IDs of the Amazon Web Services accounts for which to export Amazon EBS volume recommendations.</p>
      *         <p>
      *         If your account is the management account of an organization, use this parameter to specify the member
      *         account for which you want to export recommendations.
@@ -141,7 +141,7 @@ public class ExportEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The IDs of the AWS accounts for which to export Amazon EBS volume recommendations.
+     * The IDs of the Amazon Web Services accounts for which to export Amazon EBS volume recommendations.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -160,7 +160,7 @@ public class ExportEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param accountIds
-     *        The IDs of the AWS accounts for which to export Amazon EBS volume recommendations.</p>
+     *        The IDs of the Amazon Web Services accounts for which to export Amazon EBS volume recommendations.</p>
      *        <p>
      *        If your account is the management account of an organization, use this parameter to specify the member
      *        account for which you want to export recommendations.
@@ -188,7 +188,7 @@ public class ExportEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The IDs of the AWS accounts for which to export Amazon EBS volume recommendations.
+     * The IDs of the Amazon Web Services accounts for which to export Amazon EBS volume recommendations.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -212,7 +212,7 @@ public class ExportEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param accountIds
-     *        The IDs of the AWS accounts for which to export Amazon EBS volume recommendations.</p>
+     *        The IDs of the Amazon Web Services accounts for which to export Amazon EBS volume recommendations.</p>
      *        <p>
      *        If your account is the management account of an organization, use this parameter to specify the member
      *        account for which you want to export recommendations.
@@ -242,7 +242,7 @@ public class ExportEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The IDs of the AWS accounts for which to export Amazon EBS volume recommendations.
+     * The IDs of the Amazon Web Services accounts for which to export Amazon EBS volume recommendations.
      * </p>
      * <p>
      * If your account is the management account of an organization, use this parameter to specify the member account
@@ -261,7 +261,7 @@ public class ExportEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param accountIds
-     *        The IDs of the AWS accounts for which to export Amazon EBS volume recommendations.</p>
+     *        The IDs of the Amazon Web Services accounts for which to export Amazon EBS volume recommendations.</p>
      *        <p>
      *        If your account is the management account of an organization, use this parameter to specify the member
      *        account for which you want to export recommendations.
@@ -286,10 +286,10 @@ public class ExportEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * An array of objects that describe a filter to export a more specific set of Amazon EBS volume recommendations.
+     * An array of objects to specify a filter that exports a more specific set of Amazon EBS volume recommendations.
      * </p>
      * 
-     * @return An array of objects that describe a filter to export a more specific set of Amazon EBS volume
+     * @return An array of objects to specify a filter that exports a more specific set of Amazon EBS volume
      *         recommendations.
      */
 
@@ -299,11 +299,11 @@ public class ExportEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * An array of objects that describe a filter to export a more specific set of Amazon EBS volume recommendations.
+     * An array of objects to specify a filter that exports a more specific set of Amazon EBS volume recommendations.
      * </p>
      * 
      * @param filters
-     *        An array of objects that describe a filter to export a more specific set of Amazon EBS volume
+     *        An array of objects to specify a filter that exports a more specific set of Amazon EBS volume
      *        recommendations.
      */
 
@@ -318,7 +318,7 @@ public class ExportEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * An array of objects that describe a filter to export a more specific set of Amazon EBS volume recommendations.
+     * An array of objects to specify a filter that exports a more specific set of Amazon EBS volume recommendations.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -327,7 +327,7 @@ public class ExportEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param filters
-     *        An array of objects that describe a filter to export a more specific set of Amazon EBS volume
+     *        An array of objects to specify a filter that exports a more specific set of Amazon EBS volume
      *        recommendations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -344,11 +344,11 @@ public class ExportEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * An array of objects that describe a filter to export a more specific set of Amazon EBS volume recommendations.
+     * An array of objects to specify a filter that exports a more specific set of Amazon EBS volume recommendations.
      * </p>
      * 
      * @param filters
-     *        An array of objects that describe a filter to export a more specific set of Amazon EBS volume
+     *        An array of objects to specify a filter that exports a more specific set of Amazon EBS volume
      *        recommendations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -600,7 +600,7 @@ public class ExportEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonW
      * The member accounts must also be opted in to Compute Optimizer, and trusted access for Compute Optimizer must be
      * enabled in the organization account. For more information, see <a
      * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/security-iam.html#trusted-service-access">Compute
-     * Optimizer and AWS Organizations trusted access</a> in the <i>AWS Compute Optimizer User Guide</i>.
+     * Optimizer and Amazon Web Services Organizations trusted access</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      * <p>
      * Recommendations for member accounts of the organization are not included in the export file if this parameter is
@@ -622,8 +622,8 @@ public class ExportEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonW
      *        The member accounts must also be opted in to Compute Optimizer, and trusted access for Compute Optimizer
      *        must be enabled in the organization account. For more information, see <a
      *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/security-iam.html#trusted-service-access"
-     *        >Compute Optimizer and AWS Organizations trusted access</a> in the <i>AWS Compute Optimizer User
-     *        Guide</i>.
+     *        >Compute Optimizer and Amazon Web Services Organizations trusted access</a> in the <i>Compute Optimizer
+     *        User Guide</i>.
      *        </p>
      *        <p>
      *        Recommendations for member accounts of the organization are not included in the export file if this
@@ -651,7 +651,7 @@ public class ExportEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonW
      * The member accounts must also be opted in to Compute Optimizer, and trusted access for Compute Optimizer must be
      * enabled in the organization account. For more information, see <a
      * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/security-iam.html#trusted-service-access">Compute
-     * Optimizer and AWS Organizations trusted access</a> in the <i>AWS Compute Optimizer User Guide</i>.
+     * Optimizer and Amazon Web Services Organizations trusted access</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      * <p>
      * Recommendations for member accounts of the organization are not included in the export file if this parameter is
@@ -672,8 +672,8 @@ public class ExportEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonW
      *         The member accounts must also be opted in to Compute Optimizer, and trusted access for Compute Optimizer
      *         must be enabled in the organization account. For more information, see <a
      *         href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/security-iam.html#trusted-service-access"
-     *         >Compute Optimizer and AWS Organizations trusted access</a> in the <i>AWS Compute Optimizer User
-     *         Guide</i>.
+     *         >Compute Optimizer and Amazon Web Services Organizations trusted access</a> in the <i>Compute Optimizer
+     *         User Guide</i>.
      *         </p>
      *         <p>
      *         Recommendations for member accounts of the organization are not included in the export file if this
@@ -701,7 +701,7 @@ public class ExportEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonW
      * The member accounts must also be opted in to Compute Optimizer, and trusted access for Compute Optimizer must be
      * enabled in the organization account. For more information, see <a
      * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/security-iam.html#trusted-service-access">Compute
-     * Optimizer and AWS Organizations trusted access</a> in the <i>AWS Compute Optimizer User Guide</i>.
+     * Optimizer and Amazon Web Services Organizations trusted access</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      * <p>
      * Recommendations for member accounts of the organization are not included in the export file if this parameter is
@@ -723,8 +723,8 @@ public class ExportEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonW
      *        The member accounts must also be opted in to Compute Optimizer, and trusted access for Compute Optimizer
      *        must be enabled in the organization account. For more information, see <a
      *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/security-iam.html#trusted-service-access"
-     *        >Compute Optimizer and AWS Organizations trusted access</a> in the <i>AWS Compute Optimizer User
-     *        Guide</i>.
+     *        >Compute Optimizer and Amazon Web Services Organizations trusted access</a> in the <i>Compute Optimizer
+     *        User Guide</i>.
      *        </p>
      *        <p>
      *        Recommendations for member accounts of the organization are not included in the export file if this
@@ -754,7 +754,7 @@ public class ExportEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonW
      * The member accounts must also be opted in to Compute Optimizer, and trusted access for Compute Optimizer must be
      * enabled in the organization account. For more information, see <a
      * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/security-iam.html#trusted-service-access">Compute
-     * Optimizer and AWS Organizations trusted access</a> in the <i>AWS Compute Optimizer User Guide</i>.
+     * Optimizer and Amazon Web Services Organizations trusted access</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      * <p>
      * Recommendations for member accounts of the organization are not included in the export file if this parameter is
@@ -775,8 +775,8 @@ public class ExportEBSVolumeRecommendationsRequest extends com.amazonaws.AmazonW
      *         The member accounts must also be opted in to Compute Optimizer, and trusted access for Compute Optimizer
      *         must be enabled in the organization account. For more information, see <a
      *         href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/security-iam.html#trusted-service-access"
-     *         >Compute Optimizer and AWS Organizations trusted access</a> in the <i>AWS Compute Optimizer User
-     *         Guide</i>.
+     *         >Compute Optimizer and Amazon Web Services Organizations trusted access</a> in the <i>Compute Optimizer
+     *         User Guide</i>.
      *         </p>
      *         <p>
      *         Recommendations for member accounts of the organization are not included in the export file if this

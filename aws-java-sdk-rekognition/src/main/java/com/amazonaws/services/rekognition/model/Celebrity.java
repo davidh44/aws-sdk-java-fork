@@ -57,6 +57,8 @@ public class Celebrity implements Serializable, Cloneable, StructuredPojo {
      */
     private Float matchConfidence;
 
+    private KnownGender knownGender;
+
     /**
      * <p>
      * An array of URLs pointing to additional information about the celebrity. If there is no additional information
@@ -296,6 +298,32 @@ public class Celebrity implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * @param knownGender
+     */
+
+    public void setKnownGender(KnownGender knownGender) {
+        this.knownGender = knownGender;
+    }
+
+    /**
+     * @return
+     */
+
+    public KnownGender getKnownGender() {
+        return this.knownGender;
+    }
+
+    /**
+     * @param knownGender
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Celebrity withKnownGender(KnownGender knownGender) {
+        setKnownGender(knownGender);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -316,7 +344,9 @@ public class Celebrity implements Serializable, Cloneable, StructuredPojo {
         if (getFace() != null)
             sb.append("Face: ").append(getFace()).append(",");
         if (getMatchConfidence() != null)
-            sb.append("MatchConfidence: ").append(getMatchConfidence());
+            sb.append("MatchConfidence: ").append(getMatchConfidence()).append(",");
+        if (getKnownGender() != null)
+            sb.append("KnownGender: ").append(getKnownGender());
         sb.append("}");
         return sb.toString();
     }
@@ -351,6 +381,10 @@ public class Celebrity implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getMatchConfidence() != null && other.getMatchConfidence().equals(this.getMatchConfidence()) == false)
             return false;
+        if (other.getKnownGender() == null ^ this.getKnownGender() == null)
+            return false;
+        if (other.getKnownGender() != null && other.getKnownGender().equals(this.getKnownGender()) == false)
+            return false;
         return true;
     }
 
@@ -364,6 +398,7 @@ public class Celebrity implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getId() == null) ? 0 : getId().hashCode());
         hashCode = prime * hashCode + ((getFace() == null) ? 0 : getFace().hashCode());
         hashCode = prime * hashCode + ((getMatchConfidence() == null) ? 0 : getMatchConfidence().hashCode());
+        hashCode = prime * hashCode + ((getKnownGender() == null) ? 0 : getKnownGender().hashCode());
         return hashCode;
     }
 

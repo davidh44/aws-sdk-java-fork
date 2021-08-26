@@ -29,8 +29,8 @@ public class ExportEC2InstanceRecommendationsResult extends com.amazonaws.Amazon
      * The identification number of the export job.
      * </p>
      * <p>
-     * Use the <code>DescribeRecommendationExportJobs</code> action, and specify the job ID to view the status of an
-     * export job.
+     * Use the <a>DescribeRecommendationExportJobs</a> action, and specify the job ID to view the status of an export
+     * job.
      * </p>
      */
     private String jobId;
@@ -46,15 +46,15 @@ public class ExportEC2InstanceRecommendationsResult extends com.amazonaws.Amazon
      * The identification number of the export job.
      * </p>
      * <p>
-     * Use the <code>DescribeRecommendationExportJobs</code> action, and specify the job ID to view the status of an
-     * export job.
+     * Use the <a>DescribeRecommendationExportJobs</a> action, and specify the job ID to view the status of an export
+     * job.
      * </p>
      * 
      * @param jobId
      *        The identification number of the export job.</p>
      *        <p>
-     *        Use the <code>DescribeRecommendationExportJobs</code> action, and specify the job ID to view the status of
-     *        an export job.
+     *        Use the <a>DescribeRecommendationExportJobs</a> action, and specify the job ID to view the status of an
+     *        export job.
      */
 
     public void setJobId(String jobId) {
@@ -66,14 +66,14 @@ public class ExportEC2InstanceRecommendationsResult extends com.amazonaws.Amazon
      * The identification number of the export job.
      * </p>
      * <p>
-     * Use the <code>DescribeRecommendationExportJobs</code> action, and specify the job ID to view the status of an
-     * export job.
+     * Use the <a>DescribeRecommendationExportJobs</a> action, and specify the job ID to view the status of an export
+     * job.
      * </p>
      * 
      * @return The identification number of the export job.</p>
      *         <p>
-     *         Use the <code>DescribeRecommendationExportJobs</code> action, and specify the job ID to view the status
-     *         of an export job.
+     *         Use the <a>DescribeRecommendationExportJobs</a> action, and specify the job ID to view the status of an
+     *         export job.
      */
 
     public String getJobId() {
@@ -85,15 +85,15 @@ public class ExportEC2InstanceRecommendationsResult extends com.amazonaws.Amazon
      * The identification number of the export job.
      * </p>
      * <p>
-     * Use the <code>DescribeRecommendationExportJobs</code> action, and specify the job ID to view the status of an
-     * export job.
+     * Use the <a>DescribeRecommendationExportJobs</a> action, and specify the job ID to view the status of an export
+     * job.
      * </p>
      * 
      * @param jobId
      *        The identification number of the export job.</p>
      *        <p>
-     *        Use the <code>DescribeRecommendationExportJobs</code> action, and specify the job ID to view the status of
-     *        an export job.
+     *        Use the <a>DescribeRecommendationExportJobs</a> action, and specify the job ID to view the status of an
+     *        export job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

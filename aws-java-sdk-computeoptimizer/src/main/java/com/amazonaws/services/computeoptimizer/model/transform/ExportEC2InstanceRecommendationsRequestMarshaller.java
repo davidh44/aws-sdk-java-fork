@@ -40,6 +40,8 @@ public class ExportEC2InstanceRecommendationsRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fileFormat").build();
     private static final MarshallingInfo<Boolean> INCLUDEMEMBERACCOUNTS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("includeMemberAccounts").build();
+    private static final MarshallingInfo<StructuredPojo> RECOMMENDATIONPREFERENCES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recommendationPreferences").build();
 
     private static final ExportEC2InstanceRecommendationsRequestMarshaller instance = new ExportEC2InstanceRecommendationsRequestMarshaller();
 
@@ -63,6 +65,7 @@ public class ExportEC2InstanceRecommendationsRequestMarshaller {
             protocolMarshaller.marshall(exportEC2InstanceRecommendationsRequest.getS3DestinationConfig(), S3DESTINATIONCONFIG_BINDING);
             protocolMarshaller.marshall(exportEC2InstanceRecommendationsRequest.getFileFormat(), FILEFORMAT_BINDING);
             protocolMarshaller.marshall(exportEC2InstanceRecommendationsRequest.getIncludeMemberAccounts(), INCLUDEMEMBERACCOUNTS_BINDING);
+            protocolMarshaller.marshall(exportEC2InstanceRecommendationsRequest.getRecommendationPreferences(), RECOMMENDATIONPREFERENCES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

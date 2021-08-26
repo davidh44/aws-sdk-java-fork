@@ -37,9 +37,11 @@ public class DetectCustomLabelsRequest extends com.amazonaws.AmazonWebServiceReq
     private Integer maxResults;
     /**
      * <p>
-     * Specifies the minimum confidence level for the labels to return. Amazon Rekognition doesn't return any labels
-     * with a confidence lower than this specified value. If you specify a value of 0, all labels are return, regardless
-     * of the default thresholds that the model version applies.
+     * Specifies the minimum confidence level for the labels to return. <code>DetectCustomLabels</code> doesn't return
+     * any labels with a confidence value that's lower than this specified value. If you specify a value of 0,
+     * <code>DetectCustomLabels</code> returns all labels, regardless of the assumed threshold applied to each label. If
+     * you don't specify a value for <code>MinConfidence</code>, <code>DetectCustomLabels</code> returns labels based on
+     * the assumed threshold of each label.
      * </p>
      */
     private Float minConfidence;
@@ -158,15 +160,19 @@ public class DetectCustomLabelsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Specifies the minimum confidence level for the labels to return. Amazon Rekognition doesn't return any labels
-     * with a confidence lower than this specified value. If you specify a value of 0, all labels are return, regardless
-     * of the default thresholds that the model version applies.
+     * Specifies the minimum confidence level for the labels to return. <code>DetectCustomLabels</code> doesn't return
+     * any labels with a confidence value that's lower than this specified value. If you specify a value of 0,
+     * <code>DetectCustomLabels</code> returns all labels, regardless of the assumed threshold applied to each label. If
+     * you don't specify a value for <code>MinConfidence</code>, <code>DetectCustomLabels</code> returns labels based on
+     * the assumed threshold of each label.
      * </p>
      * 
      * @param minConfidence
-     *        Specifies the minimum confidence level for the labels to return. Amazon Rekognition doesn't return any
-     *        labels with a confidence lower than this specified value. If you specify a value of 0, all labels are
-     *        return, regardless of the default thresholds that the model version applies.
+     *        Specifies the minimum confidence level for the labels to return. <code>DetectCustomLabels</code> doesn't
+     *        return any labels with a confidence value that's lower than this specified value. If you specify a value
+     *        of 0, <code>DetectCustomLabels</code> returns all labels, regardless of the assumed threshold applied to
+     *        each label. If you don't specify a value for <code>MinConfidence</code>, <code>DetectCustomLabels</code>
+     *        returns labels based on the assumed threshold of each label.
      */
 
     public void setMinConfidence(Float minConfidence) {
@@ -175,14 +181,18 @@ public class DetectCustomLabelsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Specifies the minimum confidence level for the labels to return. Amazon Rekognition doesn't return any labels
-     * with a confidence lower than this specified value. If you specify a value of 0, all labels are return, regardless
-     * of the default thresholds that the model version applies.
+     * Specifies the minimum confidence level for the labels to return. <code>DetectCustomLabels</code> doesn't return
+     * any labels with a confidence value that's lower than this specified value. If you specify a value of 0,
+     * <code>DetectCustomLabels</code> returns all labels, regardless of the assumed threshold applied to each label. If
+     * you don't specify a value for <code>MinConfidence</code>, <code>DetectCustomLabels</code> returns labels based on
+     * the assumed threshold of each label.
      * </p>
      * 
-     * @return Specifies the minimum confidence level for the labels to return. Amazon Rekognition doesn't return any
-     *         labels with a confidence lower than this specified value. If you specify a value of 0, all labels are
-     *         return, regardless of the default thresholds that the model version applies.
+     * @return Specifies the minimum confidence level for the labels to return. <code>DetectCustomLabels</code> doesn't
+     *         return any labels with a confidence value that's lower than this specified value. If you specify a value
+     *         of 0, <code>DetectCustomLabels</code> returns all labels, regardless of the assumed threshold applied to
+     *         each label. If you don't specify a value for <code>MinConfidence</code>, <code>DetectCustomLabels</code>
+     *         returns labels based on the assumed threshold of each label.
      */
 
     public Float getMinConfidence() {
@@ -191,15 +201,19 @@ public class DetectCustomLabelsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Specifies the minimum confidence level for the labels to return. Amazon Rekognition doesn't return any labels
-     * with a confidence lower than this specified value. If you specify a value of 0, all labels are return, regardless
-     * of the default thresholds that the model version applies.
+     * Specifies the minimum confidence level for the labels to return. <code>DetectCustomLabels</code> doesn't return
+     * any labels with a confidence value that's lower than this specified value. If you specify a value of 0,
+     * <code>DetectCustomLabels</code> returns all labels, regardless of the assumed threshold applied to each label. If
+     * you don't specify a value for <code>MinConfidence</code>, <code>DetectCustomLabels</code> returns labels based on
+     * the assumed threshold of each label.
      * </p>
      * 
      * @param minConfidence
-     *        Specifies the minimum confidence level for the labels to return. Amazon Rekognition doesn't return any
-     *        labels with a confidence lower than this specified value. If you specify a value of 0, all labels are
-     *        return, regardless of the default thresholds that the model version applies.
+     *        Specifies the minimum confidence level for the labels to return. <code>DetectCustomLabels</code> doesn't
+     *        return any labels with a confidence value that's lower than this specified value. If you specify a value
+     *        of 0, <code>DetectCustomLabels</code> returns all labels, regardless of the assumed threshold applied to
+     *        each label. If you don't specify a value for <code>MinConfidence</code>, <code>DetectCustomLabels</code>
+     *        returns labels based on the assumed threshold of each label.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -30,8 +30,8 @@ public class DescribeRecommendationExportJobsRequest extends com.amazonaws.Amazo
      * The identification numbers of the export jobs to return.
      * </p>
      * <p>
-     * An export job ID is returned when you create an export using the
-     * <code>ExportAutoScalingGroupRecommendations</code> or <code>ExportEC2InstanceRecommendations</code> actions.
+     * An export job ID is returned when you create an export using the <a>ExportAutoScalingGroupRecommendations</a> or
+     * <a>ExportEC2InstanceRecommendations</a> actions.
      * </p>
      * <p>
      * All export jobs created in the last seven days are returned if this parameter is omitted.
@@ -40,7 +40,7 @@ public class DescribeRecommendationExportJobsRequest extends com.amazonaws.Amazo
     private java.util.List<String> jobIds;
     /**
      * <p>
-     * An array of objects that describe a filter to return a more specific list of export jobs.
+     * An array of objects to specify a filter that returns a more specific list of export jobs.
      * </p>
      */
     private java.util.List<JobFilter> filters;
@@ -55,7 +55,7 @@ public class DescribeRecommendationExportJobsRequest extends com.amazonaws.Amazo
      * The maximum number of export jobs to return with a single request.
      * </p>
      * <p>
-     * To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     * To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * </p>
      */
     private Integer maxResults;
@@ -65,8 +65,8 @@ public class DescribeRecommendationExportJobsRequest extends com.amazonaws.Amazo
      * The identification numbers of the export jobs to return.
      * </p>
      * <p>
-     * An export job ID is returned when you create an export using the
-     * <code>ExportAutoScalingGroupRecommendations</code> or <code>ExportEC2InstanceRecommendations</code> actions.
+     * An export job ID is returned when you create an export using the <a>ExportAutoScalingGroupRecommendations</a> or
+     * <a>ExportEC2InstanceRecommendations</a> actions.
      * </p>
      * <p>
      * All export jobs created in the last seven days are returned if this parameter is omitted.
@@ -75,8 +75,7 @@ public class DescribeRecommendationExportJobsRequest extends com.amazonaws.Amazo
      * @return The identification numbers of the export jobs to return.</p>
      *         <p>
      *         An export job ID is returned when you create an export using the
-     *         <code>ExportAutoScalingGroupRecommendations</code> or <code>ExportEC2InstanceRecommendations</code>
-     *         actions.
+     *         <a>ExportAutoScalingGroupRecommendations</a> or <a>ExportEC2InstanceRecommendations</a> actions.
      *         </p>
      *         <p>
      *         All export jobs created in the last seven days are returned if this parameter is omitted.
@@ -91,8 +90,8 @@ public class DescribeRecommendationExportJobsRequest extends com.amazonaws.Amazo
      * The identification numbers of the export jobs to return.
      * </p>
      * <p>
-     * An export job ID is returned when you create an export using the
-     * <code>ExportAutoScalingGroupRecommendations</code> or <code>ExportEC2InstanceRecommendations</code> actions.
+     * An export job ID is returned when you create an export using the <a>ExportAutoScalingGroupRecommendations</a> or
+     * <a>ExportEC2InstanceRecommendations</a> actions.
      * </p>
      * <p>
      * All export jobs created in the last seven days are returned if this parameter is omitted.
@@ -102,8 +101,7 @@ public class DescribeRecommendationExportJobsRequest extends com.amazonaws.Amazo
      *        The identification numbers of the export jobs to return.</p>
      *        <p>
      *        An export job ID is returned when you create an export using the
-     *        <code>ExportAutoScalingGroupRecommendations</code> or <code>ExportEC2InstanceRecommendations</code>
-     *        actions.
+     *        <a>ExportAutoScalingGroupRecommendations</a> or <a>ExportEC2InstanceRecommendations</a> actions.
      *        </p>
      *        <p>
      *        All export jobs created in the last seven days are returned if this parameter is omitted.
@@ -123,8 +121,8 @@ public class DescribeRecommendationExportJobsRequest extends com.amazonaws.Amazo
      * The identification numbers of the export jobs to return.
      * </p>
      * <p>
-     * An export job ID is returned when you create an export using the
-     * <code>ExportAutoScalingGroupRecommendations</code> or <code>ExportEC2InstanceRecommendations</code> actions.
+     * An export job ID is returned when you create an export using the <a>ExportAutoScalingGroupRecommendations</a> or
+     * <a>ExportEC2InstanceRecommendations</a> actions.
      * </p>
      * <p>
      * All export jobs created in the last seven days are returned if this parameter is omitted.
@@ -139,8 +137,7 @@ public class DescribeRecommendationExportJobsRequest extends com.amazonaws.Amazo
      *        The identification numbers of the export jobs to return.</p>
      *        <p>
      *        An export job ID is returned when you create an export using the
-     *        <code>ExportAutoScalingGroupRecommendations</code> or <code>ExportEC2InstanceRecommendations</code>
-     *        actions.
+     *        <a>ExportAutoScalingGroupRecommendations</a> or <a>ExportEC2InstanceRecommendations</a> actions.
      *        </p>
      *        <p>
      *        All export jobs created in the last seven days are returned if this parameter is omitted.
@@ -162,8 +159,8 @@ public class DescribeRecommendationExportJobsRequest extends com.amazonaws.Amazo
      * The identification numbers of the export jobs to return.
      * </p>
      * <p>
-     * An export job ID is returned when you create an export using the
-     * <code>ExportAutoScalingGroupRecommendations</code> or <code>ExportEC2InstanceRecommendations</code> actions.
+     * An export job ID is returned when you create an export using the <a>ExportAutoScalingGroupRecommendations</a> or
+     * <a>ExportEC2InstanceRecommendations</a> actions.
      * </p>
      * <p>
      * All export jobs created in the last seven days are returned if this parameter is omitted.
@@ -173,8 +170,7 @@ public class DescribeRecommendationExportJobsRequest extends com.amazonaws.Amazo
      *        The identification numbers of the export jobs to return.</p>
      *        <p>
      *        An export job ID is returned when you create an export using the
-     *        <code>ExportAutoScalingGroupRecommendations</code> or <code>ExportEC2InstanceRecommendations</code>
-     *        actions.
+     *        <a>ExportAutoScalingGroupRecommendations</a> or <a>ExportEC2InstanceRecommendations</a> actions.
      *        </p>
      *        <p>
      *        All export jobs created in the last seven days are returned if this parameter is omitted.
@@ -188,10 +184,10 @@ public class DescribeRecommendationExportJobsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * An array of objects that describe a filter to return a more specific list of export jobs.
+     * An array of objects to specify a filter that returns a more specific list of export jobs.
      * </p>
      * 
-     * @return An array of objects that describe a filter to return a more specific list of export jobs.
+     * @return An array of objects to specify a filter that returns a more specific list of export jobs.
      */
 
     public java.util.List<JobFilter> getFilters() {
@@ -200,11 +196,11 @@ public class DescribeRecommendationExportJobsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * An array of objects that describe a filter to return a more specific list of export jobs.
+     * An array of objects to specify a filter that returns a more specific list of export jobs.
      * </p>
      * 
      * @param filters
-     *        An array of objects that describe a filter to return a more specific list of export jobs.
+     *        An array of objects to specify a filter that returns a more specific list of export jobs.
      */
 
     public void setFilters(java.util.Collection<JobFilter> filters) {
@@ -218,7 +214,7 @@ public class DescribeRecommendationExportJobsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * An array of objects that describe a filter to return a more specific list of export jobs.
+     * An array of objects to specify a filter that returns a more specific list of export jobs.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -227,7 +223,7 @@ public class DescribeRecommendationExportJobsRequest extends com.amazonaws.Amazo
      * </p>
      * 
      * @param filters
-     *        An array of objects that describe a filter to return a more specific list of export jobs.
+     *        An array of objects to specify a filter that returns a more specific list of export jobs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -243,11 +239,11 @@ public class DescribeRecommendationExportJobsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * An array of objects that describe a filter to return a more specific list of export jobs.
+     * An array of objects to specify a filter that returns a more specific list of export jobs.
      * </p>
      * 
      * @param filters
-     *        An array of objects that describe a filter to return a more specific list of export jobs.
+     *        An array of objects to specify a filter that returns a more specific list of export jobs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -301,13 +297,13 @@ public class DescribeRecommendationExportJobsRequest extends com.amazonaws.Amazo
      * The maximum number of export jobs to return with a single request.
      * </p>
      * <p>
-     * To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     * To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * </p>
      * 
      * @param maxResults
      *        The maximum number of export jobs to return with a single request.</p>
      *        <p>
-     *        To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     *        To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -319,12 +315,12 @@ public class DescribeRecommendationExportJobsRequest extends com.amazonaws.Amazo
      * The maximum number of export jobs to return with a single request.
      * </p>
      * <p>
-     * To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     * To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * </p>
      * 
      * @return The maximum number of export jobs to return with a single request.</p>
      *         <p>
-     *         To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     *         To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      */
 
     public Integer getMaxResults() {
@@ -336,13 +332,13 @@ public class DescribeRecommendationExportJobsRequest extends com.amazonaws.Amazo
      * The maximum number of export jobs to return with a single request.
      * </p>
      * <p>
-     * To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     * To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * </p>
      * 
      * @param maxResults
      *        The maximum number of export jobs to return with a single request.</p>
      *        <p>
-     *        To retrieve the remaining results, make another request with the returned <code>NextToken</code> value.
+     *        To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

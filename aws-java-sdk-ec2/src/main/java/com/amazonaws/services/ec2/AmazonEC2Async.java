@@ -5127,7 +5127,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * tunnel attachment that you can use to establish a connection between a transit gateway and an appliance.
      * </p>
      * <p>
-     * A Connect attachment uses an existing VPC or AWS Direct Connect attachment as the underlying transport mechanism.
+     * A Connect attachment uses an existing VPC or Amazon Web Services Direct Connect attachment as the underlying
+     * transport mechanism.
      * </p>
      * 
      * @param createTransitGatewayConnectRequest
@@ -5145,7 +5146,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * tunnel attachment that you can use to establish a connection between a transit gateway and an appliance.
      * </p>
      * <p>
-     * A Connect attachment uses an existing VPC or AWS Direct Connect attachment as the underlying transport mechanism.
+     * A Connect attachment uses an existing VPC or Amazon Web Services Direct Connect attachment as the underlying
+     * transport mechanism.
      * </p>
      * 
      * @param createTransitGatewayConnectRequest
@@ -5264,7 +5266,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <p>
      * Requests a transit gateway peering attachment between the specified transit gateway (requester) and a peer
      * transit gateway (accepter). The transit gateways must be in different Regions. The peer transit gateway can be in
-     * your account or a different AWS account.
+     * your account or a different Amazon Web Services account.
      * </p>
      * <p>
      * After you create the peering attachment, the owner of the accepter transit gateway must accept the attachment
@@ -5285,7 +5287,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <p>
      * Requests a transit gateway peering attachment between the specified transit gateway (requester) and a peer
      * transit gateway (accepter). The transit gateways must be in different Regions. The peer transit gateway can be in
-     * your account or a different AWS account.
+     * your account or a different Amazon Web Services account.
      * </p>
      * <p>
      * After you create the peering attachment, the owner of the accepter transit gateway must accept the attachment
