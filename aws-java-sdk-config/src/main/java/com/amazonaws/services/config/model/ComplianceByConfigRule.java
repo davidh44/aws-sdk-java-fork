@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Indicates whether an AWS Config rule is compliant. A rule is compliant if all of the resources that the rule
- * evaluated comply with it. A rule is noncompliant if any of these resources do not comply.
+ * Indicates whether an Config rule is compliant. A rule is compliant if all of the resources that the rule evaluated
+ * comply with it. A rule is noncompliant if any of these resources do not comply.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ComplianceByConfigRule" target="_top">AWS API
@@ -31,24 +31,24 @@ public class ComplianceByConfigRule implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The name of the AWS Config rule.
+     * The name of the Config rule.
      * </p>
      */
     private String configRuleName;
     /**
      * <p>
-     * Indicates whether the AWS Config rule is compliant.
+     * Indicates whether the Config rule is compliant.
      * </p>
      */
     private Compliance compliance;
 
     /**
      * <p>
-     * The name of the AWS Config rule.
+     * The name of the Config rule.
      * </p>
      * 
      * @param configRuleName
-     *        The name of the AWS Config rule.
+     *        The name of the Config rule.
      */
 
     public void setConfigRuleName(String configRuleName) {
@@ -57,10 +57,10 @@ public class ComplianceByConfigRule implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The name of the AWS Config rule.
+     * The name of the Config rule.
      * </p>
      * 
-     * @return The name of the AWS Config rule.
+     * @return The name of the Config rule.
      */
 
     public String getConfigRuleName() {
@@ -69,11 +69,11 @@ public class ComplianceByConfigRule implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The name of the AWS Config rule.
+     * The name of the Config rule.
      * </p>
      * 
      * @param configRuleName
-     *        The name of the AWS Config rule.
+     *        The name of the Config rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -84,11 +84,11 @@ public class ComplianceByConfigRule implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Indicates whether the AWS Config rule is compliant.
+     * Indicates whether the Config rule is compliant.
      * </p>
      * 
      * @param compliance
-     *        Indicates whether the AWS Config rule is compliant.
+     *        Indicates whether the Config rule is compliant.
      */
 
     public void setCompliance(Compliance compliance) {
@@ -97,10 +97,10 @@ public class ComplianceByConfigRule implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Indicates whether the AWS Config rule is compliant.
+     * Indicates whether the Config rule is compliant.
      * </p>
      * 
-     * @return Indicates whether the AWS Config rule is compliant.
+     * @return Indicates whether the Config rule is compliant.
      */
 
     public Compliance getCompliance() {
@@ -109,11 +109,11 @@ public class ComplianceByConfigRule implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Indicates whether the AWS Config rule is compliant.
+     * Indicates whether the Config rule is compliant.
      * </p>
      * 
      * @param compliance
-     *        Indicates whether the AWS Config rule is compliant.
+     *        Indicates whether the Config rule is compliant.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

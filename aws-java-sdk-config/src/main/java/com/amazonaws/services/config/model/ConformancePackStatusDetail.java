@@ -51,7 +51,7 @@ public class ConformancePackStatusDetail implements Serializable, Cloneable, Str
      * Indicates deployment status of conformance pack.
      * </p>
      * <p>
-     * AWS Config sets the state of the conformance pack to:
+     * Config sets the state of the conformance pack to:
      * </p>
      * <ul>
      * <li>
@@ -84,7 +84,7 @@ public class ConformancePackStatusDetail implements Serializable, Cloneable, Str
     private String conformancePackState;
     /**
      * <p>
-     * Amazon Resource Name (ARN) of AWS CloudFormation stack.
+     * Amazon Resource Name (ARN) of CloudFormation stack.
      * </p>
      */
     private String stackArn;
@@ -232,7 +232,7 @@ public class ConformancePackStatusDetail implements Serializable, Cloneable, Str
      * Indicates deployment status of conformance pack.
      * </p>
      * <p>
-     * AWS Config sets the state of the conformance pack to:
+     * Config sets the state of the conformance pack to:
      * </p>
      * <ul>
      * <li>
@@ -265,7 +265,7 @@ public class ConformancePackStatusDetail implements Serializable, Cloneable, Str
      * @param conformancePackState
      *        Indicates deployment status of conformance pack.</p>
      *        <p>
-     *        AWS Config sets the state of the conformance pack to:
+     *        Config sets the state of the conformance pack to:
      *        </p>
      *        <ul>
      *        <li>
@@ -305,7 +305,7 @@ public class ConformancePackStatusDetail implements Serializable, Cloneable, Str
      * Indicates deployment status of conformance pack.
      * </p>
      * <p>
-     * AWS Config sets the state of the conformance pack to:
+     * Config sets the state of the conformance pack to:
      * </p>
      * <ul>
      * <li>
@@ -337,7 +337,7 @@ public class ConformancePackStatusDetail implements Serializable, Cloneable, Str
      * 
      * @return Indicates deployment status of conformance pack.</p>
      *         <p>
-     *         AWS Config sets the state of the conformance pack to:
+     *         Config sets the state of the conformance pack to:
      *         </p>
      *         <ul>
      *         <li>
@@ -377,7 +377,7 @@ public class ConformancePackStatusDetail implements Serializable, Cloneable, Str
      * Indicates deployment status of conformance pack.
      * </p>
      * <p>
-     * AWS Config sets the state of the conformance pack to:
+     * Config sets the state of the conformance pack to:
      * </p>
      * <ul>
      * <li>
@@ -410,7 +410,7 @@ public class ConformancePackStatusDetail implements Serializable, Cloneable, Str
      * @param conformancePackState
      *        Indicates deployment status of conformance pack.</p>
      *        <p>
-     *        AWS Config sets the state of the conformance pack to:
+     *        Config sets the state of the conformance pack to:
      *        </p>
      *        <ul>
      *        <li>
@@ -452,7 +452,7 @@ public class ConformancePackStatusDetail implements Serializable, Cloneable, Str
      * Indicates deployment status of conformance pack.
      * </p>
      * <p>
-     * AWS Config sets the state of the conformance pack to:
+     * Config sets the state of the conformance pack to:
      * </p>
      * <ul>
      * <li>
@@ -485,7 +485,7 @@ public class ConformancePackStatusDetail implements Serializable, Cloneable, Str
      * @param conformancePackState
      *        Indicates deployment status of conformance pack.</p>
      *        <p>
-     *        AWS Config sets the state of the conformance pack to:
+     *        Config sets the state of the conformance pack to:
      *        </p>
      *        <ul>
      *        <li>
@@ -524,11 +524,11 @@ public class ConformancePackStatusDetail implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * Amazon Resource Name (ARN) of AWS CloudFormation stack.
+     * Amazon Resource Name (ARN) of CloudFormation stack.
      * </p>
      * 
      * @param stackArn
-     *        Amazon Resource Name (ARN) of AWS CloudFormation stack.
+     *        Amazon Resource Name (ARN) of CloudFormation stack.
      */
 
     public void setStackArn(String stackArn) {
@@ -537,10 +537,10 @@ public class ConformancePackStatusDetail implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * Amazon Resource Name (ARN) of AWS CloudFormation stack.
+     * Amazon Resource Name (ARN) of CloudFormation stack.
      * </p>
      * 
-     * @return Amazon Resource Name (ARN) of AWS CloudFormation stack.
+     * @return Amazon Resource Name (ARN) of CloudFormation stack.
      */
 
     public String getStackArn() {
@@ -549,11 +549,11 @@ public class ConformancePackStatusDetail implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * Amazon Resource Name (ARN) of AWS CloudFormation stack.
+     * Amazon Resource Name (ARN) of CloudFormation stack.
      * </p>
      * 
      * @param stackArn
-     *        Amazon Resource Name (ARN) of AWS CloudFormation stack.
+     *        Amazon Resource Name (ARN) of CloudFormation stack.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

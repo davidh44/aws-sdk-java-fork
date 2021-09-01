@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Summary of a Service Catalog AppRegistry application.
+ * Summary of a Amazon Web Services Service Catalog AppRegistry application.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/AWS242AppRegistry-2020-06-24/ApplicationSummary"

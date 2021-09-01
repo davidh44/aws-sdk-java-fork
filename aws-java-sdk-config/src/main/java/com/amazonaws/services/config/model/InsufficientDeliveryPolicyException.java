@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Your Amazon S3 bucket policy does not permit AWS Config to write to it.
+ * Your Amazon S3 bucket policy does not permit Config to write to it.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

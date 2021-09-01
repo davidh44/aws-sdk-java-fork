@@ -27,7 +27,7 @@ public class DescribeConfigRuleEvaluationStatusResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * Status information about your AWS managed Config rules.
+     * Status information about your Config managed rules.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<ConfigRuleEvaluationStatus> configRulesEvaluationStatus;
@@ -40,10 +40,10 @@ public class DescribeConfigRuleEvaluationStatusResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * Status information about your AWS managed Config rules.
+     * Status information about your Config managed rules.
      * </p>
      * 
-     * @return Status information about your AWS managed Config rules.
+     * @return Status information about your Config managed rules.
      */
 
     public java.util.List<ConfigRuleEvaluationStatus> getConfigRulesEvaluationStatus() {
@@ -55,11 +55,11 @@ public class DescribeConfigRuleEvaluationStatusResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * Status information about your AWS managed Config rules.
+     * Status information about your Config managed rules.
      * </p>
      * 
      * @param configRulesEvaluationStatus
-     *        Status information about your AWS managed Config rules.
+     *        Status information about your Config managed rules.
      */
 
     public void setConfigRulesEvaluationStatus(java.util.Collection<ConfigRuleEvaluationStatus> configRulesEvaluationStatus) {
@@ -73,7 +73,7 @@ public class DescribeConfigRuleEvaluationStatusResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * Status information about your AWS managed Config rules.
+     * Status information about your Config managed rules.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -82,7 +82,7 @@ public class DescribeConfigRuleEvaluationStatusResult extends com.amazonaws.Amaz
      * </p>
      * 
      * @param configRulesEvaluationStatus
-     *        Status information about your AWS managed Config rules.
+     *        Status information about your Config managed rules.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -98,11 +98,11 @@ public class DescribeConfigRuleEvaluationStatusResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * Status information about your AWS managed Config rules.
+     * Status information about your Config managed rules.
      * </p>
      * 
      * @param configRulesEvaluationStatus
-     *        Status information about your AWS managed Config rules.
+     *        Status information about your Config managed rules.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

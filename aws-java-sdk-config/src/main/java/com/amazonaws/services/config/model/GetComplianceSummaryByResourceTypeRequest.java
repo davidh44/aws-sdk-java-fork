@@ -32,8 +32,9 @@ public class GetComplianceSummaryByResourceTypeRequest extends com.amazonaws.Ama
      * noncompliant for each resource type.
      * </p>
      * <p>
-     * For this request, you can specify an AWS resource type such as <code>AWS::EC2::Instance</code>. You can specify
-     * that the resource type is an AWS account by specifying <code>AWS::::Account</code>.
+     * For this request, you can specify an Amazon Web Services resource type such as <code>AWS::EC2::Instance</code>.
+     * You can specify that the resource type is an Amazon Web Services account by specifying
+     * <code>AWS::::Account</code>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> resourceTypes;
@@ -44,15 +45,17 @@ public class GetComplianceSummaryByResourceTypeRequest extends com.amazonaws.Ama
      * noncompliant for each resource type.
      * </p>
      * <p>
-     * For this request, you can specify an AWS resource type such as <code>AWS::EC2::Instance</code>. You can specify
-     * that the resource type is an AWS account by specifying <code>AWS::::Account</code>.
+     * For this request, you can specify an Amazon Web Services resource type such as <code>AWS::EC2::Instance</code>.
+     * You can specify that the resource type is an Amazon Web Services account by specifying
+     * <code>AWS::::Account</code>.
      * </p>
      * 
      * @return Specify one or more resource types to get the number of resources that are compliant and the number that
      *         are noncompliant for each resource type.</p>
      *         <p>
-     *         For this request, you can specify an AWS resource type such as <code>AWS::EC2::Instance</code>. You can
-     *         specify that the resource type is an AWS account by specifying <code>AWS::::Account</code>.
+     *         For this request, you can specify an Amazon Web Services resource type such as
+     *         <code>AWS::EC2::Instance</code>. You can specify that the resource type is an Amazon Web Services account
+     *         by specifying <code>AWS::::Account</code>.
      */
 
     public java.util.List<String> getResourceTypes() {
@@ -68,16 +71,18 @@ public class GetComplianceSummaryByResourceTypeRequest extends com.amazonaws.Ama
      * noncompliant for each resource type.
      * </p>
      * <p>
-     * For this request, you can specify an AWS resource type such as <code>AWS::EC2::Instance</code>. You can specify
-     * that the resource type is an AWS account by specifying <code>AWS::::Account</code>.
+     * For this request, you can specify an Amazon Web Services resource type such as <code>AWS::EC2::Instance</code>.
+     * You can specify that the resource type is an Amazon Web Services account by specifying
+     * <code>AWS::::Account</code>.
      * </p>
      * 
      * @param resourceTypes
      *        Specify one or more resource types to get the number of resources that are compliant and the number that
      *        are noncompliant for each resource type.</p>
      *        <p>
-     *        For this request, you can specify an AWS resource type such as <code>AWS::EC2::Instance</code>. You can
-     *        specify that the resource type is an AWS account by specifying <code>AWS::::Account</code>.
+     *        For this request, you can specify an Amazon Web Services resource type such as
+     *        <code>AWS::EC2::Instance</code>. You can specify that the resource type is an Amazon Web Services account
+     *        by specifying <code>AWS::::Account</code>.
      */
 
     public void setResourceTypes(java.util.Collection<String> resourceTypes) {
@@ -95,8 +100,9 @@ public class GetComplianceSummaryByResourceTypeRequest extends com.amazonaws.Ama
      * noncompliant for each resource type.
      * </p>
      * <p>
-     * For this request, you can specify an AWS resource type such as <code>AWS::EC2::Instance</code>. You can specify
-     * that the resource type is an AWS account by specifying <code>AWS::::Account</code>.
+     * For this request, you can specify an Amazon Web Services resource type such as <code>AWS::EC2::Instance</code>.
+     * You can specify that the resource type is an Amazon Web Services account by specifying
+     * <code>AWS::::Account</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -108,8 +114,9 @@ public class GetComplianceSummaryByResourceTypeRequest extends com.amazonaws.Ama
      *        Specify one or more resource types to get the number of resources that are compliant and the number that
      *        are noncompliant for each resource type.</p>
      *        <p>
-     *        For this request, you can specify an AWS resource type such as <code>AWS::EC2::Instance</code>. You can
-     *        specify that the resource type is an AWS account by specifying <code>AWS::::Account</code>.
+     *        For this request, you can specify an Amazon Web Services resource type such as
+     *        <code>AWS::EC2::Instance</code>. You can specify that the resource type is an Amazon Web Services account
+     *        by specifying <code>AWS::::Account</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -129,16 +136,18 @@ public class GetComplianceSummaryByResourceTypeRequest extends com.amazonaws.Ama
      * noncompliant for each resource type.
      * </p>
      * <p>
-     * For this request, you can specify an AWS resource type such as <code>AWS::EC2::Instance</code>. You can specify
-     * that the resource type is an AWS account by specifying <code>AWS::::Account</code>.
+     * For this request, you can specify an Amazon Web Services resource type such as <code>AWS::EC2::Instance</code>.
+     * You can specify that the resource type is an Amazon Web Services account by specifying
+     * <code>AWS::::Account</code>.
      * </p>
      * 
      * @param resourceTypes
      *        Specify one or more resource types to get the number of resources that are compliant and the number that
      *        are noncompliant for each resource type.</p>
      *        <p>
-     *        For this request, you can specify an AWS resource type such as <code>AWS::EC2::Instance</code>. You can
-     *        specify that the resource type is an AWS account by specifying <code>AWS::::Account</code>.
+     *        For this request, you can specify an Amazon Web Services resource type such as
+     *        <code>AWS::EC2::Instance</code>. You can specify that the resource type is an Amazon Web Services account
+     *        by specifying <code>AWS::::Account</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

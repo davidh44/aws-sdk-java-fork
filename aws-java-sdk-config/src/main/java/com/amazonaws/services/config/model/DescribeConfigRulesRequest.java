@@ -28,8 +28,8 @@ public class DescribeConfigRulesRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The names of the AWS Config rules for which you want details. If you do not specify any names, AWS Config returns
-     * details for all your rules.
+     * The names of the Config rules for which you want details. If you do not specify any names, Config returns details
+     * for all your rules.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> configRuleNames;
@@ -43,12 +43,12 @@ public class DescribeConfigRulesRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The names of the AWS Config rules for which you want details. If you do not specify any names, AWS Config returns
-     * details for all your rules.
+     * The names of the Config rules for which you want details. If you do not specify any names, Config returns details
+     * for all your rules.
      * </p>
      * 
-     * @return The names of the AWS Config rules for which you want details. If you do not specify any names, AWS Config
-     *         returns details for all your rules.
+     * @return The names of the Config rules for which you want details. If you do not specify any names, Config returns
+     *         details for all your rules.
      */
 
     public java.util.List<String> getConfigRuleNames() {
@@ -60,13 +60,13 @@ public class DescribeConfigRulesRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The names of the AWS Config rules for which you want details. If you do not specify any names, AWS Config returns
-     * details for all your rules.
+     * The names of the Config rules for which you want details. If you do not specify any names, Config returns details
+     * for all your rules.
      * </p>
      * 
      * @param configRuleNames
-     *        The names of the AWS Config rules for which you want details. If you do not specify any names, AWS Config
-     *        returns details for all your rules.
+     *        The names of the Config rules for which you want details. If you do not specify any names, Config returns
+     *        details for all your rules.
      */
 
     public void setConfigRuleNames(java.util.Collection<String> configRuleNames) {
@@ -80,8 +80,8 @@ public class DescribeConfigRulesRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The names of the AWS Config rules for which you want details. If you do not specify any names, AWS Config returns
-     * details for all your rules.
+     * The names of the Config rules for which you want details. If you do not specify any names, Config returns details
+     * for all your rules.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -90,8 +90,8 @@ public class DescribeConfigRulesRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param configRuleNames
-     *        The names of the AWS Config rules for which you want details. If you do not specify any names, AWS Config
-     *        returns details for all your rules.
+     *        The names of the Config rules for which you want details. If you do not specify any names, Config returns
+     *        details for all your rules.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -107,13 +107,13 @@ public class DescribeConfigRulesRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The names of the AWS Config rules for which you want details. If you do not specify any names, AWS Config returns
-     * details for all your rules.
+     * The names of the Config rules for which you want details. If you do not specify any names, Config returns details
+     * for all your rules.
      * </p>
      * 
      * @param configRuleNames
-     *        The names of the AWS Config rules for which you want details. If you do not specify any names, AWS Config
-     *        returns details for all your rules.
+     *        The names of the Config rules for which you want details. If you do not specify any names, Config returns
+     *        details for all your rules.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,7 +27,7 @@ public class GetComplianceSummaryByConfigRuleResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The number of AWS Config rules that are compliant and the number that are noncompliant, up to a maximum of 25 for
+     * The number of Config rules that are compliant and the number that are noncompliant, up to a maximum of 25 for
      * each.
      * </p>
      */
@@ -35,13 +35,13 @@ public class GetComplianceSummaryByConfigRuleResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The number of AWS Config rules that are compliant and the number that are noncompliant, up to a maximum of 25 for
+     * The number of Config rules that are compliant and the number that are noncompliant, up to a maximum of 25 for
      * each.
      * </p>
      * 
      * @param complianceSummary
-     *        The number of AWS Config rules that are compliant and the number that are noncompliant, up to a maximum of
-     *        25 for each.
+     *        The number of Config rules that are compliant and the number that are noncompliant, up to a maximum of 25
+     *        for each.
      */
 
     public void setComplianceSummary(ComplianceSummary complianceSummary) {
@@ -50,12 +50,12 @@ public class GetComplianceSummaryByConfigRuleResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The number of AWS Config rules that are compliant and the number that are noncompliant, up to a maximum of 25 for
+     * The number of Config rules that are compliant and the number that are noncompliant, up to a maximum of 25 for
      * each.
      * </p>
      * 
-     * @return The number of AWS Config rules that are compliant and the number that are noncompliant, up to a maximum
-     *         of 25 for each.
+     * @return The number of Config rules that are compliant and the number that are noncompliant, up to a maximum of 25
+     *         for each.
      */
 
     public ComplianceSummary getComplianceSummary() {
@@ -64,13 +64,13 @@ public class GetComplianceSummaryByConfigRuleResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The number of AWS Config rules that are compliant and the number that are noncompliant, up to a maximum of 25 for
+     * The number of Config rules that are compliant and the number that are noncompliant, up to a maximum of 25 for
      * each.
      * </p>
      * 
      * @param complianceSummary
-     *        The number of AWS Config rules that are compliant and the number that are noncompliant, up to a maximum of
-     *        25 for each.
+     *        The number of Config rules that are compliant and the number that are noncompliant, up to a maximum of 25
+     *        for each.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

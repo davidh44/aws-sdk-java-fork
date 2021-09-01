@@ -27,7 +27,7 @@ public class StartRemediationExecutionRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The list of names of AWS Config rules that you want to run remediation execution for.
+     * The list of names of Config rules that you want to run remediation execution for.
      * </p>
      */
     private String configRuleName;
@@ -41,11 +41,11 @@ public class StartRemediationExecutionRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The list of names of AWS Config rules that you want to run remediation execution for.
+     * The list of names of Config rules that you want to run remediation execution for.
      * </p>
      * 
      * @param configRuleName
-     *        The list of names of AWS Config rules that you want to run remediation execution for.
+     *        The list of names of Config rules that you want to run remediation execution for.
      */
 
     public void setConfigRuleName(String configRuleName) {
@@ -54,10 +54,10 @@ public class StartRemediationExecutionRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The list of names of AWS Config rules that you want to run remediation execution for.
+     * The list of names of Config rules that you want to run remediation execution for.
      * </p>
      * 
-     * @return The list of names of AWS Config rules that you want to run remediation execution for.
+     * @return The list of names of Config rules that you want to run remediation execution for.
      */
 
     public String getConfigRuleName() {
@@ -66,11 +66,11 @@ public class StartRemediationExecutionRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The list of names of AWS Config rules that you want to run remediation execution for.
+     * The list of names of Config rules that you want to run remediation execution for.
      * </p>
      * 
      * @param configRuleName
-     *        The list of names of AWS Config rules that you want to run remediation execution for.
+     *        The list of names of Config rules that you want to run remediation execution for.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

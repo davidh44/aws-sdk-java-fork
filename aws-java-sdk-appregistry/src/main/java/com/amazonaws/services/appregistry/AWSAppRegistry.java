@@ -27,9 +27,9 @@ import com.amazonaws.services.appregistry.model.*;
  * </p>
  * <p>
  * <p>
- * AWS Service Catalog AppRegistry enables organizations to understand the application context of their AWS resources.
- * AppRegistry provides a repository of your applications, their resources, and the application metadata that you use
- * within your enterprise.
+ * Amazon Web Services Service Catalog AppRegistry enables organizations to understand the application context of their
+ * Amazon Web Services resources. AppRegistry provides a repository of your applications, their resources, and the
+ * application metadata that you use within your enterprise.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -234,6 +234,25 @@ public interface AWSAppRegistry {
 
     /**
      * <p>
+     * Gets the resource associated with the application.
+     * </p>
+     * 
+     * @param getAssociatedResourceRequest
+     * @return Result of the GetAssociatedResource operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ValidationException
+     *         The request has invalid or missing parameters.
+     * @throws InternalServerException
+     *         The service is experiencing internal problems.
+     * @sample AWSAppRegistry.GetAssociatedResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/AWS242AppRegistry-2020-06-24/GetAssociatedResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetAssociatedResourceResult getAssociatedResource(GetAssociatedResourceRequest getAssociatedResourceRequest);
+
+    /**
+     * <p>
      * Retrieves an attribute group, either by its name or its ID. The attribute group can be specified either by its
      * unique ID or by its name.
      * </p>
@@ -345,9 +364,12 @@ public interface AWSAppRegistry {
 
     /**
      * <p>
-     * Syncs the resource with what is currently recorded in App registry. Specifically, the resource’s App registry
-     * system tags are synced with its associated application. The resource is removed if it is not associated with the
-     * application. The caller must have permissions to read and update the resource.
+     * Syncs the resource with current AppRegistry records.
+     * </p>
+     * <p>
+     * Specifically, the resource’s AppRegistry system tags sync with its associated application. We remove the
+     * resource's AppRegistry system tags if it does not associate with the application. The caller must have
+     * permissions to read and update the resource.
      * </p>
      * 
      * @param syncResourceRequest

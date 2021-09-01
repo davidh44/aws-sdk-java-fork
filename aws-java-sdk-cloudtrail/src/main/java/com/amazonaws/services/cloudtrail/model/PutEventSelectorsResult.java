@@ -25,7 +25,7 @@ public class PutEventSelectorsResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Specifies the ARN of the trail that was updated with event selectors. The format of a trail ARN is:
+     * Specifies the ARN of the trail that was updated with event selectors. The following is the format of a trail ARN.
      * </p>
      * <p>
      * <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
@@ -47,14 +47,15 @@ public class PutEventSelectorsResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Specifies the ARN of the trail that was updated with event selectors. The format of a trail ARN is:
+     * Specifies the ARN of the trail that was updated with event selectors. The following is the format of a trail ARN.
      * </p>
      * <p>
      * <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
      * </p>
      * 
      * @param trailARN
-     *        Specifies the ARN of the trail that was updated with event selectors. The format of a trail ARN is:</p>
+     *        Specifies the ARN of the trail that was updated with event selectors. The following is the format of a
+     *        trail ARN.</p>
      *        <p>
      *        <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
      */
@@ -65,13 +66,14 @@ public class PutEventSelectorsResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Specifies the ARN of the trail that was updated with event selectors. The format of a trail ARN is:
+     * Specifies the ARN of the trail that was updated with event selectors. The following is the format of a trail ARN.
      * </p>
      * <p>
      * <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
      * </p>
      * 
-     * @return Specifies the ARN of the trail that was updated with event selectors. The format of a trail ARN is:</p>
+     * @return Specifies the ARN of the trail that was updated with event selectors. The following is the format of a
+     *         trail ARN.</p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
      */
@@ -82,14 +84,15 @@ public class PutEventSelectorsResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Specifies the ARN of the trail that was updated with event selectors. The format of a trail ARN is:
+     * Specifies the ARN of the trail that was updated with event selectors. The following is the format of a trail ARN.
      * </p>
      * <p>
      * <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
      * </p>
      * 
      * @param trailARN
-     *        Specifies the ARN of the trail that was updated with event selectors. The format of a trail ARN is:</p>
+     *        Specifies the ARN of the trail that was updated with event selectors. The following is the format of a
+     *        trail ARN.</p>
      *        <p>
      *        <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
      * @return Returns a reference to this object so that method calls can be chained together.

@@ -30,8 +30,8 @@ public class FailedDeleteRemediationExceptionsBatch implements Serializable, Clo
 
     /**
      * <p>
-     * Returns a failure message for delete remediation exception. For example, AWS Config creates an exception due to
-     * an internal error.
+     * Returns a failure message for delete remediation exception. For example, Config creates an exception due to an
+     * internal error.
      * </p>
      */
     private String failureMessage;
@@ -44,13 +44,13 @@ public class FailedDeleteRemediationExceptionsBatch implements Serializable, Clo
 
     /**
      * <p>
-     * Returns a failure message for delete remediation exception. For example, AWS Config creates an exception due to
-     * an internal error.
+     * Returns a failure message for delete remediation exception. For example, Config creates an exception due to an
+     * internal error.
      * </p>
      * 
      * @param failureMessage
-     *        Returns a failure message for delete remediation exception. For example, AWS Config creates an exception
-     *        due to an internal error.
+     *        Returns a failure message for delete remediation exception. For example, Config creates an exception due
+     *        to an internal error.
      */
 
     public void setFailureMessage(String failureMessage) {
@@ -59,12 +59,12 @@ public class FailedDeleteRemediationExceptionsBatch implements Serializable, Clo
 
     /**
      * <p>
-     * Returns a failure message for delete remediation exception. For example, AWS Config creates an exception due to
-     * an internal error.
+     * Returns a failure message for delete remediation exception. For example, Config creates an exception due to an
+     * internal error.
      * </p>
      * 
-     * @return Returns a failure message for delete remediation exception. For example, AWS Config creates an exception
-     *         due to an internal error.
+     * @return Returns a failure message for delete remediation exception. For example, Config creates an exception due
+     *         to an internal error.
      */
 
     public String getFailureMessage() {
@@ -73,13 +73,13 @@ public class FailedDeleteRemediationExceptionsBatch implements Serializable, Clo
 
     /**
      * <p>
-     * Returns a failure message for delete remediation exception. For example, AWS Config creates an exception due to
-     * an internal error.
+     * Returns a failure message for delete remediation exception. For example, Config creates an exception due to an
+     * internal error.
      * </p>
      * 
      * @param failureMessage
-     *        Returns a failure message for delete remediation exception. For example, AWS Config creates an exception
-     *        due to an internal error.
+     *        Returns a failure message for delete remediation exception. For example, Config creates an exception due
+     *        to an internal error.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

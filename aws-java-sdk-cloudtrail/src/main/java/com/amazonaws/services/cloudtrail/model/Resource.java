@@ -32,8 +32,8 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The type of a resource referenced by the event returned. When the resource type cannot be determined, null is
      * returned. Some examples of resource types are: <b>Instance</b> for EC2, <b>Trail</b> for CloudTrail,
-     * <b>DBInstance</b> for RDS, and <b>AccessKey</b> for IAM. To learn more about how to look up and filter events by
-     * the resource types supported for a service, see <a href=
+     * <b>DBInstance</b> for Amazon RDS, and <b>AccessKey</b> for IAM. To learn more about how to look up and filter
+     * events by the resource types supported for a service, see <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/view-cloudtrail-events-console.html#filtering-cloudtrail-events"
      * >Filtering CloudTrail Events</a>.
      * </p>
@@ -52,8 +52,8 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The type of a resource referenced by the event returned. When the resource type cannot be determined, null is
      * returned. Some examples of resource types are: <b>Instance</b> for EC2, <b>Trail</b> for CloudTrail,
-     * <b>DBInstance</b> for RDS, and <b>AccessKey</b> for IAM. To learn more about how to look up and filter events by
-     * the resource types supported for a service, see <a href=
+     * <b>DBInstance</b> for Amazon RDS, and <b>AccessKey</b> for IAM. To learn more about how to look up and filter
+     * events by the resource types supported for a service, see <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/view-cloudtrail-events-console.html#filtering-cloudtrail-events"
      * >Filtering CloudTrail Events</a>.
      * </p>
@@ -61,8 +61,8 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
      * @param resourceType
      *        The type of a resource referenced by the event returned. When the resource type cannot be determined, null
      *        is returned. Some examples of resource types are: <b>Instance</b> for EC2, <b>Trail</b> for CloudTrail,
-     *        <b>DBInstance</b> for RDS, and <b>AccessKey</b> for IAM. To learn more about how to look up and filter
-     *        events by the resource types supported for a service, see <a href=
+     *        <b>DBInstance</b> for Amazon RDS, and <b>AccessKey</b> for IAM. To learn more about how to look up and
+     *        filter events by the resource types supported for a service, see <a href=
      *        "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/view-cloudtrail-events-console.html#filtering-cloudtrail-events"
      *        >Filtering CloudTrail Events</a>.
      */
@@ -75,16 +75,16 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The type of a resource referenced by the event returned. When the resource type cannot be determined, null is
      * returned. Some examples of resource types are: <b>Instance</b> for EC2, <b>Trail</b> for CloudTrail,
-     * <b>DBInstance</b> for RDS, and <b>AccessKey</b> for IAM. To learn more about how to look up and filter events by
-     * the resource types supported for a service, see <a href=
+     * <b>DBInstance</b> for Amazon RDS, and <b>AccessKey</b> for IAM. To learn more about how to look up and filter
+     * events by the resource types supported for a service, see <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/view-cloudtrail-events-console.html#filtering-cloudtrail-events"
      * >Filtering CloudTrail Events</a>.
      * </p>
      * 
      * @return The type of a resource referenced by the event returned. When the resource type cannot be determined,
      *         null is returned. Some examples of resource types are: <b>Instance</b> for EC2, <b>Trail</b> for
-     *         CloudTrail, <b>DBInstance</b> for RDS, and <b>AccessKey</b> for IAM. To learn more about how to look up
-     *         and filter events by the resource types supported for a service, see <a href=
+     *         CloudTrail, <b>DBInstance</b> for Amazon RDS, and <b>AccessKey</b> for IAM. To learn more about how to
+     *         look up and filter events by the resource types supported for a service, see <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/view-cloudtrail-events-console.html#filtering-cloudtrail-events"
      *         >Filtering CloudTrail Events</a>.
      */
@@ -97,8 +97,8 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The type of a resource referenced by the event returned. When the resource type cannot be determined, null is
      * returned. Some examples of resource types are: <b>Instance</b> for EC2, <b>Trail</b> for CloudTrail,
-     * <b>DBInstance</b> for RDS, and <b>AccessKey</b> for IAM. To learn more about how to look up and filter events by
-     * the resource types supported for a service, see <a href=
+     * <b>DBInstance</b> for Amazon RDS, and <b>AccessKey</b> for IAM. To learn more about how to look up and filter
+     * events by the resource types supported for a service, see <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/view-cloudtrail-events-console.html#filtering-cloudtrail-events"
      * >Filtering CloudTrail Events</a>.
      * </p>
@@ -106,8 +106,8 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
      * @param resourceType
      *        The type of a resource referenced by the event returned. When the resource type cannot be determined, null
      *        is returned. Some examples of resource types are: <b>Instance</b> for EC2, <b>Trail</b> for CloudTrail,
-     *        <b>DBInstance</b> for RDS, and <b>AccessKey</b> for IAM. To learn more about how to look up and filter
-     *        events by the resource types supported for a service, see <a href=
+     *        <b>DBInstance</b> for Amazon RDS, and <b>AccessKey</b> for IAM. To learn more about how to look up and
+     *        filter events by the resource types supported for a service, see <a href=
      *        "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/view-cloudtrail-events-console.html#filtering-cloudtrail-events"
      *        >Filtering CloudTrail Events</a>.
      * @return Returns a reference to this object so that method calls can be chained together.

@@ -30,8 +30,7 @@ public class Transition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The position where this program will be inserted relative to the RelativeProgram. Possible values are:
-     * AFTER_PROGRAM, and BEFORE_PROGRAM.
+     * The position where this program will be inserted relative to the RelativePosition.
      * </p>
      */
     private String relativePosition;
@@ -43,20 +42,42 @@ public class Transition implements Serializable, Cloneable, StructuredPojo {
     private String relativeProgram;
     /**
      * <p>
-     * When the program should be played. RELATIVE means that programs will be played back-to-back.
+     * The date and time that the program is scheduled to start, in epoch milliseconds.
+     * </p>
+     */
+    private Long scheduledStartTimeMillis;
+    /**
+     * <p>
+     * Defines when the program plays in the schedule. You can set the value to ABSOLUTE or RELATIVE.
+     * </p>
+     * <p>
+     * ABSOLUTE - The program plays at a specific wall clock time. This setting can only be used for channels using the
+     * LINEAR PlaybackMode.
+     * </p>
+     * <p>
+     * Note the following considerations when using ABSOLUTE transitions:
+     * </p>
+     * <p>
+     * If the preceding program in the schedule has a duration that extends past the wall clock time, MediaTailor
+     * truncates the preceding program on a common segment boundary.
+     * </p>
+     * <p>
+     * If there are gaps in playback, MediaTailor plays the FillerSlate you configured for your linear channel.
+     * </p>
+     * <p>
+     * RELATIVE - The program is inserted into the schedule either before or after a program that you specify via
+     * RelativePosition.
      * </p>
      */
     private String type;
 
     /**
      * <p>
-     * The position where this program will be inserted relative to the RelativeProgram. Possible values are:
-     * AFTER_PROGRAM, and BEFORE_PROGRAM.
+     * The position where this program will be inserted relative to the RelativePosition.
      * </p>
      * 
      * @param relativePosition
-     *        The position where this program will be inserted relative to the RelativeProgram. Possible values are:
-     *        AFTER_PROGRAM, and BEFORE_PROGRAM.
+     *        The position where this program will be inserted relative to the RelativePosition.
      * @see RelativePosition
      */
 
@@ -66,12 +87,10 @@ public class Transition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The position where this program will be inserted relative to the RelativeProgram. Possible values are:
-     * AFTER_PROGRAM, and BEFORE_PROGRAM.
+     * The position where this program will be inserted relative to the RelativePosition.
      * </p>
      * 
-     * @return The position where this program will be inserted relative to the RelativeProgram. Possible values are:
-     *         AFTER_PROGRAM, and BEFORE_PROGRAM.
+     * @return The position where this program will be inserted relative to the RelativePosition.
      * @see RelativePosition
      */
 
@@ -81,13 +100,11 @@ public class Transition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The position where this program will be inserted relative to the RelativeProgram. Possible values are:
-     * AFTER_PROGRAM, and BEFORE_PROGRAM.
+     * The position where this program will be inserted relative to the RelativePosition.
      * </p>
      * 
      * @param relativePosition
-     *        The position where this program will be inserted relative to the RelativeProgram. Possible values are:
-     *        AFTER_PROGRAM, and BEFORE_PROGRAM.
+     *        The position where this program will be inserted relative to the RelativePosition.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RelativePosition
      */
@@ -99,13 +116,11 @@ public class Transition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The position where this program will be inserted relative to the RelativeProgram. Possible values are:
-     * AFTER_PROGRAM, and BEFORE_PROGRAM.
+     * The position where this program will be inserted relative to the RelativePosition.
      * </p>
      * 
      * @param relativePosition
-     *        The position where this program will be inserted relative to the RelativeProgram. Possible values are:
-     *        AFTER_PROGRAM, and BEFORE_PROGRAM.
+     *        The position where this program will be inserted relative to the RelativePosition.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RelativePosition
      */
@@ -157,11 +172,86 @@ public class Transition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * When the program should be played. RELATIVE means that programs will be played back-to-back.
+     * The date and time that the program is scheduled to start, in epoch milliseconds.
+     * </p>
+     * 
+     * @param scheduledStartTimeMillis
+     *        The date and time that the program is scheduled to start, in epoch milliseconds.
+     */
+
+    public void setScheduledStartTimeMillis(Long scheduledStartTimeMillis) {
+        this.scheduledStartTimeMillis = scheduledStartTimeMillis;
+    }
+
+    /**
+     * <p>
+     * The date and time that the program is scheduled to start, in epoch milliseconds.
+     * </p>
+     * 
+     * @return The date and time that the program is scheduled to start, in epoch milliseconds.
+     */
+
+    public Long getScheduledStartTimeMillis() {
+        return this.scheduledStartTimeMillis;
+    }
+
+    /**
+     * <p>
+     * The date and time that the program is scheduled to start, in epoch milliseconds.
+     * </p>
+     * 
+     * @param scheduledStartTimeMillis
+     *        The date and time that the program is scheduled to start, in epoch milliseconds.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Transition withScheduledStartTimeMillis(Long scheduledStartTimeMillis) {
+        setScheduledStartTimeMillis(scheduledStartTimeMillis);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Defines when the program plays in the schedule. You can set the value to ABSOLUTE or RELATIVE.
+     * </p>
+     * <p>
+     * ABSOLUTE - The program plays at a specific wall clock time. This setting can only be used for channels using the
+     * LINEAR PlaybackMode.
+     * </p>
+     * <p>
+     * Note the following considerations when using ABSOLUTE transitions:
+     * </p>
+     * <p>
+     * If the preceding program in the schedule has a duration that extends past the wall clock time, MediaTailor
+     * truncates the preceding program on a common segment boundary.
+     * </p>
+     * <p>
+     * If there are gaps in playback, MediaTailor plays the FillerSlate you configured for your linear channel.
+     * </p>
+     * <p>
+     * RELATIVE - The program is inserted into the schedule either before or after a program that you specify via
+     * RelativePosition.
      * </p>
      * 
      * @param type
-     *        When the program should be played. RELATIVE means that programs will be played back-to-back.
+     *        Defines when the program plays in the schedule. You can set the value to ABSOLUTE or RELATIVE.</p>
+     *        <p>
+     *        ABSOLUTE - The program plays at a specific wall clock time. This setting can only be used for channels
+     *        using the LINEAR PlaybackMode.
+     *        </p>
+     *        <p>
+     *        Note the following considerations when using ABSOLUTE transitions:
+     *        </p>
+     *        <p>
+     *        If the preceding program in the schedule has a duration that extends past the wall clock time, MediaTailor
+     *        truncates the preceding program on a common segment boundary.
+     *        </p>
+     *        <p>
+     *        If there are gaps in playback, MediaTailor plays the FillerSlate you configured for your linear channel.
+     *        </p>
+     *        <p>
+     *        RELATIVE - The program is inserted into the schedule either before or after a program that you specify via
+     *        RelativePosition.
      */
 
     public void setType(String type) {
@@ -170,10 +260,45 @@ public class Transition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * When the program should be played. RELATIVE means that programs will be played back-to-back.
+     * Defines when the program plays in the schedule. You can set the value to ABSOLUTE or RELATIVE.
+     * </p>
+     * <p>
+     * ABSOLUTE - The program plays at a specific wall clock time. This setting can only be used for channels using the
+     * LINEAR PlaybackMode.
+     * </p>
+     * <p>
+     * Note the following considerations when using ABSOLUTE transitions:
+     * </p>
+     * <p>
+     * If the preceding program in the schedule has a duration that extends past the wall clock time, MediaTailor
+     * truncates the preceding program on a common segment boundary.
+     * </p>
+     * <p>
+     * If there are gaps in playback, MediaTailor plays the FillerSlate you configured for your linear channel.
+     * </p>
+     * <p>
+     * RELATIVE - The program is inserted into the schedule either before or after a program that you specify via
+     * RelativePosition.
      * </p>
      * 
-     * @return When the program should be played. RELATIVE means that programs will be played back-to-back.
+     * @return Defines when the program plays in the schedule. You can set the value to ABSOLUTE or RELATIVE.</p>
+     *         <p>
+     *         ABSOLUTE - The program plays at a specific wall clock time. This setting can only be used for channels
+     *         using the LINEAR PlaybackMode.
+     *         </p>
+     *         <p>
+     *         Note the following considerations when using ABSOLUTE transitions:
+     *         </p>
+     *         <p>
+     *         If the preceding program in the schedule has a duration that extends past the wall clock time,
+     *         MediaTailor truncates the preceding program on a common segment boundary.
+     *         </p>
+     *         <p>
+     *         If there are gaps in playback, MediaTailor plays the FillerSlate you configured for your linear channel.
+     *         </p>
+     *         <p>
+     *         RELATIVE - The program is inserted into the schedule either before or after a program that you specify
+     *         via RelativePosition.
      */
 
     public String getType() {
@@ -182,11 +307,46 @@ public class Transition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * When the program should be played. RELATIVE means that programs will be played back-to-back.
+     * Defines when the program plays in the schedule. You can set the value to ABSOLUTE or RELATIVE.
+     * </p>
+     * <p>
+     * ABSOLUTE - The program plays at a specific wall clock time. This setting can only be used for channels using the
+     * LINEAR PlaybackMode.
+     * </p>
+     * <p>
+     * Note the following considerations when using ABSOLUTE transitions:
+     * </p>
+     * <p>
+     * If the preceding program in the schedule has a duration that extends past the wall clock time, MediaTailor
+     * truncates the preceding program on a common segment boundary.
+     * </p>
+     * <p>
+     * If there are gaps in playback, MediaTailor plays the FillerSlate you configured for your linear channel.
+     * </p>
+     * <p>
+     * RELATIVE - The program is inserted into the schedule either before or after a program that you specify via
+     * RelativePosition.
      * </p>
      * 
      * @param type
-     *        When the program should be played. RELATIVE means that programs will be played back-to-back.
+     *        Defines when the program plays in the schedule. You can set the value to ABSOLUTE or RELATIVE.</p>
+     *        <p>
+     *        ABSOLUTE - The program plays at a specific wall clock time. This setting can only be used for channels
+     *        using the LINEAR PlaybackMode.
+     *        </p>
+     *        <p>
+     *        Note the following considerations when using ABSOLUTE transitions:
+     *        </p>
+     *        <p>
+     *        If the preceding program in the schedule has a duration that extends past the wall clock time, MediaTailor
+     *        truncates the preceding program on a common segment boundary.
+     *        </p>
+     *        <p>
+     *        If there are gaps in playback, MediaTailor plays the FillerSlate you configured for your linear channel.
+     *        </p>
+     *        <p>
+     *        RELATIVE - The program is inserted into the schedule either before or after a program that you specify via
+     *        RelativePosition.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -211,6 +371,8 @@ public class Transition implements Serializable, Cloneable, StructuredPojo {
             sb.append("RelativePosition: ").append(getRelativePosition()).append(",");
         if (getRelativeProgram() != null)
             sb.append("RelativeProgram: ").append(getRelativeProgram()).append(",");
+        if (getScheduledStartTimeMillis() != null)
+            sb.append("ScheduledStartTimeMillis: ").append(getScheduledStartTimeMillis()).append(",");
         if (getType() != null)
             sb.append("Type: ").append(getType());
         sb.append("}");
@@ -235,6 +397,10 @@ public class Transition implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getRelativeProgram() != null && other.getRelativeProgram().equals(this.getRelativeProgram()) == false)
             return false;
+        if (other.getScheduledStartTimeMillis() == null ^ this.getScheduledStartTimeMillis() == null)
+            return false;
+        if (other.getScheduledStartTimeMillis() != null && other.getScheduledStartTimeMillis().equals(this.getScheduledStartTimeMillis()) == false)
+            return false;
         if (other.getType() == null ^ this.getType() == null)
             return false;
         if (other.getType() != null && other.getType().equals(this.getType()) == false)
@@ -249,6 +415,7 @@ public class Transition implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getRelativePosition() == null) ? 0 : getRelativePosition().hashCode());
         hashCode = prime * hashCode + ((getRelativeProgram() == null) ? 0 : getRelativeProgram().hashCode());
+        hashCode = prime * hashCode + ((getScheduledStartTimeMillis() == null) ? 0 : getScheduledStartTimeMillis().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         return hashCode;
     }

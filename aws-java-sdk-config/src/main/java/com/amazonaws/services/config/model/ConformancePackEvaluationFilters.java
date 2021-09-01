@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Filters a conformance pack by AWS Config rule names, compliance types, AWS resource types, and resource IDs.
+ * Filters a conformance pack by Config rule names, compliance types, Amazon Web Services resource types, and resource
+ * IDs.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ConformancePackEvaluationFilters"
@@ -30,7 +31,7 @@ public class ConformancePackEvaluationFilters implements Serializable, Cloneable
 
     /**
      * <p>
-     * Filters the results by AWS Config rule names.
+     * Filters the results by Config rule names.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> configRuleNames;
@@ -64,10 +65,10 @@ public class ConformancePackEvaluationFilters implements Serializable, Cloneable
 
     /**
      * <p>
-     * Filters the results by AWS Config rule names.
+     * Filters the results by Config rule names.
      * </p>
      * 
-     * @return Filters the results by AWS Config rule names.
+     * @return Filters the results by Config rule names.
      */
 
     public java.util.List<String> getConfigRuleNames() {
@@ -79,11 +80,11 @@ public class ConformancePackEvaluationFilters implements Serializable, Cloneable
 
     /**
      * <p>
-     * Filters the results by AWS Config rule names.
+     * Filters the results by Config rule names.
      * </p>
      * 
      * @param configRuleNames
-     *        Filters the results by AWS Config rule names.
+     *        Filters the results by Config rule names.
      */
 
     public void setConfigRuleNames(java.util.Collection<String> configRuleNames) {
@@ -97,7 +98,7 @@ public class ConformancePackEvaluationFilters implements Serializable, Cloneable
 
     /**
      * <p>
-     * Filters the results by AWS Config rule names.
+     * Filters the results by Config rule names.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -106,7 +107,7 @@ public class ConformancePackEvaluationFilters implements Serializable, Cloneable
      * </p>
      * 
      * @param configRuleNames
-     *        Filters the results by AWS Config rule names.
+     *        Filters the results by Config rule names.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -122,11 +123,11 @@ public class ConformancePackEvaluationFilters implements Serializable, Cloneable
 
     /**
      * <p>
-     * Filters the results by AWS Config rule names.
+     * Filters the results by Config rule names.
      * </p>
      * 
      * @param configRuleNames
-     *        Filters the results by AWS Config rule names.
+     *        Filters the results by Config rule names.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

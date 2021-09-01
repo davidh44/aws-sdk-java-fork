@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides the AWS Config rule owner (AWS or customer), the rule identifier, and the events that trigger the evaluation
- * of your AWS resources.
+ * Provides the Config rule owner (Amazon Web Services or customer), the rule identifier, and the events that trigger
+ * the evaluation of your Amazon Web Services resources.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/Source" target="_top">AWS API
@@ -31,37 +31,37 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether AWS or the customer owns and manages the AWS Config rule.
+     * Indicates whether Amazon Web Services or the customer owns and manages the Config rule.
      * </p>
      */
     private String owner;
     /**
      * <p>
-     * For AWS Config managed rules, a predefined identifier from a list. For example, <code>IAM_PASSWORD_POLICY</code>
-     * is a managed rule. To reference a managed rule, see <a
-     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Using AWS
-     * Managed Config Rules</a>.
+     * For Config managed rules, a predefined identifier from a list. For example, <code>IAM_PASSWORD_POLICY</code> is a
+     * managed rule. To reference a managed rule, see <a
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Using
+     * Config managed rules</a>.
      * </p>
      * <p>
-     * For custom rules, the identifier is the Amazon Resource Name (ARN) of the rule's AWS Lambda function, such as
+     * For custom rules, the identifier is the Amazon Resource Name (ARN) of the rule's Lambda function, such as
      * <code>arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name</code>.
      * </p>
      */
     private String sourceIdentifier;
     /**
      * <p>
-     * Provides the source and type of the event that causes AWS Config to evaluate your AWS resources.
+     * Provides the source and type of the event that causes Config to evaluate your Amazon Web Services resources.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<SourceDetail> sourceDetails;
 
     /**
      * <p>
-     * Indicates whether AWS or the customer owns and manages the AWS Config rule.
+     * Indicates whether Amazon Web Services or the customer owns and manages the Config rule.
      * </p>
      * 
      * @param owner
-     *        Indicates whether AWS or the customer owns and manages the AWS Config rule.
+     *        Indicates whether Amazon Web Services or the customer owns and manages the Config rule.
      * @see Owner
      */
 
@@ -71,10 +71,10 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether AWS or the customer owns and manages the AWS Config rule.
+     * Indicates whether Amazon Web Services or the customer owns and manages the Config rule.
      * </p>
      * 
-     * @return Indicates whether AWS or the customer owns and manages the AWS Config rule.
+     * @return Indicates whether Amazon Web Services or the customer owns and manages the Config rule.
      * @see Owner
      */
 
@@ -84,11 +84,11 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether AWS or the customer owns and manages the AWS Config rule.
+     * Indicates whether Amazon Web Services or the customer owns and manages the Config rule.
      * </p>
      * 
      * @param owner
-     *        Indicates whether AWS or the customer owns and manages the AWS Config rule.
+     *        Indicates whether Amazon Web Services or the customer owns and manages the Config rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Owner
      */
@@ -100,11 +100,11 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether AWS or the customer owns and manages the AWS Config rule.
+     * Indicates whether Amazon Web Services or the customer owns and manages the Config rule.
      * </p>
      * 
      * @param owner
-     *        Indicates whether AWS or the customer owns and manages the AWS Config rule.
+     *        Indicates whether Amazon Web Services or the customer owns and manages the Config rule.
      * @see Owner
      */
 
@@ -114,11 +114,11 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether AWS or the customer owns and manages the AWS Config rule.
+     * Indicates whether Amazon Web Services or the customer owns and manages the Config rule.
      * </p>
      * 
      * @param owner
-     *        Indicates whether AWS or the customer owns and manages the AWS Config rule.
+     *        Indicates whether Amazon Web Services or the customer owns and manages the Config rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Owner
      */
@@ -130,24 +130,24 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * For AWS Config managed rules, a predefined identifier from a list. For example, <code>IAM_PASSWORD_POLICY</code>
-     * is a managed rule. To reference a managed rule, see <a
-     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Using AWS
-     * Managed Config Rules</a>.
+     * For Config managed rules, a predefined identifier from a list. For example, <code>IAM_PASSWORD_POLICY</code> is a
+     * managed rule. To reference a managed rule, see <a
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Using
+     * Config managed rules</a>.
      * </p>
      * <p>
-     * For custom rules, the identifier is the Amazon Resource Name (ARN) of the rule's AWS Lambda function, such as
+     * For custom rules, the identifier is the Amazon Resource Name (ARN) of the rule's Lambda function, such as
      * <code>arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name</code>.
      * </p>
      * 
      * @param sourceIdentifier
-     *        For AWS Config managed rules, a predefined identifier from a list. For example,
+     *        For Config managed rules, a predefined identifier from a list. For example,
      *        <code>IAM_PASSWORD_POLICY</code> is a managed rule. To reference a managed rule, see <a
      *        href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html"
-     *        >Using AWS Managed Config Rules</a>.</p>
+     *        >Using Config managed rules</a>.</p>
      *        <p>
-     *        For custom rules, the identifier is the Amazon Resource Name (ARN) of the rule's AWS Lambda function, such
-     *        as <code>arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name</code>.
+     *        For custom rules, the identifier is the Amazon Resource Name (ARN) of the rule's Lambda function, such as
+     *        <code>arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name</code>.
      */
 
     public void setSourceIdentifier(String sourceIdentifier) {
@@ -156,23 +156,23 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * For AWS Config managed rules, a predefined identifier from a list. For example, <code>IAM_PASSWORD_POLICY</code>
-     * is a managed rule. To reference a managed rule, see <a
-     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Using AWS
-     * Managed Config Rules</a>.
+     * For Config managed rules, a predefined identifier from a list. For example, <code>IAM_PASSWORD_POLICY</code> is a
+     * managed rule. To reference a managed rule, see <a
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Using
+     * Config managed rules</a>.
      * </p>
      * <p>
-     * For custom rules, the identifier is the Amazon Resource Name (ARN) of the rule's AWS Lambda function, such as
+     * For custom rules, the identifier is the Amazon Resource Name (ARN) of the rule's Lambda function, such as
      * <code>arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name</code>.
      * </p>
      * 
-     * @return For AWS Config managed rules, a predefined identifier from a list. For example,
+     * @return For Config managed rules, a predefined identifier from a list. For example,
      *         <code>IAM_PASSWORD_POLICY</code> is a managed rule. To reference a managed rule, see <a
      *         href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html"
-     *         >Using AWS Managed Config Rules</a>.</p>
+     *         >Using Config managed rules</a>.</p>
      *         <p>
-     *         For custom rules, the identifier is the Amazon Resource Name (ARN) of the rule's AWS Lambda function,
-     *         such as <code>arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name</code>.
+     *         For custom rules, the identifier is the Amazon Resource Name (ARN) of the rule's Lambda function, such as
+     *         <code>arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name</code>.
      */
 
     public String getSourceIdentifier() {
@@ -181,24 +181,24 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * For AWS Config managed rules, a predefined identifier from a list. For example, <code>IAM_PASSWORD_POLICY</code>
-     * is a managed rule. To reference a managed rule, see <a
-     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Using AWS
-     * Managed Config Rules</a>.
+     * For Config managed rules, a predefined identifier from a list. For example, <code>IAM_PASSWORD_POLICY</code> is a
+     * managed rule. To reference a managed rule, see <a
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Using
+     * Config managed rules</a>.
      * </p>
      * <p>
-     * For custom rules, the identifier is the Amazon Resource Name (ARN) of the rule's AWS Lambda function, such as
+     * For custom rules, the identifier is the Amazon Resource Name (ARN) of the rule's Lambda function, such as
      * <code>arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name</code>.
      * </p>
      * 
      * @param sourceIdentifier
-     *        For AWS Config managed rules, a predefined identifier from a list. For example,
+     *        For Config managed rules, a predefined identifier from a list. For example,
      *        <code>IAM_PASSWORD_POLICY</code> is a managed rule. To reference a managed rule, see <a
      *        href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html"
-     *        >Using AWS Managed Config Rules</a>.</p>
+     *        >Using Config managed rules</a>.</p>
      *        <p>
-     *        For custom rules, the identifier is the Amazon Resource Name (ARN) of the rule's AWS Lambda function, such
-     *        as <code>arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name</code>.
+     *        For custom rules, the identifier is the Amazon Resource Name (ARN) of the rule's Lambda function, such as
+     *        <code>arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -209,10 +209,11 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides the source and type of the event that causes AWS Config to evaluate your AWS resources.
+     * Provides the source and type of the event that causes Config to evaluate your Amazon Web Services resources.
      * </p>
      * 
-     * @return Provides the source and type of the event that causes AWS Config to evaluate your AWS resources.
+     * @return Provides the source and type of the event that causes Config to evaluate your Amazon Web Services
+     *         resources.
      */
 
     public java.util.List<SourceDetail> getSourceDetails() {
@@ -224,11 +225,12 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides the source and type of the event that causes AWS Config to evaluate your AWS resources.
+     * Provides the source and type of the event that causes Config to evaluate your Amazon Web Services resources.
      * </p>
      * 
      * @param sourceDetails
-     *        Provides the source and type of the event that causes AWS Config to evaluate your AWS resources.
+     *        Provides the source and type of the event that causes Config to evaluate your Amazon Web Services
+     *        resources.
      */
 
     public void setSourceDetails(java.util.Collection<SourceDetail> sourceDetails) {
@@ -242,7 +244,7 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides the source and type of the event that causes AWS Config to evaluate your AWS resources.
+     * Provides the source and type of the event that causes Config to evaluate your Amazon Web Services resources.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -251,7 +253,8 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param sourceDetails
-     *        Provides the source and type of the event that causes AWS Config to evaluate your AWS resources.
+     *        Provides the source and type of the event that causes Config to evaluate your Amazon Web Services
+     *        resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -267,11 +270,12 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides the source and type of the event that causes AWS Config to evaluate your AWS resources.
+     * Provides the source and type of the event that causes Config to evaluate your Amazon Web Services resources.
      * </p>
      * 
      * @param sourceDetails
-     *        Provides the source and type of the event that causes AWS Config to evaluate your AWS resources.
+     *        Provides the source and type of the event that causes Config to evaluate your Amazon Web Services
+     *        resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The number of AWS resources or AWS Config rules responsible for the current compliance of the item, up to a maximum
- * number.
+ * The number of Amazon Web Services resources or Config rules responsible for the current compliance of the item, up to
+ * a maximum number.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ComplianceContributorCount" target="_top">AWS
@@ -31,7 +31,7 @@ public class ComplianceContributorCount implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The number of AWS resources or AWS Config rules responsible for the current compliance of the item.
+     * The number of Amazon Web Services resources or Config rules responsible for the current compliance of the item.
      * </p>
      */
     private Integer cappedCount;
@@ -44,11 +44,12 @@ public class ComplianceContributorCount implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The number of AWS resources or AWS Config rules responsible for the current compliance of the item.
+     * The number of Amazon Web Services resources or Config rules responsible for the current compliance of the item.
      * </p>
      * 
      * @param cappedCount
-     *        The number of AWS resources or AWS Config rules responsible for the current compliance of the item.
+     *        The number of Amazon Web Services resources or Config rules responsible for the current compliance of the
+     *        item.
      */
 
     public void setCappedCount(Integer cappedCount) {
@@ -57,10 +58,11 @@ public class ComplianceContributorCount implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The number of AWS resources or AWS Config rules responsible for the current compliance of the item.
+     * The number of Amazon Web Services resources or Config rules responsible for the current compliance of the item.
      * </p>
      * 
-     * @return The number of AWS resources or AWS Config rules responsible for the current compliance of the item.
+     * @return The number of Amazon Web Services resources or Config rules responsible for the current compliance of the
+     *         item.
      */
 
     public Integer getCappedCount() {
@@ -69,11 +71,12 @@ public class ComplianceContributorCount implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The number of AWS resources or AWS Config rules responsible for the current compliance of the item.
+     * The number of Amazon Web Services resources or Config rules responsible for the current compliance of the item.
      * </p>
      * 
      * @param cappedCount
-     *        The number of AWS resources or AWS Config rules responsible for the current compliance of the item.
+     *        The number of Amazon Web Services resources or Config rules responsible for the current compliance of the
+     *        item.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

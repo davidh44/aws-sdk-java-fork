@@ -49,6 +49,12 @@ public class CreateChannelResult extends com.amazonaws.AmazonWebServiceResult<co
     private java.util.Date creationTime;
     /**
      * <p>
+     * Contains information about the slate used to fill gaps between programs in the schedule.
+     * </p>
+     */
+    private SlateSource fillerSlate;
+    /**
+     * <p>
      * The timestamp of when the channel was last modified.
      * </p>
      */
@@ -61,7 +67,7 @@ public class CreateChannelResult extends com.amazonaws.AmazonWebServiceResult<co
     private java.util.List<ResponseOutputItem> outputs;
     /**
      * <p>
-     * The type of playback for this channel. The only supported value is LOOP.
+     * The channel's playback mode.
      * </p>
      */
     private String playbackMode;
@@ -253,6 +259,46 @@ public class CreateChannelResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
+     * Contains information about the slate used to fill gaps between programs in the schedule.
+     * </p>
+     * 
+     * @param fillerSlate
+     *        Contains information about the slate used to fill gaps between programs in the schedule.
+     */
+
+    public void setFillerSlate(SlateSource fillerSlate) {
+        this.fillerSlate = fillerSlate;
+    }
+
+    /**
+     * <p>
+     * Contains information about the slate used to fill gaps between programs in the schedule.
+     * </p>
+     * 
+     * @return Contains information about the slate used to fill gaps between programs in the schedule.
+     */
+
+    public SlateSource getFillerSlate() {
+        return this.fillerSlate;
+    }
+
+    /**
+     * <p>
+     * Contains information about the slate used to fill gaps between programs in the schedule.
+     * </p>
+     * 
+     * @param fillerSlate
+     *        Contains information about the slate used to fill gaps between programs in the schedule.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateChannelResult withFillerSlate(SlateSource fillerSlate) {
+        setFillerSlate(fillerSlate);
+        return this;
+    }
+
+    /**
+     * <p>
      * The timestamp of when the channel was last modified.
      * </p>
      * 
@@ -363,11 +409,11 @@ public class CreateChannelResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The type of playback for this channel. The only supported value is LOOP.
+     * The channel's playback mode.
      * </p>
      * 
      * @param playbackMode
-     *        The type of playback for this channel. The only supported value is LOOP.
+     *        The channel's playback mode.
      */
 
     public void setPlaybackMode(String playbackMode) {
@@ -376,10 +422,10 @@ public class CreateChannelResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The type of playback for this channel. The only supported value is LOOP.
+     * The channel's playback mode.
      * </p>
      * 
-     * @return The type of playback for this channel. The only supported value is LOOP.
+     * @return The channel's playback mode.
      */
 
     public String getPlaybackMode() {
@@ -388,11 +434,11 @@ public class CreateChannelResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The type of playback for this channel. The only supported value is LOOP.
+     * The channel's playback mode.
      * </p>
      * 
      * @param playbackMode
-     *        The type of playback for this channel. The only supported value is LOOP.
+     *        The channel's playback mode.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -489,6 +535,8 @@ public class CreateChannelResult extends com.amazonaws.AmazonWebServiceResult<co
             sb.append("ChannelState: ").append(getChannelState()).append(",");
         if (getCreationTime() != null)
             sb.append("CreationTime: ").append(getCreationTime()).append(",");
+        if (getFillerSlate() != null)
+            sb.append("FillerSlate: ").append(getFillerSlate()).append(",");
         if (getLastModifiedTime() != null)
             sb.append("LastModifiedTime: ").append(getLastModifiedTime()).append(",");
         if (getOutputs() != null)
@@ -527,6 +575,10 @@ public class CreateChannelResult extends com.amazonaws.AmazonWebServiceResult<co
             return false;
         if (other.getCreationTime() != null && other.getCreationTime().equals(this.getCreationTime()) == false)
             return false;
+        if (other.getFillerSlate() == null ^ this.getFillerSlate() == null)
+            return false;
+        if (other.getFillerSlate() != null && other.getFillerSlate().equals(this.getFillerSlate()) == false)
+            return false;
         if (other.getLastModifiedTime() == null ^ this.getLastModifiedTime() == null)
             return false;
         if (other.getLastModifiedTime() != null && other.getLastModifiedTime().equals(this.getLastModifiedTime()) == false)
@@ -555,6 +607,7 @@ public class CreateChannelResult extends com.amazonaws.AmazonWebServiceResult<co
         hashCode = prime * hashCode + ((getChannelName() == null) ? 0 : getChannelName().hashCode());
         hashCode = prime * hashCode + ((getChannelState() == null) ? 0 : getChannelState().hashCode());
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
+        hashCode = prime * hashCode + ((getFillerSlate() == null) ? 0 : getFillerSlate().hashCode());
         hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
         hashCode = prime * hashCode + ((getOutputs() == null) ? 0 : getOutputs().hashCode());
         hashCode = prime * hashCode + ((getPlaybackMode() == null) ? 0 : getPlaybackMode().hashCode());

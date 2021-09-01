@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * AWS Config organization conformance pack that you passed in the filter does not exist.
+ * Config organization conformance pack that you passed in the filter does not exist.
  * </p>
  * <p>
  * For DeleteOrganizationConformancePack, you tried to delete an organization conformance pack that does not exist.

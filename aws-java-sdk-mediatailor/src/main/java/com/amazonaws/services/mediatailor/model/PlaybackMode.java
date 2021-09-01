@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum PlaybackMode {
 
-    LOOP("LOOP");
+    LOOP("LOOP"),
+    LINEAR("LINEAR");
 
     private String value;
 

@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Identifies an AWS resource and indicates whether it complies with the AWS Config rule that it was evaluated against.
+ * Identifies an Amazon Web Services resource and indicates whether it complies with the Config rule that it was
+ * evaluated against.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/Evaluation" target="_top">AWS API
@@ -30,29 +31,29 @@ public class Evaluation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of AWS resource that was evaluated.
+     * The type of Amazon Web Services resource that was evaluated.
      * </p>
      */
     private String complianceResourceType;
     /**
      * <p>
-     * The ID of the AWS resource that was evaluated.
+     * The ID of the Amazon Web Services resource that was evaluated.
      * </p>
      */
     private String complianceResourceId;
     /**
      * <p>
-     * Indicates whether the AWS resource complies with the AWS Config rule that it was evaluated against.
+     * Indicates whether the Amazon Web Services resource complies with the Config rule that it was evaluated against.
      * </p>
      * <p>
-     * For the <code>Evaluation</code> data type, AWS Config supports only the <code>COMPLIANT</code>,
-     * <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. AWS Config does not support the
+     * For the <code>Evaluation</code> data type, Config supports only the <code>COMPLIANT</code>,
+     * <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. Config does not support the
      * <code>INSUFFICIENT_DATA</code> value for this data type.
      * </p>
      * <p>
-     * Similarly, AWS Config does not accept <code>INSUFFICIENT_DATA</code> as the value for <code>ComplianceType</code>
-     * from a <code>PutEvaluations</code> request. For example, an AWS Lambda function for a custom AWS Config rule
-     * cannot pass an <code>INSUFFICIENT_DATA</code> value to AWS Config.
+     * Similarly, Config does not accept <code>INSUFFICIENT_DATA</code> as the value for <code>ComplianceType</code>
+     * from a <code>PutEvaluations</code> request. For example, an Lambda function for a custom Config rule cannot pass
+     * an <code>INSUFFICIENT_DATA</code> value to Config.
      * </p>
      */
     private String complianceType;
@@ -64,21 +65,20 @@ public class Evaluation implements Serializable, Cloneable, StructuredPojo {
     private String annotation;
     /**
      * <p>
-     * The time of the event in AWS Config that triggered the evaluation. For event-based evaluations, the time
-     * indicates when AWS Config created the configuration item that triggered the evaluation. For periodic evaluations,
-     * the time indicates when AWS Config triggered the evaluation at the frequency that you specified (for example,
-     * every 24 hours).
+     * The time of the event in Config that triggered the evaluation. For event-based evaluations, the time indicates
+     * when Config created the configuration item that triggered the evaluation. For periodic evaluations, the time
+     * indicates when Config triggered the evaluation at the frequency that you specified (for example, every 24 hours).
      * </p>
      */
     private java.util.Date orderingTimestamp;
 
     /**
      * <p>
-     * The type of AWS resource that was evaluated.
+     * The type of Amazon Web Services resource that was evaluated.
      * </p>
      * 
      * @param complianceResourceType
-     *        The type of AWS resource that was evaluated.
+     *        The type of Amazon Web Services resource that was evaluated.
      */
 
     public void setComplianceResourceType(String complianceResourceType) {
@@ -87,10 +87,10 @@ public class Evaluation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of AWS resource that was evaluated.
+     * The type of Amazon Web Services resource that was evaluated.
      * </p>
      * 
-     * @return The type of AWS resource that was evaluated.
+     * @return The type of Amazon Web Services resource that was evaluated.
      */
 
     public String getComplianceResourceType() {
@@ -99,11 +99,11 @@ public class Evaluation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of AWS resource that was evaluated.
+     * The type of Amazon Web Services resource that was evaluated.
      * </p>
      * 
      * @param complianceResourceType
-     *        The type of AWS resource that was evaluated.
+     *        The type of Amazon Web Services resource that was evaluated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -114,11 +114,11 @@ public class Evaluation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the AWS resource that was evaluated.
+     * The ID of the Amazon Web Services resource that was evaluated.
      * </p>
      * 
      * @param complianceResourceId
-     *        The ID of the AWS resource that was evaluated.
+     *        The ID of the Amazon Web Services resource that was evaluated.
      */
 
     public void setComplianceResourceId(String complianceResourceId) {
@@ -127,10 +127,10 @@ public class Evaluation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the AWS resource that was evaluated.
+     * The ID of the Amazon Web Services resource that was evaluated.
      * </p>
      * 
-     * @return The ID of the AWS resource that was evaluated.
+     * @return The ID of the Amazon Web Services resource that was evaluated.
      */
 
     public String getComplianceResourceId() {
@@ -139,11 +139,11 @@ public class Evaluation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the AWS resource that was evaluated.
+     * The ID of the Amazon Web Services resource that was evaluated.
      * </p>
      * 
      * @param complianceResourceId
-     *        The ID of the AWS resource that was evaluated.
+     *        The ID of the Amazon Web Services resource that was evaluated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -154,30 +154,31 @@ public class Evaluation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether the AWS resource complies with the AWS Config rule that it was evaluated against.
+     * Indicates whether the Amazon Web Services resource complies with the Config rule that it was evaluated against.
      * </p>
      * <p>
-     * For the <code>Evaluation</code> data type, AWS Config supports only the <code>COMPLIANT</code>,
-     * <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. AWS Config does not support the
+     * For the <code>Evaluation</code> data type, Config supports only the <code>COMPLIANT</code>,
+     * <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. Config does not support the
      * <code>INSUFFICIENT_DATA</code> value for this data type.
      * </p>
      * <p>
-     * Similarly, AWS Config does not accept <code>INSUFFICIENT_DATA</code> as the value for <code>ComplianceType</code>
-     * from a <code>PutEvaluations</code> request. For example, an AWS Lambda function for a custom AWS Config rule
-     * cannot pass an <code>INSUFFICIENT_DATA</code> value to AWS Config.
+     * Similarly, Config does not accept <code>INSUFFICIENT_DATA</code> as the value for <code>ComplianceType</code>
+     * from a <code>PutEvaluations</code> request. For example, an Lambda function for a custom Config rule cannot pass
+     * an <code>INSUFFICIENT_DATA</code> value to Config.
      * </p>
      * 
      * @param complianceType
-     *        Indicates whether the AWS resource complies with the AWS Config rule that it was evaluated against.</p>
+     *        Indicates whether the Amazon Web Services resource complies with the Config rule that it was evaluated
+     *        against.</p>
      *        <p>
-     *        For the <code>Evaluation</code> data type, AWS Config supports only the <code>COMPLIANT</code>,
-     *        <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. AWS Config does not support the
+     *        For the <code>Evaluation</code> data type, Config supports only the <code>COMPLIANT</code>,
+     *        <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. Config does not support the
      *        <code>INSUFFICIENT_DATA</code> value for this data type.
      *        </p>
      *        <p>
-     *        Similarly, AWS Config does not accept <code>INSUFFICIENT_DATA</code> as the value for
-     *        <code>ComplianceType</code> from a <code>PutEvaluations</code> request. For example, an AWS Lambda
-     *        function for a custom AWS Config rule cannot pass an <code>INSUFFICIENT_DATA</code> value to AWS Config.
+     *        Similarly, Config does not accept <code>INSUFFICIENT_DATA</code> as the value for
+     *        <code>ComplianceType</code> from a <code>PutEvaluations</code> request. For example, an Lambda function
+     *        for a custom Config rule cannot pass an <code>INSUFFICIENT_DATA</code> value to Config.
      * @see ComplianceType
      */
 
@@ -187,29 +188,30 @@ public class Evaluation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether the AWS resource complies with the AWS Config rule that it was evaluated against.
+     * Indicates whether the Amazon Web Services resource complies with the Config rule that it was evaluated against.
      * </p>
      * <p>
-     * For the <code>Evaluation</code> data type, AWS Config supports only the <code>COMPLIANT</code>,
-     * <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. AWS Config does not support the
+     * For the <code>Evaluation</code> data type, Config supports only the <code>COMPLIANT</code>,
+     * <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. Config does not support the
      * <code>INSUFFICIENT_DATA</code> value for this data type.
      * </p>
      * <p>
-     * Similarly, AWS Config does not accept <code>INSUFFICIENT_DATA</code> as the value for <code>ComplianceType</code>
-     * from a <code>PutEvaluations</code> request. For example, an AWS Lambda function for a custom AWS Config rule
-     * cannot pass an <code>INSUFFICIENT_DATA</code> value to AWS Config.
+     * Similarly, Config does not accept <code>INSUFFICIENT_DATA</code> as the value for <code>ComplianceType</code>
+     * from a <code>PutEvaluations</code> request. For example, an Lambda function for a custom Config rule cannot pass
+     * an <code>INSUFFICIENT_DATA</code> value to Config.
      * </p>
      * 
-     * @return Indicates whether the AWS resource complies with the AWS Config rule that it was evaluated against.</p>
+     * @return Indicates whether the Amazon Web Services resource complies with the Config rule that it was evaluated
+     *         against.</p>
      *         <p>
-     *         For the <code>Evaluation</code> data type, AWS Config supports only the <code>COMPLIANT</code>,
-     *         <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. AWS Config does not support the
+     *         For the <code>Evaluation</code> data type, Config supports only the <code>COMPLIANT</code>,
+     *         <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. Config does not support the
      *         <code>INSUFFICIENT_DATA</code> value for this data type.
      *         </p>
      *         <p>
-     *         Similarly, AWS Config does not accept <code>INSUFFICIENT_DATA</code> as the value for
-     *         <code>ComplianceType</code> from a <code>PutEvaluations</code> request. For example, an AWS Lambda
-     *         function for a custom AWS Config rule cannot pass an <code>INSUFFICIENT_DATA</code> value to AWS Config.
+     *         Similarly, Config does not accept <code>INSUFFICIENT_DATA</code> as the value for
+     *         <code>ComplianceType</code> from a <code>PutEvaluations</code> request. For example, an Lambda function
+     *         for a custom Config rule cannot pass an <code>INSUFFICIENT_DATA</code> value to Config.
      * @see ComplianceType
      */
 
@@ -219,30 +221,31 @@ public class Evaluation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether the AWS resource complies with the AWS Config rule that it was evaluated against.
+     * Indicates whether the Amazon Web Services resource complies with the Config rule that it was evaluated against.
      * </p>
      * <p>
-     * For the <code>Evaluation</code> data type, AWS Config supports only the <code>COMPLIANT</code>,
-     * <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. AWS Config does not support the
+     * For the <code>Evaluation</code> data type, Config supports only the <code>COMPLIANT</code>,
+     * <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. Config does not support the
      * <code>INSUFFICIENT_DATA</code> value for this data type.
      * </p>
      * <p>
-     * Similarly, AWS Config does not accept <code>INSUFFICIENT_DATA</code> as the value for <code>ComplianceType</code>
-     * from a <code>PutEvaluations</code> request. For example, an AWS Lambda function for a custom AWS Config rule
-     * cannot pass an <code>INSUFFICIENT_DATA</code> value to AWS Config.
+     * Similarly, Config does not accept <code>INSUFFICIENT_DATA</code> as the value for <code>ComplianceType</code>
+     * from a <code>PutEvaluations</code> request. For example, an Lambda function for a custom Config rule cannot pass
+     * an <code>INSUFFICIENT_DATA</code> value to Config.
      * </p>
      * 
      * @param complianceType
-     *        Indicates whether the AWS resource complies with the AWS Config rule that it was evaluated against.</p>
+     *        Indicates whether the Amazon Web Services resource complies with the Config rule that it was evaluated
+     *        against.</p>
      *        <p>
-     *        For the <code>Evaluation</code> data type, AWS Config supports only the <code>COMPLIANT</code>,
-     *        <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. AWS Config does not support the
+     *        For the <code>Evaluation</code> data type, Config supports only the <code>COMPLIANT</code>,
+     *        <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. Config does not support the
      *        <code>INSUFFICIENT_DATA</code> value for this data type.
      *        </p>
      *        <p>
-     *        Similarly, AWS Config does not accept <code>INSUFFICIENT_DATA</code> as the value for
-     *        <code>ComplianceType</code> from a <code>PutEvaluations</code> request. For example, an AWS Lambda
-     *        function for a custom AWS Config rule cannot pass an <code>INSUFFICIENT_DATA</code> value to AWS Config.
+     *        Similarly, Config does not accept <code>INSUFFICIENT_DATA</code> as the value for
+     *        <code>ComplianceType</code> from a <code>PutEvaluations</code> request. For example, an Lambda function
+     *        for a custom Config rule cannot pass an <code>INSUFFICIENT_DATA</code> value to Config.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ComplianceType
      */
@@ -254,30 +257,31 @@ public class Evaluation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether the AWS resource complies with the AWS Config rule that it was evaluated against.
+     * Indicates whether the Amazon Web Services resource complies with the Config rule that it was evaluated against.
      * </p>
      * <p>
-     * For the <code>Evaluation</code> data type, AWS Config supports only the <code>COMPLIANT</code>,
-     * <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. AWS Config does not support the
+     * For the <code>Evaluation</code> data type, Config supports only the <code>COMPLIANT</code>,
+     * <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. Config does not support the
      * <code>INSUFFICIENT_DATA</code> value for this data type.
      * </p>
      * <p>
-     * Similarly, AWS Config does not accept <code>INSUFFICIENT_DATA</code> as the value for <code>ComplianceType</code>
-     * from a <code>PutEvaluations</code> request. For example, an AWS Lambda function for a custom AWS Config rule
-     * cannot pass an <code>INSUFFICIENT_DATA</code> value to AWS Config.
+     * Similarly, Config does not accept <code>INSUFFICIENT_DATA</code> as the value for <code>ComplianceType</code>
+     * from a <code>PutEvaluations</code> request. For example, an Lambda function for a custom Config rule cannot pass
+     * an <code>INSUFFICIENT_DATA</code> value to Config.
      * </p>
      * 
      * @param complianceType
-     *        Indicates whether the AWS resource complies with the AWS Config rule that it was evaluated against.</p>
+     *        Indicates whether the Amazon Web Services resource complies with the Config rule that it was evaluated
+     *        against.</p>
      *        <p>
-     *        For the <code>Evaluation</code> data type, AWS Config supports only the <code>COMPLIANT</code>,
-     *        <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. AWS Config does not support the
+     *        For the <code>Evaluation</code> data type, Config supports only the <code>COMPLIANT</code>,
+     *        <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. Config does not support the
      *        <code>INSUFFICIENT_DATA</code> value for this data type.
      *        </p>
      *        <p>
-     *        Similarly, AWS Config does not accept <code>INSUFFICIENT_DATA</code> as the value for
-     *        <code>ComplianceType</code> from a <code>PutEvaluations</code> request. For example, an AWS Lambda
-     *        function for a custom AWS Config rule cannot pass an <code>INSUFFICIENT_DATA</code> value to AWS Config.
+     *        Similarly, Config does not accept <code>INSUFFICIENT_DATA</code> as the value for
+     *        <code>ComplianceType</code> from a <code>PutEvaluations</code> request. For example, an Lambda function
+     *        for a custom Config rule cannot pass an <code>INSUFFICIENT_DATA</code> value to Config.
      * @see ComplianceType
      */
 
@@ -287,30 +291,31 @@ public class Evaluation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether the AWS resource complies with the AWS Config rule that it was evaluated against.
+     * Indicates whether the Amazon Web Services resource complies with the Config rule that it was evaluated against.
      * </p>
      * <p>
-     * For the <code>Evaluation</code> data type, AWS Config supports only the <code>COMPLIANT</code>,
-     * <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. AWS Config does not support the
+     * For the <code>Evaluation</code> data type, Config supports only the <code>COMPLIANT</code>,
+     * <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. Config does not support the
      * <code>INSUFFICIENT_DATA</code> value for this data type.
      * </p>
      * <p>
-     * Similarly, AWS Config does not accept <code>INSUFFICIENT_DATA</code> as the value for <code>ComplianceType</code>
-     * from a <code>PutEvaluations</code> request. For example, an AWS Lambda function for a custom AWS Config rule
-     * cannot pass an <code>INSUFFICIENT_DATA</code> value to AWS Config.
+     * Similarly, Config does not accept <code>INSUFFICIENT_DATA</code> as the value for <code>ComplianceType</code>
+     * from a <code>PutEvaluations</code> request. For example, an Lambda function for a custom Config rule cannot pass
+     * an <code>INSUFFICIENT_DATA</code> value to Config.
      * </p>
      * 
      * @param complianceType
-     *        Indicates whether the AWS resource complies with the AWS Config rule that it was evaluated against.</p>
+     *        Indicates whether the Amazon Web Services resource complies with the Config rule that it was evaluated
+     *        against.</p>
      *        <p>
-     *        For the <code>Evaluation</code> data type, AWS Config supports only the <code>COMPLIANT</code>,
-     *        <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. AWS Config does not support the
+     *        For the <code>Evaluation</code> data type, Config supports only the <code>COMPLIANT</code>,
+     *        <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. Config does not support the
      *        <code>INSUFFICIENT_DATA</code> value for this data type.
      *        </p>
      *        <p>
-     *        Similarly, AWS Config does not accept <code>INSUFFICIENT_DATA</code> as the value for
-     *        <code>ComplianceType</code> from a <code>PutEvaluations</code> request. For example, an AWS Lambda
-     *        function for a custom AWS Config rule cannot pass an <code>INSUFFICIENT_DATA</code> value to AWS Config.
+     *        Similarly, Config does not accept <code>INSUFFICIENT_DATA</code> as the value for
+     *        <code>ComplianceType</code> from a <code>PutEvaluations</code> request. For example, an Lambda function
+     *        for a custom Config rule cannot pass an <code>INSUFFICIENT_DATA</code> value to Config.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ComplianceType
      */
@@ -362,17 +367,16 @@ public class Evaluation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time of the event in AWS Config that triggered the evaluation. For event-based evaluations, the time
-     * indicates when AWS Config created the configuration item that triggered the evaluation. For periodic evaluations,
-     * the time indicates when AWS Config triggered the evaluation at the frequency that you specified (for example,
-     * every 24 hours).
+     * The time of the event in Config that triggered the evaluation. For event-based evaluations, the time indicates
+     * when Config created the configuration item that triggered the evaluation. For periodic evaluations, the time
+     * indicates when Config triggered the evaluation at the frequency that you specified (for example, every 24 hours).
      * </p>
      * 
      * @param orderingTimestamp
-     *        The time of the event in AWS Config that triggered the evaluation. For event-based evaluations, the time
-     *        indicates when AWS Config created the configuration item that triggered the evaluation. For periodic
-     *        evaluations, the time indicates when AWS Config triggered the evaluation at the frequency that you
-     *        specified (for example, every 24 hours).
+     *        The time of the event in Config that triggered the evaluation. For event-based evaluations, the time
+     *        indicates when Config created the configuration item that triggered the evaluation. For periodic
+     *        evaluations, the time indicates when Config triggered the evaluation at the frequency that you specified
+     *        (for example, every 24 hours).
      */
 
     public void setOrderingTimestamp(java.util.Date orderingTimestamp) {
@@ -381,16 +385,15 @@ public class Evaluation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time of the event in AWS Config that triggered the evaluation. For event-based evaluations, the time
-     * indicates when AWS Config created the configuration item that triggered the evaluation. For periodic evaluations,
-     * the time indicates when AWS Config triggered the evaluation at the frequency that you specified (for example,
-     * every 24 hours).
+     * The time of the event in Config that triggered the evaluation. For event-based evaluations, the time indicates
+     * when Config created the configuration item that triggered the evaluation. For periodic evaluations, the time
+     * indicates when Config triggered the evaluation at the frequency that you specified (for example, every 24 hours).
      * </p>
      * 
-     * @return The time of the event in AWS Config that triggered the evaluation. For event-based evaluations, the time
-     *         indicates when AWS Config created the configuration item that triggered the evaluation. For periodic
-     *         evaluations, the time indicates when AWS Config triggered the evaluation at the frequency that you
-     *         specified (for example, every 24 hours).
+     * @return The time of the event in Config that triggered the evaluation. For event-based evaluations, the time
+     *         indicates when Config created the configuration item that triggered the evaluation. For periodic
+     *         evaluations, the time indicates when Config triggered the evaluation at the frequency that you specified
+     *         (for example, every 24 hours).
      */
 
     public java.util.Date getOrderingTimestamp() {
@@ -399,17 +402,16 @@ public class Evaluation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time of the event in AWS Config that triggered the evaluation. For event-based evaluations, the time
-     * indicates when AWS Config created the configuration item that triggered the evaluation. For periodic evaluations,
-     * the time indicates when AWS Config triggered the evaluation at the frequency that you specified (for example,
-     * every 24 hours).
+     * The time of the event in Config that triggered the evaluation. For event-based evaluations, the time indicates
+     * when Config created the configuration item that triggered the evaluation. For periodic evaluations, the time
+     * indicates when Config triggered the evaluation at the frequency that you specified (for example, every 24 hours).
      * </p>
      * 
      * @param orderingTimestamp
-     *        The time of the event in AWS Config that triggered the evaluation. For event-based evaluations, the time
-     *        indicates when AWS Config created the configuration item that triggered the evaluation. For periodic
-     *        evaluations, the time indicates when AWS Config triggered the evaluation at the frequency that you
-     *        specified (for example, every 24 hours).
+     *        The time of the event in Config that triggered the evaluation. For event-based evaluations, the time
+     *        indicates when Config created the configuration item that triggered the evaluation. For periodic
+     *        evaluations, the time indicates when Config triggered the evaluation at the frequency that you specified
+     *        (for example, every 24 hours).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

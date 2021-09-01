@@ -45,7 +45,7 @@ public class OrganizationConformancePackStatus implements Serializable, Cloneabl
      * <code>config-multiaccountsetup.amazonaws.com</code>.
      * </p>
      * <p>
-     * AWS Config sets the state of the conformance pack to:
+     * Config sets the state of the conformance pack to:
      * </p>
      * <ul>
      * <li>
@@ -173,7 +173,7 @@ public class OrganizationConformancePackStatus implements Serializable, Cloneabl
      * <code>config-multiaccountsetup.amazonaws.com</code>.
      * </p>
      * <p>
-     * AWS Config sets the state of the conformance pack to:
+     * Config sets the state of the conformance pack to:
      * </p>
      * <ul>
      * <li>
@@ -238,7 +238,7 @@ public class OrganizationConformancePackStatus implements Serializable, Cloneabl
      *        account deletes OrganizationConformancePack in all the member accounts and disables service access for
      *        <code>config-multiaccountsetup.amazonaws.com</code>.</p>
      *        <p>
-     *        AWS Config sets the state of the conformance pack to:
+     *        Config sets the state of the conformance pack to:
      *        </p>
      *        <ul>
      *        <li>
@@ -310,7 +310,7 @@ public class OrganizationConformancePackStatus implements Serializable, Cloneabl
      * <code>config-multiaccountsetup.amazonaws.com</code>.
      * </p>
      * <p>
-     * AWS Config sets the state of the conformance pack to:
+     * Config sets the state of the conformance pack to:
      * </p>
      * <ul>
      * <li>
@@ -374,7 +374,7 @@ public class OrganizationConformancePackStatus implements Serializable, Cloneabl
      *         account deletes OrganizationConformancePack in all the member accounts and disables service access for
      *         <code>config-multiaccountsetup.amazonaws.com</code>.</p>
      *         <p>
-     *         AWS Config sets the state of the conformance pack to:
+     *         Config sets the state of the conformance pack to:
      *         </p>
      *         <ul>
      *         <li>
@@ -446,7 +446,7 @@ public class OrganizationConformancePackStatus implements Serializable, Cloneabl
      * <code>config-multiaccountsetup.amazonaws.com</code>.
      * </p>
      * <p>
-     * AWS Config sets the state of the conformance pack to:
+     * Config sets the state of the conformance pack to:
      * </p>
      * <ul>
      * <li>
@@ -511,7 +511,7 @@ public class OrganizationConformancePackStatus implements Serializable, Cloneabl
      *        account deletes OrganizationConformancePack in all the member accounts and disables service access for
      *        <code>config-multiaccountsetup.amazonaws.com</code>.</p>
      *        <p>
-     *        AWS Config sets the state of the conformance pack to:
+     *        Config sets the state of the conformance pack to:
      *        </p>
      *        <ul>
      *        <li>
@@ -585,7 +585,7 @@ public class OrganizationConformancePackStatus implements Serializable, Cloneabl
      * <code>config-multiaccountsetup.amazonaws.com</code>.
      * </p>
      * <p>
-     * AWS Config sets the state of the conformance pack to:
+     * Config sets the state of the conformance pack to:
      * </p>
      * <ul>
      * <li>
@@ -650,7 +650,7 @@ public class OrganizationConformancePackStatus implements Serializable, Cloneabl
      *        account deletes OrganizationConformancePack in all the member accounts and disables service access for
      *        <code>config-multiaccountsetup.amazonaws.com</code>.</p>
      *        <p>
-     *        AWS Config sets the state of the conformance pack to:
+     *        Config sets the state of the conformance pack to:
      *        </p>
      *        <ul>
      *        <li>

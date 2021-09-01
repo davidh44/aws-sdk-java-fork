@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Represents a Service Catalog AppRegistry attribute group that is rich metadata which describes an application and its
- * components.
+ * Represents a Amazon Web Services Service Catalog AppRegistry attribute group that is rich metadata which describes an
+ * application and its components.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/AWS242AppRegistry-2020-06-24/AttributeGroup" target="_top">AWS

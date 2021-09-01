@@ -49,8 +49,8 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <b> <code>eventName</code> </b> - Can use any operator. You can use it to ﬁlter in or ﬁlter out any data event
-     * logged to CloudTrail, such as <code>PutBucket</code>. You can have multiple values for this ﬁeld, separated by
-     * commas.
+     * logged to CloudTrail, such as <code>PutBucket</code> or <code>GetSnapshotBlock</code>. You can have multiple
+     * values for this ﬁeld, separated by commas.
      * </p>
      * </li>
      * <li>
@@ -63,9 +63,10 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <p>
      * <b> <code>resources.type</code> </b> - This ﬁeld is required. <code>resources.type</code> can only use the
      * <code>Equals</code> operator, and the value can be one of the following: <code>AWS::S3::Object</code>,
-     * <code>AWS::Lambda::Function</code>, <code>AWS::DynamoDB::Table</code>, <code>AWS::S3Outposts::Object</code>,
-     * <code>AWS::ManagedBlockchain::Node</code>, or <code>AWS::S3ObjectLambda::AccessPoint</code>. You can have only
-     * one <code>resources.type</code> ﬁeld per selector. To log data events on more than one resource type, add another
+     * <code>AWS::S3::AccessPoint</code>, <code>AWS::Lambda::Function</code>, <code>AWS::DynamoDB::Table</code>,
+     * <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>,
+     * <code>AWS::S3ObjectLambda::AccessPoint</code>, or <code>AWS::EC2::Snapshot</code>. You can have only one
+     * <code>resources.type</code> ﬁeld per selector. To log data events on more than one resource type, add another
      * selector.
      * </p>
      * </li>
@@ -79,17 +80,36 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * matching value.
      * </p>
      * <p>
-     * The trailing slash is intentional; do not exclude it.
+     * The trailing slash is intentional; do not exclude it. Replace the text between less than and greater than symbols
+     * (&lt;&gt;) with resource-specific information.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>arn:partition:s3:::bucket_name/</code>
+     * <code>arn:&lt;partition&gt;:s3:::&lt;bucket_name&gt;/</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>arn:partition:s3:::bucket_name/object_or_file_name/</code>
+     * <code>arn:&lt;partition&gt;:s3:::&lt;bucket_name&gt;/&lt;object_path&gt;/</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::S3::AccessPoint</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats. To log events on
+     * all objects in an S3 access point, we recommend that you use only the access point ARN, don’t include the object
+     * path, and use the <code>StartsWith</code> or <code>NotStartsWith</code> operators.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;/object/&lt;object_path&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -100,7 +120,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:partition:lambda:region:account_ID:function:function_name</code>
+     * <code>arn:&lt;partition&gt;:lambda:&lt;region&gt;:&lt;account_ID&gt;:function:&lt;function_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -111,7 +131,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:partition:dynamodb:region:account_ID:table:table_name</code>
+     * <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table:&lt;table_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -122,7 +142,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:partition:s3-outposts:region:&gt;account_ID:object_path</code>
+     * <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -133,7 +153,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:partition:managedblockchain:region:account_ID:nodes/node_ID</code>
+     * <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -144,7 +164,18 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:partition:s3-object-lambda:region:account_ID:accesspoint/access_point_name</code>
+     * <code>arn:&lt;partition&gt;:s3-object-lambda:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::EC2::Snapshot</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -217,8 +248,8 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <b> <code>eventName</code> </b> - Can use any operator. You can use it to ﬁlter in or ﬁlter out any data event
-     * logged to CloudTrail, such as <code>PutBucket</code>. You can have multiple values for this ﬁeld, separated by
-     * commas.
+     * logged to CloudTrail, such as <code>PutBucket</code> or <code>GetSnapshotBlock</code>. You can have multiple
+     * values for this ﬁeld, separated by commas.
      * </p>
      * </li>
      * <li>
@@ -231,9 +262,10 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <p>
      * <b> <code>resources.type</code> </b> - This ﬁeld is required. <code>resources.type</code> can only use the
      * <code>Equals</code> operator, and the value can be one of the following: <code>AWS::S3::Object</code>,
-     * <code>AWS::Lambda::Function</code>, <code>AWS::DynamoDB::Table</code>, <code>AWS::S3Outposts::Object</code>,
-     * <code>AWS::ManagedBlockchain::Node</code>, or <code>AWS::S3ObjectLambda::AccessPoint</code>. You can have only
-     * one <code>resources.type</code> ﬁeld per selector. To log data events on more than one resource type, add another
+     * <code>AWS::S3::AccessPoint</code>, <code>AWS::Lambda::Function</code>, <code>AWS::DynamoDB::Table</code>,
+     * <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>,
+     * <code>AWS::S3ObjectLambda::AccessPoint</code>, or <code>AWS::EC2::Snapshot</code>. You can have only one
+     * <code>resources.type</code> ﬁeld per selector. To log data events on more than one resource type, add another
      * selector.
      * </p>
      * </li>
@@ -247,17 +279,36 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * matching value.
      * </p>
      * <p>
-     * The trailing slash is intentional; do not exclude it.
+     * The trailing slash is intentional; do not exclude it. Replace the text between less than and greater than symbols
+     * (&lt;&gt;) with resource-specific information.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>arn:partition:s3:::bucket_name/</code>
+     * <code>arn:&lt;partition&gt;:s3:::&lt;bucket_name&gt;/</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>arn:partition:s3:::bucket_name/object_or_file_name/</code>
+     * <code>arn:&lt;partition&gt;:s3:::&lt;bucket_name&gt;/&lt;object_path&gt;/</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::S3::AccessPoint</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats. To log events on
+     * all objects in an S3 access point, we recommend that you use only the access point ARN, don’t include the object
+     * path, and use the <code>StartsWith</code> or <code>NotStartsWith</code> operators.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;/object/&lt;object_path&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -268,7 +319,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:partition:lambda:region:account_ID:function:function_name</code>
+     * <code>arn:&lt;partition&gt;:lambda:&lt;region&gt;:&lt;account_ID&gt;:function:&lt;function_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -279,7 +330,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:partition:dynamodb:region:account_ID:table:table_name</code>
+     * <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table:&lt;table_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -290,7 +341,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:partition:s3-outposts:region:&gt;account_ID:object_path</code>
+     * <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -301,7 +352,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:partition:managedblockchain:region:account_ID:nodes/node_ID</code>
+     * <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -312,7 +363,18 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:partition:s3-object-lambda:region:account_ID:accesspoint/access_point_name</code>
+     * <code>arn:&lt;partition&gt;:s3-object-lambda:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::EC2::Snapshot</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -340,8 +402,8 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <b> <code>eventName</code> </b> - Can use any operator. You can use it to ﬁlter in or ﬁlter out any data
-     *        event logged to CloudTrail, such as <code>PutBucket</code>. You can have multiple values for this ﬁeld,
-     *        separated by commas.
+     *        event logged to CloudTrail, such as <code>PutBucket</code> or <code>GetSnapshotBlock</code>. You can have
+     *        multiple values for this ﬁeld, separated by commas.
      *        </p>
      *        </li>
      *        <li>
@@ -354,10 +416,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <p>
      *        <b> <code>resources.type</code> </b> - This ﬁeld is required. <code>resources.type</code> can only use the
      *        <code>Equals</code> operator, and the value can be one of the following: <code>AWS::S3::Object</code>,
-     *        <code>AWS::Lambda::Function</code>, <code>AWS::DynamoDB::Table</code>,
-     *        <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>, or
-     *        <code>AWS::S3ObjectLambda::AccessPoint</code>. You can have only one <code>resources.type</code> ﬁeld per
-     *        selector. To log data events on more than one resource type, add another selector.
+     *        <code>AWS::S3::AccessPoint</code>, <code>AWS::Lambda::Function</code>, <code>AWS::DynamoDB::Table</code>,
+     *        <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>,
+     *        <code>AWS::S3ObjectLambda::AccessPoint</code>, or <code>AWS::EC2::Snapshot</code>. You can have only one
+     *        <code>resources.type</code> ﬁeld per selector. To log data events on more than one resource type, add
+     *        another selector.
      *        </p>
      *        </li>
      *        <li>
@@ -370,17 +433,36 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        the bucket ARN as the matching value.
      *        </p>
      *        <p>
-     *        The trailing slash is intentional; do not exclude it.
+     *        The trailing slash is intentional; do not exclude it. Replace the text between less than and greater than
+     *        symbols (&lt;&gt;) with resource-specific information.
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>arn:partition:s3:::bucket_name/</code>
+     *        <code>arn:&lt;partition&gt;:s3:::&lt;bucket_name&gt;/</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>arn:partition:s3:::bucket_name/object_or_file_name/</code>
+     *        <code>arn:&lt;partition&gt;:s3:::&lt;bucket_name&gt;/&lt;object_path&gt;/</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::S3::AccessPoint</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats. To log
+     *        events on all objects in an S3 access point, we recommend that you use only the access point ARN, don’t
+     *        include the object path, and use the <code>StartsWith</code> or <code>NotStartsWith</code> operators.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;/object/&lt;object_path&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -391,7 +473,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>arn:partition:lambda:region:account_ID:function:function_name</code>
+     *        <code>arn:&lt;partition&gt;:lambda:&lt;region&gt;:&lt;account_ID&gt;:function:&lt;function_name&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -402,7 +484,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>arn:partition:dynamodb:region:account_ID:table:table_name</code>
+     *        <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table:&lt;table_name&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -413,7 +495,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>arn:partition:s3-outposts:region:&gt;account_ID:object_path</code>
+     *        <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -424,7 +506,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>arn:partition:managedblockchain:region:account_ID:nodes/node_ID</code>
+     *        <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -435,7 +517,18 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>arn:partition:s3-object-lambda:region:account_ID:accesspoint/access_point_name</code>
+     *        <code>arn:&lt;partition&gt;:s3-object-lambda:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::EC2::Snapshot</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -467,8 +560,8 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <b> <code>eventName</code> </b> - Can use any operator. You can use it to ﬁlter in or ﬁlter out any data event
-     * logged to CloudTrail, such as <code>PutBucket</code>. You can have multiple values for this ﬁeld, separated by
-     * commas.
+     * logged to CloudTrail, such as <code>PutBucket</code> or <code>GetSnapshotBlock</code>. You can have multiple
+     * values for this ﬁeld, separated by commas.
      * </p>
      * </li>
      * <li>
@@ -481,9 +574,10 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <p>
      * <b> <code>resources.type</code> </b> - This ﬁeld is required. <code>resources.type</code> can only use the
      * <code>Equals</code> operator, and the value can be one of the following: <code>AWS::S3::Object</code>,
-     * <code>AWS::Lambda::Function</code>, <code>AWS::DynamoDB::Table</code>, <code>AWS::S3Outposts::Object</code>,
-     * <code>AWS::ManagedBlockchain::Node</code>, or <code>AWS::S3ObjectLambda::AccessPoint</code>. You can have only
-     * one <code>resources.type</code> ﬁeld per selector. To log data events on more than one resource type, add another
+     * <code>AWS::S3::AccessPoint</code>, <code>AWS::Lambda::Function</code>, <code>AWS::DynamoDB::Table</code>,
+     * <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>,
+     * <code>AWS::S3ObjectLambda::AccessPoint</code>, or <code>AWS::EC2::Snapshot</code>. You can have only one
+     * <code>resources.type</code> ﬁeld per selector. To log data events on more than one resource type, add another
      * selector.
      * </p>
      * </li>
@@ -497,17 +591,36 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * matching value.
      * </p>
      * <p>
-     * The trailing slash is intentional; do not exclude it.
+     * The trailing slash is intentional; do not exclude it. Replace the text between less than and greater than symbols
+     * (&lt;&gt;) with resource-specific information.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>arn:partition:s3:::bucket_name/</code>
+     * <code>arn:&lt;partition&gt;:s3:::&lt;bucket_name&gt;/</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>arn:partition:s3:::bucket_name/object_or_file_name/</code>
+     * <code>arn:&lt;partition&gt;:s3:::&lt;bucket_name&gt;/&lt;object_path&gt;/</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::S3::AccessPoint</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats. To log events on
+     * all objects in an S3 access point, we recommend that you use only the access point ARN, don’t include the object
+     * path, and use the <code>StartsWith</code> or <code>NotStartsWith</code> operators.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;/object/&lt;object_path&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -518,7 +631,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:partition:lambda:region:account_ID:function:function_name</code>
+     * <code>arn:&lt;partition&gt;:lambda:&lt;region&gt;:&lt;account_ID&gt;:function:&lt;function_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -529,7 +642,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:partition:dynamodb:region:account_ID:table:table_name</code>
+     * <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table:&lt;table_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -540,7 +653,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:partition:s3-outposts:region:&gt;account_ID:object_path</code>
+     * <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -551,7 +664,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:partition:managedblockchain:region:account_ID:nodes/node_ID</code>
+     * <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -562,7 +675,18 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:partition:s3-object-lambda:region:account_ID:accesspoint/access_point_name</code>
+     * <code>arn:&lt;partition&gt;:s3-object-lambda:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::EC2::Snapshot</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -589,8 +713,8 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <li>
      *         <p>
      *         <b> <code>eventName</code> </b> - Can use any operator. You can use it to ﬁlter in or ﬁlter out any data
-     *         event logged to CloudTrail, such as <code>PutBucket</code>. You can have multiple values for this ﬁeld,
-     *         separated by commas.
+     *         event logged to CloudTrail, such as <code>PutBucket</code> or <code>GetSnapshotBlock</code>. You can have
+     *         multiple values for this ﬁeld, separated by commas.
      *         </p>
      *         </li>
      *         <li>
@@ -602,10 +726,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <li>
      *         <p>
      *         <b> <code>resources.type</code> </b> - This ﬁeld is required. <code>resources.type</code> can only use
-     *         the <code>Equals</code> operator, and the value can be one of the following: <code>AWS::S3::Object</code>, <code>AWS::Lambda::Function</code>, <code>AWS::DynamoDB::Table</code>,
-     *         <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>, or
-     *         <code>AWS::S3ObjectLambda::AccessPoint</code>. You can have only one <code>resources.type</code> ﬁeld per
-     *         selector. To log data events on more than one resource type, add another selector.
+     *         the <code>Equals</code> operator, and the value can be one of the following: <code>AWS::S3::Object</code>, <code>AWS::S3::AccessPoint</code>, <code>AWS::Lambda::Function</code>,
+     *         <code>AWS::DynamoDB::Table</code>, <code>AWS::S3Outposts::Object</code>,
+     *         <code>AWS::ManagedBlockchain::Node</code>, <code>AWS::S3ObjectLambda::AccessPoint</code>, or
+     *         <code>AWS::EC2::Snapshot</code>. You can have only one <code>resources.type</code> ﬁeld per selector. To
+     *         log data events on more than one resource type, add another selector.
      *         </p>
      *         </li>
      *         <li>
@@ -618,17 +743,36 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         and include only the bucket ARN as the matching value.
      *         </p>
      *         <p>
-     *         The trailing slash is intentional; do not exclude it.
+     *         The trailing slash is intentional; do not exclude it. Replace the text between less than and greater than
+     *         symbols (&lt;&gt;) with resource-specific information.
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>arn:partition:s3:::bucket_name/</code>
+     *         <code>arn:&lt;partition&gt;:s3:::&lt;bucket_name&gt;/</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>arn:partition:s3:::bucket_name/object_or_file_name/</code>
+     *         <code>arn:&lt;partition&gt;:s3:::&lt;bucket_name&gt;/&lt;object_path&gt;/</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::S3::AccessPoint</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats. To log
+     *         events on all objects in an S3 access point, we recommend that you use only the access point ARN, don’t
+     *         include the object path, and use the <code>StartsWith</code> or <code>NotStartsWith</code> operators.
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;/object/&lt;object_path&gt;</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -639,7 +783,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>arn:partition:lambda:region:account_ID:function:function_name</code>
+     *         <code>arn:&lt;partition&gt;:lambda:&lt;region&gt;:&lt;account_ID&gt;:function:&lt;function_name&gt;</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -650,7 +794,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>arn:partition:dynamodb:region:account_ID:table:table_name</code>
+     *         <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table:&lt;table_name&gt;</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -661,7 +805,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>arn:partition:s3-outposts:region:&gt;account_ID:object_path</code>
+     *         <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -672,7 +816,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>arn:partition:managedblockchain:region:account_ID:nodes/node_ID</code>
+     *         <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -683,7 +827,18 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>arn:partition:s3-object-lambda:region:account_ID:accesspoint/access_point_name</code>
+     *         <code>arn:&lt;partition&gt;:s3-object-lambda:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::EC2::Snapshot</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -715,8 +870,8 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <b> <code>eventName</code> </b> - Can use any operator. You can use it to ﬁlter in or ﬁlter out any data event
-     * logged to CloudTrail, such as <code>PutBucket</code>. You can have multiple values for this ﬁeld, separated by
-     * commas.
+     * logged to CloudTrail, such as <code>PutBucket</code> or <code>GetSnapshotBlock</code>. You can have multiple
+     * values for this ﬁeld, separated by commas.
      * </p>
      * </li>
      * <li>
@@ -729,9 +884,10 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <p>
      * <b> <code>resources.type</code> </b> - This ﬁeld is required. <code>resources.type</code> can only use the
      * <code>Equals</code> operator, and the value can be one of the following: <code>AWS::S3::Object</code>,
-     * <code>AWS::Lambda::Function</code>, <code>AWS::DynamoDB::Table</code>, <code>AWS::S3Outposts::Object</code>,
-     * <code>AWS::ManagedBlockchain::Node</code>, or <code>AWS::S3ObjectLambda::AccessPoint</code>. You can have only
-     * one <code>resources.type</code> ﬁeld per selector. To log data events on more than one resource type, add another
+     * <code>AWS::S3::AccessPoint</code>, <code>AWS::Lambda::Function</code>, <code>AWS::DynamoDB::Table</code>,
+     * <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>,
+     * <code>AWS::S3ObjectLambda::AccessPoint</code>, or <code>AWS::EC2::Snapshot</code>. You can have only one
+     * <code>resources.type</code> ﬁeld per selector. To log data events on more than one resource type, add another
      * selector.
      * </p>
      * </li>
@@ -745,17 +901,36 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * matching value.
      * </p>
      * <p>
-     * The trailing slash is intentional; do not exclude it.
+     * The trailing slash is intentional; do not exclude it. Replace the text between less than and greater than symbols
+     * (&lt;&gt;) with resource-specific information.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>arn:partition:s3:::bucket_name/</code>
+     * <code>arn:&lt;partition&gt;:s3:::&lt;bucket_name&gt;/</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>arn:partition:s3:::bucket_name/object_or_file_name/</code>
+     * <code>arn:&lt;partition&gt;:s3:::&lt;bucket_name&gt;/&lt;object_path&gt;/</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::S3::AccessPoint</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats. To log events on
+     * all objects in an S3 access point, we recommend that you use only the access point ARN, don’t include the object
+     * path, and use the <code>StartsWith</code> or <code>NotStartsWith</code> operators.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;/object/&lt;object_path&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -766,7 +941,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:partition:lambda:region:account_ID:function:function_name</code>
+     * <code>arn:&lt;partition&gt;:lambda:&lt;region&gt;:&lt;account_ID&gt;:function:&lt;function_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -777,7 +952,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:partition:dynamodb:region:account_ID:table:table_name</code>
+     * <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table:&lt;table_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -788,7 +963,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:partition:s3-outposts:region:&gt;account_ID:object_path</code>
+     * <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -799,7 +974,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:partition:managedblockchain:region:account_ID:nodes/node_ID</code>
+     * <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -810,7 +985,18 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:partition:s3-object-lambda:region:account_ID:accesspoint/access_point_name</code>
+     * <code>arn:&lt;partition&gt;:s3-object-lambda:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::EC2::Snapshot</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -838,8 +1024,8 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <b> <code>eventName</code> </b> - Can use any operator. You can use it to ﬁlter in or ﬁlter out any data
-     *        event logged to CloudTrail, such as <code>PutBucket</code>. You can have multiple values for this ﬁeld,
-     *        separated by commas.
+     *        event logged to CloudTrail, such as <code>PutBucket</code> or <code>GetSnapshotBlock</code>. You can have
+     *        multiple values for this ﬁeld, separated by commas.
      *        </p>
      *        </li>
      *        <li>
@@ -852,10 +1038,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <p>
      *        <b> <code>resources.type</code> </b> - This ﬁeld is required. <code>resources.type</code> can only use the
      *        <code>Equals</code> operator, and the value can be one of the following: <code>AWS::S3::Object</code>,
-     *        <code>AWS::Lambda::Function</code>, <code>AWS::DynamoDB::Table</code>,
-     *        <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>, or
-     *        <code>AWS::S3ObjectLambda::AccessPoint</code>. You can have only one <code>resources.type</code> ﬁeld per
-     *        selector. To log data events on more than one resource type, add another selector.
+     *        <code>AWS::S3::AccessPoint</code>, <code>AWS::Lambda::Function</code>, <code>AWS::DynamoDB::Table</code>,
+     *        <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>,
+     *        <code>AWS::S3ObjectLambda::AccessPoint</code>, or <code>AWS::EC2::Snapshot</code>. You can have only one
+     *        <code>resources.type</code> ﬁeld per selector. To log data events on more than one resource type, add
+     *        another selector.
      *        </p>
      *        </li>
      *        <li>
@@ -868,17 +1055,36 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        the bucket ARN as the matching value.
      *        </p>
      *        <p>
-     *        The trailing slash is intentional; do not exclude it.
+     *        The trailing slash is intentional; do not exclude it. Replace the text between less than and greater than
+     *        symbols (&lt;&gt;) with resource-specific information.
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>arn:partition:s3:::bucket_name/</code>
+     *        <code>arn:&lt;partition&gt;:s3:::&lt;bucket_name&gt;/</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>arn:partition:s3:::bucket_name/object_or_file_name/</code>
+     *        <code>arn:&lt;partition&gt;:s3:::&lt;bucket_name&gt;/&lt;object_path&gt;/</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::S3::AccessPoint</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats. To log
+     *        events on all objects in an S3 access point, we recommend that you use only the access point ARN, don’t
+     *        include the object path, and use the <code>StartsWith</code> or <code>NotStartsWith</code> operators.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;/object/&lt;object_path&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -889,7 +1095,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>arn:partition:lambda:region:account_ID:function:function_name</code>
+     *        <code>arn:&lt;partition&gt;:lambda:&lt;region&gt;:&lt;account_ID&gt;:function:&lt;function_name&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -900,7 +1106,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>arn:partition:dynamodb:region:account_ID:table:table_name</code>
+     *        <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table:&lt;table_name&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -911,7 +1117,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>arn:partition:s3-outposts:region:&gt;account_ID:object_path</code>
+     *        <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -922,7 +1128,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>arn:partition:managedblockchain:region:account_ID:nodes/node_ID</code>
+     *        <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -933,7 +1139,18 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>arn:partition:s3-object-lambda:region:account_ID:accesspoint/access_point_name</code>
+     *        <code>arn:&lt;partition&gt;:s3-object-lambda:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::EC2::Snapshot</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
      *        </p>
      *        </li>
      *        </ul>

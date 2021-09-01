@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The ouput configuration for this channel.
+ * The output configuration for this channel.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/RequestOutputItem" target="_top">AWS API

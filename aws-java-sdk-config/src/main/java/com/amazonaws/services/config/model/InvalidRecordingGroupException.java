@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * AWS Config throws an exception if the recording group does not contain a valid list of resource types. Invalid values
+ * Config throws an exception if the recording group does not contain a valid list of resource types. Invalid values
  * might also be incorrectly formatted.
  * </p>
  */

@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Occurs if the timestamp values are invalid. Either the start time occurs after the end time or the time range is
+ * Occurs if the timestamp values are not valid. Either the start time occurs after the end time, or the time range is
  * outside the range of possible values.
  * </p>
  */

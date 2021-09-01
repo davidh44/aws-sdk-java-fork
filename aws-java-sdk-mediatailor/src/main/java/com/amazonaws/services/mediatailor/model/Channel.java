@@ -54,6 +54,13 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date creationTime;
     /**
      * <p>
+     * Contains information about the slate used to fill gaps between programs in the schedule. You must configure
+     * FillerSlate if your channel uses an LINEAR PlaybackMode.
+     * </p>
+     */
+    private SlateSource fillerSlate;
+    /**
+     * <p>
      * The timestamp of when the channel was last modified.
      * </p>
      */
@@ -66,7 +73,14 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<ResponseOutputItem> outputs;
     /**
      * <p>
-     * The type of playback mode for this channel. Possible values: ONCE or LOOP.
+     * The type of playback mode for this channel.
+     * </p>
+     * <p>
+     * LINEAR - Programs play back-to-back only once.
+     * </p>
+     * <p>
+     * LOOP - Programs play back-to-back in an endless loop. When the last program in the schedule plays, playback loops
+     * back to the first program in the schedule.
      * </p>
      */
     private String playbackMode;
@@ -239,6 +253,52 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Contains information about the slate used to fill gaps between programs in the schedule. You must configure
+     * FillerSlate if your channel uses an LINEAR PlaybackMode.
+     * </p>
+     * 
+     * @param fillerSlate
+     *        Contains information about the slate used to fill gaps between programs in the schedule. You must
+     *        configure FillerSlate if your channel uses an LINEAR PlaybackMode.
+     */
+
+    public void setFillerSlate(SlateSource fillerSlate) {
+        this.fillerSlate = fillerSlate;
+    }
+
+    /**
+     * <p>
+     * Contains information about the slate used to fill gaps between programs in the schedule. You must configure
+     * FillerSlate if your channel uses an LINEAR PlaybackMode.
+     * </p>
+     * 
+     * @return Contains information about the slate used to fill gaps between programs in the schedule. You must
+     *         configure FillerSlate if your channel uses an LINEAR PlaybackMode.
+     */
+
+    public SlateSource getFillerSlate() {
+        return this.fillerSlate;
+    }
+
+    /**
+     * <p>
+     * Contains information about the slate used to fill gaps between programs in the schedule. You must configure
+     * FillerSlate if your channel uses an LINEAR PlaybackMode.
+     * </p>
+     * 
+     * @param fillerSlate
+     *        Contains information about the slate used to fill gaps between programs in the schedule. You must
+     *        configure FillerSlate if your channel uses an LINEAR PlaybackMode.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Channel withFillerSlate(SlateSource fillerSlate) {
+        setFillerSlate(fillerSlate);
+        return this;
+    }
+
+    /**
+     * <p>
      * The timestamp of when the channel was last modified.
      * </p>
      * 
@@ -349,11 +409,24 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of playback mode for this channel. Possible values: ONCE or LOOP.
+     * The type of playback mode for this channel.
+     * </p>
+     * <p>
+     * LINEAR - Programs play back-to-back only once.
+     * </p>
+     * <p>
+     * LOOP - Programs play back-to-back in an endless loop. When the last program in the schedule plays, playback loops
+     * back to the first program in the schedule.
      * </p>
      * 
      * @param playbackMode
-     *        The type of playback mode for this channel. Possible values: ONCE or LOOP.
+     *        The type of playback mode for this channel.</p>
+     *        <p>
+     *        LINEAR - Programs play back-to-back only once.
+     *        </p>
+     *        <p>
+     *        LOOP - Programs play back-to-back in an endless loop. When the last program in the schedule plays,
+     *        playback loops back to the first program in the schedule.
      */
 
     public void setPlaybackMode(String playbackMode) {
@@ -362,10 +435,23 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of playback mode for this channel. Possible values: ONCE or LOOP.
+     * The type of playback mode for this channel.
+     * </p>
+     * <p>
+     * LINEAR - Programs play back-to-back only once.
+     * </p>
+     * <p>
+     * LOOP - Programs play back-to-back in an endless loop. When the last program in the schedule plays, playback loops
+     * back to the first program in the schedule.
      * </p>
      * 
-     * @return The type of playback mode for this channel. Possible values: ONCE or LOOP.
+     * @return The type of playback mode for this channel.</p>
+     *         <p>
+     *         LINEAR - Programs play back-to-back only once.
+     *         </p>
+     *         <p>
+     *         LOOP - Programs play back-to-back in an endless loop. When the last program in the schedule plays,
+     *         playback loops back to the first program in the schedule.
      */
 
     public String getPlaybackMode() {
@@ -374,11 +460,24 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of playback mode for this channel. Possible values: ONCE or LOOP.
+     * The type of playback mode for this channel.
+     * </p>
+     * <p>
+     * LINEAR - Programs play back-to-back only once.
+     * </p>
+     * <p>
+     * LOOP - Programs play back-to-back in an endless loop. When the last program in the schedule plays, playback loops
+     * back to the first program in the schedule.
      * </p>
      * 
      * @param playbackMode
-     *        The type of playback mode for this channel. Possible values: ONCE or LOOP.
+     *        The type of playback mode for this channel.</p>
+     *        <p>
+     *        LINEAR - Programs play back-to-back only once.
+     *        </p>
+     *        <p>
+     *        LOOP - Programs play back-to-back in an endless loop. When the last program in the schedule plays,
+     *        playback loops back to the first program in the schedule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -475,6 +574,8 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
             sb.append("ChannelState: ").append(getChannelState()).append(",");
         if (getCreationTime() != null)
             sb.append("CreationTime: ").append(getCreationTime()).append(",");
+        if (getFillerSlate() != null)
+            sb.append("FillerSlate: ").append(getFillerSlate()).append(",");
         if (getLastModifiedTime() != null)
             sb.append("LastModifiedTime: ").append(getLastModifiedTime()).append(",");
         if (getOutputs() != null)
@@ -513,6 +614,10 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getCreationTime() != null && other.getCreationTime().equals(this.getCreationTime()) == false)
             return false;
+        if (other.getFillerSlate() == null ^ this.getFillerSlate() == null)
+            return false;
+        if (other.getFillerSlate() != null && other.getFillerSlate().equals(this.getFillerSlate()) == false)
+            return false;
         if (other.getLastModifiedTime() == null ^ this.getLastModifiedTime() == null)
             return false;
         if (other.getLastModifiedTime() != null && other.getLastModifiedTime().equals(this.getLastModifiedTime()) == false)
@@ -541,6 +646,7 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getChannelName() == null) ? 0 : getChannelName().hashCode());
         hashCode = prime * hashCode + ((getChannelState() == null) ? 0 : getChannelState().hashCode());
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
+        hashCode = prime * hashCode + ((getFillerSlate() == null) ? 0 : getFillerSlate().hashCode());
         hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
         hashCode = prime * hashCode + ((getOutputs() == null) ? 0 : getOutputs().hashCode());
         hashCode = prime * hashCode + ((getPlaybackMode() == null) ? 0 : getPlaybackMode().hashCode());

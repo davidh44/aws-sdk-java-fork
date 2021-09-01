@@ -142,11 +142,19 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
     private String instanceInitiatedShutdownBehavior;
     /**
      * <p>
-     * The Base64-encoded user data to make available to the instance. For more information, see <a
+     * The user data to make available to the instance. You must provide base64-encoded text. User data is limited to 16
+     * KB. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Running Commands on Your Linux Instance
-     * at Launch</a> (Linux) and <a href=
+     * at Launch</a> (Linux) or <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-instance-metadata.html#instancedata-add-user-data"
      * >Adding User Data</a> (Windows).
+     * </p>
+     * <p>
+     * If you are creating the launch template for use with Batch, the user data must be provided in the <a
+     * href="https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive"> MIME multi-part
+     * archive format</a>. For more information, see <a
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Amazon EC2 user data in launch
+     * templates</a> in the <i>Batch User Guide</i>.
      * </p>
      */
     private String userData;
@@ -1129,19 +1137,34 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Base64-encoded user data to make available to the instance. For more information, see <a
+     * The user data to make available to the instance. You must provide base64-encoded text. User data is limited to 16
+     * KB. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Running Commands on Your Linux Instance
-     * at Launch</a> (Linux) and <a href=
+     * at Launch</a> (Linux) or <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-instance-metadata.html#instancedata-add-user-data"
      * >Adding User Data</a> (Windows).
      * </p>
+     * <p>
+     * If you are creating the launch template for use with Batch, the user data must be provided in the <a
+     * href="https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive"> MIME multi-part
+     * archive format</a>. For more information, see <a
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Amazon EC2 user data in launch
+     * templates</a> in the <i>Batch User Guide</i>.
+     * </p>
      * 
      * @param userData
-     *        The Base64-encoded user data to make available to the instance. For more information, see <a
+     *        The user data to make available to the instance. You must provide base64-encoded text. User data is
+     *        limited to 16 KB. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Running Commands on Your Linux
-     *        Instance at Launch</a> (Linux) and <a href=
+     *        Instance at Launch</a> (Linux) or <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-instance-metadata.html#instancedata-add-user-data"
-     *        >Adding User Data</a> (Windows).
+     *        >Adding User Data</a> (Windows).</p>
+     *        <p>
+     *        If you are creating the launch template for use with Batch, the user data must be provided in the <a
+     *        href="https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive"> MIME
+     *        multi-part archive format</a>. For more information, see <a
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Amazon EC2 user data in
+     *        launch templates</a> in the <i>Batch User Guide</i>.
      */
 
     public void setUserData(String userData) {
@@ -1150,18 +1173,33 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Base64-encoded user data to make available to the instance. For more information, see <a
+     * The user data to make available to the instance. You must provide base64-encoded text. User data is limited to 16
+     * KB. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Running Commands on Your Linux Instance
-     * at Launch</a> (Linux) and <a href=
+     * at Launch</a> (Linux) or <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-instance-metadata.html#instancedata-add-user-data"
      * >Adding User Data</a> (Windows).
      * </p>
+     * <p>
+     * If you are creating the launch template for use with Batch, the user data must be provided in the <a
+     * href="https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive"> MIME multi-part
+     * archive format</a>. For more information, see <a
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Amazon EC2 user data in launch
+     * templates</a> in the <i>Batch User Guide</i>.
+     * </p>
      * 
-     * @return The Base64-encoded user data to make available to the instance. For more information, see <a
+     * @return The user data to make available to the instance. You must provide base64-encoded text. User data is
+     *         limited to 16 KB. For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Running Commands on Your Linux
-     *         Instance at Launch</a> (Linux) and <a href=
+     *         Instance at Launch</a> (Linux) or <a href=
      *         "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-instance-metadata.html#instancedata-add-user-data"
-     *         >Adding User Data</a> (Windows).
+     *         >Adding User Data</a> (Windows).</p>
+     *         <p>
+     *         If you are creating the launch template for use with Batch, the user data must be provided in the <a
+     *         href="https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive"> MIME
+     *         multi-part archive format</a>. For more information, see <a
+     *         href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Amazon EC2 user data in
+     *         launch templates</a> in the <i>Batch User Guide</i>.
      */
 
     public String getUserData() {
@@ -1170,19 +1208,34 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Base64-encoded user data to make available to the instance. For more information, see <a
+     * The user data to make available to the instance. You must provide base64-encoded text. User data is limited to 16
+     * KB. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Running Commands on Your Linux Instance
-     * at Launch</a> (Linux) and <a href=
+     * at Launch</a> (Linux) or <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-instance-metadata.html#instancedata-add-user-data"
      * >Adding User Data</a> (Windows).
      * </p>
+     * <p>
+     * If you are creating the launch template for use with Batch, the user data must be provided in the <a
+     * href="https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive"> MIME multi-part
+     * archive format</a>. For more information, see <a
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Amazon EC2 user data in launch
+     * templates</a> in the <i>Batch User Guide</i>.
+     * </p>
      * 
      * @param userData
-     *        The Base64-encoded user data to make available to the instance. For more information, see <a
+     *        The user data to make available to the instance. You must provide base64-encoded text. User data is
+     *        limited to 16 KB. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Running Commands on Your Linux
-     *        Instance at Launch</a> (Linux) and <a href=
+     *        Instance at Launch</a> (Linux) or <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-instance-metadata.html#instancedata-add-user-data"
-     *        >Adding User Data</a> (Windows).
+     *        >Adding User Data</a> (Windows).</p>
+     *        <p>
+     *        If you are creating the launch template for use with Batch, the user data must be provided in the <a
+     *        href="https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive"> MIME
+     *        multi-part archive format</a>. For more information, see <a
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Amazon EC2 user data in
+     *        launch templates</a> in the <i>Batch User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,7 +27,7 @@ public class PutRetentionConfigurationRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Number of days AWS Config stores your historical information.
+     * Number of days Config stores your historical information.
      * </p>
      * <note>
      * <p>
@@ -39,7 +39,7 @@ public class PutRetentionConfigurationRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Number of days AWS Config stores your historical information.
+     * Number of days Config stores your historical information.
      * </p>
      * <note>
      * <p>
@@ -48,7 +48,7 @@ public class PutRetentionConfigurationRequest extends com.amazonaws.AmazonWebSer
      * </note>
      * 
      * @param retentionPeriodInDays
-     *        Number of days AWS Config stores your historical information.</p> <note>
+     *        Number of days Config stores your historical information.</p> <note>
      *        <p>
      *        Currently, only applicable to the configuration item history.
      *        </p>
@@ -60,7 +60,7 @@ public class PutRetentionConfigurationRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Number of days AWS Config stores your historical information.
+     * Number of days Config stores your historical information.
      * </p>
      * <note>
      * <p>
@@ -68,7 +68,7 @@ public class PutRetentionConfigurationRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * </note>
      * 
-     * @return Number of days AWS Config stores your historical information.</p> <note>
+     * @return Number of days Config stores your historical information.</p> <note>
      *         <p>
      *         Currently, only applicable to the configuration item history.
      *         </p>
@@ -80,7 +80,7 @@ public class PutRetentionConfigurationRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Number of days AWS Config stores your historical information.
+     * Number of days Config stores your historical information.
      * </p>
      * <note>
      * <p>
@@ -89,7 +89,7 @@ public class PutRetentionConfigurationRequest extends com.amazonaws.AmazonWebSer
      * </note>
      * 
      * @param retentionPeriodInDays
-     *        Number of days AWS Config stores your historical information.</p> <note>
+     *        Number of days Config stores your historical information.</p> <note>
      *        <p>
      *        Currently, only applicable to the configuration item history.
      *        </p>

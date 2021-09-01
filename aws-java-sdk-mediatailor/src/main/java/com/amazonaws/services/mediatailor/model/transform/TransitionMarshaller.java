@@ -31,6 +31,8 @@ public class TransitionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RelativePosition").build();
     private static final MarshallingInfo<String> RELATIVEPROGRAM_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RelativeProgram").build();
+    private static final MarshallingInfo<Long> SCHEDULEDSTARTTIMEMILLIS_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ScheduledStartTimeMillis").build();
     private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Type").build();
 
@@ -52,6 +54,7 @@ public class TransitionMarshaller {
         try {
             protocolMarshaller.marshall(transition.getRelativePosition(), RELATIVEPOSITION_BINDING);
             protocolMarshaller.marshall(transition.getRelativeProgram(), RELATIVEPROGRAM_BINDING);
+            protocolMarshaller.marshall(transition.getScheduledStartTimeMillis(), SCHEDULEDSTARTTIMEMILLIS_BINDING);
             protocolMarshaller.marshall(transition.getType(), TYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

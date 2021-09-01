@@ -74,6 +74,10 @@ public class ScheduleEntryJsonUnmarshaller implements Unmarshaller<ScheduleEntry
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("ScheduleEntryType", targetDepth)) {
+                    context.nextToken();
+                    scheduleEntry.setScheduleEntryType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("SourceLocationName", targetDepth)) {
                     context.nextToken();
                     scheduleEntry.setSourceLocationName(context.getUnmarshaller(String.class).unmarshall(context));

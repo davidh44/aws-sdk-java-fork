@@ -73,6 +73,11 @@ public class AbstractAWSAppRegistry implements AWSAppRegistry {
     }
 
     @Override
+    public GetAssociatedResourceResult getAssociatedResource(GetAssociatedResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetAttributeGroupResult getAttributeGroup(GetAttributeGroupRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

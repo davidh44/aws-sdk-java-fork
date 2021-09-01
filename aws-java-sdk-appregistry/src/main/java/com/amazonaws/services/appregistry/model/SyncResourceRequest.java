@@ -33,8 +33,8 @@ public class SyncResourceRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String resourceType;
     /**
      * <p>
-     * An entity you can work with and specify with a name or ID. Examples include an Amazon EC2 instance, an AWS
-     * CloudFormation stack, or an Amazon S3 bucket.
+     * An entity you can work with and specify with a name or ID. Examples include an Amazon EC2 instance, an Amazon Web
+     * Services CloudFormation stack, or an Amazon S3 bucket.
      * </p>
      */
     private String resource;
@@ -100,13 +100,13 @@ public class SyncResourceRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * An entity you can work with and specify with a name or ID. Examples include an Amazon EC2 instance, an AWS
-     * CloudFormation stack, or an Amazon S3 bucket.
+     * An entity you can work with and specify with a name or ID. Examples include an Amazon EC2 instance, an Amazon Web
+     * Services CloudFormation stack, or an Amazon S3 bucket.
      * </p>
      * 
      * @param resource
-     *        An entity you can work with and specify with a name or ID. Examples include an Amazon EC2 instance, an AWS
-     *        CloudFormation stack, or an Amazon S3 bucket.
+     *        An entity you can work with and specify with a name or ID. Examples include an Amazon EC2 instance, an
+     *        Amazon Web Services CloudFormation stack, or an Amazon S3 bucket.
      */
 
     public void setResource(String resource) {
@@ -115,12 +115,12 @@ public class SyncResourceRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * An entity you can work with and specify with a name or ID. Examples include an Amazon EC2 instance, an AWS
-     * CloudFormation stack, or an Amazon S3 bucket.
+     * An entity you can work with and specify with a name or ID. Examples include an Amazon EC2 instance, an Amazon Web
+     * Services CloudFormation stack, or an Amazon S3 bucket.
      * </p>
      * 
      * @return An entity you can work with and specify with a name or ID. Examples include an Amazon EC2 instance, an
-     *         AWS CloudFormation stack, or an Amazon S3 bucket.
+     *         Amazon Web Services CloudFormation stack, or an Amazon S3 bucket.
      */
 
     public String getResource() {
@@ -129,13 +129,13 @@ public class SyncResourceRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * An entity you can work with and specify with a name or ID. Examples include an Amazon EC2 instance, an AWS
-     * CloudFormation stack, or an Amazon S3 bucket.
+     * An entity you can work with and specify with a name or ID. Examples include an Amazon EC2 instance, an Amazon Web
+     * Services CloudFormation stack, or an Amazon S3 bucket.
      * </p>
      * 
      * @param resource
-     *        An entity you can work with and specify with a name or ID. Examples include an Amazon EC2 instance, an AWS
-     *        CloudFormation stack, or an Amazon S3 bucket.
+     *        An entity you can work with and specify with a name or ID. Examples include an Amazon EC2 instance, an
+     *        Amazon Web Services CloudFormation stack, or an Amazon S3 bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

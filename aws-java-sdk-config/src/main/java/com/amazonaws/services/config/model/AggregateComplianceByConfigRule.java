@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Indicates whether an AWS Config rule is compliant based on account ID, region, compliance, and rule name.
+ * Indicates whether an Config rule is compliant based on account ID, region, compliance, and rule name.
  * </p>
  * <p>
  * A rule is compliant if all of the resources that the rule evaluated comply with it. It is noncompliant if any of
@@ -34,14 +34,14 @@ public class AggregateComplianceByConfigRule implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The name of the AWS Config rule.
+     * The name of the Config rule.
      * </p>
      */
     private String configRuleName;
     /**
      * <p>
-     * Indicates whether an AWS resource or AWS Config rule is compliant and provides the number of contributors that
-     * affect the compliance.
+     * Indicates whether an Amazon Web Services resource or Config rule is compliant and provides the number of
+     * contributors that affect the compliance.
      * </p>
      */
     private Compliance compliance;
@@ -60,11 +60,11 @@ public class AggregateComplianceByConfigRule implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The name of the AWS Config rule.
+     * The name of the Config rule.
      * </p>
      * 
      * @param configRuleName
-     *        The name of the AWS Config rule.
+     *        The name of the Config rule.
      */
 
     public void setConfigRuleName(String configRuleName) {
@@ -73,10 +73,10 @@ public class AggregateComplianceByConfigRule implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The name of the AWS Config rule.
+     * The name of the Config rule.
      * </p>
      * 
-     * @return The name of the AWS Config rule.
+     * @return The name of the Config rule.
      */
 
     public String getConfigRuleName() {
@@ -85,11 +85,11 @@ public class AggregateComplianceByConfigRule implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The name of the AWS Config rule.
+     * The name of the Config rule.
      * </p>
      * 
      * @param configRuleName
-     *        The name of the AWS Config rule.
+     *        The name of the Config rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -100,13 +100,13 @@ public class AggregateComplianceByConfigRule implements Serializable, Cloneable,
 
     /**
      * <p>
-     * Indicates whether an AWS resource or AWS Config rule is compliant and provides the number of contributors that
-     * affect the compliance.
+     * Indicates whether an Amazon Web Services resource or Config rule is compliant and provides the number of
+     * contributors that affect the compliance.
      * </p>
      * 
      * @param compliance
-     *        Indicates whether an AWS resource or AWS Config rule is compliant and provides the number of contributors
-     *        that affect the compliance.
+     *        Indicates whether an Amazon Web Services resource or Config rule is compliant and provides the number of
+     *        contributors that affect the compliance.
      */
 
     public void setCompliance(Compliance compliance) {
@@ -115,12 +115,12 @@ public class AggregateComplianceByConfigRule implements Serializable, Cloneable,
 
     /**
      * <p>
-     * Indicates whether an AWS resource or AWS Config rule is compliant and provides the number of contributors that
-     * affect the compliance.
+     * Indicates whether an Amazon Web Services resource or Config rule is compliant and provides the number of
+     * contributors that affect the compliance.
      * </p>
      * 
-     * @return Indicates whether an AWS resource or AWS Config rule is compliant and provides the number of contributors
-     *         that affect the compliance.
+     * @return Indicates whether an Amazon Web Services resource or Config rule is compliant and provides the number of
+     *         contributors that affect the compliance.
      */
 
     public Compliance getCompliance() {
@@ -129,13 +129,13 @@ public class AggregateComplianceByConfigRule implements Serializable, Cloneable,
 
     /**
      * <p>
-     * Indicates whether an AWS resource or AWS Config rule is compliant and provides the number of contributors that
-     * affect the compliance.
+     * Indicates whether an Amazon Web Services resource or Config rule is compliant and provides the number of
+     * contributors that affect the compliance.
      * </p>
      * 
      * @param compliance
-     *        Indicates whether an AWS resource or AWS Config rule is compliant and provides the number of contributors
-     *        that affect the compliance.
+     *        Indicates whether an Amazon Web Services resource or Config rule is compliant and provides the number of
+     *        contributors that affect the compliance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -26,9 +26,9 @@ import java.util.concurrent.ExecutorService;
  * notification when an asynchronous operation completes.
  * <p>
  * <p>
- * AWS Service Catalog AppRegistry enables organizations to understand the application context of their AWS resources.
- * AppRegistry provides a repository of your applications, their resources, and the application metadata that you use
- * within your enterprise.
+ * Amazon Web Services Service Catalog AppRegistry enables organizations to understand the application context of their
+ * Amazon Web Services resources. AppRegistry provides a repository of your applications, their resources, and the
+ * application metadata that you use within your enterprise.
  * </p>
  */
 @ThreadSafe
@@ -357,6 +357,39 @@ public class AWSAppRegistryAsyncClient extends AWSAppRegistryClient implements A
 
                 try {
                     result = executeGetApplication(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAssociatedResourceResult> getAssociatedResourceAsync(GetAssociatedResourceRequest request) {
+
+        return getAssociatedResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAssociatedResourceResult> getAssociatedResourceAsync(final GetAssociatedResourceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetAssociatedResourceRequest, GetAssociatedResourceResult> asyncHandler) {
+        final GetAssociatedResourceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetAssociatedResourceResult>() {
+            @Override
+            public GetAssociatedResourceResult call() throws Exception {
+                GetAssociatedResourceResult result = null;
+
+                try {
+                    result = executeGetAssociatedResource(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

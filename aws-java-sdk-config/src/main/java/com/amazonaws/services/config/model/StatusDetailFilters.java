@@ -45,7 +45,7 @@ public class StatusDetailFilters implements Serializable, Cloneable, StructuredP
      * <code>config-multiaccountsetup.amazonaws.com</code>.
      * </p>
      * <p>
-     * AWS Config sets the state of the rule to:
+     * Config sets the state of the rule to:
      * </p>
      * <ul>
      * <li>
@@ -147,7 +147,7 @@ public class StatusDetailFilters implements Serializable, Cloneable, StructuredP
      * <code>config-multiaccountsetup.amazonaws.com</code>.
      * </p>
      * <p>
-     * AWS Config sets the state of the rule to:
+     * Config sets the state of the rule to:
      * </p>
      * <ul>
      * <li>
@@ -205,7 +205,7 @@ public class StatusDetailFilters implements Serializable, Cloneable, StructuredP
      *        account deletes <code>OrganizationConfigRule</code> and disables service access for
      *        <code>config-multiaccountsetup.amazonaws.com</code>. </p>
      *        <p>
-     *        AWS Config sets the state of the rule to:
+     *        Config sets the state of the rule to:
      *        </p>
      *        <ul>
      *        <li>
@@ -270,7 +270,7 @@ public class StatusDetailFilters implements Serializable, Cloneable, StructuredP
      * <code>config-multiaccountsetup.amazonaws.com</code>.
      * </p>
      * <p>
-     * AWS Config sets the state of the rule to:
+     * Config sets the state of the rule to:
      * </p>
      * <ul>
      * <li>
@@ -327,7 +327,7 @@ public class StatusDetailFilters implements Serializable, Cloneable, StructuredP
      *         account deletes <code>OrganizationConfigRule</code> and disables service access for
      *         <code>config-multiaccountsetup.amazonaws.com</code>. </p>
      *         <p>
-     *         AWS Config sets the state of the rule to:
+     *         Config sets the state of the rule to:
      *         </p>
      *         <ul>
      *         <li>
@@ -392,7 +392,7 @@ public class StatusDetailFilters implements Serializable, Cloneable, StructuredP
      * <code>config-multiaccountsetup.amazonaws.com</code>.
      * </p>
      * <p>
-     * AWS Config sets the state of the rule to:
+     * Config sets the state of the rule to:
      * </p>
      * <ul>
      * <li>
@@ -450,7 +450,7 @@ public class StatusDetailFilters implements Serializable, Cloneable, StructuredP
      *        account deletes <code>OrganizationConfigRule</code> and disables service access for
      *        <code>config-multiaccountsetup.amazonaws.com</code>. </p>
      *        <p>
-     *        AWS Config sets the state of the rule to:
+     *        Config sets the state of the rule to:
      *        </p>
      *        <ul>
      *        <li>
@@ -517,7 +517,7 @@ public class StatusDetailFilters implements Serializable, Cloneable, StructuredP
      * <code>config-multiaccountsetup.amazonaws.com</code>.
      * </p>
      * <p>
-     * AWS Config sets the state of the rule to:
+     * Config sets the state of the rule to:
      * </p>
      * <ul>
      * <li>
@@ -575,7 +575,7 @@ public class StatusDetailFilters implements Serializable, Cloneable, StructuredP
      *        account deletes <code>OrganizationConfigRule</code> and disables service access for
      *        <code>config-multiaccountsetup.amazonaws.com</code>. </p>
      *        <p>
-     *        AWS Config sets the state of the rule to:
+     *        Config sets the state of the rule to:
      *        </p>
      *        <ul>
      *        <li>

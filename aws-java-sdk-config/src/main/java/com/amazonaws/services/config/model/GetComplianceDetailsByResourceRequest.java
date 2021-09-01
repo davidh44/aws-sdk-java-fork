@@ -28,13 +28,13 @@ public class GetComplianceDetailsByResourceRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The type of the AWS resource for which you want compliance information.
+     * The type of the Amazon Web Services resource for which you want compliance information.
      * </p>
      */
     private String resourceType;
     /**
      * <p>
-     * The ID of the AWS resource for which you want compliance information.
+     * The ID of the Amazon Web Services resource for which you want compliance information.
      * </p>
      */
     private String resourceId;
@@ -57,11 +57,11 @@ public class GetComplianceDetailsByResourceRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The type of the AWS resource for which you want compliance information.
+     * The type of the Amazon Web Services resource for which you want compliance information.
      * </p>
      * 
      * @param resourceType
-     *        The type of the AWS resource for which you want compliance information.
+     *        The type of the Amazon Web Services resource for which you want compliance information.
      */
 
     public void setResourceType(String resourceType) {
@@ -70,10 +70,10 @@ public class GetComplianceDetailsByResourceRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The type of the AWS resource for which you want compliance information.
+     * The type of the Amazon Web Services resource for which you want compliance information.
      * </p>
      * 
-     * @return The type of the AWS resource for which you want compliance information.
+     * @return The type of the Amazon Web Services resource for which you want compliance information.
      */
 
     public String getResourceType() {
@@ -82,11 +82,11 @@ public class GetComplianceDetailsByResourceRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The type of the AWS resource for which you want compliance information.
+     * The type of the Amazon Web Services resource for which you want compliance information.
      * </p>
      * 
      * @param resourceType
-     *        The type of the AWS resource for which you want compliance information.
+     *        The type of the Amazon Web Services resource for which you want compliance information.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -97,11 +97,11 @@ public class GetComplianceDetailsByResourceRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The ID of the AWS resource for which you want compliance information.
+     * The ID of the Amazon Web Services resource for which you want compliance information.
      * </p>
      * 
      * @param resourceId
-     *        The ID of the AWS resource for which you want compliance information.
+     *        The ID of the Amazon Web Services resource for which you want compliance information.
      */
 
     public void setResourceId(String resourceId) {
@@ -110,10 +110,10 @@ public class GetComplianceDetailsByResourceRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The ID of the AWS resource for which you want compliance information.
+     * The ID of the Amazon Web Services resource for which you want compliance information.
      * </p>
      * 
-     * @return The ID of the AWS resource for which you want compliance information.
+     * @return The ID of the Amazon Web Services resource for which you want compliance information.
      */
 
     public String getResourceId() {
@@ -122,11 +122,11 @@ public class GetComplianceDetailsByResourceRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The ID of the AWS resource for which you want compliance information.
+     * The ID of the Amazon Web Services resource for which you want compliance information.
      * </p>
      * 
      * @param resourceId
-     *        The ID of the AWS resource for which you want compliance information.
+     *        The ID of the Amazon Web Services resource for which you want compliance information.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -28,18 +28,18 @@ public class DeleteConfigRuleRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the AWS Config rule that you want to delete.
+     * The name of the Config rule that you want to delete.
      * </p>
      */
     private String configRuleName;
 
     /**
      * <p>
-     * The name of the AWS Config rule that you want to delete.
+     * The name of the Config rule that you want to delete.
      * </p>
      * 
      * @param configRuleName
-     *        The name of the AWS Config rule that you want to delete.
+     *        The name of the Config rule that you want to delete.
      */
 
     public void setConfigRuleName(String configRuleName) {
@@ -48,10 +48,10 @@ public class DeleteConfigRuleRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the AWS Config rule that you want to delete.
+     * The name of the Config rule that you want to delete.
      * </p>
      * 
-     * @return The name of the AWS Config rule that you want to delete.
+     * @return The name of the Config rule that you want to delete.
      */
 
     public String getConfigRuleName() {
@@ -60,11 +60,11 @@ public class DeleteConfigRuleRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the AWS Config rule that you want to delete.
+     * The name of the Config rule that you want to delete.
      * </p>
      * 
      * @param configRuleName
-     *        The name of the AWS Config rule that you want to delete.
+     *        The name of the Config rule that you want to delete.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

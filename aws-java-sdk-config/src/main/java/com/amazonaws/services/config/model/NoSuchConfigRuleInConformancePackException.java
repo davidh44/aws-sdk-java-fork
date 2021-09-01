@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * AWS Config rule that you passed in the filter does not exist.
+ * Config rule that you passed in the filter does not exist.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The controls that AWS Config uses for executing remediations.
+ * The controls that Config uses for executing remediations.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ExecutionControls" target="_top">AWS API

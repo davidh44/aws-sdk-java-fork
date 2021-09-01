@@ -46,7 +46,7 @@ public class GetAggregateDiscoveredResourceCountsRequest extends com.amazonaws.A
     /**
      * <p>
      * The maximum number of <a>GroupedResourceCount</a> objects returned on each page. The default is 1000. You cannot
-     * specify a number greater than 1000. If you specify 0, AWS Config uses the default.
+     * specify a number greater than 1000. If you specify 0, Config uses the default.
      * </p>
      */
     private Integer limit;
@@ -200,12 +200,12 @@ public class GetAggregateDiscoveredResourceCountsRequest extends com.amazonaws.A
     /**
      * <p>
      * The maximum number of <a>GroupedResourceCount</a> objects returned on each page. The default is 1000. You cannot
-     * specify a number greater than 1000. If you specify 0, AWS Config uses the default.
+     * specify a number greater than 1000. If you specify 0, Config uses the default.
      * </p>
      * 
      * @param limit
      *        The maximum number of <a>GroupedResourceCount</a> objects returned on each page. The default is 1000. You
-     *        cannot specify a number greater than 1000. If you specify 0, AWS Config uses the default.
+     *        cannot specify a number greater than 1000. If you specify 0, Config uses the default.
      */
 
     public void setLimit(Integer limit) {
@@ -215,11 +215,11 @@ public class GetAggregateDiscoveredResourceCountsRequest extends com.amazonaws.A
     /**
      * <p>
      * The maximum number of <a>GroupedResourceCount</a> objects returned on each page. The default is 1000. You cannot
-     * specify a number greater than 1000. If you specify 0, AWS Config uses the default.
+     * specify a number greater than 1000. If you specify 0, Config uses the default.
      * </p>
      * 
      * @return The maximum number of <a>GroupedResourceCount</a> objects returned on each page. The default is 1000. You
-     *         cannot specify a number greater than 1000. If you specify 0, AWS Config uses the default.
+     *         cannot specify a number greater than 1000. If you specify 0, Config uses the default.
      */
 
     public Integer getLimit() {
@@ -229,12 +229,12 @@ public class GetAggregateDiscoveredResourceCountsRequest extends com.amazonaws.A
     /**
      * <p>
      * The maximum number of <a>GroupedResourceCount</a> objects returned on each page. The default is 1000. You cannot
-     * specify a number greater than 1000. If you specify 0, AWS Config uses the default.
+     * specify a number greater than 1000. If you specify 0, Config uses the default.
      * </p>
      * 
      * @param limit
      *        The maximum number of <a>GroupedResourceCount</a> objects returned on each page. The default is 1000. You
-     *        cannot specify a number greater than 1000. If you specify 0, AWS Config uses the default.
+     *        cannot specify a number greater than 1000. If you specify 0, Config uses the default.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

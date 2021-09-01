@@ -33,7 +33,7 @@ public class GetAggregateComplianceDetailsByConfigRuleRequest extends com.amazon
     private String configurationAggregatorName;
     /**
      * <p>
-     * The name of the AWS Config rule for which you want compliance information.
+     * The name of the Config rule for which you want compliance information.
      * </p>
      */
     private String configRuleName;
@@ -55,9 +55,9 @@ public class GetAggregateComplianceDetailsByConfigRuleRequest extends com.amazon
      * </p>
      * <note>
      * <p>
-     * For the <code>GetAggregateComplianceDetailsByConfigRuleRequest</code> data type, AWS Config supports only the
-     * <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. AWS Config does not support the
-     * <code>NOT_APPLICABLE</code> and <code>INSUFFICIENT_DATA</code> values.
+     * For the <code>GetAggregateComplianceDetailsByConfigRuleRequest</code> data type, Config supports only the
+     * <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. Config does not support the <code>NOT_APPLICABLE</code>
+     * and <code>INSUFFICIENT_DATA</code> values.
      * </p>
      * </note>
      */
@@ -65,7 +65,7 @@ public class GetAggregateComplianceDetailsByConfigRuleRequest extends com.amazon
     /**
      * <p>
      * The maximum number of evaluation results returned on each page. The default is 50. You cannot specify a number
-     * greater than 100. If you specify 0, AWS Config uses the default.
+     * greater than 100. If you specify 0, Config uses the default.
      * </p>
      */
     private Integer limit;
@@ -119,11 +119,11 @@ public class GetAggregateComplianceDetailsByConfigRuleRequest extends com.amazon
 
     /**
      * <p>
-     * The name of the AWS Config rule for which you want compliance information.
+     * The name of the Config rule for which you want compliance information.
      * </p>
      * 
      * @param configRuleName
-     *        The name of the AWS Config rule for which you want compliance information.
+     *        The name of the Config rule for which you want compliance information.
      */
 
     public void setConfigRuleName(String configRuleName) {
@@ -132,10 +132,10 @@ public class GetAggregateComplianceDetailsByConfigRuleRequest extends com.amazon
 
     /**
      * <p>
-     * The name of the AWS Config rule for which you want compliance information.
+     * The name of the Config rule for which you want compliance information.
      * </p>
      * 
-     * @return The name of the AWS Config rule for which you want compliance information.
+     * @return The name of the Config rule for which you want compliance information.
      */
 
     public String getConfigRuleName() {
@@ -144,11 +144,11 @@ public class GetAggregateComplianceDetailsByConfigRuleRequest extends com.amazon
 
     /**
      * <p>
-     * The name of the AWS Config rule for which you want compliance information.
+     * The name of the Config rule for which you want compliance information.
      * </p>
      * 
      * @param configRuleName
-     *        The name of the AWS Config rule for which you want compliance information.
+     *        The name of the Config rule for which you want compliance information.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -243,17 +243,17 @@ public class GetAggregateComplianceDetailsByConfigRuleRequest extends com.amazon
      * </p>
      * <note>
      * <p>
-     * For the <code>GetAggregateComplianceDetailsByConfigRuleRequest</code> data type, AWS Config supports only the
-     * <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. AWS Config does not support the
-     * <code>NOT_APPLICABLE</code> and <code>INSUFFICIENT_DATA</code> values.
+     * For the <code>GetAggregateComplianceDetailsByConfigRuleRequest</code> data type, Config supports only the
+     * <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. Config does not support the <code>NOT_APPLICABLE</code>
+     * and <code>INSUFFICIENT_DATA</code> values.
      * </p>
      * </note>
      * 
      * @param complianceType
      *        The resource compliance status.</p> <note>
      *        <p>
-     *        For the <code>GetAggregateComplianceDetailsByConfigRuleRequest</code> data type, AWS Config supports only
-     *        the <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. AWS Config does not support the
+     *        For the <code>GetAggregateComplianceDetailsByConfigRuleRequest</code> data type, Config supports only the
+     *        <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. Config does not support the
      *        <code>NOT_APPLICABLE</code> and <code>INSUFFICIENT_DATA</code> values.
      *        </p>
      * @see ComplianceType
@@ -269,16 +269,16 @@ public class GetAggregateComplianceDetailsByConfigRuleRequest extends com.amazon
      * </p>
      * <note>
      * <p>
-     * For the <code>GetAggregateComplianceDetailsByConfigRuleRequest</code> data type, AWS Config supports only the
-     * <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. AWS Config does not support the
-     * <code>NOT_APPLICABLE</code> and <code>INSUFFICIENT_DATA</code> values.
+     * For the <code>GetAggregateComplianceDetailsByConfigRuleRequest</code> data type, Config supports only the
+     * <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. Config does not support the <code>NOT_APPLICABLE</code>
+     * and <code>INSUFFICIENT_DATA</code> values.
      * </p>
      * </note>
      * 
      * @return The resource compliance status.</p> <note>
      *         <p>
-     *         For the <code>GetAggregateComplianceDetailsByConfigRuleRequest</code> data type, AWS Config supports only
-     *         the <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. AWS Config does not support the
+     *         For the <code>GetAggregateComplianceDetailsByConfigRuleRequest</code> data type, Config supports only the
+     *         <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. Config does not support the
      *         <code>NOT_APPLICABLE</code> and <code>INSUFFICIENT_DATA</code> values.
      *         </p>
      * @see ComplianceType
@@ -294,17 +294,17 @@ public class GetAggregateComplianceDetailsByConfigRuleRequest extends com.amazon
      * </p>
      * <note>
      * <p>
-     * For the <code>GetAggregateComplianceDetailsByConfigRuleRequest</code> data type, AWS Config supports only the
-     * <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. AWS Config does not support the
-     * <code>NOT_APPLICABLE</code> and <code>INSUFFICIENT_DATA</code> values.
+     * For the <code>GetAggregateComplianceDetailsByConfigRuleRequest</code> data type, Config supports only the
+     * <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. Config does not support the <code>NOT_APPLICABLE</code>
+     * and <code>INSUFFICIENT_DATA</code> values.
      * </p>
      * </note>
      * 
      * @param complianceType
      *        The resource compliance status.</p> <note>
      *        <p>
-     *        For the <code>GetAggregateComplianceDetailsByConfigRuleRequest</code> data type, AWS Config supports only
-     *        the <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. AWS Config does not support the
+     *        For the <code>GetAggregateComplianceDetailsByConfigRuleRequest</code> data type, Config supports only the
+     *        <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. Config does not support the
      *        <code>NOT_APPLICABLE</code> and <code>INSUFFICIENT_DATA</code> values.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -322,17 +322,17 @@ public class GetAggregateComplianceDetailsByConfigRuleRequest extends com.amazon
      * </p>
      * <note>
      * <p>
-     * For the <code>GetAggregateComplianceDetailsByConfigRuleRequest</code> data type, AWS Config supports only the
-     * <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. AWS Config does not support the
-     * <code>NOT_APPLICABLE</code> and <code>INSUFFICIENT_DATA</code> values.
+     * For the <code>GetAggregateComplianceDetailsByConfigRuleRequest</code> data type, Config supports only the
+     * <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. Config does not support the <code>NOT_APPLICABLE</code>
+     * and <code>INSUFFICIENT_DATA</code> values.
      * </p>
      * </note>
      * 
      * @param complianceType
      *        The resource compliance status.</p> <note>
      *        <p>
-     *        For the <code>GetAggregateComplianceDetailsByConfigRuleRequest</code> data type, AWS Config supports only
-     *        the <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. AWS Config does not support the
+     *        For the <code>GetAggregateComplianceDetailsByConfigRuleRequest</code> data type, Config supports only the
+     *        <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. Config does not support the
      *        <code>NOT_APPLICABLE</code> and <code>INSUFFICIENT_DATA</code> values.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -347,12 +347,12 @@ public class GetAggregateComplianceDetailsByConfigRuleRequest extends com.amazon
     /**
      * <p>
      * The maximum number of evaluation results returned on each page. The default is 50. You cannot specify a number
-     * greater than 100. If you specify 0, AWS Config uses the default.
+     * greater than 100. If you specify 0, Config uses the default.
      * </p>
      * 
      * @param limit
      *        The maximum number of evaluation results returned on each page. The default is 50. You cannot specify a
-     *        number greater than 100. If you specify 0, AWS Config uses the default.
+     *        number greater than 100. If you specify 0, Config uses the default.
      */
 
     public void setLimit(Integer limit) {
@@ -362,11 +362,11 @@ public class GetAggregateComplianceDetailsByConfigRuleRequest extends com.amazon
     /**
      * <p>
      * The maximum number of evaluation results returned on each page. The default is 50. You cannot specify a number
-     * greater than 100. If you specify 0, AWS Config uses the default.
+     * greater than 100. If you specify 0, Config uses the default.
      * </p>
      * 
      * @return The maximum number of evaluation results returned on each page. The default is 50. You cannot specify a
-     *         number greater than 100. If you specify 0, AWS Config uses the default.
+     *         number greater than 100. If you specify 0, Config uses the default.
      */
 
     public Integer getLimit() {
@@ -376,12 +376,12 @@ public class GetAggregateComplianceDetailsByConfigRuleRequest extends com.amazon
     /**
      * <p>
      * The maximum number of evaluation results returned on each page. The default is 50. You cannot specify a number
-     * greater than 100. If you specify 0, AWS Config uses the default.
+     * greater than 100. If you specify 0, Config uses the default.
      * </p>
      * 
      * @param limit
      *        The maximum number of evaluation results returned on each page. The default is 50. You cannot specify a
-     *        number greater than 100. If you specify 0, AWS Config uses the default.
+     *        number greater than 100. If you specify 0, Config uses the default.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

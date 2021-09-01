@@ -19,8 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An organization conformance pack that has information about conformance packs that AWS Config creates in member
- * accounts.
+ * An organization conformance pack that has information about conformance packs that Config creates in member accounts.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/OrganizationConformancePack" target="_top">AWS
@@ -43,7 +42,7 @@ public class OrganizationConformancePack implements Serializable, Cloneable, Str
     private String organizationConformancePackArn;
     /**
      * <p>
-     * Amazon S3 bucket where AWS Config stores conformance pack templates.
+     * The name of the Amazon S3 bucket where Config stores conformance pack templates.
      * </p>
      * <note>
      * <p>
@@ -164,7 +163,7 @@ public class OrganizationConformancePack implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * Amazon S3 bucket where AWS Config stores conformance pack templates.
+     * The name of the Amazon S3 bucket where Config stores conformance pack templates.
      * </p>
      * <note>
      * <p>
@@ -173,7 +172,7 @@ public class OrganizationConformancePack implements Serializable, Cloneable, Str
      * </note>
      * 
      * @param deliveryS3Bucket
-     *        Amazon S3 bucket where AWS Config stores conformance pack templates. </p> <note>
+     *        The name of the Amazon S3 bucket where Config stores conformance pack templates. </p> <note>
      *        <p>
      *        This field is optional.
      *        </p>
@@ -185,7 +184,7 @@ public class OrganizationConformancePack implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * Amazon S3 bucket where AWS Config stores conformance pack templates.
+     * The name of the Amazon S3 bucket where Config stores conformance pack templates.
      * </p>
      * <note>
      * <p>
@@ -193,7 +192,7 @@ public class OrganizationConformancePack implements Serializable, Cloneable, Str
      * </p>
      * </note>
      * 
-     * @return Amazon S3 bucket where AWS Config stores conformance pack templates. </p> <note>
+     * @return The name of the Amazon S3 bucket where Config stores conformance pack templates. </p> <note>
      *         <p>
      *         This field is optional.
      *         </p>
@@ -205,7 +204,7 @@ public class OrganizationConformancePack implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * Amazon S3 bucket where AWS Config stores conformance pack templates.
+     * The name of the Amazon S3 bucket where Config stores conformance pack templates.
      * </p>
      * <note>
      * <p>
@@ -214,7 +213,7 @@ public class OrganizationConformancePack implements Serializable, Cloneable, Str
      * </note>
      * 
      * @param deliveryS3Bucket
-     *        Amazon S3 bucket where AWS Config stores conformance pack templates. </p> <note>
+     *        The name of the Amazon S3 bucket where Config stores conformance pack templates. </p> <note>
      *        <p>
      *        This field is optional.
      *        </p>

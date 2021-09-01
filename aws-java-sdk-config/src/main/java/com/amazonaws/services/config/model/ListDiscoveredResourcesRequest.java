@@ -28,34 +28,34 @@ public class ListDiscoveredResourcesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The type of resources that you want AWS Config to list in the response.
+     * The type of resources that you want Config to list in the response.
      * </p>
      */
     private String resourceType;
     /**
      * <p>
-     * The IDs of only those resources that you want AWS Config to list in the response. If you do not specify this
-     * parameter, AWS Config lists all resources of the specified type that it has discovered.
+     * The IDs of only those resources that you want Config to list in the response. If you do not specify this
+     * parameter, Config lists all resources of the specified type that it has discovered.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> resourceIds;
     /**
      * <p>
-     * The custom name of only those resources that you want AWS Config to list in the response. If you do not specify
-     * this parameter, AWS Config lists all resources of the specified type that it has discovered.
+     * The custom name of only those resources that you want Config to list in the response. If you do not specify this
+     * parameter, Config lists all resources of the specified type that it has discovered.
      * </p>
      */
     private String resourceName;
     /**
      * <p>
      * The maximum number of resource identifiers returned on each page. The default is 100. You cannot specify a number
-     * greater than 100. If you specify 0, AWS Config uses the default.
+     * greater than 100. If you specify 0, Config uses the default.
      * </p>
      */
     private Integer limit;
     /**
      * <p>
-     * Specifies whether AWS Config includes deleted resources in the results. By default, deleted resources are not
+     * Specifies whether Config includes deleted resources in the results. By default, deleted resources are not
      * included.
      * </p>
      */
@@ -70,11 +70,11 @@ public class ListDiscoveredResourcesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The type of resources that you want AWS Config to list in the response.
+     * The type of resources that you want Config to list in the response.
      * </p>
      * 
      * @param resourceType
-     *        The type of resources that you want AWS Config to list in the response.
+     *        The type of resources that you want Config to list in the response.
      * @see ResourceType
      */
 
@@ -84,10 +84,10 @@ public class ListDiscoveredResourcesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The type of resources that you want AWS Config to list in the response.
+     * The type of resources that you want Config to list in the response.
      * </p>
      * 
-     * @return The type of resources that you want AWS Config to list in the response.
+     * @return The type of resources that you want Config to list in the response.
      * @see ResourceType
      */
 
@@ -97,11 +97,11 @@ public class ListDiscoveredResourcesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The type of resources that you want AWS Config to list in the response.
+     * The type of resources that you want Config to list in the response.
      * </p>
      * 
      * @param resourceType
-     *        The type of resources that you want AWS Config to list in the response.
+     *        The type of resources that you want Config to list in the response.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -113,11 +113,11 @@ public class ListDiscoveredResourcesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The type of resources that you want AWS Config to list in the response.
+     * The type of resources that you want Config to list in the response.
      * </p>
      * 
      * @param resourceType
-     *        The type of resources that you want AWS Config to list in the response.
+     *        The type of resources that you want Config to list in the response.
      * @see ResourceType
      */
 
@@ -127,11 +127,11 @@ public class ListDiscoveredResourcesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The type of resources that you want AWS Config to list in the response.
+     * The type of resources that you want Config to list in the response.
      * </p>
      * 
      * @param resourceType
-     *        The type of resources that you want AWS Config to list in the response.
+     *        The type of resources that you want Config to list in the response.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -143,12 +143,12 @@ public class ListDiscoveredResourcesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The IDs of only those resources that you want AWS Config to list in the response. If you do not specify this
-     * parameter, AWS Config lists all resources of the specified type that it has discovered.
+     * The IDs of only those resources that you want Config to list in the response. If you do not specify this
+     * parameter, Config lists all resources of the specified type that it has discovered.
      * </p>
      * 
-     * @return The IDs of only those resources that you want AWS Config to list in the response. If you do not specify
-     *         this parameter, AWS Config lists all resources of the specified type that it has discovered.
+     * @return The IDs of only those resources that you want Config to list in the response. If you do not specify this
+     *         parameter, Config lists all resources of the specified type that it has discovered.
      */
 
     public java.util.List<String> getResourceIds() {
@@ -160,13 +160,13 @@ public class ListDiscoveredResourcesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The IDs of only those resources that you want AWS Config to list in the response. If you do not specify this
-     * parameter, AWS Config lists all resources of the specified type that it has discovered.
+     * The IDs of only those resources that you want Config to list in the response. If you do not specify this
+     * parameter, Config lists all resources of the specified type that it has discovered.
      * </p>
      * 
      * @param resourceIds
-     *        The IDs of only those resources that you want AWS Config to list in the response. If you do not specify
-     *        this parameter, AWS Config lists all resources of the specified type that it has discovered.
+     *        The IDs of only those resources that you want Config to list in the response. If you do not specify this
+     *        parameter, Config lists all resources of the specified type that it has discovered.
      */
 
     public void setResourceIds(java.util.Collection<String> resourceIds) {
@@ -180,8 +180,8 @@ public class ListDiscoveredResourcesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The IDs of only those resources that you want AWS Config to list in the response. If you do not specify this
-     * parameter, AWS Config lists all resources of the specified type that it has discovered.
+     * The IDs of only those resources that you want Config to list in the response. If you do not specify this
+     * parameter, Config lists all resources of the specified type that it has discovered.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -190,8 +190,8 @@ public class ListDiscoveredResourcesRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param resourceIds
-     *        The IDs of only those resources that you want AWS Config to list in the response. If you do not specify
-     *        this parameter, AWS Config lists all resources of the specified type that it has discovered.
+     *        The IDs of only those resources that you want Config to list in the response. If you do not specify this
+     *        parameter, Config lists all resources of the specified type that it has discovered.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -207,13 +207,13 @@ public class ListDiscoveredResourcesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The IDs of only those resources that you want AWS Config to list in the response. If you do not specify this
-     * parameter, AWS Config lists all resources of the specified type that it has discovered.
+     * The IDs of only those resources that you want Config to list in the response. If you do not specify this
+     * parameter, Config lists all resources of the specified type that it has discovered.
      * </p>
      * 
      * @param resourceIds
-     *        The IDs of only those resources that you want AWS Config to list in the response. If you do not specify
-     *        this parameter, AWS Config lists all resources of the specified type that it has discovered.
+     *        The IDs of only those resources that you want Config to list in the response. If you do not specify this
+     *        parameter, Config lists all resources of the specified type that it has discovered.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -224,13 +224,13 @@ public class ListDiscoveredResourcesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The custom name of only those resources that you want AWS Config to list in the response. If you do not specify
-     * this parameter, AWS Config lists all resources of the specified type that it has discovered.
+     * The custom name of only those resources that you want Config to list in the response. If you do not specify this
+     * parameter, Config lists all resources of the specified type that it has discovered.
      * </p>
      * 
      * @param resourceName
-     *        The custom name of only those resources that you want AWS Config to list in the response. If you do not
-     *        specify this parameter, AWS Config lists all resources of the specified type that it has discovered.
+     *        The custom name of only those resources that you want Config to list in the response. If you do not
+     *        specify this parameter, Config lists all resources of the specified type that it has discovered.
      */
 
     public void setResourceName(String resourceName) {
@@ -239,12 +239,12 @@ public class ListDiscoveredResourcesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The custom name of only those resources that you want AWS Config to list in the response. If you do not specify
-     * this parameter, AWS Config lists all resources of the specified type that it has discovered.
+     * The custom name of only those resources that you want Config to list in the response. If you do not specify this
+     * parameter, Config lists all resources of the specified type that it has discovered.
      * </p>
      * 
-     * @return The custom name of only those resources that you want AWS Config to list in the response. If you do not
-     *         specify this parameter, AWS Config lists all resources of the specified type that it has discovered.
+     * @return The custom name of only those resources that you want Config to list in the response. If you do not
+     *         specify this parameter, Config lists all resources of the specified type that it has discovered.
      */
 
     public String getResourceName() {
@@ -253,13 +253,13 @@ public class ListDiscoveredResourcesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The custom name of only those resources that you want AWS Config to list in the response. If you do not specify
-     * this parameter, AWS Config lists all resources of the specified type that it has discovered.
+     * The custom name of only those resources that you want Config to list in the response. If you do not specify this
+     * parameter, Config lists all resources of the specified type that it has discovered.
      * </p>
      * 
      * @param resourceName
-     *        The custom name of only those resources that you want AWS Config to list in the response. If you do not
-     *        specify this parameter, AWS Config lists all resources of the specified type that it has discovered.
+     *        The custom name of only those resources that you want Config to list in the response. If you do not
+     *        specify this parameter, Config lists all resources of the specified type that it has discovered.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -271,12 +271,12 @@ public class ListDiscoveredResourcesRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The maximum number of resource identifiers returned on each page. The default is 100. You cannot specify a number
-     * greater than 100. If you specify 0, AWS Config uses the default.
+     * greater than 100. If you specify 0, Config uses the default.
      * </p>
      * 
      * @param limit
      *        The maximum number of resource identifiers returned on each page. The default is 100. You cannot specify a
-     *        number greater than 100. If you specify 0, AWS Config uses the default.
+     *        number greater than 100. If you specify 0, Config uses the default.
      */
 
     public void setLimit(Integer limit) {
@@ -286,11 +286,11 @@ public class ListDiscoveredResourcesRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The maximum number of resource identifiers returned on each page. The default is 100. You cannot specify a number
-     * greater than 100. If you specify 0, AWS Config uses the default.
+     * greater than 100. If you specify 0, Config uses the default.
      * </p>
      * 
      * @return The maximum number of resource identifiers returned on each page. The default is 100. You cannot specify
-     *         a number greater than 100. If you specify 0, AWS Config uses the default.
+     *         a number greater than 100. If you specify 0, Config uses the default.
      */
 
     public Integer getLimit() {
@@ -300,12 +300,12 @@ public class ListDiscoveredResourcesRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The maximum number of resource identifiers returned on each page. The default is 100. You cannot specify a number
-     * greater than 100. If you specify 0, AWS Config uses the default.
+     * greater than 100. If you specify 0, Config uses the default.
      * </p>
      * 
      * @param limit
      *        The maximum number of resource identifiers returned on each page. The default is 100. You cannot specify a
-     *        number greater than 100. If you specify 0, AWS Config uses the default.
+     *        number greater than 100. If you specify 0, Config uses the default.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -316,13 +316,13 @@ public class ListDiscoveredResourcesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Specifies whether AWS Config includes deleted resources in the results. By default, deleted resources are not
+     * Specifies whether Config includes deleted resources in the results. By default, deleted resources are not
      * included.
      * </p>
      * 
      * @param includeDeletedResources
-     *        Specifies whether AWS Config includes deleted resources in the results. By default, deleted resources are
-     *        not included.
+     *        Specifies whether Config includes deleted resources in the results. By default, deleted resources are not
+     *        included.
      */
 
     public void setIncludeDeletedResources(Boolean includeDeletedResources) {
@@ -331,12 +331,12 @@ public class ListDiscoveredResourcesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Specifies whether AWS Config includes deleted resources in the results. By default, deleted resources are not
+     * Specifies whether Config includes deleted resources in the results. By default, deleted resources are not
      * included.
      * </p>
      * 
-     * @return Specifies whether AWS Config includes deleted resources in the results. By default, deleted resources are
-     *         not included.
+     * @return Specifies whether Config includes deleted resources in the results. By default, deleted resources are not
+     *         included.
      */
 
     public Boolean getIncludeDeletedResources() {
@@ -345,13 +345,13 @@ public class ListDiscoveredResourcesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Specifies whether AWS Config includes deleted resources in the results. By default, deleted resources are not
+     * Specifies whether Config includes deleted resources in the results. By default, deleted resources are not
      * included.
      * </p>
      * 
      * @param includeDeletedResources
-     *        Specifies whether AWS Config includes deleted resources in the results. By default, deleted resources are
-     *        not included.
+     *        Specifies whether Config includes deleted resources in the results. By default, deleted resources are not
+     *        included.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -362,12 +362,12 @@ public class ListDiscoveredResourcesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Specifies whether AWS Config includes deleted resources in the results. By default, deleted resources are not
+     * Specifies whether Config includes deleted resources in the results. By default, deleted resources are not
      * included.
      * </p>
      * 
-     * @return Specifies whether AWS Config includes deleted resources in the results. By default, deleted resources are
-     *         not included.
+     * @return Specifies whether Config includes deleted resources in the results. By default, deleted resources are not
+     *         included.
      */
 
     public Boolean isIncludeDeletedResources() {

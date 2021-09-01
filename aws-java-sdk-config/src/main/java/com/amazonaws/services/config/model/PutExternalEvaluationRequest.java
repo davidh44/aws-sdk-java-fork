@@ -27,7 +27,7 @@ public class PutExternalEvaluationRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The name of the AWS Config rule.
+     * The name of the Config rule.
      * </p>
      */
     private String configRuleName;
@@ -40,11 +40,11 @@ public class PutExternalEvaluationRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The name of the AWS Config rule.
+     * The name of the Config rule.
      * </p>
      * 
      * @param configRuleName
-     *        The name of the AWS Config rule.
+     *        The name of the Config rule.
      */
 
     public void setConfigRuleName(String configRuleName) {
@@ -53,10 +53,10 @@ public class PutExternalEvaluationRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The name of the AWS Config rule.
+     * The name of the Config rule.
      * </p>
      * 
-     * @return The name of the AWS Config rule.
+     * @return The name of the Config rule.
      */
 
     public String getConfigRuleName() {
@@ -65,11 +65,11 @@ public class PutExternalEvaluationRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The name of the AWS Config rule.
+     * The name of the Config rule.
      * </p>
      * 
      * @param configRuleName
-     *        The name of the AWS Config rule.
+     *        The name of the Config rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

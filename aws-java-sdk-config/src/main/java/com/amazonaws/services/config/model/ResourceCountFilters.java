@@ -30,7 +30,7 @@ public class ResourceCountFilters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The type of the AWS resource.
+     * The type of the Amazon Web Services resource.
      * </p>
      */
     private String resourceType;
@@ -49,11 +49,11 @@ public class ResourceCountFilters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The type of the AWS resource.
+     * The type of the Amazon Web Services resource.
      * </p>
      * 
      * @param resourceType
-     *        The type of the AWS resource.
+     *        The type of the Amazon Web Services resource.
      * @see ResourceType
      */
 
@@ -63,10 +63,10 @@ public class ResourceCountFilters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The type of the AWS resource.
+     * The type of the Amazon Web Services resource.
      * </p>
      * 
-     * @return The type of the AWS resource.
+     * @return The type of the Amazon Web Services resource.
      * @see ResourceType
      */
 
@@ -76,11 +76,11 @@ public class ResourceCountFilters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The type of the AWS resource.
+     * The type of the Amazon Web Services resource.
      * </p>
      * 
      * @param resourceType
-     *        The type of the AWS resource.
+     *        The type of the Amazon Web Services resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -92,11 +92,11 @@ public class ResourceCountFilters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The type of the AWS resource.
+     * The type of the Amazon Web Services resource.
      * </p>
      * 
      * @param resourceType
-     *        The type of the AWS resource.
+     *        The type of the Amazon Web Services resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */

@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Indicates whether an AWS resource or AWS Config rule is compliant and provides the number of contributors that affect
- * the compliance.
+ * Indicates whether an Amazon Web Services resource or Config rule is compliant and provides the number of contributors
+ * that affect the compliance.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/Compliance" target="_top">AWS API
@@ -31,61 +31,61 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether an AWS resource or AWS Config rule is compliant.
+     * Indicates whether an Amazon Web Services resource or Config rule is compliant.
      * </p>
      * <p>
-     * A resource is compliant if it complies with all of the AWS Config rules that evaluate it. A resource is
-     * noncompliant if it does not comply with one or more of these rules.
+     * A resource is compliant if it complies with all of the Config rules that evaluate it. A resource is noncompliant
+     * if it does not comply with one or more of these rules.
      * </p>
      * <p>
      * A rule is compliant if all of the resources that the rule evaluates comply with it. A rule is noncompliant if any
      * of these resources do not comply.
      * </p>
      * <p>
-     * AWS Config returns the <code>INSUFFICIENT_DATA</code> value when no evaluation results are available for the AWS
-     * resource or AWS Config rule.
+     * Config returns the <code>INSUFFICIENT_DATA</code> value when no evaluation results are available for the Amazon
+     * Web Services resource or Config rule.
      * </p>
      * <p>
-     * For the <code>Compliance</code> data type, AWS Config supports only <code>COMPLIANT</code>,
-     * <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code> values. AWS Config does not support the
+     * For the <code>Compliance</code> data type, Config supports only <code>COMPLIANT</code>,
+     * <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code> values. Config does not support the
      * <code>NOT_APPLICABLE</code> value for the <code>Compliance</code> data type.
      * </p>
      */
     private String complianceType;
     /**
      * <p>
-     * The number of AWS resources or AWS Config rules that cause a result of <code>NON_COMPLIANT</code>, up to a
-     * maximum number.
+     * The number of Amazon Web Services resources or Config rules that cause a result of <code>NON_COMPLIANT</code>, up
+     * to a maximum number.
      * </p>
      */
     private ComplianceContributorCount complianceContributorCount;
 
     /**
      * <p>
-     * Indicates whether an AWS resource or AWS Config rule is compliant.
+     * Indicates whether an Amazon Web Services resource or Config rule is compliant.
      * </p>
      * <p>
-     * A resource is compliant if it complies with all of the AWS Config rules that evaluate it. A resource is
-     * noncompliant if it does not comply with one or more of these rules.
+     * A resource is compliant if it complies with all of the Config rules that evaluate it. A resource is noncompliant
+     * if it does not comply with one or more of these rules.
      * </p>
      * <p>
      * A rule is compliant if all of the resources that the rule evaluates comply with it. A rule is noncompliant if any
      * of these resources do not comply.
      * </p>
      * <p>
-     * AWS Config returns the <code>INSUFFICIENT_DATA</code> value when no evaluation results are available for the AWS
-     * resource or AWS Config rule.
+     * Config returns the <code>INSUFFICIENT_DATA</code> value when no evaluation results are available for the Amazon
+     * Web Services resource or Config rule.
      * </p>
      * <p>
-     * For the <code>Compliance</code> data type, AWS Config supports only <code>COMPLIANT</code>,
-     * <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code> values. AWS Config does not support the
+     * For the <code>Compliance</code> data type, Config supports only <code>COMPLIANT</code>,
+     * <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code> values. Config does not support the
      * <code>NOT_APPLICABLE</code> value for the <code>Compliance</code> data type.
      * </p>
      * 
      * @param complianceType
-     *        Indicates whether an AWS resource or AWS Config rule is compliant.</p>
+     *        Indicates whether an Amazon Web Services resource or Config rule is compliant.</p>
      *        <p>
-     *        A resource is compliant if it complies with all of the AWS Config rules that evaluate it. A resource is
+     *        A resource is compliant if it complies with all of the Config rules that evaluate it. A resource is
      *        noncompliant if it does not comply with one or more of these rules.
      *        </p>
      *        <p>
@@ -93,12 +93,12 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
      *        if any of these resources do not comply.
      *        </p>
      *        <p>
-     *        AWS Config returns the <code>INSUFFICIENT_DATA</code> value when no evaluation results are available for
-     *        the AWS resource or AWS Config rule.
+     *        Config returns the <code>INSUFFICIENT_DATA</code> value when no evaluation results are available for the
+     *        Amazon Web Services resource or Config rule.
      *        </p>
      *        <p>
-     *        For the <code>Compliance</code> data type, AWS Config supports only <code>COMPLIANT</code>,
-     *        <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code> values. AWS Config does not support the
+     *        For the <code>Compliance</code> data type, Config supports only <code>COMPLIANT</code>,
+     *        <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code> values. Config does not support the
      *        <code>NOT_APPLICABLE</code> value for the <code>Compliance</code> data type.
      * @see ComplianceType
      */
@@ -109,29 +109,29 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether an AWS resource or AWS Config rule is compliant.
+     * Indicates whether an Amazon Web Services resource or Config rule is compliant.
      * </p>
      * <p>
-     * A resource is compliant if it complies with all of the AWS Config rules that evaluate it. A resource is
-     * noncompliant if it does not comply with one or more of these rules.
+     * A resource is compliant if it complies with all of the Config rules that evaluate it. A resource is noncompliant
+     * if it does not comply with one or more of these rules.
      * </p>
      * <p>
      * A rule is compliant if all of the resources that the rule evaluates comply with it. A rule is noncompliant if any
      * of these resources do not comply.
      * </p>
      * <p>
-     * AWS Config returns the <code>INSUFFICIENT_DATA</code> value when no evaluation results are available for the AWS
-     * resource or AWS Config rule.
+     * Config returns the <code>INSUFFICIENT_DATA</code> value when no evaluation results are available for the Amazon
+     * Web Services resource or Config rule.
      * </p>
      * <p>
-     * For the <code>Compliance</code> data type, AWS Config supports only <code>COMPLIANT</code>,
-     * <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code> values. AWS Config does not support the
+     * For the <code>Compliance</code> data type, Config supports only <code>COMPLIANT</code>,
+     * <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code> values. Config does not support the
      * <code>NOT_APPLICABLE</code> value for the <code>Compliance</code> data type.
      * </p>
      * 
-     * @return Indicates whether an AWS resource or AWS Config rule is compliant.</p>
+     * @return Indicates whether an Amazon Web Services resource or Config rule is compliant.</p>
      *         <p>
-     *         A resource is compliant if it complies with all of the AWS Config rules that evaluate it. A resource is
+     *         A resource is compliant if it complies with all of the Config rules that evaluate it. A resource is
      *         noncompliant if it does not comply with one or more of these rules.
      *         </p>
      *         <p>
@@ -139,12 +139,12 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
      *         noncompliant if any of these resources do not comply.
      *         </p>
      *         <p>
-     *         AWS Config returns the <code>INSUFFICIENT_DATA</code> value when no evaluation results are available for
-     *         the AWS resource or AWS Config rule.
+     *         Config returns the <code>INSUFFICIENT_DATA</code> value when no evaluation results are available for the
+     *         Amazon Web Services resource or Config rule.
      *         </p>
      *         <p>
-     *         For the <code>Compliance</code> data type, AWS Config supports only <code>COMPLIANT</code>,
-     *         <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code> values. AWS Config does not support the
+     *         For the <code>Compliance</code> data type, Config supports only <code>COMPLIANT</code>,
+     *         <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code> values. Config does not support the
      *         <code>NOT_APPLICABLE</code> value for the <code>Compliance</code> data type.
      * @see ComplianceType
      */
@@ -155,30 +155,30 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether an AWS resource or AWS Config rule is compliant.
+     * Indicates whether an Amazon Web Services resource or Config rule is compliant.
      * </p>
      * <p>
-     * A resource is compliant if it complies with all of the AWS Config rules that evaluate it. A resource is
-     * noncompliant if it does not comply with one or more of these rules.
+     * A resource is compliant if it complies with all of the Config rules that evaluate it. A resource is noncompliant
+     * if it does not comply with one or more of these rules.
      * </p>
      * <p>
      * A rule is compliant if all of the resources that the rule evaluates comply with it. A rule is noncompliant if any
      * of these resources do not comply.
      * </p>
      * <p>
-     * AWS Config returns the <code>INSUFFICIENT_DATA</code> value when no evaluation results are available for the AWS
-     * resource or AWS Config rule.
+     * Config returns the <code>INSUFFICIENT_DATA</code> value when no evaluation results are available for the Amazon
+     * Web Services resource or Config rule.
      * </p>
      * <p>
-     * For the <code>Compliance</code> data type, AWS Config supports only <code>COMPLIANT</code>,
-     * <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code> values. AWS Config does not support the
+     * For the <code>Compliance</code> data type, Config supports only <code>COMPLIANT</code>,
+     * <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code> values. Config does not support the
      * <code>NOT_APPLICABLE</code> value for the <code>Compliance</code> data type.
      * </p>
      * 
      * @param complianceType
-     *        Indicates whether an AWS resource or AWS Config rule is compliant.</p>
+     *        Indicates whether an Amazon Web Services resource or Config rule is compliant.</p>
      *        <p>
-     *        A resource is compliant if it complies with all of the AWS Config rules that evaluate it. A resource is
+     *        A resource is compliant if it complies with all of the Config rules that evaluate it. A resource is
      *        noncompliant if it does not comply with one or more of these rules.
      *        </p>
      *        <p>
@@ -186,12 +186,12 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
      *        if any of these resources do not comply.
      *        </p>
      *        <p>
-     *        AWS Config returns the <code>INSUFFICIENT_DATA</code> value when no evaluation results are available for
-     *        the AWS resource or AWS Config rule.
+     *        Config returns the <code>INSUFFICIENT_DATA</code> value when no evaluation results are available for the
+     *        Amazon Web Services resource or Config rule.
      *        </p>
      *        <p>
-     *        For the <code>Compliance</code> data type, AWS Config supports only <code>COMPLIANT</code>,
-     *        <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code> values. AWS Config does not support the
+     *        For the <code>Compliance</code> data type, Config supports only <code>COMPLIANT</code>,
+     *        <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code> values. Config does not support the
      *        <code>NOT_APPLICABLE</code> value for the <code>Compliance</code> data type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ComplianceType
@@ -204,30 +204,30 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether an AWS resource or AWS Config rule is compliant.
+     * Indicates whether an Amazon Web Services resource or Config rule is compliant.
      * </p>
      * <p>
-     * A resource is compliant if it complies with all of the AWS Config rules that evaluate it. A resource is
-     * noncompliant if it does not comply with one or more of these rules.
+     * A resource is compliant if it complies with all of the Config rules that evaluate it. A resource is noncompliant
+     * if it does not comply with one or more of these rules.
      * </p>
      * <p>
      * A rule is compliant if all of the resources that the rule evaluates comply with it. A rule is noncompliant if any
      * of these resources do not comply.
      * </p>
      * <p>
-     * AWS Config returns the <code>INSUFFICIENT_DATA</code> value when no evaluation results are available for the AWS
-     * resource or AWS Config rule.
+     * Config returns the <code>INSUFFICIENT_DATA</code> value when no evaluation results are available for the Amazon
+     * Web Services resource or Config rule.
      * </p>
      * <p>
-     * For the <code>Compliance</code> data type, AWS Config supports only <code>COMPLIANT</code>,
-     * <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code> values. AWS Config does not support the
+     * For the <code>Compliance</code> data type, Config supports only <code>COMPLIANT</code>,
+     * <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code> values. Config does not support the
      * <code>NOT_APPLICABLE</code> value for the <code>Compliance</code> data type.
      * </p>
      * 
      * @param complianceType
-     *        Indicates whether an AWS resource or AWS Config rule is compliant.</p>
+     *        Indicates whether an Amazon Web Services resource or Config rule is compliant.</p>
      *        <p>
-     *        A resource is compliant if it complies with all of the AWS Config rules that evaluate it. A resource is
+     *        A resource is compliant if it complies with all of the Config rules that evaluate it. A resource is
      *        noncompliant if it does not comply with one or more of these rules.
      *        </p>
      *        <p>
@@ -235,12 +235,12 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
      *        if any of these resources do not comply.
      *        </p>
      *        <p>
-     *        AWS Config returns the <code>INSUFFICIENT_DATA</code> value when no evaluation results are available for
-     *        the AWS resource or AWS Config rule.
+     *        Config returns the <code>INSUFFICIENT_DATA</code> value when no evaluation results are available for the
+     *        Amazon Web Services resource or Config rule.
      *        </p>
      *        <p>
-     *        For the <code>Compliance</code> data type, AWS Config supports only <code>COMPLIANT</code>,
-     *        <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code> values. AWS Config does not support the
+     *        For the <code>Compliance</code> data type, Config supports only <code>COMPLIANT</code>,
+     *        <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code> values. Config does not support the
      *        <code>NOT_APPLICABLE</code> value for the <code>Compliance</code> data type.
      * @see ComplianceType
      */
@@ -251,30 +251,30 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether an AWS resource or AWS Config rule is compliant.
+     * Indicates whether an Amazon Web Services resource or Config rule is compliant.
      * </p>
      * <p>
-     * A resource is compliant if it complies with all of the AWS Config rules that evaluate it. A resource is
-     * noncompliant if it does not comply with one or more of these rules.
+     * A resource is compliant if it complies with all of the Config rules that evaluate it. A resource is noncompliant
+     * if it does not comply with one or more of these rules.
      * </p>
      * <p>
      * A rule is compliant if all of the resources that the rule evaluates comply with it. A rule is noncompliant if any
      * of these resources do not comply.
      * </p>
      * <p>
-     * AWS Config returns the <code>INSUFFICIENT_DATA</code> value when no evaluation results are available for the AWS
-     * resource or AWS Config rule.
+     * Config returns the <code>INSUFFICIENT_DATA</code> value when no evaluation results are available for the Amazon
+     * Web Services resource or Config rule.
      * </p>
      * <p>
-     * For the <code>Compliance</code> data type, AWS Config supports only <code>COMPLIANT</code>,
-     * <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code> values. AWS Config does not support the
+     * For the <code>Compliance</code> data type, Config supports only <code>COMPLIANT</code>,
+     * <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code> values. Config does not support the
      * <code>NOT_APPLICABLE</code> value for the <code>Compliance</code> data type.
      * </p>
      * 
      * @param complianceType
-     *        Indicates whether an AWS resource or AWS Config rule is compliant.</p>
+     *        Indicates whether an Amazon Web Services resource or Config rule is compliant.</p>
      *        <p>
-     *        A resource is compliant if it complies with all of the AWS Config rules that evaluate it. A resource is
+     *        A resource is compliant if it complies with all of the Config rules that evaluate it. A resource is
      *        noncompliant if it does not comply with one or more of these rules.
      *        </p>
      *        <p>
@@ -282,12 +282,12 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
      *        if any of these resources do not comply.
      *        </p>
      *        <p>
-     *        AWS Config returns the <code>INSUFFICIENT_DATA</code> value when no evaluation results are available for
-     *        the AWS resource or AWS Config rule.
+     *        Config returns the <code>INSUFFICIENT_DATA</code> value when no evaluation results are available for the
+     *        Amazon Web Services resource or Config rule.
      *        </p>
      *        <p>
-     *        For the <code>Compliance</code> data type, AWS Config supports only <code>COMPLIANT</code>,
-     *        <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code> values. AWS Config does not support the
+     *        For the <code>Compliance</code> data type, Config supports only <code>COMPLIANT</code>,
+     *        <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code> values. Config does not support the
      *        <code>NOT_APPLICABLE</code> value for the <code>Compliance</code> data type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ComplianceType
@@ -300,13 +300,13 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of AWS resources or AWS Config rules that cause a result of <code>NON_COMPLIANT</code>, up to a
-     * maximum number.
+     * The number of Amazon Web Services resources or Config rules that cause a result of <code>NON_COMPLIANT</code>, up
+     * to a maximum number.
      * </p>
      * 
      * @param complianceContributorCount
-     *        The number of AWS resources or AWS Config rules that cause a result of <code>NON_COMPLIANT</code>, up to a
-     *        maximum number.
+     *        The number of Amazon Web Services resources or Config rules that cause a result of
+     *        <code>NON_COMPLIANT</code>, up to a maximum number.
      */
 
     public void setComplianceContributorCount(ComplianceContributorCount complianceContributorCount) {
@@ -315,12 +315,12 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of AWS resources or AWS Config rules that cause a result of <code>NON_COMPLIANT</code>, up to a
-     * maximum number.
+     * The number of Amazon Web Services resources or Config rules that cause a result of <code>NON_COMPLIANT</code>, up
+     * to a maximum number.
      * </p>
      * 
-     * @return The number of AWS resources or AWS Config rules that cause a result of <code>NON_COMPLIANT</code>, up to
-     *         a maximum number.
+     * @return The number of Amazon Web Services resources or Config rules that cause a result of
+     *         <code>NON_COMPLIANT</code>, up to a maximum number.
      */
 
     public ComplianceContributorCount getComplianceContributorCount() {
@@ -329,13 +329,13 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of AWS resources or AWS Config rules that cause a result of <code>NON_COMPLIANT</code>, up to a
-     * maximum number.
+     * The number of Amazon Web Services resources or Config rules that cause a result of <code>NON_COMPLIANT</code>, up
+     * to a maximum number.
      * </p>
      * 
      * @param complianceContributorCount
-     *        The number of AWS resources or AWS Config rules that cause a result of <code>NON_COMPLIANT</code>, up to a
-     *        maximum number.
+     *        The number of Amazon Web Services resources or Config rules that cause a result of
+     *        <code>NON_COMPLIANT</code>, up to a maximum number.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

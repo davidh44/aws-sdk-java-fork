@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The Amazon S3 buckets, AWS Lambda functions, or Amazon DynamoDB tables that you specify in your event selectors for
- * your trail to log data events. Data events provide information about the resource operations performed on or within a
+ * The Amazon S3 buckets, Lambda functions, or Amazon DynamoDB tables that you specify in your event selectors for your
+ * trail to log data events. Data events provide information about the resource operations performed on or within a
  * resource itself. These are also known as data plane operations. You can specify up to 250 data resources for a trail.
  * </p>
  * <note>
@@ -64,8 +64,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </li>
  * </ol>
  * <p>
- * The following example demonstrates how logging works when you configure logging of AWS Lambda data events for a
- * Lambda function named <i>MyLambdaFunction</i>, but not for all AWS Lambda functions.
+ * The following example demonstrates how logging works when you configure logging of Lambda data events for a Lambda
+ * function named <i>MyLambdaFunction</i>, but not for all Lambda functions.
  * </p>
  * <ol>
  * <li>
@@ -76,15 +76,15 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </li>
  * <li>
  * <p>
- * The <code>Invoke</code> API operation on <i>MyLambdaFunction</i> is an AWS Lambda API. It is recorded as a data event
- * in CloudTrail. Because the CloudTrail user specified logging data events for <i>MyLambdaFunction</i>, any invocations
- * of that function are logged. The trail processes and logs the event.
+ * The <code>Invoke</code> API operation on <i>MyLambdaFunction</i> is an Lambda API. It is recorded as a data event in
+ * CloudTrail. Because the CloudTrail user specified logging data events for <i>MyLambdaFunction</i>, any invocations of
+ * that function are logged. The trail processes and logs the event.
  * </p>
  * </li>
  * <li>
  * <p>
- * The <code>Invoke</code> API operation on <i>MyOtherLambdaFunction</i> is an AWS Lambda API. Because the CloudTrail
- * user did not specify logging data events for all Lambda functions, the <code>Invoke</code> operation for
+ * The <code>Invoke</code> API operation on <i>MyOtherLambdaFunction</i> is an Lambda API. Because the CloudTrail user
+ * did not specify logging data events for all Lambda functions, the <code>Invoke</code> operation for
  * <i>MyOtherLambdaFunction</i> does not match the function specified for the trail. The trail doesn’t log the event.
  * </p>
  * </li>
@@ -102,9 +102,9 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <code>AWS::Lambda::Function</code>, or <code>AWS::DynamoDB::Table</code> resources.
      * </p>
      * <p>
-     * The <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>, and
-     * <code>AWS::S3ObjectLambda::AccessPoint</code> resource types are not valid in basic event selectors. To log data
-     * events on these resource types, use advanced event selectors.
+     * The <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>,
+     * <code>AWS::S3ObjectLambda::AccessPoint</code>, and <code>AWS::EC2::Snapshot</code> resource types are not valid
+     * in basic event selectors. To log data events on these resource types, use advanced event selectors.
      * </p>
      */
     private String type;
@@ -115,13 +115,13 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * To log data events for all objects in all S3 buckets in your AWS account, specify the prefix as
+     * To log data events for all objects in all S3 buckets in your Amazon Web Services account, specify the prefix as
      * <code>arn:aws:s3:::</code>.
      * </p>
      * <note>
      * <p>
-     * This will also enable logging of data event activity performed by any user or role in your AWS account, even if
-     * that activity is performed on a bucket that belongs to another AWS account.
+     * This also enables logging of data event activity performed by any user or role in your Amazon Web Services
+     * account, even if that activity is performed on a bucket that belongs to another Amazon Web Services account.
      * </p>
      * </note></li>
      * <li>
@@ -139,13 +139,14 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * To log data events for all Lambda functions in your AWS account, specify the prefix as
+     * To log data events for all Lambda functions in your Amazon Web Services account, specify the prefix as
      * <code>arn:aws:lambda</code>.
      * </p>
      * <note>
      * <p>
-     * This will also enable logging of <code>Invoke</code> activity performed by any user or role in your AWS account,
-     * even if that activity is performed on a function that belongs to another AWS account.
+     * This also enables logging of <code>Invoke</code> activity performed by any user or role in your Amazon Web
+     * Services account, even if that activity is performed on a function that belongs to another Amazon Web Services
+     * account.
      * </p>
      * </note></li>
      * <li>
@@ -162,7 +163,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </note></li>
      * <li>
      * <p>
-     * To log data events for all DynamoDB tables in your AWS account, specify the prefix as
+     * To log data events for all DynamoDB tables in your Amazon Web Services account, specify the prefix as
      * <code>arn:aws:dynamodb</code>.
      * </p>
      * </li>
@@ -176,18 +177,18 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <code>AWS::Lambda::Function</code>, or <code>AWS::DynamoDB::Table</code> resources.
      * </p>
      * <p>
-     * The <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>, and
-     * <code>AWS::S3ObjectLambda::AccessPoint</code> resource types are not valid in basic event selectors. To log data
-     * events on these resource types, use advanced event selectors.
+     * The <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>,
+     * <code>AWS::S3ObjectLambda::AccessPoint</code>, and <code>AWS::EC2::Snapshot</code> resource types are not valid
+     * in basic event selectors. To log data events on these resource types, use advanced event selectors.
      * </p>
      * 
      * @param type
      *        The resource type in which you want to log data events. You can specify <code>AWS::S3::Object</code>,
      *        <code>AWS::Lambda::Function</code>, or <code>AWS::DynamoDB::Table</code> resources.</p>
      *        <p>
-     *        The <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>, and
-     *        <code>AWS::S3ObjectLambda::AccessPoint</code> resource types are not valid in basic event selectors. To
-     *        log data events on these resource types, use advanced event selectors.
+     *        The <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>,
+     *        <code>AWS::S3ObjectLambda::AccessPoint</code>, and <code>AWS::EC2::Snapshot</code> resource types are not
+     *        valid in basic event selectors. To log data events on these resource types, use advanced event selectors.
      */
 
     public void setType(String type) {
@@ -200,17 +201,17 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <code>AWS::Lambda::Function</code>, or <code>AWS::DynamoDB::Table</code> resources.
      * </p>
      * <p>
-     * The <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>, and
-     * <code>AWS::S3ObjectLambda::AccessPoint</code> resource types are not valid in basic event selectors. To log data
-     * events on these resource types, use advanced event selectors.
+     * The <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>,
+     * <code>AWS::S3ObjectLambda::AccessPoint</code>, and <code>AWS::EC2::Snapshot</code> resource types are not valid
+     * in basic event selectors. To log data events on these resource types, use advanced event selectors.
      * </p>
      * 
      * @return The resource type in which you want to log data events. You can specify <code>AWS::S3::Object</code>,
      *         <code>AWS::Lambda::Function</code>, or <code>AWS::DynamoDB::Table</code> resources.</p>
      *         <p>
-     *         The <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>, and
-     *         <code>AWS::S3ObjectLambda::AccessPoint</code> resource types are not valid in basic event selectors. To
-     *         log data events on these resource types, use advanced event selectors.
+     *         The <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>,
+     *         <code>AWS::S3ObjectLambda::AccessPoint</code>, and <code>AWS::EC2::Snapshot</code> resource types are not
+     *         valid in basic event selectors. To log data events on these resource types, use advanced event selectors.
      */
 
     public String getType() {
@@ -223,18 +224,18 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <code>AWS::Lambda::Function</code>, or <code>AWS::DynamoDB::Table</code> resources.
      * </p>
      * <p>
-     * The <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>, and
-     * <code>AWS::S3ObjectLambda::AccessPoint</code> resource types are not valid in basic event selectors. To log data
-     * events on these resource types, use advanced event selectors.
+     * The <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>,
+     * <code>AWS::S3ObjectLambda::AccessPoint</code>, and <code>AWS::EC2::Snapshot</code> resource types are not valid
+     * in basic event selectors. To log data events on these resource types, use advanced event selectors.
      * </p>
      * 
      * @param type
      *        The resource type in which you want to log data events. You can specify <code>AWS::S3::Object</code>,
      *        <code>AWS::Lambda::Function</code>, or <code>AWS::DynamoDB::Table</code> resources.</p>
      *        <p>
-     *        The <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>, and
-     *        <code>AWS::S3ObjectLambda::AccessPoint</code> resource types are not valid in basic event selectors. To
-     *        log data events on these resource types, use advanced event selectors.
+     *        The <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>,
+     *        <code>AWS::S3ObjectLambda::AccessPoint</code>, and <code>AWS::EC2::Snapshot</code> resource types are not
+     *        valid in basic event selectors. To log data events on these resource types, use advanced event selectors.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -250,13 +251,13 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * To log data events for all objects in all S3 buckets in your AWS account, specify the prefix as
+     * To log data events for all objects in all S3 buckets in your Amazon Web Services account, specify the prefix as
      * <code>arn:aws:s3:::</code>.
      * </p>
      * <note>
      * <p>
-     * This will also enable logging of data event activity performed by any user or role in your AWS account, even if
-     * that activity is performed on a bucket that belongs to another AWS account.
+     * This also enables logging of data event activity performed by any user or role in your Amazon Web Services
+     * account, even if that activity is performed on a bucket that belongs to another Amazon Web Services account.
      * </p>
      * </note></li>
      * <li>
@@ -274,13 +275,14 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * To log data events for all Lambda functions in your AWS account, specify the prefix as
+     * To log data events for all Lambda functions in your Amazon Web Services account, specify the prefix as
      * <code>arn:aws:lambda</code>.
      * </p>
      * <note>
      * <p>
-     * This will also enable logging of <code>Invoke</code> activity performed by any user or role in your AWS account,
-     * even if that activity is performed on a function that belongs to another AWS account.
+     * This also enables logging of <code>Invoke</code> activity performed by any user or role in your Amazon Web
+     * Services account, even if that activity is performed on a function that belongs to another Amazon Web Services
+     * account.
      * </p>
      * </note></li>
      * <li>
@@ -297,7 +299,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </note></li>
      * <li>
      * <p>
-     * To log data events for all DynamoDB tables in your AWS account, specify the prefix as
+     * To log data events for all DynamoDB tables in your Amazon Web Services account, specify the prefix as
      * <code>arn:aws:dynamodb</code>.
      * </p>
      * </li>
@@ -307,13 +309,14 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         To log data events for all objects in all S3 buckets in your AWS account, specify the prefix as
-     *         <code>arn:aws:s3:::</code>.
+     *         To log data events for all objects in all S3 buckets in your Amazon Web Services account, specify the
+     *         prefix as <code>arn:aws:s3:::</code>.
      *         </p>
      *         <note>
      *         <p>
-     *         This will also enable logging of data event activity performed by any user or role in your AWS account,
-     *         even if that activity is performed on a bucket that belongs to another AWS account.
+     *         This also enables logging of data event activity performed by any user or role in your Amazon Web
+     *         Services account, even if that activity is performed on a bucket that belongs to another Amazon Web
+     *         Services account.
      *         </p>
      *         </note></li>
      *         <li>
@@ -331,13 +334,14 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         To log data events for all Lambda functions in your AWS account, specify the prefix as
+     *         To log data events for all Lambda functions in your Amazon Web Services account, specify the prefix as
      *         <code>arn:aws:lambda</code>.
      *         </p>
      *         <note>
      *         <p>
-     *         This will also enable logging of <code>Invoke</code> activity performed by any user or role in your AWS
-     *         account, even if that activity is performed on a function that belongs to another AWS account.
+     *         This also enables logging of <code>Invoke</code> activity performed by any user or role in your Amazon
+     *         Web Services account, even if that activity is performed on a function that belongs to another Amazon Web
+     *         Services account.
      *         </p>
      *         </note></li>
      *         <li>
@@ -354,7 +358,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *         </note></li>
      *         <li>
      *         <p>
-     *         To log data events for all DynamoDB tables in your AWS account, specify the prefix as
+     *         To log data events for all DynamoDB tables in your Amazon Web Services account, specify the prefix as
      *         <code>arn:aws:dynamodb</code>.
      *         </p>
      *         </li>
@@ -374,13 +378,13 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * To log data events for all objects in all S3 buckets in your AWS account, specify the prefix as
+     * To log data events for all objects in all S3 buckets in your Amazon Web Services account, specify the prefix as
      * <code>arn:aws:s3:::</code>.
      * </p>
      * <note>
      * <p>
-     * This will also enable logging of data event activity performed by any user or role in your AWS account, even if
-     * that activity is performed on a bucket that belongs to another AWS account.
+     * This also enables logging of data event activity performed by any user or role in your Amazon Web Services
+     * account, even if that activity is performed on a bucket that belongs to another Amazon Web Services account.
      * </p>
      * </note></li>
      * <li>
@@ -398,13 +402,14 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * To log data events for all Lambda functions in your AWS account, specify the prefix as
+     * To log data events for all Lambda functions in your Amazon Web Services account, specify the prefix as
      * <code>arn:aws:lambda</code>.
      * </p>
      * <note>
      * <p>
-     * This will also enable logging of <code>Invoke</code> activity performed by any user or role in your AWS account,
-     * even if that activity is performed on a function that belongs to another AWS account.
+     * This also enables logging of <code>Invoke</code> activity performed by any user or role in your Amazon Web
+     * Services account, even if that activity is performed on a function that belongs to another Amazon Web Services
+     * account.
      * </p>
      * </note></li>
      * <li>
@@ -421,7 +426,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </note></li>
      * <li>
      * <p>
-     * To log data events for all DynamoDB tables in your AWS account, specify the prefix as
+     * To log data events for all DynamoDB tables in your Amazon Web Services account, specify the prefix as
      * <code>arn:aws:dynamodb</code>.
      * </p>
      * </li>
@@ -432,13 +437,14 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        To log data events for all objects in all S3 buckets in your AWS account, specify the prefix as
-     *        <code>arn:aws:s3:::</code>.
+     *        To log data events for all objects in all S3 buckets in your Amazon Web Services account, specify the
+     *        prefix as <code>arn:aws:s3:::</code>.
      *        </p>
      *        <note>
      *        <p>
-     *        This will also enable logging of data event activity performed by any user or role in your AWS account,
-     *        even if that activity is performed on a bucket that belongs to another AWS account.
+     *        This also enables logging of data event activity performed by any user or role in your Amazon Web Services
+     *        account, even if that activity is performed on a bucket that belongs to another Amazon Web Services
+     *        account.
      *        </p>
      *        </note></li>
      *        <li>
@@ -456,13 +462,14 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        To log data events for all Lambda functions in your AWS account, specify the prefix as
+     *        To log data events for all Lambda functions in your Amazon Web Services account, specify the prefix as
      *        <code>arn:aws:lambda</code>.
      *        </p>
      *        <note>
      *        <p>
-     *        This will also enable logging of <code>Invoke</code> activity performed by any user or role in your AWS
-     *        account, even if that activity is performed on a function that belongs to another AWS account.
+     *        This also enables logging of <code>Invoke</code> activity performed by any user or role in your Amazon Web
+     *        Services account, even if that activity is performed on a function that belongs to another Amazon Web
+     *        Services account.
      *        </p>
      *        </note></li>
      *        <li>
@@ -479,7 +486,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        </note></li>
      *        <li>
      *        <p>
-     *        To log data events for all DynamoDB tables in your AWS account, specify the prefix as
+     *        To log data events for all DynamoDB tables in your Amazon Web Services account, specify the prefix as
      *        <code>arn:aws:dynamodb</code>.
      *        </p>
      *        </li>
@@ -501,13 +508,13 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * To log data events for all objects in all S3 buckets in your AWS account, specify the prefix as
+     * To log data events for all objects in all S3 buckets in your Amazon Web Services account, specify the prefix as
      * <code>arn:aws:s3:::</code>.
      * </p>
      * <note>
      * <p>
-     * This will also enable logging of data event activity performed by any user or role in your AWS account, even if
-     * that activity is performed on a bucket that belongs to another AWS account.
+     * This also enables logging of data event activity performed by any user or role in your Amazon Web Services
+     * account, even if that activity is performed on a bucket that belongs to another Amazon Web Services account.
      * </p>
      * </note></li>
      * <li>
@@ -525,13 +532,14 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * To log data events for all Lambda functions in your AWS account, specify the prefix as
+     * To log data events for all Lambda functions in your Amazon Web Services account, specify the prefix as
      * <code>arn:aws:lambda</code>.
      * </p>
      * <note>
      * <p>
-     * This will also enable logging of <code>Invoke</code> activity performed by any user or role in your AWS account,
-     * even if that activity is performed on a function that belongs to another AWS account.
+     * This also enables logging of <code>Invoke</code> activity performed by any user or role in your Amazon Web
+     * Services account, even if that activity is performed on a function that belongs to another Amazon Web Services
+     * account.
      * </p>
      * </note></li>
      * <li>
@@ -548,7 +556,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </note></li>
      * <li>
      * <p>
-     * To log data events for all DynamoDB tables in your AWS account, specify the prefix as
+     * To log data events for all DynamoDB tables in your Amazon Web Services account, specify the prefix as
      * <code>arn:aws:dynamodb</code>.
      * </p>
      * </li>
@@ -564,13 +572,14 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        To log data events for all objects in all S3 buckets in your AWS account, specify the prefix as
-     *        <code>arn:aws:s3:::</code>.
+     *        To log data events for all objects in all S3 buckets in your Amazon Web Services account, specify the
+     *        prefix as <code>arn:aws:s3:::</code>.
      *        </p>
      *        <note>
      *        <p>
-     *        This will also enable logging of data event activity performed by any user or role in your AWS account,
-     *        even if that activity is performed on a bucket that belongs to another AWS account.
+     *        This also enables logging of data event activity performed by any user or role in your Amazon Web Services
+     *        account, even if that activity is performed on a bucket that belongs to another Amazon Web Services
+     *        account.
      *        </p>
      *        </note></li>
      *        <li>
@@ -588,13 +597,14 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        To log data events for all Lambda functions in your AWS account, specify the prefix as
+     *        To log data events for all Lambda functions in your Amazon Web Services account, specify the prefix as
      *        <code>arn:aws:lambda</code>.
      *        </p>
      *        <note>
      *        <p>
-     *        This will also enable logging of <code>Invoke</code> activity performed by any user or role in your AWS
-     *        account, even if that activity is performed on a function that belongs to another AWS account.
+     *        This also enables logging of <code>Invoke</code> activity performed by any user or role in your Amazon Web
+     *        Services account, even if that activity is performed on a function that belongs to another Amazon Web
+     *        Services account.
      *        </p>
      *        </note></li>
      *        <li>
@@ -611,7 +621,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        </note></li>
      *        <li>
      *        <p>
-     *        To log data events for all DynamoDB tables in your AWS account, specify the prefix as
+     *        To log data events for all DynamoDB tables in your Amazon Web Services account, specify the prefix as
      *        <code>arn:aws:dynamodb</code>.
      *        </p>
      *        </li>
@@ -635,13 +645,13 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * To log data events for all objects in all S3 buckets in your AWS account, specify the prefix as
+     * To log data events for all objects in all S3 buckets in your Amazon Web Services account, specify the prefix as
      * <code>arn:aws:s3:::</code>.
      * </p>
      * <note>
      * <p>
-     * This will also enable logging of data event activity performed by any user or role in your AWS account, even if
-     * that activity is performed on a bucket that belongs to another AWS account.
+     * This also enables logging of data event activity performed by any user or role in your Amazon Web Services
+     * account, even if that activity is performed on a bucket that belongs to another Amazon Web Services account.
      * </p>
      * </note></li>
      * <li>
@@ -659,13 +669,14 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * To log data events for all Lambda functions in your AWS account, specify the prefix as
+     * To log data events for all Lambda functions in your Amazon Web Services account, specify the prefix as
      * <code>arn:aws:lambda</code>.
      * </p>
      * <note>
      * <p>
-     * This will also enable logging of <code>Invoke</code> activity performed by any user or role in your AWS account,
-     * even if that activity is performed on a function that belongs to another AWS account.
+     * This also enables logging of <code>Invoke</code> activity performed by any user or role in your Amazon Web
+     * Services account, even if that activity is performed on a function that belongs to another Amazon Web Services
+     * account.
      * </p>
      * </note></li>
      * <li>
@@ -682,7 +693,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </note></li>
      * <li>
      * <p>
-     * To log data events for all DynamoDB tables in your AWS account, specify the prefix as
+     * To log data events for all DynamoDB tables in your Amazon Web Services account, specify the prefix as
      * <code>arn:aws:dynamodb</code>.
      * </p>
      * </li>
@@ -693,13 +704,14 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        To log data events for all objects in all S3 buckets in your AWS account, specify the prefix as
-     *        <code>arn:aws:s3:::</code>.
+     *        To log data events for all objects in all S3 buckets in your Amazon Web Services account, specify the
+     *        prefix as <code>arn:aws:s3:::</code>.
      *        </p>
      *        <note>
      *        <p>
-     *        This will also enable logging of data event activity performed by any user or role in your AWS account,
-     *        even if that activity is performed on a bucket that belongs to another AWS account.
+     *        This also enables logging of data event activity performed by any user or role in your Amazon Web Services
+     *        account, even if that activity is performed on a bucket that belongs to another Amazon Web Services
+     *        account.
      *        </p>
      *        </note></li>
      *        <li>
@@ -717,13 +729,14 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        To log data events for all Lambda functions in your AWS account, specify the prefix as
+     *        To log data events for all Lambda functions in your Amazon Web Services account, specify the prefix as
      *        <code>arn:aws:lambda</code>.
      *        </p>
      *        <note>
      *        <p>
-     *        This will also enable logging of <code>Invoke</code> activity performed by any user or role in your AWS
-     *        account, even if that activity is performed on a function that belongs to another AWS account.
+     *        This also enables logging of <code>Invoke</code> activity performed by any user or role in your Amazon Web
+     *        Services account, even if that activity is performed on a function that belongs to another Amazon Web
+     *        Services account.
      *        </p>
      *        </note></li>
      *        <li>
@@ -740,7 +753,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        </note></li>
      *        <li>
      *        <p>
-     *        To log data events for all DynamoDB tables in your AWS account, specify the prefix as
+     *        To log data events for all DynamoDB tables in your Amazon Web Services account, specify the prefix as
      *        <code>arn:aws:dynamodb</code>.
      *        </p>
      *        </li>

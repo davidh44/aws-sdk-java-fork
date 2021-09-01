@@ -45,7 +45,7 @@ public class SelectAggregateResourceConfigRequest extends com.amazonaws.AmazonWe
     private Integer limit;
     /**
      * <p>
-     * The maximum number of query results returned on each page. AWS Config also allows the Limit request parameter.
+     * The maximum number of query results returned on each page. Config also allows the Limit request parameter.
      * </p>
      */
     private Integer maxResults;
@@ -179,12 +179,11 @@ public class SelectAggregateResourceConfigRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The maximum number of query results returned on each page. AWS Config also allows the Limit request parameter.
+     * The maximum number of query results returned on each page. Config also allows the Limit request parameter.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of query results returned on each page. AWS Config also allows the Limit request
-     *        parameter.
+     *        The maximum number of query results returned on each page. Config also allows the Limit request parameter.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -193,10 +192,10 @@ public class SelectAggregateResourceConfigRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The maximum number of query results returned on each page. AWS Config also allows the Limit request parameter.
+     * The maximum number of query results returned on each page. Config also allows the Limit request parameter.
      * </p>
      * 
-     * @return The maximum number of query results returned on each page. AWS Config also allows the Limit request
+     * @return The maximum number of query results returned on each page. Config also allows the Limit request
      *         parameter.
      */
 
@@ -206,12 +205,11 @@ public class SelectAggregateResourceConfigRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The maximum number of query results returned on each page. AWS Config also allows the Limit request parameter.
+     * The maximum number of query results returned on each page. Config also allows the Limit request parameter.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of query results returned on each page. AWS Config also allows the Limit request
-     *        parameter.
+     *        The maximum number of query results returned on each page. Config also allows the Limit request parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

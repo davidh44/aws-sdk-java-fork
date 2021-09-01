@@ -19,9 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An object that specifies organization managed rule metadata such as resource type and ID of AWS resource along with
- * the rule identifier. It also provides the frequency with which you want AWS Config to run evaluations for the rule if
- * the trigger type is periodic.
+ * An object that specifies organization managed rule metadata such as resource type and ID of Amazon Web Services
+ * resource along with the rule identifier. It also provides the frequency with which you want Config to run evaluations
+ * for the rule if the trigger type is periodic.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/OrganizationManagedRuleMetadata"
@@ -40,8 +40,8 @@ public class OrganizationManagedRuleMetadata implements Serializable, Cloneable,
      * <p>
      * For organization config managed rules, a predefined identifier from a list. For example,
      * <code>IAM_PASSWORD_POLICY</code> is a managed rule. To reference a managed rule, see <a
-     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Using AWS
-     * Managed Config Rules</a>.
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Using
+     * Config managed rules</a>.
      * </p>
      */
     private String ruleIdentifier;
@@ -53,8 +53,8 @@ public class OrganizationManagedRuleMetadata implements Serializable, Cloneable,
     private String inputParameters;
     /**
      * <p>
-     * The maximum frequency with which AWS Config runs evaluations for a rule. You are using an AWS managed rule that
-     * is triggered at a periodic frequency.
+     * The maximum frequency with which Config runs evaluations for a rule. You are using an Config managed rule that is
+     * triggered at a periodic frequency.
      * </p>
      * <note>
      * <p>
@@ -66,13 +66,13 @@ public class OrganizationManagedRuleMetadata implements Serializable, Cloneable,
     private String maximumExecutionFrequency;
     /**
      * <p>
-     * The type of the AWS resource that was evaluated.
+     * The type of the Amazon Web Services resource that was evaluated.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> resourceTypesScope;
     /**
      * <p>
-     * The ID of the AWS resource that was evaluated.
+     * The ID of the Amazon Web Services resource that was evaluated.
      * </p>
      */
     private String resourceIdScope;
@@ -135,15 +135,15 @@ public class OrganizationManagedRuleMetadata implements Serializable, Cloneable,
      * <p>
      * For organization config managed rules, a predefined identifier from a list. For example,
      * <code>IAM_PASSWORD_POLICY</code> is a managed rule. To reference a managed rule, see <a
-     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Using AWS
-     * Managed Config Rules</a>.
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Using
+     * Config managed rules</a>.
      * </p>
      * 
      * @param ruleIdentifier
      *        For organization config managed rules, a predefined identifier from a list. For example,
      *        <code>IAM_PASSWORD_POLICY</code> is a managed rule. To reference a managed rule, see <a
      *        href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html"
-     *        >Using AWS Managed Config Rules</a>.
+     *        >Using Config managed rules</a>.
      */
 
     public void setRuleIdentifier(String ruleIdentifier) {
@@ -154,14 +154,14 @@ public class OrganizationManagedRuleMetadata implements Serializable, Cloneable,
      * <p>
      * For organization config managed rules, a predefined identifier from a list. For example,
      * <code>IAM_PASSWORD_POLICY</code> is a managed rule. To reference a managed rule, see <a
-     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Using AWS
-     * Managed Config Rules</a>.
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Using
+     * Config managed rules</a>.
      * </p>
      * 
      * @return For organization config managed rules, a predefined identifier from a list. For example,
      *         <code>IAM_PASSWORD_POLICY</code> is a managed rule. To reference a managed rule, see <a
      *         href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html"
-     *         >Using AWS Managed Config Rules</a>.
+     *         >Using Config managed rules</a>.
      */
 
     public String getRuleIdentifier() {
@@ -172,15 +172,15 @@ public class OrganizationManagedRuleMetadata implements Serializable, Cloneable,
      * <p>
      * For organization config managed rules, a predefined identifier from a list. For example,
      * <code>IAM_PASSWORD_POLICY</code> is a managed rule. To reference a managed rule, see <a
-     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Using AWS
-     * Managed Config Rules</a>.
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Using
+     * Config managed rules</a>.
      * </p>
      * 
      * @param ruleIdentifier
      *        For organization config managed rules, a predefined identifier from a list. For example,
      *        <code>IAM_PASSWORD_POLICY</code> is a managed rule. To reference a managed rule, see <a
      *        href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html"
-     *        >Using AWS Managed Config Rules</a>.
+     *        >Using Config managed rules</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -231,8 +231,8 @@ public class OrganizationManagedRuleMetadata implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The maximum frequency with which AWS Config runs evaluations for a rule. You are using an AWS managed rule that
-     * is triggered at a periodic frequency.
+     * The maximum frequency with which Config runs evaluations for a rule. You are using an Config managed rule that is
+     * triggered at a periodic frequency.
      * </p>
      * <note>
      * <p>
@@ -242,7 +242,7 @@ public class OrganizationManagedRuleMetadata implements Serializable, Cloneable,
      * </note>
      * 
      * @param maximumExecutionFrequency
-     *        The maximum frequency with which AWS Config runs evaluations for a rule. You are using an AWS managed rule
+     *        The maximum frequency with which Config runs evaluations for a rule. You are using an Config managed rule
      *        that is triggered at a periodic frequency.</p> <note>
      *        <p>
      *        By default, rules with a periodic trigger are evaluated every 24 hours. To change the frequency, specify a
@@ -257,8 +257,8 @@ public class OrganizationManagedRuleMetadata implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The maximum frequency with which AWS Config runs evaluations for a rule. You are using an AWS managed rule that
-     * is triggered at a periodic frequency.
+     * The maximum frequency with which Config runs evaluations for a rule. You are using an Config managed rule that is
+     * triggered at a periodic frequency.
      * </p>
      * <note>
      * <p>
@@ -267,8 +267,8 @@ public class OrganizationManagedRuleMetadata implements Serializable, Cloneable,
      * </p>
      * </note>
      * 
-     * @return The maximum frequency with which AWS Config runs evaluations for a rule. You are using an AWS managed
-     *         rule that is triggered at a periodic frequency.</p> <note>
+     * @return The maximum frequency with which Config runs evaluations for a rule. You are using an Config managed rule
+     *         that is triggered at a periodic frequency.</p> <note>
      *         <p>
      *         By default, rules with a periodic trigger are evaluated every 24 hours. To change the frequency, specify
      *         a valid value for the <code>MaximumExecutionFrequency</code> parameter.
@@ -282,8 +282,8 @@ public class OrganizationManagedRuleMetadata implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The maximum frequency with which AWS Config runs evaluations for a rule. You are using an AWS managed rule that
-     * is triggered at a periodic frequency.
+     * The maximum frequency with which Config runs evaluations for a rule. You are using an Config managed rule that is
+     * triggered at a periodic frequency.
      * </p>
      * <note>
      * <p>
@@ -293,7 +293,7 @@ public class OrganizationManagedRuleMetadata implements Serializable, Cloneable,
      * </note>
      * 
      * @param maximumExecutionFrequency
-     *        The maximum frequency with which AWS Config runs evaluations for a rule. You are using an AWS managed rule
+     *        The maximum frequency with which Config runs evaluations for a rule. You are using an Config managed rule
      *        that is triggered at a periodic frequency.</p> <note>
      *        <p>
      *        By default, rules with a periodic trigger are evaluated every 24 hours. To change the frequency, specify a
@@ -310,8 +310,8 @@ public class OrganizationManagedRuleMetadata implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The maximum frequency with which AWS Config runs evaluations for a rule. You are using an AWS managed rule that
-     * is triggered at a periodic frequency.
+     * The maximum frequency with which Config runs evaluations for a rule. You are using an Config managed rule that is
+     * triggered at a periodic frequency.
      * </p>
      * <note>
      * <p>
@@ -321,7 +321,7 @@ public class OrganizationManagedRuleMetadata implements Serializable, Cloneable,
      * </note>
      * 
      * @param maximumExecutionFrequency
-     *        The maximum frequency with which AWS Config runs evaluations for a rule. You are using an AWS managed rule
+     *        The maximum frequency with which Config runs evaluations for a rule. You are using an Config managed rule
      *        that is triggered at a periodic frequency.</p> <note>
      *        <p>
      *        By default, rules with a periodic trigger are evaluated every 24 hours. To change the frequency, specify a
@@ -338,10 +338,10 @@ public class OrganizationManagedRuleMetadata implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The type of the AWS resource that was evaluated.
+     * The type of the Amazon Web Services resource that was evaluated.
      * </p>
      * 
-     * @return The type of the AWS resource that was evaluated.
+     * @return The type of the Amazon Web Services resource that was evaluated.
      */
 
     public java.util.List<String> getResourceTypesScope() {
@@ -353,11 +353,11 @@ public class OrganizationManagedRuleMetadata implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The type of the AWS resource that was evaluated.
+     * The type of the Amazon Web Services resource that was evaluated.
      * </p>
      * 
      * @param resourceTypesScope
-     *        The type of the AWS resource that was evaluated.
+     *        The type of the Amazon Web Services resource that was evaluated.
      */
 
     public void setResourceTypesScope(java.util.Collection<String> resourceTypesScope) {
@@ -371,7 +371,7 @@ public class OrganizationManagedRuleMetadata implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The type of the AWS resource that was evaluated.
+     * The type of the Amazon Web Services resource that was evaluated.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -380,7 +380,7 @@ public class OrganizationManagedRuleMetadata implements Serializable, Cloneable,
      * </p>
      * 
      * @param resourceTypesScope
-     *        The type of the AWS resource that was evaluated.
+     *        The type of the Amazon Web Services resource that was evaluated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -396,11 +396,11 @@ public class OrganizationManagedRuleMetadata implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The type of the AWS resource that was evaluated.
+     * The type of the Amazon Web Services resource that was evaluated.
      * </p>
      * 
      * @param resourceTypesScope
-     *        The type of the AWS resource that was evaluated.
+     *        The type of the Amazon Web Services resource that was evaluated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -411,11 +411,11 @@ public class OrganizationManagedRuleMetadata implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The ID of the AWS resource that was evaluated.
+     * The ID of the Amazon Web Services resource that was evaluated.
      * </p>
      * 
      * @param resourceIdScope
-     *        The ID of the AWS resource that was evaluated.
+     *        The ID of the Amazon Web Services resource that was evaluated.
      */
 
     public void setResourceIdScope(String resourceIdScope) {
@@ -424,10 +424,10 @@ public class OrganizationManagedRuleMetadata implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The ID of the AWS resource that was evaluated.
+     * The ID of the Amazon Web Services resource that was evaluated.
      * </p>
      * 
-     * @return The ID of the AWS resource that was evaluated.
+     * @return The ID of the Amazon Web Services resource that was evaluated.
      */
 
     public String getResourceIdScope() {
@@ -436,11 +436,11 @@ public class OrganizationManagedRuleMetadata implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The ID of the AWS resource that was evaluated.
+     * The ID of the Amazon Web Services resource that was evaluated.
      * </p>
      * 
      * @param resourceIdScope
-     *        The ID of the AWS resource that was evaluated.
+     *        The ID of the Amazon Web Services resource that was evaluated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -71,6 +71,12 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The information about the integration of the application with other services, such as Resource Groups.
+     * </p>
+     */
+    private Integrations integrations;
 
     /**
      * <p>
@@ -424,6 +430,46 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
     }
 
     /**
+     * <p>
+     * The information about the integration of the application with other services, such as Resource Groups.
+     * </p>
+     * 
+     * @param integrations
+     *        The information about the integration of the application with other services, such as Resource Groups.
+     */
+
+    public void setIntegrations(Integrations integrations) {
+        this.integrations = integrations;
+    }
+
+    /**
+     * <p>
+     * The information about the integration of the application with other services, such as Resource Groups.
+     * </p>
+     * 
+     * @return The information about the integration of the application with other services, such as Resource Groups.
+     */
+
+    public Integrations getIntegrations() {
+        return this.integrations;
+    }
+
+    /**
+     * <p>
+     * The information about the integration of the application with other services, such as Resource Groups.
+     * </p>
+     * 
+     * @param integrations
+     *        The information about the integration of the application with other services, such as Resource Groups.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetApplicationResult withIntegrations(Integrations integrations) {
+        setIntegrations(integrations);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -450,7 +496,9 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
         if (getAssociatedResourceCount() != null)
             sb.append("AssociatedResourceCount: ").append(getAssociatedResourceCount()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getIntegrations() != null)
+            sb.append("Integrations: ").append(getIntegrations());
         sb.append("}");
         return sb.toString();
     }
@@ -497,6 +545,10 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getIntegrations() == null ^ this.getIntegrations() == null)
+            return false;
+        if (other.getIntegrations() != null && other.getIntegrations().equals(this.getIntegrations()) == false)
+            return false;
         return true;
     }
 
@@ -513,6 +565,7 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
         hashCode = prime * hashCode + ((getLastUpdateTime() == null) ? 0 : getLastUpdateTime().hashCode());
         hashCode = prime * hashCode + ((getAssociatedResourceCount() == null) ? 0 : getAssociatedResourceCount().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getIntegrations() == null) ? 0 : getIntegrations().hashCode());
         return hashCode;
     }
 

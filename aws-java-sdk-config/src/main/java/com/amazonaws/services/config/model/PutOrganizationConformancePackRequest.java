@@ -52,7 +52,7 @@ public class PutOrganizationConformancePackRequest extends com.amazonaws.AmazonW
     private String templateBody;
     /**
      * <p>
-     * Amazon S3 bucket where AWS Config stores conformance pack templates.
+     * The name of the Amazon S3 bucket where Config stores conformance pack templates.
      * </p>
      * <note>
      * <p>
@@ -80,7 +80,8 @@ public class PutOrganizationConformancePackRequest extends com.amazonaws.AmazonW
     private com.amazonaws.internal.SdkInternalList<ConformancePackInputParameter> conformancePackInputParameters;
     /**
      * <p>
-     * A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
+     * A list of Amazon Web Services accounts to be excluded from an organization conformance pack while deploying a
+     * conformance pack.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> excludedAccounts;
@@ -243,7 +244,7 @@ public class PutOrganizationConformancePackRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Amazon S3 bucket where AWS Config stores conformance pack templates.
+     * The name of the Amazon S3 bucket where Config stores conformance pack templates.
      * </p>
      * <note>
      * <p>
@@ -252,7 +253,7 @@ public class PutOrganizationConformancePackRequest extends com.amazonaws.AmazonW
      * </note>
      * 
      * @param deliveryS3Bucket
-     *        Amazon S3 bucket where AWS Config stores conformance pack templates.</p> <note>
+     *        The name of the Amazon S3 bucket where Config stores conformance pack templates.</p> <note>
      *        <p>
      *        This field is optional. If used, it must be prefixed with <code>awsconfigconforms</code>.
      *        </p>
@@ -264,7 +265,7 @@ public class PutOrganizationConformancePackRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Amazon S3 bucket where AWS Config stores conformance pack templates.
+     * The name of the Amazon S3 bucket where Config stores conformance pack templates.
      * </p>
      * <note>
      * <p>
@@ -272,7 +273,7 @@ public class PutOrganizationConformancePackRequest extends com.amazonaws.AmazonW
      * </p>
      * </note>
      * 
-     * @return Amazon S3 bucket where AWS Config stores conformance pack templates.</p> <note>
+     * @return The name of the Amazon S3 bucket where Config stores conformance pack templates.</p> <note>
      *         <p>
      *         This field is optional. If used, it must be prefixed with <code>awsconfigconforms</code>.
      *         </p>
@@ -284,7 +285,7 @@ public class PutOrganizationConformancePackRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Amazon S3 bucket where AWS Config stores conformance pack templates.
+     * The name of the Amazon S3 bucket where Config stores conformance pack templates.
      * </p>
      * <note>
      * <p>
@@ -293,7 +294,7 @@ public class PutOrganizationConformancePackRequest extends com.amazonaws.AmazonW
      * </note>
      * 
      * @param deliveryS3Bucket
-     *        Amazon S3 bucket where AWS Config stores conformance pack templates.</p> <note>
+     *        The name of the Amazon S3 bucket where Config stores conformance pack templates.</p> <note>
      *        <p>
      *        This field is optional. If used, it must be prefixed with <code>awsconfigconforms</code>.
      *        </p>
@@ -445,11 +446,12 @@ public class PutOrganizationConformancePackRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
+     * A list of Amazon Web Services accounts to be excluded from an organization conformance pack while deploying a
+     * conformance pack.
      * </p>
      * 
-     * @return A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance
-     *         pack.
+     * @return A list of Amazon Web Services accounts to be excluded from an organization conformance pack while
+     *         deploying a conformance pack.
      */
 
     public java.util.List<String> getExcludedAccounts() {
@@ -461,12 +463,13 @@ public class PutOrganizationConformancePackRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
+     * A list of Amazon Web Services accounts to be excluded from an organization conformance pack while deploying a
+     * conformance pack.
      * </p>
      * 
      * @param excludedAccounts
-     *        A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance
-     *        pack.
+     *        A list of Amazon Web Services accounts to be excluded from an organization conformance pack while
+     *        deploying a conformance pack.
      */
 
     public void setExcludedAccounts(java.util.Collection<String> excludedAccounts) {
@@ -480,7 +483,8 @@ public class PutOrganizationConformancePackRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
+     * A list of Amazon Web Services accounts to be excluded from an organization conformance pack while deploying a
+     * conformance pack.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -489,8 +493,8 @@ public class PutOrganizationConformancePackRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param excludedAccounts
-     *        A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance
-     *        pack.
+     *        A list of Amazon Web Services accounts to be excluded from an organization conformance pack while
+     *        deploying a conformance pack.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -506,12 +510,13 @@ public class PutOrganizationConformancePackRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
+     * A list of Amazon Web Services accounts to be excluded from an organization conformance pack while deploying a
+     * conformance pack.
      * </p>
      * 
      * @param excludedAccounts
-     *        A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance
-     *        pack.
+     *        A list of Amazon Web Services accounts to be excluded from an organization conformance pack while
+     *        deploying a conformance pack.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

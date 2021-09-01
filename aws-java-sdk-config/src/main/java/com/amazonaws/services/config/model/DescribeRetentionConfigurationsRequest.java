@@ -27,12 +27,12 @@ public class DescribeRetentionConfigurationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * A list of names of retention configurations for which you want details. If you do not specify a name, AWS Config
+     * A list of names of retention configurations for which you want details. If you do not specify a name, Config
      * returns details for all the retention configurations for that account.
      * </p>
      * <note>
      * <p>
-     * Currently, AWS Config supports only one retention configuration per region in your account.
+     * Currently, Config supports only one retention configuration per region in your account.
      * </p>
      * </note>
      */
@@ -47,19 +47,19 @@ public class DescribeRetentionConfigurationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * A list of names of retention configurations for which you want details. If you do not specify a name, AWS Config
+     * A list of names of retention configurations for which you want details. If you do not specify a name, Config
      * returns details for all the retention configurations for that account.
      * </p>
      * <note>
      * <p>
-     * Currently, AWS Config supports only one retention configuration per region in your account.
+     * Currently, Config supports only one retention configuration per region in your account.
      * </p>
      * </note>
      * 
-     * @return A list of names of retention configurations for which you want details. If you do not specify a name, AWS
+     * @return A list of names of retention configurations for which you want details. If you do not specify a name,
      *         Config returns details for all the retention configurations for that account.</p> <note>
      *         <p>
-     *         Currently, AWS Config supports only one retention configuration per region in your account.
+     *         Currently, Config supports only one retention configuration per region in your account.
      *         </p>
      */
 
@@ -72,20 +72,20 @@ public class DescribeRetentionConfigurationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * A list of names of retention configurations for which you want details. If you do not specify a name, AWS Config
+     * A list of names of retention configurations for which you want details. If you do not specify a name, Config
      * returns details for all the retention configurations for that account.
      * </p>
      * <note>
      * <p>
-     * Currently, AWS Config supports only one retention configuration per region in your account.
+     * Currently, Config supports only one retention configuration per region in your account.
      * </p>
      * </note>
      * 
      * @param retentionConfigurationNames
-     *        A list of names of retention configurations for which you want details. If you do not specify a name, AWS
+     *        A list of names of retention configurations for which you want details. If you do not specify a name,
      *        Config returns details for all the retention configurations for that account.</p> <note>
      *        <p>
-     *        Currently, AWS Config supports only one retention configuration per region in your account.
+     *        Currently, Config supports only one retention configuration per region in your account.
      *        </p>
      */
 
@@ -100,12 +100,12 @@ public class DescribeRetentionConfigurationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * A list of names of retention configurations for which you want details. If you do not specify a name, AWS Config
+     * A list of names of retention configurations for which you want details. If you do not specify a name, Config
      * returns details for all the retention configurations for that account.
      * </p>
      * <note>
      * <p>
-     * Currently, AWS Config supports only one retention configuration per region in your account.
+     * Currently, Config supports only one retention configuration per region in your account.
      * </p>
      * </note>
      * <p>
@@ -115,10 +115,10 @@ public class DescribeRetentionConfigurationsRequest extends com.amazonaws.Amazon
      * </p>
      * 
      * @param retentionConfigurationNames
-     *        A list of names of retention configurations for which you want details. If you do not specify a name, AWS
+     *        A list of names of retention configurations for which you want details. If you do not specify a name,
      *        Config returns details for all the retention configurations for that account.</p> <note>
      *        <p>
-     *        Currently, AWS Config supports only one retention configuration per region in your account.
+     *        Currently, Config supports only one retention configuration per region in your account.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -135,20 +135,20 @@ public class DescribeRetentionConfigurationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * A list of names of retention configurations for which you want details. If you do not specify a name, AWS Config
+     * A list of names of retention configurations for which you want details. If you do not specify a name, Config
      * returns details for all the retention configurations for that account.
      * </p>
      * <note>
      * <p>
-     * Currently, AWS Config supports only one retention configuration per region in your account.
+     * Currently, Config supports only one retention configuration per region in your account.
      * </p>
      * </note>
      * 
      * @param retentionConfigurationNames
-     *        A list of names of retention configurations for which you want details. If you do not specify a name, AWS
+     *        A list of names of retention configurations for which you want details. If you do not specify a name,
      *        Config returns details for all the retention configurations for that account.</p> <note>
      *        <p>
-     *        Currently, AWS Config supports only one retention configuration per region in your account.
+     *        Currently, Config supports only one retention configuration per region in your account.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

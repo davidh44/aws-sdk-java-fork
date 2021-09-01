@@ -136,29 +136,29 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
     private Integer networkCardIndex;
     /**
      * <p>
-     * One or more IPv4 delegated prefixes to be assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv4PrefixCount</code> option.
+     * One or more IPv4 prefixes to be assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv4PrefixCount</code> option.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Ipv4PrefixSpecificationRequest> ipv4Prefixes;
     /**
      * <p>
-     * The number of IPv4 delegated prefixes to be automatically assigned to the network interface. You cannot use this
-     * option if you use the <code>Ipv4Prefix</code> option.
+     * The number of IPv4 prefixes to be automatically assigned to the network interface. You cannot use this option if
+     * you use the <code>Ipv4Prefix</code> option.
      * </p>
      */
     private Integer ipv4PrefixCount;
     /**
      * <p>
-     * One or more IPv6 delegated prefixes to be assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv6PrefixCount</code> option.
+     * One or more IPv6 prefixes to be assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv6PrefixCount</code> option.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Ipv6PrefixSpecificationRequest> ipv6Prefixes;
     /**
      * <p>
-     * The number of IPv6 delegated prefixes to be automatically assigned to the network interface. You cannot use this
-     * option if you use the <code>Ipv6Prefix</code> option.
+     * The number of IPv6 prefixes to be automatically assigned to the network interface. You cannot use this option if
+     * you use the <code>Ipv6Prefix</code> option.
      * </p>
      */
     private Integer ipv6PrefixCount;
@@ -1010,12 +1010,12 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
 
     /**
      * <p>
-     * One or more IPv4 delegated prefixes to be assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv4PrefixCount</code> option.
+     * One or more IPv4 prefixes to be assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv4PrefixCount</code> option.
      * </p>
      * 
-     * @return One or more IPv4 delegated prefixes to be assigned to the network interface. You cannot use this option
-     *         if you use the <code>Ipv4PrefixCount</code> option.
+     * @return One or more IPv4 prefixes to be assigned to the network interface. You cannot use this option if you use
+     *         the <code>Ipv4PrefixCount</code> option.
      */
 
     public java.util.List<Ipv4PrefixSpecificationRequest> getIpv4Prefixes() {
@@ -1027,13 +1027,13 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
 
     /**
      * <p>
-     * One or more IPv4 delegated prefixes to be assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv4PrefixCount</code> option.
+     * One or more IPv4 prefixes to be assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv4PrefixCount</code> option.
      * </p>
      * 
      * @param ipv4Prefixes
-     *        One or more IPv4 delegated prefixes to be assigned to the network interface. You cannot use this option if
-     *        you use the <code>Ipv4PrefixCount</code> option.
+     *        One or more IPv4 prefixes to be assigned to the network interface. You cannot use this option if you use
+     *        the <code>Ipv4PrefixCount</code> option.
      */
 
     public void setIpv4Prefixes(java.util.Collection<Ipv4PrefixSpecificationRequest> ipv4Prefixes) {
@@ -1047,8 +1047,8 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
 
     /**
      * <p>
-     * One or more IPv4 delegated prefixes to be assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv4PrefixCount</code> option.
+     * One or more IPv4 prefixes to be assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv4PrefixCount</code> option.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1057,8 +1057,8 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
      * </p>
      * 
      * @param ipv4Prefixes
-     *        One or more IPv4 delegated prefixes to be assigned to the network interface. You cannot use this option if
-     *        you use the <code>Ipv4PrefixCount</code> option.
+     *        One or more IPv4 prefixes to be assigned to the network interface. You cannot use this option if you use
+     *        the <code>Ipv4PrefixCount</code> option.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1074,13 +1074,13 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
 
     /**
      * <p>
-     * One or more IPv4 delegated prefixes to be assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv4PrefixCount</code> option.
+     * One or more IPv4 prefixes to be assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv4PrefixCount</code> option.
      * </p>
      * 
      * @param ipv4Prefixes
-     *        One or more IPv4 delegated prefixes to be assigned to the network interface. You cannot use this option if
-     *        you use the <code>Ipv4PrefixCount</code> option.
+     *        One or more IPv4 prefixes to be assigned to the network interface. You cannot use this option if you use
+     *        the <code>Ipv4PrefixCount</code> option.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1091,13 +1091,13 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
 
     /**
      * <p>
-     * The number of IPv4 delegated prefixes to be automatically assigned to the network interface. You cannot use this
-     * option if you use the <code>Ipv4Prefix</code> option.
+     * The number of IPv4 prefixes to be automatically assigned to the network interface. You cannot use this option if
+     * you use the <code>Ipv4Prefix</code> option.
      * </p>
      * 
      * @param ipv4PrefixCount
-     *        The number of IPv4 delegated prefixes to be automatically assigned to the network interface. You cannot
-     *        use this option if you use the <code>Ipv4Prefix</code> option.
+     *        The number of IPv4 prefixes to be automatically assigned to the network interface. You cannot use this
+     *        option if you use the <code>Ipv4Prefix</code> option.
      */
 
     public void setIpv4PrefixCount(Integer ipv4PrefixCount) {
@@ -1106,12 +1106,12 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
 
     /**
      * <p>
-     * The number of IPv4 delegated prefixes to be automatically assigned to the network interface. You cannot use this
-     * option if you use the <code>Ipv4Prefix</code> option.
+     * The number of IPv4 prefixes to be automatically assigned to the network interface. You cannot use this option if
+     * you use the <code>Ipv4Prefix</code> option.
      * </p>
      * 
-     * @return The number of IPv4 delegated prefixes to be automatically assigned to the network interface. You cannot
-     *         use this option if you use the <code>Ipv4Prefix</code> option.
+     * @return The number of IPv4 prefixes to be automatically assigned to the network interface. You cannot use this
+     *         option if you use the <code>Ipv4Prefix</code> option.
      */
 
     public Integer getIpv4PrefixCount() {
@@ -1120,13 +1120,13 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
 
     /**
      * <p>
-     * The number of IPv4 delegated prefixes to be automatically assigned to the network interface. You cannot use this
-     * option if you use the <code>Ipv4Prefix</code> option.
+     * The number of IPv4 prefixes to be automatically assigned to the network interface. You cannot use this option if
+     * you use the <code>Ipv4Prefix</code> option.
      * </p>
      * 
      * @param ipv4PrefixCount
-     *        The number of IPv4 delegated prefixes to be automatically assigned to the network interface. You cannot
-     *        use this option if you use the <code>Ipv4Prefix</code> option.
+     *        The number of IPv4 prefixes to be automatically assigned to the network interface. You cannot use this
+     *        option if you use the <code>Ipv4Prefix</code> option.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1137,12 +1137,12 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
 
     /**
      * <p>
-     * One or more IPv6 delegated prefixes to be assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv6PrefixCount</code> option.
+     * One or more IPv6 prefixes to be assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv6PrefixCount</code> option.
      * </p>
      * 
-     * @return One or more IPv6 delegated prefixes to be assigned to the network interface. You cannot use this option
-     *         if you use the <code>Ipv6PrefixCount</code> option.
+     * @return One or more IPv6 prefixes to be assigned to the network interface. You cannot use this option if you use
+     *         the <code>Ipv6PrefixCount</code> option.
      */
 
     public java.util.List<Ipv6PrefixSpecificationRequest> getIpv6Prefixes() {
@@ -1154,13 +1154,13 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
 
     /**
      * <p>
-     * One or more IPv6 delegated prefixes to be assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv6PrefixCount</code> option.
+     * One or more IPv6 prefixes to be assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv6PrefixCount</code> option.
      * </p>
      * 
      * @param ipv6Prefixes
-     *        One or more IPv6 delegated prefixes to be assigned to the network interface. You cannot use this option if
-     *        you use the <code>Ipv6PrefixCount</code> option.
+     *        One or more IPv6 prefixes to be assigned to the network interface. You cannot use this option if you use
+     *        the <code>Ipv6PrefixCount</code> option.
      */
 
     public void setIpv6Prefixes(java.util.Collection<Ipv6PrefixSpecificationRequest> ipv6Prefixes) {
@@ -1174,8 +1174,8 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
 
     /**
      * <p>
-     * One or more IPv6 delegated prefixes to be assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv6PrefixCount</code> option.
+     * One or more IPv6 prefixes to be assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv6PrefixCount</code> option.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1184,8 +1184,8 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
      * </p>
      * 
      * @param ipv6Prefixes
-     *        One or more IPv6 delegated prefixes to be assigned to the network interface. You cannot use this option if
-     *        you use the <code>Ipv6PrefixCount</code> option.
+     *        One or more IPv6 prefixes to be assigned to the network interface. You cannot use this option if you use
+     *        the <code>Ipv6PrefixCount</code> option.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1201,13 +1201,13 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
 
     /**
      * <p>
-     * One or more IPv6 delegated prefixes to be assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv6PrefixCount</code> option.
+     * One or more IPv6 prefixes to be assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv6PrefixCount</code> option.
      * </p>
      * 
      * @param ipv6Prefixes
-     *        One or more IPv6 delegated prefixes to be assigned to the network interface. You cannot use this option if
-     *        you use the <code>Ipv6PrefixCount</code> option.
+     *        One or more IPv6 prefixes to be assigned to the network interface. You cannot use this option if you use
+     *        the <code>Ipv6PrefixCount</code> option.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1218,13 +1218,13 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
 
     /**
      * <p>
-     * The number of IPv6 delegated prefixes to be automatically assigned to the network interface. You cannot use this
-     * option if you use the <code>Ipv6Prefix</code> option.
+     * The number of IPv6 prefixes to be automatically assigned to the network interface. You cannot use this option if
+     * you use the <code>Ipv6Prefix</code> option.
      * </p>
      * 
      * @param ipv6PrefixCount
-     *        The number of IPv6 delegated prefixes to be automatically assigned to the network interface. You cannot
-     *        use this option if you use the <code>Ipv6Prefix</code> option.
+     *        The number of IPv6 prefixes to be automatically assigned to the network interface. You cannot use this
+     *        option if you use the <code>Ipv6Prefix</code> option.
      */
 
     public void setIpv6PrefixCount(Integer ipv6PrefixCount) {
@@ -1233,12 +1233,12 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
 
     /**
      * <p>
-     * The number of IPv6 delegated prefixes to be automatically assigned to the network interface. You cannot use this
-     * option if you use the <code>Ipv6Prefix</code> option.
+     * The number of IPv6 prefixes to be automatically assigned to the network interface. You cannot use this option if
+     * you use the <code>Ipv6Prefix</code> option.
      * </p>
      * 
-     * @return The number of IPv6 delegated prefixes to be automatically assigned to the network interface. You cannot
-     *         use this option if you use the <code>Ipv6Prefix</code> option.
+     * @return The number of IPv6 prefixes to be automatically assigned to the network interface. You cannot use this
+     *         option if you use the <code>Ipv6Prefix</code> option.
      */
 
     public Integer getIpv6PrefixCount() {
@@ -1247,13 +1247,13 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
 
     /**
      * <p>
-     * The number of IPv6 delegated prefixes to be automatically assigned to the network interface. You cannot use this
-     * option if you use the <code>Ipv6Prefix</code> option.
+     * The number of IPv6 prefixes to be automatically assigned to the network interface. You cannot use this option if
+     * you use the <code>Ipv6Prefix</code> option.
      * </p>
      * 
      * @param ipv6PrefixCount
-     *        The number of IPv6 delegated prefixes to be automatically assigned to the network interface. You cannot
-     *        use this option if you use the <code>Ipv6Prefix</code> option.
+     *        The number of IPv6 prefixes to be automatically assigned to the network interface. You cannot use this
+     *        option if you use the <code>Ipv6Prefix</code> option.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

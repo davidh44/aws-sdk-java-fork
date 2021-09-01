@@ -36,7 +36,7 @@ public class AggregateConformancePackComplianceSummary implements Serializable, 
     private AggregateConformancePackComplianceCount complianceSummary;
     /**
      * <p>
-     * Groups the result based on AWS Account ID or AWS Region.
+     * Groups the result based on Amazon Web Services account ID or Amazon Web Services Region.
      * </p>
      */
     private String groupName;
@@ -83,11 +83,11 @@ public class AggregateConformancePackComplianceSummary implements Serializable, 
 
     /**
      * <p>
-     * Groups the result based on AWS Account ID or AWS Region.
+     * Groups the result based on Amazon Web Services account ID or Amazon Web Services Region.
      * </p>
      * 
      * @param groupName
-     *        Groups the result based on AWS Account ID or AWS Region.
+     *        Groups the result based on Amazon Web Services account ID or Amazon Web Services Region.
      */
 
     public void setGroupName(String groupName) {
@@ -96,10 +96,10 @@ public class AggregateConformancePackComplianceSummary implements Serializable, 
 
     /**
      * <p>
-     * Groups the result based on AWS Account ID or AWS Region.
+     * Groups the result based on Amazon Web Services account ID or Amazon Web Services Region.
      * </p>
      * 
-     * @return Groups the result based on AWS Account ID or AWS Region.
+     * @return Groups the result based on Amazon Web Services account ID or Amazon Web Services Region.
      */
 
     public String getGroupName() {
@@ -108,11 +108,11 @@ public class AggregateConformancePackComplianceSummary implements Serializable, 
 
     /**
      * <p>
-     * Groups the result based on AWS Account ID or AWS Region.
+     * Groups the result based on Amazon Web Services account ID or Amazon Web Services Region.
      * </p>
      * 
      * @param groupName
-     *        Groups the result based on AWS Account ID or AWS Region.
+     *        Groups the result based on Amazon Web Services account ID or Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

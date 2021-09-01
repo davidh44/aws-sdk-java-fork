@@ -146,7 +146,7 @@ public class PredefinedRetryPolicies {
                                DYNAMODB_STANDARD_DEFAULT_MAX_ERROR_RETRY,
                                true,
                                false,
-                               true);
+                               false);
     }
 
     /**

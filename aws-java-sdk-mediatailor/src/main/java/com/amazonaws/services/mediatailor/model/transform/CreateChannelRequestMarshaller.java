@@ -31,6 +31,8 @@ public class CreateChannelRequestMarshaller {
 
     private static final MarshallingInfo<String> CHANNELNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("channelName").build();
+    private static final MarshallingInfo<StructuredPojo> FILLERSLATE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FillerSlate").build();
     private static final MarshallingInfo<List> OUTPUTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Outputs").build();
     private static final MarshallingInfo<String> PLAYBACKMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -55,6 +57,7 @@ public class CreateChannelRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(createChannelRequest.getChannelName(), CHANNELNAME_BINDING);
+            protocolMarshaller.marshall(createChannelRequest.getFillerSlate(), FILLERSLATE_BINDING);
             protocolMarshaller.marshall(createChannelRequest.getOutputs(), OUTPUTS_BINDING);
             protocolMarshaller.marshall(createChannelRequest.getPlaybackMode(), PLAYBACKMODE_BINDING);
             protocolMarshaller.marshall(createChannelRequest.getTags(), TAGS_BINDING);

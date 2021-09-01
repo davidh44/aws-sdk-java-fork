@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Identifies an AWS Config rule that evaluated an AWS resource, and provides the type and ID of the resource that the
- * rule evaluated.
+ * Identifies an Config rule that evaluated an Amazon Web Services resource, and provides the type and ID of the
+ * resource that the rule evaluated.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/EvaluationResultQualifier" target="_top">AWS
@@ -31,30 +31,30 @@ public class EvaluationResultQualifier implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The name of the AWS Config rule that was used in the evaluation.
+     * The name of the Config rule that was used in the evaluation.
      * </p>
      */
     private String configRuleName;
     /**
      * <p>
-     * The type of AWS resource that was evaluated.
+     * The type of Amazon Web Services resource that was evaluated.
      * </p>
      */
     private String resourceType;
     /**
      * <p>
-     * The ID of the evaluated AWS resource.
+     * The ID of the evaluated Amazon Web Services resource.
      * </p>
      */
     private String resourceId;
 
     /**
      * <p>
-     * The name of the AWS Config rule that was used in the evaluation.
+     * The name of the Config rule that was used in the evaluation.
      * </p>
      * 
      * @param configRuleName
-     *        The name of the AWS Config rule that was used in the evaluation.
+     *        The name of the Config rule that was used in the evaluation.
      */
 
     public void setConfigRuleName(String configRuleName) {
@@ -63,10 +63,10 @@ public class EvaluationResultQualifier implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The name of the AWS Config rule that was used in the evaluation.
+     * The name of the Config rule that was used in the evaluation.
      * </p>
      * 
-     * @return The name of the AWS Config rule that was used in the evaluation.
+     * @return The name of the Config rule that was used in the evaluation.
      */
 
     public String getConfigRuleName() {
@@ -75,11 +75,11 @@ public class EvaluationResultQualifier implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The name of the AWS Config rule that was used in the evaluation.
+     * The name of the Config rule that was used in the evaluation.
      * </p>
      * 
      * @param configRuleName
-     *        The name of the AWS Config rule that was used in the evaluation.
+     *        The name of the Config rule that was used in the evaluation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -90,11 +90,11 @@ public class EvaluationResultQualifier implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The type of AWS resource that was evaluated.
+     * The type of Amazon Web Services resource that was evaluated.
      * </p>
      * 
      * @param resourceType
-     *        The type of AWS resource that was evaluated.
+     *        The type of Amazon Web Services resource that was evaluated.
      */
 
     public void setResourceType(String resourceType) {
@@ -103,10 +103,10 @@ public class EvaluationResultQualifier implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The type of AWS resource that was evaluated.
+     * The type of Amazon Web Services resource that was evaluated.
      * </p>
      * 
-     * @return The type of AWS resource that was evaluated.
+     * @return The type of Amazon Web Services resource that was evaluated.
      */
 
     public String getResourceType() {
@@ -115,11 +115,11 @@ public class EvaluationResultQualifier implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The type of AWS resource that was evaluated.
+     * The type of Amazon Web Services resource that was evaluated.
      * </p>
      * 
      * @param resourceType
-     *        The type of AWS resource that was evaluated.
+     *        The type of Amazon Web Services resource that was evaluated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -130,11 +130,11 @@ public class EvaluationResultQualifier implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The ID of the evaluated AWS resource.
+     * The ID of the evaluated Amazon Web Services resource.
      * </p>
      * 
      * @param resourceId
-     *        The ID of the evaluated AWS resource.
+     *        The ID of the evaluated Amazon Web Services resource.
      */
 
     public void setResourceId(String resourceId) {
@@ -143,10 +143,10 @@ public class EvaluationResultQualifier implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The ID of the evaluated AWS resource.
+     * The ID of the evaluated Amazon Web Services resource.
      * </p>
      * 
-     * @return The ID of the evaluated AWS resource.
+     * @return The ID of the evaluated Amazon Web Services resource.
      */
 
     public String getResourceId() {
@@ -155,11 +155,11 @@ public class EvaluationResultQualifier implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The ID of the evaluated AWS resource.
+     * The ID of the evaluated Amazon Web Services resource.
      * </p>
      * 
      * @param resourceId
-     *        The ID of the evaluated AWS resource.
+     *        The ID of the evaluated Amazon Web Services resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

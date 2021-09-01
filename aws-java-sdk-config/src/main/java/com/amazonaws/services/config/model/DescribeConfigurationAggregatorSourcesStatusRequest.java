@@ -63,7 +63,7 @@ public class DescribeConfigurationAggregatorSourcesStatusRequest extends com.ama
     private String nextToken;
     /**
      * <p>
-     * The maximum number of AggregatorSourceStatus returned on each page. The default is maximum. If you specify 0, AWS
+     * The maximum number of AggregatorSourceStatus returned on each page. The default is maximum. If you specify 0,
      * Config uses the default.
      * </p>
      */
@@ -423,13 +423,13 @@ public class DescribeConfigurationAggregatorSourcesStatusRequest extends com.ama
 
     /**
      * <p>
-     * The maximum number of AggregatorSourceStatus returned on each page. The default is maximum. If you specify 0, AWS
+     * The maximum number of AggregatorSourceStatus returned on each page. The default is maximum. If you specify 0,
      * Config uses the default.
      * </p>
      * 
      * @param limit
      *        The maximum number of AggregatorSourceStatus returned on each page. The default is maximum. If you specify
-     *        0, AWS Config uses the default.
+     *        0, Config uses the default.
      */
 
     public void setLimit(Integer limit) {
@@ -438,12 +438,12 @@ public class DescribeConfigurationAggregatorSourcesStatusRequest extends com.ama
 
     /**
      * <p>
-     * The maximum number of AggregatorSourceStatus returned on each page. The default is maximum. If you specify 0, AWS
+     * The maximum number of AggregatorSourceStatus returned on each page. The default is maximum. If you specify 0,
      * Config uses the default.
      * </p>
      * 
      * @return The maximum number of AggregatorSourceStatus returned on each page. The default is maximum. If you
-     *         specify 0, AWS Config uses the default.
+     *         specify 0, Config uses the default.
      */
 
     public Integer getLimit() {
@@ -452,13 +452,13 @@ public class DescribeConfigurationAggregatorSourcesStatusRequest extends com.ama
 
     /**
      * <p>
-     * The maximum number of AggregatorSourceStatus returned on each page. The default is maximum. If you specify 0, AWS
+     * The maximum number of AggregatorSourceStatus returned on each page. The default is maximum. If you specify 0,
      * Config uses the default.
      * </p>
      * 
      * @param limit
      *        The maximum number of AggregatorSourceStatus returned on each page. The default is maximum. If you specify
-     *        0, AWS Config uses the default.
+     *        0, Config uses the default.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -67,7 +67,7 @@ public class ConfigurationAggregator implements Serializable, Cloneable, Structu
     private java.util.Date lastUpdatedTime;
     /**
      * <p>
-     * AWS service that created the configuration aggregator.
+     * Amazon Web Services service that created the configuration aggregator.
      * </p>
      */
     private String createdBy;
@@ -347,11 +347,11 @@ public class ConfigurationAggregator implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * AWS service that created the configuration aggregator.
+     * Amazon Web Services service that created the configuration aggregator.
      * </p>
      * 
      * @param createdBy
-     *        AWS service that created the configuration aggregator.
+     *        Amazon Web Services service that created the configuration aggregator.
      */
 
     public void setCreatedBy(String createdBy) {
@@ -360,10 +360,10 @@ public class ConfigurationAggregator implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * AWS service that created the configuration aggregator.
+     * Amazon Web Services service that created the configuration aggregator.
      * </p>
      * 
-     * @return AWS service that created the configuration aggregator.
+     * @return Amazon Web Services service that created the configuration aggregator.
      */
 
     public String getCreatedBy() {
@@ -372,11 +372,11 @@ public class ConfigurationAggregator implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * AWS service that created the configuration aggregator.
+     * Amazon Web Services service that created the configuration aggregator.
      * </p>
      * 
      * @param createdBy
-     *        AWS service that created the configuration aggregator.
+     *        Amazon Web Services service that created the configuration aggregator.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

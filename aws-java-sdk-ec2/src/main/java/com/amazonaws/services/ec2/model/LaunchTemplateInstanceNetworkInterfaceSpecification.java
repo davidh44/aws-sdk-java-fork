@@ -125,25 +125,25 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecification implements Seri
     private Integer networkCardIndex;
     /**
      * <p>
-     * One or more IPv4 delegated prefixes assigned to the network interface.
+     * One or more IPv4 prefixes assigned to the network interface.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Ipv4PrefixSpecificationResponse> ipv4Prefixes;
     /**
      * <p>
-     * The number of IPv4 delegated prefixes that AWS automatically assigned to the network interface.
+     * The number of IPv4 prefixes that Amazon Web Services automatically assigned to the network interface.
      * </p>
      */
     private Integer ipv4PrefixCount;
     /**
      * <p>
-     * One or more IPv6 delegated prefixes assigned to the network interface.
+     * One or more IPv6 prefixes assigned to the network interface.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Ipv6PrefixSpecificationResponse> ipv6Prefixes;
     /**
      * <p>
-     * The number of IPv6 delegated prefixes that AWS automatically assigned to the network interface.
+     * The number of IPv6 prefixes that Amazon Web Services automatically assigned to the network interface.
      * </p>
      */
     private Integer ipv6PrefixCount;
@@ -929,10 +929,10 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecification implements Seri
 
     /**
      * <p>
-     * One or more IPv4 delegated prefixes assigned to the network interface.
+     * One or more IPv4 prefixes assigned to the network interface.
      * </p>
      * 
-     * @return One or more IPv4 delegated prefixes assigned to the network interface.
+     * @return One or more IPv4 prefixes assigned to the network interface.
      */
 
     public java.util.List<Ipv4PrefixSpecificationResponse> getIpv4Prefixes() {
@@ -944,11 +944,11 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecification implements Seri
 
     /**
      * <p>
-     * One or more IPv4 delegated prefixes assigned to the network interface.
+     * One or more IPv4 prefixes assigned to the network interface.
      * </p>
      * 
      * @param ipv4Prefixes
-     *        One or more IPv4 delegated prefixes assigned to the network interface.
+     *        One or more IPv4 prefixes assigned to the network interface.
      */
 
     public void setIpv4Prefixes(java.util.Collection<Ipv4PrefixSpecificationResponse> ipv4Prefixes) {
@@ -962,7 +962,7 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecification implements Seri
 
     /**
      * <p>
-     * One or more IPv4 delegated prefixes assigned to the network interface.
+     * One or more IPv4 prefixes assigned to the network interface.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -971,7 +971,7 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecification implements Seri
      * </p>
      * 
      * @param ipv4Prefixes
-     *        One or more IPv4 delegated prefixes assigned to the network interface.
+     *        One or more IPv4 prefixes assigned to the network interface.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -987,11 +987,11 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecification implements Seri
 
     /**
      * <p>
-     * One or more IPv4 delegated prefixes assigned to the network interface.
+     * One or more IPv4 prefixes assigned to the network interface.
      * </p>
      * 
      * @param ipv4Prefixes
-     *        One or more IPv4 delegated prefixes assigned to the network interface.
+     *        One or more IPv4 prefixes assigned to the network interface.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1002,11 +1002,11 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecification implements Seri
 
     /**
      * <p>
-     * The number of IPv4 delegated prefixes that AWS automatically assigned to the network interface.
+     * The number of IPv4 prefixes that Amazon Web Services automatically assigned to the network interface.
      * </p>
      * 
      * @param ipv4PrefixCount
-     *        The number of IPv4 delegated prefixes that AWS automatically assigned to the network interface.
+     *        The number of IPv4 prefixes that Amazon Web Services automatically assigned to the network interface.
      */
 
     public void setIpv4PrefixCount(Integer ipv4PrefixCount) {
@@ -1015,10 +1015,10 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecification implements Seri
 
     /**
      * <p>
-     * The number of IPv4 delegated prefixes that AWS automatically assigned to the network interface.
+     * The number of IPv4 prefixes that Amazon Web Services automatically assigned to the network interface.
      * </p>
      * 
-     * @return The number of IPv4 delegated prefixes that AWS automatically assigned to the network interface.
+     * @return The number of IPv4 prefixes that Amazon Web Services automatically assigned to the network interface.
      */
 
     public Integer getIpv4PrefixCount() {
@@ -1027,11 +1027,11 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecification implements Seri
 
     /**
      * <p>
-     * The number of IPv4 delegated prefixes that AWS automatically assigned to the network interface.
+     * The number of IPv4 prefixes that Amazon Web Services automatically assigned to the network interface.
      * </p>
      * 
      * @param ipv4PrefixCount
-     *        The number of IPv4 delegated prefixes that AWS automatically assigned to the network interface.
+     *        The number of IPv4 prefixes that Amazon Web Services automatically assigned to the network interface.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1042,10 +1042,10 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecification implements Seri
 
     /**
      * <p>
-     * One or more IPv6 delegated prefixes assigned to the network interface.
+     * One or more IPv6 prefixes assigned to the network interface.
      * </p>
      * 
-     * @return One or more IPv6 delegated prefixes assigned to the network interface.
+     * @return One or more IPv6 prefixes assigned to the network interface.
      */
 
     public java.util.List<Ipv6PrefixSpecificationResponse> getIpv6Prefixes() {
@@ -1057,11 +1057,11 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecification implements Seri
 
     /**
      * <p>
-     * One or more IPv6 delegated prefixes assigned to the network interface.
+     * One or more IPv6 prefixes assigned to the network interface.
      * </p>
      * 
      * @param ipv6Prefixes
-     *        One or more IPv6 delegated prefixes assigned to the network interface.
+     *        One or more IPv6 prefixes assigned to the network interface.
      */
 
     public void setIpv6Prefixes(java.util.Collection<Ipv6PrefixSpecificationResponse> ipv6Prefixes) {
@@ -1075,7 +1075,7 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecification implements Seri
 
     /**
      * <p>
-     * One or more IPv6 delegated prefixes assigned to the network interface.
+     * One or more IPv6 prefixes assigned to the network interface.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1084,7 +1084,7 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecification implements Seri
      * </p>
      * 
      * @param ipv6Prefixes
-     *        One or more IPv6 delegated prefixes assigned to the network interface.
+     *        One or more IPv6 prefixes assigned to the network interface.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1100,11 +1100,11 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecification implements Seri
 
     /**
      * <p>
-     * One or more IPv6 delegated prefixes assigned to the network interface.
+     * One or more IPv6 prefixes assigned to the network interface.
      * </p>
      * 
      * @param ipv6Prefixes
-     *        One or more IPv6 delegated prefixes assigned to the network interface.
+     *        One or more IPv6 prefixes assigned to the network interface.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1115,11 +1115,11 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecification implements Seri
 
     /**
      * <p>
-     * The number of IPv6 delegated prefixes that AWS automatically assigned to the network interface.
+     * The number of IPv6 prefixes that Amazon Web Services automatically assigned to the network interface.
      * </p>
      * 
      * @param ipv6PrefixCount
-     *        The number of IPv6 delegated prefixes that AWS automatically assigned to the network interface.
+     *        The number of IPv6 prefixes that Amazon Web Services automatically assigned to the network interface.
      */
 
     public void setIpv6PrefixCount(Integer ipv6PrefixCount) {
@@ -1128,10 +1128,10 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecification implements Seri
 
     /**
      * <p>
-     * The number of IPv6 delegated prefixes that AWS automatically assigned to the network interface.
+     * The number of IPv6 prefixes that Amazon Web Services automatically assigned to the network interface.
      * </p>
      * 
-     * @return The number of IPv6 delegated prefixes that AWS automatically assigned to the network interface.
+     * @return The number of IPv6 prefixes that Amazon Web Services automatically assigned to the network interface.
      */
 
     public Integer getIpv6PrefixCount() {
@@ -1140,11 +1140,11 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecification implements Seri
 
     /**
      * <p>
-     * The number of IPv6 delegated prefixes that AWS automatically assigned to the network interface.
+     * The number of IPv6 prefixes that Amazon Web Services automatically assigned to the network interface.
      * </p>
      * 
      * @param ipv6PrefixCount
-     *        The number of IPv6 delegated prefixes that AWS automatically assigned to the network interface.
+     *        The number of IPv6 prefixes that Amazon Web Services automatically assigned to the network interface.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

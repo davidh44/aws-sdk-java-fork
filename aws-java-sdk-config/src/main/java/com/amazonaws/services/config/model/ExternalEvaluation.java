@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Identifies an AWS resource and indicates whether it complies with the AWS Config rule that it was evaluated against.
+ * Identifies an Amazon Web Services resource and indicates whether it complies with the Config rule that it was
+ * evaluated against.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ExternalEvaluation" target="_top">AWS API
@@ -30,20 +31,20 @@ public class ExternalEvaluation implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The evaluated compliance resource type. AWS Config accepts <code>AWS::::Account</code> resource type.
+     * The evaluated compliance resource type. Config accepts <code>AWS::::Account</code> resource type.
      * </p>
      */
     private String complianceResourceType;
     /**
      * <p>
-     * The evaluated compliance resource ID. AWS Config accepts only AWS account ID.
+     * The evaluated compliance resource ID. Config accepts only Amazon Web Services account ID.
      * </p>
      */
     private String complianceResourceId;
     /**
      * <p>
-     * The compliance of the AWS resource. The valid values are <code>COMPLIANT, NON_COMPLIANT, </code> and
-     * <code>NOT_APPLICABLE</code>.
+     * The compliance of the Amazon Web Services resource. The valid values are <code>COMPLIANT, NON_COMPLIANT, </code>
+     * and <code>NOT_APPLICABLE</code>.
      * </p>
      */
     private String complianceType;
@@ -63,11 +64,11 @@ public class ExternalEvaluation implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The evaluated compliance resource type. AWS Config accepts <code>AWS::::Account</code> resource type.
+     * The evaluated compliance resource type. Config accepts <code>AWS::::Account</code> resource type.
      * </p>
      * 
      * @param complianceResourceType
-     *        The evaluated compliance resource type. AWS Config accepts <code>AWS::::Account</code> resource type.
+     *        The evaluated compliance resource type. Config accepts <code>AWS::::Account</code> resource type.
      */
 
     public void setComplianceResourceType(String complianceResourceType) {
@@ -76,10 +77,10 @@ public class ExternalEvaluation implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The evaluated compliance resource type. AWS Config accepts <code>AWS::::Account</code> resource type.
+     * The evaluated compliance resource type. Config accepts <code>AWS::::Account</code> resource type.
      * </p>
      * 
-     * @return The evaluated compliance resource type. AWS Config accepts <code>AWS::::Account</code> resource type.
+     * @return The evaluated compliance resource type. Config accepts <code>AWS::::Account</code> resource type.
      */
 
     public String getComplianceResourceType() {
@@ -88,11 +89,11 @@ public class ExternalEvaluation implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The evaluated compliance resource type. AWS Config accepts <code>AWS::::Account</code> resource type.
+     * The evaluated compliance resource type. Config accepts <code>AWS::::Account</code> resource type.
      * </p>
      * 
      * @param complianceResourceType
-     *        The evaluated compliance resource type. AWS Config accepts <code>AWS::::Account</code> resource type.
+     *        The evaluated compliance resource type. Config accepts <code>AWS::::Account</code> resource type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -103,11 +104,11 @@ public class ExternalEvaluation implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The evaluated compliance resource ID. AWS Config accepts only AWS account ID.
+     * The evaluated compliance resource ID. Config accepts only Amazon Web Services account ID.
      * </p>
      * 
      * @param complianceResourceId
-     *        The evaluated compliance resource ID. AWS Config accepts only AWS account ID.
+     *        The evaluated compliance resource ID. Config accepts only Amazon Web Services account ID.
      */
 
     public void setComplianceResourceId(String complianceResourceId) {
@@ -116,10 +117,10 @@ public class ExternalEvaluation implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The evaluated compliance resource ID. AWS Config accepts only AWS account ID.
+     * The evaluated compliance resource ID. Config accepts only Amazon Web Services account ID.
      * </p>
      * 
-     * @return The evaluated compliance resource ID. AWS Config accepts only AWS account ID.
+     * @return The evaluated compliance resource ID. Config accepts only Amazon Web Services account ID.
      */
 
     public String getComplianceResourceId() {
@@ -128,11 +129,11 @@ public class ExternalEvaluation implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The evaluated compliance resource ID. AWS Config accepts only AWS account ID.
+     * The evaluated compliance resource ID. Config accepts only Amazon Web Services account ID.
      * </p>
      * 
      * @param complianceResourceId
-     *        The evaluated compliance resource ID. AWS Config accepts only AWS account ID.
+     *        The evaluated compliance resource ID. Config accepts only Amazon Web Services account ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -143,13 +144,13 @@ public class ExternalEvaluation implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The compliance of the AWS resource. The valid values are <code>COMPLIANT, NON_COMPLIANT, </code> and
-     * <code>NOT_APPLICABLE</code>.
+     * The compliance of the Amazon Web Services resource. The valid values are <code>COMPLIANT, NON_COMPLIANT, </code>
+     * and <code>NOT_APPLICABLE</code>.
      * </p>
      * 
      * @param complianceType
-     *        The compliance of the AWS resource. The valid values are <code>COMPLIANT, NON_COMPLIANT, </code> and
-     *        <code>NOT_APPLICABLE</code>.
+     *        The compliance of the Amazon Web Services resource. The valid values are
+     *        <code>COMPLIANT, NON_COMPLIANT, </code> and <code>NOT_APPLICABLE</code>.
      * @see ComplianceType
      */
 
@@ -159,12 +160,12 @@ public class ExternalEvaluation implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The compliance of the AWS resource. The valid values are <code>COMPLIANT, NON_COMPLIANT, </code> and
-     * <code>NOT_APPLICABLE</code>.
+     * The compliance of the Amazon Web Services resource. The valid values are <code>COMPLIANT, NON_COMPLIANT, </code>
+     * and <code>NOT_APPLICABLE</code>.
      * </p>
      * 
-     * @return The compliance of the AWS resource. The valid values are <code>COMPLIANT, NON_COMPLIANT, </code> and
-     *         <code>NOT_APPLICABLE</code>.
+     * @return The compliance of the Amazon Web Services resource. The valid values are
+     *         <code>COMPLIANT, NON_COMPLIANT, </code> and <code>NOT_APPLICABLE</code>.
      * @see ComplianceType
      */
 
@@ -174,13 +175,13 @@ public class ExternalEvaluation implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The compliance of the AWS resource. The valid values are <code>COMPLIANT, NON_COMPLIANT, </code> and
-     * <code>NOT_APPLICABLE</code>.
+     * The compliance of the Amazon Web Services resource. The valid values are <code>COMPLIANT, NON_COMPLIANT, </code>
+     * and <code>NOT_APPLICABLE</code>.
      * </p>
      * 
      * @param complianceType
-     *        The compliance of the AWS resource. The valid values are <code>COMPLIANT, NON_COMPLIANT, </code> and
-     *        <code>NOT_APPLICABLE</code>.
+     *        The compliance of the Amazon Web Services resource. The valid values are
+     *        <code>COMPLIANT, NON_COMPLIANT, </code> and <code>NOT_APPLICABLE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ComplianceType
      */
@@ -192,13 +193,13 @@ public class ExternalEvaluation implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The compliance of the AWS resource. The valid values are <code>COMPLIANT, NON_COMPLIANT, </code> and
-     * <code>NOT_APPLICABLE</code>.
+     * The compliance of the Amazon Web Services resource. The valid values are <code>COMPLIANT, NON_COMPLIANT, </code>
+     * and <code>NOT_APPLICABLE</code>.
      * </p>
      * 
      * @param complianceType
-     *        The compliance of the AWS resource. The valid values are <code>COMPLIANT, NON_COMPLIANT, </code> and
-     *        <code>NOT_APPLICABLE</code>.
+     *        The compliance of the Amazon Web Services resource. The valid values are
+     *        <code>COMPLIANT, NON_COMPLIANT, </code> and <code>NOT_APPLICABLE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ComplianceType
      */

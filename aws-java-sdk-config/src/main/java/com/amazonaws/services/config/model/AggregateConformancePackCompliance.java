@@ -45,13 +45,13 @@ public class AggregateConformancePackCompliance implements Serializable, Cloneab
     private String complianceType;
     /**
      * <p>
-     * The number of compliant AWS Config Rules.
+     * The number of compliant Config Rules.
      * </p>
      */
     private Integer compliantRuleCount;
     /**
      * <p>
-     * The number of noncompliant AWS Config Rules.
+     * The number of noncompliant Config Rules.
      * </p>
      */
     private Integer nonCompliantRuleCount;
@@ -124,11 +124,11 @@ public class AggregateConformancePackCompliance implements Serializable, Cloneab
 
     /**
      * <p>
-     * The number of compliant AWS Config Rules.
+     * The number of compliant Config Rules.
      * </p>
      * 
      * @param compliantRuleCount
-     *        The number of compliant AWS Config Rules.
+     *        The number of compliant Config Rules.
      */
 
     public void setCompliantRuleCount(Integer compliantRuleCount) {
@@ -137,10 +137,10 @@ public class AggregateConformancePackCompliance implements Serializable, Cloneab
 
     /**
      * <p>
-     * The number of compliant AWS Config Rules.
+     * The number of compliant Config Rules.
      * </p>
      * 
-     * @return The number of compliant AWS Config Rules.
+     * @return The number of compliant Config Rules.
      */
 
     public Integer getCompliantRuleCount() {
@@ -149,11 +149,11 @@ public class AggregateConformancePackCompliance implements Serializable, Cloneab
 
     /**
      * <p>
-     * The number of compliant AWS Config Rules.
+     * The number of compliant Config Rules.
      * </p>
      * 
      * @param compliantRuleCount
-     *        The number of compliant AWS Config Rules.
+     *        The number of compliant Config Rules.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -164,11 +164,11 @@ public class AggregateConformancePackCompliance implements Serializable, Cloneab
 
     /**
      * <p>
-     * The number of noncompliant AWS Config Rules.
+     * The number of noncompliant Config Rules.
      * </p>
      * 
      * @param nonCompliantRuleCount
-     *        The number of noncompliant AWS Config Rules.
+     *        The number of noncompliant Config Rules.
      */
 
     public void setNonCompliantRuleCount(Integer nonCompliantRuleCount) {
@@ -177,10 +177,10 @@ public class AggregateConformancePackCompliance implements Serializable, Cloneab
 
     /**
      * <p>
-     * The number of noncompliant AWS Config Rules.
+     * The number of noncompliant Config Rules.
      * </p>
      * 
-     * @return The number of noncompliant AWS Config Rules.
+     * @return The number of noncompliant Config Rules.
      */
 
     public Integer getNonCompliantRuleCount() {
@@ -189,11 +189,11 @@ public class AggregateConformancePackCompliance implements Serializable, Cloneab
 
     /**
      * <p>
-     * The number of noncompliant AWS Config Rules.
+     * The number of noncompliant Config Rules.
      * </p>
      * 
      * @param nonCompliantRuleCount
-     *        The number of noncompliant AWS Config Rules.
+     *        The number of noncompliant Config Rules.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

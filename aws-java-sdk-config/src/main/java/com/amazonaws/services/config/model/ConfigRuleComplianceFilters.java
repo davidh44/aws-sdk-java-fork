@@ -30,7 +30,7 @@ public class ConfigRuleComplianceFilters implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The name of the AWS Config rule.
+     * The name of the Config rule.
      * </p>
      */
     private String configRuleName;
@@ -39,8 +39,8 @@ public class ConfigRuleComplianceFilters implements Serializable, Cloneable, Str
      * The rule compliance status.
      * </p>
      * <p>
-     * For the <code>ConfigRuleComplianceFilters</code> data type, AWS Config supports only <code>COMPLIANT</code> and
-     * <code>NON_COMPLIANT</code>. AWS Config does not support the <code>NOT_APPLICABLE</code> and the
+     * For the <code>ConfigRuleComplianceFilters</code> data type, Config supports only <code>COMPLIANT</code> and
+     * <code>NON_COMPLIANT</code>. Config does not support the <code>NOT_APPLICABLE</code> and the
      * <code>INSUFFICIENT_DATA</code> values.
      * </p>
      */
@@ -60,11 +60,11 @@ public class ConfigRuleComplianceFilters implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The name of the AWS Config rule.
+     * The name of the Config rule.
      * </p>
      * 
      * @param configRuleName
-     *        The name of the AWS Config rule.
+     *        The name of the Config rule.
      */
 
     public void setConfigRuleName(String configRuleName) {
@@ -73,10 +73,10 @@ public class ConfigRuleComplianceFilters implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The name of the AWS Config rule.
+     * The name of the Config rule.
      * </p>
      * 
-     * @return The name of the AWS Config rule.
+     * @return The name of the Config rule.
      */
 
     public String getConfigRuleName() {
@@ -85,11 +85,11 @@ public class ConfigRuleComplianceFilters implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The name of the AWS Config rule.
+     * The name of the Config rule.
      * </p>
      * 
      * @param configRuleName
-     *        The name of the AWS Config rule.
+     *        The name of the Config rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -103,17 +103,17 @@ public class ConfigRuleComplianceFilters implements Serializable, Cloneable, Str
      * The rule compliance status.
      * </p>
      * <p>
-     * For the <code>ConfigRuleComplianceFilters</code> data type, AWS Config supports only <code>COMPLIANT</code> and
-     * <code>NON_COMPLIANT</code>. AWS Config does not support the <code>NOT_APPLICABLE</code> and the
+     * For the <code>ConfigRuleComplianceFilters</code> data type, Config supports only <code>COMPLIANT</code> and
+     * <code>NON_COMPLIANT</code>. Config does not support the <code>NOT_APPLICABLE</code> and the
      * <code>INSUFFICIENT_DATA</code> values.
      * </p>
      * 
      * @param complianceType
      *        The rule compliance status.</p>
      *        <p>
-     *        For the <code>ConfigRuleComplianceFilters</code> data type, AWS Config supports only
-     *        <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. AWS Config does not support the
-     *        <code>NOT_APPLICABLE</code> and the <code>INSUFFICIENT_DATA</code> values.
+     *        For the <code>ConfigRuleComplianceFilters</code> data type, Config supports only <code>COMPLIANT</code>
+     *        and <code>NON_COMPLIANT</code>. Config does not support the <code>NOT_APPLICABLE</code> and the
+     *        <code>INSUFFICIENT_DATA</code> values.
      * @see ComplianceType
      */
 
@@ -126,16 +126,16 @@ public class ConfigRuleComplianceFilters implements Serializable, Cloneable, Str
      * The rule compliance status.
      * </p>
      * <p>
-     * For the <code>ConfigRuleComplianceFilters</code> data type, AWS Config supports only <code>COMPLIANT</code> and
-     * <code>NON_COMPLIANT</code>. AWS Config does not support the <code>NOT_APPLICABLE</code> and the
+     * For the <code>ConfigRuleComplianceFilters</code> data type, Config supports only <code>COMPLIANT</code> and
+     * <code>NON_COMPLIANT</code>. Config does not support the <code>NOT_APPLICABLE</code> and the
      * <code>INSUFFICIENT_DATA</code> values.
      * </p>
      * 
      * @return The rule compliance status.</p>
      *         <p>
-     *         For the <code>ConfigRuleComplianceFilters</code> data type, AWS Config supports only
-     *         <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. AWS Config does not support the
-     *         <code>NOT_APPLICABLE</code> and the <code>INSUFFICIENT_DATA</code> values.
+     *         For the <code>ConfigRuleComplianceFilters</code> data type, Config supports only <code>COMPLIANT</code>
+     *         and <code>NON_COMPLIANT</code>. Config does not support the <code>NOT_APPLICABLE</code> and the
+     *         <code>INSUFFICIENT_DATA</code> values.
      * @see ComplianceType
      */
 
@@ -148,17 +148,17 @@ public class ConfigRuleComplianceFilters implements Serializable, Cloneable, Str
      * The rule compliance status.
      * </p>
      * <p>
-     * For the <code>ConfigRuleComplianceFilters</code> data type, AWS Config supports only <code>COMPLIANT</code> and
-     * <code>NON_COMPLIANT</code>. AWS Config does not support the <code>NOT_APPLICABLE</code> and the
+     * For the <code>ConfigRuleComplianceFilters</code> data type, Config supports only <code>COMPLIANT</code> and
+     * <code>NON_COMPLIANT</code>. Config does not support the <code>NOT_APPLICABLE</code> and the
      * <code>INSUFFICIENT_DATA</code> values.
      * </p>
      * 
      * @param complianceType
      *        The rule compliance status.</p>
      *        <p>
-     *        For the <code>ConfigRuleComplianceFilters</code> data type, AWS Config supports only
-     *        <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. AWS Config does not support the
-     *        <code>NOT_APPLICABLE</code> and the <code>INSUFFICIENT_DATA</code> values.
+     *        For the <code>ConfigRuleComplianceFilters</code> data type, Config supports only <code>COMPLIANT</code>
+     *        and <code>NON_COMPLIANT</code>. Config does not support the <code>NOT_APPLICABLE</code> and the
+     *        <code>INSUFFICIENT_DATA</code> values.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ComplianceType
      */
@@ -173,17 +173,17 @@ public class ConfigRuleComplianceFilters implements Serializable, Cloneable, Str
      * The rule compliance status.
      * </p>
      * <p>
-     * For the <code>ConfigRuleComplianceFilters</code> data type, AWS Config supports only <code>COMPLIANT</code> and
-     * <code>NON_COMPLIANT</code>. AWS Config does not support the <code>NOT_APPLICABLE</code> and the
+     * For the <code>ConfigRuleComplianceFilters</code> data type, Config supports only <code>COMPLIANT</code> and
+     * <code>NON_COMPLIANT</code>. Config does not support the <code>NOT_APPLICABLE</code> and the
      * <code>INSUFFICIENT_DATA</code> values.
      * </p>
      * 
      * @param complianceType
      *        The rule compliance status.</p>
      *        <p>
-     *        For the <code>ConfigRuleComplianceFilters</code> data type, AWS Config supports only
-     *        <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. AWS Config does not support the
-     *        <code>NOT_APPLICABLE</code> and the <code>INSUFFICIENT_DATA</code> values.
+     *        For the <code>ConfigRuleComplianceFilters</code> data type, Config supports only <code>COMPLIANT</code>
+     *        and <code>NON_COMPLIANT</code>. Config does not support the <code>NOT_APPLICABLE</code> and the
+     *        <code>INSUFFICIENT_DATA</code> values.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ComplianceType
      */

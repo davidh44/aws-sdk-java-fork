@@ -19,32 +19,32 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specifies the types of AWS resource for which AWS Config records configuration changes.
+ * Specifies the types of Amazon Web Services resource for which Config records configuration changes.
  * </p>
  * <p>
  * In the recording group, you specify whether all supported types or specific types of resources are recorded.
  * </p>
  * <p>
- * By default, AWS Config records configuration changes for all supported types of regional resources that AWS Config
- * discovers in the region in which it is running. Regional resources are tied to a region and can be used only in that
- * region. Examples of regional resources are EC2 instances and EBS volumes.
+ * By default, Config records configuration changes for all supported types of regional resources that Config discovers
+ * in the region in which it is running. Regional resources are tied to a region and can be used only in that region.
+ * Examples of regional resources are EC2 instances and EBS volumes.
  * </p>
  * <p>
- * You can also have AWS Config record configuration changes for supported types of global resources (for example, IAM
+ * You can also have Config record configuration changes for supported types of global resources (for example, IAM
  * resources). Global resources are not tied to an individual region and can be used in all regions.
  * </p>
  * <important>
  * <p>
- * The configuration details for any global resource are the same in all regions. If you customize AWS Config in
- * multiple regions to record global resources, it will create multiple configuration items each time a global resource
- * changes: one configuration item for each region. These configuration items will contain identical data. To prevent
- * duplicate configuration items, you should consider customizing AWS Config in only one region to record global
- * resources, unless you want the configuration items to be available in multiple regions.
+ * The configuration details for any global resource are the same in all regions. If you customize Config in multiple
+ * regions to record global resources, it will create multiple configuration items each time a global resource changes:
+ * one configuration item for each region. These configuration items will contain identical data. To prevent duplicate
+ * configuration items, you should consider customizing Config in only one region to record global resources, unless you
+ * want the configuration items to be available in multiple regions.
  * </p>
  * </important>
  * <p>
- * If you don't want AWS Config to record all resources, you can specify which types of resources it will record with
- * the <code>resourceTypes</code> parameter.
+ * If you don't want Config to record all resources, you can specify which types of resources it will record with the
+ * <code>resourceTypes</code> parameter.
  * </p>
  * <p>
  * For a list of supported resource types, see <a
@@ -53,7 +53,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </p>
  * <p>
  * For more information, see <a
- * href="https://docs.aws.amazon.com/config/latest/developerguide/select-resources.html">Selecting Which Resources AWS
+ * href="https://docs.aws.amazon.com/config/latest/developerguide/select-resources.html">Selecting Which Resources
  * Config Records</a>.
  * </p>
  * 
@@ -65,10 +65,10 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether AWS Config records configuration changes for every supported type of regional resource.
+     * Specifies whether Config records configuration changes for every supported type of regional resource.
      * </p>
      * <p>
-     * If you set this option to <code>true</code>, when AWS Config adds support for a new type of regional resource, it
+     * If you set this option to <code>true</code>, when Config adds support for a new type of regional resource, it
      * starts recording resources of that type automatically.
      * </p>
      * <p>
@@ -78,49 +78,49 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
     private Boolean allSupported;
     /**
      * <p>
-     * Specifies whether AWS Config includes all supported types of global resources (for example, IAM resources) with
-     * the resources that it records.
+     * Specifies whether Config includes all supported types of global resources (for example, IAM resources) with the
+     * resources that it records.
      * </p>
      * <p>
      * Before you can set this option to <code>true</code>, you must set the <code>allSupported</code> option to
      * <code>true</code>.
      * </p>
      * <p>
-     * If you set this option to <code>true</code>, when AWS Config adds support for a new type of global resource, it
+     * If you set this option to <code>true</code>, when Config adds support for a new type of global resource, it
      * starts recording resources of that type automatically.
      * </p>
      * <p>
      * The configuration details for any global resource are the same in all regions. To prevent duplicate configuration
-     * items, you should consider customizing AWS Config in only one region to record global resources.
+     * items, you should consider customizing Config in only one region to record global resources.
      * </p>
      */
     private Boolean includeGlobalResourceTypes;
     /**
      * <p>
-     * A comma-separated list that specifies the types of AWS resources for which AWS Config records configuration
-     * changes (for example, <code>AWS::EC2::Instance</code> or <code>AWS::CloudTrail::Trail</code>).
+     * A comma-separated list that specifies the types of Amazon Web Services resources for which Config records
+     * configuration changes (for example, <code>AWS::EC2::Instance</code> or <code>AWS::CloudTrail::Trail</code>).
      * </p>
      * <p>
      * To record all configuration changes, you must set the <code>allSupported</code> option to <code>true</code>.
      * </p>
      * <p>
-     * If you set this option to <code>false</code>, when AWS Config adds support for a new type of resource, it will
-     * not record resources of that type unless you manually add that type to your recording group.
+     * If you set this option to <code>false</code>, when Config adds support for a new type of resource, it will not
+     * record resources of that type unless you manually add that type to your recording group.
      * </p>
      * <p>
      * For a list of valid <code>resourceTypes</code> values, see the <b>resourceType Value</b> column in <a href=
      * "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
-     * >Supported AWS Resource Types</a>.
+     * >Supported Amazon Web Services resource Types</a>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> resourceTypes;
 
     /**
      * <p>
-     * Specifies whether AWS Config records configuration changes for every supported type of regional resource.
+     * Specifies whether Config records configuration changes for every supported type of regional resource.
      * </p>
      * <p>
-     * If you set this option to <code>true</code>, when AWS Config adds support for a new type of regional resource, it
+     * If you set this option to <code>true</code>, when Config adds support for a new type of regional resource, it
      * starts recording resources of that type automatically.
      * </p>
      * <p>
@@ -128,11 +128,10 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param allSupported
-     *        Specifies whether AWS Config records configuration changes for every supported type of regional
-     *        resource.</p>
+     *        Specifies whether Config records configuration changes for every supported type of regional resource.</p>
      *        <p>
-     *        If you set this option to <code>true</code>, when AWS Config adds support for a new type of regional
-     *        resource, it starts recording resources of that type automatically.
+     *        If you set this option to <code>true</code>, when Config adds support for a new type of regional resource,
+     *        it starts recording resources of that type automatically.
      *        </p>
      *        <p>
      *        If you set this option to <code>true</code>, you cannot enumerate a list of <code>resourceTypes</code>.
@@ -144,20 +143,19 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether AWS Config records configuration changes for every supported type of regional resource.
+     * Specifies whether Config records configuration changes for every supported type of regional resource.
      * </p>
      * <p>
-     * If you set this option to <code>true</code>, when AWS Config adds support for a new type of regional resource, it
+     * If you set this option to <code>true</code>, when Config adds support for a new type of regional resource, it
      * starts recording resources of that type automatically.
      * </p>
      * <p>
      * If you set this option to <code>true</code>, you cannot enumerate a list of <code>resourceTypes</code>.
      * </p>
      * 
-     * @return Specifies whether AWS Config records configuration changes for every supported type of regional
-     *         resource.</p>
+     * @return Specifies whether Config records configuration changes for every supported type of regional resource.</p>
      *         <p>
-     *         If you set this option to <code>true</code>, when AWS Config adds support for a new type of regional
+     *         If you set this option to <code>true</code>, when Config adds support for a new type of regional
      *         resource, it starts recording resources of that type automatically.
      *         </p>
      *         <p>
@@ -170,10 +168,10 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether AWS Config records configuration changes for every supported type of regional resource.
+     * Specifies whether Config records configuration changes for every supported type of regional resource.
      * </p>
      * <p>
-     * If you set this option to <code>true</code>, when AWS Config adds support for a new type of regional resource, it
+     * If you set this option to <code>true</code>, when Config adds support for a new type of regional resource, it
      * starts recording resources of that type automatically.
      * </p>
      * <p>
@@ -181,11 +179,10 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param allSupported
-     *        Specifies whether AWS Config records configuration changes for every supported type of regional
-     *        resource.</p>
+     *        Specifies whether Config records configuration changes for every supported type of regional resource.</p>
      *        <p>
-     *        If you set this option to <code>true</code>, when AWS Config adds support for a new type of regional
-     *        resource, it starts recording resources of that type automatically.
+     *        If you set this option to <code>true</code>, when Config adds support for a new type of regional resource,
+     *        it starts recording resources of that type automatically.
      *        </p>
      *        <p>
      *        If you set this option to <code>true</code>, you cannot enumerate a list of <code>resourceTypes</code>.
@@ -199,20 +196,19 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether AWS Config records configuration changes for every supported type of regional resource.
+     * Specifies whether Config records configuration changes for every supported type of regional resource.
      * </p>
      * <p>
-     * If you set this option to <code>true</code>, when AWS Config adds support for a new type of regional resource, it
+     * If you set this option to <code>true</code>, when Config adds support for a new type of regional resource, it
      * starts recording resources of that type automatically.
      * </p>
      * <p>
      * If you set this option to <code>true</code>, you cannot enumerate a list of <code>resourceTypes</code>.
      * </p>
      * 
-     * @return Specifies whether AWS Config records configuration changes for every supported type of regional
-     *         resource.</p>
+     * @return Specifies whether Config records configuration changes for every supported type of regional resource.</p>
      *         <p>
-     *         If you set this option to <code>true</code>, when AWS Config adds support for a new type of regional
+     *         If you set this option to <code>true</code>, when Config adds support for a new type of regional
      *         resource, it starts recording resources of that type automatically.
      *         </p>
      *         <p>
@@ -225,37 +221,36 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether AWS Config includes all supported types of global resources (for example, IAM resources) with
-     * the resources that it records.
+     * Specifies whether Config includes all supported types of global resources (for example, IAM resources) with the
+     * resources that it records.
      * </p>
      * <p>
      * Before you can set this option to <code>true</code>, you must set the <code>allSupported</code> option to
      * <code>true</code>.
      * </p>
      * <p>
-     * If you set this option to <code>true</code>, when AWS Config adds support for a new type of global resource, it
+     * If you set this option to <code>true</code>, when Config adds support for a new type of global resource, it
      * starts recording resources of that type automatically.
      * </p>
      * <p>
      * The configuration details for any global resource are the same in all regions. To prevent duplicate configuration
-     * items, you should consider customizing AWS Config in only one region to record global resources.
+     * items, you should consider customizing Config in only one region to record global resources.
      * </p>
      * 
      * @param includeGlobalResourceTypes
-     *        Specifies whether AWS Config includes all supported types of global resources (for example, IAM resources)
+     *        Specifies whether Config includes all supported types of global resources (for example, IAM resources)
      *        with the resources that it records.</p>
      *        <p>
      *        Before you can set this option to <code>true</code>, you must set the <code>allSupported</code> option to
      *        <code>true</code>.
      *        </p>
      *        <p>
-     *        If you set this option to <code>true</code>, when AWS Config adds support for a new type of global
-     *        resource, it starts recording resources of that type automatically.
+     *        If you set this option to <code>true</code>, when Config adds support for a new type of global resource,
+     *        it starts recording resources of that type automatically.
      *        </p>
      *        <p>
      *        The configuration details for any global resource are the same in all regions. To prevent duplicate
-     *        configuration items, you should consider customizing AWS Config in only one region to record global
-     *        resources.
+     *        configuration items, you should consider customizing Config in only one region to record global resources.
      */
 
     public void setIncludeGlobalResourceTypes(Boolean includeGlobalResourceTypes) {
@@ -264,35 +259,35 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether AWS Config includes all supported types of global resources (for example, IAM resources) with
-     * the resources that it records.
+     * Specifies whether Config includes all supported types of global resources (for example, IAM resources) with the
+     * resources that it records.
      * </p>
      * <p>
      * Before you can set this option to <code>true</code>, you must set the <code>allSupported</code> option to
      * <code>true</code>.
      * </p>
      * <p>
-     * If you set this option to <code>true</code>, when AWS Config adds support for a new type of global resource, it
+     * If you set this option to <code>true</code>, when Config adds support for a new type of global resource, it
      * starts recording resources of that type automatically.
      * </p>
      * <p>
      * The configuration details for any global resource are the same in all regions. To prevent duplicate configuration
-     * items, you should consider customizing AWS Config in only one region to record global resources.
+     * items, you should consider customizing Config in only one region to record global resources.
      * </p>
      * 
-     * @return Specifies whether AWS Config includes all supported types of global resources (for example, IAM
-     *         resources) with the resources that it records.</p>
+     * @return Specifies whether Config includes all supported types of global resources (for example, IAM resources)
+     *         with the resources that it records.</p>
      *         <p>
      *         Before you can set this option to <code>true</code>, you must set the <code>allSupported</code> option to
      *         <code>true</code>.
      *         </p>
      *         <p>
-     *         If you set this option to <code>true</code>, when AWS Config adds support for a new type of global
-     *         resource, it starts recording resources of that type automatically.
+     *         If you set this option to <code>true</code>, when Config adds support for a new type of global resource,
+     *         it starts recording resources of that type automatically.
      *         </p>
      *         <p>
      *         The configuration details for any global resource are the same in all regions. To prevent duplicate
-     *         configuration items, you should consider customizing AWS Config in only one region to record global
+     *         configuration items, you should consider customizing Config in only one region to record global
      *         resources.
      */
 
@@ -302,37 +297,36 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether AWS Config includes all supported types of global resources (for example, IAM resources) with
-     * the resources that it records.
+     * Specifies whether Config includes all supported types of global resources (for example, IAM resources) with the
+     * resources that it records.
      * </p>
      * <p>
      * Before you can set this option to <code>true</code>, you must set the <code>allSupported</code> option to
      * <code>true</code>.
      * </p>
      * <p>
-     * If you set this option to <code>true</code>, when AWS Config adds support for a new type of global resource, it
+     * If you set this option to <code>true</code>, when Config adds support for a new type of global resource, it
      * starts recording resources of that type automatically.
      * </p>
      * <p>
      * The configuration details for any global resource are the same in all regions. To prevent duplicate configuration
-     * items, you should consider customizing AWS Config in only one region to record global resources.
+     * items, you should consider customizing Config in only one region to record global resources.
      * </p>
      * 
      * @param includeGlobalResourceTypes
-     *        Specifies whether AWS Config includes all supported types of global resources (for example, IAM resources)
+     *        Specifies whether Config includes all supported types of global resources (for example, IAM resources)
      *        with the resources that it records.</p>
      *        <p>
      *        Before you can set this option to <code>true</code>, you must set the <code>allSupported</code> option to
      *        <code>true</code>.
      *        </p>
      *        <p>
-     *        If you set this option to <code>true</code>, when AWS Config adds support for a new type of global
-     *        resource, it starts recording resources of that type automatically.
+     *        If you set this option to <code>true</code>, when Config adds support for a new type of global resource,
+     *        it starts recording resources of that type automatically.
      *        </p>
      *        <p>
      *        The configuration details for any global resource are the same in all regions. To prevent duplicate
-     *        configuration items, you should consider customizing AWS Config in only one region to record global
-     *        resources.
+     *        configuration items, you should consider customizing Config in only one region to record global resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -343,35 +337,35 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether AWS Config includes all supported types of global resources (for example, IAM resources) with
-     * the resources that it records.
+     * Specifies whether Config includes all supported types of global resources (for example, IAM resources) with the
+     * resources that it records.
      * </p>
      * <p>
      * Before you can set this option to <code>true</code>, you must set the <code>allSupported</code> option to
      * <code>true</code>.
      * </p>
      * <p>
-     * If you set this option to <code>true</code>, when AWS Config adds support for a new type of global resource, it
+     * If you set this option to <code>true</code>, when Config adds support for a new type of global resource, it
      * starts recording resources of that type automatically.
      * </p>
      * <p>
      * The configuration details for any global resource are the same in all regions. To prevent duplicate configuration
-     * items, you should consider customizing AWS Config in only one region to record global resources.
+     * items, you should consider customizing Config in only one region to record global resources.
      * </p>
      * 
-     * @return Specifies whether AWS Config includes all supported types of global resources (for example, IAM
-     *         resources) with the resources that it records.</p>
+     * @return Specifies whether Config includes all supported types of global resources (for example, IAM resources)
+     *         with the resources that it records.</p>
      *         <p>
      *         Before you can set this option to <code>true</code>, you must set the <code>allSupported</code> option to
      *         <code>true</code>.
      *         </p>
      *         <p>
-     *         If you set this option to <code>true</code>, when AWS Config adds support for a new type of global
-     *         resource, it starts recording resources of that type automatically.
+     *         If you set this option to <code>true</code>, when Config adds support for a new type of global resource,
+     *         it starts recording resources of that type automatically.
      *         </p>
      *         <p>
      *         The configuration details for any global resource are the same in all regions. To prevent duplicate
-     *         configuration items, you should consider customizing AWS Config in only one region to record global
+     *         configuration items, you should consider customizing Config in only one region to record global
      *         resources.
      */
 
@@ -381,23 +375,23 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A comma-separated list that specifies the types of AWS resources for which AWS Config records configuration
-     * changes (for example, <code>AWS::EC2::Instance</code> or <code>AWS::CloudTrail::Trail</code>).
+     * A comma-separated list that specifies the types of Amazon Web Services resources for which Config records
+     * configuration changes (for example, <code>AWS::EC2::Instance</code> or <code>AWS::CloudTrail::Trail</code>).
      * </p>
      * <p>
      * To record all configuration changes, you must set the <code>allSupported</code> option to <code>true</code>.
      * </p>
      * <p>
-     * If you set this option to <code>false</code>, when AWS Config adds support for a new type of resource, it will
-     * not record resources of that type unless you manually add that type to your recording group.
+     * If you set this option to <code>false</code>, when Config adds support for a new type of resource, it will not
+     * record resources of that type unless you manually add that type to your recording group.
      * </p>
      * <p>
      * For a list of valid <code>resourceTypes</code> values, see the <b>resourceType Value</b> column in <a href=
      * "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
-     * >Supported AWS Resource Types</a>.
+     * >Supported Amazon Web Services resource Types</a>.
      * </p>
      * 
-     * @return A comma-separated list that specifies the types of AWS resources for which AWS Config records
+     * @return A comma-separated list that specifies the types of Amazon Web Services resources for which Config records
      *         configuration changes (for example, <code>AWS::EC2::Instance</code> or
      *         <code>AWS::CloudTrail::Trail</code>).</p>
      *         <p>
@@ -405,14 +399,14 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *         <code>true</code>.
      *         </p>
      *         <p>
-     *         If you set this option to <code>false</code>, when AWS Config adds support for a new type of resource, it
+     *         If you set this option to <code>false</code>, when Config adds support for a new type of resource, it
      *         will not record resources of that type unless you manually add that type to your recording group.
      *         </p>
      *         <p>
      *         For a list of valid <code>resourceTypes</code> values, see the <b>resourceType Value</b> column in <a
      *         href=
      *         "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
-     *         >Supported AWS Resource Types</a>.
+     *         >Supported Amazon Web Services resource Types</a>.
      * @see ResourceType
      */
 
@@ -425,24 +419,24 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A comma-separated list that specifies the types of AWS resources for which AWS Config records configuration
-     * changes (for example, <code>AWS::EC2::Instance</code> or <code>AWS::CloudTrail::Trail</code>).
+     * A comma-separated list that specifies the types of Amazon Web Services resources for which Config records
+     * configuration changes (for example, <code>AWS::EC2::Instance</code> or <code>AWS::CloudTrail::Trail</code>).
      * </p>
      * <p>
      * To record all configuration changes, you must set the <code>allSupported</code> option to <code>true</code>.
      * </p>
      * <p>
-     * If you set this option to <code>false</code>, when AWS Config adds support for a new type of resource, it will
-     * not record resources of that type unless you manually add that type to your recording group.
+     * If you set this option to <code>false</code>, when Config adds support for a new type of resource, it will not
+     * record resources of that type unless you manually add that type to your recording group.
      * </p>
      * <p>
      * For a list of valid <code>resourceTypes</code> values, see the <b>resourceType Value</b> column in <a href=
      * "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
-     * >Supported AWS Resource Types</a>.
+     * >Supported Amazon Web Services resource Types</a>.
      * </p>
      * 
      * @param resourceTypes
-     *        A comma-separated list that specifies the types of AWS resources for which AWS Config records
+     *        A comma-separated list that specifies the types of Amazon Web Services resources for which Config records
      *        configuration changes (for example, <code>AWS::EC2::Instance</code> or <code>AWS::CloudTrail::Trail</code>
      *        ).</p>
      *        <p>
@@ -450,14 +444,14 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *        <code>true</code>.
      *        </p>
      *        <p>
-     *        If you set this option to <code>false</code>, when AWS Config adds support for a new type of resource, it
-     *        will not record resources of that type unless you manually add that type to your recording group.
+     *        If you set this option to <code>false</code>, when Config adds support for a new type of resource, it will
+     *        not record resources of that type unless you manually add that type to your recording group.
      *        </p>
      *        <p>
      *        For a list of valid <code>resourceTypes</code> values, see the <b>resourceType Value</b> column in <a
      *        href=
      *        "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
-     *        >Supported AWS Resource Types</a>.
+     *        >Supported Amazon Web Services resource Types</a>.
      * @see ResourceType
      */
 
@@ -472,20 +466,20 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A comma-separated list that specifies the types of AWS resources for which AWS Config records configuration
-     * changes (for example, <code>AWS::EC2::Instance</code> or <code>AWS::CloudTrail::Trail</code>).
+     * A comma-separated list that specifies the types of Amazon Web Services resources for which Config records
+     * configuration changes (for example, <code>AWS::EC2::Instance</code> or <code>AWS::CloudTrail::Trail</code>).
      * </p>
      * <p>
      * To record all configuration changes, you must set the <code>allSupported</code> option to <code>true</code>.
      * </p>
      * <p>
-     * If you set this option to <code>false</code>, when AWS Config adds support for a new type of resource, it will
-     * not record resources of that type unless you manually add that type to your recording group.
+     * If you set this option to <code>false</code>, when Config adds support for a new type of resource, it will not
+     * record resources of that type unless you manually add that type to your recording group.
      * </p>
      * <p>
      * For a list of valid <code>resourceTypes</code> values, see the <b>resourceType Value</b> column in <a href=
      * "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
-     * >Supported AWS Resource Types</a>.
+     * >Supported Amazon Web Services resource Types</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -494,7 +488,7 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param resourceTypes
-     *        A comma-separated list that specifies the types of AWS resources for which AWS Config records
+     *        A comma-separated list that specifies the types of Amazon Web Services resources for which Config records
      *        configuration changes (for example, <code>AWS::EC2::Instance</code> or <code>AWS::CloudTrail::Trail</code>
      *        ).</p>
      *        <p>
@@ -502,14 +496,14 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *        <code>true</code>.
      *        </p>
      *        <p>
-     *        If you set this option to <code>false</code>, when AWS Config adds support for a new type of resource, it
-     *        will not record resources of that type unless you manually add that type to your recording group.
+     *        If you set this option to <code>false</code>, when Config adds support for a new type of resource, it will
+     *        not record resources of that type unless you manually add that type to your recording group.
      *        </p>
      *        <p>
      *        For a list of valid <code>resourceTypes</code> values, see the <b>resourceType Value</b> column in <a
      *        href=
      *        "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
-     *        >Supported AWS Resource Types</a>.
+     *        >Supported Amazon Web Services resource Types</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -526,24 +520,24 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A comma-separated list that specifies the types of AWS resources for which AWS Config records configuration
-     * changes (for example, <code>AWS::EC2::Instance</code> or <code>AWS::CloudTrail::Trail</code>).
+     * A comma-separated list that specifies the types of Amazon Web Services resources for which Config records
+     * configuration changes (for example, <code>AWS::EC2::Instance</code> or <code>AWS::CloudTrail::Trail</code>).
      * </p>
      * <p>
      * To record all configuration changes, you must set the <code>allSupported</code> option to <code>true</code>.
      * </p>
      * <p>
-     * If you set this option to <code>false</code>, when AWS Config adds support for a new type of resource, it will
-     * not record resources of that type unless you manually add that type to your recording group.
+     * If you set this option to <code>false</code>, when Config adds support for a new type of resource, it will not
+     * record resources of that type unless you manually add that type to your recording group.
      * </p>
      * <p>
      * For a list of valid <code>resourceTypes</code> values, see the <b>resourceType Value</b> column in <a href=
      * "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
-     * >Supported AWS Resource Types</a>.
+     * >Supported Amazon Web Services resource Types</a>.
      * </p>
      * 
      * @param resourceTypes
-     *        A comma-separated list that specifies the types of AWS resources for which AWS Config records
+     *        A comma-separated list that specifies the types of Amazon Web Services resources for which Config records
      *        configuration changes (for example, <code>AWS::EC2::Instance</code> or <code>AWS::CloudTrail::Trail</code>
      *        ).</p>
      *        <p>
@@ -551,14 +545,14 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *        <code>true</code>.
      *        </p>
      *        <p>
-     *        If you set this option to <code>false</code>, when AWS Config adds support for a new type of resource, it
-     *        will not record resources of that type unless you manually add that type to your recording group.
+     *        If you set this option to <code>false</code>, when Config adds support for a new type of resource, it will
+     *        not record resources of that type unless you manually add that type to your recording group.
      *        </p>
      *        <p>
      *        For a list of valid <code>resourceTypes</code> values, see the <b>resourceType Value</b> column in <a
      *        href=
      *        "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
-     *        >Supported AWS Resource Types</a>.
+     *        >Supported Amazon Web Services resource Types</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -570,24 +564,24 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A comma-separated list that specifies the types of AWS resources for which AWS Config records configuration
-     * changes (for example, <code>AWS::EC2::Instance</code> or <code>AWS::CloudTrail::Trail</code>).
+     * A comma-separated list that specifies the types of Amazon Web Services resources for which Config records
+     * configuration changes (for example, <code>AWS::EC2::Instance</code> or <code>AWS::CloudTrail::Trail</code>).
      * </p>
      * <p>
      * To record all configuration changes, you must set the <code>allSupported</code> option to <code>true</code>.
      * </p>
      * <p>
-     * If you set this option to <code>false</code>, when AWS Config adds support for a new type of resource, it will
-     * not record resources of that type unless you manually add that type to your recording group.
+     * If you set this option to <code>false</code>, when Config adds support for a new type of resource, it will not
+     * record resources of that type unless you manually add that type to your recording group.
      * </p>
      * <p>
      * For a list of valid <code>resourceTypes</code> values, see the <b>resourceType Value</b> column in <a href=
      * "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
-     * >Supported AWS Resource Types</a>.
+     * >Supported Amazon Web Services resource Types</a>.
      * </p>
      * 
      * @param resourceTypes
-     *        A comma-separated list that specifies the types of AWS resources for which AWS Config records
+     *        A comma-separated list that specifies the types of Amazon Web Services resources for which Config records
      *        configuration changes (for example, <code>AWS::EC2::Instance</code> or <code>AWS::CloudTrail::Trail</code>
      *        ).</p>
      *        <p>
@@ -595,14 +589,14 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *        <code>true</code>.
      *        </p>
      *        <p>
-     *        If you set this option to <code>false</code>, when AWS Config adds support for a new type of resource, it
-     *        will not record resources of that type unless you manually add that type to your recording group.
+     *        If you set this option to <code>false</code>, when Config adds support for a new type of resource, it will
+     *        not record resources of that type unless you manually add that type to your recording group.
      *        </p>
      *        <p>
      *        For a list of valid <code>resourceTypes</code> values, see the <b>resourceType Value</b> column in <a
      *        href=
      *        "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
-     *        >Supported AWS Resource Types</a>.
+     *        >Supported Amazon Web Services resource Types</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */

@@ -26,7 +26,7 @@ public class DescribeConfigRulesResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The details about your AWS Config rules.
+     * The details about your Config rules.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<ConfigRule> configRules;
@@ -39,10 +39,10 @@ public class DescribeConfigRulesResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The details about your AWS Config rules.
+     * The details about your Config rules.
      * </p>
      * 
-     * @return The details about your AWS Config rules.
+     * @return The details about your Config rules.
      */
 
     public java.util.List<ConfigRule> getConfigRules() {
@@ -54,11 +54,11 @@ public class DescribeConfigRulesResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The details about your AWS Config rules.
+     * The details about your Config rules.
      * </p>
      * 
      * @param configRules
-     *        The details about your AWS Config rules.
+     *        The details about your Config rules.
      */
 
     public void setConfigRules(java.util.Collection<ConfigRule> configRules) {
@@ -72,7 +72,7 @@ public class DescribeConfigRulesResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The details about your AWS Config rules.
+     * The details about your Config rules.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -81,7 +81,7 @@ public class DescribeConfigRulesResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * 
      * @param configRules
-     *        The details about your AWS Config rules.
+     *        The details about your Config rules.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -97,11 +97,11 @@ public class DescribeConfigRulesResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The details about your AWS Config rules.
+     * The details about your Config rules.
      * </p>
      * 
      * @param configRules
-     *        The details about your AWS Config rules.
+     *        The details about your Config rules.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

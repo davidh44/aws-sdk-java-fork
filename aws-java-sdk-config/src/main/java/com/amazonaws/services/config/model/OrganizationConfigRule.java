@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An organization config rule that has information about config rules that AWS Config creates in member accounts.
+ * An organization config rule that has information about config rules that Config creates in member accounts.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/OrganizationConfigRule" target="_top">AWS API

@@ -17,7 +17,8 @@ import javax.annotation.Generated;
 /**
  * <p>
  * This exception is thrown when a call results in the <code>InvalidClientTokenId</code> error code. This can occur when
- * you are creating or updating a trail to send notifications to an Amazon SNS topic that is in a suspended AWS account.
+ * you are creating or updating a trail to send notifications to an Amazon SNS topic that is in a suspended Amazon Web
+ * Services account.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

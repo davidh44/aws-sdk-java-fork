@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The details of a conformance pack evaluation. Provides AWS Config rule and AWS resource type that was evaluated, the
- * compliance of the conformance pack, related time stamps, and supplementary information.
+ * The details of a conformance pack evaluation. Provides Config rule and Amazon Web Services resource type that was
+ * evaluated, the compliance of the conformance pack, related time stamps, and supplementary information.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ConformancePackEvaluationResult"
@@ -40,13 +40,13 @@ public class ConformancePackEvaluationResult implements Serializable, Cloneable,
     private EvaluationResultIdentifier evaluationResultIdentifier;
     /**
      * <p>
-     * The time when AWS Config rule evaluated AWS resource.
+     * The time when Config rule evaluated Amazon Web Services resource.
      * </p>
      */
     private java.util.Date configRuleInvokedTime;
     /**
      * <p>
-     * The time when AWS Config recorded the evaluation result.
+     * The time when Config recorded the evaluation result.
      * </p>
      */
     private java.util.Date resultRecordedTime;
@@ -152,11 +152,11 @@ public class ConformancePackEvaluationResult implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The time when AWS Config rule evaluated AWS resource.
+     * The time when Config rule evaluated Amazon Web Services resource.
      * </p>
      * 
      * @param configRuleInvokedTime
-     *        The time when AWS Config rule evaluated AWS resource.
+     *        The time when Config rule evaluated Amazon Web Services resource.
      */
 
     public void setConfigRuleInvokedTime(java.util.Date configRuleInvokedTime) {
@@ -165,10 +165,10 @@ public class ConformancePackEvaluationResult implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The time when AWS Config rule evaluated AWS resource.
+     * The time when Config rule evaluated Amazon Web Services resource.
      * </p>
      * 
-     * @return The time when AWS Config rule evaluated AWS resource.
+     * @return The time when Config rule evaluated Amazon Web Services resource.
      */
 
     public java.util.Date getConfigRuleInvokedTime() {
@@ -177,11 +177,11 @@ public class ConformancePackEvaluationResult implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The time when AWS Config rule evaluated AWS resource.
+     * The time when Config rule evaluated Amazon Web Services resource.
      * </p>
      * 
      * @param configRuleInvokedTime
-     *        The time when AWS Config rule evaluated AWS resource.
+     *        The time when Config rule evaluated Amazon Web Services resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -192,11 +192,11 @@ public class ConformancePackEvaluationResult implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The time when AWS Config recorded the evaluation result.
+     * The time when Config recorded the evaluation result.
      * </p>
      * 
      * @param resultRecordedTime
-     *        The time when AWS Config recorded the evaluation result.
+     *        The time when Config recorded the evaluation result.
      */
 
     public void setResultRecordedTime(java.util.Date resultRecordedTime) {
@@ -205,10 +205,10 @@ public class ConformancePackEvaluationResult implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The time when AWS Config recorded the evaluation result.
+     * The time when Config recorded the evaluation result.
      * </p>
      * 
-     * @return The time when AWS Config recorded the evaluation result.
+     * @return The time when Config recorded the evaluation result.
      */
 
     public java.util.Date getResultRecordedTime() {
@@ -217,11 +217,11 @@ public class ConformancePackEvaluationResult implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The time when AWS Config recorded the evaluation result.
+     * The time when Config recorded the evaluation result.
      * </p>
      * 
      * @param resultRecordedTime
-     *        The time when AWS Config recorded the evaluation result.
+     *        The time when Config recorded the evaluation result.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,25 +27,25 @@ public class DeleteRemediationExceptionsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The name of the AWS Config rule for which you want to delete remediation exception configuration.
+     * The name of the Config rule for which you want to delete remediation exception configuration.
      * </p>
      */
     private String configRuleName;
     /**
      * <p>
-     * An exception list of resource exception keys to be processed with the current request. AWS Config adds exception
-     * for each resource key. For example, AWS Config adds 3 exceptions for 3 resource keys.
+     * An exception list of resource exception keys to be processed with the current request. Config adds exception for
+     * each resource key. For example, Config adds 3 exceptions for 3 resource keys.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<RemediationExceptionResourceKey> resourceKeys;
 
     /**
      * <p>
-     * The name of the AWS Config rule for which you want to delete remediation exception configuration.
+     * The name of the Config rule for which you want to delete remediation exception configuration.
      * </p>
      * 
      * @param configRuleName
-     *        The name of the AWS Config rule for which you want to delete remediation exception configuration.
+     *        The name of the Config rule for which you want to delete remediation exception configuration.
      */
 
     public void setConfigRuleName(String configRuleName) {
@@ -54,10 +54,10 @@ public class DeleteRemediationExceptionsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The name of the AWS Config rule for which you want to delete remediation exception configuration.
+     * The name of the Config rule for which you want to delete remediation exception configuration.
      * </p>
      * 
-     * @return The name of the AWS Config rule for which you want to delete remediation exception configuration.
+     * @return The name of the Config rule for which you want to delete remediation exception configuration.
      */
 
     public String getConfigRuleName() {
@@ -66,11 +66,11 @@ public class DeleteRemediationExceptionsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The name of the AWS Config rule for which you want to delete remediation exception configuration.
+     * The name of the Config rule for which you want to delete remediation exception configuration.
      * </p>
      * 
      * @param configRuleName
-     *        The name of the AWS Config rule for which you want to delete remediation exception configuration.
+     *        The name of the Config rule for which you want to delete remediation exception configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -81,12 +81,12 @@ public class DeleteRemediationExceptionsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * An exception list of resource exception keys to be processed with the current request. AWS Config adds exception
-     * for each resource key. For example, AWS Config adds 3 exceptions for 3 resource keys.
+     * An exception list of resource exception keys to be processed with the current request. Config adds exception for
+     * each resource key. For example, Config adds 3 exceptions for 3 resource keys.
      * </p>
      * 
-     * @return An exception list of resource exception keys to be processed with the current request. AWS Config adds
-     *         exception for each resource key. For example, AWS Config adds 3 exceptions for 3 resource keys.
+     * @return An exception list of resource exception keys to be processed with the current request. Config adds
+     *         exception for each resource key. For example, Config adds 3 exceptions for 3 resource keys.
      */
 
     public java.util.List<RemediationExceptionResourceKey> getResourceKeys() {
@@ -98,13 +98,13 @@ public class DeleteRemediationExceptionsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * An exception list of resource exception keys to be processed with the current request. AWS Config adds exception
-     * for each resource key. For example, AWS Config adds 3 exceptions for 3 resource keys.
+     * An exception list of resource exception keys to be processed with the current request. Config adds exception for
+     * each resource key. For example, Config adds 3 exceptions for 3 resource keys.
      * </p>
      * 
      * @param resourceKeys
-     *        An exception list of resource exception keys to be processed with the current request. AWS Config adds
-     *        exception for each resource key. For example, AWS Config adds 3 exceptions for 3 resource keys.
+     *        An exception list of resource exception keys to be processed with the current request. Config adds
+     *        exception for each resource key. For example, Config adds 3 exceptions for 3 resource keys.
      */
 
     public void setResourceKeys(java.util.Collection<RemediationExceptionResourceKey> resourceKeys) {
@@ -118,8 +118,8 @@ public class DeleteRemediationExceptionsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * An exception list of resource exception keys to be processed with the current request. AWS Config adds exception
-     * for each resource key. For example, AWS Config adds 3 exceptions for 3 resource keys.
+     * An exception list of resource exception keys to be processed with the current request. Config adds exception for
+     * each resource key. For example, Config adds 3 exceptions for 3 resource keys.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -128,8 +128,8 @@ public class DeleteRemediationExceptionsRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param resourceKeys
-     *        An exception list of resource exception keys to be processed with the current request. AWS Config adds
-     *        exception for each resource key. For example, AWS Config adds 3 exceptions for 3 resource keys.
+     *        An exception list of resource exception keys to be processed with the current request. Config adds
+     *        exception for each resource key. For example, Config adds 3 exceptions for 3 resource keys.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -145,13 +145,13 @@ public class DeleteRemediationExceptionsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * An exception list of resource exception keys to be processed with the current request. AWS Config adds exception
-     * for each resource key. For example, AWS Config adds 3 exceptions for 3 resource keys.
+     * An exception list of resource exception keys to be processed with the current request. Config adds exception for
+     * each resource key. For example, Config adds 3 exceptions for 3 resource keys.
      * </p>
      * 
      * @param resourceKeys
-     *        An exception list of resource exception keys to be processed with the current request. AWS Config adds
-     *        exception for each resource key. For example, AWS Config adds 3 exceptions for 3 resource keys.
+     *        An exception list of resource exception keys to be processed with the current request. Config adds
+     *        exception for each resource key. For example, Config adds 3 exceptions for 3 resource keys.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

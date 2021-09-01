@@ -36,7 +36,7 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The maximum number of tags returned on each page. The limit maximum is 50. You cannot specify a number greater
-     * than 50. If you specify 0, AWS Config uses the default.
+     * than 50. If you specify 0, Config uses the default.
      * </p>
      */
     private Integer limit;
@@ -103,12 +103,12 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The maximum number of tags returned on each page. The limit maximum is 50. You cannot specify a number greater
-     * than 50. If you specify 0, AWS Config uses the default.
+     * than 50. If you specify 0, Config uses the default.
      * </p>
      * 
      * @param limit
      *        The maximum number of tags returned on each page. The limit maximum is 50. You cannot specify a number
-     *        greater than 50. If you specify 0, AWS Config uses the default.
+     *        greater than 50. If you specify 0, Config uses the default.
      */
 
     public void setLimit(Integer limit) {
@@ -118,11 +118,11 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The maximum number of tags returned on each page. The limit maximum is 50. You cannot specify a number greater
-     * than 50. If you specify 0, AWS Config uses the default.
+     * than 50. If you specify 0, Config uses the default.
      * </p>
      * 
      * @return The maximum number of tags returned on each page. The limit maximum is 50. You cannot specify a number
-     *         greater than 50. If you specify 0, AWS Config uses the default.
+     *         greater than 50. If you specify 0, Config uses the default.
      */
 
     public Integer getLimit() {
@@ -132,12 +132,12 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The maximum number of tags returned on each page. The limit maximum is 50. You cannot specify a number greater
-     * than 50. If you specify 0, AWS Config uses the default.
+     * than 50. If you specify 0, Config uses the default.
      * </p>
      * 
      * @param limit
      *        The maximum number of tags returned on each page. The limit maximum is 50. You cannot specify a number
-     *        greater than 50. If you specify 0, AWS Config uses the default.
+     *        greater than 50. If you specify 0, Config uses the default.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

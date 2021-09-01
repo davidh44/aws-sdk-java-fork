@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The details of an AWS Config evaluation. Provides the AWS resource that was evaluated, the compliance of the
- * resource, related time stamps, and supplementary information.
+ * The details of an Config evaluation. Provides the Amazon Web Services resource that was evaluated, the compliance of
+ * the resource, related time stamps, and supplementary information.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/EvaluationResult" target="_top">AWS API
@@ -37,24 +37,24 @@ public class EvaluationResult implements Serializable, Cloneable, StructuredPojo
     private EvaluationResultIdentifier evaluationResultIdentifier;
     /**
      * <p>
-     * Indicates whether the AWS resource complies with the AWS Config rule that evaluated it.
+     * Indicates whether the Amazon Web Services resource complies with the Config rule that evaluated it.
      * </p>
      * <p>
-     * For the <code>EvaluationResult</code> data type, AWS Config supports only the <code>COMPLIANT</code>,
-     * <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. AWS Config does not support the
+     * For the <code>EvaluationResult</code> data type, Config supports only the <code>COMPLIANT</code>,
+     * <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. Config does not support the
      * <code>INSUFFICIENT_DATA</code> value for the <code>EvaluationResult</code> data type.
      * </p>
      */
     private String complianceType;
     /**
      * <p>
-     * The time when AWS Config recorded the evaluation result.
+     * The time when Config recorded the evaluation result.
      * </p>
      */
     private java.util.Date resultRecordedTime;
     /**
      * <p>
-     * The time when the AWS Config rule evaluated the AWS resource.
+     * The time when the Config rule evaluated the Amazon Web Services resource.
      * </p>
      */
     private java.util.Date configRuleInvokedTime;
@@ -66,8 +66,8 @@ public class EvaluationResult implements Serializable, Cloneable, StructuredPojo
     private String annotation;
     /**
      * <p>
-     * An encrypted token that associates an evaluation with an AWS Config rule. The token identifies the rule, the AWS
-     * resource being evaluated, and the event that triggered the evaluation.
+     * An encrypted token that associates an evaluation with an Config rule. The token identifies the rule, the Amazon
+     * Web Services resource being evaluated, and the event that triggered the evaluation.
      * </p>
      */
     private String resultToken;
@@ -114,19 +114,19 @@ public class EvaluationResult implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Indicates whether the AWS resource complies with the AWS Config rule that evaluated it.
+     * Indicates whether the Amazon Web Services resource complies with the Config rule that evaluated it.
      * </p>
      * <p>
-     * For the <code>EvaluationResult</code> data type, AWS Config supports only the <code>COMPLIANT</code>,
-     * <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. AWS Config does not support the
+     * For the <code>EvaluationResult</code> data type, Config supports only the <code>COMPLIANT</code>,
+     * <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. Config does not support the
      * <code>INSUFFICIENT_DATA</code> value for the <code>EvaluationResult</code> data type.
      * </p>
      * 
      * @param complianceType
-     *        Indicates whether the AWS resource complies with the AWS Config rule that evaluated it.</p>
+     *        Indicates whether the Amazon Web Services resource complies with the Config rule that evaluated it.</p>
      *        <p>
-     *        For the <code>EvaluationResult</code> data type, AWS Config supports only the <code>COMPLIANT</code>,
-     *        <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. AWS Config does not support the
+     *        For the <code>EvaluationResult</code> data type, Config supports only the <code>COMPLIANT</code>,
+     *        <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. Config does not support the
      *        <code>INSUFFICIENT_DATA</code> value for the <code>EvaluationResult</code> data type.
      * @see ComplianceType
      */
@@ -137,18 +137,18 @@ public class EvaluationResult implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Indicates whether the AWS resource complies with the AWS Config rule that evaluated it.
+     * Indicates whether the Amazon Web Services resource complies with the Config rule that evaluated it.
      * </p>
      * <p>
-     * For the <code>EvaluationResult</code> data type, AWS Config supports only the <code>COMPLIANT</code>,
-     * <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. AWS Config does not support the
+     * For the <code>EvaluationResult</code> data type, Config supports only the <code>COMPLIANT</code>,
+     * <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. Config does not support the
      * <code>INSUFFICIENT_DATA</code> value for the <code>EvaluationResult</code> data type.
      * </p>
      * 
-     * @return Indicates whether the AWS resource complies with the AWS Config rule that evaluated it.</p>
+     * @return Indicates whether the Amazon Web Services resource complies with the Config rule that evaluated it.</p>
      *         <p>
-     *         For the <code>EvaluationResult</code> data type, AWS Config supports only the <code>COMPLIANT</code>,
-     *         <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. AWS Config does not support the
+     *         For the <code>EvaluationResult</code> data type, Config supports only the <code>COMPLIANT</code>,
+     *         <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. Config does not support the
      *         <code>INSUFFICIENT_DATA</code> value for the <code>EvaluationResult</code> data type.
      * @see ComplianceType
      */
@@ -159,19 +159,19 @@ public class EvaluationResult implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Indicates whether the AWS resource complies with the AWS Config rule that evaluated it.
+     * Indicates whether the Amazon Web Services resource complies with the Config rule that evaluated it.
      * </p>
      * <p>
-     * For the <code>EvaluationResult</code> data type, AWS Config supports only the <code>COMPLIANT</code>,
-     * <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. AWS Config does not support the
+     * For the <code>EvaluationResult</code> data type, Config supports only the <code>COMPLIANT</code>,
+     * <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. Config does not support the
      * <code>INSUFFICIENT_DATA</code> value for the <code>EvaluationResult</code> data type.
      * </p>
      * 
      * @param complianceType
-     *        Indicates whether the AWS resource complies with the AWS Config rule that evaluated it.</p>
+     *        Indicates whether the Amazon Web Services resource complies with the Config rule that evaluated it.</p>
      *        <p>
-     *        For the <code>EvaluationResult</code> data type, AWS Config supports only the <code>COMPLIANT</code>,
-     *        <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. AWS Config does not support the
+     *        For the <code>EvaluationResult</code> data type, Config supports only the <code>COMPLIANT</code>,
+     *        <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. Config does not support the
      *        <code>INSUFFICIENT_DATA</code> value for the <code>EvaluationResult</code> data type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ComplianceType
@@ -184,19 +184,19 @@ public class EvaluationResult implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Indicates whether the AWS resource complies with the AWS Config rule that evaluated it.
+     * Indicates whether the Amazon Web Services resource complies with the Config rule that evaluated it.
      * </p>
      * <p>
-     * For the <code>EvaluationResult</code> data type, AWS Config supports only the <code>COMPLIANT</code>,
-     * <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. AWS Config does not support the
+     * For the <code>EvaluationResult</code> data type, Config supports only the <code>COMPLIANT</code>,
+     * <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. Config does not support the
      * <code>INSUFFICIENT_DATA</code> value for the <code>EvaluationResult</code> data type.
      * </p>
      * 
      * @param complianceType
-     *        Indicates whether the AWS resource complies with the AWS Config rule that evaluated it.</p>
+     *        Indicates whether the Amazon Web Services resource complies with the Config rule that evaluated it.</p>
      *        <p>
-     *        For the <code>EvaluationResult</code> data type, AWS Config supports only the <code>COMPLIANT</code>,
-     *        <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. AWS Config does not support the
+     *        For the <code>EvaluationResult</code> data type, Config supports only the <code>COMPLIANT</code>,
+     *        <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. Config does not support the
      *        <code>INSUFFICIENT_DATA</code> value for the <code>EvaluationResult</code> data type.
      * @see ComplianceType
      */
@@ -207,19 +207,19 @@ public class EvaluationResult implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Indicates whether the AWS resource complies with the AWS Config rule that evaluated it.
+     * Indicates whether the Amazon Web Services resource complies with the Config rule that evaluated it.
      * </p>
      * <p>
-     * For the <code>EvaluationResult</code> data type, AWS Config supports only the <code>COMPLIANT</code>,
-     * <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. AWS Config does not support the
+     * For the <code>EvaluationResult</code> data type, Config supports only the <code>COMPLIANT</code>,
+     * <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. Config does not support the
      * <code>INSUFFICIENT_DATA</code> value for the <code>EvaluationResult</code> data type.
      * </p>
      * 
      * @param complianceType
-     *        Indicates whether the AWS resource complies with the AWS Config rule that evaluated it.</p>
+     *        Indicates whether the Amazon Web Services resource complies with the Config rule that evaluated it.</p>
      *        <p>
-     *        For the <code>EvaluationResult</code> data type, AWS Config supports only the <code>COMPLIANT</code>,
-     *        <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. AWS Config does not support the
+     *        For the <code>EvaluationResult</code> data type, Config supports only the <code>COMPLIANT</code>,
+     *        <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. Config does not support the
      *        <code>INSUFFICIENT_DATA</code> value for the <code>EvaluationResult</code> data type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ComplianceType
@@ -232,11 +232,11 @@ public class EvaluationResult implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The time when AWS Config recorded the evaluation result.
+     * The time when Config recorded the evaluation result.
      * </p>
      * 
      * @param resultRecordedTime
-     *        The time when AWS Config recorded the evaluation result.
+     *        The time when Config recorded the evaluation result.
      */
 
     public void setResultRecordedTime(java.util.Date resultRecordedTime) {
@@ -245,10 +245,10 @@ public class EvaluationResult implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The time when AWS Config recorded the evaluation result.
+     * The time when Config recorded the evaluation result.
      * </p>
      * 
-     * @return The time when AWS Config recorded the evaluation result.
+     * @return The time when Config recorded the evaluation result.
      */
 
     public java.util.Date getResultRecordedTime() {
@@ -257,11 +257,11 @@ public class EvaluationResult implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The time when AWS Config recorded the evaluation result.
+     * The time when Config recorded the evaluation result.
      * </p>
      * 
      * @param resultRecordedTime
-     *        The time when AWS Config recorded the evaluation result.
+     *        The time when Config recorded the evaluation result.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -272,11 +272,11 @@ public class EvaluationResult implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The time when the AWS Config rule evaluated the AWS resource.
+     * The time when the Config rule evaluated the Amazon Web Services resource.
      * </p>
      * 
      * @param configRuleInvokedTime
-     *        The time when the AWS Config rule evaluated the AWS resource.
+     *        The time when the Config rule evaluated the Amazon Web Services resource.
      */
 
     public void setConfigRuleInvokedTime(java.util.Date configRuleInvokedTime) {
@@ -285,10 +285,10 @@ public class EvaluationResult implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The time when the AWS Config rule evaluated the AWS resource.
+     * The time when the Config rule evaluated the Amazon Web Services resource.
      * </p>
      * 
-     * @return The time when the AWS Config rule evaluated the AWS resource.
+     * @return The time when the Config rule evaluated the Amazon Web Services resource.
      */
 
     public java.util.Date getConfigRuleInvokedTime() {
@@ -297,11 +297,11 @@ public class EvaluationResult implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The time when the AWS Config rule evaluated the AWS resource.
+     * The time when the Config rule evaluated the Amazon Web Services resource.
      * </p>
      * 
      * @param configRuleInvokedTime
-     *        The time when the AWS Config rule evaluated the AWS resource.
+     *        The time when the Config rule evaluated the Amazon Web Services resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -352,13 +352,13 @@ public class EvaluationResult implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * An encrypted token that associates an evaluation with an AWS Config rule. The token identifies the rule, the AWS
-     * resource being evaluated, and the event that triggered the evaluation.
+     * An encrypted token that associates an evaluation with an Config rule. The token identifies the rule, the Amazon
+     * Web Services resource being evaluated, and the event that triggered the evaluation.
      * </p>
      * 
      * @param resultToken
-     *        An encrypted token that associates an evaluation with an AWS Config rule. The token identifies the rule,
-     *        the AWS resource being evaluated, and the event that triggered the evaluation.
+     *        An encrypted token that associates an evaluation with an Config rule. The token identifies the rule, the
+     *        Amazon Web Services resource being evaluated, and the event that triggered the evaluation.
      */
 
     public void setResultToken(String resultToken) {
@@ -367,12 +367,12 @@ public class EvaluationResult implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * An encrypted token that associates an evaluation with an AWS Config rule. The token identifies the rule, the AWS
-     * resource being evaluated, and the event that triggered the evaluation.
+     * An encrypted token that associates an evaluation with an Config rule. The token identifies the rule, the Amazon
+     * Web Services resource being evaluated, and the event that triggered the evaluation.
      * </p>
      * 
-     * @return An encrypted token that associates an evaluation with an AWS Config rule. The token identifies the rule,
-     *         the AWS resource being evaluated, and the event that triggered the evaluation.
+     * @return An encrypted token that associates an evaluation with an Config rule. The token identifies the rule, the
+     *         Amazon Web Services resource being evaluated, and the event that triggered the evaluation.
      */
 
     public String getResultToken() {
@@ -381,13 +381,13 @@ public class EvaluationResult implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * An encrypted token that associates an evaluation with an AWS Config rule. The token identifies the rule, the AWS
-     * resource being evaluated, and the event that triggered the evaluation.
+     * An encrypted token that associates an evaluation with an Config rule. The token identifies the rule, the Amazon
+     * Web Services resource being evaluated, and the event that triggered the evaluation.
      * </p>
      * 
      * @param resultToken
-     *        An encrypted token that associates an evaluation with an AWS Config rule. The token identifies the rule,
-     *        the AWS resource being evaluated, and the event that triggered the evaluation.
+     *        An encrypted token that associates an evaluation with an Config rule. The token identifies the rule, the
+     *        Amazon Web Services resource being evaluated, and the event that triggered the evaluation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

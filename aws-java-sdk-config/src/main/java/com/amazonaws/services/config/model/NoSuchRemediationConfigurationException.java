@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * You specified an AWS Config rule without a remediation configuration.
+ * You specified an Config rule without a remediation configuration.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

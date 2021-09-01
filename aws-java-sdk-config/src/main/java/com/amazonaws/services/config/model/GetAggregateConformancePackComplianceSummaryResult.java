@@ -32,7 +32,7 @@ public class GetAggregateConformancePackComplianceSummaryResult extends com.amaz
     private com.amazonaws.internal.SdkInternalList<AggregateConformancePackComplianceSummary> aggregateConformancePackComplianceSummaries;
     /**
      * <p>
-     * Groups the result based on AWS Account ID or AWS Region.
+     * Groups the result based on Amazon Web Services account ID or Amazon Web Services Region.
      * </p>
      */
     private String groupByKey;
@@ -125,11 +125,11 @@ public class GetAggregateConformancePackComplianceSummaryResult extends com.amaz
 
     /**
      * <p>
-     * Groups the result based on AWS Account ID or AWS Region.
+     * Groups the result based on Amazon Web Services account ID or Amazon Web Services Region.
      * </p>
      * 
      * @param groupByKey
-     *        Groups the result based on AWS Account ID or AWS Region.
+     *        Groups the result based on Amazon Web Services account ID or Amazon Web Services Region.
      */
 
     public void setGroupByKey(String groupByKey) {
@@ -138,10 +138,10 @@ public class GetAggregateConformancePackComplianceSummaryResult extends com.amaz
 
     /**
      * <p>
-     * Groups the result based on AWS Account ID or AWS Region.
+     * Groups the result based on Amazon Web Services account ID or Amazon Web Services Region.
      * </p>
      * 
-     * @return Groups the result based on AWS Account ID or AWS Region.
+     * @return Groups the result based on Amazon Web Services account ID or Amazon Web Services Region.
      */
 
     public String getGroupByKey() {
@@ -150,11 +150,11 @@ public class GetAggregateConformancePackComplianceSummaryResult extends com.amaz
 
     /**
      * <p>
-     * Groups the result based on AWS Account ID or AWS Region.
+     * Groups the result based on Amazon Web Services account ID or Amazon Web Services Region.
      * </p>
      * 
      * @param groupByKey
-     *        Groups the result based on AWS Account ID or AWS Region.
+     *        Groups the result based on Amazon Web Services account ID or Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

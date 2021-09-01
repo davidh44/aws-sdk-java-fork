@@ -25,8 +25,8 @@ public class GetDiscoveredResourceCountsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The total number of resources that AWS Config is recording in the region for your account. If you specify
-     * resource types in the request, AWS Config returns only the total number of resources for those resource types.
+     * The total number of resources that Config is recording in the region for your account. If you specify resource
+     * types in the request, Config returns only the total number of resources for those resource types.
      * </p>
      * <p class="title">
      * <b>Example</b>
@@ -34,8 +34,8 @@ public class GetDiscoveredResourceCountsResult extends com.amazonaws.AmazonWebSe
      * <ol>
      * <li>
      * <p>
-     * AWS Config is recording three resource types in the US East (Ohio) Region for your account: 25 EC2 instances, 20
-     * IAM users, and 15 S3 buckets, for a total of 60 resources.
+     * Config is recording three resource types in the US East (Ohio) Region for your account: 25 EC2 instances, 20 IAM
+     * users, and 15 S3 buckets, for a total of 60 resources.
      * </p>
      * </li>
      * <li>
@@ -46,7 +46,7 @@ public class GetDiscoveredResourceCountsResult extends com.amazonaws.AmazonWebSe
      * </li>
      * <li>
      * <p>
-     * AWS Config returns 25 for <code>totalDiscoveredResources</code>.
+     * Config returns 25 for <code>totalDiscoveredResources</code>.
      * </p>
      * </li>
      * </ol>
@@ -68,8 +68,8 @@ public class GetDiscoveredResourceCountsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The total number of resources that AWS Config is recording in the region for your account. If you specify
-     * resource types in the request, AWS Config returns only the total number of resources for those resource types.
+     * The total number of resources that Config is recording in the region for your account. If you specify resource
+     * types in the request, Config returns only the total number of resources for those resource types.
      * </p>
      * <p class="title">
      * <b>Example</b>
@@ -77,8 +77,8 @@ public class GetDiscoveredResourceCountsResult extends com.amazonaws.AmazonWebSe
      * <ol>
      * <li>
      * <p>
-     * AWS Config is recording three resource types in the US East (Ohio) Region for your account: 25 EC2 instances, 20
-     * IAM users, and 15 S3 buckets, for a total of 60 resources.
+     * Config is recording three resource types in the US East (Ohio) Region for your account: 25 EC2 instances, 20 IAM
+     * users, and 15 S3 buckets, for a total of 60 resources.
      * </p>
      * </li>
      * <li>
@@ -89,14 +89,14 @@ public class GetDiscoveredResourceCountsResult extends com.amazonaws.AmazonWebSe
      * </li>
      * <li>
      * <p>
-     * AWS Config returns 25 for <code>totalDiscoveredResources</code>.
+     * Config returns 25 for <code>totalDiscoveredResources</code>.
      * </p>
      * </li>
      * </ol>
      * 
      * @param totalDiscoveredResources
-     *        The total number of resources that AWS Config is recording in the region for your account. If you specify
-     *        resource types in the request, AWS Config returns only the total number of resources for those resource
+     *        The total number of resources that Config is recording in the region for your account. If you specify
+     *        resource types in the request, Config returns only the total number of resources for those resource
      *        types.</p>
      *        <p class="title">
      *        <b>Example</b>
@@ -104,8 +104,8 @@ public class GetDiscoveredResourceCountsResult extends com.amazonaws.AmazonWebSe
      *        <ol>
      *        <li>
      *        <p>
-     *        AWS Config is recording three resource types in the US East (Ohio) Region for your account: 25 EC2
-     *        instances, 20 IAM users, and 15 S3 buckets, for a total of 60 resources.
+     *        Config is recording three resource types in the US East (Ohio) Region for your account: 25 EC2 instances,
+     *        20 IAM users, and 15 S3 buckets, for a total of 60 resources.
      *        </p>
      *        </li>
      *        <li>
@@ -116,7 +116,7 @@ public class GetDiscoveredResourceCountsResult extends com.amazonaws.AmazonWebSe
      *        </li>
      *        <li>
      *        <p>
-     *        AWS Config returns 25 for <code>totalDiscoveredResources</code>.
+     *        Config returns 25 for <code>totalDiscoveredResources</code>.
      *        </p>
      *        </li>
      */
@@ -127,8 +127,8 @@ public class GetDiscoveredResourceCountsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The total number of resources that AWS Config is recording in the region for your account. If you specify
-     * resource types in the request, AWS Config returns only the total number of resources for those resource types.
+     * The total number of resources that Config is recording in the region for your account. If you specify resource
+     * types in the request, Config returns only the total number of resources for those resource types.
      * </p>
      * <p class="title">
      * <b>Example</b>
@@ -136,8 +136,8 @@ public class GetDiscoveredResourceCountsResult extends com.amazonaws.AmazonWebSe
      * <ol>
      * <li>
      * <p>
-     * AWS Config is recording three resource types in the US East (Ohio) Region for your account: 25 EC2 instances, 20
-     * IAM users, and 15 S3 buckets, for a total of 60 resources.
+     * Config is recording three resource types in the US East (Ohio) Region for your account: 25 EC2 instances, 20 IAM
+     * users, and 15 S3 buckets, for a total of 60 resources.
      * </p>
      * </li>
      * <li>
@@ -148,13 +148,13 @@ public class GetDiscoveredResourceCountsResult extends com.amazonaws.AmazonWebSe
      * </li>
      * <li>
      * <p>
-     * AWS Config returns 25 for <code>totalDiscoveredResources</code>.
+     * Config returns 25 for <code>totalDiscoveredResources</code>.
      * </p>
      * </li>
      * </ol>
      * 
-     * @return The total number of resources that AWS Config is recording in the region for your account. If you specify
-     *         resource types in the request, AWS Config returns only the total number of resources for those resource
+     * @return The total number of resources that Config is recording in the region for your account. If you specify
+     *         resource types in the request, Config returns only the total number of resources for those resource
      *         types.</p>
      *         <p class="title">
      *         <b>Example</b>
@@ -162,8 +162,8 @@ public class GetDiscoveredResourceCountsResult extends com.amazonaws.AmazonWebSe
      *         <ol>
      *         <li>
      *         <p>
-     *         AWS Config is recording three resource types in the US East (Ohio) Region for your account: 25 EC2
-     *         instances, 20 IAM users, and 15 S3 buckets, for a total of 60 resources.
+     *         Config is recording three resource types in the US East (Ohio) Region for your account: 25 EC2 instances,
+     *         20 IAM users, and 15 S3 buckets, for a total of 60 resources.
      *         </p>
      *         </li>
      *         <li>
@@ -174,7 +174,7 @@ public class GetDiscoveredResourceCountsResult extends com.amazonaws.AmazonWebSe
      *         </li>
      *         <li>
      *         <p>
-     *         AWS Config returns 25 for <code>totalDiscoveredResources</code>.
+     *         Config returns 25 for <code>totalDiscoveredResources</code>.
      *         </p>
      *         </li>
      */
@@ -185,8 +185,8 @@ public class GetDiscoveredResourceCountsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The total number of resources that AWS Config is recording in the region for your account. If you specify
-     * resource types in the request, AWS Config returns only the total number of resources for those resource types.
+     * The total number of resources that Config is recording in the region for your account. If you specify resource
+     * types in the request, Config returns only the total number of resources for those resource types.
      * </p>
      * <p class="title">
      * <b>Example</b>
@@ -194,8 +194,8 @@ public class GetDiscoveredResourceCountsResult extends com.amazonaws.AmazonWebSe
      * <ol>
      * <li>
      * <p>
-     * AWS Config is recording three resource types in the US East (Ohio) Region for your account: 25 EC2 instances, 20
-     * IAM users, and 15 S3 buckets, for a total of 60 resources.
+     * Config is recording three resource types in the US East (Ohio) Region for your account: 25 EC2 instances, 20 IAM
+     * users, and 15 S3 buckets, for a total of 60 resources.
      * </p>
      * </li>
      * <li>
@@ -206,14 +206,14 @@ public class GetDiscoveredResourceCountsResult extends com.amazonaws.AmazonWebSe
      * </li>
      * <li>
      * <p>
-     * AWS Config returns 25 for <code>totalDiscoveredResources</code>.
+     * Config returns 25 for <code>totalDiscoveredResources</code>.
      * </p>
      * </li>
      * </ol>
      * 
      * @param totalDiscoveredResources
-     *        The total number of resources that AWS Config is recording in the region for your account. If you specify
-     *        resource types in the request, AWS Config returns only the total number of resources for those resource
+     *        The total number of resources that Config is recording in the region for your account. If you specify
+     *        resource types in the request, Config returns only the total number of resources for those resource
      *        types.</p>
      *        <p class="title">
      *        <b>Example</b>
@@ -221,8 +221,8 @@ public class GetDiscoveredResourceCountsResult extends com.amazonaws.AmazonWebSe
      *        <ol>
      *        <li>
      *        <p>
-     *        AWS Config is recording three resource types in the US East (Ohio) Region for your account: 25 EC2
-     *        instances, 20 IAM users, and 15 S3 buckets, for a total of 60 resources.
+     *        Config is recording three resource types in the US East (Ohio) Region for your account: 25 EC2 instances,
+     *        20 IAM users, and 15 S3 buckets, for a total of 60 resources.
      *        </p>
      *        </li>
      *        <li>
@@ -233,7 +233,7 @@ public class GetDiscoveredResourceCountsResult extends com.amazonaws.AmazonWebSe
      *        </li>
      *        <li>
      *        <p>
-     *        AWS Config returns 25 for <code>totalDiscoveredResources</code>.
+     *        Config returns 25 for <code>totalDiscoveredResources</code>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

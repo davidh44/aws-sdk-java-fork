@@ -33,13 +33,27 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String channelName;
     /**
      * <p>
+     * The slate used to fill gaps between programs in the schedule. You must configure filler slate if your channel
+     * uses an LINEAR PlaybackMode.
+     * </p>
+     */
+    private SlateSource fillerSlate;
+    /**
+     * <p>
      * The channel's output properties.
      * </p>
      */
     private java.util.List<RequestOutputItem> outputs;
     /**
      * <p>
-     * The type of playback mode for this channel. The only supported value is LOOP.
+     * The type of playback mode to use for this channel.
+     * </p>
+     * <p>
+     * LINEAR - The programs in the schedule play once back-to-back in the schedule.
+     * </p>
+     * <p>
+     * LOOP - The programs in the schedule play back-to-back in an endless loop. When the last program in the schedule
+     * stops playing, playback loops back to the first program in the schedule.
      * </p>
      */
     private String playbackMode;
@@ -87,6 +101,52 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     public CreateChannelRequest withChannelName(String channelName) {
         setChannelName(channelName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The slate used to fill gaps between programs in the schedule. You must configure filler slate if your channel
+     * uses an LINEAR PlaybackMode.
+     * </p>
+     * 
+     * @param fillerSlate
+     *        The slate used to fill gaps between programs in the schedule. You must configure filler slate if your
+     *        channel uses an LINEAR PlaybackMode.
+     */
+
+    public void setFillerSlate(SlateSource fillerSlate) {
+        this.fillerSlate = fillerSlate;
+    }
+
+    /**
+     * <p>
+     * The slate used to fill gaps between programs in the schedule. You must configure filler slate if your channel
+     * uses an LINEAR PlaybackMode.
+     * </p>
+     * 
+     * @return The slate used to fill gaps between programs in the schedule. You must configure filler slate if your
+     *         channel uses an LINEAR PlaybackMode.
+     */
+
+    public SlateSource getFillerSlate() {
+        return this.fillerSlate;
+    }
+
+    /**
+     * <p>
+     * The slate used to fill gaps between programs in the schedule. You must configure filler slate if your channel
+     * uses an LINEAR PlaybackMode.
+     * </p>
+     * 
+     * @param fillerSlate
+     *        The slate used to fill gaps between programs in the schedule. You must configure filler slate if your
+     *        channel uses an LINEAR PlaybackMode.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateChannelRequest withFillerSlate(SlateSource fillerSlate) {
+        setFillerSlate(fillerSlate);
         return this;
     }
 
@@ -162,11 +222,24 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The type of playback mode for this channel. The only supported value is LOOP.
+     * The type of playback mode to use for this channel.
+     * </p>
+     * <p>
+     * LINEAR - The programs in the schedule play once back-to-back in the schedule.
+     * </p>
+     * <p>
+     * LOOP - The programs in the schedule play back-to-back in an endless loop. When the last program in the schedule
+     * stops playing, playback loops back to the first program in the schedule.
      * </p>
      * 
      * @param playbackMode
-     *        The type of playback mode for this channel. The only supported value is LOOP.
+     *        The type of playback mode to use for this channel.</p>
+     *        <p>
+     *        LINEAR - The programs in the schedule play once back-to-back in the schedule.
+     *        </p>
+     *        <p>
+     *        LOOP - The programs in the schedule play back-to-back in an endless loop. When the last program in the
+     *        schedule stops playing, playback loops back to the first program in the schedule.
      * @see PlaybackMode
      */
 
@@ -176,10 +249,23 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The type of playback mode for this channel. The only supported value is LOOP.
+     * The type of playback mode to use for this channel.
+     * </p>
+     * <p>
+     * LINEAR - The programs in the schedule play once back-to-back in the schedule.
+     * </p>
+     * <p>
+     * LOOP - The programs in the schedule play back-to-back in an endless loop. When the last program in the schedule
+     * stops playing, playback loops back to the first program in the schedule.
      * </p>
      * 
-     * @return The type of playback mode for this channel. The only supported value is LOOP.
+     * @return The type of playback mode to use for this channel.</p>
+     *         <p>
+     *         LINEAR - The programs in the schedule play once back-to-back in the schedule.
+     *         </p>
+     *         <p>
+     *         LOOP - The programs in the schedule play back-to-back in an endless loop. When the last program in the
+     *         schedule stops playing, playback loops back to the first program in the schedule.
      * @see PlaybackMode
      */
 
@@ -189,11 +275,24 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The type of playback mode for this channel. The only supported value is LOOP.
+     * The type of playback mode to use for this channel.
+     * </p>
+     * <p>
+     * LINEAR - The programs in the schedule play once back-to-back in the schedule.
+     * </p>
+     * <p>
+     * LOOP - The programs in the schedule play back-to-back in an endless loop. When the last program in the schedule
+     * stops playing, playback loops back to the first program in the schedule.
      * </p>
      * 
      * @param playbackMode
-     *        The type of playback mode for this channel. The only supported value is LOOP.
+     *        The type of playback mode to use for this channel.</p>
+     *        <p>
+     *        LINEAR - The programs in the schedule play once back-to-back in the schedule.
+     *        </p>
+     *        <p>
+     *        LOOP - The programs in the schedule play back-to-back in an endless loop. When the last program in the
+     *        schedule stops playing, playback loops back to the first program in the schedule.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PlaybackMode
      */
@@ -205,11 +304,24 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The type of playback mode for this channel. The only supported value is LOOP.
+     * The type of playback mode to use for this channel.
+     * </p>
+     * <p>
+     * LINEAR - The programs in the schedule play once back-to-back in the schedule.
+     * </p>
+     * <p>
+     * LOOP - The programs in the schedule play back-to-back in an endless loop. When the last program in the schedule
+     * stops playing, playback loops back to the first program in the schedule.
      * </p>
      * 
      * @param playbackMode
-     *        The type of playback mode for this channel. The only supported value is LOOP.
+     *        The type of playback mode to use for this channel.</p>
+     *        <p>
+     *        LINEAR - The programs in the schedule play once back-to-back in the schedule.
+     *        </p>
+     *        <p>
+     *        LOOP - The programs in the schedule play back-to-back in an endless loop. When the last program in the
+     *        schedule stops playing, playback loops back to the first program in the schedule.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PlaybackMode
      */
@@ -301,6 +413,8 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
         sb.append("{");
         if (getChannelName() != null)
             sb.append("ChannelName: ").append(getChannelName()).append(",");
+        if (getFillerSlate() != null)
+            sb.append("FillerSlate: ").append(getFillerSlate()).append(",");
         if (getOutputs() != null)
             sb.append("Outputs: ").append(getOutputs()).append(",");
         if (getPlaybackMode() != null)
@@ -325,6 +439,10 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getChannelName() != null && other.getChannelName().equals(this.getChannelName()) == false)
             return false;
+        if (other.getFillerSlate() == null ^ this.getFillerSlate() == null)
+            return false;
+        if (other.getFillerSlate() != null && other.getFillerSlate().equals(this.getFillerSlate()) == false)
+            return false;
         if (other.getOutputs() == null ^ this.getOutputs() == null)
             return false;
         if (other.getOutputs() != null && other.getOutputs().equals(this.getOutputs()) == false)
@@ -346,6 +464,7 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getChannelName() == null) ? 0 : getChannelName().hashCode());
+        hashCode = prime * hashCode + ((getFillerSlate() == null) ? 0 : getFillerSlate().hashCode());
         hashCode = prime * hashCode + ((getOutputs() == null) ? 0 : getOutputs().hashCode());
         hashCode = prime * hashCode + ((getPlaybackMode() == null) ? 0 : getPlaybackMode().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());

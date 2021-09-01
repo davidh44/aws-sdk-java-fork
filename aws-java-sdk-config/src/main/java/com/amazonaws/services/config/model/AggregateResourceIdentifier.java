@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The details that identify a resource that is collected by AWS Config aggregator, including the resource type, ID, (if
+ * The details that identify a resource that is collected by Config aggregator, including the resource type, ID, (if
  * available) the custom resource name, the source account, and source region.
  * </p>
  * 
@@ -43,19 +43,19 @@ public class AggregateResourceIdentifier implements Serializable, Cloneable, Str
     private String sourceRegion;
     /**
      * <p>
-     * The ID of the AWS resource.
+     * The ID of the Amazon Web Services resource.
      * </p>
      */
     private String resourceId;
     /**
      * <p>
-     * The type of the AWS resource.
+     * The type of the Amazon Web Services resource.
      * </p>
      */
     private String resourceType;
     /**
      * <p>
-     * The name of the AWS resource.
+     * The name of the Amazon Web Services resource.
      * </p>
      */
     private String resourceName;
@@ -142,11 +142,11 @@ public class AggregateResourceIdentifier implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The ID of the AWS resource.
+     * The ID of the Amazon Web Services resource.
      * </p>
      * 
      * @param resourceId
-     *        The ID of the AWS resource.
+     *        The ID of the Amazon Web Services resource.
      */
 
     public void setResourceId(String resourceId) {
@@ -155,10 +155,10 @@ public class AggregateResourceIdentifier implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The ID of the AWS resource.
+     * The ID of the Amazon Web Services resource.
      * </p>
      * 
-     * @return The ID of the AWS resource.
+     * @return The ID of the Amazon Web Services resource.
      */
 
     public String getResourceId() {
@@ -167,11 +167,11 @@ public class AggregateResourceIdentifier implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The ID of the AWS resource.
+     * The ID of the Amazon Web Services resource.
      * </p>
      * 
      * @param resourceId
-     *        The ID of the AWS resource.
+     *        The ID of the Amazon Web Services resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -182,11 +182,11 @@ public class AggregateResourceIdentifier implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The type of the AWS resource.
+     * The type of the Amazon Web Services resource.
      * </p>
      * 
      * @param resourceType
-     *        The type of the AWS resource.
+     *        The type of the Amazon Web Services resource.
      * @see ResourceType
      */
 
@@ -196,10 +196,10 @@ public class AggregateResourceIdentifier implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The type of the AWS resource.
+     * The type of the Amazon Web Services resource.
      * </p>
      * 
-     * @return The type of the AWS resource.
+     * @return The type of the Amazon Web Services resource.
      * @see ResourceType
      */
 
@@ -209,11 +209,11 @@ public class AggregateResourceIdentifier implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The type of the AWS resource.
+     * The type of the Amazon Web Services resource.
      * </p>
      * 
      * @param resourceType
-     *        The type of the AWS resource.
+     *        The type of the Amazon Web Services resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -225,11 +225,11 @@ public class AggregateResourceIdentifier implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The type of the AWS resource.
+     * The type of the Amazon Web Services resource.
      * </p>
      * 
      * @param resourceType
-     *        The type of the AWS resource.
+     *        The type of the Amazon Web Services resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -241,11 +241,11 @@ public class AggregateResourceIdentifier implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The name of the AWS resource.
+     * The name of the Amazon Web Services resource.
      * </p>
      * 
      * @param resourceName
-     *        The name of the AWS resource.
+     *        The name of the Amazon Web Services resource.
      */
 
     public void setResourceName(String resourceName) {
@@ -254,10 +254,10 @@ public class AggregateResourceIdentifier implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The name of the AWS resource.
+     * The name of the Amazon Web Services resource.
      * </p>
      * 
-     * @return The name of the AWS resource.
+     * @return The name of the Amazon Web Services resource.
      */
 
     public String getResourceName() {
@@ -266,11 +266,11 @@ public class AggregateResourceIdentifier implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The name of the AWS resource.
+     * The name of the Amazon Web Services resource.
      * </p>
      * 
      * @param resourceName
-     *        The name of the AWS resource.
+     *        The name of the Amazon Web Services resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

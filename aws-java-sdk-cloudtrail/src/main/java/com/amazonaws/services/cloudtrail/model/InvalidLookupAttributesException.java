@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Occurs when an invalid lookup attribute is specified.
+ * Occurs when a lookup attribute is specified that is not valid.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

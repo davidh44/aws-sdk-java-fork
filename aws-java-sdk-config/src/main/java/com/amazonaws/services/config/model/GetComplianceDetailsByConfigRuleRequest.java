@@ -28,7 +28,7 @@ public class GetComplianceDetailsByConfigRuleRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The name of the AWS Config rule for which you want compliance information.
+     * The name of the Config rule for which you want compliance information.
      * </p>
      */
     private String configRuleName;
@@ -44,7 +44,7 @@ public class GetComplianceDetailsByConfigRuleRequest extends com.amazonaws.Amazo
     /**
      * <p>
      * The maximum number of evaluation results returned on each page. The default is 10. You cannot specify a number
-     * greater than 100. If you specify 0, AWS Config uses the default.
+     * greater than 100. If you specify 0, Config uses the default.
      * </p>
      */
     private Integer limit;
@@ -58,11 +58,11 @@ public class GetComplianceDetailsByConfigRuleRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The name of the AWS Config rule for which you want compliance information.
+     * The name of the Config rule for which you want compliance information.
      * </p>
      * 
      * @param configRuleName
-     *        The name of the AWS Config rule for which you want compliance information.
+     *        The name of the Config rule for which you want compliance information.
      */
 
     public void setConfigRuleName(String configRuleName) {
@@ -71,10 +71,10 @@ public class GetComplianceDetailsByConfigRuleRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The name of the AWS Config rule for which you want compliance information.
+     * The name of the Config rule for which you want compliance information.
      * </p>
      * 
-     * @return The name of the AWS Config rule for which you want compliance information.
+     * @return The name of the Config rule for which you want compliance information.
      */
 
     public String getConfigRuleName() {
@@ -83,11 +83,11 @@ public class GetComplianceDetailsByConfigRuleRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The name of the AWS Config rule for which you want compliance information.
+     * The name of the Config rule for which you want compliance information.
      * </p>
      * 
      * @param configRuleName
-     *        The name of the AWS Config rule for which you want compliance information.
+     *        The name of the Config rule for which you want compliance information.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -226,12 +226,12 @@ public class GetComplianceDetailsByConfigRuleRequest extends com.amazonaws.Amazo
     /**
      * <p>
      * The maximum number of evaluation results returned on each page. The default is 10. You cannot specify a number
-     * greater than 100. If you specify 0, AWS Config uses the default.
+     * greater than 100. If you specify 0, Config uses the default.
      * </p>
      * 
      * @param limit
      *        The maximum number of evaluation results returned on each page. The default is 10. You cannot specify a
-     *        number greater than 100. If you specify 0, AWS Config uses the default.
+     *        number greater than 100. If you specify 0, Config uses the default.
      */
 
     public void setLimit(Integer limit) {
@@ -241,11 +241,11 @@ public class GetComplianceDetailsByConfigRuleRequest extends com.amazonaws.Amazo
     /**
      * <p>
      * The maximum number of evaluation results returned on each page. The default is 10. You cannot specify a number
-     * greater than 100. If you specify 0, AWS Config uses the default.
+     * greater than 100. If you specify 0, Config uses the default.
      * </p>
      * 
      * @return The maximum number of evaluation results returned on each page. The default is 10. You cannot specify a
-     *         number greater than 100. If you specify 0, AWS Config uses the default.
+     *         number greater than 100. If you specify 0, Config uses the default.
      */
 
     public Integer getLimit() {
@@ -255,12 +255,12 @@ public class GetComplianceDetailsByConfigRuleRequest extends com.amazonaws.Amazo
     /**
      * <p>
      * The maximum number of evaluation results returned on each page. The default is 10. You cannot specify a number
-     * greater than 100. If you specify 0, AWS Config uses the default.
+     * greater than 100. If you specify 0, Config uses the default.
      * </p>
      * 
      * @param limit
      *        The maximum number of evaluation results returned on each page. The default is 10. You cannot specify a
-     *        number greater than 100. If you specify 0, AWS Config uses the default.
+     *        number greater than 100. If you specify 0, Config uses the default.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,14 +27,14 @@ public class PutRemediationExceptionsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the AWS Config rule for which you want to create remediation exception.
+     * The name of the Config rule for which you want to create remediation exception.
      * </p>
      */
     private String configRuleName;
     /**
      * <p>
-     * An exception list of resource exception keys to be processed with the current request. AWS Config adds exception
-     * for each resource key. For example, AWS Config adds 3 exceptions for 3 resource keys.
+     * An exception list of resource exception keys to be processed with the current request. Config adds exception for
+     * each resource key. For example, Config adds 3 exceptions for 3 resource keys.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<RemediationExceptionResourceKey> resourceKeys;
@@ -53,11 +53,11 @@ public class PutRemediationExceptionsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the AWS Config rule for which you want to create remediation exception.
+     * The name of the Config rule for which you want to create remediation exception.
      * </p>
      * 
      * @param configRuleName
-     *        The name of the AWS Config rule for which you want to create remediation exception.
+     *        The name of the Config rule for which you want to create remediation exception.
      */
 
     public void setConfigRuleName(String configRuleName) {
@@ -66,10 +66,10 @@ public class PutRemediationExceptionsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the AWS Config rule for which you want to create remediation exception.
+     * The name of the Config rule for which you want to create remediation exception.
      * </p>
      * 
-     * @return The name of the AWS Config rule for which you want to create remediation exception.
+     * @return The name of the Config rule for which you want to create remediation exception.
      */
 
     public String getConfigRuleName() {
@@ -78,11 +78,11 @@ public class PutRemediationExceptionsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the AWS Config rule for which you want to create remediation exception.
+     * The name of the Config rule for which you want to create remediation exception.
      * </p>
      * 
      * @param configRuleName
-     *        The name of the AWS Config rule for which you want to create remediation exception.
+     *        The name of the Config rule for which you want to create remediation exception.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,12 +93,12 @@ public class PutRemediationExceptionsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * An exception list of resource exception keys to be processed with the current request. AWS Config adds exception
-     * for each resource key. For example, AWS Config adds 3 exceptions for 3 resource keys.
+     * An exception list of resource exception keys to be processed with the current request. Config adds exception for
+     * each resource key. For example, Config adds 3 exceptions for 3 resource keys.
      * </p>
      * 
-     * @return An exception list of resource exception keys to be processed with the current request. AWS Config adds
-     *         exception for each resource key. For example, AWS Config adds 3 exceptions for 3 resource keys.
+     * @return An exception list of resource exception keys to be processed with the current request. Config adds
+     *         exception for each resource key. For example, Config adds 3 exceptions for 3 resource keys.
      */
 
     public java.util.List<RemediationExceptionResourceKey> getResourceKeys() {
@@ -110,13 +110,13 @@ public class PutRemediationExceptionsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * An exception list of resource exception keys to be processed with the current request. AWS Config adds exception
-     * for each resource key. For example, AWS Config adds 3 exceptions for 3 resource keys.
+     * An exception list of resource exception keys to be processed with the current request. Config adds exception for
+     * each resource key. For example, Config adds 3 exceptions for 3 resource keys.
      * </p>
      * 
      * @param resourceKeys
-     *        An exception list of resource exception keys to be processed with the current request. AWS Config adds
-     *        exception for each resource key. For example, AWS Config adds 3 exceptions for 3 resource keys.
+     *        An exception list of resource exception keys to be processed with the current request. Config adds
+     *        exception for each resource key. For example, Config adds 3 exceptions for 3 resource keys.
      */
 
     public void setResourceKeys(java.util.Collection<RemediationExceptionResourceKey> resourceKeys) {
@@ -130,8 +130,8 @@ public class PutRemediationExceptionsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * An exception list of resource exception keys to be processed with the current request. AWS Config adds exception
-     * for each resource key. For example, AWS Config adds 3 exceptions for 3 resource keys.
+     * An exception list of resource exception keys to be processed with the current request. Config adds exception for
+     * each resource key. For example, Config adds 3 exceptions for 3 resource keys.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -140,8 +140,8 @@ public class PutRemediationExceptionsRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @param resourceKeys
-     *        An exception list of resource exception keys to be processed with the current request. AWS Config adds
-     *        exception for each resource key. For example, AWS Config adds 3 exceptions for 3 resource keys.
+     *        An exception list of resource exception keys to be processed with the current request. Config adds
+     *        exception for each resource key. For example, Config adds 3 exceptions for 3 resource keys.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -157,13 +157,13 @@ public class PutRemediationExceptionsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * An exception list of resource exception keys to be processed with the current request. AWS Config adds exception
-     * for each resource key. For example, AWS Config adds 3 exceptions for 3 resource keys.
+     * An exception list of resource exception keys to be processed with the current request. Config adds exception for
+     * each resource key. For example, Config adds 3 exceptions for 3 resource keys.
      * </p>
      * 
      * @param resourceKeys
-     *        An exception list of resource exception keys to be processed with the current request. AWS Config adds
-     *        exception for each resource key. For example, AWS Config adds 3 exceptions for 3 resource keys.
+     *        An exception list of resource exception keys to be processed with the current request. Config adds
+     *        exception for each resource key. For example, Config adds 3 exceptions for 3 resource keys.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

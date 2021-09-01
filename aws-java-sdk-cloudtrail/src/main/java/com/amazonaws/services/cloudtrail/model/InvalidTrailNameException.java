@@ -37,7 +37,7 @@ import javax.annotation.Generated;
  * <li>
  * <p>
  * Have no adjacent periods, underscores or dashes. Names like <code>my-_namespace</code> and <code>my--namespace</code>
- * are invalid.
+ * are not valid.
  * </p>
  * </li>
  * <li>

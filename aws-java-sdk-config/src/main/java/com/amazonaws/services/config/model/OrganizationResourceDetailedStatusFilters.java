@@ -45,7 +45,7 @@ public class OrganizationResourceDetailedStatusFilters implements Serializable, 
      * <code>config-multiaccountsetup.amazonaws.com</code>.
      * </p>
      * <p>
-     * AWS Config sets the state of the conformance pack to:
+     * Config sets the state of the conformance pack to:
      * </p>
      * <ul>
      * <li>
@@ -147,7 +147,7 @@ public class OrganizationResourceDetailedStatusFilters implements Serializable, 
      * <code>config-multiaccountsetup.amazonaws.com</code>.
      * </p>
      * <p>
-     * AWS Config sets the state of the conformance pack to:
+     * Config sets the state of the conformance pack to:
      * </p>
      * <ul>
      * <li>
@@ -205,7 +205,7 @@ public class OrganizationResourceDetailedStatusFilters implements Serializable, 
      *        deleted when the master account deletes <code>OrganizationConformancePack</code> and disables service
      *        access for <code>config-multiaccountsetup.amazonaws.com</code>. </p>
      *        <p>
-     *        AWS Config sets the state of the conformance pack to:
+     *        Config sets the state of the conformance pack to:
      *        </p>
      *        <ul>
      *        <li>
@@ -270,7 +270,7 @@ public class OrganizationResourceDetailedStatusFilters implements Serializable, 
      * <code>config-multiaccountsetup.amazonaws.com</code>.
      * </p>
      * <p>
-     * AWS Config sets the state of the conformance pack to:
+     * Config sets the state of the conformance pack to:
      * </p>
      * <ul>
      * <li>
@@ -327,7 +327,7 @@ public class OrganizationResourceDetailedStatusFilters implements Serializable, 
      *         deleted when the master account deletes <code>OrganizationConformancePack</code> and disables service
      *         access for <code>config-multiaccountsetup.amazonaws.com</code>. </p>
      *         <p>
-     *         AWS Config sets the state of the conformance pack to:
+     *         Config sets the state of the conformance pack to:
      *         </p>
      *         <ul>
      *         <li>
@@ -392,7 +392,7 @@ public class OrganizationResourceDetailedStatusFilters implements Serializable, 
      * <code>config-multiaccountsetup.amazonaws.com</code>.
      * </p>
      * <p>
-     * AWS Config sets the state of the conformance pack to:
+     * Config sets the state of the conformance pack to:
      * </p>
      * <ul>
      * <li>
@@ -450,7 +450,7 @@ public class OrganizationResourceDetailedStatusFilters implements Serializable, 
      *        deleted when the master account deletes <code>OrganizationConformancePack</code> and disables service
      *        access for <code>config-multiaccountsetup.amazonaws.com</code>. </p>
      *        <p>
-     *        AWS Config sets the state of the conformance pack to:
+     *        Config sets the state of the conformance pack to:
      *        </p>
      *        <ul>
      *        <li>
@@ -517,7 +517,7 @@ public class OrganizationResourceDetailedStatusFilters implements Serializable, 
      * <code>config-multiaccountsetup.amazonaws.com</code>.
      * </p>
      * <p>
-     * AWS Config sets the state of the conformance pack to:
+     * Config sets the state of the conformance pack to:
      * </p>
      * <ul>
      * <li>
@@ -575,7 +575,7 @@ public class OrganizationResourceDetailedStatusFilters implements Serializable, 
      *        deleted when the master account deletes <code>OrganizationConformancePack</code> and disables service
      *        access for <code>config-multiaccountsetup.amazonaws.com</code>. </p>
      *        <p>
-     *        AWS Config sets the state of the conformance pack to:
+     *        Config sets the state of the conformance pack to:
      *        </p>
      *        <ul>
      *        <li>

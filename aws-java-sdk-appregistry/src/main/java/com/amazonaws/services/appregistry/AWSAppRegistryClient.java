@@ -51,9 +51,9 @@ import com.amazonaws.services.appregistry.model.transform.*;
  * the service call completes.
  * <p>
  * <p>
- * AWS Service Catalog AppRegistry enables organizations to understand the application context of their AWS resources.
- * AppRegistry provides a repository of your applications, their resources, and the application metadata that you use
- * within your enterprise.
+ * Amazon Web Services Service Catalog AppRegistry enables organizations to understand the application context of their
+ * Amazon Web Services resources. AppRegistry provides a repository of your applications, their resources, and the
+ * application metadata that you use within your enterprise.
  * </p>
  */
 @ThreadSafe
@@ -715,6 +715,68 @@ public class AWSAppRegistryClient extends AmazonWebServiceClient implements AWSA
 
     /**
      * <p>
+     * Gets the resource associated with the application.
+     * </p>
+     * 
+     * @param getAssociatedResourceRequest
+     * @return Result of the GetAssociatedResource operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ValidationException
+     *         The request has invalid or missing parameters.
+     * @throws InternalServerException
+     *         The service is experiencing internal problems.
+     * @sample AWSAppRegistry.GetAssociatedResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/AWS242AppRegistry-2020-06-24/GetAssociatedResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetAssociatedResourceResult getAssociatedResource(GetAssociatedResourceRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetAssociatedResource(request);
+    }
+
+    @SdkInternalApi
+    final GetAssociatedResourceResult executeGetAssociatedResource(GetAssociatedResourceRequest getAssociatedResourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getAssociatedResourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetAssociatedResourceRequest> request = null;
+        Response<GetAssociatedResourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetAssociatedResourceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getAssociatedResourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Service Catalog AppRegistry");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetAssociatedResource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetAssociatedResourceResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new GetAssociatedResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Retrieves an attribute group, either by its name or its ID. The attribute group can be specified either by its
      * unique ID or by its name.
      * </p>
@@ -1082,9 +1144,12 @@ public class AWSAppRegistryClient extends AmazonWebServiceClient implements AWSA
 
     /**
      * <p>
-     * Syncs the resource with what is currently recorded in App registry. Specifically, the resource’s App registry
-     * system tags are synced with its associated application. The resource is removed if it is not associated with the
-     * application. The caller must have permissions to read and update the resource.
+     * Syncs the resource with current AppRegistry records.
+     * </p>
+     * <p>
+     * Specifically, the resource’s AppRegistry system tags sync with its associated application. We remove the
+     * resource's AppRegistry system tags if it does not associate with the application. The caller must have
+     * permissions to read and update the resource.
      * </p>
      * 
      * @param syncResourceRequest

@@ -56,7 +56,7 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-management-events"
-     * >Management Events</a> in the <i>AWS CloudTrail User Guide</i>.
+     * >Management Events</a> in the <i>CloudTrail User Guide</i>.
      * </p>
      * <p>
      * By default, the value is <code>true</code>.
@@ -64,33 +64,33 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The first copy of management events is free. You are charged for additional copies of management events that you
      * are logging on any subsequent trail in the same region. For more information about CloudTrail pricing, see <a
-     * href="http://aws.amazon.com/cloudtrail/pricing/">AWS CloudTrail Pricing</a>.
+     * href="http://aws.amazon.com/cloudtrail/pricing/">CloudTrail Pricing</a>.
      * </p>
      */
     private Boolean includeManagementEvents;
     /**
      * <p>
-     * CloudTrail supports data event logging for Amazon S3 objects and AWS Lambda functions with basic event selectors.
-     * You can specify up to 250 resources for an individual event selector, but the total number of data resources
-     * cannot exceed 250 across all event selectors in a trail. This limit does not apply if you configure resource
-     * logging for all data events.
+     * CloudTrail supports data event logging for Amazon S3 objects, Lambda functions, and Amazon DynamoDB tables with
+     * basic event selectors. You can specify up to 250 resources for an individual event selector, but the total number
+     * of data resources cannot exceed 250 across all event selectors in a trail. This limit does not apply if you
+     * configure resource logging for all data events.
      * </p>
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-data-events"
      * >Data Events</a> and <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html">Limits in AWS
-     * CloudTrail</a> in the <i>AWS CloudTrail User Guide</i>.
+     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html">Limits in
+     * CloudTrail</a> in the <i>CloudTrail User Guide</i>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<DataResource> dataResources;
     /**
      * <p>
      * An optional list of service event sources from which you do not want management events to be logged on your
-     * trail. In this release, the list can be empty (disables the filter), or it can filter out AWS Key Management
-     * Service events by containing <code>"kms.amazonaws.com"</code>. By default,
-     * <code>ExcludeManagementEventSources</code> is empty, and AWS KMS events are included in events that are logged to
-     * your trail.
+     * trail. In this release, the list can be empty (disables the filter), or it can filter out Key Management Service
+     * or Amazon RDS Data API events by containing <code>kms.amazonaws.com</code> or <code>rdsdata.amazonaws.com</code>.
+     * By default, <code>ExcludeManagementEventSources</code> is empty, and KMS and Amazon RDS Data API events are
+     * logged to your trail.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> excludeManagementEventSources;
@@ -220,7 +220,7 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-management-events"
-     * >Management Events</a> in the <i>AWS CloudTrail User Guide</i>.
+     * >Management Events</a> in the <i>CloudTrail User Guide</i>.
      * </p>
      * <p>
      * By default, the value is <code>true</code>.
@@ -228,7 +228,7 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The first copy of management events is free. You are charged for additional copies of management events that you
      * are logging on any subsequent trail in the same region. For more information about CloudTrail pricing, see <a
-     * href="http://aws.amazon.com/cloudtrail/pricing/">AWS CloudTrail Pricing</a>.
+     * href="http://aws.amazon.com/cloudtrail/pricing/">CloudTrail Pricing</a>.
      * </p>
      * 
      * @param includeManagementEvents
@@ -236,7 +236,7 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-management-events"
-     *        >Management Events</a> in the <i>AWS CloudTrail User Guide</i>.
+     *        >Management Events</a> in the <i>CloudTrail User Guide</i>.
      *        </p>
      *        <p>
      *        By default, the value is <code>true</code>.
@@ -244,7 +244,7 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        The first copy of management events is free. You are charged for additional copies of management events
      *        that you are logging on any subsequent trail in the same region. For more information about CloudTrail
-     *        pricing, see <a href="http://aws.amazon.com/cloudtrail/pricing/">AWS CloudTrail Pricing</a>.
+     *        pricing, see <a href="http://aws.amazon.com/cloudtrail/pricing/">CloudTrail Pricing</a>.
      */
 
     public void setIncludeManagementEvents(Boolean includeManagementEvents) {
@@ -258,7 +258,7 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-management-events"
-     * >Management Events</a> in the <i>AWS CloudTrail User Guide</i>.
+     * >Management Events</a> in the <i>CloudTrail User Guide</i>.
      * </p>
      * <p>
      * By default, the value is <code>true</code>.
@@ -266,14 +266,14 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The first copy of management events is free. You are charged for additional copies of management events that you
      * are logging on any subsequent trail in the same region. For more information about CloudTrail pricing, see <a
-     * href="http://aws.amazon.com/cloudtrail/pricing/">AWS CloudTrail Pricing</a>.
+     * href="http://aws.amazon.com/cloudtrail/pricing/">CloudTrail Pricing</a>.
      * </p>
      * 
      * @return Specify if you want your event selector to include management events for your trail.</p>
      *         <p>
      *         For more information, see <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-management-events"
-     *         >Management Events</a> in the <i>AWS CloudTrail User Guide</i>.
+     *         >Management Events</a> in the <i>CloudTrail User Guide</i>.
      *         </p>
      *         <p>
      *         By default, the value is <code>true</code>.
@@ -281,7 +281,7 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
      *         <p>
      *         The first copy of management events is free. You are charged for additional copies of management events
      *         that you are logging on any subsequent trail in the same region. For more information about CloudTrail
-     *         pricing, see <a href="http://aws.amazon.com/cloudtrail/pricing/">AWS CloudTrail Pricing</a>.
+     *         pricing, see <a href="http://aws.amazon.com/cloudtrail/pricing/">CloudTrail Pricing</a>.
      */
 
     public Boolean getIncludeManagementEvents() {
@@ -295,7 +295,7 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-management-events"
-     * >Management Events</a> in the <i>AWS CloudTrail User Guide</i>.
+     * >Management Events</a> in the <i>CloudTrail User Guide</i>.
      * </p>
      * <p>
      * By default, the value is <code>true</code>.
@@ -303,7 +303,7 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The first copy of management events is free. You are charged for additional copies of management events that you
      * are logging on any subsequent trail in the same region. For more information about CloudTrail pricing, see <a
-     * href="http://aws.amazon.com/cloudtrail/pricing/">AWS CloudTrail Pricing</a>.
+     * href="http://aws.amazon.com/cloudtrail/pricing/">CloudTrail Pricing</a>.
      * </p>
      * 
      * @param includeManagementEvents
@@ -311,7 +311,7 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-management-events"
-     *        >Management Events</a> in the <i>AWS CloudTrail User Guide</i>.
+     *        >Management Events</a> in the <i>CloudTrail User Guide</i>.
      *        </p>
      *        <p>
      *        By default, the value is <code>true</code>.
@@ -319,7 +319,7 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        The first copy of management events is free. You are charged for additional copies of management events
      *        that you are logging on any subsequent trail in the same region. For more information about CloudTrail
-     *        pricing, see <a href="http://aws.amazon.com/cloudtrail/pricing/">AWS CloudTrail Pricing</a>.
+     *        pricing, see <a href="http://aws.amazon.com/cloudtrail/pricing/">CloudTrail Pricing</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -335,7 +335,7 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-management-events"
-     * >Management Events</a> in the <i>AWS CloudTrail User Guide</i>.
+     * >Management Events</a> in the <i>CloudTrail User Guide</i>.
      * </p>
      * <p>
      * By default, the value is <code>true</code>.
@@ -343,14 +343,14 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The first copy of management events is free. You are charged for additional copies of management events that you
      * are logging on any subsequent trail in the same region. For more information about CloudTrail pricing, see <a
-     * href="http://aws.amazon.com/cloudtrail/pricing/">AWS CloudTrail Pricing</a>.
+     * href="http://aws.amazon.com/cloudtrail/pricing/">CloudTrail Pricing</a>.
      * </p>
      * 
      * @return Specify if you want your event selector to include management events for your trail.</p>
      *         <p>
      *         For more information, see <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-management-events"
-     *         >Management Events</a> in the <i>AWS CloudTrail User Guide</i>.
+     *         >Management Events</a> in the <i>CloudTrail User Guide</i>.
      *         </p>
      *         <p>
      *         By default, the value is <code>true</code>.
@@ -358,7 +358,7 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
      *         <p>
      *         The first copy of management events is free. You are charged for additional copies of management events
      *         that you are logging on any subsequent trail in the same region. For more information about CloudTrail
-     *         pricing, see <a href="http://aws.amazon.com/cloudtrail/pricing/">AWS CloudTrail Pricing</a>.
+     *         pricing, see <a href="http://aws.amazon.com/cloudtrail/pricing/">CloudTrail Pricing</a>.
      */
 
     public Boolean isIncludeManagementEvents() {
@@ -367,29 +367,29 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * CloudTrail supports data event logging for Amazon S3 objects and AWS Lambda functions with basic event selectors.
-     * You can specify up to 250 resources for an individual event selector, but the total number of data resources
-     * cannot exceed 250 across all event selectors in a trail. This limit does not apply if you configure resource
-     * logging for all data events.
+     * CloudTrail supports data event logging for Amazon S3 objects, Lambda functions, and Amazon DynamoDB tables with
+     * basic event selectors. You can specify up to 250 resources for an individual event selector, but the total number
+     * of data resources cannot exceed 250 across all event selectors in a trail. This limit does not apply if you
+     * configure resource logging for all data events.
      * </p>
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-data-events"
      * >Data Events</a> and <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html">Limits in AWS
-     * CloudTrail</a> in the <i>AWS CloudTrail User Guide</i>.
+     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html">Limits in
+     * CloudTrail</a> in the <i>CloudTrail User Guide</i>.
      * </p>
      * 
-     * @return CloudTrail supports data event logging for Amazon S3 objects and AWS Lambda functions with basic event
-     *         selectors. You can specify up to 250 resources for an individual event selector, but the total number of
-     *         data resources cannot exceed 250 across all event selectors in a trail. This limit does not apply if you
-     *         configure resource logging for all data events. </p>
+     * @return CloudTrail supports data event logging for Amazon S3 objects, Lambda functions, and Amazon DynamoDB
+     *         tables with basic event selectors. You can specify up to 250 resources for an individual event selector,
+     *         but the total number of data resources cannot exceed 250 across all event selectors in a trail. This
+     *         limit does not apply if you configure resource logging for all data events.</p>
      *         <p>
      *         For more information, see <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-data-events"
      *         >Data Events</a> and <a
      *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html">Limits in
-     *         AWS CloudTrail</a> in the <i>AWS CloudTrail User Guide</i>.
+     *         CloudTrail</a> in the <i>CloudTrail User Guide</i>.
      */
 
     public java.util.List<DataResource> getDataResources() {
@@ -401,30 +401,30 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * CloudTrail supports data event logging for Amazon S3 objects and AWS Lambda functions with basic event selectors.
-     * You can specify up to 250 resources for an individual event selector, but the total number of data resources
-     * cannot exceed 250 across all event selectors in a trail. This limit does not apply if you configure resource
-     * logging for all data events.
+     * CloudTrail supports data event logging for Amazon S3 objects, Lambda functions, and Amazon DynamoDB tables with
+     * basic event selectors. You can specify up to 250 resources for an individual event selector, but the total number
+     * of data resources cannot exceed 250 across all event selectors in a trail. This limit does not apply if you
+     * configure resource logging for all data events.
      * </p>
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-data-events"
      * >Data Events</a> and <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html">Limits in AWS
-     * CloudTrail</a> in the <i>AWS CloudTrail User Guide</i>.
+     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html">Limits in
+     * CloudTrail</a> in the <i>CloudTrail User Guide</i>.
      * </p>
      * 
      * @param dataResources
-     *        CloudTrail supports data event logging for Amazon S3 objects and AWS Lambda functions with basic event
-     *        selectors. You can specify up to 250 resources for an individual event selector, but the total number of
-     *        data resources cannot exceed 250 across all event selectors in a trail. This limit does not apply if you
-     *        configure resource logging for all data events. </p>
+     *        CloudTrail supports data event logging for Amazon S3 objects, Lambda functions, and Amazon DynamoDB tables
+     *        with basic event selectors. You can specify up to 250 resources for an individual event selector, but the
+     *        total number of data resources cannot exceed 250 across all event selectors in a trail. This limit does
+     *        not apply if you configure resource logging for all data events.</p>
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-data-events"
      *        >Data Events</a> and <a
      *        href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html">Limits in
-     *        AWS CloudTrail</a> in the <i>AWS CloudTrail User Guide</i>.
+     *        CloudTrail</a> in the <i>CloudTrail User Guide</i>.
      */
 
     public void setDataResources(java.util.Collection<DataResource> dataResources) {
@@ -438,17 +438,17 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * CloudTrail supports data event logging for Amazon S3 objects and AWS Lambda functions with basic event selectors.
-     * You can specify up to 250 resources for an individual event selector, but the total number of data resources
-     * cannot exceed 250 across all event selectors in a trail. This limit does not apply if you configure resource
-     * logging for all data events.
+     * CloudTrail supports data event logging for Amazon S3 objects, Lambda functions, and Amazon DynamoDB tables with
+     * basic event selectors. You can specify up to 250 resources for an individual event selector, but the total number
+     * of data resources cannot exceed 250 across all event selectors in a trail. This limit does not apply if you
+     * configure resource logging for all data events.
      * </p>
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-data-events"
      * >Data Events</a> and <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html">Limits in AWS
-     * CloudTrail</a> in the <i>AWS CloudTrail User Guide</i>.
+     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html">Limits in
+     * CloudTrail</a> in the <i>CloudTrail User Guide</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -457,16 +457,16 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param dataResources
-     *        CloudTrail supports data event logging for Amazon S3 objects and AWS Lambda functions with basic event
-     *        selectors. You can specify up to 250 resources for an individual event selector, but the total number of
-     *        data resources cannot exceed 250 across all event selectors in a trail. This limit does not apply if you
-     *        configure resource logging for all data events. </p>
+     *        CloudTrail supports data event logging for Amazon S3 objects, Lambda functions, and Amazon DynamoDB tables
+     *        with basic event selectors. You can specify up to 250 resources for an individual event selector, but the
+     *        total number of data resources cannot exceed 250 across all event selectors in a trail. This limit does
+     *        not apply if you configure resource logging for all data events.</p>
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-data-events"
      *        >Data Events</a> and <a
      *        href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html">Limits in
-     *        AWS CloudTrail</a> in the <i>AWS CloudTrail User Guide</i>.
+     *        CloudTrail</a> in the <i>CloudTrail User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -482,30 +482,30 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * CloudTrail supports data event logging for Amazon S3 objects and AWS Lambda functions with basic event selectors.
-     * You can specify up to 250 resources for an individual event selector, but the total number of data resources
-     * cannot exceed 250 across all event selectors in a trail. This limit does not apply if you configure resource
-     * logging for all data events.
+     * CloudTrail supports data event logging for Amazon S3 objects, Lambda functions, and Amazon DynamoDB tables with
+     * basic event selectors. You can specify up to 250 resources for an individual event selector, but the total number
+     * of data resources cannot exceed 250 across all event selectors in a trail. This limit does not apply if you
+     * configure resource logging for all data events.
      * </p>
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-data-events"
      * >Data Events</a> and <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html">Limits in AWS
-     * CloudTrail</a> in the <i>AWS CloudTrail User Guide</i>.
+     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html">Limits in
+     * CloudTrail</a> in the <i>CloudTrail User Guide</i>.
      * </p>
      * 
      * @param dataResources
-     *        CloudTrail supports data event logging for Amazon S3 objects and AWS Lambda functions with basic event
-     *        selectors. You can specify up to 250 resources for an individual event selector, but the total number of
-     *        data resources cannot exceed 250 across all event selectors in a trail. This limit does not apply if you
-     *        configure resource logging for all data events. </p>
+     *        CloudTrail supports data event logging for Amazon S3 objects, Lambda functions, and Amazon DynamoDB tables
+     *        with basic event selectors. You can specify up to 250 resources for an individual event selector, but the
+     *        total number of data resources cannot exceed 250 across all event selectors in a trail. This limit does
+     *        not apply if you configure resource logging for all data events.</p>
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-data-events"
      *        >Data Events</a> and <a
      *        href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html">Limits in
-     *        AWS CloudTrail</a> in the <i>AWS CloudTrail User Guide</i>.
+     *        CloudTrail</a> in the <i>CloudTrail User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -517,17 +517,17 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * An optional list of service event sources from which you do not want management events to be logged on your
-     * trail. In this release, the list can be empty (disables the filter), or it can filter out AWS Key Management
-     * Service events by containing <code>"kms.amazonaws.com"</code>. By default,
-     * <code>ExcludeManagementEventSources</code> is empty, and AWS KMS events are included in events that are logged to
-     * your trail.
+     * trail. In this release, the list can be empty (disables the filter), or it can filter out Key Management Service
+     * or Amazon RDS Data API events by containing <code>kms.amazonaws.com</code> or <code>rdsdata.amazonaws.com</code>.
+     * By default, <code>ExcludeManagementEventSources</code> is empty, and KMS and Amazon RDS Data API events are
+     * logged to your trail.
      * </p>
      * 
      * @return An optional list of service event sources from which you do not want management events to be logged on
-     *         your trail. In this release, the list can be empty (disables the filter), or it can filter out AWS Key
-     *         Management Service events by containing <code>"kms.amazonaws.com"</code>. By default,
-     *         <code>ExcludeManagementEventSources</code> is empty, and AWS KMS events are included in events that are
-     *         logged to your trail.
+     *         your trail. In this release, the list can be empty (disables the filter), or it can filter out Key
+     *         Management Service or Amazon RDS Data API events by containing <code>kms.amazonaws.com</code> or
+     *         <code>rdsdata.amazonaws.com</code>. By default, <code>ExcludeManagementEventSources</code> is empty, and
+     *         KMS and Amazon RDS Data API events are logged to your trail.
      */
 
     public java.util.List<String> getExcludeManagementEventSources() {
@@ -540,18 +540,18 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * An optional list of service event sources from which you do not want management events to be logged on your
-     * trail. In this release, the list can be empty (disables the filter), or it can filter out AWS Key Management
-     * Service events by containing <code>"kms.amazonaws.com"</code>. By default,
-     * <code>ExcludeManagementEventSources</code> is empty, and AWS KMS events are included in events that are logged to
-     * your trail.
+     * trail. In this release, the list can be empty (disables the filter), or it can filter out Key Management Service
+     * or Amazon RDS Data API events by containing <code>kms.amazonaws.com</code> or <code>rdsdata.amazonaws.com</code>.
+     * By default, <code>ExcludeManagementEventSources</code> is empty, and KMS and Amazon RDS Data API events are
+     * logged to your trail.
      * </p>
      * 
      * @param excludeManagementEventSources
      *        An optional list of service event sources from which you do not want management events to be logged on
-     *        your trail. In this release, the list can be empty (disables the filter), or it can filter out AWS Key
-     *        Management Service events by containing <code>"kms.amazonaws.com"</code>. By default,
-     *        <code>ExcludeManagementEventSources</code> is empty, and AWS KMS events are included in events that are
-     *        logged to your trail.
+     *        your trail. In this release, the list can be empty (disables the filter), or it can filter out Key
+     *        Management Service or Amazon RDS Data API events by containing <code>kms.amazonaws.com</code> or
+     *        <code>rdsdata.amazonaws.com</code>. By default, <code>ExcludeManagementEventSources</code> is empty, and
+     *        KMS and Amazon RDS Data API events are logged to your trail.
      */
 
     public void setExcludeManagementEventSources(java.util.Collection<String> excludeManagementEventSources) {
@@ -566,10 +566,10 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * An optional list of service event sources from which you do not want management events to be logged on your
-     * trail. In this release, the list can be empty (disables the filter), or it can filter out AWS Key Management
-     * Service events by containing <code>"kms.amazonaws.com"</code>. By default,
-     * <code>ExcludeManagementEventSources</code> is empty, and AWS KMS events are included in events that are logged to
-     * your trail.
+     * trail. In this release, the list can be empty (disables the filter), or it can filter out Key Management Service
+     * or Amazon RDS Data API events by containing <code>kms.amazonaws.com</code> or <code>rdsdata.amazonaws.com</code>.
+     * By default, <code>ExcludeManagementEventSources</code> is empty, and KMS and Amazon RDS Data API events are
+     * logged to your trail.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -579,10 +579,10 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param excludeManagementEventSources
      *        An optional list of service event sources from which you do not want management events to be logged on
-     *        your trail. In this release, the list can be empty (disables the filter), or it can filter out AWS Key
-     *        Management Service events by containing <code>"kms.amazonaws.com"</code>. By default,
-     *        <code>ExcludeManagementEventSources</code> is empty, and AWS KMS events are included in events that are
-     *        logged to your trail.
+     *        your trail. In this release, the list can be empty (disables the filter), or it can filter out Key
+     *        Management Service or Amazon RDS Data API events by containing <code>kms.amazonaws.com</code> or
+     *        <code>rdsdata.amazonaws.com</code>. By default, <code>ExcludeManagementEventSources</code> is empty, and
+     *        KMS and Amazon RDS Data API events are logged to your trail.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -599,18 +599,18 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * An optional list of service event sources from which you do not want management events to be logged on your
-     * trail. In this release, the list can be empty (disables the filter), or it can filter out AWS Key Management
-     * Service events by containing <code>"kms.amazonaws.com"</code>. By default,
-     * <code>ExcludeManagementEventSources</code> is empty, and AWS KMS events are included in events that are logged to
-     * your trail.
+     * trail. In this release, the list can be empty (disables the filter), or it can filter out Key Management Service
+     * or Amazon RDS Data API events by containing <code>kms.amazonaws.com</code> or <code>rdsdata.amazonaws.com</code>.
+     * By default, <code>ExcludeManagementEventSources</code> is empty, and KMS and Amazon RDS Data API events are
+     * logged to your trail.
      * </p>
      * 
      * @param excludeManagementEventSources
      *        An optional list of service event sources from which you do not want management events to be logged on
-     *        your trail. In this release, the list can be empty (disables the filter), or it can filter out AWS Key
-     *        Management Service events by containing <code>"kms.amazonaws.com"</code>. By default,
-     *        <code>ExcludeManagementEventSources</code> is empty, and AWS KMS events are included in events that are
-     *        logged to your trail.
+     *        your trail. In this release, the list can be empty (disables the filter), or it can filter out Key
+     *        Management Service or Amazon RDS Data API events by containing <code>kms.amazonaws.com</code> or
+     *        <code>rdsdata.amazonaws.com</code>. By default, <code>ExcludeManagementEventSources</code> is empty, and
+     *        KMS and Amazon RDS Data API events are logged to your trail.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,7 +27,7 @@ public class GetComplianceDetailsByConfigRuleResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Indicates whether the AWS resource complies with the specified AWS Config rule.
+     * Indicates whether the Amazon Web Services resource complies with the specified Config rule.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<EvaluationResult> evaluationResults;
@@ -40,10 +40,10 @@ public class GetComplianceDetailsByConfigRuleResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Indicates whether the AWS resource complies with the specified AWS Config rule.
+     * Indicates whether the Amazon Web Services resource complies with the specified Config rule.
      * </p>
      * 
-     * @return Indicates whether the AWS resource complies with the specified AWS Config rule.
+     * @return Indicates whether the Amazon Web Services resource complies with the specified Config rule.
      */
 
     public java.util.List<EvaluationResult> getEvaluationResults() {
@@ -55,11 +55,11 @@ public class GetComplianceDetailsByConfigRuleResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Indicates whether the AWS resource complies with the specified AWS Config rule.
+     * Indicates whether the Amazon Web Services resource complies with the specified Config rule.
      * </p>
      * 
      * @param evaluationResults
-     *        Indicates whether the AWS resource complies with the specified AWS Config rule.
+     *        Indicates whether the Amazon Web Services resource complies with the specified Config rule.
      */
 
     public void setEvaluationResults(java.util.Collection<EvaluationResult> evaluationResults) {
@@ -73,7 +73,7 @@ public class GetComplianceDetailsByConfigRuleResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Indicates whether the AWS resource complies with the specified AWS Config rule.
+     * Indicates whether the Amazon Web Services resource complies with the specified Config rule.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -82,7 +82,7 @@ public class GetComplianceDetailsByConfigRuleResult extends com.amazonaws.Amazon
      * </p>
      * 
      * @param evaluationResults
-     *        Indicates whether the AWS resource complies with the specified AWS Config rule.
+     *        Indicates whether the Amazon Web Services resource complies with the specified Config rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -98,11 +98,11 @@ public class GetComplianceDetailsByConfigRuleResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Indicates whether the AWS resource complies with the specified AWS Config rule.
+     * Indicates whether the Amazon Web Services resource complies with the specified Config rule.
      * </p>
      * 
      * @param evaluationResults
-     *        Indicates whether the AWS resource complies with the specified AWS Config rule.
+     *        Indicates whether the Amazon Web Services resource complies with the specified Config rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

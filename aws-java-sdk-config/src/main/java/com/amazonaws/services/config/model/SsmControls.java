@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * AWS Systems Manager (SSM) specific remediation controls.
+ * Amazon Web Services Systems Manager (SSM) specific remediation controls.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/SsmControls" target="_top">AWS API

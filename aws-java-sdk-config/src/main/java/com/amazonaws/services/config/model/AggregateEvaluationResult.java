@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The details of an AWS Config evaluation for an account ID and region in an aggregator. Provides the AWS resource that
- * was evaluated, the compliance of the resource, related time stamps, and supplementary information.
+ * The details of an Config evaluation for an account ID and region in an aggregator. Provides the Amazon Web Services
+ * resource that was evaluated, the compliance of the resource, related time stamps, and supplementary information.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/AggregateEvaluationResult" target="_top">AWS
@@ -40,21 +40,21 @@ public class AggregateEvaluationResult implements Serializable, Cloneable, Struc
      * The resource compliance status.
      * </p>
      * <p>
-     * For the <code>AggregationEvaluationResult</code> data type, AWS Config supports only the <code>COMPLIANT</code>
-     * and <code>NON_COMPLIANT</code>. AWS Config does not support the <code>NOT_APPLICABLE</code> and
+     * For the <code>AggregationEvaluationResult</code> data type, Config supports only the <code>COMPLIANT</code> and
+     * <code>NON_COMPLIANT</code>. Config does not support the <code>NOT_APPLICABLE</code> and
      * <code>INSUFFICIENT_DATA</code> value.
      * </p>
      */
     private String complianceType;
     /**
      * <p>
-     * The time when AWS Config recorded the aggregate evaluation result.
+     * The time when Config recorded the aggregate evaluation result.
      * </p>
      */
     private java.util.Date resultRecordedTime;
     /**
      * <p>
-     * The time when the AWS Config rule evaluated the AWS resource.
+     * The time when the Config rule evaluated the Amazon Web Services resource.
      * </p>
      */
     private java.util.Date configRuleInvokedTime;
@@ -122,16 +122,16 @@ public class AggregateEvaluationResult implements Serializable, Cloneable, Struc
      * The resource compliance status.
      * </p>
      * <p>
-     * For the <code>AggregationEvaluationResult</code> data type, AWS Config supports only the <code>COMPLIANT</code>
-     * and <code>NON_COMPLIANT</code>. AWS Config does not support the <code>NOT_APPLICABLE</code> and
+     * For the <code>AggregationEvaluationResult</code> data type, Config supports only the <code>COMPLIANT</code> and
+     * <code>NON_COMPLIANT</code>. Config does not support the <code>NOT_APPLICABLE</code> and
      * <code>INSUFFICIENT_DATA</code> value.
      * </p>
      * 
      * @param complianceType
      *        The resource compliance status.</p>
      *        <p>
-     *        For the <code>AggregationEvaluationResult</code> data type, AWS Config supports only the
-     *        <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. AWS Config does not support the
+     *        For the <code>AggregationEvaluationResult</code> data type, Config supports only the
+     *        <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. Config does not support the
      *        <code>NOT_APPLICABLE</code> and <code>INSUFFICIENT_DATA</code> value.
      * @see ComplianceType
      */
@@ -145,15 +145,15 @@ public class AggregateEvaluationResult implements Serializable, Cloneable, Struc
      * The resource compliance status.
      * </p>
      * <p>
-     * For the <code>AggregationEvaluationResult</code> data type, AWS Config supports only the <code>COMPLIANT</code>
-     * and <code>NON_COMPLIANT</code>. AWS Config does not support the <code>NOT_APPLICABLE</code> and
+     * For the <code>AggregationEvaluationResult</code> data type, Config supports only the <code>COMPLIANT</code> and
+     * <code>NON_COMPLIANT</code>. Config does not support the <code>NOT_APPLICABLE</code> and
      * <code>INSUFFICIENT_DATA</code> value.
      * </p>
      * 
      * @return The resource compliance status.</p>
      *         <p>
-     *         For the <code>AggregationEvaluationResult</code> data type, AWS Config supports only the
-     *         <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. AWS Config does not support the
+     *         For the <code>AggregationEvaluationResult</code> data type, Config supports only the
+     *         <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. Config does not support the
      *         <code>NOT_APPLICABLE</code> and <code>INSUFFICIENT_DATA</code> value.
      * @see ComplianceType
      */
@@ -167,16 +167,16 @@ public class AggregateEvaluationResult implements Serializable, Cloneable, Struc
      * The resource compliance status.
      * </p>
      * <p>
-     * For the <code>AggregationEvaluationResult</code> data type, AWS Config supports only the <code>COMPLIANT</code>
-     * and <code>NON_COMPLIANT</code>. AWS Config does not support the <code>NOT_APPLICABLE</code> and
+     * For the <code>AggregationEvaluationResult</code> data type, Config supports only the <code>COMPLIANT</code> and
+     * <code>NON_COMPLIANT</code>. Config does not support the <code>NOT_APPLICABLE</code> and
      * <code>INSUFFICIENT_DATA</code> value.
      * </p>
      * 
      * @param complianceType
      *        The resource compliance status.</p>
      *        <p>
-     *        For the <code>AggregationEvaluationResult</code> data type, AWS Config supports only the
-     *        <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. AWS Config does not support the
+     *        For the <code>AggregationEvaluationResult</code> data type, Config supports only the
+     *        <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. Config does not support the
      *        <code>NOT_APPLICABLE</code> and <code>INSUFFICIENT_DATA</code> value.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ComplianceType
@@ -192,16 +192,16 @@ public class AggregateEvaluationResult implements Serializable, Cloneable, Struc
      * The resource compliance status.
      * </p>
      * <p>
-     * For the <code>AggregationEvaluationResult</code> data type, AWS Config supports only the <code>COMPLIANT</code>
-     * and <code>NON_COMPLIANT</code>. AWS Config does not support the <code>NOT_APPLICABLE</code> and
+     * For the <code>AggregationEvaluationResult</code> data type, Config supports only the <code>COMPLIANT</code> and
+     * <code>NON_COMPLIANT</code>. Config does not support the <code>NOT_APPLICABLE</code> and
      * <code>INSUFFICIENT_DATA</code> value.
      * </p>
      * 
      * @param complianceType
      *        The resource compliance status.</p>
      *        <p>
-     *        For the <code>AggregationEvaluationResult</code> data type, AWS Config supports only the
-     *        <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. AWS Config does not support the
+     *        For the <code>AggregationEvaluationResult</code> data type, Config supports only the
+     *        <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. Config does not support the
      *        <code>NOT_APPLICABLE</code> and <code>INSUFFICIENT_DATA</code> value.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ComplianceType
@@ -214,11 +214,11 @@ public class AggregateEvaluationResult implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The time when AWS Config recorded the aggregate evaluation result.
+     * The time when Config recorded the aggregate evaluation result.
      * </p>
      * 
      * @param resultRecordedTime
-     *        The time when AWS Config recorded the aggregate evaluation result.
+     *        The time when Config recorded the aggregate evaluation result.
      */
 
     public void setResultRecordedTime(java.util.Date resultRecordedTime) {
@@ -227,10 +227,10 @@ public class AggregateEvaluationResult implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The time when AWS Config recorded the aggregate evaluation result.
+     * The time when Config recorded the aggregate evaluation result.
      * </p>
      * 
-     * @return The time when AWS Config recorded the aggregate evaluation result.
+     * @return The time when Config recorded the aggregate evaluation result.
      */
 
     public java.util.Date getResultRecordedTime() {
@@ -239,11 +239,11 @@ public class AggregateEvaluationResult implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The time when AWS Config recorded the aggregate evaluation result.
+     * The time when Config recorded the aggregate evaluation result.
      * </p>
      * 
      * @param resultRecordedTime
-     *        The time when AWS Config recorded the aggregate evaluation result.
+     *        The time when Config recorded the aggregate evaluation result.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -254,11 +254,11 @@ public class AggregateEvaluationResult implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The time when the AWS Config rule evaluated the AWS resource.
+     * The time when the Config rule evaluated the Amazon Web Services resource.
      * </p>
      * 
      * @param configRuleInvokedTime
-     *        The time when the AWS Config rule evaluated the AWS resource.
+     *        The time when the Config rule evaluated the Amazon Web Services resource.
      */
 
     public void setConfigRuleInvokedTime(java.util.Date configRuleInvokedTime) {
@@ -267,10 +267,10 @@ public class AggregateEvaluationResult implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The time when the AWS Config rule evaluated the AWS resource.
+     * The time when the Config rule evaluated the Amazon Web Services resource.
      * </p>
      * 
-     * @return The time when the AWS Config rule evaluated the AWS resource.
+     * @return The time when the Config rule evaluated the Amazon Web Services resource.
      */
 
     public java.util.Date getConfigRuleInvokedTime() {
@@ -279,11 +279,11 @@ public class AggregateEvaluationResult implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The time when the AWS Config rule evaluated the AWS resource.
+     * The time when the Config rule evaluated the Amazon Web Services resource.
      * </p>
      * 
      * @param configRuleInvokedTime
-     *        The time when the AWS Config rule evaluated the AWS resource.
+     *        The time when the Config rule evaluated the Amazon Web Services resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

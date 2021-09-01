@@ -84,6 +84,15 @@ public class LaunchTemplateInstanceMetadataOptions implements Serializable, Clon
      * </note>
      */
     private String httpEndpoint;
+    /**
+     * <p>
+     * Enables or disables the IPv6 endpoint for the instance metadata service.
+     * </p>
+     * <p>
+     * Default: <code>disabled</code>
+     * </p>
+     */
+    private String httpProtocolIpv6;
 
     /**
      * <p>
@@ -526,6 +535,85 @@ public class LaunchTemplateInstanceMetadataOptions implements Serializable, Clon
     }
 
     /**
+     * <p>
+     * Enables or disables the IPv6 endpoint for the instance metadata service.
+     * </p>
+     * <p>
+     * Default: <code>disabled</code>
+     * </p>
+     * 
+     * @param httpProtocolIpv6
+     *        Enables or disables the IPv6 endpoint for the instance metadata service.</p>
+     *        <p>
+     *        Default: <code>disabled</code>
+     * @see LaunchTemplateInstanceMetadataProtocolIpv6
+     */
+
+    public void setHttpProtocolIpv6(String httpProtocolIpv6) {
+        this.httpProtocolIpv6 = httpProtocolIpv6;
+    }
+
+    /**
+     * <p>
+     * Enables or disables the IPv6 endpoint for the instance metadata service.
+     * </p>
+     * <p>
+     * Default: <code>disabled</code>
+     * </p>
+     * 
+     * @return Enables or disables the IPv6 endpoint for the instance metadata service.</p>
+     *         <p>
+     *         Default: <code>disabled</code>
+     * @see LaunchTemplateInstanceMetadataProtocolIpv6
+     */
+
+    public String getHttpProtocolIpv6() {
+        return this.httpProtocolIpv6;
+    }
+
+    /**
+     * <p>
+     * Enables or disables the IPv6 endpoint for the instance metadata service.
+     * </p>
+     * <p>
+     * Default: <code>disabled</code>
+     * </p>
+     * 
+     * @param httpProtocolIpv6
+     *        Enables or disables the IPv6 endpoint for the instance metadata service.</p>
+     *        <p>
+     *        Default: <code>disabled</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LaunchTemplateInstanceMetadataProtocolIpv6
+     */
+
+    public LaunchTemplateInstanceMetadataOptions withHttpProtocolIpv6(String httpProtocolIpv6) {
+        setHttpProtocolIpv6(httpProtocolIpv6);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Enables or disables the IPv6 endpoint for the instance metadata service.
+     * </p>
+     * <p>
+     * Default: <code>disabled</code>
+     * </p>
+     * 
+     * @param httpProtocolIpv6
+     *        Enables or disables the IPv6 endpoint for the instance metadata service.</p>
+     *        <p>
+     *        Default: <code>disabled</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LaunchTemplateInstanceMetadataProtocolIpv6
+     */
+
+    public LaunchTemplateInstanceMetadataOptions withHttpProtocolIpv6(LaunchTemplateInstanceMetadataProtocolIpv6 httpProtocolIpv6) {
+        this.httpProtocolIpv6 = httpProtocolIpv6.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -544,7 +632,9 @@ public class LaunchTemplateInstanceMetadataOptions implements Serializable, Clon
         if (getHttpPutResponseHopLimit() != null)
             sb.append("HttpPutResponseHopLimit: ").append(getHttpPutResponseHopLimit()).append(",");
         if (getHttpEndpoint() != null)
-            sb.append("HttpEndpoint: ").append(getHttpEndpoint());
+            sb.append("HttpEndpoint: ").append(getHttpEndpoint()).append(",");
+        if (getHttpProtocolIpv6() != null)
+            sb.append("HttpProtocolIpv6: ").append(getHttpProtocolIpv6());
         sb.append("}");
         return sb.toString();
     }
@@ -575,6 +665,10 @@ public class LaunchTemplateInstanceMetadataOptions implements Serializable, Clon
             return false;
         if (other.getHttpEndpoint() != null && other.getHttpEndpoint().equals(this.getHttpEndpoint()) == false)
             return false;
+        if (other.getHttpProtocolIpv6() == null ^ this.getHttpProtocolIpv6() == null)
+            return false;
+        if (other.getHttpProtocolIpv6() != null && other.getHttpProtocolIpv6().equals(this.getHttpProtocolIpv6()) == false)
+            return false;
         return true;
     }
 
@@ -587,6 +681,7 @@ public class LaunchTemplateInstanceMetadataOptions implements Serializable, Clon
         hashCode = prime * hashCode + ((getHttpTokens() == null) ? 0 : getHttpTokens().hashCode());
         hashCode = prime * hashCode + ((getHttpPutResponseHopLimit() == null) ? 0 : getHttpPutResponseHopLimit().hashCode());
         hashCode = prime * hashCode + ((getHttpEndpoint() == null) ? 0 : getHttpEndpoint().hashCode());
+        hashCode = prime * hashCode + ((getHttpProtocolIpv6() == null) ? 0 : getHttpProtocolIpv6().hashCode());
         return hashCode;
     }
 

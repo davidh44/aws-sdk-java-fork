@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * This exception is thrown when the KMS key ARN is invalid.
+ * This exception is thrown when the KMS key ARN is not valid.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

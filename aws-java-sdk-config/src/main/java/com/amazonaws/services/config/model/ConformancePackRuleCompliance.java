@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Compliance information of one or more AWS Config rules within a conformance pack. You can filter using AWS Config
- * rule names and compliance types.
+ * Compliance information of one or more Config rules within a conformance pack. You can filter using Config rule names
+ * and compliance types.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ConformancePackRuleCompliance"
@@ -37,7 +37,7 @@ public class ConformancePackRuleCompliance implements Serializable, Cloneable, S
     private String configRuleName;
     /**
      * <p>
-     * Compliance of the AWS Config rule.
+     * Compliance of the Config rule.
      * </p>
      * <p>
      * The allowed values are <code>COMPLIANT</code>, <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code>.
@@ -94,14 +94,14 @@ public class ConformancePackRuleCompliance implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Compliance of the AWS Config rule.
+     * Compliance of the Config rule.
      * </p>
      * <p>
      * The allowed values are <code>COMPLIANT</code>, <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code>.
      * </p>
      * 
      * @param complianceType
-     *        Compliance of the AWS Config rule.</p>
+     *        Compliance of the Config rule.</p>
      *        <p>
      *        The allowed values are <code>COMPLIANT</code>, <code>NON_COMPLIANT</code>, and
      *        <code>INSUFFICIENT_DATA</code>.
@@ -114,13 +114,13 @@ public class ConformancePackRuleCompliance implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Compliance of the AWS Config rule.
+     * Compliance of the Config rule.
      * </p>
      * <p>
      * The allowed values are <code>COMPLIANT</code>, <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code>.
      * </p>
      * 
-     * @return Compliance of the AWS Config rule.</p>
+     * @return Compliance of the Config rule.</p>
      *         <p>
      *         The allowed values are <code>COMPLIANT</code>, <code>NON_COMPLIANT</code>, and
      *         <code>INSUFFICIENT_DATA</code>.
@@ -133,14 +133,14 @@ public class ConformancePackRuleCompliance implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Compliance of the AWS Config rule.
+     * Compliance of the Config rule.
      * </p>
      * <p>
      * The allowed values are <code>COMPLIANT</code>, <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code>.
      * </p>
      * 
      * @param complianceType
-     *        Compliance of the AWS Config rule.</p>
+     *        Compliance of the Config rule.</p>
      *        <p>
      *        The allowed values are <code>COMPLIANT</code>, <code>NON_COMPLIANT</code>, and
      *        <code>INSUFFICIENT_DATA</code>.
@@ -155,14 +155,14 @@ public class ConformancePackRuleCompliance implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Compliance of the AWS Config rule.
+     * Compliance of the Config rule.
      * </p>
      * <p>
      * The allowed values are <code>COMPLIANT</code>, <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code>.
      * </p>
      * 
      * @param complianceType
-     *        Compliance of the AWS Config rule.</p>
+     *        Compliance of the Config rule.</p>
      *        <p>
      *        The allowed values are <code>COMPLIANT</code>, <code>NON_COMPLIANT</code>, and
      *        <code>INSUFFICIENT_DATA</code>.

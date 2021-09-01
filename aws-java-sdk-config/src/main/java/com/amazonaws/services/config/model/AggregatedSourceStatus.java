@@ -77,7 +77,7 @@ public class AggregatedSourceStatus implements Serializable, Cloneable, Structur
     private java.util.Date lastUpdateTime;
     /**
      * <p>
-     * The error code that AWS Config returned when the source account aggregation last failed.
+     * The error code that Config returned when the source account aggregation last failed.
      * </p>
      */
     private String lastErrorCode;
@@ -460,11 +460,11 @@ public class AggregatedSourceStatus implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The error code that AWS Config returned when the source account aggregation last failed.
+     * The error code that Config returned when the source account aggregation last failed.
      * </p>
      * 
      * @param lastErrorCode
-     *        The error code that AWS Config returned when the source account aggregation last failed.
+     *        The error code that Config returned when the source account aggregation last failed.
      */
 
     public void setLastErrorCode(String lastErrorCode) {
@@ -473,10 +473,10 @@ public class AggregatedSourceStatus implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The error code that AWS Config returned when the source account aggregation last failed.
+     * The error code that Config returned when the source account aggregation last failed.
      * </p>
      * 
-     * @return The error code that AWS Config returned when the source account aggregation last failed.
+     * @return The error code that Config returned when the source account aggregation last failed.
      */
 
     public String getLastErrorCode() {
@@ -485,11 +485,11 @@ public class AggregatedSourceStatus implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The error code that AWS Config returned when the source account aggregation last failed.
+     * The error code that Config returned when the source account aggregation last failed.
      * </p>
      * 
      * @param lastErrorCode
-     *        The error code that AWS Config returned when the source account aggregation last failed.
+     *        The error code that Config returned when the source account aggregation last failed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

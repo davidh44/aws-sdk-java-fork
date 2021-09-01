@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * One or more AWS Config rules in the request are invalid. Verify that the rule names are correct and try again.
+ * One or more Config rules in the request are invalid. Verify that the rule names are correct and try again.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

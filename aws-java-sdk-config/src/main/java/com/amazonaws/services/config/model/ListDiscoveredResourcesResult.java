@@ -26,7 +26,7 @@ public class ListDiscoveredResourcesResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The details that identify a resource that is discovered by AWS Config, including the resource type, ID, and (if
+     * The details that identify a resource that is discovered by Config, including the resource type, ID, and (if
      * available) the custom resource name.
      * </p>
      */
@@ -40,12 +40,12 @@ public class ListDiscoveredResourcesResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The details that identify a resource that is discovered by AWS Config, including the resource type, ID, and (if
+     * The details that identify a resource that is discovered by Config, including the resource type, ID, and (if
      * available) the custom resource name.
      * </p>
      * 
-     * @return The details that identify a resource that is discovered by AWS Config, including the resource type, ID,
-     *         and (if available) the custom resource name.
+     * @return The details that identify a resource that is discovered by Config, including the resource type, ID, and
+     *         (if available) the custom resource name.
      */
 
     public java.util.List<ResourceIdentifier> getResourceIdentifiers() {
@@ -57,13 +57,13 @@ public class ListDiscoveredResourcesResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The details that identify a resource that is discovered by AWS Config, including the resource type, ID, and (if
+     * The details that identify a resource that is discovered by Config, including the resource type, ID, and (if
      * available) the custom resource name.
      * </p>
      * 
      * @param resourceIdentifiers
-     *        The details that identify a resource that is discovered by AWS Config, including the resource type, ID,
-     *        and (if available) the custom resource name.
+     *        The details that identify a resource that is discovered by Config, including the resource type, ID, and
+     *        (if available) the custom resource name.
      */
 
     public void setResourceIdentifiers(java.util.Collection<ResourceIdentifier> resourceIdentifiers) {
@@ -77,7 +77,7 @@ public class ListDiscoveredResourcesResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The details that identify a resource that is discovered by AWS Config, including the resource type, ID, and (if
+     * The details that identify a resource that is discovered by Config, including the resource type, ID, and (if
      * available) the custom resource name.
      * </p>
      * <p>
@@ -87,8 +87,8 @@ public class ListDiscoveredResourcesResult extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param resourceIdentifiers
-     *        The details that identify a resource that is discovered by AWS Config, including the resource type, ID,
-     *        and (if available) the custom resource name.
+     *        The details that identify a resource that is discovered by Config, including the resource type, ID, and
+     *        (if available) the custom resource name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -104,13 +104,13 @@ public class ListDiscoveredResourcesResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The details that identify a resource that is discovered by AWS Config, including the resource type, ID, and (if
+     * The details that identify a resource that is discovered by Config, including the resource type, ID, and (if
      * available) the custom resource name.
      * </p>
      * 
      * @param resourceIdentifiers
-     *        The details that identify a resource that is discovered by AWS Config, including the resource type, ID,
-     *        and (if available) the custom resource name.
+     *        The details that identify a resource that is discovered by Config, including the resource type, ID, and
+     *        (if available) the custom resource name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

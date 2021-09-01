@@ -27,15 +27,15 @@ public class DescribeOrganizationConfigRuleStatusesRequest extends com.amazonaws
 
     /**
      * <p>
-     * The names of organization config rules for which you want status details. If you do not specify any names, AWS
-     * Config returns details for all your organization AWS Confg rules.
+     * The names of organization config rules for which you want status details. If you do not specify any names, Config
+     * returns details for all your organization Config rules.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> organizationConfigRuleNames;
     /**
      * <p>
      * The maximum number of <code>OrganizationConfigRuleStatuses</code> returned on each page. If you do no specify a
-     * number, AWS Config uses the default. The default is 100.
+     * number, Config uses the default. The default is 100.
      * </p>
      */
     private Integer limit;
@@ -49,12 +49,12 @@ public class DescribeOrganizationConfigRuleStatusesRequest extends com.amazonaws
 
     /**
      * <p>
-     * The names of organization config rules for which you want status details. If you do not specify any names, AWS
-     * Config returns details for all your organization AWS Confg rules.
+     * The names of organization config rules for which you want status details. If you do not specify any names, Config
+     * returns details for all your organization Config rules.
      * </p>
      * 
      * @return The names of organization config rules for which you want status details. If you do not specify any
-     *         names, AWS Config returns details for all your organization AWS Confg rules.
+     *         names, Config returns details for all your organization Config rules.
      */
 
     public java.util.List<String> getOrganizationConfigRuleNames() {
@@ -66,13 +66,13 @@ public class DescribeOrganizationConfigRuleStatusesRequest extends com.amazonaws
 
     /**
      * <p>
-     * The names of organization config rules for which you want status details. If you do not specify any names, AWS
-     * Config returns details for all your organization AWS Confg rules.
+     * The names of organization config rules for which you want status details. If you do not specify any names, Config
+     * returns details for all your organization Config rules.
      * </p>
      * 
      * @param organizationConfigRuleNames
      *        The names of organization config rules for which you want status details. If you do not specify any names,
-     *        AWS Config returns details for all your organization AWS Confg rules.
+     *        Config returns details for all your organization Config rules.
      */
 
     public void setOrganizationConfigRuleNames(java.util.Collection<String> organizationConfigRuleNames) {
@@ -86,8 +86,8 @@ public class DescribeOrganizationConfigRuleStatusesRequest extends com.amazonaws
 
     /**
      * <p>
-     * The names of organization config rules for which you want status details. If you do not specify any names, AWS
-     * Config returns details for all your organization AWS Confg rules.
+     * The names of organization config rules for which you want status details. If you do not specify any names, Config
+     * returns details for all your organization Config rules.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -97,7 +97,7 @@ public class DescribeOrganizationConfigRuleStatusesRequest extends com.amazonaws
      * 
      * @param organizationConfigRuleNames
      *        The names of organization config rules for which you want status details. If you do not specify any names,
-     *        AWS Config returns details for all your organization AWS Confg rules.
+     *        Config returns details for all your organization Config rules.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -113,13 +113,13 @@ public class DescribeOrganizationConfigRuleStatusesRequest extends com.amazonaws
 
     /**
      * <p>
-     * The names of organization config rules for which you want status details. If you do not specify any names, AWS
-     * Config returns details for all your organization AWS Confg rules.
+     * The names of organization config rules for which you want status details. If you do not specify any names, Config
+     * returns details for all your organization Config rules.
      * </p>
      * 
      * @param organizationConfigRuleNames
      *        The names of organization config rules for which you want status details. If you do not specify any names,
-     *        AWS Config returns details for all your organization AWS Confg rules.
+     *        Config returns details for all your organization Config rules.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -131,12 +131,12 @@ public class DescribeOrganizationConfigRuleStatusesRequest extends com.amazonaws
     /**
      * <p>
      * The maximum number of <code>OrganizationConfigRuleStatuses</code> returned on each page. If you do no specify a
-     * number, AWS Config uses the default. The default is 100.
+     * number, Config uses the default. The default is 100.
      * </p>
      * 
      * @param limit
      *        The maximum number of <code>OrganizationConfigRuleStatuses</code> returned on each page. If you do no
-     *        specify a number, AWS Config uses the default. The default is 100.
+     *        specify a number, Config uses the default. The default is 100.
      */
 
     public void setLimit(Integer limit) {
@@ -146,11 +146,11 @@ public class DescribeOrganizationConfigRuleStatusesRequest extends com.amazonaws
     /**
      * <p>
      * The maximum number of <code>OrganizationConfigRuleStatuses</code> returned on each page. If you do no specify a
-     * number, AWS Config uses the default. The default is 100.
+     * number, Config uses the default. The default is 100.
      * </p>
      * 
      * @return The maximum number of <code>OrganizationConfigRuleStatuses</code> returned on each page. If you do no
-     *         specify a number, AWS Config uses the default. The default is 100.
+     *         specify a number, Config uses the default. The default is 100.
      */
 
     public Integer getLimit() {
@@ -160,12 +160,12 @@ public class DescribeOrganizationConfigRuleStatusesRequest extends com.amazonaws
     /**
      * <p>
      * The maximum number of <code>OrganizationConfigRuleStatuses</code> returned on each page. If you do no specify a
-     * number, AWS Config uses the default. The default is 100.
+     * number, Config uses the default. The default is 100.
      * </p>
      * 
      * @param limit
      *        The maximum number of <code>OrganizationConfigRuleStatuses</code> returned on each page. If you do no
-     *        specify a number, AWS Config uses the default. The default is 100.
+     *        specify a number, Config uses the default. The default is 100.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

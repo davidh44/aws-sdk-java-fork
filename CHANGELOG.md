@@ -1,3 +1,24 @@
+# __1.12.60__ __2021-09-01__
+## __AWS CloudTrail__
+  - ### Features
+    - Documentation updates for CloudTrail
+
+## __AWS Config__
+  - ### Features
+    - Documentation updates for config
+
+## __AWS MediaTailor__
+  - ### Features
+    - This release adds support for wall clock programs in LINEAR channels.
+
+## __AWS Service Catalog App Registry__
+  - ### Features
+    - Introduction of GetAssociatedResource API and GetApplication response extension for Resource Groups support.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Added LaunchTemplate support for the IMDS IPv6 endpoint
+
 # __1.12.59__ __2021-08-31__
 ## __AWS Compute Optimizer__
   - ### Features

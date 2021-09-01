@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * An object with the name of the retention configuration and the retention period in days. The object stores the
- * configuration for data retention in AWS Config.
+ * configuration for data retention in Config.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/RetentionConfiguration" target="_top">AWS API
@@ -37,7 +37,7 @@ public class RetentionConfiguration implements Serializable, Cloneable, Structur
     private String name;
     /**
      * <p>
-     * Number of days AWS Config stores your historical information.
+     * Number of days Config stores your historical information.
      * </p>
      * <note>
      * <p>
@@ -89,7 +89,7 @@ public class RetentionConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Number of days AWS Config stores your historical information.
+     * Number of days Config stores your historical information.
      * </p>
      * <note>
      * <p>
@@ -98,7 +98,7 @@ public class RetentionConfiguration implements Serializable, Cloneable, Structur
      * </note>
      * 
      * @param retentionPeriodInDays
-     *        Number of days AWS Config stores your historical information.</p> <note>
+     *        Number of days Config stores your historical information.</p> <note>
      *        <p>
      *        Currently, only applicable to the configuration item history.
      *        </p>
@@ -110,7 +110,7 @@ public class RetentionConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Number of days AWS Config stores your historical information.
+     * Number of days Config stores your historical information.
      * </p>
      * <note>
      * <p>
@@ -118,7 +118,7 @@ public class RetentionConfiguration implements Serializable, Cloneable, Structur
      * </p>
      * </note>
      * 
-     * @return Number of days AWS Config stores your historical information.</p> <note>
+     * @return Number of days Config stores your historical information.</p> <note>
      *         <p>
      *         Currently, only applicable to the configuration item history.
      *         </p>
@@ -130,7 +130,7 @@ public class RetentionConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Number of days AWS Config stores your historical information.
+     * Number of days Config stores your historical information.
      * </p>
      * <note>
      * <p>
@@ -139,7 +139,7 @@ public class RetentionConfiguration implements Serializable, Cloneable, Structur
      * </note>
      * 
      * @param retentionPeriodInDays
-     *        Number of days AWS Config stores your historical information.</p> <note>
+     *        Number of days Config stores your historical information.</p> <note>
      *        <p>
      *        Currently, only applicable to the configuration item history.
      *        </p>

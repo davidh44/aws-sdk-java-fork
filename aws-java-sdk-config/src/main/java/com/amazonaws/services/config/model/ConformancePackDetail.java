@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Returns details of a conformance pack. A conformance pack is a collection of AWS Config rules and remediation actions
+ * Returns details of a conformance pack. A conformance pack is a collection of Config rules and remediation actions
  * that can be easily deployed in an account and a region.
  * </p>
  * 
@@ -49,7 +49,7 @@ public class ConformancePackDetail implements Serializable, Cloneable, Structure
     private String conformancePackId;
     /**
      * <p>
-     * Amazon S3 bucket where AWS Config stores conformance pack templates.
+     * The name of the Amazon S3 bucket where Config stores conformance pack templates.
      * </p>
      * <note>
      * <p>
@@ -83,7 +83,7 @@ public class ConformancePackDetail implements Serializable, Cloneable, Structure
     private java.util.Date lastUpdateRequestedTime;
     /**
      * <p>
-     * AWS service that created the conformance pack.
+     * Amazon Web Services service that created the conformance pack.
      * </p>
      */
     private String createdBy;
@@ -210,7 +210,7 @@ public class ConformancePackDetail implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Amazon S3 bucket where AWS Config stores conformance pack templates.
+     * The name of the Amazon S3 bucket where Config stores conformance pack templates.
      * </p>
      * <note>
      * <p>
@@ -219,7 +219,7 @@ public class ConformancePackDetail implements Serializable, Cloneable, Structure
      * </note>
      * 
      * @param deliveryS3Bucket
-     *        Amazon S3 bucket where AWS Config stores conformance pack templates. </p> <note>
+     *        The name of the Amazon S3 bucket where Config stores conformance pack templates. </p> <note>
      *        <p>
      *        This field is optional.
      *        </p>
@@ -231,7 +231,7 @@ public class ConformancePackDetail implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Amazon S3 bucket where AWS Config stores conformance pack templates.
+     * The name of the Amazon S3 bucket where Config stores conformance pack templates.
      * </p>
      * <note>
      * <p>
@@ -239,7 +239,7 @@ public class ConformancePackDetail implements Serializable, Cloneable, Structure
      * </p>
      * </note>
      * 
-     * @return Amazon S3 bucket where AWS Config stores conformance pack templates. </p> <note>
+     * @return The name of the Amazon S3 bucket where Config stores conformance pack templates. </p> <note>
      *         <p>
      *         This field is optional.
      *         </p>
@@ -251,7 +251,7 @@ public class ConformancePackDetail implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Amazon S3 bucket where AWS Config stores conformance pack templates.
+     * The name of the Amazon S3 bucket where Config stores conformance pack templates.
      * </p>
      * <note>
      * <p>
@@ -260,7 +260,7 @@ public class ConformancePackDetail implements Serializable, Cloneable, Structure
      * </note>
      * 
      * @param deliveryS3Bucket
-     *        Amazon S3 bucket where AWS Config stores conformance pack templates. </p> <note>
+     *        The name of the Amazon S3 bucket where Config stores conformance pack templates. </p> <note>
      *        <p>
      *        This field is optional.
      *        </p>
@@ -451,11 +451,11 @@ public class ConformancePackDetail implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * AWS service that created the conformance pack.
+     * Amazon Web Services service that created the conformance pack.
      * </p>
      * 
      * @param createdBy
-     *        AWS service that created the conformance pack.
+     *        Amazon Web Services service that created the conformance pack.
      */
 
     public void setCreatedBy(String createdBy) {
@@ -464,10 +464,10 @@ public class ConformancePackDetail implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * AWS service that created the conformance pack.
+     * Amazon Web Services service that created the conformance pack.
      * </p>
      * 
-     * @return AWS service that created the conformance pack.
+     * @return Amazon Web Services service that created the conformance pack.
      */
 
     public String getCreatedBy() {
@@ -476,11 +476,11 @@ public class ConformancePackDetail implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * AWS service that created the conformance pack.
+     * Amazon Web Services service that created the conformance pack.
      * </p>
      * 
      * @param createdBy
-     *        AWS service that created the conformance pack.
+     *        Amazon Web Services service that created the conformance pack.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

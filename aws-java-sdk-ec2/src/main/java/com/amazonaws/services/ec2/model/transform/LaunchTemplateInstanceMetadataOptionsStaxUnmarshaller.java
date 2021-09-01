@@ -62,6 +62,11 @@ public class LaunchTemplateInstanceMetadataOptionsStaxUnmarshaller implements Un
                     launchTemplateInstanceMetadataOptions.setHttpEndpoint(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("httpProtocolIpv6", targetDepth)) {
+                    launchTemplateInstanceMetadataOptions.setHttpProtocolIpv6(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return launchTemplateInstanceMetadataOptions;

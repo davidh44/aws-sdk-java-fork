@@ -30,21 +30,21 @@ public class InsightSelector implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The type of insights to log on a trail. In this release, only <code>ApiCallRateInsight</code> is supported as an
-     * insight type.
+     * The type of Insights events to log on a trail. The valid Insights type in this release is
+     * <code>ApiCallRateInsight</code>.
      * </p>
      */
     private String insightType;
 
     /**
      * <p>
-     * The type of insights to log on a trail. In this release, only <code>ApiCallRateInsight</code> is supported as an
-     * insight type.
+     * The type of Insights events to log on a trail. The valid Insights type in this release is
+     * <code>ApiCallRateInsight</code>.
      * </p>
      * 
      * @param insightType
-     *        The type of insights to log on a trail. In this release, only <code>ApiCallRateInsight</code> is supported
-     *        as an insight type.
+     *        The type of Insights events to log on a trail. The valid Insights type in this release is
+     *        <code>ApiCallRateInsight</code>.
      * @see InsightType
      */
 
@@ -54,12 +54,12 @@ public class InsightSelector implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The type of insights to log on a trail. In this release, only <code>ApiCallRateInsight</code> is supported as an
-     * insight type.
+     * The type of Insights events to log on a trail. The valid Insights type in this release is
+     * <code>ApiCallRateInsight</code>.
      * </p>
      * 
-     * @return The type of insights to log on a trail. In this release, only <code>ApiCallRateInsight</code> is
-     *         supported as an insight type.
+     * @return The type of Insights events to log on a trail. The valid Insights type in this release is
+     *         <code>ApiCallRateInsight</code>.
      * @see InsightType
      */
 
@@ -69,13 +69,13 @@ public class InsightSelector implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The type of insights to log on a trail. In this release, only <code>ApiCallRateInsight</code> is supported as an
-     * insight type.
+     * The type of Insights events to log on a trail. The valid Insights type in this release is
+     * <code>ApiCallRateInsight</code>.
      * </p>
      * 
      * @param insightType
-     *        The type of insights to log on a trail. In this release, only <code>ApiCallRateInsight</code> is supported
-     *        as an insight type.
+     *        The type of Insights events to log on a trail. The valid Insights type in this release is
+     *        <code>ApiCallRateInsight</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InsightType
      */
@@ -87,13 +87,13 @@ public class InsightSelector implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The type of insights to log on a trail. In this release, only <code>ApiCallRateInsight</code> is supported as an
-     * insight type.
+     * The type of Insights events to log on a trail. The valid Insights type in this release is
+     * <code>ApiCallRateInsight</code>.
      * </p>
      * 
      * @param insightType
-     *        The type of insights to log on a trail. In this release, only <code>ApiCallRateInsight</code> is supported
-     *        as an insight type.
+     *        The type of Insights events to log on a trail. The valid Insights type in this release is
+     *        <code>ApiCallRateInsight</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InsightType
      */

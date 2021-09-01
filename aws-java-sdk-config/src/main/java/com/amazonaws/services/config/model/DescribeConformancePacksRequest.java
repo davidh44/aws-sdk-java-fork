@@ -27,7 +27,7 @@ public class DescribeConformancePacksRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Comma-separated list of conformance pack names for which you want details. If you do not specify any names, AWS
+     * Comma-separated list of conformance pack names for which you want details. If you do not specify any names,
      * Config returns details for all your conformance packs.
      * </p>
      */
@@ -48,12 +48,12 @@ public class DescribeConformancePacksRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Comma-separated list of conformance pack names for which you want details. If you do not specify any names, AWS
+     * Comma-separated list of conformance pack names for which you want details. If you do not specify any names,
      * Config returns details for all your conformance packs.
      * </p>
      * 
      * @return Comma-separated list of conformance pack names for which you want details. If you do not specify any
-     *         names, AWS Config returns details for all your conformance packs.
+     *         names, Config returns details for all your conformance packs.
      */
 
     public java.util.List<String> getConformancePackNames() {
@@ -65,13 +65,13 @@ public class DescribeConformancePacksRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Comma-separated list of conformance pack names for which you want details. If you do not specify any names, AWS
+     * Comma-separated list of conformance pack names for which you want details. If you do not specify any names,
      * Config returns details for all your conformance packs.
      * </p>
      * 
      * @param conformancePackNames
      *        Comma-separated list of conformance pack names for which you want details. If you do not specify any
-     *        names, AWS Config returns details for all your conformance packs.
+     *        names, Config returns details for all your conformance packs.
      */
 
     public void setConformancePackNames(java.util.Collection<String> conformancePackNames) {
@@ -85,7 +85,7 @@ public class DescribeConformancePacksRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Comma-separated list of conformance pack names for which you want details. If you do not specify any names, AWS
+     * Comma-separated list of conformance pack names for which you want details. If you do not specify any names,
      * Config returns details for all your conformance packs.
      * </p>
      * <p>
@@ -96,7 +96,7 @@ public class DescribeConformancePacksRequest extends com.amazonaws.AmazonWebServ
      * 
      * @param conformancePackNames
      *        Comma-separated list of conformance pack names for which you want details. If you do not specify any
-     *        names, AWS Config returns details for all your conformance packs.
+     *        names, Config returns details for all your conformance packs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -112,13 +112,13 @@ public class DescribeConformancePacksRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Comma-separated list of conformance pack names for which you want details. If you do not specify any names, AWS
+     * Comma-separated list of conformance pack names for which you want details. If you do not specify any names,
      * Config returns details for all your conformance packs.
      * </p>
      * 
      * @param conformancePackNames
      *        Comma-separated list of conformance pack names for which you want details. If you do not specify any
-     *        names, AWS Config returns details for all your conformance packs.
+     *        names, Config returns details for all your conformance packs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -44,7 +44,7 @@ public class OrganizationConfigRuleStatus implements Serializable, Cloneable, St
      * and disables service access for <code>config-multiaccountsetup.amazonaws.com</code>.
      * </p>
      * <p>
-     * AWS Config sets the state of the rule to:
+     * Config sets the state of the rule to:
      * </p>
      * <ul>
      * <li>
@@ -170,7 +170,7 @@ public class OrganizationConfigRuleStatus implements Serializable, Cloneable, St
      * and disables service access for <code>config-multiaccountsetup.amazonaws.com</code>.
      * </p>
      * <p>
-     * AWS Config sets the state of the rule to:
+     * Config sets the state of the rule to:
      * </p>
      * <ul>
      * <li>
@@ -235,7 +235,7 @@ public class OrganizationConfigRuleStatus implements Serializable, Cloneable, St
      *        deletes OrganizationConfigRule in all the member accounts and disables service access for
      *        <code>config-multiaccountsetup.amazonaws.com</code>.</p>
      *        <p>
-     *        AWS Config sets the state of the rule to:
+     *        Config sets the state of the rule to:
      *        </p>
      *        <ul>
      *        <li>
@@ -306,7 +306,7 @@ public class OrganizationConfigRuleStatus implements Serializable, Cloneable, St
      * and disables service access for <code>config-multiaccountsetup.amazonaws.com</code>.
      * </p>
      * <p>
-     * AWS Config sets the state of the rule to:
+     * Config sets the state of the rule to:
      * </p>
      * <ul>
      * <li>
@@ -370,7 +370,7 @@ public class OrganizationConfigRuleStatus implements Serializable, Cloneable, St
      *         deletes OrganizationConfigRule in all the member accounts and disables service access for
      *         <code>config-multiaccountsetup.amazonaws.com</code>.</p>
      *         <p>
-     *         AWS Config sets the state of the rule to:
+     *         Config sets the state of the rule to:
      *         </p>
      *         <ul>
      *         <li>
@@ -441,7 +441,7 @@ public class OrganizationConfigRuleStatus implements Serializable, Cloneable, St
      * and disables service access for <code>config-multiaccountsetup.amazonaws.com</code>.
      * </p>
      * <p>
-     * AWS Config sets the state of the rule to:
+     * Config sets the state of the rule to:
      * </p>
      * <ul>
      * <li>
@@ -506,7 +506,7 @@ public class OrganizationConfigRuleStatus implements Serializable, Cloneable, St
      *        deletes OrganizationConfigRule in all the member accounts and disables service access for
      *        <code>config-multiaccountsetup.amazonaws.com</code>.</p>
      *        <p>
-     *        AWS Config sets the state of the rule to:
+     *        Config sets the state of the rule to:
      *        </p>
      *        <ul>
      *        <li>
@@ -579,7 +579,7 @@ public class OrganizationConfigRuleStatus implements Serializable, Cloneable, St
      * and disables service access for <code>config-multiaccountsetup.amazonaws.com</code>.
      * </p>
      * <p>
-     * AWS Config sets the state of the rule to:
+     * Config sets the state of the rule to:
      * </p>
      * <ul>
      * <li>
@@ -644,7 +644,7 @@ public class OrganizationConfigRuleStatus implements Serializable, Cloneable, St
      *        deletes OrganizationConfigRule in all the member accounts and disables service access for
      *        <code>config-multiaccountsetup.amazonaws.com</code>.</p>
      *        <p>
-     *        AWS Config sets the state of the rule to:
+     *        Config sets the state of the rule to:
      *        </p>
      *        <ul>
      *        <li>

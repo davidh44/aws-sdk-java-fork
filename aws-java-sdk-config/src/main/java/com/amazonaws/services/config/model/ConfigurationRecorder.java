@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An object that represents the recording of configuration changes of an AWS resource.
+ * An object that represents the recording of configuration changes of an Amazon Web Services resource.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ConfigurationRecorder" target="_top">AWS API
@@ -30,33 +30,34 @@ public class ConfigurationRecorder implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The name of the recorder. By default, AWS Config automatically assigns the name "default" when creating the
+     * The name of the recorder. By default, Config automatically assigns the name "default" when creating the
      * configuration recorder. You cannot change the assigned name.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * Amazon Resource Name (ARN) of the IAM role used to describe the AWS resources associated with the account.
+     * Amazon Resource Name (ARN) of the IAM role used to describe the Amazon Web Services resources associated with the
+     * account.
      * </p>
      */
     private String roleARN;
     /**
      * <p>
-     * Specifies the types of AWS resources for which AWS Config records configuration changes.
+     * Specifies the types of Amazon Web Services resources for which Config records configuration changes.
      * </p>
      */
     private RecordingGroup recordingGroup;
 
     /**
      * <p>
-     * The name of the recorder. By default, AWS Config automatically assigns the name "default" when creating the
+     * The name of the recorder. By default, Config automatically assigns the name "default" when creating the
      * configuration recorder. You cannot change the assigned name.
      * </p>
      * 
      * @param name
-     *        The name of the recorder. By default, AWS Config automatically assigns the name "default" when creating
-     *        the configuration recorder. You cannot change the assigned name.
+     *        The name of the recorder. By default, Config automatically assigns the name "default" when creating the
+     *        configuration recorder. You cannot change the assigned name.
      */
 
     public void setName(String name) {
@@ -65,12 +66,12 @@ public class ConfigurationRecorder implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The name of the recorder. By default, AWS Config automatically assigns the name "default" when creating the
+     * The name of the recorder. By default, Config automatically assigns the name "default" when creating the
      * configuration recorder. You cannot change the assigned name.
      * </p>
      * 
-     * @return The name of the recorder. By default, AWS Config automatically assigns the name "default" when creating
-     *         the configuration recorder. You cannot change the assigned name.
+     * @return The name of the recorder. By default, Config automatically assigns the name "default" when creating the
+     *         configuration recorder. You cannot change the assigned name.
      */
 
     public String getName() {
@@ -79,13 +80,13 @@ public class ConfigurationRecorder implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The name of the recorder. By default, AWS Config automatically assigns the name "default" when creating the
+     * The name of the recorder. By default, Config automatically assigns the name "default" when creating the
      * configuration recorder. You cannot change the assigned name.
      * </p>
      * 
      * @param name
-     *        The name of the recorder. By default, AWS Config automatically assigns the name "default" when creating
-     *        the configuration recorder. You cannot change the assigned name.
+     *        The name of the recorder. By default, Config automatically assigns the name "default" when creating the
+     *        configuration recorder. You cannot change the assigned name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -96,11 +97,13 @@ public class ConfigurationRecorder implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Amazon Resource Name (ARN) of the IAM role used to describe the AWS resources associated with the account.
+     * Amazon Resource Name (ARN) of the IAM role used to describe the Amazon Web Services resources associated with the
+     * account.
      * </p>
      * 
      * @param roleARN
-     *        Amazon Resource Name (ARN) of the IAM role used to describe the AWS resources associated with the account.
+     *        Amazon Resource Name (ARN) of the IAM role used to describe the Amazon Web Services resources associated
+     *        with the account.
      */
 
     public void setRoleARN(String roleARN) {
@@ -109,11 +112,12 @@ public class ConfigurationRecorder implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Amazon Resource Name (ARN) of the IAM role used to describe the AWS resources associated with the account.
+     * Amazon Resource Name (ARN) of the IAM role used to describe the Amazon Web Services resources associated with the
+     * account.
      * </p>
      * 
-     * @return Amazon Resource Name (ARN) of the IAM role used to describe the AWS resources associated with the
-     *         account.
+     * @return Amazon Resource Name (ARN) of the IAM role used to describe the Amazon Web Services resources associated
+     *         with the account.
      */
 
     public String getRoleARN() {
@@ -122,11 +126,13 @@ public class ConfigurationRecorder implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Amazon Resource Name (ARN) of the IAM role used to describe the AWS resources associated with the account.
+     * Amazon Resource Name (ARN) of the IAM role used to describe the Amazon Web Services resources associated with the
+     * account.
      * </p>
      * 
      * @param roleARN
-     *        Amazon Resource Name (ARN) of the IAM role used to describe the AWS resources associated with the account.
+     *        Amazon Resource Name (ARN) of the IAM role used to describe the Amazon Web Services resources associated
+     *        with the account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -137,11 +143,11 @@ public class ConfigurationRecorder implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Specifies the types of AWS resources for which AWS Config records configuration changes.
+     * Specifies the types of Amazon Web Services resources for which Config records configuration changes.
      * </p>
      * 
      * @param recordingGroup
-     *        Specifies the types of AWS resources for which AWS Config records configuration changes.
+     *        Specifies the types of Amazon Web Services resources for which Config records configuration changes.
      */
 
     public void setRecordingGroup(RecordingGroup recordingGroup) {
@@ -150,10 +156,10 @@ public class ConfigurationRecorder implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Specifies the types of AWS resources for which AWS Config records configuration changes.
+     * Specifies the types of Amazon Web Services resources for which Config records configuration changes.
      * </p>
      * 
-     * @return Specifies the types of AWS resources for which AWS Config records configuration changes.
+     * @return Specifies the types of Amazon Web Services resources for which Config records configuration changes.
      */
 
     public RecordingGroup getRecordingGroup() {
@@ -162,11 +168,11 @@ public class ConfigurationRecorder implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Specifies the types of AWS resources for which AWS Config records configuration changes.
+     * Specifies the types of Amazon Web Services resources for which Config records configuration changes.
      * </p>
      * 
      * @param recordingGroup
-     *        Specifies the types of AWS resources for which AWS Config records configuration changes.
+     *        Specifies the types of Amazon Web Services resources for which Config records configuration changes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

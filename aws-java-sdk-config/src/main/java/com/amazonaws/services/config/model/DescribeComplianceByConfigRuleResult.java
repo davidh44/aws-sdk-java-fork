@@ -27,7 +27,7 @@ public class DescribeComplianceByConfigRuleResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * Indicates whether each of the specified AWS Config rules is compliant.
+     * Indicates whether each of the specified Config rules is compliant.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<ComplianceByConfigRule> complianceByConfigRules;
@@ -40,10 +40,10 @@ public class DescribeComplianceByConfigRuleResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * Indicates whether each of the specified AWS Config rules is compliant.
+     * Indicates whether each of the specified Config rules is compliant.
      * </p>
      * 
-     * @return Indicates whether each of the specified AWS Config rules is compliant.
+     * @return Indicates whether each of the specified Config rules is compliant.
      */
 
     public java.util.List<ComplianceByConfigRule> getComplianceByConfigRules() {
@@ -55,11 +55,11 @@ public class DescribeComplianceByConfigRuleResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * Indicates whether each of the specified AWS Config rules is compliant.
+     * Indicates whether each of the specified Config rules is compliant.
      * </p>
      * 
      * @param complianceByConfigRules
-     *        Indicates whether each of the specified AWS Config rules is compliant.
+     *        Indicates whether each of the specified Config rules is compliant.
      */
 
     public void setComplianceByConfigRules(java.util.Collection<ComplianceByConfigRule> complianceByConfigRules) {
@@ -73,7 +73,7 @@ public class DescribeComplianceByConfigRuleResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * Indicates whether each of the specified AWS Config rules is compliant.
+     * Indicates whether each of the specified Config rules is compliant.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -82,7 +82,7 @@ public class DescribeComplianceByConfigRuleResult extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @param complianceByConfigRules
-     *        Indicates whether each of the specified AWS Config rules is compliant.
+     *        Indicates whether each of the specified Config rules is compliant.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -98,11 +98,11 @@ public class DescribeComplianceByConfigRuleResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * Indicates whether each of the specified AWS Config rules is compliant.
+     * Indicates whether each of the specified Config rules is compliant.
      * </p>
      * 
      * @param complianceByConfigRules
-     *        Indicates whether each of the specified AWS Config rules is compliant.
+     *        Indicates whether each of the specified Config rules is compliant.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

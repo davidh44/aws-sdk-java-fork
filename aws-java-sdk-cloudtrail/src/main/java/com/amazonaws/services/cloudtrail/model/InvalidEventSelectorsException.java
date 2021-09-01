@@ -47,7 +47,7 @@ import javax.annotation.Generated;
  * <li>
  * <p>
  * Specify a valid value for a parameter. For example, specifying the <code>ReadWriteType</code> parameter with a value
- * of <code>read-only</code> is invalid.
+ * of <code>read-only</code> is not valid.
  * </p>
  * </li>
  * </ul>

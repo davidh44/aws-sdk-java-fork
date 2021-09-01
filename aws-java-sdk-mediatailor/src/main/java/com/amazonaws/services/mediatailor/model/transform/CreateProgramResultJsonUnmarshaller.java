@@ -70,6 +70,10 @@ public class CreateProgramResultJsonUnmarshaller implements Unmarshaller<CreateP
                     context.nextToken();
                     createProgramResult.setProgramName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ScheduledStartTime", targetDepth)) {
+                    context.nextToken();
+                    createProgramResult.setScheduledStartTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
                 if (context.testExpression("SourceLocationName", targetDepth)) {
                     context.nextToken();
                     createProgramResult.setSourceLocationName(context.getUnmarshaller(String.class).unmarshall(context));

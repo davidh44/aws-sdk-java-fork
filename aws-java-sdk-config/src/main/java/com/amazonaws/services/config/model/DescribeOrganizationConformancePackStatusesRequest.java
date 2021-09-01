@@ -28,14 +28,14 @@ public class DescribeOrganizationConformancePackStatusesRequest extends com.amaz
     /**
      * <p>
      * The names of organization conformance packs for which you want status details. If you do not specify any names,
-     * AWS Config returns details for all your organization conformance packs.
+     * Config returns details for all your organization conformance packs.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> organizationConformancePackNames;
     /**
      * <p>
      * The maximum number of OrganizationConformancePackStatuses returned on each page. If you do no specify a number,
-     * AWS Config uses the default. The default is 100.
+     * Config uses the default. The default is 100.
      * </p>
      */
     private Integer limit;
@@ -50,11 +50,11 @@ public class DescribeOrganizationConformancePackStatusesRequest extends com.amaz
     /**
      * <p>
      * The names of organization conformance packs for which you want status details. If you do not specify any names,
-     * AWS Config returns details for all your organization conformance packs.
+     * Config returns details for all your organization conformance packs.
      * </p>
      * 
      * @return The names of organization conformance packs for which you want status details. If you do not specify any
-     *         names, AWS Config returns details for all your organization conformance packs.
+     *         names, Config returns details for all your organization conformance packs.
      */
 
     public java.util.List<String> getOrganizationConformancePackNames() {
@@ -67,12 +67,12 @@ public class DescribeOrganizationConformancePackStatusesRequest extends com.amaz
     /**
      * <p>
      * The names of organization conformance packs for which you want status details. If you do not specify any names,
-     * AWS Config returns details for all your organization conformance packs.
+     * Config returns details for all your organization conformance packs.
      * </p>
      * 
      * @param organizationConformancePackNames
      *        The names of organization conformance packs for which you want status details. If you do not specify any
-     *        names, AWS Config returns details for all your organization conformance packs.
+     *        names, Config returns details for all your organization conformance packs.
      */
 
     public void setOrganizationConformancePackNames(java.util.Collection<String> organizationConformancePackNames) {
@@ -87,7 +87,7 @@ public class DescribeOrganizationConformancePackStatusesRequest extends com.amaz
     /**
      * <p>
      * The names of organization conformance packs for which you want status details. If you do not specify any names,
-     * AWS Config returns details for all your organization conformance packs.
+     * Config returns details for all your organization conformance packs.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -97,7 +97,7 @@ public class DescribeOrganizationConformancePackStatusesRequest extends com.amaz
      * 
      * @param organizationConformancePackNames
      *        The names of organization conformance packs for which you want status details. If you do not specify any
-     *        names, AWS Config returns details for all your organization conformance packs.
+     *        names, Config returns details for all your organization conformance packs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -114,12 +114,12 @@ public class DescribeOrganizationConformancePackStatusesRequest extends com.amaz
     /**
      * <p>
      * The names of organization conformance packs for which you want status details. If you do not specify any names,
-     * AWS Config returns details for all your organization conformance packs.
+     * Config returns details for all your organization conformance packs.
      * </p>
      * 
      * @param organizationConformancePackNames
      *        The names of organization conformance packs for which you want status details. If you do not specify any
-     *        names, AWS Config returns details for all your organization conformance packs.
+     *        names, Config returns details for all your organization conformance packs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -131,12 +131,12 @@ public class DescribeOrganizationConformancePackStatusesRequest extends com.amaz
     /**
      * <p>
      * The maximum number of OrganizationConformancePackStatuses returned on each page. If you do no specify a number,
-     * AWS Config uses the default. The default is 100.
+     * Config uses the default. The default is 100.
      * </p>
      * 
      * @param limit
      *        The maximum number of OrganizationConformancePackStatuses returned on each page. If you do no specify a
-     *        number, AWS Config uses the default. The default is 100.
+     *        number, Config uses the default. The default is 100.
      */
 
     public void setLimit(Integer limit) {
@@ -146,11 +146,11 @@ public class DescribeOrganizationConformancePackStatusesRequest extends com.amaz
     /**
      * <p>
      * The maximum number of OrganizationConformancePackStatuses returned on each page. If you do no specify a number,
-     * AWS Config uses the default. The default is 100.
+     * Config uses the default. The default is 100.
      * </p>
      * 
      * @return The maximum number of OrganizationConformancePackStatuses returned on each page. If you do no specify a
-     *         number, AWS Config uses the default. The default is 100.
+     *         number, Config uses the default. The default is 100.
      */
 
     public Integer getLimit() {
@@ -160,12 +160,12 @@ public class DescribeOrganizationConformancePackStatusesRequest extends com.amaz
     /**
      * <p>
      * The maximum number of OrganizationConformancePackStatuses returned on each page. If you do no specify a number,
-     * AWS Config uses the default. The default is 100.
+     * Config uses the default. The default is 100.
      * </p>
      * 
      * @param limit
      *        The maximum number of OrganizationConformancePackStatuses returned on each page. If you do no specify a
-     *        number, AWS Config uses the default. The default is 100.
+     *        number, Config uses the default. The default is 100.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

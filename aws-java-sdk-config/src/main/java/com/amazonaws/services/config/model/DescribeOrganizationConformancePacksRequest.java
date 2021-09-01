@@ -33,8 +33,8 @@ public class DescribeOrganizationConformancePacksRequest extends com.amazonaws.A
     private com.amazonaws.internal.SdkInternalList<String> organizationConformancePackNames;
     /**
      * <p>
-     * The maximum number of organization config packs returned on each page. If you do no specify a number, AWS Config
-     * uses the default. The default is 100.
+     * The maximum number of organization config packs returned on each page. If you do no specify a number, Config uses
+     * the default. The default is 100.
      * </p>
      */
     private Integer limit;
@@ -121,12 +121,12 @@ public class DescribeOrganizationConformancePacksRequest extends com.amazonaws.A
 
     /**
      * <p>
-     * The maximum number of organization config packs returned on each page. If you do no specify a number, AWS Config
-     * uses the default. The default is 100.
+     * The maximum number of organization config packs returned on each page. If you do no specify a number, Config uses
+     * the default. The default is 100.
      * </p>
      * 
      * @param limit
-     *        The maximum number of organization config packs returned on each page. If you do no specify a number, AWS
+     *        The maximum number of organization config packs returned on each page. If you do no specify a number,
      *        Config uses the default. The default is 100.
      */
 
@@ -136,11 +136,11 @@ public class DescribeOrganizationConformancePacksRequest extends com.amazonaws.A
 
     /**
      * <p>
-     * The maximum number of organization config packs returned on each page. If you do no specify a number, AWS Config
-     * uses the default. The default is 100.
+     * The maximum number of organization config packs returned on each page. If you do no specify a number, Config uses
+     * the default. The default is 100.
      * </p>
      * 
-     * @return The maximum number of organization config packs returned on each page. If you do no specify a number, AWS
+     * @return The maximum number of organization config packs returned on each page. If you do no specify a number,
      *         Config uses the default. The default is 100.
      */
 
@@ -150,12 +150,12 @@ public class DescribeOrganizationConformancePacksRequest extends com.amazonaws.A
 
     /**
      * <p>
-     * The maximum number of organization config packs returned on each page. If you do no specify a number, AWS Config
-     * uses the default. The default is 100.
+     * The maximum number of organization config packs returned on each page. If you do no specify a number, Config uses
+     * the default. The default is 100.
      * </p>
      * 
      * @param limit
-     *        The maximum number of organization config packs returned on each page. If you do no specify a number, AWS
+     *        The maximum number of organization config packs returned on each page. If you do no specify a number,
      *        Config uses the default. The default is 100.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

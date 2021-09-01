@@ -28,16 +28,16 @@ public class DescribeComplianceByResourceRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The types of AWS resources for which you want compliance information (for example,
-     * <code>AWS::EC2::Instance</code>). For this action, you can specify that the resource type is an AWS account by
-     * specifying <code>AWS::::Account</code>.
+     * The types of Amazon Web Services resources for which you want compliance information (for example,
+     * <code>AWS::EC2::Instance</code>). For this action, you can specify that the resource type is an Amazon Web
+     * Services account by specifying <code>AWS::::Account</code>.
      * </p>
      */
     private String resourceType;
     /**
      * <p>
-     * The ID of the AWS resource for which you want compliance information. You can specify only one resource ID. If
-     * you specify a resource ID, you must also specify a type for <code>ResourceType</code>.
+     * The ID of the Amazon Web Services resource for which you want compliance information. You can specify only one
+     * resource ID. If you specify a resource ID, you must also specify a type for <code>ResourceType</code>.
      * </p>
      */
     private String resourceId;
@@ -53,7 +53,7 @@ public class DescribeComplianceByResourceRequest extends com.amazonaws.AmazonWeb
     /**
      * <p>
      * The maximum number of evaluation results returned on each page. The default is 10. You cannot specify a number
-     * greater than 100. If you specify 0, AWS Config uses the default.
+     * greater than 100. If you specify 0, Config uses the default.
      * </p>
      */
     private Integer limit;
@@ -67,15 +67,15 @@ public class DescribeComplianceByResourceRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The types of AWS resources for which you want compliance information (for example,
-     * <code>AWS::EC2::Instance</code>). For this action, you can specify that the resource type is an AWS account by
-     * specifying <code>AWS::::Account</code>.
+     * The types of Amazon Web Services resources for which you want compliance information (for example,
+     * <code>AWS::EC2::Instance</code>). For this action, you can specify that the resource type is an Amazon Web
+     * Services account by specifying <code>AWS::::Account</code>.
      * </p>
      * 
      * @param resourceType
-     *        The types of AWS resources for which you want compliance information (for example,
-     *        <code>AWS::EC2::Instance</code>). For this action, you can specify that the resource type is an AWS
-     *        account by specifying <code>AWS::::Account</code>.
+     *        The types of Amazon Web Services resources for which you want compliance information (for example,
+     *        <code>AWS::EC2::Instance</code>). For this action, you can specify that the resource type is an Amazon Web
+     *        Services account by specifying <code>AWS::::Account</code>.
      */
 
     public void setResourceType(String resourceType) {
@@ -84,14 +84,14 @@ public class DescribeComplianceByResourceRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The types of AWS resources for which you want compliance information (for example,
-     * <code>AWS::EC2::Instance</code>). For this action, you can specify that the resource type is an AWS account by
-     * specifying <code>AWS::::Account</code>.
+     * The types of Amazon Web Services resources for which you want compliance information (for example,
+     * <code>AWS::EC2::Instance</code>). For this action, you can specify that the resource type is an Amazon Web
+     * Services account by specifying <code>AWS::::Account</code>.
      * </p>
      * 
-     * @return The types of AWS resources for which you want compliance information (for example,
-     *         <code>AWS::EC2::Instance</code>). For this action, you can specify that the resource type is an AWS
-     *         account by specifying <code>AWS::::Account</code>.
+     * @return The types of Amazon Web Services resources for which you want compliance information (for example,
+     *         <code>AWS::EC2::Instance</code>). For this action, you can specify that the resource type is an Amazon
+     *         Web Services account by specifying <code>AWS::::Account</code>.
      */
 
     public String getResourceType() {
@@ -100,15 +100,15 @@ public class DescribeComplianceByResourceRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The types of AWS resources for which you want compliance information (for example,
-     * <code>AWS::EC2::Instance</code>). For this action, you can specify that the resource type is an AWS account by
-     * specifying <code>AWS::::Account</code>.
+     * The types of Amazon Web Services resources for which you want compliance information (for example,
+     * <code>AWS::EC2::Instance</code>). For this action, you can specify that the resource type is an Amazon Web
+     * Services account by specifying <code>AWS::::Account</code>.
      * </p>
      * 
      * @param resourceType
-     *        The types of AWS resources for which you want compliance information (for example,
-     *        <code>AWS::EC2::Instance</code>). For this action, you can specify that the resource type is an AWS
-     *        account by specifying <code>AWS::::Account</code>.
+     *        The types of Amazon Web Services resources for which you want compliance information (for example,
+     *        <code>AWS::EC2::Instance</code>). For this action, you can specify that the resource type is an Amazon Web
+     *        Services account by specifying <code>AWS::::Account</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -119,13 +119,13 @@ public class DescribeComplianceByResourceRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The ID of the AWS resource for which you want compliance information. You can specify only one resource ID. If
-     * you specify a resource ID, you must also specify a type for <code>ResourceType</code>.
+     * The ID of the Amazon Web Services resource for which you want compliance information. You can specify only one
+     * resource ID. If you specify a resource ID, you must also specify a type for <code>ResourceType</code>.
      * </p>
      * 
      * @param resourceId
-     *        The ID of the AWS resource for which you want compliance information. You can specify only one resource
-     *        ID. If you specify a resource ID, you must also specify a type for <code>ResourceType</code>.
+     *        The ID of the Amazon Web Services resource for which you want compliance information. You can specify only
+     *        one resource ID. If you specify a resource ID, you must also specify a type for <code>ResourceType</code>.
      */
 
     public void setResourceId(String resourceId) {
@@ -134,12 +134,13 @@ public class DescribeComplianceByResourceRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The ID of the AWS resource for which you want compliance information. You can specify only one resource ID. If
-     * you specify a resource ID, you must also specify a type for <code>ResourceType</code>.
+     * The ID of the Amazon Web Services resource for which you want compliance information. You can specify only one
+     * resource ID. If you specify a resource ID, you must also specify a type for <code>ResourceType</code>.
      * </p>
      * 
-     * @return The ID of the AWS resource for which you want compliance information. You can specify only one resource
-     *         ID. If you specify a resource ID, you must also specify a type for <code>ResourceType</code>.
+     * @return The ID of the Amazon Web Services resource for which you want compliance information. You can specify
+     *         only one resource ID. If you specify a resource ID, you must also specify a type for
+     *         <code>ResourceType</code>.
      */
 
     public String getResourceId() {
@@ -148,13 +149,13 @@ public class DescribeComplianceByResourceRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The ID of the AWS resource for which you want compliance information. You can specify only one resource ID. If
-     * you specify a resource ID, you must also specify a type for <code>ResourceType</code>.
+     * The ID of the Amazon Web Services resource for which you want compliance information. You can specify only one
+     * resource ID. If you specify a resource ID, you must also specify a type for <code>ResourceType</code>.
      * </p>
      * 
      * @param resourceId
-     *        The ID of the AWS resource for which you want compliance information. You can specify only one resource
-     *        ID. If you specify a resource ID, you must also specify a type for <code>ResourceType</code>.
+     *        The ID of the Amazon Web Services resource for which you want compliance information. You can specify only
+     *        one resource ID. If you specify a resource ID, you must also specify a type for <code>ResourceType</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -297,12 +298,12 @@ public class DescribeComplianceByResourceRequest extends com.amazonaws.AmazonWeb
     /**
      * <p>
      * The maximum number of evaluation results returned on each page. The default is 10. You cannot specify a number
-     * greater than 100. If you specify 0, AWS Config uses the default.
+     * greater than 100. If you specify 0, Config uses the default.
      * </p>
      * 
      * @param limit
      *        The maximum number of evaluation results returned on each page. The default is 10. You cannot specify a
-     *        number greater than 100. If you specify 0, AWS Config uses the default.
+     *        number greater than 100. If you specify 0, Config uses the default.
      */
 
     public void setLimit(Integer limit) {
@@ -312,11 +313,11 @@ public class DescribeComplianceByResourceRequest extends com.amazonaws.AmazonWeb
     /**
      * <p>
      * The maximum number of evaluation results returned on each page. The default is 10. You cannot specify a number
-     * greater than 100. If you specify 0, AWS Config uses the default.
+     * greater than 100. If you specify 0, Config uses the default.
      * </p>
      * 
      * @return The maximum number of evaluation results returned on each page. The default is 10. You cannot specify a
-     *         number greater than 100. If you specify 0, AWS Config uses the default.
+     *         number greater than 100. If you specify 0, Config uses the default.
      */
 
     public Integer getLimit() {
@@ -326,12 +327,12 @@ public class DescribeComplianceByResourceRequest extends com.amazonaws.AmazonWeb
     /**
      * <p>
      * The maximum number of evaluation results returned on each page. The default is 10. You cannot specify a number
-     * greater than 100. If you specify 0, AWS Config uses the default.
+     * greater than 100. If you specify 0, Config uses the default.
      * </p>
      * 
      * @param limit
      *        The maximum number of evaluation results returned on each page. The default is 10. You cannot specify a
-     *        number greater than 100. If you specify 0, AWS Config uses the default.
+     *        number greater than 100. If you specify 0, Config uses the default.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

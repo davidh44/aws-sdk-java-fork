@@ -19,9 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Indicates whether an AWS resource that is evaluated according to one or more AWS Config rules is compliant. A
- * resource is compliant if it complies with all of the rules that evaluate it. A resource is noncompliant if it does
- * not comply with one or more of these rules.
+ * Indicates whether an Amazon Web Services resource that is evaluated according to one or more Config rules is
+ * compliant. A resource is compliant if it complies with all of the rules that evaluate it. A resource is noncompliant
+ * if it does not comply with one or more of these rules.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ComplianceByResource" target="_top">AWS API
@@ -32,30 +32,30 @@ public class ComplianceByResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The type of the AWS resource that was evaluated.
+     * The type of the Amazon Web Services resource that was evaluated.
      * </p>
      */
     private String resourceType;
     /**
      * <p>
-     * The ID of the AWS resource that was evaluated.
+     * The ID of the Amazon Web Services resource that was evaluated.
      * </p>
      */
     private String resourceId;
     /**
      * <p>
-     * Indicates whether the AWS resource complies with all of the AWS Config rules that evaluated it.
+     * Indicates whether the Amazon Web Services resource complies with all of the Config rules that evaluated it.
      * </p>
      */
     private Compliance compliance;
 
     /**
      * <p>
-     * The type of the AWS resource that was evaluated.
+     * The type of the Amazon Web Services resource that was evaluated.
      * </p>
      * 
      * @param resourceType
-     *        The type of the AWS resource that was evaluated.
+     *        The type of the Amazon Web Services resource that was evaluated.
      */
 
     public void setResourceType(String resourceType) {
@@ -64,10 +64,10 @@ public class ComplianceByResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The type of the AWS resource that was evaluated.
+     * The type of the Amazon Web Services resource that was evaluated.
      * </p>
      * 
-     * @return The type of the AWS resource that was evaluated.
+     * @return The type of the Amazon Web Services resource that was evaluated.
      */
 
     public String getResourceType() {
@@ -76,11 +76,11 @@ public class ComplianceByResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The type of the AWS resource that was evaluated.
+     * The type of the Amazon Web Services resource that was evaluated.
      * </p>
      * 
      * @param resourceType
-     *        The type of the AWS resource that was evaluated.
+     *        The type of the Amazon Web Services resource that was evaluated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -91,11 +91,11 @@ public class ComplianceByResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The ID of the AWS resource that was evaluated.
+     * The ID of the Amazon Web Services resource that was evaluated.
      * </p>
      * 
      * @param resourceId
-     *        The ID of the AWS resource that was evaluated.
+     *        The ID of the Amazon Web Services resource that was evaluated.
      */
 
     public void setResourceId(String resourceId) {
@@ -104,10 +104,10 @@ public class ComplianceByResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The ID of the AWS resource that was evaluated.
+     * The ID of the Amazon Web Services resource that was evaluated.
      * </p>
      * 
-     * @return The ID of the AWS resource that was evaluated.
+     * @return The ID of the Amazon Web Services resource that was evaluated.
      */
 
     public String getResourceId() {
@@ -116,11 +116,11 @@ public class ComplianceByResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The ID of the AWS resource that was evaluated.
+     * The ID of the Amazon Web Services resource that was evaluated.
      * </p>
      * 
      * @param resourceId
-     *        The ID of the AWS resource that was evaluated.
+     *        The ID of the Amazon Web Services resource that was evaluated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -131,11 +131,12 @@ public class ComplianceByResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Indicates whether the AWS resource complies with all of the AWS Config rules that evaluated it.
+     * Indicates whether the Amazon Web Services resource complies with all of the Config rules that evaluated it.
      * </p>
      * 
      * @param compliance
-     *        Indicates whether the AWS resource complies with all of the AWS Config rules that evaluated it.
+     *        Indicates whether the Amazon Web Services resource complies with all of the Config rules that evaluated
+     *        it.
      */
 
     public void setCompliance(Compliance compliance) {
@@ -144,10 +145,11 @@ public class ComplianceByResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Indicates whether the AWS resource complies with all of the AWS Config rules that evaluated it.
+     * Indicates whether the Amazon Web Services resource complies with all of the Config rules that evaluated it.
      * </p>
      * 
-     * @return Indicates whether the AWS resource complies with all of the AWS Config rules that evaluated it.
+     * @return Indicates whether the Amazon Web Services resource complies with all of the Config rules that evaluated
+     *         it.
      */
 
     public Compliance getCompliance() {
@@ -156,11 +158,12 @@ public class ComplianceByResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Indicates whether the AWS resource complies with all of the AWS Config rules that evaluated it.
+     * Indicates whether the Amazon Web Services resource complies with all of the Config rules that evaluated it.
      * </p>
      * 
      * @param compliance
-     *        Indicates whether the AWS resource complies with all of the AWS Config rules that evaluated it.
+     *        Indicates whether the Amazon Web Services resource complies with all of the Config rules that evaluated
+     *        it.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

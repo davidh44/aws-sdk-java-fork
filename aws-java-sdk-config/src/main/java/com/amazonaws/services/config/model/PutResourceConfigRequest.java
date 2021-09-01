@@ -27,19 +27,19 @@ public class PutResourceConfigRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The type of the resource. The custom resource type must be registered with AWS CloudFormation.
+     * The type of the resource. The custom resource type must be registered with CloudFormation.
      * </p>
      * <note>
      * <p>
-     * You cannot use the organization names “aws”, “amzn”, “amazon”, “alexa”, “custom” with custom resource types. It
-     * is the first part of the ResourceType up to the first ::.
+     * You cannot use the organization names “amzn”, “amazon”, “alexa”, “custom” with custom resource types. It is the
+     * first part of the ResourceType up to the first ::.
      * </p>
      * </note>
      */
     private String resourceType;
     /**
      * <p>
-     * Version of the schema registered for the ResourceType in AWS CloudFormation.
+     * Version of the schema registered for the ResourceType in CloudFormation.
      * </p>
      */
     private String schemaVersionId;
@@ -57,7 +57,7 @@ public class PutResourceConfigRequest extends com.amazonaws.AmazonWebServiceRequ
     private String resourceName;
     /**
      * <p>
-     * The configuration object of the resource in valid JSON format. It must match the schema registered with AWS
+     * The configuration object of the resource in valid JSON format. It must match the schema registered with
      * CloudFormation.
      * </p>
      * <note>
@@ -76,20 +76,20 @@ public class PutResourceConfigRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The type of the resource. The custom resource type must be registered with AWS CloudFormation.
+     * The type of the resource. The custom resource type must be registered with CloudFormation.
      * </p>
      * <note>
      * <p>
-     * You cannot use the organization names “aws”, “amzn”, “amazon”, “alexa”, “custom” with custom resource types. It
-     * is the first part of the ResourceType up to the first ::.
+     * You cannot use the organization names “amzn”, “amazon”, “alexa”, “custom” with custom resource types. It is the
+     * first part of the ResourceType up to the first ::.
      * </p>
      * </note>
      * 
      * @param resourceType
-     *        The type of the resource. The custom resource type must be registered with AWS CloudFormation. </p> <note>
+     *        The type of the resource. The custom resource type must be registered with CloudFormation. </p> <note>
      *        <p>
-     *        You cannot use the organization names “aws”, “amzn”, “amazon”, “alexa”, “custom” with custom resource
-     *        types. It is the first part of the ResourceType up to the first ::.
+     *        You cannot use the organization names “amzn”, “amazon”, “alexa”, “custom” with custom resource types. It
+     *        is the first part of the ResourceType up to the first ::.
      *        </p>
      */
 
@@ -99,20 +99,19 @@ public class PutResourceConfigRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The type of the resource. The custom resource type must be registered with AWS CloudFormation.
+     * The type of the resource. The custom resource type must be registered with CloudFormation.
      * </p>
      * <note>
      * <p>
-     * You cannot use the organization names “aws”, “amzn”, “amazon”, “alexa”, “custom” with custom resource types. It
-     * is the first part of the ResourceType up to the first ::.
+     * You cannot use the organization names “amzn”, “amazon”, “alexa”, “custom” with custom resource types. It is the
+     * first part of the ResourceType up to the first ::.
      * </p>
      * </note>
      * 
-     * @return The type of the resource. The custom resource type must be registered with AWS CloudFormation. </p>
-     *         <note>
+     * @return The type of the resource. The custom resource type must be registered with CloudFormation. </p> <note>
      *         <p>
-     *         You cannot use the organization names “aws”, “amzn”, “amazon”, “alexa”, “custom” with custom resource
-     *         types. It is the first part of the ResourceType up to the first ::.
+     *         You cannot use the organization names “amzn”, “amazon”, “alexa”, “custom” with custom resource types. It
+     *         is the first part of the ResourceType up to the first ::.
      *         </p>
      */
 
@@ -122,20 +121,20 @@ public class PutResourceConfigRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The type of the resource. The custom resource type must be registered with AWS CloudFormation.
+     * The type of the resource. The custom resource type must be registered with CloudFormation.
      * </p>
      * <note>
      * <p>
-     * You cannot use the organization names “aws”, “amzn”, “amazon”, “alexa”, “custom” with custom resource types. It
-     * is the first part of the ResourceType up to the first ::.
+     * You cannot use the organization names “amzn”, “amazon”, “alexa”, “custom” with custom resource types. It is the
+     * first part of the ResourceType up to the first ::.
      * </p>
      * </note>
      * 
      * @param resourceType
-     *        The type of the resource. The custom resource type must be registered with AWS CloudFormation. </p> <note>
+     *        The type of the resource. The custom resource type must be registered with CloudFormation. </p> <note>
      *        <p>
-     *        You cannot use the organization names “aws”, “amzn”, “amazon”, “alexa”, “custom” with custom resource
-     *        types. It is the first part of the ResourceType up to the first ::.
+     *        You cannot use the organization names “amzn”, “amazon”, “alexa”, “custom” with custom resource types. It
+     *        is the first part of the ResourceType up to the first ::.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -147,11 +146,11 @@ public class PutResourceConfigRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Version of the schema registered for the ResourceType in AWS CloudFormation.
+     * Version of the schema registered for the ResourceType in CloudFormation.
      * </p>
      * 
      * @param schemaVersionId
-     *        Version of the schema registered for the ResourceType in AWS CloudFormation.
+     *        Version of the schema registered for the ResourceType in CloudFormation.
      */
 
     public void setSchemaVersionId(String schemaVersionId) {
@@ -160,10 +159,10 @@ public class PutResourceConfigRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Version of the schema registered for the ResourceType in AWS CloudFormation.
+     * Version of the schema registered for the ResourceType in CloudFormation.
      * </p>
      * 
-     * @return Version of the schema registered for the ResourceType in AWS CloudFormation.
+     * @return Version of the schema registered for the ResourceType in CloudFormation.
      */
 
     public String getSchemaVersionId() {
@@ -172,11 +171,11 @@ public class PutResourceConfigRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Version of the schema registered for the ResourceType in AWS CloudFormation.
+     * Version of the schema registered for the ResourceType in CloudFormation.
      * </p>
      * 
      * @param schemaVersionId
-     *        Version of the schema registered for the ResourceType in AWS CloudFormation.
+     *        Version of the schema registered for the ResourceType in CloudFormation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -267,7 +266,7 @@ public class PutResourceConfigRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The configuration object of the resource in valid JSON format. It must match the schema registered with AWS
+     * The configuration object of the resource in valid JSON format. It must match the schema registered with
      * CloudFormation.
      * </p>
      * <note>
@@ -278,7 +277,7 @@ public class PutResourceConfigRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param configuration
      *        The configuration object of the resource in valid JSON format. It must match the schema registered with
-     *        AWS CloudFormation.</p> <note>
+     *        CloudFormation.</p> <note>
      *        <p>
      *        The configuration JSON must not exceed 64 KB.
      *        </p>
@@ -290,7 +289,7 @@ public class PutResourceConfigRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The configuration object of the resource in valid JSON format. It must match the schema registered with AWS
+     * The configuration object of the resource in valid JSON format. It must match the schema registered with
      * CloudFormation.
      * </p>
      * <note>
@@ -300,7 +299,7 @@ public class PutResourceConfigRequest extends com.amazonaws.AmazonWebServiceRequ
      * </note>
      * 
      * @return The configuration object of the resource in valid JSON format. It must match the schema registered with
-     *         AWS CloudFormation.</p> <note>
+     *         CloudFormation.</p> <note>
      *         <p>
      *         The configuration JSON must not exceed 64 KB.
      *         </p>
@@ -312,7 +311,7 @@ public class PutResourceConfigRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The configuration object of the resource in valid JSON format. It must match the schema registered with AWS
+     * The configuration object of the resource in valid JSON format. It must match the schema registered with
      * CloudFormation.
      * </p>
      * <note>
@@ -323,7 +322,7 @@ public class PutResourceConfigRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param configuration
      *        The configuration object of the resource in valid JSON format. It must match the schema registered with
-     *        AWS CloudFormation.</p> <note>
+     *        CloudFormation.</p> <note>
      *        <p>
      *        The configuration JSON must not exceed 64 KB.
      *        </p>

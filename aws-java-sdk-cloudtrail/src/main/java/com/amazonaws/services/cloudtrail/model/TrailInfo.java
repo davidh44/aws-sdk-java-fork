@@ -42,7 +42,7 @@ public class TrailInfo implements Serializable, Cloneable, StructuredPojo {
     private String name;
     /**
      * <p>
-     * The AWS region in which a trail was created.
+     * The Amazon Web Services Region in which a trail was created.
      * </p>
      */
     private String homeRegion;
@@ -129,11 +129,11 @@ public class TrailInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS region in which a trail was created.
+     * The Amazon Web Services Region in which a trail was created.
      * </p>
      * 
      * @param homeRegion
-     *        The AWS region in which a trail was created.
+     *        The Amazon Web Services Region in which a trail was created.
      */
 
     public void setHomeRegion(String homeRegion) {
@@ -142,10 +142,10 @@ public class TrailInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS region in which a trail was created.
+     * The Amazon Web Services Region in which a trail was created.
      * </p>
      * 
-     * @return The AWS region in which a trail was created.
+     * @return The Amazon Web Services Region in which a trail was created.
      */
 
     public String getHomeRegion() {
@@ -154,11 +154,11 @@ public class TrailInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS region in which a trail was created.
+     * The Amazon Web Services Region in which a trail was created.
      * </p>
      * 
      * @param homeRegion
-     *        The AWS region in which a trail was created.
+     *        The Amazon Web Services Region in which a trail was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

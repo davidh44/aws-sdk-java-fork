@@ -28,7 +28,7 @@ public class DescribeComplianceByConfigRuleRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Specify one or more AWS Config rule names to filter the results by rule.
+     * Specify one or more Config rule names to filter the results by rule.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> configRuleNames;
@@ -51,10 +51,10 @@ public class DescribeComplianceByConfigRuleRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Specify one or more AWS Config rule names to filter the results by rule.
+     * Specify one or more Config rule names to filter the results by rule.
      * </p>
      * 
-     * @return Specify one or more AWS Config rule names to filter the results by rule.
+     * @return Specify one or more Config rule names to filter the results by rule.
      */
 
     public java.util.List<String> getConfigRuleNames() {
@@ -66,11 +66,11 @@ public class DescribeComplianceByConfigRuleRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Specify one or more AWS Config rule names to filter the results by rule.
+     * Specify one or more Config rule names to filter the results by rule.
      * </p>
      * 
      * @param configRuleNames
-     *        Specify one or more AWS Config rule names to filter the results by rule.
+     *        Specify one or more Config rule names to filter the results by rule.
      */
 
     public void setConfigRuleNames(java.util.Collection<String> configRuleNames) {
@@ -84,7 +84,7 @@ public class DescribeComplianceByConfigRuleRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Specify one or more AWS Config rule names to filter the results by rule.
+     * Specify one or more Config rule names to filter the results by rule.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -93,7 +93,7 @@ public class DescribeComplianceByConfigRuleRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param configRuleNames
-     *        Specify one or more AWS Config rule names to filter the results by rule.
+     *        Specify one or more Config rule names to filter the results by rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -109,11 +109,11 @@ public class DescribeComplianceByConfigRuleRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Specify one or more AWS Config rule names to filter the results by rule.
+     * Specify one or more Config rule names to filter the results by rule.
      * </p>
      * 
      * @param configRuleNames
-     *        Specify one or more AWS Config rule names to filter the results by rule.
+     *        Specify one or more Config rule names to filter the results by rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

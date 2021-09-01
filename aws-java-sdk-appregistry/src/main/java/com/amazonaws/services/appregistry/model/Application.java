@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Represents a Service Catalog AppRegistry application that is the top-level node in a hierarchy of related cloud
- * resource abstractions.
+ * Represents a Amazon Web Services Service Catalog AppRegistry application that is the top-level node in a hierarchy of
+ * related cloud resource abstractions.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/AWS242AppRegistry-2020-06-24/Application" target="_top">AWS API

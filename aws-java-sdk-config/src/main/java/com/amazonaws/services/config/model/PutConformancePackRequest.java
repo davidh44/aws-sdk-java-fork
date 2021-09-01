@@ -58,7 +58,7 @@ public class PutConformancePackRequest extends com.amazonaws.AmazonWebServiceReq
     private String templateBody;
     /**
      * <p>
-     * Amazon S3 bucket where AWS Config stores conformance pack templates.
+     * The name of the Amazon S3 bucket where Config stores conformance pack templates.
      * </p>
      * <note>
      * <p>
@@ -273,7 +273,7 @@ public class PutConformancePackRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Amazon S3 bucket where AWS Config stores conformance pack templates.
+     * The name of the Amazon S3 bucket where Config stores conformance pack templates.
      * </p>
      * <note>
      * <p>
@@ -282,7 +282,7 @@ public class PutConformancePackRequest extends com.amazonaws.AmazonWebServiceReq
      * </note>
      * 
      * @param deliveryS3Bucket
-     *        Amazon S3 bucket where AWS Config stores conformance pack templates.</p> <note>
+     *        The name of the Amazon S3 bucket where Config stores conformance pack templates.</p> <note>
      *        <p>
      *        This field is optional.
      *        </p>
@@ -294,7 +294,7 @@ public class PutConformancePackRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Amazon S3 bucket where AWS Config stores conformance pack templates.
+     * The name of the Amazon S3 bucket where Config stores conformance pack templates.
      * </p>
      * <note>
      * <p>
@@ -302,7 +302,7 @@ public class PutConformancePackRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * </note>
      * 
-     * @return Amazon S3 bucket where AWS Config stores conformance pack templates.</p> <note>
+     * @return The name of the Amazon S3 bucket where Config stores conformance pack templates.</p> <note>
      *         <p>
      *         This field is optional.
      *         </p>
@@ -314,7 +314,7 @@ public class PutConformancePackRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Amazon S3 bucket where AWS Config stores conformance pack templates.
+     * The name of the Amazon S3 bucket where Config stores conformance pack templates.
      * </p>
      * <note>
      * <p>
@@ -323,7 +323,7 @@ public class PutConformancePackRequest extends com.amazonaws.AmazonWebServiceReq
      * </note>
      * 
      * @param deliveryS3Bucket
-     *        Amazon S3 bucket where AWS Config stores conformance pack templates.</p> <note>
+     *        The name of the Amazon S3 bucket where Config stores conformance pack templates.</p> <note>
      *        <p>
      *        This field is optional.
      *        </p>

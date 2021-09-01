@@ -27,17 +27,17 @@ public class DescribeRemediationConfigurationsRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * A list of AWS Config rule names of remediation configurations for which you want details.
+     * A list of Config rule names of remediation configurations for which you want details.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> configRuleNames;
 
     /**
      * <p>
-     * A list of AWS Config rule names of remediation configurations for which you want details.
+     * A list of Config rule names of remediation configurations for which you want details.
      * </p>
      * 
-     * @return A list of AWS Config rule names of remediation configurations for which you want details.
+     * @return A list of Config rule names of remediation configurations for which you want details.
      */
 
     public java.util.List<String> getConfigRuleNames() {
@@ -49,11 +49,11 @@ public class DescribeRemediationConfigurationsRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * A list of AWS Config rule names of remediation configurations for which you want details.
+     * A list of Config rule names of remediation configurations for which you want details.
      * </p>
      * 
      * @param configRuleNames
-     *        A list of AWS Config rule names of remediation configurations for which you want details.
+     *        A list of Config rule names of remediation configurations for which you want details.
      */
 
     public void setConfigRuleNames(java.util.Collection<String> configRuleNames) {
@@ -67,7 +67,7 @@ public class DescribeRemediationConfigurationsRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * A list of AWS Config rule names of remediation configurations for which you want details.
+     * A list of Config rule names of remediation configurations for which you want details.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -76,7 +76,7 @@ public class DescribeRemediationConfigurationsRequest extends com.amazonaws.Amaz
      * </p>
      * 
      * @param configRuleNames
-     *        A list of AWS Config rule names of remediation configurations for which you want details.
+     *        A list of Config rule names of remediation configurations for which you want details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -92,11 +92,11 @@ public class DescribeRemediationConfigurationsRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * A list of AWS Config rule names of remediation configurations for which you want details.
+     * A list of Config rule names of remediation configurations for which you want details.
      * </p>
      * 
      * @param configRuleNames
-     *        A list of AWS Config rule names of remediation configurations for which you want details.
+     *        A list of Config rule names of remediation configurations for which you want details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

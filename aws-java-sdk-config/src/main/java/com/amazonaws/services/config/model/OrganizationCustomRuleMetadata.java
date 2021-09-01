@@ -19,10 +19,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An object that specifies organization custom rule metadata such as resource type, resource ID of AWS resource, Lamdba
- * function ARN, and organization trigger types that trigger AWS Config to evaluate your AWS resources against a rule.
- * It also provides the frequency with which you want AWS Config to run evaluations for the rule if the trigger type is
- * periodic.
+ * An object that specifies organization custom rule metadata such as resource type, resource ID of Amazon Web Services
+ * resource, Lambda function ARN, and organization trigger types that trigger Config to evaluate your Amazon Web
+ * Services resources against a rule. It also provides the frequency with which you want Config to run evaluations for
+ * the rule if the trigger type is periodic.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/OrganizationCustomRuleMetadata"
@@ -45,20 +45,20 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
     private String lambdaFunctionArn;
     /**
      * <p>
-     * The type of notification that triggers AWS Config to run an evaluation for a rule. You can specify the following
+     * The type of notification that triggers Config to run an evaluation for a rule. You can specify the following
      * notification types:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>ConfigurationItemChangeNotification</code> - Triggers an evaluation when AWS Config delivers a
-     * configuration item as a result of a resource change.
+     * <code>ConfigurationItemChangeNotification</code> - Triggers an evaluation when Config delivers a configuration
+     * item as a result of a resource change.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>OversizedConfigurationItemChangeNotification</code> - Triggers an evaluation when AWS Config delivers an
-     * oversized configuration item. AWS Config may generate this notification type when a resource changes and the
+     * <code>OversizedConfigurationItemChangeNotification</code> - Triggers an evaluation when Config delivers an
+     * oversized configuration item. Config may generate this notification type when a resource changes and the
      * notification exceeds the maximum size allowed by Amazon SNS.
      * </p>
      * </li>
@@ -79,8 +79,8 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
     private String inputParameters;
     /**
      * <p>
-     * The maximum frequency with which AWS Config runs evaluations for a rule. Your custom rule is triggered when AWS
-     * Config delivers the configuration snapshot. For more information, see <a>ConfigSnapshotDeliveryProperties</a>.
+     * The maximum frequency with which Config runs evaluations for a rule. Your custom rule is triggered when Config
+     * delivers the configuration snapshot. For more information, see <a>ConfigSnapshotDeliveryProperties</a>.
      * </p>
      * <note>
      * <p>
@@ -92,13 +92,13 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
     private String maximumExecutionFrequency;
     /**
      * <p>
-     * The type of the AWS resource that was evaluated.
+     * The type of the Amazon Web Services resource that was evaluated.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> resourceTypesScope;
     /**
      * <p>
-     * The ID of the AWS resource that was evaluated.
+     * The ID of the Amazon Web Services resource that was evaluated.
      * </p>
      */
     private String resourceIdScope;
@@ -199,20 +199,20 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The type of notification that triggers AWS Config to run an evaluation for a rule. You can specify the following
+     * The type of notification that triggers Config to run an evaluation for a rule. You can specify the following
      * notification types:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>ConfigurationItemChangeNotification</code> - Triggers an evaluation when AWS Config delivers a
-     * configuration item as a result of a resource change.
+     * <code>ConfigurationItemChangeNotification</code> - Triggers an evaluation when Config delivers a configuration
+     * item as a result of a resource change.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>OversizedConfigurationItemChangeNotification</code> - Triggers an evaluation when AWS Config delivers an
-     * oversized configuration item. AWS Config may generate this notification type when a resource changes and the
+     * <code>OversizedConfigurationItemChangeNotification</code> - Triggers an evaluation when Config delivers an
+     * oversized configuration item. Config may generate this notification type when a resource changes and the
      * notification exceeds the maximum size allowed by Amazon SNS.
      * </p>
      * </li>
@@ -224,20 +224,20 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
      * </li>
      * </ul>
      * 
-     * @return The type of notification that triggers AWS Config to run an evaluation for a rule. You can specify the
+     * @return The type of notification that triggers Config to run an evaluation for a rule. You can specify the
      *         following notification types:</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>ConfigurationItemChangeNotification</code> - Triggers an evaluation when AWS Config delivers a
+     *         <code>ConfigurationItemChangeNotification</code> - Triggers an evaluation when Config delivers a
      *         configuration item as a result of a resource change.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>OversizedConfigurationItemChangeNotification</code> - Triggers an evaluation when AWS Config
-     *         delivers an oversized configuration item. AWS Config may generate this notification type when a resource
-     *         changes and the notification exceeds the maximum size allowed by Amazon SNS.
+     *         <code>OversizedConfigurationItemChangeNotification</code> - Triggers an evaluation when Config delivers
+     *         an oversized configuration item. Config may generate this notification type when a resource changes and
+     *         the notification exceeds the maximum size allowed by Amazon SNS.
      *         </p>
      *         </li>
      *         <li>
@@ -258,20 +258,20 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The type of notification that triggers AWS Config to run an evaluation for a rule. You can specify the following
+     * The type of notification that triggers Config to run an evaluation for a rule. You can specify the following
      * notification types:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>ConfigurationItemChangeNotification</code> - Triggers an evaluation when AWS Config delivers a
-     * configuration item as a result of a resource change.
+     * <code>ConfigurationItemChangeNotification</code> - Triggers an evaluation when Config delivers a configuration
+     * item as a result of a resource change.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>OversizedConfigurationItemChangeNotification</code> - Triggers an evaluation when AWS Config delivers an
-     * oversized configuration item. AWS Config may generate this notification type when a resource changes and the
+     * <code>OversizedConfigurationItemChangeNotification</code> - Triggers an evaluation when Config delivers an
+     * oversized configuration item. Config may generate this notification type when a resource changes and the
      * notification exceeds the maximum size allowed by Amazon SNS.
      * </p>
      * </li>
@@ -284,20 +284,20 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
      * </ul>
      * 
      * @param organizationConfigRuleTriggerTypes
-     *        The type of notification that triggers AWS Config to run an evaluation for a rule. You can specify the
+     *        The type of notification that triggers Config to run an evaluation for a rule. You can specify the
      *        following notification types:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>ConfigurationItemChangeNotification</code> - Triggers an evaluation when AWS Config delivers a
+     *        <code>ConfigurationItemChangeNotification</code> - Triggers an evaluation when Config delivers a
      *        configuration item as a result of a resource change.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>OversizedConfigurationItemChangeNotification</code> - Triggers an evaluation when AWS Config
-     *        delivers an oversized configuration item. AWS Config may generate this notification type when a resource
-     *        changes and the notification exceeds the maximum size allowed by Amazon SNS.
+     *        <code>OversizedConfigurationItemChangeNotification</code> - Triggers an evaluation when Config delivers an
+     *        oversized configuration item. Config may generate this notification type when a resource changes and the
+     *        notification exceeds the maximum size allowed by Amazon SNS.
      *        </p>
      *        </li>
      *        <li>
@@ -320,20 +320,20 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The type of notification that triggers AWS Config to run an evaluation for a rule. You can specify the following
+     * The type of notification that triggers Config to run an evaluation for a rule. You can specify the following
      * notification types:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>ConfigurationItemChangeNotification</code> - Triggers an evaluation when AWS Config delivers a
-     * configuration item as a result of a resource change.
+     * <code>ConfigurationItemChangeNotification</code> - Triggers an evaluation when Config delivers a configuration
+     * item as a result of a resource change.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>OversizedConfigurationItemChangeNotification</code> - Triggers an evaluation when AWS Config delivers an
-     * oversized configuration item. AWS Config may generate this notification type when a resource changes and the
+     * <code>OversizedConfigurationItemChangeNotification</code> - Triggers an evaluation when Config delivers an
+     * oversized configuration item. Config may generate this notification type when a resource changes and the
      * notification exceeds the maximum size allowed by Amazon SNS.
      * </p>
      * </li>
@@ -352,20 +352,20 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
      * </p>
      * 
      * @param organizationConfigRuleTriggerTypes
-     *        The type of notification that triggers AWS Config to run an evaluation for a rule. You can specify the
+     *        The type of notification that triggers Config to run an evaluation for a rule. You can specify the
      *        following notification types:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>ConfigurationItemChangeNotification</code> - Triggers an evaluation when AWS Config delivers a
+     *        <code>ConfigurationItemChangeNotification</code> - Triggers an evaluation when Config delivers a
      *        configuration item as a result of a resource change.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>OversizedConfigurationItemChangeNotification</code> - Triggers an evaluation when AWS Config
-     *        delivers an oversized configuration item. AWS Config may generate this notification type when a resource
-     *        changes and the notification exceeds the maximum size allowed by Amazon SNS.
+     *        <code>OversizedConfigurationItemChangeNotification</code> - Triggers an evaluation when Config delivers an
+     *        oversized configuration item. Config may generate this notification type when a resource changes and the
+     *        notification exceeds the maximum size allowed by Amazon SNS.
      *        </p>
      *        </li>
      *        <li>
@@ -390,20 +390,20 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The type of notification that triggers AWS Config to run an evaluation for a rule. You can specify the following
+     * The type of notification that triggers Config to run an evaluation for a rule. You can specify the following
      * notification types:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>ConfigurationItemChangeNotification</code> - Triggers an evaluation when AWS Config delivers a
-     * configuration item as a result of a resource change.
+     * <code>ConfigurationItemChangeNotification</code> - Triggers an evaluation when Config delivers a configuration
+     * item as a result of a resource change.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>OversizedConfigurationItemChangeNotification</code> - Triggers an evaluation when AWS Config delivers an
-     * oversized configuration item. AWS Config may generate this notification type when a resource changes and the
+     * <code>OversizedConfigurationItemChangeNotification</code> - Triggers an evaluation when Config delivers an
+     * oversized configuration item. Config may generate this notification type when a resource changes and the
      * notification exceeds the maximum size allowed by Amazon SNS.
      * </p>
      * </li>
@@ -416,20 +416,20 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
      * </ul>
      * 
      * @param organizationConfigRuleTriggerTypes
-     *        The type of notification that triggers AWS Config to run an evaluation for a rule. You can specify the
+     *        The type of notification that triggers Config to run an evaluation for a rule. You can specify the
      *        following notification types:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>ConfigurationItemChangeNotification</code> - Triggers an evaluation when AWS Config delivers a
+     *        <code>ConfigurationItemChangeNotification</code> - Triggers an evaluation when Config delivers a
      *        configuration item as a result of a resource change.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>OversizedConfigurationItemChangeNotification</code> - Triggers an evaluation when AWS Config
-     *        delivers an oversized configuration item. AWS Config may generate this notification type when a resource
-     *        changes and the notification exceeds the maximum size allowed by Amazon SNS.
+     *        <code>OversizedConfigurationItemChangeNotification</code> - Triggers an evaluation when Config delivers an
+     *        oversized configuration item. Config may generate this notification type when a resource changes and the
+     *        notification exceeds the maximum size allowed by Amazon SNS.
      *        </p>
      *        </li>
      *        <li>
@@ -449,20 +449,20 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The type of notification that triggers AWS Config to run an evaluation for a rule. You can specify the following
+     * The type of notification that triggers Config to run an evaluation for a rule. You can specify the following
      * notification types:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>ConfigurationItemChangeNotification</code> - Triggers an evaluation when AWS Config delivers a
-     * configuration item as a result of a resource change.
+     * <code>ConfigurationItemChangeNotification</code> - Triggers an evaluation when Config delivers a configuration
+     * item as a result of a resource change.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>OversizedConfigurationItemChangeNotification</code> - Triggers an evaluation when AWS Config delivers an
-     * oversized configuration item. AWS Config may generate this notification type when a resource changes and the
+     * <code>OversizedConfigurationItemChangeNotification</code> - Triggers an evaluation when Config delivers an
+     * oversized configuration item. Config may generate this notification type when a resource changes and the
      * notification exceeds the maximum size allowed by Amazon SNS.
      * </p>
      * </li>
@@ -475,20 +475,20 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
      * </ul>
      * 
      * @param organizationConfigRuleTriggerTypes
-     *        The type of notification that triggers AWS Config to run an evaluation for a rule. You can specify the
+     *        The type of notification that triggers Config to run an evaluation for a rule. You can specify the
      *        following notification types:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>ConfigurationItemChangeNotification</code> - Triggers an evaluation when AWS Config delivers a
+     *        <code>ConfigurationItemChangeNotification</code> - Triggers an evaluation when Config delivers a
      *        configuration item as a result of a resource change.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>OversizedConfigurationItemChangeNotification</code> - Triggers an evaluation when AWS Config
-     *        delivers an oversized configuration item. AWS Config may generate this notification type when a resource
-     *        changes and the notification exceeds the maximum size allowed by Amazon SNS.
+     *        <code>OversizedConfigurationItemChangeNotification</code> - Triggers an evaluation when Config delivers an
+     *        oversized configuration item. Config may generate this notification type when a resource changes and the
+     *        notification exceeds the maximum size allowed by Amazon SNS.
      *        </p>
      *        </li>
      *        <li>
@@ -557,8 +557,8 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The maximum frequency with which AWS Config runs evaluations for a rule. Your custom rule is triggered when AWS
-     * Config delivers the configuration snapshot. For more information, see <a>ConfigSnapshotDeliveryProperties</a>.
+     * The maximum frequency with which Config runs evaluations for a rule. Your custom rule is triggered when Config
+     * delivers the configuration snapshot. For more information, see <a>ConfigSnapshotDeliveryProperties</a>.
      * </p>
      * <note>
      * <p>
@@ -568,8 +568,8 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
      * </note>
      * 
      * @param maximumExecutionFrequency
-     *        The maximum frequency with which AWS Config runs evaluations for a rule. Your custom rule is triggered
-     *        when AWS Config delivers the configuration snapshot. For more information, see
+     *        The maximum frequency with which Config runs evaluations for a rule. Your custom rule is triggered when
+     *        Config delivers the configuration snapshot. For more information, see
      *        <a>ConfigSnapshotDeliveryProperties</a>.</p> <note>
      *        <p>
      *        By default, rules with a periodic trigger are evaluated every 24 hours. To change the frequency, specify a
@@ -584,8 +584,8 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The maximum frequency with which AWS Config runs evaluations for a rule. Your custom rule is triggered when AWS
-     * Config delivers the configuration snapshot. For more information, see <a>ConfigSnapshotDeliveryProperties</a>.
+     * The maximum frequency with which Config runs evaluations for a rule. Your custom rule is triggered when Config
+     * delivers the configuration snapshot. For more information, see <a>ConfigSnapshotDeliveryProperties</a>.
      * </p>
      * <note>
      * <p>
@@ -594,8 +594,8 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
      * </p>
      * </note>
      * 
-     * @return The maximum frequency with which AWS Config runs evaluations for a rule. Your custom rule is triggered
-     *         when AWS Config delivers the configuration snapshot. For more information, see
+     * @return The maximum frequency with which Config runs evaluations for a rule. Your custom rule is triggered when
+     *         Config delivers the configuration snapshot. For more information, see
      *         <a>ConfigSnapshotDeliveryProperties</a>.</p> <note>
      *         <p>
      *         By default, rules with a periodic trigger are evaluated every 24 hours. To change the frequency, specify
@@ -610,8 +610,8 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The maximum frequency with which AWS Config runs evaluations for a rule. Your custom rule is triggered when AWS
-     * Config delivers the configuration snapshot. For more information, see <a>ConfigSnapshotDeliveryProperties</a>.
+     * The maximum frequency with which Config runs evaluations for a rule. Your custom rule is triggered when Config
+     * delivers the configuration snapshot. For more information, see <a>ConfigSnapshotDeliveryProperties</a>.
      * </p>
      * <note>
      * <p>
@@ -621,8 +621,8 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
      * </note>
      * 
      * @param maximumExecutionFrequency
-     *        The maximum frequency with which AWS Config runs evaluations for a rule. Your custom rule is triggered
-     *        when AWS Config delivers the configuration snapshot. For more information, see
+     *        The maximum frequency with which Config runs evaluations for a rule. Your custom rule is triggered when
+     *        Config delivers the configuration snapshot. For more information, see
      *        <a>ConfigSnapshotDeliveryProperties</a>.</p> <note>
      *        <p>
      *        By default, rules with a periodic trigger are evaluated every 24 hours. To change the frequency, specify a
@@ -639,8 +639,8 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The maximum frequency with which AWS Config runs evaluations for a rule. Your custom rule is triggered when AWS
-     * Config delivers the configuration snapshot. For more information, see <a>ConfigSnapshotDeliveryProperties</a>.
+     * The maximum frequency with which Config runs evaluations for a rule. Your custom rule is triggered when Config
+     * delivers the configuration snapshot. For more information, see <a>ConfigSnapshotDeliveryProperties</a>.
      * </p>
      * <note>
      * <p>
@@ -650,8 +650,8 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
      * </note>
      * 
      * @param maximumExecutionFrequency
-     *        The maximum frequency with which AWS Config runs evaluations for a rule. Your custom rule is triggered
-     *        when AWS Config delivers the configuration snapshot. For more information, see
+     *        The maximum frequency with which Config runs evaluations for a rule. Your custom rule is triggered when
+     *        Config delivers the configuration snapshot. For more information, see
      *        <a>ConfigSnapshotDeliveryProperties</a>.</p> <note>
      *        <p>
      *        By default, rules with a periodic trigger are evaluated every 24 hours. To change the frequency, specify a
@@ -668,10 +668,10 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The type of the AWS resource that was evaluated.
+     * The type of the Amazon Web Services resource that was evaluated.
      * </p>
      * 
-     * @return The type of the AWS resource that was evaluated.
+     * @return The type of the Amazon Web Services resource that was evaluated.
      */
 
     public java.util.List<String> getResourceTypesScope() {
@@ -683,11 +683,11 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The type of the AWS resource that was evaluated.
+     * The type of the Amazon Web Services resource that was evaluated.
      * </p>
      * 
      * @param resourceTypesScope
-     *        The type of the AWS resource that was evaluated.
+     *        The type of the Amazon Web Services resource that was evaluated.
      */
 
     public void setResourceTypesScope(java.util.Collection<String> resourceTypesScope) {
@@ -701,7 +701,7 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The type of the AWS resource that was evaluated.
+     * The type of the Amazon Web Services resource that was evaluated.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -710,7 +710,7 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
      * </p>
      * 
      * @param resourceTypesScope
-     *        The type of the AWS resource that was evaluated.
+     *        The type of the Amazon Web Services resource that was evaluated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -726,11 +726,11 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The type of the AWS resource that was evaluated.
+     * The type of the Amazon Web Services resource that was evaluated.
      * </p>
      * 
      * @param resourceTypesScope
-     *        The type of the AWS resource that was evaluated.
+     *        The type of the Amazon Web Services resource that was evaluated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -741,11 +741,11 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The ID of the AWS resource that was evaluated.
+     * The ID of the Amazon Web Services resource that was evaluated.
      * </p>
      * 
      * @param resourceIdScope
-     *        The ID of the AWS resource that was evaluated.
+     *        The ID of the Amazon Web Services resource that was evaluated.
      */
 
     public void setResourceIdScope(String resourceIdScope) {
@@ -754,10 +754,10 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The ID of the AWS resource that was evaluated.
+     * The ID of the Amazon Web Services resource that was evaluated.
      * </p>
      * 
-     * @return The ID of the AWS resource that was evaluated.
+     * @return The ID of the Amazon Web Services resource that was evaluated.
      */
 
     public String getResourceIdScope() {
@@ -766,11 +766,11 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The ID of the AWS resource that was evaluated.
+     * The ID of the Amazon Web Services resource that was evaluated.
      * </p>
      * 
      * @param resourceIdScope
-     *        The ID of the AWS resource that was evaluated.
+     *        The ID of the Amazon Web Services resource that was evaluated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

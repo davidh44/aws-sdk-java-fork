@@ -64,6 +64,10 @@ public class DescribeChannelResultJsonUnmarshaller implements Unmarshaller<Descr
                     context.nextToken();
                     describeChannelResult.setCreationTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("FillerSlate", targetDepth)) {
+                    context.nextToken();
+                    describeChannelResult.setFillerSlate(SlateSourceJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("LastModifiedTime", targetDepth)) {
                     context.nextToken();
                     describeChannelResult.setLastModifiedTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

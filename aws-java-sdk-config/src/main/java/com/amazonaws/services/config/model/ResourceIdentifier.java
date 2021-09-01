@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The details that identify a resource that is discovered by AWS Config, including the resource type, ID, and (if
+ * The details that identify a resource that is discovered by Config, including the resource type, ID, and (if
  * available) the custom resource name.
  * </p>
  * 

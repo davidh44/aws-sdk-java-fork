@@ -56,6 +56,10 @@ public class TransitionJsonUnmarshaller implements Unmarshaller<Transition, Json
                     context.nextToken();
                     transition.setRelativeProgram(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ScheduledStartTimeMillis", targetDepth)) {
+                    context.nextToken();
+                    transition.setScheduledStartTimeMillis(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
                 if (context.testExpression("Type", targetDepth)) {
                     context.nextToken();
                     transition.setType(context.getUnmarshaller(String.class).unmarshall(context));

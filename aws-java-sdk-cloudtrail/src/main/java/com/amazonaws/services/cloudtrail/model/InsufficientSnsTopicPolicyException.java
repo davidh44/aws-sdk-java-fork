@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * This exception is thrown when the policy on the SNS topic is not sufficient.
+ * This exception is thrown when the policy on the Amazon SNS topic is not sufficient.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -39,7 +39,7 @@ public class DescribeConformancePackComplianceRequest extends com.amazonaws.Amaz
     private ConformancePackComplianceFilters filters;
     /**
      * <p>
-     * The maximum number of AWS Config rules within a conformance pack are returned on each page.
+     * The maximum number of Config rules within a conformance pack are returned on each page.
      * </p>
      */
     private Integer limit;
@@ -133,11 +133,11 @@ public class DescribeConformancePackComplianceRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The maximum number of AWS Config rules within a conformance pack are returned on each page.
+     * The maximum number of Config rules within a conformance pack are returned on each page.
      * </p>
      * 
      * @param limit
-     *        The maximum number of AWS Config rules within a conformance pack are returned on each page.
+     *        The maximum number of Config rules within a conformance pack are returned on each page.
      */
 
     public void setLimit(Integer limit) {
@@ -146,10 +146,10 @@ public class DescribeConformancePackComplianceRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The maximum number of AWS Config rules within a conformance pack are returned on each page.
+     * The maximum number of Config rules within a conformance pack are returned on each page.
      * </p>
      * 
-     * @return The maximum number of AWS Config rules within a conformance pack are returned on each page.
+     * @return The maximum number of Config rules within a conformance pack are returned on each page.
      */
 
     public Integer getLimit() {
@@ -158,11 +158,11 @@ public class DescribeConformancePackComplianceRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The maximum number of AWS Config rules within a conformance pack are returned on each page.
+     * The maximum number of Config rules within a conformance pack are returned on each page.
      * </p>
      * 
      * @param limit
-     *        The maximum number of AWS Config rules within a conformance pack are returned on each page.
+     *        The maximum number of Config rules within a conformance pack are returned on each page.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

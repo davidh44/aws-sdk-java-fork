@@ -55,6 +55,13 @@ public class DescribeProgramResult extends com.amazonaws.AmazonWebServiceResult<
     private String programName;
     /**
      * <p>
+     * The date and time that the program is scheduled to start in ISO 8601 format and Coordinated Universal Time (UTC).
+     * For example, the value 2021-03-27T17:48:16.751Z represents March 27, 2021 at 17:48:16.751 UTC.
+     * </p>
+     */
+    private java.util.Date scheduledStartTime;
+    /**
+     * <p>
      * The source location name.
      * </p>
      */
@@ -298,6 +305,53 @@ public class DescribeProgramResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
+     * The date and time that the program is scheduled to start in ISO 8601 format and Coordinated Universal Time (UTC).
+     * For example, the value 2021-03-27T17:48:16.751Z represents March 27, 2021 at 17:48:16.751 UTC.
+     * </p>
+     * 
+     * @param scheduledStartTime
+     *        The date and time that the program is scheduled to start in ISO 8601 format and Coordinated Universal Time
+     *        (UTC). For example, the value 2021-03-27T17:48:16.751Z represents March 27, 2021 at 17:48:16.751 UTC.
+     */
+
+    public void setScheduledStartTime(java.util.Date scheduledStartTime) {
+        this.scheduledStartTime = scheduledStartTime;
+    }
+
+    /**
+     * <p>
+     * The date and time that the program is scheduled to start in ISO 8601 format and Coordinated Universal Time (UTC).
+     * For example, the value 2021-03-27T17:48:16.751Z represents March 27, 2021 at 17:48:16.751 UTC.
+     * </p>
+     * 
+     * @return The date and time that the program is scheduled to start in ISO 8601 format and Coordinated Universal
+     *         Time (UTC). For example, the value 2021-03-27T17:48:16.751Z represents March 27, 2021 at 17:48:16.751
+     *         UTC.
+     */
+
+    public java.util.Date getScheduledStartTime() {
+        return this.scheduledStartTime;
+    }
+
+    /**
+     * <p>
+     * The date and time that the program is scheduled to start in ISO 8601 format and Coordinated Universal Time (UTC).
+     * For example, the value 2021-03-27T17:48:16.751Z represents March 27, 2021 at 17:48:16.751 UTC.
+     * </p>
+     * 
+     * @param scheduledStartTime
+     *        The date and time that the program is scheduled to start in ISO 8601 format and Coordinated Universal Time
+     *        (UTC). For example, the value 2021-03-27T17:48:16.751Z represents March 27, 2021 at 17:48:16.751 UTC.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeProgramResult withScheduledStartTime(java.util.Date scheduledStartTime) {
+        setScheduledStartTime(scheduledStartTime);
+        return this;
+    }
+
+    /**
+     * <p>
      * The source location name.
      * </p>
      * 
@@ -398,6 +452,8 @@ public class DescribeProgramResult extends com.amazonaws.AmazonWebServiceResult<
             sb.append("CreationTime: ").append(getCreationTime()).append(",");
         if (getProgramName() != null)
             sb.append("ProgramName: ").append(getProgramName()).append(",");
+        if (getScheduledStartTime() != null)
+            sb.append("ScheduledStartTime: ").append(getScheduledStartTime()).append(",");
         if (getSourceLocationName() != null)
             sb.append("SourceLocationName: ").append(getSourceLocationName()).append(",");
         if (getVodSourceName() != null)
@@ -436,6 +492,10 @@ public class DescribeProgramResult extends com.amazonaws.AmazonWebServiceResult<
             return false;
         if (other.getProgramName() != null && other.getProgramName().equals(this.getProgramName()) == false)
             return false;
+        if (other.getScheduledStartTime() == null ^ this.getScheduledStartTime() == null)
+            return false;
+        if (other.getScheduledStartTime() != null && other.getScheduledStartTime().equals(this.getScheduledStartTime()) == false)
+            return false;
         if (other.getSourceLocationName() == null ^ this.getSourceLocationName() == null)
             return false;
         if (other.getSourceLocationName() != null && other.getSourceLocationName().equals(this.getSourceLocationName()) == false)
@@ -457,6 +517,7 @@ public class DescribeProgramResult extends com.amazonaws.AmazonWebServiceResult<
         hashCode = prime * hashCode + ((getChannelName() == null) ? 0 : getChannelName().hashCode());
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         hashCode = prime * hashCode + ((getProgramName() == null) ? 0 : getProgramName().hashCode());
+        hashCode = prime * hashCode + ((getScheduledStartTime() == null) ? 0 : getScheduledStartTime().hashCode());
         hashCode = prime * hashCode + ((getSourceLocationName() == null) ? 0 : getSourceLocationName().hashCode());
         hashCode = prime * hashCode + ((getVodSourceName() == null) ? 0 : getVodSourceName().hashCode());
         return hashCode;

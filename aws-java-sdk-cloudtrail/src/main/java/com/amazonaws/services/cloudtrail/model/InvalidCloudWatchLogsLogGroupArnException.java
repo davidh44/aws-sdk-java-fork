@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * This exception is thrown when the provided CloudWatch log group is not valid.
+ * This exception is thrown when the provided CloudWatch Logs log group is not valid.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

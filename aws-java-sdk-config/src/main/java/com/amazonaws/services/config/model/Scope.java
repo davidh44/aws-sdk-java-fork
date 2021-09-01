@@ -19,10 +19,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Defines which resources trigger an evaluation for an AWS Config rule. The scope can include one or more resource
- * types, a combination of a tag key and value, or a combination of one resource type and one resource ID. Specify a
- * scope to constrain which resources trigger an evaluation for a rule. Otherwise, evaluations for the rule are
- * triggered when any resource in your recording group changes in configuration.
+ * Defines which resources trigger an evaluation for an Config rule. The scope can include one or more resource types, a
+ * combination of a tag key and value, or a combination of one resource type and one resource ID. Specify a scope to
+ * constrain which resources trigger an evaluation for a rule. Otherwise, evaluations for the rule are triggered when
+ * any resource in your recording group changes in configuration.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/Scope" target="_top">AWS API Documentation</a>
@@ -32,40 +32,42 @@ public class Scope implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The resource types of only those AWS resources that you want to trigger an evaluation for the rule. You can only
-     * specify one type if you also specify a resource ID for <code>ComplianceResourceId</code>.
+     * The resource types of only those Amazon Web Services resources that you want to trigger an evaluation for the
+     * rule. You can only specify one type if you also specify a resource ID for <code>ComplianceResourceId</code>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> complianceResourceTypes;
     /**
      * <p>
-     * The tag key that is applied to only those AWS resources that you want to trigger an evaluation for the rule.
+     * The tag key that is applied to only those Amazon Web Services resources that you want to trigger an evaluation
+     * for the rule.
      * </p>
      */
     private String tagKey;
     /**
      * <p>
-     * The tag value applied to only those AWS resources that you want to trigger an evaluation for the rule. If you
-     * specify a value for <code>TagValue</code>, you must also specify a value for <code>TagKey</code>.
+     * The tag value applied to only those Amazon Web Services resources that you want to trigger an evaluation for the
+     * rule. If you specify a value for <code>TagValue</code>, you must also specify a value for <code>TagKey</code>.
      * </p>
      */
     private String tagValue;
     /**
      * <p>
-     * The ID of the only AWS resource that you want to trigger an evaluation for the rule. If you specify a resource
-     * ID, you must specify one resource type for <code>ComplianceResourceTypes</code>.
+     * The ID of the only Amazon Web Services resource that you want to trigger an evaluation for the rule. If you
+     * specify a resource ID, you must specify one resource type for <code>ComplianceResourceTypes</code>.
      * </p>
      */
     private String complianceResourceId;
 
     /**
      * <p>
-     * The resource types of only those AWS resources that you want to trigger an evaluation for the rule. You can only
-     * specify one type if you also specify a resource ID for <code>ComplianceResourceId</code>.
+     * The resource types of only those Amazon Web Services resources that you want to trigger an evaluation for the
+     * rule. You can only specify one type if you also specify a resource ID for <code>ComplianceResourceId</code>.
      * </p>
      * 
-     * @return The resource types of only those AWS resources that you want to trigger an evaluation for the rule. You
-     *         can only specify one type if you also specify a resource ID for <code>ComplianceResourceId</code>.
+     * @return The resource types of only those Amazon Web Services resources that you want to trigger an evaluation for
+     *         the rule. You can only specify one type if you also specify a resource ID for
+     *         <code>ComplianceResourceId</code>.
      */
 
     public java.util.List<String> getComplianceResourceTypes() {
@@ -77,13 +79,14 @@ public class Scope implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The resource types of only those AWS resources that you want to trigger an evaluation for the rule. You can only
-     * specify one type if you also specify a resource ID for <code>ComplianceResourceId</code>.
+     * The resource types of only those Amazon Web Services resources that you want to trigger an evaluation for the
+     * rule. You can only specify one type if you also specify a resource ID for <code>ComplianceResourceId</code>.
      * </p>
      * 
      * @param complianceResourceTypes
-     *        The resource types of only those AWS resources that you want to trigger an evaluation for the rule. You
-     *        can only specify one type if you also specify a resource ID for <code>ComplianceResourceId</code>.
+     *        The resource types of only those Amazon Web Services resources that you want to trigger an evaluation for
+     *        the rule. You can only specify one type if you also specify a resource ID for
+     *        <code>ComplianceResourceId</code>.
      */
 
     public void setComplianceResourceTypes(java.util.Collection<String> complianceResourceTypes) {
@@ -97,8 +100,8 @@ public class Scope implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The resource types of only those AWS resources that you want to trigger an evaluation for the rule. You can only
-     * specify one type if you also specify a resource ID for <code>ComplianceResourceId</code>.
+     * The resource types of only those Amazon Web Services resources that you want to trigger an evaluation for the
+     * rule. You can only specify one type if you also specify a resource ID for <code>ComplianceResourceId</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -107,8 +110,9 @@ public class Scope implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param complianceResourceTypes
-     *        The resource types of only those AWS resources that you want to trigger an evaluation for the rule. You
-     *        can only specify one type if you also specify a resource ID for <code>ComplianceResourceId</code>.
+     *        The resource types of only those Amazon Web Services resources that you want to trigger an evaluation for
+     *        the rule. You can only specify one type if you also specify a resource ID for
+     *        <code>ComplianceResourceId</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -124,13 +128,14 @@ public class Scope implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The resource types of only those AWS resources that you want to trigger an evaluation for the rule. You can only
-     * specify one type if you also specify a resource ID for <code>ComplianceResourceId</code>.
+     * The resource types of only those Amazon Web Services resources that you want to trigger an evaluation for the
+     * rule. You can only specify one type if you also specify a resource ID for <code>ComplianceResourceId</code>.
      * </p>
      * 
      * @param complianceResourceTypes
-     *        The resource types of only those AWS resources that you want to trigger an evaluation for the rule. You
-     *        can only specify one type if you also specify a resource ID for <code>ComplianceResourceId</code>.
+     *        The resource types of only those Amazon Web Services resources that you want to trigger an evaluation for
+     *        the rule. You can only specify one type if you also specify a resource ID for
+     *        <code>ComplianceResourceId</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -141,12 +146,13 @@ public class Scope implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tag key that is applied to only those AWS resources that you want to trigger an evaluation for the rule.
+     * The tag key that is applied to only those Amazon Web Services resources that you want to trigger an evaluation
+     * for the rule.
      * </p>
      * 
      * @param tagKey
-     *        The tag key that is applied to only those AWS resources that you want to trigger an evaluation for the
-     *        rule.
+     *        The tag key that is applied to only those Amazon Web Services resources that you want to trigger an
+     *        evaluation for the rule.
      */
 
     public void setTagKey(String tagKey) {
@@ -155,11 +161,12 @@ public class Scope implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tag key that is applied to only those AWS resources that you want to trigger an evaluation for the rule.
+     * The tag key that is applied to only those Amazon Web Services resources that you want to trigger an evaluation
+     * for the rule.
      * </p>
      * 
-     * @return The tag key that is applied to only those AWS resources that you want to trigger an evaluation for the
-     *         rule.
+     * @return The tag key that is applied to only those Amazon Web Services resources that you want to trigger an
+     *         evaluation for the rule.
      */
 
     public String getTagKey() {
@@ -168,12 +175,13 @@ public class Scope implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tag key that is applied to only those AWS resources that you want to trigger an evaluation for the rule.
+     * The tag key that is applied to only those Amazon Web Services resources that you want to trigger an evaluation
+     * for the rule.
      * </p>
      * 
      * @param tagKey
-     *        The tag key that is applied to only those AWS resources that you want to trigger an evaluation for the
-     *        rule.
+     *        The tag key that is applied to only those Amazon Web Services resources that you want to trigger an
+     *        evaluation for the rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -184,13 +192,14 @@ public class Scope implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tag value applied to only those AWS resources that you want to trigger an evaluation for the rule. If you
-     * specify a value for <code>TagValue</code>, you must also specify a value for <code>TagKey</code>.
+     * The tag value applied to only those Amazon Web Services resources that you want to trigger an evaluation for the
+     * rule. If you specify a value for <code>TagValue</code>, you must also specify a value for <code>TagKey</code>.
      * </p>
      * 
      * @param tagValue
-     *        The tag value applied to only those AWS resources that you want to trigger an evaluation for the rule. If
-     *        you specify a value for <code>TagValue</code>, you must also specify a value for <code>TagKey</code>.
+     *        The tag value applied to only those Amazon Web Services resources that you want to trigger an evaluation
+     *        for the rule. If you specify a value for <code>TagValue</code>, you must also specify a value for
+     *        <code>TagKey</code>.
      */
 
     public void setTagValue(String tagValue) {
@@ -199,12 +208,13 @@ public class Scope implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tag value applied to only those AWS resources that you want to trigger an evaluation for the rule. If you
-     * specify a value for <code>TagValue</code>, you must also specify a value for <code>TagKey</code>.
+     * The tag value applied to only those Amazon Web Services resources that you want to trigger an evaluation for the
+     * rule. If you specify a value for <code>TagValue</code>, you must also specify a value for <code>TagKey</code>.
      * </p>
      * 
-     * @return The tag value applied to only those AWS resources that you want to trigger an evaluation for the rule. If
-     *         you specify a value for <code>TagValue</code>, you must also specify a value for <code>TagKey</code>.
+     * @return The tag value applied to only those Amazon Web Services resources that you want to trigger an evaluation
+     *         for the rule. If you specify a value for <code>TagValue</code>, you must also specify a value for
+     *         <code>TagKey</code>.
      */
 
     public String getTagValue() {
@@ -213,13 +223,14 @@ public class Scope implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tag value applied to only those AWS resources that you want to trigger an evaluation for the rule. If you
-     * specify a value for <code>TagValue</code>, you must also specify a value for <code>TagKey</code>.
+     * The tag value applied to only those Amazon Web Services resources that you want to trigger an evaluation for the
+     * rule. If you specify a value for <code>TagValue</code>, you must also specify a value for <code>TagKey</code>.
      * </p>
      * 
      * @param tagValue
-     *        The tag value applied to only those AWS resources that you want to trigger an evaluation for the rule. If
-     *        you specify a value for <code>TagValue</code>, you must also specify a value for <code>TagKey</code>.
+     *        The tag value applied to only those Amazon Web Services resources that you want to trigger an evaluation
+     *        for the rule. If you specify a value for <code>TagValue</code>, you must also specify a value for
+     *        <code>TagKey</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -230,13 +241,13 @@ public class Scope implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the only AWS resource that you want to trigger an evaluation for the rule. If you specify a resource
-     * ID, you must specify one resource type for <code>ComplianceResourceTypes</code>.
+     * The ID of the only Amazon Web Services resource that you want to trigger an evaluation for the rule. If you
+     * specify a resource ID, you must specify one resource type for <code>ComplianceResourceTypes</code>.
      * </p>
      * 
      * @param complianceResourceId
-     *        The ID of the only AWS resource that you want to trigger an evaluation for the rule. If you specify a
-     *        resource ID, you must specify one resource type for <code>ComplianceResourceTypes</code>.
+     *        The ID of the only Amazon Web Services resource that you want to trigger an evaluation for the rule. If
+     *        you specify a resource ID, you must specify one resource type for <code>ComplianceResourceTypes</code>.
      */
 
     public void setComplianceResourceId(String complianceResourceId) {
@@ -245,12 +256,12 @@ public class Scope implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the only AWS resource that you want to trigger an evaluation for the rule. If you specify a resource
-     * ID, you must specify one resource type for <code>ComplianceResourceTypes</code>.
+     * The ID of the only Amazon Web Services resource that you want to trigger an evaluation for the rule. If you
+     * specify a resource ID, you must specify one resource type for <code>ComplianceResourceTypes</code>.
      * </p>
      * 
-     * @return The ID of the only AWS resource that you want to trigger an evaluation for the rule. If you specify a
-     *         resource ID, you must specify one resource type for <code>ComplianceResourceTypes</code>.
+     * @return The ID of the only Amazon Web Services resource that you want to trigger an evaluation for the rule. If
+     *         you specify a resource ID, you must specify one resource type for <code>ComplianceResourceTypes</code>.
      */
 
     public String getComplianceResourceId() {
@@ -259,13 +270,13 @@ public class Scope implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the only AWS resource that you want to trigger an evaluation for the rule. If you specify a resource
-     * ID, you must specify one resource type for <code>ComplianceResourceTypes</code>.
+     * The ID of the only Amazon Web Services resource that you want to trigger an evaluation for the rule. If you
+     * specify a resource ID, you must specify one resource type for <code>ComplianceResourceTypes</code>.
      * </p>
      * 
      * @param complianceResourceId
-     *        The ID of the only AWS resource that you want to trigger an evaluation for the rule. If you specify a
-     *        resource ID, you must specify one resource type for <code>ComplianceResourceTypes</code>.
+     *        The ID of the only Amazon Web Services resource that you want to trigger an evaluation for the rule. If
+     *        you specify a resource ID, you must specify one resource type for <code>ComplianceResourceTypes</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

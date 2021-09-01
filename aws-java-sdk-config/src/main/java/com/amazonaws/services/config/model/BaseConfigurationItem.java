@@ -36,7 +36,7 @@ public class BaseConfigurationItem implements Serializable, Cloneable, Structure
     private String version;
     /**
      * <p>
-     * The 12-digit AWS account ID associated with the resource.
+     * The 12-digit Amazon Web Services account ID associated with the resource.
      * </p>
      */
     private String accountId;
@@ -100,7 +100,7 @@ public class BaseConfigurationItem implements Serializable, Cloneable, Structure
     private String arn;
     /**
      * <p>
-     * The type of AWS resource.
+     * The type of Amazon Web Services resource.
      * </p>
      */
     private String resourceType;
@@ -142,8 +142,8 @@ public class BaseConfigurationItem implements Serializable, Cloneable, Structure
     private String configuration;
     /**
      * <p>
-     * Configuration attributes that AWS Config returns for certain resource types to supplement the information
-     * returned for the configuration parameter.
+     * Configuration attributes that Config returns for certain resource types to supplement the information returned
+     * for the configuration parameter.
      * </p>
      */
     private java.util.Map<String, String> supplementaryConfiguration;
@@ -190,11 +190,11 @@ public class BaseConfigurationItem implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The 12-digit AWS account ID associated with the resource.
+     * The 12-digit Amazon Web Services account ID associated with the resource.
      * </p>
      * 
      * @param accountId
-     *        The 12-digit AWS account ID associated with the resource.
+     *        The 12-digit Amazon Web Services account ID associated with the resource.
      */
 
     public void setAccountId(String accountId) {
@@ -203,10 +203,10 @@ public class BaseConfigurationItem implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The 12-digit AWS account ID associated with the resource.
+     * The 12-digit Amazon Web Services account ID associated with the resource.
      * </p>
      * 
-     * @return The 12-digit AWS account ID associated with the resource.
+     * @return The 12-digit Amazon Web Services account ID associated with the resource.
      */
 
     public String getAccountId() {
@@ -215,11 +215,11 @@ public class BaseConfigurationItem implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The 12-digit AWS account ID associated with the resource.
+     * The 12-digit Amazon Web Services account ID associated with the resource.
      * </p>
      * 
      * @param accountId
-     *        The 12-digit AWS account ID associated with the resource.
+     *        The 12-digit Amazon Web Services account ID associated with the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -677,11 +677,11 @@ public class BaseConfigurationItem implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The type of AWS resource.
+     * The type of Amazon Web Services resource.
      * </p>
      * 
      * @param resourceType
-     *        The type of AWS resource.
+     *        The type of Amazon Web Services resource.
      * @see ResourceType
      */
 
@@ -691,10 +691,10 @@ public class BaseConfigurationItem implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The type of AWS resource.
+     * The type of Amazon Web Services resource.
      * </p>
      * 
-     * @return The type of AWS resource.
+     * @return The type of Amazon Web Services resource.
      * @see ResourceType
      */
 
@@ -704,11 +704,11 @@ public class BaseConfigurationItem implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The type of AWS resource.
+     * The type of Amazon Web Services resource.
      * </p>
      * 
      * @param resourceType
-     *        The type of AWS resource.
+     *        The type of Amazon Web Services resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -720,11 +720,11 @@ public class BaseConfigurationItem implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The type of AWS resource.
+     * The type of Amazon Web Services resource.
      * </p>
      * 
      * @param resourceType
-     *        The type of AWS resource.
+     *        The type of Amazon Web Services resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -976,11 +976,11 @@ public class BaseConfigurationItem implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Configuration attributes that AWS Config returns for certain resource types to supplement the information
-     * returned for the configuration parameter.
+     * Configuration attributes that Config returns for certain resource types to supplement the information returned
+     * for the configuration parameter.
      * </p>
      * 
-     * @return Configuration attributes that AWS Config returns for certain resource types to supplement the information
+     * @return Configuration attributes that Config returns for certain resource types to supplement the information
      *         returned for the configuration parameter.
      */
 
@@ -990,12 +990,12 @@ public class BaseConfigurationItem implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Configuration attributes that AWS Config returns for certain resource types to supplement the information
-     * returned for the configuration parameter.
+     * Configuration attributes that Config returns for certain resource types to supplement the information returned
+     * for the configuration parameter.
      * </p>
      * 
      * @param supplementaryConfiguration
-     *        Configuration attributes that AWS Config returns for certain resource types to supplement the information
+     *        Configuration attributes that Config returns for certain resource types to supplement the information
      *        returned for the configuration parameter.
      */
 
@@ -1005,12 +1005,12 @@ public class BaseConfigurationItem implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Configuration attributes that AWS Config returns for certain resource types to supplement the information
-     * returned for the configuration parameter.
+     * Configuration attributes that Config returns for certain resource types to supplement the information returned
+     * for the configuration parameter.
      * </p>
      * 
      * @param supplementaryConfiguration
-     *        Configuration attributes that AWS Config returns for certain resource types to supplement the information
+     *        Configuration attributes that Config returns for certain resource types to supplement the information
      *        returned for the configuration parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

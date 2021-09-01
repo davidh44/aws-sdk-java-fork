@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * This exception is thrown if the limit specified is invalid.
+ * This exception is thrown if the limit specified is not valid.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

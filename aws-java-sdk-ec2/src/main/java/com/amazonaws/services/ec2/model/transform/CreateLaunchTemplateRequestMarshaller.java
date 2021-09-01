@@ -604,6 +604,10 @@ public class CreateLaunchTemplateRequestMarshaller implements Marshaller<Request
                 if (metadataOptions.getHttpEndpoint() != null) {
                     request.addParameter("LaunchTemplateData.MetadataOptions.HttpEndpoint", StringUtils.fromString(metadataOptions.getHttpEndpoint()));
                 }
+
+                if (metadataOptions.getHttpProtocolIpv6() != null) {
+                    request.addParameter("LaunchTemplateData.MetadataOptions.HttpProtocolIpv6", StringUtils.fromString(metadataOptions.getHttpProtocolIpv6()));
+                }
             }
 
             LaunchTemplateEnclaveOptionsRequest enclaveOptions = launchTemplateData.getEnclaveOptions();

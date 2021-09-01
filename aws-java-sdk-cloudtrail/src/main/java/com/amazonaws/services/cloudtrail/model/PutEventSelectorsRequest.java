@@ -49,7 +49,7 @@ public class PutEventSelectorsRequest extends com.amazonaws.AmazonWebServiceRequ
      * <li>
      * <p>
      * Have no adjacent periods, underscores or dashes. Names like <code>my-_namespace</code> and
-     * <code>my--namespace</code> are invalid.
+     * <code>my--namespace</code> are not valid.
      * </p>
      * </li>
      * <li>
@@ -59,7 +59,7 @@ public class PutEventSelectorsRequest extends com.amazonaws.AmazonWebServiceRequ
      * </li>
      * </ul>
      * <p>
-     * If you specify a trail ARN, it must be in the format:
+     * If you specify a trail ARN, it must be in the following format.
      * </p>
      * <p>
      * <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
@@ -83,7 +83,7 @@ public class PutEventSelectorsRequest extends com.amazonaws.AmazonWebServiceRequ
      * <code>AdvancedEventSelectors</code> to a trail, any existing <code>EventSelectors</code> are overwritten. For
      * more information about advanced event selectors, see <a
      * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html"
-     * >Logging data events for trails</a> in the <i>AWS CloudTrail User Guide</i>.
+     * >Logging data events for trails</a> in the <i>CloudTrail User Guide</i>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<AdvancedEventSelector> advancedEventSelectors;
@@ -112,7 +112,7 @@ public class PutEventSelectorsRequest extends com.amazonaws.AmazonWebServiceRequ
      * <li>
      * <p>
      * Have no adjacent periods, underscores or dashes. Names like <code>my-_namespace</code> and
-     * <code>my--namespace</code> are invalid.
+     * <code>my--namespace</code> are not valid.
      * </p>
      * </li>
      * <li>
@@ -122,7 +122,7 @@ public class PutEventSelectorsRequest extends com.amazonaws.AmazonWebServiceRequ
      * </li>
      * </ul>
      * <p>
-     * If you specify a trail ARN, it must be in the format:
+     * If you specify a trail ARN, it must be in the following format.
      * </p>
      * <p>
      * <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
@@ -150,7 +150,7 @@ public class PutEventSelectorsRequest extends com.amazonaws.AmazonWebServiceRequ
      *        <li>
      *        <p>
      *        Have no adjacent periods, underscores or dashes. Names like <code>my-_namespace</code> and
-     *        <code>my--namespace</code> are invalid.
+     *        <code>my--namespace</code> are not valid.
      *        </p>
      *        </li>
      *        <li>
@@ -160,7 +160,7 @@ public class PutEventSelectorsRequest extends com.amazonaws.AmazonWebServiceRequ
      *        </li>
      *        </ul>
      *        <p>
-     *        If you specify a trail ARN, it must be in the format:
+     *        If you specify a trail ARN, it must be in the following format.
      *        </p>
      *        <p>
      *        <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
@@ -194,7 +194,7 @@ public class PutEventSelectorsRequest extends com.amazonaws.AmazonWebServiceRequ
      * <li>
      * <p>
      * Have no adjacent periods, underscores or dashes. Names like <code>my-_namespace</code> and
-     * <code>my--namespace</code> are invalid.
+     * <code>my--namespace</code> are not valid.
      * </p>
      * </li>
      * <li>
@@ -204,7 +204,7 @@ public class PutEventSelectorsRequest extends com.amazonaws.AmazonWebServiceRequ
      * </li>
      * </ul>
      * <p>
-     * If you specify a trail ARN, it must be in the format:
+     * If you specify a trail ARN, it must be in the following format.
      * </p>
      * <p>
      * <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
@@ -231,7 +231,7 @@ public class PutEventSelectorsRequest extends com.amazonaws.AmazonWebServiceRequ
      *         <li>
      *         <p>
      *         Have no adjacent periods, underscores or dashes. Names like <code>my-_namespace</code> and
-     *         <code>my--namespace</code> are invalid.
+     *         <code>my--namespace</code> are not valid.
      *         </p>
      *         </li>
      *         <li>
@@ -241,7 +241,7 @@ public class PutEventSelectorsRequest extends com.amazonaws.AmazonWebServiceRequ
      *         </li>
      *         </ul>
      *         <p>
-     *         If you specify a trail ARN, it must be in the format:
+     *         If you specify a trail ARN, it must be in the following format.
      *         </p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
@@ -275,7 +275,7 @@ public class PutEventSelectorsRequest extends com.amazonaws.AmazonWebServiceRequ
      * <li>
      * <p>
      * Have no adjacent periods, underscores or dashes. Names like <code>my-_namespace</code> and
-     * <code>my--namespace</code> are invalid.
+     * <code>my--namespace</code> are not valid.
      * </p>
      * </li>
      * <li>
@@ -285,7 +285,7 @@ public class PutEventSelectorsRequest extends com.amazonaws.AmazonWebServiceRequ
      * </li>
      * </ul>
      * <p>
-     * If you specify a trail ARN, it must be in the format:
+     * If you specify a trail ARN, it must be in the following format.
      * </p>
      * <p>
      * <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
@@ -313,7 +313,7 @@ public class PutEventSelectorsRequest extends com.amazonaws.AmazonWebServiceRequ
      *        <li>
      *        <p>
      *        Have no adjacent periods, underscores or dashes. Names like <code>my-_namespace</code> and
-     *        <code>my--namespace</code> are invalid.
+     *        <code>my--namespace</code> are not valid.
      *        </p>
      *        </li>
      *        <li>
@@ -323,7 +323,7 @@ public class PutEventSelectorsRequest extends com.amazonaws.AmazonWebServiceRequ
      *        </li>
      *        </ul>
      *        <p>
-     *        If you specify a trail ARN, it must be in the format:
+     *        If you specify a trail ARN, it must be in the following format.
      *        </p>
      *        <p>
      *        <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
@@ -440,7 +440,7 @@ public class PutEventSelectorsRequest extends com.amazonaws.AmazonWebServiceRequ
      * <code>AdvancedEventSelectors</code> to a trail, any existing <code>EventSelectors</code> are overwritten. For
      * more information about advanced event selectors, see <a
      * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html"
-     * >Logging data events for trails</a> in the <i>AWS CloudTrail User Guide</i>.
+     * >Logging data events for trails</a> in the <i>CloudTrail User Guide</i>.
      * </p>
      * 
      * @return Specifies the settings for advanced event selectors. You can add advanced event selectors, and conditions
@@ -450,7 +450,7 @@ public class PutEventSelectorsRequest extends com.amazonaws.AmazonWebServiceRequ
      *         <code>EventSelectors</code> are overwritten. For more information about advanced event selectors, see <a
      *         href
      *         ="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html"
-     *         >Logging data events for trails</a> in the <i>AWS CloudTrail User Guide</i>.
+     *         >Logging data events for trails</a> in the <i>CloudTrail User Guide</i>.
      */
 
     public java.util.List<AdvancedEventSelector> getAdvancedEventSelectors() {
@@ -468,7 +468,7 @@ public class PutEventSelectorsRequest extends com.amazonaws.AmazonWebServiceRequ
      * <code>AdvancedEventSelectors</code> to a trail, any existing <code>EventSelectors</code> are overwritten. For
      * more information about advanced event selectors, see <a
      * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html"
-     * >Logging data events for trails</a> in the <i>AWS CloudTrail User Guide</i>.
+     * >Logging data events for trails</a> in the <i>CloudTrail User Guide</i>.
      * </p>
      * 
      * @param advancedEventSelectors
@@ -479,7 +479,7 @@ public class PutEventSelectorsRequest extends com.amazonaws.AmazonWebServiceRequ
      *        <code>EventSelectors</code> are overwritten. For more information about advanced event selectors, see <a
      *        href
      *        ="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html">
-     *        Logging data events for trails</a> in the <i>AWS CloudTrail User Guide</i>.
+     *        Logging data events for trails</a> in the <i>CloudTrail User Guide</i>.
      */
 
     public void setAdvancedEventSelectors(java.util.Collection<AdvancedEventSelector> advancedEventSelectors) {
@@ -499,7 +499,7 @@ public class PutEventSelectorsRequest extends com.amazonaws.AmazonWebServiceRequ
      * <code>AdvancedEventSelectors</code> to a trail, any existing <code>EventSelectors</code> are overwritten. For
      * more information about advanced event selectors, see <a
      * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html"
-     * >Logging data events for trails</a> in the <i>AWS CloudTrail User Guide</i>.
+     * >Logging data events for trails</a> in the <i>CloudTrail User Guide</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -515,7 +515,7 @@ public class PutEventSelectorsRequest extends com.amazonaws.AmazonWebServiceRequ
      *        <code>EventSelectors</code> are overwritten. For more information about advanced event selectors, see <a
      *        href
      *        ="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html">
-     *        Logging data events for trails</a> in the <i>AWS CloudTrail User Guide</i>.
+     *        Logging data events for trails</a> in the <i>CloudTrail User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -537,7 +537,7 @@ public class PutEventSelectorsRequest extends com.amazonaws.AmazonWebServiceRequ
      * <code>AdvancedEventSelectors</code> to a trail, any existing <code>EventSelectors</code> are overwritten. For
      * more information about advanced event selectors, see <a
      * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html"
-     * >Logging data events for trails</a> in the <i>AWS CloudTrail User Guide</i>.
+     * >Logging data events for trails</a> in the <i>CloudTrail User Guide</i>.
      * </p>
      * 
      * @param advancedEventSelectors
@@ -548,7 +548,7 @@ public class PutEventSelectorsRequest extends com.amazonaws.AmazonWebServiceRequ
      *        <code>EventSelectors</code> are overwritten. For more information about advanced event selectors, see <a
      *        href
      *        ="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html">
-     *        Logging data events for trails</a> in the <i>AWS CloudTrail User Guide</i>.
+     *        Logging data events for trails</a> in the <i>CloudTrail User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -106,7 +106,7 @@ public class CreateTrailResult extends com.amazonaws.AmazonWebServiceResult<com.
     /**
      * <p>
      * Specifies the KMS key ID that encrypts the logs delivered by CloudTrail. The value is a fully specified ARN to a
-     * KMS key in the format:
+     * KMS key in the following format.
      * </p>
      * <p>
      * <code>arn:aws:kms:us-east-2:123456789012:key/12345678-1234-1234-1234-123456789012</code>
@@ -653,7 +653,7 @@ public class CreateTrailResult extends com.amazonaws.AmazonWebServiceResult<com.
     /**
      * <p>
      * Specifies the KMS key ID that encrypts the logs delivered by CloudTrail. The value is a fully specified ARN to a
-     * KMS key in the format:
+     * KMS key in the following format.
      * </p>
      * <p>
      * <code>arn:aws:kms:us-east-2:123456789012:key/12345678-1234-1234-1234-123456789012</code>
@@ -661,7 +661,7 @@ public class CreateTrailResult extends com.amazonaws.AmazonWebServiceResult<com.
      * 
      * @param kmsKeyId
      *        Specifies the KMS key ID that encrypts the logs delivered by CloudTrail. The value is a fully specified
-     *        ARN to a KMS key in the format:</p>
+     *        ARN to a KMS key in the following format.</p>
      *        <p>
      *        <code>arn:aws:kms:us-east-2:123456789012:key/12345678-1234-1234-1234-123456789012</code>
      */
@@ -673,14 +673,14 @@ public class CreateTrailResult extends com.amazonaws.AmazonWebServiceResult<com.
     /**
      * <p>
      * Specifies the KMS key ID that encrypts the logs delivered by CloudTrail. The value is a fully specified ARN to a
-     * KMS key in the format:
+     * KMS key in the following format.
      * </p>
      * <p>
      * <code>arn:aws:kms:us-east-2:123456789012:key/12345678-1234-1234-1234-123456789012</code>
      * </p>
      * 
      * @return Specifies the KMS key ID that encrypts the logs delivered by CloudTrail. The value is a fully specified
-     *         ARN to a KMS key in the format:</p>
+     *         ARN to a KMS key in the following format.</p>
      *         <p>
      *         <code>arn:aws:kms:us-east-2:123456789012:key/12345678-1234-1234-1234-123456789012</code>
      */
@@ -692,7 +692,7 @@ public class CreateTrailResult extends com.amazonaws.AmazonWebServiceResult<com.
     /**
      * <p>
      * Specifies the KMS key ID that encrypts the logs delivered by CloudTrail. The value is a fully specified ARN to a
-     * KMS key in the format:
+     * KMS key in the following format.
      * </p>
      * <p>
      * <code>arn:aws:kms:us-east-2:123456789012:key/12345678-1234-1234-1234-123456789012</code>
@@ -700,7 +700,7 @@ public class CreateTrailResult extends com.amazonaws.AmazonWebServiceResult<com.
      * 
      * @param kmsKeyId
      *        Specifies the KMS key ID that encrypts the logs delivered by CloudTrail. The value is a fully specified
-     *        ARN to a KMS key in the format:</p>
+     *        ARN to a KMS key in the following format.</p>
      *        <p>
      *        <code>arn:aws:kms:us-east-2:123456789012:key/12345678-1234-1234-1234-123456789012</code>
      * @return Returns a reference to this object so that method calls can be chained together.

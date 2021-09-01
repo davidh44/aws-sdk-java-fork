@@ -37,6 +37,8 @@ public class ChannelMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ChannelState").build();
     private static final MarshallingInfo<java.util.Date> CREATIONTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreationTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<StructuredPojo> FILLERSLATE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FillerSlate").build();
     private static final MarshallingInfo<java.util.Date> LASTMODIFIEDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastModifiedTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<List> OUTPUTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
@@ -66,6 +68,7 @@ public class ChannelMarshaller {
             protocolMarshaller.marshall(channel.getChannelName(), CHANNELNAME_BINDING);
             protocolMarshaller.marshall(channel.getChannelState(), CHANNELSTATE_BINDING);
             protocolMarshaller.marshall(channel.getCreationTime(), CREATIONTIME_BINDING);
+            protocolMarshaller.marshall(channel.getFillerSlate(), FILLERSLATE_BINDING);
             protocolMarshaller.marshall(channel.getLastModifiedTime(), LASTMODIFIEDTIME_BINDING);
             protocolMarshaller.marshall(channel.getOutputs(), OUTPUTS_BINDING);
             protocolMarshaller.marshall(channel.getPlaybackMode(), PLAYBACKMODE_BINDING);

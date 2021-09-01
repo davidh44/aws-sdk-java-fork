@@ -36,7 +36,7 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
     private String version;
     /**
      * <p>
-     * The 12-digit AWS account ID associated with the resource.
+     * The 12-digit Amazon Web Services account ID associated with the resource.
      * </p>
      */
     private String accountId;
@@ -110,7 +110,7 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
     private String arn;
     /**
      * <p>
-     * The type of AWS resource.
+     * The type of Amazon Web Services resource.
      * </p>
      */
     private String resourceType;
@@ -157,20 +157,20 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
      * <p>
      * A populated field indicates that the current configuration was initiated by the events recorded in the CloudTrail
      * log. For more information about CloudTrail, see <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">What Is AWS
+     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">What Is
      * CloudTrail</a>.
      * </p>
      * <p>
      * An empty field indicates that the current configuration was not initiated by any event. As of Version 1.3, the
      * relatedEvents field is empty. You can access the <a
      * href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_LookupEvents.html">LookupEvents API</a>
-     * in the <i>AWS CloudTrail API Reference</i> to retrieve the events for the resource.
+     * in the <i>CloudTrail API Reference</i> to retrieve the events for the resource.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> relatedEvents;
     /**
      * <p>
-     * A list of related AWS resources.
+     * A list of related Amazon Web Services resources.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Relationship> relationships;
@@ -182,8 +182,8 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
     private String configuration;
     /**
      * <p>
-     * Configuration attributes that AWS Config returns for certain resource types to supplement the information
-     * returned for the <code>configuration</code> parameter.
+     * Configuration attributes that Config returns for certain resource types to supplement the information returned
+     * for the <code>configuration</code> parameter.
      * </p>
      */
     private java.util.Map<String, String> supplementaryConfiguration;
@@ -230,11 +230,11 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The 12-digit AWS account ID associated with the resource.
+     * The 12-digit Amazon Web Services account ID associated with the resource.
      * </p>
      * 
      * @param accountId
-     *        The 12-digit AWS account ID associated with the resource.
+     *        The 12-digit Amazon Web Services account ID associated with the resource.
      */
 
     public void setAccountId(String accountId) {
@@ -243,10 +243,10 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The 12-digit AWS account ID associated with the resource.
+     * The 12-digit Amazon Web Services account ID associated with the resource.
      * </p>
      * 
-     * @return The 12-digit AWS account ID associated with the resource.
+     * @return The 12-digit Amazon Web Services account ID associated with the resource.
      */
 
     public String getAccountId() {
@@ -255,11 +255,11 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The 12-digit AWS account ID associated with the resource.
+     * The 12-digit Amazon Web Services account ID associated with the resource.
      * </p>
      * 
      * @param accountId
-     *        The 12-digit AWS account ID associated with the resource.
+     *        The 12-digit Amazon Web Services account ID associated with the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -859,11 +859,11 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The type of AWS resource.
+     * The type of Amazon Web Services resource.
      * </p>
      * 
      * @param resourceType
-     *        The type of AWS resource.
+     *        The type of Amazon Web Services resource.
      * @see ResourceType
      */
 
@@ -873,10 +873,10 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The type of AWS resource.
+     * The type of Amazon Web Services resource.
      * </p>
      * 
-     * @return The type of AWS resource.
+     * @return The type of Amazon Web Services resource.
      * @see ResourceType
      */
 
@@ -886,11 +886,11 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The type of AWS resource.
+     * The type of Amazon Web Services resource.
      * </p>
      * 
      * @param resourceType
-     *        The type of AWS resource.
+     *        The type of Amazon Web Services resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -902,11 +902,11 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The type of AWS resource.
+     * The type of Amazon Web Services resource.
      * </p>
      * 
      * @param resourceType
-     *        The type of AWS resource.
+     *        The type of Amazon Web Services resource.
      * @see ResourceType
      */
 
@@ -916,11 +916,11 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The type of AWS resource.
+     * The type of Amazon Web Services resource.
      * </p>
      * 
      * @param resourceType
-     *        The type of AWS resource.
+     *        The type of Amazon Web Services resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -1205,14 +1205,14 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
      * <p>
      * A populated field indicates that the current configuration was initiated by the events recorded in the CloudTrail
      * log. For more information about CloudTrail, see <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">What Is AWS
+     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">What Is
      * CloudTrail</a>.
      * </p>
      * <p>
      * An empty field indicates that the current configuration was not initiated by any event. As of Version 1.3, the
      * relatedEvents field is empty. You can access the <a
      * href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_LookupEvents.html">LookupEvents API</a>
-     * in the <i>AWS CloudTrail API Reference</i> to retrieve the events for the resource.
+     * in the <i>CloudTrail API Reference</i> to retrieve the events for the resource.
      * </p>
      * 
      * @return A list of CloudTrail event IDs.</p>
@@ -1220,13 +1220,13 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
      *         A populated field indicates that the current configuration was initiated by the events recorded in the
      *         CloudTrail log. For more information about CloudTrail, see <a
      *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">What
-     *         Is AWS CloudTrail</a>.
+     *         Is CloudTrail</a>.
      *         </p>
      *         <p>
      *         An empty field indicates that the current configuration was not initiated by any event. As of Version
      *         1.3, the relatedEvents field is empty. You can access the <a
      *         href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_LookupEvents.html">LookupEvents
-     *         API</a> in the <i>AWS CloudTrail API Reference</i> to retrieve the events for the resource.
+     *         API</a> in the <i>CloudTrail API Reference</i> to retrieve the events for the resource.
      */
 
     public java.util.List<String> getRelatedEvents() {
@@ -1243,14 +1243,14 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
      * <p>
      * A populated field indicates that the current configuration was initiated by the events recorded in the CloudTrail
      * log. For more information about CloudTrail, see <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">What Is AWS
+     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">What Is
      * CloudTrail</a>.
      * </p>
      * <p>
      * An empty field indicates that the current configuration was not initiated by any event. As of Version 1.3, the
      * relatedEvents field is empty. You can access the <a
      * href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_LookupEvents.html">LookupEvents API</a>
-     * in the <i>AWS CloudTrail API Reference</i> to retrieve the events for the resource.
+     * in the <i>CloudTrail API Reference</i> to retrieve the events for the resource.
      * </p>
      * 
      * @param relatedEvents
@@ -1259,13 +1259,13 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
      *        A populated field indicates that the current configuration was initiated by the events recorded in the
      *        CloudTrail log. For more information about CloudTrail, see <a
      *        href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">What
-     *        Is AWS CloudTrail</a>.
+     *        Is CloudTrail</a>.
      *        </p>
      *        <p>
      *        An empty field indicates that the current configuration was not initiated by any event. As of Version 1.3,
      *        the relatedEvents field is empty. You can access the <a
      *        href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_LookupEvents.html">LookupEvents
-     *        API</a> in the <i>AWS CloudTrail API Reference</i> to retrieve the events for the resource.
+     *        API</a> in the <i>CloudTrail API Reference</i> to retrieve the events for the resource.
      */
 
     public void setRelatedEvents(java.util.Collection<String> relatedEvents) {
@@ -1284,14 +1284,14 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
      * <p>
      * A populated field indicates that the current configuration was initiated by the events recorded in the CloudTrail
      * log. For more information about CloudTrail, see <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">What Is AWS
+     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">What Is
      * CloudTrail</a>.
      * </p>
      * <p>
      * An empty field indicates that the current configuration was not initiated by any event. As of Version 1.3, the
      * relatedEvents field is empty. You can access the <a
      * href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_LookupEvents.html">LookupEvents API</a>
-     * in the <i>AWS CloudTrail API Reference</i> to retrieve the events for the resource.
+     * in the <i>CloudTrail API Reference</i> to retrieve the events for the resource.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1305,13 +1305,13 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
      *        A populated field indicates that the current configuration was initiated by the events recorded in the
      *        CloudTrail log. For more information about CloudTrail, see <a
      *        href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">What
-     *        Is AWS CloudTrail</a>.
+     *        Is CloudTrail</a>.
      *        </p>
      *        <p>
      *        An empty field indicates that the current configuration was not initiated by any event. As of Version 1.3,
      *        the relatedEvents field is empty. You can access the <a
      *        href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_LookupEvents.html">LookupEvents
-     *        API</a> in the <i>AWS CloudTrail API Reference</i> to retrieve the events for the resource.
+     *        API</a> in the <i>CloudTrail API Reference</i> to retrieve the events for the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1332,14 +1332,14 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
      * <p>
      * A populated field indicates that the current configuration was initiated by the events recorded in the CloudTrail
      * log. For more information about CloudTrail, see <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">What Is AWS
+     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">What Is
      * CloudTrail</a>.
      * </p>
      * <p>
      * An empty field indicates that the current configuration was not initiated by any event. As of Version 1.3, the
      * relatedEvents field is empty. You can access the <a
      * href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_LookupEvents.html">LookupEvents API</a>
-     * in the <i>AWS CloudTrail API Reference</i> to retrieve the events for the resource.
+     * in the <i>CloudTrail API Reference</i> to retrieve the events for the resource.
      * </p>
      * 
      * @param relatedEvents
@@ -1348,13 +1348,13 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
      *        A populated field indicates that the current configuration was initiated by the events recorded in the
      *        CloudTrail log. For more information about CloudTrail, see <a
      *        href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">What
-     *        Is AWS CloudTrail</a>.
+     *        Is CloudTrail</a>.
      *        </p>
      *        <p>
      *        An empty field indicates that the current configuration was not initiated by any event. As of Version 1.3,
      *        the relatedEvents field is empty. You can access the <a
      *        href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_LookupEvents.html">LookupEvents
-     *        API</a> in the <i>AWS CloudTrail API Reference</i> to retrieve the events for the resource.
+     *        API</a> in the <i>CloudTrail API Reference</i> to retrieve the events for the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1365,10 +1365,10 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of related AWS resources.
+     * A list of related Amazon Web Services resources.
      * </p>
      * 
-     * @return A list of related AWS resources.
+     * @return A list of related Amazon Web Services resources.
      */
 
     public java.util.List<Relationship> getRelationships() {
@@ -1380,11 +1380,11 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of related AWS resources.
+     * A list of related Amazon Web Services resources.
      * </p>
      * 
      * @param relationships
-     *        A list of related AWS resources.
+     *        A list of related Amazon Web Services resources.
      */
 
     public void setRelationships(java.util.Collection<Relationship> relationships) {
@@ -1398,7 +1398,7 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of related AWS resources.
+     * A list of related Amazon Web Services resources.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1407,7 +1407,7 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
      * </p>
      * 
      * @param relationships
-     *        A list of related AWS resources.
+     *        A list of related Amazon Web Services resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1423,11 +1423,11 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of related AWS resources.
+     * A list of related Amazon Web Services resources.
      * </p>
      * 
      * @param relationships
-     *        A list of related AWS resources.
+     *        A list of related Amazon Web Services resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1478,11 +1478,11 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Configuration attributes that AWS Config returns for certain resource types to supplement the information
-     * returned for the <code>configuration</code> parameter.
+     * Configuration attributes that Config returns for certain resource types to supplement the information returned
+     * for the <code>configuration</code> parameter.
      * </p>
      * 
-     * @return Configuration attributes that AWS Config returns for certain resource types to supplement the information
+     * @return Configuration attributes that Config returns for certain resource types to supplement the information
      *         returned for the <code>configuration</code> parameter.
      */
 
@@ -1492,12 +1492,12 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Configuration attributes that AWS Config returns for certain resource types to supplement the information
-     * returned for the <code>configuration</code> parameter.
+     * Configuration attributes that Config returns for certain resource types to supplement the information returned
+     * for the <code>configuration</code> parameter.
      * </p>
      * 
      * @param supplementaryConfiguration
-     *        Configuration attributes that AWS Config returns for certain resource types to supplement the information
+     *        Configuration attributes that Config returns for certain resource types to supplement the information
      *        returned for the <code>configuration</code> parameter.
      */
 
@@ -1507,12 +1507,12 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Configuration attributes that AWS Config returns for certain resource types to supplement the information
-     * returned for the <code>configuration</code> parameter.
+     * Configuration attributes that Config returns for certain resource types to supplement the information returned
+     * for the <code>configuration</code> parameter.
      * </p>
      * 
      * @param supplementaryConfiguration
-     *        Configuration attributes that AWS Config returns for certain resource types to supplement the information
+     *        Configuration attributes that Config returns for certain resource types to supplement the information
      *        returned for the <code>configuration</code> parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

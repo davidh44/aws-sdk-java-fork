@@ -27,21 +27,21 @@ public class DescribeRemediationExceptionsRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The name of the AWS Config rule.
+     * The name of the Config rule.
      * </p>
      */
     private String configRuleName;
     /**
      * <p>
-     * An exception list of resource exception keys to be processed with the current request. AWS Config adds exception
-     * for each resource key. For example, AWS Config adds 3 exceptions for 3 resource keys.
+     * An exception list of resource exception keys to be processed with the current request. Config adds exception for
+     * each resource key. For example, Config adds 3 exceptions for 3 resource keys.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<RemediationExceptionResourceKey> resourceKeys;
     /**
      * <p>
      * The maximum number of RemediationExceptionResourceKey returned on each page. The default is 25. If you specify 0,
-     * AWS Config uses the default.
+     * Config uses the default.
      * </p>
      */
     private Integer limit;
@@ -55,11 +55,11 @@ public class DescribeRemediationExceptionsRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The name of the AWS Config rule.
+     * The name of the Config rule.
      * </p>
      * 
      * @param configRuleName
-     *        The name of the AWS Config rule.
+     *        The name of the Config rule.
      */
 
     public void setConfigRuleName(String configRuleName) {
@@ -68,10 +68,10 @@ public class DescribeRemediationExceptionsRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The name of the AWS Config rule.
+     * The name of the Config rule.
      * </p>
      * 
-     * @return The name of the AWS Config rule.
+     * @return The name of the Config rule.
      */
 
     public String getConfigRuleName() {
@@ -80,11 +80,11 @@ public class DescribeRemediationExceptionsRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The name of the AWS Config rule.
+     * The name of the Config rule.
      * </p>
      * 
      * @param configRuleName
-     *        The name of the AWS Config rule.
+     *        The name of the Config rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -95,12 +95,12 @@ public class DescribeRemediationExceptionsRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * An exception list of resource exception keys to be processed with the current request. AWS Config adds exception
-     * for each resource key. For example, AWS Config adds 3 exceptions for 3 resource keys.
+     * An exception list of resource exception keys to be processed with the current request. Config adds exception for
+     * each resource key. For example, Config adds 3 exceptions for 3 resource keys.
      * </p>
      * 
-     * @return An exception list of resource exception keys to be processed with the current request. AWS Config adds
-     *         exception for each resource key. For example, AWS Config adds 3 exceptions for 3 resource keys.
+     * @return An exception list of resource exception keys to be processed with the current request. Config adds
+     *         exception for each resource key. For example, Config adds 3 exceptions for 3 resource keys.
      */
 
     public java.util.List<RemediationExceptionResourceKey> getResourceKeys() {
@@ -112,13 +112,13 @@ public class DescribeRemediationExceptionsRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * An exception list of resource exception keys to be processed with the current request. AWS Config adds exception
-     * for each resource key. For example, AWS Config adds 3 exceptions for 3 resource keys.
+     * An exception list of resource exception keys to be processed with the current request. Config adds exception for
+     * each resource key. For example, Config adds 3 exceptions for 3 resource keys.
      * </p>
      * 
      * @param resourceKeys
-     *        An exception list of resource exception keys to be processed with the current request. AWS Config adds
-     *        exception for each resource key. For example, AWS Config adds 3 exceptions for 3 resource keys.
+     *        An exception list of resource exception keys to be processed with the current request. Config adds
+     *        exception for each resource key. For example, Config adds 3 exceptions for 3 resource keys.
      */
 
     public void setResourceKeys(java.util.Collection<RemediationExceptionResourceKey> resourceKeys) {
@@ -132,8 +132,8 @@ public class DescribeRemediationExceptionsRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * An exception list of resource exception keys to be processed with the current request. AWS Config adds exception
-     * for each resource key. For example, AWS Config adds 3 exceptions for 3 resource keys.
+     * An exception list of resource exception keys to be processed with the current request. Config adds exception for
+     * each resource key. For example, Config adds 3 exceptions for 3 resource keys.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -142,8 +142,8 @@ public class DescribeRemediationExceptionsRequest extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @param resourceKeys
-     *        An exception list of resource exception keys to be processed with the current request. AWS Config adds
-     *        exception for each resource key. For example, AWS Config adds 3 exceptions for 3 resource keys.
+     *        An exception list of resource exception keys to be processed with the current request. Config adds
+     *        exception for each resource key. For example, Config adds 3 exceptions for 3 resource keys.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -159,13 +159,13 @@ public class DescribeRemediationExceptionsRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * An exception list of resource exception keys to be processed with the current request. AWS Config adds exception
-     * for each resource key. For example, AWS Config adds 3 exceptions for 3 resource keys.
+     * An exception list of resource exception keys to be processed with the current request. Config adds exception for
+     * each resource key. For example, Config adds 3 exceptions for 3 resource keys.
      * </p>
      * 
      * @param resourceKeys
-     *        An exception list of resource exception keys to be processed with the current request. AWS Config adds
-     *        exception for each resource key. For example, AWS Config adds 3 exceptions for 3 resource keys.
+     *        An exception list of resource exception keys to be processed with the current request. Config adds
+     *        exception for each resource key. For example, Config adds 3 exceptions for 3 resource keys.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -177,12 +177,12 @@ public class DescribeRemediationExceptionsRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * The maximum number of RemediationExceptionResourceKey returned on each page. The default is 25. If you specify 0,
-     * AWS Config uses the default.
+     * Config uses the default.
      * </p>
      * 
      * @param limit
      *        The maximum number of RemediationExceptionResourceKey returned on each page. The default is 25. If you
-     *        specify 0, AWS Config uses the default.
+     *        specify 0, Config uses the default.
      */
 
     public void setLimit(Integer limit) {
@@ -192,11 +192,11 @@ public class DescribeRemediationExceptionsRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * The maximum number of RemediationExceptionResourceKey returned on each page. The default is 25. If you specify 0,
-     * AWS Config uses the default.
+     * Config uses the default.
      * </p>
      * 
      * @return The maximum number of RemediationExceptionResourceKey returned on each page. The default is 25. If you
-     *         specify 0, AWS Config uses the default.
+     *         specify 0, Config uses the default.
      */
 
     public Integer getLimit() {
@@ -206,12 +206,12 @@ public class DescribeRemediationExceptionsRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * The maximum number of RemediationExceptionResourceKey returned on each page. The default is 25. If you specify 0,
-     * AWS Config uses the default.
+     * Config uses the default.
      * </p>
      * 
      * @param limit
      *        The maximum number of RemediationExceptionResourceKey returned on each page. The default is 25. If you
-     *        specify 0, AWS Config uses the default.
+     *        specify 0, Config uses the default.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

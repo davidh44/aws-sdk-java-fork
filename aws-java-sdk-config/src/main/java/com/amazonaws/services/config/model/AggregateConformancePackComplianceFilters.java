@@ -42,13 +42,13 @@ public class AggregateConformancePackComplianceFilters implements Serializable, 
     private String complianceType;
     /**
      * <p>
-     * The 12-digit AWS account ID of the source account.
+     * The 12-digit Amazon Web Services account ID of the source account.
      * </p>
      */
     private String accountId;
     /**
      * <p>
-     * The source AWS Region from where the data is aggregated.
+     * The source Amazon Web Services Region from where the data is aggregated.
      * </p>
      */
     private String awsRegion;
@@ -154,11 +154,11 @@ public class AggregateConformancePackComplianceFilters implements Serializable, 
 
     /**
      * <p>
-     * The 12-digit AWS account ID of the source account.
+     * The 12-digit Amazon Web Services account ID of the source account.
      * </p>
      * 
      * @param accountId
-     *        The 12-digit AWS account ID of the source account.
+     *        The 12-digit Amazon Web Services account ID of the source account.
      */
 
     public void setAccountId(String accountId) {
@@ -167,10 +167,10 @@ public class AggregateConformancePackComplianceFilters implements Serializable, 
 
     /**
      * <p>
-     * The 12-digit AWS account ID of the source account.
+     * The 12-digit Amazon Web Services account ID of the source account.
      * </p>
      * 
-     * @return The 12-digit AWS account ID of the source account.
+     * @return The 12-digit Amazon Web Services account ID of the source account.
      */
 
     public String getAccountId() {
@@ -179,11 +179,11 @@ public class AggregateConformancePackComplianceFilters implements Serializable, 
 
     /**
      * <p>
-     * The 12-digit AWS account ID of the source account.
+     * The 12-digit Amazon Web Services account ID of the source account.
      * </p>
      * 
      * @param accountId
-     *        The 12-digit AWS account ID of the source account.
+     *        The 12-digit Amazon Web Services account ID of the source account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -194,11 +194,11 @@ public class AggregateConformancePackComplianceFilters implements Serializable, 
 
     /**
      * <p>
-     * The source AWS Region from where the data is aggregated.
+     * The source Amazon Web Services Region from where the data is aggregated.
      * </p>
      * 
      * @param awsRegion
-     *        The source AWS Region from where the data is aggregated.
+     *        The source Amazon Web Services Region from where the data is aggregated.
      */
 
     public void setAwsRegion(String awsRegion) {
@@ -207,10 +207,10 @@ public class AggregateConformancePackComplianceFilters implements Serializable, 
 
     /**
      * <p>
-     * The source AWS Region from where the data is aggregated.
+     * The source Amazon Web Services Region from where the data is aggregated.
      * </p>
      * 
-     * @return The source AWS Region from where the data is aggregated.
+     * @return The source Amazon Web Services Region from where the data is aggregated.
      */
 
     public String getAwsRegion() {
@@ -219,11 +219,11 @@ public class AggregateConformancePackComplianceFilters implements Serializable, 
 
     /**
      * <p>
-     * The source AWS Region from where the data is aggregated.
+     * The source Amazon Web Services Region from where the data is aggregated.
      * </p>
      * 
      * @param awsRegion
-     *        The source AWS Region from where the data is aggregated.
+     *        The source Amazon Web Services Region from where the data is aggregated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

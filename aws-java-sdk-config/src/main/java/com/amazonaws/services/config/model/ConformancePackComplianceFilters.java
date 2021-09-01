@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Filters the conformance pack by compliance types and AWS Config rule names.
+ * Filters the conformance pack by compliance types and Config rule names.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ConformancePackComplianceFilters"
@@ -30,7 +30,7 @@ public class ConformancePackComplianceFilters implements Serializable, Cloneable
 
     /**
      * <p>
-     * Filters the results by AWS Config rule names.
+     * Filters the results by Config rule names.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> configRuleNames;
@@ -47,10 +47,10 @@ public class ConformancePackComplianceFilters implements Serializable, Cloneable
 
     /**
      * <p>
-     * Filters the results by AWS Config rule names.
+     * Filters the results by Config rule names.
      * </p>
      * 
-     * @return Filters the results by AWS Config rule names.
+     * @return Filters the results by Config rule names.
      */
 
     public java.util.List<String> getConfigRuleNames() {
@@ -62,11 +62,11 @@ public class ConformancePackComplianceFilters implements Serializable, Cloneable
 
     /**
      * <p>
-     * Filters the results by AWS Config rule names.
+     * Filters the results by Config rule names.
      * </p>
      * 
      * @param configRuleNames
-     *        Filters the results by AWS Config rule names.
+     *        Filters the results by Config rule names.
      */
 
     public void setConfigRuleNames(java.util.Collection<String> configRuleNames) {
@@ -80,7 +80,7 @@ public class ConformancePackComplianceFilters implements Serializable, Cloneable
 
     /**
      * <p>
-     * Filters the results by AWS Config rule names.
+     * Filters the results by Config rule names.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -89,7 +89,7 @@ public class ConformancePackComplianceFilters implements Serializable, Cloneable
      * </p>
      * 
      * @param configRuleNames
-     *        Filters the results by AWS Config rule names.
+     *        Filters the results by Config rule names.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -105,11 +105,11 @@ public class ConformancePackComplianceFilters implements Serializable, Cloneable
 
     /**
      * <p>
-     * Filters the results by AWS Config rule names.
+     * Filters the results by Config rule names.
      * </p>
      * 
      * @param configRuleNames
-     *        Filters the results by AWS Config rule names.
+     *        Filters the results by Config rule names.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

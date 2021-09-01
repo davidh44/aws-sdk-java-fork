@@ -39,8 +39,8 @@ public class DescribeAggregateComplianceByConfigRulesRequest extends com.amazona
     private ConfigRuleComplianceFilters filters;
     /**
      * <p>
-     * The maximum number of evaluation results returned on each page. The default is maximum. If you specify 0, AWS
-     * Config uses the default.
+     * The maximum number of evaluation results returned on each page. The default is maximum. If you specify 0, Config
+     * uses the default.
      * </p>
      */
     private Integer limit;
@@ -134,13 +134,13 @@ public class DescribeAggregateComplianceByConfigRulesRequest extends com.amazona
 
     /**
      * <p>
-     * The maximum number of evaluation results returned on each page. The default is maximum. If you specify 0, AWS
-     * Config uses the default.
+     * The maximum number of evaluation results returned on each page. The default is maximum. If you specify 0, Config
+     * uses the default.
      * </p>
      * 
      * @param limit
      *        The maximum number of evaluation results returned on each page. The default is maximum. If you specify 0,
-     *        AWS Config uses the default.
+     *        Config uses the default.
      */
 
     public void setLimit(Integer limit) {
@@ -149,12 +149,12 @@ public class DescribeAggregateComplianceByConfigRulesRequest extends com.amazona
 
     /**
      * <p>
-     * The maximum number of evaluation results returned on each page. The default is maximum. If you specify 0, AWS
-     * Config uses the default.
+     * The maximum number of evaluation results returned on each page. The default is maximum. If you specify 0, Config
+     * uses the default.
      * </p>
      * 
      * @return The maximum number of evaluation results returned on each page. The default is maximum. If you specify 0,
-     *         AWS Config uses the default.
+     *         Config uses the default.
      */
 
     public Integer getLimit() {
@@ -163,13 +163,13 @@ public class DescribeAggregateComplianceByConfigRulesRequest extends com.amazona
 
     /**
      * <p>
-     * The maximum number of evaluation results returned on each page. The default is maximum. If you specify 0, AWS
-     * Config uses the default.
+     * The maximum number of evaluation results returned on each page. The default is maximum. If you specify 0, Config
+     * uses the default.
      * </p>
      * 
      * @param limit
      *        The maximum number of evaluation results returned on each page. The default is maximum. If you specify 0,
-     *        AWS Config uses the default.
+     *        Config uses the default.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -36,7 +36,7 @@ public class AggregateComplianceCount implements Serializable, Cloneable, Struct
     private String groupName;
     /**
      * <p>
-     * The number of compliant and noncompliant AWS Config rules.
+     * The number of compliant and noncompliant Config rules.
      * </p>
      */
     private ComplianceSummary complianceSummary;
@@ -83,11 +83,11 @@ public class AggregateComplianceCount implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The number of compliant and noncompliant AWS Config rules.
+     * The number of compliant and noncompliant Config rules.
      * </p>
      * 
      * @param complianceSummary
-     *        The number of compliant and noncompliant AWS Config rules.
+     *        The number of compliant and noncompliant Config rules.
      */
 
     public void setComplianceSummary(ComplianceSummary complianceSummary) {
@@ -96,10 +96,10 @@ public class AggregateComplianceCount implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The number of compliant and noncompliant AWS Config rules.
+     * The number of compliant and noncompliant Config rules.
      * </p>
      * 
-     * @return The number of compliant and noncompliant AWS Config rules.
+     * @return The number of compliant and noncompliant Config rules.
      */
 
     public ComplianceSummary getComplianceSummary() {
@@ -108,11 +108,11 @@ public class AggregateComplianceCount implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The number of compliant and noncompliant AWS Config rules.
+     * The number of compliant and noncompliant Config rules.
      * </p>
      * 
      * @param complianceSummary
-     *        The number of compliant and noncompliant AWS Config rules.
+     *        The number of compliant and noncompliant Config rules.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

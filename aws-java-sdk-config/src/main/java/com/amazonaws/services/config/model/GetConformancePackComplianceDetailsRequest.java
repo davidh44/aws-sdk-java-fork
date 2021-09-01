@@ -39,8 +39,8 @@ public class GetConformancePackComplianceDetailsRequest extends com.amazonaws.Am
     private ConformancePackEvaluationFilters filters;
     /**
      * <p>
-     * The maximum number of evaluation results returned on each page. If you do no specify a number, AWS Config uses
-     * the default. The default is 100.
+     * The maximum number of evaluation results returned on each page. If you do no specify a number, Config uses the
+     * default. The default is 100.
      * </p>
      */
     private Integer limit;
@@ -134,13 +134,13 @@ public class GetConformancePackComplianceDetailsRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * The maximum number of evaluation results returned on each page. If you do no specify a number, AWS Config uses
-     * the default. The default is 100.
+     * The maximum number of evaluation results returned on each page. If you do no specify a number, Config uses the
+     * default. The default is 100.
      * </p>
      * 
      * @param limit
-     *        The maximum number of evaluation results returned on each page. If you do no specify a number, AWS Config
-     *        uses the default. The default is 100.
+     *        The maximum number of evaluation results returned on each page. If you do no specify a number, Config uses
+     *        the default. The default is 100.
      */
 
     public void setLimit(Integer limit) {
@@ -149,11 +149,11 @@ public class GetConformancePackComplianceDetailsRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * The maximum number of evaluation results returned on each page. If you do no specify a number, AWS Config uses
-     * the default. The default is 100.
+     * The maximum number of evaluation results returned on each page. If you do no specify a number, Config uses the
+     * default. The default is 100.
      * </p>
      * 
-     * @return The maximum number of evaluation results returned on each page. If you do no specify a number, AWS Config
+     * @return The maximum number of evaluation results returned on each page. If you do no specify a number, Config
      *         uses the default. The default is 100.
      */
 
@@ -163,13 +163,13 @@ public class GetConformancePackComplianceDetailsRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * The maximum number of evaluation results returned on each page. If you do no specify a number, AWS Config uses
-     * the default. The default is 100.
+     * The maximum number of evaluation results returned on each page. If you do no specify a number, Config uses the
+     * default. The default is 100.
      * </p>
      * 
      * @param limit
-     *        The maximum number of evaluation results returned on each page. If you do no specify a number, AWS Config
-     *        uses the default. The default is 100.
+     *        The maximum number of evaluation results returned on each page. If you do no specify a number, Config uses
+     *        the default. The default is 100.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -26,7 +26,8 @@ public class DescribeComplianceByResourceResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Indicates whether the specified AWS resource complies with all of the AWS Config rules that evaluate it.
+     * Indicates whether the specified Amazon Web Services resource complies with all of the Config rules that evaluate
+     * it.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<ComplianceByResource> complianceByResources;
@@ -39,10 +40,12 @@ public class DescribeComplianceByResourceResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Indicates whether the specified AWS resource complies with all of the AWS Config rules that evaluate it.
+     * Indicates whether the specified Amazon Web Services resource complies with all of the Config rules that evaluate
+     * it.
      * </p>
      * 
-     * @return Indicates whether the specified AWS resource complies with all of the AWS Config rules that evaluate it.
+     * @return Indicates whether the specified Amazon Web Services resource complies with all of the Config rules that
+     *         evaluate it.
      */
 
     public java.util.List<ComplianceByResource> getComplianceByResources() {
@@ -54,11 +57,13 @@ public class DescribeComplianceByResourceResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Indicates whether the specified AWS resource complies with all of the AWS Config rules that evaluate it.
+     * Indicates whether the specified Amazon Web Services resource complies with all of the Config rules that evaluate
+     * it.
      * </p>
      * 
      * @param complianceByResources
-     *        Indicates whether the specified AWS resource complies with all of the AWS Config rules that evaluate it.
+     *        Indicates whether the specified Amazon Web Services resource complies with all of the Config rules that
+     *        evaluate it.
      */
 
     public void setComplianceByResources(java.util.Collection<ComplianceByResource> complianceByResources) {
@@ -72,7 +77,8 @@ public class DescribeComplianceByResourceResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Indicates whether the specified AWS resource complies with all of the AWS Config rules that evaluate it.
+     * Indicates whether the specified Amazon Web Services resource complies with all of the Config rules that evaluate
+     * it.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -81,7 +87,8 @@ public class DescribeComplianceByResourceResult extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param complianceByResources
-     *        Indicates whether the specified AWS resource complies with all of the AWS Config rules that evaluate it.
+     *        Indicates whether the specified Amazon Web Services resource complies with all of the Config rules that
+     *        evaluate it.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -97,11 +104,13 @@ public class DescribeComplianceByResourceResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Indicates whether the specified AWS resource complies with all of the AWS Config rules that evaluate it.
+     * Indicates whether the specified Amazon Web Services resource complies with all of the Config rules that evaluate
+     * it.
      * </p>
      * 
      * @param complianceByResources
-     *        Indicates whether the specified AWS resource complies with all of the AWS Config rules that evaluate it.
+     *        Indicates whether the specified Amazon Web Services resource complies with all of the Config rules that
+     *        evaluate it.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

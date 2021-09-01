@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The channel through which AWS Config delivers notifications and updated configuration states.
+ * The channel through which Config delivers notifications and updated configuration states.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DeliveryChannel" target="_top">AWS API
@@ -30,7 +30,7 @@ public class DeliveryChannel implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the delivery channel. By default, AWS Config assigns the name "default" when creating the delivery
+     * The name of the delivery channel. By default, Config assigns the name "default" when creating the delivery
      * channel. To change the delivery channel name, you must use the DeleteDeliveryChannel action to delete your
      * current delivery channel, and then you must use the PutDeliveryChannel command to create a delivery channel that
      * has the desired name.
@@ -39,14 +39,14 @@ public class DeliveryChannel implements Serializable, Cloneable, StructuredPojo 
     private String name;
     /**
      * <p>
-     * The name of the Amazon S3 bucket to which AWS Config delivers configuration snapshots and configuration history
+     * The name of the Amazon S3 bucket to which Config delivers configuration snapshots and configuration history
      * files.
      * </p>
      * <p>
-     * If you specify a bucket that belongs to another AWS account, that bucket must have policies that grant access
-     * permissions to AWS Config. For more information, see <a
+     * If you specify a bucket that belongs to another Amazon Web Services account, that bucket must have policies that
+     * grant access permissions to Config. For more information, see <a
      * href="https://docs.aws.amazon.com/config/latest/developerguide/s3-bucket-policy.html">Permissions for the Amazon
-     * S3 Bucket</a> in the AWS Config Developer Guide.
+     * S3 Bucket</a> in the Config Developer Guide.
      * </p>
      */
     private String s3BucketName;
@@ -58,44 +58,44 @@ public class DeliveryChannel implements Serializable, Cloneable, StructuredPojo 
     private String s3KeyPrefix;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) customer managed key (CMK) used to encrypt
-     * objects delivered by AWS Config. Must belong to the same Region as the destination S3 bucket.
+     * The Amazon Resource Name (ARN) of the Key Management Service (KMS ) KMS key (KMS key) used to encrypt objects
+     * delivered by Config. Must belong to the same Region as the destination S3 bucket.
      * </p>
      */
     private String s3KmsKeyArn;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon SNS topic to which AWS Config sends notifications about
-     * configuration changes.
+     * The Amazon Resource Name (ARN) of the Amazon SNS topic to which Config sends notifications about configuration
+     * changes.
      * </p>
      * <p>
-     * If you choose a topic from another account, the topic must have policies that grant access permissions to AWS
-     * Config. For more information, see <a
+     * If you choose a topic from another account, the topic must have policies that grant access permissions to Config.
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/config/latest/developerguide/sns-topic-policy.html">Permissions for the Amazon
-     * SNS Topic</a> in the AWS Config Developer Guide.
+     * SNS Topic</a> in the Config Developer Guide.
      * </p>
      */
     private String snsTopicARN;
     /**
      * <p>
-     * The options for how often AWS Config delivers configuration snapshots to the Amazon S3 bucket.
+     * The options for how often Config delivers configuration snapshots to the Amazon S3 bucket.
      * </p>
      */
     private ConfigSnapshotDeliveryProperties configSnapshotDeliveryProperties;
 
     /**
      * <p>
-     * The name of the delivery channel. By default, AWS Config assigns the name "default" when creating the delivery
+     * The name of the delivery channel. By default, Config assigns the name "default" when creating the delivery
      * channel. To change the delivery channel name, you must use the DeleteDeliveryChannel action to delete your
      * current delivery channel, and then you must use the PutDeliveryChannel command to create a delivery channel that
      * has the desired name.
      * </p>
      * 
      * @param name
-     *        The name of the delivery channel. By default, AWS Config assigns the name "default" when creating the
-     *        delivery channel. To change the delivery channel name, you must use the DeleteDeliveryChannel action to
-     *        delete your current delivery channel, and then you must use the PutDeliveryChannel command to create a
-     *        delivery channel that has the desired name.
+     *        The name of the delivery channel. By default, Config assigns the name "default" when creating the delivery
+     *        channel. To change the delivery channel name, you must use the DeleteDeliveryChannel action to delete your
+     *        current delivery channel, and then you must use the PutDeliveryChannel command to create a delivery
+     *        channel that has the desired name.
      */
 
     public void setName(String name) {
@@ -104,13 +104,13 @@ public class DeliveryChannel implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the delivery channel. By default, AWS Config assigns the name "default" when creating the delivery
+     * The name of the delivery channel. By default, Config assigns the name "default" when creating the delivery
      * channel. To change the delivery channel name, you must use the DeleteDeliveryChannel action to delete your
      * current delivery channel, and then you must use the PutDeliveryChannel command to create a delivery channel that
      * has the desired name.
      * </p>
      * 
-     * @return The name of the delivery channel. By default, AWS Config assigns the name "default" when creating the
+     * @return The name of the delivery channel. By default, Config assigns the name "default" when creating the
      *         delivery channel. To change the delivery channel name, you must use the DeleteDeliveryChannel action to
      *         delete your current delivery channel, and then you must use the PutDeliveryChannel command to create a
      *         delivery channel that has the desired name.
@@ -122,17 +122,17 @@ public class DeliveryChannel implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the delivery channel. By default, AWS Config assigns the name "default" when creating the delivery
+     * The name of the delivery channel. By default, Config assigns the name "default" when creating the delivery
      * channel. To change the delivery channel name, you must use the DeleteDeliveryChannel action to delete your
      * current delivery channel, and then you must use the PutDeliveryChannel command to create a delivery channel that
      * has the desired name.
      * </p>
      * 
      * @param name
-     *        The name of the delivery channel. By default, AWS Config assigns the name "default" when creating the
-     *        delivery channel. To change the delivery channel name, you must use the DeleteDeliveryChannel action to
-     *        delete your current delivery channel, and then you must use the PutDeliveryChannel command to create a
-     *        delivery channel that has the desired name.
+     *        The name of the delivery channel. By default, Config assigns the name "default" when creating the delivery
+     *        channel. To change the delivery channel name, you must use the DeleteDeliveryChannel action to delete your
+     *        current delivery channel, and then you must use the PutDeliveryChannel command to create a delivery
+     *        channel that has the desired name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -143,24 +143,24 @@ public class DeliveryChannel implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the Amazon S3 bucket to which AWS Config delivers configuration snapshots and configuration history
+     * The name of the Amazon S3 bucket to which Config delivers configuration snapshots and configuration history
      * files.
      * </p>
      * <p>
-     * If you specify a bucket that belongs to another AWS account, that bucket must have policies that grant access
-     * permissions to AWS Config. For more information, see <a
+     * If you specify a bucket that belongs to another Amazon Web Services account, that bucket must have policies that
+     * grant access permissions to Config. For more information, see <a
      * href="https://docs.aws.amazon.com/config/latest/developerguide/s3-bucket-policy.html">Permissions for the Amazon
-     * S3 Bucket</a> in the AWS Config Developer Guide.
+     * S3 Bucket</a> in the Config Developer Guide.
      * </p>
      * 
      * @param s3BucketName
-     *        The name of the Amazon S3 bucket to which AWS Config delivers configuration snapshots and configuration
+     *        The name of the Amazon S3 bucket to which Config delivers configuration snapshots and configuration
      *        history files.</p>
      *        <p>
-     *        If you specify a bucket that belongs to another AWS account, that bucket must have policies that grant
-     *        access permissions to AWS Config. For more information, see <a
+     *        If you specify a bucket that belongs to another Amazon Web Services account, that bucket must have
+     *        policies that grant access permissions to Config. For more information, see <a
      *        href="https://docs.aws.amazon.com/config/latest/developerguide/s3-bucket-policy.html">Permissions for the
-     *        Amazon S3 Bucket</a> in the AWS Config Developer Guide.
+     *        Amazon S3 Bucket</a> in the Config Developer Guide.
      */
 
     public void setS3BucketName(String s3BucketName) {
@@ -169,23 +169,23 @@ public class DeliveryChannel implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the Amazon S3 bucket to which AWS Config delivers configuration snapshots and configuration history
+     * The name of the Amazon S3 bucket to which Config delivers configuration snapshots and configuration history
      * files.
      * </p>
      * <p>
-     * If you specify a bucket that belongs to another AWS account, that bucket must have policies that grant access
-     * permissions to AWS Config. For more information, see <a
+     * If you specify a bucket that belongs to another Amazon Web Services account, that bucket must have policies that
+     * grant access permissions to Config. For more information, see <a
      * href="https://docs.aws.amazon.com/config/latest/developerguide/s3-bucket-policy.html">Permissions for the Amazon
-     * S3 Bucket</a> in the AWS Config Developer Guide.
+     * S3 Bucket</a> in the Config Developer Guide.
      * </p>
      * 
-     * @return The name of the Amazon S3 bucket to which AWS Config delivers configuration snapshots and configuration
+     * @return The name of the Amazon S3 bucket to which Config delivers configuration snapshots and configuration
      *         history files.</p>
      *         <p>
-     *         If you specify a bucket that belongs to another AWS account, that bucket must have policies that grant
-     *         access permissions to AWS Config. For more information, see <a
+     *         If you specify a bucket that belongs to another Amazon Web Services account, that bucket must have
+     *         policies that grant access permissions to Config. For more information, see <a
      *         href="https://docs.aws.amazon.com/config/latest/developerguide/s3-bucket-policy.html">Permissions for the
-     *         Amazon S3 Bucket</a> in the AWS Config Developer Guide.
+     *         Amazon S3 Bucket</a> in the Config Developer Guide.
      */
 
     public String getS3BucketName() {
@@ -194,24 +194,24 @@ public class DeliveryChannel implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the Amazon S3 bucket to which AWS Config delivers configuration snapshots and configuration history
+     * The name of the Amazon S3 bucket to which Config delivers configuration snapshots and configuration history
      * files.
      * </p>
      * <p>
-     * If you specify a bucket that belongs to another AWS account, that bucket must have policies that grant access
-     * permissions to AWS Config. For more information, see <a
+     * If you specify a bucket that belongs to another Amazon Web Services account, that bucket must have policies that
+     * grant access permissions to Config. For more information, see <a
      * href="https://docs.aws.amazon.com/config/latest/developerguide/s3-bucket-policy.html">Permissions for the Amazon
-     * S3 Bucket</a> in the AWS Config Developer Guide.
+     * S3 Bucket</a> in the Config Developer Guide.
      * </p>
      * 
      * @param s3BucketName
-     *        The name of the Amazon S3 bucket to which AWS Config delivers configuration snapshots and configuration
+     *        The name of the Amazon S3 bucket to which Config delivers configuration snapshots and configuration
      *        history files.</p>
      *        <p>
-     *        If you specify a bucket that belongs to another AWS account, that bucket must have policies that grant
-     *        access permissions to AWS Config. For more information, see <a
+     *        If you specify a bucket that belongs to another Amazon Web Services account, that bucket must have
+     *        policies that grant access permissions to Config. For more information, see <a
      *        href="https://docs.aws.amazon.com/config/latest/developerguide/s3-bucket-policy.html">Permissions for the
-     *        Amazon S3 Bucket</a> in the AWS Config Developer Guide.
+     *        Amazon S3 Bucket</a> in the Config Developer Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -262,13 +262,13 @@ public class DeliveryChannel implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) customer managed key (CMK) used to encrypt
-     * objects delivered by AWS Config. Must belong to the same Region as the destination S3 bucket.
+     * The Amazon Resource Name (ARN) of the Key Management Service (KMS ) KMS key (KMS key) used to encrypt objects
+     * delivered by Config. Must belong to the same Region as the destination S3 bucket.
      * </p>
      * 
      * @param s3KmsKeyArn
-     *        The Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) customer managed key (CMK) used to
-     *        encrypt objects delivered by AWS Config. Must belong to the same Region as the destination S3 bucket.
+     *        The Amazon Resource Name (ARN) of the Key Management Service (KMS ) KMS key (KMS key) used to encrypt
+     *        objects delivered by Config. Must belong to the same Region as the destination S3 bucket.
      */
 
     public void setS3KmsKeyArn(String s3KmsKeyArn) {
@@ -277,12 +277,12 @@ public class DeliveryChannel implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) customer managed key (CMK) used to encrypt
-     * objects delivered by AWS Config. Must belong to the same Region as the destination S3 bucket.
+     * The Amazon Resource Name (ARN) of the Key Management Service (KMS ) KMS key (KMS key) used to encrypt objects
+     * delivered by Config. Must belong to the same Region as the destination S3 bucket.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) customer managed key (CMK) used to
-     *         encrypt objects delivered by AWS Config. Must belong to the same Region as the destination S3 bucket.
+     * @return The Amazon Resource Name (ARN) of the Key Management Service (KMS ) KMS key (KMS key) used to encrypt
+     *         objects delivered by Config. Must belong to the same Region as the destination S3 bucket.
      */
 
     public String getS3KmsKeyArn() {
@@ -291,13 +291,13 @@ public class DeliveryChannel implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) customer managed key (CMK) used to encrypt
-     * objects delivered by AWS Config. Must belong to the same Region as the destination S3 bucket.
+     * The Amazon Resource Name (ARN) of the Key Management Service (KMS ) KMS key (KMS key) used to encrypt objects
+     * delivered by Config. Must belong to the same Region as the destination S3 bucket.
      * </p>
      * 
      * @param s3KmsKeyArn
-     *        The Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) customer managed key (CMK) used to
-     *        encrypt objects delivered by AWS Config. Must belong to the same Region as the destination S3 bucket.
+     *        The Amazon Resource Name (ARN) of the Key Management Service (KMS ) KMS key (KMS key) used to encrypt
+     *        objects delivered by Config. Must belong to the same Region as the destination S3 bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -308,24 +308,24 @@ public class DeliveryChannel implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon SNS topic to which AWS Config sends notifications about
-     * configuration changes.
+     * The Amazon Resource Name (ARN) of the Amazon SNS topic to which Config sends notifications about configuration
+     * changes.
      * </p>
      * <p>
-     * If you choose a topic from another account, the topic must have policies that grant access permissions to AWS
-     * Config. For more information, see <a
+     * If you choose a topic from another account, the topic must have policies that grant access permissions to Config.
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/config/latest/developerguide/sns-topic-policy.html">Permissions for the Amazon
-     * SNS Topic</a> in the AWS Config Developer Guide.
+     * SNS Topic</a> in the Config Developer Guide.
      * </p>
      * 
      * @param snsTopicARN
-     *        The Amazon Resource Name (ARN) of the Amazon SNS topic to which AWS Config sends notifications about
+     *        The Amazon Resource Name (ARN) of the Amazon SNS topic to which Config sends notifications about
      *        configuration changes.</p>
      *        <p>
      *        If you choose a topic from another account, the topic must have policies that grant access permissions to
-     *        AWS Config. For more information, see <a
+     *        Config. For more information, see <a
      *        href="https://docs.aws.amazon.com/config/latest/developerguide/sns-topic-policy.html">Permissions for the
-     *        Amazon SNS Topic</a> in the AWS Config Developer Guide.
+     *        Amazon SNS Topic</a> in the Config Developer Guide.
      */
 
     public void setSnsTopicARN(String snsTopicARN) {
@@ -334,23 +334,23 @@ public class DeliveryChannel implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon SNS topic to which AWS Config sends notifications about
-     * configuration changes.
+     * The Amazon Resource Name (ARN) of the Amazon SNS topic to which Config sends notifications about configuration
+     * changes.
      * </p>
      * <p>
-     * If you choose a topic from another account, the topic must have policies that grant access permissions to AWS
-     * Config. For more information, see <a
+     * If you choose a topic from another account, the topic must have policies that grant access permissions to Config.
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/config/latest/developerguide/sns-topic-policy.html">Permissions for the Amazon
-     * SNS Topic</a> in the AWS Config Developer Guide.
+     * SNS Topic</a> in the Config Developer Guide.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Amazon SNS topic to which AWS Config sends notifications about
+     * @return The Amazon Resource Name (ARN) of the Amazon SNS topic to which Config sends notifications about
      *         configuration changes.</p>
      *         <p>
      *         If you choose a topic from another account, the topic must have policies that grant access permissions to
-     *         AWS Config. For more information, see <a
+     *         Config. For more information, see <a
      *         href="https://docs.aws.amazon.com/config/latest/developerguide/sns-topic-policy.html">Permissions for the
-     *         Amazon SNS Topic</a> in the AWS Config Developer Guide.
+     *         Amazon SNS Topic</a> in the Config Developer Guide.
      */
 
     public String getSnsTopicARN() {
@@ -359,24 +359,24 @@ public class DeliveryChannel implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon SNS topic to which AWS Config sends notifications about
-     * configuration changes.
+     * The Amazon Resource Name (ARN) of the Amazon SNS topic to which Config sends notifications about configuration
+     * changes.
      * </p>
      * <p>
-     * If you choose a topic from another account, the topic must have policies that grant access permissions to AWS
-     * Config. For more information, see <a
+     * If you choose a topic from another account, the topic must have policies that grant access permissions to Config.
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/config/latest/developerguide/sns-topic-policy.html">Permissions for the Amazon
-     * SNS Topic</a> in the AWS Config Developer Guide.
+     * SNS Topic</a> in the Config Developer Guide.
      * </p>
      * 
      * @param snsTopicARN
-     *        The Amazon Resource Name (ARN) of the Amazon SNS topic to which AWS Config sends notifications about
+     *        The Amazon Resource Name (ARN) of the Amazon SNS topic to which Config sends notifications about
      *        configuration changes.</p>
      *        <p>
      *        If you choose a topic from another account, the topic must have policies that grant access permissions to
-     *        AWS Config. For more information, see <a
+     *        Config. For more information, see <a
      *        href="https://docs.aws.amazon.com/config/latest/developerguide/sns-topic-policy.html">Permissions for the
-     *        Amazon SNS Topic</a> in the AWS Config Developer Guide.
+     *        Amazon SNS Topic</a> in the Config Developer Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -387,11 +387,11 @@ public class DeliveryChannel implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The options for how often AWS Config delivers configuration snapshots to the Amazon S3 bucket.
+     * The options for how often Config delivers configuration snapshots to the Amazon S3 bucket.
      * </p>
      * 
      * @param configSnapshotDeliveryProperties
-     *        The options for how often AWS Config delivers configuration snapshots to the Amazon S3 bucket.
+     *        The options for how often Config delivers configuration snapshots to the Amazon S3 bucket.
      */
 
     public void setConfigSnapshotDeliveryProperties(ConfigSnapshotDeliveryProperties configSnapshotDeliveryProperties) {
@@ -400,10 +400,10 @@ public class DeliveryChannel implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The options for how often AWS Config delivers configuration snapshots to the Amazon S3 bucket.
+     * The options for how often Config delivers configuration snapshots to the Amazon S3 bucket.
      * </p>
      * 
-     * @return The options for how often AWS Config delivers configuration snapshots to the Amazon S3 bucket.
+     * @return The options for how often Config delivers configuration snapshots to the Amazon S3 bucket.
      */
 
     public ConfigSnapshotDeliveryProperties getConfigSnapshotDeliveryProperties() {
@@ -412,11 +412,11 @@ public class DeliveryChannel implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The options for how often AWS Config delivers configuration snapshots to the Amazon S3 bucket.
+     * The options for how often Config delivers configuration snapshots to the Amazon S3 bucket.
      * </p>
      * 
      * @param configSnapshotDeliveryProperties
-     *        The options for how often AWS Config delivers configuration snapshots to the Amazon S3 bucket.
+     *        The options for how often Config delivers configuration snapshots to the Amazon S3 bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

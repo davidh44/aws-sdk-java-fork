@@ -28,23 +28,23 @@ public class PutEvaluationsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The assessments that the AWS Lambda function performs. Each evaluation identifies an AWS resource and indicates
-     * whether it complies with the AWS Config rule that invokes the AWS Lambda function.
+     * The assessments that the Lambda function performs. Each evaluation identifies an Amazon Web Services resource and
+     * indicates whether it complies with the Config rule that invokes the Lambda function.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Evaluation> evaluations;
     /**
      * <p>
-     * An encrypted token that associates an evaluation with an AWS Config rule. Identifies the rule and the event that
+     * An encrypted token that associates an evaluation with an Config rule. Identifies the rule and the event that
      * triggered the evaluation.
      * </p>
      */
     private String resultToken;
     /**
      * <p>
-     * Use this parameter to specify a test run for <code>PutEvaluations</code>. You can verify whether your AWS Lambda
-     * function will deliver evaluation results to AWS Config. No updates occur to your existing evaluations, and
-     * evaluation results are not sent to AWS Config.
+     * Use this parameter to specify a test run for <code>PutEvaluations</code>. You can verify whether your Lambda
+     * function will deliver evaluation results to Config. No updates occur to your existing evaluations, and evaluation
+     * results are not sent to Config.
      * </p>
      * <note>
      * <p>
@@ -57,12 +57,12 @@ public class PutEvaluationsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The assessments that the AWS Lambda function performs. Each evaluation identifies an AWS resource and indicates
-     * whether it complies with the AWS Config rule that invokes the AWS Lambda function.
+     * The assessments that the Lambda function performs. Each evaluation identifies an Amazon Web Services resource and
+     * indicates whether it complies with the Config rule that invokes the Lambda function.
      * </p>
      * 
-     * @return The assessments that the AWS Lambda function performs. Each evaluation identifies an AWS resource and
-     *         indicates whether it complies with the AWS Config rule that invokes the AWS Lambda function.
+     * @return The assessments that the Lambda function performs. Each evaluation identifies an Amazon Web Services
+     *         resource and indicates whether it complies with the Config rule that invokes the Lambda function.
      */
 
     public java.util.List<Evaluation> getEvaluations() {
@@ -74,13 +74,13 @@ public class PutEvaluationsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The assessments that the AWS Lambda function performs. Each evaluation identifies an AWS resource and indicates
-     * whether it complies with the AWS Config rule that invokes the AWS Lambda function.
+     * The assessments that the Lambda function performs. Each evaluation identifies an Amazon Web Services resource and
+     * indicates whether it complies with the Config rule that invokes the Lambda function.
      * </p>
      * 
      * @param evaluations
-     *        The assessments that the AWS Lambda function performs. Each evaluation identifies an AWS resource and
-     *        indicates whether it complies with the AWS Config rule that invokes the AWS Lambda function.
+     *        The assessments that the Lambda function performs. Each evaluation identifies an Amazon Web Services
+     *        resource and indicates whether it complies with the Config rule that invokes the Lambda function.
      */
 
     public void setEvaluations(java.util.Collection<Evaluation> evaluations) {
@@ -94,8 +94,8 @@ public class PutEvaluationsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The assessments that the AWS Lambda function performs. Each evaluation identifies an AWS resource and indicates
-     * whether it complies with the AWS Config rule that invokes the AWS Lambda function.
+     * The assessments that the Lambda function performs. Each evaluation identifies an Amazon Web Services resource and
+     * indicates whether it complies with the Config rule that invokes the Lambda function.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -104,8 +104,8 @@ public class PutEvaluationsRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param evaluations
-     *        The assessments that the AWS Lambda function performs. Each evaluation identifies an AWS resource and
-     *        indicates whether it complies with the AWS Config rule that invokes the AWS Lambda function.
+     *        The assessments that the Lambda function performs. Each evaluation identifies an Amazon Web Services
+     *        resource and indicates whether it complies with the Config rule that invokes the Lambda function.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -121,13 +121,13 @@ public class PutEvaluationsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The assessments that the AWS Lambda function performs. Each evaluation identifies an AWS resource and indicates
-     * whether it complies with the AWS Config rule that invokes the AWS Lambda function.
+     * The assessments that the Lambda function performs. Each evaluation identifies an Amazon Web Services resource and
+     * indicates whether it complies with the Config rule that invokes the Lambda function.
      * </p>
      * 
      * @param evaluations
-     *        The assessments that the AWS Lambda function performs. Each evaluation identifies an AWS resource and
-     *        indicates whether it complies with the AWS Config rule that invokes the AWS Lambda function.
+     *        The assessments that the Lambda function performs. Each evaluation identifies an Amazon Web Services
+     *        resource and indicates whether it complies with the Config rule that invokes the Lambda function.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -138,13 +138,13 @@ public class PutEvaluationsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * An encrypted token that associates an evaluation with an AWS Config rule. Identifies the rule and the event that
+     * An encrypted token that associates an evaluation with an Config rule. Identifies the rule and the event that
      * triggered the evaluation.
      * </p>
      * 
      * @param resultToken
-     *        An encrypted token that associates an evaluation with an AWS Config rule. Identifies the rule and the
-     *        event that triggered the evaluation.
+     *        An encrypted token that associates an evaluation with an Config rule. Identifies the rule and the event
+     *        that triggered the evaluation.
      */
 
     public void setResultToken(String resultToken) {
@@ -153,12 +153,12 @@ public class PutEvaluationsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * An encrypted token that associates an evaluation with an AWS Config rule. Identifies the rule and the event that
+     * An encrypted token that associates an evaluation with an Config rule. Identifies the rule and the event that
      * triggered the evaluation.
      * </p>
      * 
-     * @return An encrypted token that associates an evaluation with an AWS Config rule. Identifies the rule and the
-     *         event that triggered the evaluation.
+     * @return An encrypted token that associates an evaluation with an Config rule. Identifies the rule and the event
+     *         that triggered the evaluation.
      */
 
     public String getResultToken() {
@@ -167,13 +167,13 @@ public class PutEvaluationsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * An encrypted token that associates an evaluation with an AWS Config rule. Identifies the rule and the event that
+     * An encrypted token that associates an evaluation with an Config rule. Identifies the rule and the event that
      * triggered the evaluation.
      * </p>
      * 
      * @param resultToken
-     *        An encrypted token that associates an evaluation with an AWS Config rule. Identifies the rule and the
-     *        event that triggered the evaluation.
+     *        An encrypted token that associates an evaluation with an Config rule. Identifies the rule and the event
+     *        that triggered the evaluation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -184,9 +184,9 @@ public class PutEvaluationsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Use this parameter to specify a test run for <code>PutEvaluations</code>. You can verify whether your AWS Lambda
-     * function will deliver evaluation results to AWS Config. No updates occur to your existing evaluations, and
-     * evaluation results are not sent to AWS Config.
+     * Use this parameter to specify a test run for <code>PutEvaluations</code>. You can verify whether your Lambda
+     * function will deliver evaluation results to Config. No updates occur to your existing evaluations, and evaluation
+     * results are not sent to Config.
      * </p>
      * <note>
      * <p>
@@ -196,9 +196,9 @@ public class PutEvaluationsRequest extends com.amazonaws.AmazonWebServiceRequest
      * </note>
      * 
      * @param testMode
-     *        Use this parameter to specify a test run for <code>PutEvaluations</code>. You can verify whether your AWS
-     *        Lambda function will deliver evaluation results to AWS Config. No updates occur to your existing
-     *        evaluations, and evaluation results are not sent to AWS Config.</p> <note>
+     *        Use this parameter to specify a test run for <code>PutEvaluations</code>. You can verify whether your
+     *        Lambda function will deliver evaluation results to Config. No updates occur to your existing evaluations,
+     *        and evaluation results are not sent to Config.</p> <note>
      *        <p>
      *        When <code>TestMode</code> is <code>true</code>, <code>PutEvaluations</code> doesn't require a valid value
      *        for the <code>ResultToken</code> parameter, but the value cannot be null.
@@ -211,9 +211,9 @@ public class PutEvaluationsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Use this parameter to specify a test run for <code>PutEvaluations</code>. You can verify whether your AWS Lambda
-     * function will deliver evaluation results to AWS Config. No updates occur to your existing evaluations, and
-     * evaluation results are not sent to AWS Config.
+     * Use this parameter to specify a test run for <code>PutEvaluations</code>. You can verify whether your Lambda
+     * function will deliver evaluation results to Config. No updates occur to your existing evaluations, and evaluation
+     * results are not sent to Config.
      * </p>
      * <note>
      * <p>
@@ -222,9 +222,9 @@ public class PutEvaluationsRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * </note>
      * 
-     * @return Use this parameter to specify a test run for <code>PutEvaluations</code>. You can verify whether your AWS
-     *         Lambda function will deliver evaluation results to AWS Config. No updates occur to your existing
-     *         evaluations, and evaluation results are not sent to AWS Config.</p> <note>
+     * @return Use this parameter to specify a test run for <code>PutEvaluations</code>. You can verify whether your
+     *         Lambda function will deliver evaluation results to Config. No updates occur to your existing evaluations,
+     *         and evaluation results are not sent to Config.</p> <note>
      *         <p>
      *         When <code>TestMode</code> is <code>true</code>, <code>PutEvaluations</code> doesn't require a valid
      *         value for the <code>ResultToken</code> parameter, but the value cannot be null.
@@ -237,9 +237,9 @@ public class PutEvaluationsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Use this parameter to specify a test run for <code>PutEvaluations</code>. You can verify whether your AWS Lambda
-     * function will deliver evaluation results to AWS Config. No updates occur to your existing evaluations, and
-     * evaluation results are not sent to AWS Config.
+     * Use this parameter to specify a test run for <code>PutEvaluations</code>. You can verify whether your Lambda
+     * function will deliver evaluation results to Config. No updates occur to your existing evaluations, and evaluation
+     * results are not sent to Config.
      * </p>
      * <note>
      * <p>
@@ -249,9 +249,9 @@ public class PutEvaluationsRequest extends com.amazonaws.AmazonWebServiceRequest
      * </note>
      * 
      * @param testMode
-     *        Use this parameter to specify a test run for <code>PutEvaluations</code>. You can verify whether your AWS
-     *        Lambda function will deliver evaluation results to AWS Config. No updates occur to your existing
-     *        evaluations, and evaluation results are not sent to AWS Config.</p> <note>
+     *        Use this parameter to specify a test run for <code>PutEvaluations</code>. You can verify whether your
+     *        Lambda function will deliver evaluation results to Config. No updates occur to your existing evaluations,
+     *        and evaluation results are not sent to Config.</p> <note>
      *        <p>
      *        When <code>TestMode</code> is <code>true</code>, <code>PutEvaluations</code> doesn't require a valid value
      *        for the <code>ResultToken</code> parameter, but the value cannot be null.
@@ -266,9 +266,9 @@ public class PutEvaluationsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Use this parameter to specify a test run for <code>PutEvaluations</code>. You can verify whether your AWS Lambda
-     * function will deliver evaluation results to AWS Config. No updates occur to your existing evaluations, and
-     * evaluation results are not sent to AWS Config.
+     * Use this parameter to specify a test run for <code>PutEvaluations</code>. You can verify whether your Lambda
+     * function will deliver evaluation results to Config. No updates occur to your existing evaluations, and evaluation
+     * results are not sent to Config.
      * </p>
      * <note>
      * <p>
@@ -277,9 +277,9 @@ public class PutEvaluationsRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * </note>
      * 
-     * @return Use this parameter to specify a test run for <code>PutEvaluations</code>. You can verify whether your AWS
-     *         Lambda function will deliver evaluation results to AWS Config. No updates occur to your existing
-     *         evaluations, and evaluation results are not sent to AWS Config.</p> <note>
+     * @return Use this parameter to specify a test run for <code>PutEvaluations</code>. You can verify whether your
+     *         Lambda function will deliver evaluation results to Config. No updates occur to your existing evaluations,
+     *         and evaluation results are not sent to Config.</p> <note>
      *         <p>
      *         When <code>TestMode</code> is <code>true</code>, <code>PutEvaluations</code> doesn't require a valid
      *         value for the <code>ResultToken</code> parameter, but the value cannot be null.

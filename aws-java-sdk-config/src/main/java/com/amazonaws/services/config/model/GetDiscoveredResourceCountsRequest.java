@@ -27,18 +27,18 @@ public class GetDiscoveredResourceCountsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The comma-separated list that specifies the resource types that you want AWS Config to return (for example,
+     * The comma-separated list that specifies the resource types that you want Config to return (for example,
      * <code>"AWS::EC2::Instance"</code>, <code>"AWS::IAM::User"</code>).
      * </p>
      * <p>
-     * If a value for <code>resourceTypes</code> is not specified, AWS Config returns all resource types that AWS Config
-     * is recording in the region for your account.
+     * If a value for <code>resourceTypes</code> is not specified, Config returns all resource types that Config is
+     * recording in the region for your account.
      * </p>
      * <note>
      * <p>
-     * If the configuration recorder is turned off, AWS Config returns an empty list of <a>ResourceCount</a> objects. If
-     * the configuration recorder is not recording a specific resource type (for example, S3 buckets), that resource
-     * type is not returned in the list of <a>ResourceCount</a> objects.
+     * If the configuration recorder is turned off, Config returns an empty list of <a>ResourceCount</a> objects. If the
+     * configuration recorder is not recording a specific resource type (for example, S3 buckets), that resource type is
+     * not returned in the list of <a>ResourceCount</a> objects.
      * </p>
      * </note>
      */
@@ -46,7 +46,7 @@ public class GetDiscoveredResourceCountsRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The maximum number of <a>ResourceCount</a> objects returned on each page. The default is 100. You cannot specify
-     * a number greater than 100. If you specify 0, AWS Config uses the default.
+     * a number greater than 100. If you specify 0, Config uses the default.
      * </p>
      */
     private Integer limit;
@@ -60,30 +60,30 @@ public class GetDiscoveredResourceCountsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The comma-separated list that specifies the resource types that you want AWS Config to return (for example,
+     * The comma-separated list that specifies the resource types that you want Config to return (for example,
      * <code>"AWS::EC2::Instance"</code>, <code>"AWS::IAM::User"</code>).
      * </p>
      * <p>
-     * If a value for <code>resourceTypes</code> is not specified, AWS Config returns all resource types that AWS Config
-     * is recording in the region for your account.
+     * If a value for <code>resourceTypes</code> is not specified, Config returns all resource types that Config is
+     * recording in the region for your account.
      * </p>
      * <note>
      * <p>
-     * If the configuration recorder is turned off, AWS Config returns an empty list of <a>ResourceCount</a> objects. If
-     * the configuration recorder is not recording a specific resource type (for example, S3 buckets), that resource
-     * type is not returned in the list of <a>ResourceCount</a> objects.
+     * If the configuration recorder is turned off, Config returns an empty list of <a>ResourceCount</a> objects. If the
+     * configuration recorder is not recording a specific resource type (for example, S3 buckets), that resource type is
+     * not returned in the list of <a>ResourceCount</a> objects.
      * </p>
      * </note>
      * 
-     * @return The comma-separated list that specifies the resource types that you want AWS Config to return (for
-     *         example, <code>"AWS::EC2::Instance"</code>, <code>"AWS::IAM::User"</code>).</p>
+     * @return The comma-separated list that specifies the resource types that you want Config to return (for example,
+     *         <code>"AWS::EC2::Instance"</code>, <code>"AWS::IAM::User"</code>).</p>
      *         <p>
-     *         If a value for <code>resourceTypes</code> is not specified, AWS Config returns all resource types that
-     *         AWS Config is recording in the region for your account.
+     *         If a value for <code>resourceTypes</code> is not specified, Config returns all resource types that Config
+     *         is recording in the region for your account.
      *         </p>
      *         <note>
      *         <p>
-     *         If the configuration recorder is turned off, AWS Config returns an empty list of <a>ResourceCount</a>
+     *         If the configuration recorder is turned off, Config returns an empty list of <a>ResourceCount</a>
      *         objects. If the configuration recorder is not recording a specific resource type (for example, S3
      *         buckets), that resource type is not returned in the list of <a>ResourceCount</a> objects.
      *         </p>
@@ -98,33 +98,33 @@ public class GetDiscoveredResourceCountsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The comma-separated list that specifies the resource types that you want AWS Config to return (for example,
+     * The comma-separated list that specifies the resource types that you want Config to return (for example,
      * <code>"AWS::EC2::Instance"</code>, <code>"AWS::IAM::User"</code>).
      * </p>
      * <p>
-     * If a value for <code>resourceTypes</code> is not specified, AWS Config returns all resource types that AWS Config
-     * is recording in the region for your account.
+     * If a value for <code>resourceTypes</code> is not specified, Config returns all resource types that Config is
+     * recording in the region for your account.
      * </p>
      * <note>
      * <p>
-     * If the configuration recorder is turned off, AWS Config returns an empty list of <a>ResourceCount</a> objects. If
-     * the configuration recorder is not recording a specific resource type (for example, S3 buckets), that resource
-     * type is not returned in the list of <a>ResourceCount</a> objects.
+     * If the configuration recorder is turned off, Config returns an empty list of <a>ResourceCount</a> objects. If the
+     * configuration recorder is not recording a specific resource type (for example, S3 buckets), that resource type is
+     * not returned in the list of <a>ResourceCount</a> objects.
      * </p>
      * </note>
      * 
      * @param resourceTypes
-     *        The comma-separated list that specifies the resource types that you want AWS Config to return (for
-     *        example, <code>"AWS::EC2::Instance"</code>, <code>"AWS::IAM::User"</code>).</p>
+     *        The comma-separated list that specifies the resource types that you want Config to return (for example,
+     *        <code>"AWS::EC2::Instance"</code>, <code>"AWS::IAM::User"</code>).</p>
      *        <p>
-     *        If a value for <code>resourceTypes</code> is not specified, AWS Config returns all resource types that AWS
-     *        Config is recording in the region for your account.
+     *        If a value for <code>resourceTypes</code> is not specified, Config returns all resource types that Config
+     *        is recording in the region for your account.
      *        </p>
      *        <note>
      *        <p>
-     *        If the configuration recorder is turned off, AWS Config returns an empty list of <a>ResourceCount</a>
-     *        objects. If the configuration recorder is not recording a specific resource type (for example, S3
-     *        buckets), that resource type is not returned in the list of <a>ResourceCount</a> objects.
+     *        If the configuration recorder is turned off, Config returns an empty list of <a>ResourceCount</a> objects.
+     *        If the configuration recorder is not recording a specific resource type (for example, S3 buckets), that
+     *        resource type is not returned in the list of <a>ResourceCount</a> objects.
      *        </p>
      */
 
@@ -139,18 +139,18 @@ public class GetDiscoveredResourceCountsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The comma-separated list that specifies the resource types that you want AWS Config to return (for example,
+     * The comma-separated list that specifies the resource types that you want Config to return (for example,
      * <code>"AWS::EC2::Instance"</code>, <code>"AWS::IAM::User"</code>).
      * </p>
      * <p>
-     * If a value for <code>resourceTypes</code> is not specified, AWS Config returns all resource types that AWS Config
-     * is recording in the region for your account.
+     * If a value for <code>resourceTypes</code> is not specified, Config returns all resource types that Config is
+     * recording in the region for your account.
      * </p>
      * <note>
      * <p>
-     * If the configuration recorder is turned off, AWS Config returns an empty list of <a>ResourceCount</a> objects. If
-     * the configuration recorder is not recording a specific resource type (for example, S3 buckets), that resource
-     * type is not returned in the list of <a>ResourceCount</a> objects.
+     * If the configuration recorder is turned off, Config returns an empty list of <a>ResourceCount</a> objects. If the
+     * configuration recorder is not recording a specific resource type (for example, S3 buckets), that resource type is
+     * not returned in the list of <a>ResourceCount</a> objects.
      * </p>
      * </note>
      * <p>
@@ -160,17 +160,17 @@ public class GetDiscoveredResourceCountsRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param resourceTypes
-     *        The comma-separated list that specifies the resource types that you want AWS Config to return (for
-     *        example, <code>"AWS::EC2::Instance"</code>, <code>"AWS::IAM::User"</code>).</p>
+     *        The comma-separated list that specifies the resource types that you want Config to return (for example,
+     *        <code>"AWS::EC2::Instance"</code>, <code>"AWS::IAM::User"</code>).</p>
      *        <p>
-     *        If a value for <code>resourceTypes</code> is not specified, AWS Config returns all resource types that AWS
-     *        Config is recording in the region for your account.
+     *        If a value for <code>resourceTypes</code> is not specified, Config returns all resource types that Config
+     *        is recording in the region for your account.
      *        </p>
      *        <note>
      *        <p>
-     *        If the configuration recorder is turned off, AWS Config returns an empty list of <a>ResourceCount</a>
-     *        objects. If the configuration recorder is not recording a specific resource type (for example, S3
-     *        buckets), that resource type is not returned in the list of <a>ResourceCount</a> objects.
+     *        If the configuration recorder is turned off, Config returns an empty list of <a>ResourceCount</a> objects.
+     *        If the configuration recorder is not recording a specific resource type (for example, S3 buckets), that
+     *        resource type is not returned in the list of <a>ResourceCount</a> objects.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -187,33 +187,33 @@ public class GetDiscoveredResourceCountsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The comma-separated list that specifies the resource types that you want AWS Config to return (for example,
+     * The comma-separated list that specifies the resource types that you want Config to return (for example,
      * <code>"AWS::EC2::Instance"</code>, <code>"AWS::IAM::User"</code>).
      * </p>
      * <p>
-     * If a value for <code>resourceTypes</code> is not specified, AWS Config returns all resource types that AWS Config
-     * is recording in the region for your account.
+     * If a value for <code>resourceTypes</code> is not specified, Config returns all resource types that Config is
+     * recording in the region for your account.
      * </p>
      * <note>
      * <p>
-     * If the configuration recorder is turned off, AWS Config returns an empty list of <a>ResourceCount</a> objects. If
-     * the configuration recorder is not recording a specific resource type (for example, S3 buckets), that resource
-     * type is not returned in the list of <a>ResourceCount</a> objects.
+     * If the configuration recorder is turned off, Config returns an empty list of <a>ResourceCount</a> objects. If the
+     * configuration recorder is not recording a specific resource type (for example, S3 buckets), that resource type is
+     * not returned in the list of <a>ResourceCount</a> objects.
      * </p>
      * </note>
      * 
      * @param resourceTypes
-     *        The comma-separated list that specifies the resource types that you want AWS Config to return (for
-     *        example, <code>"AWS::EC2::Instance"</code>, <code>"AWS::IAM::User"</code>).</p>
+     *        The comma-separated list that specifies the resource types that you want Config to return (for example,
+     *        <code>"AWS::EC2::Instance"</code>, <code>"AWS::IAM::User"</code>).</p>
      *        <p>
-     *        If a value for <code>resourceTypes</code> is not specified, AWS Config returns all resource types that AWS
-     *        Config is recording in the region for your account.
+     *        If a value for <code>resourceTypes</code> is not specified, Config returns all resource types that Config
+     *        is recording in the region for your account.
      *        </p>
      *        <note>
      *        <p>
-     *        If the configuration recorder is turned off, AWS Config returns an empty list of <a>ResourceCount</a>
-     *        objects. If the configuration recorder is not recording a specific resource type (for example, S3
-     *        buckets), that resource type is not returned in the list of <a>ResourceCount</a> objects.
+     *        If the configuration recorder is turned off, Config returns an empty list of <a>ResourceCount</a> objects.
+     *        If the configuration recorder is not recording a specific resource type (for example, S3 buckets), that
+     *        resource type is not returned in the list of <a>ResourceCount</a> objects.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -226,12 +226,12 @@ public class GetDiscoveredResourceCountsRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The maximum number of <a>ResourceCount</a> objects returned on each page. The default is 100. You cannot specify
-     * a number greater than 100. If you specify 0, AWS Config uses the default.
+     * a number greater than 100. If you specify 0, Config uses the default.
      * </p>
      * 
      * @param limit
      *        The maximum number of <a>ResourceCount</a> objects returned on each page. The default is 100. You cannot
-     *        specify a number greater than 100. If you specify 0, AWS Config uses the default.
+     *        specify a number greater than 100. If you specify 0, Config uses the default.
      */
 
     public void setLimit(Integer limit) {
@@ -241,11 +241,11 @@ public class GetDiscoveredResourceCountsRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The maximum number of <a>ResourceCount</a> objects returned on each page. The default is 100. You cannot specify
-     * a number greater than 100. If you specify 0, AWS Config uses the default.
+     * a number greater than 100. If you specify 0, Config uses the default.
      * </p>
      * 
      * @return The maximum number of <a>ResourceCount</a> objects returned on each page. The default is 100. You cannot
-     *         specify a number greater than 100. If you specify 0, AWS Config uses the default.
+     *         specify a number greater than 100. If you specify 0, Config uses the default.
      */
 
     public Integer getLimit() {
@@ -255,12 +255,12 @@ public class GetDiscoveredResourceCountsRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The maximum number of <a>ResourceCount</a> objects returned on each page. The default is 100. You cannot specify
-     * a number greater than 100. If you specify 0, AWS Config uses the default.
+     * a number greater than 100. If you specify 0, Config uses the default.
      * </p>
      * 
      * @param limit
      *        The maximum number of <a>ResourceCount</a> objects returned on each page. The default is 100. You cannot
-     *        specify a number greater than 100. If you specify 0, AWS Config uses the default.
+     *        specify a number greater than 100. If you specify 0, Config uses the default.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

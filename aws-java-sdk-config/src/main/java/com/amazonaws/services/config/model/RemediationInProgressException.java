@@ -16,8 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Remediation action is in progress. You can either cancel execution in AWS Systems Manager or wait and try again
- * later.
+ * Remediation action is in progress. You can either cancel execution in Amazon Web Services Systems Manager or wait and
+ * try again later.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

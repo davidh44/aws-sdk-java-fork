@@ -17,6 +17,7 @@ package com.amazonaws.retry;
 import static com.amazonaws.SDKGlobalConfiguration.AWS_RETRY_MODE_SYSTEM_PROPERTY;
 import static com.amazonaws.retry.PredefinedBackoffStrategies.STANDARD_BACKOFF_STRATEGY;
 import static com.amazonaws.retry.PredefinedRetryPolicies.DEFAULT_BACKOFF_STRATEGY;
+import static com.amazonaws.retry.PredefinedRetryPolicies.DYNAMODB_DEFAULT_BACKOFF_STRATEGY;
 import static org.hamcrest.CoreMatchers.sameInstance;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
@@ -74,6 +75,27 @@ public class RetryPolicyTest {
     public void honorBackoffStrategyInRetryModeTrue_legacyMode_shouldHonor() {
         RetryPolicy retryPolicy = honorBackoffStrategyTrue(RetryMode.LEGACY);
         assertEquals(DEFAULT_BACKOFF_STRATEGY, retryPolicy.getBackoffStrategy());
+    }
+
+    @Test
+    public void DDBDefaultBackoffStrategy_standard_shouldNotUseStandardBackoffStrategy() {
+        verifyDDBBackOffStrategy(RetryMode.STANDARD);
+    }
+
+    @Test
+    public void DDBDefaultBackoffStrategy_adaptive_shouldNotUseStandardBackoffStrategy() {
+        verifyDDBBackOffStrategy(RetryMode.ADAPTIVE);
+    }
+
+    @Test
+    public void DDBDefaultBackoffStrategy_legacy_shouldNotUseStandardBackoffStrategy() {
+        verifyDDBBackOffStrategy(RetryMode.LEGACY);
+    }
+
+    private void verifyDDBBackOffStrategy(RetryMode retryMode) {
+        System.setProperty(AWS_RETRY_MODE_SYSTEM_PROPERTY, retryMode.getName());
+        RetryPolicy retryPolicy = PredefinedRetryPolicies.getDynamoDBDefaultRetryPolicy();
+        assertEquals(DYNAMODB_DEFAULT_BACKOFF_STRATEGY, retryPolicy.getBackoffStrategy());
     }
 
     @Test

@@ -39,14 +39,14 @@ public class GetAggregateConformancePackComplianceSummaryRequest extends com.ama
     private AggregateConformancePackComplianceSummaryFilters filters;
     /**
      * <p>
-     * Groups the result based on AWS Account ID or AWS Region.
+     * Groups the result based on Amazon Web Services account ID or Amazon Web Services Region.
      * </p>
      */
     private String groupByKey;
     /**
      * <p>
-     * The maximum number of results returned on each page. The default is maximum. If you specify 0, AWS Config uses
-     * the default.
+     * The maximum number of results returned on each page. The default is maximum. If you specify 0, Config uses the
+     * default.
      * </p>
      */
     private Integer limit;
@@ -140,11 +140,11 @@ public class GetAggregateConformancePackComplianceSummaryRequest extends com.ama
 
     /**
      * <p>
-     * Groups the result based on AWS Account ID or AWS Region.
+     * Groups the result based on Amazon Web Services account ID or Amazon Web Services Region.
      * </p>
      * 
      * @param groupByKey
-     *        Groups the result based on AWS Account ID or AWS Region.
+     *        Groups the result based on Amazon Web Services account ID or Amazon Web Services Region.
      * @see AggregateConformancePackComplianceSummaryGroupKey
      */
 
@@ -154,10 +154,10 @@ public class GetAggregateConformancePackComplianceSummaryRequest extends com.ama
 
     /**
      * <p>
-     * Groups the result based on AWS Account ID or AWS Region.
+     * Groups the result based on Amazon Web Services account ID or Amazon Web Services Region.
      * </p>
      * 
-     * @return Groups the result based on AWS Account ID or AWS Region.
+     * @return Groups the result based on Amazon Web Services account ID or Amazon Web Services Region.
      * @see AggregateConformancePackComplianceSummaryGroupKey
      */
 
@@ -167,11 +167,11 @@ public class GetAggregateConformancePackComplianceSummaryRequest extends com.ama
 
     /**
      * <p>
-     * Groups the result based on AWS Account ID or AWS Region.
+     * Groups the result based on Amazon Web Services account ID or Amazon Web Services Region.
      * </p>
      * 
      * @param groupByKey
-     *        Groups the result based on AWS Account ID or AWS Region.
+     *        Groups the result based on Amazon Web Services account ID or Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AggregateConformancePackComplianceSummaryGroupKey
      */
@@ -183,11 +183,11 @@ public class GetAggregateConformancePackComplianceSummaryRequest extends com.ama
 
     /**
      * <p>
-     * Groups the result based on AWS Account ID or AWS Region.
+     * Groups the result based on Amazon Web Services account ID or Amazon Web Services Region.
      * </p>
      * 
      * @param groupByKey
-     *        Groups the result based on AWS Account ID or AWS Region.
+     *        Groups the result based on Amazon Web Services account ID or Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AggregateConformancePackComplianceSummaryGroupKey
      */
@@ -199,13 +199,13 @@ public class GetAggregateConformancePackComplianceSummaryRequest extends com.ama
 
     /**
      * <p>
-     * The maximum number of results returned on each page. The default is maximum. If you specify 0, AWS Config uses
-     * the default.
+     * The maximum number of results returned on each page. The default is maximum. If you specify 0, Config uses the
+     * default.
      * </p>
      * 
      * @param limit
-     *        The maximum number of results returned on each page. The default is maximum. If you specify 0, AWS Config
-     *        uses the default.
+     *        The maximum number of results returned on each page. The default is maximum. If you specify 0, Config uses
+     *        the default.
      */
 
     public void setLimit(Integer limit) {
@@ -214,11 +214,11 @@ public class GetAggregateConformancePackComplianceSummaryRequest extends com.ama
 
     /**
      * <p>
-     * The maximum number of results returned on each page. The default is maximum. If you specify 0, AWS Config uses
-     * the default.
+     * The maximum number of results returned on each page. The default is maximum. If you specify 0, Config uses the
+     * default.
      * </p>
      * 
-     * @return The maximum number of results returned on each page. The default is maximum. If you specify 0, AWS Config
+     * @return The maximum number of results returned on each page. The default is maximum. If you specify 0, Config
      *         uses the default.
      */
 
@@ -228,13 +228,13 @@ public class GetAggregateConformancePackComplianceSummaryRequest extends com.ama
 
     /**
      * <p>
-     * The maximum number of results returned on each page. The default is maximum. If you specify 0, AWS Config uses
-     * the default.
+     * The maximum number of results returned on each page. The default is maximum. If you specify 0, Config uses the
+     * default.
      * </p>
      * 
      * @param limit
-     *        The maximum number of results returned on each page. The default is maximum. If you specify 0, AWS Config
-     *        uses the default.
+     *        The maximum number of results returned on each page. The default is maximum. If you specify 0, Config uses
+     *        the default.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

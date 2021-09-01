@@ -27,14 +27,6 @@ public class CreateVpcRequest extends AmazonWebServiceRequest implements Seriali
 
     /**
      * <p>
-     * The IPv4 network range for the VPC, in CIDR notation. For example, <code>10.0.0.0/16</code>. We modify the
-     * specified CIDR block to its canonical form; for example, if you specify <code>100.68.0.18/18</code>, we modify it
-     * to <code>100.68.0.0/18</code>.
-     * </p>
-     */
-    private String cidrBlock;
-    /**
-     * <p>
      * Requests an Amazon-provided IPv6 CIDR block with a /56 prefix length for the VPC. You cannot specify the range of
      * IP addresses, or the size of the CIDR block.
      * </p>
@@ -87,6 +79,14 @@ public class CreateVpcRequest extends AmazonWebServiceRequest implements Seriali
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<TagSpecification> tagSpecifications;
+    /**
+     * <p>
+     * The IPv4 network range for the VPC, in CIDR notation. For example, <code>10.0.0.0/16</code>. We modify the
+     * specified CIDR block to its canonical form; for example, if you specify <code>100.68.0.18/18</code>, we modify it
+     * to <code>100.68.0.0/18</code>.
+     * </p>
+     */
+    private String cidrBlock;
 
     /**
      * Default constructor for CreateVpcRequest object. Callers should use the setter or fluent setter (with...) methods
@@ -106,58 +106,6 @@ public class CreateVpcRequest extends AmazonWebServiceRequest implements Seriali
      */
     public CreateVpcRequest(String cidrBlock) {
         setCidrBlock(cidrBlock);
-    }
-
-    /**
-     * <p>
-     * The IPv4 network range for the VPC, in CIDR notation. For example, <code>10.0.0.0/16</code>. We modify the
-     * specified CIDR block to its canonical form; for example, if you specify <code>100.68.0.18/18</code>, we modify it
-     * to <code>100.68.0.0/18</code>.
-     * </p>
-     * 
-     * @param cidrBlock
-     *        The IPv4 network range for the VPC, in CIDR notation. For example, <code>10.0.0.0/16</code>. We modify the
-     *        specified CIDR block to its canonical form; for example, if you specify <code>100.68.0.18/18</code>, we
-     *        modify it to <code>100.68.0.0/18</code>.
-     */
-
-    public void setCidrBlock(String cidrBlock) {
-        this.cidrBlock = cidrBlock;
-    }
-
-    /**
-     * <p>
-     * The IPv4 network range for the VPC, in CIDR notation. For example, <code>10.0.0.0/16</code>. We modify the
-     * specified CIDR block to its canonical form; for example, if you specify <code>100.68.0.18/18</code>, we modify it
-     * to <code>100.68.0.0/18</code>.
-     * </p>
-     * 
-     * @return The IPv4 network range for the VPC, in CIDR notation. For example, <code>10.0.0.0/16</code>. We modify
-     *         the specified CIDR block to its canonical form; for example, if you specify <code>100.68.0.18/18</code>,
-     *         we modify it to <code>100.68.0.0/18</code>.
-     */
-
-    public String getCidrBlock() {
-        return this.cidrBlock;
-    }
-
-    /**
-     * <p>
-     * The IPv4 network range for the VPC, in CIDR notation. For example, <code>10.0.0.0/16</code>. We modify the
-     * specified CIDR block to its canonical form; for example, if you specify <code>100.68.0.18/18</code>, we modify it
-     * to <code>100.68.0.0/18</code>.
-     * </p>
-     * 
-     * @param cidrBlock
-     *        The IPv4 network range for the VPC, in CIDR notation. For example, <code>10.0.0.0/16</code>. We modify the
-     *        specified CIDR block to its canonical form; for example, if you specify <code>100.68.0.18/18</code>, we
-     *        modify it to <code>100.68.0.0/18</code>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateVpcRequest withCidrBlock(String cidrBlock) {
-        setCidrBlock(cidrBlock);
-        return this;
     }
 
     /**
@@ -626,6 +574,58 @@ public class CreateVpcRequest extends AmazonWebServiceRequest implements Seriali
     }
 
     /**
+     * <p>
+     * The IPv4 network range for the VPC, in CIDR notation. For example, <code>10.0.0.0/16</code>. We modify the
+     * specified CIDR block to its canonical form; for example, if you specify <code>100.68.0.18/18</code>, we modify it
+     * to <code>100.68.0.0/18</code>.
+     * </p>
+     * 
+     * @param cidrBlock
+     *        The IPv4 network range for the VPC, in CIDR notation. For example, <code>10.0.0.0/16</code>. We modify the
+     *        specified CIDR block to its canonical form; for example, if you specify <code>100.68.0.18/18</code>, we
+     *        modify it to <code>100.68.0.0/18</code>.
+     */
+
+    public void setCidrBlock(String cidrBlock) {
+        this.cidrBlock = cidrBlock;
+    }
+
+    /**
+     * <p>
+     * The IPv4 network range for the VPC, in CIDR notation. For example, <code>10.0.0.0/16</code>. We modify the
+     * specified CIDR block to its canonical form; for example, if you specify <code>100.68.0.18/18</code>, we modify it
+     * to <code>100.68.0.0/18</code>.
+     * </p>
+     * 
+     * @return The IPv4 network range for the VPC, in CIDR notation. For example, <code>10.0.0.0/16</code>. We modify
+     *         the specified CIDR block to its canonical form; for example, if you specify <code>100.68.0.18/18</code>,
+     *         we modify it to <code>100.68.0.0/18</code>.
+     */
+
+    public String getCidrBlock() {
+        return this.cidrBlock;
+    }
+
+    /**
+     * <p>
+     * The IPv4 network range for the VPC, in CIDR notation. For example, <code>10.0.0.0/16</code>. We modify the
+     * specified CIDR block to its canonical form; for example, if you specify <code>100.68.0.18/18</code>, we modify it
+     * to <code>100.68.0.0/18</code>.
+     * </p>
+     * 
+     * @param cidrBlock
+     *        The IPv4 network range for the VPC, in CIDR notation. For example, <code>10.0.0.0/16</code>. We modify the
+     *        specified CIDR block to its canonical form; for example, if you specify <code>100.68.0.18/18</code>, we
+     *        modify it to <code>100.68.0.0/18</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateVpcRequest withCidrBlock(String cidrBlock) {
+        setCidrBlock(cidrBlock);
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -648,8 +648,6 @@ public class CreateVpcRequest extends AmazonWebServiceRequest implements Seriali
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getCidrBlock() != null)
-            sb.append("CidrBlock: ").append(getCidrBlock()).append(",");
         if (getAmazonProvidedIpv6CidrBlock() != null)
             sb.append("AmazonProvidedIpv6CidrBlock: ").append(getAmazonProvidedIpv6CidrBlock()).append(",");
         if (getIpv6Pool() != null)
@@ -661,7 +659,9 @@ public class CreateVpcRequest extends AmazonWebServiceRequest implements Seriali
         if (getIpv6CidrBlockNetworkBorderGroup() != null)
             sb.append("Ipv6CidrBlockNetworkBorderGroup: ").append(getIpv6CidrBlockNetworkBorderGroup()).append(",");
         if (getTagSpecifications() != null)
-            sb.append("TagSpecifications: ").append(getTagSpecifications());
+            sb.append("TagSpecifications: ").append(getTagSpecifications()).append(",");
+        if (getCidrBlock() != null)
+            sb.append("CidrBlock: ").append(getCidrBlock());
         sb.append("}");
         return sb.toString();
     }
@@ -676,10 +676,6 @@ public class CreateVpcRequest extends AmazonWebServiceRequest implements Seriali
         if (obj instanceof CreateVpcRequest == false)
             return false;
         CreateVpcRequest other = (CreateVpcRequest) obj;
-        if (other.getCidrBlock() == null ^ this.getCidrBlock() == null)
-            return false;
-        if (other.getCidrBlock() != null && other.getCidrBlock().equals(this.getCidrBlock()) == false)
-            return false;
         if (other.getAmazonProvidedIpv6CidrBlock() == null ^ this.getAmazonProvidedIpv6CidrBlock() == null)
             return false;
         if (other.getAmazonProvidedIpv6CidrBlock() != null && other.getAmazonProvidedIpv6CidrBlock().equals(this.getAmazonProvidedIpv6CidrBlock()) == false)
@@ -705,6 +701,10 @@ public class CreateVpcRequest extends AmazonWebServiceRequest implements Seriali
             return false;
         if (other.getTagSpecifications() != null && other.getTagSpecifications().equals(this.getTagSpecifications()) == false)
             return false;
+        if (other.getCidrBlock() == null ^ this.getCidrBlock() == null)
+            return false;
+        if (other.getCidrBlock() != null && other.getCidrBlock().equals(this.getCidrBlock()) == false)
+            return false;
         return true;
     }
 
@@ -713,13 +713,13 @@ public class CreateVpcRequest extends AmazonWebServiceRequest implements Seriali
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getCidrBlock() == null) ? 0 : getCidrBlock().hashCode());
         hashCode = prime * hashCode + ((getAmazonProvidedIpv6CidrBlock() == null) ? 0 : getAmazonProvidedIpv6CidrBlock().hashCode());
         hashCode = prime * hashCode + ((getIpv6Pool() == null) ? 0 : getIpv6Pool().hashCode());
         hashCode = prime * hashCode + ((getIpv6CidrBlock() == null) ? 0 : getIpv6CidrBlock().hashCode());
         hashCode = prime * hashCode + ((getInstanceTenancy() == null) ? 0 : getInstanceTenancy().hashCode());
         hashCode = prime * hashCode + ((getIpv6CidrBlockNetworkBorderGroup() == null) ? 0 : getIpv6CidrBlockNetworkBorderGroup().hashCode());
         hashCode = prime * hashCode + ((getTagSpecifications() == null) ? 0 : getTagSpecifications().hashCode());
+        hashCode = prime * hashCode + ((getCidrBlock() == null) ? 0 : getCidrBlock().hashCode());
         return hashCode;
     }
 

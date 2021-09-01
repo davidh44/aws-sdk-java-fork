@@ -49,8 +49,8 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
     private String readOnly;
     /**
      * <p>
-     * The AWS access key ID that was used to sign the request. If the request was made with temporary security
-     * credentials, this is the access key ID of the temporary credentials.
+     * The Amazon Web Services access key ID that was used to sign the request. If the request was made with temporary
+     * security credentials, this is the access key ID of the temporary credentials.
      * </p>
      */
     private String accessKeyId;
@@ -62,7 +62,7 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date eventTime;
     /**
      * <p>
-     * The AWS service that the request was made to.
+     * The Amazon Web Services service to which the request was made.
      * </p>
      */
     private String eventSource;
@@ -207,13 +207,13 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS access key ID that was used to sign the request. If the request was made with temporary security
-     * credentials, this is the access key ID of the temporary credentials.
+     * The Amazon Web Services access key ID that was used to sign the request. If the request was made with temporary
+     * security credentials, this is the access key ID of the temporary credentials.
      * </p>
      * 
      * @param accessKeyId
-     *        The AWS access key ID that was used to sign the request. If the request was made with temporary security
-     *        credentials, this is the access key ID of the temporary credentials.
+     *        The Amazon Web Services access key ID that was used to sign the request. If the request was made with
+     *        temporary security credentials, this is the access key ID of the temporary credentials.
      */
 
     public void setAccessKeyId(String accessKeyId) {
@@ -222,12 +222,12 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS access key ID that was used to sign the request. If the request was made with temporary security
-     * credentials, this is the access key ID of the temporary credentials.
+     * The Amazon Web Services access key ID that was used to sign the request. If the request was made with temporary
+     * security credentials, this is the access key ID of the temporary credentials.
      * </p>
      * 
-     * @return The AWS access key ID that was used to sign the request. If the request was made with temporary security
-     *         credentials, this is the access key ID of the temporary credentials.
+     * @return The Amazon Web Services access key ID that was used to sign the request. If the request was made with
+     *         temporary security credentials, this is the access key ID of the temporary credentials.
      */
 
     public String getAccessKeyId() {
@@ -236,13 +236,13 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS access key ID that was used to sign the request. If the request was made with temporary security
-     * credentials, this is the access key ID of the temporary credentials.
+     * The Amazon Web Services access key ID that was used to sign the request. If the request was made with temporary
+     * security credentials, this is the access key ID of the temporary credentials.
      * </p>
      * 
      * @param accessKeyId
-     *        The AWS access key ID that was used to sign the request. If the request was made with temporary security
-     *        credentials, this is the access key ID of the temporary credentials.
+     *        The Amazon Web Services access key ID that was used to sign the request. If the request was made with
+     *        temporary security credentials, this is the access key ID of the temporary credentials.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -293,11 +293,11 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS service that the request was made to.
+     * The Amazon Web Services service to which the request was made.
      * </p>
      * 
      * @param eventSource
-     *        The AWS service that the request was made to.
+     *        The Amazon Web Services service to which the request was made.
      */
 
     public void setEventSource(String eventSource) {
@@ -306,10 +306,10 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS service that the request was made to.
+     * The Amazon Web Services service to which the request was made.
      * </p>
      * 
-     * @return The AWS service that the request was made to.
+     * @return The Amazon Web Services service to which the request was made.
      */
 
     public String getEventSource() {
@@ -318,11 +318,11 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS service that the request was made to.
+     * The Amazon Web Services service to which the request was made.
      * </p>
      * 
      * @param eventSource
-     *        The AWS service that the request was made to.
+     *        The Amazon Web Services service to which the request was made.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -21,7 +21,7 @@ import javax.annotation.Generated;
  * <ul>
  * <li>
  * <p>
- * For DeleteConfigRule, AWS Config is deleting this rule. Try your request again later.
+ * For DeleteConfigRule, Config is deleting this rule. Try your request again later.
  * </p>
  * </li>
  * <li>
@@ -31,8 +31,8 @@ import javax.annotation.Generated;
  * </li>
  * <li>
  * <p>
- * For DeleteConfigRule, a remediation action is associated with the rule and AWS Config cannot delete this rule. Delete
- * the remediation action associated with the rule before deleting the rule and try your request again later.
+ * For DeleteConfigRule, a remediation action is associated with the rule and Config cannot delete this rule. Delete the
+ * remediation action associated with the rule before deleting the rule and try your request again later.
  * </p>
  * </li>
  * <li>

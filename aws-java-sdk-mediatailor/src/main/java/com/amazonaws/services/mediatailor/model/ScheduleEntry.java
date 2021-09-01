@@ -66,6 +66,15 @@ public class ScheduleEntry implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<ScheduleAdBreak> scheduleAdBreaks;
     /**
      * <p>
+     * The type of schedule entry.
+     * </p>
+     * <p>
+     * Valid values: PROGRAM or FILLER_SLATE.
+     * </p>
+     */
+    private String scheduleEntryType;
+    /**
+     * <p>
      * The name of the source location.
      * </p>
      */
@@ -349,6 +358,85 @@ public class ScheduleEntry implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The type of schedule entry.
+     * </p>
+     * <p>
+     * Valid values: PROGRAM or FILLER_SLATE.
+     * </p>
+     * 
+     * @param scheduleEntryType
+     *        The type of schedule entry.</p>
+     *        <p>
+     *        Valid values: PROGRAM or FILLER_SLATE.
+     * @see ScheduleEntryType
+     */
+
+    public void setScheduleEntryType(String scheduleEntryType) {
+        this.scheduleEntryType = scheduleEntryType;
+    }
+
+    /**
+     * <p>
+     * The type of schedule entry.
+     * </p>
+     * <p>
+     * Valid values: PROGRAM or FILLER_SLATE.
+     * </p>
+     * 
+     * @return The type of schedule entry.</p>
+     *         <p>
+     *         Valid values: PROGRAM or FILLER_SLATE.
+     * @see ScheduleEntryType
+     */
+
+    public String getScheduleEntryType() {
+        return this.scheduleEntryType;
+    }
+
+    /**
+     * <p>
+     * The type of schedule entry.
+     * </p>
+     * <p>
+     * Valid values: PROGRAM or FILLER_SLATE.
+     * </p>
+     * 
+     * @param scheduleEntryType
+     *        The type of schedule entry.</p>
+     *        <p>
+     *        Valid values: PROGRAM or FILLER_SLATE.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ScheduleEntryType
+     */
+
+    public ScheduleEntry withScheduleEntryType(String scheduleEntryType) {
+        setScheduleEntryType(scheduleEntryType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of schedule entry.
+     * </p>
+     * <p>
+     * Valid values: PROGRAM or FILLER_SLATE.
+     * </p>
+     * 
+     * @param scheduleEntryType
+     *        The type of schedule entry.</p>
+     *        <p>
+     *        Valid values: PROGRAM or FILLER_SLATE.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ScheduleEntryType
+     */
+
+    public ScheduleEntry withScheduleEntryType(ScheduleEntryType scheduleEntryType) {
+        this.scheduleEntryType = scheduleEntryType.toString();
+        return this;
+    }
+
+    /**
+     * <p>
      * The name of the source location.
      * </p>
      * 
@@ -451,6 +539,8 @@ public class ScheduleEntry implements Serializable, Cloneable, StructuredPojo {
             sb.append("ProgramName: ").append(getProgramName()).append(",");
         if (getScheduleAdBreaks() != null)
             sb.append("ScheduleAdBreaks: ").append(getScheduleAdBreaks()).append(",");
+        if (getScheduleEntryType() != null)
+            sb.append("ScheduleEntryType: ").append(getScheduleEntryType()).append(",");
         if (getSourceLocationName() != null)
             sb.append("SourceLocationName: ").append(getSourceLocationName()).append(",");
         if (getVodSourceName() != null)
@@ -493,6 +583,10 @@ public class ScheduleEntry implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getScheduleAdBreaks() != null && other.getScheduleAdBreaks().equals(this.getScheduleAdBreaks()) == false)
             return false;
+        if (other.getScheduleEntryType() == null ^ this.getScheduleEntryType() == null)
+            return false;
+        if (other.getScheduleEntryType() != null && other.getScheduleEntryType().equals(this.getScheduleEntryType()) == false)
+            return false;
         if (other.getSourceLocationName() == null ^ this.getSourceLocationName() == null)
             return false;
         if (other.getSourceLocationName() != null && other.getSourceLocationName().equals(this.getSourceLocationName()) == false)
@@ -515,6 +609,7 @@ public class ScheduleEntry implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getChannelName() == null) ? 0 : getChannelName().hashCode());
         hashCode = prime * hashCode + ((getProgramName() == null) ? 0 : getProgramName().hashCode());
         hashCode = prime * hashCode + ((getScheduleAdBreaks() == null) ? 0 : getScheduleAdBreaks().hashCode());
+        hashCode = prime * hashCode + ((getScheduleEntryType() == null) ? 0 : getScheduleEntryType().hashCode());
         hashCode = prime * hashCode + ((getSourceLocationName() == null) ? 0 : getSourceLocationName().hashCode());
         hashCode = prime * hashCode + ((getVodSourceName() == null) ? 0 : getVodSourceName().hashCode());
         return hashCode;

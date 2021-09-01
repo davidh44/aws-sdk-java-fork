@@ -28,8 +28,8 @@ public class DescribeConfigRuleEvaluationStatusRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The name of the AWS managed Config rules for which you want status information. If you do not specify any names,
-     * AWS Config returns status information for all AWS managed Config rules that you use.
+     * The name of the Config managed rules for which you want status information. If you do not specify any names,
+     * Config returns status information for all Config managed rules that you use.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> configRuleNames;
@@ -49,20 +49,20 @@ public class DescribeConfigRuleEvaluationStatusRequest extends com.amazonaws.Ama
      * </p>
      * <p>
      * For information about requesting a rule limit increase, see <a
-     * href="http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_config">AWS Config Limits</a>
-     * in the <i>AWS General Reference Guide</i>.
+     * href="http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_config">Config Limits</a> in
+     * the <i>Amazon Web Services General Reference Guide</i>.
      * </p>
      */
     private Integer limit;
 
     /**
      * <p>
-     * The name of the AWS managed Config rules for which you want status information. If you do not specify any names,
-     * AWS Config returns status information for all AWS managed Config rules that you use.
+     * The name of the Config managed rules for which you want status information. If you do not specify any names,
+     * Config returns status information for all Config managed rules that you use.
      * </p>
      * 
-     * @return The name of the AWS managed Config rules for which you want status information. If you do not specify any
-     *         names, AWS Config returns status information for all AWS managed Config rules that you use.
+     * @return The name of the Config managed rules for which you want status information. If you do not specify any
+     *         names, Config returns status information for all Config managed rules that you use.
      */
 
     public java.util.List<String> getConfigRuleNames() {
@@ -74,13 +74,13 @@ public class DescribeConfigRuleEvaluationStatusRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The name of the AWS managed Config rules for which you want status information. If you do not specify any names,
-     * AWS Config returns status information for all AWS managed Config rules that you use.
+     * The name of the Config managed rules for which you want status information. If you do not specify any names,
+     * Config returns status information for all Config managed rules that you use.
      * </p>
      * 
      * @param configRuleNames
-     *        The name of the AWS managed Config rules for which you want status information. If you do not specify any
-     *        names, AWS Config returns status information for all AWS managed Config rules that you use.
+     *        The name of the Config managed rules for which you want status information. If you do not specify any
+     *        names, Config returns status information for all Config managed rules that you use.
      */
 
     public void setConfigRuleNames(java.util.Collection<String> configRuleNames) {
@@ -94,8 +94,8 @@ public class DescribeConfigRuleEvaluationStatusRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The name of the AWS managed Config rules for which you want status information. If you do not specify any names,
-     * AWS Config returns status information for all AWS managed Config rules that you use.
+     * The name of the Config managed rules for which you want status information. If you do not specify any names,
+     * Config returns status information for all Config managed rules that you use.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -104,8 +104,8 @@ public class DescribeConfigRuleEvaluationStatusRequest extends com.amazonaws.Ama
      * </p>
      * 
      * @param configRuleNames
-     *        The name of the AWS managed Config rules for which you want status information. If you do not specify any
-     *        names, AWS Config returns status information for all AWS managed Config rules that you use.
+     *        The name of the Config managed rules for which you want status information. If you do not specify any
+     *        names, Config returns status information for all Config managed rules that you use.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -121,13 +121,13 @@ public class DescribeConfigRuleEvaluationStatusRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The name of the AWS managed Config rules for which you want status information. If you do not specify any names,
-     * AWS Config returns status information for all AWS managed Config rules that you use.
+     * The name of the Config managed rules for which you want status information. If you do not specify any names,
+     * Config returns status information for all Config managed rules that you use.
      * </p>
      * 
      * @param configRuleNames
-     *        The name of the AWS managed Config rules for which you want status information. If you do not specify any
-     *        names, AWS Config returns status information for all AWS managed Config rules that you use.
+     *        The name of the Config managed rules for which you want status information. If you do not specify any
+     *        names, Config returns status information for all Config managed rules that you use.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -191,8 +191,8 @@ public class DescribeConfigRuleEvaluationStatusRequest extends com.amazonaws.Ama
      * </p>
      * <p>
      * For information about requesting a rule limit increase, see <a
-     * href="http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_config">AWS Config Limits</a>
-     * in the <i>AWS General Reference Guide</i>.
+     * href="http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_config">Config Limits</a> in
+     * the <i>Amazon Web Services General Reference Guide</i>.
      * </p>
      * 
      * @param limit
@@ -202,8 +202,8 @@ public class DescribeConfigRuleEvaluationStatusRequest extends com.amazonaws.Ama
      *        </p>
      *        <p>
      *        For information about requesting a rule limit increase, see <a
-     *        href="http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_config">AWS Config
-     *        Limits</a> in the <i>AWS General Reference Guide</i>.
+     *        href="http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_config">Config
+     *        Limits</a> in the <i>Amazon Web Services General Reference Guide</i>.
      */
 
     public void setLimit(Integer limit) {
@@ -219,8 +219,8 @@ public class DescribeConfigRuleEvaluationStatusRequest extends com.amazonaws.Ama
      * </p>
      * <p>
      * For information about requesting a rule limit increase, see <a
-     * href="http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_config">AWS Config Limits</a>
-     * in the <i>AWS General Reference Guide</i>.
+     * href="http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_config">Config Limits</a> in
+     * the <i>Amazon Web Services General Reference Guide</i>.
      * </p>
      * 
      * @return The number of rule evaluation results that you want returned.</p>
@@ -229,8 +229,8 @@ public class DescribeConfigRuleEvaluationStatusRequest extends com.amazonaws.Ama
      *         </p>
      *         <p>
      *         For information about requesting a rule limit increase, see <a
-     *         href="http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_config">AWS Config
-     *         Limits</a> in the <i>AWS General Reference Guide</i>.
+     *         href="http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_config">Config
+     *         Limits</a> in the <i>Amazon Web Services General Reference Guide</i>.
      */
 
     public Integer getLimit() {
@@ -246,8 +246,8 @@ public class DescribeConfigRuleEvaluationStatusRequest extends com.amazonaws.Ama
      * </p>
      * <p>
      * For information about requesting a rule limit increase, see <a
-     * href="http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_config">AWS Config Limits</a>
-     * in the <i>AWS General Reference Guide</i>.
+     * href="http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_config">Config Limits</a> in
+     * the <i>Amazon Web Services General Reference Guide</i>.
      * </p>
      * 
      * @param limit
@@ -257,8 +257,8 @@ public class DescribeConfigRuleEvaluationStatusRequest extends com.amazonaws.Ama
      *        </p>
      *        <p>
      *        For information about requesting a rule limit increase, see <a
-     *        href="http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_config">AWS Config
-     *        Limits</a> in the <i>AWS General Reference Guide</i>.
+     *        href="http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_config">Config
+     *        Limits</a> in the <i>Amazon Web Services General Reference Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
