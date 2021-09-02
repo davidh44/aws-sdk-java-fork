@@ -31,132 +31,132 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Amazon Elasticsearch Service parameters.
+     * The parameters for Elasticsearch.
      * </p>
      */
     private AmazonElasticsearchParameters amazonElasticsearchParameters;
     /**
      * <p>
-     * Amazon Athena parameters.
+     * The parameters for Amazon Athena.
      * </p>
      */
     private AthenaParameters athenaParameters;
     /**
      * <p>
-     * Amazon Aurora MySQL parameters.
+     * The parameters for Amazon Aurora MySQL.
      * </p>
      */
     private AuroraParameters auroraParameters;
     /**
      * <p>
-     * Aurora PostgreSQL parameters.
+     * The parameters for Amazon Aurora.
      * </p>
      */
     private AuroraPostgreSqlParameters auroraPostgreSqlParameters;
     /**
      * <p>
-     * Amazon Web Services IoT Analytics parameters.
+     * The parameters for IoT Analytics.
      * </p>
      */
     private AwsIotAnalyticsParameters awsIotAnalyticsParameters;
     /**
      * <p>
-     * Jira parameters.
+     * The parameters for Jira.
      * </p>
      */
     private JiraParameters jiraParameters;
     /**
      * <p>
-     * MariaDB parameters.
+     * The parameters for MariaDB.
      * </p>
      */
     private MariaDbParameters mariaDbParameters;
     /**
      * <p>
-     * MySQL parameters.
+     * The parameters for MySQL.
      * </p>
      */
     private MySqlParameters mySqlParameters;
     /**
      * <p>
-     * Oracle parameters.
+     * The parameters for Oracle.
      * </p>
      */
     private OracleParameters oracleParameters;
     /**
      * <p>
-     * PostgreSQL parameters.
+     * The parameters for PostgreSQL.
      * </p>
      */
     private PostgreSqlParameters postgreSqlParameters;
     /**
      * <p>
-     * Presto parameters.
+     * The parameters for Presto.
      * </p>
      */
     private PrestoParameters prestoParameters;
     /**
      * <p>
-     * Amazon RDS parameters.
+     * The parameters for Amazon RDS.
      * </p>
      */
     private RdsParameters rdsParameters;
     /**
      * <p>
-     * Amazon Redshift parameters.
+     * The parameters for Amazon Redshift.
      * </p>
      */
     private RedshiftParameters redshiftParameters;
     /**
      * <p>
-     * S3 parameters.
+     * The parameters for S3.
      * </p>
      */
     private S3Parameters s3Parameters;
     /**
      * <p>
-     * ServiceNow parameters.
+     * The parameters for ServiceNow.
      * </p>
      */
     private ServiceNowParameters serviceNowParameters;
     /**
      * <p>
-     * Snowflake parameters.
+     * The parameters for Snowflake.
      * </p>
      */
     private SnowflakeParameters snowflakeParameters;
     /**
      * <p>
-     * Spark parameters.
+     * The parameters for Spark.
      * </p>
      */
     private SparkParameters sparkParameters;
     /**
      * <p>
-     * SQL Server parameters.
+     * The parameters for SQL Server.
      * </p>
      */
     private SqlServerParameters sqlServerParameters;
     /**
      * <p>
-     * Teradata parameters.
+     * The parameters for Teradata.
      * </p>
      */
     private TeradataParameters teradataParameters;
     /**
      * <p>
-     * Twitter parameters.
+     * The parameters for Twitter.
      * </p>
      */
     private TwitterParameters twitterParameters;
 
     /**
      * <p>
-     * Amazon Elasticsearch Service parameters.
+     * The parameters for Elasticsearch.
      * </p>
      * 
      * @param amazonElasticsearchParameters
-     *        Amazon Elasticsearch Service parameters.
+     *        The parameters for Elasticsearch.
      */
 
     public void setAmazonElasticsearchParameters(AmazonElasticsearchParameters amazonElasticsearchParameters) {
@@ -165,10 +165,10 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Amazon Elasticsearch Service parameters.
+     * The parameters for Elasticsearch.
      * </p>
      * 
-     * @return Amazon Elasticsearch Service parameters.
+     * @return The parameters for Elasticsearch.
      */
 
     public AmazonElasticsearchParameters getAmazonElasticsearchParameters() {
@@ -177,11 +177,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Amazon Elasticsearch Service parameters.
+     * The parameters for Elasticsearch.
      * </p>
      * 
      * @param amazonElasticsearchParameters
-     *        Amazon Elasticsearch Service parameters.
+     *        The parameters for Elasticsearch.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -192,11 +192,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Amazon Athena parameters.
+     * The parameters for Amazon Athena.
      * </p>
      * 
      * @param athenaParameters
-     *        Amazon Athena parameters.
+     *        The parameters for Amazon Athena.
      */
 
     public void setAthenaParameters(AthenaParameters athenaParameters) {
@@ -205,10 +205,10 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Amazon Athena parameters.
+     * The parameters for Amazon Athena.
      * </p>
      * 
-     * @return Amazon Athena parameters.
+     * @return The parameters for Amazon Athena.
      */
 
     public AthenaParameters getAthenaParameters() {
@@ -217,11 +217,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Amazon Athena parameters.
+     * The parameters for Amazon Athena.
      * </p>
      * 
      * @param athenaParameters
-     *        Amazon Athena parameters.
+     *        The parameters for Amazon Athena.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -232,11 +232,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Amazon Aurora MySQL parameters.
+     * The parameters for Amazon Aurora MySQL.
      * </p>
      * 
      * @param auroraParameters
-     *        Amazon Aurora MySQL parameters.
+     *        The parameters for Amazon Aurora MySQL.
      */
 
     public void setAuroraParameters(AuroraParameters auroraParameters) {
@@ -245,10 +245,10 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Amazon Aurora MySQL parameters.
+     * The parameters for Amazon Aurora MySQL.
      * </p>
      * 
-     * @return Amazon Aurora MySQL parameters.
+     * @return The parameters for Amazon Aurora MySQL.
      */
 
     public AuroraParameters getAuroraParameters() {
@@ -257,11 +257,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Amazon Aurora MySQL parameters.
+     * The parameters for Amazon Aurora MySQL.
      * </p>
      * 
      * @param auroraParameters
-     *        Amazon Aurora MySQL parameters.
+     *        The parameters for Amazon Aurora MySQL.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -272,11 +272,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Aurora PostgreSQL parameters.
+     * The parameters for Amazon Aurora.
      * </p>
      * 
      * @param auroraPostgreSqlParameters
-     *        Aurora PostgreSQL parameters.
+     *        The parameters for Amazon Aurora.
      */
 
     public void setAuroraPostgreSqlParameters(AuroraPostgreSqlParameters auroraPostgreSqlParameters) {
@@ -285,10 +285,10 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Aurora PostgreSQL parameters.
+     * The parameters for Amazon Aurora.
      * </p>
      * 
-     * @return Aurora PostgreSQL parameters.
+     * @return The parameters for Amazon Aurora.
      */
 
     public AuroraPostgreSqlParameters getAuroraPostgreSqlParameters() {
@@ -297,11 +297,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Aurora PostgreSQL parameters.
+     * The parameters for Amazon Aurora.
      * </p>
      * 
      * @param auroraPostgreSqlParameters
-     *        Aurora PostgreSQL parameters.
+     *        The parameters for Amazon Aurora.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -312,11 +312,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Amazon Web Services IoT Analytics parameters.
+     * The parameters for IoT Analytics.
      * </p>
      * 
      * @param awsIotAnalyticsParameters
-     *        Amazon Web Services IoT Analytics parameters.
+     *        The parameters for IoT Analytics.
      */
 
     public void setAwsIotAnalyticsParameters(AwsIotAnalyticsParameters awsIotAnalyticsParameters) {
@@ -325,10 +325,10 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Amazon Web Services IoT Analytics parameters.
+     * The parameters for IoT Analytics.
      * </p>
      * 
-     * @return Amazon Web Services IoT Analytics parameters.
+     * @return The parameters for IoT Analytics.
      */
 
     public AwsIotAnalyticsParameters getAwsIotAnalyticsParameters() {
@@ -337,11 +337,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Amazon Web Services IoT Analytics parameters.
+     * The parameters for IoT Analytics.
      * </p>
      * 
      * @param awsIotAnalyticsParameters
-     *        Amazon Web Services IoT Analytics parameters.
+     *        The parameters for IoT Analytics.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -352,11 +352,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Jira parameters.
+     * The parameters for Jira.
      * </p>
      * 
      * @param jiraParameters
-     *        Jira parameters.
+     *        The parameters for Jira.
      */
 
     public void setJiraParameters(JiraParameters jiraParameters) {
@@ -365,10 +365,10 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Jira parameters.
+     * The parameters for Jira.
      * </p>
      * 
-     * @return Jira parameters.
+     * @return The parameters for Jira.
      */
 
     public JiraParameters getJiraParameters() {
@@ -377,11 +377,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Jira parameters.
+     * The parameters for Jira.
      * </p>
      * 
      * @param jiraParameters
-     *        Jira parameters.
+     *        The parameters for Jira.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -392,11 +392,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * MariaDB parameters.
+     * The parameters for MariaDB.
      * </p>
      * 
      * @param mariaDbParameters
-     *        MariaDB parameters.
+     *        The parameters for MariaDB.
      */
 
     public void setMariaDbParameters(MariaDbParameters mariaDbParameters) {
@@ -405,10 +405,10 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * MariaDB parameters.
+     * The parameters for MariaDB.
      * </p>
      * 
-     * @return MariaDB parameters.
+     * @return The parameters for MariaDB.
      */
 
     public MariaDbParameters getMariaDbParameters() {
@@ -417,11 +417,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * MariaDB parameters.
+     * The parameters for MariaDB.
      * </p>
      * 
      * @param mariaDbParameters
-     *        MariaDB parameters.
+     *        The parameters for MariaDB.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -432,11 +432,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * MySQL parameters.
+     * The parameters for MySQL.
      * </p>
      * 
      * @param mySqlParameters
-     *        MySQL parameters.
+     *        The parameters for MySQL.
      */
 
     public void setMySqlParameters(MySqlParameters mySqlParameters) {
@@ -445,10 +445,10 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * MySQL parameters.
+     * The parameters for MySQL.
      * </p>
      * 
-     * @return MySQL parameters.
+     * @return The parameters for MySQL.
      */
 
     public MySqlParameters getMySqlParameters() {
@@ -457,11 +457,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * MySQL parameters.
+     * The parameters for MySQL.
      * </p>
      * 
      * @param mySqlParameters
-     *        MySQL parameters.
+     *        The parameters for MySQL.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -472,11 +472,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Oracle parameters.
+     * The parameters for Oracle.
      * </p>
      * 
      * @param oracleParameters
-     *        Oracle parameters.
+     *        The parameters for Oracle.
      */
 
     public void setOracleParameters(OracleParameters oracleParameters) {
@@ -485,10 +485,10 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Oracle parameters.
+     * The parameters for Oracle.
      * </p>
      * 
-     * @return Oracle parameters.
+     * @return The parameters for Oracle.
      */
 
     public OracleParameters getOracleParameters() {
@@ -497,11 +497,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Oracle parameters.
+     * The parameters for Oracle.
      * </p>
      * 
      * @param oracleParameters
-     *        Oracle parameters.
+     *        The parameters for Oracle.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -512,11 +512,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * PostgreSQL parameters.
+     * The parameters for PostgreSQL.
      * </p>
      * 
      * @param postgreSqlParameters
-     *        PostgreSQL parameters.
+     *        The parameters for PostgreSQL.
      */
 
     public void setPostgreSqlParameters(PostgreSqlParameters postgreSqlParameters) {
@@ -525,10 +525,10 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * PostgreSQL parameters.
+     * The parameters for PostgreSQL.
      * </p>
      * 
-     * @return PostgreSQL parameters.
+     * @return The parameters for PostgreSQL.
      */
 
     public PostgreSqlParameters getPostgreSqlParameters() {
@@ -537,11 +537,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * PostgreSQL parameters.
+     * The parameters for PostgreSQL.
      * </p>
      * 
      * @param postgreSqlParameters
-     *        PostgreSQL parameters.
+     *        The parameters for PostgreSQL.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -552,11 +552,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Presto parameters.
+     * The parameters for Presto.
      * </p>
      * 
      * @param prestoParameters
-     *        Presto parameters.
+     *        The parameters for Presto.
      */
 
     public void setPrestoParameters(PrestoParameters prestoParameters) {
@@ -565,10 +565,10 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Presto parameters.
+     * The parameters for Presto.
      * </p>
      * 
-     * @return Presto parameters.
+     * @return The parameters for Presto.
      */
 
     public PrestoParameters getPrestoParameters() {
@@ -577,11 +577,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Presto parameters.
+     * The parameters for Presto.
      * </p>
      * 
      * @param prestoParameters
-     *        Presto parameters.
+     *        The parameters for Presto.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -592,11 +592,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Amazon RDS parameters.
+     * The parameters for Amazon RDS.
      * </p>
      * 
      * @param rdsParameters
-     *        Amazon RDS parameters.
+     *        The parameters for Amazon RDS.
      */
 
     public void setRdsParameters(RdsParameters rdsParameters) {
@@ -605,10 +605,10 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Amazon RDS parameters.
+     * The parameters for Amazon RDS.
      * </p>
      * 
-     * @return Amazon RDS parameters.
+     * @return The parameters for Amazon RDS.
      */
 
     public RdsParameters getRdsParameters() {
@@ -617,11 +617,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Amazon RDS parameters.
+     * The parameters for Amazon RDS.
      * </p>
      * 
      * @param rdsParameters
-     *        Amazon RDS parameters.
+     *        The parameters for Amazon RDS.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -632,11 +632,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Amazon Redshift parameters.
+     * The parameters for Amazon Redshift.
      * </p>
      * 
      * @param redshiftParameters
-     *        Amazon Redshift parameters.
+     *        The parameters for Amazon Redshift.
      */
 
     public void setRedshiftParameters(RedshiftParameters redshiftParameters) {
@@ -645,10 +645,10 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Amazon Redshift parameters.
+     * The parameters for Amazon Redshift.
      * </p>
      * 
-     * @return Amazon Redshift parameters.
+     * @return The parameters for Amazon Redshift.
      */
 
     public RedshiftParameters getRedshiftParameters() {
@@ -657,11 +657,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Amazon Redshift parameters.
+     * The parameters for Amazon Redshift.
      * </p>
      * 
      * @param redshiftParameters
-     *        Amazon Redshift parameters.
+     *        The parameters for Amazon Redshift.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -672,11 +672,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * S3 parameters.
+     * The parameters for S3.
      * </p>
      * 
      * @param s3Parameters
-     *        S3 parameters.
+     *        The parameters for S3.
      */
 
     public void setS3Parameters(S3Parameters s3Parameters) {
@@ -685,10 +685,10 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * S3 parameters.
+     * The parameters for S3.
      * </p>
      * 
-     * @return S3 parameters.
+     * @return The parameters for S3.
      */
 
     public S3Parameters getS3Parameters() {
@@ -697,11 +697,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * S3 parameters.
+     * The parameters for S3.
      * </p>
      * 
      * @param s3Parameters
-     *        S3 parameters.
+     *        The parameters for S3.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -712,11 +712,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * ServiceNow parameters.
+     * The parameters for ServiceNow.
      * </p>
      * 
      * @param serviceNowParameters
-     *        ServiceNow parameters.
+     *        The parameters for ServiceNow.
      */
 
     public void setServiceNowParameters(ServiceNowParameters serviceNowParameters) {
@@ -725,10 +725,10 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * ServiceNow parameters.
+     * The parameters for ServiceNow.
      * </p>
      * 
-     * @return ServiceNow parameters.
+     * @return The parameters for ServiceNow.
      */
 
     public ServiceNowParameters getServiceNowParameters() {
@@ -737,11 +737,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * ServiceNow parameters.
+     * The parameters for ServiceNow.
      * </p>
      * 
      * @param serviceNowParameters
-     *        ServiceNow parameters.
+     *        The parameters for ServiceNow.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -752,11 +752,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Snowflake parameters.
+     * The parameters for Snowflake.
      * </p>
      * 
      * @param snowflakeParameters
-     *        Snowflake parameters.
+     *        The parameters for Snowflake.
      */
 
     public void setSnowflakeParameters(SnowflakeParameters snowflakeParameters) {
@@ -765,10 +765,10 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Snowflake parameters.
+     * The parameters for Snowflake.
      * </p>
      * 
-     * @return Snowflake parameters.
+     * @return The parameters for Snowflake.
      */
 
     public SnowflakeParameters getSnowflakeParameters() {
@@ -777,11 +777,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Snowflake parameters.
+     * The parameters for Snowflake.
      * </p>
      * 
      * @param snowflakeParameters
-     *        Snowflake parameters.
+     *        The parameters for Snowflake.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -792,11 +792,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Spark parameters.
+     * The parameters for Spark.
      * </p>
      * 
      * @param sparkParameters
-     *        Spark parameters.
+     *        The parameters for Spark.
      */
 
     public void setSparkParameters(SparkParameters sparkParameters) {
@@ -805,10 +805,10 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Spark parameters.
+     * The parameters for Spark.
      * </p>
      * 
-     * @return Spark parameters.
+     * @return The parameters for Spark.
      */
 
     public SparkParameters getSparkParameters() {
@@ -817,11 +817,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Spark parameters.
+     * The parameters for Spark.
      * </p>
      * 
      * @param sparkParameters
-     *        Spark parameters.
+     *        The parameters for Spark.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -832,11 +832,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * SQL Server parameters.
+     * The parameters for SQL Server.
      * </p>
      * 
      * @param sqlServerParameters
-     *        SQL Server parameters.
+     *        The parameters for SQL Server.
      */
 
     public void setSqlServerParameters(SqlServerParameters sqlServerParameters) {
@@ -845,10 +845,10 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * SQL Server parameters.
+     * The parameters for SQL Server.
      * </p>
      * 
-     * @return SQL Server parameters.
+     * @return The parameters for SQL Server.
      */
 
     public SqlServerParameters getSqlServerParameters() {
@@ -857,11 +857,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * SQL Server parameters.
+     * The parameters for SQL Server.
      * </p>
      * 
      * @param sqlServerParameters
-     *        SQL Server parameters.
+     *        The parameters for SQL Server.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -872,11 +872,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Teradata parameters.
+     * The parameters for Teradata.
      * </p>
      * 
      * @param teradataParameters
-     *        Teradata parameters.
+     *        The parameters for Teradata.
      */
 
     public void setTeradataParameters(TeradataParameters teradataParameters) {
@@ -885,10 +885,10 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Teradata parameters.
+     * The parameters for Teradata.
      * </p>
      * 
-     * @return Teradata parameters.
+     * @return The parameters for Teradata.
      */
 
     public TeradataParameters getTeradataParameters() {
@@ -897,11 +897,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Teradata parameters.
+     * The parameters for Teradata.
      * </p>
      * 
      * @param teradataParameters
-     *        Teradata parameters.
+     *        The parameters for Teradata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -912,11 +912,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Twitter parameters.
+     * The parameters for Twitter.
      * </p>
      * 
      * @param twitterParameters
-     *        Twitter parameters.
+     *        The parameters for Twitter.
      */
 
     public void setTwitterParameters(TwitterParameters twitterParameters) {
@@ -925,10 +925,10 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Twitter parameters.
+     * The parameters for Twitter.
      * </p>
      * 
-     * @return Twitter parameters.
+     * @return The parameters for Twitter.
      */
 
     public TwitterParameters getTwitterParameters() {
@@ -937,11 +937,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Twitter parameters.
+     * The parameters for Twitter.
      * </p>
      * 
      * @param twitterParameters
-     *        Twitter parameters.
+     *        The parameters for Twitter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

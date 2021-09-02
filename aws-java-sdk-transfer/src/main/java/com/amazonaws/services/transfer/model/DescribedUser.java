@@ -53,9 +53,9 @@ public class DescribedUser implements Serializable, Cloneable, StructuredPojo {
      * can only be set when <code>HomeDirectoryType</code> is set to <i>LOGICAL</i>.
      * </p>
      * <p>
-     * In most cases, you can use this value instead of the scope-down policy to lock your user down to the designated
-     * home directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and set
-     * <code>Target</code> to the HomeDirectory parameter value.
+     * In most cases, you can use this value instead of the session policy to lock your user down to the designated home
+     * directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and set <code>Target</code>
+     * to the HomeDirectory parameter value.
      * </p>
      */
     private java.util.List<HomeDirectoryMapEntry> homeDirectoryMappings;
@@ -63,14 +63,14 @@ public class DescribedUser implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The type of landing directory (folder) you want your users' home directory to be when they log into the server.
      * If you set it to <code>PATH</code>, the user will see the absolute Amazon S3 bucket or EFS paths as is in their
-     * file transfer protocol clients. If you set it <code>LOGICAL</code>, you will need to provide mappings in the
+     * file transfer protocol clients. If you set it <code>LOGICAL</code>, you need to provide mappings in the
      * <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 or EFS paths visible to your users.
      * </p>
      */
     private String homeDirectoryType;
     /**
      * <p>
-     * A scope-down policy for your user so that you can use the same IAM role across multiple users. This policy scopes
+     * A session policy for your user so that you can use the same IAM role across multiple users. This policy scopes
      * down user access to portions of their Amazon S3 bucket. Variables that you can use inside this policy include
      * <code>${Transfer:UserName}</code>, <code>${Transfer:HomeDirectory}</code>, and
      * <code>${Transfer:HomeBucket}</code>.
@@ -223,9 +223,9 @@ public class DescribedUser implements Serializable, Cloneable, StructuredPojo {
      * can only be set when <code>HomeDirectoryType</code> is set to <i>LOGICAL</i>.
      * </p>
      * <p>
-     * In most cases, you can use this value instead of the scope-down policy to lock your user down to the designated
-     * home directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and set
-     * <code>Target</code> to the HomeDirectory parameter value.
+     * In most cases, you can use this value instead of the session policy to lock your user down to the designated home
+     * directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and set <code>Target</code>
+     * to the HomeDirectory parameter value.
      * </p>
      * 
      * @return Logical directory mappings that specify what Amazon S3 or Amazon EFS paths and keys should be visible to
@@ -236,7 +236,7 @@ public class DescribedUser implements Serializable, Cloneable, StructuredPojo {
      *         role provides access to paths in <code>Target</code>. This value can only be set when
      *         <code>HomeDirectoryType</code> is set to <i>LOGICAL</i>.</p>
      *         <p>
-     *         In most cases, you can use this value instead of the scope-down policy to lock your user down to the
+     *         In most cases, you can use this value instead of the session policy to lock your user down to the
      *         designated home directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and
      *         set <code>Target</code> to the HomeDirectory parameter value.
      */
@@ -255,9 +255,9 @@ public class DescribedUser implements Serializable, Cloneable, StructuredPojo {
      * can only be set when <code>HomeDirectoryType</code> is set to <i>LOGICAL</i>.
      * </p>
      * <p>
-     * In most cases, you can use this value instead of the scope-down policy to lock your user down to the designated
-     * home directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and set
-     * <code>Target</code> to the HomeDirectory parameter value.
+     * In most cases, you can use this value instead of the session policy to lock your user down to the designated home
+     * directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and set <code>Target</code>
+     * to the HomeDirectory parameter value.
      * </p>
      * 
      * @param homeDirectoryMappings
@@ -269,7 +269,7 @@ public class DescribedUser implements Serializable, Cloneable, StructuredPojo {
      *        role provides access to paths in <code>Target</code>. This value can only be set when
      *        <code>HomeDirectoryType</code> is set to <i>LOGICAL</i>.</p>
      *        <p>
-     *        In most cases, you can use this value instead of the scope-down policy to lock your user down to the
+     *        In most cases, you can use this value instead of the session policy to lock your user down to the
      *        designated home directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and
      *        set <code>Target</code> to the HomeDirectory parameter value.
      */
@@ -293,9 +293,9 @@ public class DescribedUser implements Serializable, Cloneable, StructuredPojo {
      * can only be set when <code>HomeDirectoryType</code> is set to <i>LOGICAL</i>.
      * </p>
      * <p>
-     * In most cases, you can use this value instead of the scope-down policy to lock your user down to the designated
-     * home directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and set
-     * <code>Target</code> to the HomeDirectory parameter value.
+     * In most cases, you can use this value instead of the session policy to lock your user down to the designated home
+     * directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and set <code>Target</code>
+     * to the HomeDirectory parameter value.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -312,7 +312,7 @@ public class DescribedUser implements Serializable, Cloneable, StructuredPojo {
      *        role provides access to paths in <code>Target</code>. This value can only be set when
      *        <code>HomeDirectoryType</code> is set to <i>LOGICAL</i>.</p>
      *        <p>
-     *        In most cases, you can use this value instead of the scope-down policy to lock your user down to the
+     *        In most cases, you can use this value instead of the session policy to lock your user down to the
      *        designated home directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and
      *        set <code>Target</code> to the HomeDirectory parameter value.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -338,9 +338,9 @@ public class DescribedUser implements Serializable, Cloneable, StructuredPojo {
      * can only be set when <code>HomeDirectoryType</code> is set to <i>LOGICAL</i>.
      * </p>
      * <p>
-     * In most cases, you can use this value instead of the scope-down policy to lock your user down to the designated
-     * home directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and set
-     * <code>Target</code> to the HomeDirectory parameter value.
+     * In most cases, you can use this value instead of the session policy to lock your user down to the designated home
+     * directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and set <code>Target</code>
+     * to the HomeDirectory parameter value.
      * </p>
      * 
      * @param homeDirectoryMappings
@@ -352,7 +352,7 @@ public class DescribedUser implements Serializable, Cloneable, StructuredPojo {
      *        role provides access to paths in <code>Target</code>. This value can only be set when
      *        <code>HomeDirectoryType</code> is set to <i>LOGICAL</i>.</p>
      *        <p>
-     *        In most cases, you can use this value instead of the scope-down policy to lock your user down to the
+     *        In most cases, you can use this value instead of the session policy to lock your user down to the
      *        designated home directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and
      *        set <code>Target</code> to the HomeDirectory parameter value.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -367,16 +367,16 @@ public class DescribedUser implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The type of landing directory (folder) you want your users' home directory to be when they log into the server.
      * If you set it to <code>PATH</code>, the user will see the absolute Amazon S3 bucket or EFS paths as is in their
-     * file transfer protocol clients. If you set it <code>LOGICAL</code>, you will need to provide mappings in the
+     * file transfer protocol clients. If you set it <code>LOGICAL</code>, you need to provide mappings in the
      * <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 or EFS paths visible to your users.
      * </p>
      * 
      * @param homeDirectoryType
      *        The type of landing directory (folder) you want your users' home directory to be when they log into the
      *        server. If you set it to <code>PATH</code>, the user will see the absolute Amazon S3 bucket or EFS paths
-     *        as is in their file transfer protocol clients. If you set it <code>LOGICAL</code>, you will need to
-     *        provide mappings in the <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 or EFS paths
-     *        visible to your users.
+     *        as is in their file transfer protocol clients. If you set it <code>LOGICAL</code>, you need to provide
+     *        mappings in the <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 or EFS paths visible
+     *        to your users.
      * @see HomeDirectoryType
      */
 
@@ -388,15 +388,15 @@ public class DescribedUser implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The type of landing directory (folder) you want your users' home directory to be when they log into the server.
      * If you set it to <code>PATH</code>, the user will see the absolute Amazon S3 bucket or EFS paths as is in their
-     * file transfer protocol clients. If you set it <code>LOGICAL</code>, you will need to provide mappings in the
+     * file transfer protocol clients. If you set it <code>LOGICAL</code>, you need to provide mappings in the
      * <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 or EFS paths visible to your users.
      * </p>
      * 
      * @return The type of landing directory (folder) you want your users' home directory to be when they log into the
      *         server. If you set it to <code>PATH</code>, the user will see the absolute Amazon S3 bucket or EFS paths
-     *         as is in their file transfer protocol clients. If you set it <code>LOGICAL</code>, you will need to
-     *         provide mappings in the <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 or EFS
-     *         paths visible to your users.
+     *         as is in their file transfer protocol clients. If you set it <code>LOGICAL</code>, you need to provide
+     *         mappings in the <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 or EFS paths
+     *         visible to your users.
      * @see HomeDirectoryType
      */
 
@@ -408,16 +408,16 @@ public class DescribedUser implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The type of landing directory (folder) you want your users' home directory to be when they log into the server.
      * If you set it to <code>PATH</code>, the user will see the absolute Amazon S3 bucket or EFS paths as is in their
-     * file transfer protocol clients. If you set it <code>LOGICAL</code>, you will need to provide mappings in the
+     * file transfer protocol clients. If you set it <code>LOGICAL</code>, you need to provide mappings in the
      * <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 or EFS paths visible to your users.
      * </p>
      * 
      * @param homeDirectoryType
      *        The type of landing directory (folder) you want your users' home directory to be when they log into the
      *        server. If you set it to <code>PATH</code>, the user will see the absolute Amazon S3 bucket or EFS paths
-     *        as is in their file transfer protocol clients. If you set it <code>LOGICAL</code>, you will need to
-     *        provide mappings in the <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 or EFS paths
-     *        visible to your users.
+     *        as is in their file transfer protocol clients. If you set it <code>LOGICAL</code>, you need to provide
+     *        mappings in the <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 or EFS paths visible
+     *        to your users.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HomeDirectoryType
      */
@@ -431,16 +431,16 @@ public class DescribedUser implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The type of landing directory (folder) you want your users' home directory to be when they log into the server.
      * If you set it to <code>PATH</code>, the user will see the absolute Amazon S3 bucket or EFS paths as is in their
-     * file transfer protocol clients. If you set it <code>LOGICAL</code>, you will need to provide mappings in the
+     * file transfer protocol clients. If you set it <code>LOGICAL</code>, you need to provide mappings in the
      * <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 or EFS paths visible to your users.
      * </p>
      * 
      * @param homeDirectoryType
      *        The type of landing directory (folder) you want your users' home directory to be when they log into the
      *        server. If you set it to <code>PATH</code>, the user will see the absolute Amazon S3 bucket or EFS paths
-     *        as is in their file transfer protocol clients. If you set it <code>LOGICAL</code>, you will need to
-     *        provide mappings in the <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 or EFS paths
-     *        visible to your users.
+     *        as is in their file transfer protocol clients. If you set it <code>LOGICAL</code>, you need to provide
+     *        mappings in the <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 or EFS paths visible
+     *        to your users.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HomeDirectoryType
      */
@@ -452,14 +452,14 @@ public class DescribedUser implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A scope-down policy for your user so that you can use the same IAM role across multiple users. This policy scopes
+     * A session policy for your user so that you can use the same IAM role across multiple users. This policy scopes
      * down user access to portions of their Amazon S3 bucket. Variables that you can use inside this policy include
      * <code>${Transfer:UserName}</code>, <code>${Transfer:HomeDirectory}</code>, and
      * <code>${Transfer:HomeBucket}</code>.
      * </p>
      * 
      * @param policy
-     *        A scope-down policy for your user so that you can use the same IAM role across multiple users. This policy
+     *        A session policy for your user so that you can use the same IAM role across multiple users. This policy
      *        scopes down user access to portions of their Amazon S3 bucket. Variables that you can use inside this
      *        policy include <code>${Transfer:UserName}</code>, <code>${Transfer:HomeDirectory}</code>, and
      *        <code>${Transfer:HomeBucket}</code>.
@@ -471,15 +471,15 @@ public class DescribedUser implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A scope-down policy for your user so that you can use the same IAM role across multiple users. This policy scopes
+     * A session policy for your user so that you can use the same IAM role across multiple users. This policy scopes
      * down user access to portions of their Amazon S3 bucket. Variables that you can use inside this policy include
      * <code>${Transfer:UserName}</code>, <code>${Transfer:HomeDirectory}</code>, and
      * <code>${Transfer:HomeBucket}</code>.
      * </p>
      * 
-     * @return A scope-down policy for your user so that you can use the same IAM role across multiple users. This
-     *         policy scopes down user access to portions of their Amazon S3 bucket. Variables that you can use inside
-     *         this policy include <code>${Transfer:UserName}</code>, <code>${Transfer:HomeDirectory}</code>, and
+     * @return A session policy for your user so that you can use the same IAM role across multiple users. This policy
+     *         scopes down user access to portions of their Amazon S3 bucket. Variables that you can use inside this
+     *         policy include <code>${Transfer:UserName}</code>, <code>${Transfer:HomeDirectory}</code>, and
      *         <code>${Transfer:HomeBucket}</code>.
      */
 
@@ -489,14 +489,14 @@ public class DescribedUser implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A scope-down policy for your user so that you can use the same IAM role across multiple users. This policy scopes
+     * A session policy for your user so that you can use the same IAM role across multiple users. This policy scopes
      * down user access to portions of their Amazon S3 bucket. Variables that you can use inside this policy include
      * <code>${Transfer:UserName}</code>, <code>${Transfer:HomeDirectory}</code>, and
      * <code>${Transfer:HomeBucket}</code>.
      * </p>
      * 
      * @param policy
-     *        A scope-down policy for your user so that you can use the same IAM role across multiple users. This policy
+     *        A session policy for your user so that you can use the same IAM role across multiple users. This policy
      *        scopes down user access to portions of their Amazon S3 bucket. Variables that you can use inside this
      *        policy include <code>${Transfer:UserName}</code>, <code>${Transfer:HomeDirectory}</code>, and
      *        <code>${Transfer:HomeBucket}</code>.

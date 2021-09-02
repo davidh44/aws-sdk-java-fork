@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Amazon Aurora with PostgreSQL compatibility parameters.
+ * Parameters for Amazon Aurora PostgreSQL-Compatible Edition.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/AuroraPostgreSqlParameters"
@@ -30,30 +30,30 @@ public class AuroraPostgreSqlParameters implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Host.
+     * The Amazon Aurora PostgreSQL-Compatible host to connect to.
      * </p>
      */
     private String host;
     /**
      * <p>
-     * Port.
+     * The port that Amazon Aurora PostgreSQL is listening on.
      * </p>
      */
     private Integer port;
     /**
      * <p>
-     * Database.
+     * The Amazon Aurora PostgreSQL database to connect to.
      * </p>
      */
     private String database;
 
     /**
      * <p>
-     * Host.
+     * The Amazon Aurora PostgreSQL-Compatible host to connect to.
      * </p>
      * 
      * @param host
-     *        Host.
+     *        The Amazon Aurora PostgreSQL-Compatible host to connect to.
      */
 
     public void setHost(String host) {
@@ -62,10 +62,10 @@ public class AuroraPostgreSqlParameters implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Host.
+     * The Amazon Aurora PostgreSQL-Compatible host to connect to.
      * </p>
      * 
-     * @return Host.
+     * @return The Amazon Aurora PostgreSQL-Compatible host to connect to.
      */
 
     public String getHost() {
@@ -74,11 +74,11 @@ public class AuroraPostgreSqlParameters implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Host.
+     * The Amazon Aurora PostgreSQL-Compatible host to connect to.
      * </p>
      * 
      * @param host
-     *        Host.
+     *        The Amazon Aurora PostgreSQL-Compatible host to connect to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -89,11 +89,11 @@ public class AuroraPostgreSqlParameters implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Port.
+     * The port that Amazon Aurora PostgreSQL is listening on.
      * </p>
      * 
      * @param port
-     *        Port.
+     *        The port that Amazon Aurora PostgreSQL is listening on.
      */
 
     public void setPort(Integer port) {
@@ -102,10 +102,10 @@ public class AuroraPostgreSqlParameters implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Port.
+     * The port that Amazon Aurora PostgreSQL is listening on.
      * </p>
      * 
-     * @return Port.
+     * @return The port that Amazon Aurora PostgreSQL is listening on.
      */
 
     public Integer getPort() {
@@ -114,11 +114,11 @@ public class AuroraPostgreSqlParameters implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Port.
+     * The port that Amazon Aurora PostgreSQL is listening on.
      * </p>
      * 
      * @param port
-     *        Port.
+     *        The port that Amazon Aurora PostgreSQL is listening on.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -129,11 +129,11 @@ public class AuroraPostgreSqlParameters implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Database.
+     * The Amazon Aurora PostgreSQL database to connect to.
      * </p>
      * 
      * @param database
-     *        Database.
+     *        The Amazon Aurora PostgreSQL database to connect to.
      */
 
     public void setDatabase(String database) {
@@ -142,10 +142,10 @@ public class AuroraPostgreSqlParameters implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Database.
+     * The Amazon Aurora PostgreSQL database to connect to.
      * </p>
      * 
-     * @return Database.
+     * @return The Amazon Aurora PostgreSQL database to connect to.
      */
 
     public String getDatabase() {
@@ -154,11 +154,11 @@ public class AuroraPostgreSqlParameters implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Database.
+     * The Amazon Aurora PostgreSQL database to connect to.
      * </p>
      * 
      * @param database
-     *        Database.
+     *        The Amazon Aurora PostgreSQL database to connect to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

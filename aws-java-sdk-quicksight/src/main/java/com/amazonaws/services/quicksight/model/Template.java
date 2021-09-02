@@ -19,10 +19,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A template object. A <i>template</i> is an entity in QuickSight that encapsulates the metadata required to create an
- * analysis and that you can use to create a dashboard. A template adds a layer of abstraction by using placeholders to
- * replace the dataset associated with an analysis. You can use templates to create dashboards by replacing dataset
- * placeholders with datasets that follow the same schema that was used to create the source analysis and template.
+ * A template object. A <i>template</i> is an entity in Amazon QuickSight that encapsulates the metadata required to
+ * create an analysis and that you can use to create a dashboard. A template adds a layer of abstraction by using
+ * placeholders to replace the dataset associated with an analysis. You can use templates to create dashboards by
+ * replacing dataset placeholders with datasets that follow the same schema that was used to create the source analysis
+ * and template.
  * </p>
  * <p>
  * You can share templates across Amazon Web Services accounts by allowing users in other Amazon Web Services accounts
@@ -55,7 +56,7 @@ public class Template implements Serializable, Cloneable, StructuredPojo {
     private TemplateVersion version;
     /**
      * <p>
-     * The ID for the template. This is unique per Amazon Web Services Region; for each Amazon Web Services account;.
+     * The ID for the template. This is unique per Amazon Web Services Region; for each Amazon Web Services account.
      * </p>
      */
     private String templateId;
@@ -194,12 +195,12 @@ public class Template implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID for the template. This is unique per Amazon Web Services Region; for each Amazon Web Services account;.
+     * The ID for the template. This is unique per Amazon Web Services Region; for each Amazon Web Services account.
      * </p>
      * 
      * @param templateId
      *        The ID for the template. This is unique per Amazon Web Services Region; for each Amazon Web Services
-     *        account;.
+     *        account.
      */
 
     public void setTemplateId(String templateId) {
@@ -208,11 +209,11 @@ public class Template implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID for the template. This is unique per Amazon Web Services Region; for each Amazon Web Services account;.
+     * The ID for the template. This is unique per Amazon Web Services Region; for each Amazon Web Services account.
      * </p>
      * 
      * @return The ID for the template. This is unique per Amazon Web Services Region; for each Amazon Web Services
-     *         account;.
+     *         account.
      */
 
     public String getTemplateId() {
@@ -221,12 +222,12 @@ public class Template implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID for the template. This is unique per Amazon Web Services Region; for each Amazon Web Services account;.
+     * The ID for the template. This is unique per Amazon Web Services Region; for each Amazon Web Services account.
      * </p>
      * 
      * @param templateId
      *        The ID for the template. This is unique per Amazon Web Services Region; for each Amazon Web Services
-     *        account;.
+     *        account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

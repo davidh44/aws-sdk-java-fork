@@ -53,7 +53,7 @@ public class AwsDynamoDbTableSseDescription implements Serializable, Cloneable, 
     private String sseType;
     /**
      * <p>
-     * The ARN of the KMS customer master key (CMK) that is used for the KMS encryption.
+     * The ARN of the KMS key that is used for the KMS encryption.
      * </p>
      */
     private String kmsMasterKeyArn;
@@ -207,11 +207,11 @@ public class AwsDynamoDbTableSseDescription implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The ARN of the KMS customer master key (CMK) that is used for the KMS encryption.
+     * The ARN of the KMS key that is used for the KMS encryption.
      * </p>
      * 
      * @param kmsMasterKeyArn
-     *        The ARN of the KMS customer master key (CMK) that is used for the KMS encryption.
+     *        The ARN of the KMS key that is used for the KMS encryption.
      */
 
     public void setKmsMasterKeyArn(String kmsMasterKeyArn) {
@@ -220,10 +220,10 @@ public class AwsDynamoDbTableSseDescription implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The ARN of the KMS customer master key (CMK) that is used for the KMS encryption.
+     * The ARN of the KMS key that is used for the KMS encryption.
      * </p>
      * 
-     * @return The ARN of the KMS customer master key (CMK) that is used for the KMS encryption.
+     * @return The ARN of the KMS key that is used for the KMS encryption.
      */
 
     public String getKmsMasterKeyArn() {
@@ -232,11 +232,11 @@ public class AwsDynamoDbTableSseDescription implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The ARN of the KMS customer master key (CMK) that is used for the KMS encryption.
+     * The ARN of the KMS key that is used for the KMS encryption.
      * </p>
      * 
      * @param kmsMasterKeyArn
-     *        The ARN of the KMS customer master key (CMK) that is used for the KMS encryption.
+     *        The ARN of the KMS key that is used for the KMS encryption.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

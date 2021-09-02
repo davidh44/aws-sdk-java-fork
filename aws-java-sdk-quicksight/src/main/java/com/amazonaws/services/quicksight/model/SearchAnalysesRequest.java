@@ -27,7 +27,7 @@ public class SearchAnalysesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the analyses that you're searching for.
+     * The ID of the Amazon Web Services account that contains the analyses that you're searching for.
      * </p>
      */
     private String awsAccountId;
@@ -52,11 +52,11 @@ public class SearchAnalysesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the analyses that you're searching for.
+     * The ID of the Amazon Web Services account that contains the analyses that you're searching for.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the analyses that you're searching for.
+     *        The ID of the Amazon Web Services account that contains the analyses that you're searching for.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -65,10 +65,10 @@ public class SearchAnalysesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the analyses that you're searching for.
+     * The ID of the Amazon Web Services account that contains the analyses that you're searching for.
      * </p>
      * 
-     * @return The ID of the Amazon Web Services account; that contains the analyses that you're searching for.
+     * @return The ID of the Amazon Web Services account that contains the analyses that you're searching for.
      */
 
     public String getAwsAccountId() {
@@ -77,11 +77,11 @@ public class SearchAnalysesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the analyses that you're searching for.
+     * The ID of the Amazon Web Services account that contains the analyses that you're searching for.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the analyses that you're searching for.
+     *        The ID of the Amazon Web Services account that contains the analyses that you're searching for.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

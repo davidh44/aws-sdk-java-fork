@@ -19,12 +19,13 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The proposed access control configuration for an SQS queue. You can propose a configuration for a new SQS queue or an
- * existing SQS queue that you own by specifying the SQS policy. If the configuration is for an existing SQS queue and
- * you do not specify the SQS policy, the access preview uses the existing SQS policy for the queue. If the access
- * preview is for a new resource and you do not specify the policy, the access preview assumes an SQS queue without a
- * policy. To propose deletion of an existing SQS queue policy, you can specify an empty string for the SQS policy. For
- * more information about SQS policy limits, see <a
+ * The proposed access control configuration for an Amazon SQS queue. You can propose a configuration for a new Amazon
+ * SQS queue or an existing Amazon SQS queue that you own by specifying the Amazon SQS policy. If the configuration is
+ * for an existing Amazon SQS queue and you do not specify the Amazon SQS policy, the access preview uses the existing
+ * Amazon SQS policy for the queue. If the access preview is for a new resource and you do not specify the policy, the
+ * access preview assumes an Amazon SQS queue without a policy. To propose deletion of an existing Amazon SQS queue
+ * policy, you can specify an empty string for the Amazon SQS policy. For more information about Amazon SQS policy
+ * limits, see <a
  * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/quotas-policies.html">Quotas related
  * to policies</a>.
  * </p>
@@ -37,18 +38,18 @@ public class SqsQueueConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The proposed resource policy for the SQS queue.
+     * The proposed resource policy for the Amazon SQS queue.
      * </p>
      */
     private String queuePolicy;
 
     /**
      * <p>
-     * The proposed resource policy for the SQS queue.
+     * The proposed resource policy for the Amazon SQS queue.
      * </p>
      * 
      * @param queuePolicy
-     *        The proposed resource policy for the SQS queue.
+     *        The proposed resource policy for the Amazon SQS queue.
      */
 
     public void setQueuePolicy(String queuePolicy) {
@@ -57,10 +58,10 @@ public class SqsQueueConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The proposed resource policy for the SQS queue.
+     * The proposed resource policy for the Amazon SQS queue.
      * </p>
      * 
-     * @return The proposed resource policy for the SQS queue.
+     * @return The proposed resource policy for the Amazon SQS queue.
      */
 
     public String getQueuePolicy() {
@@ -69,11 +70,11 @@ public class SqsQueueConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The proposed resource policy for the SQS queue.
+     * The proposed resource policy for the Amazon SQS queue.
      * </p>
      * 
      * @param queuePolicy
-     *        The proposed resource policy for the SQS queue.
+     *        The proposed resource policy for the Amazon SQS queue.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

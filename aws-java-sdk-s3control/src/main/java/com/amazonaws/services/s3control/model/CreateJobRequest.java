@@ -27,7 +27,7 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The account ID that creates the job.
+     * The Amazon Web Services account ID that creates the job.
      * </p>
      */
     private String accountId;
@@ -95,11 +95,11 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The account ID that creates the job.
+     * The Amazon Web Services account ID that creates the job.
      * </p>
      * 
      * @param accountId
-     *        The account ID that creates the job.
+     *        The Amazon Web Services account ID that creates the job.
      */
 
     public void setAccountId(String accountId) {
@@ -108,10 +108,10 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The account ID that creates the job.
+     * The Amazon Web Services account ID that creates the job.
      * </p>
      * 
-     * @return The account ID that creates the job.
+     * @return The Amazon Web Services account ID that creates the job.
      */
 
     public String getAccountId() {
@@ -120,11 +120,11 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The account ID that creates the job.
+     * The Amazon Web Services account ID that creates the job.
      * </p>
      * 
      * @param accountId
-     *        The account ID that creates the job.
+     *        The Amazon Web Services account ID that creates the job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

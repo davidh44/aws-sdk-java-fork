@@ -31,8 +31,8 @@ public class CreateFileSystemWindowsConfiguration implements Serializable, Clone
 
     /**
      * <p>
-     * The ID for an existing AWS Managed Microsoft Active Directory (AD) instance that the file system should join when
-     * it's created.
+     * The ID for an existing Amazon Web Services Managed Microsoft Active Directory (AD) instance that the file system
+     * should join when it's created.
      * </p>
      */
     private String activeDirectoryId;
@@ -46,8 +46,8 @@ public class CreateFileSystemWindowsConfiguration implements Serializable, Clone
      * <li>
      * <p>
      * <code>MULTI_AZ_1</code> - Deploys a high availability file system that is configured for Multi-AZ redundancy to
-     * tolerate temporary Availability Zone (AZ) unavailability. You can only deploy a Multi-AZ file system in AWS
-     * Regions that have a minimum of three Availability Zones. Also supports HDD storage type
+     * tolerate temporary Availability Zone (AZ) unavailability. You can only deploy a Multi-AZ file system in Amazon
+     * Web Services Regions that have a minimum of three Availability Zones. Also supports HDD storage type
      * </p>
      * </li>
      * <li>
@@ -72,9 +72,9 @@ public class CreateFileSystemWindowsConfiguration implements Serializable, Clone
     /**
      * <p>
      * Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in which
-     * you want the preferred file server to be located. For in-AWS applications, we recommend that you launch your
-     * clients in the same Availability Zone (AZ) as your preferred file server to reduce cross-AZ data transfer costs
-     * and minimize latency.
+     * you want the preferred file server to be located. For in-Amazon Web Services applications, we recommend that you
+     * launch your clients in the same Availability Zone (AZ) as your preferred file server to reduce cross-AZ data
+     * transfer costs and minimize latency.
      * </p>
      */
     private String preferredSubnetId;
@@ -173,13 +173,13 @@ public class CreateFileSystemWindowsConfiguration implements Serializable, Clone
 
     /**
      * <p>
-     * The ID for an existing AWS Managed Microsoft Active Directory (AD) instance that the file system should join when
-     * it's created.
+     * The ID for an existing Amazon Web Services Managed Microsoft Active Directory (AD) instance that the file system
+     * should join when it's created.
      * </p>
      * 
      * @param activeDirectoryId
-     *        The ID for an existing AWS Managed Microsoft Active Directory (AD) instance that the file system should
-     *        join when it's created.
+     *        The ID for an existing Amazon Web Services Managed Microsoft Active Directory (AD) instance that the file
+     *        system should join when it's created.
      */
 
     public void setActiveDirectoryId(String activeDirectoryId) {
@@ -188,12 +188,12 @@ public class CreateFileSystemWindowsConfiguration implements Serializable, Clone
 
     /**
      * <p>
-     * The ID for an existing AWS Managed Microsoft Active Directory (AD) instance that the file system should join when
-     * it's created.
+     * The ID for an existing Amazon Web Services Managed Microsoft Active Directory (AD) instance that the file system
+     * should join when it's created.
      * </p>
      * 
-     * @return The ID for an existing AWS Managed Microsoft Active Directory (AD) instance that the file system should
-     *         join when it's created.
+     * @return The ID for an existing Amazon Web Services Managed Microsoft Active Directory (AD) instance that the file
+     *         system should join when it's created.
      */
 
     public String getActiveDirectoryId() {
@@ -202,13 +202,13 @@ public class CreateFileSystemWindowsConfiguration implements Serializable, Clone
 
     /**
      * <p>
-     * The ID for an existing AWS Managed Microsoft Active Directory (AD) instance that the file system should join when
-     * it's created.
+     * The ID for an existing Amazon Web Services Managed Microsoft Active Directory (AD) instance that the file system
+     * should join when it's created.
      * </p>
      * 
      * @param activeDirectoryId
-     *        The ID for an existing AWS Managed Microsoft Active Directory (AD) instance that the file system should
-     *        join when it's created.
+     *        The ID for an existing Amazon Web Services Managed Microsoft Active Directory (AD) instance that the file
+     *        system should join when it's created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -252,8 +252,8 @@ public class CreateFileSystemWindowsConfiguration implements Serializable, Clone
      * <li>
      * <p>
      * <code>MULTI_AZ_1</code> - Deploys a high availability file system that is configured for Multi-AZ redundancy to
-     * tolerate temporary Availability Zone (AZ) unavailability. You can only deploy a Multi-AZ file system in AWS
-     * Regions that have a minimum of three Availability Zones. Also supports HDD storage type
+     * tolerate temporary Availability Zone (AZ) unavailability. You can only deploy a Multi-AZ file system in Amazon
+     * Web Services Regions that have a minimum of three Availability Zones. Also supports HDD storage type
      * </p>
      * </li>
      * <li>
@@ -281,7 +281,8 @@ public class CreateFileSystemWindowsConfiguration implements Serializable, Clone
      *        <p>
      *        <code>MULTI_AZ_1</code> - Deploys a high availability file system that is configured for Multi-AZ
      *        redundancy to tolerate temporary Availability Zone (AZ) unavailability. You can only deploy a Multi-AZ
-     *        file system in AWS Regions that have a minimum of three Availability Zones. Also supports HDD storage type
+     *        file system in Amazon Web Services Regions that have a minimum of three Availability Zones. Also supports
+     *        HDD storage type
      *        </p>
      *        </li>
      *        <li>
@@ -316,8 +317,8 @@ public class CreateFileSystemWindowsConfiguration implements Serializable, Clone
      * <li>
      * <p>
      * <code>MULTI_AZ_1</code> - Deploys a high availability file system that is configured for Multi-AZ redundancy to
-     * tolerate temporary Availability Zone (AZ) unavailability. You can only deploy a Multi-AZ file system in AWS
-     * Regions that have a minimum of three Availability Zones. Also supports HDD storage type
+     * tolerate temporary Availability Zone (AZ) unavailability. You can only deploy a Multi-AZ file system in Amazon
+     * Web Services Regions that have a minimum of three Availability Zones. Also supports HDD storage type
      * </p>
      * </li>
      * <li>
@@ -344,8 +345,8 @@ public class CreateFileSystemWindowsConfiguration implements Serializable, Clone
      *         <p>
      *         <code>MULTI_AZ_1</code> - Deploys a high availability file system that is configured for Multi-AZ
      *         redundancy to tolerate temporary Availability Zone (AZ) unavailability. You can only deploy a Multi-AZ
-     *         file system in AWS Regions that have a minimum of three Availability Zones. Also supports HDD storage
-     *         type
+     *         file system in Amazon Web Services Regions that have a minimum of three Availability Zones. Also supports
+     *         HDD storage type
      *         </p>
      *         </li>
      *         <li>
@@ -380,8 +381,8 @@ public class CreateFileSystemWindowsConfiguration implements Serializable, Clone
      * <li>
      * <p>
      * <code>MULTI_AZ_1</code> - Deploys a high availability file system that is configured for Multi-AZ redundancy to
-     * tolerate temporary Availability Zone (AZ) unavailability. You can only deploy a Multi-AZ file system in AWS
-     * Regions that have a minimum of three Availability Zones. Also supports HDD storage type
+     * tolerate temporary Availability Zone (AZ) unavailability. You can only deploy a Multi-AZ file system in Amazon
+     * Web Services Regions that have a minimum of three Availability Zones. Also supports HDD storage type
      * </p>
      * </li>
      * <li>
@@ -409,7 +410,8 @@ public class CreateFileSystemWindowsConfiguration implements Serializable, Clone
      *        <p>
      *        <code>MULTI_AZ_1</code> - Deploys a high availability file system that is configured for Multi-AZ
      *        redundancy to tolerate temporary Availability Zone (AZ) unavailability. You can only deploy a Multi-AZ
-     *        file system in AWS Regions that have a minimum of three Availability Zones. Also supports HDD storage type
+     *        file system in Amazon Web Services Regions that have a minimum of three Availability Zones. Also supports
+     *        HDD storage type
      *        </p>
      *        </li>
      *        <li>
@@ -446,8 +448,8 @@ public class CreateFileSystemWindowsConfiguration implements Serializable, Clone
      * <li>
      * <p>
      * <code>MULTI_AZ_1</code> - Deploys a high availability file system that is configured for Multi-AZ redundancy to
-     * tolerate temporary Availability Zone (AZ) unavailability. You can only deploy a Multi-AZ file system in AWS
-     * Regions that have a minimum of three Availability Zones. Also supports HDD storage type
+     * tolerate temporary Availability Zone (AZ) unavailability. You can only deploy a Multi-AZ file system in Amazon
+     * Web Services Regions that have a minimum of three Availability Zones. Also supports HDD storage type
      * </p>
      * </li>
      * <li>
@@ -475,7 +477,8 @@ public class CreateFileSystemWindowsConfiguration implements Serializable, Clone
      *        <p>
      *        <code>MULTI_AZ_1</code> - Deploys a high availability file system that is configured for Multi-AZ
      *        redundancy to tolerate temporary Availability Zone (AZ) unavailability. You can only deploy a Multi-AZ
-     *        file system in AWS Regions that have a minimum of three Availability Zones. Also supports HDD storage type
+     *        file system in Amazon Web Services Regions that have a minimum of three Availability Zones. Also supports
+     *        HDD storage type
      *        </p>
      *        </li>
      *        <li>
@@ -507,16 +510,16 @@ public class CreateFileSystemWindowsConfiguration implements Serializable, Clone
     /**
      * <p>
      * Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in which
-     * you want the preferred file server to be located. For in-AWS applications, we recommend that you launch your
-     * clients in the same Availability Zone (AZ) as your preferred file server to reduce cross-AZ data transfer costs
-     * and minimize latency.
+     * you want the preferred file server to be located. For in-Amazon Web Services applications, we recommend that you
+     * launch your clients in the same Availability Zone (AZ) as your preferred file server to reduce cross-AZ data
+     * transfer costs and minimize latency.
      * </p>
      * 
      * @param preferredSubnetId
      *        Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in
-     *        which you want the preferred file server to be located. For in-AWS applications, we recommend that you
-     *        launch your clients in the same Availability Zone (AZ) as your preferred file server to reduce cross-AZ
-     *        data transfer costs and minimize latency.
+     *        which you want the preferred file server to be located. For in-Amazon Web Services applications, we
+     *        recommend that you launch your clients in the same Availability Zone (AZ) as your preferred file server to
+     *        reduce cross-AZ data transfer costs and minimize latency.
      */
 
     public void setPreferredSubnetId(String preferredSubnetId) {
@@ -526,15 +529,15 @@ public class CreateFileSystemWindowsConfiguration implements Serializable, Clone
     /**
      * <p>
      * Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in which
-     * you want the preferred file server to be located. For in-AWS applications, we recommend that you launch your
-     * clients in the same Availability Zone (AZ) as your preferred file server to reduce cross-AZ data transfer costs
-     * and minimize latency.
+     * you want the preferred file server to be located. For in-Amazon Web Services applications, we recommend that you
+     * launch your clients in the same Availability Zone (AZ) as your preferred file server to reduce cross-AZ data
+     * transfer costs and minimize latency.
      * </p>
      * 
      * @return Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in
-     *         which you want the preferred file server to be located. For in-AWS applications, we recommend that you
-     *         launch your clients in the same Availability Zone (AZ) as your preferred file server to reduce cross-AZ
-     *         data transfer costs and minimize latency.
+     *         which you want the preferred file server to be located. For in-Amazon Web Services applications, we
+     *         recommend that you launch your clients in the same Availability Zone (AZ) as your preferred file server
+     *         to reduce cross-AZ data transfer costs and minimize latency.
      */
 
     public String getPreferredSubnetId() {
@@ -544,16 +547,16 @@ public class CreateFileSystemWindowsConfiguration implements Serializable, Clone
     /**
      * <p>
      * Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in which
-     * you want the preferred file server to be located. For in-AWS applications, we recommend that you launch your
-     * clients in the same Availability Zone (AZ) as your preferred file server to reduce cross-AZ data transfer costs
-     * and minimize latency.
+     * you want the preferred file server to be located. For in-Amazon Web Services applications, we recommend that you
+     * launch your clients in the same Availability Zone (AZ) as your preferred file server to reduce cross-AZ data
+     * transfer costs and minimize latency.
      * </p>
      * 
      * @param preferredSubnetId
      *        Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in
-     *        which you want the preferred file server to be located. For in-AWS applications, we recommend that you
-     *        launch your clients in the same Availability Zone (AZ) as your preferred file server to reduce cross-AZ
-     *        data transfer costs and minimize latency.
+     *        which you want the preferred file server to be located. For in-Amazon Web Services applications, we
+     *        recommend that you launch your clients in the same Availability Zone (AZ) as your preferred file server to
+     *        reduce cross-AZ data transfer costs and minimize latency.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

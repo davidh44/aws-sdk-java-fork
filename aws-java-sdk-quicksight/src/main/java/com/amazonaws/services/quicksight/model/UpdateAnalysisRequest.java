@@ -27,7 +27,7 @@ public class UpdateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the analysis that you're updating.
+     * The ID of the Amazon Web Services account that contains the analysis that you're updating.
      * </p>
      */
     private String awsAccountId;
@@ -39,8 +39,8 @@ public class UpdateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
     private String analysisId;
     /**
      * <p>
-     * A descriptive name for the analysis that you're updating. This name displays for the analysis in the QuickSight
-     * console.
+     * A descriptive name for the analysis that you're updating. This name displays for the analysis in the Amazon
+     * QuickSight console.
      * </p>
      */
     private String name;
@@ -61,18 +61,18 @@ public class UpdateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * The Amazon Resource Name (ARN) for the theme to apply to the analysis that you're creating. To see the theme in
-     * the QuickSight console, make sure that you have access to it.
+     * the Amazon QuickSight console, make sure that you have access to it.
      * </p>
      */
     private String themeArn;
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the analysis that you're updating.
+     * The ID of the Amazon Web Services account that contains the analysis that you're updating.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the analysis that you're updating.
+     *        The ID of the Amazon Web Services account that contains the analysis that you're updating.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -81,10 +81,10 @@ public class UpdateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the analysis that you're updating.
+     * The ID of the Amazon Web Services account that contains the analysis that you're updating.
      * </p>
      * 
-     * @return The ID of the Amazon Web Services account; that contains the analysis that you're updating.
+     * @return The ID of the Amazon Web Services account that contains the analysis that you're updating.
      */
 
     public String getAwsAccountId() {
@@ -93,11 +93,11 @@ public class UpdateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the analysis that you're updating.
+     * The ID of the Amazon Web Services account that contains the analysis that you're updating.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the analysis that you're updating.
+     *        The ID of the Amazon Web Services account that contains the analysis that you're updating.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -148,13 +148,13 @@ public class UpdateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A descriptive name for the analysis that you're updating. This name displays for the analysis in the QuickSight
-     * console.
+     * A descriptive name for the analysis that you're updating. This name displays for the analysis in the Amazon
+     * QuickSight console.
      * </p>
      * 
      * @param name
      *        A descriptive name for the analysis that you're updating. This name displays for the analysis in the
-     *        QuickSight console.
+     *        Amazon QuickSight console.
      */
 
     public void setName(String name) {
@@ -163,12 +163,12 @@ public class UpdateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A descriptive name for the analysis that you're updating. This name displays for the analysis in the QuickSight
-     * console.
+     * A descriptive name for the analysis that you're updating. This name displays for the analysis in the Amazon
+     * QuickSight console.
      * </p>
      * 
      * @return A descriptive name for the analysis that you're updating. This name displays for the analysis in the
-     *         QuickSight console.
+     *         Amazon QuickSight console.
      */
 
     public String getName() {
@@ -177,13 +177,13 @@ public class UpdateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A descriptive name for the analysis that you're updating. This name displays for the analysis in the QuickSight
-     * console.
+     * A descriptive name for the analysis that you're updating. This name displays for the analysis in the Amazon
+     * QuickSight console.
      * </p>
      * 
      * @param name
      *        A descriptive name for the analysis that you're updating. This name displays for the analysis in the
-     *        QuickSight console.
+     *        Amazon QuickSight console.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -287,12 +287,12 @@ public class UpdateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * The Amazon Resource Name (ARN) for the theme to apply to the analysis that you're creating. To see the theme in
-     * the QuickSight console, make sure that you have access to it.
+     * the Amazon QuickSight console, make sure that you have access to it.
      * </p>
      * 
      * @param themeArn
      *        The Amazon Resource Name (ARN) for the theme to apply to the analysis that you're creating. To see the
-     *        theme in the QuickSight console, make sure that you have access to it.
+     *        theme in the Amazon QuickSight console, make sure that you have access to it.
      */
 
     public void setThemeArn(String themeArn) {
@@ -302,11 +302,11 @@ public class UpdateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * The Amazon Resource Name (ARN) for the theme to apply to the analysis that you're creating. To see the theme in
-     * the QuickSight console, make sure that you have access to it.
+     * the Amazon QuickSight console, make sure that you have access to it.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) for the theme to apply to the analysis that you're creating. To see the
-     *         theme in the QuickSight console, make sure that you have access to it.
+     *         theme in the Amazon QuickSight console, make sure that you have access to it.
      */
 
     public String getThemeArn() {
@@ -316,12 +316,12 @@ public class UpdateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * The Amazon Resource Name (ARN) for the theme to apply to the analysis that you're creating. To see the theme in
-     * the QuickSight console, make sure that you have access to it.
+     * the Amazon QuickSight console, make sure that you have access to it.
      * </p>
      * 
      * @param themeArn
      *        The Amazon Resource Name (ARN) for the theme to apply to the analysis that you're creating. To see the
-     *        theme in the QuickSight console, make sure that you have access to it.
+     *        theme in the Amazon QuickSight console, make sure that you have access to it.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

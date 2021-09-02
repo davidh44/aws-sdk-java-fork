@@ -49,7 +49,7 @@ public class RowLevelPermissionDataSet implements Serializable, Cloneable, Struc
     private String arn;
     /**
      * <p>
-     * The type of permissions to use when interpretting the permissions for RLS. <code>DENY_ACCESS</code> is included
+     * The type of permissions to use when interpreting the permissions for RLS. <code>DENY_ACCESS</code> is included
      * for backward compatibility only.
      * </p>
      */
@@ -156,12 +156,12 @@ public class RowLevelPermissionDataSet implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The type of permissions to use when interpretting the permissions for RLS. <code>DENY_ACCESS</code> is included
+     * The type of permissions to use when interpreting the permissions for RLS. <code>DENY_ACCESS</code> is included
      * for backward compatibility only.
      * </p>
      * 
      * @param permissionPolicy
-     *        The type of permissions to use when interpretting the permissions for RLS. <code>DENY_ACCESS</code> is
+     *        The type of permissions to use when interpreting the permissions for RLS. <code>DENY_ACCESS</code> is
      *        included for backward compatibility only.
      * @see RowLevelPermissionPolicy
      */
@@ -172,11 +172,11 @@ public class RowLevelPermissionDataSet implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The type of permissions to use when interpretting the permissions for RLS. <code>DENY_ACCESS</code> is included
+     * The type of permissions to use when interpreting the permissions for RLS. <code>DENY_ACCESS</code> is included
      * for backward compatibility only.
      * </p>
      * 
-     * @return The type of permissions to use when interpretting the permissions for RLS. <code>DENY_ACCESS</code> is
+     * @return The type of permissions to use when interpreting the permissions for RLS. <code>DENY_ACCESS</code> is
      *         included for backward compatibility only.
      * @see RowLevelPermissionPolicy
      */
@@ -187,12 +187,12 @@ public class RowLevelPermissionDataSet implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The type of permissions to use when interpretting the permissions for RLS. <code>DENY_ACCESS</code> is included
+     * The type of permissions to use when interpreting the permissions for RLS. <code>DENY_ACCESS</code> is included
      * for backward compatibility only.
      * </p>
      * 
      * @param permissionPolicy
-     *        The type of permissions to use when interpretting the permissions for RLS. <code>DENY_ACCESS</code> is
+     *        The type of permissions to use when interpreting the permissions for RLS. <code>DENY_ACCESS</code> is
      *        included for backward compatibility only.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RowLevelPermissionPolicy
@@ -205,12 +205,12 @@ public class RowLevelPermissionDataSet implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The type of permissions to use when interpretting the permissions for RLS. <code>DENY_ACCESS</code> is included
+     * The type of permissions to use when interpreting the permissions for RLS. <code>DENY_ACCESS</code> is included
      * for backward compatibility only.
      * </p>
      * 
      * @param permissionPolicy
-     *        The type of permissions to use when interpretting the permissions for RLS. <code>DENY_ACCESS</code> is
+     *        The type of permissions to use when interpreting the permissions for RLS. <code>DENY_ACCESS</code> is
      *        included for backward compatibility only.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RowLevelPermissionPolicy

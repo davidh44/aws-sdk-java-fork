@@ -27,8 +27,8 @@ public class DescribeAnalysisRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the analysis. You must be using the Amazon Web Services
-     * account; that the analysis is in.
+     * The ID of the Amazon Web Services account that contains the analysis. You must be using the Amazon Web Services
+     * account that the analysis is in.
      * </p>
      */
     private String awsAccountId;
@@ -41,13 +41,13 @@ public class DescribeAnalysisRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the analysis. You must be using the Amazon Web Services
-     * account; that the analysis is in.
+     * The ID of the Amazon Web Services account that contains the analysis. You must be using the Amazon Web Services
+     * account that the analysis is in.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the analysis. You must be using the Amazon Web
-     *        Services account; that the analysis is in.
+     *        The ID of the Amazon Web Services account that contains the analysis. You must be using the Amazon Web
+     *        Services account that the analysis is in.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -56,12 +56,12 @@ public class DescribeAnalysisRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the analysis. You must be using the Amazon Web Services
-     * account; that the analysis is in.
+     * The ID of the Amazon Web Services account that contains the analysis. You must be using the Amazon Web Services
+     * account that the analysis is in.
      * </p>
      * 
-     * @return The ID of the Amazon Web Services account; that contains the analysis. You must be using the Amazon Web
-     *         Services account; that the analysis is in.
+     * @return The ID of the Amazon Web Services account that contains the analysis. You must be using the Amazon Web
+     *         Services account that the analysis is in.
      */
 
     public String getAwsAccountId() {
@@ -70,13 +70,13 @@ public class DescribeAnalysisRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the analysis. You must be using the Amazon Web Services
-     * account; that the analysis is in.
+     * The ID of the Amazon Web Services account that contains the analysis. You must be using the Amazon Web Services
+     * account that the analysis is in.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the analysis. You must be using the Amazon Web
-     *        Services account; that the analysis is in.
+     *        The ID of the Amazon Web Services account that contains the analysis. You must be using the Amazon Web
+     *        Services account that the analysis is in.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

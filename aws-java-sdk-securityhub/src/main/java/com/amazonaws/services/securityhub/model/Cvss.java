@@ -46,6 +46,18 @@ public class Cvss implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String baseVector;
+    /**
+     * <p>
+     * The origin of the original CVSS score and vector.
+     * </p>
+     */
+    private String source;
+    /**
+     * <p>
+     * Adjustments to the CVSS metrics.
+     * </p>
+     */
+    private java.util.List<Adjustment> adjustments;
 
     /**
      * <p>
@@ -168,6 +180,116 @@ public class Cvss implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The origin of the original CVSS score and vector.
+     * </p>
+     * 
+     * @param source
+     *        The origin of the original CVSS score and vector.
+     */
+
+    public void setSource(String source) {
+        this.source = source;
+    }
+
+    /**
+     * <p>
+     * The origin of the original CVSS score and vector.
+     * </p>
+     * 
+     * @return The origin of the original CVSS score and vector.
+     */
+
+    public String getSource() {
+        return this.source;
+    }
+
+    /**
+     * <p>
+     * The origin of the original CVSS score and vector.
+     * </p>
+     * 
+     * @param source
+     *        The origin of the original CVSS score and vector.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Cvss withSource(String source) {
+        setSource(source);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Adjustments to the CVSS metrics.
+     * </p>
+     * 
+     * @return Adjustments to the CVSS metrics.
+     */
+
+    public java.util.List<Adjustment> getAdjustments() {
+        return adjustments;
+    }
+
+    /**
+     * <p>
+     * Adjustments to the CVSS metrics.
+     * </p>
+     * 
+     * @param adjustments
+     *        Adjustments to the CVSS metrics.
+     */
+
+    public void setAdjustments(java.util.Collection<Adjustment> adjustments) {
+        if (adjustments == null) {
+            this.adjustments = null;
+            return;
+        }
+
+        this.adjustments = new java.util.ArrayList<Adjustment>(adjustments);
+    }
+
+    /**
+     * <p>
+     * Adjustments to the CVSS metrics.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAdjustments(java.util.Collection)} or {@link #withAdjustments(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param adjustments
+     *        Adjustments to the CVSS metrics.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Cvss withAdjustments(Adjustment... adjustments) {
+        if (this.adjustments == null) {
+            setAdjustments(new java.util.ArrayList<Adjustment>(adjustments.length));
+        }
+        for (Adjustment ele : adjustments) {
+            this.adjustments.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Adjustments to the CVSS metrics.
+     * </p>
+     * 
+     * @param adjustments
+     *        Adjustments to the CVSS metrics.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Cvss withAdjustments(java.util.Collection<Adjustment> adjustments) {
+        setAdjustments(adjustments);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -184,7 +306,11 @@ public class Cvss implements Serializable, Cloneable, StructuredPojo {
         if (getBaseScore() != null)
             sb.append("BaseScore: ").append(getBaseScore()).append(",");
         if (getBaseVector() != null)
-            sb.append("BaseVector: ").append(getBaseVector());
+            sb.append("BaseVector: ").append(getBaseVector()).append(",");
+        if (getSource() != null)
+            sb.append("Source: ").append(getSource()).append(",");
+        if (getAdjustments() != null)
+            sb.append("Adjustments: ").append(getAdjustments());
         sb.append("}");
         return sb.toString();
     }
@@ -211,6 +337,14 @@ public class Cvss implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getBaseVector() != null && other.getBaseVector().equals(this.getBaseVector()) == false)
             return false;
+        if (other.getSource() == null ^ this.getSource() == null)
+            return false;
+        if (other.getSource() != null && other.getSource().equals(this.getSource()) == false)
+            return false;
+        if (other.getAdjustments() == null ^ this.getAdjustments() == null)
+            return false;
+        if (other.getAdjustments() != null && other.getAdjustments().equals(this.getAdjustments()) == false)
+            return false;
         return true;
     }
 
@@ -222,6 +356,8 @@ public class Cvss implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getVersion() == null) ? 0 : getVersion().hashCode());
         hashCode = prime * hashCode + ((getBaseScore() == null) ? 0 : getBaseScore().hashCode());
         hashCode = prime * hashCode + ((getBaseVector() == null) ? 0 : getBaseVector().hashCode());
+        hashCode = prime * hashCode + ((getSource() == null) ? 0 : getSource().hashCode());
+        hashCode = prime * hashCode + ((getAdjustments() == null) ? 0 : getAdjustments().hashCode());
         return hashCode;
     }
 

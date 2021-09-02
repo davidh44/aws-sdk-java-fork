@@ -98,7 +98,8 @@ public class WindowsAuditLogConfiguration implements Serializable, Cloneable, St
      * </p>
      * <p>
      * The destination ARN (either CloudWatch Logs log group or Kinesis Data Firehose delivery stream) must be in the
-     * same AWS partition, AWS region, and AWS account as your Amazon FSx file system.
+     * same Amazon Web Services partition, Amazon Web Services Region, and Amazon Web Services account as your Amazon
+     * FSx file system.
      * </p>
      */
     private String auditLogDestination;
@@ -588,7 +589,8 @@ public class WindowsAuditLogConfiguration implements Serializable, Cloneable, St
      * </p>
      * <p>
      * The destination ARN (either CloudWatch Logs log group or Kinesis Data Firehose delivery stream) must be in the
-     * same AWS partition, AWS region, and AWS account as your Amazon FSx file system.
+     * same Amazon Web Services partition, Amazon Web Services Region, and Amazon Web Services account as your Amazon
+     * FSx file system.
      * </p>
      * 
      * @param auditLogDestination
@@ -600,7 +602,8 @@ public class WindowsAuditLogConfiguration implements Serializable, Cloneable, St
      *        </p>
      *        <p>
      *        The destination ARN (either CloudWatch Logs log group or Kinesis Data Firehose delivery stream) must be in
-     *        the same AWS partition, AWS region, and AWS account as your Amazon FSx file system.
+     *        the same Amazon Web Services partition, Amazon Web Services Region, and Amazon Web Services account as
+     *        your Amazon FSx file system.
      */
 
     public void setAuditLogDestination(String auditLogDestination) {
@@ -618,7 +621,8 @@ public class WindowsAuditLogConfiguration implements Serializable, Cloneable, St
      * </p>
      * <p>
      * The destination ARN (either CloudWatch Logs log group or Kinesis Data Firehose delivery stream) must be in the
-     * same AWS partition, AWS region, and AWS account as your Amazon FSx file system.
+     * same Amazon Web Services partition, Amazon Web Services Region, and Amazon Web Services account as your Amazon
+     * FSx file system.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) for the destination of the audit logs. The destination can be any Amazon
@@ -630,7 +634,8 @@ public class WindowsAuditLogConfiguration implements Serializable, Cloneable, St
      *         </p>
      *         <p>
      *         The destination ARN (either CloudWatch Logs log group or Kinesis Data Firehose delivery stream) must be
-     *         in the same AWS partition, AWS region, and AWS account as your Amazon FSx file system.
+     *         in the same Amazon Web Services partition, Amazon Web Services Region, and Amazon Web Services account as
+     *         your Amazon FSx file system.
      */
 
     public String getAuditLogDestination() {
@@ -648,7 +653,8 @@ public class WindowsAuditLogConfiguration implements Serializable, Cloneable, St
      * </p>
      * <p>
      * The destination ARN (either CloudWatch Logs log group or Kinesis Data Firehose delivery stream) must be in the
-     * same AWS partition, AWS region, and AWS account as your Amazon FSx file system.
+     * same Amazon Web Services partition, Amazon Web Services Region, and Amazon Web Services account as your Amazon
+     * FSx file system.
      * </p>
      * 
      * @param auditLogDestination
@@ -660,7 +666,8 @@ public class WindowsAuditLogConfiguration implements Serializable, Cloneable, St
      *        </p>
      *        <p>
      *        The destination ARN (either CloudWatch Logs log group or Kinesis Data Firehose delivery stream) must be in
-     *        the same AWS partition, AWS region, and AWS account as your Amazon FSx file system.
+     *        the same Amazon Web Services partition, Amazon Web Services Region, and Amazon Web Services account as
+     *        your Amazon FSx file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

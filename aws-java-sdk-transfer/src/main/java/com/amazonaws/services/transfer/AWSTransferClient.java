@@ -84,20 +84,23 @@ public class AWSTransferClient extends AmazonWebServiceClient implements AWSTran
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidRequestException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.transfer.model.transform.InvalidRequestExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.transfer.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidNextTokenException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.transfer.model.transform.InvalidNextTokenExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.transfer.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
                                     com.amazonaws.services.transfer.model.transform.ConflictExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InvalidRequestException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.transfer.model.transform.InvalidRequestExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.transfer.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.transfer.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServiceUnavailableException").withExceptionUnmarshaller(
                                     com.amazonaws.services.transfer.model.transform.ServiceUnavailableExceptionUnmarshaller.getInstance()))
@@ -107,9 +110,6 @@ public class AWSTransferClient extends AmazonWebServiceClient implements AWSTran
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceExistsException").withExceptionUnmarshaller(
                                     com.amazonaws.services.transfer.model.transform.ResourceExistsExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InvalidNextTokenException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.transfer.model.transform.InvalidNextTokenExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.transfer.model.AWSTransferException.class));
 
     public static AWSTransferClientBuilder builder() {
@@ -246,6 +246,8 @@ public class AWSTransferClient extends AmazonWebServiceClient implements AWSTran
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceExistsException
      *         The requested resource does not exist.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
      * @throws ThrottlingException
      *         The request was denied due to request throttling.</p>
      *         <p>
@@ -304,7 +306,7 @@ public class AWSTransferClient extends AmazonWebServiceClient implements AWSTran
      * and associate users with servers that have the <code>IdentityProviderType</code> set to
      * <code>SERVICE_MANAGED</code>. Using parameters for <code>CreateUser</code>, you can specify the user name, set
      * the home directory, store the user's public key, and assign the user's Amazon Web Services Identity and Access
-     * Management (IAM) role. You can also optionally add a scope-down policy, and assign metadata with tags that can be
+     * Management (IAM) role. You can also optionally add a session policy, and assign metadata with tags that can be
      * used to group and search for users.
      * </p>
      * 
@@ -358,6 +360,78 @@ public class AWSTransferClient extends AmazonWebServiceClient implements AWSTran
 
             HttpResponseHandler<AmazonWebServiceResponse<CreateUserResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
                     .withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateUserResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Allows you to create a workflow with specified steps and step details the workflow invokes after file transfer
+     * completes. After creating a workflow, you can associate the workflow created with any transfer servers by
+     * specifying the <code>workflow-details</code> field in <code>CreateServer</code> and <code>UpdateServer</code>
+     * operations.
+     * </p>
+     * 
+     * @param createWorkflowRequest
+     * @return Result of the CreateWorkflow operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceExistsException
+     *         The requested resource does not exist.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.</p>
+     *         <p>
+     *         HTTP Status Code: 400
+     * @sample AWSTransfer.CreateWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/CreateWorkflow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CreateWorkflowResult createWorkflow(CreateWorkflowRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateWorkflow(request);
+    }
+
+    @SdkInternalApi
+    final CreateWorkflowResult executeCreateWorkflow(CreateWorkflowRequest createWorkflowRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createWorkflowRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateWorkflowRequest> request = null;
+        Response<CreateWorkflowResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateWorkflowRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createWorkflowRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Transfer");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateWorkflow");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateWorkflowResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateWorkflowResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -503,9 +577,6 @@ public class AWSTransferClient extends AmazonWebServiceClient implements AWSTran
      * <p>
      * Deletes a user's Secure Shell (SSH) public key.
      * </p>
-     * <p>
-     * No response is returned from this operation.
-     * </p>
      * 
      * @param deleteSshPublicKeyRequest
      * @return Result of the DeleteSshPublicKey operation returned by the service.
@@ -642,6 +713,71 @@ public class AWSTransferClient extends AmazonWebServiceClient implements AWSTran
 
     /**
      * <p>
+     * Deletes the specified workflow.
+     * </p>
+     * 
+     * @param deleteWorkflowRequest
+     * @return Result of the DeleteWorkflow operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.DeleteWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DeleteWorkflow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteWorkflowResult deleteWorkflow(DeleteWorkflowRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteWorkflow(request);
+    }
+
+    @SdkInternalApi
+    final DeleteWorkflowResult executeDeleteWorkflow(DeleteWorkflowRequest deleteWorkflowRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteWorkflowRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteWorkflowRequest> request = null;
+        Response<DeleteWorkflowResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteWorkflowRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteWorkflowRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Transfer");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteWorkflow");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteWorkflowResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteWorkflowResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Describes the access that is assigned to the specific file transfer protocol-enabled server, as identified by its
      * <code>ServerId</code> property and its <code>ExternalID</code>.
      * </p>
@@ -698,6 +834,69 @@ public class AWSTransferClient extends AmazonWebServiceClient implements AWSTran
 
             HttpResponseHandler<AmazonWebServiceResponse<DescribeAccessResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeAccessResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * You can use <code>DescribeExecution</code> to check the details of the execution of the specified workflow.
+     * </p>
+     * 
+     * @param describeExecutionRequest
+     * @return Result of the DescribeExecution operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.DescribeExecution
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DescribeExecution" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DescribeExecutionResult describeExecution(DescribeExecutionRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeExecution(request);
+    }
+
+    @SdkInternalApi
+    final DescribeExecutionResult executeDescribeExecution(DescribeExecutionRequest describeExecutionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeExecutionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeExecutionRequest> request = null;
+        Response<DescribeExecutionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeExecutionRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describeExecutionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Transfer");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeExecution");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeExecutionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeExecutionResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -913,6 +1112,69 @@ public class AWSTransferClient extends AmazonWebServiceClient implements AWSTran
 
     /**
      * <p>
+     * Describes the specified workflow.
+     * </p>
+     * 
+     * @param describeWorkflowRequest
+     * @return Result of the DescribeWorkflow operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.DescribeWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DescribeWorkflow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DescribeWorkflowResult describeWorkflow(DescribeWorkflowRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeWorkflow(request);
+    }
+
+    @SdkInternalApi
+    final DescribeWorkflowResult executeDescribeWorkflow(DescribeWorkflowRequest describeWorkflowRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeWorkflowRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeWorkflowRequest> request = null;
+        Response<DescribeWorkflowResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeWorkflowRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describeWorkflowRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Transfer");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeWorkflow");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeWorkflowResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeWorkflowResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Adds a Secure Shell (SSH) public key to a user account identified by a <code>UserName</code> value assigned to
      * the specific file transfer protocol-enabled server, identified by <code>ServerId</code>.
      * </p>
@@ -1040,6 +1302,71 @@ public class AWSTransferClient extends AmazonWebServiceClient implements AWSTran
 
             HttpResponseHandler<AmazonWebServiceResponse<ListAccessesResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListAccessesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists all executions for the specified workflow.
+     * </p>
+     * 
+     * @param listExecutionsRequest
+     * @return Result of the ListExecutions operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidNextTokenException
+     *         The <code>NextToken</code> parameter that was passed is invalid.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.ListExecutions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/ListExecutions" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListExecutionsResult listExecutions(ListExecutionsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListExecutions(request);
+    }
+
+    @SdkInternalApi
+    final ListExecutionsResult executeListExecutions(ListExecutionsRequest listExecutionsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listExecutionsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListExecutionsRequest> request = null;
+        Response<ListExecutionsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListExecutionsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listExecutionsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Transfer");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListExecutions");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListExecutionsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListExecutionsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1308,6 +1635,144 @@ public class AWSTransferClient extends AmazonWebServiceClient implements AWSTran
 
     /**
      * <p>
+     * Lists all of your workflows.
+     * </p>
+     * 
+     * @param listWorkflowsRequest
+     * @return Result of the ListWorkflows operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidNextTokenException
+     *         The <code>NextToken</code> parameter that was passed is invalid.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @sample AWSTransfer.ListWorkflows
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/ListWorkflows" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListWorkflowsResult listWorkflows(ListWorkflowsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListWorkflows(request);
+    }
+
+    @SdkInternalApi
+    final ListWorkflowsResult executeListWorkflows(ListWorkflowsRequest listWorkflowsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listWorkflowsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListWorkflowsRequest> request = null;
+        Response<ListWorkflowsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListWorkflowsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listWorkflowsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Transfer");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListWorkflows");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListWorkflowsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListWorkflowsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Sends a callback for asynchronous custom steps.
+     * </p>
+     * <p>
+     * The <code>ExecutionId</code>, <code>WorkflowId</code>, and <code>Token</code> are passed to the target resource
+     * during execution of a custom step of a workflow. You must include those with their callback as well as providing
+     * a status.
+     * </p>
+     * 
+     * @param sendWorkflowStepStateRequest
+     * @return Result of the SendWorkflowStepState operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.</p>
+     *         <p>
+     *         HTTP Status Code: 400
+     * @sample AWSTransfer.SendWorkflowStepState
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/SendWorkflowStepState" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public SendWorkflowStepStateResult sendWorkflowStepState(SendWorkflowStepStateRequest request) {
+        request = beforeClientExecution(request);
+        return executeSendWorkflowStepState(request);
+    }
+
+    @SdkInternalApi
+    final SendWorkflowStepStateResult executeSendWorkflowStepState(SendWorkflowStepStateRequest sendWorkflowStepStateRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(sendWorkflowStepStateRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<SendWorkflowStepStateRequest> request = null;
+        Response<SendWorkflowStepStateResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new SendWorkflowStepStateRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(sendWorkflowStepStateRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Transfer");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "SendWorkflowStepState");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<SendWorkflowStepStateResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new SendWorkflowStepStateResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Changes the state of a file transfer protocol-enabled server from <code>OFFLINE</code> to <code>ONLINE</code>. It
      * has no impact on a server that is already <code>ONLINE</code>. An <code>ONLINE</code> server can accept and
      * process file transfer jobs.
@@ -1539,6 +2004,40 @@ public class AWSTransferClient extends AmazonWebServiceClient implements AWSTran
      * create your server. By doing so, you can troubleshoot issues with the identity provider integration to ensure
      * that your users can successfully use the service.
      * </p>
+     * <p>
+     * The <code>ServerId</code> and <code>UserName</code> parameters are required. The <code>ServerProtocol</code>,
+     * <code>SourceIp</code>, and <code>UserPassword</code> are all optional.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot use <code>TestIdentityProvider</code> if the <code>IdentityProviderType</code> of your server is
+     * <code>SERVICE_MANAGED</code>.
+     * </p>
+     * </note>
+     * <ul>
+     * <li>
+     * <p>
+     * If you provide any incorrect values for any parameters, the <code>Response</code> field is empty.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you provide a server ID for a server that uses service-managed users, you get an error:
+     * </p>
+     * <p>
+     * <code> An error occurred (InvalidRequestException) when calling the TestIdentityProvider operation: s-<i>server-ID</i> not configured for external auth </code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you enter a Server ID for the <code>--server-id</code> parameter that does not identify an actual Transfer
+     * server, you receive the following error:
+     * </p>
+     * <p>
+     * <code>An error occurred (ResourceNotFoundException) when calling the TestIdentityProvider operation: Unknown server</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param testIdentityProviderRequest
      * @return Result of the TestIdentityProvider operation returned by the service.
@@ -1746,9 +2245,9 @@ public class AWSTransferClient extends AmazonWebServiceClient implements AWSTran
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws ConflictException
-     *         This exception is thrown when the <code>UpdatServer</code> is called for a file transfer protocol-enabled
-     *         server that has VPC as the endpoint type and the server's <code>VpcEndpointID</code> is not in the
-     *         available state.
+     *         This exception is thrown when the <code>UpdateServer</code> is called for a file transfer
+     *         protocol-enabled server that has VPC as the endpoint type and the server's <code>VpcEndpointID</code> is
+     *         not in the available state.
      * @throws InternalServiceErrorException
      *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
      * @throws InvalidRequestException

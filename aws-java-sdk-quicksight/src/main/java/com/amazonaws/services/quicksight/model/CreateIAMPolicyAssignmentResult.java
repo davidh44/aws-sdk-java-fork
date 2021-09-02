@@ -25,7 +25,7 @@ public class CreateIAMPolicyAssignmentResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the assignment. This name must be unique within the Amazon Web Services account;.
+     * The name of the assignment. This name must be unique within the Amazon Web Services account.
      * </p>
      */
     private String assignmentName;
@@ -60,13 +60,13 @@ public class CreateIAMPolicyAssignmentResult extends com.amazonaws.AmazonWebServ
     private String assignmentStatus;
     /**
      * <p>
-     * The ARN for the IAM policy that is applied to the QuickSight users and groups specified in this assignment.
+     * The ARN for the IAMpolicy that is applied to the Amazon QuickSight users and groups specified in this assignment.
      * </p>
      */
     private String policyArn;
     /**
      * <p>
-     * The QuickSight users, groups, or both that the IAM policy is assigned to.
+     * The Amazon QuickSight users, groups, or both that the IAMpolicy is assigned to.
      * </p>
      */
     private java.util.Map<String, java.util.List<String>> identities;
@@ -85,11 +85,11 @@ public class CreateIAMPolicyAssignmentResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the assignment. This name must be unique within the Amazon Web Services account;.
+     * The name of the assignment. This name must be unique within the Amazon Web Services account.
      * </p>
      * 
      * @param assignmentName
-     *        The name of the assignment. This name must be unique within the Amazon Web Services account;.
+     *        The name of the assignment. This name must be unique within the Amazon Web Services account.
      */
 
     public void setAssignmentName(String assignmentName) {
@@ -98,10 +98,10 @@ public class CreateIAMPolicyAssignmentResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the assignment. This name must be unique within the Amazon Web Services account;.
+     * The name of the assignment. This name must be unique within the Amazon Web Services account.
      * </p>
      * 
-     * @return The name of the assignment. This name must be unique within the Amazon Web Services account;.
+     * @return The name of the assignment. This name must be unique within the Amazon Web Services account.
      */
 
     public String getAssignmentName() {
@@ -110,11 +110,11 @@ public class CreateIAMPolicyAssignmentResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the assignment. This name must be unique within the Amazon Web Services account;.
+     * The name of the assignment. This name must be unique within the Amazon Web Services account.
      * </p>
      * 
      * @param assignmentName
-     *        The name of the assignment. This name must be unique within the Amazon Web Services account;.
+     *        The name of the assignment. This name must be unique within the Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -356,11 +356,11 @@ public class CreateIAMPolicyAssignmentResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The ARN for the IAM policy that is applied to the QuickSight users and groups specified in this assignment.
+     * The ARN for the IAMpolicy that is applied to the Amazon QuickSight users and groups specified in this assignment.
      * </p>
      * 
      * @param policyArn
-     *        The ARN for the IAM policy that is applied to the QuickSight users and groups specified in this
+     *        The ARN for the IAMpolicy that is applied to the Amazon QuickSight users and groups specified in this
      *        assignment.
      */
 
@@ -370,10 +370,10 @@ public class CreateIAMPolicyAssignmentResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The ARN for the IAM policy that is applied to the QuickSight users and groups specified in this assignment.
+     * The ARN for the IAMpolicy that is applied to the Amazon QuickSight users and groups specified in this assignment.
      * </p>
      * 
-     * @return The ARN for the IAM policy that is applied to the QuickSight users and groups specified in this
+     * @return The ARN for the IAMpolicy that is applied to the Amazon QuickSight users and groups specified in this
      *         assignment.
      */
 
@@ -383,11 +383,11 @@ public class CreateIAMPolicyAssignmentResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The ARN for the IAM policy that is applied to the QuickSight users and groups specified in this assignment.
+     * The ARN for the IAMpolicy that is applied to the Amazon QuickSight users and groups specified in this assignment.
      * </p>
      * 
      * @param policyArn
-     *        The ARN for the IAM policy that is applied to the QuickSight users and groups specified in this
+     *        The ARN for the IAMpolicy that is applied to the Amazon QuickSight users and groups specified in this
      *        assignment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -399,10 +399,10 @@ public class CreateIAMPolicyAssignmentResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The QuickSight users, groups, or both that the IAM policy is assigned to.
+     * The Amazon QuickSight users, groups, or both that the IAMpolicy is assigned to.
      * </p>
      * 
-     * @return The QuickSight users, groups, or both that the IAM policy is assigned to.
+     * @return The Amazon QuickSight users, groups, or both that the IAMpolicy is assigned to.
      */
 
     public java.util.Map<String, java.util.List<String>> getIdentities() {
@@ -411,11 +411,11 @@ public class CreateIAMPolicyAssignmentResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The QuickSight users, groups, or both that the IAM policy is assigned to.
+     * The Amazon QuickSight users, groups, or both that the IAMpolicy is assigned to.
      * </p>
      * 
      * @param identities
-     *        The QuickSight users, groups, or both that the IAM policy is assigned to.
+     *        The Amazon QuickSight users, groups, or both that the IAMpolicy is assigned to.
      */
 
     public void setIdentities(java.util.Map<String, java.util.List<String>> identities) {
@@ -424,11 +424,11 @@ public class CreateIAMPolicyAssignmentResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The QuickSight users, groups, or both that the IAM policy is assigned to.
+     * The Amazon QuickSight users, groups, or both that the IAMpolicy is assigned to.
      * </p>
      * 
      * @param identities
-     *        The QuickSight users, groups, or both that the IAM policy is assigned to.
+     *        The Amazon QuickSight users, groups, or both that the IAMpolicy is assigned to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -52,6 +52,10 @@ public class RevocationConfigurationJsonUnmarshaller implements Unmarshaller<Rev
                     context.nextToken();
                     revocationConfiguration.setCrlConfiguration(CrlConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("OcspConfiguration", targetDepth)) {
+                    context.nextToken();
+                    revocationConfiguration.setOcspConfiguration(OcspConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

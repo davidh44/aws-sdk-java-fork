@@ -27,7 +27,7 @@ public class GetSessionEmbedUrlRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; associated with your QuickSight subscription.
+     * The ID for the Amazon Web Services account associated with your Amazon QuickSight subscription.
      * </p>
      */
     private String awsAccountId;
@@ -59,12 +59,12 @@ public class GetSessionEmbedUrlRequest extends com.amazonaws.AmazonWebServiceReq
      * <li>
      * <p>
      * <code>/dashboards/<i>DashboardId</i> </code> - where <code>DashboardId</code> is the actual ID key from the
-     * QuickSight console URL of the dashboard
+     * Amazon QuickSight console URL of the dashboard
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>/analyses/<i>AnalysisId</i> </code> - where <code>AnalysisId</code> is the actual ID key from the
+     * <code>/analyses/<i>AnalysisId</i> </code> - where <code>AnalysisId</code> is the actual ID key from the Amazon
      * QuickSight console URL of the analysis
      * </p>
      * </li>
@@ -109,11 +109,11 @@ public class GetSessionEmbedUrlRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; associated with your QuickSight subscription.
+     * The ID for the Amazon Web Services account associated with your Amazon QuickSight subscription.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID for the Amazon Web Services account; associated with your QuickSight subscription.
+     *        The ID for the Amazon Web Services account associated with your Amazon QuickSight subscription.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -122,10 +122,10 @@ public class GetSessionEmbedUrlRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; associated with your QuickSight subscription.
+     * The ID for the Amazon Web Services account associated with your Amazon QuickSight subscription.
      * </p>
      * 
-     * @return The ID for the Amazon Web Services account; associated with your QuickSight subscription.
+     * @return The ID for the Amazon Web Services account associated with your Amazon QuickSight subscription.
      */
 
     public String getAwsAccountId() {
@@ -134,11 +134,11 @@ public class GetSessionEmbedUrlRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; associated with your QuickSight subscription.
+     * The ID for the Amazon Web Services account associated with your Amazon QuickSight subscription.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID for the Amazon Web Services account; associated with your QuickSight subscription.
+     *        The ID for the Amazon Web Services account associated with your Amazon QuickSight subscription.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -175,12 +175,12 @@ public class GetSessionEmbedUrlRequest extends com.amazonaws.AmazonWebServiceReq
      * <li>
      * <p>
      * <code>/dashboards/<i>DashboardId</i> </code> - where <code>DashboardId</code> is the actual ID key from the
-     * QuickSight console URL of the dashboard
+     * Amazon QuickSight console URL of the dashboard
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>/analyses/<i>AnalysisId</i> </code> - where <code>AnalysisId</code> is the actual ID key from the
+     * <code>/analyses/<i>AnalysisId</i> </code> - where <code>AnalysisId</code> is the actual ID key from the Amazon
      * QuickSight console URL of the analysis
      * </p>
      * </li>
@@ -213,13 +213,13 @@ public class GetSessionEmbedUrlRequest extends com.amazonaws.AmazonWebServiceReq
      *        <li>
      *        <p>
      *        <code>/dashboards/<i>DashboardId</i> </code> - where <code>DashboardId</code> is the actual ID key from
-     *        the QuickSight console URL of the dashboard
+     *        the Amazon QuickSight console URL of the dashboard
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>/analyses/<i>AnalysisId</i> </code> - where <code>AnalysisId</code> is the actual ID key from the
-     *        QuickSight console URL of the analysis
+     *        Amazon QuickSight console URL of the analysis
      *        </p>
      *        </li>
      */
@@ -256,12 +256,12 @@ public class GetSessionEmbedUrlRequest extends com.amazonaws.AmazonWebServiceReq
      * <li>
      * <p>
      * <code>/dashboards/<i>DashboardId</i> </code> - where <code>DashboardId</code> is the actual ID key from the
-     * QuickSight console URL of the dashboard
+     * Amazon QuickSight console URL of the dashboard
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>/analyses/<i>AnalysisId</i> </code> - where <code>AnalysisId</code> is the actual ID key from the
+     * <code>/analyses/<i>AnalysisId</i> </code> - where <code>AnalysisId</code> is the actual ID key from the Amazon
      * QuickSight console URL of the analysis
      * </p>
      * </li>
@@ -293,13 +293,13 @@ public class GetSessionEmbedUrlRequest extends com.amazonaws.AmazonWebServiceReq
      *         <li>
      *         <p>
      *         <code>/dashboards/<i>DashboardId</i> </code> - where <code>DashboardId</code> is the actual ID key from
-     *         the QuickSight console URL of the dashboard
+     *         the Amazon QuickSight console URL of the dashboard
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <code>/analyses/<i>AnalysisId</i> </code> - where <code>AnalysisId</code> is the actual ID key from the
-     *         QuickSight console URL of the analysis
+     *         Amazon QuickSight console URL of the analysis
      *         </p>
      *         </li>
      */
@@ -336,12 +336,12 @@ public class GetSessionEmbedUrlRequest extends com.amazonaws.AmazonWebServiceReq
      * <li>
      * <p>
      * <code>/dashboards/<i>DashboardId</i> </code> - where <code>DashboardId</code> is the actual ID key from the
-     * QuickSight console URL of the dashboard
+     * Amazon QuickSight console URL of the dashboard
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>/analyses/<i>AnalysisId</i> </code> - where <code>AnalysisId</code> is the actual ID key from the
+     * <code>/analyses/<i>AnalysisId</i> </code> - where <code>AnalysisId</code> is the actual ID key from the Amazon
      * QuickSight console URL of the analysis
      * </p>
      * </li>
@@ -374,13 +374,13 @@ public class GetSessionEmbedUrlRequest extends com.amazonaws.AmazonWebServiceReq
      *        <li>
      *        <p>
      *        <code>/dashboards/<i>DashboardId</i> </code> - where <code>DashboardId</code> is the actual ID key from
-     *        the QuickSight console URL of the dashboard
+     *        the Amazon QuickSight console URL of the dashboard
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>/analyses/<i>AnalysisId</i> </code> - where <code>AnalysisId</code> is the actual ID key from the
-     *        QuickSight console URL of the analysis
+     *        Amazon QuickSight console URL of the analysis
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

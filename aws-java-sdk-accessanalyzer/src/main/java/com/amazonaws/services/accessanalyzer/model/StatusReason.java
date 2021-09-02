@@ -21,7 +21,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * Provides more details about the current status of the analyzer. For example, if the creation for the analyzer fails,
  * a <code>Failed</code> status is returned. For an analyzer with organization as the type, this failure can be due to
- * an issue with creating the service-linked roles required in the member accounts of the AWS organization.
+ * an issue with creating the service-linked roles required in the member accounts of the Amazon Web Services
+ * organization.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/accessanalyzer-2019-11-01/StatusReason" target="_top">AWS API

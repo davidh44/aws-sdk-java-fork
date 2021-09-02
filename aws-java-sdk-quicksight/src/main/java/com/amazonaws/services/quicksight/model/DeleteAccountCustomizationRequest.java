@@ -27,27 +27,27 @@ public class DeleteAccountCustomizationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that you want to delete QuickSight customizations from in this Amazon
-     * Web Services Region;.
+     * The ID for the Amazon Web Services account that you want to delete Amazon QuickSight customizations from in this
+     * Amazon Web Services Region;.
      * </p>
      */
     private String awsAccountId;
     /**
      * <p>
-     * The QuickSight namespace that you're deleting the customizations from.
+     * The Amazon QuickSight namespace that you're deleting the customizations from.
      * </p>
      */
     private String namespace;
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that you want to delete QuickSight customizations from in this Amazon
-     * Web Services Region;.
+     * The ID for the Amazon Web Services account that you want to delete Amazon QuickSight customizations from in this
+     * Amazon Web Services Region;.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID for the Amazon Web Services account; that you want to delete QuickSight customizations from in this
-     *        Amazon Web Services Region;.
+     *        The ID for the Amazon Web Services account that you want to delete Amazon QuickSight customizations from
+     *        in this Amazon Web Services Region;.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -56,12 +56,12 @@ public class DeleteAccountCustomizationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that you want to delete QuickSight customizations from in this Amazon
-     * Web Services Region;.
+     * The ID for the Amazon Web Services account that you want to delete Amazon QuickSight customizations from in this
+     * Amazon Web Services Region;.
      * </p>
      * 
-     * @return The ID for the Amazon Web Services account; that you want to delete QuickSight customizations from in
-     *         this Amazon Web Services Region;.
+     * @return The ID for the Amazon Web Services account that you want to delete Amazon QuickSight customizations from
+     *         in this Amazon Web Services Region;.
      */
 
     public String getAwsAccountId() {
@@ -70,13 +70,13 @@ public class DeleteAccountCustomizationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that you want to delete QuickSight customizations from in this Amazon
-     * Web Services Region;.
+     * The ID for the Amazon Web Services account that you want to delete Amazon QuickSight customizations from in this
+     * Amazon Web Services Region;.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID for the Amazon Web Services account; that you want to delete QuickSight customizations from in this
-     *        Amazon Web Services Region;.
+     *        The ID for the Amazon Web Services account that you want to delete Amazon QuickSight customizations from
+     *        in this Amazon Web Services Region;.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -87,11 +87,11 @@ public class DeleteAccountCustomizationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The QuickSight namespace that you're deleting the customizations from.
+     * The Amazon QuickSight namespace that you're deleting the customizations from.
      * </p>
      * 
      * @param namespace
-     *        The QuickSight namespace that you're deleting the customizations from.
+     *        The Amazon QuickSight namespace that you're deleting the customizations from.
      */
 
     public void setNamespace(String namespace) {
@@ -100,10 +100,10 @@ public class DeleteAccountCustomizationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The QuickSight namespace that you're deleting the customizations from.
+     * The Amazon QuickSight namespace that you're deleting the customizations from.
      * </p>
      * 
-     * @return The QuickSight namespace that you're deleting the customizations from.
+     * @return The Amazon QuickSight namespace that you're deleting the customizations from.
      */
 
     public String getNamespace() {
@@ -112,11 +112,11 @@ public class DeleteAccountCustomizationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The QuickSight namespace that you're deleting the customizations from.
+     * The Amazon QuickSight namespace that you're deleting the customizations from.
      * </p>
      * 
      * @param namespace
-     *        The QuickSight namespace that you're deleting the customizations from.
+     *        The Amazon QuickSight namespace that you're deleting the customizations from.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

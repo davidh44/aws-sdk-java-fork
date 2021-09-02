@@ -27,7 +27,7 @@ public class CreateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; where you are creating an analysis.
+     * The ID of the Amazon Web Services account where you are creating an analysis.
      * </p>
      */
     private String awsAccountId;
@@ -39,8 +39,8 @@ public class CreateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
     private String analysisId;
     /**
      * <p>
-     * A descriptive name for the analysis that you're creating. This name displays for the analysis in the QuickSight
-     * console.
+     * A descriptive name for the analysis that you're creating. This name displays for the analysis in the Amazon
+     * QuickSight console.
      * </p>
      */
     private String name;
@@ -71,8 +71,8 @@ public class CreateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
     private AnalysisSourceEntity sourceEntity;
     /**
      * <p>
-     * The ARN for the theme to apply to the analysis that you're creating. To see the theme in the QuickSight console,
-     * make sure that you have access to it.
+     * The ARN for the theme to apply to the analysis that you're creating. To see the theme in the Amazon QuickSight
+     * console, make sure that you have access to it.
      * </p>
      */
     private String themeArn;
@@ -85,11 +85,11 @@ public class CreateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; where you are creating an analysis.
+     * The ID of the Amazon Web Services account where you are creating an analysis.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; where you are creating an analysis.
+     *        The ID of the Amazon Web Services account where you are creating an analysis.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -98,10 +98,10 @@ public class CreateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; where you are creating an analysis.
+     * The ID of the Amazon Web Services account where you are creating an analysis.
      * </p>
      * 
-     * @return The ID of the Amazon Web Services account; where you are creating an analysis.
+     * @return The ID of the Amazon Web Services account where you are creating an analysis.
      */
 
     public String getAwsAccountId() {
@@ -110,11 +110,11 @@ public class CreateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; where you are creating an analysis.
+     * The ID of the Amazon Web Services account where you are creating an analysis.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; where you are creating an analysis.
+     *        The ID of the Amazon Web Services account where you are creating an analysis.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -165,13 +165,13 @@ public class CreateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A descriptive name for the analysis that you're creating. This name displays for the analysis in the QuickSight
-     * console.
+     * A descriptive name for the analysis that you're creating. This name displays for the analysis in the Amazon
+     * QuickSight console.
      * </p>
      * 
      * @param name
      *        A descriptive name for the analysis that you're creating. This name displays for the analysis in the
-     *        QuickSight console.
+     *        Amazon QuickSight console.
      */
 
     public void setName(String name) {
@@ -180,12 +180,12 @@ public class CreateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A descriptive name for the analysis that you're creating. This name displays for the analysis in the QuickSight
-     * console.
+     * A descriptive name for the analysis that you're creating. This name displays for the analysis in the Amazon
+     * QuickSight console.
      * </p>
      * 
      * @return A descriptive name for the analysis that you're creating. This name displays for the analysis in the
-     *         QuickSight console.
+     *         Amazon QuickSight console.
      */
 
     public String getName() {
@@ -194,13 +194,13 @@ public class CreateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A descriptive name for the analysis that you're creating. This name displays for the analysis in the QuickSight
-     * console.
+     * A descriptive name for the analysis that you're creating. This name displays for the analysis in the Amazon
+     * QuickSight console.
      * </p>
      * 
      * @param name
      *        A descriptive name for the analysis that you're creating. This name displays for the analysis in the
-     *        QuickSight console.
+     *        Amazon QuickSight console.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -409,13 +409,13 @@ public class CreateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ARN for the theme to apply to the analysis that you're creating. To see the theme in the QuickSight console,
-     * make sure that you have access to it.
+     * The ARN for the theme to apply to the analysis that you're creating. To see the theme in the Amazon QuickSight
+     * console, make sure that you have access to it.
      * </p>
      * 
      * @param themeArn
-     *        The ARN for the theme to apply to the analysis that you're creating. To see the theme in the QuickSight
-     *        console, make sure that you have access to it.
+     *        The ARN for the theme to apply to the analysis that you're creating. To see the theme in the Amazon
+     *        QuickSight console, make sure that you have access to it.
      */
 
     public void setThemeArn(String themeArn) {
@@ -424,12 +424,12 @@ public class CreateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ARN for the theme to apply to the analysis that you're creating. To see the theme in the QuickSight console,
-     * make sure that you have access to it.
+     * The ARN for the theme to apply to the analysis that you're creating. To see the theme in the Amazon QuickSight
+     * console, make sure that you have access to it.
      * </p>
      * 
-     * @return The ARN for the theme to apply to the analysis that you're creating. To see the theme in the QuickSight
-     *         console, make sure that you have access to it.
+     * @return The ARN for the theme to apply to the analysis that you're creating. To see the theme in the Amazon
+     *         QuickSight console, make sure that you have access to it.
      */
 
     public String getThemeArn() {
@@ -438,13 +438,13 @@ public class CreateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ARN for the theme to apply to the analysis that you're creating. To see the theme in the QuickSight console,
-     * make sure that you have access to it.
+     * The ARN for the theme to apply to the analysis that you're creating. To see the theme in the Amazon QuickSight
+     * console, make sure that you have access to it.
      * </p>
      * 
      * @param themeArn
-     *        The ARN for the theme to apply to the analysis that you're creating. To see the theme in the QuickSight
-     *        console, make sure that you have access to it.
+     *        The ARN for the theme to apply to the analysis that you're creating. To see the theme in the Amazon
+     *        QuickSight console, make sure that you have access to it.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,18 +25,17 @@ public class PutLifecycleConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * An array of lifecycle management policies. Currently, EFS supports a maximum of one policy per file system.
+     * An array of lifecycle management policies. EFS supports a maximum of one policy per file system.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<LifecyclePolicy> lifecyclePolicies;
 
     /**
      * <p>
-     * An array of lifecycle management policies. Currently, EFS supports a maximum of one policy per file system.
+     * An array of lifecycle management policies. EFS supports a maximum of one policy per file system.
      * </p>
      * 
-     * @return An array of lifecycle management policies. Currently, EFS supports a maximum of one policy per file
-     *         system.
+     * @return An array of lifecycle management policies. EFS supports a maximum of one policy per file system.
      */
 
     public java.util.List<LifecyclePolicy> getLifecyclePolicies() {
@@ -48,12 +47,11 @@ public class PutLifecycleConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * An array of lifecycle management policies. Currently, EFS supports a maximum of one policy per file system.
+     * An array of lifecycle management policies. EFS supports a maximum of one policy per file system.
      * </p>
      * 
      * @param lifecyclePolicies
-     *        An array of lifecycle management policies. Currently, EFS supports a maximum of one policy per file
-     *        system.
+     *        An array of lifecycle management policies. EFS supports a maximum of one policy per file system.
      */
 
     public void setLifecyclePolicies(java.util.Collection<LifecyclePolicy> lifecyclePolicies) {
@@ -67,7 +65,7 @@ public class PutLifecycleConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * An array of lifecycle management policies. Currently, EFS supports a maximum of one policy per file system.
+     * An array of lifecycle management policies. EFS supports a maximum of one policy per file system.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -76,8 +74,7 @@ public class PutLifecycleConfigurationResult extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @param lifecyclePolicies
-     *        An array of lifecycle management policies. Currently, EFS supports a maximum of one policy per file
-     *        system.
+     *        An array of lifecycle management policies. EFS supports a maximum of one policy per file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,12 +90,11 @@ public class PutLifecycleConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * An array of lifecycle management policies. Currently, EFS supports a maximum of one policy per file system.
+     * An array of lifecycle management policies. EFS supports a maximum of one policy per file system.
      * </p>
      * 
      * @param lifecyclePolicies
-     *        An array of lifecycle management policies. Currently, EFS supports a maximum of one policy per file
-     *        system.
+     *        An array of lifecycle management policies. EFS supports a maximum of one policy per file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,12 +25,30 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DescribeAccountPreferencesRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * (Optional) You can use <code>NextToken</code> in a subsequent request to fetch the next page of Amazon Web
+     * Services account preferences if the response payload was paginated.
+     * </p>
+     */
     private String nextToken;
-
+    /**
+     * <p>
+     * (Optional) When retrieving account preferences, you can optionally specify the <code>MaxItems</code> parameter to
+     * limit the number of objects returned in a response. The default value is 100.
+     * </p>
+     */
     private Integer maxResults;
 
     /**
+     * <p>
+     * (Optional) You can use <code>NextToken</code> in a subsequent request to fetch the next page of Amazon Web
+     * Services account preferences if the response payload was paginated.
+     * </p>
+     * 
      * @param nextToken
+     *        (Optional) You can use <code>NextToken</code> in a subsequent request to fetch the next page of Amazon Web
+     *        Services account preferences if the response payload was paginated.
      */
 
     public void setNextToken(String nextToken) {
@@ -38,7 +56,13 @@ public class DescribeAccountPreferencesRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
-     * @return
+     * <p>
+     * (Optional) You can use <code>NextToken</code> in a subsequent request to fetch the next page of Amazon Web
+     * Services account preferences if the response payload was paginated.
+     * </p>
+     * 
+     * @return (Optional) You can use <code>NextToken</code> in a subsequent request to fetch the next page of Amazon
+     *         Web Services account preferences if the response payload was paginated.
      */
 
     public String getNextToken() {
@@ -46,7 +70,14 @@ public class DescribeAccountPreferencesRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * (Optional) You can use <code>NextToken</code> in a subsequent request to fetch the next page of Amazon Web
+     * Services account preferences if the response payload was paginated.
+     * </p>
+     * 
      * @param nextToken
+     *        (Optional) You can use <code>NextToken</code> in a subsequent request to fetch the next page of Amazon Web
+     *        Services account preferences if the response payload was paginated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +87,14 @@ public class DescribeAccountPreferencesRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * (Optional) When retrieving account preferences, you can optionally specify the <code>MaxItems</code> parameter to
+     * limit the number of objects returned in a response. The default value is 100.
+     * </p>
+     * 
      * @param maxResults
+     *        (Optional) When retrieving account preferences, you can optionally specify the <code>MaxItems</code>
+     *        parameter to limit the number of objects returned in a response. The default value is 100.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -64,7 +102,13 @@ public class DescribeAccountPreferencesRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
-     * @return
+     * <p>
+     * (Optional) When retrieving account preferences, you can optionally specify the <code>MaxItems</code> parameter to
+     * limit the number of objects returned in a response. The default value is 100.
+     * </p>
+     * 
+     * @return (Optional) When retrieving account preferences, you can optionally specify the <code>MaxItems</code>
+     *         parameter to limit the number of objects returned in a response. The default value is 100.
      */
 
     public Integer getMaxResults() {
@@ -72,7 +116,14 @@ public class DescribeAccountPreferencesRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * (Optional) When retrieving account preferences, you can optionally specify the <code>MaxItems</code> parameter to
+     * limit the number of objects returned in a response. The default value is 100.
+     * </p>
+     * 
      * @param maxResults
+     *        (Optional) When retrieving account preferences, you can optionally specify the <code>MaxItems</code>
+     *        parameter to limit the number of objects returned in a response. The default value is 100.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

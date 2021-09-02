@@ -208,6 +208,39 @@ public class AWSS3ControlAsyncClient extends AWSS3ControlClient implements AWSS3
     }
 
     @Override
+    public java.util.concurrent.Future<CreateMultiRegionAccessPointResult> createMultiRegionAccessPointAsync(CreateMultiRegionAccessPointRequest request) {
+
+        return createMultiRegionAccessPointAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateMultiRegionAccessPointResult> createMultiRegionAccessPointAsync(final CreateMultiRegionAccessPointRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateMultiRegionAccessPointRequest, CreateMultiRegionAccessPointResult> asyncHandler) {
+        final CreateMultiRegionAccessPointRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateMultiRegionAccessPointResult>() {
+            @Override
+            public CreateMultiRegionAccessPointResult call() throws Exception {
+                CreateMultiRegionAccessPointResult result = null;
+
+                try {
+                    result = executeCreateMultiRegionAccessPoint(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteAccessPointResult> deleteAccessPointAsync(DeleteAccessPointRequest request) {
 
         return deleteAccessPointAsync(request, null);
@@ -511,6 +544,39 @@ public class AWSS3ControlAsyncClient extends AWSS3ControlClient implements AWSS3
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteMultiRegionAccessPointResult> deleteMultiRegionAccessPointAsync(DeleteMultiRegionAccessPointRequest request) {
+
+        return deleteMultiRegionAccessPointAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteMultiRegionAccessPointResult> deleteMultiRegionAccessPointAsync(final DeleteMultiRegionAccessPointRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteMultiRegionAccessPointRequest, DeleteMultiRegionAccessPointResult> asyncHandler) {
+        final DeleteMultiRegionAccessPointRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteMultiRegionAccessPointResult>() {
+            @Override
+            public DeleteMultiRegionAccessPointResult call() throws Exception {
+                DeleteMultiRegionAccessPointResult result = null;
+
+                try {
+                    result = executeDeleteMultiRegionAccessPoint(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeletePublicAccessBlockResult> deletePublicAccessBlockAsync(DeletePublicAccessBlockRequest request) {
 
         return deletePublicAccessBlockAsync(request, null);
@@ -630,6 +696,41 @@ public class AWSS3ControlAsyncClient extends AWSS3ControlClient implements AWSS3
 
                 try {
                     result = executeDescribeJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeMultiRegionAccessPointOperationResult> describeMultiRegionAccessPointOperationAsync(
+            DescribeMultiRegionAccessPointOperationRequest request) {
+
+        return describeMultiRegionAccessPointOperationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeMultiRegionAccessPointOperationResult> describeMultiRegionAccessPointOperationAsync(
+            final DescribeMultiRegionAccessPointOperationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeMultiRegionAccessPointOperationRequest, DescribeMultiRegionAccessPointOperationResult> asyncHandler) {
+        final DescribeMultiRegionAccessPointOperationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeMultiRegionAccessPointOperationResult>() {
+            @Override
+            public DescribeMultiRegionAccessPointOperationResult call() throws Exception {
+                DescribeMultiRegionAccessPointOperationResult result = null;
+
+                try {
+                    result = executeDescribeMultiRegionAccessPointOperation(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1051,6 +1152,109 @@ public class AWSS3ControlAsyncClient extends AWSS3ControlClient implements AWSS3
     }
 
     @Override
+    public java.util.concurrent.Future<GetMultiRegionAccessPointResult> getMultiRegionAccessPointAsync(GetMultiRegionAccessPointRequest request) {
+
+        return getMultiRegionAccessPointAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMultiRegionAccessPointResult> getMultiRegionAccessPointAsync(final GetMultiRegionAccessPointRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetMultiRegionAccessPointRequest, GetMultiRegionAccessPointResult> asyncHandler) {
+        final GetMultiRegionAccessPointRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetMultiRegionAccessPointResult>() {
+            @Override
+            public GetMultiRegionAccessPointResult call() throws Exception {
+                GetMultiRegionAccessPointResult result = null;
+
+                try {
+                    result = executeGetMultiRegionAccessPoint(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMultiRegionAccessPointPolicyResult> getMultiRegionAccessPointPolicyAsync(
+            GetMultiRegionAccessPointPolicyRequest request) {
+
+        return getMultiRegionAccessPointPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMultiRegionAccessPointPolicyResult> getMultiRegionAccessPointPolicyAsync(
+            final GetMultiRegionAccessPointPolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetMultiRegionAccessPointPolicyRequest, GetMultiRegionAccessPointPolicyResult> asyncHandler) {
+        final GetMultiRegionAccessPointPolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetMultiRegionAccessPointPolicyResult>() {
+            @Override
+            public GetMultiRegionAccessPointPolicyResult call() throws Exception {
+                GetMultiRegionAccessPointPolicyResult result = null;
+
+                try {
+                    result = executeGetMultiRegionAccessPointPolicy(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMultiRegionAccessPointPolicyStatusResult> getMultiRegionAccessPointPolicyStatusAsync(
+            GetMultiRegionAccessPointPolicyStatusRequest request) {
+
+        return getMultiRegionAccessPointPolicyStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMultiRegionAccessPointPolicyStatusResult> getMultiRegionAccessPointPolicyStatusAsync(
+            final GetMultiRegionAccessPointPolicyStatusRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetMultiRegionAccessPointPolicyStatusRequest, GetMultiRegionAccessPointPolicyStatusResult> asyncHandler) {
+        final GetMultiRegionAccessPointPolicyStatusRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetMultiRegionAccessPointPolicyStatusResult>() {
+            @Override
+            public GetMultiRegionAccessPointPolicyStatusResult call() throws Exception {
+                GetMultiRegionAccessPointPolicyStatusResult result = null;
+
+                try {
+                    result = executeGetMultiRegionAccessPointPolicyStatus(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetPublicAccessBlockResult> getPublicAccessBlockAsync(GetPublicAccessBlockRequest request) {
 
         return getPublicAccessBlockAsync(request, null);
@@ -1237,6 +1441,39 @@ public class AWSS3ControlAsyncClient extends AWSS3ControlClient implements AWSS3
 
                 try {
                     result = executeListJobs(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMultiRegionAccessPointsResult> listMultiRegionAccessPointsAsync(ListMultiRegionAccessPointsRequest request) {
+
+        return listMultiRegionAccessPointsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMultiRegionAccessPointsResult> listMultiRegionAccessPointsAsync(final ListMultiRegionAccessPointsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListMultiRegionAccessPointsRequest, ListMultiRegionAccessPointsResult> asyncHandler) {
+        final ListMultiRegionAccessPointsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListMultiRegionAccessPointsResult>() {
+            @Override
+            public ListMultiRegionAccessPointsResult call() throws Exception {
+                ListMultiRegionAccessPointsResult result = null;
+
+                try {
+                    result = executeListMultiRegionAccessPoints(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1541,6 +1778,41 @@ public class AWSS3ControlAsyncClient extends AWSS3ControlClient implements AWSS3
 
                 try {
                     result = executePutJobTagging(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutMultiRegionAccessPointPolicyResult> putMultiRegionAccessPointPolicyAsync(
+            PutMultiRegionAccessPointPolicyRequest request) {
+
+        return putMultiRegionAccessPointPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutMultiRegionAccessPointPolicyResult> putMultiRegionAccessPointPolicyAsync(
+            final PutMultiRegionAccessPointPolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PutMultiRegionAccessPointPolicyRequest, PutMultiRegionAccessPointPolicyResult> asyncHandler) {
+        final PutMultiRegionAccessPointPolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PutMultiRegionAccessPointPolicyResult>() {
+            @Override
+            public PutMultiRegionAccessPointPolicyResult call() throws Exception {
+                PutMultiRegionAccessPointPolicyResult result = null;
+
+                try {
+                    result = executePutMultiRegionAccessPointPolicy(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

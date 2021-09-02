@@ -27,7 +27,7 @@ public class ListAccessPointsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The account ID for owner of the bucket whose access points you want to list.
+     * The Amazon Web Services account ID for owner of the bucket whose access points you want to list.
      * </p>
      */
     private String accountId;
@@ -69,11 +69,11 @@ public class ListAccessPointsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The account ID for owner of the bucket whose access points you want to list.
+     * The Amazon Web Services account ID for owner of the bucket whose access points you want to list.
      * </p>
      * 
      * @param accountId
-     *        The account ID for owner of the bucket whose access points you want to list.
+     *        The Amazon Web Services account ID for owner of the bucket whose access points you want to list.
      */
 
     public void setAccountId(String accountId) {
@@ -82,10 +82,10 @@ public class ListAccessPointsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The account ID for owner of the bucket whose access points you want to list.
+     * The Amazon Web Services account ID for owner of the bucket whose access points you want to list.
      * </p>
      * 
-     * @return The account ID for owner of the bucket whose access points you want to list.
+     * @return The Amazon Web Services account ID for owner of the bucket whose access points you want to list.
      */
 
     public String getAccountId() {
@@ -94,11 +94,11 @@ public class ListAccessPointsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The account ID for owner of the bucket whose access points you want to list.
+     * The Amazon Web Services account ID for owner of the bucket whose access points you want to list.
      * </p>
      * 
      * @param accountId
-     *        The account ID for owner of the bucket whose access points you want to list.
+     *        The Amazon Web Services account ID for owner of the bucket whose access points you want to list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

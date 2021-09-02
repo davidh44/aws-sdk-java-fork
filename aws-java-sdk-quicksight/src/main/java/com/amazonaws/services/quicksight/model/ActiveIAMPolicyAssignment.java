@@ -30,7 +30,7 @@ public class ActiveIAMPolicyAssignment implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * A name for the IAM policy assignment.
+     * A name for the IAMpolicy assignment.
      * </p>
      */
     private String assignmentName;
@@ -43,11 +43,11 @@ public class ActiveIAMPolicyAssignment implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * A name for the IAM policy assignment.
+     * A name for the IAMpolicy assignment.
      * </p>
      * 
      * @param assignmentName
-     *        A name for the IAM policy assignment.
+     *        A name for the IAMpolicy assignment.
      */
 
     public void setAssignmentName(String assignmentName) {
@@ -56,10 +56,10 @@ public class ActiveIAMPolicyAssignment implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * A name for the IAM policy assignment.
+     * A name for the IAMpolicy assignment.
      * </p>
      * 
-     * @return A name for the IAM policy assignment.
+     * @return A name for the IAMpolicy assignment.
      */
 
     public String getAssignmentName() {
@@ -68,11 +68,11 @@ public class ActiveIAMPolicyAssignment implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * A name for the IAM policy assignment.
+     * A name for the IAMpolicy assignment.
      * </p>
      * 
      * @param assignmentName
-     *        A name for the IAM policy assignment.
+     *        A name for the IAMpolicy assignment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

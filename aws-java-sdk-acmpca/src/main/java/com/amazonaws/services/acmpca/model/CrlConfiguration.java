@@ -38,6 +38,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * are listed in the CRL. Expired certificates are not included.
  * </p>
  * <p>
+ * A CRL is typically updated approximately 30 minutes after a certificate is revoked. If for any reason a CRL update
+ * fails, ACM Private CA makes further attempts every 15 minutes.
+ * </p>
+ * <p>
  * CRLs contain the following fields:
  * </p>
  * <ul>
@@ -131,6 +135,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * <code>openssl crl -inform DER -text -in <i>crl_path</i> -noout</code>
  * </p>
+ * <p>
+ * For more information, see <a href="https://docs.aws.amazon.com/acm-pca/latest/userguide/crl-planning.html">Planning a
+ * certificate revocation list (CRL)</a> in the <i>AWS Certificate Manager Private Certificate Authority (PCA) User
+ * Guide</i>
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/CrlConfiguration" target="_top">AWS API
  *      Documentation</a>
@@ -168,7 +177,7 @@ public class CrlConfiguration implements Serializable, Cloneable, StructuredPojo
      * the name of your S3 bucket is placed into the <b>CRL Distribution Points</b> extension of the issued certificate.
      * You can change the name of your bucket by calling the <a
      * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_UpdateCertificateAuthority.html"
-     * >UpdateCertificateAuthority</a> action. You must specify a <a
+     * >UpdateCertificateAuthority</a> operation. You must specify a <a
      * href="https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaCreateCa.html#s3-policies">bucket policy</a> that
      * allows ACM Private CA to write the CRL to your bucket.
      * </p>
@@ -384,7 +393,7 @@ public class CrlConfiguration implements Serializable, Cloneable, StructuredPojo
      * the name of your S3 bucket is placed into the <b>CRL Distribution Points</b> extension of the issued certificate.
      * You can change the name of your bucket by calling the <a
      * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_UpdateCertificateAuthority.html"
-     * >UpdateCertificateAuthority</a> action. You must specify a <a
+     * >UpdateCertificateAuthority</a> operation. You must specify a <a
      * href="https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaCreateCa.html#s3-policies">bucket policy</a> that
      * allows ACM Private CA to write the CRL to your bucket.
      * </p>
@@ -394,7 +403,7 @@ public class CrlConfiguration implements Serializable, Cloneable, StructuredPojo
      *        argument, the name of your S3 bucket is placed into the <b>CRL Distribution Points</b> extension of the
      *        issued certificate. You can change the name of your bucket by calling the <a
      *        href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_UpdateCertificateAuthority.html"
-     *        >UpdateCertificateAuthority</a> action. You must specify a <a
+     *        >UpdateCertificateAuthority</a> operation. You must specify a <a
      *        href="https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaCreateCa.html#s3-policies">bucket policy</a>
      *        that allows ACM Private CA to write the CRL to your bucket.
      */
@@ -409,7 +418,7 @@ public class CrlConfiguration implements Serializable, Cloneable, StructuredPojo
      * the name of your S3 bucket is placed into the <b>CRL Distribution Points</b> extension of the issued certificate.
      * You can change the name of your bucket by calling the <a
      * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_UpdateCertificateAuthority.html"
-     * >UpdateCertificateAuthority</a> action. You must specify a <a
+     * >UpdateCertificateAuthority</a> operation. You must specify a <a
      * href="https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaCreateCa.html#s3-policies">bucket policy</a> that
      * allows ACM Private CA to write the CRL to your bucket.
      * </p>
@@ -418,7 +427,7 @@ public class CrlConfiguration implements Serializable, Cloneable, StructuredPojo
      *         argument, the name of your S3 bucket is placed into the <b>CRL Distribution Points</b> extension of the
      *         issued certificate. You can change the name of your bucket by calling the <a
      *         href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_UpdateCertificateAuthority.html"
-     *         >UpdateCertificateAuthority</a> action. You must specify a <a
+     *         >UpdateCertificateAuthority</a> operation. You must specify a <a
      *         href="https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaCreateCa.html#s3-policies">bucket
      *         policy</a> that allows ACM Private CA to write the CRL to your bucket.
      */
@@ -433,7 +442,7 @@ public class CrlConfiguration implements Serializable, Cloneable, StructuredPojo
      * the name of your S3 bucket is placed into the <b>CRL Distribution Points</b> extension of the issued certificate.
      * You can change the name of your bucket by calling the <a
      * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_UpdateCertificateAuthority.html"
-     * >UpdateCertificateAuthority</a> action. You must specify a <a
+     * >UpdateCertificateAuthority</a> operation. You must specify a <a
      * href="https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaCreateCa.html#s3-policies">bucket policy</a> that
      * allows ACM Private CA to write the CRL to your bucket.
      * </p>
@@ -443,7 +452,7 @@ public class CrlConfiguration implements Serializable, Cloneable, StructuredPojo
      *        argument, the name of your S3 bucket is placed into the <b>CRL Distribution Points</b> extension of the
      *        issued certificate. You can change the name of your bucket by calling the <a
      *        href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_UpdateCertificateAuthority.html"
-     *        >UpdateCertificateAuthority</a> action. You must specify a <a
+     *        >UpdateCertificateAuthority</a> operation. You must specify a <a
      *        href="https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaCreateCa.html#s3-policies">bucket policy</a>
      *        that allows ACM Private CA to write the CRL to your bucket.
      * @return Returns a reference to this object so that method calls can be chained together.

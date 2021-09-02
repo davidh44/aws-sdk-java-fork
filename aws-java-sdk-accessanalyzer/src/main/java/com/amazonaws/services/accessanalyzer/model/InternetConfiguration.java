@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * This configuration sets the Amazon S3 access point network origin to <code>Internet</code>.
+ * This configuration sets the network origin for the Amazon S3 access point or multi-region access point to
+ * <code>Internet</code>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/accessanalyzer-2019-11-01/InternetConfiguration"

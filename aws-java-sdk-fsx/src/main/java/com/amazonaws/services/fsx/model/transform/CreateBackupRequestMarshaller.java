@@ -37,6 +37,8 @@ public class CreateBackupRequestMarshaller {
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<String> VOLUMEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("VolumeId").build();
 
     private static final CreateBackupRequestMarshaller instance = new CreateBackupRequestMarshaller();
 
@@ -57,6 +59,7 @@ public class CreateBackupRequestMarshaller {
             protocolMarshaller.marshall(createBackupRequest.getFileSystemId(), FILESYSTEMID_BINDING);
             protocolMarshaller.marshall(createBackupRequest.getClientRequestToken(), CLIENTREQUESTTOKEN_BINDING);
             protocolMarshaller.marshall(createBackupRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createBackupRequest.getVolumeId(), VOLUMEID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

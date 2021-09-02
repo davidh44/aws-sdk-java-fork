@@ -49,7 +49,7 @@ public class ThemeVersion implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All themes initially inherit
-     * from a default QuickSight theme.
+     * from a default Amazon QuickSight theme.
      * </p>
      */
     private String baseThemeId;
@@ -201,12 +201,12 @@ public class ThemeVersion implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All themes initially inherit
-     * from a default QuickSight theme.
+     * from a default Amazon QuickSight theme.
      * </p>
      * 
      * @param baseThemeId
      *        The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All themes initially
-     *        inherit from a default QuickSight theme.
+     *        inherit from a default Amazon QuickSight theme.
      */
 
     public void setBaseThemeId(String baseThemeId) {
@@ -216,11 +216,11 @@ public class ThemeVersion implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All themes initially inherit
-     * from a default QuickSight theme.
+     * from a default Amazon QuickSight theme.
      * </p>
      * 
      * @return The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All themes initially
-     *         inherit from a default QuickSight theme.
+     *         inherit from a default Amazon QuickSight theme.
      */
 
     public String getBaseThemeId() {
@@ -230,12 +230,12 @@ public class ThemeVersion implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All themes initially inherit
-     * from a default QuickSight theme.
+     * from a default Amazon QuickSight theme.
      * </p>
      * 
      * @param baseThemeId
      *        The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All themes initially
-     *        inherit from a default QuickSight theme.
+     *        inherit from a default Amazon QuickSight theme.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

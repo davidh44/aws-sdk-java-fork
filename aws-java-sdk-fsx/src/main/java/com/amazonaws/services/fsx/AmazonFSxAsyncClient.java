@@ -306,6 +306,105 @@ public class AmazonFSxAsyncClient extends AmazonFSxClient implements AmazonFSxAs
     }
 
     @Override
+    public java.util.concurrent.Future<CreateStorageVirtualMachineResult> createStorageVirtualMachineAsync(CreateStorageVirtualMachineRequest request) {
+
+        return createStorageVirtualMachineAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateStorageVirtualMachineResult> createStorageVirtualMachineAsync(final CreateStorageVirtualMachineRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateStorageVirtualMachineRequest, CreateStorageVirtualMachineResult> asyncHandler) {
+        final CreateStorageVirtualMachineRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateStorageVirtualMachineResult>() {
+            @Override
+            public CreateStorageVirtualMachineResult call() throws Exception {
+                CreateStorageVirtualMachineResult result = null;
+
+                try {
+                    result = executeCreateStorageVirtualMachine(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateVolumeResult> createVolumeAsync(CreateVolumeRequest request) {
+
+        return createVolumeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateVolumeResult> createVolumeAsync(final CreateVolumeRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateVolumeRequest, CreateVolumeResult> asyncHandler) {
+        final CreateVolumeRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateVolumeResult>() {
+            @Override
+            public CreateVolumeResult call() throws Exception {
+                CreateVolumeResult result = null;
+
+                try {
+                    result = executeCreateVolume(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateVolumeFromBackupResult> createVolumeFromBackupAsync(CreateVolumeFromBackupRequest request) {
+
+        return createVolumeFromBackupAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateVolumeFromBackupResult> createVolumeFromBackupAsync(final CreateVolumeFromBackupRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateVolumeFromBackupRequest, CreateVolumeFromBackupResult> asyncHandler) {
+        final CreateVolumeFromBackupRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateVolumeFromBackupResult>() {
+            @Override
+            public CreateVolumeFromBackupResult call() throws Exception {
+                CreateVolumeFromBackupResult result = null;
+
+                try {
+                    result = executeCreateVolumeFromBackup(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteBackupResult> deleteBackupAsync(DeleteBackupRequest request) {
 
         return deleteBackupAsync(request, null);
@@ -356,6 +455,72 @@ public class AmazonFSxAsyncClient extends AmazonFSxClient implements AmazonFSxAs
 
                 try {
                     result = executeDeleteFileSystem(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteStorageVirtualMachineResult> deleteStorageVirtualMachineAsync(DeleteStorageVirtualMachineRequest request) {
+
+        return deleteStorageVirtualMachineAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteStorageVirtualMachineResult> deleteStorageVirtualMachineAsync(final DeleteStorageVirtualMachineRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteStorageVirtualMachineRequest, DeleteStorageVirtualMachineResult> asyncHandler) {
+        final DeleteStorageVirtualMachineRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteStorageVirtualMachineResult>() {
+            @Override
+            public DeleteStorageVirtualMachineResult call() throws Exception {
+                DeleteStorageVirtualMachineResult result = null;
+
+                try {
+                    result = executeDeleteStorageVirtualMachine(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteVolumeResult> deleteVolumeAsync(DeleteVolumeRequest request) {
+
+        return deleteVolumeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteVolumeResult> deleteVolumeAsync(final DeleteVolumeRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteVolumeRequest, DeleteVolumeResult> asyncHandler) {
+        final DeleteVolumeRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteVolumeResult>() {
+            @Override
+            public DeleteVolumeResult call() throws Exception {
+                DeleteVolumeResult result = null;
+
+                try {
+                    result = executeDeleteVolume(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -488,6 +653,73 @@ public class AmazonFSxAsyncClient extends AmazonFSxClient implements AmazonFSxAs
 
                 try {
                     result = executeDescribeFileSystems(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeStorageVirtualMachinesResult> describeStorageVirtualMachinesAsync(DescribeStorageVirtualMachinesRequest request) {
+
+        return describeStorageVirtualMachinesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeStorageVirtualMachinesResult> describeStorageVirtualMachinesAsync(
+            final DescribeStorageVirtualMachinesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeStorageVirtualMachinesRequest, DescribeStorageVirtualMachinesResult> asyncHandler) {
+        final DescribeStorageVirtualMachinesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeStorageVirtualMachinesResult>() {
+            @Override
+            public DescribeStorageVirtualMachinesResult call() throws Exception {
+                DescribeStorageVirtualMachinesResult result = null;
+
+                try {
+                    result = executeDescribeStorageVirtualMachines(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeVolumesResult> describeVolumesAsync(DescribeVolumesRequest request) {
+
+        return describeVolumesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeVolumesResult> describeVolumesAsync(final DescribeVolumesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeVolumesRequest, DescribeVolumesResult> asyncHandler) {
+        final DescribeVolumesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeVolumesResult>() {
+            @Override
+            public DescribeVolumesResult call() throws Exception {
+                DescribeVolumesResult result = null;
+
+                try {
+                    result = executeDescribeVolumes(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -654,6 +886,72 @@ public class AmazonFSxAsyncClient extends AmazonFSxClient implements AmazonFSxAs
 
                 try {
                     result = executeUpdateFileSystem(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateStorageVirtualMachineResult> updateStorageVirtualMachineAsync(UpdateStorageVirtualMachineRequest request) {
+
+        return updateStorageVirtualMachineAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateStorageVirtualMachineResult> updateStorageVirtualMachineAsync(final UpdateStorageVirtualMachineRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateStorageVirtualMachineRequest, UpdateStorageVirtualMachineResult> asyncHandler) {
+        final UpdateStorageVirtualMachineRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateStorageVirtualMachineResult>() {
+            @Override
+            public UpdateStorageVirtualMachineResult call() throws Exception {
+                UpdateStorageVirtualMachineResult result = null;
+
+                try {
+                    result = executeUpdateStorageVirtualMachine(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateVolumeResult> updateVolumeAsync(UpdateVolumeRequest request) {
+
+        return updateVolumeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateVolumeResult> updateVolumeAsync(final UpdateVolumeRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateVolumeRequest, UpdateVolumeResult> asyncHandler) {
+        final UpdateVolumeRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateVolumeResult>() {
+            @Override
+            public UpdateVolumeResult call() throws Exception {
+                UpdateVolumeResult result = null;
+
+                try {
+                    result = executeUpdateVolume(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

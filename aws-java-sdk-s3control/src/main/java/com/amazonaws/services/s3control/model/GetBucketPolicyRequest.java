@@ -27,7 +27,7 @@ public class GetBucketPolicyRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The account ID of the Outposts bucket.
+     * The Amazon Web Services account ID of the Outposts bucket.
      * </p>
      */
     private String accountId;
@@ -53,11 +53,11 @@ public class GetBucketPolicyRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The account ID of the Outposts bucket.
+     * The Amazon Web Services account ID of the Outposts bucket.
      * </p>
      * 
      * @param accountId
-     *        The account ID of the Outposts bucket.
+     *        The Amazon Web Services account ID of the Outposts bucket.
      */
 
     public void setAccountId(String accountId) {
@@ -66,10 +66,10 @@ public class GetBucketPolicyRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The account ID of the Outposts bucket.
+     * The Amazon Web Services account ID of the Outposts bucket.
      * </p>
      * 
-     * @return The account ID of the Outposts bucket.
+     * @return The Amazon Web Services account ID of the Outposts bucket.
      */
 
     public String getAccountId() {
@@ -78,11 +78,11 @@ public class GetBucketPolicyRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The account ID of the Outposts bucket.
+     * The Amazon Web Services account ID of the Outposts bucket.
      * </p>
      * 
      * @param accountId
-     *        The account ID of the Outposts bucket.
+     *        The Amazon Web Services account ID of the Outposts bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

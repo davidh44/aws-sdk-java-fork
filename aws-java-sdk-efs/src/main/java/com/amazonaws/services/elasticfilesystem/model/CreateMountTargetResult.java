@@ -28,7 +28,7 @@ public class CreateMountTargetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * AWS account ID that owns the resource.
+     * Amazon Web Services account ID that owns the resource.
      * </p>
      */
     private String ownerId;
@@ -71,15 +71,17 @@ public class CreateMountTargetResult extends com.amazonaws.AmazonWebServiceResul
     /**
      * <p>
      * The unique and consistent identifier of the Availability Zone that the mount target resides in. For example,
-     * <code>use1-az1</code> is an AZ ID for the us-east-1 Region and it has the same location in every AWS account.
+     * <code>use1-az1</code> is an AZ ID for the us-east-1 Region and it has the same location in every Amazon Web
+     * Services account.
      * </p>
      */
     private String availabilityZoneId;
     /**
      * <p>
      * The name of the Availability Zone in which the mount target is located. Availability Zones are independently
-     * mapped to names for each AWS account. For example, the Availability Zone <code>us-east-1a</code> for your AWS
-     * account might not be the same location as <code>us-east-1a</code> for another AWS account.
+     * mapped to names for each Amazon Web Services account. For example, the Availability Zone <code>us-east-1a</code>
+     * for your Amazon Web Services account might not be the same location as <code>us-east-1a</code> for another Amazon
+     * Web Services account.
      * </p>
      */
     private String availabilityZoneName;
@@ -92,11 +94,11 @@ public class CreateMountTargetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * AWS account ID that owns the resource.
+     * Amazon Web Services account ID that owns the resource.
      * </p>
      * 
      * @param ownerId
-     *        AWS account ID that owns the resource.
+     *        Amazon Web Services account ID that owns the resource.
      */
 
     public void setOwnerId(String ownerId) {
@@ -105,10 +107,10 @@ public class CreateMountTargetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * AWS account ID that owns the resource.
+     * Amazon Web Services account ID that owns the resource.
      * </p>
      * 
-     * @return AWS account ID that owns the resource.
+     * @return Amazon Web Services account ID that owns the resource.
      */
 
     public String getOwnerId() {
@@ -117,11 +119,11 @@ public class CreateMountTargetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * AWS account ID that owns the resource.
+     * Amazon Web Services account ID that owns the resource.
      * </p>
      * 
      * @param ownerId
-     *        AWS account ID that owns the resource.
+     *        Amazon Web Services account ID that owns the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -406,13 +408,14 @@ public class CreateMountTargetResult extends com.amazonaws.AmazonWebServiceResul
     /**
      * <p>
      * The unique and consistent identifier of the Availability Zone that the mount target resides in. For example,
-     * <code>use1-az1</code> is an AZ ID for the us-east-1 Region and it has the same location in every AWS account.
+     * <code>use1-az1</code> is an AZ ID for the us-east-1 Region and it has the same location in every Amazon Web
+     * Services account.
      * </p>
      * 
      * @param availabilityZoneId
      *        The unique and consistent identifier of the Availability Zone that the mount target resides in. For
      *        example, <code>use1-az1</code> is an AZ ID for the us-east-1 Region and it has the same location in every
-     *        AWS account.
+     *        Amazon Web Services account.
      */
 
     public void setAvailabilityZoneId(String availabilityZoneId) {
@@ -422,12 +425,13 @@ public class CreateMountTargetResult extends com.amazonaws.AmazonWebServiceResul
     /**
      * <p>
      * The unique and consistent identifier of the Availability Zone that the mount target resides in. For example,
-     * <code>use1-az1</code> is an AZ ID for the us-east-1 Region and it has the same location in every AWS account.
+     * <code>use1-az1</code> is an AZ ID for the us-east-1 Region and it has the same location in every Amazon Web
+     * Services account.
      * </p>
      * 
      * @return The unique and consistent identifier of the Availability Zone that the mount target resides in. For
      *         example, <code>use1-az1</code> is an AZ ID for the us-east-1 Region and it has the same location in every
-     *         AWS account.
+     *         Amazon Web Services account.
      */
 
     public String getAvailabilityZoneId() {
@@ -437,13 +441,14 @@ public class CreateMountTargetResult extends com.amazonaws.AmazonWebServiceResul
     /**
      * <p>
      * The unique and consistent identifier of the Availability Zone that the mount target resides in. For example,
-     * <code>use1-az1</code> is an AZ ID for the us-east-1 Region and it has the same location in every AWS account.
+     * <code>use1-az1</code> is an AZ ID for the us-east-1 Region and it has the same location in every Amazon Web
+     * Services account.
      * </p>
      * 
      * @param availabilityZoneId
      *        The unique and consistent identifier of the Availability Zone that the mount target resides in. For
      *        example, <code>use1-az1</code> is an AZ ID for the us-east-1 Region and it has the same location in every
-     *        AWS account.
+     *        Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -455,15 +460,16 @@ public class CreateMountTargetResult extends com.amazonaws.AmazonWebServiceResul
     /**
      * <p>
      * The name of the Availability Zone in which the mount target is located. Availability Zones are independently
-     * mapped to names for each AWS account. For example, the Availability Zone <code>us-east-1a</code> for your AWS
-     * account might not be the same location as <code>us-east-1a</code> for another AWS account.
+     * mapped to names for each Amazon Web Services account. For example, the Availability Zone <code>us-east-1a</code>
+     * for your Amazon Web Services account might not be the same location as <code>us-east-1a</code> for another Amazon
+     * Web Services account.
      * </p>
      * 
      * @param availabilityZoneName
      *        The name of the Availability Zone in which the mount target is located. Availability Zones are
-     *        independently mapped to names for each AWS account. For example, the Availability Zone
-     *        <code>us-east-1a</code> for your AWS account might not be the same location as <code>us-east-1a</code> for
-     *        another AWS account.
+     *        independently mapped to names for each Amazon Web Services account. For example, the Availability Zone
+     *        <code>us-east-1a</code> for your Amazon Web Services account might not be the same location as
+     *        <code>us-east-1a</code> for another Amazon Web Services account.
      */
 
     public void setAvailabilityZoneName(String availabilityZoneName) {
@@ -473,14 +479,15 @@ public class CreateMountTargetResult extends com.amazonaws.AmazonWebServiceResul
     /**
      * <p>
      * The name of the Availability Zone in which the mount target is located. Availability Zones are independently
-     * mapped to names for each AWS account. For example, the Availability Zone <code>us-east-1a</code> for your AWS
-     * account might not be the same location as <code>us-east-1a</code> for another AWS account.
+     * mapped to names for each Amazon Web Services account. For example, the Availability Zone <code>us-east-1a</code>
+     * for your Amazon Web Services account might not be the same location as <code>us-east-1a</code> for another Amazon
+     * Web Services account.
      * </p>
      * 
      * @return The name of the Availability Zone in which the mount target is located. Availability Zones are
-     *         independently mapped to names for each AWS account. For example, the Availability Zone
-     *         <code>us-east-1a</code> for your AWS account might not be the same location as <code>us-east-1a</code>
-     *         for another AWS account.
+     *         independently mapped to names for each Amazon Web Services account. For example, the Availability Zone
+     *         <code>us-east-1a</code> for your Amazon Web Services account might not be the same location as
+     *         <code>us-east-1a</code> for another Amazon Web Services account.
      */
 
     public String getAvailabilityZoneName() {
@@ -490,15 +497,16 @@ public class CreateMountTargetResult extends com.amazonaws.AmazonWebServiceResul
     /**
      * <p>
      * The name of the Availability Zone in which the mount target is located. Availability Zones are independently
-     * mapped to names for each AWS account. For example, the Availability Zone <code>us-east-1a</code> for your AWS
-     * account might not be the same location as <code>us-east-1a</code> for another AWS account.
+     * mapped to names for each Amazon Web Services account. For example, the Availability Zone <code>us-east-1a</code>
+     * for your Amazon Web Services account might not be the same location as <code>us-east-1a</code> for another Amazon
+     * Web Services account.
      * </p>
      * 
      * @param availabilityZoneName
      *        The name of the Availability Zone in which the mount target is located. Availability Zones are
-     *        independently mapped to names for each AWS account. For example, the Availability Zone
-     *        <code>us-east-1a</code> for your AWS account might not be the same location as <code>us-east-1a</code> for
-     *        another AWS account.
+     *        independently mapped to names for each Amazon Web Services account. For example, the Availability Zone
+     *        <code>us-east-1a</code> for your Amazon Web Services account might not be the same location as
+     *        <code>us-east-1a</code> for another Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

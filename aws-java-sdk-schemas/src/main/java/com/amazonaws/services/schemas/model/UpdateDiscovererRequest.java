@@ -37,6 +37,12 @@ public class UpdateDiscovererRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private String discovererId;
+    /**
+     * <p>
+     * Support discovery of schemas in events sent to the bus from another account. (default: true)
+     * </p>
+     */
+    private Boolean crossAccount;
 
     /**
      * <p>
@@ -119,6 +125,58 @@ public class UpdateDiscovererRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Support discovery of schemas in events sent to the bus from another account. (default: true)
+     * </p>
+     * 
+     * @param crossAccount
+     *        Support discovery of schemas in events sent to the bus from another account. (default: true)
+     */
+
+    public void setCrossAccount(Boolean crossAccount) {
+        this.crossAccount = crossAccount;
+    }
+
+    /**
+     * <p>
+     * Support discovery of schemas in events sent to the bus from another account. (default: true)
+     * </p>
+     * 
+     * @return Support discovery of schemas in events sent to the bus from another account. (default: true)
+     */
+
+    public Boolean getCrossAccount() {
+        return this.crossAccount;
+    }
+
+    /**
+     * <p>
+     * Support discovery of schemas in events sent to the bus from another account. (default: true)
+     * </p>
+     * 
+     * @param crossAccount
+     *        Support discovery of schemas in events sent to the bus from another account. (default: true)
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateDiscovererRequest withCrossAccount(Boolean crossAccount) {
+        setCrossAccount(crossAccount);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Support discovery of schemas in events sent to the bus from another account. (default: true)
+     * </p>
+     * 
+     * @return Support discovery of schemas in events sent to the bus from another account. (default: true)
+     */
+
+    public Boolean isCrossAccount() {
+        return this.crossAccount;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -133,7 +191,9 @@ public class UpdateDiscovererRequest extends com.amazonaws.AmazonWebServiceReque
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
         if (getDiscovererId() != null)
-            sb.append("DiscovererId: ").append(getDiscovererId());
+            sb.append("DiscovererId: ").append(getDiscovererId()).append(",");
+        if (getCrossAccount() != null)
+            sb.append("CrossAccount: ").append(getCrossAccount());
         sb.append("}");
         return sb.toString();
     }
@@ -156,6 +216,10 @@ public class UpdateDiscovererRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getDiscovererId() != null && other.getDiscovererId().equals(this.getDiscovererId()) == false)
             return false;
+        if (other.getCrossAccount() == null ^ this.getCrossAccount() == null)
+            return false;
+        if (other.getCrossAccount() != null && other.getCrossAccount().equals(this.getCrossAccount()) == false)
+            return false;
         return true;
     }
 
@@ -166,6 +230,7 @@ public class UpdateDiscovererRequest extends com.amazonaws.AmazonWebServiceReque
 
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getDiscovererId() == null) ? 0 : getDiscovererId().hashCode());
+        hashCode = prime * hashCode + ((getCrossAccount() == null) ? 0 : getCrossAccount().hashCode());
         return hashCode;
     }
 

@@ -78,7 +78,7 @@ public class CreateAccessPointResult extends com.amazonaws.AmazonWebServiceResul
     private RootDirectory rootDirectory;
     /**
      * <p>
-     * Identified the AWS account that owns the access point resource.
+     * Identified the Amazon Web Services account that owns the access point resource.
      * </p>
      */
     private String ownerId;
@@ -456,11 +456,11 @@ public class CreateAccessPointResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Identified the AWS account that owns the access point resource.
+     * Identified the Amazon Web Services account that owns the access point resource.
      * </p>
      * 
      * @param ownerId
-     *        Identified the AWS account that owns the access point resource.
+     *        Identified the Amazon Web Services account that owns the access point resource.
      */
 
     public void setOwnerId(String ownerId) {
@@ -469,10 +469,10 @@ public class CreateAccessPointResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Identified the AWS account that owns the access point resource.
+     * Identified the Amazon Web Services account that owns the access point resource.
      * </p>
      * 
-     * @return Identified the AWS account that owns the access point resource.
+     * @return Identified the Amazon Web Services account that owns the access point resource.
      */
 
     public String getOwnerId() {
@@ -481,11 +481,11 @@ public class CreateAccessPointResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Identified the AWS account that owns the access point resource.
+     * Identified the Amazon Web Services account that owns the access point resource.
      * </p>
      * 
      * @param ownerId
-     *        Identified the AWS account that owns the access point resource.
+     *        Identified the Amazon Web Services account that owns the access point resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

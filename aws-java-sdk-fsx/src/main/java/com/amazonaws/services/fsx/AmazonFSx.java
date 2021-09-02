@@ -45,7 +45,7 @@ public interface AmazonFSx {
     /**
      * <p>
      * Use this action to associate one or more Domain Name Server (DNS) aliases with an existing Amazon FSx for Windows
-     * File Server file system. A file systen can have a maximum of 50 DNS aliases associated with it at any one time.
+     * File Server file system. A file system can have a maximum of 50 DNS aliases associated with it at any one time.
      * If you try to associate a DNS alias that is already associated with the file system, FSx takes no action on that
      * alias in the request. For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html">Working with DNS Aliases</a>
@@ -118,25 +118,25 @@ public interface AmazonFSx {
 
     /**
      * <p>
-     * Copies an existing backup within the same AWS account to another Region (cross-Region copy) or within the same
-     * Region (in-Region copy). You can have up to five backup copy requests in progress to a single destination Region
-     * per account.
+     * Copies an existing backup within the same Amazon Web Services account to another Amazon Web Services Region
+     * (cross-Region copy) or within the same Amazon Web Services Region (in-Region copy). You can have up to five
+     * backup copy requests in progress to a single destination Region per account.
      * </p>
      * <p>
      * You can use cross-Region backup copies for cross-region disaster recovery. You periodically take backups and copy
      * them to another Region so that in the event of a disaster in the primary Region, you can restore from backup and
-     * recover availability quickly in the other Region. You can make cross-Region copies only within your AWS
-     * partition.
+     * recover availability quickly in the other Region. You can make cross-Region copies only within your Amazon Web
+     * Services partition.
      * </p>
      * <p>
      * You can also use backup copies to clone your file data set to another Region or within the same Region.
      * </p>
      * <p>
-     * You can use the <code>SourceRegion</code> parameter to specify the AWS Region from which the backup will be
-     * copied. For example, if you make the call from the <code>us-west-1</code> Region and want to copy a backup from
-     * the <code>us-east-2</code> Region, you specify <code>us-east-2</code> in the <code>SourceRegion</code> parameter
-     * to make a cross-Region copy. If you don't specify a Region, the backup copy is created in the same Region where
-     * the request is sent from (in-Region copy).
+     * You can use the <code>SourceRegion</code> parameter to specify the Amazon Web Services Region from which the
+     * backup will be copied. For example, if you make the call from the <code>us-west-1</code> Region and want to copy
+     * a backup from the <code>us-east-2</code> Region, you specify <code>us-east-2</code> in the
+     * <code>SourceRegion</code> parameter to make a cross-Region copy. If you don't specify a Region, the backup copy
+     * is created in the same Region where the request is sent from (in-Region copy).
      * </p>
      * <p>
      * For more information on creating backup copies, see <a
@@ -154,7 +154,7 @@ public interface AmazonFSx {
      *         No Amazon FSx backups were found based upon the supplied parameters.
      * @throws ServiceLimitExceededException
      *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
-     *         contacting AWS Support.
+     *         contacting Amazon Web Services Support.
      * @throws UnsupportedOperationException
      *         The requested operation is not supported for this resource or API.
      * @throws IncompatibleParameterErrorException
@@ -163,11 +163,12 @@ public interface AmazonFSx {
      * @throws InternalServerErrorException
      *         A generic error indicating a server-side failure.
      * @throws InvalidSourceKmsKeyException
-     *         The AWS Key Management Service (AWS KMS) key of the source backup is invalid.
+     *         The Key Management Service (KMS) key of the source backup is invalid.
      * @throws InvalidDestinationKmsKeyException
-     *         The AWS Key Management Service (AWS KMS) key of the destination backup is invalid.
+     *         The Key Management Service (KMS) key of the destination backup is invalid.
      * @throws InvalidRegionException
-     *         The Region provided for <code>Source Region</code> is invalid or is in a different AWS partition.
+     *         The Region provided for <code>Source Region</code> is invalid or is in a different Amazon Web Services
+     *         partition.
      * @throws SourceBackupUnavailableException
      *         The request was rejected because the lifecycle status of the source backup is not <code>AVAILABLE</code>.
      * @throws IncompatibleRegionForMultiAZException
@@ -181,8 +182,9 @@ public interface AmazonFSx {
 
     /**
      * <p>
-     * Creates a backup of an existing Amazon FSx file system. Creating regular backups for your file system is a best
-     * practice, enabling you to restore a file system from a backup if an issue arises with the original file system.
+     * Creates a backup of an existing Amazon FSx for Windows File Server or Amazon FSx for Lustre file system, or of an
+     * Amazon FSx for NetApp ONTAP volume. Creating regular backups is a best practice, enabling you to restore a file
+     * system or volume from a backup if an issue arises with the original file system or volume.
      * </p>
      * <p>
      * For Amazon FSx for Lustre file systems, you can create a backup only for file systems with the following
@@ -196,20 +198,36 @@ public interface AmazonFSx {
      * </li>
      * <li>
      * <p>
-     * is <i>not</i> linked to a data respository.
+     * is <i>not</i> linked to a data repository.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For more information about backing up Amazon FSx for Lustre file systems, see <a
+     * For more information about backups, see the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For Amazon FSx for Lustre, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html">Working with FSx for Lustre
      * backups</a>.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * For more information about backing up Amazon FSx for Windows file systems, see <a
+     * For Amazon FSx for Windows, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/using-backups.html">Working with FSx for Windows
      * backups</a>.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For Amazon FSx for NetApp ONTAP, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-backups.html">Working with FSx for NetApp ONTAP
+     * backups</a>.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * If a backup with the specified client request token exists, and the parameters match, this operation returns the
      * description of the existing backup. If a backup specified client request token exists, and the parameters don't
@@ -249,6 +267,8 @@ public interface AmazonFSx {
      *         The requested operation is not supported for this resource or API.
      * @throws FileSystemNotFoundException
      *         No Amazon FSx file systems were found based upon supplied parameters.
+     * @throws VolumeNotFoundException
+     *         No Amazon FSx for NetApp ONTAP volumes were found based upon the supplied parameters.
      * @throws BackupInProgressException
      *         Another backup is already under way. Wait for completion before initiating additional backups of this
      *         file system.
@@ -257,7 +277,7 @@ public interface AmazonFSx {
      *         parameters settings. A client request token should always uniquely identify a single request.
      * @throws ServiceLimitExceededException
      *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
-     *         contacting AWS Support.
+     *         contacting Amazon Web Services Support.
      * @throws InternalServerErrorException
      *         A generic error indicating a server-side failure.
      * @sample AmazonFSx.CreateBackup
@@ -293,7 +313,7 @@ public interface AmazonFSx {
      *         parameters settings. A client request token should always uniquely identify a single request.
      * @throws ServiceLimitExceededException
      *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
-     *         contacting AWS Support.
+     *         contacting Amazon Web Services Support.
      * @throws InternalServerErrorException
      *         A generic error indicating a server-side failure.
      * @throws DataRepositoryTaskExecutingException
@@ -361,17 +381,13 @@ public interface AmazonFSx {
      * @throws InvalidExportPathException
      *         The path provided for data repository export isn't valid.
      * @throws InvalidNetworkSettingsException
-     *         One or more network settings specified in the request are invalid. <code>InvalidVpcId</code> means that
-     *         the ID passed for the virtual private cloud (VPC) is invalid. <code>InvalidSubnetIds</code> returns the
-     *         list of IDs for subnets that are either invalid or not part of the VPC specified.
-     *         <code>InvalidSecurityGroupIds</code> returns the list of IDs for security groups that are either invalid
-     *         or not part of the VPC specified.
+     *         One or more network settings specified in the request are invalid.
      * @throws InvalidPerUnitStorageThroughputException
      *         An invalid value for <code>PerUnitStorageThroughput</code> was provided. Please create your file system
      *         again, using a valid value.
      * @throws ServiceLimitExceededException
      *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
-     *         contacting AWS Support.
+     *         contacting Amazon Web Services Support.
      * @throws InternalServerErrorException
      *         A generic error indicating a server-side failure.
      * @throws MissingFileSystemConfigurationException
@@ -384,7 +400,8 @@ public interface AmazonFSx {
 
     /**
      * <p>
-     * Creates a new Amazon FSx file system from an existing Amazon FSx backup.
+     * Creates a new Amazon FSx for Lustre or Amazon FSx for Windows File Server file system from an existing Amazon FSx
+     * backup.
      * </p>
      * <p>
      * If a file system with the specified client request token exists and the parameters match, this operation returns
@@ -435,17 +452,13 @@ public interface AmazonFSx {
      *         The error returned when a second request is received with the same client request token but different
      *         parameters settings. A client request token should always uniquely identify a single request.
      * @throws InvalidNetworkSettingsException
-     *         One or more network settings specified in the request are invalid. <code>InvalidVpcId</code> means that
-     *         the ID passed for the virtual private cloud (VPC) is invalid. <code>InvalidSubnetIds</code> returns the
-     *         list of IDs for subnets that are either invalid or not part of the VPC specified.
-     *         <code>InvalidSecurityGroupIds</code> returns the list of IDs for security groups that are either invalid
-     *         or not part of the VPC specified.
+     *         One or more network settings specified in the request are invalid.
      * @throws InvalidPerUnitStorageThroughputException
      *         An invalid value for <code>PerUnitStorageThroughput</code> was provided. Please create your file system
      *         again, using a valid value.
      * @throws ServiceLimitExceededException
      *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
-     *         contacting AWS Support.
+     *         contacting Amazon Web Services Support.
      * @throws BackupNotFoundException
      *         No Amazon FSx backups were found based upon the supplied parameters.
      * @throws InternalServerErrorException
@@ -457,6 +470,97 @@ public interface AmazonFSx {
      *      API Documentation</a>
      */
     CreateFileSystemFromBackupResult createFileSystemFromBackup(CreateFileSystemFromBackupRequest createFileSystemFromBackupRequest);
+
+    /**
+     * <p>
+     * Creates a storage virtual machine (SVM) for an Amazon FSx for ONTAP file system.
+     * </p>
+     * 
+     * @param createStorageVirtualMachineRequest
+     * @return Result of the CreateStorageVirtualMachine operation returned by the service.
+     * @throws ActiveDirectoryErrorException
+     *         An Active Directory error.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws FileSystemNotFoundException
+     *         No Amazon FSx file systems were found based upon supplied parameters.
+     * @throws IncompatibleParameterErrorException
+     *         The error returned when a second request is received with the same client request token but different
+     *         parameters settings. A client request token should always uniquely identify a single request.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @throws ServiceLimitExceededException
+     *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
+     *         contacting Amazon Web Services Support.
+     * @throws UnsupportedOperationException
+     *         The requested operation is not supported for this resource or API.
+     * @sample AmazonFSx.CreateStorageVirtualMachine
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/CreateStorageVirtualMachine"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateStorageVirtualMachineResult createStorageVirtualMachine(CreateStorageVirtualMachineRequest createStorageVirtualMachineRequest);
+
+    /**
+     * <p>
+     * Creates an Amazon FSx for NetApp ONTAP storage volume.
+     * </p>
+     * 
+     * @param createVolumeRequest
+     * @return Result of the CreateVolume operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws FileSystemNotFoundException
+     *         No Amazon FSx file systems were found based upon supplied parameters.
+     * @throws IncompatibleParameterErrorException
+     *         The error returned when a second request is received with the same client request token but different
+     *         parameters settings. A client request token should always uniquely identify a single request.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @throws MissingVolumeConfigurationException
+     *         A volume configuration is required for this operation.
+     * @throws ServiceLimitExceededException
+     *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
+     *         contacting Amazon Web Services Support.
+     * @throws StorageVirtualMachineNotFoundException
+     *         No Amazon FSx for NetApp ONTAP SVMs were found based upon the supplied parameters.
+     * @throws UnsupportedOperationException
+     *         The requested operation is not supported for this resource or API.
+     * @sample AmazonFSx.CreateVolume
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/CreateVolume" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateVolumeResult createVolume(CreateVolumeRequest createVolumeRequest);
+
+    /**
+     * <p>
+     * Creates a new Amazon FSx for NetApp ONTAP volume from an existing Amazon FSx volume backup.
+     * </p>
+     * 
+     * @param createVolumeFromBackupRequest
+     * @return Result of the CreateVolumeFromBackup operation returned by the service.
+     * @throws BackupNotFoundException
+     *         No Amazon FSx backups were found based upon the supplied parameters.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws FileSystemNotFoundException
+     *         No Amazon FSx file systems were found based upon supplied parameters.
+     * @throws IncompatibleParameterErrorException
+     *         The error returned when a second request is received with the same client request token but different
+     *         parameters settings. A client request token should always uniquely identify a single request.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @throws MissingVolumeConfigurationException
+     *         A volume configuration is required for this operation.
+     * @throws ServiceLimitExceededException
+     *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
+     *         contacting Amazon Web Services Support.
+     * @throws StorageVirtualMachineNotFoundException
+     *         No Amazon FSx for NetApp ONTAP SVMs were found based upon the supplied parameters.
+     * @sample AmazonFSx.CreateVolumeFromBackup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/CreateVolumeFromBackup" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateVolumeFromBackupResult createVolumeFromBackup(CreateVolumeFromBackupRequest createVolumeFromBackupRequest);
 
     /**
      * <p>
@@ -504,6 +608,10 @@ public interface AmazonFSx {
      * gone. Any existing automatic backups will also be deleted.
      * </p>
      * <p>
+     * To delete an Amazon FSx for NetApp ONTAP file system, first delete all the volumes and SVMs on the file system.
+     * Then provide a <code>FileSystemId</code> value to the <code>DeleFileSystem</code> operation.
+     * </p>
+     * <p>
      * By default, when you delete an Amazon FSx for Windows File Server file system, a final backup is created upon
      * deletion. This final backup is not subject to the file system's retention policy, and must be manually deleted.
      * </p>
@@ -536,7 +644,7 @@ public interface AmazonFSx {
      *         No Amazon FSx file systems were found based upon supplied parameters.
      * @throws ServiceLimitExceededException
      *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
-     *         contacting AWS Support.
+     *         contacting Amazon Web Services Support.
      * @throws InternalServerErrorException
      *         A generic error indicating a server-side failure.
      * @sample AmazonFSx.DeleteFileSystem
@@ -547,9 +655,56 @@ public interface AmazonFSx {
 
     /**
      * <p>
+     * Deletes an existing Amazon FSx for ONTAP storage virtual machine (SVM). Prior to deleting an SVM, you must delete
+     * all non-root volumes in the SVM, otherwise the operation will fail.
+     * </p>
+     * 
+     * @param deleteStorageVirtualMachineRequest
+     * @return Result of the DeleteStorageVirtualMachine operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws IncompatibleParameterErrorException
+     *         The error returned when a second request is received with the same client request token but different
+     *         parameters settings. A client request token should always uniquely identify a single request.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @throws StorageVirtualMachineNotFoundException
+     *         No Amazon FSx for NetApp ONTAP SVMs were found based upon the supplied parameters.
+     * @sample AmazonFSx.DeleteStorageVirtualMachine
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DeleteStorageVirtualMachine"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteStorageVirtualMachineResult deleteStorageVirtualMachine(DeleteStorageVirtualMachineRequest deleteStorageVirtualMachineRequest);
+
+    /**
+     * <p>
+     * Deletes an Amazon FSx for NetApp ONTAP volume. When deleting a volume, you have the option of creating a final
+     * backup. If you create a final backup, you have the option to apply Tags to the backup. You need to have
+     * <code>fsx:TagResource</code> permission in order to apply tags to the backup.
+     * </p>
+     * 
+     * @param deleteVolumeRequest
+     * @return Result of the DeleteVolume operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws IncompatibleParameterErrorException
+     *         The error returned when a second request is received with the same client request token but different
+     *         parameters settings. A client request token should always uniquely identify a single request.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @throws VolumeNotFoundException
+     *         No Amazon FSx for NetApp ONTAP volumes were found based upon the supplied parameters.
+     * @sample AmazonFSx.DeleteVolume
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DeleteVolume" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteVolumeResult deleteVolume(DeleteVolumeRequest deleteVolumeRequest);
+
+    /**
+     * <p>
      * Returns the description of specific Amazon FSx backups, if a <code>BackupIds</code> value is provided for that
-     * backup. Otherwise, it returns all backups owned by your AWS account in the AWS Region of the endpoint that you're
-     * calling.
+     * backup. Otherwise, it returns all backups owned by your Amazon Web Services account in the Amazon Web Services
+     * Region of the endpoint that you're calling.
      * </p>
      * <p>
      * When retrieving all backups, you can optionally specify the <code>MaxResults</code> parameter to limit the number
@@ -569,8 +724,8 @@ public interface AmazonFSx {
      * <ul>
      * <li>
      * <p>
-     * The implementation might return fewer than <code>MaxResults</code> file system descriptions while still including
-     * a <code>NextToken</code> value.
+     * The implementation might return fewer than <code>MaxResults</code> backup descriptions while still including a
+     * <code>NextToken</code> value.
      * </p>
      * </li>
      * <li>
@@ -588,6 +743,8 @@ public interface AmazonFSx {
      *         A generic error indicating a failure with a client request.
      * @throws FileSystemNotFoundException
      *         No Amazon FSx file systems were found based upon supplied parameters.
+     * @throws VolumeNotFoundException
+     *         No Amazon FSx for NetApp ONTAP volumes were found based upon the supplied parameters.
      * @throws BackupNotFoundException
      *         No Amazon FSx backups were found based upon the supplied parameters.
      * @throws InternalServerErrorException
@@ -603,8 +760,8 @@ public interface AmazonFSx {
      * Returns the description of specific Amazon FSx for Lustre data repository tasks, if one or more
      * <code>TaskIds</code> values are provided in the request, or if filters are used in the request. You can use
      * filters to narrow the response to include just tasks for specific file systems, or tasks in a specific lifecycle
-     * state. Otherwise, it returns all data repository tasks owned by your AWS account in the AWS Region of the
-     * endpoint that you're calling.
+     * state. Otherwise, it returns all data repository tasks owned by your Amazon Web Services account in the Amazon
+     * Web Services Region of the endpoint that you're calling.
      * </p>
      * <p>
      * When retrieving all tasks, you can paginate the response by using the optional <code>MaxResults</code> parameter
@@ -654,8 +811,8 @@ public interface AmazonFSx {
     /**
      * <p>
      * Returns the description of specific Amazon FSx file systems, if a <code>FileSystemIds</code> value is provided
-     * for that file system. Otherwise, it returns descriptions of all file systems owned by your AWS account in the AWS
-     * Region of the endpoint that you're calling.
+     * for that file system. Otherwise, it returns descriptions of all file systems owned by your Amazon Web Services
+     * account in the Amazon Web Services Region of the endpoint that you're calling.
      * </p>
      * <p>
      * When retrieving all file system descriptions, you can optionally specify the <code>MaxResults</code> parameter to
@@ -701,6 +858,44 @@ public interface AmazonFSx {
      *      Documentation</a>
      */
     DescribeFileSystemsResult describeFileSystems(DescribeFileSystemsRequest describeFileSystemsRequest);
+
+    /**
+     * <p>
+     * Describes one or more Amazon FSx for NetApp ONTAP storage virtual machines (SVMs).
+     * </p>
+     * 
+     * @param describeStorageVirtualMachinesRequest
+     * @return Result of the DescribeStorageVirtualMachines operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @throws StorageVirtualMachineNotFoundException
+     *         No Amazon FSx for NetApp ONTAP SVMs were found based upon the supplied parameters.
+     * @sample AmazonFSx.DescribeStorageVirtualMachines
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DescribeStorageVirtualMachines"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeStorageVirtualMachinesResult describeStorageVirtualMachines(DescribeStorageVirtualMachinesRequest describeStorageVirtualMachinesRequest);
+
+    /**
+     * <p>
+     * Describes one or more Amazon FSx for NetApp ONTAP volumes.
+     * </p>
+     * 
+     * @param describeVolumesRequest
+     * @return Result of the DescribeVolumes operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @throws VolumeNotFoundException
+     *         No Amazon FSx for NetApp ONTAP volumes were found based upon the supplied parameters.
+     * @sample AmazonFSx.DescribeVolumes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DescribeVolumes" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeVolumesResult describeVolumes(DescribeVolumesRequest describeVolumesRequest);
 
     /**
      * <p>
@@ -915,6 +1110,31 @@ public interface AmazonFSx {
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * For Amazon FSx for NetApp ONTAP file systems, you can update the following properties:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * AutomaticBackupRetentionDays
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * DailyAutomaticBackupStartTime
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * FsxAdminPassword
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * WeeklyMaintenanceStartTime
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param updateFileSystemRequest
      *        The request object for the <code>UpdateFileSystem</code> operation.
@@ -934,12 +1154,60 @@ public interface AmazonFSx {
      *         A file system configuration is required for this operation.
      * @throws ServiceLimitExceededException
      *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
-     *         contacting AWS Support.
+     *         contacting Amazon Web Services Support.
      * @sample AmazonFSx.UpdateFileSystem
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/UpdateFileSystem" target="_top">AWS API
      *      Documentation</a>
      */
     UpdateFileSystemResult updateFileSystem(UpdateFileSystemRequest updateFileSystemRequest);
+
+    /**
+     * <p>
+     * Updates an Amazon FSx for ONTAP storage virtual machine (SVM).
+     * </p>
+     * 
+     * @param updateStorageVirtualMachineRequest
+     * @return Result of the UpdateStorageVirtualMachine operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws IncompatibleParameterErrorException
+     *         The error returned when a second request is received with the same client request token but different
+     *         parameters settings. A client request token should always uniquely identify a single request.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @throws StorageVirtualMachineNotFoundException
+     *         No Amazon FSx for NetApp ONTAP SVMs were found based upon the supplied parameters.
+     * @throws UnsupportedOperationException
+     *         The requested operation is not supported for this resource or API.
+     * @sample AmazonFSx.UpdateStorageVirtualMachine
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/UpdateStorageVirtualMachine"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateStorageVirtualMachineResult updateStorageVirtualMachine(UpdateStorageVirtualMachineRequest updateStorageVirtualMachineRequest);
+
+    /**
+     * <p>
+     * Updates an Amazon FSx for NetApp ONTAP volume's configuration.
+     * </p>
+     * 
+     * @param updateVolumeRequest
+     * @return Result of the UpdateVolume operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws IncompatibleParameterErrorException
+     *         The error returned when a second request is received with the same client request token but different
+     *         parameters settings. A client request token should always uniquely identify a single request.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @throws MissingVolumeConfigurationException
+     *         A volume configuration is required for this operation.
+     * @throws VolumeNotFoundException
+     *         No Amazon FSx for NetApp ONTAP volumes were found based upon the supplied parameters.
+     * @sample AmazonFSx.UpdateVolume
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/UpdateVolume" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateVolumeResult updateVolume(UpdateVolumeRequest updateVolumeRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

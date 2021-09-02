@@ -27,7 +27,7 @@ public class GetDashboardEmbedUrlRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that contains the dashboard that you're embedding.
+     * The ID for the Amazon Web Services account that contains the dashboard that you're embedding.
      * </p>
      */
     private String awsAccountId;
@@ -64,10 +64,10 @@ public class GetDashboardEmbedUrlRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * Adds persistence of state for the user session in an embedded dashboard. Persistence applies to the sheet and the
-     * parameter settings. These are control settings that the dashboard subscriber (QuickSight reader) chooses while
-     * viewing the dashboard. If this is set to <code>TRUE</code>, the settings are the same when the subscriber reopens
-     * the same dashboard URL. The state is stored in QuickSight, not in a browser cookie. If this is set to FALSE, the
-     * state of the user session is not persisted. The default is <code>FALSE</code>.
+     * parameter settings. These are control settings that the dashboard subscriber (Amazon QuickSight reader) chooses
+     * while viewing the dashboard. If this is set to <code>TRUE</code>, the settings are the same when the subscriber
+     * reopens the same dashboard URL. The state is stored in Amazon QuickSight, not in a browser cookie. If this is set
+     * to FALSE, the state of the user session is not persisted. The default is <code>FALSE</code>.
      * </p>
      */
     private Boolean statePersistenceEnabled;
@@ -90,20 +90,20 @@ public class GetDashboardEmbedUrlRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * <li>
      * <p>
-     * IAM users and IAM role-based sessions authenticated through Federated Single Sign-On using SAML, OpenID Connect,
-     * or IAM federation.
+     * IAMusers and IAMrole-based sessions authenticated through Federated Single Sign-On using SAML, OpenID Connect, or
+     * IAMfederation.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Omit this parameter for users in the third group – IAM users and IAM role-based sessions.
+     * Omit this parameter for users in the third group – IAMusers and IAM role-based sessions.
      * </p>
      */
     private String userArn;
     /**
      * <p>
-     * The Amazon QuickSight namespace that the user virtually belongs to. If you are not using an Amazon QuickSight
-     * custom namespace, set this to <code>default</code>.
+     * The Amazon QuickSight namespace that contains the dashboard IDs in this request. If you're not using a custom
+     * namespace, set <code>Namespace = default</code>.
      * </p>
      */
     private String namespace;
@@ -111,7 +111,7 @@ public class GetDashboardEmbedUrlRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * A list of one or more dashboard IDs that you want to add to a session that includes anonymous users. The
      * <code>IdentityType</code> parameter must be set to <code>ANONYMOUS</code> for this to work, because other
-     * identity types authenticate as QuickSight or IAM users. For example, if you set "
+     * identity types authenticate as Amazon QuickSight or IAMusers. For example, if you set "
      * <code>--dashboard-id dash_id1 --dashboard-id dash_id2 dash_id3 identity-type ANONYMOUS</code>", the session can
      * access all three dashboards.
      * </p>
@@ -120,11 +120,11 @@ public class GetDashboardEmbedUrlRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that contains the dashboard that you're embedding.
+     * The ID for the Amazon Web Services account that contains the dashboard that you're embedding.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID for the Amazon Web Services account; that contains the dashboard that you're embedding.
+     *        The ID for the Amazon Web Services account that contains the dashboard that you're embedding.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -133,10 +133,10 @@ public class GetDashboardEmbedUrlRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that contains the dashboard that you're embedding.
+     * The ID for the Amazon Web Services account that contains the dashboard that you're embedding.
      * </p>
      * 
-     * @return The ID for the Amazon Web Services account; that contains the dashboard that you're embedding.
+     * @return The ID for the Amazon Web Services account that contains the dashboard that you're embedding.
      */
 
     public String getAwsAccountId() {
@@ -145,11 +145,11 @@ public class GetDashboardEmbedUrlRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that contains the dashboard that you're embedding.
+     * The ID for the Amazon Web Services account that contains the dashboard that you're embedding.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID for the Amazon Web Services account; that contains the dashboard that you're embedding.
+     *        The ID for the Amazon Web Services account that contains the dashboard that you're embedding.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -408,19 +408,19 @@ public class GetDashboardEmbedUrlRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * Adds persistence of state for the user session in an embedded dashboard. Persistence applies to the sheet and the
-     * parameter settings. These are control settings that the dashboard subscriber (QuickSight reader) chooses while
-     * viewing the dashboard. If this is set to <code>TRUE</code>, the settings are the same when the subscriber reopens
-     * the same dashboard URL. The state is stored in QuickSight, not in a browser cookie. If this is set to FALSE, the
-     * state of the user session is not persisted. The default is <code>FALSE</code>.
+     * parameter settings. These are control settings that the dashboard subscriber (Amazon QuickSight reader) chooses
+     * while viewing the dashboard. If this is set to <code>TRUE</code>, the settings are the same when the subscriber
+     * reopens the same dashboard URL. The state is stored in Amazon QuickSight, not in a browser cookie. If this is set
+     * to FALSE, the state of the user session is not persisted. The default is <code>FALSE</code>.
      * </p>
      * 
      * @param statePersistenceEnabled
      *        Adds persistence of state for the user session in an embedded dashboard. Persistence applies to the sheet
-     *        and the parameter settings. These are control settings that the dashboard subscriber (QuickSight reader)
-     *        chooses while viewing the dashboard. If this is set to <code>TRUE</code>, the settings are the same when
-     *        the subscriber reopens the same dashboard URL. The state is stored in QuickSight, not in a browser cookie.
-     *        If this is set to FALSE, the state of the user session is not persisted. The default is <code>FALSE</code>
-     *        .
+     *        and the parameter settings. These are control settings that the dashboard subscriber (Amazon QuickSight
+     *        reader) chooses while viewing the dashboard. If this is set to <code>TRUE</code>, the settings are the
+     *        same when the subscriber reopens the same dashboard URL. The state is stored in Amazon QuickSight, not in
+     *        a browser cookie. If this is set to FALSE, the state of the user session is not persisted. The default is
+     *        <code>FALSE</code>.
      */
 
     public void setStatePersistenceEnabled(Boolean statePersistenceEnabled) {
@@ -430,17 +430,17 @@ public class GetDashboardEmbedUrlRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * Adds persistence of state for the user session in an embedded dashboard. Persistence applies to the sheet and the
-     * parameter settings. These are control settings that the dashboard subscriber (QuickSight reader) chooses while
-     * viewing the dashboard. If this is set to <code>TRUE</code>, the settings are the same when the subscriber reopens
-     * the same dashboard URL. The state is stored in QuickSight, not in a browser cookie. If this is set to FALSE, the
-     * state of the user session is not persisted. The default is <code>FALSE</code>.
+     * parameter settings. These are control settings that the dashboard subscriber (Amazon QuickSight reader) chooses
+     * while viewing the dashboard. If this is set to <code>TRUE</code>, the settings are the same when the subscriber
+     * reopens the same dashboard URL. The state is stored in Amazon QuickSight, not in a browser cookie. If this is set
+     * to FALSE, the state of the user session is not persisted. The default is <code>FALSE</code>.
      * </p>
      * 
      * @return Adds persistence of state for the user session in an embedded dashboard. Persistence applies to the sheet
-     *         and the parameter settings. These are control settings that the dashboard subscriber (QuickSight reader)
-     *         chooses while viewing the dashboard. If this is set to <code>TRUE</code>, the settings are the same when
-     *         the subscriber reopens the same dashboard URL. The state is stored in QuickSight, not in a browser
-     *         cookie. If this is set to FALSE, the state of the user session is not persisted. The default is
+     *         and the parameter settings. These are control settings that the dashboard subscriber (Amazon QuickSight
+     *         reader) chooses while viewing the dashboard. If this is set to <code>TRUE</code>, the settings are the
+     *         same when the subscriber reopens the same dashboard URL. The state is stored in Amazon QuickSight, not in
+     *         a browser cookie. If this is set to FALSE, the state of the user session is not persisted. The default is
      *         <code>FALSE</code>.
      */
 
@@ -451,19 +451,19 @@ public class GetDashboardEmbedUrlRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * Adds persistence of state for the user session in an embedded dashboard. Persistence applies to the sheet and the
-     * parameter settings. These are control settings that the dashboard subscriber (QuickSight reader) chooses while
-     * viewing the dashboard. If this is set to <code>TRUE</code>, the settings are the same when the subscriber reopens
-     * the same dashboard URL. The state is stored in QuickSight, not in a browser cookie. If this is set to FALSE, the
-     * state of the user session is not persisted. The default is <code>FALSE</code>.
+     * parameter settings. These are control settings that the dashboard subscriber (Amazon QuickSight reader) chooses
+     * while viewing the dashboard. If this is set to <code>TRUE</code>, the settings are the same when the subscriber
+     * reopens the same dashboard URL. The state is stored in Amazon QuickSight, not in a browser cookie. If this is set
+     * to FALSE, the state of the user session is not persisted. The default is <code>FALSE</code>.
      * </p>
      * 
      * @param statePersistenceEnabled
      *        Adds persistence of state for the user session in an embedded dashboard. Persistence applies to the sheet
-     *        and the parameter settings. These are control settings that the dashboard subscriber (QuickSight reader)
-     *        chooses while viewing the dashboard. If this is set to <code>TRUE</code>, the settings are the same when
-     *        the subscriber reopens the same dashboard URL. The state is stored in QuickSight, not in a browser cookie.
-     *        If this is set to FALSE, the state of the user session is not persisted. The default is <code>FALSE</code>
-     *        .
+     *        and the parameter settings. These are control settings that the dashboard subscriber (Amazon QuickSight
+     *        reader) chooses while viewing the dashboard. If this is set to <code>TRUE</code>, the settings are the
+     *        same when the subscriber reopens the same dashboard URL. The state is stored in Amazon QuickSight, not in
+     *        a browser cookie. If this is set to FALSE, the state of the user session is not persisted. The default is
+     *        <code>FALSE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -475,17 +475,17 @@ public class GetDashboardEmbedUrlRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * Adds persistence of state for the user session in an embedded dashboard. Persistence applies to the sheet and the
-     * parameter settings. These are control settings that the dashboard subscriber (QuickSight reader) chooses while
-     * viewing the dashboard. If this is set to <code>TRUE</code>, the settings are the same when the subscriber reopens
-     * the same dashboard URL. The state is stored in QuickSight, not in a browser cookie. If this is set to FALSE, the
-     * state of the user session is not persisted. The default is <code>FALSE</code>.
+     * parameter settings. These are control settings that the dashboard subscriber (Amazon QuickSight reader) chooses
+     * while viewing the dashboard. If this is set to <code>TRUE</code>, the settings are the same when the subscriber
+     * reopens the same dashboard URL. The state is stored in Amazon QuickSight, not in a browser cookie. If this is set
+     * to FALSE, the state of the user session is not persisted. The default is <code>FALSE</code>.
      * </p>
      * 
      * @return Adds persistence of state for the user session in an embedded dashboard. Persistence applies to the sheet
-     *         and the parameter settings. These are control settings that the dashboard subscriber (QuickSight reader)
-     *         chooses while viewing the dashboard. If this is set to <code>TRUE</code>, the settings are the same when
-     *         the subscriber reopens the same dashboard URL. The state is stored in QuickSight, not in a browser
-     *         cookie. If this is set to FALSE, the state of the user session is not persisted. The default is
+     *         and the parameter settings. These are control settings that the dashboard subscriber (Amazon QuickSight
+     *         reader) chooses while viewing the dashboard. If this is set to <code>TRUE</code>, the settings are the
+     *         same when the subscriber reopens the same dashboard URL. The state is stored in Amazon QuickSight, not in
+     *         a browser cookie. If this is set to FALSE, the state of the user session is not persisted. The default is
      *         <code>FALSE</code>.
      */
 
@@ -512,13 +512,13 @@ public class GetDashboardEmbedUrlRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * <li>
      * <p>
-     * IAM users and IAM role-based sessions authenticated through Federated Single Sign-On using SAML, OpenID Connect,
-     * or IAM federation.
+     * IAMusers and IAMrole-based sessions authenticated through Federated Single Sign-On using SAML, OpenID Connect, or
+     * IAMfederation.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Omit this parameter for users in the third group – IAM users and IAM role-based sessions.
+     * Omit this parameter for users in the third group – IAMusers and IAM role-based sessions.
      * </p>
      * 
      * @param userArn
@@ -538,13 +538,13 @@ public class GetDashboardEmbedUrlRequest extends com.amazonaws.AmazonWebServiceR
      *        </li>
      *        <li>
      *        <p>
-     *        IAM users and IAM role-based sessions authenticated through Federated Single Sign-On using SAML, OpenID
-     *        Connect, or IAM federation.
+     *        IAMusers and IAMrole-based sessions authenticated through Federated Single Sign-On using SAML, OpenID
+     *        Connect, or IAMfederation.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        Omit this parameter for users in the third group – IAM users and IAM role-based sessions.
+     *        Omit this parameter for users in the third group – IAMusers and IAM role-based sessions.
      */
 
     public void setUserArn(String userArn) {
@@ -570,13 +570,13 @@ public class GetDashboardEmbedUrlRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * <li>
      * <p>
-     * IAM users and IAM role-based sessions authenticated through Federated Single Sign-On using SAML, OpenID Connect,
-     * or IAM federation.
+     * IAMusers and IAMrole-based sessions authenticated through Federated Single Sign-On using SAML, OpenID Connect, or
+     * IAMfederation.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Omit this parameter for users in the third group – IAM users and IAM role-based sessions.
+     * Omit this parameter for users in the third group – IAMusers and IAM role-based sessions.
      * </p>
      * 
      * @return The Amazon QuickSight user's Amazon Resource Name (ARN), for use with <code>QUICKSIGHT</code> identity
@@ -595,13 +595,13 @@ public class GetDashboardEmbedUrlRequest extends com.amazonaws.AmazonWebServiceR
      *         </li>
      *         <li>
      *         <p>
-     *         IAM users and IAM role-based sessions authenticated through Federated Single Sign-On using SAML, OpenID
-     *         Connect, or IAM federation.
+     *         IAMusers and IAMrole-based sessions authenticated through Federated Single Sign-On using SAML, OpenID
+     *         Connect, or IAMfederation.
      *         </p>
      *         </li>
      *         </ul>
      *         <p>
-     *         Omit this parameter for users in the third group – IAM users and IAM role-based sessions.
+     *         Omit this parameter for users in the third group – IAMusers and IAM role-based sessions.
      */
 
     public String getUserArn() {
@@ -627,13 +627,13 @@ public class GetDashboardEmbedUrlRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * <li>
      * <p>
-     * IAM users and IAM role-based sessions authenticated through Federated Single Sign-On using SAML, OpenID Connect,
-     * or IAM federation.
+     * IAMusers and IAMrole-based sessions authenticated through Federated Single Sign-On using SAML, OpenID Connect, or
+     * IAMfederation.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Omit this parameter for users in the third group – IAM users and IAM role-based sessions.
+     * Omit this parameter for users in the third group – IAMusers and IAM role-based sessions.
      * </p>
      * 
      * @param userArn
@@ -653,13 +653,13 @@ public class GetDashboardEmbedUrlRequest extends com.amazonaws.AmazonWebServiceR
      *        </li>
      *        <li>
      *        <p>
-     *        IAM users and IAM role-based sessions authenticated through Federated Single Sign-On using SAML, OpenID
-     *        Connect, or IAM federation.
+     *        IAMusers and IAMrole-based sessions authenticated through Federated Single Sign-On using SAML, OpenID
+     *        Connect, or IAMfederation.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        Omit this parameter for users in the third group – IAM users and IAM role-based sessions.
+     *        Omit this parameter for users in the third group – IAMusers and IAM role-based sessions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -670,13 +670,13 @@ public class GetDashboardEmbedUrlRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Amazon QuickSight namespace that the user virtually belongs to. If you are not using an Amazon QuickSight
-     * custom namespace, set this to <code>default</code>.
+     * The Amazon QuickSight namespace that contains the dashboard IDs in this request. If you're not using a custom
+     * namespace, set <code>Namespace = default</code>.
      * </p>
      * 
      * @param namespace
-     *        The Amazon QuickSight namespace that the user virtually belongs to. If you are not using an Amazon
-     *        QuickSight custom namespace, set this to <code>default</code>.
+     *        The Amazon QuickSight namespace that contains the dashboard IDs in this request. If you're not using a
+     *        custom namespace, set <code>Namespace = default</code>.
      */
 
     public void setNamespace(String namespace) {
@@ -685,12 +685,12 @@ public class GetDashboardEmbedUrlRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Amazon QuickSight namespace that the user virtually belongs to. If you are not using an Amazon QuickSight
-     * custom namespace, set this to <code>default</code>.
+     * The Amazon QuickSight namespace that contains the dashboard IDs in this request. If you're not using a custom
+     * namespace, set <code>Namespace = default</code>.
      * </p>
      * 
-     * @return The Amazon QuickSight namespace that the user virtually belongs to. If you are not using an Amazon
-     *         QuickSight custom namespace, set this to <code>default</code>.
+     * @return The Amazon QuickSight namespace that contains the dashboard IDs in this request. If you're not using a
+     *         custom namespace, set <code>Namespace = default</code>.
      */
 
     public String getNamespace() {
@@ -699,13 +699,13 @@ public class GetDashboardEmbedUrlRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Amazon QuickSight namespace that the user virtually belongs to. If you are not using an Amazon QuickSight
-     * custom namespace, set this to <code>default</code>.
+     * The Amazon QuickSight namespace that contains the dashboard IDs in this request. If you're not using a custom
+     * namespace, set <code>Namespace = default</code>.
      * </p>
      * 
      * @param namespace
-     *        The Amazon QuickSight namespace that the user virtually belongs to. If you are not using an Amazon
-     *        QuickSight custom namespace, set this to <code>default</code>.
+     *        The Amazon QuickSight namespace that contains the dashboard IDs in this request. If you're not using a
+     *        custom namespace, set <code>Namespace = default</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -718,14 +718,14 @@ public class GetDashboardEmbedUrlRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * A list of one or more dashboard IDs that you want to add to a session that includes anonymous users. The
      * <code>IdentityType</code> parameter must be set to <code>ANONYMOUS</code> for this to work, because other
-     * identity types authenticate as QuickSight or IAM users. For example, if you set "
+     * identity types authenticate as Amazon QuickSight or IAMusers. For example, if you set "
      * <code>--dashboard-id dash_id1 --dashboard-id dash_id2 dash_id3 identity-type ANONYMOUS</code>", the session can
      * access all three dashboards.
      * </p>
      * 
      * @return A list of one or more dashboard IDs that you want to add to a session that includes anonymous users. The
      *         <code>IdentityType</code> parameter must be set to <code>ANONYMOUS</code> for this to work, because other
-     *         identity types authenticate as QuickSight or IAM users. For example, if you set "
+     *         identity types authenticate as Amazon QuickSight or IAMusers. For example, if you set "
      *         <code>--dashboard-id dash_id1 --dashboard-id dash_id2 dash_id3 identity-type ANONYMOUS</code>", the
      *         session can access all three dashboards.
      */
@@ -738,7 +738,7 @@ public class GetDashboardEmbedUrlRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * A list of one or more dashboard IDs that you want to add to a session that includes anonymous users. The
      * <code>IdentityType</code> parameter must be set to <code>ANONYMOUS</code> for this to work, because other
-     * identity types authenticate as QuickSight or IAM users. For example, if you set "
+     * identity types authenticate as Amazon QuickSight or IAMusers. For example, if you set "
      * <code>--dashboard-id dash_id1 --dashboard-id dash_id2 dash_id3 identity-type ANONYMOUS</code>", the session can
      * access all three dashboards.
      * </p>
@@ -746,7 +746,7 @@ public class GetDashboardEmbedUrlRequest extends com.amazonaws.AmazonWebServiceR
      * @param additionalDashboardIds
      *        A list of one or more dashboard IDs that you want to add to a session that includes anonymous users. The
      *        <code>IdentityType</code> parameter must be set to <code>ANONYMOUS</code> for this to work, because other
-     *        identity types authenticate as QuickSight or IAM users. For example, if you set "
+     *        identity types authenticate as Amazon QuickSight or IAMusers. For example, if you set "
      *        <code>--dashboard-id dash_id1 --dashboard-id dash_id2 dash_id3 identity-type ANONYMOUS</code>", the
      *        session can access all three dashboards.
      */
@@ -764,7 +764,7 @@ public class GetDashboardEmbedUrlRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * A list of one or more dashboard IDs that you want to add to a session that includes anonymous users. The
      * <code>IdentityType</code> parameter must be set to <code>ANONYMOUS</code> for this to work, because other
-     * identity types authenticate as QuickSight or IAM users. For example, if you set "
+     * identity types authenticate as Amazon QuickSight or IAMusers. For example, if you set "
      * <code>--dashboard-id dash_id1 --dashboard-id dash_id2 dash_id3 identity-type ANONYMOUS</code>", the session can
      * access all three dashboards.
      * </p>
@@ -777,7 +777,7 @@ public class GetDashboardEmbedUrlRequest extends com.amazonaws.AmazonWebServiceR
      * @param additionalDashboardIds
      *        A list of one or more dashboard IDs that you want to add to a session that includes anonymous users. The
      *        <code>IdentityType</code> parameter must be set to <code>ANONYMOUS</code> for this to work, because other
-     *        identity types authenticate as QuickSight or IAM users. For example, if you set "
+     *        identity types authenticate as Amazon QuickSight or IAMusers. For example, if you set "
      *        <code>--dashboard-id dash_id1 --dashboard-id dash_id2 dash_id3 identity-type ANONYMOUS</code>", the
      *        session can access all three dashboards.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -797,7 +797,7 @@ public class GetDashboardEmbedUrlRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * A list of one or more dashboard IDs that you want to add to a session that includes anonymous users. The
      * <code>IdentityType</code> parameter must be set to <code>ANONYMOUS</code> for this to work, because other
-     * identity types authenticate as QuickSight or IAM users. For example, if you set "
+     * identity types authenticate as Amazon QuickSight or IAMusers. For example, if you set "
      * <code>--dashboard-id dash_id1 --dashboard-id dash_id2 dash_id3 identity-type ANONYMOUS</code>", the session can
      * access all three dashboards.
      * </p>
@@ -805,7 +805,7 @@ public class GetDashboardEmbedUrlRequest extends com.amazonaws.AmazonWebServiceR
      * @param additionalDashboardIds
      *        A list of one or more dashboard IDs that you want to add to a session that includes anonymous users. The
      *        <code>IdentityType</code> parameter must be set to <code>ANONYMOUS</code> for this to work, because other
-     *        identity types authenticate as QuickSight or IAM users. For example, if you set "
+     *        identity types authenticate as Amazon QuickSight or IAMusers. For example, if you set "
      *        <code>--dashboard-id dash_id1 --dashboard-id dash_id2 dash_id3 identity-type ANONYMOUS</code>", the
      *        session can access all three dashboards.
      * @return Returns a reference to this object so that method calls can be chained together.

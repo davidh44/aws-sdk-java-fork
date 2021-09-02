@@ -61,6 +61,10 @@ public class InvalidNetworkSettingsExceptionUnmarshaller extends EnhancedJsonErr
                     context.nextToken();
                     invalidNetworkSettingsException.setInvalidSecurityGroupId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("InvalidRouteTableId", targetDepth)) {
+                    context.nextToken();
+                    invalidNetworkSettingsException.setInvalidRouteTableId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

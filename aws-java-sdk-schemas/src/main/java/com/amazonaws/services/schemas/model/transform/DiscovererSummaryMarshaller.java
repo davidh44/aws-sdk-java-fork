@@ -37,6 +37,8 @@ public class DiscovererSummaryMarshaller {
             .marshallLocationName("SourceArn").build();
     private static final MarshallingInfo<String> STATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("State").build();
+    private static final MarshallingInfo<Boolean> CROSSACCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CrossAccount").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
 
@@ -60,6 +62,7 @@ public class DiscovererSummaryMarshaller {
             protocolMarshaller.marshall(discovererSummary.getDiscovererId(), DISCOVERERID_BINDING);
             protocolMarshaller.marshall(discovererSummary.getSourceArn(), SOURCEARN_BINDING);
             protocolMarshaller.marshall(discovererSummary.getState(), STATE_BINDING);
+            protocolMarshaller.marshall(discovererSummary.getCrossAccount(), CROSSACCOUNT_BINDING);
             protocolMarshaller.marshall(discovererSummary.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

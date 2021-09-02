@@ -68,6 +68,10 @@ public class CreateDiscovererResultJsonUnmarshaller implements Unmarshaller<Crea
                     context.nextToken();
                     createDiscovererResult.setState(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("CrossAccount", targetDepth)) {
+                    context.nextToken();
+                    createDiscovererResult.setCrossAccount(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("tags", targetDepth)) {
                     context.nextToken();
                     createDiscovererResult.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context

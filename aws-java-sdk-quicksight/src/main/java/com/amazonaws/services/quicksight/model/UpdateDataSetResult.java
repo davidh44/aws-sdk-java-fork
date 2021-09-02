@@ -32,7 +32,7 @@ public class UpdateDataSetResult extends com.amazonaws.AmazonWebServiceResult<co
     /**
      * <p>
      * The ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for each Amazon
-     * Web Services account;.
+     * Web Services account.
      * </p>
      */
     private String dataSetId;
@@ -104,12 +104,12 @@ public class UpdateDataSetResult extends com.amazonaws.AmazonWebServiceResult<co
     /**
      * <p>
      * The ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for each Amazon
-     * Web Services account;.
+     * Web Services account.
      * </p>
      * 
      * @param dataSetId
      *        The ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for each
-     *        Amazon Web Services account;.
+     *        Amazon Web Services account.
      */
 
     public void setDataSetId(String dataSetId) {
@@ -119,11 +119,11 @@ public class UpdateDataSetResult extends com.amazonaws.AmazonWebServiceResult<co
     /**
      * <p>
      * The ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for each Amazon
-     * Web Services account;.
+     * Web Services account.
      * </p>
      * 
      * @return The ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for
-     *         each Amazon Web Services account;.
+     *         each Amazon Web Services account.
      */
 
     public String getDataSetId() {
@@ -133,12 +133,12 @@ public class UpdateDataSetResult extends com.amazonaws.AmazonWebServiceResult<co
     /**
      * <p>
      * The ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for each Amazon
-     * Web Services account;.
+     * Web Services account.
      * </p>
      * 
      * @param dataSetId
      *        The ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for each
-     *        Amazon Web Services account;.
+     *        Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

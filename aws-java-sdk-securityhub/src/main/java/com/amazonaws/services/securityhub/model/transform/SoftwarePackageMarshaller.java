@@ -37,6 +37,10 @@ public class SoftwarePackageMarshaller {
             .marshallLocationName("Release").build();
     private static final MarshallingInfo<String> ARCHITECTURE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Architecture").build();
+    private static final MarshallingInfo<String> PACKAGEMANAGER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PackageManager").build();
+    private static final MarshallingInfo<String> FILEPATH_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("FilePath").build();
 
     private static final SoftwarePackageMarshaller instance = new SoftwarePackageMarshaller();
 
@@ -59,6 +63,8 @@ public class SoftwarePackageMarshaller {
             protocolMarshaller.marshall(softwarePackage.getEpoch(), EPOCH_BINDING);
             protocolMarshaller.marshall(softwarePackage.getRelease(), RELEASE_BINDING);
             protocolMarshaller.marshall(softwarePackage.getArchitecture(), ARCHITECTURE_BINDING);
+            protocolMarshaller.marshall(softwarePackage.getPackageManager(), PACKAGEMANAGER_BINDING);
+            protocolMarshaller.marshall(softwarePackage.getFilePath(), FILEPATH_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

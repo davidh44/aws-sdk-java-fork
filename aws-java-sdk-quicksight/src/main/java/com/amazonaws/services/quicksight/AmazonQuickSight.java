@@ -76,14 +76,15 @@ public interface AmazonQuickSight {
      * <p>
      * Creates Amazon QuickSight customizations the current Amazon Web Services Region;. Currently, you can add a custom
      * default theme by using the <code>CreateAccountCustomization</code> or <code>UpdateAccountCustomization</code> API
-     * operation. To further customize QuickSight by removing QuickSight sample assets and videos for all new users, see
-     * <a href="https://docs.aws.amazon.com/quicksight/latest/user/customizing-quicksight.html">Customizing
+     * operation. To further customize Amazon QuickSight by removing Amazon QuickSight sample assets and videos for all
+     * new users, see <a
+     * href="https://docs.aws.amazon.com/quicksight/latest/user/customizing-quicksight.html">Customizing Amazon
      * QuickSight</a> in the <i>Amazon QuickSight User Guide.</i>
      * </p>
      * <p>
-     * You can create customizations for your Amazon Web Services account; or, if you specify a namespace, for a
+     * You can create customizations for your Amazon Web Services account or, if you specify a namespace, for a Amazon
      * QuickSight namespace instead. Customizations that apply to a namespace always override customizations that apply
-     * to an Amazon Web Services account;. To find out which customizations apply, use the
+     * to an Amazon Web Services account. To find out which customizations apply, use the
      * <code>DescribeAccountCustomization</code> API operation.
      * </p>
      * <p>
@@ -138,8 +139,8 @@ public interface AmazonQuickSight {
      *         Updating or deleting a resource can cause an inconsistent state.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.CreateAnalysis
@@ -154,10 +155,10 @@ public interface AmazonQuickSight {
      * operation.
      * </p>
      * <p>
-     * A dashboard is an entity in QuickSight that identifies QuickSight reports, created from analyses. You can share
-     * QuickSight dashboards. With the right permissions, you can create scheduled email reports from them. If you have
-     * the correct permissions, you can create a dashboard from a template that exists in a different Amazon Web
-     * Services account;.
+     * A dashboard is an entity in Amazon QuickSight that identifies Amazon QuickSight reports, created from analyses.
+     * You can share Amazon QuickSight dashboards. With the right permissions, you can create scheduled email reports
+     * from them. If you have the correct permissions, you can create a dashboard from a template that exists in a
+     * different Amazon Web Services account.
      * </p>
      * 
      * @param createDashboardRequest
@@ -174,8 +175,8 @@ public interface AmazonQuickSight {
      *         Updating or deleting a resource can cause an inconsistent state.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.CreateDashboard
@@ -210,8 +211,8 @@ public interface AmazonQuickSight {
      *         Access is throttled.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.CreateDataSet
@@ -271,8 +272,8 @@ public interface AmazonQuickSight {
      *         Updating or deleting a resource can cause an inconsistent state.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws AccessDeniedException
      *         You don't have access to this item. The provided credentials couldn't be validated. You might not be
      *         authorized to carry out the request. Make sure that your account is authorized to use the Amazon
@@ -312,8 +313,8 @@ public interface AmazonQuickSight {
      *         A limit is exceeded.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.CreateFolderMembership
@@ -397,9 +398,9 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
-     * Creates an assignment with one specified IAM policy, identified by its Amazon Resource Name (ARN). This policy
+     * Creates an assignment with one specified IAMpolicy, identified by its Amazon Resource Name (ARN). This policy
      * assignment is attached to the specified groups or users of Amazon QuickSight. Assignment names are unique per
-     * Amazon Web Services account;. To avoid overwriting rules in other namespaces, use assignment names that are
+     * Amazon Web Services account. To avoid overwriting rules in other namespaces, use assignment names that are
      * unique.
      * </p>
      * 
@@ -470,12 +471,12 @@ public interface AmazonQuickSight {
      * (Enterprise edition only) Creates a new namespace for you to use with Amazon QuickSight.
      * </p>
      * <p>
-     * A namespace allows you to isolate the QuickSight users and groups that are registered for that namespace. Users
-     * that access the namespace can share assets only with other users or groups in the same namespace. They can't see
-     * users and groups in other namespaces. You can create a namespace after your Amazon Web Services account; is
-     * subscribed to QuickSight. The namespace must be unique within the Amazon Web Services account;. By default, there
-     * is a limit of 100 namespaces per Amazon Web Services account;. To increase your limit, create a ticket with
-     * Amazon Web Services Support.
+     * A namespace allows you to isolate the Amazon QuickSight users and groups that are registered for that namespace.
+     * Users that access the namespace can share assets only with other users or groups in the same namespace. They
+     * can't see users and groups in other namespaces. You can create a namespace after your Amazon Web Services account
+     * is subscribed to Amazon QuickSight. The namespace must be unique within the Amazon Web Services account. By
+     * default, there is a limit of 100 namespaces per Amazon Web Services account. To increase your limit, create a
+     * ticket with Amazon Web Services Support.
      * </p>
      * 
      * @param createNamespaceRequest
@@ -515,9 +516,9 @@ public interface AmazonQuickSight {
      * create a dashboard.
      * </p>
      * <p>
-     * A <i>template</i> is an entity in QuickSight that encapsulates the metadata required to create an analysis and
-     * that you can use to create s dashboard. A template adds a layer of abstraction by using placeholders to replace
-     * the dataset associated with the analysis. You can use templates to create dashboards by replacing dataset
+     * A <i>template</i> is an entity in Amazon QuickSight that encapsulates the metadata required to create an analysis
+     * and that you can use to create s dashboard. A template adds a layer of abstraction by using placeholders to
+     * replace the dataset associated with the analysis. You can use templates to create dashboards by replacing dataset
      * placeholders with datasets that follow the same schema that was used to create the source analysis and template.
      * </p>
      * 
@@ -540,8 +541,8 @@ public interface AmazonQuickSight {
      *         A limit is exceeded.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws ConflictException
      *         Updating or deleting a resource can cause an inconsistent state.
      * @throws InternalFailureException
@@ -571,8 +572,8 @@ public interface AmazonQuickSight {
      *         A limit is exceeded.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws ConflictException
      *         Updating or deleting a resource can cause an inconsistent state.
      * @throws InternalFailureException
@@ -611,8 +612,8 @@ public interface AmazonQuickSight {
      *         Access is throttled.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws LimitExceededException
      *         A limit is exceeded.
      * @throws InternalFailureException
@@ -644,8 +645,8 @@ public interface AmazonQuickSight {
      *         Access is throttled.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.CreateThemeAlias
@@ -657,7 +658,7 @@ public interface AmazonQuickSight {
     /**
      * <p>
      * Deletes all Amazon QuickSight customizations in this Amazon Web Services Region; for the specified Amazon Web
-     * Services account; and QuickSight namespace.
+     * Services account and Amazon QuickSight namespace.
      * </p>
      * 
      * @param deleteAccountCustomizationRequest
@@ -686,9 +687,9 @@ public interface AmazonQuickSight {
     /**
      * <p>
      * Deletes an analysis from Amazon QuickSight. You can optionally include a recovery window during which you can
-     * restore the analysis. If you don't specify a recovery window value, the operation defaults to 30 days. QuickSight
-     * attaches a <code>DeletionTime</code> stamp to the response that specifies the end of the recovery window. At the
-     * end of the recovery window, QuickSight deletes the analysis permanently.
+     * restore the analysis. If you don't specify a recovery window value, the operation defaults to 30 days. Amazon
+     * QuickSight attaches a <code>DeletionTime</code> stamp to the response that specifies the end of the recovery
+     * window. At the end of the recovery window, Amazon QuickSight deletes the analysis permanently.
      * </p>
      * <p>
      * At any time before recovery window ends, you can use the <code>RestoreAnalysis</code> API operation to remove the
@@ -696,7 +697,7 @@ public interface AmazonQuickSight {
      * until it's deleted, so you can describe it but you can't make a template from it.
      * </p>
      * <p>
-     * An analysis that's scheduled for deletion isn't accessible in the QuickSight console. To access it in the
+     * An analysis that's scheduled for deletion isn't accessible in the Amazon QuickSight console. To access it in the
      * console, restore it. Deleting an analysis doesn't delete the dashboards that you publish from it.
      * </p>
      * 
@@ -712,8 +713,8 @@ public interface AmazonQuickSight {
      *         One or more resources can't be found.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.DeleteAnalysis
@@ -739,8 +740,8 @@ public interface AmazonQuickSight {
      *         One or more resources can't be found.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.DeleteDashboard
@@ -826,8 +827,8 @@ public interface AmazonQuickSight {
      *         Access is throttled.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.DeleteFolder
@@ -856,8 +857,8 @@ public interface AmazonQuickSight {
      *         Access is throttled.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.DeleteFolderMembership
@@ -928,7 +929,7 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
-     * Deletes an existing IAM policy assignment.
+     * Deletes an existing IAMpolicy assignment.
      * </p>
      * 
      * @param deleteIAMPolicyAssignmentRequest
@@ -1008,8 +1009,8 @@ public interface AmazonQuickSight {
      *         A limit is exceeded.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.DeleteTemplate
@@ -1032,8 +1033,8 @@ public interface AmazonQuickSight {
      *         One or more resources can't be found.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws ConflictException
      *         Updating or deleting a resource can cause an inconsistent state.
      * @throws InternalFailureException
@@ -1066,8 +1067,8 @@ public interface AmazonQuickSight {
      *         Access is throttled.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.DeleteTheme
@@ -1094,8 +1095,8 @@ public interface AmazonQuickSight {
      *         Access is throttled.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.DeleteThemeAlias
@@ -1167,9 +1168,9 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
-     * Describes the customizations associated with the provided Amazon Web Services account; and Amazon QuickSight
-     * namespace in an Amazon Web Services Region;. The QuickSight console evaluates which customizations to apply by
-     * running this API operation with the <code>Resolved</code> flag included.
+     * Describes the customizations associated with the provided Amazon Web Services account and Amazon Amazon
+     * QuickSight namespace in an Amazon Web Services Region;. The Amazon QuickSight console evaluates which
+     * customizations to apply by running this API operation with the <code>Resolved</code> flag included.
      * </p>
      * <p>
      * To determine what customizations display when you run this command, it can help to visualize the relationship of
@@ -1178,18 +1179,18 @@ public interface AmazonQuickSight {
      * <ul>
      * <li>
      * <p>
-     * <code>Amazon Web Services account;</code> - The Amazon Web Services account; exists at the top of the hierarchy.
-     * It has the potential to use all of the Amazon Web Services Regions; and AWS Services. When you subscribe to
+     * <code>Amazon Web Services account</code> - The Amazon Web Services account exists at the top of the hierarchy. It
+     * has the potential to use all of the Amazon Web Services Regions; and AWS Services. When you subscribe to Amazon
      * QuickSight, you choose one Amazon Web Services Region; to use as your home Region. That's where your free SPICE
-     * capacity is located. You can use QuickSight in any supported Amazon Web Services Region;.
+     * capacity is located. You can use Amazon QuickSight in any supported Amazon Web Services Region;.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Amazon Web Services Region;</code> - In each Amazon Web Services Region; where you sign in to QuickSight at
-     * least once, QuickSight acts as a separate instance of the same service. If you have a user directory, it resides
-     * in us-east-1, which is the US East (N. Virginia). Generally speaking, these users have access to QuickSight in
-     * any Amazon Web Services Region;, unless they are constrained to a namespace.
+     * <code>Amazon Web Services Region;</code> - In each Amazon Web Services Region; where you sign in to Amazon
+     * QuickSight at least once, Amazon QuickSight acts as a separate instance of the same service. If you have a user
+     * directory, it resides in us-east-1, which is the US East (N. Virginia). Generally speaking, these users have
+     * access to Amazon QuickSight in any Amazon Web Services Region;, unless they are constrained to a namespace.
      * </p>
      * <p>
      * To run the command in a different Amazon Web Services Region;, you change your Region settings. If you're using
@@ -1218,18 +1219,19 @@ public interface AmazonQuickSight {
      * </li>
      * <li>
      * <p>
-     * <code>Namespace</code> - A QuickSight namespace is a partition that contains users and assets (data sources,
-     * datasets, dashboards, and so on). To access assets that are in a specific namespace, users and groups must also
-     * be part of the same namespace. People who share a namespace are completely isolated from users and assets in
-     * other namespaces, even if they are in the same Amazon Web Services account; and Amazon Web Services Region;.
+     * <code>Namespace</code> - A Amazon QuickSight namespace is a partition that contains users and assets (data
+     * sources, datasets, dashboards, and so on). To access assets that are in a specific namespace, users and groups
+     * must also be part of the same namespace. People who share a namespace are completely isolated from users and
+     * assets in other namespaces, even if they are in the same Amazon Web Services account and Amazon Web Services
+     * Region;.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Applied customizations</code> - Within an Amazon Web Services Region;, a set of QuickSight customizations
-     * can apply to an Amazon Web Services account; or to a namespace. Settings that you apply to a namespace override
-     * settings that you apply to an Amazon Web Services account;. All settings are isolated to a single Amazon Web
-     * Services Region;. To apply them in other Amazon Web Services Regions;, run the
+     * <code>Applied customizations</code> - Within an Amazon Web Services Region;, a set of Amazon QuickSight
+     * customizations can apply to an Amazon Web Services account or to a namespace. Settings that you apply to a
+     * namespace override settings that you apply to an Amazon Web Services account. All settings are isolated to a
+     * single Amazon Web Services Region;. To apply them in other Amazon Web Services Regions;, run the
      * <code>CreateAccountCustomization</code> command in each Amazon Web Services Region; where you want to apply the
      * same customizations.
      * </p>
@@ -1261,8 +1263,8 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
-     * Describes the settings that were used when your QuickSight subscription was first created in this Amazon Web
-     * Services account;.
+     * Describes the settings that were used when your Amazon QuickSight subscription was first created in this Amazon
+     * Web Services account.
      * </p>
      * 
      * @param describeAccountSettingsRequest
@@ -1308,8 +1310,8 @@ public interface AmazonQuickSight {
      *         Access is throttled.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.DescribeAnalysis
@@ -1333,8 +1335,8 @@ public interface AmazonQuickSight {
      *         Access is throttled.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.DescribeAnalysisPermissions
@@ -1363,8 +1365,8 @@ public interface AmazonQuickSight {
      *         Access is throttled.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.DescribeDashboard
@@ -1388,8 +1390,8 @@ public interface AmazonQuickSight {
      *         Access is throttled.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.DescribeDashboardPermissions
@@ -1525,8 +1527,8 @@ public interface AmazonQuickSight {
      *         Access is throttled.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.DescribeFolder
@@ -1555,8 +1557,8 @@ public interface AmazonQuickSight {
      *         Access is throttled.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.DescribeFolderPermissions
@@ -1586,8 +1588,8 @@ public interface AmazonQuickSight {
      *         Access is throttled.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.DescribeFolderResolvedPermissions
@@ -1628,7 +1630,7 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
-     * Describes an existing IAM policy assignment, as specified by the assignment name.
+     * Describes an existing IAMpolicy assignment, as specified by the assignment name.
      * </p>
      * 
      * @param describeIAMPolicyAssignmentRequest
@@ -1734,8 +1736,8 @@ public interface AmazonQuickSight {
      *         Updating or deleting a resource can cause an inconsistent state.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.DescribeTemplate
@@ -1757,8 +1759,8 @@ public interface AmazonQuickSight {
      *         One or more resources can't be found.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.DescribeTemplateAlias
@@ -1784,8 +1786,8 @@ public interface AmazonQuickSight {
      *         One or more resources can't be found.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.DescribeTemplatePermissions
@@ -1816,8 +1818,8 @@ public interface AmazonQuickSight {
      *         Access is throttled.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.DescribeTheme
@@ -1843,8 +1845,8 @@ public interface AmazonQuickSight {
      *         Access is throttled.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.DescribeThemeAlias
@@ -1873,8 +1875,8 @@ public interface AmazonQuickSight {
      *         Access is throttled.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.DescribeThemePermissions
@@ -1975,13 +1977,13 @@ public interface AmazonQuickSight {
      *         15-600 minutes.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws UnsupportedPricingPlanException
      *         This error indicates that you are calling an embedding operation in Amazon QuickSight without the
-     *         required pricing plan on your Amazon Web Services account;. Before you can use embedding for anonymous
-     *         users, a QuickSight administrator needs to add capacity pricing to QuickSight. You can do this on the
-     *         <b>Manage QuickSight</b> page. </p>
+     *         required pricing plan on your Amazon Web Services account. Before you can use embedding for anonymous
+     *         users, a Amazon QuickSight administrator needs to add capacity pricing to Amazon QuickSight. You can do
+     *         this on the <b>Manage Amazon QuickSight</b> page. </p>
      *         <p>
      *         After capacity pricing is added, you can use the <a>GetDashboardEmbedUrl</a> API operation with the
      *         <code>--identity-type ANONYMOUS</code> option.
@@ -2059,13 +2061,13 @@ public interface AmazonQuickSight {
      *         Access is throttled.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws UnsupportedPricingPlanException
      *         This error indicates that you are calling an embedding operation in Amazon QuickSight without the
-     *         required pricing plan on your Amazon Web Services account;. Before you can use embedding for anonymous
-     *         users, a QuickSight administrator needs to add capacity pricing to QuickSight. You can do this on the
-     *         <b>Manage QuickSight</b> page. </p>
+     *         required pricing plan on your Amazon Web Services account. Before you can use embedding for anonymous
+     *         users, a Amazon QuickSight administrator needs to add capacity pricing to Amazon QuickSight. You can do
+     *         this on the <b>Manage Amazon QuickSight</b> page. </p>
      *         <p>
      *         After capacity pricing is added, you can use the <a>GetDashboardEmbedUrl</a> API operation with the
      *         <code>--identity-type ANONYMOUS</code> option.
@@ -2079,9 +2081,9 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
-     * Generates a session URL and authorization code that you can use to embed an Amazon QuickSight read-only dashboard
-     * in your web server code. Before you use this command, make sure that you have configured the dashboards and
-     * permissions.
+     * Generates a session URL and authorization code that you can use to embed an Amazon Amazon QuickSight read-only
+     * dashboard in your web server code. Before you use this command, make sure that you have configured the dashboards
+     * and permissions.
      * </p>
      * <p>
      * Currently, you can use <code>GetDashboardEmbedURL</code> only from the server, not from the user's browser. The
@@ -2151,13 +2153,13 @@ public interface AmazonQuickSight {
      *         15-600 minutes.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws UnsupportedPricingPlanException
      *         This error indicates that you are calling an embedding operation in Amazon QuickSight without the
-     *         required pricing plan on your Amazon Web Services account;. Before you can use embedding for anonymous
-     *         users, a QuickSight administrator needs to add capacity pricing to QuickSight. You can do this on the
-     *         <b>Manage QuickSight</b> page. </p>
+     *         required pricing plan on your Amazon Web Services account. Before you can use embedding for anonymous
+     *         users, a Amazon QuickSight administrator needs to add capacity pricing to Amazon QuickSight. You can do
+     *         this on the <b>Manage Amazon QuickSight</b> page. </p>
      *         <p>
      *         After capacity pricing is added, you can use the <a>GetDashboardEmbedUrl</a> API operation with the
      *         <code>--identity-type ANONYMOUS</code> option.
@@ -2171,20 +2173,18 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
-     * Generates a session URL and authorization code that you can use to embed the Amazon QuickSight console in your
-     * web server code. Use <code>GetSessionEmbedUrl</code> where you want to provide an authoring portal that allows
-     * users to create data sources, datasets, analyses, and dashboards. The users who access an embedded QuickSight
-     * console need belong to the author or admin security cohort. If you want to restrict permissions to some of these
-     * features, add a custom permissions profile to the user with the <code> <a>UpdateUser</a> </code> API operation.
-     * Use <code> <a>RegisterUser</a> </code> API operation to add a new user with a custom permission profile attached.
-     * For more information, see the following sections in the <i>Amazon QuickSight User Guide</i>:
+     * Generates a session URL and authorization code that you can use to embed the Amazon Amazon QuickSight console in
+     * your web server code. Use <code>GetSessionEmbedUrl</code> where you want to provide an authoring portal that
+     * allows users to create data sources, datasets, analyses, and dashboards. The users who access an embedded Amazon
+     * QuickSight console need belong to the author or admin security cohort. If you want to restrict permissions to
+     * some of these features, add a custom permissions profile to the user with the <code> <a>UpdateUser</a> </code>
+     * API operation. Use <code> <a>RegisterUser</a> </code> API operation to add a new user with a custom permission
+     * profile attached. For more information, see the following sections in the <i>Amazon QuickSight User Guide</i>:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <a href=
-     * "https://docs.aws.amazon.com/quicksight/latest/user/embedded-analytics-full-console-for-authenticated-users-get.html"
-     * >Embedding the Amazon QuickSight Console Using GetSessionEmbedUrl</a>
+     * <a href="https://docs.aws.amazon.com/quicksight/latest/user/embedded-analytics.html">Embedding Analytics</a>
      * </p>
      * </li>
      * <li>
@@ -2220,8 +2220,8 @@ public interface AmazonQuickSight {
      *         15-600 minutes.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.GetSessionEmbedUrl
@@ -2232,7 +2232,7 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
-     * Lists Amazon QuickSight analyses that exist in the specified Amazon Web Services account;.
+     * Lists Amazon QuickSight analyses that exist in the specified Amazon Web Services account.
      * </p>
      * 
      * @param listAnalysesRequest
@@ -2243,8 +2243,8 @@ public interface AmazonQuickSight {
      *         The <code>NextToken</code> value isn't valid.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.ListAnalyses
@@ -2255,7 +2255,7 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
-     * Lists all the versions of the dashboards in the QuickSight subscription.
+     * Lists all the versions of the dashboards in the Amazon QuickSight subscription.
      * </p>
      * 
      * @param listDashboardVersionsRequest
@@ -2270,8 +2270,8 @@ public interface AmazonQuickSight {
      *         The <code>NextToken</code> value isn't valid.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.ListDashboardVersions
@@ -2282,7 +2282,7 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
-     * Lists dashboards in an Amazon Web Services account;.
+     * Lists dashboards in an Amazon Web Services account.
      * </p>
      * 
      * @param listDashboardsRequest
@@ -2293,8 +2293,8 @@ public interface AmazonQuickSight {
      *         The <code>NextToken</code> value isn't valid.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.ListDashboards
@@ -2305,8 +2305,7 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
-     * Lists all of the datasets belonging to the current Amazon Web Services account; in an Amazon Web Services
-     * Region;.
+     * Lists all of the datasets belonging to the current Amazon Web Services account in an Amazon Web Services Region;.
      * </p>
      * <p>
      * The permissions resource is <code>arn:aws:quicksight:region:aws-account-id:dataset/*</code>.
@@ -2335,7 +2334,7 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
-     * Lists data sources in current Amazon Web Services Region; that belong to this Amazon Web Services account;.
+     * Lists data sources in current Amazon Web Services Region; that belong to this Amazon Web Services account.
      * </p>
      * 
      * @param listDataSourcesRequest
@@ -2381,8 +2380,8 @@ public interface AmazonQuickSight {
      *         The <code>NextToken</code> value isn't valid.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.ListFolderMembers
@@ -2413,8 +2412,8 @@ public interface AmazonQuickSight {
      *         The <code>NextToken</code> value isn't valid.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.ListFolders
@@ -2489,7 +2488,7 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
-     * Lists IAM policy assignments in the current Amazon QuickSight account.
+     * Lists IAMpolicy assignments in the current Amazon QuickSight account.
      * </p>
      * 
      * @param listIAMPolicyAssignmentsRequest
@@ -2517,7 +2516,7 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
-     * Lists all the IAM policy assignments, including the Amazon Resource Names (ARNs) for the IAM policies assigned to
+     * Lists all the IAMpolicy assignments, including the Amazon Resource Names (ARNs) for the IAM policies assigned to
      * the specified user and group or groups that the user belongs to.
      * </p>
      * 
@@ -2579,7 +2578,7 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
-     * Lists the namespaces for the specified Amazon Web Services account;.
+     * Lists the namespaces for the specified Amazon Web Services account.
      * </p>
      * 
      * @param listNamespacesRequest
@@ -2650,8 +2649,8 @@ public interface AmazonQuickSight {
      *         One or more resources can't be found.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.ListTemplateAliases
@@ -2677,8 +2676,8 @@ public interface AmazonQuickSight {
      *         The <code>NextToken</code> value isn't valid.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.ListTemplateVersions
@@ -2704,8 +2703,8 @@ public interface AmazonQuickSight {
      *         The <code>NextToken</code> value isn't valid.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.ListTemplates
@@ -2733,8 +2732,8 @@ public interface AmazonQuickSight {
      *         Access is throttled.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.ListThemeAliases
@@ -2745,7 +2744,7 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
-     * Lists all the versions of the themes in the current Amazon Web Services account;.
+     * Lists all the versions of the themes in the current Amazon Web Services account.
      * </p>
      * 
      * @param listThemeVersionsRequest
@@ -2765,8 +2764,8 @@ public interface AmazonQuickSight {
      *         Access is throttled.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.ListThemeVersions
@@ -2777,7 +2776,7 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
-     * Lists all the themes in the current Amazon Web Services account;.
+     * Lists all the themes in the current Amazon Web Services account.
      * </p>
      * 
      * @param listThemesRequest
@@ -2797,8 +2796,8 @@ public interface AmazonQuickSight {
      *         Access is throttled.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.ListThemes
@@ -2921,8 +2920,8 @@ public interface AmazonQuickSight {
      *         One or more resources can't be found.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.RestoreAnalysis
@@ -2952,8 +2951,8 @@ public interface AmazonQuickSight {
      *         One or more parameters has a value that isn't valid.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InvalidNextTokenException
      *         The <code>NextToken</code> value isn't valid.
      * @throws InternalFailureException
@@ -2985,8 +2984,8 @@ public interface AmazonQuickSight {
      *         One or more parameters has a value that isn't valid.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InvalidNextTokenException
      *         The <code>NextToken</code> value isn't valid.
      * @throws InternalFailureException
@@ -3019,8 +3018,8 @@ public interface AmazonQuickSight {
      *         The <code>NextToken</code> value isn't valid.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.SearchFolders
@@ -3031,7 +3030,7 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
-     * Assigns one or more tags (key-value pairs) to the specified QuickSight resource.
+     * Assigns one or more tags (key-value pairs) to the specified Amazon QuickSight resource.
      * </p>
      * <p>
      * Tags can help you organize and categorize your resources. You can also use them to scope user permissions, by
@@ -3042,22 +3041,22 @@ public interface AmazonQuickSight {
      * tag.
      * </p>
      * <p>
-     * You can associate as many as 50 tags with a resource. QuickSight supports tagging on data set, data source,
-     * dashboard, and template.
+     * You can associate as many as 50 tags with a resource. Amazon QuickSight supports tagging on data set, data
+     * source, dashboard, and template.
      * </p>
      * <p>
-     * Tagging for QuickSight works in a similar way to tagging for other AWS services, except for the following:
+     * Tagging for Amazon QuickSight works in a similar way to tagging for other AWS services, except for the following:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * You can't use tags to track AWS costs for QuickSight. This restriction is because QuickSight costs are based on
-     * users and SPICE capacity, which aren't taggable resources.
+     * You can't use tags to track AWS costs for Amazon QuickSight. This restriction is because Amazon QuickSight costs
+     * are based on users and SPICE capacity, which aren't taggable resources.
      * </p>
      * </li>
      * <li>
      * <p>
-     * QuickSight doesn't currently support the Tag Editor for Resource Groups.
+     * Amazon QuickSight doesn't currently support the Tag Editor for Resource Groups.
      * </p>
      * </li>
      * </ul>
@@ -3117,10 +3116,10 @@ public interface AmazonQuickSight {
      * customization you can use is a theme.
      * </p>
      * <p>
-     * You can use customizations for your Amazon Web Services account; or, if you specify a namespace, for a QuickSight
-     * namespace instead. Customizations that apply to a namespace override customizations that apply to an Amazon Web
-     * Services account;. To find out which customizations apply, use the <code>DescribeAccountCustomization</code> API
-     * operation.
+     * You can use customizations for your Amazon Web Services account or, if you specify a namespace, for a Amazon
+     * QuickSight namespace instead. Customizations that apply to a namespace override customizations that apply to an
+     * Amazon Web Services account. To find out which customizations apply, use the
+     * <code>DescribeAccountCustomization</code> API operation.
      * </p>
      * 
      * @param updateAccountCustomizationRequest
@@ -3148,7 +3147,7 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
-     * Updates the Amazon QuickSight settings in your Amazon Web Services account;.
+     * Updates the Amazon QuickSight settings in your Amazon Web Services account.
      * </p>
      * 
      * @param updateAccountSettingsRequest
@@ -3193,8 +3192,8 @@ public interface AmazonQuickSight {
      *         Updating or deleting a resource can cause an inconsistent state.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.UpdateAnalysis
@@ -3218,8 +3217,8 @@ public interface AmazonQuickSight {
      *         One or more resources can't be found.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws ConflictException
      *         Updating or deleting a resource can cause an inconsistent state.
      * @throws InternalFailureException
@@ -3232,7 +3231,7 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
-     * Updates a dashboard in an Amazon Web Services account;.
+     * Updates a dashboard in an Amazon Web Services account.
      * </p>
      * <note>
      * <p>
@@ -3255,8 +3254,8 @@ public interface AmazonQuickSight {
      *         A limit is exceeded.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.UpdateDashboard
@@ -3280,8 +3279,8 @@ public interface AmazonQuickSight {
      *         One or more resources can't be found.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws ConflictException
      *         Updating or deleting a resource can cause an inconsistent state.
      * @throws InternalFailureException
@@ -3309,8 +3308,8 @@ public interface AmazonQuickSight {
      *         One or more resources can't be found.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.UpdateDashboardPublishedVersion
@@ -3343,8 +3342,8 @@ public interface AmazonQuickSight {
      *         One or more resources can't be found.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.UpdateDataSet
@@ -3464,8 +3463,8 @@ public interface AmazonQuickSight {
      *         Access is throttled.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.UpdateFolder
@@ -3496,8 +3495,8 @@ public interface AmazonQuickSight {
      *         Access is throttled.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.UpdateFolderPermissions
@@ -3538,7 +3537,7 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
-     * Updates an existing IAM policy assignment. This operation updates only the optional parameter or parameters that
+     * Updates an existing IAMpolicy assignment. This operation updates only the optional parameter or parameters that
      * are specified in the request. This overwrites all of the users included in <code>Identities</code>.
      * </p>
      * 
@@ -3589,8 +3588,8 @@ public interface AmazonQuickSight {
      *         A limit is exceeded.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.UpdateTemplate
@@ -3614,8 +3613,8 @@ public interface AmazonQuickSight {
      *         Updating or deleting a resource can cause an inconsistent state.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws ConflictException
      *         Updating or deleting a resource can cause an inconsistent state.
      * @throws InternalFailureException
@@ -3643,8 +3642,8 @@ public interface AmazonQuickSight {
      *         One or more resources can't be found.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.UpdateTemplatePermissions
@@ -3677,8 +3676,8 @@ public interface AmazonQuickSight {
      *         Access is throttled.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.UpdateTheme
@@ -3706,8 +3705,8 @@ public interface AmazonQuickSight {
      *         Access is throttled.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.UpdateThemeAlias
@@ -3837,8 +3836,8 @@ public interface AmazonQuickSight {
      *         Access is throttled.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
-     *         edition doesn't include support for that operation. Amazon QuickSight currently has Standard Edition and
-     *         Enterprise Edition. Not every operation and capability is available in every edition.
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
      * @throws InternalFailureException
      *         An internal failure occurred.
      * @sample AmazonQuickSight.UpdateThemePermissions

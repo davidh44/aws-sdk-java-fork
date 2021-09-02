@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A backup of an Amazon FSx file system.
+ * A backup of an Amazon FSx for Windows File Server or Amazon FSx for Lustre file system, or of an Amazon FSx for
+ * NetApp ONTAP volume.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/Backup" target="_top">AWS API Documentation</a>
@@ -100,8 +101,8 @@ public class Backup implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date creationTime;
     /**
      * <p>
-     * The ID of the AWS Key Management Service (AWS KMS) key used to encrypt the backup of the Amazon FSx file system's
-     * data at rest.
+     * The ID of the Key Management Service (KMS) key used to encrypt the backup of the Amazon FSx file system's data at
+     * rest.
      * </p>
      */
     private String kmsKeyId;
@@ -141,6 +142,14 @@ public class Backup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String sourceBackupRegion;
+    /**
+     * <p>
+     * Specifies the resource type that is backed up.
+     * </p>
+     */
+    private String resourceType;
+
+    private Volume volume;
 
     /**
      * <p>
@@ -716,13 +725,13 @@ public class Backup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the AWS Key Management Service (AWS KMS) key used to encrypt the backup of the Amazon FSx file system's
-     * data at rest.
+     * The ID of the Key Management Service (KMS) key used to encrypt the backup of the Amazon FSx file system's data at
+     * rest.
      * </p>
      * 
      * @param kmsKeyId
-     *        The ID of the AWS Key Management Service (AWS KMS) key used to encrypt the backup of the Amazon FSx file
-     *        system's data at rest.
+     *        The ID of the Key Management Service (KMS) key used to encrypt the backup of the Amazon FSx file system's
+     *        data at rest.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -731,12 +740,12 @@ public class Backup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the AWS Key Management Service (AWS KMS) key used to encrypt the backup of the Amazon FSx file system's
-     * data at rest.
+     * The ID of the Key Management Service (KMS) key used to encrypt the backup of the Amazon FSx file system's data at
+     * rest.
      * </p>
      * 
-     * @return The ID of the AWS Key Management Service (AWS KMS) key used to encrypt the backup of the Amazon FSx file
-     *         system's data at rest.
+     * @return The ID of the Key Management Service (KMS) key used to encrypt the backup of the Amazon FSx file system's
+     *         data at rest.
      */
 
     public String getKmsKeyId() {
@@ -745,13 +754,13 @@ public class Backup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the AWS Key Management Service (AWS KMS) key used to encrypt the backup of the Amazon FSx file system's
-     * data at rest.
+     * The ID of the Key Management Service (KMS) key used to encrypt the backup of the Amazon FSx file system's data at
+     * rest.
      * </p>
      * 
      * @param kmsKeyId
-     *        The ID of the AWS Key Management Service (AWS KMS) key used to encrypt the backup of the Amazon FSx file
-     *        system's data at rest.
+     *        The ID of the Key Management Service (KMS) key used to encrypt the backup of the Amazon FSx file system's
+     *        data at rest.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1055,6 +1064,91 @@ public class Backup implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Specifies the resource type that is backed up.
+     * </p>
+     * 
+     * @param resourceType
+     *        Specifies the resource type that is backed up.
+     * @see ResourceType
+     */
+
+    public void setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+    }
+
+    /**
+     * <p>
+     * Specifies the resource type that is backed up.
+     * </p>
+     * 
+     * @return Specifies the resource type that is backed up.
+     * @see ResourceType
+     */
+
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
+     * <p>
+     * Specifies the resource type that is backed up.
+     * </p>
+     * 
+     * @param resourceType
+     *        Specifies the resource type that is backed up.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ResourceType
+     */
+
+    public Backup withResourceType(String resourceType) {
+        setResourceType(resourceType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the resource type that is backed up.
+     * </p>
+     * 
+     * @param resourceType
+     *        Specifies the resource type that is backed up.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ResourceType
+     */
+
+    public Backup withResourceType(ResourceType resourceType) {
+        this.resourceType = resourceType.toString();
+        return this;
+    }
+
+    /**
+     * @param volume
+     */
+
+    public void setVolume(Volume volume) {
+        this.volume = volume;
+    }
+
+    /**
+     * @return
+     */
+
+    public Volume getVolume() {
+        return this.volume;
+    }
+
+    /**
+     * @param volume
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Backup withVolume(Volume volume) {
+        setVolume(volume);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1093,7 +1187,11 @@ public class Backup implements Serializable, Cloneable, StructuredPojo {
         if (getSourceBackupId() != null)
             sb.append("SourceBackupId: ").append(getSourceBackupId()).append(",");
         if (getSourceBackupRegion() != null)
-            sb.append("SourceBackupRegion: ").append(getSourceBackupRegion());
+            sb.append("SourceBackupRegion: ").append(getSourceBackupRegion()).append(",");
+        if (getResourceType() != null)
+            sb.append("ResourceType: ").append(getResourceType()).append(",");
+        if (getVolume() != null)
+            sb.append("Volume: ").append(getVolume());
         sb.append("}");
         return sb.toString();
     }
@@ -1164,6 +1262,14 @@ public class Backup implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSourceBackupRegion() != null && other.getSourceBackupRegion().equals(this.getSourceBackupRegion()) == false)
             return false;
+        if (other.getResourceType() == null ^ this.getResourceType() == null)
+            return false;
+        if (other.getResourceType() != null && other.getResourceType().equals(this.getResourceType()) == false)
+            return false;
+        if (other.getVolume() == null ^ this.getVolume() == null)
+            return false;
+        if (other.getVolume() != null && other.getVolume().equals(this.getVolume()) == false)
+            return false;
         return true;
     }
 
@@ -1186,6 +1292,8 @@ public class Backup implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getOwnerId() == null) ? 0 : getOwnerId().hashCode());
         hashCode = prime * hashCode + ((getSourceBackupId() == null) ? 0 : getSourceBackupId().hashCode());
         hashCode = prime * hashCode + ((getSourceBackupRegion() == null) ? 0 : getSourceBackupRegion().hashCode());
+        hashCode = prime * hashCode + ((getResourceType() == null) ? 0 : getResourceType().hashCode());
+        hashCode = prime * hashCode + ((getVolume() == null) ? 0 : getVolume().hashCode());
         return hashCode;
     }
 

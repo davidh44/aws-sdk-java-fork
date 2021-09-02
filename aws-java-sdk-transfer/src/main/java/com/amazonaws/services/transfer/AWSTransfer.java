@@ -94,6 +94,8 @@ public interface AWSTransfer {
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceExistsException
      *         The requested resource does not exist.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
      * @throws ThrottlingException
      *         The request was denied due to request throttling.</p>
      *         <p>
@@ -110,7 +112,7 @@ public interface AWSTransfer {
      * and associate users with servers that have the <code>IdentityProviderType</code> set to
      * <code>SERVICE_MANAGED</code>. Using parameters for <code>CreateUser</code>, you can specify the user name, set
      * the home directory, store the user's public key, and assign the user's Amazon Web Services Identity and Access
-     * Management (IAM) role. You can also optionally add a scope-down policy, and assign metadata with tags that can be
+     * Management (IAM) role. You can also optionally add a session policy, and assign metadata with tags that can be
      * used to group and search for users.
      * </p>
      * 
@@ -131,6 +133,36 @@ public interface AWSTransfer {
      *      Documentation</a>
      */
     CreateUserResult createUser(CreateUserRequest createUserRequest);
+
+    /**
+     * <p>
+     * Allows you to create a workflow with specified steps and step details the workflow invokes after file transfer
+     * completes. After creating a workflow, you can associate the workflow created with any transfer servers by
+     * specifying the <code>workflow-details</code> field in <code>CreateServer</code> and <code>UpdateServer</code>
+     * operations.
+     * </p>
+     * 
+     * @param createWorkflowRequest
+     * @return Result of the CreateWorkflow operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceExistsException
+     *         The requested resource does not exist.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.</p>
+     *         <p>
+     *         HTTP Status Code: 400
+     * @sample AWSTransfer.CreateWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/CreateWorkflow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateWorkflowResult createWorkflow(CreateWorkflowRequest createWorkflowRequest);
 
     /**
      * <p>
@@ -182,9 +214,6 @@ public interface AWSTransfer {
     /**
      * <p>
      * Deletes a user's Secure Shell (SSH) public key.
-     * </p>
-     * <p>
-     * No response is returned from this operation.
      * </p>
      * 
      * @param deleteSshPublicKeyRequest
@@ -238,6 +267,29 @@ public interface AWSTransfer {
 
     /**
      * <p>
+     * Deletes the specified workflow.
+     * </p>
+     * 
+     * @param deleteWorkflowRequest
+     * @return Result of the DeleteWorkflow operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.DeleteWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DeleteWorkflow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteWorkflowResult deleteWorkflow(DeleteWorkflowRequest deleteWorkflowRequest);
+
+    /**
+     * <p>
      * Describes the access that is assigned to the specific file transfer protocol-enabled server, as identified by its
      * <code>ServerId</code> property and its <code>ExternalID</code>.
      * </p>
@@ -261,6 +313,27 @@ public interface AWSTransfer {
      *      Documentation</a>
      */
     DescribeAccessResult describeAccess(DescribeAccessRequest describeAccessRequest);
+
+    /**
+     * <p>
+     * You can use <code>DescribeExecution</code> to check the details of the execution of the specified workflow.
+     * </p>
+     * 
+     * @param describeExecutionRequest
+     * @return Result of the DescribeExecution operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.DescribeExecution
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DescribeExecution" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeExecutionResult describeExecution(DescribeExecutionRequest describeExecutionRequest);
 
     /**
      * <p>
@@ -340,6 +413,27 @@ public interface AWSTransfer {
 
     /**
      * <p>
+     * Describes the specified workflow.
+     * </p>
+     * 
+     * @param describeWorkflowRequest
+     * @return Result of the DescribeWorkflow operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.DescribeWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DescribeWorkflow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeWorkflowResult describeWorkflow(DescribeWorkflowRequest describeWorkflowRequest);
+
+    /**
+     * <p>
      * Adds a Secure Shell (SSH) public key to a user account identified by a <code>UserName</code> value assigned to
      * the specific file transfer protocol-enabled server, identified by <code>ServerId</code>.
      * </p>
@@ -392,6 +486,29 @@ public interface AWSTransfer {
      *      Documentation</a>
      */
     ListAccessesResult listAccesses(ListAccessesRequest listAccessesRequest);
+
+    /**
+     * <p>
+     * Lists all executions for the specified workflow.
+     * </p>
+     * 
+     * @param listExecutionsRequest
+     * @return Result of the ListExecutions operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidNextTokenException
+     *         The <code>NextToken</code> parameter that was passed is invalid.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.ListExecutions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/ListExecutions" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListExecutionsResult listExecutions(ListExecutionsRequest listExecutionsRequest);
 
     /**
      * <p>
@@ -480,6 +597,59 @@ public interface AWSTransfer {
      *      Documentation</a>
      */
     ListUsersResult listUsers(ListUsersRequest listUsersRequest);
+
+    /**
+     * <p>
+     * Lists all of your workflows.
+     * </p>
+     * 
+     * @param listWorkflowsRequest
+     * @return Result of the ListWorkflows operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidNextTokenException
+     *         The <code>NextToken</code> parameter that was passed is invalid.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @sample AWSTransfer.ListWorkflows
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/ListWorkflows" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListWorkflowsResult listWorkflows(ListWorkflowsRequest listWorkflowsRequest);
+
+    /**
+     * <p>
+     * Sends a callback for asynchronous custom steps.
+     * </p>
+     * <p>
+     * The <code>ExecutionId</code>, <code>WorkflowId</code>, and <code>Token</code> are passed to the target resource
+     * during execution of a custom step of a workflow. You must include those with their callback as well as providing
+     * a status.
+     * </p>
+     * 
+     * @param sendWorkflowStepStateRequest
+     * @return Result of the SendWorkflowStepState operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.</p>
+     *         <p>
+     *         HTTP Status Code: 400
+     * @sample AWSTransfer.SendWorkflowStepState
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/SendWorkflowStepState" target="_top">AWS
+     *      API Documentation</a>
+     */
+    SendWorkflowStepStateResult sendWorkflowStepState(SendWorkflowStepStateRequest sendWorkflowStepStateRequest);
 
     /**
      * <p>
@@ -588,6 +758,40 @@ public interface AWSTransfer {
      * create your server. By doing so, you can troubleshoot issues with the identity provider integration to ensure
      * that your users can successfully use the service.
      * </p>
+     * <p>
+     * The <code>ServerId</code> and <code>UserName</code> parameters are required. The <code>ServerProtocol</code>,
+     * <code>SourceIp</code>, and <code>UserPassword</code> are all optional.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot use <code>TestIdentityProvider</code> if the <code>IdentityProviderType</code> of your server is
+     * <code>SERVICE_MANAGED</code>.
+     * </p>
+     * </note>
+     * <ul>
+     * <li>
+     * <p>
+     * If you provide any incorrect values for any parameters, the <code>Response</code> field is empty.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you provide a server ID for a server that uses service-managed users, you get an error:
+     * </p>
+     * <p>
+     * <code> An error occurred (InvalidRequestException) when calling the TestIdentityProvider operation: s-<i>server-ID</i> not configured for external auth </code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you enter a Server ID for the <code>--server-id</code> parameter that does not identify an actual Transfer
+     * server, you receive the following error:
+     * </p>
+     * <p>
+     * <code>An error occurred (ResourceNotFoundException) when calling the TestIdentityProvider operation: Unknown server</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param testIdentityProviderRequest
      * @return Result of the TestIdentityProvider operation returned by the service.
@@ -669,9 +873,9 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws ConflictException
-     *         This exception is thrown when the <code>UpdatServer</code> is called for a file transfer protocol-enabled
-     *         server that has VPC as the endpoint type and the server's <code>VpcEndpointID</code> is not in the
-     *         available state.
+     *         This exception is thrown when the <code>UpdateServer</code> is called for a file transfer
+     *         protocol-enabled server that has VPC as the endpoint type and the server's <code>VpcEndpointID</code> is
+     *         not in the available state.
      * @throws InternalServiceErrorException
      *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
      * @throws InvalidRequestException

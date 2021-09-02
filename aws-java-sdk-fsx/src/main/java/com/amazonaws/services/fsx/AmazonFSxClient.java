@@ -78,6 +78,9 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("MissingVolumeConfiguration").withExceptionUnmarshaller(
+                                    com.amazonaws.services.fsx.model.transform.MissingVolumeConfigurationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidImportPath").withExceptionUnmarshaller(
                                     com.amazonaws.services.fsx.model.transform.InvalidImportPathExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -108,6 +111,9 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
                             new JsonErrorShapeMetadata().withErrorCode("InvalidDestinationKmsKey").withExceptionUnmarshaller(
                                     com.amazonaws.services.fsx.model.transform.InvalidDestinationKmsKeyExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("VolumeNotFound").withExceptionUnmarshaller(
+                                    com.amazonaws.services.fsx.model.transform.VolumeNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServiceLimitExceeded").withExceptionUnmarshaller(
                                     com.amazonaws.services.fsx.model.transform.ServiceLimitExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -122,6 +128,9 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("UnsupportedOperation").withExceptionUnmarshaller(
                                     com.amazonaws.services.fsx.model.transform.UnsupportedOperationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("StorageVirtualMachineNotFound").withExceptionUnmarshaller(
+                                    com.amazonaws.services.fsx.model.transform.StorageVirtualMachineNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("MissingFileSystemConfiguration").withExceptionUnmarshaller(
                                     com.amazonaws.services.fsx.model.transform.MissingFileSystemConfigurationExceptionUnmarshaller.getInstance()))
@@ -209,7 +218,7 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
     /**
      * <p>
      * Use this action to associate one or more Domain Name Server (DNS) aliases with an existing Amazon FSx for Windows
-     * File Server file system. A file systen can have a maximum of 50 DNS aliases associated with it at any one time.
+     * File Server file system. A file system can have a maximum of 50 DNS aliases associated with it at any one time.
      * If you try to associate a DNS alias that is already associated with the file system, FSx takes no action on that
      * alias in the request. For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html">Working with DNS Aliases</a>
@@ -370,25 +379,25 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
     /**
      * <p>
-     * Copies an existing backup within the same AWS account to another Region (cross-Region copy) or within the same
-     * Region (in-Region copy). You can have up to five backup copy requests in progress to a single destination Region
-     * per account.
+     * Copies an existing backup within the same Amazon Web Services account to another Amazon Web Services Region
+     * (cross-Region copy) or within the same Amazon Web Services Region (in-Region copy). You can have up to five
+     * backup copy requests in progress to a single destination Region per account.
      * </p>
      * <p>
      * You can use cross-Region backup copies for cross-region disaster recovery. You periodically take backups and copy
      * them to another Region so that in the event of a disaster in the primary Region, you can restore from backup and
-     * recover availability quickly in the other Region. You can make cross-Region copies only within your AWS
-     * partition.
+     * recover availability quickly in the other Region. You can make cross-Region copies only within your Amazon Web
+     * Services partition.
      * </p>
      * <p>
      * You can also use backup copies to clone your file data set to another Region or within the same Region.
      * </p>
      * <p>
-     * You can use the <code>SourceRegion</code> parameter to specify the AWS Region from which the backup will be
-     * copied. For example, if you make the call from the <code>us-west-1</code> Region and want to copy a backup from
-     * the <code>us-east-2</code> Region, you specify <code>us-east-2</code> in the <code>SourceRegion</code> parameter
-     * to make a cross-Region copy. If you don't specify a Region, the backup copy is created in the same Region where
-     * the request is sent from (in-Region copy).
+     * You can use the <code>SourceRegion</code> parameter to specify the Amazon Web Services Region from which the
+     * backup will be copied. For example, if you make the call from the <code>us-west-1</code> Region and want to copy
+     * a backup from the <code>us-east-2</code> Region, you specify <code>us-east-2</code> in the
+     * <code>SourceRegion</code> parameter to make a cross-Region copy. If you don't specify a Region, the backup copy
+     * is created in the same Region where the request is sent from (in-Region copy).
      * </p>
      * <p>
      * For more information on creating backup copies, see <a
@@ -406,7 +415,7 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      *         No Amazon FSx backups were found based upon the supplied parameters.
      * @throws ServiceLimitExceededException
      *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
-     *         contacting AWS Support.
+     *         contacting Amazon Web Services Support.
      * @throws UnsupportedOperationException
      *         The requested operation is not supported for this resource or API.
      * @throws IncompatibleParameterErrorException
@@ -415,11 +424,12 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * @throws InternalServerErrorException
      *         A generic error indicating a server-side failure.
      * @throws InvalidSourceKmsKeyException
-     *         The AWS Key Management Service (AWS KMS) key of the source backup is invalid.
+     *         The Key Management Service (KMS) key of the source backup is invalid.
      * @throws InvalidDestinationKmsKeyException
-     *         The AWS Key Management Service (AWS KMS) key of the destination backup is invalid.
+     *         The Key Management Service (KMS) key of the destination backup is invalid.
      * @throws InvalidRegionException
-     *         The Region provided for <code>Source Region</code> is invalid or is in a different AWS partition.
+     *         The Region provided for <code>Source Region</code> is invalid or is in a different Amazon Web Services
+     *         partition.
      * @throws SourceBackupUnavailableException
      *         The request was rejected because the lifecycle status of the source backup is not <code>AVAILABLE</code>.
      * @throws IncompatibleRegionForMultiAZException
@@ -475,8 +485,9 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
     /**
      * <p>
-     * Creates a backup of an existing Amazon FSx file system. Creating regular backups for your file system is a best
-     * practice, enabling you to restore a file system from a backup if an issue arises with the original file system.
+     * Creates a backup of an existing Amazon FSx for Windows File Server or Amazon FSx for Lustre file system, or of an
+     * Amazon FSx for NetApp ONTAP volume. Creating regular backups is a best practice, enabling you to restore a file
+     * system or volume from a backup if an issue arises with the original file system or volume.
      * </p>
      * <p>
      * For Amazon FSx for Lustre file systems, you can create a backup only for file systems with the following
@@ -490,20 +501,36 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * </li>
      * <li>
      * <p>
-     * is <i>not</i> linked to a data respository.
+     * is <i>not</i> linked to a data repository.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For more information about backing up Amazon FSx for Lustre file systems, see <a
+     * For more information about backups, see the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For Amazon FSx for Lustre, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html">Working with FSx for Lustre
      * backups</a>.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * For more information about backing up Amazon FSx for Windows file systems, see <a
+     * For Amazon FSx for Windows, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/using-backups.html">Working with FSx for Windows
      * backups</a>.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For Amazon FSx for NetApp ONTAP, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-backups.html">Working with FSx for NetApp ONTAP
+     * backups</a>.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * If a backup with the specified client request token exists, and the parameters match, this operation returns the
      * description of the existing backup. If a backup specified client request token exists, and the parameters don't
@@ -543,6 +570,8 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      *         The requested operation is not supported for this resource or API.
      * @throws FileSystemNotFoundException
      *         No Amazon FSx file systems were found based upon supplied parameters.
+     * @throws VolumeNotFoundException
+     *         No Amazon FSx for NetApp ONTAP volumes were found based upon the supplied parameters.
      * @throws BackupInProgressException
      *         Another backup is already under way. Wait for completion before initiating additional backups of this
      *         file system.
@@ -551,7 +580,7 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      *         parameters settings. A client request token should always uniquely identify a single request.
      * @throws ServiceLimitExceededException
      *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
-     *         contacting AWS Support.
+     *         contacting Amazon Web Services Support.
      * @throws InternalServerErrorException
      *         A generic error indicating a server-side failure.
      * @sample AmazonFSx.CreateBackup
@@ -629,7 +658,7 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      *         parameters settings. A client request token should always uniquely identify a single request.
      * @throws ServiceLimitExceededException
      *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
-     *         contacting AWS Support.
+     *         contacting Amazon Web Services Support.
      * @throws InternalServerErrorException
      *         A generic error indicating a server-side failure.
      * @throws DataRepositoryTaskExecutingException
@@ -741,17 +770,13 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * @throws InvalidExportPathException
      *         The path provided for data repository export isn't valid.
      * @throws InvalidNetworkSettingsException
-     *         One or more network settings specified in the request are invalid. <code>InvalidVpcId</code> means that
-     *         the ID passed for the virtual private cloud (VPC) is invalid. <code>InvalidSubnetIds</code> returns the
-     *         list of IDs for subnets that are either invalid or not part of the VPC specified.
-     *         <code>InvalidSecurityGroupIds</code> returns the list of IDs for security groups that are either invalid
-     *         or not part of the VPC specified.
+     *         One or more network settings specified in the request are invalid.
      * @throws InvalidPerUnitStorageThroughputException
      *         An invalid value for <code>PerUnitStorageThroughput</code> was provided. Please create your file system
      *         again, using a valid value.
      * @throws ServiceLimitExceededException
      *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
-     *         contacting AWS Support.
+     *         contacting Amazon Web Services Support.
      * @throws InternalServerErrorException
      *         A generic error indicating a server-side failure.
      * @throws MissingFileSystemConfigurationException
@@ -806,7 +831,8 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
     /**
      * <p>
-     * Creates a new Amazon FSx file system from an existing Amazon FSx backup.
+     * Creates a new Amazon FSx for Lustre or Amazon FSx for Windows File Server file system from an existing Amazon FSx
+     * backup.
      * </p>
      * <p>
      * If a file system with the specified client request token exists and the parameters match, this operation returns
@@ -857,17 +883,13 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      *         The error returned when a second request is received with the same client request token but different
      *         parameters settings. A client request token should always uniquely identify a single request.
      * @throws InvalidNetworkSettingsException
-     *         One or more network settings specified in the request are invalid. <code>InvalidVpcId</code> means that
-     *         the ID passed for the virtual private cloud (VPC) is invalid. <code>InvalidSubnetIds</code> returns the
-     *         list of IDs for subnets that are either invalid or not part of the VPC specified.
-     *         <code>InvalidSecurityGroupIds</code> returns the list of IDs for security groups that are either invalid
-     *         or not part of the VPC specified.
+     *         One or more network settings specified in the request are invalid.
      * @throws InvalidPerUnitStorageThroughputException
      *         An invalid value for <code>PerUnitStorageThroughput</code> was provided. Please create your file system
      *         again, using a valid value.
      * @throws ServiceLimitExceededException
      *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
-     *         contacting AWS Support.
+     *         contacting Amazon Web Services Support.
      * @throws BackupNotFoundException
      *         No Amazon FSx backups were found based upon the supplied parameters.
      * @throws InternalServerErrorException
@@ -914,6 +936,226 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
             HttpResponseHandler<AmazonWebServiceResponse<CreateFileSystemFromBackupResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new CreateFileSystemFromBackupResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a storage virtual machine (SVM) for an Amazon FSx for ONTAP file system.
+     * </p>
+     * 
+     * @param createStorageVirtualMachineRequest
+     * @return Result of the CreateStorageVirtualMachine operation returned by the service.
+     * @throws ActiveDirectoryErrorException
+     *         An Active Directory error.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws FileSystemNotFoundException
+     *         No Amazon FSx file systems were found based upon supplied parameters.
+     * @throws IncompatibleParameterErrorException
+     *         The error returned when a second request is received with the same client request token but different
+     *         parameters settings. A client request token should always uniquely identify a single request.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @throws ServiceLimitExceededException
+     *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
+     *         contacting Amazon Web Services Support.
+     * @throws UnsupportedOperationException
+     *         The requested operation is not supported for this resource or API.
+     * @sample AmazonFSx.CreateStorageVirtualMachine
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/CreateStorageVirtualMachine"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateStorageVirtualMachineResult createStorageVirtualMachine(CreateStorageVirtualMachineRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateStorageVirtualMachine(request);
+    }
+
+    @SdkInternalApi
+    final CreateStorageVirtualMachineResult executeCreateStorageVirtualMachine(CreateStorageVirtualMachineRequest createStorageVirtualMachineRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createStorageVirtualMachineRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateStorageVirtualMachineRequest> request = null;
+        Response<CreateStorageVirtualMachineResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateStorageVirtualMachineRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createStorageVirtualMachineRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "FSx");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateStorageVirtualMachine");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateStorageVirtualMachineResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateStorageVirtualMachineResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates an Amazon FSx for NetApp ONTAP storage volume.
+     * </p>
+     * 
+     * @param createVolumeRequest
+     * @return Result of the CreateVolume operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws FileSystemNotFoundException
+     *         No Amazon FSx file systems were found based upon supplied parameters.
+     * @throws IncompatibleParameterErrorException
+     *         The error returned when a second request is received with the same client request token but different
+     *         parameters settings. A client request token should always uniquely identify a single request.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @throws MissingVolumeConfigurationException
+     *         A volume configuration is required for this operation.
+     * @throws ServiceLimitExceededException
+     *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
+     *         contacting Amazon Web Services Support.
+     * @throws StorageVirtualMachineNotFoundException
+     *         No Amazon FSx for NetApp ONTAP SVMs were found based upon the supplied parameters.
+     * @throws UnsupportedOperationException
+     *         The requested operation is not supported for this resource or API.
+     * @sample AmazonFSx.CreateVolume
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/CreateVolume" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CreateVolumeResult createVolume(CreateVolumeRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateVolume(request);
+    }
+
+    @SdkInternalApi
+    final CreateVolumeResult executeCreateVolume(CreateVolumeRequest createVolumeRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createVolumeRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateVolumeRequest> request = null;
+        Response<CreateVolumeResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateVolumeRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createVolumeRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "FSx");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateVolume");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateVolumeResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateVolumeResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a new Amazon FSx for NetApp ONTAP volume from an existing Amazon FSx volume backup.
+     * </p>
+     * 
+     * @param createVolumeFromBackupRequest
+     * @return Result of the CreateVolumeFromBackup operation returned by the service.
+     * @throws BackupNotFoundException
+     *         No Amazon FSx backups were found based upon the supplied parameters.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws FileSystemNotFoundException
+     *         No Amazon FSx file systems were found based upon supplied parameters.
+     * @throws IncompatibleParameterErrorException
+     *         The error returned when a second request is received with the same client request token but different
+     *         parameters settings. A client request token should always uniquely identify a single request.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @throws MissingVolumeConfigurationException
+     *         A volume configuration is required for this operation.
+     * @throws ServiceLimitExceededException
+     *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
+     *         contacting Amazon Web Services Support.
+     * @throws StorageVirtualMachineNotFoundException
+     *         No Amazon FSx for NetApp ONTAP SVMs were found based upon the supplied parameters.
+     * @sample AmazonFSx.CreateVolumeFromBackup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/CreateVolumeFromBackup" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CreateVolumeFromBackupResult createVolumeFromBackup(CreateVolumeFromBackupRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateVolumeFromBackup(request);
+    }
+
+    @SdkInternalApi
+    final CreateVolumeFromBackupResult executeCreateVolumeFromBackup(CreateVolumeFromBackupRequest createVolumeFromBackupRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createVolumeFromBackupRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateVolumeFromBackupRequest> request = null;
+        Response<CreateVolumeFromBackupResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateVolumeFromBackupRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createVolumeFromBackupRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "FSx");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateVolumeFromBackup");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateVolumeFromBackupResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateVolumeFromBackupResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1012,6 +1254,10 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * gone. Any existing automatic backups will also be deleted.
      * </p>
      * <p>
+     * To delete an Amazon FSx for NetApp ONTAP file system, first delete all the volumes and SVMs on the file system.
+     * Then provide a <code>FileSystemId</code> value to the <code>DeleFileSystem</code> operation.
+     * </p>
+     * <p>
      * By default, when you delete an Amazon FSx for Windows File Server file system, a final backup is created upon
      * deletion. This final backup is not subject to the file system's retention policy, and must be manually deleted.
      * </p>
@@ -1044,7 +1290,7 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      *         No Amazon FSx file systems were found based upon supplied parameters.
      * @throws ServiceLimitExceededException
      *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
-     *         contacting AWS Support.
+     *         contacting Amazon Web Services Support.
      * @throws InternalServerErrorException
      *         A generic error indicating a server-side failure.
      * @sample AmazonFSx.DeleteFileSystem
@@ -1097,9 +1343,142 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
     /**
      * <p>
+     * Deletes an existing Amazon FSx for ONTAP storage virtual machine (SVM). Prior to deleting an SVM, you must delete
+     * all non-root volumes in the SVM, otherwise the operation will fail.
+     * </p>
+     * 
+     * @param deleteStorageVirtualMachineRequest
+     * @return Result of the DeleteStorageVirtualMachine operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws IncompatibleParameterErrorException
+     *         The error returned when a second request is received with the same client request token but different
+     *         parameters settings. A client request token should always uniquely identify a single request.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @throws StorageVirtualMachineNotFoundException
+     *         No Amazon FSx for NetApp ONTAP SVMs were found based upon the supplied parameters.
+     * @sample AmazonFSx.DeleteStorageVirtualMachine
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DeleteStorageVirtualMachine"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteStorageVirtualMachineResult deleteStorageVirtualMachine(DeleteStorageVirtualMachineRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteStorageVirtualMachine(request);
+    }
+
+    @SdkInternalApi
+    final DeleteStorageVirtualMachineResult executeDeleteStorageVirtualMachine(DeleteStorageVirtualMachineRequest deleteStorageVirtualMachineRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteStorageVirtualMachineRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteStorageVirtualMachineRequest> request = null;
+        Response<DeleteStorageVirtualMachineResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteStorageVirtualMachineRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteStorageVirtualMachineRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "FSx");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteStorageVirtualMachine");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteStorageVirtualMachineResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteStorageVirtualMachineResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes an Amazon FSx for NetApp ONTAP volume. When deleting a volume, you have the option of creating a final
+     * backup. If you create a final backup, you have the option to apply Tags to the backup. You need to have
+     * <code>fsx:TagResource</code> permission in order to apply tags to the backup.
+     * </p>
+     * 
+     * @param deleteVolumeRequest
+     * @return Result of the DeleteVolume operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws IncompatibleParameterErrorException
+     *         The error returned when a second request is received with the same client request token but different
+     *         parameters settings. A client request token should always uniquely identify a single request.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @throws VolumeNotFoundException
+     *         No Amazon FSx for NetApp ONTAP volumes were found based upon the supplied parameters.
+     * @sample AmazonFSx.DeleteVolume
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DeleteVolume" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteVolumeResult deleteVolume(DeleteVolumeRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteVolume(request);
+    }
+
+    @SdkInternalApi
+    final DeleteVolumeResult executeDeleteVolume(DeleteVolumeRequest deleteVolumeRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteVolumeRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteVolumeRequest> request = null;
+        Response<DeleteVolumeResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteVolumeRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteVolumeRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "FSx");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteVolume");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteVolumeResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteVolumeResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns the description of specific Amazon FSx backups, if a <code>BackupIds</code> value is provided for that
-     * backup. Otherwise, it returns all backups owned by your AWS account in the AWS Region of the endpoint that you're
-     * calling.
+     * backup. Otherwise, it returns all backups owned by your Amazon Web Services account in the Amazon Web Services
+     * Region of the endpoint that you're calling.
      * </p>
      * <p>
      * When retrieving all backups, you can optionally specify the <code>MaxResults</code> parameter to limit the number
@@ -1119,8 +1498,8 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * <ul>
      * <li>
      * <p>
-     * The implementation might return fewer than <code>MaxResults</code> file system descriptions while still including
-     * a <code>NextToken</code> value.
+     * The implementation might return fewer than <code>MaxResults</code> backup descriptions while still including a
+     * <code>NextToken</code> value.
      * </p>
      * </li>
      * <li>
@@ -1138,6 +1517,8 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      *         A generic error indicating a failure with a client request.
      * @throws FileSystemNotFoundException
      *         No Amazon FSx file systems were found based upon supplied parameters.
+     * @throws VolumeNotFoundException
+     *         No Amazon FSx for NetApp ONTAP volumes were found based upon the supplied parameters.
      * @throws BackupNotFoundException
      *         No Amazon FSx backups were found based upon the supplied parameters.
      * @throws InternalServerErrorException
@@ -1195,8 +1576,8 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * Returns the description of specific Amazon FSx for Lustre data repository tasks, if one or more
      * <code>TaskIds</code> values are provided in the request, or if filters are used in the request. You can use
      * filters to narrow the response to include just tasks for specific file systems, or tasks in a specific lifecycle
-     * state. Otherwise, it returns all data repository tasks owned by your AWS account in the AWS Region of the
-     * endpoint that you're calling.
+     * state. Otherwise, it returns all data repository tasks owned by your Amazon Web Services account in the Amazon
+     * Web Services Region of the endpoint that you're calling.
      * </p>
      * <p>
      * When retrieving all tasks, you can paginate the response by using the optional <code>MaxResults</code> parameter
@@ -1334,8 +1715,8 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
     /**
      * <p>
      * Returns the description of specific Amazon FSx file systems, if a <code>FileSystemIds</code> value is provided
-     * for that file system. Otherwise, it returns descriptions of all file systems owned by your AWS account in the AWS
-     * Region of the endpoint that you're calling.
+     * for that file system. Otherwise, it returns descriptions of all file systems owned by your Amazon Web Services
+     * account in the Amazon Web Services Region of the endpoint that you're calling.
      * </p>
      * <p>
      * When retrieving all file system descriptions, you can optionally specify the <code>MaxResults</code> parameter to
@@ -1414,6 +1795,130 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
             HttpResponseHandler<AmazonWebServiceResponse<DescribeFileSystemsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeFileSystemsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Describes one or more Amazon FSx for NetApp ONTAP storage virtual machines (SVMs).
+     * </p>
+     * 
+     * @param describeStorageVirtualMachinesRequest
+     * @return Result of the DescribeStorageVirtualMachines operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @throws StorageVirtualMachineNotFoundException
+     *         No Amazon FSx for NetApp ONTAP SVMs were found based upon the supplied parameters.
+     * @sample AmazonFSx.DescribeStorageVirtualMachines
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DescribeStorageVirtualMachines"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeStorageVirtualMachinesResult describeStorageVirtualMachines(DescribeStorageVirtualMachinesRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeStorageVirtualMachines(request);
+    }
+
+    @SdkInternalApi
+    final DescribeStorageVirtualMachinesResult executeDescribeStorageVirtualMachines(DescribeStorageVirtualMachinesRequest describeStorageVirtualMachinesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeStorageVirtualMachinesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeStorageVirtualMachinesRequest> request = null;
+        Response<DescribeStorageVirtualMachinesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeStorageVirtualMachinesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeStorageVirtualMachinesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "FSx");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeStorageVirtualMachines");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeStorageVirtualMachinesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeStorageVirtualMachinesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Describes one or more Amazon FSx for NetApp ONTAP volumes.
+     * </p>
+     * 
+     * @param describeVolumesRequest
+     * @return Result of the DescribeVolumes operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @throws VolumeNotFoundException
+     *         No Amazon FSx for NetApp ONTAP volumes were found based upon the supplied parameters.
+     * @sample AmazonFSx.DescribeVolumes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DescribeVolumes" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DescribeVolumesResult describeVolumes(DescribeVolumesRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeVolumes(request);
+    }
+
+    @SdkInternalApi
+    final DescribeVolumesResult executeDescribeVolumes(DescribeVolumesRequest describeVolumesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeVolumesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeVolumesRequest> request = null;
+        Response<DescribeVolumesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeVolumesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describeVolumesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "FSx");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeVolumes");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeVolumesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeVolumesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1807,6 +2312,31 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * For Amazon FSx for NetApp ONTAP file systems, you can update the following properties:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * AutomaticBackupRetentionDays
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * DailyAutomaticBackupStartTime
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * FsxAdminPassword
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * WeeklyMaintenanceStartTime
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param updateFileSystemRequest
      *        The request object for the <code>UpdateFileSystem</code> operation.
@@ -1826,7 +2356,7 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      *         A file system configuration is required for this operation.
      * @throws ServiceLimitExceededException
      *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
-     *         contacting AWS Support.
+     *         contacting Amazon Web Services Support.
      * @sample AmazonFSx.UpdateFileSystem
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/UpdateFileSystem" target="_top">AWS API
      *      Documentation</a>
@@ -1865,6 +2395,140 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateFileSystemResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateFileSystemResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates an Amazon FSx for ONTAP storage virtual machine (SVM).
+     * </p>
+     * 
+     * @param updateStorageVirtualMachineRequest
+     * @return Result of the UpdateStorageVirtualMachine operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws IncompatibleParameterErrorException
+     *         The error returned when a second request is received with the same client request token but different
+     *         parameters settings. A client request token should always uniquely identify a single request.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @throws StorageVirtualMachineNotFoundException
+     *         No Amazon FSx for NetApp ONTAP SVMs were found based upon the supplied parameters.
+     * @throws UnsupportedOperationException
+     *         The requested operation is not supported for this resource or API.
+     * @sample AmazonFSx.UpdateStorageVirtualMachine
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/UpdateStorageVirtualMachine"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateStorageVirtualMachineResult updateStorageVirtualMachine(UpdateStorageVirtualMachineRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateStorageVirtualMachine(request);
+    }
+
+    @SdkInternalApi
+    final UpdateStorageVirtualMachineResult executeUpdateStorageVirtualMachine(UpdateStorageVirtualMachineRequest updateStorageVirtualMachineRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateStorageVirtualMachineRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateStorageVirtualMachineRequest> request = null;
+        Response<UpdateStorageVirtualMachineResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateStorageVirtualMachineRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateStorageVirtualMachineRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "FSx");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateStorageVirtualMachine");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateStorageVirtualMachineResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateStorageVirtualMachineResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates an Amazon FSx for NetApp ONTAP volume's configuration.
+     * </p>
+     * 
+     * @param updateVolumeRequest
+     * @return Result of the UpdateVolume operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws IncompatibleParameterErrorException
+     *         The error returned when a second request is received with the same client request token but different
+     *         parameters settings. A client request token should always uniquely identify a single request.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @throws MissingVolumeConfigurationException
+     *         A volume configuration is required for this operation.
+     * @throws VolumeNotFoundException
+     *         No Amazon FSx for NetApp ONTAP volumes were found based upon the supplied parameters.
+     * @sample AmazonFSx.UpdateVolume
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/UpdateVolume" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public UpdateVolumeResult updateVolume(UpdateVolumeRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateVolume(request);
+    }
+
+    @SdkInternalApi
+    final UpdateVolumeResult executeUpdateVolume(UpdateVolumeRequest updateVolumeRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateVolumeRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateVolumeRequest> request = null;
+        Response<UpdateVolumeResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateVolumeRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateVolumeRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "FSx");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateVolume");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateVolumeResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateVolumeResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

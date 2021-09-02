@@ -25,7 +25,7 @@ public class ListNamespacesResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The information about the namespaces in this Amazon Web Services account;. The response includes the namespace
+     * The information about the namespaces in this Amazon Web Services account. The response includes the namespace
      * ARN, name, Amazon Web Services Region;, notification email address, creation status, and identity store.
      * </p>
      */
@@ -51,11 +51,11 @@ public class ListNamespacesResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The information about the namespaces in this Amazon Web Services account;. The response includes the namespace
+     * The information about the namespaces in this Amazon Web Services account. The response includes the namespace
      * ARN, name, Amazon Web Services Region;, notification email address, creation status, and identity store.
      * </p>
      * 
-     * @return The information about the namespaces in this Amazon Web Services account;. The response includes the
+     * @return The information about the namespaces in this Amazon Web Services account. The response includes the
      *         namespace ARN, name, Amazon Web Services Region;, notification email address, creation status, and
      *         identity store.
      */
@@ -66,12 +66,12 @@ public class ListNamespacesResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The information about the namespaces in this Amazon Web Services account;. The response includes the namespace
+     * The information about the namespaces in this Amazon Web Services account. The response includes the namespace
      * ARN, name, Amazon Web Services Region;, notification email address, creation status, and identity store.
      * </p>
      * 
      * @param namespaces
-     *        The information about the namespaces in this Amazon Web Services account;. The response includes the
+     *        The information about the namespaces in this Amazon Web Services account. The response includes the
      *        namespace ARN, name, Amazon Web Services Region;, notification email address, creation status, and
      *        identity store.
      */
@@ -87,7 +87,7 @@ public class ListNamespacesResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The information about the namespaces in this Amazon Web Services account;. The response includes the namespace
+     * The information about the namespaces in this Amazon Web Services account. The response includes the namespace
      * ARN, name, Amazon Web Services Region;, notification email address, creation status, and identity store.
      * </p>
      * <p>
@@ -97,7 +97,7 @@ public class ListNamespacesResult extends com.amazonaws.AmazonWebServiceResult<c
      * </p>
      * 
      * @param namespaces
-     *        The information about the namespaces in this Amazon Web Services account;. The response includes the
+     *        The information about the namespaces in this Amazon Web Services account. The response includes the
      *        namespace ARN, name, Amazon Web Services Region;, notification email address, creation status, and
      *        identity store.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -115,12 +115,12 @@ public class ListNamespacesResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The information about the namespaces in this Amazon Web Services account;. The response includes the namespace
+     * The information about the namespaces in this Amazon Web Services account. The response includes the namespace
      * ARN, name, Amazon Web Services Region;, notification email address, creation status, and identity store.
      * </p>
      * 
      * @param namespaces
-     *        The information about the namespaces in this Amazon Web Services account;. The response includes the
+     *        The information about the namespaces in this Amazon Web Services account. The response includes the
      *        namespace ARN, name, Amazon Web Services Region;, notification email address, creation status, and
      *        identity store.
      * @return Returns a reference to this object so that method calls can be chained together.

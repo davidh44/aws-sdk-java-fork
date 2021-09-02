@@ -66,6 +66,8 @@ public class TransformOperation implements Serializable, Cloneable, StructuredPo
      */
     private TagColumnOperation tagColumnOperation;
 
+    private UntagColumnOperation untagColumnOperation;
+
     /**
      * <p>
      * An operation that projects columns. Operations that come after a projection can only refer to projected columns.
@@ -313,6 +315,32 @@ public class TransformOperation implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * @param untagColumnOperation
+     */
+
+    public void setUntagColumnOperation(UntagColumnOperation untagColumnOperation) {
+        this.untagColumnOperation = untagColumnOperation;
+    }
+
+    /**
+     * @return
+     */
+
+    public UntagColumnOperation getUntagColumnOperation() {
+        return this.untagColumnOperation;
+    }
+
+    /**
+     * @param untagColumnOperation
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TransformOperation withUntagColumnOperation(UntagColumnOperation untagColumnOperation) {
+        setUntagColumnOperation(untagColumnOperation);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -335,7 +363,9 @@ public class TransformOperation implements Serializable, Cloneable, StructuredPo
         if (getCastColumnTypeOperation() != null)
             sb.append("CastColumnTypeOperation: ").append(getCastColumnTypeOperation()).append(",");
         if (getTagColumnOperation() != null)
-            sb.append("TagColumnOperation: ").append(getTagColumnOperation());
+            sb.append("TagColumnOperation: ").append(getTagColumnOperation()).append(",");
+        if (getUntagColumnOperation() != null)
+            sb.append("UntagColumnOperation: ").append(getUntagColumnOperation());
         sb.append("}");
         return sb.toString();
     }
@@ -374,6 +404,10 @@ public class TransformOperation implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getTagColumnOperation() != null && other.getTagColumnOperation().equals(this.getTagColumnOperation()) == false)
             return false;
+        if (other.getUntagColumnOperation() == null ^ this.getUntagColumnOperation() == null)
+            return false;
+        if (other.getUntagColumnOperation() != null && other.getUntagColumnOperation().equals(this.getUntagColumnOperation()) == false)
+            return false;
         return true;
     }
 
@@ -388,6 +422,7 @@ public class TransformOperation implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getRenameColumnOperation() == null) ? 0 : getRenameColumnOperation().hashCode());
         hashCode = prime * hashCode + ((getCastColumnTypeOperation() == null) ? 0 : getCastColumnTypeOperation().hashCode());
         hashCode = prime * hashCode + ((getTagColumnOperation() == null) ? 0 : getTagColumnOperation().hashCode());
+        hashCode = prime * hashCode + ((getUntagColumnOperation() == null) ? 0 : getUntagColumnOperation().hashCode());
         return hashCode;
     }
 

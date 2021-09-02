@@ -27,7 +27,7 @@ public class UpdateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the dashboard that you're updating.
+     * The ID of the Amazon Web Services account that contains the dashboard that you're updating.
      * </p>
      */
     private String awsAccountId;
@@ -50,7 +50,7 @@ public class UpdateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>SourceTemplate</code> entity. If you need to update a dashboard from an analysis, first convert the
      * analysis to a template by using the <a>CreateTemplate</a> API operation. For <code>SourceTemplate</code>, specify
      * the Amazon Resource Name (ARN) of the source template. The <code>SourceTemplate</code> ARN can contain any Amazon
-     * Web Services account; and any QuickSight-supported Amazon Web Services Region;.
+     * Web Services account and any Amazon QuickSight-supported Amazon Web Services Region;.
      * </p>
      * <p>
      * Use the <code>DataSetReferences</code> entity within <code>SourceTemplate</code> to list the replacement datasets
@@ -79,9 +79,9 @@ public class UpdateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      * <li>
      * <p>
      * <code>AvailabilityStatus</code> for <code>AdHocFilteringOption</code> - This status can be either
-     * <code>ENABLED</code> or <code>DISABLED</code>. When this is set to <code>DISABLED</code>, QuickSight disables the
-     * left filter pane on the published dashboard, which can be used for ad hoc (one-time) filtering. This option is
-     * <code>ENABLED</code> by default.
+     * <code>ENABLED</code> or <code>DISABLED</code>. When this is set to <code>DISABLED</code>, Amazon QuickSight
+     * disables the left filter pane on the published dashboard, which can be used for ad hoc (one-time) filtering. This
+     * option is <code>ENABLED</code> by default.
      * </p>
      * </li>
      * <li>
@@ -104,18 +104,18 @@ public class UpdateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * The Amazon Resource Name (ARN) of the theme that is being used for this dashboard. If you add a value for this
      * field, it overrides the value that was originally associated with the entity. The theme ARN must exist in the
-     * same Amazon Web Services account; where you create the dashboard.
+     * same Amazon Web Services account where you create the dashboard.
      * </p>
      */
     private String themeArn;
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the dashboard that you're updating.
+     * The ID of the Amazon Web Services account that contains the dashboard that you're updating.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the dashboard that you're updating.
+     *        The ID of the Amazon Web Services account that contains the dashboard that you're updating.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -124,10 +124,10 @@ public class UpdateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the dashboard that you're updating.
+     * The ID of the Amazon Web Services account that contains the dashboard that you're updating.
      * </p>
      * 
-     * @return The ID of the Amazon Web Services account; that contains the dashboard that you're updating.
+     * @return The ID of the Amazon Web Services account that contains the dashboard that you're updating.
      */
 
     public String getAwsAccountId() {
@@ -136,11 +136,11 @@ public class UpdateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the dashboard that you're updating.
+     * The ID of the Amazon Web Services account that contains the dashboard that you're updating.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the dashboard that you're updating.
+     *        The ID of the Amazon Web Services account that contains the dashboard that you're updating.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -236,7 +236,7 @@ public class UpdateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>SourceTemplate</code> entity. If you need to update a dashboard from an analysis, first convert the
      * analysis to a template by using the <a>CreateTemplate</a> API operation. For <code>SourceTemplate</code>, specify
      * the Amazon Resource Name (ARN) of the source template. The <code>SourceTemplate</code> ARN can contain any Amazon
-     * Web Services account; and any QuickSight-supported Amazon Web Services Region;.
+     * Web Services account and any Amazon QuickSight-supported Amazon Web Services Region;.
      * </p>
      * <p>
      * Use the <code>DataSetReferences</code> entity within <code>SourceTemplate</code> to list the replacement datasets
@@ -249,8 +249,8 @@ public class UpdateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      *        use a <code>SourceTemplate</code> entity. If you need to update a dashboard from an analysis, first
      *        convert the analysis to a template by using the <a>CreateTemplate</a> API operation. For
      *        <code>SourceTemplate</code>, specify the Amazon Resource Name (ARN) of the source template. The
-     *        <code>SourceTemplate</code> ARN can contain any Amazon Web Services account; and any QuickSight-supported
-     *        Amazon Web Services Region;. </p>
+     *        <code>SourceTemplate</code> ARN can contain any Amazon Web Services account and any Amazon
+     *        QuickSight-supported Amazon Web Services Region;. </p>
      *        <p>
      *        Use the <code>DataSetReferences</code> entity within <code>SourceTemplate</code> to list the replacement
      *        datasets for the placeholders listed in the original. The schema in each dataset must match its
@@ -268,7 +268,7 @@ public class UpdateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>SourceTemplate</code> entity. If you need to update a dashboard from an analysis, first convert the
      * analysis to a template by using the <a>CreateTemplate</a> API operation. For <code>SourceTemplate</code>, specify
      * the Amazon Resource Name (ARN) of the source template. The <code>SourceTemplate</code> ARN can contain any Amazon
-     * Web Services account; and any QuickSight-supported Amazon Web Services Region;.
+     * Web Services account and any Amazon QuickSight-supported Amazon Web Services Region;.
      * </p>
      * <p>
      * Use the <code>DataSetReferences</code> entity within <code>SourceTemplate</code> to list the replacement datasets
@@ -280,8 +280,8 @@ public class UpdateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      *         so you use a <code>SourceTemplate</code> entity. If you need to update a dashboard from an analysis,
      *         first convert the analysis to a template by using the <a>CreateTemplate</a> API operation. For
      *         <code>SourceTemplate</code>, specify the Amazon Resource Name (ARN) of the source template. The
-     *         <code>SourceTemplate</code> ARN can contain any Amazon Web Services account; and any QuickSight-supported
-     *         Amazon Web Services Region;. </p>
+     *         <code>SourceTemplate</code> ARN can contain any Amazon Web Services account and any Amazon
+     *         QuickSight-supported Amazon Web Services Region;. </p>
      *         <p>
      *         Use the <code>DataSetReferences</code> entity within <code>SourceTemplate</code> to list the replacement
      *         datasets for the placeholders listed in the original. The schema in each dataset must match its
@@ -299,7 +299,7 @@ public class UpdateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>SourceTemplate</code> entity. If you need to update a dashboard from an analysis, first convert the
      * analysis to a template by using the <a>CreateTemplate</a> API operation. For <code>SourceTemplate</code>, specify
      * the Amazon Resource Name (ARN) of the source template. The <code>SourceTemplate</code> ARN can contain any Amazon
-     * Web Services account; and any QuickSight-supported Amazon Web Services Region;.
+     * Web Services account and any Amazon QuickSight-supported Amazon Web Services Region;.
      * </p>
      * <p>
      * Use the <code>DataSetReferences</code> entity within <code>SourceTemplate</code> to list the replacement datasets
@@ -312,8 +312,8 @@ public class UpdateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      *        use a <code>SourceTemplate</code> entity. If you need to update a dashboard from an analysis, first
      *        convert the analysis to a template by using the <a>CreateTemplate</a> API operation. For
      *        <code>SourceTemplate</code>, specify the Amazon Resource Name (ARN) of the source template. The
-     *        <code>SourceTemplate</code> ARN can contain any Amazon Web Services account; and any QuickSight-supported
-     *        Amazon Web Services Region;. </p>
+     *        <code>SourceTemplate</code> ARN can contain any Amazon Web Services account and any Amazon
+     *        QuickSight-supported Amazon Web Services Region;. </p>
      *        <p>
      *        Use the <code>DataSetReferences</code> entity within <code>SourceTemplate</code> to list the replacement
      *        datasets for the placeholders listed in the original. The schema in each dataset must match its
@@ -420,9 +420,9 @@ public class UpdateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      * <li>
      * <p>
      * <code>AvailabilityStatus</code> for <code>AdHocFilteringOption</code> - This status can be either
-     * <code>ENABLED</code> or <code>DISABLED</code>. When this is set to <code>DISABLED</code>, QuickSight disables the
-     * left filter pane on the published dashboard, which can be used for ad hoc (one-time) filtering. This option is
-     * <code>ENABLED</code> by default.
+     * <code>ENABLED</code> or <code>DISABLED</code>. When this is set to <code>DISABLED</code>, Amazon QuickSight
+     * disables the left filter pane on the published dashboard, which can be used for ad hoc (one-time) filtering. This
+     * option is <code>ENABLED</code> by default.
      * </p>
      * </li>
      * <li>
@@ -446,9 +446,9 @@ public class UpdateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      *        <li>
      *        <p>
      *        <code>AvailabilityStatus</code> for <code>AdHocFilteringOption</code> - This status can be either
-     *        <code>ENABLED</code> or <code>DISABLED</code>. When this is set to <code>DISABLED</code>, QuickSight
-     *        disables the left filter pane on the published dashboard, which can be used for ad hoc (one-time)
-     *        filtering. This option is <code>ENABLED</code> by default.
+     *        <code>ENABLED</code> or <code>DISABLED</code>. When this is set to <code>DISABLED</code>, Amazon
+     *        QuickSight disables the left filter pane on the published dashboard, which can be used for ad hoc
+     *        (one-time) filtering. This option is <code>ENABLED</code> by default.
      *        </p>
      *        </li>
      *        <li>
@@ -478,9 +478,9 @@ public class UpdateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      * <li>
      * <p>
      * <code>AvailabilityStatus</code> for <code>AdHocFilteringOption</code> - This status can be either
-     * <code>ENABLED</code> or <code>DISABLED</code>. When this is set to <code>DISABLED</code>, QuickSight disables the
-     * left filter pane on the published dashboard, which can be used for ad hoc (one-time) filtering. This option is
-     * <code>ENABLED</code> by default.
+     * <code>ENABLED</code> or <code>DISABLED</code>. When this is set to <code>DISABLED</code>, Amazon QuickSight
+     * disables the left filter pane on the published dashboard, which can be used for ad hoc (one-time) filtering. This
+     * option is <code>ENABLED</code> by default.
      * </p>
      * </li>
      * <li>
@@ -503,9 +503,9 @@ public class UpdateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      *         <li>
      *         <p>
      *         <code>AvailabilityStatus</code> for <code>AdHocFilteringOption</code> - This status can be either
-     *         <code>ENABLED</code> or <code>DISABLED</code>. When this is set to <code>DISABLED</code>, QuickSight
-     *         disables the left filter pane on the published dashboard, which can be used for ad hoc (one-time)
-     *         filtering. This option is <code>ENABLED</code> by default.
+     *         <code>ENABLED</code> or <code>DISABLED</code>. When this is set to <code>DISABLED</code>, Amazon
+     *         QuickSight disables the left filter pane on the published dashboard, which can be used for ad hoc
+     *         (one-time) filtering. This option is <code>ENABLED</code> by default.
      *         </p>
      *         </li>
      *         <li>
@@ -535,9 +535,9 @@ public class UpdateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      * <li>
      * <p>
      * <code>AvailabilityStatus</code> for <code>AdHocFilteringOption</code> - This status can be either
-     * <code>ENABLED</code> or <code>DISABLED</code>. When this is set to <code>DISABLED</code>, QuickSight disables the
-     * left filter pane on the published dashboard, which can be used for ad hoc (one-time) filtering. This option is
-     * <code>ENABLED</code> by default.
+     * <code>ENABLED</code> or <code>DISABLED</code>. When this is set to <code>DISABLED</code>, Amazon QuickSight
+     * disables the left filter pane on the published dashboard, which can be used for ad hoc (one-time) filtering. This
+     * option is <code>ENABLED</code> by default.
      * </p>
      * </li>
      * <li>
@@ -561,9 +561,9 @@ public class UpdateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      *        <li>
      *        <p>
      *        <code>AvailabilityStatus</code> for <code>AdHocFilteringOption</code> - This status can be either
-     *        <code>ENABLED</code> or <code>DISABLED</code>. When this is set to <code>DISABLED</code>, QuickSight
-     *        disables the left filter pane on the published dashboard, which can be used for ad hoc (one-time)
-     *        filtering. This option is <code>ENABLED</code> by default.
+     *        <code>ENABLED</code> or <code>DISABLED</code>. When this is set to <code>DISABLED</code>, Amazon
+     *        QuickSight disables the left filter pane on the published dashboard, which can be used for ad hoc
+     *        (one-time) filtering. This option is <code>ENABLED</code> by default.
      *        </p>
      *        </li>
      *        <li>
@@ -591,13 +591,13 @@ public class UpdateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * The Amazon Resource Name (ARN) of the theme that is being used for this dashboard. If you add a value for this
      * field, it overrides the value that was originally associated with the entity. The theme ARN must exist in the
-     * same Amazon Web Services account; where you create the dashboard.
+     * same Amazon Web Services account where you create the dashboard.
      * </p>
      * 
      * @param themeArn
      *        The Amazon Resource Name (ARN) of the theme that is being used for this dashboard. If you add a value for
      *        this field, it overrides the value that was originally associated with the entity. The theme ARN must
-     *        exist in the same Amazon Web Services account; where you create the dashboard.
+     *        exist in the same Amazon Web Services account where you create the dashboard.
      */
 
     public void setThemeArn(String themeArn) {
@@ -608,12 +608,12 @@ public class UpdateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * The Amazon Resource Name (ARN) of the theme that is being used for this dashboard. If you add a value for this
      * field, it overrides the value that was originally associated with the entity. The theme ARN must exist in the
-     * same Amazon Web Services account; where you create the dashboard.
+     * same Amazon Web Services account where you create the dashboard.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the theme that is being used for this dashboard. If you add a value for
      *         this field, it overrides the value that was originally associated with the entity. The theme ARN must
-     *         exist in the same Amazon Web Services account; where you create the dashboard.
+     *         exist in the same Amazon Web Services account where you create the dashboard.
      */
 
     public String getThemeArn() {
@@ -624,13 +624,13 @@ public class UpdateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * The Amazon Resource Name (ARN) of the theme that is being used for this dashboard. If you add a value for this
      * field, it overrides the value that was originally associated with the entity. The theme ARN must exist in the
-     * same Amazon Web Services account; where you create the dashboard.
+     * same Amazon Web Services account where you create the dashboard.
      * </p>
      * 
      * @param themeArn
      *        The Amazon Resource Name (ARN) of the theme that is being used for this dashboard. If you add a value for
      *        this field, it overrides the value that was originally associated with the entity. The theme ARN must
-     *        exist in the same Amazon Web Services account; where you create the dashboard.
+     *        exist in the same Amazon Web Services account where you create the dashboard.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

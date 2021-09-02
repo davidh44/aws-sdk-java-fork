@@ -29,6 +29,8 @@ public class RevocationConfigurationMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> CRLCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CrlConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> OCSPCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OcspConfiguration").build();
 
     private static final RevocationConfigurationMarshaller instance = new RevocationConfigurationMarshaller();
 
@@ -47,6 +49,7 @@ public class RevocationConfigurationMarshaller {
 
         try {
             protocolMarshaller.marshall(revocationConfiguration.getCrlConfiguration(), CRLCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(revocationConfiguration.getOcspConfiguration(), OCSPCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -36,7 +36,7 @@ public class AccessPreviewFinding implements Serializable, Cloneable, Structured
     private java.util.List<String> action;
     /**
      * <p>
-     * Provides context on how the access preview finding compares to existing access identified in Access Analyzer.
+     * Provides context on how the access preview finding compares to existing access identified in IAM Access Analyzer.
      * </p>
      * <ul>
      * <li>
@@ -82,7 +82,7 @@ public class AccessPreviewFinding implements Serializable, Cloneable, Structured
     private String error;
     /**
      * <p>
-     * The existing ID of the finding in Access Analyzer, provided only for existing findings.
+     * The existing ID of the finding in IAM Access Analyzer, provided only for existing findings.
      * </p>
      */
     private String existingFindingId;
@@ -119,8 +119,8 @@ public class AccessPreviewFinding implements Serializable, Cloneable, Structured
     private String resource;
     /**
      * <p>
-     * The AWS account ID that owns the resource. For most AWS resources, the owning account is the account in which the
-     * resource was created.
+     * The Amazon Web Services account ID that owns the resource. For most Amazon Web Services resources, the owning
+     * account is the account in which the resource was created.
      * </p>
      */
     private String resourceOwnerAccount;
@@ -219,7 +219,7 @@ public class AccessPreviewFinding implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Provides context on how the access preview finding compares to existing access identified in Access Analyzer.
+     * Provides context on how the access preview finding compares to existing access identified in IAM Access Analyzer.
      * </p>
      * <ul>
      * <li>
@@ -245,7 +245,7 @@ public class AccessPreviewFinding implements Serializable, Cloneable, Structured
      * </p>
      * 
      * @param changeType
-     *        Provides context on how the access preview finding compares to existing access identified in Access
+     *        Provides context on how the access preview finding compares to existing access identified in IAM Access
      *        Analyzer.</p>
      *        <ul>
      *        <li>
@@ -277,7 +277,7 @@ public class AccessPreviewFinding implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Provides context on how the access preview finding compares to existing access identified in Access Analyzer.
+     * Provides context on how the access preview finding compares to existing access identified in IAM Access Analyzer.
      * </p>
      * <ul>
      * <li>
@@ -302,7 +302,7 @@ public class AccessPreviewFinding implements Serializable, Cloneable, Structured
      * result of the proposed permissions change.
      * </p>
      * 
-     * @return Provides context on how the access preview finding compares to existing access identified in Access
+     * @return Provides context on how the access preview finding compares to existing access identified in IAM Access
      *         Analyzer.</p>
      *         <ul>
      *         <li>
@@ -334,7 +334,7 @@ public class AccessPreviewFinding implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Provides context on how the access preview finding compares to existing access identified in Access Analyzer.
+     * Provides context on how the access preview finding compares to existing access identified in IAM Access Analyzer.
      * </p>
      * <ul>
      * <li>
@@ -360,7 +360,7 @@ public class AccessPreviewFinding implements Serializable, Cloneable, Structured
      * </p>
      * 
      * @param changeType
-     *        Provides context on how the access preview finding compares to existing access identified in Access
+     *        Provides context on how the access preview finding compares to existing access identified in IAM Access
      *        Analyzer.</p>
      *        <ul>
      *        <li>
@@ -394,7 +394,7 @@ public class AccessPreviewFinding implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Provides context on how the access preview finding compares to existing access identified in Access Analyzer.
+     * Provides context on how the access preview finding compares to existing access identified in IAM Access Analyzer.
      * </p>
      * <ul>
      * <li>
@@ -420,7 +420,7 @@ public class AccessPreviewFinding implements Serializable, Cloneable, Structured
      * </p>
      * 
      * @param changeType
-     *        Provides context on how the access preview finding compares to existing access identified in Access
+     *        Provides context on how the access preview finding compares to existing access identified in IAM Access
      *        Analyzer.</p>
      *        <ul>
      *        <li>
@@ -602,11 +602,11 @@ public class AccessPreviewFinding implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The existing ID of the finding in Access Analyzer, provided only for existing findings.
+     * The existing ID of the finding in IAM Access Analyzer, provided only for existing findings.
      * </p>
      * 
      * @param existingFindingId
-     *        The existing ID of the finding in Access Analyzer, provided only for existing findings.
+     *        The existing ID of the finding in IAM Access Analyzer, provided only for existing findings.
      */
 
     public void setExistingFindingId(String existingFindingId) {
@@ -615,10 +615,10 @@ public class AccessPreviewFinding implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The existing ID of the finding in Access Analyzer, provided only for existing findings.
+     * The existing ID of the finding in IAM Access Analyzer, provided only for existing findings.
      * </p>
      * 
-     * @return The existing ID of the finding in Access Analyzer, provided only for existing findings.
+     * @return The existing ID of the finding in IAM Access Analyzer, provided only for existing findings.
      */
 
     public String getExistingFindingId() {
@@ -627,11 +627,11 @@ public class AccessPreviewFinding implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The existing ID of the finding in Access Analyzer, provided only for existing findings.
+     * The existing ID of the finding in IAM Access Analyzer, provided only for existing findings.
      * </p>
      * 
      * @param existingFindingId
-     *        The existing ID of the finding in Access Analyzer, provided only for existing findings.
+     *        The existing ID of the finding in IAM Access Analyzer, provided only for existing findings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -910,13 +910,13 @@ public class AccessPreviewFinding implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The AWS account ID that owns the resource. For most AWS resources, the owning account is the account in which the
-     * resource was created.
+     * The Amazon Web Services account ID that owns the resource. For most Amazon Web Services resources, the owning
+     * account is the account in which the resource was created.
      * </p>
      * 
      * @param resourceOwnerAccount
-     *        The AWS account ID that owns the resource. For most AWS resources, the owning account is the account in
-     *        which the resource was created.
+     *        The Amazon Web Services account ID that owns the resource. For most Amazon Web Services resources, the
+     *        owning account is the account in which the resource was created.
      */
 
     public void setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -925,12 +925,12 @@ public class AccessPreviewFinding implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The AWS account ID that owns the resource. For most AWS resources, the owning account is the account in which the
-     * resource was created.
+     * The Amazon Web Services account ID that owns the resource. For most Amazon Web Services resources, the owning
+     * account is the account in which the resource was created.
      * </p>
      * 
-     * @return The AWS account ID that owns the resource. For most AWS resources, the owning account is the account in
-     *         which the resource was created.
+     * @return The Amazon Web Services account ID that owns the resource. For most Amazon Web Services resources, the
+     *         owning account is the account in which the resource was created.
      */
 
     public String getResourceOwnerAccount() {
@@ -939,13 +939,13 @@ public class AccessPreviewFinding implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The AWS account ID that owns the resource. For most AWS resources, the owning account is the account in which the
-     * resource was created.
+     * The Amazon Web Services account ID that owns the resource. For most Amazon Web Services resources, the owning
+     * account is the account in which the resource was created.
      * </p>
      * 
      * @param resourceOwnerAccount
-     *        The AWS account ID that owns the resource. For most AWS resources, the owning account is the account in
-     *        which the resource was created.
+     *        The Amazon Web Services account ID that owns the resource. For most Amazon Web Services resources, the
+     *        owning account is the account in which the resource was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

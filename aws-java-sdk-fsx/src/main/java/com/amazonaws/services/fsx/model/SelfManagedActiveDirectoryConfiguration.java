@@ -19,10 +19,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The configuration that Amazon FSx uses to join the Windows File Server instance to your self-managed (including
- * on-premises) Microsoft Active Directory (AD) directory. For more information, see <a
- * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html"> Using Amazon FSx with your
- * self-managed Microsoft Active Directory</a>.
+ * The configuration that Amazon FSx uses to join a Amazon FSx for Windows File Server file system or an ONTAP storage
+ * virtual machine (SVM) to a self-managed (including on-premises) Microsoft Active Directory (AD) directory. For more
+ * information, see <a href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html"> Using Amazon FSx
+ * with your self-managed Microsoft Active Directory</a> or <a
+ * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html">Managing SVMs</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/SelfManagedActiveDirectoryConfiguration"
@@ -40,8 +41,8 @@ public class SelfManagedActiveDirectoryConfiguration implements Serializable, Cl
     /**
      * <p>
      * (Optional) The fully qualified distinguished name of the organizational unit within your self-managed AD
-     * directory that the Windows File Server instance will join. Amazon FSx only accepts OU as the direct parent of the
-     * file system. An example is <code>OU=FSx,DC=yourdomain,DC=corp,DC=com</code>. To learn more, see <a
+     * directory. Amazon FSx only accepts OU as the direct parent of the file system. An example is
+     * <code>OU=FSx,DC=yourdomain,DC=corp,DC=com</code>. To learn more, see <a
      * href="https://tools.ietf.org/html/rfc2253">RFC 2253</a>. If none is provided, the FSx file system is created in
      * the default location of your self-managed AD directory.
      * </p>
@@ -127,8 +128,8 @@ public class SelfManagedActiveDirectoryConfiguration implements Serializable, Cl
     /**
      * <p>
      * (Optional) The fully qualified distinguished name of the organizational unit within your self-managed AD
-     * directory that the Windows File Server instance will join. Amazon FSx only accepts OU as the direct parent of the
-     * file system. An example is <code>OU=FSx,DC=yourdomain,DC=corp,DC=com</code>. To learn more, see <a
+     * directory. Amazon FSx only accepts OU as the direct parent of the file system. An example is
+     * <code>OU=FSx,DC=yourdomain,DC=corp,DC=com</code>. To learn more, see <a
      * href="https://tools.ietf.org/html/rfc2253">RFC 2253</a>. If none is provided, the FSx file system is created in
      * the default location of your self-managed AD directory.
      * </p>
@@ -140,8 +141,8 @@ public class SelfManagedActiveDirectoryConfiguration implements Serializable, Cl
      * 
      * @param organizationalUnitDistinguishedName
      *        (Optional) The fully qualified distinguished name of the organizational unit within your self-managed AD
-     *        directory that the Windows File Server instance will join. Amazon FSx only accepts OU as the direct parent
-     *        of the file system. An example is <code>OU=FSx,DC=yourdomain,DC=corp,DC=com</code>. To learn more, see <a
+     *        directory. Amazon FSx only accepts OU as the direct parent of the file system. An example is
+     *        <code>OU=FSx,DC=yourdomain,DC=corp,DC=com</code>. To learn more, see <a
      *        href="https://tools.ietf.org/html/rfc2253">RFC 2253</a>. If none is provided, the FSx file system is
      *        created in the default location of your self-managed AD directory. </p> <important>
      *        <p>
@@ -156,8 +157,8 @@ public class SelfManagedActiveDirectoryConfiguration implements Serializable, Cl
     /**
      * <p>
      * (Optional) The fully qualified distinguished name of the organizational unit within your self-managed AD
-     * directory that the Windows File Server instance will join. Amazon FSx only accepts OU as the direct parent of the
-     * file system. An example is <code>OU=FSx,DC=yourdomain,DC=corp,DC=com</code>. To learn more, see <a
+     * directory. Amazon FSx only accepts OU as the direct parent of the file system. An example is
+     * <code>OU=FSx,DC=yourdomain,DC=corp,DC=com</code>. To learn more, see <a
      * href="https://tools.ietf.org/html/rfc2253">RFC 2253</a>. If none is provided, the FSx file system is created in
      * the default location of your self-managed AD directory.
      * </p>
@@ -168,10 +169,10 @@ public class SelfManagedActiveDirectoryConfiguration implements Serializable, Cl
      * </important>
      * 
      * @return (Optional) The fully qualified distinguished name of the organizational unit within your self-managed AD
-     *         directory that the Windows File Server instance will join. Amazon FSx only accepts OU as the direct
-     *         parent of the file system. An example is <code>OU=FSx,DC=yourdomain,DC=corp,DC=com</code>. To learn more,
-     *         see <a href="https://tools.ietf.org/html/rfc2253">RFC 2253</a>. If none is provided, the FSx file system
-     *         is created in the default location of your self-managed AD directory. </p> <important>
+     *         directory. Amazon FSx only accepts OU as the direct parent of the file system. An example is
+     *         <code>OU=FSx,DC=yourdomain,DC=corp,DC=com</code>. To learn more, see <a
+     *         href="https://tools.ietf.org/html/rfc2253">RFC 2253</a>. If none is provided, the FSx file system is
+     *         created in the default location of your self-managed AD directory. </p> <important>
      *         <p>
      *         Only Organizational Unit (OU) objects can be the direct parent of the file system that you're creating.
      *         </p>
@@ -184,8 +185,8 @@ public class SelfManagedActiveDirectoryConfiguration implements Serializable, Cl
     /**
      * <p>
      * (Optional) The fully qualified distinguished name of the organizational unit within your self-managed AD
-     * directory that the Windows File Server instance will join. Amazon FSx only accepts OU as the direct parent of the
-     * file system. An example is <code>OU=FSx,DC=yourdomain,DC=corp,DC=com</code>. To learn more, see <a
+     * directory. Amazon FSx only accepts OU as the direct parent of the file system. An example is
+     * <code>OU=FSx,DC=yourdomain,DC=corp,DC=com</code>. To learn more, see <a
      * href="https://tools.ietf.org/html/rfc2253">RFC 2253</a>. If none is provided, the FSx file system is created in
      * the default location of your self-managed AD directory.
      * </p>
@@ -197,8 +198,8 @@ public class SelfManagedActiveDirectoryConfiguration implements Serializable, Cl
      * 
      * @param organizationalUnitDistinguishedName
      *        (Optional) The fully qualified distinguished name of the organizational unit within your self-managed AD
-     *        directory that the Windows File Server instance will join. Amazon FSx only accepts OU as the direct parent
-     *        of the file system. An example is <code>OU=FSx,DC=yourdomain,DC=corp,DC=com</code>. To learn more, see <a
+     *        directory. Amazon FSx only accepts OU as the direct parent of the file system. An example is
+     *        <code>OU=FSx,DC=yourdomain,DC=corp,DC=com</code>. To learn more, see <a
      *        href="https://tools.ietf.org/html/rfc2253">RFC 2253</a>. If none is provided, the FSx file system is
      *        created in the default location of your self-managed AD directory. </p> <important>
      *        <p>

@@ -180,6 +180,39 @@ public class AWSTransferAsyncClient extends AWSTransferClient implements AWSTran
     }
 
     @Override
+    public java.util.concurrent.Future<CreateWorkflowResult> createWorkflowAsync(CreateWorkflowRequest request) {
+
+        return createWorkflowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateWorkflowResult> createWorkflowAsync(final CreateWorkflowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateWorkflowRequest, CreateWorkflowResult> asyncHandler) {
+        final CreateWorkflowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateWorkflowResult>() {
+            @Override
+            public CreateWorkflowResult call() throws Exception {
+                CreateWorkflowResult result = null;
+
+                try {
+                    result = executeCreateWorkflow(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteAccessResult> deleteAccessAsync(DeleteAccessRequest request) {
 
         return deleteAccessAsync(request, null);
@@ -312,6 +345,39 @@ public class AWSTransferAsyncClient extends AWSTransferClient implements AWSTran
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteWorkflowResult> deleteWorkflowAsync(DeleteWorkflowRequest request) {
+
+        return deleteWorkflowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteWorkflowResult> deleteWorkflowAsync(final DeleteWorkflowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteWorkflowRequest, DeleteWorkflowResult> asyncHandler) {
+        final DeleteWorkflowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteWorkflowResult>() {
+            @Override
+            public DeleteWorkflowResult call() throws Exception {
+                DeleteWorkflowResult result = null;
+
+                try {
+                    result = executeDeleteWorkflow(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeAccessResult> describeAccessAsync(DescribeAccessRequest request) {
 
         return describeAccessAsync(request, null);
@@ -329,6 +395,39 @@ public class AWSTransferAsyncClient extends AWSTransferClient implements AWSTran
 
                 try {
                     result = executeDescribeAccess(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeExecutionResult> describeExecutionAsync(DescribeExecutionRequest request) {
+
+        return describeExecutionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeExecutionResult> describeExecutionAsync(final DescribeExecutionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeExecutionRequest, DescribeExecutionResult> asyncHandler) {
+        final DescribeExecutionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeExecutionResult>() {
+            @Override
+            public DescribeExecutionResult call() throws Exception {
+                DescribeExecutionResult result = null;
+
+                try {
+                    result = executeDescribeExecution(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -444,6 +543,39 @@ public class AWSTransferAsyncClient extends AWSTransferClient implements AWSTran
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeWorkflowResult> describeWorkflowAsync(DescribeWorkflowRequest request) {
+
+        return describeWorkflowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeWorkflowResult> describeWorkflowAsync(final DescribeWorkflowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeWorkflowRequest, DescribeWorkflowResult> asyncHandler) {
+        final DescribeWorkflowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeWorkflowResult>() {
+            @Override
+            public DescribeWorkflowResult call() throws Exception {
+                DescribeWorkflowResult result = null;
+
+                try {
+                    result = executeDescribeWorkflow(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ImportSshPublicKeyResult> importSshPublicKeyAsync(ImportSshPublicKeyRequest request) {
 
         return importSshPublicKeyAsync(request, null);
@@ -494,6 +626,39 @@ public class AWSTransferAsyncClient extends AWSTransferClient implements AWSTran
 
                 try {
                     result = executeListAccesses(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListExecutionsResult> listExecutionsAsync(ListExecutionsRequest request) {
+
+        return listExecutionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListExecutionsResult> listExecutionsAsync(final ListExecutionsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListExecutionsRequest, ListExecutionsResult> asyncHandler) {
+        final ListExecutionsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListExecutionsResult>() {
+            @Override
+            public ListExecutionsResult call() throws Exception {
+                ListExecutionsResult result = null;
+
+                try {
+                    result = executeListExecutions(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -626,6 +791,72 @@ public class AWSTransferAsyncClient extends AWSTransferClient implements AWSTran
 
                 try {
                     result = executeListUsers(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListWorkflowsResult> listWorkflowsAsync(ListWorkflowsRequest request) {
+
+        return listWorkflowsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListWorkflowsResult> listWorkflowsAsync(final ListWorkflowsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListWorkflowsRequest, ListWorkflowsResult> asyncHandler) {
+        final ListWorkflowsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListWorkflowsResult>() {
+            @Override
+            public ListWorkflowsResult call() throws Exception {
+                ListWorkflowsResult result = null;
+
+                try {
+                    result = executeListWorkflows(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<SendWorkflowStepStateResult> sendWorkflowStepStateAsync(SendWorkflowStepStateRequest request) {
+
+        return sendWorkflowStepStateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SendWorkflowStepStateResult> sendWorkflowStepStateAsync(final SendWorkflowStepStateRequest request,
+            final com.amazonaws.handlers.AsyncHandler<SendWorkflowStepStateRequest, SendWorkflowStepStateResult> asyncHandler) {
+        final SendWorkflowStepStateRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<SendWorkflowStepStateResult>() {
+            @Override
+            public SendWorkflowStepStateResult call() throws Exception {
+                SendWorkflowStepStateResult result = null;
+
+                try {
+                    result = executeSendWorkflowStepState(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

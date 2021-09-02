@@ -29,6 +29,8 @@ public class LifecyclePolicyMarshaller {
 
     private static final MarshallingInfo<String> TRANSITIONTOIA_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TransitionToIA").build();
+    private static final MarshallingInfo<String> TRANSITIONTOPRIMARYSTORAGECLASS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TransitionToPrimaryStorageClass").build();
 
     private static final LifecyclePolicyMarshaller instance = new LifecyclePolicyMarshaller();
 
@@ -47,6 +49,7 @@ public class LifecyclePolicyMarshaller {
 
         try {
             protocolMarshaller.marshall(lifecyclePolicy.getTransitionToIA(), TRANSITIONTOIA_BINDING);
+            protocolMarshaller.marshall(lifecyclePolicy.getTransitionToPrimaryStorageClass(), TRANSITIONTOPRIMARYSTORAGECLASS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

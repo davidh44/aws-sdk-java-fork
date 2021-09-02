@@ -37,15 +37,16 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent updates. This string is
-     * automatically filled on your behalf when you use the AWS Command Line Interface (AWS CLI) or an AWS SDK.
+     * automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
      * </p>
      */
     private String clientRequestToken;
     /**
      * <p>
-     * Use this parameter to increase the storage capacity of an Amazon FSx file system. Specifies the storage capacity
-     * target value, GiB, to increase the storage capacity for the file system that you're updating. You cannot make a
-     * storage capacity increase request if there is an existing storage capacity increase request in progress.
+     * Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server or Amazon FSx for
+     * Lustre file system. Specifies the storage capacity target value, GiB, to increase the storage capacity for the
+     * file system that you're updating. You cannot make a storage capacity increase request if there is an existing
+     * storage capacity increase request in progress.
      * </p>
      * <p>
      * For Windows file systems, the storage capacity target value must be at least 10 percent (%) greater than the
@@ -93,6 +94,8 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     private UpdateFileSystemLustreConfiguration lustreConfiguration;
 
+    private UpdateFileSystemOntapConfiguration ontapConfiguration;
+
     /**
      * <p>
      * Identifies the file system that you are updating.
@@ -136,12 +139,13 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent updates. This string is
-     * automatically filled on your behalf when you use the AWS Command Line Interface (AWS CLI) or an AWS SDK.
+     * automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
      * </p>
      * 
      * @param clientRequestToken
      *        A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent updates. This string is
-     *        automatically filled on your behalf when you use the AWS Command Line Interface (AWS CLI) or an AWS SDK.
+     *        automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web
+     *        Services SDK.
      */
 
     public void setClientRequestToken(String clientRequestToken) {
@@ -151,11 +155,12 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent updates. This string is
-     * automatically filled on your behalf when you use the AWS Command Line Interface (AWS CLI) or an AWS SDK.
+     * automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
      * </p>
      * 
      * @return A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent updates. This string is
-     *         automatically filled on your behalf when you use the AWS Command Line Interface (AWS CLI) or an AWS SDK.
+     *         automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web
+     *         Services SDK.
      */
 
     public String getClientRequestToken() {
@@ -165,12 +170,13 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent updates. This string is
-     * automatically filled on your behalf when you use the AWS Command Line Interface (AWS CLI) or an AWS SDK.
+     * automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
      * </p>
      * 
      * @param clientRequestToken
      *        A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent updates. This string is
-     *        automatically filled on your behalf when you use the AWS Command Line Interface (AWS CLI) or an AWS SDK.
+     *        automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web
+     *        Services SDK.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -181,9 +187,10 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Use this parameter to increase the storage capacity of an Amazon FSx file system. Specifies the storage capacity
-     * target value, GiB, to increase the storage capacity for the file system that you're updating. You cannot make a
-     * storage capacity increase request if there is an existing storage capacity increase request in progress.
+     * Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server or Amazon FSx for
+     * Lustre file system. Specifies the storage capacity target value, GiB, to increase the storage capacity for the
+     * file system that you're updating. You cannot make a storage capacity increase request if there is an existing
+     * storage capacity increase request in progress.
      * </p>
      * <p>
      * For Windows file systems, the storage capacity target value must be at least 10 percent (%) greater than the
@@ -222,10 +229,10 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param storageCapacity
-     *        Use this parameter to increase the storage capacity of an Amazon FSx file system. Specifies the storage
-     *        capacity target value, GiB, to increase the storage capacity for the file system that you're updating. You
-     *        cannot make a storage capacity increase request if there is an existing storage capacity increase request
-     *        in progress.</p>
+     *        Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server or Amazon FSx
+     *        for Lustre file system. Specifies the storage capacity target value, GiB, to increase the storage capacity
+     *        for the file system that you're updating. You cannot make a storage capacity increase request if there is
+     *        an existing storage capacity increase request in progress.</p>
      *        <p>
      *        For Windows file systems, the storage capacity target value must be at least 10 percent (%) greater than
      *        the current storage capacity value. In order to increase storage capacity, the file system must have at
@@ -268,9 +275,10 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Use this parameter to increase the storage capacity of an Amazon FSx file system. Specifies the storage capacity
-     * target value, GiB, to increase the storage capacity for the file system that you're updating. You cannot make a
-     * storage capacity increase request if there is an existing storage capacity increase request in progress.
+     * Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server or Amazon FSx for
+     * Lustre file system. Specifies the storage capacity target value, GiB, to increase the storage capacity for the
+     * file system that you're updating. You cannot make a storage capacity increase request if there is an existing
+     * storage capacity increase request in progress.
      * </p>
      * <p>
      * For Windows file systems, the storage capacity target value must be at least 10 percent (%) greater than the
@@ -308,10 +316,10 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>.
      * </p>
      * 
-     * @return Use this parameter to increase the storage capacity of an Amazon FSx file system. Specifies the storage
-     *         capacity target value, GiB, to increase the storage capacity for the file system that you're updating.
-     *         You cannot make a storage capacity increase request if there is an existing storage capacity increase
-     *         request in progress.</p>
+     * @return Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server or Amazon
+     *         FSx for Lustre file system. Specifies the storage capacity target value, GiB, to increase the storage
+     *         capacity for the file system that you're updating. You cannot make a storage capacity increase request if
+     *         there is an existing storage capacity increase request in progress.</p>
      *         <p>
      *         For Windows file systems, the storage capacity target value must be at least 10 percent (%) greater than
      *         the current storage capacity value. In order to increase storage capacity, the file system must have at
@@ -354,9 +362,10 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Use this parameter to increase the storage capacity of an Amazon FSx file system. Specifies the storage capacity
-     * target value, GiB, to increase the storage capacity for the file system that you're updating. You cannot make a
-     * storage capacity increase request if there is an existing storage capacity increase request in progress.
+     * Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server or Amazon FSx for
+     * Lustre file system. Specifies the storage capacity target value, GiB, to increase the storage capacity for the
+     * file system that you're updating. You cannot make a storage capacity increase request if there is an existing
+     * storage capacity increase request in progress.
      * </p>
      * <p>
      * For Windows file systems, the storage capacity target value must be at least 10 percent (%) greater than the
@@ -395,10 +404,10 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param storageCapacity
-     *        Use this parameter to increase the storage capacity of an Amazon FSx file system. Specifies the storage
-     *        capacity target value, GiB, to increase the storage capacity for the file system that you're updating. You
-     *        cannot make a storage capacity increase request if there is an existing storage capacity increase request
-     *        in progress.</p>
+     *        Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server or Amazon FSx
+     *        for Lustre file system. Specifies the storage capacity target value, GiB, to increase the storage capacity
+     *        for the file system that you're updating. You cannot make a storage capacity increase request if there is
+     *        an existing storage capacity increase request in progress.</p>
      *        <p>
      *        For Windows file systems, the storage capacity target value must be at least 10 percent (%) greater than
      *        the current storage capacity value. In order to increase storage capacity, the file system must have at
@@ -508,6 +517,32 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * @param ontapConfiguration
+     */
+
+    public void setOntapConfiguration(UpdateFileSystemOntapConfiguration ontapConfiguration) {
+        this.ontapConfiguration = ontapConfiguration;
+    }
+
+    /**
+     * @return
+     */
+
+    public UpdateFileSystemOntapConfiguration getOntapConfiguration() {
+        return this.ontapConfiguration;
+    }
+
+    /**
+     * @param ontapConfiguration
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateFileSystemRequest withOntapConfiguration(UpdateFileSystemOntapConfiguration ontapConfiguration) {
+        setOntapConfiguration(ontapConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -528,7 +563,9 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
         if (getWindowsConfiguration() != null)
             sb.append("WindowsConfiguration: ").append(getWindowsConfiguration()).append(",");
         if (getLustreConfiguration() != null)
-            sb.append("LustreConfiguration: ").append(getLustreConfiguration());
+            sb.append("LustreConfiguration: ").append(getLustreConfiguration()).append(",");
+        if (getOntapConfiguration() != null)
+            sb.append("OntapConfiguration: ").append(getOntapConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -563,6 +600,10 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getLustreConfiguration() != null && other.getLustreConfiguration().equals(this.getLustreConfiguration()) == false)
             return false;
+        if (other.getOntapConfiguration() == null ^ this.getOntapConfiguration() == null)
+            return false;
+        if (other.getOntapConfiguration() != null && other.getOntapConfiguration().equals(this.getOntapConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -576,6 +617,7 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getStorageCapacity() == null) ? 0 : getStorageCapacity().hashCode());
         hashCode = prime * hashCode + ((getWindowsConfiguration() == null) ? 0 : getWindowsConfiguration().hashCode());
         hashCode = prime * hashCode + ((getLustreConfiguration() == null) ? 0 : getLustreConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getOntapConfiguration() == null) ? 0 : getOntapConfiguration().hashCode());
         return hashCode;
     }
 

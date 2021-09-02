@@ -119,7 +119,7 @@ public interface AWSTransferAsync extends AWSTransfer {
      * and associate users with servers that have the <code>IdentityProviderType</code> set to
      * <code>SERVICE_MANAGED</code>. Using parameters for <code>CreateUser</code>, you can specify the user name, set
      * the home directory, store the user's public key, and assign the user's Amazon Web Services Identity and Access
-     * Management (IAM) role. You can also optionally add a scope-down policy, and assign metadata with tags that can be
+     * Management (IAM) role. You can also optionally add a session policy, and assign metadata with tags that can be
      * used to group and search for users.
      * </p>
      * 
@@ -137,7 +137,7 @@ public interface AWSTransferAsync extends AWSTransfer {
      * and associate users with servers that have the <code>IdentityProviderType</code> set to
      * <code>SERVICE_MANAGED</code>. Using parameters for <code>CreateUser</code>, you can specify the user name, set
      * the home directory, store the user's public key, and assign the user's Amazon Web Services Identity and Access
-     * Management (IAM) role. You can also optionally add a scope-down policy, and assign metadata with tags that can be
+     * Management (IAM) role. You can also optionally add a session policy, and assign metadata with tags that can be
      * used to group and search for users.
      * </p>
      * 
@@ -153,6 +153,43 @@ public interface AWSTransferAsync extends AWSTransfer {
      */
     java.util.concurrent.Future<CreateUserResult> createUserAsync(CreateUserRequest createUserRequest,
             com.amazonaws.handlers.AsyncHandler<CreateUserRequest, CreateUserResult> asyncHandler);
+
+    /**
+     * <p>
+     * Allows you to create a workflow with specified steps and step details the workflow invokes after file transfer
+     * completes. After creating a workflow, you can associate the workflow created with any transfer servers by
+     * specifying the <code>workflow-details</code> field in <code>CreateServer</code> and <code>UpdateServer</code>
+     * operations.
+     * </p>
+     * 
+     * @param createWorkflowRequest
+     * @return A Java Future containing the result of the CreateWorkflow operation returned by the service.
+     * @sample AWSTransferAsync.CreateWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/CreateWorkflow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateWorkflowResult> createWorkflowAsync(CreateWorkflowRequest createWorkflowRequest);
+
+    /**
+     * <p>
+     * Allows you to create a workflow with specified steps and step details the workflow invokes after file transfer
+     * completes. After creating a workflow, you can associate the workflow created with any transfer servers by
+     * specifying the <code>workflow-details</code> field in <code>CreateServer</code> and <code>UpdateServer</code>
+     * operations.
+     * </p>
+     * 
+     * @param createWorkflowRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateWorkflow operation returned by the service.
+     * @sample AWSTransferAsyncHandler.CreateWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/CreateWorkflow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateWorkflowResult> createWorkflowAsync(CreateWorkflowRequest createWorkflowRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateWorkflowRequest, CreateWorkflowResult> asyncHandler);
 
     /**
      * <p>
@@ -226,9 +263,6 @@ public interface AWSTransferAsync extends AWSTransfer {
      * <p>
      * Deletes a user's Secure Shell (SSH) public key.
      * </p>
-     * <p>
-     * No response is returned from this operation.
-     * </p>
      * 
      * @param deleteSshPublicKeyRequest
      * @return A Java Future containing the result of the DeleteSshPublicKey operation returned by the service.
@@ -241,9 +275,6 @@ public interface AWSTransferAsync extends AWSTransfer {
     /**
      * <p>
      * Deletes a user's Secure Shell (SSH) public key.
-     * </p>
-     * <p>
-     * No response is returned from this operation.
      * </p>
      * 
      * @param deleteSshPublicKeyRequest
@@ -308,6 +339,37 @@ public interface AWSTransferAsync extends AWSTransfer {
 
     /**
      * <p>
+     * Deletes the specified workflow.
+     * </p>
+     * 
+     * @param deleteWorkflowRequest
+     * @return A Java Future containing the result of the DeleteWorkflow operation returned by the service.
+     * @sample AWSTransferAsync.DeleteWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DeleteWorkflow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteWorkflowResult> deleteWorkflowAsync(DeleteWorkflowRequest deleteWorkflowRequest);
+
+    /**
+     * <p>
+     * Deletes the specified workflow.
+     * </p>
+     * 
+     * @param deleteWorkflowRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteWorkflow operation returned by the service.
+     * @sample AWSTransferAsyncHandler.DeleteWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DeleteWorkflow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteWorkflowResult> deleteWorkflowAsync(DeleteWorkflowRequest deleteWorkflowRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteWorkflowRequest, DeleteWorkflowResult> asyncHandler);
+
+    /**
+     * <p>
      * Describes the access that is assigned to the specific file transfer protocol-enabled server, as identified by its
      * <code>ServerId</code> property and its <code>ExternalID</code>.
      * </p>
@@ -346,6 +408,37 @@ public interface AWSTransferAsync extends AWSTransfer {
      */
     java.util.concurrent.Future<DescribeAccessResult> describeAccessAsync(DescribeAccessRequest describeAccessRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeAccessRequest, DescribeAccessResult> asyncHandler);
+
+    /**
+     * <p>
+     * You can use <code>DescribeExecution</code> to check the details of the execution of the specified workflow.
+     * </p>
+     * 
+     * @param describeExecutionRequest
+     * @return A Java Future containing the result of the DescribeExecution operation returned by the service.
+     * @sample AWSTransferAsync.DescribeExecution
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DescribeExecution" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeExecutionResult> describeExecutionAsync(DescribeExecutionRequest describeExecutionRequest);
+
+    /**
+     * <p>
+     * You can use <code>DescribeExecution</code> to check the details of the execution of the specified workflow.
+     * </p>
+     * 
+     * @param describeExecutionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeExecution operation returned by the service.
+     * @sample AWSTransferAsyncHandler.DescribeExecution
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DescribeExecution" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeExecutionResult> describeExecutionAsync(DescribeExecutionRequest describeExecutionRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeExecutionRequest, DescribeExecutionResult> asyncHandler);
 
     /**
      * <p>
@@ -468,6 +561,37 @@ public interface AWSTransferAsync extends AWSTransfer {
 
     /**
      * <p>
+     * Describes the specified workflow.
+     * </p>
+     * 
+     * @param describeWorkflowRequest
+     * @return A Java Future containing the result of the DescribeWorkflow operation returned by the service.
+     * @sample AWSTransferAsync.DescribeWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DescribeWorkflow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeWorkflowResult> describeWorkflowAsync(DescribeWorkflowRequest describeWorkflowRequest);
+
+    /**
+     * <p>
+     * Describes the specified workflow.
+     * </p>
+     * 
+     * @param describeWorkflowRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeWorkflow operation returned by the service.
+     * @sample AWSTransferAsyncHandler.DescribeWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DescribeWorkflow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeWorkflowResult> describeWorkflowAsync(DescribeWorkflowRequest describeWorkflowRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeWorkflowRequest, DescribeWorkflowResult> asyncHandler);
+
+    /**
+     * <p>
      * Adds a Secure Shell (SSH) public key to a user account identified by a <code>UserName</code> value assigned to
      * the specific file transfer protocol-enabled server, identified by <code>ServerId</code>.
      * </p>
@@ -537,6 +661,37 @@ public interface AWSTransferAsync extends AWSTransfer {
      */
     java.util.concurrent.Future<ListAccessesResult> listAccessesAsync(ListAccessesRequest listAccessesRequest,
             com.amazonaws.handlers.AsyncHandler<ListAccessesRequest, ListAccessesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists all executions for the specified workflow.
+     * </p>
+     * 
+     * @param listExecutionsRequest
+     * @return A Java Future containing the result of the ListExecutions operation returned by the service.
+     * @sample AWSTransferAsync.ListExecutions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/ListExecutions" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListExecutionsResult> listExecutionsAsync(ListExecutionsRequest listExecutionsRequest);
+
+    /**
+     * <p>
+     * Lists all executions for the specified workflow.
+     * </p>
+     * 
+     * @param listExecutionsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListExecutions operation returned by the service.
+     * @sample AWSTransferAsyncHandler.ListExecutions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/ListExecutions" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListExecutionsResult> listExecutionsAsync(ListExecutionsRequest listExecutionsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListExecutionsRequest, ListExecutionsResult> asyncHandler);
 
     /**
      * <p>
@@ -665,6 +820,78 @@ public interface AWSTransferAsync extends AWSTransfer {
      */
     java.util.concurrent.Future<ListUsersResult> listUsersAsync(ListUsersRequest listUsersRequest,
             com.amazonaws.handlers.AsyncHandler<ListUsersRequest, ListUsersResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists all of your workflows.
+     * </p>
+     * 
+     * @param listWorkflowsRequest
+     * @return A Java Future containing the result of the ListWorkflows operation returned by the service.
+     * @sample AWSTransferAsync.ListWorkflows
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/ListWorkflows" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListWorkflowsResult> listWorkflowsAsync(ListWorkflowsRequest listWorkflowsRequest);
+
+    /**
+     * <p>
+     * Lists all of your workflows.
+     * </p>
+     * 
+     * @param listWorkflowsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListWorkflows operation returned by the service.
+     * @sample AWSTransferAsyncHandler.ListWorkflows
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/ListWorkflows" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListWorkflowsResult> listWorkflowsAsync(ListWorkflowsRequest listWorkflowsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListWorkflowsRequest, ListWorkflowsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Sends a callback for asynchronous custom steps.
+     * </p>
+     * <p>
+     * The <code>ExecutionId</code>, <code>WorkflowId</code>, and <code>Token</code> are passed to the target resource
+     * during execution of a custom step of a workflow. You must include those with their callback as well as providing
+     * a status.
+     * </p>
+     * 
+     * @param sendWorkflowStepStateRequest
+     * @return A Java Future containing the result of the SendWorkflowStepState operation returned by the service.
+     * @sample AWSTransferAsync.SendWorkflowStepState
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/SendWorkflowStepState" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<SendWorkflowStepStateResult> sendWorkflowStepStateAsync(SendWorkflowStepStateRequest sendWorkflowStepStateRequest);
+
+    /**
+     * <p>
+     * Sends a callback for asynchronous custom steps.
+     * </p>
+     * <p>
+     * The <code>ExecutionId</code>, <code>WorkflowId</code>, and <code>Token</code> are passed to the target resource
+     * during execution of a custom step of a workflow. You must include those with their callback as well as providing
+     * a status.
+     * </p>
+     * 
+     * @param sendWorkflowStepStateRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SendWorkflowStepState operation returned by the service.
+     * @sample AWSTransferAsyncHandler.SendWorkflowStepState
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/SendWorkflowStepState" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<SendWorkflowStepStateResult> sendWorkflowStepStateAsync(SendWorkflowStepStateRequest sendWorkflowStepStateRequest,
+            com.amazonaws.handlers.AsyncHandler<SendWorkflowStepStateRequest, SendWorkflowStepStateResult> asyncHandler);
 
     /**
      * <p>
@@ -823,6 +1050,40 @@ public interface AWSTransferAsync extends AWSTransfer {
      * create your server. By doing so, you can troubleshoot issues with the identity provider integration to ensure
      * that your users can successfully use the service.
      * </p>
+     * <p>
+     * The <code>ServerId</code> and <code>UserName</code> parameters are required. The <code>ServerProtocol</code>,
+     * <code>SourceIp</code>, and <code>UserPassword</code> are all optional.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot use <code>TestIdentityProvider</code> if the <code>IdentityProviderType</code> of your server is
+     * <code>SERVICE_MANAGED</code>.
+     * </p>
+     * </note>
+     * <ul>
+     * <li>
+     * <p>
+     * If you provide any incorrect values for any parameters, the <code>Response</code> field is empty.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you provide a server ID for a server that uses service-managed users, you get an error:
+     * </p>
+     * <p>
+     * <code> An error occurred (InvalidRequestException) when calling the TestIdentityProvider operation: s-<i>server-ID</i> not configured for external auth </code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you enter a Server ID for the <code>--server-id</code> parameter that does not identify an actual Transfer
+     * server, you receive the following error:
+     * </p>
+     * <p>
+     * <code>An error occurred (ResourceNotFoundException) when calling the TestIdentityProvider operation: Unknown server</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param testIdentityProviderRequest
      * @return A Java Future containing the result of the TestIdentityProvider operation returned by the service.
@@ -840,6 +1101,40 @@ public interface AWSTransferAsync extends AWSTransfer {
      * create your server. By doing so, you can troubleshoot issues with the identity provider integration to ensure
      * that your users can successfully use the service.
      * </p>
+     * <p>
+     * The <code>ServerId</code> and <code>UserName</code> parameters are required. The <code>ServerProtocol</code>,
+     * <code>SourceIp</code>, and <code>UserPassword</code> are all optional.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot use <code>TestIdentityProvider</code> if the <code>IdentityProviderType</code> of your server is
+     * <code>SERVICE_MANAGED</code>.
+     * </p>
+     * </note>
+     * <ul>
+     * <li>
+     * <p>
+     * If you provide any incorrect values for any parameters, the <code>Response</code> field is empty.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you provide a server ID for a server that uses service-managed users, you get an error:
+     * </p>
+     * <p>
+     * <code> An error occurred (InvalidRequestException) when calling the TestIdentityProvider operation: s-<i>server-ID</i> not configured for external auth </code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you enter a Server ID for the <code>--server-id</code> parameter that does not identify an actual Transfer
+     * server, you receive the following error:
+     * </p>
+     * <p>
+     * <code>An error occurred (ResourceNotFoundException) when calling the TestIdentityProvider operation: Unknown server</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param testIdentityProviderRequest
      * @param asyncHandler

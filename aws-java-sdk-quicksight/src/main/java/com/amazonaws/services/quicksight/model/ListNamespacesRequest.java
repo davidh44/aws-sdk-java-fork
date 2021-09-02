@@ -27,7 +27,7 @@ public class ListNamespacesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that contains the QuickSight namespaces that you want to list.
+     * The ID for the Amazon Web Services account that contains the Amazon QuickSight namespaces that you want to list.
      * </p>
      */
     private String awsAccountId;
@@ -46,11 +46,12 @@ public class ListNamespacesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that contains the QuickSight namespaces that you want to list.
+     * The ID for the Amazon Web Services account that contains the Amazon QuickSight namespaces that you want to list.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID for the Amazon Web Services account; that contains the QuickSight namespaces that you want to list.
+     *        The ID for the Amazon Web Services account that contains the Amazon QuickSight namespaces that you want to
+     *        list.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -59,11 +60,11 @@ public class ListNamespacesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that contains the QuickSight namespaces that you want to list.
+     * The ID for the Amazon Web Services account that contains the Amazon QuickSight namespaces that you want to list.
      * </p>
      * 
-     * @return The ID for the Amazon Web Services account; that contains the QuickSight namespaces that you want to
-     *         list.
+     * @return The ID for the Amazon Web Services account that contains the Amazon QuickSight namespaces that you want
+     *         to list.
      */
 
     public String getAwsAccountId() {
@@ -72,11 +73,12 @@ public class ListNamespacesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that contains the QuickSight namespaces that you want to list.
+     * The ID for the Amazon Web Services account that contains the Amazon QuickSight namespaces that you want to list.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID for the Amazon Web Services account; that contains the QuickSight namespaces that you want to list.
+     *        The ID for the Amazon Web Services account that contains the Amazon QuickSight namespaces that you want to
+     *        list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

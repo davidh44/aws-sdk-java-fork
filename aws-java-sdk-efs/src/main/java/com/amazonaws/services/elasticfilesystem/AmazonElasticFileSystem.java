@@ -29,10 +29,11 @@ import com.amazonaws.services.elasticfilesystem.model.*;
  * <fullname>Amazon Elastic File System</fullname>
  * <p>
  * Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in
- * the AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and
- * remove files, so your applications have the storage they need, when they need it. For more information, see the <a
- * href="https://docs.aws.amazon.com/efs/latest/ug/api-reference.html">Amazon Elastic File System API Reference</a> and
- * the <a href="https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html">Amazon Elastic File System User Guide</a>.
+ * the Amazon Web Services Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as
+ * you add and remove files, so your applications have the storage they need, when they need it. For more information,
+ * see the <a href="https://docs.aws.amazon.com/efs/latest/ug/api-reference.html">Amazon Elastic File System API
+ * Reference</a> and the <a href="https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html">Amazon Elastic File System
+ * User Guide</a>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -125,10 +126,11 @@ public interface AmazonElasticFileSystem {
      * @throws InternalServerErrorException
      *         Returned if an error occurred on the server side.
      * @throws FileSystemNotFoundException
-     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's AWS account.
+     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
      * @throws AccessPointLimitExceededException
-     *         Returned if the AWS account has already created the maximum number of access points allowed per file
-     *         system.
+     *         Returned if the Amazon Web Services account has already created the maximum number of access points
+     *         allowed per file system.
      * @sample AmazonElasticFileSystem.CreateAccessPoint
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/CreateAccessPoint"
      *      target="_top">AWS API Documentation</a>
@@ -139,8 +141,8 @@ public interface AmazonElasticFileSystem {
      * <p>
      * Creates a new, empty file system. The operation requires a creation token in the request that Amazon EFS uses to
      * ensure idempotent creation (calling the operation with same creation token has no effect). If a file system does
-     * not currently exist that is owned by the caller's AWS account with the specified creation token, this operation
-     * does the following:
+     * not currently exist that is owned by the caller's Amazon Web Services account with the specified creation token,
+     * this operation does the following:
      * </p>
      * <ul>
      * <li>
@@ -217,7 +219,8 @@ public interface AmazonElasticFileSystem {
      *         Returned if the file system you are trying to create already exists, with the creation token you
      *         provided.
      * @throws FileSystemLimitExceededException
-     *         Returned if the AWS account has already created the maximum number of file systems allowed per account.
+     *         Returned if the Amazon Web Services account has already created the maximum number of file systems
+     *         allowed per account.
      * @throws InsufficientThroughputCapacityException
      *         Returned if there's not enough capacity to provision additional throughput. This value might be returned
      *         when you try to create a file system in provisioned throughput mode, when you attempt to increase the
@@ -420,7 +423,8 @@ public interface AmazonElasticFileSystem {
      * @throws InternalServerErrorException
      *         Returned if an error occurred on the server side.
      * @throws FileSystemNotFoundException
-     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's AWS account.
+     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
      * @throws IncorrectFileSystemLifeCycleStateException
      *         Returned if the file system's lifecycle state is not "available".
      * @throws MountTargetConflictException
@@ -434,9 +438,9 @@ public interface AmazonElasticFileSystem {
      * @throws IpAddressInUseException
      *         Returned if the request specified an <code>IpAddress</code> that is already in use in the subnet.
      * @throws NetworkInterfaceLimitExceededException
-     *         The calling account has reached the limit for elastic network interfaces for the specific AWS Region. The
-     *         client should try to delete some elastic network interfaces or get the account limit raised. For more
-     *         information, see <a
+     *         The calling account has reached the limit for elastic network interfaces for the specific Amazon Web
+     *         Services Region. The client should try to delete some elastic network interfaces or get the account limit
+     *         raised. For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Appendix_Limits.html">Amazon VPC
      *         Limits</a> in the <i>Amazon VPC User Guide </i> (see the Network interfaces per VPC entry in the table).
      * @throws SecurityGroupLimitExceededException
@@ -481,7 +485,8 @@ public interface AmazonElasticFileSystem {
      * @throws InternalServerErrorException
      *         Returned if an error occurred on the server side.
      * @throws FileSystemNotFoundException
-     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's AWS account.
+     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
      * @sample AmazonElasticFileSystem.CreateTags
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/CreateTags" target="_top">AWS
      *      API Documentation</a>
@@ -507,7 +512,8 @@ public interface AmazonElasticFileSystem {
      * @throws InternalServerErrorException
      *         Returned if an error occurred on the server side.
      * @throws AccessPointNotFoundException
-     *         Returned if the specified <code>AccessPointId</code> value doesn't exist in the requester's AWS account.
+     *         Returned if the specified <code>AccessPointId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
      * @sample AmazonElasticFileSystem.DeleteAccessPoint
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DeleteAccessPoint"
      *      target="_top">AWS API Documentation</a>
@@ -543,7 +549,8 @@ public interface AmazonElasticFileSystem {
      * @throws InternalServerErrorException
      *         Returned if an error occurred on the server side.
      * @throws FileSystemNotFoundException
-     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's AWS account.
+     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
      * @throws FileSystemInUseException
      *         Returned if a file system has mount targets.
      * @sample AmazonElasticFileSystem.DeleteFileSystem
@@ -569,7 +576,8 @@ public interface AmazonElasticFileSystem {
      * @throws InternalServerErrorException
      *         Returned if an error occurred on the server side.
      * @throws FileSystemNotFoundException
-     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's AWS account.
+     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
      * @throws IncorrectFileSystemLifeCycleStateException
      *         Returned if the file system's lifecycle state is not "available".
      * @sample AmazonElasticFileSystem.DeleteFileSystemPolicy
@@ -629,7 +637,8 @@ public interface AmazonElasticFileSystem {
      * @throws DependencyTimeoutException
      *         The service timed out trying to fulfill the request, and the client should try the call again.
      * @throws MountTargetNotFoundException
-     *         Returned if there is no mount target with the specified ID found in the caller's account.
+     *         Returned if there is no mount target with the specified ID found in the caller's Amazon Web Services
+     *         account.
      * @sample AmazonElasticFileSystem.DeleteMountTarget
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DeleteMountTarget"
      *      target="_top">AWS API Documentation</a>
@@ -647,7 +656,7 @@ public interface AmazonElasticFileSystem {
      * Deletes the specified tags from a file system. If the <code>DeleteTags</code> request includes a tag key that
      * doesn't exist, Amazon EFS ignores it and doesn't cause an error. For more information about tags and related
      * restrictions, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Tag
-     * Restrictions</a> in the <i>AWS Billing and Cost Management User Guide</i>.
+     * restrictions</a> in the <i>Billing and Cost Management User Guide</i>.
      * </p>
      * <p>
      * This operation requires permissions for the <code>elasticfilesystem:DeleteTags</code> action.
@@ -661,7 +670,8 @@ public interface AmazonElasticFileSystem {
      * @throws InternalServerErrorException
      *         Returned if an error occurred on the server side.
      * @throws FileSystemNotFoundException
-     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's AWS account.
+     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
      * @sample AmazonElasticFileSystem.DeleteTags
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DeleteTags" target="_top">AWS
      *      API Documentation</a>
@@ -687,9 +697,11 @@ public interface AmazonElasticFileSystem {
      * @throws InternalServerErrorException
      *         Returned if an error occurred on the server side.
      * @throws FileSystemNotFoundException
-     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's AWS account.
+     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
      * @throws AccessPointNotFoundException
-     *         Returned if the specified <code>AccessPointId</code> value doesn't exist in the requester's AWS account.
+     *         Returned if the specified <code>AccessPointId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
      * @sample AmazonElasticFileSystem.DescribeAccessPoints
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DescribeAccessPoints"
      *      target="_top">AWS API Documentation</a>
@@ -697,6 +709,12 @@ public interface AmazonElasticFileSystem {
     DescribeAccessPointsResult describeAccessPoints(DescribeAccessPointsRequest describeAccessPointsRequest);
 
     /**
+     * <p>
+     * Returns the account preferences settings for the Amazon Web Services account associated with the user making the
+     * request, in the current Amazon Web Services Region. For more information, see <a
+     * href="efs/latest/ug/manage-efs-resource-ids.html">Managing Amazon EFS resource IDs</a>.
+     * </p>
+     * 
      * @param describeAccountPreferencesRequest
      * @return Result of the DescribeAccountPreferences operation returned by the service.
      * @throws InternalServerErrorException
@@ -718,13 +736,15 @@ public interface AmazonElasticFileSystem {
      *         Returned if the request is malformed or contains an error such as an invalid parameter value or a missing
      *         required parameter.
      * @throws FileSystemNotFoundException
-     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's AWS account.
+     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
      * @throws InternalServerErrorException
      *         Returned if an error occurred on the server side.
      * @throws PolicyNotFoundException
      *         Returned if the default file system policy is in effect for the EFS file system specified.
      * @throws ValidationException
-     *         Returned if the AWS Backup service is not available in the Region in which the request was made.
+     *         Returned if the Backup service is not available in the Amazon Web Services Region in which the request
+     *         was made.
      * @sample AmazonElasticFileSystem.DescribeBackupPolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DescribeBackupPolicy"
      *      target="_top">AWS API Documentation</a>
@@ -744,7 +764,8 @@ public interface AmazonElasticFileSystem {
      * @throws InternalServerErrorException
      *         Returned if an error occurred on the server side.
      * @throws FileSystemNotFoundException
-     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's AWS account.
+     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
      * @throws PolicyNotFoundException
      *         Returned if the default file system policy is in effect for the EFS file system specified.
      * @sample AmazonElasticFileSystem.DescribeFileSystemPolicy
@@ -757,7 +778,7 @@ public interface AmazonElasticFileSystem {
      * <p>
      * Returns the description of a specific Amazon EFS file system if either the file system <code>CreationToken</code>
      * or the <code>FileSystemId</code> is provided. Otherwise, it returns descriptions of all file systems owned by the
-     * caller's AWS account in the AWS Region of the endpoint that you're calling.
+     * caller's Amazon Web Services account in the Amazon Web Services Region of the endpoint that you're calling.
      * </p>
      * <p>
      * When retrieving all file system descriptions, you can optionally specify the <code>MaxItems</code> parameter to
@@ -788,7 +809,8 @@ public interface AmazonElasticFileSystem {
      * @throws InternalServerErrorException
      *         Returned if an error occurred on the server side.
      * @throws FileSystemNotFoundException
-     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's AWS account.
+     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
      * @sample AmazonElasticFileSystem.DescribeFileSystems
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DescribeFileSystems"
      *      target="_top">AWS API Documentation</a>
@@ -810,6 +832,10 @@ public interface AmazonElasticFileSystem {
      * the call returns an empty array in the response.
      * </p>
      * <p>
+     * When EFS Intelligent Tiering is enabled, <code>TransitionToPrimaryStorageClass</code> has a value of
+     * <code>AFTER_1_ACCESS</code>.
+     * </p>
+     * <p>
      * This operation requires permissions for the <code>elasticfilesystem:DescribeLifecycleConfiguration</code>
      * operation.
      * </p>
@@ -822,7 +848,8 @@ public interface AmazonElasticFileSystem {
      *         Returned if the request is malformed or contains an error such as an invalid parameter value or a missing
      *         required parameter.
      * @throws FileSystemNotFoundException
-     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's AWS account.
+     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
      * @sample AmazonElasticFileSystem.DescribeLifecycleConfiguration
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DescribeLifecycleConfiguration"
      *      target="_top">AWS API Documentation</a>
@@ -859,7 +886,8 @@ public interface AmazonElasticFileSystem {
      * @throws InternalServerErrorException
      *         Returned if an error occurred on the server side.
      * @throws MountTargetNotFoundException
-     *         Returned if there is no mount target with the specified ID found in the caller's account.
+     *         Returned if there is no mount target with the specified ID found in the caller's Amazon Web Services
+     *         account.
      * @throws IncorrectMountTargetStateException
      *         Returned if the mount target is not in the correct state for the operation.
      * @sample AmazonElasticFileSystem.DescribeMountTargetSecurityGroups
@@ -888,11 +916,14 @@ public interface AmazonElasticFileSystem {
      * @throws InternalServerErrorException
      *         Returned if an error occurred on the server side.
      * @throws FileSystemNotFoundException
-     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's AWS account.
+     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
      * @throws MountTargetNotFoundException
-     *         Returned if there is no mount target with the specified ID found in the caller's account.
+     *         Returned if there is no mount target with the specified ID found in the caller's Amazon Web Services
+     *         account.
      * @throws AccessPointNotFoundException
-     *         Returned if the specified <code>AccessPointId</code> value doesn't exist in the requester's AWS account.
+     *         Returned if the specified <code>AccessPointId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
      * @sample AmazonElasticFileSystem.DescribeMountTargets
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DescribeMountTargets"
      *      target="_top">AWS API Documentation</a>
@@ -923,7 +954,8 @@ public interface AmazonElasticFileSystem {
      * @throws InternalServerErrorException
      *         Returned if an error occurred on the server side.
      * @throws FileSystemNotFoundException
-     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's AWS account.
+     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
      * @sample AmazonElasticFileSystem.DescribeTags
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DescribeTags" target="_top">AWS
      *      API Documentation</a>
@@ -948,9 +980,11 @@ public interface AmazonElasticFileSystem {
      * @throws InternalServerErrorException
      *         Returned if an error occurred on the server side.
      * @throws FileSystemNotFoundException
-     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's AWS account.
+     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
      * @throws AccessPointNotFoundException
-     *         Returned if the specified <code>AccessPointId</code> value doesn't exist in the requester's AWS account.
+     *         Returned if the specified <code>AccessPointId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
      * @sample AmazonElasticFileSystem.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/ListTagsForResource"
      *      target="_top">AWS API Documentation</a>
@@ -992,7 +1026,8 @@ public interface AmazonElasticFileSystem {
      * @throws InternalServerErrorException
      *         Returned if an error occurred on the server side.
      * @throws MountTargetNotFoundException
-     *         Returned if there is no mount target with the specified ID found in the caller's account.
+     *         Returned if there is no mount target with the specified ID found in the caller's Amazon Web Services
+     *         account.
      * @throws IncorrectMountTargetStateException
      *         Returned if the mount target is not in the correct state for the operation.
      * @throws SecurityGroupLimitExceededException
@@ -1007,6 +1042,14 @@ public interface AmazonElasticFileSystem {
     ModifyMountTargetSecurityGroupsResult modifyMountTargetSecurityGroups(ModifyMountTargetSecurityGroupsRequest modifyMountTargetSecurityGroupsRequest);
 
     /**
+     * <p>
+     * Use this operation to set the account preference in the current Amazon Web Services Region to use either long 17
+     * character (63 bit) or short 8 character (32 bit) IDs for new EFS file systems and mount targets created. All
+     * existing resource IDs are not affected by any changes you make. You can set the ID preference during the opt-in
+     * period as EFS transitions to long resource IDs. For more information, see <a
+     * href="efs/latest/ug/manage-efs-resource-ids.html">Managing Amazon EFS resource IDs</a>.
+     * </p>
+     * 
      * @param putAccountPreferencesRequest
      * @return Result of the PutAccountPreferences operation returned by the service.
      * @throws InternalServerErrorException
@@ -1028,13 +1071,15 @@ public interface AmazonElasticFileSystem {
      *         Returned if the request is malformed or contains an error such as an invalid parameter value or a missing
      *         required parameter.
      * @throws FileSystemNotFoundException
-     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's AWS account.
+     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
      * @throws IncorrectFileSystemLifeCycleStateException
      *         Returned if the file system's lifecycle state is not "available".
      * @throws InternalServerErrorException
      *         Returned if an error occurred on the server side.
      * @throws ValidationException
-     *         Returned if the AWS Backup service is not available in the Region in which the request was made.
+     *         Returned if the Backup service is not available in the Amazon Web Services Region in which the request
+     *         was made.
      * @sample AmazonElasticFileSystem.PutBackupPolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/PutBackupPolicy"
      *      target="_top">AWS API Documentation</a>
@@ -1063,7 +1108,8 @@ public interface AmazonElasticFileSystem {
      * @throws InternalServerErrorException
      *         Returned if an error occurred on the server side.
      * @throws FileSystemNotFoundException
-     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's AWS account.
+     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
      * @throws InvalidPolicyException
      *         Returned if the <code>FileSystemPolicy</code> is is malformed or contains an error such as an invalid
      *         parameter value or a missing required parameter. Returned in the case of a policy lockout safety check
@@ -1080,8 +1126,13 @@ public interface AmazonElasticFileSystem {
      * <p>
      * Enables lifecycle management by creating a new <code>LifecycleConfiguration</code> object. A
      * <code>LifecycleConfiguration</code> object defines when files in an Amazon EFS file system are automatically
-     * transitioned to the lower-cost EFS Infrequent Access (IA) storage class. A <code>LifecycleConfiguration</code>
-     * applies to all files in a file system.
+     * transitioned to the lower-cost EFS Infrequent Access (IA) storage class. To enable EFS Intelligent Tiering, set
+     * the value of <code>TransitionToPrimaryStorageClass</code> to <code>AFTER_1_ACCESS</code>. For more information,
+     * see <a href="https://docs.aws.amazon.com/efs/latest/ug/lifecycle-management-efs.html">EFS Lifecycle
+     * Management</a>.
+     * </p>
+     * <p>
+     * A <code>LifecycleConfiguration</code> applies to all files in a file system.
      * </p>
      * <p>
      * Each Amazon EFS file system supports one lifecycle configuration, which applies to all files in the file system.
@@ -1110,8 +1161,8 @@ public interface AmazonElasticFileSystem {
      * This operation requires permissions for the <code>elasticfilesystem:PutLifecycleConfiguration</code> operation.
      * </p>
      * <p>
-     * To apply a <code>LifecycleConfiguration</code> object to an encrypted file system, you need the same AWS Key
-     * Management Service (AWS KMS) permissions as when you created the encrypted file system.
+     * To apply a <code>LifecycleConfiguration</code> object to an encrypted file system, you need the same Key
+     * Management Service permissions as when you created the encrypted file system.
      * </p>
      * 
      * @param putLifecycleConfigurationRequest
@@ -1122,7 +1173,8 @@ public interface AmazonElasticFileSystem {
      * @throws InternalServerErrorException
      *         Returned if an error occurred on the server side.
      * @throws FileSystemNotFoundException
-     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's AWS account.
+     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
      * @throws IncorrectFileSystemLifeCycleStateException
      *         Returned if the file system's lifecycle state is not "available".
      * @sample AmazonElasticFileSystem.PutLifecycleConfiguration
@@ -1148,9 +1200,11 @@ public interface AmazonElasticFileSystem {
      * @throws InternalServerErrorException
      *         Returned if an error occurred on the server side.
      * @throws FileSystemNotFoundException
-     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's AWS account.
+     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
      * @throws AccessPointNotFoundException
-     *         Returned if the specified <code>AccessPointId</code> value doesn't exist in the requester's AWS account.
+     *         Returned if the specified <code>AccessPointId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
      * @sample AmazonElasticFileSystem.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/TagResource" target="_top">AWS
      *      API Documentation</a>
@@ -1174,9 +1228,11 @@ public interface AmazonElasticFileSystem {
      * @throws InternalServerErrorException
      *         Returned if an error occurred on the server side.
      * @throws FileSystemNotFoundException
-     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's AWS account.
+     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
      * @throws AccessPointNotFoundException
-     *         Returned if the specified <code>AccessPointId</code> value doesn't exist in the requester's AWS account.
+     *         Returned if the specified <code>AccessPointId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
      * @sample AmazonElasticFileSystem.UntagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/UntagResource"
      *      target="_top">AWS API Documentation</a>
@@ -1194,7 +1250,8 @@ public interface AmazonElasticFileSystem {
      *         Returned if the request is malformed or contains an error such as an invalid parameter value or a missing
      *         required parameter.
      * @throws FileSystemNotFoundException
-     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's AWS account.
+     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
      * @throws IncorrectFileSystemLifeCycleStateException
      *         Returned if the file system's lifecycle state is not "available".
      * @throws InsufficientThroughputCapacityException

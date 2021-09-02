@@ -69,6 +69,30 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private AwsS3AccountPublicAccessBlockDetails publicAccessBlockConfiguration;
+    /**
+     * <p>
+     * The access control list for the S3 bucket.
+     * </p>
+     */
+    private String accessControlList;
+    /**
+     * <p>
+     * The logging configuration for the S3 bucket.
+     * </p>
+     */
+    private AwsS3BucketLoggingConfiguration bucketLoggingConfiguration;
+    /**
+     * <p>
+     * The website configuration parameters for the S3 bucket.
+     * </p>
+     */
+    private AwsS3BucketWebsiteConfiguration bucketWebsiteConfiguration;
+    /**
+     * <p>
+     * The notification configuration for the S3 bucket.
+     * </p>
+     */
+    private AwsS3BucketNotificationConfiguration bucketNotificationConfiguration;
 
     /**
      * <p>
@@ -338,6 +362,166 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The access control list for the S3 bucket.
+     * </p>
+     * 
+     * @param accessControlList
+     *        The access control list for the S3 bucket.
+     */
+
+    public void setAccessControlList(String accessControlList) {
+        this.accessControlList = accessControlList;
+    }
+
+    /**
+     * <p>
+     * The access control list for the S3 bucket.
+     * </p>
+     * 
+     * @return The access control list for the S3 bucket.
+     */
+
+    public String getAccessControlList() {
+        return this.accessControlList;
+    }
+
+    /**
+     * <p>
+     * The access control list for the S3 bucket.
+     * </p>
+     * 
+     * @param accessControlList
+     *        The access control list for the S3 bucket.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsS3BucketDetails withAccessControlList(String accessControlList) {
+        setAccessControlList(accessControlList);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The logging configuration for the S3 bucket.
+     * </p>
+     * 
+     * @param bucketLoggingConfiguration
+     *        The logging configuration for the S3 bucket.
+     */
+
+    public void setBucketLoggingConfiguration(AwsS3BucketLoggingConfiguration bucketLoggingConfiguration) {
+        this.bucketLoggingConfiguration = bucketLoggingConfiguration;
+    }
+
+    /**
+     * <p>
+     * The logging configuration for the S3 bucket.
+     * </p>
+     * 
+     * @return The logging configuration for the S3 bucket.
+     */
+
+    public AwsS3BucketLoggingConfiguration getBucketLoggingConfiguration() {
+        return this.bucketLoggingConfiguration;
+    }
+
+    /**
+     * <p>
+     * The logging configuration for the S3 bucket.
+     * </p>
+     * 
+     * @param bucketLoggingConfiguration
+     *        The logging configuration for the S3 bucket.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsS3BucketDetails withBucketLoggingConfiguration(AwsS3BucketLoggingConfiguration bucketLoggingConfiguration) {
+        setBucketLoggingConfiguration(bucketLoggingConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The website configuration parameters for the S3 bucket.
+     * </p>
+     * 
+     * @param bucketWebsiteConfiguration
+     *        The website configuration parameters for the S3 bucket.
+     */
+
+    public void setBucketWebsiteConfiguration(AwsS3BucketWebsiteConfiguration bucketWebsiteConfiguration) {
+        this.bucketWebsiteConfiguration = bucketWebsiteConfiguration;
+    }
+
+    /**
+     * <p>
+     * The website configuration parameters for the S3 bucket.
+     * </p>
+     * 
+     * @return The website configuration parameters for the S3 bucket.
+     */
+
+    public AwsS3BucketWebsiteConfiguration getBucketWebsiteConfiguration() {
+        return this.bucketWebsiteConfiguration;
+    }
+
+    /**
+     * <p>
+     * The website configuration parameters for the S3 bucket.
+     * </p>
+     * 
+     * @param bucketWebsiteConfiguration
+     *        The website configuration parameters for the S3 bucket.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsS3BucketDetails withBucketWebsiteConfiguration(AwsS3BucketWebsiteConfiguration bucketWebsiteConfiguration) {
+        setBucketWebsiteConfiguration(bucketWebsiteConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The notification configuration for the S3 bucket.
+     * </p>
+     * 
+     * @param bucketNotificationConfiguration
+     *        The notification configuration for the S3 bucket.
+     */
+
+    public void setBucketNotificationConfiguration(AwsS3BucketNotificationConfiguration bucketNotificationConfiguration) {
+        this.bucketNotificationConfiguration = bucketNotificationConfiguration;
+    }
+
+    /**
+     * <p>
+     * The notification configuration for the S3 bucket.
+     * </p>
+     * 
+     * @return The notification configuration for the S3 bucket.
+     */
+
+    public AwsS3BucketNotificationConfiguration getBucketNotificationConfiguration() {
+        return this.bucketNotificationConfiguration;
+    }
+
+    /**
+     * <p>
+     * The notification configuration for the S3 bucket.
+     * </p>
+     * 
+     * @param bucketNotificationConfiguration
+     *        The notification configuration for the S3 bucket.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsS3BucketDetails withBucketNotificationConfiguration(AwsS3BucketNotificationConfiguration bucketNotificationConfiguration) {
+        setBucketNotificationConfiguration(bucketNotificationConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -360,7 +544,15 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
         if (getBucketLifecycleConfiguration() != null)
             sb.append("BucketLifecycleConfiguration: ").append(getBucketLifecycleConfiguration()).append(",");
         if (getPublicAccessBlockConfiguration() != null)
-            sb.append("PublicAccessBlockConfiguration: ").append(getPublicAccessBlockConfiguration());
+            sb.append("PublicAccessBlockConfiguration: ").append(getPublicAccessBlockConfiguration()).append(",");
+        if (getAccessControlList() != null)
+            sb.append("AccessControlList: ").append(getAccessControlList()).append(",");
+        if (getBucketLoggingConfiguration() != null)
+            sb.append("BucketLoggingConfiguration: ").append(getBucketLoggingConfiguration()).append(",");
+        if (getBucketWebsiteConfiguration() != null)
+            sb.append("BucketWebsiteConfiguration: ").append(getBucketWebsiteConfiguration()).append(",");
+        if (getBucketNotificationConfiguration() != null)
+            sb.append("BucketNotificationConfiguration: ").append(getBucketNotificationConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -401,6 +593,23 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
         if (other.getPublicAccessBlockConfiguration() != null
                 && other.getPublicAccessBlockConfiguration().equals(this.getPublicAccessBlockConfiguration()) == false)
             return false;
+        if (other.getAccessControlList() == null ^ this.getAccessControlList() == null)
+            return false;
+        if (other.getAccessControlList() != null && other.getAccessControlList().equals(this.getAccessControlList()) == false)
+            return false;
+        if (other.getBucketLoggingConfiguration() == null ^ this.getBucketLoggingConfiguration() == null)
+            return false;
+        if (other.getBucketLoggingConfiguration() != null && other.getBucketLoggingConfiguration().equals(this.getBucketLoggingConfiguration()) == false)
+            return false;
+        if (other.getBucketWebsiteConfiguration() == null ^ this.getBucketWebsiteConfiguration() == null)
+            return false;
+        if (other.getBucketWebsiteConfiguration() != null && other.getBucketWebsiteConfiguration().equals(this.getBucketWebsiteConfiguration()) == false)
+            return false;
+        if (other.getBucketNotificationConfiguration() == null ^ this.getBucketNotificationConfiguration() == null)
+            return false;
+        if (other.getBucketNotificationConfiguration() != null
+                && other.getBucketNotificationConfiguration().equals(this.getBucketNotificationConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -415,6 +624,10 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getServerSideEncryptionConfiguration() == null) ? 0 : getServerSideEncryptionConfiguration().hashCode());
         hashCode = prime * hashCode + ((getBucketLifecycleConfiguration() == null) ? 0 : getBucketLifecycleConfiguration().hashCode());
         hashCode = prime * hashCode + ((getPublicAccessBlockConfiguration() == null) ? 0 : getPublicAccessBlockConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getAccessControlList() == null) ? 0 : getAccessControlList().hashCode());
+        hashCode = prime * hashCode + ((getBucketLoggingConfiguration() == null) ? 0 : getBucketLoggingConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getBucketWebsiteConfiguration() == null) ? 0 : getBucketWebsiteConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getBucketNotificationConfiguration() == null) ? 0 : getBucketNotificationConfiguration().hashCode());
         return hashCode;
     }
 

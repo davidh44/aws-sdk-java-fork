@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The Region provided for <code>Source Region</code> is invalid or is in a different AWS partition.
+ * The Region provided for <code>Source Region</code> is invalid or is in a different Amazon Web Services partition.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -23,7 +23,8 @@ import javax.annotation.Generated;
 public enum FileSystemType {
 
     WINDOWS("WINDOWS"),
-    LUSTRE("LUSTRE");
+    LUSTRE("LUSTRE"),
+    ONTAP("ONTAP");
 
     private String value;
 

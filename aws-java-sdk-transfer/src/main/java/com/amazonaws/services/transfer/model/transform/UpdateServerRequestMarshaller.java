@@ -48,6 +48,8 @@ public class UpdateServerRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SecurityPolicyName").build();
     private static final MarshallingInfo<String> SERVERID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("ServerId").build();
+    private static final MarshallingInfo<StructuredPojo> WORKFLOWDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WorkflowDetails").build();
 
     private static final UpdateServerRequestMarshaller instance = new UpdateServerRequestMarshaller();
 
@@ -75,6 +77,7 @@ public class UpdateServerRequestMarshaller {
             protocolMarshaller.marshall(updateServerRequest.getProtocols(), PROTOCOLS_BINDING);
             protocolMarshaller.marshall(updateServerRequest.getSecurityPolicyName(), SECURITYPOLICYNAME_BINDING);
             protocolMarshaller.marshall(updateServerRequest.getServerId(), SERVERID_BINDING);
+            protocolMarshaller.marshall(updateServerRequest.getWorkflowDetails(), WORKFLOWDETAILS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

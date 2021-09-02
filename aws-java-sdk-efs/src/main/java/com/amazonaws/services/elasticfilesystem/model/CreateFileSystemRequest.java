@@ -48,17 +48,17 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A Boolean value that, if true, creates an encrypted file system. When creating an encrypted file system, you have
-     * the option of specifying <a>CreateFileSystemRequest$KmsKeyId</a> for an existing AWS Key Management Service (AWS
-     * KMS) customer master key (CMK). If you don't specify a CMK, then the default CMK for Amazon EFS,
+     * the option of specifying <a>CreateFileSystemRequest$KmsKeyId</a> for an existing Key Management Service (KMS
+     * customer master key (CMK). If you don't specify a CMK, then the default CMK for Amazon EFS,
      * <code>/aws/elasticfilesystem</code>, is used to protect the encrypted file system.
      * </p>
      */
     private Boolean encrypted;
     /**
      * <p>
-     * The ID of the AWS KMS CMK that you want to use to protect the encrypted file system. This parameter is only
-     * required if you want to use a non-default KMS key. If this parameter is not specified, the default CMK for Amazon
-     * EFS is used. This ID can be in one of the following formats:
+     * The ID of the KMS CMK that you want to use to protect the encrypted file system. This parameter is only required
+     * if you want to use a non-default KMS key. If this parameter is not specified, the default CMK for Amazon EFS is
+     * used. This ID can be in one of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -114,24 +114,24 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The throughput, measured in MiB/s, that you want to provision for a file system that you're creating. Valid
      * values are 1-1024. Required if <code>ThroughputMode</code> is set to <code>provisioned</code>. The upper limit
-     * for throughput is 1024 MiB/s. To increase this limit, contact AWS Support. For more information, see <a
-     * href="https://docs.aws.amazon.com/efs/latest/ug/limits.html#soft-limits">Amazon EFS quotas that you can
+     * for throughput is 1024 MiB/s. To increase this limit, contact Amazon Web Services Support. For more information,
+     * see <a href="https://docs.aws.amazon.com/efs/latest/ug/limits.html#soft-limits">Amazon EFS quotas that you can
      * increase</a> in the <i>Amazon EFS User Guide</i>.
      * </p>
      */
     private Double provisionedThroughputInMibps;
     /**
      * <p>
-     * Used to create a file system that uses One Zone storage classes. It specifies the AWS Availability Zone in which
-     * to create the file system. Use the format <code>us-east-1a</code> to specify the Availability Zone. For more
-     * information about One Zone storage classes, see <a
+     * Used to create a file system that uses One Zone storage classes. It specifies the Amazon Web Services
+     * Availability Zone in which to create the file system. Use the format <code>us-east-1a</code> to specify the
+     * Availability Zone. For more information about One Zone storage classes, see <a
      * href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html">Using EFS storage classes</a> in the
      * <i>Amazon EFS User Guide</i>.
      * </p>
      * <note>
      * <p>
-     * One Zone storage classes are not available in all Availability Zones in AWS Regions where Amazon EFS is
-     * available.
+     * One Zone storage classes are not available in all Availability Zones in Amazon Web Services Regions where Amazon
+     * EFS is available.
      * </p>
      * </note>
      */
@@ -150,16 +150,18 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <note>
      * <p>
-     * AWS Backup is not available in all AWS Regions where Amazon EFS is available.
+     * Backup is not available in all Amazon Web Services Regionswhere Amazon EFS is available.
      * </p>
      * </note>
      */
     private Boolean backup;
     /**
      * <p>
-     * A value that specifies to create one or more tags associated with the file system. Each tag is a user-defined
-     * key-value pair. Name your file system on creation by including a <code>"Key":"Name","Value":"{value}"</code>
-     * key-value pair.
+     * Use to create one or more tags associated with the file system. Each tag is a user-defined key-value pair. Name
+     * your file system on creation by including a <code>"Key":"Name","Value":"{value}"</code> key-value pair. Each key
+     * must be unique. For more information, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>
+     * in the <i>Amazon Web Services General Reference Guide</i>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
@@ -350,16 +352,16 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A Boolean value that, if true, creates an encrypted file system. When creating an encrypted file system, you have
-     * the option of specifying <a>CreateFileSystemRequest$KmsKeyId</a> for an existing AWS Key Management Service (AWS
-     * KMS) customer master key (CMK). If you don't specify a CMK, then the default CMK for Amazon EFS,
+     * the option of specifying <a>CreateFileSystemRequest$KmsKeyId</a> for an existing Key Management Service (KMS
+     * customer master key (CMK). If you don't specify a CMK, then the default CMK for Amazon EFS,
      * <code>/aws/elasticfilesystem</code>, is used to protect the encrypted file system.
      * </p>
      * 
      * @param encrypted
      *        A Boolean value that, if true, creates an encrypted file system. When creating an encrypted file system,
-     *        you have the option of specifying <a>CreateFileSystemRequest$KmsKeyId</a> for an existing AWS Key
-     *        Management Service (AWS KMS) customer master key (CMK). If you don't specify a CMK, then the default CMK
-     *        for Amazon EFS, <code>/aws/elasticfilesystem</code>, is used to protect the encrypted file system.
+     *        you have the option of specifying <a>CreateFileSystemRequest$KmsKeyId</a> for an existing Key Management
+     *        Service (KMS customer master key (CMK). If you don't specify a CMK, then the default CMK for Amazon EFS,
+     *        <code>/aws/elasticfilesystem</code>, is used to protect the encrypted file system.
      */
 
     public void setEncrypted(Boolean encrypted) {
@@ -369,15 +371,15 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A Boolean value that, if true, creates an encrypted file system. When creating an encrypted file system, you have
-     * the option of specifying <a>CreateFileSystemRequest$KmsKeyId</a> for an existing AWS Key Management Service (AWS
-     * KMS) customer master key (CMK). If you don't specify a CMK, then the default CMK for Amazon EFS,
+     * the option of specifying <a>CreateFileSystemRequest$KmsKeyId</a> for an existing Key Management Service (KMS
+     * customer master key (CMK). If you don't specify a CMK, then the default CMK for Amazon EFS,
      * <code>/aws/elasticfilesystem</code>, is used to protect the encrypted file system.
      * </p>
      * 
      * @return A Boolean value that, if true, creates an encrypted file system. When creating an encrypted file system,
-     *         you have the option of specifying <a>CreateFileSystemRequest$KmsKeyId</a> for an existing AWS Key
-     *         Management Service (AWS KMS) customer master key (CMK). If you don't specify a CMK, then the default CMK
-     *         for Amazon EFS, <code>/aws/elasticfilesystem</code>, is used to protect the encrypted file system.
+     *         you have the option of specifying <a>CreateFileSystemRequest$KmsKeyId</a> for an existing Key Management
+     *         Service (KMS customer master key (CMK). If you don't specify a CMK, then the default CMK for Amazon EFS,
+     *         <code>/aws/elasticfilesystem</code>, is used to protect the encrypted file system.
      */
 
     public Boolean getEncrypted() {
@@ -387,16 +389,16 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A Boolean value that, if true, creates an encrypted file system. When creating an encrypted file system, you have
-     * the option of specifying <a>CreateFileSystemRequest$KmsKeyId</a> for an existing AWS Key Management Service (AWS
-     * KMS) customer master key (CMK). If you don't specify a CMK, then the default CMK for Amazon EFS,
+     * the option of specifying <a>CreateFileSystemRequest$KmsKeyId</a> for an existing Key Management Service (KMS
+     * customer master key (CMK). If you don't specify a CMK, then the default CMK for Amazon EFS,
      * <code>/aws/elasticfilesystem</code>, is used to protect the encrypted file system.
      * </p>
      * 
      * @param encrypted
      *        A Boolean value that, if true, creates an encrypted file system. When creating an encrypted file system,
-     *        you have the option of specifying <a>CreateFileSystemRequest$KmsKeyId</a> for an existing AWS Key
-     *        Management Service (AWS KMS) customer master key (CMK). If you don't specify a CMK, then the default CMK
-     *        for Amazon EFS, <code>/aws/elasticfilesystem</code>, is used to protect the encrypted file system.
+     *        you have the option of specifying <a>CreateFileSystemRequest$KmsKeyId</a> for an existing Key Management
+     *        Service (KMS customer master key (CMK). If you don't specify a CMK, then the default CMK for Amazon EFS,
+     *        <code>/aws/elasticfilesystem</code>, is used to protect the encrypted file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -408,15 +410,15 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A Boolean value that, if true, creates an encrypted file system. When creating an encrypted file system, you have
-     * the option of specifying <a>CreateFileSystemRequest$KmsKeyId</a> for an existing AWS Key Management Service (AWS
-     * KMS) customer master key (CMK). If you don't specify a CMK, then the default CMK for Amazon EFS,
+     * the option of specifying <a>CreateFileSystemRequest$KmsKeyId</a> for an existing Key Management Service (KMS
+     * customer master key (CMK). If you don't specify a CMK, then the default CMK for Amazon EFS,
      * <code>/aws/elasticfilesystem</code>, is used to protect the encrypted file system.
      * </p>
      * 
      * @return A Boolean value that, if true, creates an encrypted file system. When creating an encrypted file system,
-     *         you have the option of specifying <a>CreateFileSystemRequest$KmsKeyId</a> for an existing AWS Key
-     *         Management Service (AWS KMS) customer master key (CMK). If you don't specify a CMK, then the default CMK
-     *         for Amazon EFS, <code>/aws/elasticfilesystem</code>, is used to protect the encrypted file system.
+     *         you have the option of specifying <a>CreateFileSystemRequest$KmsKeyId</a> for an existing Key Management
+     *         Service (KMS customer master key (CMK). If you don't specify a CMK, then the default CMK for Amazon EFS,
+     *         <code>/aws/elasticfilesystem</code>, is used to protect the encrypted file system.
      */
 
     public Boolean isEncrypted() {
@@ -425,9 +427,9 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the AWS KMS CMK that you want to use to protect the encrypted file system. This parameter is only
-     * required if you want to use a non-default KMS key. If this parameter is not specified, the default CMK for Amazon
-     * EFS is used. This ID can be in one of the following formats:
+     * The ID of the KMS CMK that you want to use to protect the encrypted file system. This parameter is only required
+     * if you want to use a non-default KMS key. If this parameter is not specified, the default CMK for Amazon EFS is
+     * used. This ID can be in one of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -464,9 +466,9 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </important>
      * 
      * @param kmsKeyId
-     *        The ID of the AWS KMS CMK that you want to use to protect the encrypted file system. This parameter is
-     *        only required if you want to use a non-default KMS key. If this parameter is not specified, the default
-     *        CMK for Amazon EFS is used. This ID can be in one of the following formats:</p>
+     *        The ID of the KMS CMK that you want to use to protect the encrypted file system. This parameter is only
+     *        required if you want to use a non-default KMS key. If this parameter is not specified, the default CMK for
+     *        Amazon EFS is used. This ID can be in one of the following formats:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -507,9 +509,9 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the AWS KMS CMK that you want to use to protect the encrypted file system. This parameter is only
-     * required if you want to use a non-default KMS key. If this parameter is not specified, the default CMK for Amazon
-     * EFS is used. This ID can be in one of the following formats:
+     * The ID of the KMS CMK that you want to use to protect the encrypted file system. This parameter is only required
+     * if you want to use a non-default KMS key. If this parameter is not specified, the default CMK for Amazon EFS is
+     * used. This ID can be in one of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -545,9 +547,9 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * </important>
      * 
-     * @return The ID of the AWS KMS CMK that you want to use to protect the encrypted file system. This parameter is
-     *         only required if you want to use a non-default KMS key. If this parameter is not specified, the default
-     *         CMK for Amazon EFS is used. This ID can be in one of the following formats:</p>
+     * @return The ID of the KMS CMK that you want to use to protect the encrypted file system. This parameter is only
+     *         required if you want to use a non-default KMS key. If this parameter is not specified, the default CMK
+     *         for Amazon EFS is used. This ID can be in one of the following formats:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -588,9 +590,9 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the AWS KMS CMK that you want to use to protect the encrypted file system. This parameter is only
-     * required if you want to use a non-default KMS key. If this parameter is not specified, the default CMK for Amazon
-     * EFS is used. This ID can be in one of the following formats:
+     * The ID of the KMS CMK that you want to use to protect the encrypted file system. This parameter is only required
+     * if you want to use a non-default KMS key. If this parameter is not specified, the default CMK for Amazon EFS is
+     * used. This ID can be in one of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -627,9 +629,9 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </important>
      * 
      * @param kmsKeyId
-     *        The ID of the AWS KMS CMK that you want to use to protect the encrypted file system. This parameter is
-     *        only required if you want to use a non-default KMS key. If this parameter is not specified, the default
-     *        CMK for Amazon EFS is used. This ID can be in one of the following formats:</p>
+     *        The ID of the KMS CMK that you want to use to protect the encrypted file system. This parameter is only
+     *        required if you want to use a non-default KMS key. If this parameter is not specified, the default CMK for
+     *        Amazon EFS is used. This ID can be in one of the following formats:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -837,17 +839,17 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The throughput, measured in MiB/s, that you want to provision for a file system that you're creating. Valid
      * values are 1-1024. Required if <code>ThroughputMode</code> is set to <code>provisioned</code>. The upper limit
-     * for throughput is 1024 MiB/s. To increase this limit, contact AWS Support. For more information, see <a
-     * href="https://docs.aws.amazon.com/efs/latest/ug/limits.html#soft-limits">Amazon EFS quotas that you can
+     * for throughput is 1024 MiB/s. To increase this limit, contact Amazon Web Services Support. For more information,
+     * see <a href="https://docs.aws.amazon.com/efs/latest/ug/limits.html#soft-limits">Amazon EFS quotas that you can
      * increase</a> in the <i>Amazon EFS User Guide</i>.
      * </p>
      * 
      * @param provisionedThroughputInMibps
      *        The throughput, measured in MiB/s, that you want to provision for a file system that you're creating.
      *        Valid values are 1-1024. Required if <code>ThroughputMode</code> is set to <code>provisioned</code>. The
-     *        upper limit for throughput is 1024 MiB/s. To increase this limit, contact AWS Support. For more
-     *        information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/limits.html#soft-limits">Amazon EFS
-     *        quotas that you can increase</a> in the <i>Amazon EFS User Guide</i>.
+     *        upper limit for throughput is 1024 MiB/s. To increase this limit, contact Amazon Web Services Support. For
+     *        more information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/limits.html#soft-limits">Amazon
+     *        EFS quotas that you can increase</a> in the <i>Amazon EFS User Guide</i>.
      */
 
     public void setProvisionedThroughputInMibps(Double provisionedThroughputInMibps) {
@@ -858,16 +860,17 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The throughput, measured in MiB/s, that you want to provision for a file system that you're creating. Valid
      * values are 1-1024. Required if <code>ThroughputMode</code> is set to <code>provisioned</code>. The upper limit
-     * for throughput is 1024 MiB/s. To increase this limit, contact AWS Support. For more information, see <a
-     * href="https://docs.aws.amazon.com/efs/latest/ug/limits.html#soft-limits">Amazon EFS quotas that you can
+     * for throughput is 1024 MiB/s. To increase this limit, contact Amazon Web Services Support. For more information,
+     * see <a href="https://docs.aws.amazon.com/efs/latest/ug/limits.html#soft-limits">Amazon EFS quotas that you can
      * increase</a> in the <i>Amazon EFS User Guide</i>.
      * </p>
      * 
      * @return The throughput, measured in MiB/s, that you want to provision for a file system that you're creating.
      *         Valid values are 1-1024. Required if <code>ThroughputMode</code> is set to <code>provisioned</code>. The
-     *         upper limit for throughput is 1024 MiB/s. To increase this limit, contact AWS Support. For more
-     *         information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/limits.html#soft-limits">Amazon EFS
-     *         quotas that you can increase</a> in the <i>Amazon EFS User Guide</i>.
+     *         upper limit for throughput is 1024 MiB/s. To increase this limit, contact Amazon Web Services Support.
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/efs/latest/ug/limits.html#soft-limits">Amazon EFS quotas that you can
+     *         increase</a> in the <i>Amazon EFS User Guide</i>.
      */
 
     public Double getProvisionedThroughputInMibps() {
@@ -878,17 +881,17 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The throughput, measured in MiB/s, that you want to provision for a file system that you're creating. Valid
      * values are 1-1024. Required if <code>ThroughputMode</code> is set to <code>provisioned</code>. The upper limit
-     * for throughput is 1024 MiB/s. To increase this limit, contact AWS Support. For more information, see <a
-     * href="https://docs.aws.amazon.com/efs/latest/ug/limits.html#soft-limits">Amazon EFS quotas that you can
+     * for throughput is 1024 MiB/s. To increase this limit, contact Amazon Web Services Support. For more information,
+     * see <a href="https://docs.aws.amazon.com/efs/latest/ug/limits.html#soft-limits">Amazon EFS quotas that you can
      * increase</a> in the <i>Amazon EFS User Guide</i>.
      * </p>
      * 
      * @param provisionedThroughputInMibps
      *        The throughput, measured in MiB/s, that you want to provision for a file system that you're creating.
      *        Valid values are 1-1024. Required if <code>ThroughputMode</code> is set to <code>provisioned</code>. The
-     *        upper limit for throughput is 1024 MiB/s. To increase this limit, contact AWS Support. For more
-     *        information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/limits.html#soft-limits">Amazon EFS
-     *        quotas that you can increase</a> in the <i>Amazon EFS User Guide</i>.
+     *        upper limit for throughput is 1024 MiB/s. To increase this limit, contact Amazon Web Services Support. For
+     *        more information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/limits.html#soft-limits">Amazon
+     *        EFS quotas that you can increase</a> in the <i>Amazon EFS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -899,28 +902,28 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Used to create a file system that uses One Zone storage classes. It specifies the AWS Availability Zone in which
-     * to create the file system. Use the format <code>us-east-1a</code> to specify the Availability Zone. For more
-     * information about One Zone storage classes, see <a
+     * Used to create a file system that uses One Zone storage classes. It specifies the Amazon Web Services
+     * Availability Zone in which to create the file system. Use the format <code>us-east-1a</code> to specify the
+     * Availability Zone. For more information about One Zone storage classes, see <a
      * href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html">Using EFS storage classes</a> in the
      * <i>Amazon EFS User Guide</i>.
      * </p>
      * <note>
      * <p>
-     * One Zone storage classes are not available in all Availability Zones in AWS Regions where Amazon EFS is
-     * available.
+     * One Zone storage classes are not available in all Availability Zones in Amazon Web Services Regions where Amazon
+     * EFS is available.
      * </p>
      * </note>
      * 
      * @param availabilityZoneName
-     *        Used to create a file system that uses One Zone storage classes. It specifies the AWS Availability Zone in
-     *        which to create the file system. Use the format <code>us-east-1a</code> to specify the Availability Zone.
-     *        For more information about One Zone storage classes, see <a
+     *        Used to create a file system that uses One Zone storage classes. It specifies the Amazon Web Services
+     *        Availability Zone in which to create the file system. Use the format <code>us-east-1a</code> to specify
+     *        the Availability Zone. For more information about One Zone storage classes, see <a
      *        href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html">Using EFS storage classes</a> in the
      *        <i>Amazon EFS User Guide</i>.</p> <note>
      *        <p>
-     *        One Zone storage classes are not available in all Availability Zones in AWS Regions where Amazon EFS is
-     *        available.
+     *        One Zone storage classes are not available in all Availability Zones in Amazon Web Services Regions where
+     *        Amazon EFS is available.
      *        </p>
      */
 
@@ -930,27 +933,27 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Used to create a file system that uses One Zone storage classes. It specifies the AWS Availability Zone in which
-     * to create the file system. Use the format <code>us-east-1a</code> to specify the Availability Zone. For more
-     * information about One Zone storage classes, see <a
+     * Used to create a file system that uses One Zone storage classes. It specifies the Amazon Web Services
+     * Availability Zone in which to create the file system. Use the format <code>us-east-1a</code> to specify the
+     * Availability Zone. For more information about One Zone storage classes, see <a
      * href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html">Using EFS storage classes</a> in the
      * <i>Amazon EFS User Guide</i>.
      * </p>
      * <note>
      * <p>
-     * One Zone storage classes are not available in all Availability Zones in AWS Regions where Amazon EFS is
-     * available.
+     * One Zone storage classes are not available in all Availability Zones in Amazon Web Services Regions where Amazon
+     * EFS is available.
      * </p>
      * </note>
      * 
-     * @return Used to create a file system that uses One Zone storage classes. It specifies the AWS Availability Zone
-     *         in which to create the file system. Use the format <code>us-east-1a</code> to specify the Availability
-     *         Zone. For more information about One Zone storage classes, see <a
+     * @return Used to create a file system that uses One Zone storage classes. It specifies the Amazon Web Services
+     *         Availability Zone in which to create the file system. Use the format <code>us-east-1a</code> to specify
+     *         the Availability Zone. For more information about One Zone storage classes, see <a
      *         href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html">Using EFS storage classes</a> in
      *         the <i>Amazon EFS User Guide</i>.</p> <note>
      *         <p>
-     *         One Zone storage classes are not available in all Availability Zones in AWS Regions where Amazon EFS is
-     *         available.
+     *         One Zone storage classes are not available in all Availability Zones in Amazon Web Services Regions where
+     *         Amazon EFS is available.
      *         </p>
      */
 
@@ -960,28 +963,28 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Used to create a file system that uses One Zone storage classes. It specifies the AWS Availability Zone in which
-     * to create the file system. Use the format <code>us-east-1a</code> to specify the Availability Zone. For more
-     * information about One Zone storage classes, see <a
+     * Used to create a file system that uses One Zone storage classes. It specifies the Amazon Web Services
+     * Availability Zone in which to create the file system. Use the format <code>us-east-1a</code> to specify the
+     * Availability Zone. For more information about One Zone storage classes, see <a
      * href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html">Using EFS storage classes</a> in the
      * <i>Amazon EFS User Guide</i>.
      * </p>
      * <note>
      * <p>
-     * One Zone storage classes are not available in all Availability Zones in AWS Regions where Amazon EFS is
-     * available.
+     * One Zone storage classes are not available in all Availability Zones in Amazon Web Services Regions where Amazon
+     * EFS is available.
      * </p>
      * </note>
      * 
      * @param availabilityZoneName
-     *        Used to create a file system that uses One Zone storage classes. It specifies the AWS Availability Zone in
-     *        which to create the file system. Use the format <code>us-east-1a</code> to specify the Availability Zone.
-     *        For more information about One Zone storage classes, see <a
+     *        Used to create a file system that uses One Zone storage classes. It specifies the Amazon Web Services
+     *        Availability Zone in which to create the file system. Use the format <code>us-east-1a</code> to specify
+     *        the Availability Zone. For more information about One Zone storage classes, see <a
      *        href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html">Using EFS storage classes</a> in the
      *        <i>Amazon EFS User Guide</i>.</p> <note>
      *        <p>
-     *        One Zone storage classes are not available in all Availability Zones in AWS Regions where Amazon EFS is
-     *        available.
+     *        One Zone storage classes are not available in all Availability Zones in Amazon Web Services Regions where
+     *        Amazon EFS is available.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1005,7 +1008,7 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <note>
      * <p>
-     * AWS Backup is not available in all AWS Regions where Amazon EFS is available.
+     * Backup is not available in all Amazon Web Services Regionswhere Amazon EFS is available.
      * </p>
      * </note>
      * 
@@ -1021,7 +1024,7 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <note>
      *        <p>
-     *        AWS Backup is not available in all AWS Regions where Amazon EFS is available.
+     *        Backup is not available in all Amazon Web Services Regionswhere Amazon EFS is available.
      *        </p>
      */
 
@@ -1043,7 +1046,7 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <note>
      * <p>
-     * AWS Backup is not available in all AWS Regions where Amazon EFS is available.
+     * Backup is not available in all Amazon Web Services Regionswhere Amazon EFS is available.
      * </p>
      * </note>
      * 
@@ -1058,7 +1061,7 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *         </p>
      *         <note>
      *         <p>
-     *         AWS Backup is not available in all AWS Regions where Amazon EFS is available.
+     *         Backup is not available in all Amazon Web Services Regionswhere Amazon EFS is available.
      *         </p>
      */
 
@@ -1080,7 +1083,7 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <note>
      * <p>
-     * AWS Backup is not available in all AWS Regions where Amazon EFS is available.
+     * Backup is not available in all Amazon Web Services Regionswhere Amazon EFS is available.
      * </p>
      * </note>
      * 
@@ -1096,7 +1099,7 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <note>
      *        <p>
-     *        AWS Backup is not available in all AWS Regions where Amazon EFS is available.
+     *        Backup is not available in all Amazon Web Services Regionswhere Amazon EFS is available.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1120,7 +1123,7 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <note>
      * <p>
-     * AWS Backup is not available in all AWS Regions where Amazon EFS is available.
+     * Backup is not available in all Amazon Web Services Regionswhere Amazon EFS is available.
      * </p>
      * </note>
      * 
@@ -1135,7 +1138,7 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *         </p>
      *         <note>
      *         <p>
-     *         AWS Backup is not available in all AWS Regions where Amazon EFS is available.
+     *         Backup is not available in all Amazon Web Services Regionswhere Amazon EFS is available.
      *         </p>
      */
 
@@ -1145,14 +1148,18 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A value that specifies to create one or more tags associated with the file system. Each tag is a user-defined
-     * key-value pair. Name your file system on creation by including a <code>"Key":"Name","Value":"{value}"</code>
-     * key-value pair.
+     * Use to create one or more tags associated with the file system. Each tag is a user-defined key-value pair. Name
+     * your file system on creation by including a <code>"Key":"Name","Value":"{value}"</code> key-value pair. Each key
+     * must be unique. For more information, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>
+     * in the <i>Amazon Web Services General Reference Guide</i>.
      * </p>
      * 
-     * @return A value that specifies to create one or more tags associated with the file system. Each tag is a
-     *         user-defined key-value pair. Name your file system on creation by including a
-     *         <code>"Key":"Name","Value":"{value}"</code> key-value pair.
+     * @return Use to create one or more tags associated with the file system. Each tag is a user-defined key-value
+     *         pair. Name your file system on creation by including a <code>"Key":"Name","Value":"{value}"</code>
+     *         key-value pair. Each key must be unique. For more information, see <a
+     *         href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
+     *         resources</a> in the <i>Amazon Web Services General Reference Guide</i>.
      */
 
     public java.util.List<Tag> getTags() {
@@ -1164,15 +1171,19 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A value that specifies to create one or more tags associated with the file system. Each tag is a user-defined
-     * key-value pair. Name your file system on creation by including a <code>"Key":"Name","Value":"{value}"</code>
-     * key-value pair.
+     * Use to create one or more tags associated with the file system. Each tag is a user-defined key-value pair. Name
+     * your file system on creation by including a <code>"Key":"Name","Value":"{value}"</code> key-value pair. Each key
+     * must be unique. For more information, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>
+     * in the <i>Amazon Web Services General Reference Guide</i>.
      * </p>
      * 
      * @param tags
-     *        A value that specifies to create one or more tags associated with the file system. Each tag is a
-     *        user-defined key-value pair. Name your file system on creation by including a
-     *        <code>"Key":"Name","Value":"{value}"</code> key-value pair.
+     *        Use to create one or more tags associated with the file system. Each tag is a user-defined key-value pair.
+     *        Name your file system on creation by including a <code>"Key":"Name","Value":"{value}"</code> key-value
+     *        pair. Each key must be unique. For more information, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
+     *        resources</a> in the <i>Amazon Web Services General Reference Guide</i>.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -1186,9 +1197,11 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A value that specifies to create one or more tags associated with the file system. Each tag is a user-defined
-     * key-value pair. Name your file system on creation by including a <code>"Key":"Name","Value":"{value}"</code>
-     * key-value pair.
+     * Use to create one or more tags associated with the file system. Each tag is a user-defined key-value pair. Name
+     * your file system on creation by including a <code>"Key":"Name","Value":"{value}"</code> key-value pair. Each key
+     * must be unique. For more information, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>
+     * in the <i>Amazon Web Services General Reference Guide</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1197,9 +1210,11 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param tags
-     *        A value that specifies to create one or more tags associated with the file system. Each tag is a
-     *        user-defined key-value pair. Name your file system on creation by including a
-     *        <code>"Key":"Name","Value":"{value}"</code> key-value pair.
+     *        Use to create one or more tags associated with the file system. Each tag is a user-defined key-value pair.
+     *        Name your file system on creation by including a <code>"Key":"Name","Value":"{value}"</code> key-value
+     *        pair. Each key must be unique. For more information, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
+     *        resources</a> in the <i>Amazon Web Services General Reference Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1215,15 +1230,19 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A value that specifies to create one or more tags associated with the file system. Each tag is a user-defined
-     * key-value pair. Name your file system on creation by including a <code>"Key":"Name","Value":"{value}"</code>
-     * key-value pair.
+     * Use to create one or more tags associated with the file system. Each tag is a user-defined key-value pair. Name
+     * your file system on creation by including a <code>"Key":"Name","Value":"{value}"</code> key-value pair. Each key
+     * must be unique. For more information, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>
+     * in the <i>Amazon Web Services General Reference Guide</i>.
      * </p>
      * 
      * @param tags
-     *        A value that specifies to create one or more tags associated with the file system. Each tag is a
-     *        user-defined key-value pair. Name your file system on creation by including a
-     *        <code>"Key":"Name","Value":"{value}"</code> key-value pair.
+     *        Use to create one or more tags associated with the file system. Each tag is a user-defined key-value pair.
+     *        Name your file system on creation by including a <code>"Key":"Name","Value":"{value}"</code> key-value
+     *        pair. Each key must be unique. For more information, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
+     *        resources</a> in the <i>Amazon Web Services General Reference Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

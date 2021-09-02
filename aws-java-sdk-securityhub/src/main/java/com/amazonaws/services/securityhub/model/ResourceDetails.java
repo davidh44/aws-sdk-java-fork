@@ -223,7 +223,7 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
     private AwsRedshiftClusterDetails awsRedshiftCluster;
     /**
      * <p>
-     * contains details about a Classic Load Balancer.
+     * Contains details about a Classic Load Balancer.
      * </p>
      */
     private AwsElbLoadBalancerDetails awsElbLoadBalancer;
@@ -352,6 +352,24 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private AwsEcsServiceDetails awsEcsService;
+    /**
+     * <p>
+     * Provides details about a launch configuration.
+     * </p>
+     */
+    private AwsAutoScalingLaunchConfigurationDetails awsAutoScalingLaunchConfiguration;
+    /**
+     * <p>
+     * Details about an EC2 VPN connection.
+     * </p>
+     */
+    private AwsEc2VpnConnectionDetails awsEc2VpnConnection;
+    /**
+     * <p>
+     * information about an Amazon ECR image.
+     * </p>
+     */
+    private AwsEcrContainerImageDetails awsEcrContainerImage;
 
     /**
      * <p>
@@ -1561,11 +1579,11 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * contains details about a Classic Load Balancer.
+     * Contains details about a Classic Load Balancer.
      * </p>
      * 
      * @param awsElbLoadBalancer
-     *        contains details about a Classic Load Balancer.
+     *        Contains details about a Classic Load Balancer.
      */
 
     public void setAwsElbLoadBalancer(AwsElbLoadBalancerDetails awsElbLoadBalancer) {
@@ -1574,10 +1592,10 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * contains details about a Classic Load Balancer.
+     * Contains details about a Classic Load Balancer.
      * </p>
      * 
-     * @return contains details about a Classic Load Balancer.
+     * @return Contains details about a Classic Load Balancer.
      */
 
     public AwsElbLoadBalancerDetails getAwsElbLoadBalancer() {
@@ -1586,11 +1604,11 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * contains details about a Classic Load Balancer.
+     * Contains details about a Classic Load Balancer.
      * </p>
      * 
      * @param awsElbLoadBalancer
-     *        contains details about a Classic Load Balancer.
+     *        Contains details about a Classic Load Balancer.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2447,6 +2465,126 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * Provides details about a launch configuration.
+     * </p>
+     * 
+     * @param awsAutoScalingLaunchConfiguration
+     *        Provides details about a launch configuration.
+     */
+
+    public void setAwsAutoScalingLaunchConfiguration(AwsAutoScalingLaunchConfigurationDetails awsAutoScalingLaunchConfiguration) {
+        this.awsAutoScalingLaunchConfiguration = awsAutoScalingLaunchConfiguration;
+    }
+
+    /**
+     * <p>
+     * Provides details about a launch configuration.
+     * </p>
+     * 
+     * @return Provides details about a launch configuration.
+     */
+
+    public AwsAutoScalingLaunchConfigurationDetails getAwsAutoScalingLaunchConfiguration() {
+        return this.awsAutoScalingLaunchConfiguration;
+    }
+
+    /**
+     * <p>
+     * Provides details about a launch configuration.
+     * </p>
+     * 
+     * @param awsAutoScalingLaunchConfiguration
+     *        Provides details about a launch configuration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsAutoScalingLaunchConfiguration(AwsAutoScalingLaunchConfigurationDetails awsAutoScalingLaunchConfiguration) {
+        setAwsAutoScalingLaunchConfiguration(awsAutoScalingLaunchConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Details about an EC2 VPN connection.
+     * </p>
+     * 
+     * @param awsEc2VpnConnection
+     *        Details about an EC2 VPN connection.
+     */
+
+    public void setAwsEc2VpnConnection(AwsEc2VpnConnectionDetails awsEc2VpnConnection) {
+        this.awsEc2VpnConnection = awsEc2VpnConnection;
+    }
+
+    /**
+     * <p>
+     * Details about an EC2 VPN connection.
+     * </p>
+     * 
+     * @return Details about an EC2 VPN connection.
+     */
+
+    public AwsEc2VpnConnectionDetails getAwsEc2VpnConnection() {
+        return this.awsEc2VpnConnection;
+    }
+
+    /**
+     * <p>
+     * Details about an EC2 VPN connection.
+     * </p>
+     * 
+     * @param awsEc2VpnConnection
+     *        Details about an EC2 VPN connection.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsEc2VpnConnection(AwsEc2VpnConnectionDetails awsEc2VpnConnection) {
+        setAwsEc2VpnConnection(awsEc2VpnConnection);
+        return this;
+    }
+
+    /**
+     * <p>
+     * information about an Amazon ECR image.
+     * </p>
+     * 
+     * @param awsEcrContainerImage
+     *        information about an Amazon ECR image.
+     */
+
+    public void setAwsEcrContainerImage(AwsEcrContainerImageDetails awsEcrContainerImage) {
+        this.awsEcrContainerImage = awsEcrContainerImage;
+    }
+
+    /**
+     * <p>
+     * information about an Amazon ECR image.
+     * </p>
+     * 
+     * @return information about an Amazon ECR image.
+     */
+
+    public AwsEcrContainerImageDetails getAwsEcrContainerImage() {
+        return this.awsEcrContainerImage;
+    }
+
+    /**
+     * <p>
+     * information about an Amazon ECR image.
+     * </p>
+     * 
+     * @param awsEcrContainerImage
+     *        information about an Amazon ECR image.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsEcrContainerImage(AwsEcrContainerImageDetails awsEcrContainerImage) {
+        setAwsEcrContainerImage(awsEcrContainerImage);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2555,7 +2693,13 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
         if (getAwsRdsEventSubscription() != null)
             sb.append("AwsRdsEventSubscription: ").append(getAwsRdsEventSubscription()).append(",");
         if (getAwsEcsService() != null)
-            sb.append("AwsEcsService: ").append(getAwsEcsService());
+            sb.append("AwsEcsService: ").append(getAwsEcsService()).append(",");
+        if (getAwsAutoScalingLaunchConfiguration() != null)
+            sb.append("AwsAutoScalingLaunchConfiguration: ").append(getAwsAutoScalingLaunchConfiguration()).append(",");
+        if (getAwsEc2VpnConnection() != null)
+            sb.append("AwsEc2VpnConnection: ").append(getAwsEc2VpnConnection()).append(",");
+        if (getAwsEcrContainerImage() != null)
+            sb.append("AwsEcrContainerImage: ").append(getAwsEcrContainerImage());
         sb.append("}");
         return sb.toString();
     }
@@ -2770,6 +2914,19 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getAwsEcsService() != null && other.getAwsEcsService().equals(this.getAwsEcsService()) == false)
             return false;
+        if (other.getAwsAutoScalingLaunchConfiguration() == null ^ this.getAwsAutoScalingLaunchConfiguration() == null)
+            return false;
+        if (other.getAwsAutoScalingLaunchConfiguration() != null
+                && other.getAwsAutoScalingLaunchConfiguration().equals(this.getAwsAutoScalingLaunchConfiguration()) == false)
+            return false;
+        if (other.getAwsEc2VpnConnection() == null ^ this.getAwsEc2VpnConnection() == null)
+            return false;
+        if (other.getAwsEc2VpnConnection() != null && other.getAwsEc2VpnConnection().equals(this.getAwsEc2VpnConnection()) == false)
+            return false;
+        if (other.getAwsEcrContainerImage() == null ^ this.getAwsEcrContainerImage() == null)
+            return false;
+        if (other.getAwsEcrContainerImage() != null && other.getAwsEcrContainerImage().equals(this.getAwsEcrContainerImage()) == false)
+            return false;
         return true;
     }
 
@@ -2827,6 +2984,9 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getOther() == null) ? 0 : getOther().hashCode());
         hashCode = prime * hashCode + ((getAwsRdsEventSubscription() == null) ? 0 : getAwsRdsEventSubscription().hashCode());
         hashCode = prime * hashCode + ((getAwsEcsService() == null) ? 0 : getAwsEcsService().hashCode());
+        hashCode = prime * hashCode + ((getAwsAutoScalingLaunchConfiguration() == null) ? 0 : getAwsAutoScalingLaunchConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getAwsEc2VpnConnection() == null) ? 0 : getAwsEc2VpnConnection().hashCode());
+        hashCode = prime * hashCode + ((getAwsEcrContainerImage() == null) ? 0 : getAwsEcrContainerImage().hashCode());
         return hashCode;
     }
 

@@ -58,6 +58,18 @@ public class SoftwarePackage implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private String architecture;
+    /**
+     * <p>
+     * The source of the package.
+     * </p>
+     */
+    private String packageManager;
+    /**
+     * <p>
+     * The file system path to the package manager inventory file.
+     * </p>
+     */
+    private String filePath;
 
     /**
      * <p>
@@ -260,6 +272,86 @@ public class SoftwarePackage implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * The source of the package.
+     * </p>
+     * 
+     * @param packageManager
+     *        The source of the package.
+     */
+
+    public void setPackageManager(String packageManager) {
+        this.packageManager = packageManager;
+    }
+
+    /**
+     * <p>
+     * The source of the package.
+     * </p>
+     * 
+     * @return The source of the package.
+     */
+
+    public String getPackageManager() {
+        return this.packageManager;
+    }
+
+    /**
+     * <p>
+     * The source of the package.
+     * </p>
+     * 
+     * @param packageManager
+     *        The source of the package.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SoftwarePackage withPackageManager(String packageManager) {
+        setPackageManager(packageManager);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The file system path to the package manager inventory file.
+     * </p>
+     * 
+     * @param filePath
+     *        The file system path to the package manager inventory file.
+     */
+
+    public void setFilePath(String filePath) {
+        this.filePath = filePath;
+    }
+
+    /**
+     * <p>
+     * The file system path to the package manager inventory file.
+     * </p>
+     * 
+     * @return The file system path to the package manager inventory file.
+     */
+
+    public String getFilePath() {
+        return this.filePath;
+    }
+
+    /**
+     * <p>
+     * The file system path to the package manager inventory file.
+     * </p>
+     * 
+     * @param filePath
+     *        The file system path to the package manager inventory file.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SoftwarePackage withFilePath(String filePath) {
+        setFilePath(filePath);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -280,7 +372,11 @@ public class SoftwarePackage implements Serializable, Cloneable, StructuredPojo 
         if (getRelease() != null)
             sb.append("Release: ").append(getRelease()).append(",");
         if (getArchitecture() != null)
-            sb.append("Architecture: ").append(getArchitecture());
+            sb.append("Architecture: ").append(getArchitecture()).append(",");
+        if (getPackageManager() != null)
+            sb.append("PackageManager: ").append(getPackageManager()).append(",");
+        if (getFilePath() != null)
+            sb.append("FilePath: ").append(getFilePath());
         sb.append("}");
         return sb.toString();
     }
@@ -315,6 +411,14 @@ public class SoftwarePackage implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getArchitecture() != null && other.getArchitecture().equals(this.getArchitecture()) == false)
             return false;
+        if (other.getPackageManager() == null ^ this.getPackageManager() == null)
+            return false;
+        if (other.getPackageManager() != null && other.getPackageManager().equals(this.getPackageManager()) == false)
+            return false;
+        if (other.getFilePath() == null ^ this.getFilePath() == null)
+            return false;
+        if (other.getFilePath() != null && other.getFilePath().equals(this.getFilePath()) == false)
+            return false;
         return true;
     }
 
@@ -328,6 +432,8 @@ public class SoftwarePackage implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getEpoch() == null) ? 0 : getEpoch().hashCode());
         hashCode = prime * hashCode + ((getRelease() == null) ? 0 : getRelease().hashCode());
         hashCode = prime * hashCode + ((getArchitecture() == null) ? 0 : getArchitecture().hashCode());
+        hashCode = prime * hashCode + ((getPackageManager() == null) ? 0 : getPackageManager().hashCode());
+        hashCode = prime * hashCode + ((getFilePath() == null) ? 0 : getFilePath().hashCode());
         return hashCode;
     }
 

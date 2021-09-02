@@ -176,6 +176,12 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private Integer userCount;
+    /**
+     * <p>
+     * Specifies the workflow ID for the workflow to assign and the execution role used for executing the workflow.
+     * </p>
+     */
+    private WorkflowDetails workflowDetails;
 
     /**
      * <p>
@@ -1396,6 +1402,49 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * Specifies the workflow ID for the workflow to assign and the execution role used for executing the workflow.
+     * </p>
+     * 
+     * @param workflowDetails
+     *        Specifies the workflow ID for the workflow to assign and the execution role used for executing the
+     *        workflow.
+     */
+
+    public void setWorkflowDetails(WorkflowDetails workflowDetails) {
+        this.workflowDetails = workflowDetails;
+    }
+
+    /**
+     * <p>
+     * Specifies the workflow ID for the workflow to assign and the execution role used for executing the workflow.
+     * </p>
+     * 
+     * @return Specifies the workflow ID for the workflow to assign and the execution role used for executing the
+     *         workflow.
+     */
+
+    public WorkflowDetails getWorkflowDetails() {
+        return this.workflowDetails;
+    }
+
+    /**
+     * <p>
+     * Specifies the workflow ID for the workflow to assign and the execution role used for executing the workflow.
+     * </p>
+     * 
+     * @param workflowDetails
+     *        Specifies the workflow ID for the workflow to assign and the execution role used for executing the
+     *        workflow.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribedServer withWorkflowDetails(WorkflowDetails workflowDetails) {
+        setWorkflowDetails(workflowDetails);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1438,7 +1487,9 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getUserCount() != null)
-            sb.append("UserCount: ").append(getUserCount());
+            sb.append("UserCount: ").append(getUserCount()).append(",");
+        if (getWorkflowDetails() != null)
+            sb.append("WorkflowDetails: ").append(getWorkflowDetails());
         sb.append("}");
         return sb.toString();
     }
@@ -1517,6 +1568,10 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getUserCount() != null && other.getUserCount().equals(this.getUserCount()) == false)
             return false;
+        if (other.getWorkflowDetails() == null ^ this.getWorkflowDetails() == null)
+            return false;
+        if (other.getWorkflowDetails() != null && other.getWorkflowDetails().equals(this.getWorkflowDetails()) == false)
+            return false;
         return true;
     }
 
@@ -1541,6 +1596,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getUserCount() == null) ? 0 : getUserCount().hashCode());
+        hashCode = prime * hashCode + ((getWorkflowDetails() == null) ? 0 : getWorkflowDetails().hashCode());
         return hashCode;
     }
 

@@ -30,7 +30,8 @@ public class WindowsFileSystemConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The ID for an existing AWS Managed Microsoft Active Directory instance that the file system is joined to.
+     * The ID for an existing Amazon Web Services Managed Microsoft Active Directory instance that the file system is
+     * joined to.
      * </p>
      */
     private String activeDirectoryId;
@@ -163,11 +164,13 @@ public class WindowsFileSystemConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The ID for an existing AWS Managed Microsoft Active Directory instance that the file system is joined to.
+     * The ID for an existing Amazon Web Services Managed Microsoft Active Directory instance that the file system is
+     * joined to.
      * </p>
      * 
      * @param activeDirectoryId
-     *        The ID for an existing AWS Managed Microsoft Active Directory instance that the file system is joined to.
+     *        The ID for an existing Amazon Web Services Managed Microsoft Active Directory instance that the file
+     *        system is joined to.
      */
 
     public void setActiveDirectoryId(String activeDirectoryId) {
@@ -176,10 +179,12 @@ public class WindowsFileSystemConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The ID for an existing AWS Managed Microsoft Active Directory instance that the file system is joined to.
+     * The ID for an existing Amazon Web Services Managed Microsoft Active Directory instance that the file system is
+     * joined to.
      * </p>
      * 
-     * @return The ID for an existing AWS Managed Microsoft Active Directory instance that the file system is joined to.
+     * @return The ID for an existing Amazon Web Services Managed Microsoft Active Directory instance that the file
+     *         system is joined to.
      */
 
     public String getActiveDirectoryId() {
@@ -188,11 +193,13 @@ public class WindowsFileSystemConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The ID for an existing AWS Managed Microsoft Active Directory instance that the file system is joined to.
+     * The ID for an existing Amazon Web Services Managed Microsoft Active Directory instance that the file system is
+     * joined to.
      * </p>
      * 
      * @param activeDirectoryId
-     *        The ID for an existing AWS Managed Microsoft Active Directory instance that the file system is joined to.
+     *        The ID for an existing Amazon Web Services Managed Microsoft Active Directory instance that the file
+     *        system is joined to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

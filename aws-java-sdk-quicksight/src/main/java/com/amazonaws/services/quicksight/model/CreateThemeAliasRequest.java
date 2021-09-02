@@ -27,7 +27,7 @@ public class CreateThemeAliasRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the theme for the new theme alias.
+     * The ID of the Amazon Web Services account that contains the theme for the new theme alias.
      * </p>
      */
     private String awsAccountId;
@@ -53,11 +53,11 @@ public class CreateThemeAliasRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the theme for the new theme alias.
+     * The ID of the Amazon Web Services account that contains the theme for the new theme alias.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the theme for the new theme alias.
+     *        The ID of the Amazon Web Services account that contains the theme for the new theme alias.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -66,10 +66,10 @@ public class CreateThemeAliasRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the theme for the new theme alias.
+     * The ID of the Amazon Web Services account that contains the theme for the new theme alias.
      * </p>
      * 
-     * @return The ID of the Amazon Web Services account; that contains the theme for the new theme alias.
+     * @return The ID of the Amazon Web Services account that contains the theme for the new theme alias.
      */
 
     public String getAwsAccountId() {
@@ -78,11 +78,11 @@ public class CreateThemeAliasRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the theme for the new theme alias.
+     * The ID of the Amazon Web Services account that contains the theme for the new theme alias.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the theme for the new theme alias.
+     *        The ID of the Amazon Web Services account that contains the theme for the new theme alias.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

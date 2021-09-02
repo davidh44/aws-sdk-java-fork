@@ -33,7 +33,9 @@ public class CreateAccessPointRequest extends com.amazonaws.AmazonWebServiceRequ
     private String clientToken;
     /**
      * <p>
-     * Creates tags associated with the access point. Each tag is a key-value pair.
+     * Creates tags associated with the access point. Each tag is a key-value pair, each key must be unique. For more
+     * information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web
+     * Services resources</a> in the <i>Amazon Web Services General Reference Guide</i>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
@@ -108,10 +110,14 @@ public class CreateAccessPointRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Creates tags associated with the access point. Each tag is a key-value pair.
+     * Creates tags associated with the access point. Each tag is a key-value pair, each key must be unique. For more
+     * information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web
+     * Services resources</a> in the <i>Amazon Web Services General Reference Guide</i>.
      * </p>
      * 
-     * @return Creates tags associated with the access point. Each tag is a key-value pair.
+     * @return Creates tags associated with the access point. Each tag is a key-value pair, each key must be unique. For
+     *         more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging
+     *         Amazon Web Services resources</a> in the <i>Amazon Web Services General Reference Guide</i>.
      */
 
     public java.util.List<Tag> getTags() {
@@ -123,11 +129,15 @@ public class CreateAccessPointRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Creates tags associated with the access point. Each tag is a key-value pair.
+     * Creates tags associated with the access point. Each tag is a key-value pair, each key must be unique. For more
+     * information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web
+     * Services resources</a> in the <i>Amazon Web Services General Reference Guide</i>.
      * </p>
      * 
      * @param tags
-     *        Creates tags associated with the access point. Each tag is a key-value pair.
+     *        Creates tags associated with the access point. Each tag is a key-value pair, each key must be unique. For
+     *        more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging
+     *        Amazon Web Services resources</a> in the <i>Amazon Web Services General Reference Guide</i>.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -141,7 +151,9 @@ public class CreateAccessPointRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Creates tags associated with the access point. Each tag is a key-value pair.
+     * Creates tags associated with the access point. Each tag is a key-value pair, each key must be unique. For more
+     * information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web
+     * Services resources</a> in the <i>Amazon Web Services General Reference Guide</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -150,7 +162,9 @@ public class CreateAccessPointRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * 
      * @param tags
-     *        Creates tags associated with the access point. Each tag is a key-value pair.
+     *        Creates tags associated with the access point. Each tag is a key-value pair, each key must be unique. For
+     *        more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging
+     *        Amazon Web Services resources</a> in the <i>Amazon Web Services General Reference Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -166,11 +180,15 @@ public class CreateAccessPointRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Creates tags associated with the access point. Each tag is a key-value pair.
+     * Creates tags associated with the access point. Each tag is a key-value pair, each key must be unique. For more
+     * information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web
+     * Services resources</a> in the <i>Amazon Web Services General Reference Guide</i>.
      * </p>
      * 
      * @param tags
-     *        Creates tags associated with the access point. Each tag is a key-value pair.
+     *        Creates tags associated with the access point. Each tag is a key-value pair, each key must be unique. For
+     *        more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging
+     *        Amazon Web Services resources</a> in the <i>Amazon Web Services General Reference Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

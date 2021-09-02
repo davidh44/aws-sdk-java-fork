@@ -62,9 +62,9 @@ public class AnalyzerSummary implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The status of the analyzer. An <code>Active</code> analyzer successfully monitors supported resources and
      * generates new findings. The analyzer is <code>Disabled</code> when a user action, such as removing trusted access
-     * for AWS IAM Access Analyzer from AWS Organizations, causes the analyzer to stop generating new findings. The
-     * status is <code>Creating</code> when the analyzer creation is in progress and <code>Failed</code> when the
-     * analyzer creation has failed.
+     * for Identity and Access Management Access Analyzer from Organizations, causes the analyzer to stop generating new
+     * findings. The status is <code>Creating</code> when the analyzer creation is in progress and <code>Failed</code>
+     * when the analyzer creation has failed.
      * </p>
      */
     private String status;
@@ -73,7 +73,7 @@ public class AnalyzerSummary implements Serializable, Cloneable, StructuredPojo 
      * The <code>statusReason</code> provides more details about the current status of the analyzer. For example, if the
      * creation for the analyzer fails, a <code>Failed</code> status is returned. For an analyzer with organization as
      * the type, this failure can be due to an issue with creating the service-linked roles required in the member
-     * accounts of the AWS organization.
+     * accounts of the Amazon Web Services organization.
      * </p>
      */
     private StatusReason statusReason;
@@ -294,16 +294,16 @@ public class AnalyzerSummary implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The status of the analyzer. An <code>Active</code> analyzer successfully monitors supported resources and
      * generates new findings. The analyzer is <code>Disabled</code> when a user action, such as removing trusted access
-     * for AWS IAM Access Analyzer from AWS Organizations, causes the analyzer to stop generating new findings. The
-     * status is <code>Creating</code> when the analyzer creation is in progress and <code>Failed</code> when the
-     * analyzer creation has failed.
+     * for Identity and Access Management Access Analyzer from Organizations, causes the analyzer to stop generating new
+     * findings. The status is <code>Creating</code> when the analyzer creation is in progress and <code>Failed</code>
+     * when the analyzer creation has failed.
      * </p>
      * 
      * @param status
      *        The status of the analyzer. An <code>Active</code> analyzer successfully monitors supported resources and
      *        generates new findings. The analyzer is <code>Disabled</code> when a user action, such as removing trusted
-     *        access for AWS IAM Access Analyzer from AWS Organizations, causes the analyzer to stop generating new
-     *        findings. The status is <code>Creating</code> when the analyzer creation is in progress and
+     *        access for Identity and Access Management Access Analyzer from Organizations, causes the analyzer to stop
+     *        generating new findings. The status is <code>Creating</code> when the analyzer creation is in progress and
      *        <code>Failed</code> when the analyzer creation has failed.
      * @see AnalyzerStatus
      */
@@ -316,16 +316,16 @@ public class AnalyzerSummary implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The status of the analyzer. An <code>Active</code> analyzer successfully monitors supported resources and
      * generates new findings. The analyzer is <code>Disabled</code> when a user action, such as removing trusted access
-     * for AWS IAM Access Analyzer from AWS Organizations, causes the analyzer to stop generating new findings. The
-     * status is <code>Creating</code> when the analyzer creation is in progress and <code>Failed</code> when the
-     * analyzer creation has failed.
+     * for Identity and Access Management Access Analyzer from Organizations, causes the analyzer to stop generating new
+     * findings. The status is <code>Creating</code> when the analyzer creation is in progress and <code>Failed</code>
+     * when the analyzer creation has failed.
      * </p>
      * 
      * @return The status of the analyzer. An <code>Active</code> analyzer successfully monitors supported resources and
      *         generates new findings. The analyzer is <code>Disabled</code> when a user action, such as removing
-     *         trusted access for AWS IAM Access Analyzer from AWS Organizations, causes the analyzer to stop generating
-     *         new findings. The status is <code>Creating</code> when the analyzer creation is in progress and
-     *         <code>Failed</code> when the analyzer creation has failed.
+     *         trusted access for Identity and Access Management Access Analyzer from Organizations, causes the analyzer
+     *         to stop generating new findings. The status is <code>Creating</code> when the analyzer creation is in
+     *         progress and <code>Failed</code> when the analyzer creation has failed.
      * @see AnalyzerStatus
      */
 
@@ -337,16 +337,16 @@ public class AnalyzerSummary implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The status of the analyzer. An <code>Active</code> analyzer successfully monitors supported resources and
      * generates new findings. The analyzer is <code>Disabled</code> when a user action, such as removing trusted access
-     * for AWS IAM Access Analyzer from AWS Organizations, causes the analyzer to stop generating new findings. The
-     * status is <code>Creating</code> when the analyzer creation is in progress and <code>Failed</code> when the
-     * analyzer creation has failed.
+     * for Identity and Access Management Access Analyzer from Organizations, causes the analyzer to stop generating new
+     * findings. The status is <code>Creating</code> when the analyzer creation is in progress and <code>Failed</code>
+     * when the analyzer creation has failed.
      * </p>
      * 
      * @param status
      *        The status of the analyzer. An <code>Active</code> analyzer successfully monitors supported resources and
      *        generates new findings. The analyzer is <code>Disabled</code> when a user action, such as removing trusted
-     *        access for AWS IAM Access Analyzer from AWS Organizations, causes the analyzer to stop generating new
-     *        findings. The status is <code>Creating</code> when the analyzer creation is in progress and
+     *        access for Identity and Access Management Access Analyzer from Organizations, causes the analyzer to stop
+     *        generating new findings. The status is <code>Creating</code> when the analyzer creation is in progress and
      *        <code>Failed</code> when the analyzer creation has failed.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AnalyzerStatus
@@ -361,16 +361,16 @@ public class AnalyzerSummary implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The status of the analyzer. An <code>Active</code> analyzer successfully monitors supported resources and
      * generates new findings. The analyzer is <code>Disabled</code> when a user action, such as removing trusted access
-     * for AWS IAM Access Analyzer from AWS Organizations, causes the analyzer to stop generating new findings. The
-     * status is <code>Creating</code> when the analyzer creation is in progress and <code>Failed</code> when the
-     * analyzer creation has failed.
+     * for Identity and Access Management Access Analyzer from Organizations, causes the analyzer to stop generating new
+     * findings. The status is <code>Creating</code> when the analyzer creation is in progress and <code>Failed</code>
+     * when the analyzer creation has failed.
      * </p>
      * 
      * @param status
      *        The status of the analyzer. An <code>Active</code> analyzer successfully monitors supported resources and
      *        generates new findings. The analyzer is <code>Disabled</code> when a user action, such as removing trusted
-     *        access for AWS IAM Access Analyzer from AWS Organizations, causes the analyzer to stop generating new
-     *        findings. The status is <code>Creating</code> when the analyzer creation is in progress and
+     *        access for Identity and Access Management Access Analyzer from Organizations, causes the analyzer to stop
+     *        generating new findings. The status is <code>Creating</code> when the analyzer creation is in progress and
      *        <code>Failed</code> when the analyzer creation has failed.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AnalyzerStatus
@@ -386,14 +386,14 @@ public class AnalyzerSummary implements Serializable, Cloneable, StructuredPojo 
      * The <code>statusReason</code> provides more details about the current status of the analyzer. For example, if the
      * creation for the analyzer fails, a <code>Failed</code> status is returned. For an analyzer with organization as
      * the type, this failure can be due to an issue with creating the service-linked roles required in the member
-     * accounts of the AWS organization.
+     * accounts of the Amazon Web Services organization.
      * </p>
      * 
      * @param statusReason
      *        The <code>statusReason</code> provides more details about the current status of the analyzer. For example,
      *        if the creation for the analyzer fails, a <code>Failed</code> status is returned. For an analyzer with
      *        organization as the type, this failure can be due to an issue with creating the service-linked roles
-     *        required in the member accounts of the AWS organization.
+     *        required in the member accounts of the Amazon Web Services organization.
      */
 
     public void setStatusReason(StatusReason statusReason) {
@@ -405,13 +405,13 @@ public class AnalyzerSummary implements Serializable, Cloneable, StructuredPojo 
      * The <code>statusReason</code> provides more details about the current status of the analyzer. For example, if the
      * creation for the analyzer fails, a <code>Failed</code> status is returned. For an analyzer with organization as
      * the type, this failure can be due to an issue with creating the service-linked roles required in the member
-     * accounts of the AWS organization.
+     * accounts of the Amazon Web Services organization.
      * </p>
      * 
      * @return The <code>statusReason</code> provides more details about the current status of the analyzer. For
      *         example, if the creation for the analyzer fails, a <code>Failed</code> status is returned. For an
      *         analyzer with organization as the type, this failure can be due to an issue with creating the
-     *         service-linked roles required in the member accounts of the AWS organization.
+     *         service-linked roles required in the member accounts of the Amazon Web Services organization.
      */
 
     public StatusReason getStatusReason() {
@@ -423,14 +423,14 @@ public class AnalyzerSummary implements Serializable, Cloneable, StructuredPojo 
      * The <code>statusReason</code> provides more details about the current status of the analyzer. For example, if the
      * creation for the analyzer fails, a <code>Failed</code> status is returned. For an analyzer with organization as
      * the type, this failure can be due to an issue with creating the service-linked roles required in the member
-     * accounts of the AWS organization.
+     * accounts of the Amazon Web Services organization.
      * </p>
      * 
      * @param statusReason
      *        The <code>statusReason</code> provides more details about the current status of the analyzer. For example,
      *        if the creation for the analyzer fails, a <code>Failed</code> status is returned. For an analyzer with
      *        organization as the type, this failure can be due to an issue with creating the service-linked roles
-     *        required in the member accounts of the AWS organization.
+     *        required in the member accounts of the Amazon Web Services organization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

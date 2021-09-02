@@ -63,7 +63,7 @@ public class User implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>ADMIN</code>: A user who is an author, who can also manage Amazon QuickSight settings.
+     * <code>ADMIN</code>: A user who is an author, who can also manage Amazon Amazon QuickSight settings.
      * </p>
      * </li>
      * <li>
@@ -107,7 +107,7 @@ public class User implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The type of supported external login provider that provides identity to let the user federate into Amazon
-     * QuickSight with an associated IAM role. The type can be one of the following.
+     * QuickSight with an associated IAMrole. The type can be one of the following.
      * </p>
      * <ul>
      * <li>
@@ -273,7 +273,7 @@ public class User implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>ADMIN</code>: A user who is an author, who can also manage Amazon QuickSight settings.
+     * <code>ADMIN</code>: A user who is an author, who can also manage Amazon Amazon QuickSight settings.
      * </p>
      * </li>
      * <li>
@@ -303,7 +303,7 @@ public class User implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ADMIN</code>: A user who is an author, who can also manage Amazon QuickSight settings.
+     *        <code>ADMIN</code>: A user who is an author, who can also manage Amazon Amazon QuickSight settings.
      *        </p>
      *        </li>
      *        <li>
@@ -340,7 +340,7 @@ public class User implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>ADMIN</code>: A user who is an author, who can also manage Amazon QuickSight settings.
+     * <code>ADMIN</code>: A user who is an author, who can also manage Amazon Amazon QuickSight settings.
      * </p>
      * </li>
      * <li>
@@ -369,7 +369,7 @@ public class User implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>ADMIN</code>: A user who is an author, who can also manage Amazon QuickSight settings.
+     *         <code>ADMIN</code>: A user who is an author, who can also manage Amazon Amazon QuickSight settings.
      *         </p>
      *         </li>
      *         <li>
@@ -406,7 +406,7 @@ public class User implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>ADMIN</code>: A user who is an author, who can also manage Amazon QuickSight settings.
+     * <code>ADMIN</code>: A user who is an author, who can also manage Amazon Amazon QuickSight settings.
      * </p>
      * </li>
      * <li>
@@ -436,7 +436,7 @@ public class User implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ADMIN</code>: A user who is an author, who can also manage Amazon QuickSight settings.
+     *        <code>ADMIN</code>: A user who is an author, who can also manage Amazon Amazon QuickSight settings.
      *        </p>
      *        </li>
      *        <li>
@@ -475,7 +475,7 @@ public class User implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>ADMIN</code>: A user who is an author, who can also manage Amazon QuickSight settings.
+     * <code>ADMIN</code>: A user who is an author, who can also manage Amazon Amazon QuickSight settings.
      * </p>
      * </li>
      * <li>
@@ -505,7 +505,7 @@ public class User implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ADMIN</code>: A user who is an author, who can also manage Amazon QuickSight settings.
+     *        <code>ADMIN</code>: A user who is an author, who can also manage Amazon Amazon QuickSight settings.
      *        </p>
      *        </li>
      *        <li>
@@ -729,7 +729,7 @@ public class User implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The type of supported external login provider that provides identity to let the user federate into Amazon
-     * QuickSight with an associated IAM role. The type can be one of the following.
+     * QuickSight with an associated IAMrole. The type can be one of the following.
      * </p>
      * <ul>
      * <li>
@@ -746,7 +746,7 @@ public class User implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param externalLoginFederationProviderType
      *        The type of supported external login provider that provides identity to let the user federate into Amazon
-     *        QuickSight with an associated IAM role. The type can be one of the following.</p>
+     *        QuickSight with an associated IAMrole. The type can be one of the following.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -767,7 +767,7 @@ public class User implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The type of supported external login provider that provides identity to let the user federate into Amazon
-     * QuickSight with an associated IAM role. The type can be one of the following.
+     * QuickSight with an associated IAMrole. The type can be one of the following.
      * </p>
      * <ul>
      * <li>
@@ -783,7 +783,7 @@ public class User implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @return The type of supported external login provider that provides identity to let the user federate into Amazon
-     *         QuickSight with an associated IAM role. The type can be one of the following.</p>
+     *         QuickSight with an associated IAMrole. The type can be one of the following.</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -804,7 +804,7 @@ public class User implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The type of supported external login provider that provides identity to let the user federate into Amazon
-     * QuickSight with an associated IAM role. The type can be one of the following.
+     * QuickSight with an associated IAMrole. The type can be one of the following.
      * </p>
      * <ul>
      * <li>
@@ -821,7 +821,7 @@ public class User implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param externalLoginFederationProviderType
      *        The type of supported external login provider that provides identity to let the user federate into Amazon
-     *        QuickSight with an associated IAM role. The type can be one of the following.</p>
+     *        QuickSight with an associated IAMrole. The type can be one of the following.</p>
      *        <ul>
      *        <li>
      *        <p>

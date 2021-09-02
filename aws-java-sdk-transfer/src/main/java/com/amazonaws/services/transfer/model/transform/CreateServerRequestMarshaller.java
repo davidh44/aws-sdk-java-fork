@@ -50,6 +50,8 @@ public class CreateServerRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SecurityPolicyName").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<StructuredPojo> WORKFLOWDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WorkflowDetails").build();
 
     private static final CreateServerRequestMarshaller instance = new CreateServerRequestMarshaller();
 
@@ -78,6 +80,7 @@ public class CreateServerRequestMarshaller {
             protocolMarshaller.marshall(createServerRequest.getProtocols(), PROTOCOLS_BINDING);
             protocolMarshaller.marshall(createServerRequest.getSecurityPolicyName(), SECURITYPOLICYNAME_BINDING);
             protocolMarshaller.marshall(createServerRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createServerRequest.getWorkflowDetails(), WORKFLOWDETAILS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

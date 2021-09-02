@@ -27,7 +27,7 @@ public class DeleteAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; where you want to delete an analysis.
+     * The ID of the Amazon Web Services account where you want to delete an analysis.
      * </p>
      */
     private String awsAccountId;
@@ -39,9 +39,9 @@ public class DeleteAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
     private String analysisId;
     /**
      * <p>
-     * A value that specifies the number of days that QuickSight waits before it deletes the analysis. You can't use
-     * this parameter with the <code>ForceDeleteWithoutRecovery</code> option in the same API call. The default value is
-     * 30.
+     * A value that specifies the number of days that Amazon QuickSight waits before it deletes the analysis. You can't
+     * use this parameter with the <code>ForceDeleteWithoutRecovery</code> option in the same API call. The default
+     * value is 30.
      * </p>
      */
     private Long recoveryWindowInDays;
@@ -55,11 +55,11 @@ public class DeleteAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; where you want to delete an analysis.
+     * The ID of the Amazon Web Services account where you want to delete an analysis.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; where you want to delete an analysis.
+     *        The ID of the Amazon Web Services account where you want to delete an analysis.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -68,10 +68,10 @@ public class DeleteAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; where you want to delete an analysis.
+     * The ID of the Amazon Web Services account where you want to delete an analysis.
      * </p>
      * 
-     * @return The ID of the Amazon Web Services account; where you want to delete an analysis.
+     * @return The ID of the Amazon Web Services account where you want to delete an analysis.
      */
 
     public String getAwsAccountId() {
@@ -80,11 +80,11 @@ public class DeleteAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; where you want to delete an analysis.
+     * The ID of the Amazon Web Services account where you want to delete an analysis.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; where you want to delete an analysis.
+     *        The ID of the Amazon Web Services account where you want to delete an analysis.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -135,14 +135,14 @@ public class DeleteAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A value that specifies the number of days that QuickSight waits before it deletes the analysis. You can't use
-     * this parameter with the <code>ForceDeleteWithoutRecovery</code> option in the same API call. The default value is
-     * 30.
+     * A value that specifies the number of days that Amazon QuickSight waits before it deletes the analysis. You can't
+     * use this parameter with the <code>ForceDeleteWithoutRecovery</code> option in the same API call. The default
+     * value is 30.
      * </p>
      * 
      * @param recoveryWindowInDays
-     *        A value that specifies the number of days that QuickSight waits before it deletes the analysis. You can't
-     *        use this parameter with the <code>ForceDeleteWithoutRecovery</code> option in the same API call. The
+     *        A value that specifies the number of days that Amazon QuickSight waits before it deletes the analysis. You
+     *        can't use this parameter with the <code>ForceDeleteWithoutRecovery</code> option in the same API call. The
      *        default value is 30.
      */
 
@@ -152,14 +152,14 @@ public class DeleteAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A value that specifies the number of days that QuickSight waits before it deletes the analysis. You can't use
-     * this parameter with the <code>ForceDeleteWithoutRecovery</code> option in the same API call. The default value is
-     * 30.
+     * A value that specifies the number of days that Amazon QuickSight waits before it deletes the analysis. You can't
+     * use this parameter with the <code>ForceDeleteWithoutRecovery</code> option in the same API call. The default
+     * value is 30.
      * </p>
      * 
-     * @return A value that specifies the number of days that QuickSight waits before it deletes the analysis. You can't
-     *         use this parameter with the <code>ForceDeleteWithoutRecovery</code> option in the same API call. The
-     *         default value is 30.
+     * @return A value that specifies the number of days that Amazon QuickSight waits before it deletes the analysis.
+     *         You can't use this parameter with the <code>ForceDeleteWithoutRecovery</code> option in the same API
+     *         call. The default value is 30.
      */
 
     public Long getRecoveryWindowInDays() {
@@ -168,14 +168,14 @@ public class DeleteAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A value that specifies the number of days that QuickSight waits before it deletes the analysis. You can't use
-     * this parameter with the <code>ForceDeleteWithoutRecovery</code> option in the same API call. The default value is
-     * 30.
+     * A value that specifies the number of days that Amazon QuickSight waits before it deletes the analysis. You can't
+     * use this parameter with the <code>ForceDeleteWithoutRecovery</code> option in the same API call. The default
+     * value is 30.
      * </p>
      * 
      * @param recoveryWindowInDays
-     *        A value that specifies the number of days that QuickSight waits before it deletes the analysis. You can't
-     *        use this parameter with the <code>ForceDeleteWithoutRecovery</code> option in the same API call. The
+     *        A value that specifies the number of days that Amazon QuickSight waits before it deletes the analysis. You
+     *        can't use this parameter with the <code>ForceDeleteWithoutRecovery</code> option in the same API call. The
      *        default value is 30.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

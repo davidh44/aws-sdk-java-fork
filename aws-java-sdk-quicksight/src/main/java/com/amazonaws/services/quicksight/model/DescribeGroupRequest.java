@@ -33,8 +33,8 @@ public class DescribeGroupRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String groupName;
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that the group is in. Currently, you use the ID for the Amazon Web
-     * Services account; that contains your Amazon QuickSight account.
+     * The ID for the Amazon Web Services account that the group is in. Currently, you use the ID for the Amazon Web
+     * Services account that contains your Amazon QuickSight account.
      * </p>
      */
     private String awsAccountId;
@@ -87,13 +87,13 @@ public class DescribeGroupRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that the group is in. Currently, you use the ID for the Amazon Web
-     * Services account; that contains your Amazon QuickSight account.
+     * The ID for the Amazon Web Services account that the group is in. Currently, you use the ID for the Amazon Web
+     * Services account that contains your Amazon QuickSight account.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID for the Amazon Web Services account; that the group is in. Currently, you use the ID for the Amazon
-     *        Web Services account; that contains your Amazon QuickSight account.
+     *        The ID for the Amazon Web Services account that the group is in. Currently, you use the ID for the Amazon
+     *        Web Services account that contains your Amazon QuickSight account.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -102,12 +102,12 @@ public class DescribeGroupRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that the group is in. Currently, you use the ID for the Amazon Web
-     * Services account; that contains your Amazon QuickSight account.
+     * The ID for the Amazon Web Services account that the group is in. Currently, you use the ID for the Amazon Web
+     * Services account that contains your Amazon QuickSight account.
      * </p>
      * 
-     * @return The ID for the Amazon Web Services account; that the group is in. Currently, you use the ID for the
-     *         Amazon Web Services account; that contains your Amazon QuickSight account.
+     * @return The ID for the Amazon Web Services account that the group is in. Currently, you use the ID for the Amazon
+     *         Web Services account that contains your Amazon QuickSight account.
      */
 
     public String getAwsAccountId() {
@@ -116,13 +116,13 @@ public class DescribeGroupRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that the group is in. Currently, you use the ID for the Amazon Web
-     * Services account; that contains your Amazon QuickSight account.
+     * The ID for the Amazon Web Services account that the group is in. Currently, you use the ID for the Amazon Web
+     * Services account that contains your Amazon QuickSight account.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID for the Amazon Web Services account; that the group is in. Currently, you use the ID for the Amazon
-     *        Web Services account; that contains your Amazon QuickSight account.
+     *        The ID for the Amazon Web Services account that the group is in. Currently, you use the ID for the Amazon
+     *        Web Services account that contains your Amazon QuickSight account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

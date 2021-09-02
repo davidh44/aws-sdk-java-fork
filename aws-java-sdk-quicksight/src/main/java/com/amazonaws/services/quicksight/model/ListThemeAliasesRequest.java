@@ -27,7 +27,7 @@ public class ListThemeAliasesRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the theme aliases that you're listing.
+     * The ID of the Amazon Web Services account that contains the theme aliases that you're listing.
      * </p>
      */
     private String awsAccountId;
@@ -52,11 +52,11 @@ public class ListThemeAliasesRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the theme aliases that you're listing.
+     * The ID of the Amazon Web Services account that contains the theme aliases that you're listing.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the theme aliases that you're listing.
+     *        The ID of the Amazon Web Services account that contains the theme aliases that you're listing.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -65,10 +65,10 @@ public class ListThemeAliasesRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the theme aliases that you're listing.
+     * The ID of the Amazon Web Services account that contains the theme aliases that you're listing.
      * </p>
      * 
-     * @return The ID of the Amazon Web Services account; that contains the theme aliases that you're listing.
+     * @return The ID of the Amazon Web Services account that contains the theme aliases that you're listing.
      */
 
     public String getAwsAccountId() {
@@ -77,11 +77,11 @@ public class ListThemeAliasesRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the theme aliases that you're listing.
+     * The ID of the Amazon Web Services account that contains the theme aliases that you're listing.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the theme aliases that you're listing.
+     *        The ID of the Amazon Web Services account that contains the theme aliases that you're listing.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

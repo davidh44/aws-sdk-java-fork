@@ -27,14 +27,14 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Web Services account; ID.
+     * The Amazon Web Services account ID.
      * </p>
      */
     private String awsAccountId;
     /**
      * <p>
      * An ID for the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     * account;.
+     * account.
      * </p>
      */
     private String dataSourceId;
@@ -46,25 +46,23 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     private String name;
     /**
      * <p>
-     * The type of the data source. Currently, the supported types for this operation are:
-     * <code>ATHENA, AURORA, AURORA_POSTGRESQL, AMAZON_ELASTICSEARCH, MARIADB, MYSQL, POSTGRESQL, PRESTO, REDSHIFT, S3, SNOWFLAKE, SPARK, SQLSERVER, TERADATA</code>
-     * . Use <code>ListDataSources</code> to return a list of all data sources.
+     * The type of the data source. To return a list of all data sources, use <code>ListDataSources</code>.
      * </p>
      * <p>
-     * <code>AMAZON_ELASTICSEARCH</code> is for Amazon managed Elasticsearch Service.
+     * Use <code>AMAZON_ELASTICSEARCH</code> for Amazon Elasticsearch Service.
      * </p>
      */
     private String type;
     /**
      * <p>
-     * The parameters that QuickSight uses to connect to your underlying source.
+     * The parameters that Amazon QuickSight uses to connect to your underlying source.
      * </p>
      */
     private DataSourceParameters dataSourceParameters;
     /**
      * <p>
-     * The credentials QuickSight that uses to connect to your underlying source. Currently, only credentials based on
-     * user name and password are supported.
+     * The credentials Amazon QuickSight that uses to connect to your underlying source. Currently, only credentials
+     * based on user name and password are supported.
      * </p>
      */
     private DataSourceCredentials credentials;
@@ -76,14 +74,14 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     private java.util.List<ResourcePermission> permissions;
     /**
      * <p>
-     * Use this parameter only when you want QuickSight to use a VPC connection when connecting to your underlying
-     * source.
+     * Use this parameter only when you want Amazon QuickSight to use a VPC connection when connecting to your
+     * underlying source.
      * </p>
      */
     private VpcConnectionProperties vpcConnectionProperties;
     /**
      * <p>
-     * Secure Socket Layer (SSL) properties that apply when QuickSight connects to your underlying source.
+     * Secure Socket Layer (SSL) properties that apply when Amazon QuickSight connects to your underlying source.
      * </p>
      */
     private SslProperties sslProperties;
@@ -96,11 +94,11 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Web Services account; ID.
+     * The Amazon Web Services account ID.
      * </p>
      * 
      * @param awsAccountId
-     *        The Amazon Web Services account; ID.
+     *        The Amazon Web Services account ID.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -109,10 +107,10 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Web Services account; ID.
+     * The Amazon Web Services account ID.
      * </p>
      * 
-     * @return The Amazon Web Services account; ID.
+     * @return The Amazon Web Services account ID.
      */
 
     public String getAwsAccountId() {
@@ -121,11 +119,11 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Web Services account; ID.
+     * The Amazon Web Services account ID.
      * </p>
      * 
      * @param awsAccountId
-     *        The Amazon Web Services account; ID.
+     *        The Amazon Web Services account ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -137,12 +135,12 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * An ID for the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     * account;.
+     * account.
      * </p>
      * 
      * @param dataSourceId
      *        An ID for the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     *        account;.
+     *        account.
      */
 
     public void setDataSourceId(String dataSourceId) {
@@ -152,11 +150,11 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * An ID for the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     * account;.
+     * account.
      * </p>
      * 
      * @return An ID for the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     *         account;.
+     *         account.
      */
 
     public String getDataSourceId() {
@@ -166,12 +164,12 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * An ID for the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     * account;.
+     * account.
      * </p>
      * 
      * @param dataSourceId
      *        An ID for the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     *        account;.
+     *        account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -222,20 +220,16 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The type of the data source. Currently, the supported types for this operation are:
-     * <code>ATHENA, AURORA, AURORA_POSTGRESQL, AMAZON_ELASTICSEARCH, MARIADB, MYSQL, POSTGRESQL, PRESTO, REDSHIFT, S3, SNOWFLAKE, SPARK, SQLSERVER, TERADATA</code>
-     * . Use <code>ListDataSources</code> to return a list of all data sources.
+     * The type of the data source. To return a list of all data sources, use <code>ListDataSources</code>.
      * </p>
      * <p>
-     * <code>AMAZON_ELASTICSEARCH</code> is for Amazon managed Elasticsearch Service.
+     * Use <code>AMAZON_ELASTICSEARCH</code> for Amazon Elasticsearch Service.
      * </p>
      * 
      * @param type
-     *        The type of the data source. Currently, the supported types for this operation are:
-     *        <code>ATHENA, AURORA, AURORA_POSTGRESQL, AMAZON_ELASTICSEARCH, MARIADB, MYSQL, POSTGRESQL, PRESTO, REDSHIFT, S3, SNOWFLAKE, SPARK, SQLSERVER, TERADATA</code>
-     *        . Use <code>ListDataSources</code> to return a list of all data sources.</p>
+     *        The type of the data source. To return a list of all data sources, use <code>ListDataSources</code>.</p>
      *        <p>
-     *        <code>AMAZON_ELASTICSEARCH</code> is for Amazon managed Elasticsearch Service.
+     *        Use <code>AMAZON_ELASTICSEARCH</code> for Amazon Elasticsearch Service.
      * @see DataSourceType
      */
 
@@ -245,19 +239,15 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The type of the data source. Currently, the supported types for this operation are:
-     * <code>ATHENA, AURORA, AURORA_POSTGRESQL, AMAZON_ELASTICSEARCH, MARIADB, MYSQL, POSTGRESQL, PRESTO, REDSHIFT, S3, SNOWFLAKE, SPARK, SQLSERVER, TERADATA</code>
-     * . Use <code>ListDataSources</code> to return a list of all data sources.
+     * The type of the data source. To return a list of all data sources, use <code>ListDataSources</code>.
      * </p>
      * <p>
-     * <code>AMAZON_ELASTICSEARCH</code> is for Amazon managed Elasticsearch Service.
+     * Use <code>AMAZON_ELASTICSEARCH</code> for Amazon Elasticsearch Service.
      * </p>
      * 
-     * @return The type of the data source. Currently, the supported types for this operation are:
-     *         <code>ATHENA, AURORA, AURORA_POSTGRESQL, AMAZON_ELASTICSEARCH, MARIADB, MYSQL, POSTGRESQL, PRESTO, REDSHIFT, S3, SNOWFLAKE, SPARK, SQLSERVER, TERADATA</code>
-     *         . Use <code>ListDataSources</code> to return a list of all data sources.</p>
+     * @return The type of the data source. To return a list of all data sources, use <code>ListDataSources</code>.</p>
      *         <p>
-     *         <code>AMAZON_ELASTICSEARCH</code> is for Amazon managed Elasticsearch Service.
+     *         Use <code>AMAZON_ELASTICSEARCH</code> for Amazon Elasticsearch Service.
      * @see DataSourceType
      */
 
@@ -267,20 +257,16 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The type of the data source. Currently, the supported types for this operation are:
-     * <code>ATHENA, AURORA, AURORA_POSTGRESQL, AMAZON_ELASTICSEARCH, MARIADB, MYSQL, POSTGRESQL, PRESTO, REDSHIFT, S3, SNOWFLAKE, SPARK, SQLSERVER, TERADATA</code>
-     * . Use <code>ListDataSources</code> to return a list of all data sources.
+     * The type of the data source. To return a list of all data sources, use <code>ListDataSources</code>.
      * </p>
      * <p>
-     * <code>AMAZON_ELASTICSEARCH</code> is for Amazon managed Elasticsearch Service.
+     * Use <code>AMAZON_ELASTICSEARCH</code> for Amazon Elasticsearch Service.
      * </p>
      * 
      * @param type
-     *        The type of the data source. Currently, the supported types for this operation are:
-     *        <code>ATHENA, AURORA, AURORA_POSTGRESQL, AMAZON_ELASTICSEARCH, MARIADB, MYSQL, POSTGRESQL, PRESTO, REDSHIFT, S3, SNOWFLAKE, SPARK, SQLSERVER, TERADATA</code>
-     *        . Use <code>ListDataSources</code> to return a list of all data sources.</p>
+     *        The type of the data source. To return a list of all data sources, use <code>ListDataSources</code>.</p>
      *        <p>
-     *        <code>AMAZON_ELASTICSEARCH</code> is for Amazon managed Elasticsearch Service.
+     *        Use <code>AMAZON_ELASTICSEARCH</code> for Amazon Elasticsearch Service.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataSourceType
      */
@@ -292,20 +278,16 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The type of the data source. Currently, the supported types for this operation are:
-     * <code>ATHENA, AURORA, AURORA_POSTGRESQL, AMAZON_ELASTICSEARCH, MARIADB, MYSQL, POSTGRESQL, PRESTO, REDSHIFT, S3, SNOWFLAKE, SPARK, SQLSERVER, TERADATA</code>
-     * . Use <code>ListDataSources</code> to return a list of all data sources.
+     * The type of the data source. To return a list of all data sources, use <code>ListDataSources</code>.
      * </p>
      * <p>
-     * <code>AMAZON_ELASTICSEARCH</code> is for Amazon managed Elasticsearch Service.
+     * Use <code>AMAZON_ELASTICSEARCH</code> for Amazon Elasticsearch Service.
      * </p>
      * 
      * @param type
-     *        The type of the data source. Currently, the supported types for this operation are:
-     *        <code>ATHENA, AURORA, AURORA_POSTGRESQL, AMAZON_ELASTICSEARCH, MARIADB, MYSQL, POSTGRESQL, PRESTO, REDSHIFT, S3, SNOWFLAKE, SPARK, SQLSERVER, TERADATA</code>
-     *        . Use <code>ListDataSources</code> to return a list of all data sources.</p>
+     *        The type of the data source. To return a list of all data sources, use <code>ListDataSources</code>.</p>
      *        <p>
-     *        <code>AMAZON_ELASTICSEARCH</code> is for Amazon managed Elasticsearch Service.
+     *        Use <code>AMAZON_ELASTICSEARCH</code> for Amazon Elasticsearch Service.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataSourceType
      */
@@ -317,11 +299,11 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The parameters that QuickSight uses to connect to your underlying source.
+     * The parameters that Amazon QuickSight uses to connect to your underlying source.
      * </p>
      * 
      * @param dataSourceParameters
-     *        The parameters that QuickSight uses to connect to your underlying source.
+     *        The parameters that Amazon QuickSight uses to connect to your underlying source.
      */
 
     public void setDataSourceParameters(DataSourceParameters dataSourceParameters) {
@@ -330,10 +312,10 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The parameters that QuickSight uses to connect to your underlying source.
+     * The parameters that Amazon QuickSight uses to connect to your underlying source.
      * </p>
      * 
-     * @return The parameters that QuickSight uses to connect to your underlying source.
+     * @return The parameters that Amazon QuickSight uses to connect to your underlying source.
      */
 
     public DataSourceParameters getDataSourceParameters() {
@@ -342,11 +324,11 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The parameters that QuickSight uses to connect to your underlying source.
+     * The parameters that Amazon QuickSight uses to connect to your underlying source.
      * </p>
      * 
      * @param dataSourceParameters
-     *        The parameters that QuickSight uses to connect to your underlying source.
+     *        The parameters that Amazon QuickSight uses to connect to your underlying source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -357,13 +339,13 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The credentials QuickSight that uses to connect to your underlying source. Currently, only credentials based on
-     * user name and password are supported.
+     * The credentials Amazon QuickSight that uses to connect to your underlying source. Currently, only credentials
+     * based on user name and password are supported.
      * </p>
      * 
      * @param credentials
-     *        The credentials QuickSight that uses to connect to your underlying source. Currently, only credentials
-     *        based on user name and password are supported.
+     *        The credentials Amazon QuickSight that uses to connect to your underlying source. Currently, only
+     *        credentials based on user name and password are supported.
      */
 
     public void setCredentials(DataSourceCredentials credentials) {
@@ -372,12 +354,12 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The credentials QuickSight that uses to connect to your underlying source. Currently, only credentials based on
-     * user name and password are supported.
+     * The credentials Amazon QuickSight that uses to connect to your underlying source. Currently, only credentials
+     * based on user name and password are supported.
      * </p>
      * 
-     * @return The credentials QuickSight that uses to connect to your underlying source. Currently, only credentials
-     *         based on user name and password are supported.
+     * @return The credentials Amazon QuickSight that uses to connect to your underlying source. Currently, only
+     *         credentials based on user name and password are supported.
      */
 
     public DataSourceCredentials getCredentials() {
@@ -386,13 +368,13 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The credentials QuickSight that uses to connect to your underlying source. Currently, only credentials based on
-     * user name and password are supported.
+     * The credentials Amazon QuickSight that uses to connect to your underlying source. Currently, only credentials
+     * based on user name and password are supported.
      * </p>
      * 
      * @param credentials
-     *        The credentials QuickSight that uses to connect to your underlying source. Currently, only credentials
-     *        based on user name and password are supported.
+     *        The credentials Amazon QuickSight that uses to connect to your underlying source. Currently, only
+     *        credentials based on user name and password are supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -473,12 +455,12 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Use this parameter only when you want QuickSight to use a VPC connection when connecting to your underlying
-     * source.
+     * Use this parameter only when you want Amazon QuickSight to use a VPC connection when connecting to your
+     * underlying source.
      * </p>
      * 
      * @param vpcConnectionProperties
-     *        Use this parameter only when you want QuickSight to use a VPC connection when connecting to your
+     *        Use this parameter only when you want Amazon QuickSight to use a VPC connection when connecting to your
      *        underlying source.
      */
 
@@ -488,11 +470,11 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Use this parameter only when you want QuickSight to use a VPC connection when connecting to your underlying
-     * source.
+     * Use this parameter only when you want Amazon QuickSight to use a VPC connection when connecting to your
+     * underlying source.
      * </p>
      * 
-     * @return Use this parameter only when you want QuickSight to use a VPC connection when connecting to your
+     * @return Use this parameter only when you want Amazon QuickSight to use a VPC connection when connecting to your
      *         underlying source.
      */
 
@@ -502,12 +484,12 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Use this parameter only when you want QuickSight to use a VPC connection when connecting to your underlying
-     * source.
+     * Use this parameter only when you want Amazon QuickSight to use a VPC connection when connecting to your
+     * underlying source.
      * </p>
      * 
      * @param vpcConnectionProperties
-     *        Use this parameter only when you want QuickSight to use a VPC connection when connecting to your
+     *        Use this parameter only when you want Amazon QuickSight to use a VPC connection when connecting to your
      *        underlying source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -519,11 +501,11 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Secure Socket Layer (SSL) properties that apply when QuickSight connects to your underlying source.
+     * Secure Socket Layer (SSL) properties that apply when Amazon QuickSight connects to your underlying source.
      * </p>
      * 
      * @param sslProperties
-     *        Secure Socket Layer (SSL) properties that apply when QuickSight connects to your underlying source.
+     *        Secure Socket Layer (SSL) properties that apply when Amazon QuickSight connects to your underlying source.
      */
 
     public void setSslProperties(SslProperties sslProperties) {
@@ -532,10 +514,11 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Secure Socket Layer (SSL) properties that apply when QuickSight connects to your underlying source.
+     * Secure Socket Layer (SSL) properties that apply when Amazon QuickSight connects to your underlying source.
      * </p>
      * 
-     * @return Secure Socket Layer (SSL) properties that apply when QuickSight connects to your underlying source.
+     * @return Secure Socket Layer (SSL) properties that apply when Amazon QuickSight connects to your underlying
+     *         source.
      */
 
     public SslProperties getSslProperties() {
@@ -544,11 +527,11 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Secure Socket Layer (SSL) properties that apply when QuickSight connects to your underlying source.
+     * Secure Socket Layer (SSL) properties that apply when Amazon QuickSight connects to your underlying source.
      * </p>
      * 
      * @param sslProperties
-     *        Secure Socket Layer (SSL) properties that apply when QuickSight connects to your underlying source.
+     *        Secure Socket Layer (SSL) properties that apply when Amazon QuickSight connects to your underlying source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

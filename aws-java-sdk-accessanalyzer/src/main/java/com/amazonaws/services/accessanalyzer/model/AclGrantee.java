@@ -32,7 +32,7 @@ public class AclGrantee implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The value specified is the canonical user ID of an AWS account.
+     * The value specified is the canonical user ID of an Amazon Web Services account.
      * </p>
      */
     private String id;
@@ -45,11 +45,11 @@ public class AclGrantee implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The value specified is the canonical user ID of an AWS account.
+     * The value specified is the canonical user ID of an Amazon Web Services account.
      * </p>
      * 
      * @param id
-     *        The value specified is the canonical user ID of an AWS account.
+     *        The value specified is the canonical user ID of an Amazon Web Services account.
      */
 
     public void setId(String id) {
@@ -58,10 +58,10 @@ public class AclGrantee implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The value specified is the canonical user ID of an AWS account.
+     * The value specified is the canonical user ID of an Amazon Web Services account.
      * </p>
      * 
-     * @return The value specified is the canonical user ID of an AWS account.
+     * @return The value specified is the canonical user ID of an Amazon Web Services account.
      */
 
     public String getId() {
@@ -70,11 +70,11 @@ public class AclGrantee implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The value specified is the canonical user ID of an AWS account.
+     * The value specified is the canonical user ID of an Amazon Web Services account.
      * </p>
      * 
      * @param id
-     *        The value specified is the canonical user ID of an AWS account.
+     *        The value specified is the canonical user ID of an Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

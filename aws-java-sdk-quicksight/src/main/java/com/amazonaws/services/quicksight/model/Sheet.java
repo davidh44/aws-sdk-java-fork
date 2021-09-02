@@ -39,7 +39,7 @@ public class Sheet implements Serializable, Cloneable, StructuredPojo {
     private String sheetId;
     /**
      * <p>
-     * The name of a sheet. This name is displayed on the sheet's tab in the QuickSight console.
+     * The name of a sheet. This name is displayed on the sheet's tab in the Amazon QuickSight console.
      * </p>
      */
     private String name;
@@ -86,11 +86,11 @@ public class Sheet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of a sheet. This name is displayed on the sheet's tab in the QuickSight console.
+     * The name of a sheet. This name is displayed on the sheet's tab in the Amazon QuickSight console.
      * </p>
      * 
      * @param name
-     *        The name of a sheet. This name is displayed on the sheet's tab in the QuickSight console.
+     *        The name of a sheet. This name is displayed on the sheet's tab in the Amazon QuickSight console.
      */
 
     public void setName(String name) {
@@ -99,10 +99,10 @@ public class Sheet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of a sheet. This name is displayed on the sheet's tab in the QuickSight console.
+     * The name of a sheet. This name is displayed on the sheet's tab in the Amazon QuickSight console.
      * </p>
      * 
-     * @return The name of a sheet. This name is displayed on the sheet's tab in the QuickSight console.
+     * @return The name of a sheet. This name is displayed on the sheet's tab in the Amazon QuickSight console.
      */
 
     public String getName() {
@@ -111,11 +111,11 @@ public class Sheet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of a sheet. This name is displayed on the sheet's tab in the QuickSight console.
+     * The name of a sheet. This name is displayed on the sheet's tab in the Amazon QuickSight console.
      * </p>
      * 
      * @param name
-     *        The name of a sheet. This name is displayed on the sheet's tab in the QuickSight console.
+     *        The name of a sheet. This name is displayed on the sheet's tab in the Amazon QuickSight console.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

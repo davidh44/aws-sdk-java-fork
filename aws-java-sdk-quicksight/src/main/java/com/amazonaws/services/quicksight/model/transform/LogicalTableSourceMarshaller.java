@@ -31,6 +31,8 @@ public class LogicalTableSourceMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("JoinInstruction").build();
     private static final MarshallingInfo<String> PHYSICALTABLEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PhysicalTableId").build();
+    private static final MarshallingInfo<String> DATASETARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataSetArn").build();
 
     private static final LogicalTableSourceMarshaller instance = new LogicalTableSourceMarshaller();
 
@@ -50,6 +52,7 @@ public class LogicalTableSourceMarshaller {
         try {
             protocolMarshaller.marshall(logicalTableSource.getJoinInstruction(), JOININSTRUCTION_BINDING);
             protocolMarshaller.marshall(logicalTableSource.getPhysicalTableId(), PHYSICALTABLEID_BINDING);
+            protocolMarshaller.marshall(logicalTableSource.getDataSetArn(), DATASETARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

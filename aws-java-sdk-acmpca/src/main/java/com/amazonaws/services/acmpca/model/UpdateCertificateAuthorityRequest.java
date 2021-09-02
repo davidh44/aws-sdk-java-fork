@@ -36,7 +36,13 @@ public class UpdateCertificateAuthorityRequest extends com.amazonaws.AmazonWebSe
     private String certificateAuthorityArn;
     /**
      * <p>
-     * Revocation information for your private CA.
+     * Contains information to enable Online Certificate Status Protocol (OCSP) support, to enable a certificate
+     * revocation list (CRL), to enable both, or to enable neither. If this parameter is not supplied, existing
+     * capibilites remain unchanged. For more information, see the <a
+     * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_OcspConfiguration.html">OcspConfiguration</a>
+     * and <a
+     * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CrlConfiguration.html">CrlConfiguration</a>
+     * types.
      * </p>
      */
     private RevocationConfiguration revocationConfiguration;
@@ -107,11 +113,23 @@ public class UpdateCertificateAuthorityRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Revocation information for your private CA.
+     * Contains information to enable Online Certificate Status Protocol (OCSP) support, to enable a certificate
+     * revocation list (CRL), to enable both, or to enable neither. If this parameter is not supplied, existing
+     * capibilites remain unchanged. For more information, see the <a
+     * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_OcspConfiguration.html">OcspConfiguration</a>
+     * and <a
+     * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CrlConfiguration.html">CrlConfiguration</a>
+     * types.
      * </p>
      * 
      * @param revocationConfiguration
-     *        Revocation information for your private CA.
+     *        Contains information to enable Online Certificate Status Protocol (OCSP) support, to enable a certificate
+     *        revocation list (CRL), to enable both, or to enable neither. If this parameter is not supplied, existing
+     *        capibilites remain unchanged. For more information, see the <a
+     *        href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_OcspConfiguration.html"
+     *        >OcspConfiguration</a> and <a
+     *        href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CrlConfiguration.html"
+     *        >CrlConfiguration</a> types.
      */
 
     public void setRevocationConfiguration(RevocationConfiguration revocationConfiguration) {
@@ -120,10 +138,22 @@ public class UpdateCertificateAuthorityRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Revocation information for your private CA.
+     * Contains information to enable Online Certificate Status Protocol (OCSP) support, to enable a certificate
+     * revocation list (CRL), to enable both, or to enable neither. If this parameter is not supplied, existing
+     * capibilites remain unchanged. For more information, see the <a
+     * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_OcspConfiguration.html">OcspConfiguration</a>
+     * and <a
+     * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CrlConfiguration.html">CrlConfiguration</a>
+     * types.
      * </p>
      * 
-     * @return Revocation information for your private CA.
+     * @return Contains information to enable Online Certificate Status Protocol (OCSP) support, to enable a certificate
+     *         revocation list (CRL), to enable both, or to enable neither. If this parameter is not supplied, existing
+     *         capibilites remain unchanged. For more information, see the <a
+     *         href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_OcspConfiguration.html"
+     *         >OcspConfiguration</a> and <a
+     *         href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CrlConfiguration.html"
+     *         >CrlConfiguration</a> types.
      */
 
     public RevocationConfiguration getRevocationConfiguration() {
@@ -132,11 +162,23 @@ public class UpdateCertificateAuthorityRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Revocation information for your private CA.
+     * Contains information to enable Online Certificate Status Protocol (OCSP) support, to enable a certificate
+     * revocation list (CRL), to enable both, or to enable neither. If this parameter is not supplied, existing
+     * capibilites remain unchanged. For more information, see the <a
+     * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_OcspConfiguration.html">OcspConfiguration</a>
+     * and <a
+     * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CrlConfiguration.html">CrlConfiguration</a>
+     * types.
      * </p>
      * 
      * @param revocationConfiguration
-     *        Revocation information for your private CA.
+     *        Contains information to enable Online Certificate Status Protocol (OCSP) support, to enable a certificate
+     *        revocation list (CRL), to enable both, or to enable neither. If this parameter is not supplied, existing
+     *        capibilites remain unchanged. For more information, see the <a
+     *        href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_OcspConfiguration.html"
+     *        >OcspConfiguration</a> and <a
+     *        href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CrlConfiguration.html"
+     *        >CrlConfiguration</a> types.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

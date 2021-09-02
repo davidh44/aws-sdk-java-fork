@@ -34,9 +34,9 @@ public class CopyBackupRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String sourceBackupId;
     /**
      * <p>
-     * The source AWS Region of the backup. Specifies the AWS Region from which the backup is being copied. The source
-     * and destination Regions must be in the same AWS partition. If you don't specify a Region, it defaults to the
-     * Region where the request is sent from (in-Region copy).
+     * The source Amazon Web Services Region of the backup. Specifies the Amazon Web Services Region from which the
+     * backup is being copied. The source and destination Regions must be in the same Amazon Web Services partition. If
+     * you don't specify a Region, it defaults to the Region where the request is sent from (in-Region copy).
      * </p>
      */
     private String sourceRegion;
@@ -126,15 +126,16 @@ public class CopyBackupRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The source AWS Region of the backup. Specifies the AWS Region from which the backup is being copied. The source
-     * and destination Regions must be in the same AWS partition. If you don't specify a Region, it defaults to the
-     * Region where the request is sent from (in-Region copy).
+     * The source Amazon Web Services Region of the backup. Specifies the Amazon Web Services Region from which the
+     * backup is being copied. The source and destination Regions must be in the same Amazon Web Services partition. If
+     * you don't specify a Region, it defaults to the Region where the request is sent from (in-Region copy).
      * </p>
      * 
      * @param sourceRegion
-     *        The source AWS Region of the backup. Specifies the AWS Region from which the backup is being copied. The
-     *        source and destination Regions must be in the same AWS partition. If you don't specify a Region, it
-     *        defaults to the Region where the request is sent from (in-Region copy).
+     *        The source Amazon Web Services Region of the backup. Specifies the Amazon Web Services Region from which
+     *        the backup is being copied. The source and destination Regions must be in the same Amazon Web Services
+     *        partition. If you don't specify a Region, it defaults to the Region where the request is sent from
+     *        (in-Region copy).
      */
 
     public void setSourceRegion(String sourceRegion) {
@@ -143,14 +144,15 @@ public class CopyBackupRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The source AWS Region of the backup. Specifies the AWS Region from which the backup is being copied. The source
-     * and destination Regions must be in the same AWS partition. If you don't specify a Region, it defaults to the
-     * Region where the request is sent from (in-Region copy).
+     * The source Amazon Web Services Region of the backup. Specifies the Amazon Web Services Region from which the
+     * backup is being copied. The source and destination Regions must be in the same Amazon Web Services partition. If
+     * you don't specify a Region, it defaults to the Region where the request is sent from (in-Region copy).
      * </p>
      * 
-     * @return The source AWS Region of the backup. Specifies the AWS Region from which the backup is being copied. The
-     *         source and destination Regions must be in the same AWS partition. If you don't specify a Region, it
-     *         defaults to the Region where the request is sent from (in-Region copy).
+     * @return The source Amazon Web Services Region of the backup. Specifies the Amazon Web Services Region from which
+     *         the backup is being copied. The source and destination Regions must be in the same Amazon Web Services
+     *         partition. If you don't specify a Region, it defaults to the Region where the request is sent from
+     *         (in-Region copy).
      */
 
     public String getSourceRegion() {
@@ -159,15 +161,16 @@ public class CopyBackupRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The source AWS Region of the backup. Specifies the AWS Region from which the backup is being copied. The source
-     * and destination Regions must be in the same AWS partition. If you don't specify a Region, it defaults to the
-     * Region where the request is sent from (in-Region copy).
+     * The source Amazon Web Services Region of the backup. Specifies the Amazon Web Services Region from which the
+     * backup is being copied. The source and destination Regions must be in the same Amazon Web Services partition. If
+     * you don't specify a Region, it defaults to the Region where the request is sent from (in-Region copy).
      * </p>
      * 
      * @param sourceRegion
-     *        The source AWS Region of the backup. Specifies the AWS Region from which the backup is being copied. The
-     *        source and destination Regions must be in the same AWS partition. If you don't specify a Region, it
-     *        defaults to the Region where the request is sent from (in-Region copy).
+     *        The source Amazon Web Services Region of the backup. Specifies the Amazon Web Services Region from which
+     *        the backup is being copied. The source and destination Regions must be in the same Amazon Web Services
+     *        partition. If you don't specify a Region, it defaults to the Region where the request is sent from
+     *        (in-Region copy).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

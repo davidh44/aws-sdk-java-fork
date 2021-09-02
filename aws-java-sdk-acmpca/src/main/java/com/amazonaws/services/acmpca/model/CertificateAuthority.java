@@ -107,7 +107,8 @@ public class CertificateAuthority implements Serializable, Cloneable, Structured
     private CertificateAuthorityConfiguration certificateAuthorityConfiguration;
     /**
      * <p>
-     * Information about the certificate revocation list (CRL) created and maintained by your private CA.
+     * Information about the Online Certificate Status Protocol (OCSP) configuration or certificate revocation list
+     * (CRL) created and maintained by your private CA.
      * </p>
      */
     private RevocationConfiguration revocationConfiguration;
@@ -641,11 +642,13 @@ public class CertificateAuthority implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Information about the certificate revocation list (CRL) created and maintained by your private CA.
+     * Information about the Online Certificate Status Protocol (OCSP) configuration or certificate revocation list
+     * (CRL) created and maintained by your private CA.
      * </p>
      * 
      * @param revocationConfiguration
-     *        Information about the certificate revocation list (CRL) created and maintained by your private CA.
+     *        Information about the Online Certificate Status Protocol (OCSP) configuration or certificate revocation
+     *        list (CRL) created and maintained by your private CA.
      */
 
     public void setRevocationConfiguration(RevocationConfiguration revocationConfiguration) {
@@ -654,10 +657,12 @@ public class CertificateAuthority implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Information about the certificate revocation list (CRL) created and maintained by your private CA.
+     * Information about the Online Certificate Status Protocol (OCSP) configuration or certificate revocation list
+     * (CRL) created and maintained by your private CA.
      * </p>
      * 
-     * @return Information about the certificate revocation list (CRL) created and maintained by your private CA.
+     * @return Information about the Online Certificate Status Protocol (OCSP) configuration or certificate revocation
+     *         list (CRL) created and maintained by your private CA.
      */
 
     public RevocationConfiguration getRevocationConfiguration() {
@@ -666,11 +671,13 @@ public class CertificateAuthority implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Information about the certificate revocation list (CRL) created and maintained by your private CA.
+     * Information about the Online Certificate Status Protocol (OCSP) configuration or certificate revocation list
+     * (CRL) created and maintained by your private CA.
      * </p>
      * 
      * @param revocationConfiguration
-     *        Information about the certificate revocation list (CRL) created and maintained by your private CA.
+     *        Information about the Online Certificate Status Protocol (OCSP) configuration or certificate revocation
+     *        list (CRL) created and maintained by your private CA.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

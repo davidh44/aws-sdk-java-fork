@@ -31,18 +31,21 @@ public class FindingSourceDetail implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The ARN of the access point that generated the finding.
+     * The ARN of the access point that generated the finding. The ARN format depends on whether the ARN represents an
+     * access point or a multi-region access point.
      * </p>
      */
     private String accessPointArn;
 
     /**
      * <p>
-     * The ARN of the access point that generated the finding.
+     * The ARN of the access point that generated the finding. The ARN format depends on whether the ARN represents an
+     * access point or a multi-region access point.
      * </p>
      * 
      * @param accessPointArn
-     *        The ARN of the access point that generated the finding.
+     *        The ARN of the access point that generated the finding. The ARN format depends on whether the ARN
+     *        represents an access point or a multi-region access point.
      */
 
     public void setAccessPointArn(String accessPointArn) {
@@ -51,10 +54,12 @@ public class FindingSourceDetail implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The ARN of the access point that generated the finding.
+     * The ARN of the access point that generated the finding. The ARN format depends on whether the ARN represents an
+     * access point or a multi-region access point.
      * </p>
      * 
-     * @return The ARN of the access point that generated the finding.
+     * @return The ARN of the access point that generated the finding. The ARN format depends on whether the ARN
+     *         represents an access point or a multi-region access point.
      */
 
     public String getAccessPointArn() {
@@ -63,11 +68,13 @@ public class FindingSourceDetail implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The ARN of the access point that generated the finding.
+     * The ARN of the access point that generated the finding. The ARN format depends on whether the ARN represents an
+     * access point or a multi-region access point.
      * </p>
      * 
      * @param accessPointArn
-     *        The ARN of the access point that generated the finding.
+     *        The ARN of the access point that generated the finding. The ARN format depends on whether the ARN
+     *        represents an access point or a multi-region access point.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

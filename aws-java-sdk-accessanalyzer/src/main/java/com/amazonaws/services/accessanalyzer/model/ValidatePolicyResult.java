@@ -25,7 +25,7 @@ public class ValidatePolicyResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The list of findings in a policy returned by Access Analyzer based on its suite of policy checks.
+     * The list of findings in a policy returned by IAM Access Analyzer based on its suite of policy checks.
      * </p>
      */
     private java.util.List<ValidatePolicyFinding> findings;
@@ -38,10 +38,10 @@ public class ValidatePolicyResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The list of findings in a policy returned by Access Analyzer based on its suite of policy checks.
+     * The list of findings in a policy returned by IAM Access Analyzer based on its suite of policy checks.
      * </p>
      * 
-     * @return The list of findings in a policy returned by Access Analyzer based on its suite of policy checks.
+     * @return The list of findings in a policy returned by IAM Access Analyzer based on its suite of policy checks.
      */
 
     public java.util.List<ValidatePolicyFinding> getFindings() {
@@ -50,11 +50,11 @@ public class ValidatePolicyResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The list of findings in a policy returned by Access Analyzer based on its suite of policy checks.
+     * The list of findings in a policy returned by IAM Access Analyzer based on its suite of policy checks.
      * </p>
      * 
      * @param findings
-     *        The list of findings in a policy returned by Access Analyzer based on its suite of policy checks.
+     *        The list of findings in a policy returned by IAM Access Analyzer based on its suite of policy checks.
      */
 
     public void setFindings(java.util.Collection<ValidatePolicyFinding> findings) {
@@ -68,7 +68,7 @@ public class ValidatePolicyResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The list of findings in a policy returned by Access Analyzer based on its suite of policy checks.
+     * The list of findings in a policy returned by IAM Access Analyzer based on its suite of policy checks.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +77,7 @@ public class ValidatePolicyResult extends com.amazonaws.AmazonWebServiceResult<c
      * </p>
      * 
      * @param findings
-     *        The list of findings in a policy returned by Access Analyzer based on its suite of policy checks.
+     *        The list of findings in a policy returned by IAM Access Analyzer based on its suite of policy checks.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class ValidatePolicyResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The list of findings in a policy returned by Access Analyzer based on its suite of policy checks.
+     * The list of findings in a policy returned by IAM Access Analyzer based on its suite of policy checks.
      * </p>
      * 
      * @param findings
-     *        The list of findings in a policy returned by Access Analyzer based on its suite of policy checks.
+     *        The list of findings in a policy returned by IAM Access Analyzer based on its suite of policy checks.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

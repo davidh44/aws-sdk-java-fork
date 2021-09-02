@@ -48,6 +48,11 @@ public class AbstractAWSS3Control implements AWSS3Control {
     }
 
     @Override
+    public CreateMultiRegionAccessPointResult createMultiRegionAccessPoint(CreateMultiRegionAccessPointRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteAccessPointResult deleteAccessPoint(DeleteAccessPointRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -93,6 +98,11 @@ public class AbstractAWSS3Control implements AWSS3Control {
     }
 
     @Override
+    public DeleteMultiRegionAccessPointResult deleteMultiRegionAccessPoint(DeleteMultiRegionAccessPointRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeletePublicAccessBlockResult deletePublicAccessBlock(DeletePublicAccessBlockRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -109,6 +119,11 @@ public class AbstractAWSS3Control implements AWSS3Control {
 
     @Override
     public DescribeJobResult describeJob(DescribeJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeMultiRegionAccessPointOperationResult describeMultiRegionAccessPointOperation(DescribeMultiRegionAccessPointOperationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -173,6 +188,21 @@ public class AbstractAWSS3Control implements AWSS3Control {
     }
 
     @Override
+    public GetMultiRegionAccessPointResult getMultiRegionAccessPoint(GetMultiRegionAccessPointRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetMultiRegionAccessPointPolicyResult getMultiRegionAccessPointPolicy(GetMultiRegionAccessPointPolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetMultiRegionAccessPointPolicyStatusResult getMultiRegionAccessPointPolicyStatus(GetMultiRegionAccessPointPolicyStatusRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetPublicAccessBlockResult getPublicAccessBlock(GetPublicAccessBlockRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -199,6 +229,11 @@ public class AbstractAWSS3Control implements AWSS3Control {
 
     @Override
     public ListJobsResult listJobs(ListJobsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListMultiRegionAccessPointsResult listMultiRegionAccessPoints(ListMultiRegionAccessPointsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -244,6 +279,11 @@ public class AbstractAWSS3Control implements AWSS3Control {
 
     @Override
     public PutJobTaggingResult putJobTagging(PutJobTaggingRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutMultiRegionAccessPointPolicyResult putMultiRegionAccessPointPolicy(PutMultiRegionAccessPointPolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

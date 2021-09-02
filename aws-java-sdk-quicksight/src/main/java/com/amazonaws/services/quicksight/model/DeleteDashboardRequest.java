@@ -27,7 +27,7 @@ public class DeleteDashboardRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the dashboard that you're deleting.
+     * The ID of the Amazon Web Services account that contains the dashboard that you're deleting.
      * </p>
      */
     private String awsAccountId;
@@ -47,11 +47,11 @@ public class DeleteDashboardRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the dashboard that you're deleting.
+     * The ID of the Amazon Web Services account that contains the dashboard that you're deleting.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the dashboard that you're deleting.
+     *        The ID of the Amazon Web Services account that contains the dashboard that you're deleting.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -60,10 +60,10 @@ public class DeleteDashboardRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the dashboard that you're deleting.
+     * The ID of the Amazon Web Services account that contains the dashboard that you're deleting.
      * </p>
      * 
-     * @return The ID of the Amazon Web Services account; that contains the dashboard that you're deleting.
+     * @return The ID of the Amazon Web Services account that contains the dashboard that you're deleting.
      */
 
     public String getAwsAccountId() {
@@ -72,11 +72,11 @@ public class DeleteDashboardRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the dashboard that you're deleting.
+     * The ID of the Amazon Web Services account that contains the dashboard that you're deleting.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the dashboard that you're deleting.
+     *        The ID of the Amazon Web Services account that contains the dashboard that you're deleting.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

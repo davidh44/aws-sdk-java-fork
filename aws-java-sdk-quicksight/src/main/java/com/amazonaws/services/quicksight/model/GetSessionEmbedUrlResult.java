@@ -25,9 +25,9 @@ public class GetSessionEmbedUrlResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * A single-use URL that you can put into your server-side web page to embed your QuickSight session. This URL is
-     * valid for 5 minutes. The API operation provides the URL with an <code>auth_code</code> value that enables one
-     * (and only one) sign-on to a user session that is valid for 10 hours.
+     * A single-use URL that you can put into your server-side web page to embed your Amazon QuickSight session. This
+     * URL is valid for 5 minutes. The API operation provides the URL with an <code>auth_code</code> value that enables
+     * one (and only one) sign-on to a user session that is valid for 10 hours.
      * </p>
      */
     private String embedUrl;
@@ -46,15 +46,15 @@ public class GetSessionEmbedUrlResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * A single-use URL that you can put into your server-side web page to embed your QuickSight session. This URL is
-     * valid for 5 minutes. The API operation provides the URL with an <code>auth_code</code> value that enables one
-     * (and only one) sign-on to a user session that is valid for 10 hours.
+     * A single-use URL that you can put into your server-side web page to embed your Amazon QuickSight session. This
+     * URL is valid for 5 minutes. The API operation provides the URL with an <code>auth_code</code> value that enables
+     * one (and only one) sign-on to a user session that is valid for 10 hours.
      * </p>
      * 
      * @param embedUrl
-     *        A single-use URL that you can put into your server-side web page to embed your QuickSight session. This
-     *        URL is valid for 5 minutes. The API operation provides the URL with an <code>auth_code</code> value that
-     *        enables one (and only one) sign-on to a user session that is valid for 10 hours.
+     *        A single-use URL that you can put into your server-side web page to embed your Amazon QuickSight session.
+     *        This URL is valid for 5 minutes. The API operation provides the URL with an <code>auth_code</code> value
+     *        that enables one (and only one) sign-on to a user session that is valid for 10 hours.
      */
 
     public void setEmbedUrl(String embedUrl) {
@@ -63,14 +63,14 @@ public class GetSessionEmbedUrlResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * A single-use URL that you can put into your server-side web page to embed your QuickSight session. This URL is
-     * valid for 5 minutes. The API operation provides the URL with an <code>auth_code</code> value that enables one
-     * (and only one) sign-on to a user session that is valid for 10 hours.
+     * A single-use URL that you can put into your server-side web page to embed your Amazon QuickSight session. This
+     * URL is valid for 5 minutes. The API operation provides the URL with an <code>auth_code</code> value that enables
+     * one (and only one) sign-on to a user session that is valid for 10 hours.
      * </p>
      * 
-     * @return A single-use URL that you can put into your server-side web page to embed your QuickSight session. This
-     *         URL is valid for 5 minutes. The API operation provides the URL with an <code>auth_code</code> value that
-     *         enables one (and only one) sign-on to a user session that is valid for 10 hours.
+     * @return A single-use URL that you can put into your server-side web page to embed your Amazon QuickSight session.
+     *         This URL is valid for 5 minutes. The API operation provides the URL with an <code>auth_code</code> value
+     *         that enables one (and only one) sign-on to a user session that is valid for 10 hours.
      */
 
     public String getEmbedUrl() {
@@ -79,15 +79,15 @@ public class GetSessionEmbedUrlResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * A single-use URL that you can put into your server-side web page to embed your QuickSight session. This URL is
-     * valid for 5 minutes. The API operation provides the URL with an <code>auth_code</code> value that enables one
-     * (and only one) sign-on to a user session that is valid for 10 hours.
+     * A single-use URL that you can put into your server-side web page to embed your Amazon QuickSight session. This
+     * URL is valid for 5 minutes. The API operation provides the URL with an <code>auth_code</code> value that enables
+     * one (and only one) sign-on to a user session that is valid for 10 hours.
      * </p>
      * 
      * @param embedUrl
-     *        A single-use URL that you can put into your server-side web page to embed your QuickSight session. This
-     *        URL is valid for 5 minutes. The API operation provides the URL with an <code>auth_code</code> value that
-     *        enables one (and only one) sign-on to a user session that is valid for 10 hours.
+     *        A single-use URL that you can put into your server-side web page to embed your Amazon QuickSight session.
+     *        This URL is valid for 5 minutes. The API operation provides the URL with an <code>auth_code</code> value
+     *        that enables one (and only one) sign-on to a user session that is valid for 10 hours.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,8 +27,8 @@ public class ListUsersRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that the user is in. Currently, you use the ID for the Amazon Web
-     * Services account; that contains your Amazon QuickSight account.
+     * The ID for the Amazon Web Services account that the user is in. Currently, you use the ID for the Amazon Web
+     * Services account that contains your Amazon QuickSight account.
      * </p>
      */
     private String awsAccountId;
@@ -53,13 +53,13 @@ public class ListUsersRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that the user is in. Currently, you use the ID for the Amazon Web
-     * Services account; that contains your Amazon QuickSight account.
+     * The ID for the Amazon Web Services account that the user is in. Currently, you use the ID for the Amazon Web
+     * Services account that contains your Amazon QuickSight account.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID for the Amazon Web Services account; that the user is in. Currently, you use the ID for the Amazon
-     *        Web Services account; that contains your Amazon QuickSight account.
+     *        The ID for the Amazon Web Services account that the user is in. Currently, you use the ID for the Amazon
+     *        Web Services account that contains your Amazon QuickSight account.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -68,12 +68,12 @@ public class ListUsersRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that the user is in. Currently, you use the ID for the Amazon Web
-     * Services account; that contains your Amazon QuickSight account.
+     * The ID for the Amazon Web Services account that the user is in. Currently, you use the ID for the Amazon Web
+     * Services account that contains your Amazon QuickSight account.
      * </p>
      * 
-     * @return The ID for the Amazon Web Services account; that the user is in. Currently, you use the ID for the Amazon
-     *         Web Services account; that contains your Amazon QuickSight account.
+     * @return The ID for the Amazon Web Services account that the user is in. Currently, you use the ID for the Amazon
+     *         Web Services account that contains your Amazon QuickSight account.
      */
 
     public String getAwsAccountId() {
@@ -82,13 +82,13 @@ public class ListUsersRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that the user is in. Currently, you use the ID for the Amazon Web
-     * Services account; that contains your Amazon QuickSight account.
+     * The ID for the Amazon Web Services account that the user is in. Currently, you use the ID for the Amazon Web
+     * Services account that contains your Amazon QuickSight account.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID for the Amazon Web Services account; that the user is in. Currently, you use the ID for the Amazon
-     *        Web Services account; that contains your Amazon QuickSight account.
+     *        The ID for the Amazon Web Services account that the user is in. Currently, you use the ID for the Amazon
+     *        Web Services account that contains your Amazon QuickSight account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

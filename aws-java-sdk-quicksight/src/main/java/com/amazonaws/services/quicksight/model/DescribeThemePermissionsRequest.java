@@ -27,7 +27,7 @@ public class DescribeThemePermissionsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the theme that you're describing.
+     * The ID of the Amazon Web Services account that contains the theme that you're describing.
      * </p>
      */
     private String awsAccountId;
@@ -40,11 +40,11 @@ public class DescribeThemePermissionsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the theme that you're describing.
+     * The ID of the Amazon Web Services account that contains the theme that you're describing.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the theme that you're describing.
+     *        The ID of the Amazon Web Services account that contains the theme that you're describing.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -53,10 +53,10 @@ public class DescribeThemePermissionsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the theme that you're describing.
+     * The ID of the Amazon Web Services account that contains the theme that you're describing.
      * </p>
      * 
-     * @return The ID of the Amazon Web Services account; that contains the theme that you're describing.
+     * @return The ID of the Amazon Web Services account that contains the theme that you're describing.
      */
 
     public String getAwsAccountId() {
@@ -65,11 +65,11 @@ public class DescribeThemePermissionsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the theme that you're describing.
+     * The ID of the Amazon Web Services account that contains the theme that you're describing.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the theme that you're describing.
+     *        The ID of the Amazon Web Services account that contains the theme that you're describing.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

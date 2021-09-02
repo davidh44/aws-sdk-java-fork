@@ -27,7 +27,7 @@ public class UpdateTemplateRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the template that you're updating.
+     * The ID of the Amazon Web Services account that contains the template that you're updating.
      * </p>
      */
     private String awsAccountId;
@@ -43,8 +43,8 @@ public class UpdateTemplateRequest extends com.amazonaws.AmazonWebServiceRequest
      * the type of object you're using as source: <code>SourceTemplate</code> for a template or
      * <code>SourceAnalysis</code> for an analysis. Both of these require an Amazon Resource Name (ARN). For
      * <code>SourceTemplate</code>, specify the ARN of the source template. For <code>SourceAnalysis</code>, specify the
-     * ARN of the source analysis. The <code>SourceTemplate</code> ARN can contain any Amazon Web Services account; and
-     * any QuickSight-supported Amazon Web Services Region;.
+     * ARN of the source analysis. The <code>SourceTemplate</code> ARN can contain any Amazon Web Services account and
+     * any Amazon QuickSight-supported Amazon Web Services Region;.
      * </p>
      * <p>
      * Use the <code>DataSetReferences</code> entity within <code>SourceTemplate</code> or <code>SourceAnalysis</code>
@@ -70,11 +70,11 @@ public class UpdateTemplateRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the template that you're updating.
+     * The ID of the Amazon Web Services account that contains the template that you're updating.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the template that you're updating.
+     *        The ID of the Amazon Web Services account that contains the template that you're updating.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -83,10 +83,10 @@ public class UpdateTemplateRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the template that you're updating.
+     * The ID of the Amazon Web Services account that contains the template that you're updating.
      * </p>
      * 
-     * @return The ID of the Amazon Web Services account; that contains the template that you're updating.
+     * @return The ID of the Amazon Web Services account that contains the template that you're updating.
      */
 
     public String getAwsAccountId() {
@@ -95,11 +95,11 @@ public class UpdateTemplateRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the template that you're updating.
+     * The ID of the Amazon Web Services account that contains the template that you're updating.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the template that you're updating.
+     *        The ID of the Amazon Web Services account that contains the template that you're updating.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -154,8 +154,8 @@ public class UpdateTemplateRequest extends com.amazonaws.AmazonWebServiceRequest
      * the type of object you're using as source: <code>SourceTemplate</code> for a template or
      * <code>SourceAnalysis</code> for an analysis. Both of these require an Amazon Resource Name (ARN). For
      * <code>SourceTemplate</code>, specify the ARN of the source template. For <code>SourceAnalysis</code>, specify the
-     * ARN of the source analysis. The <code>SourceTemplate</code> ARN can contain any Amazon Web Services account; and
-     * any QuickSight-supported Amazon Web Services Region;.
+     * ARN of the source analysis. The <code>SourceTemplate</code> ARN can contain any Amazon Web Services account and
+     * any Amazon QuickSight-supported Amazon Web Services Region;.
      * </p>
      * <p>
      * Use the <code>DataSetReferences</code> entity within <code>SourceTemplate</code> or <code>SourceAnalysis</code>
@@ -169,7 +169,7 @@ public class UpdateTemplateRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <code>SourceAnalysis</code> for an analysis. Both of these require an Amazon Resource Name (ARN). For
      *        <code>SourceTemplate</code>, specify the ARN of the source template. For <code>SourceAnalysis</code>,
      *        specify the ARN of the source analysis. The <code>SourceTemplate</code> ARN can contain any Amazon Web
-     *        Services account; and any QuickSight-supported Amazon Web Services Region;. </p>
+     *        Services account and any Amazon QuickSight-supported Amazon Web Services Region;. </p>
      *        <p>
      *        Use the <code>DataSetReferences</code> entity within <code>SourceTemplate</code> or
      *        <code>SourceAnalysis</code> to list the replacement datasets for the placeholders listed in the original.
@@ -186,8 +186,8 @@ public class UpdateTemplateRequest extends com.amazonaws.AmazonWebServiceRequest
      * the type of object you're using as source: <code>SourceTemplate</code> for a template or
      * <code>SourceAnalysis</code> for an analysis. Both of these require an Amazon Resource Name (ARN). For
      * <code>SourceTemplate</code>, specify the ARN of the source template. For <code>SourceAnalysis</code>, specify the
-     * ARN of the source analysis. The <code>SourceTemplate</code> ARN can contain any Amazon Web Services account; and
-     * any QuickSight-supported Amazon Web Services Region;.
+     * ARN of the source analysis. The <code>SourceTemplate</code> ARN can contain any Amazon Web Services account and
+     * any Amazon QuickSight-supported Amazon Web Services Region;.
      * </p>
      * <p>
      * Use the <code>DataSetReferences</code> entity within <code>SourceTemplate</code> or <code>SourceAnalysis</code>
@@ -200,7 +200,7 @@ public class UpdateTemplateRequest extends com.amazonaws.AmazonWebServiceRequest
      *         <code>SourceAnalysis</code> for an analysis. Both of these require an Amazon Resource Name (ARN). For
      *         <code>SourceTemplate</code>, specify the ARN of the source template. For <code>SourceAnalysis</code>,
      *         specify the ARN of the source analysis. The <code>SourceTemplate</code> ARN can contain any Amazon Web
-     *         Services account; and any QuickSight-supported Amazon Web Services Region;. </p>
+     *         Services account and any Amazon QuickSight-supported Amazon Web Services Region;. </p>
      *         <p>
      *         Use the <code>DataSetReferences</code> entity within <code>SourceTemplate</code> or
      *         <code>SourceAnalysis</code> to list the replacement datasets for the placeholders listed in the original.
@@ -217,8 +217,8 @@ public class UpdateTemplateRequest extends com.amazonaws.AmazonWebServiceRequest
      * the type of object you're using as source: <code>SourceTemplate</code> for a template or
      * <code>SourceAnalysis</code> for an analysis. Both of these require an Amazon Resource Name (ARN). For
      * <code>SourceTemplate</code>, specify the ARN of the source template. For <code>SourceAnalysis</code>, specify the
-     * ARN of the source analysis. The <code>SourceTemplate</code> ARN can contain any Amazon Web Services account; and
-     * any QuickSight-supported Amazon Web Services Region;.
+     * ARN of the source analysis. The <code>SourceTemplate</code> ARN can contain any Amazon Web Services account and
+     * any Amazon QuickSight-supported Amazon Web Services Region;.
      * </p>
      * <p>
      * Use the <code>DataSetReferences</code> entity within <code>SourceTemplate</code> or <code>SourceAnalysis</code>
@@ -232,7 +232,7 @@ public class UpdateTemplateRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <code>SourceAnalysis</code> for an analysis. Both of these require an Amazon Resource Name (ARN). For
      *        <code>SourceTemplate</code>, specify the ARN of the source template. For <code>SourceAnalysis</code>,
      *        specify the ARN of the source analysis. The <code>SourceTemplate</code> ARN can contain any Amazon Web
-     *        Services account; and any QuickSight-supported Amazon Web Services Region;. </p>
+     *        Services account and any Amazon QuickSight-supported Amazon Web Services Region;. </p>
      *        <p>
      *        Use the <code>DataSetReferences</code> entity within <code>SourceTemplate</code> or
      *        <code>SourceAnalysis</code> to list the replacement datasets for the placeholders listed in the original.

@@ -69,7 +69,7 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
      * </p>
      * <p>
      * When you use the Security Hub API to filter findings by product name, you use the
-     * <code>aws/securityhub/ProductyName</code> attribute under <code>ProductFields</code>.
+     * <code>aws/securityhub/ProductName</code> attribute under <code>ProductFields</code>.
      * </p>
      * <p>
      * Security Hub does not synchronize those two attributes.
@@ -506,7 +506,7 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
      * </p>
      * <p>
      * When you use the Security Hub API to filter findings by product name, you use the
-     * <code>aws/securityhub/ProductyName</code> attribute under <code>ProductFields</code>.
+     * <code>aws/securityhub/ProductName</code> attribute under <code>ProductFields</code>.
      * </p>
      * <p>
      * Security Hub does not synchronize those two attributes.
@@ -524,7 +524,7 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
      *        </p>
      *        <p>
      *        When you use the Security Hub API to filter findings by product name, you use the
-     *        <code>aws/securityhub/ProductyName</code> attribute under <code>ProductFields</code>.
+     *        <code>aws/securityhub/ProductName</code> attribute under <code>ProductFields</code>.
      *        </p>
      *        <p>
      *        Security Hub does not synchronize those two attributes.
@@ -548,7 +548,7 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
      * </p>
      * <p>
      * When you use the Security Hub API to filter findings by product name, you use the
-     * <code>aws/securityhub/ProductyName</code> attribute under <code>ProductFields</code>.
+     * <code>aws/securityhub/ProductName</code> attribute under <code>ProductFields</code>.
      * </p>
      * <p>
      * Security Hub does not synchronize those two attributes.
@@ -565,7 +565,7 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
      *         </p>
      *         <p>
      *         When you use the Security Hub API to filter findings by product name, you use the
-     *         <code>aws/securityhub/ProductyName</code> attribute under <code>ProductFields</code>.
+     *         <code>aws/securityhub/ProductName</code> attribute under <code>ProductFields</code>.
      *         </p>
      *         <p>
      *         Security Hub does not synchronize those two attributes.
@@ -589,7 +589,7 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
      * </p>
      * <p>
      * When you use the Security Hub API to filter findings by product name, you use the
-     * <code>aws/securityhub/ProductyName</code> attribute under <code>ProductFields</code>.
+     * <code>aws/securityhub/ProductName</code> attribute under <code>ProductFields</code>.
      * </p>
      * <p>
      * Security Hub does not synchronize those two attributes.
@@ -607,7 +607,7 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
      *        </p>
      *        <p>
      *        When you use the Security Hub API to filter findings by product name, you use the
-     *        <code>aws/securityhub/ProductyName</code> attribute under <code>ProductFields</code>.
+     *        <code>aws/securityhub/ProductName</code> attribute under <code>ProductFields</code>.
      *        </p>
      *        <p>
      *        Security Hub does not synchronize those two attributes.

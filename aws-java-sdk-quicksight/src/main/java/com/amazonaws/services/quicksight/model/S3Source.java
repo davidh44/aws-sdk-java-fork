@@ -46,7 +46,7 @@ public class S3Source implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * For non-JSON files, only <code>STRING</code> data types are supported in input columns.
+     * For files that aren't JSON, only <code>STRING</code> data types are supported in input columns.
      * </p>
      * </note>
      */
@@ -138,13 +138,13 @@ public class S3Source implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * For non-JSON files, only <code>STRING</code> data types are supported in input columns.
+     * For files that aren't JSON, only <code>STRING</code> data types are supported in input columns.
      * </p>
      * </note>
      * 
      * @return A physical table type for an S3 data source.</p> <note>
      *         <p>
-     *         For non-JSON files, only <code>STRING</code> data types are supported in input columns.
+     *         For files that aren't JSON, only <code>STRING</code> data types are supported in input columns.
      *         </p>
      */
 
@@ -158,14 +158,14 @@ public class S3Source implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * For non-JSON files, only <code>STRING</code> data types are supported in input columns.
+     * For files that aren't JSON, only <code>STRING</code> data types are supported in input columns.
      * </p>
      * </note>
      * 
      * @param inputColumns
      *        A physical table type for an S3 data source.</p> <note>
      *        <p>
-     *        For non-JSON files, only <code>STRING</code> data types are supported in input columns.
+     *        For files that aren't JSON, only <code>STRING</code> data types are supported in input columns.
      *        </p>
      */
 
@@ -184,7 +184,7 @@ public class S3Source implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * For non-JSON files, only <code>STRING</code> data types are supported in input columns.
+     * For files that aren't JSON, only <code>STRING</code> data types are supported in input columns.
      * </p>
      * </note>
      * <p>
@@ -196,7 +196,7 @@ public class S3Source implements Serializable, Cloneable, StructuredPojo {
      * @param inputColumns
      *        A physical table type for an S3 data source.</p> <note>
      *        <p>
-     *        For non-JSON files, only <code>STRING</code> data types are supported in input columns.
+     *        For files that aren't JSON, only <code>STRING</code> data types are supported in input columns.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -217,14 +217,14 @@ public class S3Source implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * For non-JSON files, only <code>STRING</code> data types are supported in input columns.
+     * For files that aren't JSON, only <code>STRING</code> data types are supported in input columns.
      * </p>
      * </note>
      * 
      * @param inputColumns
      *        A physical table type for an S3 data source.</p> <note>
      *        <p>
-     *        For non-JSON files, only <code>STRING</code> data types are supported in input columns.
+     *        For files that aren't JSON, only <code>STRING</code> data types are supported in input columns.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

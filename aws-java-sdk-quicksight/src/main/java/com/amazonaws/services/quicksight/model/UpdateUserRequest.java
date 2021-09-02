@@ -33,8 +33,8 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String userName;
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that the user is in. Currently, you use the ID for the Amazon Web
-     * Services account; that contains your Amazon QuickSight account.
+     * The ID for the Amazon Web Services account that the user is in. Currently, you use the ID for the Amazon Web
+     * Services account that contains your Amazon QuickSight account.
      * </p>
      */
     private String awsAccountId;
@@ -72,7 +72,8 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </li>
      * </ul>
      * <p>
-     * The name of the QuickSight role is invisible to the user except for the console screens dealing with permissions.
+     * The name of the Amazon QuickSight role is invisible to the user except for the console screens dealing with
+     * permissions.
      * </p>
      */
     private String role;
@@ -105,16 +106,16 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </ul>
      * <p>
      * A set of custom permissions includes any combination of these restrictions. Currently, you need to create the
-     * profile names for custom permission sets by using the QuickSight console. Then, you use the
-     * <code>RegisterUser</code> API operation to assign the named set of permissions to a QuickSight user.
+     * profile names for custom permission sets by using the Amazon QuickSight console. Then, you use the
+     * <code>RegisterUser</code> API operation to assign the named set of permissions to a Amazon QuickSight user.
      * </p>
      * <p>
-     * QuickSight custom permissions are applied through IAM policies. Therefore, they override the permissions
-     * typically granted by assigning QuickSight users to one of the default security cohorts in QuickSight (admin,
-     * author, reader).
+     * Amazon QuickSight custom permissions are applied through IAMpolicies. Therefore, they override the permissions
+     * typically granted by assigning Amazon QuickSight users to one of the default security cohorts in Amazon
+     * QuickSight (admin, author, reader).
      * </p>
      * <p>
-     * This feature is available only to QuickSight Enterprise edition subscriptions.
+     * This feature is available only to Amazon QuickSight Enterprise edition subscriptions.
      * </p>
      */
     private String customPermissionsName;
@@ -128,9 +129,9 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private Boolean unapplyCustomPermissions;
     /**
      * <p>
-     * The type of supported external login provider that provides identity to let a user federate into QuickSight with
-     * an associated AWS Identity and Access Management (IAM) role. The type of supported external login provider can be
-     * one of the following.
+     * The type of supported external login provider that provides identity to let a user federate into Amazon
+     * QuickSight with an associated Identity and Access Management(IAM) role. The type of supported external login
+     * provider can be one of the following.
      * </p>
      * <ul>
      * <li>
@@ -157,9 +158,9 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String externalLoginFederationProviderType;
     /**
      * <p>
-     * The URL of the custom OpenID Connect (OIDC) provider that provides identity to let a user federate into
-     * QuickSight with an associated AWS Identity and Access Management (IAM) role. This parameter should only be used
-     * when <code>ExternalLoginFederationProviderType</code> parameter is set to <code>CUSTOM_OIDC</code>.
+     * The URL of the custom OpenID Connect (OIDC) provider that provides identity to let a user federate into Amazon
+     * QuickSight with an associated Identity and Access Management(IAM) role. This parameter should only be used when
+     * <code>ExternalLoginFederationProviderType</code> parameter is set to <code>CUSTOM_OIDC</code>.
      * </p>
      */
     private String customFederationProviderUrl;
@@ -212,13 +213,13 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that the user is in. Currently, you use the ID for the Amazon Web
-     * Services account; that contains your Amazon QuickSight account.
+     * The ID for the Amazon Web Services account that the user is in. Currently, you use the ID for the Amazon Web
+     * Services account that contains your Amazon QuickSight account.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID for the Amazon Web Services account; that the user is in. Currently, you use the ID for the Amazon
-     *        Web Services account; that contains your Amazon QuickSight account.
+     *        The ID for the Amazon Web Services account that the user is in. Currently, you use the ID for the Amazon
+     *        Web Services account that contains your Amazon QuickSight account.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -227,12 +228,12 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that the user is in. Currently, you use the ID for the Amazon Web
-     * Services account; that contains your Amazon QuickSight account.
+     * The ID for the Amazon Web Services account that the user is in. Currently, you use the ID for the Amazon Web
+     * Services account that contains your Amazon QuickSight account.
      * </p>
      * 
-     * @return The ID for the Amazon Web Services account; that the user is in. Currently, you use the ID for the Amazon
-     *         Web Services account; that contains your Amazon QuickSight account.
+     * @return The ID for the Amazon Web Services account that the user is in. Currently, you use the ID for the Amazon
+     *         Web Services account that contains your Amazon QuickSight account.
      */
 
     public String getAwsAccountId() {
@@ -241,13 +242,13 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that the user is in. Currently, you use the ID for the Amazon Web
-     * Services account; that contains your Amazon QuickSight account.
+     * The ID for the Amazon Web Services account that the user is in. Currently, you use the ID for the Amazon Web
+     * Services account that contains your Amazon QuickSight account.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID for the Amazon Web Services account; that the user is in. Currently, you use the ID for the Amazon
-     *        Web Services account; that contains your Amazon QuickSight account.
+     *        The ID for the Amazon Web Services account that the user is in. Currently, you use the ID for the Amazon
+     *        Web Services account that contains your Amazon QuickSight account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -358,7 +359,8 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </li>
      * </ul>
      * <p>
-     * The name of the QuickSight role is invisible to the user except for the console screens dealing with permissions.
+     * The name of the Amazon QuickSight role is invisible to the user except for the console screens dealing with
+     * permissions.
      * </p>
      * 
      * @param role
@@ -381,8 +383,8 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        </li>
      *        </ul>
      *        <p>
-     *        The name of the QuickSight role is invisible to the user except for the console screens dealing with
-     *        permissions.
+     *        The name of the Amazon QuickSight role is invisible to the user except for the console screens dealing
+     *        with permissions.
      * @see UserRole
      */
 
@@ -412,7 +414,8 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </li>
      * </ul>
      * <p>
-     * The name of the QuickSight role is invisible to the user except for the console screens dealing with permissions.
+     * The name of the Amazon QuickSight role is invisible to the user except for the console screens dealing with
+     * permissions.
      * </p>
      * 
      * @return The Amazon QuickSight role of the user. The role can be one of the following default security
@@ -435,8 +438,8 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *         </li>
      *         </ul>
      *         <p>
-     *         The name of the QuickSight role is invisible to the user except for the console screens dealing with
-     *         permissions.
+     *         The name of the Amazon QuickSight role is invisible to the user except for the console screens dealing
+     *         with permissions.
      * @see UserRole
      */
 
@@ -466,7 +469,8 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </li>
      * </ul>
      * <p>
-     * The name of the QuickSight role is invisible to the user except for the console screens dealing with permissions.
+     * The name of the Amazon QuickSight role is invisible to the user except for the console screens dealing with
+     * permissions.
      * </p>
      * 
      * @param role
@@ -489,8 +493,8 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        </li>
      *        </ul>
      *        <p>
-     *        The name of the QuickSight role is invisible to the user except for the console screens dealing with
-     *        permissions.
+     *        The name of the Amazon QuickSight role is invisible to the user except for the console screens dealing
+     *        with permissions.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see UserRole
      */
@@ -522,7 +526,8 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </li>
      * </ul>
      * <p>
-     * The name of the QuickSight role is invisible to the user except for the console screens dealing with permissions.
+     * The name of the Amazon QuickSight role is invisible to the user except for the console screens dealing with
+     * permissions.
      * </p>
      * 
      * @param role
@@ -545,8 +550,8 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        </li>
      *        </ul>
      *        <p>
-     *        The name of the QuickSight role is invisible to the user except for the console screens dealing with
-     *        permissions.
+     *        The name of the Amazon QuickSight role is invisible to the user except for the console screens dealing
+     *        with permissions.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see UserRole
      */
@@ -585,16 +590,16 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </ul>
      * <p>
      * A set of custom permissions includes any combination of these restrictions. Currently, you need to create the
-     * profile names for custom permission sets by using the QuickSight console. Then, you use the
-     * <code>RegisterUser</code> API operation to assign the named set of permissions to a QuickSight user.
+     * profile names for custom permission sets by using the Amazon QuickSight console. Then, you use the
+     * <code>RegisterUser</code> API operation to assign the named set of permissions to a Amazon QuickSight user.
      * </p>
      * <p>
-     * QuickSight custom permissions are applied through IAM policies. Therefore, they override the permissions
-     * typically granted by assigning QuickSight users to one of the default security cohorts in QuickSight (admin,
-     * author, reader).
+     * Amazon QuickSight custom permissions are applied through IAMpolicies. Therefore, they override the permissions
+     * typically granted by assigning Amazon QuickSight users to one of the default security cohorts in Amazon
+     * QuickSight (admin, author, reader).
      * </p>
      * <p>
-     * This feature is available only to QuickSight Enterprise edition subscriptions.
+     * This feature is available only to Amazon QuickSight Enterprise edition subscriptions.
      * </p>
      * 
      * @param customPermissionsName
@@ -625,16 +630,17 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        </ul>
      *        <p>
      *        A set of custom permissions includes any combination of these restrictions. Currently, you need to create
-     *        the profile names for custom permission sets by using the QuickSight console. Then, you use the
-     *        <code>RegisterUser</code> API operation to assign the named set of permissions to a QuickSight user.
+     *        the profile names for custom permission sets by using the Amazon QuickSight console. Then, you use the
+     *        <code>RegisterUser</code> API operation to assign the named set of permissions to a Amazon QuickSight
+     *        user.
      *        </p>
      *        <p>
-     *        QuickSight custom permissions are applied through IAM policies. Therefore, they override the permissions
-     *        typically granted by assigning QuickSight users to one of the default security cohorts in QuickSight
-     *        (admin, author, reader).
+     *        Amazon QuickSight custom permissions are applied through IAMpolicies. Therefore, they override the
+     *        permissions typically granted by assigning Amazon QuickSight users to one of the default security cohorts
+     *        in Amazon QuickSight (admin, author, reader).
      *        </p>
      *        <p>
-     *        This feature is available only to QuickSight Enterprise edition subscriptions.
+     *        This feature is available only to Amazon QuickSight Enterprise edition subscriptions.
      */
 
     public void setCustomPermissionsName(String customPermissionsName) {
@@ -670,16 +676,16 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </ul>
      * <p>
      * A set of custom permissions includes any combination of these restrictions. Currently, you need to create the
-     * profile names for custom permission sets by using the QuickSight console. Then, you use the
-     * <code>RegisterUser</code> API operation to assign the named set of permissions to a QuickSight user.
+     * profile names for custom permission sets by using the Amazon QuickSight console. Then, you use the
+     * <code>RegisterUser</code> API operation to assign the named set of permissions to a Amazon QuickSight user.
      * </p>
      * <p>
-     * QuickSight custom permissions are applied through IAM policies. Therefore, they override the permissions
-     * typically granted by assigning QuickSight users to one of the default security cohorts in QuickSight (admin,
-     * author, reader).
+     * Amazon QuickSight custom permissions are applied through IAMpolicies. Therefore, they override the permissions
+     * typically granted by assigning Amazon QuickSight users to one of the default security cohorts in Amazon
+     * QuickSight (admin, author, reader).
      * </p>
      * <p>
-     * This feature is available only to QuickSight Enterprise edition subscriptions.
+     * This feature is available only to Amazon QuickSight Enterprise edition subscriptions.
      * </p>
      * 
      * @return (Enterprise edition only) The name of the custom permissions profile that you want to assign to this
@@ -709,16 +715,17 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *         </ul>
      *         <p>
      *         A set of custom permissions includes any combination of these restrictions. Currently, you need to create
-     *         the profile names for custom permission sets by using the QuickSight console. Then, you use the
-     *         <code>RegisterUser</code> API operation to assign the named set of permissions to a QuickSight user.
+     *         the profile names for custom permission sets by using the Amazon QuickSight console. Then, you use the
+     *         <code>RegisterUser</code> API operation to assign the named set of permissions to a Amazon QuickSight
+     *         user.
      *         </p>
      *         <p>
-     *         QuickSight custom permissions are applied through IAM policies. Therefore, they override the permissions
-     *         typically granted by assigning QuickSight users to one of the default security cohorts in QuickSight
-     *         (admin, author, reader).
+     *         Amazon QuickSight custom permissions are applied through IAMpolicies. Therefore, they override the
+     *         permissions typically granted by assigning Amazon QuickSight users to one of the default security cohorts
+     *         in Amazon QuickSight (admin, author, reader).
      *         </p>
      *         <p>
-     *         This feature is available only to QuickSight Enterprise edition subscriptions.
+     *         This feature is available only to Amazon QuickSight Enterprise edition subscriptions.
      */
 
     public String getCustomPermissionsName() {
@@ -754,16 +761,16 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </ul>
      * <p>
      * A set of custom permissions includes any combination of these restrictions. Currently, you need to create the
-     * profile names for custom permission sets by using the QuickSight console. Then, you use the
-     * <code>RegisterUser</code> API operation to assign the named set of permissions to a QuickSight user.
+     * profile names for custom permission sets by using the Amazon QuickSight console. Then, you use the
+     * <code>RegisterUser</code> API operation to assign the named set of permissions to a Amazon QuickSight user.
      * </p>
      * <p>
-     * QuickSight custom permissions are applied through IAM policies. Therefore, they override the permissions
-     * typically granted by assigning QuickSight users to one of the default security cohorts in QuickSight (admin,
-     * author, reader).
+     * Amazon QuickSight custom permissions are applied through IAMpolicies. Therefore, they override the permissions
+     * typically granted by assigning Amazon QuickSight users to one of the default security cohorts in Amazon
+     * QuickSight (admin, author, reader).
      * </p>
      * <p>
-     * This feature is available only to QuickSight Enterprise edition subscriptions.
+     * This feature is available only to Amazon QuickSight Enterprise edition subscriptions.
      * </p>
      * 
      * @param customPermissionsName
@@ -794,16 +801,17 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        </ul>
      *        <p>
      *        A set of custom permissions includes any combination of these restrictions. Currently, you need to create
-     *        the profile names for custom permission sets by using the QuickSight console. Then, you use the
-     *        <code>RegisterUser</code> API operation to assign the named set of permissions to a QuickSight user.
+     *        the profile names for custom permission sets by using the Amazon QuickSight console. Then, you use the
+     *        <code>RegisterUser</code> API operation to assign the named set of permissions to a Amazon QuickSight
+     *        user.
      *        </p>
      *        <p>
-     *        QuickSight custom permissions are applied through IAM policies. Therefore, they override the permissions
-     *        typically granted by assigning QuickSight users to one of the default security cohorts in QuickSight
-     *        (admin, author, reader).
+     *        Amazon QuickSight custom permissions are applied through IAMpolicies. Therefore, they override the
+     *        permissions typically granted by assigning Amazon QuickSight users to one of the default security cohorts
+     *        in Amazon QuickSight (admin, author, reader).
      *        </p>
      *        <p>
-     *        This feature is available only to QuickSight Enterprise edition subscriptions.
+     *        This feature is available only to Amazon QuickSight Enterprise edition subscriptions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -882,9 +890,9 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The type of supported external login provider that provides identity to let a user federate into QuickSight with
-     * an associated AWS Identity and Access Management (IAM) role. The type of supported external login provider can be
-     * one of the following.
+     * The type of supported external login provider that provides identity to let a user federate into Amazon
+     * QuickSight with an associated Identity and Access Management(IAM) role. The type of supported external login
+     * provider can be one of the following.
      * </p>
      * <ul>
      * <li>
@@ -909,9 +917,9 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </ul>
      * 
      * @param externalLoginFederationProviderType
-     *        The type of supported external login provider that provides identity to let a user federate into
-     *        QuickSight with an associated AWS Identity and Access Management (IAM) role. The type of supported
-     *        external login provider can be one of the following.</p>
+     *        The type of supported external login provider that provides identity to let a user federate into Amazon
+     *        QuickSight with an associated Identity and Access Management(IAM) role. The type of supported external
+     *        login provider can be one of the following.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -940,9 +948,9 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The type of supported external login provider that provides identity to let a user federate into QuickSight with
-     * an associated AWS Identity and Access Management (IAM) role. The type of supported external login provider can be
-     * one of the following.
+     * The type of supported external login provider that provides identity to let a user federate into Amazon
+     * QuickSight with an associated Identity and Access Management(IAM) role. The type of supported external login
+     * provider can be one of the following.
      * </p>
      * <ul>
      * <li>
@@ -966,9 +974,9 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </li>
      * </ul>
      * 
-     * @return The type of supported external login provider that provides identity to let a user federate into
-     *         QuickSight with an associated AWS Identity and Access Management (IAM) role. The type of supported
-     *         external login provider can be one of the following.</p>
+     * @return The type of supported external login provider that provides identity to let a user federate into Amazon
+     *         QuickSight with an associated Identity and Access Management(IAM) role. The type of supported external
+     *         login provider can be one of the following.</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -997,9 +1005,9 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The type of supported external login provider that provides identity to let a user federate into QuickSight with
-     * an associated AWS Identity and Access Management (IAM) role. The type of supported external login provider can be
-     * one of the following.
+     * The type of supported external login provider that provides identity to let a user federate into Amazon
+     * QuickSight with an associated Identity and Access Management(IAM) role. The type of supported external login
+     * provider can be one of the following.
      * </p>
      * <ul>
      * <li>
@@ -1024,9 +1032,9 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </ul>
      * 
      * @param externalLoginFederationProviderType
-     *        The type of supported external login provider that provides identity to let a user federate into
-     *        QuickSight with an associated AWS Identity and Access Management (IAM) role. The type of supported
-     *        external login provider can be one of the following.</p>
+     *        The type of supported external login provider that provides identity to let a user federate into Amazon
+     *        QuickSight with an associated Identity and Access Management(IAM) role. The type of supported external
+     *        login provider can be one of the following.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1057,15 +1065,16 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The URL of the custom OpenID Connect (OIDC) provider that provides identity to let a user federate into
-     * QuickSight with an associated AWS Identity and Access Management (IAM) role. This parameter should only be used
-     * when <code>ExternalLoginFederationProviderType</code> parameter is set to <code>CUSTOM_OIDC</code>.
+     * The URL of the custom OpenID Connect (OIDC) provider that provides identity to let a user federate into Amazon
+     * QuickSight with an associated Identity and Access Management(IAM) role. This parameter should only be used when
+     * <code>ExternalLoginFederationProviderType</code> parameter is set to <code>CUSTOM_OIDC</code>.
      * </p>
      * 
      * @param customFederationProviderUrl
      *        The URL of the custom OpenID Connect (OIDC) provider that provides identity to let a user federate into
-     *        QuickSight with an associated AWS Identity and Access Management (IAM) role. This parameter should only be
-     *        used when <code>ExternalLoginFederationProviderType</code> parameter is set to <code>CUSTOM_OIDC</code>.
+     *        Amazon QuickSight with an associated Identity and Access Management(IAM) role. This parameter should only
+     *        be used when <code>ExternalLoginFederationProviderType</code> parameter is set to <code>CUSTOM_OIDC</code>
+     *        .
      */
 
     public void setCustomFederationProviderUrl(String customFederationProviderUrl) {
@@ -1074,13 +1083,13 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The URL of the custom OpenID Connect (OIDC) provider that provides identity to let a user federate into
-     * QuickSight with an associated AWS Identity and Access Management (IAM) role. This parameter should only be used
-     * when <code>ExternalLoginFederationProviderType</code> parameter is set to <code>CUSTOM_OIDC</code>.
+     * The URL of the custom OpenID Connect (OIDC) provider that provides identity to let a user federate into Amazon
+     * QuickSight with an associated Identity and Access Management(IAM) role. This parameter should only be used when
+     * <code>ExternalLoginFederationProviderType</code> parameter is set to <code>CUSTOM_OIDC</code>.
      * </p>
      * 
      * @return The URL of the custom OpenID Connect (OIDC) provider that provides identity to let a user federate into
-     *         QuickSight with an associated AWS Identity and Access Management (IAM) role. This parameter should only
+     *         Amazon QuickSight with an associated Identity and Access Management(IAM) role. This parameter should only
      *         be used when <code>ExternalLoginFederationProviderType</code> parameter is set to
      *         <code>CUSTOM_OIDC</code>.
      */
@@ -1091,15 +1100,16 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The URL of the custom OpenID Connect (OIDC) provider that provides identity to let a user federate into
-     * QuickSight with an associated AWS Identity and Access Management (IAM) role. This parameter should only be used
-     * when <code>ExternalLoginFederationProviderType</code> parameter is set to <code>CUSTOM_OIDC</code>.
+     * The URL of the custom OpenID Connect (OIDC) provider that provides identity to let a user federate into Amazon
+     * QuickSight with an associated Identity and Access Management(IAM) role. This parameter should only be used when
+     * <code>ExternalLoginFederationProviderType</code> parameter is set to <code>CUSTOM_OIDC</code>.
      * </p>
      * 
      * @param customFederationProviderUrl
      *        The URL of the custom OpenID Connect (OIDC) provider that provides identity to let a user federate into
-     *        QuickSight with an associated AWS Identity and Access Management (IAM) role. This parameter should only be
-     *        used when <code>ExternalLoginFederationProviderType</code> parameter is set to <code>CUSTOM_OIDC</code>.
+     *        Amazon QuickSight with an associated Identity and Access Management(IAM) role. This parameter should only
+     *        be used when <code>ExternalLoginFederationProviderType</code> parameter is set to <code>CUSTOM_OIDC</code>
+     *        .
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

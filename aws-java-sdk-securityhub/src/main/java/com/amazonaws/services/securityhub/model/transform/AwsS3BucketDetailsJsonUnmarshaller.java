@@ -75,6 +75,23 @@ public class AwsS3BucketDetailsJsonUnmarshaller implements Unmarshaller<AwsS3Buc
                     awsS3BucketDetails
                             .setPublicAccessBlockConfiguration(AwsS3AccountPublicAccessBlockDetailsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("AccessControlList", targetDepth)) {
+                    context.nextToken();
+                    awsS3BucketDetails.setAccessControlList(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("BucketLoggingConfiguration", targetDepth)) {
+                    context.nextToken();
+                    awsS3BucketDetails.setBucketLoggingConfiguration(AwsS3BucketLoggingConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("BucketWebsiteConfiguration", targetDepth)) {
+                    context.nextToken();
+                    awsS3BucketDetails.setBucketWebsiteConfiguration(AwsS3BucketWebsiteConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("BucketNotificationConfiguration", targetDepth)) {
+                    context.nextToken();
+                    awsS3BucketDetails.setBucketNotificationConfiguration(AwsS3BucketNotificationConfigurationJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

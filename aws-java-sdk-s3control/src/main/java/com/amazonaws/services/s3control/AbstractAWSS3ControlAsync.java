@@ -82,6 +82,19 @@ public class AbstractAWSS3ControlAsync extends AbstractAWSS3Control implements A
     }
 
     @Override
+    public java.util.concurrent.Future<CreateMultiRegionAccessPointResult> createMultiRegionAccessPointAsync(CreateMultiRegionAccessPointRequest request) {
+
+        return createMultiRegionAccessPointAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateMultiRegionAccessPointResult> createMultiRegionAccessPointAsync(CreateMultiRegionAccessPointRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateMultiRegionAccessPointRequest, CreateMultiRegionAccessPointResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteAccessPointResult> deleteAccessPointAsync(DeleteAccessPointRequest request) {
 
         return deleteAccessPointAsync(request, null);
@@ -205,6 +218,19 @@ public class AbstractAWSS3ControlAsync extends AbstractAWSS3Control implements A
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteMultiRegionAccessPointResult> deleteMultiRegionAccessPointAsync(DeleteMultiRegionAccessPointRequest request) {
+
+        return deleteMultiRegionAccessPointAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteMultiRegionAccessPointResult> deleteMultiRegionAccessPointAsync(DeleteMultiRegionAccessPointRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteMultiRegionAccessPointRequest, DeleteMultiRegionAccessPointResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeletePublicAccessBlockResult> deletePublicAccessBlockAsync(DeletePublicAccessBlockRequest request) {
 
         return deletePublicAccessBlockAsync(request, null);
@@ -254,6 +280,21 @@ public class AbstractAWSS3ControlAsync extends AbstractAWSS3Control implements A
     @Override
     public java.util.concurrent.Future<DescribeJobResult> describeJobAsync(DescribeJobRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeJobRequest, DescribeJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeMultiRegionAccessPointOperationResult> describeMultiRegionAccessPointOperationAsync(
+            DescribeMultiRegionAccessPointOperationRequest request) {
+
+        return describeMultiRegionAccessPointOperationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeMultiRegionAccessPointOperationResult> describeMultiRegionAccessPointOperationAsync(
+            DescribeMultiRegionAccessPointOperationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeMultiRegionAccessPointOperationRequest, DescribeMultiRegionAccessPointOperationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -423,6 +464,49 @@ public class AbstractAWSS3ControlAsync extends AbstractAWSS3Control implements A
     }
 
     @Override
+    public java.util.concurrent.Future<GetMultiRegionAccessPointResult> getMultiRegionAccessPointAsync(GetMultiRegionAccessPointRequest request) {
+
+        return getMultiRegionAccessPointAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMultiRegionAccessPointResult> getMultiRegionAccessPointAsync(GetMultiRegionAccessPointRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetMultiRegionAccessPointRequest, GetMultiRegionAccessPointResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMultiRegionAccessPointPolicyResult> getMultiRegionAccessPointPolicyAsync(
+            GetMultiRegionAccessPointPolicyRequest request) {
+
+        return getMultiRegionAccessPointPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMultiRegionAccessPointPolicyResult> getMultiRegionAccessPointPolicyAsync(
+            GetMultiRegionAccessPointPolicyRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetMultiRegionAccessPointPolicyRequest, GetMultiRegionAccessPointPolicyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMultiRegionAccessPointPolicyStatusResult> getMultiRegionAccessPointPolicyStatusAsync(
+            GetMultiRegionAccessPointPolicyStatusRequest request) {
+
+        return getMultiRegionAccessPointPolicyStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMultiRegionAccessPointPolicyStatusResult> getMultiRegionAccessPointPolicyStatusAsync(
+            GetMultiRegionAccessPointPolicyStatusRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetMultiRegionAccessPointPolicyStatusRequest, GetMultiRegionAccessPointPolicyStatusResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetPublicAccessBlockResult> getPublicAccessBlockAsync(GetPublicAccessBlockRequest request) {
 
         return getPublicAccessBlockAsync(request, null);
@@ -500,6 +584,19 @@ public class AbstractAWSS3ControlAsync extends AbstractAWSS3Control implements A
     @Override
     public java.util.concurrent.Future<ListJobsResult> listJobsAsync(ListJobsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListJobsRequest, ListJobsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMultiRegionAccessPointsResult> listMultiRegionAccessPointsAsync(ListMultiRegionAccessPointsRequest request) {
+
+        return listMultiRegionAccessPointsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMultiRegionAccessPointsResult> listMultiRegionAccessPointsAsync(ListMultiRegionAccessPointsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListMultiRegionAccessPointsRequest, ListMultiRegionAccessPointsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -623,6 +720,21 @@ public class AbstractAWSS3ControlAsync extends AbstractAWSS3Control implements A
     @Override
     public java.util.concurrent.Future<PutJobTaggingResult> putJobTaggingAsync(PutJobTaggingRequest request,
             com.amazonaws.handlers.AsyncHandler<PutJobTaggingRequest, PutJobTaggingResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutMultiRegionAccessPointPolicyResult> putMultiRegionAccessPointPolicyAsync(
+            PutMultiRegionAccessPointPolicyRequest request) {
+
+        return putMultiRegionAccessPointPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutMultiRegionAccessPointPolicyResult> putMultiRegionAccessPointPolicyAsync(
+            PutMultiRegionAccessPointPolicyRequest request,
+            com.amazonaws.handlers.AsyncHandler<PutMultiRegionAccessPointPolicyRequest, PutMultiRegionAccessPointPolicyResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

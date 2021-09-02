@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A list of QuickSight parameters and the list's override values.
+ * A list of Amazon QuickSight parameters and the list's override values.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/Parameters" target="_top">AWS API
@@ -30,35 +30,35 @@ public class Parameters implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * String parameters.
+     * The parameters that have a data type of string.
      * </p>
      */
     private java.util.List<StringParameter> stringParameters;
     /**
      * <p>
-     * Integer parameters.
+     * The parameters that have a data type of integer.
      * </p>
      */
     private java.util.List<IntegerParameter> integerParameters;
     /**
      * <p>
-     * Decimal parameters.
+     * The parameters that have a data type of decimal.
      * </p>
      */
     private java.util.List<DecimalParameter> decimalParameters;
     /**
      * <p>
-     * Date-time parameters.
+     * The parameters that have a data type of date-time.
      * </p>
      */
     private java.util.List<DateTimeParameter> dateTimeParameters;
 
     /**
      * <p>
-     * String parameters.
+     * The parameters that have a data type of string.
      * </p>
      * 
-     * @return String parameters.
+     * @return The parameters that have a data type of string.
      */
 
     public java.util.List<StringParameter> getStringParameters() {
@@ -67,11 +67,11 @@ public class Parameters implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * String parameters.
+     * The parameters that have a data type of string.
      * </p>
      * 
      * @param stringParameters
-     *        String parameters.
+     *        The parameters that have a data type of string.
      */
 
     public void setStringParameters(java.util.Collection<StringParameter> stringParameters) {
@@ -85,7 +85,7 @@ public class Parameters implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * String parameters.
+     * The parameters that have a data type of string.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -94,7 +94,7 @@ public class Parameters implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param stringParameters
-     *        String parameters.
+     *        The parameters that have a data type of string.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -110,11 +110,11 @@ public class Parameters implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * String parameters.
+     * The parameters that have a data type of string.
      * </p>
      * 
      * @param stringParameters
-     *        String parameters.
+     *        The parameters that have a data type of string.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -125,10 +125,10 @@ public class Parameters implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Integer parameters.
+     * The parameters that have a data type of integer.
      * </p>
      * 
-     * @return Integer parameters.
+     * @return The parameters that have a data type of integer.
      */
 
     public java.util.List<IntegerParameter> getIntegerParameters() {
@@ -137,11 +137,11 @@ public class Parameters implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Integer parameters.
+     * The parameters that have a data type of integer.
      * </p>
      * 
      * @param integerParameters
-     *        Integer parameters.
+     *        The parameters that have a data type of integer.
      */
 
     public void setIntegerParameters(java.util.Collection<IntegerParameter> integerParameters) {
@@ -155,7 +155,7 @@ public class Parameters implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Integer parameters.
+     * The parameters that have a data type of integer.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -164,7 +164,7 @@ public class Parameters implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param integerParameters
-     *        Integer parameters.
+     *        The parameters that have a data type of integer.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -180,11 +180,11 @@ public class Parameters implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Integer parameters.
+     * The parameters that have a data type of integer.
      * </p>
      * 
      * @param integerParameters
-     *        Integer parameters.
+     *        The parameters that have a data type of integer.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -195,10 +195,10 @@ public class Parameters implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Decimal parameters.
+     * The parameters that have a data type of decimal.
      * </p>
      * 
-     * @return Decimal parameters.
+     * @return The parameters that have a data type of decimal.
      */
 
     public java.util.List<DecimalParameter> getDecimalParameters() {
@@ -207,11 +207,11 @@ public class Parameters implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Decimal parameters.
+     * The parameters that have a data type of decimal.
      * </p>
      * 
      * @param decimalParameters
-     *        Decimal parameters.
+     *        The parameters that have a data type of decimal.
      */
 
     public void setDecimalParameters(java.util.Collection<DecimalParameter> decimalParameters) {
@@ -225,7 +225,7 @@ public class Parameters implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Decimal parameters.
+     * The parameters that have a data type of decimal.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -234,7 +234,7 @@ public class Parameters implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param decimalParameters
-     *        Decimal parameters.
+     *        The parameters that have a data type of decimal.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -250,11 +250,11 @@ public class Parameters implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Decimal parameters.
+     * The parameters that have a data type of decimal.
      * </p>
      * 
      * @param decimalParameters
-     *        Decimal parameters.
+     *        The parameters that have a data type of decimal.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -265,10 +265,10 @@ public class Parameters implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Date-time parameters.
+     * The parameters that have a data type of date-time.
      * </p>
      * 
-     * @return Date-time parameters.
+     * @return The parameters that have a data type of date-time.
      */
 
     public java.util.List<DateTimeParameter> getDateTimeParameters() {
@@ -277,11 +277,11 @@ public class Parameters implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Date-time parameters.
+     * The parameters that have a data type of date-time.
      * </p>
      * 
      * @param dateTimeParameters
-     *        Date-time parameters.
+     *        The parameters that have a data type of date-time.
      */
 
     public void setDateTimeParameters(java.util.Collection<DateTimeParameter> dateTimeParameters) {
@@ -295,7 +295,7 @@ public class Parameters implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Date-time parameters.
+     * The parameters that have a data type of date-time.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -304,7 +304,7 @@ public class Parameters implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param dateTimeParameters
-     *        Date-time parameters.
+     *        The parameters that have a data type of date-time.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -320,11 +320,11 @@ public class Parameters implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Date-time parameters.
+     * The parameters that have a data type of date-time.
      * </p>
      * 
      * @param dateTimeParameters
-     *        Date-time parameters.
+     *        The parameters that have a data type of date-time.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

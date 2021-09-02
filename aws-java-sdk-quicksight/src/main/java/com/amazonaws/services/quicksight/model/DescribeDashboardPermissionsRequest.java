@@ -27,24 +27,24 @@ public class DescribeDashboardPermissionsRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the dashboard that you're describing permissions for.
+     * The ID of the Amazon Web Services account that contains the dashboard that you're describing permissions for.
      * </p>
      */
     private String awsAccountId;
     /**
      * <p>
-     * The ID for the dashboard, also added to the IAM policy.
+     * The ID for the dashboard, also added to the IAMpolicy.
      * </p>
      */
     private String dashboardId;
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the dashboard that you're describing permissions for.
+     * The ID of the Amazon Web Services account that contains the dashboard that you're describing permissions for.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the dashboard that you're describing permissions
+     *        The ID of the Amazon Web Services account that contains the dashboard that you're describing permissions
      *        for.
      */
 
@@ -54,10 +54,10 @@ public class DescribeDashboardPermissionsRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the dashboard that you're describing permissions for.
+     * The ID of the Amazon Web Services account that contains the dashboard that you're describing permissions for.
      * </p>
      * 
-     * @return The ID of the Amazon Web Services account; that contains the dashboard that you're describing permissions
+     * @return The ID of the Amazon Web Services account that contains the dashboard that you're describing permissions
      *         for.
      */
 
@@ -67,11 +67,11 @@ public class DescribeDashboardPermissionsRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the dashboard that you're describing permissions for.
+     * The ID of the Amazon Web Services account that contains the dashboard that you're describing permissions for.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the dashboard that you're describing permissions
+     *        The ID of the Amazon Web Services account that contains the dashboard that you're describing permissions
      *        for.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -83,11 +83,11 @@ public class DescribeDashboardPermissionsRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The ID for the dashboard, also added to the IAM policy.
+     * The ID for the dashboard, also added to the IAMpolicy.
      * </p>
      * 
      * @param dashboardId
-     *        The ID for the dashboard, also added to the IAM policy.
+     *        The ID for the dashboard, also added to the IAMpolicy.
      */
 
     public void setDashboardId(String dashboardId) {
@@ -96,10 +96,10 @@ public class DescribeDashboardPermissionsRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The ID for the dashboard, also added to the IAM policy.
+     * The ID for the dashboard, also added to the IAMpolicy.
      * </p>
      * 
-     * @return The ID for the dashboard, also added to the IAM policy.
+     * @return The ID for the dashboard, also added to the IAMpolicy.
      */
 
     public String getDashboardId() {
@@ -108,11 +108,11 @@ public class DescribeDashboardPermissionsRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The ID for the dashboard, also added to the IAM policy.
+     * The ID for the dashboard, also added to the IAMpolicy.
      * </p>
      * 
      * @param dashboardId
-     *        The ID for the dashboard, also added to the IAM policy.
+     *        The ID for the dashboard, also added to the IAMpolicy.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

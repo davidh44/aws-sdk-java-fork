@@ -23,10 +23,13 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CreateCertificateAuthority.html"
  * >CreateCertificateAuthority</a> and <a
  * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_UpdateCertificateAuthority.html"
- * >UpdateCertificateAuthority</a> actions. Your private certificate authority (CA) can create and maintain a
- * certificate revocation list (CRL). A CRL contains information about certificates revoked by your CA. For more
- * information, see <a
- * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_RevokeCertificate.html">RevokeCertificate</a>.
+ * >UpdateCertificateAuthority</a> actions. Your private certificate authority (CA) can configure Online Certificate
+ * Status Protocol (OCSP) support and/or maintain a certificate revocation list (CRL). OCSP returns validation
+ * information about certificates as requested by clients, and a CRL contains an updated list of certificates revoked by
+ * your CA. For more information, see <a
+ * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_RevokeCertificate.html">RevokeCertificate</a> and
+ * <a href="https://docs.aws.amazon.com/acm-pca/latest/userguide/revocation-setup.html">Setting up a certificate
+ * revocation method</a> in the <i>AWS Certificate Manager Private Certificate Authority (PCA) User Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/RevocationConfiguration" target="_top">AWS
@@ -37,18 +40,31 @@ public class RevocationConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Configuration of the certificate revocation list (CRL), if any, maintained by your private CA.
+     * Configuration of the certificate revocation list (CRL), if any, maintained by your private CA. A CRL is typically
+     * updated approximately 30 minutes after a certificate is revoked. If for any reason a CRL update fails, ACM
+     * Private CA makes further attempts every 15 minutes.
      * </p>
      */
     private CrlConfiguration crlConfiguration;
+    /**
+     * <p>
+     * Configuration of Online Certificate Status Protocol (OCSP) support, if any, maintained by your private CA. When
+     * you revoke a certificate, OCSP responses may take up to 60 minutes to reflect the new status.
+     * </p>
+     */
+    private OcspConfiguration ocspConfiguration;
 
     /**
      * <p>
-     * Configuration of the certificate revocation list (CRL), if any, maintained by your private CA.
+     * Configuration of the certificate revocation list (CRL), if any, maintained by your private CA. A CRL is typically
+     * updated approximately 30 minutes after a certificate is revoked. If for any reason a CRL update fails, ACM
+     * Private CA makes further attempts every 15 minutes.
      * </p>
      * 
      * @param crlConfiguration
-     *        Configuration of the certificate revocation list (CRL), if any, maintained by your private CA.
+     *        Configuration of the certificate revocation list (CRL), if any, maintained by your private CA. A CRL is
+     *        typically updated approximately 30 minutes after a certificate is revoked. If for any reason a CRL update
+     *        fails, ACM Private CA makes further attempts every 15 minutes.
      */
 
     public void setCrlConfiguration(CrlConfiguration crlConfiguration) {
@@ -57,10 +73,14 @@ public class RevocationConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Configuration of the certificate revocation list (CRL), if any, maintained by your private CA.
+     * Configuration of the certificate revocation list (CRL), if any, maintained by your private CA. A CRL is typically
+     * updated approximately 30 minutes after a certificate is revoked. If for any reason a CRL update fails, ACM
+     * Private CA makes further attempts every 15 minutes.
      * </p>
      * 
-     * @return Configuration of the certificate revocation list (CRL), if any, maintained by your private CA.
+     * @return Configuration of the certificate revocation list (CRL), if any, maintained by your private CA. A CRL is
+     *         typically updated approximately 30 minutes after a certificate is revoked. If for any reason a CRL update
+     *         fails, ACM Private CA makes further attempts every 15 minutes.
      */
 
     public CrlConfiguration getCrlConfiguration() {
@@ -69,16 +89,66 @@ public class RevocationConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Configuration of the certificate revocation list (CRL), if any, maintained by your private CA.
+     * Configuration of the certificate revocation list (CRL), if any, maintained by your private CA. A CRL is typically
+     * updated approximately 30 minutes after a certificate is revoked. If for any reason a CRL update fails, ACM
+     * Private CA makes further attempts every 15 minutes.
      * </p>
      * 
      * @param crlConfiguration
-     *        Configuration of the certificate revocation list (CRL), if any, maintained by your private CA.
+     *        Configuration of the certificate revocation list (CRL), if any, maintained by your private CA. A CRL is
+     *        typically updated approximately 30 minutes after a certificate is revoked. If for any reason a CRL update
+     *        fails, ACM Private CA makes further attempts every 15 minutes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public RevocationConfiguration withCrlConfiguration(CrlConfiguration crlConfiguration) {
         setCrlConfiguration(crlConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Configuration of Online Certificate Status Protocol (OCSP) support, if any, maintained by your private CA. When
+     * you revoke a certificate, OCSP responses may take up to 60 minutes to reflect the new status.
+     * </p>
+     * 
+     * @param ocspConfiguration
+     *        Configuration of Online Certificate Status Protocol (OCSP) support, if any, maintained by your private CA.
+     *        When you revoke a certificate, OCSP responses may take up to 60 minutes to reflect the new status.
+     */
+
+    public void setOcspConfiguration(OcspConfiguration ocspConfiguration) {
+        this.ocspConfiguration = ocspConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration of Online Certificate Status Protocol (OCSP) support, if any, maintained by your private CA. When
+     * you revoke a certificate, OCSP responses may take up to 60 minutes to reflect the new status.
+     * </p>
+     * 
+     * @return Configuration of Online Certificate Status Protocol (OCSP) support, if any, maintained by your private
+     *         CA. When you revoke a certificate, OCSP responses may take up to 60 minutes to reflect the new status.
+     */
+
+    public OcspConfiguration getOcspConfiguration() {
+        return this.ocspConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration of Online Certificate Status Protocol (OCSP) support, if any, maintained by your private CA. When
+     * you revoke a certificate, OCSP responses may take up to 60 minutes to reflect the new status.
+     * </p>
+     * 
+     * @param ocspConfiguration
+     *        Configuration of Online Certificate Status Protocol (OCSP) support, if any, maintained by your private CA.
+     *        When you revoke a certificate, OCSP responses may take up to 60 minutes to reflect the new status.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RevocationConfiguration withOcspConfiguration(OcspConfiguration ocspConfiguration) {
+        setOcspConfiguration(ocspConfiguration);
         return this;
     }
 
@@ -95,7 +165,9 @@ public class RevocationConfiguration implements Serializable, Cloneable, Structu
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getCrlConfiguration() != null)
-            sb.append("CrlConfiguration: ").append(getCrlConfiguration());
+            sb.append("CrlConfiguration: ").append(getCrlConfiguration()).append(",");
+        if (getOcspConfiguration() != null)
+            sb.append("OcspConfiguration: ").append(getOcspConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -114,6 +186,10 @@ public class RevocationConfiguration implements Serializable, Cloneable, Structu
             return false;
         if (other.getCrlConfiguration() != null && other.getCrlConfiguration().equals(this.getCrlConfiguration()) == false)
             return false;
+        if (other.getOcspConfiguration() == null ^ this.getOcspConfiguration() == null)
+            return false;
+        if (other.getOcspConfiguration() != null && other.getOcspConfiguration().equals(this.getOcspConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -123,6 +199,7 @@ public class RevocationConfiguration implements Serializable, Cloneable, Structu
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getCrlConfiguration() == null) ? 0 : getCrlConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getOcspConfiguration() == null) ? 0 : getOcspConfiguration().hashCode());
         return hashCode;
     }
 

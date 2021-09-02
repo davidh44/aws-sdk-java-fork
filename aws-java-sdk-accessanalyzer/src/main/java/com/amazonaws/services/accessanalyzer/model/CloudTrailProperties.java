@@ -30,15 +30,15 @@ public class CloudTrailProperties implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The end of the time range for which Access Analyzer reviews your CloudTrail events. Events with a timestamp after
-     * this time are not considered to generate a policy. If this is not included in the request, the default value is
-     * the current time.
+     * The end of the time range for which IAM Access Analyzer reviews your CloudTrail events. Events with a timestamp
+     * after this time are not considered to generate a policy. If this is not included in the request, the default
+     * value is the current time.
      * </p>
      */
     private java.util.Date endTime;
     /**
      * <p>
-     * The start of the time range for which Access Analyzer reviews your CloudTrail events. Events with a timestamp
+     * The start of the time range for which IAM Access Analyzer reviews your CloudTrail events. Events with a timestamp
      * before this time are not considered to generate a policy.
      * </p>
      */
@@ -52,13 +52,13 @@ public class CloudTrailProperties implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The end of the time range for which Access Analyzer reviews your CloudTrail events. Events with a timestamp after
-     * this time are not considered to generate a policy. If this is not included in the request, the default value is
-     * the current time.
+     * The end of the time range for which IAM Access Analyzer reviews your CloudTrail events. Events with a timestamp
+     * after this time are not considered to generate a policy. If this is not included in the request, the default
+     * value is the current time.
      * </p>
      * 
      * @param endTime
-     *        The end of the time range for which Access Analyzer reviews your CloudTrail events. Events with a
+     *        The end of the time range for which IAM Access Analyzer reviews your CloudTrail events. Events with a
      *        timestamp after this time are not considered to generate a policy. If this is not included in the request,
      *        the default value is the current time.
      */
@@ -69,12 +69,12 @@ public class CloudTrailProperties implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The end of the time range for which Access Analyzer reviews your CloudTrail events. Events with a timestamp after
-     * this time are not considered to generate a policy. If this is not included in the request, the default value is
-     * the current time.
+     * The end of the time range for which IAM Access Analyzer reviews your CloudTrail events. Events with a timestamp
+     * after this time are not considered to generate a policy. If this is not included in the request, the default
+     * value is the current time.
      * </p>
      * 
-     * @return The end of the time range for which Access Analyzer reviews your CloudTrail events. Events with a
+     * @return The end of the time range for which IAM Access Analyzer reviews your CloudTrail events. Events with a
      *         timestamp after this time are not considered to generate a policy. If this is not included in the
      *         request, the default value is the current time.
      */
@@ -85,13 +85,13 @@ public class CloudTrailProperties implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The end of the time range for which Access Analyzer reviews your CloudTrail events. Events with a timestamp after
-     * this time are not considered to generate a policy. If this is not included in the request, the default value is
-     * the current time.
+     * The end of the time range for which IAM Access Analyzer reviews your CloudTrail events. Events with a timestamp
+     * after this time are not considered to generate a policy. If this is not included in the request, the default
+     * value is the current time.
      * </p>
      * 
      * @param endTime
-     *        The end of the time range for which Access Analyzer reviews your CloudTrail events. Events with a
+     *        The end of the time range for which IAM Access Analyzer reviews your CloudTrail events. Events with a
      *        timestamp after this time are not considered to generate a policy. If this is not included in the request,
      *        the default value is the current time.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -104,12 +104,12 @@ public class CloudTrailProperties implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The start of the time range for which Access Analyzer reviews your CloudTrail events. Events with a timestamp
+     * The start of the time range for which IAM Access Analyzer reviews your CloudTrail events. Events with a timestamp
      * before this time are not considered to generate a policy.
      * </p>
      * 
      * @param startTime
-     *        The start of the time range for which Access Analyzer reviews your CloudTrail events. Events with a
+     *        The start of the time range for which IAM Access Analyzer reviews your CloudTrail events. Events with a
      *        timestamp before this time are not considered to generate a policy.
      */
 
@@ -119,11 +119,11 @@ public class CloudTrailProperties implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The start of the time range for which Access Analyzer reviews your CloudTrail events. Events with a timestamp
+     * The start of the time range for which IAM Access Analyzer reviews your CloudTrail events. Events with a timestamp
      * before this time are not considered to generate a policy.
      * </p>
      * 
-     * @return The start of the time range for which Access Analyzer reviews your CloudTrail events. Events with a
+     * @return The start of the time range for which IAM Access Analyzer reviews your CloudTrail events. Events with a
      *         timestamp before this time are not considered to generate a policy.
      */
 
@@ -133,12 +133,12 @@ public class CloudTrailProperties implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The start of the time range for which Access Analyzer reviews your CloudTrail events. Events with a timestamp
+     * The start of the time range for which IAM Access Analyzer reviews your CloudTrail events. Events with a timestamp
      * before this time are not considered to generate a policy.
      * </p>
      * 
      * @param startTime
-     *        The start of the time range for which Access Analyzer reviews your CloudTrail events. Events with a
+     *        The start of the time range for which IAM Access Analyzer reviews your CloudTrail events. Events with a
      *        timestamp before this time are not considered to generate a policy.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -67,7 +67,7 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The KMS key that is used to encrypt the function's environment variables. This key is only returned if you've
-     * configured a customer managed CMK.
+     * configured a customer managed customer managed key.
      * </p>
      */
     private String kmsKeyArn;
@@ -386,12 +386,12 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The KMS key that is used to encrypt the function's environment variables. This key is only returned if you've
-     * configured a customer managed CMK.
+     * configured a customer managed customer managed key.
      * </p>
      * 
      * @param kmsKeyArn
      *        The KMS key that is used to encrypt the function's environment variables. This key is only returned if
-     *        you've configured a customer managed CMK.
+     *        you've configured a customer managed customer managed key.
      */
 
     public void setKmsKeyArn(String kmsKeyArn) {
@@ -401,11 +401,11 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The KMS key that is used to encrypt the function's environment variables. This key is only returned if you've
-     * configured a customer managed CMK.
+     * configured a customer managed customer managed key.
      * </p>
      * 
      * @return The KMS key that is used to encrypt the function's environment variables. This key is only returned if
-     *         you've configured a customer managed CMK.
+     *         you've configured a customer managed customer managed key.
      */
 
     public String getKmsKeyArn() {
@@ -415,12 +415,12 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The KMS key that is used to encrypt the function's environment variables. This key is only returned if you've
-     * configured a customer managed CMK.
+     * configured a customer managed customer managed key.
      * </p>
      * 
      * @param kmsKeyArn
      *        The KMS key that is used to encrypt the function's environment variables. This key is only returned if
-     *        you've configured a customer managed CMK.
+     *        you've configured a customer managed customer managed key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

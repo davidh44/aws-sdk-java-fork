@@ -90,7 +90,7 @@ public class Alias implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * DELETE_FAILED - Amazon FSx was unable to disassocate the DNS alias from the file system.
+     * DELETE_FAILED - Amazon FSx was unable to disassociate the DNS alias from the file system.
      * </p>
      * </li>
      * </ul>
@@ -323,7 +323,7 @@ public class Alias implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * DELETE_FAILED - Amazon FSx was unable to disassocate the DNS alias from the file system.
+     * DELETE_FAILED - Amazon FSx was unable to disassociate the DNS alias from the file system.
      * </p>
      * </li>
      * </ul>
@@ -353,7 +353,7 @@ public class Alias implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        DELETE_FAILED - Amazon FSx was unable to disassocate the DNS alias from the file system.
+     *        DELETE_FAILED - Amazon FSx was unable to disassociate the DNS alias from the file system.
      *        </p>
      *        </li>
      * @see AliasLifecycle
@@ -390,7 +390,7 @@ public class Alias implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * DELETE_FAILED - Amazon FSx was unable to disassocate the DNS alias from the file system.
+     * DELETE_FAILED - Amazon FSx was unable to disassociate the DNS alias from the file system.
      * </p>
      * </li>
      * </ul>
@@ -419,7 +419,7 @@ public class Alias implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         DELETE_FAILED - Amazon FSx was unable to disassocate the DNS alias from the file system.
+     *         DELETE_FAILED - Amazon FSx was unable to disassociate the DNS alias from the file system.
      *         </p>
      *         </li>
      * @see AliasLifecycle
@@ -456,7 +456,7 @@ public class Alias implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * DELETE_FAILED - Amazon FSx was unable to disassocate the DNS alias from the file system.
+     * DELETE_FAILED - Amazon FSx was unable to disassociate the DNS alias from the file system.
      * </p>
      * </li>
      * </ul>
@@ -486,7 +486,7 @@ public class Alias implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        DELETE_FAILED - Amazon FSx was unable to disassocate the DNS alias from the file system.
+     *        DELETE_FAILED - Amazon FSx was unable to disassociate the DNS alias from the file system.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -525,7 +525,7 @@ public class Alias implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * DELETE_FAILED - Amazon FSx was unable to disassocate the DNS alias from the file system.
+     * DELETE_FAILED - Amazon FSx was unable to disassociate the DNS alias from the file system.
      * </p>
      * </li>
      * </ul>
@@ -555,7 +555,7 @@ public class Alias implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        DELETE_FAILED - Amazon FSx was unable to disassocate the DNS alias from the file system.
+     *        DELETE_FAILED - Amazon FSx was unable to disassociate the DNS alias from the file system.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

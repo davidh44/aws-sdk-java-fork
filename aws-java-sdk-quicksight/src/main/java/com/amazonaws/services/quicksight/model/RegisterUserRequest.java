@@ -32,7 +32,7 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <ul>
      * <li>
      * <p>
-     * <code>IAM</code>: A user whose identity maps to an existing IAM user or role.
+     * <code>IAM</code>: A user whose identity maps to an existing IAMuser or role.
      * </p>
      * </li>
      * <li>
@@ -84,16 +84,16 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String userRole;
     /**
      * <p>
-     * The ARN of the IAM user or role that you are registering with Amazon QuickSight.
+     * The ARN of the IAMuser or role that you are registering with Amazon QuickSight.
      * </p>
      */
     private String iamArn;
     /**
      * <p>
-     * You need to use this parameter only when you register one or more users using an assumed IAM role. You don't need
-     * to provide the session name for other scenarios, for example when you are registering an IAM user or an Amazon
-     * QuickSight user. You can register multiple users using the same IAM role if each user has a different session
-     * name. For more information on assuming IAM roles, see <a
+     * You need to use this parameter only when you register one or more users using an assumed IAMrole. You don't need
+     * to provide the session name for other scenarios, for example when you are registering an IAMuser or an Amazon
+     * QuickSight user. You can register multiple users using the same IAMrole if each user has a different session
+     * name. For more information on assuming IAMroles, see <a
      * href="https://docs.aws.amazon.com/cli/latest/reference/sts/assume-role.html"> <code>assume-role</code> </a> in
      * the <i>AWS CLI Reference.</i>
      * </p>
@@ -101,8 +101,8 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String sessionName;
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that the user is in. Currently, you use the ID for the Amazon Web
-     * Services account; that contains your Amazon QuickSight account.
+     * The ID for the Amazon Web Services account that the user is in. Currently, you use the ID for the Amazon Web
+     * Services account that contains your Amazon QuickSight account.
      * </p>
      */
     private String awsAccountId;
@@ -150,23 +150,23 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * A set of custom permissions includes any combination of these restrictions. Currently, you need to create the
-     * profile names for custom permission sets by using the QuickSight console. Then, you use the
-     * <code>RegisterUser</code> API operation to assign the named set of permissions to a QuickSight user.
+     * profile names for custom permission sets by using the Amazon QuickSight console. Then, you use the
+     * <code>RegisterUser</code> API operation to assign the named set of permissions to a Amazon QuickSight user.
      * </p>
      * <p>
-     * QuickSight custom permissions are applied through IAM policies. Therefore, they override the permissions
-     * typically granted by assigning QuickSight users to one of the default security cohorts in QuickSight (admin,
-     * author, reader).
+     * Amazon QuickSight custom permissions are applied through IAMpolicies. Therefore, they override the permissions
+     * typically granted by assigning Amazon QuickSight users to one of the default security cohorts in Amazon
+     * QuickSight (admin, author, reader).
      * </p>
      * <p>
-     * This feature is available only to QuickSight Enterprise edition subscriptions.
+     * This feature is available only to Amazon QuickSight Enterprise edition subscriptions.
      * </p>
      */
     private String customPermissionsName;
     /**
      * <p>
      * The type of supported external login provider that provides identity to let a user federate into Amazon
-     * QuickSight with an associated AWS Identity and Access Management (IAM) role. The type of supported external login
+     * QuickSight with an associated Identity and Access Management(IAM) role. The type of supported external login
      * provider can be one of the following.
      * </p>
      * <ul>
@@ -188,9 +188,9 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String externalLoginFederationProviderType;
     /**
      * <p>
-     * The URL of the custom OpenID Connect (OIDC) provider that provides identity to let a user federate into
-     * QuickSight with an associated AWS Identity and Access Management (IAM) role. This parameter should only be used
-     * when <code>ExternalLoginFederationProviderType</code> parameter is set to <code>CUSTOM_OIDC</code>.
+     * The URL of the custom OpenID Connect (OIDC) provider that provides identity to let a user federate into Amazon
+     * QuickSight with an associated Identity and Access Management(IAM) role. This parameter should only be used when
+     * <code>ExternalLoginFederationProviderType</code> parameter is set to <code>CUSTOM_OIDC</code>.
      * </p>
      */
     private String customFederationProviderUrl;
@@ -208,7 +208,7 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <ul>
      * <li>
      * <p>
-     * <code>IAM</code>: A user whose identity maps to an existing IAM user or role.
+     * <code>IAM</code>: A user whose identity maps to an existing IAMuser or role.
      * </p>
      * </li>
      * <li>
@@ -224,7 +224,7 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>IAM</code>: A user whose identity maps to an existing IAM user or role.
+     *        <code>IAM</code>: A user whose identity maps to an existing IAMuser or role.
      *        </p>
      *        </li>
      *        <li>
@@ -246,7 +246,7 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <ul>
      * <li>
      * <p>
-     * <code>IAM</code>: A user whose identity maps to an existing IAM user or role.
+     * <code>IAM</code>: A user whose identity maps to an existing IAMuser or role.
      * </p>
      * </li>
      * <li>
@@ -261,7 +261,7 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>IAM</code>: A user whose identity maps to an existing IAM user or role.
+     *         <code>IAM</code>: A user whose identity maps to an existing IAMuser or role.
      *         </p>
      *         </li>
      *         <li>
@@ -283,7 +283,7 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <ul>
      * <li>
      * <p>
-     * <code>IAM</code>: A user whose identity maps to an existing IAM user or role.
+     * <code>IAM</code>: A user whose identity maps to an existing IAMuser or role.
      * </p>
      * </li>
      * <li>
@@ -299,7 +299,7 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>IAM</code>: A user whose identity maps to an existing IAM user or role.
+     *        <code>IAM</code>: A user whose identity maps to an existing IAMuser or role.
      *        </p>
      *        </li>
      *        <li>
@@ -323,7 +323,7 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <ul>
      * <li>
      * <p>
-     * <code>IAM</code>: A user whose identity maps to an existing IAM user or role.
+     * <code>IAM</code>: A user whose identity maps to an existing IAMuser or role.
      * </p>
      * </li>
      * <li>
@@ -339,7 +339,7 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>IAM</code>: A user whose identity maps to an existing IAM user or role.
+     *        <code>IAM</code>: A user whose identity maps to an existing IAMuser or role.
      *        </p>
      *        </li>
      *        <li>
@@ -669,11 +669,11 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The ARN of the IAM user or role that you are registering with Amazon QuickSight.
+     * The ARN of the IAMuser or role that you are registering with Amazon QuickSight.
      * </p>
      * 
      * @param iamArn
-     *        The ARN of the IAM user or role that you are registering with Amazon QuickSight.
+     *        The ARN of the IAMuser or role that you are registering with Amazon QuickSight.
      */
 
     public void setIamArn(String iamArn) {
@@ -682,10 +682,10 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The ARN of the IAM user or role that you are registering with Amazon QuickSight.
+     * The ARN of the IAMuser or role that you are registering with Amazon QuickSight.
      * </p>
      * 
-     * @return The ARN of the IAM user or role that you are registering with Amazon QuickSight.
+     * @return The ARN of the IAMuser or role that you are registering with Amazon QuickSight.
      */
 
     public String getIamArn() {
@@ -694,11 +694,11 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The ARN of the IAM user or role that you are registering with Amazon QuickSight.
+     * The ARN of the IAMuser or role that you are registering with Amazon QuickSight.
      * </p>
      * 
      * @param iamArn
-     *        The ARN of the IAM user or role that you are registering with Amazon QuickSight.
+     *        The ARN of the IAMuser or role that you are registering with Amazon QuickSight.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -709,19 +709,19 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * You need to use this parameter only when you register one or more users using an assumed IAM role. You don't need
-     * to provide the session name for other scenarios, for example when you are registering an IAM user or an Amazon
-     * QuickSight user. You can register multiple users using the same IAM role if each user has a different session
-     * name. For more information on assuming IAM roles, see <a
+     * You need to use this parameter only when you register one or more users using an assumed IAMrole. You don't need
+     * to provide the session name for other scenarios, for example when you are registering an IAMuser or an Amazon
+     * QuickSight user. You can register multiple users using the same IAMrole if each user has a different session
+     * name. For more information on assuming IAMroles, see <a
      * href="https://docs.aws.amazon.com/cli/latest/reference/sts/assume-role.html"> <code>assume-role</code> </a> in
      * the <i>AWS CLI Reference.</i>
      * </p>
      * 
      * @param sessionName
-     *        You need to use this parameter only when you register one or more users using an assumed IAM role. You
-     *        don't need to provide the session name for other scenarios, for example when you are registering an IAM
-     *        user or an Amazon QuickSight user. You can register multiple users using the same IAM role if each user
-     *        has a different session name. For more information on assuming IAM roles, see <a
+     *        You need to use this parameter only when you register one or more users using an assumed IAMrole. You
+     *        don't need to provide the session name for other scenarios, for example when you are registering an
+     *        IAMuser or an Amazon QuickSight user. You can register multiple users using the same IAMrole if each user
+     *        has a different session name. For more information on assuming IAMroles, see <a
      *        href="https://docs.aws.amazon.com/cli/latest/reference/sts/assume-role.html"> <code>assume-role</code>
      *        </a> in the <i>AWS CLI Reference.</i>
      */
@@ -732,18 +732,18 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * You need to use this parameter only when you register one or more users using an assumed IAM role. You don't need
-     * to provide the session name for other scenarios, for example when you are registering an IAM user or an Amazon
-     * QuickSight user. You can register multiple users using the same IAM role if each user has a different session
-     * name. For more information on assuming IAM roles, see <a
+     * You need to use this parameter only when you register one or more users using an assumed IAMrole. You don't need
+     * to provide the session name for other scenarios, for example when you are registering an IAMuser or an Amazon
+     * QuickSight user. You can register multiple users using the same IAMrole if each user has a different session
+     * name. For more information on assuming IAMroles, see <a
      * href="https://docs.aws.amazon.com/cli/latest/reference/sts/assume-role.html"> <code>assume-role</code> </a> in
      * the <i>AWS CLI Reference.</i>
      * </p>
      * 
-     * @return You need to use this parameter only when you register one or more users using an assumed IAM role. You
-     *         don't need to provide the session name for other scenarios, for example when you are registering an IAM
-     *         user or an Amazon QuickSight user. You can register multiple users using the same IAM role if each user
-     *         has a different session name. For more information on assuming IAM roles, see <a
+     * @return You need to use this parameter only when you register one or more users using an assumed IAMrole. You
+     *         don't need to provide the session name for other scenarios, for example when you are registering an
+     *         IAMuser or an Amazon QuickSight user. You can register multiple users using the same IAMrole if each user
+     *         has a different session name. For more information on assuming IAMroles, see <a
      *         href="https://docs.aws.amazon.com/cli/latest/reference/sts/assume-role.html"> <code>assume-role</code>
      *         </a> in the <i>AWS CLI Reference.</i>
      */
@@ -754,19 +754,19 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * You need to use this parameter only when you register one or more users using an assumed IAM role. You don't need
-     * to provide the session name for other scenarios, for example when you are registering an IAM user or an Amazon
-     * QuickSight user. You can register multiple users using the same IAM role if each user has a different session
-     * name. For more information on assuming IAM roles, see <a
+     * You need to use this parameter only when you register one or more users using an assumed IAMrole. You don't need
+     * to provide the session name for other scenarios, for example when you are registering an IAMuser or an Amazon
+     * QuickSight user. You can register multiple users using the same IAMrole if each user has a different session
+     * name. For more information on assuming IAMroles, see <a
      * href="https://docs.aws.amazon.com/cli/latest/reference/sts/assume-role.html"> <code>assume-role</code> </a> in
      * the <i>AWS CLI Reference.</i>
      * </p>
      * 
      * @param sessionName
-     *        You need to use this parameter only when you register one or more users using an assumed IAM role. You
-     *        don't need to provide the session name for other scenarios, for example when you are registering an IAM
-     *        user or an Amazon QuickSight user. You can register multiple users using the same IAM role if each user
-     *        has a different session name. For more information on assuming IAM roles, see <a
+     *        You need to use this parameter only when you register one or more users using an assumed IAMrole. You
+     *        don't need to provide the session name for other scenarios, for example when you are registering an
+     *        IAMuser or an Amazon QuickSight user. You can register multiple users using the same IAMrole if each user
+     *        has a different session name. For more information on assuming IAMroles, see <a
      *        href="https://docs.aws.amazon.com/cli/latest/reference/sts/assume-role.html"> <code>assume-role</code>
      *        </a> in the <i>AWS CLI Reference.</i>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -779,13 +779,13 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that the user is in. Currently, you use the ID for the Amazon Web
-     * Services account; that contains your Amazon QuickSight account.
+     * The ID for the Amazon Web Services account that the user is in. Currently, you use the ID for the Amazon Web
+     * Services account that contains your Amazon QuickSight account.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID for the Amazon Web Services account; that the user is in. Currently, you use the ID for the Amazon
-     *        Web Services account; that contains your Amazon QuickSight account.
+     *        The ID for the Amazon Web Services account that the user is in. Currently, you use the ID for the Amazon
+     *        Web Services account that contains your Amazon QuickSight account.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -794,12 +794,12 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that the user is in. Currently, you use the ID for the Amazon Web
-     * Services account; that contains your Amazon QuickSight account.
+     * The ID for the Amazon Web Services account that the user is in. Currently, you use the ID for the Amazon Web
+     * Services account that contains your Amazon QuickSight account.
      * </p>
      * 
-     * @return The ID for the Amazon Web Services account; that the user is in. Currently, you use the ID for the Amazon
-     *         Web Services account; that contains your Amazon QuickSight account.
+     * @return The ID for the Amazon Web Services account that the user is in. Currently, you use the ID for the Amazon
+     *         Web Services account that contains your Amazon QuickSight account.
      */
 
     public String getAwsAccountId() {
@@ -808,13 +808,13 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that the user is in. Currently, you use the ID for the Amazon Web
-     * Services account; that contains your Amazon QuickSight account.
+     * The ID for the Amazon Web Services account that the user is in. Currently, you use the ID for the Amazon Web
+     * Services account that contains your Amazon QuickSight account.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID for the Amazon Web Services account; that the user is in. Currently, you use the ID for the Amazon
-     *        Web Services account; that contains your Amazon QuickSight account.
+     *        The ID for the Amazon Web Services account that the user is in. Currently, you use the ID for the Amazon
+     *        Web Services account that contains your Amazon QuickSight account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -935,16 +935,16 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * A set of custom permissions includes any combination of these restrictions. Currently, you need to create the
-     * profile names for custom permission sets by using the QuickSight console. Then, you use the
-     * <code>RegisterUser</code> API operation to assign the named set of permissions to a QuickSight user.
+     * profile names for custom permission sets by using the Amazon QuickSight console. Then, you use the
+     * <code>RegisterUser</code> API operation to assign the named set of permissions to a Amazon QuickSight user.
      * </p>
      * <p>
-     * QuickSight custom permissions are applied through IAM policies. Therefore, they override the permissions
-     * typically granted by assigning QuickSight users to one of the default security cohorts in QuickSight (admin,
-     * author, reader).
+     * Amazon QuickSight custom permissions are applied through IAMpolicies. Therefore, they override the permissions
+     * typically granted by assigning Amazon QuickSight users to one of the default security cohorts in Amazon
+     * QuickSight (admin, author, reader).
      * </p>
      * <p>
-     * This feature is available only to QuickSight Enterprise edition subscriptions.
+     * This feature is available only to Amazon QuickSight Enterprise edition subscriptions.
      * </p>
      * 
      * @param customPermissionsName
@@ -978,16 +978,17 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </p>
      *        <p>
      *        A set of custom permissions includes any combination of these restrictions. Currently, you need to create
-     *        the profile names for custom permission sets by using the QuickSight console. Then, you use the
-     *        <code>RegisterUser</code> API operation to assign the named set of permissions to a QuickSight user.
+     *        the profile names for custom permission sets by using the Amazon QuickSight console. Then, you use the
+     *        <code>RegisterUser</code> API operation to assign the named set of permissions to a Amazon QuickSight
+     *        user.
      *        </p>
      *        <p>
-     *        QuickSight custom permissions are applied through IAM policies. Therefore, they override the permissions
-     *        typically granted by assigning QuickSight users to one of the default security cohorts in QuickSight
-     *        (admin, author, reader).
+     *        Amazon QuickSight custom permissions are applied through IAMpolicies. Therefore, they override the
+     *        permissions typically granted by assigning Amazon QuickSight users to one of the default security cohorts
+     *        in Amazon QuickSight (admin, author, reader).
      *        </p>
      *        <p>
-     *        This feature is available only to QuickSight Enterprise edition subscriptions.
+     *        This feature is available only to Amazon QuickSight Enterprise edition subscriptions.
      */
 
     public void setCustomPermissionsName(String customPermissionsName) {
@@ -1026,16 +1027,16 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * A set of custom permissions includes any combination of these restrictions. Currently, you need to create the
-     * profile names for custom permission sets by using the QuickSight console. Then, you use the
-     * <code>RegisterUser</code> API operation to assign the named set of permissions to a QuickSight user.
+     * profile names for custom permission sets by using the Amazon QuickSight console. Then, you use the
+     * <code>RegisterUser</code> API operation to assign the named set of permissions to a Amazon QuickSight user.
      * </p>
      * <p>
-     * QuickSight custom permissions are applied through IAM policies. Therefore, they override the permissions
-     * typically granted by assigning QuickSight users to one of the default security cohorts in QuickSight (admin,
-     * author, reader).
+     * Amazon QuickSight custom permissions are applied through IAMpolicies. Therefore, they override the permissions
+     * typically granted by assigning Amazon QuickSight users to one of the default security cohorts in Amazon
+     * QuickSight (admin, author, reader).
      * </p>
      * <p>
-     * This feature is available only to QuickSight Enterprise edition subscriptions.
+     * This feature is available only to Amazon QuickSight Enterprise edition subscriptions.
      * </p>
      * 
      * @return (Enterprise edition only) The name of the custom permissions profile that you want to assign to this
@@ -1068,16 +1069,17 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         </p>
      *         <p>
      *         A set of custom permissions includes any combination of these restrictions. Currently, you need to create
-     *         the profile names for custom permission sets by using the QuickSight console. Then, you use the
-     *         <code>RegisterUser</code> API operation to assign the named set of permissions to a QuickSight user.
+     *         the profile names for custom permission sets by using the Amazon QuickSight console. Then, you use the
+     *         <code>RegisterUser</code> API operation to assign the named set of permissions to a Amazon QuickSight
+     *         user.
      *         </p>
      *         <p>
-     *         QuickSight custom permissions are applied through IAM policies. Therefore, they override the permissions
-     *         typically granted by assigning QuickSight users to one of the default security cohorts in QuickSight
-     *         (admin, author, reader).
+     *         Amazon QuickSight custom permissions are applied through IAMpolicies. Therefore, they override the
+     *         permissions typically granted by assigning Amazon QuickSight users to one of the default security cohorts
+     *         in Amazon QuickSight (admin, author, reader).
      *         </p>
      *         <p>
-     *         This feature is available only to QuickSight Enterprise edition subscriptions.
+     *         This feature is available only to Amazon QuickSight Enterprise edition subscriptions.
      */
 
     public String getCustomPermissionsName() {
@@ -1116,16 +1118,16 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * A set of custom permissions includes any combination of these restrictions. Currently, you need to create the
-     * profile names for custom permission sets by using the QuickSight console. Then, you use the
-     * <code>RegisterUser</code> API operation to assign the named set of permissions to a QuickSight user.
+     * profile names for custom permission sets by using the Amazon QuickSight console. Then, you use the
+     * <code>RegisterUser</code> API operation to assign the named set of permissions to a Amazon QuickSight user.
      * </p>
      * <p>
-     * QuickSight custom permissions are applied through IAM policies. Therefore, they override the permissions
-     * typically granted by assigning QuickSight users to one of the default security cohorts in QuickSight (admin,
-     * author, reader).
+     * Amazon QuickSight custom permissions are applied through IAMpolicies. Therefore, they override the permissions
+     * typically granted by assigning Amazon QuickSight users to one of the default security cohorts in Amazon
+     * QuickSight (admin, author, reader).
      * </p>
      * <p>
-     * This feature is available only to QuickSight Enterprise edition subscriptions.
+     * This feature is available only to Amazon QuickSight Enterprise edition subscriptions.
      * </p>
      * 
      * @param customPermissionsName
@@ -1159,16 +1161,17 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </p>
      *        <p>
      *        A set of custom permissions includes any combination of these restrictions. Currently, you need to create
-     *        the profile names for custom permission sets by using the QuickSight console. Then, you use the
-     *        <code>RegisterUser</code> API operation to assign the named set of permissions to a QuickSight user.
+     *        the profile names for custom permission sets by using the Amazon QuickSight console. Then, you use the
+     *        <code>RegisterUser</code> API operation to assign the named set of permissions to a Amazon QuickSight
+     *        user.
      *        </p>
      *        <p>
-     *        QuickSight custom permissions are applied through IAM policies. Therefore, they override the permissions
-     *        typically granted by assigning QuickSight users to one of the default security cohorts in QuickSight
-     *        (admin, author, reader).
+     *        Amazon QuickSight custom permissions are applied through IAMpolicies. Therefore, they override the
+     *        permissions typically granted by assigning Amazon QuickSight users to one of the default security cohorts
+     *        in Amazon QuickSight (admin, author, reader).
      *        </p>
      *        <p>
-     *        This feature is available only to QuickSight Enterprise edition subscriptions.
+     *        This feature is available only to Amazon QuickSight Enterprise edition subscriptions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1180,7 +1183,7 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * The type of supported external login provider that provides identity to let a user federate into Amazon
-     * QuickSight with an associated AWS Identity and Access Management (IAM) role. The type of supported external login
+     * QuickSight with an associated Identity and Access Management(IAM) role. The type of supported external login
      * provider can be one of the following.
      * </p>
      * <ul>
@@ -1201,8 +1204,8 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      * 
      * @param externalLoginFederationProviderType
      *        The type of supported external login provider that provides identity to let a user federate into Amazon
-     *        QuickSight with an associated AWS Identity and Access Management (IAM) role. The type of supported
-     *        external login provider can be one of the following.</p>
+     *        QuickSight with an associated Identity and Access Management(IAM) role. The type of supported external
+     *        login provider can be one of the following.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1226,7 +1229,7 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * The type of supported external login provider that provides identity to let a user federate into Amazon
-     * QuickSight with an associated AWS Identity and Access Management (IAM) role. The type of supported external login
+     * QuickSight with an associated Identity and Access Management(IAM) role. The type of supported external login
      * provider can be one of the following.
      * </p>
      * <ul>
@@ -1246,8 +1249,8 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </ul>
      * 
      * @return The type of supported external login provider that provides identity to let a user federate into Amazon
-     *         QuickSight with an associated AWS Identity and Access Management (IAM) role. The type of supported
-     *         external login provider can be one of the following.</p>
+     *         QuickSight with an associated Identity and Access Management(IAM) role. The type of supported external
+     *         login provider can be one of the following.</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -1271,7 +1274,7 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * The type of supported external login provider that provides identity to let a user federate into Amazon
-     * QuickSight with an associated AWS Identity and Access Management (IAM) role. The type of supported external login
+     * QuickSight with an associated Identity and Access Management(IAM) role. The type of supported external login
      * provider can be one of the following.
      * </p>
      * <ul>
@@ -1292,8 +1295,8 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      * 
      * @param externalLoginFederationProviderType
      *        The type of supported external login provider that provides identity to let a user federate into Amazon
-     *        QuickSight with an associated AWS Identity and Access Management (IAM) role. The type of supported
-     *        external login provider can be one of the following.</p>
+     *        QuickSight with an associated Identity and Access Management(IAM) role. The type of supported external
+     *        login provider can be one of the following.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1318,15 +1321,16 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The URL of the custom OpenID Connect (OIDC) provider that provides identity to let a user federate into
-     * QuickSight with an associated AWS Identity and Access Management (IAM) role. This parameter should only be used
-     * when <code>ExternalLoginFederationProviderType</code> parameter is set to <code>CUSTOM_OIDC</code>.
+     * The URL of the custom OpenID Connect (OIDC) provider that provides identity to let a user federate into Amazon
+     * QuickSight with an associated Identity and Access Management(IAM) role. This parameter should only be used when
+     * <code>ExternalLoginFederationProviderType</code> parameter is set to <code>CUSTOM_OIDC</code>.
      * </p>
      * 
      * @param customFederationProviderUrl
      *        The URL of the custom OpenID Connect (OIDC) provider that provides identity to let a user federate into
-     *        QuickSight with an associated AWS Identity and Access Management (IAM) role. This parameter should only be
-     *        used when <code>ExternalLoginFederationProviderType</code> parameter is set to <code>CUSTOM_OIDC</code>.
+     *        Amazon QuickSight with an associated Identity and Access Management(IAM) role. This parameter should only
+     *        be used when <code>ExternalLoginFederationProviderType</code> parameter is set to <code>CUSTOM_OIDC</code>
+     *        .
      */
 
     public void setCustomFederationProviderUrl(String customFederationProviderUrl) {
@@ -1335,13 +1339,13 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The URL of the custom OpenID Connect (OIDC) provider that provides identity to let a user federate into
-     * QuickSight with an associated AWS Identity and Access Management (IAM) role. This parameter should only be used
-     * when <code>ExternalLoginFederationProviderType</code> parameter is set to <code>CUSTOM_OIDC</code>.
+     * The URL of the custom OpenID Connect (OIDC) provider that provides identity to let a user federate into Amazon
+     * QuickSight with an associated Identity and Access Management(IAM) role. This parameter should only be used when
+     * <code>ExternalLoginFederationProviderType</code> parameter is set to <code>CUSTOM_OIDC</code>.
      * </p>
      * 
      * @return The URL of the custom OpenID Connect (OIDC) provider that provides identity to let a user federate into
-     *         QuickSight with an associated AWS Identity and Access Management (IAM) role. This parameter should only
+     *         Amazon QuickSight with an associated Identity and Access Management(IAM) role. This parameter should only
      *         be used when <code>ExternalLoginFederationProviderType</code> parameter is set to
      *         <code>CUSTOM_OIDC</code>.
      */
@@ -1352,15 +1356,16 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The URL of the custom OpenID Connect (OIDC) provider that provides identity to let a user federate into
-     * QuickSight with an associated AWS Identity and Access Management (IAM) role. This parameter should only be used
-     * when <code>ExternalLoginFederationProviderType</code> parameter is set to <code>CUSTOM_OIDC</code>.
+     * The URL of the custom OpenID Connect (OIDC) provider that provides identity to let a user federate into Amazon
+     * QuickSight with an associated Identity and Access Management(IAM) role. This parameter should only be used when
+     * <code>ExternalLoginFederationProviderType</code> parameter is set to <code>CUSTOM_OIDC</code>.
      * </p>
      * 
      * @param customFederationProviderUrl
      *        The URL of the custom OpenID Connect (OIDC) provider that provides identity to let a user federate into
-     *        QuickSight with an associated AWS Identity and Access Management (IAM) role. This parameter should only be
-     *        used when <code>ExternalLoginFederationProviderType</code> parameter is set to <code>CUSTOM_OIDC</code>.
+     *        Amazon QuickSight with an associated Identity and Access Management(IAM) role. This parameter should only
+     *        be used when <code>ExternalLoginFederationProviderType</code> parameter is set to <code>CUSTOM_OIDC</code>
+     *        .
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

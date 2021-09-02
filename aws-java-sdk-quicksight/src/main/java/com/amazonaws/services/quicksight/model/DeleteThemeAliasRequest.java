@@ -27,7 +27,7 @@ public class DeleteThemeAliasRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the theme alias to delete.
+     * The ID of the Amazon Web Services account that contains the theme alias to delete.
      * </p>
      */
     private String awsAccountId;
@@ -46,11 +46,11 @@ public class DeleteThemeAliasRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the theme alias to delete.
+     * The ID of the Amazon Web Services account that contains the theme alias to delete.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the theme alias to delete.
+     *        The ID of the Amazon Web Services account that contains the theme alias to delete.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -59,10 +59,10 @@ public class DeleteThemeAliasRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the theme alias to delete.
+     * The ID of the Amazon Web Services account that contains the theme alias to delete.
      * </p>
      * 
-     * @return The ID of the Amazon Web Services account; that contains the theme alias to delete.
+     * @return The ID of the Amazon Web Services account that contains the theme alias to delete.
      */
 
     public String getAwsAccountId() {
@@ -71,11 +71,11 @@ public class DeleteThemeAliasRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the theme alias to delete.
+     * The ID of the Amazon Web Services account that contains the theme alias to delete.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the theme alias to delete.
+     *        The ID of the Amazon Web Services account that contains the theme alias to delete.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

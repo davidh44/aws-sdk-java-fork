@@ -27,30 +27,30 @@ public class UpdateAccountCustomizationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that you want to update QuickSight customizations for.
+     * The ID for the Amazon Web Services account that you want to update Amazon QuickSight customizations for.
      * </p>
      */
     private String awsAccountId;
     /**
      * <p>
-     * The namespace that you want to update QuickSight customizations for.
+     * The namespace that you want to update Amazon QuickSight customizations for.
      * </p>
      */
     private String namespace;
     /**
      * <p>
-     * The QuickSight customizations you're updating in the current Amazon Web Services Region;.
+     * The Amazon QuickSight customizations you're updating in the current Amazon Web Services Region;.
      * </p>
      */
     private AccountCustomization accountCustomization;
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that you want to update QuickSight customizations for.
+     * The ID for the Amazon Web Services account that you want to update Amazon QuickSight customizations for.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID for the Amazon Web Services account; that you want to update QuickSight customizations for.
+     *        The ID for the Amazon Web Services account that you want to update Amazon QuickSight customizations for.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -59,10 +59,10 @@ public class UpdateAccountCustomizationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that you want to update QuickSight customizations for.
+     * The ID for the Amazon Web Services account that you want to update Amazon QuickSight customizations for.
      * </p>
      * 
-     * @return The ID for the Amazon Web Services account; that you want to update QuickSight customizations for.
+     * @return The ID for the Amazon Web Services account that you want to update Amazon QuickSight customizations for.
      */
 
     public String getAwsAccountId() {
@@ -71,11 +71,11 @@ public class UpdateAccountCustomizationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that you want to update QuickSight customizations for.
+     * The ID for the Amazon Web Services account that you want to update Amazon QuickSight customizations for.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID for the Amazon Web Services account; that you want to update QuickSight customizations for.
+     *        The ID for the Amazon Web Services account that you want to update Amazon QuickSight customizations for.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -86,11 +86,11 @@ public class UpdateAccountCustomizationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The namespace that you want to update QuickSight customizations for.
+     * The namespace that you want to update Amazon QuickSight customizations for.
      * </p>
      * 
      * @param namespace
-     *        The namespace that you want to update QuickSight customizations for.
+     *        The namespace that you want to update Amazon QuickSight customizations for.
      */
 
     public void setNamespace(String namespace) {
@@ -99,10 +99,10 @@ public class UpdateAccountCustomizationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The namespace that you want to update QuickSight customizations for.
+     * The namespace that you want to update Amazon QuickSight customizations for.
      * </p>
      * 
-     * @return The namespace that you want to update QuickSight customizations for.
+     * @return The namespace that you want to update Amazon QuickSight customizations for.
      */
 
     public String getNamespace() {
@@ -111,11 +111,11 @@ public class UpdateAccountCustomizationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The namespace that you want to update QuickSight customizations for.
+     * The namespace that you want to update Amazon QuickSight customizations for.
      * </p>
      * 
      * @param namespace
-     *        The namespace that you want to update QuickSight customizations for.
+     *        The namespace that you want to update Amazon QuickSight customizations for.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -126,11 +126,11 @@ public class UpdateAccountCustomizationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The QuickSight customizations you're updating in the current Amazon Web Services Region;.
+     * The Amazon QuickSight customizations you're updating in the current Amazon Web Services Region;.
      * </p>
      * 
      * @param accountCustomization
-     *        The QuickSight customizations you're updating in the current Amazon Web Services Region;.
+     *        The Amazon QuickSight customizations you're updating in the current Amazon Web Services Region;.
      */
 
     public void setAccountCustomization(AccountCustomization accountCustomization) {
@@ -139,10 +139,10 @@ public class UpdateAccountCustomizationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The QuickSight customizations you're updating in the current Amazon Web Services Region;.
+     * The Amazon QuickSight customizations you're updating in the current Amazon Web Services Region;.
      * </p>
      * 
-     * @return The QuickSight customizations you're updating in the current Amazon Web Services Region;.
+     * @return The Amazon QuickSight customizations you're updating in the current Amazon Web Services Region;.
      */
 
     public AccountCustomization getAccountCustomization() {
@@ -151,11 +151,11 @@ public class UpdateAccountCustomizationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The QuickSight customizations you're updating in the current Amazon Web Services Region;.
+     * The Amazon QuickSight customizations you're updating in the current Amazon Web Services Region;.
      * </p>
      * 
      * @param accountCustomization
-     *        The QuickSight customizations you're updating in the current Amazon Web Services Region;.
+     *        The Amazon QuickSight customizations you're updating in the current Amazon Web Services Region;.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -30,10 +30,11 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The KMS customer master key (CMK) used to encrypt the build output artifacts.
+     * The KMS key used to encrypt the build output artifacts.
      * </p>
      * <p>
-     * You can specify either the ARN of the CMK or, if available, the CMK alias (using the format alias/alias-name).
+     * You can specify either the ARN of the KMS key or, if available, the KMS key alias (using the format
+     * alias/alias-name).
      * </p>
      */
     private String encryptionKey;
@@ -71,16 +72,17 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The KMS customer master key (CMK) used to encrypt the build output artifacts.
+     * The KMS key used to encrypt the build output artifacts.
      * </p>
      * <p>
-     * You can specify either the ARN of the CMK or, if available, the CMK alias (using the format alias/alias-name).
+     * You can specify either the ARN of the KMS key or, if available, the KMS key alias (using the format
+     * alias/alias-name).
      * </p>
      * 
      * @param encryptionKey
-     *        The KMS customer master key (CMK) used to encrypt the build output artifacts.</p>
+     *        The KMS key used to encrypt the build output artifacts.</p>
      *        <p>
-     *        You can specify either the ARN of the CMK or, if available, the CMK alias (using the format
+     *        You can specify either the ARN of the KMS key or, if available, the KMS key alias (using the format
      *        alias/alias-name).
      */
 
@@ -90,15 +92,16 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The KMS customer master key (CMK) used to encrypt the build output artifacts.
+     * The KMS key used to encrypt the build output artifacts.
      * </p>
      * <p>
-     * You can specify either the ARN of the CMK or, if available, the CMK alias (using the format alias/alias-name).
+     * You can specify either the ARN of the KMS key or, if available, the KMS key alias (using the format
+     * alias/alias-name).
      * </p>
      * 
-     * @return The KMS customer master key (CMK) used to encrypt the build output artifacts.</p>
+     * @return The KMS key used to encrypt the build output artifacts.</p>
      *         <p>
-     *         You can specify either the ARN of the CMK or, if available, the CMK alias (using the format
+     *         You can specify either the ARN of the KMS key or, if available, the KMS key alias (using the format
      *         alias/alias-name).
      */
 
@@ -108,16 +111,17 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The KMS customer master key (CMK) used to encrypt the build output artifacts.
+     * The KMS key used to encrypt the build output artifacts.
      * </p>
      * <p>
-     * You can specify either the ARN of the CMK or, if available, the CMK alias (using the format alias/alias-name).
+     * You can specify either the ARN of the KMS key or, if available, the KMS key alias (using the format
+     * alias/alias-name).
      * </p>
      * 
      * @param encryptionKey
-     *        The KMS customer master key (CMK) used to encrypt the build output artifacts.</p>
+     *        The KMS key used to encrypt the build output artifacts.</p>
      *        <p>
-     *        You can specify either the ARN of the CMK or, if available, the CMK alias (using the format
+     *        You can specify either the ARN of the KMS key or, if available, the KMS key alias (using the format
      *        alias/alias-name).
      * @return Returns a reference to this object so that method calls can be chained together.
      */

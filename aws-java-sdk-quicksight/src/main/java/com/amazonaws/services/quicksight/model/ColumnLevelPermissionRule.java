@@ -32,7 +32,7 @@ public class ColumnLevelPermissionRule implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * An array of Amazon Resource Names (ARNs) for QuickSight users or groups.
+     * An array of Amazon Resource Names (ARNs) for Amazon QuickSight users or groups.
      * </p>
      */
     private java.util.List<String> principals;
@@ -45,10 +45,10 @@ public class ColumnLevelPermissionRule implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * An array of Amazon Resource Names (ARNs) for QuickSight users or groups.
+     * An array of Amazon Resource Names (ARNs) for Amazon QuickSight users or groups.
      * </p>
      * 
-     * @return An array of Amazon Resource Names (ARNs) for QuickSight users or groups.
+     * @return An array of Amazon Resource Names (ARNs) for Amazon QuickSight users or groups.
      */
 
     public java.util.List<String> getPrincipals() {
@@ -57,11 +57,11 @@ public class ColumnLevelPermissionRule implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * An array of Amazon Resource Names (ARNs) for QuickSight users or groups.
+     * An array of Amazon Resource Names (ARNs) for Amazon QuickSight users or groups.
      * </p>
      * 
      * @param principals
-     *        An array of Amazon Resource Names (ARNs) for QuickSight users or groups.
+     *        An array of Amazon Resource Names (ARNs) for Amazon QuickSight users or groups.
      */
 
     public void setPrincipals(java.util.Collection<String> principals) {
@@ -75,7 +75,7 @@ public class ColumnLevelPermissionRule implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * An array of Amazon Resource Names (ARNs) for QuickSight users or groups.
+     * An array of Amazon Resource Names (ARNs) for Amazon QuickSight users or groups.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -84,7 +84,7 @@ public class ColumnLevelPermissionRule implements Serializable, Cloneable, Struc
      * </p>
      * 
      * @param principals
-     *        An array of Amazon Resource Names (ARNs) for QuickSight users or groups.
+     *        An array of Amazon Resource Names (ARNs) for Amazon QuickSight users or groups.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -100,11 +100,11 @@ public class ColumnLevelPermissionRule implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * An array of Amazon Resource Names (ARNs) for QuickSight users or groups.
+     * An array of Amazon Resource Names (ARNs) for Amazon QuickSight users or groups.
      * </p>
      * 
      * @param principals
-     *        An array of Amazon Resource Names (ARNs) for QuickSight users or groups.
+     *        An array of Amazon Resource Names (ARNs) for Amazon QuickSight users or groups.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

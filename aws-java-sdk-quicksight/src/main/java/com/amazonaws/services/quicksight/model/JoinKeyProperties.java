@@ -31,7 +31,7 @@ public class JoinKeyProperties implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * A value that indicates that a row in a table is uniquely identified by the columns in a join key. This is used by
-     * QuickSight to optimize query performance.
+     * Amazon QuickSight to optimize query performance.
      * </p>
      */
     private Boolean uniqueKey;
@@ -39,12 +39,12 @@ public class JoinKeyProperties implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * A value that indicates that a row in a table is uniquely identified by the columns in a join key. This is used by
-     * QuickSight to optimize query performance.
+     * Amazon QuickSight to optimize query performance.
      * </p>
      * 
      * @param uniqueKey
      *        A value that indicates that a row in a table is uniquely identified by the columns in a join key. This is
-     *        used by QuickSight to optimize query performance.
+     *        used by Amazon QuickSight to optimize query performance.
      */
 
     public void setUniqueKey(Boolean uniqueKey) {
@@ -54,11 +54,11 @@ public class JoinKeyProperties implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * A value that indicates that a row in a table is uniquely identified by the columns in a join key. This is used by
-     * QuickSight to optimize query performance.
+     * Amazon QuickSight to optimize query performance.
      * </p>
      * 
      * @return A value that indicates that a row in a table is uniquely identified by the columns in a join key. This is
-     *         used by QuickSight to optimize query performance.
+     *         used by Amazon QuickSight to optimize query performance.
      */
 
     public Boolean getUniqueKey() {
@@ -68,12 +68,12 @@ public class JoinKeyProperties implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * A value that indicates that a row in a table is uniquely identified by the columns in a join key. This is used by
-     * QuickSight to optimize query performance.
+     * Amazon QuickSight to optimize query performance.
      * </p>
      * 
      * @param uniqueKey
      *        A value that indicates that a row in a table is uniquely identified by the columns in a join key. This is
-     *        used by QuickSight to optimize query performance.
+     *        used by Amazon QuickSight to optimize query performance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -85,11 +85,11 @@ public class JoinKeyProperties implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * A value that indicates that a row in a table is uniquely identified by the columns in a join key. This is used by
-     * QuickSight to optimize query performance.
+     * Amazon QuickSight to optimize query performance.
      * </p>
      * 
      * @return A value that indicates that a row in a table is uniquely identified by the columns in a join key. This is
-     *         used by QuickSight to optimize query performance.
+     *         used by Amazon QuickSight to optimize query performance.
      */
 
     public Boolean isUniqueKey() {

@@ -37,7 +37,8 @@ public class CreateBackupRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * (Optional) A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent creation. This string
-     * is automatically filled on your behalf when you use the AWS Command Line Interface (AWS CLI) or an AWS SDK.
+     * is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services
+     * SDK.
      * </p>
      */
     private String clientRequestToken;
@@ -50,6 +51,12 @@ public class CreateBackupRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      */
     private java.util.List<Tag> tags;
+    /**
+     * <p>
+     * The ID of he FSx for NetApp ONTAP volume to back up.
+     * </p>
+     */
+    private String volumeId;
 
     /**
      * <p>
@@ -94,13 +101,14 @@ public class CreateBackupRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * (Optional) A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent creation. This string
-     * is automatically filled on your behalf when you use the AWS Command Line Interface (AWS CLI) or an AWS SDK.
+     * is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services
+     * SDK.
      * </p>
      * 
      * @param clientRequestToken
      *        (Optional) A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent creation. This
-     *        string is automatically filled on your behalf when you use the AWS Command Line Interface (AWS CLI) or an
-     *        AWS SDK.
+     *        string is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon
+     *        Web Services SDK.
      */
 
     public void setClientRequestToken(String clientRequestToken) {
@@ -110,12 +118,13 @@ public class CreateBackupRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * (Optional) A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent creation. This string
-     * is automatically filled on your behalf when you use the AWS Command Line Interface (AWS CLI) or an AWS SDK.
+     * is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services
+     * SDK.
      * </p>
      * 
      * @return (Optional) A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent creation. This
-     *         string is automatically filled on your behalf when you use the AWS Command Line Interface (AWS CLI) or an
-     *         AWS SDK.
+     *         string is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon
+     *         Web Services SDK.
      */
 
     public String getClientRequestToken() {
@@ -125,13 +134,14 @@ public class CreateBackupRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * (Optional) A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent creation. This string
-     * is automatically filled on your behalf when you use the AWS Command Line Interface (AWS CLI) or an AWS SDK.
+     * is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services
+     * SDK.
      * </p>
      * 
      * @param clientRequestToken
      *        (Optional) A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent creation. This
-     *        string is automatically filled on your behalf when you use the AWS Command Line Interface (AWS CLI) or an
-     *        AWS SDK.
+     *        string is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon
+     *        Web Services SDK.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -235,6 +245,46 @@ public class CreateBackupRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
+     * <p>
+     * The ID of he FSx for NetApp ONTAP volume to back up.
+     * </p>
+     * 
+     * @param volumeId
+     *        The ID of he FSx for NetApp ONTAP volume to back up.
+     */
+
+    public void setVolumeId(String volumeId) {
+        this.volumeId = volumeId;
+    }
+
+    /**
+     * <p>
+     * The ID of he FSx for NetApp ONTAP volume to back up.
+     * </p>
+     * 
+     * @return The ID of he FSx for NetApp ONTAP volume to back up.
+     */
+
+    public String getVolumeId() {
+        return this.volumeId;
+    }
+
+    /**
+     * <p>
+     * The ID of he FSx for NetApp ONTAP volume to back up.
+     * </p>
+     * 
+     * @param volumeId
+     *        The ID of he FSx for NetApp ONTAP volume to back up.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateBackupRequest withVolumeId(String volumeId) {
+        setVolumeId(volumeId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -251,7 +301,9 @@ public class CreateBackupRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (getClientRequestToken() != null)
             sb.append("ClientRequestToken: ").append(getClientRequestToken()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getVolumeId() != null)
+            sb.append("VolumeId: ").append(getVolumeId());
         sb.append("}");
         return sb.toString();
     }
@@ -278,6 +330,10 @@ public class CreateBackupRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getVolumeId() == null ^ this.getVolumeId() == null)
+            return false;
+        if (other.getVolumeId() != null && other.getVolumeId().equals(this.getVolumeId()) == false)
+            return false;
         return true;
     }
 
@@ -289,6 +345,7 @@ public class CreateBackupRequest extends com.amazonaws.AmazonWebServiceRequest i
         hashCode = prime * hashCode + ((getFileSystemId() == null) ? 0 : getFileSystemId().hashCode());
         hashCode = prime * hashCode + ((getClientRequestToken() == null) ? 0 : getClientRequestToken().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getVolumeId() == null) ? 0 : getVolumeId().hashCode());
         return hashCode;
     }
 

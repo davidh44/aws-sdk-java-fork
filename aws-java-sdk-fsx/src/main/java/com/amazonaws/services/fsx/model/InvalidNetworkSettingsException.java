@@ -16,19 +16,31 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * One or more network settings specified in the request are invalid. <code>InvalidVpcId</code> means that the ID passed
- * for the virtual private cloud (VPC) is invalid. <code>InvalidSubnetIds</code> returns the list of IDs for subnets
- * that are either invalid or not part of the VPC specified. <code>InvalidSecurityGroupIds</code> returns the list of
- * IDs for security groups that are either invalid or not part of the VPC specified.
+ * One or more network settings specified in the request are invalid.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class InvalidNetworkSettingsException extends com.amazonaws.services.fsx.model.AmazonFSxException {
     private static final long serialVersionUID = 1L;
 
+    /**
+     * <p>
+     * The subnet ID that is either invalid or not part of the VPC specified.
+     * </p>
+     */
     private String invalidSubnetId;
-
+    /**
+     * <p>
+     * The security group ID is either invalid or not part of the VPC specified.
+     * </p>
+     */
     private String invalidSecurityGroupId;
+    /**
+     * <p>
+     * The route table ID is either invalid or not part of the VPC specified.
+     * </p>
+     */
+    private String invalidRouteTableId;
 
     /**
      * Constructs a new InvalidNetworkSettingsException with the specified error message.
@@ -41,7 +53,12 @@ public class InvalidNetworkSettingsException extends com.amazonaws.services.fsx.
     }
 
     /**
+     * <p>
+     * The subnet ID that is either invalid or not part of the VPC specified.
+     * </p>
+     * 
      * @param invalidSubnetId
+     *        The subnet ID that is either invalid or not part of the VPC specified.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("InvalidSubnetId")
@@ -50,7 +67,11 @@ public class InvalidNetworkSettingsException extends com.amazonaws.services.fsx.
     }
 
     /**
-     * @return
+     * <p>
+     * The subnet ID that is either invalid or not part of the VPC specified.
+     * </p>
+     * 
+     * @return The subnet ID that is either invalid or not part of the VPC specified.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("InvalidSubnetId")
@@ -59,7 +80,12 @@ public class InvalidNetworkSettingsException extends com.amazonaws.services.fsx.
     }
 
     /**
+     * <p>
+     * The subnet ID that is either invalid or not part of the VPC specified.
+     * </p>
+     * 
      * @param invalidSubnetId
+     *        The subnet ID that is either invalid or not part of the VPC specified.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -69,7 +95,12 @@ public class InvalidNetworkSettingsException extends com.amazonaws.services.fsx.
     }
 
     /**
+     * <p>
+     * The security group ID is either invalid or not part of the VPC specified.
+     * </p>
+     * 
      * @param invalidSecurityGroupId
+     *        The security group ID is either invalid or not part of the VPC specified.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("InvalidSecurityGroupId")
@@ -78,7 +109,11 @@ public class InvalidNetworkSettingsException extends com.amazonaws.services.fsx.
     }
 
     /**
-     * @return
+     * <p>
+     * The security group ID is either invalid or not part of the VPC specified.
+     * </p>
+     * 
+     * @return The security group ID is either invalid or not part of the VPC specified.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("InvalidSecurityGroupId")
@@ -87,12 +122,59 @@ public class InvalidNetworkSettingsException extends com.amazonaws.services.fsx.
     }
 
     /**
+     * <p>
+     * The security group ID is either invalid or not part of the VPC specified.
+     * </p>
+     * 
      * @param invalidSecurityGroupId
+     *        The security group ID is either invalid or not part of the VPC specified.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public InvalidNetworkSettingsException withInvalidSecurityGroupId(String invalidSecurityGroupId) {
         setInvalidSecurityGroupId(invalidSecurityGroupId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The route table ID is either invalid or not part of the VPC specified.
+     * </p>
+     * 
+     * @param invalidRouteTableId
+     *        The route table ID is either invalid or not part of the VPC specified.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("InvalidRouteTableId")
+    public void setInvalidRouteTableId(String invalidRouteTableId) {
+        this.invalidRouteTableId = invalidRouteTableId;
+    }
+
+    /**
+     * <p>
+     * The route table ID is either invalid or not part of the VPC specified.
+     * </p>
+     * 
+     * @return The route table ID is either invalid or not part of the VPC specified.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("InvalidRouteTableId")
+    public String getInvalidRouteTableId() {
+        return this.invalidRouteTableId;
+    }
+
+    /**
+     * <p>
+     * The route table ID is either invalid or not part of the VPC specified.
+     * </p>
+     * 
+     * @param invalidRouteTableId
+     *        The route table ID is either invalid or not part of the VPC specified.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public InvalidNetworkSettingsException withInvalidRouteTableId(String invalidRouteTableId) {
+        setInvalidRouteTableId(invalidRouteTableId);
         return this;
     }
 

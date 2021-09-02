@@ -16,7 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Returned if the AWS account has already created the maximum number of access points allowed per file system.
+ * Returned if the Amazon Web Services account has already created the maximum number of access points allowed per file
+ * system.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

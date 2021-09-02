@@ -37,7 +37,7 @@ public class DeleteFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This is automatically
-     * filled on your behalf when using the AWS CLI or SDK.
+     * filled on your behalf when using the Command Line Interface (CLI) or an Amazon Web Services SDK.
      * </p>
      */
     private String clientRequestToken;
@@ -89,12 +89,13 @@ public class DeleteFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This is automatically
-     * filled on your behalf when using the AWS CLI or SDK.
+     * filled on your behalf when using the Command Line Interface (CLI) or an Amazon Web Services SDK.
      * </p>
      * 
      * @param clientRequestToken
      *        A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This is
-     *        automatically filled on your behalf when using the AWS CLI or SDK.
+     *        automatically filled on your behalf when using the Command Line Interface (CLI) or an Amazon Web Services
+     *        SDK.
      */
 
     public void setClientRequestToken(String clientRequestToken) {
@@ -104,11 +105,12 @@ public class DeleteFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This is automatically
-     * filled on your behalf when using the AWS CLI or SDK.
+     * filled on your behalf when using the Command Line Interface (CLI) or an Amazon Web Services SDK.
      * </p>
      * 
      * @return A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This is
-     *         automatically filled on your behalf when using the AWS CLI or SDK.
+     *         automatically filled on your behalf when using the Command Line Interface (CLI) or an Amazon Web Services
+     *         SDK.
      */
 
     public String getClientRequestToken() {
@@ -118,12 +120,13 @@ public class DeleteFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This is automatically
-     * filled on your behalf when using the AWS CLI or SDK.
+     * filled on your behalf when using the Command Line Interface (CLI) or an Amazon Web Services SDK.
      * </p>
      * 
      * @param clientRequestToken
      *        A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This is
-     *        automatically filled on your behalf when using the AWS CLI or SDK.
+     *        automatically filled on your behalf when using the Command Line Interface (CLI) or an Amazon Web Services
+     *        SDK.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

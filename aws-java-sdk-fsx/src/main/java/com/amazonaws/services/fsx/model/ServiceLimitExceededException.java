@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 /**
  * <p>
  * An error indicating that a particular service limit was exceeded. You can increase some service limits by contacting
- * AWS Support.
+ * Amazon Web Services Support.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

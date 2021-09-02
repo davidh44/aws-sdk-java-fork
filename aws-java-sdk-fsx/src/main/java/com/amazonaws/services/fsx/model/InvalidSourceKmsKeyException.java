@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The AWS Key Management Service (AWS KMS) key of the source backup is invalid.
+ * The Key Management Service (KMS) key of the source backup is invalid.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

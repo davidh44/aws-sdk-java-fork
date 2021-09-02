@@ -34,12 +34,13 @@ public class CreateCertificateAuthorityRequest extends com.amazonaws.AmazonWebSe
     private CertificateAuthorityConfiguration certificateAuthorityConfiguration;
     /**
      * <p>
-     * Contains a Boolean value that you can use to enable a certification revocation list (CRL) for the CA, the name of
-     * the S3 bucket to which ACM Private CA will write the CRL, and an optional CNAME alias that you can use to hide
-     * the name of your bucket in the <b>CRL Distribution Points</b> extension of your CA certificate. For more
-     * information, see the <a
+     * Contains information to enable Online Certificate Status Protocol (OCSP) support, to enable a certificate
+     * revocation list (CRL), to enable both, or to enable neither. The default is for both certificate validation
+     * mechanisms to be disabled. For more information, see the <a
+     * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_OcspConfiguration.html">OcspConfiguration</a>
+     * and <a
      * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CrlConfiguration.html">CrlConfiguration</a>
-     * structure.
+     * types.
      * </p>
      */
     private RevocationConfiguration revocationConfiguration;
@@ -132,21 +133,23 @@ public class CreateCertificateAuthorityRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Contains a Boolean value that you can use to enable a certification revocation list (CRL) for the CA, the name of
-     * the S3 bucket to which ACM Private CA will write the CRL, and an optional CNAME alias that you can use to hide
-     * the name of your bucket in the <b>CRL Distribution Points</b> extension of your CA certificate. For more
-     * information, see the <a
+     * Contains information to enable Online Certificate Status Protocol (OCSP) support, to enable a certificate
+     * revocation list (CRL), to enable both, or to enable neither. The default is for both certificate validation
+     * mechanisms to be disabled. For more information, see the <a
+     * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_OcspConfiguration.html">OcspConfiguration</a>
+     * and <a
      * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CrlConfiguration.html">CrlConfiguration</a>
-     * structure.
+     * types.
      * </p>
      * 
      * @param revocationConfiguration
-     *        Contains a Boolean value that you can use to enable a certification revocation list (CRL) for the CA, the
-     *        name of the S3 bucket to which ACM Private CA will write the CRL, and an optional CNAME alias that you can
-     *        use to hide the name of your bucket in the <b>CRL Distribution Points</b> extension of your CA
-     *        certificate. For more information, see the <a
+     *        Contains information to enable Online Certificate Status Protocol (OCSP) support, to enable a certificate
+     *        revocation list (CRL), to enable both, or to enable neither. The default is for both certificate
+     *        validation mechanisms to be disabled. For more information, see the <a
+     *        href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_OcspConfiguration.html"
+     *        >OcspConfiguration</a> and <a
      *        href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CrlConfiguration.html"
-     *        >CrlConfiguration</a> structure.
+     *        >CrlConfiguration</a> types.
      */
 
     public void setRevocationConfiguration(RevocationConfiguration revocationConfiguration) {
@@ -155,20 +158,22 @@ public class CreateCertificateAuthorityRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Contains a Boolean value that you can use to enable a certification revocation list (CRL) for the CA, the name of
-     * the S3 bucket to which ACM Private CA will write the CRL, and an optional CNAME alias that you can use to hide
-     * the name of your bucket in the <b>CRL Distribution Points</b> extension of your CA certificate. For more
-     * information, see the <a
+     * Contains information to enable Online Certificate Status Protocol (OCSP) support, to enable a certificate
+     * revocation list (CRL), to enable both, or to enable neither. The default is for both certificate validation
+     * mechanisms to be disabled. For more information, see the <a
+     * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_OcspConfiguration.html">OcspConfiguration</a>
+     * and <a
      * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CrlConfiguration.html">CrlConfiguration</a>
-     * structure.
+     * types.
      * </p>
      * 
-     * @return Contains a Boolean value that you can use to enable a certification revocation list (CRL) for the CA, the
-     *         name of the S3 bucket to which ACM Private CA will write the CRL, and an optional CNAME alias that you
-     *         can use to hide the name of your bucket in the <b>CRL Distribution Points</b> extension of your CA
-     *         certificate. For more information, see the <a
+     * @return Contains information to enable Online Certificate Status Protocol (OCSP) support, to enable a certificate
+     *         revocation list (CRL), to enable both, or to enable neither. The default is for both certificate
+     *         validation mechanisms to be disabled. For more information, see the <a
+     *         href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_OcspConfiguration.html"
+     *         >OcspConfiguration</a> and <a
      *         href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CrlConfiguration.html"
-     *         >CrlConfiguration</a> structure.
+     *         >CrlConfiguration</a> types.
      */
 
     public RevocationConfiguration getRevocationConfiguration() {
@@ -177,21 +182,23 @@ public class CreateCertificateAuthorityRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Contains a Boolean value that you can use to enable a certification revocation list (CRL) for the CA, the name of
-     * the S3 bucket to which ACM Private CA will write the CRL, and an optional CNAME alias that you can use to hide
-     * the name of your bucket in the <b>CRL Distribution Points</b> extension of your CA certificate. For more
-     * information, see the <a
+     * Contains information to enable Online Certificate Status Protocol (OCSP) support, to enable a certificate
+     * revocation list (CRL), to enable both, or to enable neither. The default is for both certificate validation
+     * mechanisms to be disabled. For more information, see the <a
+     * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_OcspConfiguration.html">OcspConfiguration</a>
+     * and <a
      * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CrlConfiguration.html">CrlConfiguration</a>
-     * structure.
+     * types.
      * </p>
      * 
      * @param revocationConfiguration
-     *        Contains a Boolean value that you can use to enable a certification revocation list (CRL) for the CA, the
-     *        name of the S3 bucket to which ACM Private CA will write the CRL, and an optional CNAME alias that you can
-     *        use to hide the name of your bucket in the <b>CRL Distribution Points</b> extension of your CA
-     *        certificate. For more information, see the <a
+     *        Contains information to enable Online Certificate Status Protocol (OCSP) support, to enable a certificate
+     *        revocation list (CRL), to enable both, or to enable neither. The default is for both certificate
+     *        validation mechanisms to be disabled. For more information, see the <a
+     *        href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_OcspConfiguration.html"
+     *        >OcspConfiguration</a> and <a
      *        href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CrlConfiguration.html"
-     *        >CrlConfiguration</a> structure.
+     *        >CrlConfiguration</a> types.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

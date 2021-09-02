@@ -72,6 +72,10 @@ public class AdministrativeActionJsonUnmarshaller implements Unmarshaller<Admini
                     context.nextToken();
                     administrativeAction.setFailureDetails(AdministrativeActionFailureDetailsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("TargetVolumeValues", targetDepth)) {
+                    context.nextToken();
+                    administrativeAction.setTargetVolumeValues(VolumeJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

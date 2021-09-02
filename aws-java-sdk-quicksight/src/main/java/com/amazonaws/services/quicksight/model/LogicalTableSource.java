@@ -41,6 +41,12 @@ public class LogicalTableSource implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private String physicalTableId;
+    /**
+     * <p>
+     * The Amazon Resource Number (ARN) of the parent dataset.
+     * </p>
+     */
+    private String dataSetArn;
 
     /**
      * <p>
@@ -123,6 +129,46 @@ public class LogicalTableSource implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The Amazon Resource Number (ARN) of the parent dataset.
+     * </p>
+     * 
+     * @param dataSetArn
+     *        The Amazon Resource Number (ARN) of the parent dataset.
+     */
+
+    public void setDataSetArn(String dataSetArn) {
+        this.dataSetArn = dataSetArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Number (ARN) of the parent dataset.
+     * </p>
+     * 
+     * @return The Amazon Resource Number (ARN) of the parent dataset.
+     */
+
+    public String getDataSetArn() {
+        return this.dataSetArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Number (ARN) of the parent dataset.
+     * </p>
+     * 
+     * @param dataSetArn
+     *        The Amazon Resource Number (ARN) of the parent dataset.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LogicalTableSource withDataSetArn(String dataSetArn) {
+        setDataSetArn(dataSetArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -137,7 +183,9 @@ public class LogicalTableSource implements Serializable, Cloneable, StructuredPo
         if (getJoinInstruction() != null)
             sb.append("JoinInstruction: ").append(getJoinInstruction()).append(",");
         if (getPhysicalTableId() != null)
-            sb.append("PhysicalTableId: ").append(getPhysicalTableId());
+            sb.append("PhysicalTableId: ").append(getPhysicalTableId()).append(",");
+        if (getDataSetArn() != null)
+            sb.append("DataSetArn: ").append(getDataSetArn());
         sb.append("}");
         return sb.toString();
     }
@@ -160,6 +208,10 @@ public class LogicalTableSource implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getPhysicalTableId() != null && other.getPhysicalTableId().equals(this.getPhysicalTableId()) == false)
             return false;
+        if (other.getDataSetArn() == null ^ this.getDataSetArn() == null)
+            return false;
+        if (other.getDataSetArn() != null && other.getDataSetArn().equals(this.getDataSetArn()) == false)
+            return false;
         return true;
     }
 
@@ -170,6 +222,7 @@ public class LogicalTableSource implements Serializable, Cloneable, StructuredPo
 
         hashCode = prime * hashCode + ((getJoinInstruction() == null) ? 0 : getJoinInstruction().hashCode());
         hashCode = prime * hashCode + ((getPhysicalTableId() == null) ? 0 : getPhysicalTableId().hashCode());
+        hashCode = prime * hashCode + ((getDataSetArn() == null) ? 0 : getDataSetArn().hashCode());
         return hashCode;
     }
 

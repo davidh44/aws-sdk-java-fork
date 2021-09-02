@@ -25,13 +25,13 @@ public class CreateAccountCustomizationResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the customization that you created for this Amazon Web Services account;.
+     * The Amazon Resource Name (ARN) for the customization that you created for this Amazon Web Services account.
      * </p>
      */
     private String arn;
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that you want to customize QuickSight for.
+     * The ID for the Amazon Web Services account that you want to customize Amazon QuickSight for.
      * </p>
      */
     private String awsAccountId;
@@ -43,7 +43,7 @@ public class CreateAccountCustomizationResult extends com.amazonaws.AmazonWebSer
     private String namespace;
     /**
      * <p>
-     * The QuickSight customizations you're adding in the current Amazon Web Services Region;.
+     * The Amazon QuickSight customizations you're adding in the current Amazon Web Services Region;.
      * </p>
      */
     private AccountCustomization accountCustomization;
@@ -62,12 +62,12 @@ public class CreateAccountCustomizationResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the customization that you created for this Amazon Web Services account;.
+     * The Amazon Resource Name (ARN) for the customization that you created for this Amazon Web Services account.
      * </p>
      * 
      * @param arn
      *        The Amazon Resource Name (ARN) for the customization that you created for this Amazon Web Services
-     *        account;.
+     *        account.
      */
 
     public void setArn(String arn) {
@@ -76,11 +76,11 @@ public class CreateAccountCustomizationResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the customization that you created for this Amazon Web Services account;.
+     * The Amazon Resource Name (ARN) for the customization that you created for this Amazon Web Services account.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) for the customization that you created for this Amazon Web Services
-     *         account;.
+     *         account.
      */
 
     public String getArn() {
@@ -89,12 +89,12 @@ public class CreateAccountCustomizationResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the customization that you created for this Amazon Web Services account;.
+     * The Amazon Resource Name (ARN) for the customization that you created for this Amazon Web Services account.
      * </p>
      * 
      * @param arn
      *        The Amazon Resource Name (ARN) for the customization that you created for this Amazon Web Services
-     *        account;.
+     *        account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -105,11 +105,11 @@ public class CreateAccountCustomizationResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that you want to customize QuickSight for.
+     * The ID for the Amazon Web Services account that you want to customize Amazon QuickSight for.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID for the Amazon Web Services account; that you want to customize QuickSight for.
+     *        The ID for the Amazon Web Services account that you want to customize Amazon QuickSight for.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -118,10 +118,10 @@ public class CreateAccountCustomizationResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that you want to customize QuickSight for.
+     * The ID for the Amazon Web Services account that you want to customize Amazon QuickSight for.
      * </p>
      * 
-     * @return The ID for the Amazon Web Services account; that you want to customize QuickSight for.
+     * @return The ID for the Amazon Web Services account that you want to customize Amazon QuickSight for.
      */
 
     public String getAwsAccountId() {
@@ -130,11 +130,11 @@ public class CreateAccountCustomizationResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that you want to customize QuickSight for.
+     * The ID for the Amazon Web Services account that you want to customize Amazon QuickSight for.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID for the Amazon Web Services account; that you want to customize QuickSight for.
+     *        The ID for the Amazon Web Services account that you want to customize Amazon QuickSight for.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -185,11 +185,11 @@ public class CreateAccountCustomizationResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The QuickSight customizations you're adding in the current Amazon Web Services Region;.
+     * The Amazon QuickSight customizations you're adding in the current Amazon Web Services Region;.
      * </p>
      * 
      * @param accountCustomization
-     *        The QuickSight customizations you're adding in the current Amazon Web Services Region;.
+     *        The Amazon QuickSight customizations you're adding in the current Amazon Web Services Region;.
      */
 
     public void setAccountCustomization(AccountCustomization accountCustomization) {
@@ -198,10 +198,10 @@ public class CreateAccountCustomizationResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The QuickSight customizations you're adding in the current Amazon Web Services Region;.
+     * The Amazon QuickSight customizations you're adding in the current Amazon Web Services Region;.
      * </p>
      * 
-     * @return The QuickSight customizations you're adding in the current Amazon Web Services Region;.
+     * @return The Amazon QuickSight customizations you're adding in the current Amazon Web Services Region;.
      */
 
     public AccountCustomization getAccountCustomization() {
@@ -210,11 +210,11 @@ public class CreateAccountCustomizationResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The QuickSight customizations you're adding in the current Amazon Web Services Region;.
+     * The Amazon QuickSight customizations you're adding in the current Amazon Web Services Region;.
      * </p>
      * 
      * @param accountCustomization
-     *        The QuickSight customizations you're adding in the current Amazon Web Services Region;.
+     *        The Amazon QuickSight customizations you're adding in the current Amazon Web Services Region;.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -39,7 +39,7 @@ public class CreateIngestionRequest extends com.amazonaws.AmazonWebServiceReques
     private String ingestionId;
     /**
      * <p>
-     * The Amazon Web Services account; ID.
+     * The Amazon Web Services account ID.
      * </p>
      */
     private String awsAccountId;
@@ -126,11 +126,11 @@ public class CreateIngestionRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon Web Services account; ID.
+     * The Amazon Web Services account ID.
      * </p>
      * 
      * @param awsAccountId
-     *        The Amazon Web Services account; ID.
+     *        The Amazon Web Services account ID.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -139,10 +139,10 @@ public class CreateIngestionRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon Web Services account; ID.
+     * The Amazon Web Services account ID.
      * </p>
      * 
-     * @return The Amazon Web Services account; ID.
+     * @return The Amazon Web Services account ID.
      */
 
     public String getAwsAccountId() {
@@ -151,11 +151,11 @@ public class CreateIngestionRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon Web Services account; ID.
+     * The Amazon Web Services account ID.
      * </p>
      * 
      * @param awsAccountId
-     *        The Amazon Web Services account; ID.
+     *        The Amazon Web Services account ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

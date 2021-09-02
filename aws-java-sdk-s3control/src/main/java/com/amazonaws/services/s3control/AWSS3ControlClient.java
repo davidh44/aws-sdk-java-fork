@@ -615,6 +615,118 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
     /**
      * <p>
+     * Creates a Multi-Region Access Point and associates it with the specified buckets. For more information about
+     * creating Multi-Region Access Points, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CreatingMultiRegionAccessPoints.html">Creating
+     * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.
+     * </p>
+     * <p>
+     * This action will always be routed to the US West (Oregon) Region. For more information about the restrictions
+     * around managing Multi-Region Access Points, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+     * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.
+     * </p>
+     * <p>
+     * This request is asynchronous, meaning that you might receive a response before the command has completed. When
+     * this request provides a response, it provides a token that you can use to monitor the status of the request with
+     * <code>DescribeMultiRegionAccessPointOperation</code>.
+     * </p>
+     * <p>
+     * The following actions are related to <code>CreateMultiRegionAccessPoint</code>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteMultiRegionAccessPoint.html">
+     * DeleteMultiRegionAccessPoint</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DescribeMultiRegionAccessPointOperation.html"
+     * >DescribeMultiRegionAccessPointOperation</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPoint.html">
+     * GetMultiRegionAccessPoint</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListMultiRegionAccessPoints.html">
+     * ListMultiRegionAccessPoints</a>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param createMultiRegionAccessPointRequest
+     * @return Result of the CreateMultiRegionAccessPoint operation returned by the service.
+     * @sample AWSS3Control.CreateMultiRegionAccessPoint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/CreateMultiRegionAccessPoint"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateMultiRegionAccessPointResult createMultiRegionAccessPoint(CreateMultiRegionAccessPointRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateMultiRegionAccessPoint(request);
+    }
+
+    @SdkInternalApi
+    final CreateMultiRegionAccessPointResult executeCreateMultiRegionAccessPoint(CreateMultiRegionAccessPointRequest createMultiRegionAccessPointRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createMultiRegionAccessPointRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateMultiRegionAccessPointRequest> request = null;
+        Response<CreateMultiRegionAccessPointResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateMultiRegionAccessPointRequestMarshaller().marshall(super.beforeMarshalling(createMultiRegionAccessPointRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateMultiRegionAccessPoint");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(createMultiRegionAccessPointRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(createMultiRegionAccessPointRequest.getAccountId(), "AccountId",
+                        "createMultiRegionAccessPointRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", createMultiRegionAccessPointRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<CreateMultiRegionAccessPointResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<CreateMultiRegionAccessPointResult>(
+                    new CreateMultiRegionAccessPointResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes the specified access point.
      * </p>
      * <p>
@@ -1318,11 +1430,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * </note>
      * <p>
      * This implementation of the DELETE action uses the policy subresource to delete the policy of a specified Amazon
-     * S3 on Outposts bucket. If you are using an identity other than the root user of the account that owns the bucket,
-     * the calling identity must have the <code>s3-outposts:DeleteBucketPolicy</code> permissions on the specified
-     * Outposts bucket and belong to the bucket owner's account to use this action. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using Amazon S3 on Outposts</a> in
-     * <i>Amazon S3 User Guide</i>.
+     * S3 on Outposts bucket. If you are using an identity other than the root user of the Amazon Web Services account
+     * that owns the bucket, the calling identity must have the <code>s3-outposts:DeleteBucketPolicy</code> permissions
+     * on the specified Outposts bucket and belong to the bucket owner's account to use this action. For more
+     * information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using Amazon
+     * S3 on Outposts</a> in <i>Amazon S3 User Guide</i>.
      * </p>
      * <p>
      * If you don't have <code>DeleteBucketPolicy</code> permissions, Amazon S3 returns a <code>403 Access Denied</code>
@@ -1331,8 +1443,8 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * </p>
      * <important>
      * <p>
-     * As a security precaution, the root user of the account that owns a bucket can always use this action, even if the
-     * policy explicitly denies the root user the ability to perform this action.
+     * As a security precaution, the root user of the Amazon Web Services account that owns a bucket can always use this
+     * action, even if the policy explicitly denies the root user the ability to perform this action.
      * </p>
      * </important>
      * <p>
@@ -1677,7 +1789,118 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
     /**
      * <p>
-     * Removes the <code>PublicAccessBlock</code> configuration for an account. For more information, see <a
+     * Deletes a Multi-Region Access Point. This action does not delete the buckets associated with the Multi-Region
+     * Access Point, only the Multi-Region Access Point itself.
+     * </p>
+     * <p>
+     * This action will always be routed to the US West (Oregon) Region. For more information about the restrictions
+     * around managing Multi-Region Access Points, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+     * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.
+     * </p>
+     * <p>
+     * This request is asynchronous, meaning that you might receive a response before the command has completed. When
+     * this request provides a response, it provides a token that you can use to monitor the status of the request with
+     * <code>DescribeMultiRegionAccessPointOperation</code>.
+     * </p>
+     * <p>
+     * The following actions are related to <code>DeleteMultiRegionAccessPoint</code>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateMultiRegionAccessPoint.html">
+     * CreateMultiRegionAccessPoint</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DescribeMultiRegionAccessPointOperation.html"
+     * >DescribeMultiRegionAccessPointOperation</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPoint.html">
+     * GetMultiRegionAccessPoint</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListMultiRegionAccessPoints.html">
+     * ListMultiRegionAccessPoints</a>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param deleteMultiRegionAccessPointRequest
+     * @return Result of the DeleteMultiRegionAccessPoint operation returned by the service.
+     * @sample AWSS3Control.DeleteMultiRegionAccessPoint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteMultiRegionAccessPoint"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteMultiRegionAccessPointResult deleteMultiRegionAccessPoint(DeleteMultiRegionAccessPointRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteMultiRegionAccessPoint(request);
+    }
+
+    @SdkInternalApi
+    final DeleteMultiRegionAccessPointResult executeDeleteMultiRegionAccessPoint(DeleteMultiRegionAccessPointRequest deleteMultiRegionAccessPointRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteMultiRegionAccessPointRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteMultiRegionAccessPointRequest> request = null;
+        Response<DeleteMultiRegionAccessPointResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteMultiRegionAccessPointRequestMarshaller().marshall(super.beforeMarshalling(deleteMultiRegionAccessPointRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteMultiRegionAccessPoint");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(deleteMultiRegionAccessPointRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(deleteMultiRegionAccessPointRequest.getAccountId(), "AccountId",
+                        "deleteMultiRegionAccessPointRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", deleteMultiRegionAccessPointRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<DeleteMultiRegionAccessPointResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<DeleteMultiRegionAccessPointResult>(
+                    new DeleteMultiRegionAccessPointResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Removes the <code>PublicAccessBlock</code> configuration for an Amazon Web Services account. For more
+     * information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html"> Using Amazon S3
      * block public access</a>.
      * </p>
@@ -2008,6 +2231,109 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
             StaxResponseHandler<DescribeJobResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<DescribeJobResult>(
                     new DescribeJobResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves the status of an asynchronous request to manage a Multi-Region Access Point. For more information about
+     * managing Multi-Region Access Points and how asynchronous requests work, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+     * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.
+     * </p>
+     * <p>
+     * The following actions are related to <code>GetMultiRegionAccessPoint</code>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateMultiRegionAccessPoint.html">
+     * CreateMultiRegionAccessPoint</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteMultiRegionAccessPoint.html">
+     * DeleteMultiRegionAccessPoint</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPoint.html">
+     * GetMultiRegionAccessPoint</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListMultiRegionAccessPoints.html">
+     * ListMultiRegionAccessPoints</a>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param describeMultiRegionAccessPointOperationRequest
+     * @return Result of the DescribeMultiRegionAccessPointOperation operation returned by the service.
+     * @sample AWSS3Control.DescribeMultiRegionAccessPointOperation
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DescribeMultiRegionAccessPointOperation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeMultiRegionAccessPointOperationResult describeMultiRegionAccessPointOperation(DescribeMultiRegionAccessPointOperationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeMultiRegionAccessPointOperation(request);
+    }
+
+    @SdkInternalApi
+    final DescribeMultiRegionAccessPointOperationResult executeDescribeMultiRegionAccessPointOperation(
+            DescribeMultiRegionAccessPointOperationRequest describeMultiRegionAccessPointOperationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeMultiRegionAccessPointOperationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeMultiRegionAccessPointOperationRequest> request = null;
+        Response<DescribeMultiRegionAccessPointOperationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeMultiRegionAccessPointOperationRequestMarshaller().marshall(super
+                        .beforeMarshalling(describeMultiRegionAccessPointOperationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeMultiRegionAccessPointOperation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(describeMultiRegionAccessPointOperationRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(describeMultiRegionAccessPointOperationRequest.getAccountId(), "AccountId",
+                        "describeMultiRegionAccessPointOperationRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", describeMultiRegionAccessPointOperationRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<DescribeMultiRegionAccessPointOperationResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<DescribeMultiRegionAccessPointOperationResult>(
+                    new DescribeMultiRegionAccessPointOperationResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
@@ -2662,10 +2988,10 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * in the <i>Amazon S3 User Guide</i>.
      * </p>
      * <p>
-     * If you are using an identity other than the root user of the account that owns the Outposts bucket, the calling
-     * identity must have the <code>s3-outposts:GetBucket</code> permissions on the specified Outposts bucket and belong
-     * to the Outposts bucket owner's account in order to use this action. Only users from Outposts bucket owner account
-     * with the right permissions can perform actions on an Outposts bucket.
+     * If you are using an identity other than the root user of the Amazon Web Services account that owns the Outposts
+     * bucket, the calling identity must have the <code>s3-outposts:GetBucket</code> permissions on the specified
+     * Outposts bucket and belong to the Outposts bucket owner's account in order to use this action. Only users from
+     * Outposts bucket owner account with the right permissions can perform actions on an Outposts bucket.
      * </p>
      * <p>
      * If you don't have <code>s3-outposts:GetBucket</code> permissions or you're not using an identity that belongs to
@@ -2970,9 +3296,9 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * the <i>Amazon S3 User Guide</i>.
      * </p>
      * <p>
-     * If you are using an identity other than the root user of the account that owns the bucket, the calling identity
-     * must have the <code>GetBucketPolicy</code> permissions on the specified bucket and belong to the bucket owner's
-     * account in order to use this action.
+     * If you are using an identity other than the root user of the Amazon Web Services account that owns the bucket,
+     * the calling identity must have the <code>GetBucketPolicy</code> permissions on the specified bucket and belong to
+     * the bucket owner's account in order to use this action.
      * </p>
      * <p>
      * Only users from Outposts bucket owner account with the right permissions can perform actions on an Outposts
@@ -2981,8 +3307,8 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * </p>
      * <important>
      * <p>
-     * As a security precaution, the root user of the account that owns a bucket can always use this action, even if the
-     * policy explicitly denies the root user the ability to perform this action.
+     * As a security precaution, the root user of the Amazon Web Services account that owns a bucket can always use this
+     * action, even if the policy explicitly denies the root user the ability to perform this action.
      * </p>
      * </important>
      * <p>
@@ -3352,7 +3678,296 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
     /**
      * <p>
-     * Retrieves the <code>PublicAccessBlock</code> configuration for an account. For more information, see <a
+     * Returns configuration information about the specified Multi-Region Access Point.
+     * </p>
+     * <p>
+     * This action will always be routed to the US West (Oregon) Region. For more information about the restrictions
+     * around managing Multi-Region Access Points, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+     * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.
+     * </p>
+     * <p>
+     * The following actions are related to <code>GetMultiRegionAccessPoint</code>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateMultiRegionAccessPoint.html">
+     * CreateMultiRegionAccessPoint</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteMultiRegionAccessPoint.html">
+     * DeleteMultiRegionAccessPoint</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DescribeMultiRegionAccessPointOperation.html"
+     * >DescribeMultiRegionAccessPointOperation</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListMultiRegionAccessPoints.html">
+     * ListMultiRegionAccessPoints</a>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param getMultiRegionAccessPointRequest
+     * @return Result of the GetMultiRegionAccessPoint operation returned by the service.
+     * @sample AWSS3Control.GetMultiRegionAccessPoint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetMultiRegionAccessPoint"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetMultiRegionAccessPointResult getMultiRegionAccessPoint(GetMultiRegionAccessPointRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetMultiRegionAccessPoint(request);
+    }
+
+    @SdkInternalApi
+    final GetMultiRegionAccessPointResult executeGetMultiRegionAccessPoint(GetMultiRegionAccessPointRequest getMultiRegionAccessPointRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getMultiRegionAccessPointRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetMultiRegionAccessPointRequest> request = null;
+        Response<GetMultiRegionAccessPointResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetMultiRegionAccessPointRequestMarshaller().marshall(super.beforeMarshalling(getMultiRegionAccessPointRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetMultiRegionAccessPoint");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(getMultiRegionAccessPointRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(getMultiRegionAccessPointRequest.getAccountId(), "AccountId", "getMultiRegionAccessPointRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", getMultiRegionAccessPointRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<GetMultiRegionAccessPointResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<GetMultiRegionAccessPointResult>(
+                    new GetMultiRegionAccessPointResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns the access control policy of the specified Multi-Region Access Point.
+     * </p>
+     * <p>
+     * This action will always be routed to the US West (Oregon) Region. For more information about the restrictions
+     * around managing Multi-Region Access Points, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+     * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.
+     * </p>
+     * <p>
+     * The following actions are related to <code>GetMultiRegionAccessPointPolicy</code>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPointPolicyStatus.html">
+     * GetMultiRegionAccessPointPolicyStatus</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutMultiRegionAccessPointPolicy.html">
+     * PutMultiRegionAccessPointPolicy</a>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param getMultiRegionAccessPointPolicyRequest
+     * @return Result of the GetMultiRegionAccessPointPolicy operation returned by the service.
+     * @sample AWSS3Control.GetMultiRegionAccessPointPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetMultiRegionAccessPointPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetMultiRegionAccessPointPolicyResult getMultiRegionAccessPointPolicy(GetMultiRegionAccessPointPolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetMultiRegionAccessPointPolicy(request);
+    }
+
+    @SdkInternalApi
+    final GetMultiRegionAccessPointPolicyResult executeGetMultiRegionAccessPointPolicy(
+            GetMultiRegionAccessPointPolicyRequest getMultiRegionAccessPointPolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getMultiRegionAccessPointPolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetMultiRegionAccessPointPolicyRequest> request = null;
+        Response<GetMultiRegionAccessPointPolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetMultiRegionAccessPointPolicyRequestMarshaller().marshall(super.beforeMarshalling(getMultiRegionAccessPointPolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetMultiRegionAccessPointPolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(getMultiRegionAccessPointPolicyRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(getMultiRegionAccessPointPolicyRequest.getAccountId(), "AccountId",
+                        "getMultiRegionAccessPointPolicyRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", getMultiRegionAccessPointPolicyRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<GetMultiRegionAccessPointPolicyResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<GetMultiRegionAccessPointPolicyResult>(
+                    new GetMultiRegionAccessPointPolicyResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Indicates whether the specified Multi-Region Access Point has an access control policy that allows public access.
+     * </p>
+     * <p>
+     * This action will always be routed to the US West (Oregon) Region. For more information about the restrictions
+     * around managing Multi-Region Access Points, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+     * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.
+     * </p>
+     * <p>
+     * The following actions are related to <code>GetMultiRegionAccessPointPolicyStatus</code>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPointPolicy.html">
+     * GetMultiRegionAccessPointPolicy</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutMultiRegionAccessPointPolicy.html">
+     * PutMultiRegionAccessPointPolicy</a>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param getMultiRegionAccessPointPolicyStatusRequest
+     * @return Result of the GetMultiRegionAccessPointPolicyStatus operation returned by the service.
+     * @sample AWSS3Control.GetMultiRegionAccessPointPolicyStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetMultiRegionAccessPointPolicyStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetMultiRegionAccessPointPolicyStatusResult getMultiRegionAccessPointPolicyStatus(GetMultiRegionAccessPointPolicyStatusRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetMultiRegionAccessPointPolicyStatus(request);
+    }
+
+    @SdkInternalApi
+    final GetMultiRegionAccessPointPolicyStatusResult executeGetMultiRegionAccessPointPolicyStatus(
+            GetMultiRegionAccessPointPolicyStatusRequest getMultiRegionAccessPointPolicyStatusRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getMultiRegionAccessPointPolicyStatusRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetMultiRegionAccessPointPolicyStatusRequest> request = null;
+        Response<GetMultiRegionAccessPointPolicyStatusResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetMultiRegionAccessPointPolicyStatusRequestMarshaller().marshall(super
+                        .beforeMarshalling(getMultiRegionAccessPointPolicyStatusRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetMultiRegionAccessPointPolicyStatus");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(getMultiRegionAccessPointPolicyStatusRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(getMultiRegionAccessPointPolicyStatusRequest.getAccountId(), "AccountId",
+                        "getMultiRegionAccessPointPolicyStatusRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", getMultiRegionAccessPointPolicyStatusRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<GetMultiRegionAccessPointPolicyStatusResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<GetMultiRegionAccessPointPolicyStatusResult>(
+                    new GetMultiRegionAccessPointPolicyStatusResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves the <code>PublicAccessBlock</code> configuration for an Amazon Web Services account. For more
+     * information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html"> Using Amazon S3
      * block public access</a>.
      * </p>
@@ -3821,8 +4436,8 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
     /**
      * <p>
-     * Lists current S3 Batch Operations jobs and jobs that have ended within the last 30 days for the account making
-     * the request. For more information, see <a
+     * Lists current S3 Batch Operations jobs and jobs that have ended within the last 30 days for the Amazon Web
+     * Services account making the request. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">S3 Batch Operations</a> in the
      * <i>Amazon S3 User Guide</i>.
      * </p>
@@ -3908,6 +4523,112 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
             StaxResponseHandler<ListJobsResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<ListJobsResult>(
                     new ListJobsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a list of the Multi-Region Access Points currently associated with the specified Amazon Web Services
+     * account. Each call can return up to 100 Multi-Region Access Points, the maximum number of Multi-Region Access
+     * Points that can be associated with a single account.
+     * </p>
+     * <p>
+     * This action will always be routed to the US West (Oregon) Region. For more information about the restrictions
+     * around managing Multi-Region Access Points, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+     * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.
+     * </p>
+     * <p>
+     * The following actions are related to <code>ListMultiRegionAccessPoint</code>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateMultiRegionAccessPoint.html">
+     * CreateMultiRegionAccessPoint</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteMultiRegionAccessPoint.html">
+     * DeleteMultiRegionAccessPoint</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DescribeMultiRegionAccessPointOperation.html"
+     * >DescribeMultiRegionAccessPointOperation</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPoint.html">
+     * GetMultiRegionAccessPoint</a>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param listMultiRegionAccessPointsRequest
+     * @return Result of the ListMultiRegionAccessPoints operation returned by the service.
+     * @sample AWSS3Control.ListMultiRegionAccessPoints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListMultiRegionAccessPoints"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListMultiRegionAccessPointsResult listMultiRegionAccessPoints(ListMultiRegionAccessPointsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListMultiRegionAccessPoints(request);
+    }
+
+    @SdkInternalApi
+    final ListMultiRegionAccessPointsResult executeListMultiRegionAccessPoints(ListMultiRegionAccessPointsRequest listMultiRegionAccessPointsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listMultiRegionAccessPointsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListMultiRegionAccessPointsRequest> request = null;
+        Response<ListMultiRegionAccessPointsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListMultiRegionAccessPointsRequestMarshaller().marshall(super.beforeMarshalling(listMultiRegionAccessPointsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListMultiRegionAccessPoints");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(listMultiRegionAccessPointsRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(listMultiRegionAccessPointsRequest.getAccountId(), "AccountId",
+                        "listMultiRegionAccessPointsRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", listMultiRegionAccessPointsRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<ListMultiRegionAccessPointsResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<ListMultiRegionAccessPointsResult>(
+                    new ListMultiRegionAccessPointsResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
@@ -4510,9 +5231,9 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * the <i>Amazon S3 User Guide</i>.
      * </p>
      * <p>
-     * If you are using an identity other than the root user of the account that owns the Outposts bucket, the calling
-     * identity must have the <code>PutBucketPolicy</code> permissions on the specified Outposts bucket and belong to
-     * the bucket owner's account in order to use this action.
+     * If you are using an identity other than the root user of the Amazon Web Services account that owns the Outposts
+     * bucket, the calling identity must have the <code>PutBucketPolicy</code> permissions on the specified Outposts
+     * bucket and belong to the bucket owner's account in order to use this action.
      * </p>
      * <p>
      * If you don't have <code>PutBucketPolicy</code> permissions, Amazon S3 returns a <code>403 Access Denied</code>
@@ -4521,8 +5242,8 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * </p>
      * <important>
      * <p>
-     * As a security precaution, the root user of the account that owns a bucket can always use this action, even if the
-     * policy explicitly denies the root user the ability to perform this action.
+     * As a security precaution, the root user of the Amazon Web Services account that owns a bucket can always use this
+     * action, even if the policy explicitly denies the root user the ability to perform this action.
      * </p>
      * </important>
      * <p>
@@ -4658,10 +5379,10 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * </p>
      * <p>
      * Use tags to organize your Amazon Web Services bill to reflect your own cost structure. To do this, sign up to get
-     * your account bill with tag key values included. Then, to see the cost of combined resources, organize your
-     * billing information according to resources with the same tag key values. For example, you can tag several
-     * resources with a specific application name, and then organize your billing information to see the total cost of
-     * that application across several services. For more information, see <a
+     * your Amazon Web Services account bill with tag key values included. Then, to see the cost of combined resources,
+     * organize your billing information according to resources with the same tag key values. For example, you can tag
+     * several resources with a specific application name, and then organize your billing information to see the total
+     * cost of that application across several services. For more information, see <a
      * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Cost allocation and
      * tagging</a>.
      * </p>
@@ -5017,7 +5738,102 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
     /**
      * <p>
-     * Creates or modifies the <code>PublicAccessBlock</code> configuration for an account. For more information, see <a
+     * Associates an access control policy with the specified Multi-Region Access Point. Each Multi-Region Access Point
+     * can have only one policy, so a request made to this action replaces any existing policy that is associated with
+     * the specified Multi-Region Access Point.
+     * </p>
+     * <p>
+     * This action will always be routed to the US West (Oregon) Region. For more information about the restrictions
+     * around managing Multi-Region Access Points, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+     * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.
+     * </p>
+     * <p>
+     * The following actions are related to <code>PutMultiRegionAccessPointPolicy</code>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPointPolicy.html">
+     * GetMultiRegionAccessPointPolicy</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPointPolicyStatus.html">
+     * GetMultiRegionAccessPointPolicyStatus</a>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param putMultiRegionAccessPointPolicyRequest
+     * @return Result of the PutMultiRegionAccessPointPolicy operation returned by the service.
+     * @sample AWSS3Control.PutMultiRegionAccessPointPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/PutMultiRegionAccessPointPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public PutMultiRegionAccessPointPolicyResult putMultiRegionAccessPointPolicy(PutMultiRegionAccessPointPolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executePutMultiRegionAccessPointPolicy(request);
+    }
+
+    @SdkInternalApi
+    final PutMultiRegionAccessPointPolicyResult executePutMultiRegionAccessPointPolicy(
+            PutMultiRegionAccessPointPolicyRequest putMultiRegionAccessPointPolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(putMultiRegionAccessPointPolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PutMultiRegionAccessPointPolicyRequest> request = null;
+        Response<PutMultiRegionAccessPointPolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PutMultiRegionAccessPointPolicyRequestMarshaller().marshall(super.beforeMarshalling(putMultiRegionAccessPointPolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutMultiRegionAccessPointPolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(putMultiRegionAccessPointPolicyRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(putMultiRegionAccessPointPolicyRequest.getAccountId(), "AccountId",
+                        "putMultiRegionAccessPointPolicyRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", putMultiRegionAccessPointPolicyRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<PutMultiRegionAccessPointPolicyResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<PutMultiRegionAccessPointPolicyResult>(
+                    new PutMultiRegionAccessPointPolicyResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates or modifies the <code>PublicAccessBlock</code> configuration for an Amazon Web Services account. For more
+     * information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html"> Using Amazon S3
      * block public access</a>.
      * </p>

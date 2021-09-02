@@ -90,6 +90,8 @@ public class AdministrativeAction implements Serializable, Cloneable, Structured
 
     private AdministrativeActionFailureDetails failureDetails;
 
+    private Volume targetVolumeValues;
+
     /**
      * @param administrativeActionType
      * @see AdministrativeActionType
@@ -604,6 +606,32 @@ public class AdministrativeAction implements Serializable, Cloneable, Structured
     }
 
     /**
+     * @param targetVolumeValues
+     */
+
+    public void setTargetVolumeValues(Volume targetVolumeValues) {
+        this.targetVolumeValues = targetVolumeValues;
+    }
+
+    /**
+     * @return
+     */
+
+    public Volume getTargetVolumeValues() {
+        return this.targetVolumeValues;
+    }
+
+    /**
+     * @param targetVolumeValues
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AdministrativeAction withTargetVolumeValues(Volume targetVolumeValues) {
+        setTargetVolumeValues(targetVolumeValues);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -626,7 +654,9 @@ public class AdministrativeAction implements Serializable, Cloneable, Structured
         if (getTargetFileSystemValues() != null)
             sb.append("TargetFileSystemValues: ").append(getTargetFileSystemValues()).append(",");
         if (getFailureDetails() != null)
-            sb.append("FailureDetails: ").append(getFailureDetails());
+            sb.append("FailureDetails: ").append(getFailureDetails()).append(",");
+        if (getTargetVolumeValues() != null)
+            sb.append("TargetVolumeValues: ").append(getTargetVolumeValues());
         sb.append("}");
         return sb.toString();
     }
@@ -665,6 +695,10 @@ public class AdministrativeAction implements Serializable, Cloneable, Structured
             return false;
         if (other.getFailureDetails() != null && other.getFailureDetails().equals(this.getFailureDetails()) == false)
             return false;
+        if (other.getTargetVolumeValues() == null ^ this.getTargetVolumeValues() == null)
+            return false;
+        if (other.getTargetVolumeValues() != null && other.getTargetVolumeValues().equals(this.getTargetVolumeValues()) == false)
+            return false;
         return true;
     }
 
@@ -679,6 +713,7 @@ public class AdministrativeAction implements Serializable, Cloneable, Structured
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getTargetFileSystemValues() == null) ? 0 : getTargetFileSystemValues().hashCode());
         hashCode = prime * hashCode + ((getFailureDetails() == null) ? 0 : getFailureDetails().hashCode());
+        hashCode = prime * hashCode + ((getTargetVolumeValues() == null) ? 0 : getTargetVolumeValues().hashCode());
         return hashCode;
     }
 

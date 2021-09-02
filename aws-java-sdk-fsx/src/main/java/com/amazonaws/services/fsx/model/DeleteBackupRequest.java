@@ -37,7 +37,7 @@ public class DeleteBackupRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This is automatically
-     * filled on your behalf when using the AWS CLI or SDK.
+     * filled on your behalf when using the CLI or SDK.
      * </p>
      */
     private String clientRequestToken;
@@ -85,12 +85,12 @@ public class DeleteBackupRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This is automatically
-     * filled on your behalf when using the AWS CLI or SDK.
+     * filled on your behalf when using the CLI or SDK.
      * </p>
      * 
      * @param clientRequestToken
      *        A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This is
-     *        automatically filled on your behalf when using the AWS CLI or SDK.
+     *        automatically filled on your behalf when using the CLI or SDK.
      */
 
     public void setClientRequestToken(String clientRequestToken) {
@@ -100,11 +100,11 @@ public class DeleteBackupRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This is automatically
-     * filled on your behalf when using the AWS CLI or SDK.
+     * filled on your behalf when using the CLI or SDK.
      * </p>
      * 
      * @return A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This is
-     *         automatically filled on your behalf when using the AWS CLI or SDK.
+     *         automatically filled on your behalf when using the CLI or SDK.
      */
 
     public String getClientRequestToken() {
@@ -114,12 +114,12 @@ public class DeleteBackupRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This is automatically
-     * filled on your behalf when using the AWS CLI or SDK.
+     * filled on your behalf when using the CLI or SDK.
      * </p>
      * 
      * @param clientRequestToken
      *        A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This is
-     *        automatically filled on your behalf when using the AWS CLI or SDK.
+     *        automatically filled on your behalf when using the CLI or SDK.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

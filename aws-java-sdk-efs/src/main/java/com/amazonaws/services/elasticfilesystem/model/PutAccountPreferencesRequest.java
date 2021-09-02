@@ -25,10 +25,24 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class PutAccountPreferencesRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Specifies the EFS resource ID preference to set for the user's Amazon Web Services account, in the current Amazon
+     * Web Services Region, either <code>LONG_ID</code> (17 characters), or <code>SHORT_ID</code> (8 characters).
+     * </p>
+     */
     private String resourceIdType;
 
     /**
+     * <p>
+     * Specifies the EFS resource ID preference to set for the user's Amazon Web Services account, in the current Amazon
+     * Web Services Region, either <code>LONG_ID</code> (17 characters), or <code>SHORT_ID</code> (8 characters).
+     * </p>
+     * 
      * @param resourceIdType
+     *        Specifies the EFS resource ID preference to set for the user's Amazon Web Services account, in the current
+     *        Amazon Web Services Region, either <code>LONG_ID</code> (17 characters), or <code>SHORT_ID</code> (8
+     *        characters).
      * @see ResourceIdType
      */
 
@@ -37,7 +51,14 @@ public class PutAccountPreferencesRequest extends com.amazonaws.AmazonWebService
     }
 
     /**
-     * @return
+     * <p>
+     * Specifies the EFS resource ID preference to set for the user's Amazon Web Services account, in the current Amazon
+     * Web Services Region, either <code>LONG_ID</code> (17 characters), or <code>SHORT_ID</code> (8 characters).
+     * </p>
+     * 
+     * @return Specifies the EFS resource ID preference to set for the user's Amazon Web Services account, in the
+     *         current Amazon Web Services Region, either <code>LONG_ID</code> (17 characters), or <code>SHORT_ID</code>
+     *         (8 characters).
      * @see ResourceIdType
      */
 
@@ -46,7 +67,15 @@ public class PutAccountPreferencesRequest extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * Specifies the EFS resource ID preference to set for the user's Amazon Web Services account, in the current Amazon
+     * Web Services Region, either <code>LONG_ID</code> (17 characters), or <code>SHORT_ID</code> (8 characters).
+     * </p>
+     * 
      * @param resourceIdType
+     *        Specifies the EFS resource ID preference to set for the user's Amazon Web Services account, in the current
+     *        Amazon Web Services Region, either <code>LONG_ID</code> (17 characters), or <code>SHORT_ID</code> (8
+     *        characters).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceIdType
      */
@@ -57,7 +86,15 @@ public class PutAccountPreferencesRequest extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * Specifies the EFS resource ID preference to set for the user's Amazon Web Services account, in the current Amazon
+     * Web Services Region, either <code>LONG_ID</code> (17 characters), or <code>SHORT_ID</code> (8 characters).
+     * </p>
+     * 
      * @param resourceIdType
+     *        Specifies the EFS resource ID preference to set for the user's Amazon Web Services account, in the current
+     *        Amazon Web Services Region, either <code>LONG_ID</code> (17 characters), or <code>SHORT_ID</code> (8
+     *        characters).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceIdType
      */

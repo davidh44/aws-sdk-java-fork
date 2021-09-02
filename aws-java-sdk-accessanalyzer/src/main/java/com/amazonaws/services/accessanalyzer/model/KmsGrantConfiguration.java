@@ -47,8 +47,8 @@ public class KmsGrantConfiguration implements Serializable, Cloneable, Structure
     private String granteePrincipal;
     /**
      * <p>
-     * The AWS account under which the grant was issued. The account is used to propose KMS grants issued by accounts
-     * other than the owner of the key.
+     * The Amazon Web Services account under which the grant was issued. The account is used to propose KMS grants
+     * issued by accounts other than the owner of the key.
      * </p>
      */
     private String issuingAccount;
@@ -172,13 +172,13 @@ public class KmsGrantConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The AWS account under which the grant was issued. The account is used to propose KMS grants issued by accounts
-     * other than the owner of the key.
+     * The Amazon Web Services account under which the grant was issued. The account is used to propose KMS grants
+     * issued by accounts other than the owner of the key.
      * </p>
      * 
      * @param issuingAccount
-     *        The AWS account under which the grant was issued. The account is used to propose KMS grants issued by
-     *        accounts other than the owner of the key.
+     *        The Amazon Web Services account under which the grant was issued. The account is used to propose KMS
+     *        grants issued by accounts other than the owner of the key.
      */
 
     public void setIssuingAccount(String issuingAccount) {
@@ -187,12 +187,12 @@ public class KmsGrantConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The AWS account under which the grant was issued. The account is used to propose KMS grants issued by accounts
-     * other than the owner of the key.
+     * The Amazon Web Services account under which the grant was issued. The account is used to propose KMS grants
+     * issued by accounts other than the owner of the key.
      * </p>
      * 
-     * @return The AWS account under which the grant was issued. The account is used to propose KMS grants issued by
-     *         accounts other than the owner of the key.
+     * @return The Amazon Web Services account under which the grant was issued. The account is used to propose KMS
+     *         grants issued by accounts other than the owner of the key.
      */
 
     public String getIssuingAccount() {
@@ -201,13 +201,13 @@ public class KmsGrantConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The AWS account under which the grant was issued. The account is used to propose KMS grants issued by accounts
-     * other than the owner of the key.
+     * The Amazon Web Services account under which the grant was issued. The account is used to propose KMS grants
+     * issued by accounts other than the owner of the key.
      * </p>
      * 
      * @param issuingAccount
-     *        The AWS account under which the grant was issued. The account is used to propose KMS grants issued by
-     *        accounts other than the owner of the key.
+     *        The Amazon Web Services account under which the grant was issued. The account is used to propose KMS
+     *        grants issued by accounts other than the owner of the key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

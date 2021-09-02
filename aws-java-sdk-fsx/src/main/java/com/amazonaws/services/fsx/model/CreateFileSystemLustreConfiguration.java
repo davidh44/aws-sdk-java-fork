@@ -94,7 +94,7 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * </p>
      * <p>
      * Encryption of data in-transit for <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types is
-     * supported when accessed from supported instance types in supported AWS Regions. To learn more, <a
+     * supported when accessed from supported instance types in supported Amazon Web Services Regions. To learn more, <a
      * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting Data in
      * Transit</a>.
      * </p>
@@ -517,7 +517,7 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * </p>
      * <p>
      * Encryption of data in-transit for <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types is
-     * supported when accessed from supported instance types in supported AWS Regions. To learn more, <a
+     * supported when accessed from supported instance types in supported Amazon Web Services Regions. To learn more, <a
      * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting Data in
      * Transit</a>.
      * </p>
@@ -540,7 +540,8 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      *        </p>
      *        <p>
      *        Encryption of data in-transit for <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types is
-     *        supported when accessed from supported instance types in supported AWS Regions. To learn more, <a
+     *        supported when accessed from supported instance types in supported Amazon Web Services Regions. To learn
+     *        more, <a
      *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting Data
      *        in Transit</a>.
      * @see LustreDeploymentType
@@ -570,7 +571,7 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * </p>
      * <p>
      * Encryption of data in-transit for <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types is
-     * supported when accessed from supported instance types in supported AWS Regions. To learn more, <a
+     * supported when accessed from supported instance types in supported Amazon Web Services Regions. To learn more, <a
      * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting Data in
      * Transit</a>.
      * </p>
@@ -592,7 +593,8 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      *         </p>
      *         <p>
      *         Encryption of data in-transit for <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types
-     *         is supported when accessed from supported instance types in supported AWS Regions. To learn more, <a
+     *         is supported when accessed from supported instance types in supported Amazon Web Services Regions. To
+     *         learn more, <a
      *         href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting Data
      *         in Transit</a>.
      * @see LustreDeploymentType
@@ -622,7 +624,7 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * </p>
      * <p>
      * Encryption of data in-transit for <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types is
-     * supported when accessed from supported instance types in supported AWS Regions. To learn more, <a
+     * supported when accessed from supported instance types in supported Amazon Web Services Regions. To learn more, <a
      * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting Data in
      * Transit</a>.
      * </p>
@@ -645,7 +647,8 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      *        </p>
      *        <p>
      *        Encryption of data in-transit for <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types is
-     *        supported when accessed from supported instance types in supported AWS Regions. To learn more, <a
+     *        supported when accessed from supported instance types in supported Amazon Web Services Regions. To learn
+     *        more, <a
      *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting Data
      *        in Transit</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -677,7 +680,7 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * </p>
      * <p>
      * Encryption of data in-transit for <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types is
-     * supported when accessed from supported instance types in supported AWS Regions. To learn more, <a
+     * supported when accessed from supported instance types in supported Amazon Web Services Regions. To learn more, <a
      * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting Data in
      * Transit</a>.
      * </p>
@@ -700,7 +703,8 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      *        </p>
      *        <p>
      *        Encryption of data in-transit for <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types is
-     *        supported when accessed from supported instance types in supported AWS Regions. To learn more, <a
+     *        supported when accessed from supported instance types in supported Amazon Web Services Regions. To learn
+     *        more, <a
      *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting Data
      *        in Transit</a>.
      * @return Returns a reference to this object so that method calls can be chained together.

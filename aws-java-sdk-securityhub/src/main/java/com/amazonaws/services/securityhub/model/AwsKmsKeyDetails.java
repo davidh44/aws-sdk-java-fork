@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains metadata about a customer master key (CMK).
+ * Contains metadata about an KMS key.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/AwsKmsKeyDetails" target="_top">AWS API
@@ -30,13 +30,13 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The twelve-digit account ID of the Amazon Web Services account that owns the CMK.
+     * The twelve-digit account ID of the Amazon Web Services account that owns the KMS key.
      * </p>
      */
     private String aWSAccountId;
     /**
      * <p>
-     * Indicates when the CMK was created.
+     * Indicates when the KMS key was created.
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
@@ -47,33 +47,33 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
     private Double creationDate;
     /**
      * <p>
-     * The globally unique identifier for the CMK.
+     * The globally unique identifier for the KMS key.
      * </p>
      */
     private String keyId;
     /**
      * <p>
-     * The manager of the CMK. CMKs in your Amazon Web Services account are either customer managed or Amazon Web
-     * Services managed.
+     * The manager of the KMS key. KMS keys in your Amazon Web Services account are either customer managed or Amazon
+     * Web Services managed.
      * </p>
      */
     private String keyManager;
     /**
      * <p>
-     * The state of the CMK.
+     * The state of the KMS key.
      * </p>
      */
     private String keyState;
     /**
      * <p>
-     * The source of the CMK's key material.
+     * The source of the KMS key material.
      * </p>
      * <p>
      * When this value is <code>AWS_KMS</code>, KMS created the key material.
      * </p>
      * <p>
      * When this value is <code>EXTERNAL</code>, the key material was imported from your existing key management
-     * infrastructure or the CMK lacks key material.
+     * infrastructure or the KMS key lacks key material.
      * </p>
      * <p>
      * When this value is <code>AWS_CLOUDHSM</code>, the key material was created in the CloudHSM cluster associated
@@ -87,14 +87,20 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private String description;
+    /**
+     * <p>
+     * Whether the key has key rotation enabled.
+     * </p>
+     */
+    private Boolean keyRotationStatus;
 
     /**
      * <p>
-     * The twelve-digit account ID of the Amazon Web Services account that owns the CMK.
+     * The twelve-digit account ID of the Amazon Web Services account that owns the KMS key.
      * </p>
      * 
      * @param aWSAccountId
-     *        The twelve-digit account ID of the Amazon Web Services account that owns the CMK.
+     *        The twelve-digit account ID of the Amazon Web Services account that owns the KMS key.
      */
 
     public void setAWSAccountId(String aWSAccountId) {
@@ -103,10 +109,10 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The twelve-digit account ID of the Amazon Web Services account that owns the CMK.
+     * The twelve-digit account ID of the Amazon Web Services account that owns the KMS key.
      * </p>
      * 
-     * @return The twelve-digit account ID of the Amazon Web Services account that owns the CMK.
+     * @return The twelve-digit account ID of the Amazon Web Services account that owns the KMS key.
      */
 
     public String getAWSAccountId() {
@@ -115,11 +121,11 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The twelve-digit account ID of the Amazon Web Services account that owns the CMK.
+     * The twelve-digit account ID of the Amazon Web Services account that owns the KMS key.
      * </p>
      * 
      * @param aWSAccountId
-     *        The twelve-digit account ID of the Amazon Web Services account that owns the CMK.
+     *        The twelve-digit account ID of the Amazon Web Services account that owns the KMS key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -130,7 +136,7 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Indicates when the CMK was created.
+     * Indicates when the KMS key was created.
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
@@ -139,7 +145,7 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
      * </p>
      * 
      * @param creationDate
-     *        Indicates when the CMK was created.</p>
+     *        Indicates when the KMS key was created.</p>
      *        <p>
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
@@ -152,7 +158,7 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Indicates when the CMK was created.
+     * Indicates when the KMS key was created.
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
@@ -160,7 +166,7 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
      * <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
-     * @return Indicates when the CMK was created.</p>
+     * @return Indicates when the KMS key was created.</p>
      *         <p>
      *         Uses the <code>date-time</code> format specified in <a
      *         href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
@@ -173,7 +179,7 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Indicates when the CMK was created.
+     * Indicates when the KMS key was created.
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
@@ -182,7 +188,7 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
      * </p>
      * 
      * @param creationDate
-     *        Indicates when the CMK was created.</p>
+     *        Indicates when the KMS key was created.</p>
      *        <p>
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
@@ -197,11 +203,11 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The globally unique identifier for the CMK.
+     * The globally unique identifier for the KMS key.
      * </p>
      * 
      * @param keyId
-     *        The globally unique identifier for the CMK.
+     *        The globally unique identifier for the KMS key.
      */
 
     public void setKeyId(String keyId) {
@@ -210,10 +216,10 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The globally unique identifier for the CMK.
+     * The globally unique identifier for the KMS key.
      * </p>
      * 
-     * @return The globally unique identifier for the CMK.
+     * @return The globally unique identifier for the KMS key.
      */
 
     public String getKeyId() {
@@ -222,11 +228,11 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The globally unique identifier for the CMK.
+     * The globally unique identifier for the KMS key.
      * </p>
      * 
      * @param keyId
-     *        The globally unique identifier for the CMK.
+     *        The globally unique identifier for the KMS key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -237,13 +243,13 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The manager of the CMK. CMKs in your Amazon Web Services account are either customer managed or Amazon Web
-     * Services managed.
+     * The manager of the KMS key. KMS keys in your Amazon Web Services account are either customer managed or Amazon
+     * Web Services managed.
      * </p>
      * 
      * @param keyManager
-     *        The manager of the CMK. CMKs in your Amazon Web Services account are either customer managed or Amazon Web
-     *        Services managed.
+     *        The manager of the KMS key. KMS keys in your Amazon Web Services account are either customer managed or
+     *        Amazon Web Services managed.
      */
 
     public void setKeyManager(String keyManager) {
@@ -252,12 +258,12 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The manager of the CMK. CMKs in your Amazon Web Services account are either customer managed or Amazon Web
-     * Services managed.
+     * The manager of the KMS key. KMS keys in your Amazon Web Services account are either customer managed or Amazon
+     * Web Services managed.
      * </p>
      * 
-     * @return The manager of the CMK. CMKs in your Amazon Web Services account are either customer managed or Amazon
-     *         Web Services managed.
+     * @return The manager of the KMS key. KMS keys in your Amazon Web Services account are either customer managed or
+     *         Amazon Web Services managed.
      */
 
     public String getKeyManager() {
@@ -266,13 +272,13 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The manager of the CMK. CMKs in your Amazon Web Services account are either customer managed or Amazon Web
-     * Services managed.
+     * The manager of the KMS key. KMS keys in your Amazon Web Services account are either customer managed or Amazon
+     * Web Services managed.
      * </p>
      * 
      * @param keyManager
-     *        The manager of the CMK. CMKs in your Amazon Web Services account are either customer managed or Amazon Web
-     *        Services managed.
+     *        The manager of the KMS key. KMS keys in your Amazon Web Services account are either customer managed or
+     *        Amazon Web Services managed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -283,11 +289,11 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The state of the CMK.
+     * The state of the KMS key.
      * </p>
      * 
      * @param keyState
-     *        The state of the CMK.
+     *        The state of the KMS key.
      */
 
     public void setKeyState(String keyState) {
@@ -296,10 +302,10 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The state of the CMK.
+     * The state of the KMS key.
      * </p>
      * 
-     * @return The state of the CMK.
+     * @return The state of the KMS key.
      */
 
     public String getKeyState() {
@@ -308,11 +314,11 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The state of the CMK.
+     * The state of the KMS key.
      * </p>
      * 
      * @param keyState
-     *        The state of the CMK.
+     *        The state of the KMS key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -323,14 +329,14 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The source of the CMK's key material.
+     * The source of the KMS key material.
      * </p>
      * <p>
      * When this value is <code>AWS_KMS</code>, KMS created the key material.
      * </p>
      * <p>
      * When this value is <code>EXTERNAL</code>, the key material was imported from your existing key management
-     * infrastructure or the CMK lacks key material.
+     * infrastructure or the KMS key lacks key material.
      * </p>
      * <p>
      * When this value is <code>AWS_CLOUDHSM</code>, the key material was created in the CloudHSM cluster associated
@@ -338,13 +344,13 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
      * </p>
      * 
      * @param origin
-     *        The source of the CMK's key material.</p>
+     *        The source of the KMS key material.</p>
      *        <p>
      *        When this value is <code>AWS_KMS</code>, KMS created the key material.
      *        </p>
      *        <p>
      *        When this value is <code>EXTERNAL</code>, the key material was imported from your existing key management
-     *        infrastructure or the CMK lacks key material.
+     *        infrastructure or the KMS key lacks key material.
      *        </p>
      *        <p>
      *        When this value is <code>AWS_CLOUDHSM</code>, the key material was created in the CloudHSM cluster
@@ -357,27 +363,27 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The source of the CMK's key material.
+     * The source of the KMS key material.
      * </p>
      * <p>
      * When this value is <code>AWS_KMS</code>, KMS created the key material.
      * </p>
      * <p>
      * When this value is <code>EXTERNAL</code>, the key material was imported from your existing key management
-     * infrastructure or the CMK lacks key material.
+     * infrastructure or the KMS key lacks key material.
      * </p>
      * <p>
      * When this value is <code>AWS_CLOUDHSM</code>, the key material was created in the CloudHSM cluster associated
      * with a custom key store.
      * </p>
      * 
-     * @return The source of the CMK's key material.</p>
+     * @return The source of the KMS key material.</p>
      *         <p>
      *         When this value is <code>AWS_KMS</code>, KMS created the key material.
      *         </p>
      *         <p>
      *         When this value is <code>EXTERNAL</code>, the key material was imported from your existing key management
-     *         infrastructure or the CMK lacks key material.
+     *         infrastructure or the KMS key lacks key material.
      *         </p>
      *         <p>
      *         When this value is <code>AWS_CLOUDHSM</code>, the key material was created in the CloudHSM cluster
@@ -390,14 +396,14 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The source of the CMK's key material.
+     * The source of the KMS key material.
      * </p>
      * <p>
      * When this value is <code>AWS_KMS</code>, KMS created the key material.
      * </p>
      * <p>
      * When this value is <code>EXTERNAL</code>, the key material was imported from your existing key management
-     * infrastructure or the CMK lacks key material.
+     * infrastructure or the KMS key lacks key material.
      * </p>
      * <p>
      * When this value is <code>AWS_CLOUDHSM</code>, the key material was created in the CloudHSM cluster associated
@@ -405,13 +411,13 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
      * </p>
      * 
      * @param origin
-     *        The source of the CMK's key material.</p>
+     *        The source of the KMS key material.</p>
      *        <p>
      *        When this value is <code>AWS_KMS</code>, KMS created the key material.
      *        </p>
      *        <p>
      *        When this value is <code>EXTERNAL</code>, the key material was imported from your existing key management
-     *        infrastructure or the CMK lacks key material.
+     *        infrastructure or the KMS key lacks key material.
      *        </p>
      *        <p>
      *        When this value is <code>AWS_CLOUDHSM</code>, the key material was created in the CloudHSM cluster
@@ -465,6 +471,58 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * Whether the key has key rotation enabled.
+     * </p>
+     * 
+     * @param keyRotationStatus
+     *        Whether the key has key rotation enabled.
+     */
+
+    public void setKeyRotationStatus(Boolean keyRotationStatus) {
+        this.keyRotationStatus = keyRotationStatus;
+    }
+
+    /**
+     * <p>
+     * Whether the key has key rotation enabled.
+     * </p>
+     * 
+     * @return Whether the key has key rotation enabled.
+     */
+
+    public Boolean getKeyRotationStatus() {
+        return this.keyRotationStatus;
+    }
+
+    /**
+     * <p>
+     * Whether the key has key rotation enabled.
+     * </p>
+     * 
+     * @param keyRotationStatus
+     *        Whether the key has key rotation enabled.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsKmsKeyDetails withKeyRotationStatus(Boolean keyRotationStatus) {
+        setKeyRotationStatus(keyRotationStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether the key has key rotation enabled.
+     * </p>
+     * 
+     * @return Whether the key has key rotation enabled.
+     */
+
+    public Boolean isKeyRotationStatus() {
+        return this.keyRotationStatus;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -489,7 +547,9 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
         if (getOrigin() != null)
             sb.append("Origin: ").append(getOrigin()).append(",");
         if (getDescription() != null)
-            sb.append("Description: ").append(getDescription());
+            sb.append("Description: ").append(getDescription()).append(",");
+        if (getKeyRotationStatus() != null)
+            sb.append("KeyRotationStatus: ").append(getKeyRotationStatus());
         sb.append("}");
         return sb.toString();
     }
@@ -532,6 +592,10 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
+        if (other.getKeyRotationStatus() == null ^ this.getKeyRotationStatus() == null)
+            return false;
+        if (other.getKeyRotationStatus() != null && other.getKeyRotationStatus().equals(this.getKeyRotationStatus()) == false)
+            return false;
         return true;
     }
 
@@ -547,6 +611,7 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getKeyState() == null) ? 0 : getKeyState().hashCode());
         hashCode = prime * hashCode + ((getOrigin() == null) ? 0 : getOrigin().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getKeyRotationStatus() == null) ? 0 : getKeyRotationStatus().hashCode());
         return hashCode;
     }
 

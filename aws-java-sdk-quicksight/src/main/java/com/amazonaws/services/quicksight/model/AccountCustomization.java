@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The Amazon QuickSight customizations associated with your Amazon Web Services account; or a QuickSight namespace in a
- * specific Amazon Web Services Region;.
+ * The Amazon QuickSight customizations associated with your Amazon Web Services account or a Amazon QuickSight
+ * namespace in a specific Amazon Web Services Region;.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/AccountCustomization" target="_top">AWS
@@ -31,18 +31,18 @@ public class AccountCustomization implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The default theme for this QuickSight subscription.
+     * The default theme for this Amazon QuickSight subscription.
      * </p>
      */
     private String defaultTheme;
 
     /**
      * <p>
-     * The default theme for this QuickSight subscription.
+     * The default theme for this Amazon QuickSight subscription.
      * </p>
      * 
      * @param defaultTheme
-     *        The default theme for this QuickSight subscription.
+     *        The default theme for this Amazon QuickSight subscription.
      */
 
     public void setDefaultTheme(String defaultTheme) {
@@ -51,10 +51,10 @@ public class AccountCustomization implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The default theme for this QuickSight subscription.
+     * The default theme for this Amazon QuickSight subscription.
      * </p>
      * 
-     * @return The default theme for this QuickSight subscription.
+     * @return The default theme for this Amazon QuickSight subscription.
      */
 
     public String getDefaultTheme() {
@@ -63,11 +63,11 @@ public class AccountCustomization implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The default theme for this QuickSight subscription.
+     * The default theme for this Amazon QuickSight subscription.
      * </p>
      * 
      * @param defaultTheme
-     *        The default theme for this QuickSight subscription.
+     *        The default theme for this Amazon QuickSight subscription.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -60,6 +60,16 @@ public class CvssJsonUnmarshaller implements Unmarshaller<Cvss, JsonUnmarshaller
                     context.nextToken();
                     cvss.setBaseVector(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Source", targetDepth)) {
+                    context.nextToken();
+                    cvss.setSource(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Adjustments", targetDepth)) {
+                    context.nextToken();
+                    cvss.setAdjustments(new ListUnmarshaller<Adjustment>(AdjustmentJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

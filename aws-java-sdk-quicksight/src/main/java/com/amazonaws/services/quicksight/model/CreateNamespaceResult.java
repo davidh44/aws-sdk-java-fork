@@ -25,7 +25,7 @@ public class CreateNamespaceResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The ARN of the QuickSight namespace you created.
+     * The ARN of the Amazon QuickSight namespace you created.
      * </p>
      */
     private String arn;
@@ -73,11 +73,11 @@ public class CreateNamespaceResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The ARN of the QuickSight namespace you created.
+     * The ARN of the Amazon QuickSight namespace you created.
      * </p>
      * 
      * @param arn
-     *        The ARN of the QuickSight namespace you created.
+     *        The ARN of the Amazon QuickSight namespace you created.
      */
 
     public void setArn(String arn) {
@@ -86,10 +86,10 @@ public class CreateNamespaceResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The ARN of the QuickSight namespace you created.
+     * The ARN of the Amazon QuickSight namespace you created.
      * </p>
      * 
-     * @return The ARN of the QuickSight namespace you created.
+     * @return The ARN of the Amazon QuickSight namespace you created.
      */
 
     public String getArn() {
@@ -98,11 +98,11 @@ public class CreateNamespaceResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The ARN of the QuickSight namespace you created.
+     * The ARN of the Amazon QuickSight namespace you created.
      * </p>
      * 
      * @param arn
-     *        The ARN of the QuickSight namespace you created.
+     *        The ARN of the Amazon QuickSight namespace you created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

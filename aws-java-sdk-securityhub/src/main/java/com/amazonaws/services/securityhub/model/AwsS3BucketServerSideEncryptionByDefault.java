@@ -36,7 +36,7 @@ public class AwsS3BucketServerSideEncryptionByDefault implements Serializable, C
     private String sSEAlgorithm;
     /**
      * <p>
-     * KMS customer master key (CMK) ID to use for the default encryption.
+     * KMS key ID to use for the default encryption.
      * </p>
      */
     private String kMSMasterKeyID;
@@ -83,11 +83,11 @@ public class AwsS3BucketServerSideEncryptionByDefault implements Serializable, C
 
     /**
      * <p>
-     * KMS customer master key (CMK) ID to use for the default encryption.
+     * KMS key ID to use for the default encryption.
      * </p>
      * 
      * @param kMSMasterKeyID
-     *        KMS customer master key (CMK) ID to use for the default encryption.
+     *        KMS key ID to use for the default encryption.
      */
 
     public void setKMSMasterKeyID(String kMSMasterKeyID) {
@@ -96,10 +96,10 @@ public class AwsS3BucketServerSideEncryptionByDefault implements Serializable, C
 
     /**
      * <p>
-     * KMS customer master key (CMK) ID to use for the default encryption.
+     * KMS key ID to use for the default encryption.
      * </p>
      * 
-     * @return KMS customer master key (CMK) ID to use for the default encryption.
+     * @return KMS key ID to use for the default encryption.
      */
 
     public String getKMSMasterKeyID() {
@@ -108,11 +108,11 @@ public class AwsS3BucketServerSideEncryptionByDefault implements Serializable, C
 
     /**
      * <p>
-     * KMS customer master key (CMK) ID to use for the default encryption.
+     * KMS key ID to use for the default encryption.
      * </p>
      * 
      * @param kMSMasterKeyID
-     *        KMS customer master key (CMK) ID to use for the default encryption.
+     *        KMS key ID to use for the default encryption.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

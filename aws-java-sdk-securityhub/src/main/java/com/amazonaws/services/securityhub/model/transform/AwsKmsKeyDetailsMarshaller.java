@@ -41,6 +41,8 @@ public class AwsKmsKeyDetailsMarshaller {
             .marshallLocationName("Origin").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
+    private static final MarshallingInfo<Boolean> KEYROTATIONSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyRotationStatus").build();
 
     private static final AwsKmsKeyDetailsMarshaller instance = new AwsKmsKeyDetailsMarshaller();
 
@@ -65,6 +67,7 @@ public class AwsKmsKeyDetailsMarshaller {
             protocolMarshaller.marshall(awsKmsKeyDetails.getKeyState(), KEYSTATE_BINDING);
             protocolMarshaller.marshall(awsKmsKeyDetails.getOrigin(), ORIGIN_BINDING);
             protocolMarshaller.marshall(awsKmsKeyDetails.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(awsKmsKeyDetails.getKeyRotationStatus(), KEYROTATIONSTATUS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

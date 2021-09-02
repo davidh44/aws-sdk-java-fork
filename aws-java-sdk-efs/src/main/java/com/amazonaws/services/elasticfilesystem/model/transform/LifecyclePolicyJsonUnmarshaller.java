@@ -52,6 +52,10 @@ public class LifecyclePolicyJsonUnmarshaller implements Unmarshaller<LifecyclePo
                     context.nextToken();
                     lifecyclePolicy.setTransitionToIA(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("TransitionToPrimaryStorageClass", targetDepth)) {
+                    context.nextToken();
+                    lifecyclePolicy.setTransitionToPrimaryStorageClass(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

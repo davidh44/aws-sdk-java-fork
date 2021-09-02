@@ -21,11 +21,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * Proposed access control configuration for an Amazon S3 bucket. You can propose a configuration for a new Amazon S3
  * bucket or an existing Amazon S3 bucket that you own by specifying the Amazon S3 bucket policy, bucket ACLs, bucket
- * BPA settings, and Amazon S3 access points attached to the bucket. If the configuration is for an existing Amazon S3
- * bucket and you do not specify the Amazon S3 bucket policy, the access preview uses the existing policy attached to
- * the bucket. If the access preview is for a new resource and you do not specify the Amazon S3 bucket policy, the
- * access preview assumes a bucket without a policy. To propose deletion of an existing bucket policy, you can specify
- * an empty string. For more information about bucket policy limits, see <a
+ * BPA settings, Amazon S3 access points, and multi-region access points attached to the bucket. If the configuration is
+ * for an existing Amazon S3 bucket and you do not specify the Amazon S3 bucket policy, the access preview uses the
+ * existing policy attached to the bucket. If the access preview is for a new resource and you do not specify the Amazon
+ * S3 bucket policy, the access preview assumes a bucket without a policy. To propose deletion of an existing bucket
+ * policy, you can specify an empty string. For more information about bucket policy limits, see <a
  * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html">Bucket Policy Examples</a>.
  * </p>
  * 
@@ -37,7 +37,8 @@ public class S3BucketConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The configuration of Amazon S3 access points for the bucket.
+     * The configuration of Amazon S3 access points or multi-region access points for the bucket. You can propose up to
+     * 10 new access points per bucket.
      * </p>
      */
     private java.util.Map<String, S3AccessPointConfiguration> accessPoints;
@@ -65,10 +66,12 @@ public class S3BucketConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The configuration of Amazon S3 access points for the bucket.
+     * The configuration of Amazon S3 access points or multi-region access points for the bucket. You can propose up to
+     * 10 new access points per bucket.
      * </p>
      * 
-     * @return The configuration of Amazon S3 access points for the bucket.
+     * @return The configuration of Amazon S3 access points or multi-region access points for the bucket. You can
+     *         propose up to 10 new access points per bucket.
      */
 
     public java.util.Map<String, S3AccessPointConfiguration> getAccessPoints() {
@@ -77,11 +80,13 @@ public class S3BucketConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The configuration of Amazon S3 access points for the bucket.
+     * The configuration of Amazon S3 access points or multi-region access points for the bucket. You can propose up to
+     * 10 new access points per bucket.
      * </p>
      * 
      * @param accessPoints
-     *        The configuration of Amazon S3 access points for the bucket.
+     *        The configuration of Amazon S3 access points or multi-region access points for the bucket. You can propose
+     *        up to 10 new access points per bucket.
      */
 
     public void setAccessPoints(java.util.Map<String, S3AccessPointConfiguration> accessPoints) {
@@ -90,11 +95,13 @@ public class S3BucketConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The configuration of Amazon S3 access points for the bucket.
+     * The configuration of Amazon S3 access points or multi-region access points for the bucket. You can propose up to
+     * 10 new access points per bucket.
      * </p>
      * 
      * @param accessPoints
-     *        The configuration of Amazon S3 access points for the bucket.
+     *        The configuration of Amazon S3 access points or multi-region access points for the bucket. You can propose
+     *        up to 10 new access points per bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

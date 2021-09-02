@@ -40,6 +40,8 @@ public class UpdateFileSystemRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WindowsConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> LUSTRECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LustreConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> ONTAPCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OntapConfiguration").build();
 
     private static final UpdateFileSystemRequestMarshaller instance = new UpdateFileSystemRequestMarshaller();
 
@@ -62,6 +64,7 @@ public class UpdateFileSystemRequestMarshaller {
             protocolMarshaller.marshall(updateFileSystemRequest.getStorageCapacity(), STORAGECAPACITY_BINDING);
             protocolMarshaller.marshall(updateFileSystemRequest.getWindowsConfiguration(), WINDOWSCONFIGURATION_BINDING);
             protocolMarshaller.marshall(updateFileSystemRequest.getLustreConfiguration(), LUSTRECONFIGURATION_BINDING);
+            protocolMarshaller.marshall(updateFileSystemRequest.getOntapConfiguration(), ONTAPCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -119,6 +119,12 @@ public class DataSet implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<ColumnLevelPermissionRule> columnLevelPermissionRules;
+    /**
+     * <p>
+     * The usage configuration to apply to child datasets that reference this dataset as a source.
+     * </p>
+     */
+    private DataSetUsageConfiguration dataSetUsageConfiguration;
 
     /**
      * <p>
@@ -926,6 +932,46 @@ public class DataSet implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The usage configuration to apply to child datasets that reference this dataset as a source.
+     * </p>
+     * 
+     * @param dataSetUsageConfiguration
+     *        The usage configuration to apply to child datasets that reference this dataset as a source.
+     */
+
+    public void setDataSetUsageConfiguration(DataSetUsageConfiguration dataSetUsageConfiguration) {
+        this.dataSetUsageConfiguration = dataSetUsageConfiguration;
+    }
+
+    /**
+     * <p>
+     * The usage configuration to apply to child datasets that reference this dataset as a source.
+     * </p>
+     * 
+     * @return The usage configuration to apply to child datasets that reference this dataset as a source.
+     */
+
+    public DataSetUsageConfiguration getDataSetUsageConfiguration() {
+        return this.dataSetUsageConfiguration;
+    }
+
+    /**
+     * <p>
+     * The usage configuration to apply to child datasets that reference this dataset as a source.
+     * </p>
+     * 
+     * @param dataSetUsageConfiguration
+     *        The usage configuration to apply to child datasets that reference this dataset as a source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataSet withDataSetUsageConfiguration(DataSetUsageConfiguration dataSetUsageConfiguration) {
+        setDataSetUsageConfiguration(dataSetUsageConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -966,7 +1012,9 @@ public class DataSet implements Serializable, Cloneable, StructuredPojo {
         if (getRowLevelPermissionTagConfiguration() != null)
             sb.append("RowLevelPermissionTagConfiguration: ").append(getRowLevelPermissionTagConfiguration()).append(",");
         if (getColumnLevelPermissionRules() != null)
-            sb.append("ColumnLevelPermissionRules: ").append(getColumnLevelPermissionRules());
+            sb.append("ColumnLevelPermissionRules: ").append(getColumnLevelPermissionRules()).append(",");
+        if (getDataSetUsageConfiguration() != null)
+            sb.append("DataSetUsageConfiguration: ").append(getDataSetUsageConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -1042,6 +1090,10 @@ public class DataSet implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getColumnLevelPermissionRules() != null && other.getColumnLevelPermissionRules().equals(this.getColumnLevelPermissionRules()) == false)
             return false;
+        if (other.getDataSetUsageConfiguration() == null ^ this.getDataSetUsageConfiguration() == null)
+            return false;
+        if (other.getDataSetUsageConfiguration() != null && other.getDataSetUsageConfiguration().equals(this.getDataSetUsageConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -1065,6 +1117,7 @@ public class DataSet implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getRowLevelPermissionDataSet() == null) ? 0 : getRowLevelPermissionDataSet().hashCode());
         hashCode = prime * hashCode + ((getRowLevelPermissionTagConfiguration() == null) ? 0 : getRowLevelPermissionTagConfiguration().hashCode());
         hashCode = prime * hashCode + ((getColumnLevelPermissionRules() == null) ? 0 : getColumnLevelPermissionRules().hashCode());
+        hashCode = prime * hashCode + ((getDataSetUsageConfiguration() == null) ? 0 : getDataSetUsageConfiguration().hashCode());
         return hashCode;
     }
 

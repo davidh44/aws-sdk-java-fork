@@ -23,12 +23,30 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DescribeAccountPreferencesResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Describes the resource ID preference setting for the Amazon Web Services account associated with the user making
+     * the request, in the current Amazon Web Services Region.
+     * </p>
+     */
     private ResourceIdPreference resourceIdPreference;
-
+    /**
+     * <p>
+     * Present if there are more records than returned in the response. You can use the <code>NextToken</code> in the
+     * subsequent request to fetch the additional descriptions.
+     * </p>
+     */
     private String nextToken;
 
     /**
+     * <p>
+     * Describes the resource ID preference setting for the Amazon Web Services account associated with the user making
+     * the request, in the current Amazon Web Services Region.
+     * </p>
+     * 
      * @param resourceIdPreference
+     *        Describes the resource ID preference setting for the Amazon Web Services account associated with the user
+     *        making the request, in the current Amazon Web Services Region.
      */
 
     public void setResourceIdPreference(ResourceIdPreference resourceIdPreference) {
@@ -36,7 +54,13 @@ public class DescribeAccountPreferencesResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * @return
+     * <p>
+     * Describes the resource ID preference setting for the Amazon Web Services account associated with the user making
+     * the request, in the current Amazon Web Services Region.
+     * </p>
+     * 
+     * @return Describes the resource ID preference setting for the Amazon Web Services account associated with the user
+     *         making the request, in the current Amazon Web Services Region.
      */
 
     public ResourceIdPreference getResourceIdPreference() {
@@ -44,7 +68,14 @@ public class DescribeAccountPreferencesResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * Describes the resource ID preference setting for the Amazon Web Services account associated with the user making
+     * the request, in the current Amazon Web Services Region.
+     * </p>
+     * 
      * @param resourceIdPreference
+     *        Describes the resource ID preference setting for the Amazon Web Services account associated with the user
+     *        making the request, in the current Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -54,7 +85,14 @@ public class DescribeAccountPreferencesResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * Present if there are more records than returned in the response. You can use the <code>NextToken</code> in the
+     * subsequent request to fetch the additional descriptions.
+     * </p>
+     * 
      * @param nextToken
+     *        Present if there are more records than returned in the response. You can use the <code>NextToken</code> in
+     *        the subsequent request to fetch the additional descriptions.
      */
 
     public void setNextToken(String nextToken) {
@@ -62,7 +100,13 @@ public class DescribeAccountPreferencesResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * @return
+     * <p>
+     * Present if there are more records than returned in the response. You can use the <code>NextToken</code> in the
+     * subsequent request to fetch the additional descriptions.
+     * </p>
+     * 
+     * @return Present if there are more records than returned in the response. You can use the <code>NextToken</code>
+     *         in the subsequent request to fetch the additional descriptions.
      */
 
     public String getNextToken() {
@@ -70,7 +114,14 @@ public class DescribeAccountPreferencesResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * Present if there are more records than returned in the response. You can use the <code>NextToken</code> in the
+     * subsequent request to fetch the additional descriptions.
+     * </p>
+     * 
      * @param nextToken
+     *        Present if there are more records than returned in the response. You can use the <code>NextToken</code> in
+     *        the subsequent request to fetch the additional descriptions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

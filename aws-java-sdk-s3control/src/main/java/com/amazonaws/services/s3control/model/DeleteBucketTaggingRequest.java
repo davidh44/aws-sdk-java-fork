@@ -27,7 +27,7 @@ public class DeleteBucketTaggingRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The account ID of the Outposts bucket tag set to be removed.
+     * The Amazon Web Services account ID of the Outposts bucket tag set to be removed.
      * </p>
      */
     private String accountId;
@@ -53,11 +53,11 @@ public class DeleteBucketTaggingRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The account ID of the Outposts bucket tag set to be removed.
+     * The Amazon Web Services account ID of the Outposts bucket tag set to be removed.
      * </p>
      * 
      * @param accountId
-     *        The account ID of the Outposts bucket tag set to be removed.
+     *        The Amazon Web Services account ID of the Outposts bucket tag set to be removed.
      */
 
     public void setAccountId(String accountId) {
@@ -66,10 +66,10 @@ public class DeleteBucketTaggingRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The account ID of the Outposts bucket tag set to be removed.
+     * The Amazon Web Services account ID of the Outposts bucket tag set to be removed.
      * </p>
      * 
-     * @return The account ID of the Outposts bucket tag set to be removed.
+     * @return The Amazon Web Services account ID of the Outposts bucket tag set to be removed.
      */
 
     public String getAccountId() {
@@ -78,11 +78,11 @@ public class DeleteBucketTaggingRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The account ID of the Outposts bucket tag set to be removed.
+     * The Amazon Web Services account ID of the Outposts bucket tag set to be removed.
      * </p>
      * 
      * @param accountId
-     *        The account ID of the Outposts bucket tag set to be removed.
+     *        The Amazon Web Services account ID of the Outposts bucket tag set to be removed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

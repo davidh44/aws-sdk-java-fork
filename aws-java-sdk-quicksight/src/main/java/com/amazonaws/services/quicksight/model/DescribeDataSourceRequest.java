@@ -27,25 +27,25 @@ public class DescribeDataSourceRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Web Services account; ID.
+     * The Amazon Web Services account ID.
      * </p>
      */
     private String awsAccountId;
     /**
      * <p>
      * The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     * account;.
+     * account.
      * </p>
      */
     private String dataSourceId;
 
     /**
      * <p>
-     * The Amazon Web Services account; ID.
+     * The Amazon Web Services account ID.
      * </p>
      * 
      * @param awsAccountId
-     *        The Amazon Web Services account; ID.
+     *        The Amazon Web Services account ID.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -54,10 +54,10 @@ public class DescribeDataSourceRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Web Services account; ID.
+     * The Amazon Web Services account ID.
      * </p>
      * 
-     * @return The Amazon Web Services account; ID.
+     * @return The Amazon Web Services account ID.
      */
 
     public String getAwsAccountId() {
@@ -66,11 +66,11 @@ public class DescribeDataSourceRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Web Services account; ID.
+     * The Amazon Web Services account ID.
      * </p>
      * 
      * @param awsAccountId
-     *        The Amazon Web Services account; ID.
+     *        The Amazon Web Services account ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -82,12 +82,12 @@ public class DescribeDataSourceRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     * account;.
+     * account.
      * </p>
      * 
      * @param dataSourceId
      *        The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     *        account;.
+     *        account.
      */
 
     public void setDataSourceId(String dataSourceId) {
@@ -97,11 +97,11 @@ public class DescribeDataSourceRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     * account;.
+     * account.
      * </p>
      * 
      * @return The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     *         account;.
+     *         account.
      */
 
     public String getDataSourceId() {
@@ -111,12 +111,12 @@ public class DescribeDataSourceRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     * account;.
+     * account.
      * </p>
      * 
      * @param dataSourceId
      *        The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     *        account;.
+     *        account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -44,6 +44,14 @@ public class ProtocolDetails implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * Replace <code> <i>0.0.0.0</i> </code> in the example above with the actual IP address you want to use.
      * </p>
+     * <note>
+     * <p>
+     * If you change the <code>PassiveIp</code> value, you must stop and then restart your Transfer server for the
+     * change to take effect. For details on using Passive IP (PASV) in a NAT environment, see <a href=
+     * "http://aws.amazon.com/blogs/storage/configuring-your-ftps-server-behind-a-firewall-or-nat-with-aws-transfer-family/"
+     * >Configuring your FTPS server behind a firewall or NAT with Amazon Web Services Transfer Family</a>.
+     * </p>
+     * </note>
      */
     private String passiveIp;
 
@@ -58,6 +66,14 @@ public class ProtocolDetails implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * Replace <code> <i>0.0.0.0</i> </code> in the example above with the actual IP address you want to use.
      * </p>
+     * <note>
+     * <p>
+     * If you change the <code>PassiveIp</code> value, you must stop and then restart your Transfer server for the
+     * change to take effect. For details on using Passive IP (PASV) in a NAT environment, see <a href=
+     * "http://aws.amazon.com/blogs/storage/configuring-your-ftps-server-behind-a-firewall-or-nat-with-aws-transfer-family/"
+     * >Configuring your FTPS server behind a firewall or NAT with Amazon Web Services Transfer Family</a>.
+     * </p>
+     * </note>
      * 
      * @param passiveIp
      *        Indicates passive mode, for FTP and FTPS protocols. Enter a single dotted-quad IPv4 address, such as the
@@ -67,6 +83,14 @@ public class ProtocolDetails implements Serializable, Cloneable, StructuredPojo 
      *        </p>
      *        <p>
      *        Replace <code> <i>0.0.0.0</i> </code> in the example above with the actual IP address you want to use.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        If you change the <code>PassiveIp</code> value, you must stop and then restart your Transfer server for
+     *        the change to take effect. For details on using Passive IP (PASV) in a NAT environment, see <a href=
+     *        "http://aws.amazon.com/blogs/storage/configuring-your-ftps-server-behind-a-firewall-or-nat-with-aws-transfer-family/"
+     *        >Configuring your FTPS server behind a firewall or NAT with Amazon Web Services Transfer Family</a>.
+     *        </p>
      */
 
     public void setPassiveIp(String passiveIp) {
@@ -84,6 +108,14 @@ public class ProtocolDetails implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * Replace <code> <i>0.0.0.0</i> </code> in the example above with the actual IP address you want to use.
      * </p>
+     * <note>
+     * <p>
+     * If you change the <code>PassiveIp</code> value, you must stop and then restart your Transfer server for the
+     * change to take effect. For details on using Passive IP (PASV) in a NAT environment, see <a href=
+     * "http://aws.amazon.com/blogs/storage/configuring-your-ftps-server-behind-a-firewall-or-nat-with-aws-transfer-family/"
+     * >Configuring your FTPS server behind a firewall or NAT with Amazon Web Services Transfer Family</a>.
+     * </p>
+     * </note>
      * 
      * @return Indicates passive mode, for FTP and FTPS protocols. Enter a single dotted-quad IPv4 address, such as the
      *         external IP address of a firewall, router, or load balancer. For example: </p>
@@ -92,6 +124,14 @@ public class ProtocolDetails implements Serializable, Cloneable, StructuredPojo 
      *         </p>
      *         <p>
      *         Replace <code> <i>0.0.0.0</i> </code> in the example above with the actual IP address you want to use.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         If you change the <code>PassiveIp</code> value, you must stop and then restart your Transfer server for
+     *         the change to take effect. For details on using Passive IP (PASV) in a NAT environment, see <a href=
+     *         "http://aws.amazon.com/blogs/storage/configuring-your-ftps-server-behind-a-firewall-or-nat-with-aws-transfer-family/"
+     *         >Configuring your FTPS server behind a firewall or NAT with Amazon Web Services Transfer Family</a>.
+     *         </p>
      */
 
     public String getPassiveIp() {
@@ -109,6 +149,14 @@ public class ProtocolDetails implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * Replace <code> <i>0.0.0.0</i> </code> in the example above with the actual IP address you want to use.
      * </p>
+     * <note>
+     * <p>
+     * If you change the <code>PassiveIp</code> value, you must stop and then restart your Transfer server for the
+     * change to take effect. For details on using Passive IP (PASV) in a NAT environment, see <a href=
+     * "http://aws.amazon.com/blogs/storage/configuring-your-ftps-server-behind-a-firewall-or-nat-with-aws-transfer-family/"
+     * >Configuring your FTPS server behind a firewall or NAT with Amazon Web Services Transfer Family</a>.
+     * </p>
+     * </note>
      * 
      * @param passiveIp
      *        Indicates passive mode, for FTP and FTPS protocols. Enter a single dotted-quad IPv4 address, such as the
@@ -118,6 +166,14 @@ public class ProtocolDetails implements Serializable, Cloneable, StructuredPojo 
      *        </p>
      *        <p>
      *        Replace <code> <i>0.0.0.0</i> </code> in the example above with the actual IP address you want to use.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        If you change the <code>PassiveIp</code> value, you must stop and then restart your Transfer server for
+     *        the change to take effect. For details on using Passive IP (PASV) in a NAT environment, see <a href=
+     *        "http://aws.amazon.com/blogs/storage/configuring-your-ftps-server-behind-a-firewall-or-nat-with-aws-transfer-family/"
+     *        >Configuring your FTPS server behind a firewall or NAT with Amazon Web Services Transfer Family</a>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

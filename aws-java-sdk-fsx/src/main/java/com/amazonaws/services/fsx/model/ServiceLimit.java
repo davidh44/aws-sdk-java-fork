@@ -17,8 +17,8 @@ import javax.annotation.Generated;
 /**
  * <p>
  * The types of limits on your service utilization. Limits include file system count, total throughput capacity, total
- * storage, and total user-initiated backups. These limits apply for a specific account in a specific AWS Region. You
- * can increase some of them by contacting AWS Support.
+ * storage, and total user-initiated backups. These limits apply for a specific account in a specific Amazon Web
+ * Services Region. You can increase some of them by contacting Amazon Web Services Support.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -29,7 +29,10 @@ public enum ServiceLimit {
     TOTAL_STORAGE("TOTAL_STORAGE"),
     TOTAL_USER_INITIATED_BACKUPS("TOTAL_USER_INITIATED_BACKUPS"),
     TOTAL_USER_TAGS("TOTAL_USER_TAGS"),
-    TOTAL_IN_PROGRESS_COPY_BACKUPS("TOTAL_IN_PROGRESS_COPY_BACKUPS");
+    TOTAL_IN_PROGRESS_COPY_BACKUPS("TOTAL_IN_PROGRESS_COPY_BACKUPS"),
+    STORAGE_VIRTUAL_MACHINES_PER_FILE_SYSTEM("STORAGE_VIRTUAL_MACHINES_PER_FILE_SYSTEM"),
+    VOLUMES_PER_FILE_SYSTEM("VOLUMES_PER_FILE_SYSTEM"),
+    TOTAL_SSD_IOPS("TOTAL_SSD_IOPS");
 
     private String value;
 

@@ -32,7 +32,7 @@ public class CreateDataSourceResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     * account;.
+     * account.
      * </p>
      */
     private String dataSourceId;
@@ -98,12 +98,12 @@ public class CreateDataSourceResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     * account;.
+     * account.
      * </p>
      * 
      * @param dataSourceId
      *        The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     *        account;.
+     *        account.
      */
 
     public void setDataSourceId(String dataSourceId) {
@@ -113,11 +113,11 @@ public class CreateDataSourceResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     * account;.
+     * account.
      * </p>
      * 
      * @return The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     *         account;.
+     *         account.
      */
 
     public String getDataSourceId() {
@@ -127,12 +127,12 @@ public class CreateDataSourceResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     * account;.
+     * account.
      * </p>
      * 
      * @param dataSourceId
      *        The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     *        account;.
+     *        account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

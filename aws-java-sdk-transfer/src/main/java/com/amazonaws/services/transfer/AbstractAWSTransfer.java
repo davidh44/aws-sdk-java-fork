@@ -43,6 +43,11 @@ public class AbstractAWSTransfer implements AWSTransfer {
     }
 
     @Override
+    public CreateWorkflowResult createWorkflow(CreateWorkflowRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteAccessResult deleteAccess(DeleteAccessRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -63,7 +68,17 @@ public class AbstractAWSTransfer implements AWSTransfer {
     }
 
     @Override
+    public DeleteWorkflowResult deleteWorkflow(DeleteWorkflowRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeAccessResult describeAccess(DescribeAccessRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeExecutionResult describeExecution(DescribeExecutionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -83,12 +98,22 @@ public class AbstractAWSTransfer implements AWSTransfer {
     }
 
     @Override
+    public DescribeWorkflowResult describeWorkflow(DescribeWorkflowRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ImportSshPublicKeyResult importSshPublicKey(ImportSshPublicKeyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public ListAccessesResult listAccesses(ListAccessesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListExecutionsResult listExecutions(ListExecutionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -109,6 +134,16 @@ public class AbstractAWSTransfer implements AWSTransfer {
 
     @Override
     public ListUsersResult listUsers(ListUsersRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListWorkflowsResult listWorkflows(ListWorkflowsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public SendWorkflowStepStateResult sendWorkflowStepState(SendWorkflowStepStateRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

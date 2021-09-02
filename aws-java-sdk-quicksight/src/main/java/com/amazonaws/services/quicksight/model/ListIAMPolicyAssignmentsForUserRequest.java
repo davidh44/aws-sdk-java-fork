@@ -27,7 +27,7 @@ public class ListIAMPolicyAssignmentsForUserRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the assignments.
+     * The ID of the Amazon Web Services account that contains the assignments.
      * </p>
      */
     private String awsAccountId;
@@ -58,11 +58,11 @@ public class ListIAMPolicyAssignmentsForUserRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the assignments.
+     * The ID of the Amazon Web Services account that contains the assignments.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the assignments.
+     *        The ID of the Amazon Web Services account that contains the assignments.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -71,10 +71,10 @@ public class ListIAMPolicyAssignmentsForUserRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the assignments.
+     * The ID of the Amazon Web Services account that contains the assignments.
      * </p>
      * 
-     * @return The ID of the Amazon Web Services account; that contains the assignments.
+     * @return The ID of the Amazon Web Services account that contains the assignments.
      */
 
     public String getAwsAccountId() {
@@ -83,11 +83,11 @@ public class ListIAMPolicyAssignmentsForUserRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the assignments.
+     * The ID of the Amazon Web Services account that contains the assignments.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the assignments.
+     *        The ID of the Amazon Web Services account that contains the assignments.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

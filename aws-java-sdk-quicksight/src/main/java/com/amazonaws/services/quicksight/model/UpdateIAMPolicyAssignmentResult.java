@@ -37,13 +37,13 @@ public class UpdateIAMPolicyAssignmentResult extends com.amazonaws.AmazonWebServ
     private String assignmentId;
     /**
      * <p>
-     * The ARN for the IAM policy applied to the QuickSight users and groups specified in this assignment.
+     * The ARN for the IAMpolicy applied to the Amazon QuickSight users and groups specified in this assignment.
      * </p>
      */
     private String policyArn;
     /**
      * <p>
-     * The QuickSight users, groups, or both that the IAM policy is assigned to.
+     * The Amazon QuickSight users, groups, or both that the IAMpolicy is assigned to.
      * </p>
      */
     private java.util.Map<String, java.util.List<String>> identities;
@@ -165,11 +165,11 @@ public class UpdateIAMPolicyAssignmentResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The ARN for the IAM policy applied to the QuickSight users and groups specified in this assignment.
+     * The ARN for the IAMpolicy applied to the Amazon QuickSight users and groups specified in this assignment.
      * </p>
      * 
      * @param policyArn
-     *        The ARN for the IAM policy applied to the QuickSight users and groups specified in this assignment.
+     *        The ARN for the IAMpolicy applied to the Amazon QuickSight users and groups specified in this assignment.
      */
 
     public void setPolicyArn(String policyArn) {
@@ -178,10 +178,10 @@ public class UpdateIAMPolicyAssignmentResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The ARN for the IAM policy applied to the QuickSight users and groups specified in this assignment.
+     * The ARN for the IAMpolicy applied to the Amazon QuickSight users and groups specified in this assignment.
      * </p>
      * 
-     * @return The ARN for the IAM policy applied to the QuickSight users and groups specified in this assignment.
+     * @return The ARN for the IAMpolicy applied to the Amazon QuickSight users and groups specified in this assignment.
      */
 
     public String getPolicyArn() {
@@ -190,11 +190,11 @@ public class UpdateIAMPolicyAssignmentResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The ARN for the IAM policy applied to the QuickSight users and groups specified in this assignment.
+     * The ARN for the IAMpolicy applied to the Amazon QuickSight users and groups specified in this assignment.
      * </p>
      * 
      * @param policyArn
-     *        The ARN for the IAM policy applied to the QuickSight users and groups specified in this assignment.
+     *        The ARN for the IAMpolicy applied to the Amazon QuickSight users and groups specified in this assignment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -205,10 +205,10 @@ public class UpdateIAMPolicyAssignmentResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The QuickSight users, groups, or both that the IAM policy is assigned to.
+     * The Amazon QuickSight users, groups, or both that the IAMpolicy is assigned to.
      * </p>
      * 
-     * @return The QuickSight users, groups, or both that the IAM policy is assigned to.
+     * @return The Amazon QuickSight users, groups, or both that the IAMpolicy is assigned to.
      */
 
     public java.util.Map<String, java.util.List<String>> getIdentities() {
@@ -217,11 +217,11 @@ public class UpdateIAMPolicyAssignmentResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The QuickSight users, groups, or both that the IAM policy is assigned to.
+     * The Amazon QuickSight users, groups, or both that the IAMpolicy is assigned to.
      * </p>
      * 
      * @param identities
-     *        The QuickSight users, groups, or both that the IAM policy is assigned to.
+     *        The Amazon QuickSight users, groups, or both that the IAMpolicy is assigned to.
      */
 
     public void setIdentities(java.util.Map<String, java.util.List<String>> identities) {
@@ -230,11 +230,11 @@ public class UpdateIAMPolicyAssignmentResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The QuickSight users, groups, or both that the IAM policy is assigned to.
+     * The Amazon QuickSight users, groups, or both that the IAMpolicy is assigned to.
      * </p>
      * 
      * @param identities
-     *        The QuickSight users, groups, or both that the IAM policy is assigned to.
+     *        The Amazon QuickSight users, groups, or both that the IAMpolicy is assigned to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

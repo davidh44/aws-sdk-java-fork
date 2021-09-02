@@ -27,7 +27,7 @@ public class PutAccessPointPolicyRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The account ID for owner of the bucket associated with the specified access point.
+     * The Amazon Web Services account ID for owner of the bucket associated with the specified access point.
      * </p>
      */
     private String accountId;
@@ -61,11 +61,11 @@ public class PutAccessPointPolicyRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The account ID for owner of the bucket associated with the specified access point.
+     * The Amazon Web Services account ID for owner of the bucket associated with the specified access point.
      * </p>
      * 
      * @param accountId
-     *        The account ID for owner of the bucket associated with the specified access point.
+     *        The Amazon Web Services account ID for owner of the bucket associated with the specified access point.
      */
 
     public void setAccountId(String accountId) {
@@ -74,10 +74,10 @@ public class PutAccessPointPolicyRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The account ID for owner of the bucket associated with the specified access point.
+     * The Amazon Web Services account ID for owner of the bucket associated with the specified access point.
      * </p>
      * 
-     * @return The account ID for owner of the bucket associated with the specified access point.
+     * @return The Amazon Web Services account ID for owner of the bucket associated with the specified access point.
      */
 
     public String getAccountId() {
@@ -86,11 +86,11 @@ public class PutAccessPointPolicyRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The account ID for owner of the bucket associated with the specified access point.
+     * The Amazon Web Services account ID for owner of the bucket associated with the specified access point.
      * </p>
      * 
      * @param accountId
-     *        The account ID for owner of the bucket associated with the specified access point.
+     *        The Amazon Web Services account ID for owner of the bucket associated with the specified access point.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

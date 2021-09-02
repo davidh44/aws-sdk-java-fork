@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Returned if there is no mount target with the specified ID found in the caller's account.
+ * Returned if there is no mount target with the specified ID found in the caller's Amazon Web Services account.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

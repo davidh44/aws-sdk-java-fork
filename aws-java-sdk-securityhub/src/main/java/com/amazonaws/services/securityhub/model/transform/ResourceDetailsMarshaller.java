@@ -127,6 +127,12 @@ public class ResourceDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsRdsEventSubscription").build();
     private static final MarshallingInfo<StructuredPojo> AWSECSSERVICE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsEcsService").build();
+    private static final MarshallingInfo<StructuredPojo> AWSAUTOSCALINGLAUNCHCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsAutoScalingLaunchConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> AWSEC2VPNCONNECTION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsEc2VpnConnection").build();
+    private static final MarshallingInfo<StructuredPojo> AWSECRCONTAINERIMAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsEcrContainerImage").build();
 
     private static final ResourceDetailsMarshaller instance = new ResourceDetailsMarshaller();
 
@@ -193,6 +199,9 @@ public class ResourceDetailsMarshaller {
             protocolMarshaller.marshall(resourceDetails.getOther(), OTHER_BINDING);
             protocolMarshaller.marshall(resourceDetails.getAwsRdsEventSubscription(), AWSRDSEVENTSUBSCRIPTION_BINDING);
             protocolMarshaller.marshall(resourceDetails.getAwsEcsService(), AWSECSSERVICE_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsAutoScalingLaunchConfiguration(), AWSAUTOSCALINGLAUNCHCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsEc2VpnConnection(), AWSEC2VPNCONNECTION_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsEcrContainerImage(), AWSECRCONTAINERIMAGE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

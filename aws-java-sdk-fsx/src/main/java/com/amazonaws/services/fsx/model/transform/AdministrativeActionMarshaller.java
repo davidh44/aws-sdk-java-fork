@@ -39,6 +39,8 @@ public class AdministrativeActionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TargetFileSystemValues").build();
     private static final MarshallingInfo<StructuredPojo> FAILUREDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FailureDetails").build();
+    private static final MarshallingInfo<StructuredPojo> TARGETVOLUMEVALUES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TargetVolumeValues").build();
 
     private static final AdministrativeActionMarshaller instance = new AdministrativeActionMarshaller();
 
@@ -62,6 +64,7 @@ public class AdministrativeActionMarshaller {
             protocolMarshaller.marshall(administrativeAction.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(administrativeAction.getTargetFileSystemValues(), TARGETFILESYSTEMVALUES_BINDING);
             protocolMarshaller.marshall(administrativeAction.getFailureDetails(), FAILUREDETAILS_BINDING);
+            protocolMarshaller.marshall(administrativeAction.getTargetVolumeValues(), TARGETVOLUMEVALUES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

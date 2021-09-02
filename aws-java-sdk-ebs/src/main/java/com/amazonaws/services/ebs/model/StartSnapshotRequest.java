@@ -27,7 +27,7 @@ public class StartSnapshotRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The size of the volume, in GiB. The maximum size is <code>16384</code> GiB (16 TiB).
+     * The size of the volume, in GiB. The maximum size is <code>65536</code> GiB (64 TiB).
      * </p>
      */
     private Long volumeSize;
@@ -137,11 +137,11 @@ public class StartSnapshotRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The size of the volume, in GiB. The maximum size is <code>16384</code> GiB (16 TiB).
+     * The size of the volume, in GiB. The maximum size is <code>65536</code> GiB (64 TiB).
      * </p>
      * 
      * @param volumeSize
-     *        The size of the volume, in GiB. The maximum size is <code>16384</code> GiB (16 TiB).
+     *        The size of the volume, in GiB. The maximum size is <code>65536</code> GiB (64 TiB).
      */
 
     public void setVolumeSize(Long volumeSize) {
@@ -150,10 +150,10 @@ public class StartSnapshotRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The size of the volume, in GiB. The maximum size is <code>16384</code> GiB (16 TiB).
+     * The size of the volume, in GiB. The maximum size is <code>65536</code> GiB (64 TiB).
      * </p>
      * 
-     * @return The size of the volume, in GiB. The maximum size is <code>16384</code> GiB (16 TiB).
+     * @return The size of the volume, in GiB. The maximum size is <code>65536</code> GiB (64 TiB).
      */
 
     public Long getVolumeSize() {
@@ -162,11 +162,11 @@ public class StartSnapshotRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The size of the volume, in GiB. The maximum size is <code>16384</code> GiB (16 TiB).
+     * The size of the volume, in GiB. The maximum size is <code>65536</code> GiB (64 TiB).
      * </p>
      * 
      * @param volumeSize
-     *        The size of the volume, in GiB. The maximum size is <code>16384</code> GiB (16 TiB).
+     *        The size of the volume, in GiB. The maximum size is <code>65536</code> GiB (64 TiB).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

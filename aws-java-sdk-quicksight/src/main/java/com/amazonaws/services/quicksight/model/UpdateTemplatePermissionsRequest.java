@@ -27,7 +27,7 @@ public class UpdateTemplatePermissionsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the template.
+     * The ID of the Amazon Web Services account that contains the template.
      * </p>
      */
     private String awsAccountId;
@@ -52,11 +52,11 @@ public class UpdateTemplatePermissionsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the template.
+     * The ID of the Amazon Web Services account that contains the template.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the template.
+     *        The ID of the Amazon Web Services account that contains the template.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -65,10 +65,10 @@ public class UpdateTemplatePermissionsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the template.
+     * The ID of the Amazon Web Services account that contains the template.
      * </p>
      * 
-     * @return The ID of the Amazon Web Services account; that contains the template.
+     * @return The ID of the Amazon Web Services account that contains the template.
      */
 
     public String getAwsAccountId() {
@@ -77,11 +77,11 @@ public class UpdateTemplatePermissionsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the template.
+     * The ID of the Amazon Web Services account that contains the template.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the template.
+     *        The ID of the Amazon Web Services account that contains the template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

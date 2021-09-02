@@ -30,7 +30,7 @@ public class IAMPolicyAssignment implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The Amazon Web Services account; ID.
+     * The Amazon Web Services account ID.
      * </p>
      */
     private String awsAccountId;
@@ -48,7 +48,7 @@ public class IAMPolicyAssignment implements Serializable, Cloneable, StructuredP
     private String assignmentName;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the IAM policy.
+     * The Amazon Resource Name (ARN) for the IAMpolicy.
      * </p>
      */
     private String policyArn;
@@ -67,11 +67,11 @@ public class IAMPolicyAssignment implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The Amazon Web Services account; ID.
+     * The Amazon Web Services account ID.
      * </p>
      * 
      * @param awsAccountId
-     *        The Amazon Web Services account; ID.
+     *        The Amazon Web Services account ID.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -80,10 +80,10 @@ public class IAMPolicyAssignment implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The Amazon Web Services account; ID.
+     * The Amazon Web Services account ID.
      * </p>
      * 
-     * @return The Amazon Web Services account; ID.
+     * @return The Amazon Web Services account ID.
      */
 
     public String getAwsAccountId() {
@@ -92,11 +92,11 @@ public class IAMPolicyAssignment implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The Amazon Web Services account; ID.
+     * The Amazon Web Services account ID.
      * </p>
      * 
      * @param awsAccountId
-     *        The Amazon Web Services account; ID.
+     *        The Amazon Web Services account ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -187,11 +187,11 @@ public class IAMPolicyAssignment implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the IAM policy.
+     * The Amazon Resource Name (ARN) for the IAMpolicy.
      * </p>
      * 
      * @param policyArn
-     *        The Amazon Resource Name (ARN) for the IAM policy.
+     *        The Amazon Resource Name (ARN) for the IAMpolicy.
      */
 
     public void setPolicyArn(String policyArn) {
@@ -200,10 +200,10 @@ public class IAMPolicyAssignment implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the IAM policy.
+     * The Amazon Resource Name (ARN) for the IAMpolicy.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) for the IAM policy.
+     * @return The Amazon Resource Name (ARN) for the IAMpolicy.
      */
 
     public String getPolicyArn() {
@@ -212,11 +212,11 @@ public class IAMPolicyAssignment implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the IAM policy.
+     * The Amazon Resource Name (ARN) for the IAMpolicy.
      * </p>
      * 
      * @param policyArn
-     *        The Amazon Resource Name (ARN) for the IAM policy.
+     *        The Amazon Resource Name (ARN) for the IAMpolicy.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

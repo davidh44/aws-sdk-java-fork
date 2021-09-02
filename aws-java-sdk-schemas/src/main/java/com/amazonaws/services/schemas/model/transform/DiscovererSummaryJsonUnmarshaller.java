@@ -64,6 +64,10 @@ public class DiscovererSummaryJsonUnmarshaller implements Unmarshaller<Discovere
                     context.nextToken();
                     discovererSummary.setState(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("CrossAccount", targetDepth)) {
+                    context.nextToken();
+                    discovererSummary.setCrossAccount(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("tags", targetDepth)) {
                     context.nextToken();
                     discovererSummary.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))

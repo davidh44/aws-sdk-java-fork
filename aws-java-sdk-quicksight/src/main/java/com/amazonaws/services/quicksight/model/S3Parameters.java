@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * S3 parameters.
+ * The parameters for S3.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/S3Parameters" target="_top">AWS API
@@ -30,18 +30,19 @@ public class S3Parameters implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Location of the Amazon S3 manifest file. This is NULL if the manifest file was uploaded into QuickSight.
+     * Location of the Amazon S3 manifest file. This is NULL if the manifest file was uploaded into Amazon QuickSight.
      * </p>
      */
     private ManifestFileLocation manifestFileLocation;
 
     /**
      * <p>
-     * Location of the Amazon S3 manifest file. This is NULL if the manifest file was uploaded into QuickSight.
+     * Location of the Amazon S3 manifest file. This is NULL if the manifest file was uploaded into Amazon QuickSight.
      * </p>
      * 
      * @param manifestFileLocation
-     *        Location of the Amazon S3 manifest file. This is NULL if the manifest file was uploaded into QuickSight.
+     *        Location of the Amazon S3 manifest file. This is NULL if the manifest file was uploaded into Amazon
+     *        QuickSight.
      */
 
     public void setManifestFileLocation(ManifestFileLocation manifestFileLocation) {
@@ -50,10 +51,11 @@ public class S3Parameters implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Location of the Amazon S3 manifest file. This is NULL if the manifest file was uploaded into QuickSight.
+     * Location of the Amazon S3 manifest file. This is NULL if the manifest file was uploaded into Amazon QuickSight.
      * </p>
      * 
-     * @return Location of the Amazon S3 manifest file. This is NULL if the manifest file was uploaded into QuickSight.
+     * @return Location of the Amazon S3 manifest file. This is NULL if the manifest file was uploaded into Amazon
+     *         QuickSight.
      */
 
     public ManifestFileLocation getManifestFileLocation() {
@@ -62,11 +64,12 @@ public class S3Parameters implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Location of the Amazon S3 manifest file. This is NULL if the manifest file was uploaded into QuickSight.
+     * Location of the Amazon S3 manifest file. This is NULL if the manifest file was uploaded into Amazon QuickSight.
      * </p>
      * 
      * @param manifestFileLocation
-     *        Location of the Amazon S3 manifest file. This is NULL if the manifest file was uploaded into QuickSight.
+     *        Location of the Amazon S3 manifest file. This is NULL if the manifest file was uploaded into Amazon
+     *        QuickSight.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

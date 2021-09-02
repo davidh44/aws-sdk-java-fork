@@ -55,7 +55,7 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
     private SecretsManagerSecretConfiguration secretsManagerSecret;
     /**
      * <p>
-     * The access control configuration is for an SQS queue.
+     * The access control configuration is for an Amazon SQS queue.
      * </p>
      */
     private SqsQueueConfiguration sqsQueue;
@@ -222,11 +222,11 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The access control configuration is for an SQS queue.
+     * The access control configuration is for an Amazon SQS queue.
      * </p>
      * 
      * @param sqsQueue
-     *        The access control configuration is for an SQS queue.
+     *        The access control configuration is for an Amazon SQS queue.
      */
 
     public void setSqsQueue(SqsQueueConfiguration sqsQueue) {
@@ -235,10 +235,10 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The access control configuration is for an SQS queue.
+     * The access control configuration is for an Amazon SQS queue.
      * </p>
      * 
-     * @return The access control configuration is for an SQS queue.
+     * @return The access control configuration is for an Amazon SQS queue.
      */
 
     public SqsQueueConfiguration getSqsQueue() {
@@ -247,11 +247,11 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The access control configuration is for an SQS queue.
+     * The access control configuration is for an Amazon SQS queue.
      * </p>
      * 
      * @param sqsQueue
-     *        The access control configuration is for an SQS queue.
+     *        The access control configuration is for an Amazon SQS queue.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

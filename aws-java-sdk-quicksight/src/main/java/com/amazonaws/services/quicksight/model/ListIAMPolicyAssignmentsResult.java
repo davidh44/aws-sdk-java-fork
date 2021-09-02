@@ -25,7 +25,7 @@ public class ListIAMPolicyAssignmentsResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Information describing the IAM policy assignments.
+     * Information describing the IAMpolicy assignments.
      * </p>
      */
     private java.util.List<IAMPolicyAssignmentSummary> iAMPolicyAssignments;
@@ -50,10 +50,10 @@ public class ListIAMPolicyAssignmentsResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Information describing the IAM policy assignments.
+     * Information describing the IAMpolicy assignments.
      * </p>
      * 
-     * @return Information describing the IAM policy assignments.
+     * @return Information describing the IAMpolicy assignments.
      */
 
     public java.util.List<IAMPolicyAssignmentSummary> getIAMPolicyAssignments() {
@@ -62,11 +62,11 @@ public class ListIAMPolicyAssignmentsResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Information describing the IAM policy assignments.
+     * Information describing the IAMpolicy assignments.
      * </p>
      * 
      * @param iAMPolicyAssignments
-     *        Information describing the IAM policy assignments.
+     *        Information describing the IAMpolicy assignments.
      */
 
     public void setIAMPolicyAssignments(java.util.Collection<IAMPolicyAssignmentSummary> iAMPolicyAssignments) {
@@ -80,7 +80,7 @@ public class ListIAMPolicyAssignmentsResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Information describing the IAM policy assignments.
+     * Information describing the IAMpolicy assignments.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -89,7 +89,7 @@ public class ListIAMPolicyAssignmentsResult extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param iAMPolicyAssignments
-     *        Information describing the IAM policy assignments.
+     *        Information describing the IAMpolicy assignments.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -105,11 +105,11 @@ public class ListIAMPolicyAssignmentsResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Information describing the IAM policy assignments.
+     * Information describing the IAMpolicy assignments.
      * </p>
      * 
      * @param iAMPolicyAssignments
-     *        Information describing the IAM policy assignments.
+     *        Information describing the IAMpolicy assignments.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

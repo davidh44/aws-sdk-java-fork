@@ -118,6 +118,10 @@ public class DataSetJsonUnmarshaller implements Unmarshaller<DataSet, JsonUnmars
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("DataSetUsageConfiguration", targetDepth)) {
+                    context.nextToken();
+                    dataSet.setDataSetUsageConfiguration(DataSetUsageConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

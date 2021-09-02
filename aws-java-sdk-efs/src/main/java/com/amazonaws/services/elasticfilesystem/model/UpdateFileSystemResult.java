@@ -28,8 +28,8 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The AWS account that created the file system. If the file system was created by an IAM user, the parent account
-     * to which the user belongs is the owner.
+     * The Amazon Web Services account that created the file system. If the file system was created by an IAM user, the
+     * parent account to which the user belongs is the owner.
      * </p>
      */
     private String ownerId;
@@ -106,8 +106,7 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
     private Boolean encrypted;
     /**
      * <p>
-     * The ID of an AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to protect the
-     * encrypted file system.
+     * The ID of an Key Management Service customer master key (CMK) that was used to protect the encrypted file system.
      * </p>
      */
     private String kmsKeyId;
@@ -128,8 +127,8 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
     private Double provisionedThroughputInMibps;
     /**
      * <p>
-     * Describes the AWS Availability Zone in which the file system is located, and is valid only for file systems using
-     * One Zone storage classes. For more information, see <a
+     * Describes the Amazon Web Services Availability Zone in which the file system is located, and is valid only for
+     * file systems using One Zone storage classes. For more information, see <a
      * href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html">Using EFS storage classes</a> in the
      * <i>Amazon EFS User Guide</i>.
      * </p>
@@ -138,8 +137,8 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * The unique and consistent identifier of the Availability Zone in which the file system's One Zone storage classes
-     * exist. For example, <code>use1-az1</code> is an Availability Zone ID for the us-east-1 AWS Region, and it has the
-     * same location in every AWS account.
+     * exist. For example, <code>use1-az1</code> is an Availability Zone ID for the us-east-1 Amazon Web Services
+     * Region, and it has the same location in every Amazon Web Services account.
      * </p>
      */
     private String availabilityZoneId;
@@ -152,13 +151,13 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The AWS account that created the file system. If the file system was created by an IAM user, the parent account
-     * to which the user belongs is the owner.
+     * The Amazon Web Services account that created the file system. If the file system was created by an IAM user, the
+     * parent account to which the user belongs is the owner.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account that created the file system. If the file system was created by an IAM user, the parent
-     *        account to which the user belongs is the owner.
+     *        The Amazon Web Services account that created the file system. If the file system was created by an IAM
+     *        user, the parent account to which the user belongs is the owner.
      */
 
     public void setOwnerId(String ownerId) {
@@ -167,12 +166,12 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The AWS account that created the file system. If the file system was created by an IAM user, the parent account
-     * to which the user belongs is the owner.
+     * The Amazon Web Services account that created the file system. If the file system was created by an IAM user, the
+     * parent account to which the user belongs is the owner.
      * </p>
      * 
-     * @return The AWS account that created the file system. If the file system was created by an IAM user, the parent
-     *         account to which the user belongs is the owner.
+     * @return The Amazon Web Services account that created the file system. If the file system was created by an IAM
+     *         user, the parent account to which the user belongs is the owner.
      */
 
     public String getOwnerId() {
@@ -181,13 +180,13 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The AWS account that created the file system. If the file system was created by an IAM user, the parent account
-     * to which the user belongs is the owner.
+     * The Amazon Web Services account that created the file system. If the file system was created by an IAM user, the
+     * parent account to which the user belongs is the owner.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account that created the file system. If the file system was created by an IAM user, the parent
-     *        account to which the user belongs is the owner.
+     *        The Amazon Web Services account that created the file system. If the file system was created by an IAM
+     *        user, the parent account to which the user belongs is the owner.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -746,13 +745,12 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The ID of an AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to protect the
-     * encrypted file system.
+     * The ID of an Key Management Service customer master key (CMK) that was used to protect the encrypted file system.
      * </p>
      * 
      * @param kmsKeyId
-     *        The ID of an AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to protect the
-     *        encrypted file system.
+     *        The ID of an Key Management Service customer master key (CMK) that was used to protect the encrypted file
+     *        system.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -761,12 +759,11 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The ID of an AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to protect the
-     * encrypted file system.
+     * The ID of an Key Management Service customer master key (CMK) that was used to protect the encrypted file system.
      * </p>
      * 
-     * @return The ID of an AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to protect the
-     *         encrypted file system.
+     * @return The ID of an Key Management Service customer master key (CMK) that was used to protect the encrypted file
+     *         system.
      */
 
     public String getKmsKeyId() {
@@ -775,13 +772,12 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The ID of an AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to protect the
-     * encrypted file system.
+     * The ID of an Key Management Service customer master key (CMK) that was used to protect the encrypted file system.
      * </p>
      * 
      * @param kmsKeyId
-     *        The ID of an AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to protect the
-     *        encrypted file system.
+     *        The ID of an Key Management Service customer master key (CMK) that was used to protect the encrypted file
+     *        system.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -931,15 +927,15 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Describes the AWS Availability Zone in which the file system is located, and is valid only for file systems using
-     * One Zone storage classes. For more information, see <a
+     * Describes the Amazon Web Services Availability Zone in which the file system is located, and is valid only for
+     * file systems using One Zone storage classes. For more information, see <a
      * href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html">Using EFS storage classes</a> in the
      * <i>Amazon EFS User Guide</i>.
      * </p>
      * 
      * @param availabilityZoneName
-     *        Describes the AWS Availability Zone in which the file system is located, and is valid only for file
-     *        systems using One Zone storage classes. For more information, see <a
+     *        Describes the Amazon Web Services Availability Zone in which the file system is located, and is valid only
+     *        for file systems using One Zone storage classes. For more information, see <a
      *        href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html">Using EFS storage classes</a> in the
      *        <i>Amazon EFS User Guide</i>.
      */
@@ -950,14 +946,14 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Describes the AWS Availability Zone in which the file system is located, and is valid only for file systems using
-     * One Zone storage classes. For more information, see <a
+     * Describes the Amazon Web Services Availability Zone in which the file system is located, and is valid only for
+     * file systems using One Zone storage classes. For more information, see <a
      * href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html">Using EFS storage classes</a> in the
      * <i>Amazon EFS User Guide</i>.
      * </p>
      * 
-     * @return Describes the AWS Availability Zone in which the file system is located, and is valid only for file
-     *         systems using One Zone storage classes. For more information, see <a
+     * @return Describes the Amazon Web Services Availability Zone in which the file system is located, and is valid
+     *         only for file systems using One Zone storage classes. For more information, see <a
      *         href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html">Using EFS storage classes</a> in
      *         the <i>Amazon EFS User Guide</i>.
      */
@@ -968,15 +964,15 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Describes the AWS Availability Zone in which the file system is located, and is valid only for file systems using
-     * One Zone storage classes. For more information, see <a
+     * Describes the Amazon Web Services Availability Zone in which the file system is located, and is valid only for
+     * file systems using One Zone storage classes. For more information, see <a
      * href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html">Using EFS storage classes</a> in the
      * <i>Amazon EFS User Guide</i>.
      * </p>
      * 
      * @param availabilityZoneName
-     *        Describes the AWS Availability Zone in which the file system is located, and is valid only for file
-     *        systems using One Zone storage classes. For more information, see <a
+     *        Describes the Amazon Web Services Availability Zone in which the file system is located, and is valid only
+     *        for file systems using One Zone storage classes. For more information, see <a
      *        href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html">Using EFS storage classes</a> in the
      *        <i>Amazon EFS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -990,14 +986,14 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * The unique and consistent identifier of the Availability Zone in which the file system's One Zone storage classes
-     * exist. For example, <code>use1-az1</code> is an Availability Zone ID for the us-east-1 AWS Region, and it has the
-     * same location in every AWS account.
+     * exist. For example, <code>use1-az1</code> is an Availability Zone ID for the us-east-1 Amazon Web Services
+     * Region, and it has the same location in every Amazon Web Services account.
      * </p>
      * 
      * @param availabilityZoneId
      *        The unique and consistent identifier of the Availability Zone in which the file system's One Zone storage
-     *        classes exist. For example, <code>use1-az1</code> is an Availability Zone ID for the us-east-1 AWS Region,
-     *        and it has the same location in every AWS account.
+     *        classes exist. For example, <code>use1-az1</code> is an Availability Zone ID for the us-east-1 Amazon Web
+     *        Services Region, and it has the same location in every Amazon Web Services account.
      */
 
     public void setAvailabilityZoneId(String availabilityZoneId) {
@@ -1007,13 +1003,13 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * The unique and consistent identifier of the Availability Zone in which the file system's One Zone storage classes
-     * exist. For example, <code>use1-az1</code> is an Availability Zone ID for the us-east-1 AWS Region, and it has the
-     * same location in every AWS account.
+     * exist. For example, <code>use1-az1</code> is an Availability Zone ID for the us-east-1 Amazon Web Services
+     * Region, and it has the same location in every Amazon Web Services account.
      * </p>
      * 
      * @return The unique and consistent identifier of the Availability Zone in which the file system's One Zone storage
-     *         classes exist. For example, <code>use1-az1</code> is an Availability Zone ID for the us-east-1 AWS
-     *         Region, and it has the same location in every AWS account.
+     *         classes exist. For example, <code>use1-az1</code> is an Availability Zone ID for the us-east-1 Amazon Web
+     *         Services Region, and it has the same location in every Amazon Web Services account.
      */
 
     public String getAvailabilityZoneId() {
@@ -1023,14 +1019,14 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * The unique and consistent identifier of the Availability Zone in which the file system's One Zone storage classes
-     * exist. For example, <code>use1-az1</code> is an Availability Zone ID for the us-east-1 AWS Region, and it has the
-     * same location in every AWS account.
+     * exist. For example, <code>use1-az1</code> is an Availability Zone ID for the us-east-1 Amazon Web Services
+     * Region, and it has the same location in every Amazon Web Services account.
      * </p>
      * 
      * @param availabilityZoneId
      *        The unique and consistent identifier of the Availability Zone in which the file system's One Zone storage
-     *        classes exist. For example, <code>use1-az1</code> is an Availability Zone ID for the us-east-1 AWS Region,
-     *        and it has the same location in every AWS account.
+     *        classes exist. For example, <code>use1-az1</code> is an Availability Zone ID for the us-east-1 Amazon Web
+     *        Services Region, and it has the same location in every Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

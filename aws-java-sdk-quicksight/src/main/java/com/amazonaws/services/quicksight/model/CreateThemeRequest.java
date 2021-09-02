@@ -27,14 +27,14 @@ public class CreateThemeRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; where you want to store the new theme.
+     * The ID of the Amazon Web Services account where you want to store the new theme.
      * </p>
      */
     private String awsAccountId;
     /**
      * <p>
-     * An ID for the theme that you want to create. The theme ID is unique per Amazon Web Services Region; in each
-     * Amazon Web Services account;.
+     * An ID for the theme that you want to create. The theme ID is unique per Amazon Web Services Region in each Amazon
+     * Web Services account.
      * </p>
      */
     private String themeId;
@@ -48,7 +48,7 @@ public class CreateThemeRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * The ID of the theme that a custom theme will inherit from. All themes inherit from one of the starting themes
      * defined by Amazon QuickSight. For a list of the starting themes, use <code>ListThemes</code> or choose
-     * <b>Themes</b> from within a QuickSight analysis.
+     * <b>Themes</b> from within a Amazon QuickSight analysis.
      * </p>
      */
     private String baseThemeId;
@@ -81,11 +81,11 @@ public class CreateThemeRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; where you want to store the new theme.
+     * The ID of the Amazon Web Services account where you want to store the new theme.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; where you want to store the new theme.
+     *        The ID of the Amazon Web Services account where you want to store the new theme.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -94,10 +94,10 @@ public class CreateThemeRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; where you want to store the new theme.
+     * The ID of the Amazon Web Services account where you want to store the new theme.
      * </p>
      * 
-     * @return The ID of the Amazon Web Services account; where you want to store the new theme.
+     * @return The ID of the Amazon Web Services account where you want to store the new theme.
      */
 
     public String getAwsAccountId() {
@@ -106,11 +106,11 @@ public class CreateThemeRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; where you want to store the new theme.
+     * The ID of the Amazon Web Services account where you want to store the new theme.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; where you want to store the new theme.
+     *        The ID of the Amazon Web Services account where you want to store the new theme.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -121,13 +121,13 @@ public class CreateThemeRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * An ID for the theme that you want to create. The theme ID is unique per Amazon Web Services Region; in each
-     * Amazon Web Services account;.
+     * An ID for the theme that you want to create. The theme ID is unique per Amazon Web Services Region in each Amazon
+     * Web Services account.
      * </p>
      * 
      * @param themeId
-     *        An ID for the theme that you want to create. The theme ID is unique per Amazon Web Services Region; in
-     *        each Amazon Web Services account;.
+     *        An ID for the theme that you want to create. The theme ID is unique per Amazon Web Services Region in each
+     *        Amazon Web Services account.
      */
 
     public void setThemeId(String themeId) {
@@ -136,12 +136,12 @@ public class CreateThemeRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * An ID for the theme that you want to create. The theme ID is unique per Amazon Web Services Region; in each
-     * Amazon Web Services account;.
+     * An ID for the theme that you want to create. The theme ID is unique per Amazon Web Services Region in each Amazon
+     * Web Services account.
      * </p>
      * 
-     * @return An ID for the theme that you want to create. The theme ID is unique per Amazon Web Services Region; in
-     *         each Amazon Web Services account;.
+     * @return An ID for the theme that you want to create. The theme ID is unique per Amazon Web Services Region in
+     *         each Amazon Web Services account.
      */
 
     public String getThemeId() {
@@ -150,13 +150,13 @@ public class CreateThemeRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * An ID for the theme that you want to create. The theme ID is unique per Amazon Web Services Region; in each
-     * Amazon Web Services account;.
+     * An ID for the theme that you want to create. The theme ID is unique per Amazon Web Services Region in each Amazon
+     * Web Services account.
      * </p>
      * 
      * @param themeId
-     *        An ID for the theme that you want to create. The theme ID is unique per Amazon Web Services Region; in
-     *        each Amazon Web Services account;.
+     *        An ID for the theme that you want to create. The theme ID is unique per Amazon Web Services Region in each
+     *        Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -209,13 +209,13 @@ public class CreateThemeRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * The ID of the theme that a custom theme will inherit from. All themes inherit from one of the starting themes
      * defined by Amazon QuickSight. For a list of the starting themes, use <code>ListThemes</code> or choose
-     * <b>Themes</b> from within a QuickSight analysis.
+     * <b>Themes</b> from within a Amazon QuickSight analysis.
      * </p>
      * 
      * @param baseThemeId
      *        The ID of the theme that a custom theme will inherit from. All themes inherit from one of the starting
      *        themes defined by Amazon QuickSight. For a list of the starting themes, use <code>ListThemes</code> or
-     *        choose <b>Themes</b> from within a QuickSight analysis.
+     *        choose <b>Themes</b> from within a Amazon QuickSight analysis.
      */
 
     public void setBaseThemeId(String baseThemeId) {
@@ -226,12 +226,12 @@ public class CreateThemeRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * The ID of the theme that a custom theme will inherit from. All themes inherit from one of the starting themes
      * defined by Amazon QuickSight. For a list of the starting themes, use <code>ListThemes</code> or choose
-     * <b>Themes</b> from within a QuickSight analysis.
+     * <b>Themes</b> from within a Amazon QuickSight analysis.
      * </p>
      * 
      * @return The ID of the theme that a custom theme will inherit from. All themes inherit from one of the starting
      *         themes defined by Amazon QuickSight. For a list of the starting themes, use <code>ListThemes</code> or
-     *         choose <b>Themes</b> from within a QuickSight analysis.
+     *         choose <b>Themes</b> from within a Amazon QuickSight analysis.
      */
 
     public String getBaseThemeId() {
@@ -242,13 +242,13 @@ public class CreateThemeRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * The ID of the theme that a custom theme will inherit from. All themes inherit from one of the starting themes
      * defined by Amazon QuickSight. For a list of the starting themes, use <code>ListThemes</code> or choose
-     * <b>Themes</b> from within a QuickSight analysis.
+     * <b>Themes</b> from within a Amazon QuickSight analysis.
      * </p>
      * 
      * @param baseThemeId
      *        The ID of the theme that a custom theme will inherit from. All themes inherit from one of the starting
      *        themes defined by Amazon QuickSight. For a list of the starting themes, use <code>ListThemes</code> or
-     *        choose <b>Themes</b> from within a QuickSight analysis.
+     *        choose <b>Themes</b> from within a Amazon QuickSight analysis.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

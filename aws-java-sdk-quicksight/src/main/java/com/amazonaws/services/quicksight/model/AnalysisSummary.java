@@ -42,7 +42,7 @@ public class AnalysisSummary implements Serializable, Cloneable, StructuredPojo 
     private String analysisId;
     /**
      * <p>
-     * The name of the analysis. This name is displayed in the QuickSight console.
+     * The name of the analysis. This name is displayed in the Amazon QuickSight console.
      * </p>
      */
     private String name;
@@ -147,11 +147,11 @@ public class AnalysisSummary implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the analysis. This name is displayed in the QuickSight console.
+     * The name of the analysis. This name is displayed in the Amazon QuickSight console.
      * </p>
      * 
      * @param name
-     *        The name of the analysis. This name is displayed in the QuickSight console.
+     *        The name of the analysis. This name is displayed in the Amazon QuickSight console.
      */
 
     public void setName(String name) {
@@ -160,10 +160,10 @@ public class AnalysisSummary implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the analysis. This name is displayed in the QuickSight console.
+     * The name of the analysis. This name is displayed in the Amazon QuickSight console.
      * </p>
      * 
-     * @return The name of the analysis. This name is displayed in the QuickSight console.
+     * @return The name of the analysis. This name is displayed in the Amazon QuickSight console.
      */
 
     public String getName() {
@@ -172,11 +172,11 @@ public class AnalysisSummary implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the analysis. This name is displayed in the QuickSight console.
+     * The name of the analysis. This name is displayed in the Amazon QuickSight console.
      * </p>
      * 
      * @param name
-     *        The name of the analysis. This name is displayed in the QuickSight console.
+     *        The name of the analysis. This name is displayed in the Amazon QuickSight console.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

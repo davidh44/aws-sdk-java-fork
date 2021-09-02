@@ -18,6 +18,10 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * Describes the resource type and its ID preference for the user's Amazon Web Services account, in the current Amazon
+ * Web Services Region.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/ResourceIdPreference"
  *      target="_top">AWS API Documentation</a>
@@ -25,12 +29,30 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ResourceIdPreference implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Identifies the EFS resource ID preference, either <code>LONG_ID</code> (17 characters) or <code>SHORT_ID</code>
+     * (8 characters).
+     * </p>
+     */
     private String resourceIdType;
-
+    /**
+     * <p>
+     * Identifies the Amazon EFS resources to which the ID preference setting applies, <code>FILE_SYSTEM</code> and
+     * <code>MOUNT_TARGET</code>.
+     * </p>
+     */
     private com.amazonaws.internal.SdkInternalList<String> resources;
 
     /**
+     * <p>
+     * Identifies the EFS resource ID preference, either <code>LONG_ID</code> (17 characters) or <code>SHORT_ID</code>
+     * (8 characters).
+     * </p>
+     * 
      * @param resourceIdType
+     *        Identifies the EFS resource ID preference, either <code>LONG_ID</code> (17 characters) or
+     *        <code>SHORT_ID</code> (8 characters).
      * @see ResourceIdType
      */
 
@@ -39,7 +61,13 @@ public class ResourceIdPreference implements Serializable, Cloneable, Structured
     }
 
     /**
-     * @return
+     * <p>
+     * Identifies the EFS resource ID preference, either <code>LONG_ID</code> (17 characters) or <code>SHORT_ID</code>
+     * (8 characters).
+     * </p>
+     * 
+     * @return Identifies the EFS resource ID preference, either <code>LONG_ID</code> (17 characters) or
+     *         <code>SHORT_ID</code> (8 characters).
      * @see ResourceIdType
      */
 
@@ -48,7 +76,14 @@ public class ResourceIdPreference implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * Identifies the EFS resource ID preference, either <code>LONG_ID</code> (17 characters) or <code>SHORT_ID</code>
+     * (8 characters).
+     * </p>
+     * 
      * @param resourceIdType
+     *        Identifies the EFS resource ID preference, either <code>LONG_ID</code> (17 characters) or
+     *        <code>SHORT_ID</code> (8 characters).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceIdType
      */
@@ -59,7 +94,14 @@ public class ResourceIdPreference implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * Identifies the EFS resource ID preference, either <code>LONG_ID</code> (17 characters) or <code>SHORT_ID</code>
+     * (8 characters).
+     * </p>
+     * 
      * @param resourceIdType
+     *        Identifies the EFS resource ID preference, either <code>LONG_ID</code> (17 characters) or
+     *        <code>SHORT_ID</code> (8 characters).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceIdType
      */
@@ -70,7 +112,13 @@ public class ResourceIdPreference implements Serializable, Cloneable, Structured
     }
 
     /**
-     * @return
+     * <p>
+     * Identifies the Amazon EFS resources to which the ID preference setting applies, <code>FILE_SYSTEM</code> and
+     * <code>MOUNT_TARGET</code>.
+     * </p>
+     * 
+     * @return Identifies the Amazon EFS resources to which the ID preference setting applies, <code>FILE_SYSTEM</code>
+     *         and <code>MOUNT_TARGET</code>.
      * @see Resource
      */
 
@@ -82,7 +130,14 @@ public class ResourceIdPreference implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * Identifies the Amazon EFS resources to which the ID preference setting applies, <code>FILE_SYSTEM</code> and
+     * <code>MOUNT_TARGET</code>.
+     * </p>
+     * 
      * @param resources
+     *        Identifies the Amazon EFS resources to which the ID preference setting applies, <code>FILE_SYSTEM</code>
+     *        and <code>MOUNT_TARGET</code>.
      * @see Resource
      */
 
@@ -97,12 +152,18 @@ public class ResourceIdPreference implements Serializable, Cloneable, Structured
 
     /**
      * <p>
+     * Identifies the Amazon EFS resources to which the ID preference setting applies, <code>FILE_SYSTEM</code> and
+     * <code>MOUNT_TARGET</code>.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setResources(java.util.Collection)} or {@link #withResources(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param resources
+     *        Identifies the Amazon EFS resources to which the ID preference setting applies, <code>FILE_SYSTEM</code>
+     *        and <code>MOUNT_TARGET</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Resource
      */
@@ -118,7 +179,14 @@ public class ResourceIdPreference implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * Identifies the Amazon EFS resources to which the ID preference setting applies, <code>FILE_SYSTEM</code> and
+     * <code>MOUNT_TARGET</code>.
+     * </p>
+     * 
      * @param resources
+     *        Identifies the Amazon EFS resources to which the ID preference setting applies, <code>FILE_SYSTEM</code>
+     *        and <code>MOUNT_TARGET</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Resource
      */
@@ -129,7 +197,14 @@ public class ResourceIdPreference implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * Identifies the Amazon EFS resources to which the ID preference setting applies, <code>FILE_SYSTEM</code> and
+     * <code>MOUNT_TARGET</code>.
+     * </p>
+     * 
      * @param resources
+     *        Identifies the Amazon EFS resources to which the ID preference setting applies, <code>FILE_SYSTEM</code>
+     *        and <code>MOUNT_TARGET</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Resource
      */

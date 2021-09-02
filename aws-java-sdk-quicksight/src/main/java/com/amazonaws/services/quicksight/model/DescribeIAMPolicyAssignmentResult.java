@@ -25,7 +25,7 @@ public class DescribeIAMPolicyAssignmentResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Information describing the IAM policy assignment.
+     * Information describing the IAMpolicy assignment.
      * </p>
      */
     private IAMPolicyAssignment iAMPolicyAssignment;
@@ -44,11 +44,11 @@ public class DescribeIAMPolicyAssignmentResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Information describing the IAM policy assignment.
+     * Information describing the IAMpolicy assignment.
      * </p>
      * 
      * @param iAMPolicyAssignment
-     *        Information describing the IAM policy assignment.
+     *        Information describing the IAMpolicy assignment.
      */
 
     public void setIAMPolicyAssignment(IAMPolicyAssignment iAMPolicyAssignment) {
@@ -57,10 +57,10 @@ public class DescribeIAMPolicyAssignmentResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Information describing the IAM policy assignment.
+     * Information describing the IAMpolicy assignment.
      * </p>
      * 
-     * @return Information describing the IAM policy assignment.
+     * @return Information describing the IAMpolicy assignment.
      */
 
     public IAMPolicyAssignment getIAMPolicyAssignment() {
@@ -69,11 +69,11 @@ public class DescribeIAMPolicyAssignmentResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Information describing the IAM policy assignment.
+     * Information describing the IAMpolicy assignment.
      * </p>
      * 
      * @param iAMPolicyAssignment
-     *        Information describing the IAM policy assignment.
+     *        Information describing the IAMpolicy assignment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

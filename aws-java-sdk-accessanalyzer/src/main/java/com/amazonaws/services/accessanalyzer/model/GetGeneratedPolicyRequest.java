@@ -41,8 +41,8 @@ public class GetGeneratedPolicyRequest extends com.amazonaws.AmazonWebServiceReq
      * The level of detail that you want to generate. You can specify whether to generate service-level policies.
      * </p>
      * <p>
-     * Access Analyzer uses <code>iam:servicelastaccessed</code> to identify services that have been used recently to
-     * create this service-level template.
+     * IAM Access Analyzer uses <code>iam:servicelastaccessed</code> to identify services that have been used recently
+     * to create this service-level template.
      * </p>
      */
     private Boolean includeServiceLevelTemplate;
@@ -148,15 +148,15 @@ public class GetGeneratedPolicyRequest extends com.amazonaws.AmazonWebServiceReq
      * The level of detail that you want to generate. You can specify whether to generate service-level policies.
      * </p>
      * <p>
-     * Access Analyzer uses <code>iam:servicelastaccessed</code> to identify services that have been used recently to
-     * create this service-level template.
+     * IAM Access Analyzer uses <code>iam:servicelastaccessed</code> to identify services that have been used recently
+     * to create this service-level template.
      * </p>
      * 
      * @param includeServiceLevelTemplate
      *        The level of detail that you want to generate. You can specify whether to generate service-level policies.
      *        </p>
      *        <p>
-     *        Access Analyzer uses <code>iam:servicelastaccessed</code> to identify services that have been used
+     *        IAM Access Analyzer uses <code>iam:servicelastaccessed</code> to identify services that have been used
      *        recently to create this service-level template.
      */
 
@@ -169,14 +169,14 @@ public class GetGeneratedPolicyRequest extends com.amazonaws.AmazonWebServiceReq
      * The level of detail that you want to generate. You can specify whether to generate service-level policies.
      * </p>
      * <p>
-     * Access Analyzer uses <code>iam:servicelastaccessed</code> to identify services that have been used recently to
-     * create this service-level template.
+     * IAM Access Analyzer uses <code>iam:servicelastaccessed</code> to identify services that have been used recently
+     * to create this service-level template.
      * </p>
      * 
      * @return The level of detail that you want to generate. You can specify whether to generate service-level
      *         policies. </p>
      *         <p>
-     *         Access Analyzer uses <code>iam:servicelastaccessed</code> to identify services that have been used
+     *         IAM Access Analyzer uses <code>iam:servicelastaccessed</code> to identify services that have been used
      *         recently to create this service-level template.
      */
 
@@ -189,15 +189,15 @@ public class GetGeneratedPolicyRequest extends com.amazonaws.AmazonWebServiceReq
      * The level of detail that you want to generate. You can specify whether to generate service-level policies.
      * </p>
      * <p>
-     * Access Analyzer uses <code>iam:servicelastaccessed</code> to identify services that have been used recently to
-     * create this service-level template.
+     * IAM Access Analyzer uses <code>iam:servicelastaccessed</code> to identify services that have been used recently
+     * to create this service-level template.
      * </p>
      * 
      * @param includeServiceLevelTemplate
      *        The level of detail that you want to generate. You can specify whether to generate service-level policies.
      *        </p>
      *        <p>
-     *        Access Analyzer uses <code>iam:servicelastaccessed</code> to identify services that have been used
+     *        IAM Access Analyzer uses <code>iam:servicelastaccessed</code> to identify services that have been used
      *        recently to create this service-level template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -212,14 +212,14 @@ public class GetGeneratedPolicyRequest extends com.amazonaws.AmazonWebServiceReq
      * The level of detail that you want to generate. You can specify whether to generate service-level policies.
      * </p>
      * <p>
-     * Access Analyzer uses <code>iam:servicelastaccessed</code> to identify services that have been used recently to
-     * create this service-level template.
+     * IAM Access Analyzer uses <code>iam:servicelastaccessed</code> to identify services that have been used recently
+     * to create this service-level template.
      * </p>
      * 
      * @return The level of detail that you want to generate. You can specify whether to generate service-level
      *         policies. </p>
      *         <p>
-     *         Access Analyzer uses <code>iam:servicelastaccessed</code> to identify services that have been used
+     *         IAM Access Analyzer uses <code>iam:servicelastaccessed</code> to identify services that have been used
      *         recently to create this service-level template.
      */
 

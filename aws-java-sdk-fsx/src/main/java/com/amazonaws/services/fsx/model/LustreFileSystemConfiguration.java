@@ -73,7 +73,7 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
      * <p>
      * For the <code>SCRATCH_1</code> deployment type, this value is always "<code>fsx</code>". For
      * <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types, this value is a string that is unique
-     * within an AWS Region.
+     * within an Amazon Web Services Region.
      * </p>
      */
     private String mountName;
@@ -426,7 +426,7 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
      * <p>
      * For the <code>SCRATCH_1</code> deployment type, this value is always "<code>fsx</code>". For
      * <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types, this value is a string that is unique
-     * within an AWS Region.
+     * within an Amazon Web Services Region.
      * </p>
      * 
      * @param mountName
@@ -434,7 +434,7 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
      *        <p>
      *        For the <code>SCRATCH_1</code> deployment type, this value is always "<code>fsx</code>". For
      *        <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types, this value is a string that is
-     *        unique within an AWS Region.
+     *        unique within an Amazon Web Services Region.
      */
 
     public void setMountName(String mountName) {
@@ -448,14 +448,14 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
      * <p>
      * For the <code>SCRATCH_1</code> deployment type, this value is always "<code>fsx</code>". For
      * <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types, this value is a string that is unique
-     * within an AWS Region.
+     * within an Amazon Web Services Region.
      * </p>
      * 
      * @return You use the <code>MountName</code> value when mounting the file system.</p>
      *         <p>
      *         For the <code>SCRATCH_1</code> deployment type, this value is always "<code>fsx</code>". For
      *         <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types, this value is a string that is
-     *         unique within an AWS Region.
+     *         unique within an Amazon Web Services Region.
      */
 
     public String getMountName() {
@@ -469,7 +469,7 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
      * <p>
      * For the <code>SCRATCH_1</code> deployment type, this value is always "<code>fsx</code>". For
      * <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types, this value is a string that is unique
-     * within an AWS Region.
+     * within an Amazon Web Services Region.
      * </p>
      * 
      * @param mountName
@@ -477,7 +477,7 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
      *        <p>
      *        For the <code>SCRATCH_1</code> deployment type, this value is always "<code>fsx</code>". For
      *        <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types, this value is a string that is
-     *        unique within an AWS Region.
+     *        unique within an Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

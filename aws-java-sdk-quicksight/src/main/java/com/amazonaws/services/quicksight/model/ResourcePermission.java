@@ -46,8 +46,8 @@ public class ResourcePermission implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * The ARN of an Amazon Web Services account; root: This is an IAM ARN rather than a QuickSight ARN. Use this option
-     * only to share resources (templates) across Amazon Web Services accounts. (This is less common.)
+     * The ARN of an Amazon Web Services account root: This is an IAMARN rather than a Amazon QuickSight ARN. Use this
+     * option only to share resources (templates) across Amazon Web Services accounts. (This is less common.)
      * </p>
      * </li>
      * </ul>
@@ -55,7 +55,7 @@ public class ResourcePermission implements Serializable, Cloneable, StructuredPo
     private String principal;
     /**
      * <p>
-     * The IAM action to grant or revoke permissions on.
+     * The IAMaction to grant or revoke permissions on.
      * </p>
      */
     private java.util.List<String> actions;
@@ -78,8 +78,8 @@ public class ResourcePermission implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * The ARN of an Amazon Web Services account; root: This is an IAM ARN rather than a QuickSight ARN. Use this option
-     * only to share resources (templates) across Amazon Web Services accounts. (This is less common.)
+     * The ARN of an Amazon Web Services account root: This is an IAMARN rather than a Amazon QuickSight ARN. Use this
+     * option only to share resources (templates) across Amazon Web Services accounts. (This is less common.)
      * </p>
      * </li>
      * </ul>
@@ -100,8 +100,9 @@ public class ResourcePermission implements Serializable, Cloneable, StructuredPo
      *        </li>
      *        <li>
      *        <p>
-     *        The ARN of an Amazon Web Services account; root: This is an IAM ARN rather than a QuickSight ARN. Use this
-     *        option only to share resources (templates) across Amazon Web Services accounts. (This is less common.)
+     *        The ARN of an Amazon Web Services account root: This is an IAMARN rather than a Amazon QuickSight ARN. Use
+     *        this option only to share resources (templates) across Amazon Web Services accounts. (This is less
+     *        common.)
      *        </p>
      *        </li>
      */
@@ -128,8 +129,8 @@ public class ResourcePermission implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * The ARN of an Amazon Web Services account; root: This is an IAM ARN rather than a QuickSight ARN. Use this option
-     * only to share resources (templates) across Amazon Web Services accounts. (This is less common.)
+     * The ARN of an Amazon Web Services account root: This is an IAMARN rather than a Amazon QuickSight ARN. Use this
+     * option only to share resources (templates) across Amazon Web Services accounts. (This is less common.)
      * </p>
      * </li>
      * </ul>
@@ -149,8 +150,8 @@ public class ResourcePermission implements Serializable, Cloneable, StructuredPo
      *         </li>
      *         <li>
      *         <p>
-     *         The ARN of an Amazon Web Services account; root: This is an IAM ARN rather than a QuickSight ARN. Use
-     *         this option only to share resources (templates) across Amazon Web Services accounts. (This is less
+     *         The ARN of an Amazon Web Services account root: This is an IAMARN rather than a Amazon QuickSight ARN.
+     *         Use this option only to share resources (templates) across Amazon Web Services accounts. (This is less
      *         common.)
      *         </p>
      *         </li>
@@ -178,8 +179,8 @@ public class ResourcePermission implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * The ARN of an Amazon Web Services account; root: This is an IAM ARN rather than a QuickSight ARN. Use this option
-     * only to share resources (templates) across Amazon Web Services accounts. (This is less common.)
+     * The ARN of an Amazon Web Services account root: This is an IAMARN rather than a Amazon QuickSight ARN. Use this
+     * option only to share resources (templates) across Amazon Web Services accounts. (This is less common.)
      * </p>
      * </li>
      * </ul>
@@ -200,8 +201,9 @@ public class ResourcePermission implements Serializable, Cloneable, StructuredPo
      *        </li>
      *        <li>
      *        <p>
-     *        The ARN of an Amazon Web Services account; root: This is an IAM ARN rather than a QuickSight ARN. Use this
-     *        option only to share resources (templates) across Amazon Web Services accounts. (This is less common.)
+     *        The ARN of an Amazon Web Services account root: This is an IAMARN rather than a Amazon QuickSight ARN. Use
+     *        this option only to share resources (templates) across Amazon Web Services accounts. (This is less
+     *        common.)
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -214,10 +216,10 @@ public class ResourcePermission implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The IAM action to grant or revoke permissions on.
+     * The IAMaction to grant or revoke permissions on.
      * </p>
      * 
-     * @return The IAM action to grant or revoke permissions on.
+     * @return The IAMaction to grant or revoke permissions on.
      */
 
     public java.util.List<String> getActions() {
@@ -226,11 +228,11 @@ public class ResourcePermission implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The IAM action to grant or revoke permissions on.
+     * The IAMaction to grant or revoke permissions on.
      * </p>
      * 
      * @param actions
-     *        The IAM action to grant or revoke permissions on.
+     *        The IAMaction to grant or revoke permissions on.
      */
 
     public void setActions(java.util.Collection<String> actions) {
@@ -244,7 +246,7 @@ public class ResourcePermission implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The IAM action to grant or revoke permissions on.
+     * The IAMaction to grant or revoke permissions on.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -253,7 +255,7 @@ public class ResourcePermission implements Serializable, Cloneable, StructuredPo
      * </p>
      * 
      * @param actions
-     *        The IAM action to grant or revoke permissions on.
+     *        The IAMaction to grant or revoke permissions on.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -269,11 +271,11 @@ public class ResourcePermission implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The IAM action to grant or revoke permissions on.
+     * The IAMaction to grant or revoke permissions on.
      * </p>
      * 
      * @param actions
-     *        The IAM action to grant or revoke permissions on.
+     *        The IAMaction to grant or revoke permissions on.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

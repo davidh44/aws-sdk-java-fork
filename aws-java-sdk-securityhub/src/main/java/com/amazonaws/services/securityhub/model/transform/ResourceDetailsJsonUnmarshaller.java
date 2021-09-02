@@ -246,6 +246,19 @@ public class ResourceDetailsJsonUnmarshaller implements Unmarshaller<ResourceDet
                     context.nextToken();
                     resourceDetails.setAwsEcsService(AwsEcsServiceDetailsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("AwsAutoScalingLaunchConfiguration", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsAutoScalingLaunchConfiguration(AwsAutoScalingLaunchConfigurationDetailsJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
+                if (context.testExpression("AwsEc2VpnConnection", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsEc2VpnConnection(AwsEc2VpnConnectionDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("AwsEcrContainerImage", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsEcrContainerImage(AwsEcrContainerImageDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -106,6 +106,14 @@ public class BackupJsonUnmarshaller implements Unmarshaller<Backup, JsonUnmarsha
                     context.nextToken();
                     backup.setSourceBackupRegion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ResourceType", targetDepth)) {
+                    context.nextToken();
+                    backup.setResourceType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Volume", targetDepth)) {
+                    context.nextToken();
+                    backup.setVolume(VolumeJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

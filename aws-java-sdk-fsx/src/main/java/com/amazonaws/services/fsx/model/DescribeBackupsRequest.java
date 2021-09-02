@@ -37,7 +37,8 @@ public class DescribeBackupsRequest extends com.amazonaws.AmazonWebServiceReques
     private java.util.List<String> backupIds;
     /**
      * <p>
-     * Filters structure. Supported names are file-system-id and backup-type.
+     * Filters structure. Supported names are <code>file-system-id</code>, <code>backup-type</code>,
+     * <code>file-system-type</code>, and <code>volume-id</code>.
      * </p>
      */
     private java.util.List<Filter> filters;
@@ -137,10 +138,12 @@ public class DescribeBackupsRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Filters structure. Supported names are file-system-id and backup-type.
+     * Filters structure. Supported names are <code>file-system-id</code>, <code>backup-type</code>,
+     * <code>file-system-type</code>, and <code>volume-id</code>.
      * </p>
      * 
-     * @return Filters structure. Supported names are file-system-id and backup-type.
+     * @return Filters structure. Supported names are <code>file-system-id</code>, <code>backup-type</code>,
+     *         <code>file-system-type</code>, and <code>volume-id</code>.
      */
 
     public java.util.List<Filter> getFilters() {
@@ -149,11 +152,13 @@ public class DescribeBackupsRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Filters structure. Supported names are file-system-id and backup-type.
+     * Filters structure. Supported names are <code>file-system-id</code>, <code>backup-type</code>,
+     * <code>file-system-type</code>, and <code>volume-id</code>.
      * </p>
      * 
      * @param filters
-     *        Filters structure. Supported names are file-system-id and backup-type.
+     *        Filters structure. Supported names are <code>file-system-id</code>, <code>backup-type</code>,
+     *        <code>file-system-type</code>, and <code>volume-id</code>.
      */
 
     public void setFilters(java.util.Collection<Filter> filters) {
@@ -167,7 +172,8 @@ public class DescribeBackupsRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Filters structure. Supported names are file-system-id and backup-type.
+     * Filters structure. Supported names are <code>file-system-id</code>, <code>backup-type</code>,
+     * <code>file-system-type</code>, and <code>volume-id</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -176,7 +182,8 @@ public class DescribeBackupsRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @param filters
-     *        Filters structure. Supported names are file-system-id and backup-type.
+     *        Filters structure. Supported names are <code>file-system-id</code>, <code>backup-type</code>,
+     *        <code>file-system-type</code>, and <code>volume-id</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -192,11 +199,13 @@ public class DescribeBackupsRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Filters structure. Supported names are file-system-id and backup-type.
+     * Filters structure. Supported names are <code>file-system-id</code>, <code>backup-type</code>,
+     * <code>file-system-type</code>, and <code>volume-id</code>.
      * </p>
      * 
      * @param filters
-     *        Filters structure. Supported names are file-system-id and backup-type.
+     *        Filters structure. Supported names are <code>file-system-id</code>, <code>backup-type</code>,
+     *        <code>file-system-type</code>, and <code>volume-id</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

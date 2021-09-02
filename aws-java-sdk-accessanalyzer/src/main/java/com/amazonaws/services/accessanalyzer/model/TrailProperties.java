@@ -30,7 +30,7 @@ public class TrailProperties implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Possible values are <code>true</code> or <code>false</code>. If set to <code>true</code>, Access Analyzer
+     * Possible values are <code>true</code> or <code>false</code>. If set to <code>true</code>, IAM Access Analyzer
      * retrieves CloudTrail data from all regions to analyze and generate a policy.
      * </p>
      */
@@ -51,13 +51,13 @@ public class TrailProperties implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Possible values are <code>true</code> or <code>false</code>. If set to <code>true</code>, Access Analyzer
+     * Possible values are <code>true</code> or <code>false</code>. If set to <code>true</code>, IAM Access Analyzer
      * retrieves CloudTrail data from all regions to analyze and generate a policy.
      * </p>
      * 
      * @param allRegions
-     *        Possible values are <code>true</code> or <code>false</code>. If set to <code>true</code>, Access Analyzer
-     *        retrieves CloudTrail data from all regions to analyze and generate a policy.
+     *        Possible values are <code>true</code> or <code>false</code>. If set to <code>true</code>, IAM Access
+     *        Analyzer retrieves CloudTrail data from all regions to analyze and generate a policy.
      */
 
     public void setAllRegions(Boolean allRegions) {
@@ -66,12 +66,12 @@ public class TrailProperties implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Possible values are <code>true</code> or <code>false</code>. If set to <code>true</code>, Access Analyzer
+     * Possible values are <code>true</code> or <code>false</code>. If set to <code>true</code>, IAM Access Analyzer
      * retrieves CloudTrail data from all regions to analyze and generate a policy.
      * </p>
      * 
-     * @return Possible values are <code>true</code> or <code>false</code>. If set to <code>true</code>, Access Analyzer
-     *         retrieves CloudTrail data from all regions to analyze and generate a policy.
+     * @return Possible values are <code>true</code> or <code>false</code>. If set to <code>true</code>, IAM Access
+     *         Analyzer retrieves CloudTrail data from all regions to analyze and generate a policy.
      */
 
     public Boolean getAllRegions() {
@@ -80,13 +80,13 @@ public class TrailProperties implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Possible values are <code>true</code> or <code>false</code>. If set to <code>true</code>, Access Analyzer
+     * Possible values are <code>true</code> or <code>false</code>. If set to <code>true</code>, IAM Access Analyzer
      * retrieves CloudTrail data from all regions to analyze and generate a policy.
      * </p>
      * 
      * @param allRegions
-     *        Possible values are <code>true</code> or <code>false</code>. If set to <code>true</code>, Access Analyzer
-     *        retrieves CloudTrail data from all regions to analyze and generate a policy.
+     *        Possible values are <code>true</code> or <code>false</code>. If set to <code>true</code>, IAM Access
+     *        Analyzer retrieves CloudTrail data from all regions to analyze and generate a policy.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -97,12 +97,12 @@ public class TrailProperties implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Possible values are <code>true</code> or <code>false</code>. If set to <code>true</code>, Access Analyzer
+     * Possible values are <code>true</code> or <code>false</code>. If set to <code>true</code>, IAM Access Analyzer
      * retrieves CloudTrail data from all regions to analyze and generate a policy.
      * </p>
      * 
-     * @return Possible values are <code>true</code> or <code>false</code>. If set to <code>true</code>, Access Analyzer
-     *         retrieves CloudTrail data from all regions to analyze and generate a policy.
+     * @return Possible values are <code>true</code> or <code>false</code>. If set to <code>true</code>, IAM Access
+     *         Analyzer retrieves CloudTrail data from all regions to analyze and generate a policy.
      */
 
     public Boolean isAllRegions() {

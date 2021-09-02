@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Returned if the AWS Backup service is not available in the Region in which the request was made.
+ * Returned if the Backup service is not available in the Amazon Web Services Region in which the request was made.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

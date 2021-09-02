@@ -215,6 +215,12 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      */
     private String serverId;
+    /**
+     * <p>
+     * Specifies the workflow ID for the workflow to assign and the execution role used for executing the workflow.
+     * </p>
+     */
+    private WorkflowDetails workflowDetails;
 
     /**
      * <p>
@@ -1647,6 +1653,49 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
+     * <p>
+     * Specifies the workflow ID for the workflow to assign and the execution role used for executing the workflow.
+     * </p>
+     * 
+     * @param workflowDetails
+     *        Specifies the workflow ID for the workflow to assign and the execution role used for executing the
+     *        workflow.
+     */
+
+    public void setWorkflowDetails(WorkflowDetails workflowDetails) {
+        this.workflowDetails = workflowDetails;
+    }
+
+    /**
+     * <p>
+     * Specifies the workflow ID for the workflow to assign and the execution role used for executing the workflow.
+     * </p>
+     * 
+     * @return Specifies the workflow ID for the workflow to assign and the execution role used for executing the
+     *         workflow.
+     */
+
+    public WorkflowDetails getWorkflowDetails() {
+        return this.workflowDetails;
+    }
+
+    /**
+     * <p>
+     * Specifies the workflow ID for the workflow to assign and the execution role used for executing the workflow.
+     * </p>
+     * 
+     * @param workflowDetails
+     *        Specifies the workflow ID for the workflow to assign and the execution role used for executing the
+     *        workflow.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateServerRequest withWorkflowDetails(WorkflowDetails workflowDetails) {
+        setWorkflowDetails(workflowDetails);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1677,7 +1726,9 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (getSecurityPolicyName() != null)
             sb.append("SecurityPolicyName: ").append(getSecurityPolicyName()).append(",");
         if (getServerId() != null)
-            sb.append("ServerId: ").append(getServerId());
+            sb.append("ServerId: ").append(getServerId()).append(",");
+        if (getWorkflowDetails() != null)
+            sb.append("WorkflowDetails: ").append(getWorkflowDetails());
         sb.append("}");
         return sb.toString();
     }
@@ -1732,6 +1783,10 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getServerId() != null && other.getServerId().equals(this.getServerId()) == false)
             return false;
+        if (other.getWorkflowDetails() == null ^ this.getWorkflowDetails() == null)
+            return false;
+        if (other.getWorkflowDetails() != null && other.getWorkflowDetails().equals(this.getWorkflowDetails()) == false)
+            return false;
         return true;
     }
 
@@ -1750,6 +1805,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
         hashCode = prime * hashCode + ((getProtocols() == null) ? 0 : getProtocols().hashCode());
         hashCode = prime * hashCode + ((getSecurityPolicyName() == null) ? 0 : getSecurityPolicyName().hashCode());
         hashCode = prime * hashCode + ((getServerId() == null) ? 0 : getServerId().hashCode());
+        hashCode = prime * hashCode + ((getWorkflowDetails() == null) ? 0 : getWorkflowDetails().hashCode());
         return hashCode;
     }
 

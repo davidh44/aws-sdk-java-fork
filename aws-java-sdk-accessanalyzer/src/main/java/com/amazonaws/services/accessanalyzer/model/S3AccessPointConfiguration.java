@@ -19,10 +19,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The configuration for an Amazon S3 access point for the bucket. You can propose up to 10 access points per bucket. If
- * the proposed Amazon S3 access point configuration is for an existing bucket, the access preview uses the proposed
- * access point configuration in place of the existing access points. To propose an access point without a policy, you
- * can provide an empty string as the access point policy. For more information, see <a
+ * The configuration for an Amazon S3 access point or multi-region access point for the bucket. You can propose up to 10
+ * access points or multi-region access points per bucket. If the proposed Amazon S3 access point configuration is for
+ * an existing bucket, the access preview uses the proposed access point configuration in place of the existing access
+ * points. To propose an access point without a policy, you can provide an empty string as the access point policy. For
+ * more information, see <a
  * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html"
  * >Creating access points</a>. For more information about access point policy limits, see <a
  * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-points-restrictions-limitations.html">Access points
@@ -37,33 +38,35 @@ public class S3AccessPointConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The access point policy.
+     * The access point or multi-region access point policy.
      * </p>
      */
     private String accessPointPolicy;
     /**
      * <p>
-     * The proposed <code>Internet</code> and <code>VpcConfiguration</code> to apply to this Amazon S3 access point. If
-     * the access preview is for a new resource and neither is specified, the access preview uses <code>Internet</code>
-     * for the network origin. If the access preview is for an existing resource and neither is specified, the access
-     * preview uses the exiting network origin.
+     * The proposed <code>Internet</code> and <code>VpcConfiguration</code> to apply to this Amazon S3 access point.
+     * <code>VpcConfiguration</code> does not apply to multi-region access points. If the access preview is for a new
+     * resource and neither is specified, the access preview uses <code>Internet</code> for the network origin. If the
+     * access preview is for an existing resource and neither is specified, the access preview uses the exiting network
+     * origin.
      * </p>
      */
     private NetworkOriginConfiguration networkOrigin;
     /**
      * <p>
-     * The proposed <code>S3PublicAccessBlock</code> configuration to apply to this Amazon S3 Access Point.
+     * The proposed <code>S3PublicAccessBlock</code> configuration to apply to this Amazon S3 access point or
+     * multi-region access point.
      * </p>
      */
     private S3PublicAccessBlockConfiguration publicAccessBlock;
 
     /**
      * <p>
-     * The access point policy.
+     * The access point or multi-region access point policy.
      * </p>
      * 
      * @param accessPointPolicy
-     *        The access point policy.
+     *        The access point or multi-region access point policy.
      */
 
     public void setAccessPointPolicy(String accessPointPolicy) {
@@ -72,10 +75,10 @@ public class S3AccessPointConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The access point policy.
+     * The access point or multi-region access point policy.
      * </p>
      * 
-     * @return The access point policy.
+     * @return The access point or multi-region access point policy.
      */
 
     public String getAccessPointPolicy() {
@@ -84,11 +87,11 @@ public class S3AccessPointConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The access point policy.
+     * The access point or multi-region access point policy.
      * </p>
      * 
      * @param accessPointPolicy
-     *        The access point policy.
+     *        The access point or multi-region access point policy.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -99,17 +102,19 @@ public class S3AccessPointConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The proposed <code>Internet</code> and <code>VpcConfiguration</code> to apply to this Amazon S3 access point. If
-     * the access preview is for a new resource and neither is specified, the access preview uses <code>Internet</code>
-     * for the network origin. If the access preview is for an existing resource and neither is specified, the access
-     * preview uses the exiting network origin.
+     * The proposed <code>Internet</code> and <code>VpcConfiguration</code> to apply to this Amazon S3 access point.
+     * <code>VpcConfiguration</code> does not apply to multi-region access points. If the access preview is for a new
+     * resource and neither is specified, the access preview uses <code>Internet</code> for the network origin. If the
+     * access preview is for an existing resource and neither is specified, the access preview uses the exiting network
+     * origin.
      * </p>
      * 
      * @param networkOrigin
      *        The proposed <code>Internet</code> and <code>VpcConfiguration</code> to apply to this Amazon S3 access
-     *        point. If the access preview is for a new resource and neither is specified, the access preview uses
-     *        <code>Internet</code> for the network origin. If the access preview is for an existing resource and
-     *        neither is specified, the access preview uses the exiting network origin.
+     *        point. <code>VpcConfiguration</code> does not apply to multi-region access points. If the access preview
+     *        is for a new resource and neither is specified, the access preview uses <code>Internet</code> for the
+     *        network origin. If the access preview is for an existing resource and neither is specified, the access
+     *        preview uses the exiting network origin.
      */
 
     public void setNetworkOrigin(NetworkOriginConfiguration networkOrigin) {
@@ -118,16 +123,18 @@ public class S3AccessPointConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The proposed <code>Internet</code> and <code>VpcConfiguration</code> to apply to this Amazon S3 access point. If
-     * the access preview is for a new resource and neither is specified, the access preview uses <code>Internet</code>
-     * for the network origin. If the access preview is for an existing resource and neither is specified, the access
-     * preview uses the exiting network origin.
+     * The proposed <code>Internet</code> and <code>VpcConfiguration</code> to apply to this Amazon S3 access point.
+     * <code>VpcConfiguration</code> does not apply to multi-region access points. If the access preview is for a new
+     * resource and neither is specified, the access preview uses <code>Internet</code> for the network origin. If the
+     * access preview is for an existing resource and neither is specified, the access preview uses the exiting network
+     * origin.
      * </p>
      * 
      * @return The proposed <code>Internet</code> and <code>VpcConfiguration</code> to apply to this Amazon S3 access
-     *         point. If the access preview is for a new resource and neither is specified, the access preview uses
-     *         <code>Internet</code> for the network origin. If the access preview is for an existing resource and
-     *         neither is specified, the access preview uses the exiting network origin.
+     *         point. <code>VpcConfiguration</code> does not apply to multi-region access points. If the access preview
+     *         is for a new resource and neither is specified, the access preview uses <code>Internet</code> for the
+     *         network origin. If the access preview is for an existing resource and neither is specified, the access
+     *         preview uses the exiting network origin.
      */
 
     public NetworkOriginConfiguration getNetworkOrigin() {
@@ -136,17 +143,19 @@ public class S3AccessPointConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The proposed <code>Internet</code> and <code>VpcConfiguration</code> to apply to this Amazon S3 access point. If
-     * the access preview is for a new resource and neither is specified, the access preview uses <code>Internet</code>
-     * for the network origin. If the access preview is for an existing resource and neither is specified, the access
-     * preview uses the exiting network origin.
+     * The proposed <code>Internet</code> and <code>VpcConfiguration</code> to apply to this Amazon S3 access point.
+     * <code>VpcConfiguration</code> does not apply to multi-region access points. If the access preview is for a new
+     * resource and neither is specified, the access preview uses <code>Internet</code> for the network origin. If the
+     * access preview is for an existing resource and neither is specified, the access preview uses the exiting network
+     * origin.
      * </p>
      * 
      * @param networkOrigin
      *        The proposed <code>Internet</code> and <code>VpcConfiguration</code> to apply to this Amazon S3 access
-     *        point. If the access preview is for a new resource and neither is specified, the access preview uses
-     *        <code>Internet</code> for the network origin. If the access preview is for an existing resource and
-     *        neither is specified, the access preview uses the exiting network origin.
+     *        point. <code>VpcConfiguration</code> does not apply to multi-region access points. If the access preview
+     *        is for a new resource and neither is specified, the access preview uses <code>Internet</code> for the
+     *        network origin. If the access preview is for an existing resource and neither is specified, the access
+     *        preview uses the exiting network origin.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -157,11 +166,13 @@ public class S3AccessPointConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The proposed <code>S3PublicAccessBlock</code> configuration to apply to this Amazon S3 Access Point.
+     * The proposed <code>S3PublicAccessBlock</code> configuration to apply to this Amazon S3 access point or
+     * multi-region access point.
      * </p>
      * 
      * @param publicAccessBlock
-     *        The proposed <code>S3PublicAccessBlock</code> configuration to apply to this Amazon S3 Access Point.
+     *        The proposed <code>S3PublicAccessBlock</code> configuration to apply to this Amazon S3 access point or
+     *        multi-region access point.
      */
 
     public void setPublicAccessBlock(S3PublicAccessBlockConfiguration publicAccessBlock) {
@@ -170,10 +181,12 @@ public class S3AccessPointConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The proposed <code>S3PublicAccessBlock</code> configuration to apply to this Amazon S3 Access Point.
+     * The proposed <code>S3PublicAccessBlock</code> configuration to apply to this Amazon S3 access point or
+     * multi-region access point.
      * </p>
      * 
-     * @return The proposed <code>S3PublicAccessBlock</code> configuration to apply to this Amazon S3 Access Point.
+     * @return The proposed <code>S3PublicAccessBlock</code> configuration to apply to this Amazon S3 access point or
+     *         multi-region access point.
      */
 
     public S3PublicAccessBlockConfiguration getPublicAccessBlock() {
@@ -182,11 +195,13 @@ public class S3AccessPointConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The proposed <code>S3PublicAccessBlock</code> configuration to apply to this Amazon S3 Access Point.
+     * The proposed <code>S3PublicAccessBlock</code> configuration to apply to this Amazon S3 access point or
+     * multi-region access point.
      * </p>
      * 
      * @param publicAccessBlock
-     *        The proposed <code>S3PublicAccessBlock</code> configuration to apply to this Amazon S3 Access Point.
+     *        The proposed <code>S3PublicAccessBlock</code> configuration to apply to this Amazon S3 access point or
+     *        multi-region access point.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

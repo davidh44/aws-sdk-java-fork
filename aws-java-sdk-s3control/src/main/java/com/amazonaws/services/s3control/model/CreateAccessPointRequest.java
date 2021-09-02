@@ -27,7 +27,7 @@ public class CreateAccessPointRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The account ID for the owner of the bucket for which you want to create an access point.
+     * The Amazon Web Services account ID for the owner of the bucket for which you want to create an access point.
      * </p>
      */
     private String accountId;
@@ -77,11 +77,12 @@ public class CreateAccessPointRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The account ID for the owner of the bucket for which you want to create an access point.
+     * The Amazon Web Services account ID for the owner of the bucket for which you want to create an access point.
      * </p>
      * 
      * @param accountId
-     *        The account ID for the owner of the bucket for which you want to create an access point.
+     *        The Amazon Web Services account ID for the owner of the bucket for which you want to create an access
+     *        point.
      */
 
     public void setAccountId(String accountId) {
@@ -90,10 +91,11 @@ public class CreateAccessPointRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The account ID for the owner of the bucket for which you want to create an access point.
+     * The Amazon Web Services account ID for the owner of the bucket for which you want to create an access point.
      * </p>
      * 
-     * @return The account ID for the owner of the bucket for which you want to create an access point.
+     * @return The Amazon Web Services account ID for the owner of the bucket for which you want to create an access
+     *         point.
      */
 
     public String getAccountId() {
@@ -102,11 +104,12 @@ public class CreateAccessPointRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The account ID for the owner of the bucket for which you want to create an access point.
+     * The Amazon Web Services account ID for the owner of the bucket for which you want to create an access point.
      * </p>
      * 
      * @param accountId
-     *        The account ID for the owner of the bucket for which you want to create an access point.
+     *        The Amazon Web Services account ID for the owner of the bucket for which you want to create an access
+     *        point.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,7 +27,7 @@ public class UpdateThemePermissionsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the theme.
+     * The ID of the Amazon Web Services account that contains the theme.
      * </p>
      */
     private String awsAccountId;
@@ -52,11 +52,11 @@ public class UpdateThemePermissionsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the theme.
+     * The ID of the Amazon Web Services account that contains the theme.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the theme.
+     *        The ID of the Amazon Web Services account that contains the theme.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -65,10 +65,10 @@ public class UpdateThemePermissionsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the theme.
+     * The ID of the Amazon Web Services account that contains the theme.
      * </p>
      * 
-     * @return The ID of the Amazon Web Services account; that contains the theme.
+     * @return The ID of the Amazon Web Services account that contains the theme.
      */
 
     public String getAwsAccountId() {
@@ -77,11 +77,11 @@ public class UpdateThemePermissionsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the theme.
+     * The ID of the Amazon Web Services account that contains the theme.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the theme.
+     *        The ID of the Amazon Web Services account that contains the theme.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

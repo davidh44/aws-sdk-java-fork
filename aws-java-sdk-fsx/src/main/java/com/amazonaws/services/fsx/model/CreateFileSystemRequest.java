@@ -31,13 +31,14 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent creation. This string is
-     * automatically filled on your behalf when you use the AWS Command Line Interface (AWS CLI) or an AWS SDK.
+     * automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
      * </p>
      */
     private String clientRequestToken;
     /**
      * <p>
-     * The type of Amazon FSx file system to create, either <code>WINDOWS</code> or <code>LUSTRE</code>.
+     * The type of Amazon FSx file system to create. Valid values are <code>WINDOWS</code>, <code>LUSTRE</code>, and
+     * <code>ONTAP</code>.
      * </p>
      */
     private String fileSystemType;
@@ -82,6 +83,16 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * For ONTAP file systems:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Valid values are 1024 GiB - 196,608 GiB (192 TiB).
+     * </p>
+     * </li>
+     * </ul>
      */
     private Integer storageCapacity;
     /**
@@ -92,8 +103,8 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Set to <code>SSD</code> to use solid state drive storage. SSD is supported on all Windows and Lustre deployment
-     * types.
+     * Set to <code>SSD</code> to use solid state drive storage. SSD is supported on all Windows, Lustre, and ONTAP
+     * deployment types.
      * </p>
      * </li>
      * <li>
@@ -115,12 +126,15 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     private String storageType;
     /**
      * <p>
-     * Specifies the IDs of the subnets that the file system will be accessible from. For Windows
+     * Specifies the IDs of the subnets that the file system will be accessible from. For Windows and ONTAP
      * <code>MULTI_AZ_1</code> file system deployment types, provide exactly two subnet IDs, one for the preferred file
      * server and one for the standby file server. You specify one of these subnets as the preferred subnet using the
-     * <code>WindowsConfiguration &gt; PreferredSubnetID</code> property. For more information, see <a
+     * <code>WindowsConfiguration &gt; PreferredSubnetID</code> or
+     * <code>OntapConfiguration &gt; PreferredSubnetID</code> properties. For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html"> Availability and
-     * durability: Single-AZ and Multi-AZ file systems</a>.
+     * durability: Single-AZ and Multi-AZ file systems</a> in the <i>Amazon FSx for Windows User Guide</i> and <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html"> Availability and
+     * durability</a> in the <i>Amazon FSx for ONTAP User Guide</i>.
      * </p>
      * <p>
      * For Windows <code>SINGLE_AZ_1</code> and <code>SINGLE_AZ_2</code> file system deployment types and Lustre file
@@ -153,15 +167,18 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     private CreateFileSystemLustreConfiguration lustreConfiguration;
 
+    private CreateFileSystemOntapConfiguration ontapConfiguration;
+
     /**
      * <p>
      * A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent creation. This string is
-     * automatically filled on your behalf when you use the AWS Command Line Interface (AWS CLI) or an AWS SDK.
+     * automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
      * </p>
      * 
      * @param clientRequestToken
      *        A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent creation. This string is
-     *        automatically filled on your behalf when you use the AWS Command Line Interface (AWS CLI) or an AWS SDK.
+     *        automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web
+     *        Services SDK.
      */
 
     public void setClientRequestToken(String clientRequestToken) {
@@ -171,11 +188,12 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent creation. This string is
-     * automatically filled on your behalf when you use the AWS Command Line Interface (AWS CLI) or an AWS SDK.
+     * automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
      * </p>
      * 
      * @return A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent creation. This string is
-     *         automatically filled on your behalf when you use the AWS Command Line Interface (AWS CLI) or an AWS SDK.
+     *         automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web
+     *         Services SDK.
      */
 
     public String getClientRequestToken() {
@@ -185,12 +203,13 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent creation. This string is
-     * automatically filled on your behalf when you use the AWS Command Line Interface (AWS CLI) or an AWS SDK.
+     * automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
      * </p>
      * 
      * @param clientRequestToken
      *        A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent creation. This string is
-     *        automatically filled on your behalf when you use the AWS Command Line Interface (AWS CLI) or an AWS SDK.
+     *        automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web
+     *        Services SDK.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -201,11 +220,13 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The type of Amazon FSx file system to create, either <code>WINDOWS</code> or <code>LUSTRE</code>.
+     * The type of Amazon FSx file system to create. Valid values are <code>WINDOWS</code>, <code>LUSTRE</code>, and
+     * <code>ONTAP</code>.
      * </p>
      * 
      * @param fileSystemType
-     *        The type of Amazon FSx file system to create, either <code>WINDOWS</code> or <code>LUSTRE</code>.
+     *        The type of Amazon FSx file system to create. Valid values are <code>WINDOWS</code>, <code>LUSTRE</code>,
+     *        and <code>ONTAP</code>.
      * @see FileSystemType
      */
 
@@ -215,10 +236,12 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The type of Amazon FSx file system to create, either <code>WINDOWS</code> or <code>LUSTRE</code>.
+     * The type of Amazon FSx file system to create. Valid values are <code>WINDOWS</code>, <code>LUSTRE</code>, and
+     * <code>ONTAP</code>.
      * </p>
      * 
-     * @return The type of Amazon FSx file system to create, either <code>WINDOWS</code> or <code>LUSTRE</code>.
+     * @return The type of Amazon FSx file system to create. Valid values are <code>WINDOWS</code>, <code>LUSTRE</code>,
+     *         and <code>ONTAP</code>.
      * @see FileSystemType
      */
 
@@ -228,11 +251,13 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The type of Amazon FSx file system to create, either <code>WINDOWS</code> or <code>LUSTRE</code>.
+     * The type of Amazon FSx file system to create. Valid values are <code>WINDOWS</code>, <code>LUSTRE</code>, and
+     * <code>ONTAP</code>.
      * </p>
      * 
      * @param fileSystemType
-     *        The type of Amazon FSx file system to create, either <code>WINDOWS</code> or <code>LUSTRE</code>.
+     *        The type of Amazon FSx file system to create. Valid values are <code>WINDOWS</code>, <code>LUSTRE</code>,
+     *        and <code>ONTAP</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FileSystemType
      */
@@ -244,11 +269,13 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The type of Amazon FSx file system to create, either <code>WINDOWS</code> or <code>LUSTRE</code>.
+     * The type of Amazon FSx file system to create. Valid values are <code>WINDOWS</code>, <code>LUSTRE</code>, and
+     * <code>ONTAP</code>.
      * </p>
      * 
      * @param fileSystemType
-     *        The type of Amazon FSx file system to create, either <code>WINDOWS</code> or <code>LUSTRE</code>.
+     *        The type of Amazon FSx file system to create. Valid values are <code>WINDOWS</code>, <code>LUSTRE</code>,
+     *        and <code>ONTAP</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FileSystemType
      */
@@ -299,6 +326,16 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * For ONTAP file systems:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Valid values are 1024 GiB - 196,608 GiB (192 TiB).
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param storageCapacity
      *        Sets the storage capacity of the file system that you're creating.</p>
@@ -337,6 +374,16 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *        <li>
      *        <p>
      *        If <code>StorageType=HDD</code>, valid values are 2000 GiB - 65,536 GiB (64 TiB).
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For ONTAP file systems:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Valid values are 1024 GiB - 196,608 GiB (192 TiB).
      *        </p>
      *        </li>
      */
@@ -386,6 +433,16 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * For ONTAP file systems:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Valid values are 1024 GiB - 196,608 GiB (192 TiB).
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @return Sets the storage capacity of the file system that you're creating.</p>
      *         <p>
@@ -423,6 +480,16 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *         <li>
      *         <p>
      *         If <code>StorageType=HDD</code>, valid values are 2000 GiB - 65,536 GiB (64 TiB).
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         For ONTAP file systems:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Valid values are 1024 GiB - 196,608 GiB (192 TiB).
      *         </p>
      *         </li>
      */
@@ -472,6 +539,16 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * For ONTAP file systems:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Valid values are 1024 GiB - 196,608 GiB (192 TiB).
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param storageCapacity
      *        Sets the storage capacity of the file system that you're creating.</p>
@@ -512,6 +589,16 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *        If <code>StorageType=HDD</code>, valid values are 2000 GiB - 65,536 GiB (64 TiB).
      *        </p>
      *        </li>
+     *        </ul>
+     *        <p>
+     *        For ONTAP file systems:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Valid values are 1024 GiB - 196,608 GiB (192 TiB).
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -528,8 +615,8 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Set to <code>SSD</code> to use solid state drive storage. SSD is supported on all Windows and Lustre deployment
-     * types.
+     * Set to <code>SSD</code> to use solid state drive storage. SSD is supported on all Windows, Lustre, and ONTAP
+     * deployment types.
      * </p>
      * </li>
      * <li>
@@ -554,8 +641,8 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        Set to <code>SSD</code> to use solid state drive storage. SSD is supported on all Windows and Lustre
-     *        deployment types.
+     *        Set to <code>SSD</code> to use solid state drive storage. SSD is supported on all Windows, Lustre, and
+     *        ONTAP deployment types.
      *        </p>
      *        </li>
      *        <li>
@@ -587,8 +674,8 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Set to <code>SSD</code> to use solid state drive storage. SSD is supported on all Windows and Lustre deployment
-     * types.
+     * Set to <code>SSD</code> to use solid state drive storage. SSD is supported on all Windows, Lustre, and ONTAP
+     * deployment types.
      * </p>
      * </li>
      * <li>
@@ -612,8 +699,8 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *         <ul>
      *         <li>
      *         <p>
-     *         Set to <code>SSD</code> to use solid state drive storage. SSD is supported on all Windows and Lustre
-     *         deployment types.
+     *         Set to <code>SSD</code> to use solid state drive storage. SSD is supported on all Windows, Lustre, and
+     *         ONTAP deployment types.
      *         </p>
      *         </li>
      *         <li>
@@ -645,8 +732,8 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Set to <code>SSD</code> to use solid state drive storage. SSD is supported on all Windows and Lustre deployment
-     * types.
+     * Set to <code>SSD</code> to use solid state drive storage. SSD is supported on all Windows, Lustre, and ONTAP
+     * deployment types.
      * </p>
      * </li>
      * <li>
@@ -671,8 +758,8 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        Set to <code>SSD</code> to use solid state drive storage. SSD is supported on all Windows and Lustre
-     *        deployment types.
+     *        Set to <code>SSD</code> to use solid state drive storage. SSD is supported on all Windows, Lustre, and
+     *        ONTAP deployment types.
      *        </p>
      *        </li>
      *        <li>
@@ -706,8 +793,8 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Set to <code>SSD</code> to use solid state drive storage. SSD is supported on all Windows and Lustre deployment
-     * types.
+     * Set to <code>SSD</code> to use solid state drive storage. SSD is supported on all Windows, Lustre, and ONTAP
+     * deployment types.
      * </p>
      * </li>
      * <li>
@@ -732,8 +819,8 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        Set to <code>SSD</code> to use solid state drive storage. SSD is supported on all Windows and Lustre
-     *        deployment types.
+     *        Set to <code>SSD</code> to use solid state drive storage. SSD is supported on all Windows, Lustre, and
+     *        ONTAP deployment types.
      *        </p>
      *        </li>
      *        <li>
@@ -761,25 +848,30 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Specifies the IDs of the subnets that the file system will be accessible from. For Windows
+     * Specifies the IDs of the subnets that the file system will be accessible from. For Windows and ONTAP
      * <code>MULTI_AZ_1</code> file system deployment types, provide exactly two subnet IDs, one for the preferred file
      * server and one for the standby file server. You specify one of these subnets as the preferred subnet using the
-     * <code>WindowsConfiguration &gt; PreferredSubnetID</code> property. For more information, see <a
+     * <code>WindowsConfiguration &gt; PreferredSubnetID</code> or
+     * <code>OntapConfiguration &gt; PreferredSubnetID</code> properties. For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html"> Availability and
-     * durability: Single-AZ and Multi-AZ file systems</a>.
+     * durability: Single-AZ and Multi-AZ file systems</a> in the <i>Amazon FSx for Windows User Guide</i> and <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html"> Availability and
+     * durability</a> in the <i>Amazon FSx for ONTAP User Guide</i>.
      * </p>
      * <p>
      * For Windows <code>SINGLE_AZ_1</code> and <code>SINGLE_AZ_2</code> file system deployment types and Lustre file
      * systems, provide exactly one subnet ID. The file server is launched in that subnet's Availability Zone.
      * </p>
      * 
-     * @return Specifies the IDs of the subnets that the file system will be accessible from. For Windows
+     * @return Specifies the IDs of the subnets that the file system will be accessible from. For Windows and ONTAP
      *         <code>MULTI_AZ_1</code> file system deployment types, provide exactly two subnet IDs, one for the
      *         preferred file server and one for the standby file server. You specify one of these subnets as the
-     *         preferred subnet using the <code>WindowsConfiguration &gt; PreferredSubnetID</code> property. For more
-     *         information, see <a
+     *         preferred subnet using the <code>WindowsConfiguration &gt; PreferredSubnetID</code> or
+     *         <code>OntapConfiguration &gt; PreferredSubnetID</code> properties. For more information, see <a
      *         href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html"> Availability
-     *         and durability: Single-AZ and Multi-AZ file systems</a>.</p>
+     *         and durability: Single-AZ and Multi-AZ file systems</a> in the <i>Amazon FSx for Windows User Guide</i>
+     *         and <a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html">
+     *         Availability and durability</a> in the <i>Amazon FSx for ONTAP User Guide</i>.</p>
      *         <p>
      *         For Windows <code>SINGLE_AZ_1</code> and <code>SINGLE_AZ_2</code> file system deployment types and Lustre
      *         file systems, provide exactly one subnet ID. The file server is launched in that subnet's Availability
@@ -792,12 +884,15 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Specifies the IDs of the subnets that the file system will be accessible from. For Windows
+     * Specifies the IDs of the subnets that the file system will be accessible from. For Windows and ONTAP
      * <code>MULTI_AZ_1</code> file system deployment types, provide exactly two subnet IDs, one for the preferred file
      * server and one for the standby file server. You specify one of these subnets as the preferred subnet using the
-     * <code>WindowsConfiguration &gt; PreferredSubnetID</code> property. For more information, see <a
+     * <code>WindowsConfiguration &gt; PreferredSubnetID</code> or
+     * <code>OntapConfiguration &gt; PreferredSubnetID</code> properties. For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html"> Availability and
-     * durability: Single-AZ and Multi-AZ file systems</a>.
+     * durability: Single-AZ and Multi-AZ file systems</a> in the <i>Amazon FSx for Windows User Guide</i> and <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html"> Availability and
+     * durability</a> in the <i>Amazon FSx for ONTAP User Guide</i>.
      * </p>
      * <p>
      * For Windows <code>SINGLE_AZ_1</code> and <code>SINGLE_AZ_2</code> file system deployment types and Lustre file
@@ -805,13 +900,15 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param subnetIds
-     *        Specifies the IDs of the subnets that the file system will be accessible from. For Windows
+     *        Specifies the IDs of the subnets that the file system will be accessible from. For Windows and ONTAP
      *        <code>MULTI_AZ_1</code> file system deployment types, provide exactly two subnet IDs, one for the
      *        preferred file server and one for the standby file server. You specify one of these subnets as the
-     *        preferred subnet using the <code>WindowsConfiguration &gt; PreferredSubnetID</code> property. For more
-     *        information, see <a
+     *        preferred subnet using the <code>WindowsConfiguration &gt; PreferredSubnetID</code> or
+     *        <code>OntapConfiguration &gt; PreferredSubnetID</code> properties. For more information, see <a
      *        href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html"> Availability
-     *        and durability: Single-AZ and Multi-AZ file systems</a>.</p>
+     *        and durability: Single-AZ and Multi-AZ file systems</a> in the <i>Amazon FSx for Windows User Guide</i>
+     *        and <a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html">
+     *        Availability and durability</a> in the <i>Amazon FSx for ONTAP User Guide</i>.</p>
      *        <p>
      *        For Windows <code>SINGLE_AZ_1</code> and <code>SINGLE_AZ_2</code> file system deployment types and Lustre
      *        file systems, provide exactly one subnet ID. The file server is launched in that subnet's Availability
@@ -829,12 +926,15 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Specifies the IDs of the subnets that the file system will be accessible from. For Windows
+     * Specifies the IDs of the subnets that the file system will be accessible from. For Windows and ONTAP
      * <code>MULTI_AZ_1</code> file system deployment types, provide exactly two subnet IDs, one for the preferred file
      * server and one for the standby file server. You specify one of these subnets as the preferred subnet using the
-     * <code>WindowsConfiguration &gt; PreferredSubnetID</code> property. For more information, see <a
+     * <code>WindowsConfiguration &gt; PreferredSubnetID</code> or
+     * <code>OntapConfiguration &gt; PreferredSubnetID</code> properties. For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html"> Availability and
-     * durability: Single-AZ and Multi-AZ file systems</a>.
+     * durability: Single-AZ and Multi-AZ file systems</a> in the <i>Amazon FSx for Windows User Guide</i> and <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html"> Availability and
+     * durability</a> in the <i>Amazon FSx for ONTAP User Guide</i>.
      * </p>
      * <p>
      * For Windows <code>SINGLE_AZ_1</code> and <code>SINGLE_AZ_2</code> file system deployment types and Lustre file
@@ -847,13 +947,15 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param subnetIds
-     *        Specifies the IDs of the subnets that the file system will be accessible from. For Windows
+     *        Specifies the IDs of the subnets that the file system will be accessible from. For Windows and ONTAP
      *        <code>MULTI_AZ_1</code> file system deployment types, provide exactly two subnet IDs, one for the
      *        preferred file server and one for the standby file server. You specify one of these subnets as the
-     *        preferred subnet using the <code>WindowsConfiguration &gt; PreferredSubnetID</code> property. For more
-     *        information, see <a
+     *        preferred subnet using the <code>WindowsConfiguration &gt; PreferredSubnetID</code> or
+     *        <code>OntapConfiguration &gt; PreferredSubnetID</code> properties. For more information, see <a
      *        href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html"> Availability
-     *        and durability: Single-AZ and Multi-AZ file systems</a>.</p>
+     *        and durability: Single-AZ and Multi-AZ file systems</a> in the <i>Amazon FSx for Windows User Guide</i>
+     *        and <a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html">
+     *        Availability and durability</a> in the <i>Amazon FSx for ONTAP User Guide</i>.</p>
      *        <p>
      *        For Windows <code>SINGLE_AZ_1</code> and <code>SINGLE_AZ_2</code> file system deployment types and Lustre
      *        file systems, provide exactly one subnet ID. The file server is launched in that subnet's Availability
@@ -873,12 +975,15 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Specifies the IDs of the subnets that the file system will be accessible from. For Windows
+     * Specifies the IDs of the subnets that the file system will be accessible from. For Windows and ONTAP
      * <code>MULTI_AZ_1</code> file system deployment types, provide exactly two subnet IDs, one for the preferred file
      * server and one for the standby file server. You specify one of these subnets as the preferred subnet using the
-     * <code>WindowsConfiguration &gt; PreferredSubnetID</code> property. For more information, see <a
+     * <code>WindowsConfiguration &gt; PreferredSubnetID</code> or
+     * <code>OntapConfiguration &gt; PreferredSubnetID</code> properties. For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html"> Availability and
-     * durability: Single-AZ and Multi-AZ file systems</a>.
+     * durability: Single-AZ and Multi-AZ file systems</a> in the <i>Amazon FSx for Windows User Guide</i> and <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html"> Availability and
+     * durability</a> in the <i>Amazon FSx for ONTAP User Guide</i>.
      * </p>
      * <p>
      * For Windows <code>SINGLE_AZ_1</code> and <code>SINGLE_AZ_2</code> file system deployment types and Lustre file
@@ -886,13 +991,15 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param subnetIds
-     *        Specifies the IDs of the subnets that the file system will be accessible from. For Windows
+     *        Specifies the IDs of the subnets that the file system will be accessible from. For Windows and ONTAP
      *        <code>MULTI_AZ_1</code> file system deployment types, provide exactly two subnet IDs, one for the
      *        preferred file server and one for the standby file server. You specify one of these subnets as the
-     *        preferred subnet using the <code>WindowsConfiguration &gt; PreferredSubnetID</code> property. For more
-     *        information, see <a
+     *        preferred subnet using the <code>WindowsConfiguration &gt; PreferredSubnetID</code> or
+     *        <code>OntapConfiguration &gt; PreferredSubnetID</code> properties. For more information, see <a
      *        href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html"> Availability
-     *        and durability: Single-AZ and Multi-AZ file systems</a>.</p>
+     *        and durability: Single-AZ and Multi-AZ file systems</a> in the <i>Amazon FSx for Windows User Guide</i>
+     *        and <a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html">
+     *        Availability and durability</a> in the <i>Amazon FSx for ONTAP User Guide</i>.</p>
      *        <p>
      *        For Windows <code>SINGLE_AZ_1</code> and <code>SINGLE_AZ_2</code> file system deployment types and Lustre
      *        file systems, provide exactly one subnet ID. The file server is launched in that subnet's Availability
@@ -1154,6 +1261,32 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * @param ontapConfiguration
+     */
+
+    public void setOntapConfiguration(CreateFileSystemOntapConfiguration ontapConfiguration) {
+        this.ontapConfiguration = ontapConfiguration;
+    }
+
+    /**
+     * @return
+     */
+
+    public CreateFileSystemOntapConfiguration getOntapConfiguration() {
+        return this.ontapConfiguration;
+    }
+
+    /**
+     * @param ontapConfiguration
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateFileSystemRequest withOntapConfiguration(CreateFileSystemOntapConfiguration ontapConfiguration) {
+        setOntapConfiguration(ontapConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1184,7 +1317,9 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
         if (getWindowsConfiguration() != null)
             sb.append("WindowsConfiguration: ").append(getWindowsConfiguration()).append(",");
         if (getLustreConfiguration() != null)
-            sb.append("LustreConfiguration: ").append(getLustreConfiguration());
+            sb.append("LustreConfiguration: ").append(getLustreConfiguration()).append(",");
+        if (getOntapConfiguration() != null)
+            sb.append("OntapConfiguration: ").append(getOntapConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -1239,6 +1374,10 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getLustreConfiguration() != null && other.getLustreConfiguration().equals(this.getLustreConfiguration()) == false)
             return false;
+        if (other.getOntapConfiguration() == null ^ this.getOntapConfiguration() == null)
+            return false;
+        if (other.getOntapConfiguration() != null && other.getOntapConfiguration().equals(this.getOntapConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -1257,6 +1396,7 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getKmsKeyId() == null) ? 0 : getKmsKeyId().hashCode());
         hashCode = prime * hashCode + ((getWindowsConfiguration() == null) ? 0 : getWindowsConfiguration().hashCode());
         hashCode = prime * hashCode + ((getLustreConfiguration() == null) ? 0 : getLustreConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getOntapConfiguration() == null) ? 0 : getOntapConfiguration().hashCode());
         return hashCode;
     }
 

@@ -118,6 +118,45 @@ public class AbstractAmazonFSxAsync extends AbstractAmazonFSx implements AmazonF
     }
 
     @Override
+    public java.util.concurrent.Future<CreateStorageVirtualMachineResult> createStorageVirtualMachineAsync(CreateStorageVirtualMachineRequest request) {
+
+        return createStorageVirtualMachineAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateStorageVirtualMachineResult> createStorageVirtualMachineAsync(CreateStorageVirtualMachineRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateStorageVirtualMachineRequest, CreateStorageVirtualMachineResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateVolumeResult> createVolumeAsync(CreateVolumeRequest request) {
+
+        return createVolumeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateVolumeResult> createVolumeAsync(CreateVolumeRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateVolumeRequest, CreateVolumeResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateVolumeFromBackupResult> createVolumeFromBackupAsync(CreateVolumeFromBackupRequest request) {
+
+        return createVolumeFromBackupAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateVolumeFromBackupResult> createVolumeFromBackupAsync(CreateVolumeFromBackupRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateVolumeFromBackupRequest, CreateVolumeFromBackupResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteBackupResult> deleteBackupAsync(DeleteBackupRequest request) {
 
         return deleteBackupAsync(request, null);
@@ -139,6 +178,32 @@ public class AbstractAmazonFSxAsync extends AbstractAmazonFSx implements AmazonF
     @Override
     public java.util.concurrent.Future<DeleteFileSystemResult> deleteFileSystemAsync(DeleteFileSystemRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteFileSystemRequest, DeleteFileSystemResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteStorageVirtualMachineResult> deleteStorageVirtualMachineAsync(DeleteStorageVirtualMachineRequest request) {
+
+        return deleteStorageVirtualMachineAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteStorageVirtualMachineResult> deleteStorageVirtualMachineAsync(DeleteStorageVirtualMachineRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteStorageVirtualMachineRequest, DeleteStorageVirtualMachineResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteVolumeResult> deleteVolumeAsync(DeleteVolumeRequest request) {
+
+        return deleteVolumeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteVolumeResult> deleteVolumeAsync(DeleteVolumeRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteVolumeRequest, DeleteVolumeResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -191,6 +256,32 @@ public class AbstractAmazonFSxAsync extends AbstractAmazonFSx implements AmazonF
     @Override
     public java.util.concurrent.Future<DescribeFileSystemsResult> describeFileSystemsAsync(DescribeFileSystemsRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeFileSystemsRequest, DescribeFileSystemsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeStorageVirtualMachinesResult> describeStorageVirtualMachinesAsync(DescribeStorageVirtualMachinesRequest request) {
+
+        return describeStorageVirtualMachinesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeStorageVirtualMachinesResult> describeStorageVirtualMachinesAsync(DescribeStorageVirtualMachinesRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeStorageVirtualMachinesRequest, DescribeStorageVirtualMachinesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeVolumesResult> describeVolumesAsync(DescribeVolumesRequest request) {
+
+        return describeVolumesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeVolumesResult> describeVolumesAsync(DescribeVolumesRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeVolumesRequest, DescribeVolumesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -256,6 +347,32 @@ public class AbstractAmazonFSxAsync extends AbstractAmazonFSx implements AmazonF
     @Override
     public java.util.concurrent.Future<UpdateFileSystemResult> updateFileSystemAsync(UpdateFileSystemRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateFileSystemRequest, UpdateFileSystemResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateStorageVirtualMachineResult> updateStorageVirtualMachineAsync(UpdateStorageVirtualMachineRequest request) {
+
+        return updateStorageVirtualMachineAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateStorageVirtualMachineResult> updateStorageVirtualMachineAsync(UpdateStorageVirtualMachineRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateStorageVirtualMachineRequest, UpdateStorageVirtualMachineResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateVolumeResult> updateVolumeAsync(UpdateVolumeRequest request) {
+
+        return updateVolumeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateVolumeResult> updateVolumeAsync(UpdateVolumeRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateVolumeRequest, UpdateVolumeResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

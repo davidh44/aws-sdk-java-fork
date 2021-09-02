@@ -42,7 +42,7 @@ public class AwsSecretsManagerSecretDetails implements Serializable, Cloneable, 
     private Boolean rotationOccurredWithinFrequency;
     /**
      * <p>
-     * The ARN, Key ID, or alias of the KMS customer master key (CMK) used to encrypt the <code>SecretString</code> or
+     * The ARN, Key ID, or alias of the KMS key used to encrypt the <code>SecretString</code> or
      * <code>SecretBinary</code> values for versions of this secret.
      * </p>
      */
@@ -172,13 +172,13 @@ public class AwsSecretsManagerSecretDetails implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The ARN, Key ID, or alias of the KMS customer master key (CMK) used to encrypt the <code>SecretString</code> or
+     * The ARN, Key ID, or alias of the KMS key used to encrypt the <code>SecretString</code> or
      * <code>SecretBinary</code> values for versions of this secret.
      * </p>
      * 
      * @param kmsKeyId
-     *        The ARN, Key ID, or alias of the KMS customer master key (CMK) used to encrypt the
-     *        <code>SecretString</code> or <code>SecretBinary</code> values for versions of this secret.
+     *        The ARN, Key ID, or alias of the KMS key used to encrypt the <code>SecretString</code> or
+     *        <code>SecretBinary</code> values for versions of this secret.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -187,12 +187,12 @@ public class AwsSecretsManagerSecretDetails implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The ARN, Key ID, or alias of the KMS customer master key (CMK) used to encrypt the <code>SecretString</code> or
+     * The ARN, Key ID, or alias of the KMS key used to encrypt the <code>SecretString</code> or
      * <code>SecretBinary</code> values for versions of this secret.
      * </p>
      * 
-     * @return The ARN, Key ID, or alias of the KMS customer master key (CMK) used to encrypt the
-     *         <code>SecretString</code> or <code>SecretBinary</code> values for versions of this secret.
+     * @return The ARN, Key ID, or alias of the KMS key used to encrypt the <code>SecretString</code> or
+     *         <code>SecretBinary</code> values for versions of this secret.
      */
 
     public String getKmsKeyId() {
@@ -201,13 +201,13 @@ public class AwsSecretsManagerSecretDetails implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The ARN, Key ID, or alias of the KMS customer master key (CMK) used to encrypt the <code>SecretString</code> or
+     * The ARN, Key ID, or alias of the KMS key used to encrypt the <code>SecretString</code> or
      * <code>SecretBinary</code> values for versions of this secret.
      * </p>
      * 
      * @param kmsKeyId
-     *        The ARN, Key ID, or alias of the KMS customer master key (CMK) used to encrypt the
-     *        <code>SecretString</code> or <code>SecretBinary</code> values for versions of this secret.
+     *        The ARN, Key ID, or alias of the KMS key used to encrypt the <code>SecretString</code> or
+     *        <code>SecretBinary</code> values for versions of this secret.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

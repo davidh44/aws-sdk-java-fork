@@ -55,6 +55,12 @@ public class DescribeDiscovererResult extends com.amazonaws.AmazonWebServiceResu
     private String state;
     /**
      * <p>
+     * The Status if the discoverer will discover schemas from events sent from another account.
+     * </p>
+     */
+    private Boolean crossAccount;
+    /**
+     * <p>
      * Tags associated with the resource.
      * </p>
      */
@@ -281,6 +287,58 @@ public class DescribeDiscovererResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
+     * The Status if the discoverer will discover schemas from events sent from another account.
+     * </p>
+     * 
+     * @param crossAccount
+     *        The Status if the discoverer will discover schemas from events sent from another account.
+     */
+
+    public void setCrossAccount(Boolean crossAccount) {
+        this.crossAccount = crossAccount;
+    }
+
+    /**
+     * <p>
+     * The Status if the discoverer will discover schemas from events sent from another account.
+     * </p>
+     * 
+     * @return The Status if the discoverer will discover schemas from events sent from another account.
+     */
+
+    public Boolean getCrossAccount() {
+        return this.crossAccount;
+    }
+
+    /**
+     * <p>
+     * The Status if the discoverer will discover schemas from events sent from another account.
+     * </p>
+     * 
+     * @param crossAccount
+     *        The Status if the discoverer will discover schemas from events sent from another account.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeDiscovererResult withCrossAccount(Boolean crossAccount) {
+        setCrossAccount(crossAccount);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Status if the discoverer will discover schemas from events sent from another account.
+     * </p>
+     * 
+     * @return The Status if the discoverer will discover schemas from events sent from another account.
+     */
+
+    public Boolean isCrossAccount() {
+        return this.crossAccount;
+    }
+
+    /**
+     * <p>
      * Tags associated with the resource.
      * </p>
      * 
@@ -369,6 +427,8 @@ public class DescribeDiscovererResult extends com.amazonaws.AmazonWebServiceResu
             sb.append("SourceArn: ").append(getSourceArn()).append(",");
         if (getState() != null)
             sb.append("State: ").append(getState()).append(",");
+        if (getCrossAccount() != null)
+            sb.append("CrossAccount: ").append(getCrossAccount()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -405,6 +465,10 @@ public class DescribeDiscovererResult extends com.amazonaws.AmazonWebServiceResu
             return false;
         if (other.getState() != null && other.getState().equals(this.getState()) == false)
             return false;
+        if (other.getCrossAccount() == null ^ this.getCrossAccount() == null)
+            return false;
+        if (other.getCrossAccount() != null && other.getCrossAccount().equals(this.getCrossAccount()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -422,6 +486,7 @@ public class DescribeDiscovererResult extends com.amazonaws.AmazonWebServiceResu
         hashCode = prime * hashCode + ((getDiscovererId() == null) ? 0 : getDiscovererId().hashCode());
         hashCode = prime * hashCode + ((getSourceArn() == null) ? 0 : getSourceArn().hashCode());
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
+        hashCode = prime * hashCode + ((getCrossAccount() == null) ? 0 : getCrossAccount().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

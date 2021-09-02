@@ -27,7 +27,7 @@ public class DeleteNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that you want to delete the QuickSight namespace from.
+     * The ID for the Amazon Web Services account that you want to delete the Amazon QuickSight namespace from.
      * </p>
      */
     private String awsAccountId;
@@ -40,11 +40,11 @@ public class DeleteNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that you want to delete the QuickSight namespace from.
+     * The ID for the Amazon Web Services account that you want to delete the Amazon QuickSight namespace from.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID for the Amazon Web Services account; that you want to delete the QuickSight namespace from.
+     *        The ID for the Amazon Web Services account that you want to delete the Amazon QuickSight namespace from.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -53,10 +53,10 @@ public class DeleteNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that you want to delete the QuickSight namespace from.
+     * The ID for the Amazon Web Services account that you want to delete the Amazon QuickSight namespace from.
      * </p>
      * 
-     * @return The ID for the Amazon Web Services account; that you want to delete the QuickSight namespace from.
+     * @return The ID for the Amazon Web Services account that you want to delete the Amazon QuickSight namespace from.
      */
 
     public String getAwsAccountId() {
@@ -65,11 +65,11 @@ public class DeleteNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that you want to delete the QuickSight namespace from.
+     * The ID for the Amazon Web Services account that you want to delete the Amazon QuickSight namespace from.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID for the Amazon Web Services account; that you want to delete the QuickSight namespace from.
+     *        The ID for the Amazon Web Services account that you want to delete the Amazon QuickSight namespace from.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

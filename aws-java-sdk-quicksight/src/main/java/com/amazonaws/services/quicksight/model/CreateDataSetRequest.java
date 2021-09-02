@@ -27,14 +27,14 @@ public class CreateDataSetRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Web Services account; ID.
+     * The Amazon Web Services account ID.
      * </p>
      */
     private String awsAccountId;
     /**
      * <p>
      * An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for each Amazon
-     * Web Services account;.
+     * Web Services account.
      * </p>
      */
     private String dataSetId;
@@ -64,8 +64,8 @@ public class CreateDataSetRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String importMode;
     /**
      * <p>
-     * Groupings of columns that work together in certain QuickSight features. Currently, only geospatial hierarchy is
-     * supported.
+     * Groupings of columns that work together in certain Amazon QuickSight features. Currently, only geospatial
+     * hierarchy is supported.
      * </p>
      */
     private java.util.List<ColumnGroup> columnGroups;
@@ -107,13 +107,15 @@ public class CreateDataSetRequest extends com.amazonaws.AmazonWebServiceRequest 
      */
     private java.util.List<Tag> tags;
 
+    private DataSetUsageConfiguration dataSetUsageConfiguration;
+
     /**
      * <p>
-     * The Amazon Web Services account; ID.
+     * The Amazon Web Services account ID.
      * </p>
      * 
      * @param awsAccountId
-     *        The Amazon Web Services account; ID.
+     *        The Amazon Web Services account ID.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -122,10 +124,10 @@ public class CreateDataSetRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Web Services account; ID.
+     * The Amazon Web Services account ID.
      * </p>
      * 
-     * @return The Amazon Web Services account; ID.
+     * @return The Amazon Web Services account ID.
      */
 
     public String getAwsAccountId() {
@@ -134,11 +136,11 @@ public class CreateDataSetRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Web Services account; ID.
+     * The Amazon Web Services account ID.
      * </p>
      * 
      * @param awsAccountId
-     *        The Amazon Web Services account; ID.
+     *        The Amazon Web Services account ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -150,12 +152,12 @@ public class CreateDataSetRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for each Amazon
-     * Web Services account;.
+     * Web Services account.
      * </p>
      * 
      * @param dataSetId
      *        An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for each
-     *        Amazon Web Services account;.
+     *        Amazon Web Services account.
      */
 
     public void setDataSetId(String dataSetId) {
@@ -165,11 +167,11 @@ public class CreateDataSetRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for each Amazon
-     * Web Services account;.
+     * Web Services account.
      * </p>
      * 
      * @return An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for each
-     *         Amazon Web Services account;.
+     *         Amazon Web Services account.
      */
 
     public String getDataSetId() {
@@ -179,12 +181,12 @@ public class CreateDataSetRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for each Amazon
-     * Web Services account;.
+     * Web Services account.
      * </p>
      * 
      * @param dataSetId
      *        An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for each
-     *        Amazon Web Services account;.
+     *        Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -430,11 +432,11 @@ public class CreateDataSetRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Groupings of columns that work together in certain QuickSight features. Currently, only geospatial hierarchy is
-     * supported.
+     * Groupings of columns that work together in certain Amazon QuickSight features. Currently, only geospatial
+     * hierarchy is supported.
      * </p>
      * 
-     * @return Groupings of columns that work together in certain QuickSight features. Currently, only geospatial
+     * @return Groupings of columns that work together in certain Amazon QuickSight features. Currently, only geospatial
      *         hierarchy is supported.
      */
 
@@ -444,12 +446,12 @@ public class CreateDataSetRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Groupings of columns that work together in certain QuickSight features. Currently, only geospatial hierarchy is
-     * supported.
+     * Groupings of columns that work together in certain Amazon QuickSight features. Currently, only geospatial
+     * hierarchy is supported.
      * </p>
      * 
      * @param columnGroups
-     *        Groupings of columns that work together in certain QuickSight features. Currently, only geospatial
+     *        Groupings of columns that work together in certain Amazon QuickSight features. Currently, only geospatial
      *        hierarchy is supported.
      */
 
@@ -464,8 +466,8 @@ public class CreateDataSetRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Groupings of columns that work together in certain QuickSight features. Currently, only geospatial hierarchy is
-     * supported.
+     * Groupings of columns that work together in certain Amazon QuickSight features. Currently, only geospatial
+     * hierarchy is supported.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -474,7 +476,7 @@ public class CreateDataSetRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param columnGroups
-     *        Groupings of columns that work together in certain QuickSight features. Currently, only geospatial
+     *        Groupings of columns that work together in certain Amazon QuickSight features. Currently, only geospatial
      *        hierarchy is supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -491,12 +493,12 @@ public class CreateDataSetRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Groupings of columns that work together in certain QuickSight features. Currently, only geospatial hierarchy is
-     * supported.
+     * Groupings of columns that work together in certain Amazon QuickSight features. Currently, only geospatial
+     * hierarchy is supported.
      * </p>
      * 
      * @param columnGroups
-     *        Groupings of columns that work together in certain QuickSight features. Currently, only geospatial
+     *        Groupings of columns that work together in certain Amazon QuickSight features. Currently, only geospatial
      *        hierarchy is supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -871,6 +873,32 @@ public class CreateDataSetRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * @param dataSetUsageConfiguration
+     */
+
+    public void setDataSetUsageConfiguration(DataSetUsageConfiguration dataSetUsageConfiguration) {
+        this.dataSetUsageConfiguration = dataSetUsageConfiguration;
+    }
+
+    /**
+     * @return
+     */
+
+    public DataSetUsageConfiguration getDataSetUsageConfiguration() {
+        return this.dataSetUsageConfiguration;
+    }
+
+    /**
+     * @param dataSetUsageConfiguration
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDataSetRequest withDataSetUsageConfiguration(DataSetUsageConfiguration dataSetUsageConfiguration) {
+        setDataSetUsageConfiguration(dataSetUsageConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -907,7 +935,9 @@ public class CreateDataSetRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getColumnLevelPermissionRules() != null)
             sb.append("ColumnLevelPermissionRules: ").append(getColumnLevelPermissionRules()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getDataSetUsageConfiguration() != null)
+            sb.append("DataSetUsageConfiguration: ").append(getDataSetUsageConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -975,6 +1005,10 @@ public class CreateDataSetRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getDataSetUsageConfiguration() == null ^ this.getDataSetUsageConfiguration() == null)
+            return false;
+        if (other.getDataSetUsageConfiguration() != null && other.getDataSetUsageConfiguration().equals(this.getDataSetUsageConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -996,6 +1030,7 @@ public class CreateDataSetRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getRowLevelPermissionTagConfiguration() == null) ? 0 : getRowLevelPermissionTagConfiguration().hashCode());
         hashCode = prime * hashCode + ((getColumnLevelPermissionRules() == null) ? 0 : getColumnLevelPermissionRules().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getDataSetUsageConfiguration() == null) ? 0 : getDataSetUsageConfiguration().hashCode());
         return hashCode;
     }
 

@@ -63,12 +63,37 @@ public class AbstractAmazonFSx implements AmazonFSx {
     }
 
     @Override
+    public CreateStorageVirtualMachineResult createStorageVirtualMachine(CreateStorageVirtualMachineRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateVolumeResult createVolume(CreateVolumeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateVolumeFromBackupResult createVolumeFromBackup(CreateVolumeFromBackupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteBackupResult deleteBackup(DeleteBackupRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public DeleteFileSystemResult deleteFileSystem(DeleteFileSystemRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteStorageVirtualMachineResult deleteStorageVirtualMachine(DeleteStorageVirtualMachineRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteVolumeResult deleteVolume(DeleteVolumeRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -89,6 +114,16 @@ public class AbstractAmazonFSx implements AmazonFSx {
 
     @Override
     public DescribeFileSystemsResult describeFileSystems(DescribeFileSystemsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeStorageVirtualMachinesResult describeStorageVirtualMachines(DescribeStorageVirtualMachinesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeVolumesResult describeVolumes(DescribeVolumesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -114,6 +149,16 @@ public class AbstractAmazonFSx implements AmazonFSx {
 
     @Override
     public UpdateFileSystemResult updateFileSystem(UpdateFileSystemRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateStorageVirtualMachineResult updateStorageVirtualMachine(UpdateStorageVirtualMachineRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateVolumeResult updateVolume(UpdateVolumeRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

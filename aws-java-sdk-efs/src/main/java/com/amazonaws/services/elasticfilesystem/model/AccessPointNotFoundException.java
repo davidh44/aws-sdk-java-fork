@@ -16,7 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Returned if the specified <code>AccessPointId</code> value doesn't exist in the requester's AWS account.
+ * Returned if the specified <code>AccessPointId</code> value doesn't exist in the requester's Amazon Web Services
+ * account.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

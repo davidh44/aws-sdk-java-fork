@@ -66,7 +66,7 @@ public class AnalyzedResource implements Serializable, Cloneable, StructuredPojo
     private String resourceArn;
     /**
      * <p>
-     * The AWS account ID that owns the resource.
+     * The Amazon Web Services account ID that owns the resource.
      * </p>
      */
     private String resourceOwnerAccount;
@@ -383,11 +383,11 @@ public class AnalyzedResource implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The AWS account ID that owns the resource.
+     * The Amazon Web Services account ID that owns the resource.
      * </p>
      * 
      * @param resourceOwnerAccount
-     *        The AWS account ID that owns the resource.
+     *        The Amazon Web Services account ID that owns the resource.
      */
 
     public void setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -396,10 +396,10 @@ public class AnalyzedResource implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The AWS account ID that owns the resource.
+     * The Amazon Web Services account ID that owns the resource.
      * </p>
      * 
-     * @return The AWS account ID that owns the resource.
+     * @return The Amazon Web Services account ID that owns the resource.
      */
 
     public String getResourceOwnerAccount() {
@@ -408,11 +408,11 @@ public class AnalyzedResource implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The AWS account ID that owns the resource.
+     * The Amazon Web Services account ID that owns the resource.
      * </p>
      * 
      * @param resourceOwnerAccount
-     *        The AWS account ID that owns the resource.
+     *        The Amazon Web Services account ID that owns the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

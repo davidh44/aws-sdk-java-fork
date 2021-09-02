@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.securityhub.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -33,6 +34,10 @@ public class CvssMarshaller {
             .marshallLocationName("BaseScore").build();
     private static final MarshallingInfo<String> BASEVECTOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BaseVector").build();
+    private static final MarshallingInfo<String> SOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Source").build();
+    private static final MarshallingInfo<List> ADJUSTMENTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Adjustments").build();
 
     private static final CvssMarshaller instance = new CvssMarshaller();
 
@@ -53,6 +58,8 @@ public class CvssMarshaller {
             protocolMarshaller.marshall(cvss.getVersion(), VERSION_BINDING);
             protocolMarshaller.marshall(cvss.getBaseScore(), BASESCORE_BINDING);
             protocolMarshaller.marshall(cvss.getBaseVector(), BASEVECTOR_BINDING);
+            protocolMarshaller.marshall(cvss.getSource(), SOURCE_BINDING);
+            protocolMarshaller.marshall(cvss.getAdjustments(), ADJUSTMENTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

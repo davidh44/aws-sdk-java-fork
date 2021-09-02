@@ -27,7 +27,7 @@ public class CreateTemplateAliasRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the template that you creating an alias for.
+     * The ID of the Amazon Web Services account that contains the template that you creating an alias for.
      * </p>
      */
     private String awsAccountId;
@@ -53,11 +53,11 @@ public class CreateTemplateAliasRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the template that you creating an alias for.
+     * The ID of the Amazon Web Services account that contains the template that you creating an alias for.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the template that you creating an alias for.
+     *        The ID of the Amazon Web Services account that contains the template that you creating an alias for.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -66,10 +66,10 @@ public class CreateTemplateAliasRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the template that you creating an alias for.
+     * The ID of the Amazon Web Services account that contains the template that you creating an alias for.
      * </p>
      * 
-     * @return The ID of the Amazon Web Services account; that contains the template that you creating an alias for.
+     * @return The ID of the Amazon Web Services account that contains the template that you creating an alias for.
      */
 
     public String getAwsAccountId() {
@@ -78,11 +78,11 @@ public class CreateTemplateAliasRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the template that you creating an alias for.
+     * The ID of the Amazon Web Services account that contains the template that you creating an alias for.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the template that you creating an alias for.
+     *        The ID of the Amazon Web Services account that contains the template that you creating an alias for.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

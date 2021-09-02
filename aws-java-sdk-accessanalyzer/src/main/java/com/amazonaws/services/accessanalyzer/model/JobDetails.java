@@ -34,7 +34,11 @@ public class JobDetails implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Date completedOn;
-
+    /**
+     * <p>
+     * The job error for the policy generation request.
+     * </p>
+     */
     private JobError jobError;
     /**
      * <p>
@@ -98,7 +102,12 @@ public class JobDetails implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The job error for the policy generation request.
+     * </p>
+     * 
      * @param jobError
+     *        The job error for the policy generation request.
      */
 
     public void setJobError(JobError jobError) {
@@ -106,7 +115,11 @@ public class JobDetails implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The job error for the policy generation request.
+     * </p>
+     * 
+     * @return The job error for the policy generation request.
      */
 
     public JobError getJobError() {
@@ -114,7 +127,12 @@ public class JobDetails implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The job error for the policy generation request.
+     * </p>
+     * 
      * @param jobError
+     *        The job error for the policy generation request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

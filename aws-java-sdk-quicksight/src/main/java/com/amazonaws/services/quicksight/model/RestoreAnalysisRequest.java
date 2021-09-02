@@ -27,7 +27,7 @@ public class RestoreAnalysisRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the analysis.
+     * The ID of the Amazon Web Services account that contains the analysis.
      * </p>
      */
     private String awsAccountId;
@@ -40,11 +40,11 @@ public class RestoreAnalysisRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the analysis.
+     * The ID of the Amazon Web Services account that contains the analysis.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the analysis.
+     *        The ID of the Amazon Web Services account that contains the analysis.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -53,10 +53,10 @@ public class RestoreAnalysisRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the analysis.
+     * The ID of the Amazon Web Services account that contains the analysis.
      * </p>
      * 
-     * @return The ID of the Amazon Web Services account; that contains the analysis.
+     * @return The ID of the Amazon Web Services account that contains the analysis.
      */
 
     public String getAwsAccountId() {
@@ -65,11 +65,11 @@ public class RestoreAnalysisRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID of the Amazon Web Services account; that contains the analysis.
+     * The ID of the Amazon Web Services account that contains the analysis.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID of the Amazon Web Services account; that contains the analysis.
+     *        The ID of the Amazon Web Services account that contains the analysis.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

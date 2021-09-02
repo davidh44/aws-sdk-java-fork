@@ -30,7 +30,12 @@ public class Workflow implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the investigation into the finding. The allowed values are the following.
+     * The status of the investigation into the finding. The workflow status is specific to an individual finding. It
+     * does not affect the generation of new findings. For example, setting the workflow status to
+     * <code>SUPPRESSED</code> or <code>RESOLVED</code> does not prevent a new finding for the same issue.
+     * </p>
+     * <p>
+     * The allowed values are the following.
      * </p>
      * <ul>
      * <li>
@@ -63,7 +68,8 @@ public class Workflow implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>SUPPRESSED</code> - The finding will not be reviewed again and will not be acted upon.
+     * <code>SUPPRESSED</code> - Indicates that you reviewed the finding and do not believe that any action is needed.
+     * The finding is no longer updated.
      * </p>
      * </li>
      * <li>
@@ -77,7 +83,12 @@ public class Workflow implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the investigation into the finding. The allowed values are the following.
+     * The status of the investigation into the finding. The workflow status is specific to an individual finding. It
+     * does not affect the generation of new findings. For example, setting the workflow status to
+     * <code>SUPPRESSED</code> or <code>RESOLVED</code> does not prevent a new finding for the same issue.
+     * </p>
+     * <p>
+     * The allowed values are the following.
      * </p>
      * <ul>
      * <li>
@@ -110,7 +121,8 @@ public class Workflow implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>SUPPRESSED</code> - The finding will not be reviewed again and will not be acted upon.
+     * <code>SUPPRESSED</code> - Indicates that you reviewed the finding and do not believe that any action is needed.
+     * The finding is no longer updated.
      * </p>
      * </li>
      * <li>
@@ -121,7 +133,12 @@ public class Workflow implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param status
-     *        The status of the investigation into the finding. The allowed values are the following.</p>
+     *        The status of the investigation into the finding. The workflow status is specific to an individual
+     *        finding. It does not affect the generation of new findings. For example, setting the workflow status to
+     *        <code>SUPPRESSED</code> or <code>RESOLVED</code> does not prevent a new finding for the same issue.</p>
+     *        <p>
+     *        The allowed values are the following.
+     *        </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -153,7 +170,8 @@ public class Workflow implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SUPPRESSED</code> - The finding will not be reviewed again and will not be acted upon.
+     *        <code>SUPPRESSED</code> - Indicates that you reviewed the finding and do not believe that any action is
+     *        needed. The finding is no longer updated.
      *        </p>
      *        </li>
      *        <li>
@@ -170,7 +188,12 @@ public class Workflow implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the investigation into the finding. The allowed values are the following.
+     * The status of the investigation into the finding. The workflow status is specific to an individual finding. It
+     * does not affect the generation of new findings. For example, setting the workflow status to
+     * <code>SUPPRESSED</code> or <code>RESOLVED</code> does not prevent a new finding for the same issue.
+     * </p>
+     * <p>
+     * The allowed values are the following.
      * </p>
      * <ul>
      * <li>
@@ -203,7 +226,8 @@ public class Workflow implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>SUPPRESSED</code> - The finding will not be reviewed again and will not be acted upon.
+     * <code>SUPPRESSED</code> - Indicates that you reviewed the finding and do not believe that any action is needed.
+     * The finding is no longer updated.
      * </p>
      * </li>
      * <li>
@@ -213,7 +237,12 @@ public class Workflow implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * </ul>
      * 
-     * @return The status of the investigation into the finding. The allowed values are the following.</p>
+     * @return The status of the investigation into the finding. The workflow status is specific to an individual
+     *         finding. It does not affect the generation of new findings. For example, setting the workflow status to
+     *         <code>SUPPRESSED</code> or <code>RESOLVED</code> does not prevent a new finding for the same issue.</p>
+     *         <p>
+     *         The allowed values are the following.
+     *         </p>
      *         <ul>
      *         <li>
      *         <p>
@@ -245,7 +274,8 @@ public class Workflow implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>SUPPRESSED</code> - The finding will not be reviewed again and will not be acted upon.
+     *         <code>SUPPRESSED</code> - Indicates that you reviewed the finding and do not believe that any action is
+     *         needed. The finding is no longer updated.
      *         </p>
      *         </li>
      *         <li>
@@ -262,7 +292,12 @@ public class Workflow implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the investigation into the finding. The allowed values are the following.
+     * The status of the investigation into the finding. The workflow status is specific to an individual finding. It
+     * does not affect the generation of new findings. For example, setting the workflow status to
+     * <code>SUPPRESSED</code> or <code>RESOLVED</code> does not prevent a new finding for the same issue.
+     * </p>
+     * <p>
+     * The allowed values are the following.
      * </p>
      * <ul>
      * <li>
@@ -295,7 +330,8 @@ public class Workflow implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>SUPPRESSED</code> - The finding will not be reviewed again and will not be acted upon.
+     * <code>SUPPRESSED</code> - Indicates that you reviewed the finding and do not believe that any action is needed.
+     * The finding is no longer updated.
      * </p>
      * </li>
      * <li>
@@ -306,7 +342,12 @@ public class Workflow implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param status
-     *        The status of the investigation into the finding. The allowed values are the following.</p>
+     *        The status of the investigation into the finding. The workflow status is specific to an individual
+     *        finding. It does not affect the generation of new findings. For example, setting the workflow status to
+     *        <code>SUPPRESSED</code> or <code>RESOLVED</code> does not prevent a new finding for the same issue.</p>
+     *        <p>
+     *        The allowed values are the following.
+     *        </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -338,7 +379,8 @@ public class Workflow implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SUPPRESSED</code> - The finding will not be reviewed again and will not be acted upon.
+     *        <code>SUPPRESSED</code> - Indicates that you reviewed the finding and do not believe that any action is
+     *        needed. The finding is no longer updated.
      *        </p>
      *        </li>
      *        <li>
@@ -357,7 +399,12 @@ public class Workflow implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the investigation into the finding. The allowed values are the following.
+     * The status of the investigation into the finding. The workflow status is specific to an individual finding. It
+     * does not affect the generation of new findings. For example, setting the workflow status to
+     * <code>SUPPRESSED</code> or <code>RESOLVED</code> does not prevent a new finding for the same issue.
+     * </p>
+     * <p>
+     * The allowed values are the following.
      * </p>
      * <ul>
      * <li>
@@ -390,7 +437,8 @@ public class Workflow implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>SUPPRESSED</code> - The finding will not be reviewed again and will not be acted upon.
+     * <code>SUPPRESSED</code> - Indicates that you reviewed the finding and do not believe that any action is needed.
+     * The finding is no longer updated.
      * </p>
      * </li>
      * <li>
@@ -401,7 +449,12 @@ public class Workflow implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param status
-     *        The status of the investigation into the finding. The allowed values are the following.</p>
+     *        The status of the investigation into the finding. The workflow status is specific to an individual
+     *        finding. It does not affect the generation of new findings. For example, setting the workflow status to
+     *        <code>SUPPRESSED</code> or <code>RESOLVED</code> does not prevent a new finding for the same issue.</p>
+     *        <p>
+     *        The allowed values are the following.
+     *        </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -433,7 +486,8 @@ public class Workflow implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SUPPRESSED</code> - The finding will not be reviewed again and will not be acted upon.
+     *        <code>SUPPRESSED</code> - Indicates that you reviewed the finding and do not believe that any action is
+     *        needed. The finding is no longer updated.
      *        </p>
      *        </li>
      *        <li>

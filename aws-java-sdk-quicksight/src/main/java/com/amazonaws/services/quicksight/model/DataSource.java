@@ -37,7 +37,7 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     * account;.
+     * account.
      * </p>
      */
     private String dataSourceId;
@@ -92,14 +92,14 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<DataSourceParameters> alternateDataSourceParameters;
     /**
      * <p>
-     * The VPC connection information. You need to use this parameter only when you want QuickSight to use a VPC
+     * The VPC connection information. You need to use this parameter only when you want Amazon QuickSight to use a VPC
      * connection when connecting to your underlying source.
      * </p>
      */
     private VpcConnectionProperties vpcConnectionProperties;
     /**
      * <p>
-     * Secure Socket Layer (SSL) properties that apply when QuickSight connects to your underlying source.
+     * Secure Socket Layer (SSL) properties that apply when Amazon QuickSight connects to your underlying source.
      * </p>
      */
     private SslProperties sslProperties;
@@ -153,12 +153,12 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     * account;.
+     * account.
      * </p>
      * 
      * @param dataSourceId
      *        The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     *        account;.
+     *        account.
      */
 
     public void setDataSourceId(String dataSourceId) {
@@ -168,11 +168,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     * account;.
+     * account.
      * </p>
      * 
      * @return The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     *         account;.
+     *         account.
      */
 
     public String getDataSourceId() {
@@ -182,12 +182,12 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     * account;.
+     * account.
      * </p>
      * 
      * @param dataSourceId
      *        The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     *        account;.
+     *        account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -604,13 +604,13 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The VPC connection information. You need to use this parameter only when you want QuickSight to use a VPC
+     * The VPC connection information. You need to use this parameter only when you want Amazon QuickSight to use a VPC
      * connection when connecting to your underlying source.
      * </p>
      * 
      * @param vpcConnectionProperties
-     *        The VPC connection information. You need to use this parameter only when you want QuickSight to use a VPC
-     *        connection when connecting to your underlying source.
+     *        The VPC connection information. You need to use this parameter only when you want Amazon QuickSight to use
+     *        a VPC connection when connecting to your underlying source.
      */
 
     public void setVpcConnectionProperties(VpcConnectionProperties vpcConnectionProperties) {
@@ -619,12 +619,12 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The VPC connection information. You need to use this parameter only when you want QuickSight to use a VPC
+     * The VPC connection information. You need to use this parameter only when you want Amazon QuickSight to use a VPC
      * connection when connecting to your underlying source.
      * </p>
      * 
-     * @return The VPC connection information. You need to use this parameter only when you want QuickSight to use a VPC
-     *         connection when connecting to your underlying source.
+     * @return The VPC connection information. You need to use this parameter only when you want Amazon QuickSight to
+     *         use a VPC connection when connecting to your underlying source.
      */
 
     public VpcConnectionProperties getVpcConnectionProperties() {
@@ -633,13 +633,13 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The VPC connection information. You need to use this parameter only when you want QuickSight to use a VPC
+     * The VPC connection information. You need to use this parameter only when you want Amazon QuickSight to use a VPC
      * connection when connecting to your underlying source.
      * </p>
      * 
      * @param vpcConnectionProperties
-     *        The VPC connection information. You need to use this parameter only when you want QuickSight to use a VPC
-     *        connection when connecting to your underlying source.
+     *        The VPC connection information. You need to use this parameter only when you want Amazon QuickSight to use
+     *        a VPC connection when connecting to your underlying source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -650,11 +650,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Secure Socket Layer (SSL) properties that apply when QuickSight connects to your underlying source.
+     * Secure Socket Layer (SSL) properties that apply when Amazon QuickSight connects to your underlying source.
      * </p>
      * 
      * @param sslProperties
-     *        Secure Socket Layer (SSL) properties that apply when QuickSight connects to your underlying source.
+     *        Secure Socket Layer (SSL) properties that apply when Amazon QuickSight connects to your underlying source.
      */
 
     public void setSslProperties(SslProperties sslProperties) {
@@ -663,10 +663,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Secure Socket Layer (SSL) properties that apply when QuickSight connects to your underlying source.
+     * Secure Socket Layer (SSL) properties that apply when Amazon QuickSight connects to your underlying source.
      * </p>
      * 
-     * @return Secure Socket Layer (SSL) properties that apply when QuickSight connects to your underlying source.
+     * @return Secure Socket Layer (SSL) properties that apply when Amazon QuickSight connects to your underlying
+     *         source.
      */
 
     public SslProperties getSslProperties() {
@@ -675,11 +676,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Secure Socket Layer (SSL) properties that apply when QuickSight connects to your underlying source.
+     * Secure Socket Layer (SSL) properties that apply when Amazon QuickSight connects to your underlying source.
      * </p>
      * 
      * @param sslProperties
-     *        Secure Socket Layer (SSL) properties that apply when QuickSight connects to your underlying source.
+     *        Secure Socket Layer (SSL) properties that apply when Amazon QuickSight connects to your underlying source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

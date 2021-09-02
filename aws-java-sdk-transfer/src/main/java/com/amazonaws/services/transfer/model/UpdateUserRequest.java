@@ -38,7 +38,7 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * The type of landing directory (folder) you want your users' home directory to be when they log into the server.
      * If you set it to <code>PATH</code>, the user will see the absolute Amazon S3 bucket or EFS paths as is in their
-     * file transfer protocol clients. If you set it <code>LOGICAL</code>, you will need to provide mappings in the
+     * file transfer protocol clients. If you set it <code>LOGICAL</code>, you need to provide mappings in the
      * <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 or EFS paths visible to your users.
      * </p>
      */
@@ -59,9 +59,9 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <code>[ { "Entry": "your-personal-report.pdf", "Target": "/bucket3/customized-reports/${transfer:UserName}.pdf" } ]</code>
      * </p>
      * <p>
-     * In most cases, you can use this value instead of the scope-down policy to lock down your user to the designated
-     * home directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and set
-     * <code>Target</code> to the HomeDirectory parameter value.
+     * In most cases, you can use this value instead of the session policy to lock down your user to the designated home
+     * directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and set <code>Target</code>
+     * to the HomeDirectory parameter value.
      * </p>
      * <p>
      * The following is an <code>Entry</code> and <code>Target</code> pair example for <code>chroot</code>.
@@ -83,24 +83,23 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private java.util.List<HomeDirectoryMapEntry> homeDirectoryMappings;
     /**
      * <p>
-     * A scope-down policy for your user so that you can use the same IAM role across multiple users. This policy scopes
+     * A session policy for your user so that you can use the same IAM role across multiple users. This policy scopes
      * down user access to portions of their Amazon S3 bucket. Variables that you can use inside this policy include
      * <code>${Transfer:UserName}</code>, <code>${Transfer:HomeDirectory}</code>, and
      * <code>${Transfer:HomeBucket}</code>.
      * </p>
      * <note>
      * <p>
-     * This only applies when domain of <code>ServerId</code> is S3. Amazon EFS does not use scope-down policies.
+     * This only applies when the domain of <code>ServerId</code> is S3. EFS does not use session policies.
      * </p>
      * <p>
-     * For scope-down policies, Amazon Web ServicesTransfer Family stores the policy as a JSON blob, instead of the
-     * Amazon Resource Name (ARN) of the policy. You save the policy as a JSON blob and pass it in the
-     * <code>Policy</code> argument.
+     * For session policies, Amazon Web Services Transfer Family stores the policy as a JSON blob, instead of the Amazon
+     * Resource Name (ARN) of the policy. You save the policy as a JSON blob and pass it in the <code>Policy</code>
+     * argument.
      * </p>
      * <p>
-     * For an example of a scope-down policy, see <a
-     * href="https://docs.aws.amazon.com/transfer/latest/userguide/users.html#users-policies-scope-down">Creating a
-     * scope-down policy</a>.
+     * For an example of a session policy, see <a
+     * href="https://docs.aws.amazon.com/transfer/latest/userguide/session-policy">Creating a session policy</a>.
      * </p>
      * <p>
      * For more information, see <a
@@ -204,16 +203,16 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * The type of landing directory (folder) you want your users' home directory to be when they log into the server.
      * If you set it to <code>PATH</code>, the user will see the absolute Amazon S3 bucket or EFS paths as is in their
-     * file transfer protocol clients. If you set it <code>LOGICAL</code>, you will need to provide mappings in the
+     * file transfer protocol clients. If you set it <code>LOGICAL</code>, you need to provide mappings in the
      * <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 or EFS paths visible to your users.
      * </p>
      * 
      * @param homeDirectoryType
      *        The type of landing directory (folder) you want your users' home directory to be when they log into the
      *        server. If you set it to <code>PATH</code>, the user will see the absolute Amazon S3 bucket or EFS paths
-     *        as is in their file transfer protocol clients. If you set it <code>LOGICAL</code>, you will need to
-     *        provide mappings in the <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 or EFS paths
-     *        visible to your users.
+     *        as is in their file transfer protocol clients. If you set it <code>LOGICAL</code>, you need to provide
+     *        mappings in the <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 or EFS paths visible
+     *        to your users.
      * @see HomeDirectoryType
      */
 
@@ -225,15 +224,15 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * The type of landing directory (folder) you want your users' home directory to be when they log into the server.
      * If you set it to <code>PATH</code>, the user will see the absolute Amazon S3 bucket or EFS paths as is in their
-     * file transfer protocol clients. If you set it <code>LOGICAL</code>, you will need to provide mappings in the
+     * file transfer protocol clients. If you set it <code>LOGICAL</code>, you need to provide mappings in the
      * <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 or EFS paths visible to your users.
      * </p>
      * 
      * @return The type of landing directory (folder) you want your users' home directory to be when they log into the
      *         server. If you set it to <code>PATH</code>, the user will see the absolute Amazon S3 bucket or EFS paths
-     *         as is in their file transfer protocol clients. If you set it <code>LOGICAL</code>, you will need to
-     *         provide mappings in the <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 or EFS
-     *         paths visible to your users.
+     *         as is in their file transfer protocol clients. If you set it <code>LOGICAL</code>, you need to provide
+     *         mappings in the <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 or EFS paths
+     *         visible to your users.
      * @see HomeDirectoryType
      */
 
@@ -245,16 +244,16 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * The type of landing directory (folder) you want your users' home directory to be when they log into the server.
      * If you set it to <code>PATH</code>, the user will see the absolute Amazon S3 bucket or EFS paths as is in their
-     * file transfer protocol clients. If you set it <code>LOGICAL</code>, you will need to provide mappings in the
+     * file transfer protocol clients. If you set it <code>LOGICAL</code>, you need to provide mappings in the
      * <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 or EFS paths visible to your users.
      * </p>
      * 
      * @param homeDirectoryType
      *        The type of landing directory (folder) you want your users' home directory to be when they log into the
      *        server. If you set it to <code>PATH</code>, the user will see the absolute Amazon S3 bucket or EFS paths
-     *        as is in their file transfer protocol clients. If you set it <code>LOGICAL</code>, you will need to
-     *        provide mappings in the <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 or EFS paths
-     *        visible to your users.
+     *        as is in their file transfer protocol clients. If you set it <code>LOGICAL</code>, you need to provide
+     *        mappings in the <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 or EFS paths visible
+     *        to your users.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HomeDirectoryType
      */
@@ -268,16 +267,16 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * The type of landing directory (folder) you want your users' home directory to be when they log into the server.
      * If you set it to <code>PATH</code>, the user will see the absolute Amazon S3 bucket or EFS paths as is in their
-     * file transfer protocol clients. If you set it <code>LOGICAL</code>, you will need to provide mappings in the
+     * file transfer protocol clients. If you set it <code>LOGICAL</code>, you need to provide mappings in the
      * <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 or EFS paths visible to your users.
      * </p>
      * 
      * @param homeDirectoryType
      *        The type of landing directory (folder) you want your users' home directory to be when they log into the
      *        server. If you set it to <code>PATH</code>, the user will see the absolute Amazon S3 bucket or EFS paths
-     *        as is in their file transfer protocol clients. If you set it <code>LOGICAL</code>, you will need to
-     *        provide mappings in the <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 or EFS paths
-     *        visible to your users.
+     *        as is in their file transfer protocol clients. If you set it <code>LOGICAL</code>, you need to provide
+     *        mappings in the <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 or EFS paths visible
+     *        to your users.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HomeDirectoryType
      */
@@ -303,9 +302,9 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <code>[ { "Entry": "your-personal-report.pdf", "Target": "/bucket3/customized-reports/${transfer:UserName}.pdf" } ]</code>
      * </p>
      * <p>
-     * In most cases, you can use this value instead of the scope-down policy to lock down your user to the designated
-     * home directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and set
-     * <code>Target</code> to the HomeDirectory parameter value.
+     * In most cases, you can use this value instead of the session policy to lock down your user to the designated home
+     * directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and set <code>Target</code>
+     * to the HomeDirectory parameter value.
      * </p>
      * <p>
      * The following is an <code>Entry</code> and <code>Target</code> pair example for <code>chroot</code>.
@@ -338,7 +337,7 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *         <code>[ { "Entry": "your-personal-report.pdf", "Target": "/bucket3/customized-reports/${transfer:UserName}.pdf" } ]</code>
      *         </p>
      *         <p>
-     *         In most cases, you can use this value instead of the scope-down policy to lock down your user to the
+     *         In most cases, you can use this value instead of the session policy to lock down your user to the
      *         designated home directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and
      *         set <code>Target</code> to the HomeDirectory parameter value.
      *         </p>
@@ -379,9 +378,9 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <code>[ { "Entry": "your-personal-report.pdf", "Target": "/bucket3/customized-reports/${transfer:UserName}.pdf" } ]</code>
      * </p>
      * <p>
-     * In most cases, you can use this value instead of the scope-down policy to lock down your user to the designated
-     * home directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and set
-     * <code>Target</code> to the HomeDirectory parameter value.
+     * In most cases, you can use this value instead of the session policy to lock down your user to the designated home
+     * directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and set <code>Target</code>
+     * to the HomeDirectory parameter value.
      * </p>
      * <p>
      * The following is an <code>Entry</code> and <code>Target</code> pair example for <code>chroot</code>.
@@ -415,7 +414,7 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        <code>[ { "Entry": "your-personal-report.pdf", "Target": "/bucket3/customized-reports/${transfer:UserName}.pdf" } ]</code>
      *        </p>
      *        <p>
-     *        In most cases, you can use this value instead of the scope-down policy to lock down your user to the
+     *        In most cases, you can use this value instead of the session policy to lock down your user to the
      *        designated home directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and
      *        set <code>Target</code> to the HomeDirectory parameter value.
      *        </p>
@@ -461,9 +460,9 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <code>[ { "Entry": "your-personal-report.pdf", "Target": "/bucket3/customized-reports/${transfer:UserName}.pdf" } ]</code>
      * </p>
      * <p>
-     * In most cases, you can use this value instead of the scope-down policy to lock down your user to the designated
-     * home directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and set
-     * <code>Target</code> to the HomeDirectory parameter value.
+     * In most cases, you can use this value instead of the session policy to lock down your user to the designated home
+     * directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and set <code>Target</code>
+     * to the HomeDirectory parameter value.
      * </p>
      * <p>
      * The following is an <code>Entry</code> and <code>Target</code> pair example for <code>chroot</code>.
@@ -502,7 +501,7 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        <code>[ { "Entry": "your-personal-report.pdf", "Target": "/bucket3/customized-reports/${transfer:UserName}.pdf" } ]</code>
      *        </p>
      *        <p>
-     *        In most cases, you can use this value instead of the scope-down policy to lock down your user to the
+     *        In most cases, you can use this value instead of the session policy to lock down your user to the
      *        designated home directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and
      *        set <code>Target</code> to the HomeDirectory parameter value.
      *        </p>
@@ -550,9 +549,9 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <code>[ { "Entry": "your-personal-report.pdf", "Target": "/bucket3/customized-reports/${transfer:UserName}.pdf" } ]</code>
      * </p>
      * <p>
-     * In most cases, you can use this value instead of the scope-down policy to lock down your user to the designated
-     * home directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and set
-     * <code>Target</code> to the HomeDirectory parameter value.
+     * In most cases, you can use this value instead of the session policy to lock down your user to the designated home
+     * directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and set <code>Target</code>
+     * to the HomeDirectory parameter value.
      * </p>
      * <p>
      * The following is an <code>Entry</code> and <code>Target</code> pair example for <code>chroot</code>.
@@ -586,7 +585,7 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        <code>[ { "Entry": "your-personal-report.pdf", "Target": "/bucket3/customized-reports/${transfer:UserName}.pdf" } ]</code>
      *        </p>
      *        <p>
-     *        In most cases, you can use this value instead of the scope-down policy to lock down your user to the
+     *        In most cases, you can use this value instead of the session policy to lock down your user to the
      *        designated home directory ("<code>chroot</code>"). To do this, you can set <code>Entry</code> to '/' and
      *        set <code>Target</code> to the HomeDirectory parameter value.
      *        </p>
@@ -615,24 +614,23 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A scope-down policy for your user so that you can use the same IAM role across multiple users. This policy scopes
+     * A session policy for your user so that you can use the same IAM role across multiple users. This policy scopes
      * down user access to portions of their Amazon S3 bucket. Variables that you can use inside this policy include
      * <code>${Transfer:UserName}</code>, <code>${Transfer:HomeDirectory}</code>, and
      * <code>${Transfer:HomeBucket}</code>.
      * </p>
      * <note>
      * <p>
-     * This only applies when domain of <code>ServerId</code> is S3. Amazon EFS does not use scope-down policies.
+     * This only applies when the domain of <code>ServerId</code> is S3. EFS does not use session policies.
      * </p>
      * <p>
-     * For scope-down policies, Amazon Web ServicesTransfer Family stores the policy as a JSON blob, instead of the
-     * Amazon Resource Name (ARN) of the policy. You save the policy as a JSON blob and pass it in the
-     * <code>Policy</code> argument.
+     * For session policies, Amazon Web Services Transfer Family stores the policy as a JSON blob, instead of the Amazon
+     * Resource Name (ARN) of the policy. You save the policy as a JSON blob and pass it in the <code>Policy</code>
+     * argument.
      * </p>
      * <p>
-     * For an example of a scope-down policy, see <a
-     * href="https://docs.aws.amazon.com/transfer/latest/userguide/users.html#users-policies-scope-down">Creating a
-     * scope-down policy</a>.
+     * For an example of a session policy, see <a
+     * href="https://docs.aws.amazon.com/transfer/latest/userguide/session-policy">Creating a session policy</a>.
      * </p>
      * <p>
      * For more information, see <a
@@ -642,22 +640,21 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </note>
      * 
      * @param policy
-     *        A scope-down policy for your user so that you can use the same IAM role across multiple users. This policy
+     *        A session policy for your user so that you can use the same IAM role across multiple users. This policy
      *        scopes down user access to portions of their Amazon S3 bucket. Variables that you can use inside this
      *        policy include <code>${Transfer:UserName}</code>, <code>${Transfer:HomeDirectory}</code>, and
      *        <code>${Transfer:HomeBucket}</code>.</p> <note>
      *        <p>
-     *        This only applies when domain of <code>ServerId</code> is S3. Amazon EFS does not use scope-down policies.
+     *        This only applies when the domain of <code>ServerId</code> is S3. EFS does not use session policies.
      *        </p>
      *        <p>
-     *        For scope-down policies, Amazon Web ServicesTransfer Family stores the policy as a JSON blob, instead of
-     *        the Amazon Resource Name (ARN) of the policy. You save the policy as a JSON blob and pass it in the
+     *        For session policies, Amazon Web Services Transfer Family stores the policy as a JSON blob, instead of the
+     *        Amazon Resource Name (ARN) of the policy. You save the policy as a JSON blob and pass it in the
      *        <code>Policy</code> argument.
      *        </p>
      *        <p>
-     *        For an example of a scope-down policy, see <a
-     *        href="https://docs.aws.amazon.com/transfer/latest/userguide/users.html#users-policies-scope-down">Creating
-     *        a scope-down policy</a>.
+     *        For an example of a session policy, see <a
+     *        href="https://docs.aws.amazon.com/transfer/latest/userguide/session-policy">Creating a session policy</a>.
      *        </p>
      *        <p>
      *        For more information, see <a
@@ -672,24 +669,23 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A scope-down policy for your user so that you can use the same IAM role across multiple users. This policy scopes
+     * A session policy for your user so that you can use the same IAM role across multiple users. This policy scopes
      * down user access to portions of their Amazon S3 bucket. Variables that you can use inside this policy include
      * <code>${Transfer:UserName}</code>, <code>${Transfer:HomeDirectory}</code>, and
      * <code>${Transfer:HomeBucket}</code>.
      * </p>
      * <note>
      * <p>
-     * This only applies when domain of <code>ServerId</code> is S3. Amazon EFS does not use scope-down policies.
+     * This only applies when the domain of <code>ServerId</code> is S3. EFS does not use session policies.
      * </p>
      * <p>
-     * For scope-down policies, Amazon Web ServicesTransfer Family stores the policy as a JSON blob, instead of the
-     * Amazon Resource Name (ARN) of the policy. You save the policy as a JSON blob and pass it in the
-     * <code>Policy</code> argument.
+     * For session policies, Amazon Web Services Transfer Family stores the policy as a JSON blob, instead of the Amazon
+     * Resource Name (ARN) of the policy. You save the policy as a JSON blob and pass it in the <code>Policy</code>
+     * argument.
      * </p>
      * <p>
-     * For an example of a scope-down policy, see <a
-     * href="https://docs.aws.amazon.com/transfer/latest/userguide/users.html#users-policies-scope-down">Creating a
-     * scope-down policy</a>.
+     * For an example of a session policy, see <a
+     * href="https://docs.aws.amazon.com/transfer/latest/userguide/session-policy">Creating a session policy</a>.
      * </p>
      * <p>
      * For more information, see <a
@@ -698,23 +694,22 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      * </note>
      * 
-     * @return A scope-down policy for your user so that you can use the same IAM role across multiple users. This
-     *         policy scopes down user access to portions of their Amazon S3 bucket. Variables that you can use inside
-     *         this policy include <code>${Transfer:UserName}</code>, <code>${Transfer:HomeDirectory}</code>, and
+     * @return A session policy for your user so that you can use the same IAM role across multiple users. This policy
+     *         scopes down user access to portions of their Amazon S3 bucket. Variables that you can use inside this
+     *         policy include <code>${Transfer:UserName}</code>, <code>${Transfer:HomeDirectory}</code>, and
      *         <code>${Transfer:HomeBucket}</code>.</p> <note>
      *         <p>
-     *         This only applies when domain of <code>ServerId</code> is S3. Amazon EFS does not use scope-down
-     *         policies.
+     *         This only applies when the domain of <code>ServerId</code> is S3. EFS does not use session policies.
      *         </p>
      *         <p>
-     *         For scope-down policies, Amazon Web ServicesTransfer Family stores the policy as a JSON blob, instead of
+     *         For session policies, Amazon Web Services Transfer Family stores the policy as a JSON blob, instead of
      *         the Amazon Resource Name (ARN) of the policy. You save the policy as a JSON blob and pass it in the
      *         <code>Policy</code> argument.
      *         </p>
      *         <p>
-     *         For an example of a scope-down policy, see <a
-     *         href="https://docs.aws.amazon.com/transfer/latest/userguide/users.html#users-policies-scope-down"
-     *         >Creating a scope-down policy</a>.
+     *         For an example of a session policy, see <a
+     *         href="https://docs.aws.amazon.com/transfer/latest/userguide/session-policy">Creating a session
+     *         policy</a>.
      *         </p>
      *         <p>
      *         For more information, see <a
@@ -729,24 +724,23 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A scope-down policy for your user so that you can use the same IAM role across multiple users. This policy scopes
+     * A session policy for your user so that you can use the same IAM role across multiple users. This policy scopes
      * down user access to portions of their Amazon S3 bucket. Variables that you can use inside this policy include
      * <code>${Transfer:UserName}</code>, <code>${Transfer:HomeDirectory}</code>, and
      * <code>${Transfer:HomeBucket}</code>.
      * </p>
      * <note>
      * <p>
-     * This only applies when domain of <code>ServerId</code> is S3. Amazon EFS does not use scope-down policies.
+     * This only applies when the domain of <code>ServerId</code> is S3. EFS does not use session policies.
      * </p>
      * <p>
-     * For scope-down policies, Amazon Web ServicesTransfer Family stores the policy as a JSON blob, instead of the
-     * Amazon Resource Name (ARN) of the policy. You save the policy as a JSON blob and pass it in the
-     * <code>Policy</code> argument.
+     * For session policies, Amazon Web Services Transfer Family stores the policy as a JSON blob, instead of the Amazon
+     * Resource Name (ARN) of the policy. You save the policy as a JSON blob and pass it in the <code>Policy</code>
+     * argument.
      * </p>
      * <p>
-     * For an example of a scope-down policy, see <a
-     * href="https://docs.aws.amazon.com/transfer/latest/userguide/users.html#users-policies-scope-down">Creating a
-     * scope-down policy</a>.
+     * For an example of a session policy, see <a
+     * href="https://docs.aws.amazon.com/transfer/latest/userguide/session-policy">Creating a session policy</a>.
      * </p>
      * <p>
      * For more information, see <a
@@ -756,22 +750,21 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </note>
      * 
      * @param policy
-     *        A scope-down policy for your user so that you can use the same IAM role across multiple users. This policy
+     *        A session policy for your user so that you can use the same IAM role across multiple users. This policy
      *        scopes down user access to portions of their Amazon S3 bucket. Variables that you can use inside this
      *        policy include <code>${Transfer:UserName}</code>, <code>${Transfer:HomeDirectory}</code>, and
      *        <code>${Transfer:HomeBucket}</code>.</p> <note>
      *        <p>
-     *        This only applies when domain of <code>ServerId</code> is S3. Amazon EFS does not use scope-down policies.
+     *        This only applies when the domain of <code>ServerId</code> is S3. EFS does not use session policies.
      *        </p>
      *        <p>
-     *        For scope-down policies, Amazon Web ServicesTransfer Family stores the policy as a JSON blob, instead of
-     *        the Amazon Resource Name (ARN) of the policy. You save the policy as a JSON blob and pass it in the
+     *        For session policies, Amazon Web Services Transfer Family stores the policy as a JSON blob, instead of the
+     *        Amazon Resource Name (ARN) of the policy. You save the policy as a JSON blob and pass it in the
      *        <code>Policy</code> argument.
      *        </p>
      *        <p>
-     *        For an example of a scope-down policy, see <a
-     *        href="https://docs.aws.amazon.com/transfer/latest/userguide/users.html#users-policies-scope-down">Creating
-     *        a scope-down policy</a>.
+     *        For an example of a session policy, see <a
+     *        href="https://docs.aws.amazon.com/transfer/latest/userguide/session-policy">Creating a session policy</a>.
      *        </p>
      *        <p>
      *        For more information, see <a

@@ -27,7 +27,7 @@ public class CreateNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that you want to create the QuickSight namespace in.
+     * The ID for the Amazon Web Services account that you want to create the Amazon QuickSight namespace in.
      * </p>
      */
     private String awsAccountId;
@@ -53,11 +53,11 @@ public class CreateNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that you want to create the QuickSight namespace in.
+     * The ID for the Amazon Web Services account that you want to create the Amazon QuickSight namespace in.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID for the Amazon Web Services account; that you want to create the QuickSight namespace in.
+     *        The ID for the Amazon Web Services account that you want to create the Amazon QuickSight namespace in.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -66,10 +66,10 @@ public class CreateNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that you want to create the QuickSight namespace in.
+     * The ID for the Amazon Web Services account that you want to create the Amazon QuickSight namespace in.
      * </p>
      * 
-     * @return The ID for the Amazon Web Services account; that you want to create the QuickSight namespace in.
+     * @return The ID for the Amazon Web Services account that you want to create the Amazon QuickSight namespace in.
      */
 
     public String getAwsAccountId() {
@@ -78,11 +78,11 @@ public class CreateNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID for the Amazon Web Services account; that you want to create the QuickSight namespace in.
+     * The ID for the Amazon Web Services account that you want to create the Amazon QuickSight namespace in.
      * </p>
      * 
      * @param awsAccountId
-     *        The ID for the Amazon Web Services account; that you want to create the QuickSight namespace in.
+     *        The ID for the Amazon Web Services account that you want to create the Amazon QuickSight namespace in.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

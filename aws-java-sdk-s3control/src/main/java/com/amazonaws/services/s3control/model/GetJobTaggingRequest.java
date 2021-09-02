@@ -27,7 +27,7 @@ public class GetJobTaggingRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The account ID associated with the S3 Batch Operations job.
+     * The Amazon Web Services account ID associated with the S3 Batch Operations job.
      * </p>
      */
     private String accountId;
@@ -40,11 +40,11 @@ public class GetJobTaggingRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The account ID associated with the S3 Batch Operations job.
+     * The Amazon Web Services account ID associated with the S3 Batch Operations job.
      * </p>
      * 
      * @param accountId
-     *        The account ID associated with the S3 Batch Operations job.
+     *        The Amazon Web Services account ID associated with the S3 Batch Operations job.
      */
 
     public void setAccountId(String accountId) {
@@ -53,10 +53,10 @@ public class GetJobTaggingRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The account ID associated with the S3 Batch Operations job.
+     * The Amazon Web Services account ID associated with the S3 Batch Operations job.
      * </p>
      * 
-     * @return The account ID associated with the S3 Batch Operations job.
+     * @return The Amazon Web Services account ID associated with the S3 Batch Operations job.
      */
 
     public String getAccountId() {
@@ -65,11 +65,11 @@ public class GetJobTaggingRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The account ID associated with the S3 Batch Operations job.
+     * The Amazon Web Services account ID associated with the S3 Batch Operations job.
      * </p>
      * 
      * @param accountId
-     *        The account ID associated with the S3 Batch Operations job.
+     *        The Amazon Web Services account ID associated with the S3 Batch Operations job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

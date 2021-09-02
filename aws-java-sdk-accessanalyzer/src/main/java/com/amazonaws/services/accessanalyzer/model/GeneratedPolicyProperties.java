@@ -37,7 +37,7 @@ public class GeneratedPolicyProperties implements Serializable, Cloneable, Struc
     /**
      * <p>
      * This value is set to <code>true</code> if the generated policy contains all possible actions for a service that
-     * Access Analyzer identified from the CloudTrail trail that you specified, and <code>false</code> otherwise.
+     * IAM Access Analyzer identified from the CloudTrail trail that you specified, and <code>false</code> otherwise.
      * </p>
      */
     private Boolean isComplete;
@@ -91,12 +91,12 @@ public class GeneratedPolicyProperties implements Serializable, Cloneable, Struc
     /**
      * <p>
      * This value is set to <code>true</code> if the generated policy contains all possible actions for a service that
-     * Access Analyzer identified from the CloudTrail trail that you specified, and <code>false</code> otherwise.
+     * IAM Access Analyzer identified from the CloudTrail trail that you specified, and <code>false</code> otherwise.
      * </p>
      * 
      * @param isComplete
      *        This value is set to <code>true</code> if the generated policy contains all possible actions for a service
-     *        that Access Analyzer identified from the CloudTrail trail that you specified, and <code>false</code>
+     *        that IAM Access Analyzer identified from the CloudTrail trail that you specified, and <code>false</code>
      *        otherwise.
      */
 
@@ -107,11 +107,11 @@ public class GeneratedPolicyProperties implements Serializable, Cloneable, Struc
     /**
      * <p>
      * This value is set to <code>true</code> if the generated policy contains all possible actions for a service that
-     * Access Analyzer identified from the CloudTrail trail that you specified, and <code>false</code> otherwise.
+     * IAM Access Analyzer identified from the CloudTrail trail that you specified, and <code>false</code> otherwise.
      * </p>
      * 
      * @return This value is set to <code>true</code> if the generated policy contains all possible actions for a
-     *         service that Access Analyzer identified from the CloudTrail trail that you specified, and
+     *         service that IAM Access Analyzer identified from the CloudTrail trail that you specified, and
      *         <code>false</code> otherwise.
      */
 
@@ -122,12 +122,12 @@ public class GeneratedPolicyProperties implements Serializable, Cloneable, Struc
     /**
      * <p>
      * This value is set to <code>true</code> if the generated policy contains all possible actions for a service that
-     * Access Analyzer identified from the CloudTrail trail that you specified, and <code>false</code> otherwise.
+     * IAM Access Analyzer identified from the CloudTrail trail that you specified, and <code>false</code> otherwise.
      * </p>
      * 
      * @param isComplete
      *        This value is set to <code>true</code> if the generated policy contains all possible actions for a service
-     *        that Access Analyzer identified from the CloudTrail trail that you specified, and <code>false</code>
+     *        that IAM Access Analyzer identified from the CloudTrail trail that you specified, and <code>false</code>
      *        otherwise.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -140,11 +140,11 @@ public class GeneratedPolicyProperties implements Serializable, Cloneable, Struc
     /**
      * <p>
      * This value is set to <code>true</code> if the generated policy contains all possible actions for a service that
-     * Access Analyzer identified from the CloudTrail trail that you specified, and <code>false</code> otherwise.
+     * IAM Access Analyzer identified from the CloudTrail trail that you specified, and <code>false</code> otherwise.
      * </p>
      * 
      * @return This value is set to <code>true</code> if the generated policy contains all possible actions for a
-     *         service that Access Analyzer identified from the CloudTrail trail that you specified, and
+     *         service that IAM Access Analyzer identified from the CloudTrail trail that you specified, and
      *         <code>false</code> otherwise.
      */
 

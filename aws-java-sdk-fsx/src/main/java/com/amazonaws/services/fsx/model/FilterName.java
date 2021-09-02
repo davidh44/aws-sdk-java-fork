@@ -24,7 +24,8 @@ public enum FilterName {
 
     FileSystemId("file-system-id"),
     BackupType("backup-type"),
-    FileSystemType("file-system-type");
+    FileSystemType("file-system-type"),
+    VolumeId("volume-id");
 
     private String value;
 
