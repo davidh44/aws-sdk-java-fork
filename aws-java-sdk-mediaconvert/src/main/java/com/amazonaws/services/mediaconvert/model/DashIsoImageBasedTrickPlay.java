@@ -27,7 +27,8 @@ public enum DashIsoImageBasedTrickPlay {
 
     NONE("NONE"),
     THUMBNAIL("THUMBNAIL"),
-    THUMBNAIL_AND_FULLFRAME("THUMBNAIL_AND_FULLFRAME");
+    THUMBNAIL_AND_FULLFRAME("THUMBNAIL_AND_FULLFRAME"),
+    ADVANCED("ADVANCED");
 
     private String value;
 

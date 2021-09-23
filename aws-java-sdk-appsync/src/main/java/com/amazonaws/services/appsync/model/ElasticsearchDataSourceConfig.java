@@ -19,7 +19,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes an Elasticsearch data source configuration.
+ * Describes an OpenSearch data source configuration.
+ * </p>
+ * <p>
+ * As of September 2021, Amazon Elasticsearch service is Amazon OpenSearch Service. This configuration is deprecated.
+ * For new data sources, use <a>OpenSearchServiceDataSourceConfig</a> to specify an OpenSearch data source.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/ElasticsearchDataSourceConfig"

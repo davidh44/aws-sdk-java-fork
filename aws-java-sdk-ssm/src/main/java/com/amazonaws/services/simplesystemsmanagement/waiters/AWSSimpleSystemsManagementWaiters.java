@@ -53,7 +53,7 @@ public class AWSSimpleSystemsManagementWaiters {
                 .withSdkFunction(new GetCommandInvocationFunction(client))
                 .withAcceptors(new CommandExecuted.IsPendingMatcher(), new CommandExecuted.IsInProgressMatcher(), new CommandExecuted.IsDelayedMatcher(),
                         new CommandExecuted.IsSuccessMatcher(), new CommandExecuted.IsCancelledMatcher(), new CommandExecuted.IsTimedOutMatcher(),
-                        new CommandExecuted.IsFailedMatcher(), new CommandExecuted.IsCancellingMatcher())
+                        new CommandExecuted.IsFailedMatcher(), new CommandExecuted.IsCancellingMatcher(), new CommandExecuted.IsInvocationDoesNotExistMatcher())
                 .withDefaultPollingStrategy(new PollingStrategy(new MaxAttemptsRetryStrategy(20), new FixedDelayStrategy(5)))
                 .withExecutorService(executorService).build();
     }

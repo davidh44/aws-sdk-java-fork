@@ -45,8 +45,7 @@ public class CommandInvocation implements Serializable, Cloneable, StructuredPoj
     private String instanceId;
     /**
      * <p>
-     * The name of the invocation target. For EC2 instances this is the value for the <code>aws:Name</code> tag. For
-     * on-premises instances, this is the name of the instance.
+     * The fully qualified host name of the managed instance.
      * </p>
      */
     private String instanceName;
@@ -280,13 +279,11 @@ public class CommandInvocation implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The name of the invocation target. For EC2 instances this is the value for the <code>aws:Name</code> tag. For
-     * on-premises instances, this is the name of the instance.
+     * The fully qualified host name of the managed instance.
      * </p>
      * 
      * @param instanceName
-     *        The name of the invocation target. For EC2 instances this is the value for the <code>aws:Name</code> tag.
-     *        For on-premises instances, this is the name of the instance.
+     *        The fully qualified host name of the managed instance.
      */
 
     public void setInstanceName(String instanceName) {
@@ -295,12 +292,10 @@ public class CommandInvocation implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The name of the invocation target. For EC2 instances this is the value for the <code>aws:Name</code> tag. For
-     * on-premises instances, this is the name of the instance.
+     * The fully qualified host name of the managed instance.
      * </p>
      * 
-     * @return The name of the invocation target. For EC2 instances this is the value for the <code>aws:Name</code> tag.
-     *         For on-premises instances, this is the name of the instance.
+     * @return The fully qualified host name of the managed instance.
      */
 
     public String getInstanceName() {
@@ -309,13 +304,11 @@ public class CommandInvocation implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The name of the invocation target. For EC2 instances this is the value for the <code>aws:Name</code> tag. For
-     * on-premises instances, this is the name of the instance.
+     * The fully qualified host name of the managed instance.
      * </p>
      * 
      * @param instanceName
-     *        The name of the invocation target. For EC2 instances this is the value for the <code>aws:Name</code> tag.
-     *        For on-premises instances, this is the name of the instance.
+     *        The fully qualified host name of the managed instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -39,7 +39,8 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
     private LogConfig logConfig;
     /**
      * <p>
-     * The authentication type: API key, Identity and Access Management, OIDC, or Amazon Cognito user pools.
+     * The authentication type: API key, Identity and Access Management, OIDC, Amazon Cognito user pools, or Amazon Web
+     * Services Lambda.
      * </p>
      */
     private String authenticationType;
@@ -75,7 +76,7 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
     private Boolean xrayEnabled;
     /**
      * <p>
-     * Configuration for AWS Lambda function authorization.
+     * Configuration for Amazon Web Services Lambda function authorization.
      * </p>
      */
     private LambdaAuthorizerConfig lambdaAuthorizerConfig;
@@ -162,11 +163,13 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The authentication type: API key, Identity and Access Management, OIDC, or Amazon Cognito user pools.
+     * The authentication type: API key, Identity and Access Management, OIDC, Amazon Cognito user pools, or Amazon Web
+     * Services Lambda.
      * </p>
      * 
      * @param authenticationType
-     *        The authentication type: API key, Identity and Access Management, OIDC, or Amazon Cognito user pools.
+     *        The authentication type: API key, Identity and Access Management, OIDC, Amazon Cognito user pools, or
+     *        Amazon Web Services Lambda.
      * @see AuthenticationType
      */
 
@@ -176,10 +179,12 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The authentication type: API key, Identity and Access Management, OIDC, or Amazon Cognito user pools.
+     * The authentication type: API key, Identity and Access Management, OIDC, Amazon Cognito user pools, or Amazon Web
+     * Services Lambda.
      * </p>
      * 
-     * @return The authentication type: API key, Identity and Access Management, OIDC, or Amazon Cognito user pools.
+     * @return The authentication type: API key, Identity and Access Management, OIDC, Amazon Cognito user pools, or
+     *         Amazon Web Services Lambda.
      * @see AuthenticationType
      */
 
@@ -189,11 +194,13 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The authentication type: API key, Identity and Access Management, OIDC, or Amazon Cognito user pools.
+     * The authentication type: API key, Identity and Access Management, OIDC, Amazon Cognito user pools, or Amazon Web
+     * Services Lambda.
      * </p>
      * 
      * @param authenticationType
-     *        The authentication type: API key, Identity and Access Management, OIDC, or Amazon Cognito user pools.
+     *        The authentication type: API key, Identity and Access Management, OIDC, Amazon Cognito user pools, or
+     *        Amazon Web Services Lambda.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AuthenticationType
      */
@@ -205,11 +212,13 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The authentication type: API key, Identity and Access Management, OIDC, or Amazon Cognito user pools.
+     * The authentication type: API key, Identity and Access Management, OIDC, Amazon Cognito user pools, or Amazon Web
+     * Services Lambda.
      * </p>
      * 
      * @param authenticationType
-     *        The authentication type: API key, Identity and Access Management, OIDC, or Amazon Cognito user pools.
+     *        The authentication type: API key, Identity and Access Management, OIDC, Amazon Cognito user pools, or
+     *        Amazon Web Services Lambda.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AuthenticationType
      */
@@ -492,11 +501,11 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Configuration for AWS Lambda function authorization.
+     * Configuration for Amazon Web Services Lambda function authorization.
      * </p>
      * 
      * @param lambdaAuthorizerConfig
-     *        Configuration for AWS Lambda function authorization.
+     *        Configuration for Amazon Web Services Lambda function authorization.
      */
 
     public void setLambdaAuthorizerConfig(LambdaAuthorizerConfig lambdaAuthorizerConfig) {
@@ -505,10 +514,10 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Configuration for AWS Lambda function authorization.
+     * Configuration for Amazon Web Services Lambda function authorization.
      * </p>
      * 
-     * @return Configuration for AWS Lambda function authorization.
+     * @return Configuration for Amazon Web Services Lambda function authorization.
      */
 
     public LambdaAuthorizerConfig getLambdaAuthorizerConfig() {
@@ -517,11 +526,11 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Configuration for AWS Lambda function authorization.
+     * Configuration for Amazon Web Services Lambda function authorization.
      * </p>
      * 
      * @param lambdaAuthorizerConfig
-     *        Configuration for AWS Lambda function authorization.
+     *        Configuration for Amazon Web Services Lambda function authorization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -77,6 +77,8 @@ public class CmafGroupSettings implements Serializable, Cloneable, StructuredPoj
      * https://developer.roku.com/docs/developer-program/media-playback/trick-mode/hls-and-dash.md
      */
     private String imageBasedTrickPlay;
+    /** Tile and thumbnail settings applicable when imageBasedTrickPlay is ADVANCED */
+    private CmafImageBasedTrickPlaySettings imageBasedTrickPlaySettings;
     /** When set to GZIP, compresses HLS playlist. */
     private String manifestCompression;
     /** Indicates whether the output manifest should use floating point values for segment duration. */
@@ -679,6 +681,40 @@ public class CmafGroupSettings implements Serializable, Cloneable, StructuredPoj
 
     public CmafGroupSettings withImageBasedTrickPlay(CmafImageBasedTrickPlay imageBasedTrickPlay) {
         this.imageBasedTrickPlay = imageBasedTrickPlay.toString();
+        return this;
+    }
+
+    /**
+     * Tile and thumbnail settings applicable when imageBasedTrickPlay is ADVANCED
+     * 
+     * @param imageBasedTrickPlaySettings
+     *        Tile and thumbnail settings applicable when imageBasedTrickPlay is ADVANCED
+     */
+
+    public void setImageBasedTrickPlaySettings(CmafImageBasedTrickPlaySettings imageBasedTrickPlaySettings) {
+        this.imageBasedTrickPlaySettings = imageBasedTrickPlaySettings;
+    }
+
+    /**
+     * Tile and thumbnail settings applicable when imageBasedTrickPlay is ADVANCED
+     * 
+     * @return Tile and thumbnail settings applicable when imageBasedTrickPlay is ADVANCED
+     */
+
+    public CmafImageBasedTrickPlaySettings getImageBasedTrickPlaySettings() {
+        return this.imageBasedTrickPlaySettings;
+    }
+
+    /**
+     * Tile and thumbnail settings applicable when imageBasedTrickPlay is ADVANCED
+     * 
+     * @param imageBasedTrickPlaySettings
+     *        Tile and thumbnail settings applicable when imageBasedTrickPlay is ADVANCED
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CmafGroupSettings withImageBasedTrickPlaySettings(CmafImageBasedTrickPlaySettings imageBasedTrickPlaySettings) {
+        setImageBasedTrickPlaySettings(imageBasedTrickPlaySettings);
         return this;
     }
 
@@ -1622,6 +1658,8 @@ public class CmafGroupSettings implements Serializable, Cloneable, StructuredPoj
             sb.append("FragmentLength: ").append(getFragmentLength()).append(",");
         if (getImageBasedTrickPlay() != null)
             sb.append("ImageBasedTrickPlay: ").append(getImageBasedTrickPlay()).append(",");
+        if (getImageBasedTrickPlaySettings() != null)
+            sb.append("ImageBasedTrickPlaySettings: ").append(getImageBasedTrickPlaySettings()).append(",");
         if (getManifestCompression() != null)
             sb.append("ManifestCompression: ").append(getManifestCompression()).append(",");
         if (getManifestDurationFormat() != null)
@@ -1700,6 +1738,10 @@ public class CmafGroupSettings implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getImageBasedTrickPlay() != null && other.getImageBasedTrickPlay().equals(this.getImageBasedTrickPlay()) == false)
             return false;
+        if (other.getImageBasedTrickPlaySettings() == null ^ this.getImageBasedTrickPlaySettings() == null)
+            return false;
+        if (other.getImageBasedTrickPlaySettings() != null && other.getImageBasedTrickPlaySettings().equals(this.getImageBasedTrickPlaySettings()) == false)
+            return false;
         if (other.getManifestCompression() == null ^ this.getManifestCompression() == null)
             return false;
         if (other.getManifestCompression() != null && other.getManifestCompression().equals(this.getManifestCompression()) == false)
@@ -1775,6 +1817,7 @@ public class CmafGroupSettings implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getEncryption() == null) ? 0 : getEncryption().hashCode());
         hashCode = prime * hashCode + ((getFragmentLength() == null) ? 0 : getFragmentLength().hashCode());
         hashCode = prime * hashCode + ((getImageBasedTrickPlay() == null) ? 0 : getImageBasedTrickPlay().hashCode());
+        hashCode = prime * hashCode + ((getImageBasedTrickPlaySettings() == null) ? 0 : getImageBasedTrickPlaySettings().hashCode());
         hashCode = prime * hashCode + ((getManifestCompression() == null) ? 0 : getManifestCompression().hashCode());
         hashCode = prime * hashCode + ((getManifestDurationFormat() == null) ? 0 : getManifestDurationFormat().hashCode());
         hashCode = prime * hashCode + ((getMinBufferTime() == null) ? 0 : getMinBufferTime().hashCode());

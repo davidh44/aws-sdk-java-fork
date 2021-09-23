@@ -27,7 +27,9 @@ public enum DvbSubtitleFontColor {
     YELLOW("YELLOW"),
     RED("RED"),
     GREEN("GREEN"),
-    BLUE("BLUE");
+    BLUE("BLUE"),
+    HEX("HEX"),
+    AUTO("AUTO");
 
     private String value;
 

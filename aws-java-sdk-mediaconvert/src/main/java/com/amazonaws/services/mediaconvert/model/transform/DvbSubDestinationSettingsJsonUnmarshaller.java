@@ -52,6 +52,10 @@ public class DvbSubDestinationSettingsJsonUnmarshaller implements Unmarshaller<D
                     context.nextToken();
                     dvbSubDestinationSettings.setAlignment(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("applyFontColor", targetDepth)) {
+                    context.nextToken();
+                    dvbSubDestinationSettings.setApplyFontColor(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("backgroundColor", targetDepth)) {
                     context.nextToken();
                     dvbSubDestinationSettings.setBackgroundColor(context.getUnmarshaller(String.class).unmarshall(context));
@@ -71,6 +75,10 @@ public class DvbSubDestinationSettingsJsonUnmarshaller implements Unmarshaller<D
                 if (context.testExpression("ddsYCoordinate", targetDepth)) {
                     context.nextToken();
                     dvbSubDestinationSettings.setDdsYCoordinate(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("fallbackFont", targetDepth)) {
+                    context.nextToken();
+                    dvbSubDestinationSettings.setFallbackFont(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("fontColor", targetDepth)) {
                     context.nextToken();
@@ -96,6 +104,10 @@ public class DvbSubDestinationSettingsJsonUnmarshaller implements Unmarshaller<D
                     context.nextToken();
                     dvbSubDestinationSettings.setHeight(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("hexFontColor", targetDepth)) {
+                    context.nextToken();
+                    dvbSubDestinationSettings.setHexFontColor(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("outlineColor", targetDepth)) {
                     context.nextToken();
                     dvbSubDestinationSettings.setOutlineColor(context.getUnmarshaller(String.class).unmarshall(context));
@@ -119,6 +131,10 @@ public class DvbSubDestinationSettingsJsonUnmarshaller implements Unmarshaller<D
                 if (context.testExpression("shadowYOffset", targetDepth)) {
                     context.nextToken();
                     dvbSubDestinationSettings.setShadowYOffset(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("stylePassthrough", targetDepth)) {
+                    context.nextToken();
+                    dvbSubDestinationSettings.setStylePassthrough(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("subtitlingType", targetDepth)) {
                     context.nextToken();

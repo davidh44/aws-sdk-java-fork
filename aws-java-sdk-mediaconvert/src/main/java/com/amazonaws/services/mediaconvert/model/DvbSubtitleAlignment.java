@@ -26,7 +26,8 @@ import javax.annotation.Generated;
 public enum DvbSubtitleAlignment {
 
     CENTERED("CENTERED"),
-    LEFT("LEFT");
+    LEFT("LEFT"),
+    AUTO("AUTO");
 
     private String value;
 

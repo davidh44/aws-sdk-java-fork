@@ -70,43 +70,47 @@ public class UpdateServiceSettingRequest extends com.amazonaws.AmazonWebServiceR
     private String settingId;
     /**
      * <p>
-     * The new value to specify for the service setting. For the
-     * <code>/ssm/parameter-store/default-parameter-tier</code> setting ID, the setting value can be one of the
-     * following.
+     * The new value to specify for the service setting. The following list specifies the available values for each
+     * setting.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Standard
+     * <code>/ssm/parameter-store/default-parameter-tier</code>: <code>Standard</code>, <code>Advanced</code>,
+     * <code>Intelligent-Tiering</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * Advanced
+     * <code>/ssm/parameter-store/high-throughput-enabled</code>: <code>true</code> or <code>false</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * Intelligent-Tiering
+     * <code>/ssm/managed-instance/activation-tier</code>: <code>true</code> or <code>false</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>/ssm/automation/customer-script-log-destination</code>: <code>CloudWatch</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>/ssm/automation/customer-script-log-group-name</code>: the name of an Amazon CloudWatch Logs log group
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>/ssm/documents/console/public-sharing-permission</code>: <code>Enable</code> or <code>Disable</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>/ssm/managed-instance/activation-tier</code>: <code>standard</code> or <code>advanced</code>
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * For the <code>/ssm/parameter-store/high-throughput-enabled</code>, and
-     * <code>/ssm/managed-instance/activation-tier</code> setting IDs, the setting value can be true or false.
-     * </p>
-     * <p>
-     * For the <code>/ssm/automation/customer-script-log-destination</code> setting ID, the setting value can be
-     * <code>CloudWatch</code>.
-     * </p>
-     * <p>
-     * For the <code>/ssm/automation/customer-script-log-group-name</code> setting ID, the setting value can be the name
-     * of an Amazon CloudWatch Logs log group.
-     * </p>
-     * <p>
-     * For the <code>/ssm/documents/console/public-sharing-permission</code> setting ID, the setting value can be
-     * <code>Enable</code> or <code>Disable</code>.
-     * </p>
      */
     private String settingValue;
 
@@ -353,80 +357,89 @@ public class UpdateServiceSettingRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The new value to specify for the service setting. For the
-     * <code>/ssm/parameter-store/default-parameter-tier</code> setting ID, the setting value can be one of the
-     * following.
+     * The new value to specify for the service setting. The following list specifies the available values for each
+     * setting.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Standard
+     * <code>/ssm/parameter-store/default-parameter-tier</code>: <code>Standard</code>, <code>Advanced</code>,
+     * <code>Intelligent-Tiering</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * Advanced
+     * <code>/ssm/parameter-store/high-throughput-enabled</code>: <code>true</code> or <code>false</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * Intelligent-Tiering
+     * <code>/ssm/managed-instance/activation-tier</code>: <code>true</code> or <code>false</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>/ssm/automation/customer-script-log-destination</code>: <code>CloudWatch</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>/ssm/automation/customer-script-log-group-name</code>: the name of an Amazon CloudWatch Logs log group
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>/ssm/documents/console/public-sharing-permission</code>: <code>Enable</code> or <code>Disable</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>/ssm/managed-instance/activation-tier</code>: <code>standard</code> or <code>advanced</code>
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * For the <code>/ssm/parameter-store/high-throughput-enabled</code>, and
-     * <code>/ssm/managed-instance/activation-tier</code> setting IDs, the setting value can be true or false.
-     * </p>
-     * <p>
-     * For the <code>/ssm/automation/customer-script-log-destination</code> setting ID, the setting value can be
-     * <code>CloudWatch</code>.
-     * </p>
-     * <p>
-     * For the <code>/ssm/automation/customer-script-log-group-name</code> setting ID, the setting value can be the name
-     * of an Amazon CloudWatch Logs log group.
-     * </p>
-     * <p>
-     * For the <code>/ssm/documents/console/public-sharing-permission</code> setting ID, the setting value can be
-     * <code>Enable</code> or <code>Disable</code>.
-     * </p>
      * 
      * @param settingValue
-     *        The new value to specify for the service setting. For the
-     *        <code>/ssm/parameter-store/default-parameter-tier</code> setting ID, the setting value can be one of the
-     *        following.</p>
+     *        The new value to specify for the service setting. The following list specifies the available values for
+     *        each setting.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Standard
+     *        <code>/ssm/parameter-store/default-parameter-tier</code>: <code>Standard</code>, <code>Advanced</code>,
+     *        <code>Intelligent-Tiering</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Advanced
+     *        <code>/ssm/parameter-store/high-throughput-enabled</code>: <code>true</code> or <code>false</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Intelligent-Tiering
+     *        <code>/ssm/managed-instance/activation-tier</code>: <code>true</code> or <code>false</code>
      *        </p>
      *        </li>
-     *        </ul>
+     *        <li>
      *        <p>
-     *        For the <code>/ssm/parameter-store/high-throughput-enabled</code>, and
-     *        <code>/ssm/managed-instance/activation-tier</code> setting IDs, the setting value can be true or false.
+     *        <code>/ssm/automation/customer-script-log-destination</code>: <code>CloudWatch</code>
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        For the <code>/ssm/automation/customer-script-log-destination</code> setting ID, the setting value can be
-     *        <code>CloudWatch</code>.
+     *        <code>/ssm/automation/customer-script-log-group-name</code>: the name of an Amazon CloudWatch Logs log
+     *        group
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        For the <code>/ssm/automation/customer-script-log-group-name</code> setting ID, the setting value can be
-     *        the name of an Amazon CloudWatch Logs log group.
+     *        <code>/ssm/documents/console/public-sharing-permission</code>: <code>Enable</code> or <code>Disable</code>
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        For the <code>/ssm/documents/console/public-sharing-permission</code> setting ID, the setting value can be
-     *        <code>Enable</code> or <code>Disable</code>.
+     *        <code>/ssm/managed-instance/activation-tier</code>: <code>standard</code> or <code>advanced</code>
+     *        </p>
+     *        </li>
      */
 
     public void setSettingValue(String settingValue) {
@@ -435,79 +448,89 @@ public class UpdateServiceSettingRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The new value to specify for the service setting. For the
-     * <code>/ssm/parameter-store/default-parameter-tier</code> setting ID, the setting value can be one of the
-     * following.
+     * The new value to specify for the service setting. The following list specifies the available values for each
+     * setting.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Standard
+     * <code>/ssm/parameter-store/default-parameter-tier</code>: <code>Standard</code>, <code>Advanced</code>,
+     * <code>Intelligent-Tiering</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * Advanced
+     * <code>/ssm/parameter-store/high-throughput-enabled</code>: <code>true</code> or <code>false</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * Intelligent-Tiering
+     * <code>/ssm/managed-instance/activation-tier</code>: <code>true</code> or <code>false</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>/ssm/automation/customer-script-log-destination</code>: <code>CloudWatch</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>/ssm/automation/customer-script-log-group-name</code>: the name of an Amazon CloudWatch Logs log group
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>/ssm/documents/console/public-sharing-permission</code>: <code>Enable</code> or <code>Disable</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>/ssm/managed-instance/activation-tier</code>: <code>standard</code> or <code>advanced</code>
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * For the <code>/ssm/parameter-store/high-throughput-enabled</code>, and
-     * <code>/ssm/managed-instance/activation-tier</code> setting IDs, the setting value can be true or false.
-     * </p>
-     * <p>
-     * For the <code>/ssm/automation/customer-script-log-destination</code> setting ID, the setting value can be
-     * <code>CloudWatch</code>.
-     * </p>
-     * <p>
-     * For the <code>/ssm/automation/customer-script-log-group-name</code> setting ID, the setting value can be the name
-     * of an Amazon CloudWatch Logs log group.
-     * </p>
-     * <p>
-     * For the <code>/ssm/documents/console/public-sharing-permission</code> setting ID, the setting value can be
-     * <code>Enable</code> or <code>Disable</code>.
-     * </p>
      * 
-     * @return The new value to specify for the service setting. For the
-     *         <code>/ssm/parameter-store/default-parameter-tier</code> setting ID, the setting value can be one of the
-     *         following.</p>
+     * @return The new value to specify for the service setting. The following list specifies the available values for
+     *         each setting.</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         Standard
+     *         <code>/ssm/parameter-store/default-parameter-tier</code>: <code>Standard</code>, <code>Advanced</code>,
+     *         <code>Intelligent-Tiering</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         Advanced
+     *         <code>/ssm/parameter-store/high-throughput-enabled</code>: <code>true</code> or <code>false</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         Intelligent-Tiering
+     *         <code>/ssm/managed-instance/activation-tier</code>: <code>true</code> or <code>false</code>
      *         </p>
      *         </li>
-     *         </ul>
+     *         <li>
      *         <p>
-     *         For the <code>/ssm/parameter-store/high-throughput-enabled</code>, and
-     *         <code>/ssm/managed-instance/activation-tier</code> setting IDs, the setting value can be true or false.
+     *         <code>/ssm/automation/customer-script-log-destination</code>: <code>CloudWatch</code>
      *         </p>
+     *         </li>
+     *         <li>
      *         <p>
-     *         For the <code>/ssm/automation/customer-script-log-destination</code> setting ID, the setting value can be
-     *         <code>CloudWatch</code>.
+     *         <code>/ssm/automation/customer-script-log-group-name</code>: the name of an Amazon CloudWatch Logs log
+     *         group
      *         </p>
+     *         </li>
+     *         <li>
      *         <p>
-     *         For the <code>/ssm/automation/customer-script-log-group-name</code> setting ID, the setting value can be
-     *         the name of an Amazon CloudWatch Logs log group.
+     *         <code>/ssm/documents/console/public-sharing-permission</code>: <code>Enable</code> or
+     *         <code>Disable</code>
      *         </p>
+     *         </li>
+     *         <li>
      *         <p>
-     *         For the <code>/ssm/documents/console/public-sharing-permission</code> setting ID, the setting value can
-     *         be <code>Enable</code> or <code>Disable</code>.
+     *         <code>/ssm/managed-instance/activation-tier</code>: <code>standard</code> or <code>advanced</code>
+     *         </p>
+     *         </li>
      */
 
     public String getSettingValue() {
@@ -516,80 +539,89 @@ public class UpdateServiceSettingRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The new value to specify for the service setting. For the
-     * <code>/ssm/parameter-store/default-parameter-tier</code> setting ID, the setting value can be one of the
-     * following.
+     * The new value to specify for the service setting. The following list specifies the available values for each
+     * setting.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Standard
+     * <code>/ssm/parameter-store/default-parameter-tier</code>: <code>Standard</code>, <code>Advanced</code>,
+     * <code>Intelligent-Tiering</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * Advanced
+     * <code>/ssm/parameter-store/high-throughput-enabled</code>: <code>true</code> or <code>false</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * Intelligent-Tiering
+     * <code>/ssm/managed-instance/activation-tier</code>: <code>true</code> or <code>false</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>/ssm/automation/customer-script-log-destination</code>: <code>CloudWatch</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>/ssm/automation/customer-script-log-group-name</code>: the name of an Amazon CloudWatch Logs log group
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>/ssm/documents/console/public-sharing-permission</code>: <code>Enable</code> or <code>Disable</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>/ssm/managed-instance/activation-tier</code>: <code>standard</code> or <code>advanced</code>
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * For the <code>/ssm/parameter-store/high-throughput-enabled</code>, and
-     * <code>/ssm/managed-instance/activation-tier</code> setting IDs, the setting value can be true or false.
-     * </p>
-     * <p>
-     * For the <code>/ssm/automation/customer-script-log-destination</code> setting ID, the setting value can be
-     * <code>CloudWatch</code>.
-     * </p>
-     * <p>
-     * For the <code>/ssm/automation/customer-script-log-group-name</code> setting ID, the setting value can be the name
-     * of an Amazon CloudWatch Logs log group.
-     * </p>
-     * <p>
-     * For the <code>/ssm/documents/console/public-sharing-permission</code> setting ID, the setting value can be
-     * <code>Enable</code> or <code>Disable</code>.
-     * </p>
      * 
      * @param settingValue
-     *        The new value to specify for the service setting. For the
-     *        <code>/ssm/parameter-store/default-parameter-tier</code> setting ID, the setting value can be one of the
-     *        following.</p>
+     *        The new value to specify for the service setting. The following list specifies the available values for
+     *        each setting.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Standard
+     *        <code>/ssm/parameter-store/default-parameter-tier</code>: <code>Standard</code>, <code>Advanced</code>,
+     *        <code>Intelligent-Tiering</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Advanced
+     *        <code>/ssm/parameter-store/high-throughput-enabled</code>: <code>true</code> or <code>false</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Intelligent-Tiering
+     *        <code>/ssm/managed-instance/activation-tier</code>: <code>true</code> or <code>false</code>
      *        </p>
      *        </li>
-     *        </ul>
+     *        <li>
      *        <p>
-     *        For the <code>/ssm/parameter-store/high-throughput-enabled</code>, and
-     *        <code>/ssm/managed-instance/activation-tier</code> setting IDs, the setting value can be true or false.
+     *        <code>/ssm/automation/customer-script-log-destination</code>: <code>CloudWatch</code>
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        For the <code>/ssm/automation/customer-script-log-destination</code> setting ID, the setting value can be
-     *        <code>CloudWatch</code>.
+     *        <code>/ssm/automation/customer-script-log-group-name</code>: the name of an Amazon CloudWatch Logs log
+     *        group
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        For the <code>/ssm/automation/customer-script-log-group-name</code> setting ID, the setting value can be
-     *        the name of an Amazon CloudWatch Logs log group.
+     *        <code>/ssm/documents/console/public-sharing-permission</code>: <code>Enable</code> or <code>Disable</code>
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        For the <code>/ssm/documents/console/public-sharing-permission</code> setting ID, the setting value can be
-     *        <code>Enable</code> or <code>Disable</code>.
+     *        <code>/ssm/managed-instance/activation-tier</code>: <code>standard</code> or <code>advanced</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -142,6 +142,16 @@ public class GetMaintenanceWindowTaskResult extends com.amazonaws.AmazonWebServi
      * </p>
      */
     private String description;
+    /**
+     * <p>
+     * The action to take on tasks when the maintenance window cutoff time is reached. <code>CONTINUE_TASK</code> means
+     * that tasks continue to run. For Automation, Lambda, Step Functions tasks, <code>CANCEL_TASK</code> means that
+     * currently running task invocations continue, but no new task invocations are started. For Run Command tasks,
+     * <code>CANCEL_TASK</code> means the system attempts to stop the task by sending a <code>CancelCommand</code>
+     * operation.
+     * </p>
+     */
+    private String cutoffBehavior;
 
     /**
      * <p>
@@ -973,6 +983,97 @@ public class GetMaintenanceWindowTaskResult extends com.amazonaws.AmazonWebServi
     }
 
     /**
+     * <p>
+     * The action to take on tasks when the maintenance window cutoff time is reached. <code>CONTINUE_TASK</code> means
+     * that tasks continue to run. For Automation, Lambda, Step Functions tasks, <code>CANCEL_TASK</code> means that
+     * currently running task invocations continue, but no new task invocations are started. For Run Command tasks,
+     * <code>CANCEL_TASK</code> means the system attempts to stop the task by sending a <code>CancelCommand</code>
+     * operation.
+     * </p>
+     * 
+     * @param cutoffBehavior
+     *        The action to take on tasks when the maintenance window cutoff time is reached. <code>CONTINUE_TASK</code>
+     *        means that tasks continue to run. For Automation, Lambda, Step Functions tasks, <code>CANCEL_TASK</code>
+     *        means that currently running task invocations continue, but no new task invocations are started. For Run
+     *        Command tasks, <code>CANCEL_TASK</code> means the system attempts to stop the task by sending a
+     *        <code>CancelCommand</code> operation.
+     * @see MaintenanceWindowTaskCutoffBehavior
+     */
+
+    public void setCutoffBehavior(String cutoffBehavior) {
+        this.cutoffBehavior = cutoffBehavior;
+    }
+
+    /**
+     * <p>
+     * The action to take on tasks when the maintenance window cutoff time is reached. <code>CONTINUE_TASK</code> means
+     * that tasks continue to run. For Automation, Lambda, Step Functions tasks, <code>CANCEL_TASK</code> means that
+     * currently running task invocations continue, but no new task invocations are started. For Run Command tasks,
+     * <code>CANCEL_TASK</code> means the system attempts to stop the task by sending a <code>CancelCommand</code>
+     * operation.
+     * </p>
+     * 
+     * @return The action to take on tasks when the maintenance window cutoff time is reached.
+     *         <code>CONTINUE_TASK</code> means that tasks continue to run. For Automation, Lambda, Step Functions
+     *         tasks, <code>CANCEL_TASK</code> means that currently running task invocations continue, but no new task
+     *         invocations are started. For Run Command tasks, <code>CANCEL_TASK</code> means the system attempts to
+     *         stop the task by sending a <code>CancelCommand</code> operation.
+     * @see MaintenanceWindowTaskCutoffBehavior
+     */
+
+    public String getCutoffBehavior() {
+        return this.cutoffBehavior;
+    }
+
+    /**
+     * <p>
+     * The action to take on tasks when the maintenance window cutoff time is reached. <code>CONTINUE_TASK</code> means
+     * that tasks continue to run. For Automation, Lambda, Step Functions tasks, <code>CANCEL_TASK</code> means that
+     * currently running task invocations continue, but no new task invocations are started. For Run Command tasks,
+     * <code>CANCEL_TASK</code> means the system attempts to stop the task by sending a <code>CancelCommand</code>
+     * operation.
+     * </p>
+     * 
+     * @param cutoffBehavior
+     *        The action to take on tasks when the maintenance window cutoff time is reached. <code>CONTINUE_TASK</code>
+     *        means that tasks continue to run. For Automation, Lambda, Step Functions tasks, <code>CANCEL_TASK</code>
+     *        means that currently running task invocations continue, but no new task invocations are started. For Run
+     *        Command tasks, <code>CANCEL_TASK</code> means the system attempts to stop the task by sending a
+     *        <code>CancelCommand</code> operation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see MaintenanceWindowTaskCutoffBehavior
+     */
+
+    public GetMaintenanceWindowTaskResult withCutoffBehavior(String cutoffBehavior) {
+        setCutoffBehavior(cutoffBehavior);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The action to take on tasks when the maintenance window cutoff time is reached. <code>CONTINUE_TASK</code> means
+     * that tasks continue to run. For Automation, Lambda, Step Functions tasks, <code>CANCEL_TASK</code> means that
+     * currently running task invocations continue, but no new task invocations are started. For Run Command tasks,
+     * <code>CANCEL_TASK</code> means the system attempts to stop the task by sending a <code>CancelCommand</code>
+     * operation.
+     * </p>
+     * 
+     * @param cutoffBehavior
+     *        The action to take on tasks when the maintenance window cutoff time is reached. <code>CONTINUE_TASK</code>
+     *        means that tasks continue to run. For Automation, Lambda, Step Functions tasks, <code>CANCEL_TASK</code>
+     *        means that currently running task invocations continue, but no new task invocations are started. For Run
+     *        Command tasks, <code>CANCEL_TASK</code> means the system attempts to stop the task by sending a
+     *        <code>CancelCommand</code> operation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see MaintenanceWindowTaskCutoffBehavior
+     */
+
+    public GetMaintenanceWindowTaskResult withCutoffBehavior(MaintenanceWindowTaskCutoffBehavior cutoffBehavior) {
+        this.cutoffBehavior = cutoffBehavior.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1011,7 +1112,9 @@ public class GetMaintenanceWindowTaskResult extends com.amazonaws.AmazonWebServi
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getDescription() != null)
-            sb.append("Description: ").append("***Sensitive Data Redacted***");
+            sb.append("Description: ").append("***Sensitive Data Redacted***").append(",");
+        if (getCutoffBehavior() != null)
+            sb.append("CutoffBehavior: ").append(getCutoffBehavior());
         sb.append("}");
         return sb.toString();
     }
@@ -1082,6 +1185,10 @@ public class GetMaintenanceWindowTaskResult extends com.amazonaws.AmazonWebServi
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
+        if (other.getCutoffBehavior() == null ^ this.getCutoffBehavior() == null)
+            return false;
+        if (other.getCutoffBehavior() != null && other.getCutoffBehavior().equals(this.getCutoffBehavior()) == false)
+            return false;
         return true;
     }
 
@@ -1104,6 +1211,7 @@ public class GetMaintenanceWindowTaskResult extends com.amazonaws.AmazonWebServi
         hashCode = prime * hashCode + ((getLoggingInfo() == null) ? 0 : getLoggingInfo().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getCutoffBehavior() == null) ? 0 : getCutoffBehavior().hashCode());
         return hashCode;
     }
 

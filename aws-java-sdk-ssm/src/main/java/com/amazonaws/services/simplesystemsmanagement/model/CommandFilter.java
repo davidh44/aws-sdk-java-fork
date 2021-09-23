@@ -59,8 +59,11 @@ public class CommandFilter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>Status</b>: Specify a valid command status to see a list of all command executions with that status. Status
-     * values you can specify include:
+     * <b>Status</b>: Specify a valid command status to see a list of all command executions with that status. The
+     * status choices depend on the API you call.
+     * </p>
+     * <p>
+     * The status values you can specify for <code>ListCommands</code> are:
      * </p>
      * <ul>
      * <li>
@@ -90,12 +93,107 @@ public class CommandFilter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>TimedOut</code>
+     * <code>TimedOut</code> (this includes both Delivery and Execution time outs)
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Cancelling</code>
+     * <code>AccessDenied</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DeliveryTimedOut</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ExecutionTimedOut</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Incomplete</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NoInstancesInTag</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LimitExceeded</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The status values you can specify for <code>ListCommandInvocations</code> are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Pending</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>InProgress</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Delayed</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Success</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Cancelled</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Failed</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TimedOut</code> (this includes both Delivery and Execution time outs)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AccessDenied</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DeliveryTimedOut</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ExecutionTimedOut</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Undeliverable</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>InvalidPlatform</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Terminated</code>
      * </p>
      * </li>
      * </ul>
@@ -220,8 +318,11 @@ public class CommandFilter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>Status</b>: Specify a valid command status to see a list of all command executions with that status. Status
-     * values you can specify include:
+     * <b>Status</b>: Specify a valid command status to see a list of all command executions with that status. The
+     * status choices depend on the API you call.
+     * </p>
+     * <p>
+     * The status values you can specify for <code>ListCommands</code> are:
      * </p>
      * <ul>
      * <li>
@@ -251,12 +352,107 @@ public class CommandFilter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>TimedOut</code>
+     * <code>TimedOut</code> (this includes both Delivery and Execution time outs)
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Cancelling</code>
+     * <code>AccessDenied</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DeliveryTimedOut</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ExecutionTimedOut</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Incomplete</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NoInstancesInTag</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LimitExceeded</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The status values you can specify for <code>ListCommandInvocations</code> are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Pending</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>InProgress</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Delayed</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Success</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Cancelled</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Failed</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TimedOut</code> (this includes both Delivery and Execution time outs)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AccessDenied</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DeliveryTimedOut</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ExecutionTimedOut</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Undeliverable</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>InvalidPlatform</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Terminated</code>
      * </p>
      * </li>
      * </ul>
@@ -305,7 +501,10 @@ public class CommandFilter implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <b>Status</b>: Specify a valid command status to see a list of all command executions with that status.
-     *        Status values you can specify include:
+     *        The status choices depend on the API you call.
+     *        </p>
+     *        <p>
+     *        The status values you can specify for <code>ListCommands</code> are:
      *        </p>
      *        <ul>
      *        <li>
@@ -335,12 +534,107 @@ public class CommandFilter implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>TimedOut</code>
+     *        <code>TimedOut</code> (this includes both Delivery and Execution time outs)
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Cancelling</code>
+     *        <code>AccessDenied</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>DeliveryTimedOut</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ExecutionTimedOut</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Incomplete</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>NoInstancesInTag</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LimitExceeded</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        The status values you can specify for <code>ListCommandInvocations</code> are:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>Pending</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>InProgress</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Delayed</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Success</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Cancelled</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Failed</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>TimedOut</code> (this includes both Delivery and Execution time outs)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AccessDenied</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>DeliveryTimedOut</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ExecutionTimedOut</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Undeliverable</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>InvalidPlatform</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Terminated</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -394,8 +688,11 @@ public class CommandFilter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>Status</b>: Specify a valid command status to see a list of all command executions with that status. Status
-     * values you can specify include:
+     * <b>Status</b>: Specify a valid command status to see a list of all command executions with that status. The
+     * status choices depend on the API you call.
+     * </p>
+     * <p>
+     * The status values you can specify for <code>ListCommands</code> are:
      * </p>
      * <ul>
      * <li>
@@ -425,12 +722,107 @@ public class CommandFilter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>TimedOut</code>
+     * <code>TimedOut</code> (this includes both Delivery and Execution time outs)
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Cancelling</code>
+     * <code>AccessDenied</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DeliveryTimedOut</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ExecutionTimedOut</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Incomplete</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NoInstancesInTag</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LimitExceeded</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The status values you can specify for <code>ListCommandInvocations</code> are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Pending</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>InProgress</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Delayed</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Success</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Cancelled</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Failed</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TimedOut</code> (this includes both Delivery and Execution time outs)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AccessDenied</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DeliveryTimedOut</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ExecutionTimedOut</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Undeliverable</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>InvalidPlatform</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Terminated</code>
      * </p>
      * </li>
      * </ul>
@@ -478,7 +870,10 @@ public class CommandFilter implements Serializable, Cloneable, StructuredPojo {
      *         <li>
      *         <p>
      *         <b>Status</b>: Specify a valid command status to see a list of all command executions with that status.
-     *         Status values you can specify include:
+     *         The status choices depend on the API you call.
+     *         </p>
+     *         <p>
+     *         The status values you can specify for <code>ListCommands</code> are:
      *         </p>
      *         <ul>
      *         <li>
@@ -508,12 +903,107 @@ public class CommandFilter implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>TimedOut</code>
+     *         <code>TimedOut</code> (this includes both Delivery and Execution time outs)
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>Cancelling</code>
+     *         <code>AccessDenied</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>DeliveryTimedOut</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>ExecutionTimedOut</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Incomplete</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>NoInstancesInTag</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>LimitExceeded</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         The status values you can specify for <code>ListCommandInvocations</code> are:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>Pending</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>InProgress</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Delayed</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Success</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Cancelled</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Failed</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>TimedOut</code> (this includes both Delivery and Execution time outs)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AccessDenied</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>DeliveryTimedOut</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>ExecutionTimedOut</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Undeliverable</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>InvalidPlatform</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Terminated</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -568,8 +1058,11 @@ public class CommandFilter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>Status</b>: Specify a valid command status to see a list of all command executions with that status. Status
-     * values you can specify include:
+     * <b>Status</b>: Specify a valid command status to see a list of all command executions with that status. The
+     * status choices depend on the API you call.
+     * </p>
+     * <p>
+     * The status values you can specify for <code>ListCommands</code> are:
      * </p>
      * <ul>
      * <li>
@@ -599,12 +1092,107 @@ public class CommandFilter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>TimedOut</code>
+     * <code>TimedOut</code> (this includes both Delivery and Execution time outs)
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Cancelling</code>
+     * <code>AccessDenied</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DeliveryTimedOut</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ExecutionTimedOut</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Incomplete</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NoInstancesInTag</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LimitExceeded</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The status values you can specify for <code>ListCommandInvocations</code> are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Pending</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>InProgress</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Delayed</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Success</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Cancelled</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Failed</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TimedOut</code> (this includes both Delivery and Execution time outs)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AccessDenied</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DeliveryTimedOut</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ExecutionTimedOut</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Undeliverable</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>InvalidPlatform</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Terminated</code>
      * </p>
      * </li>
      * </ul>
@@ -653,7 +1241,10 @@ public class CommandFilter implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <b>Status</b>: Specify a valid command status to see a list of all command executions with that status.
-     *        Status values you can specify include:
+     *        The status choices depend on the API you call.
+     *        </p>
+     *        <p>
+     *        The status values you can specify for <code>ListCommands</code> are:
      *        </p>
      *        <ul>
      *        <li>
@@ -683,12 +1274,107 @@ public class CommandFilter implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>TimedOut</code>
+     *        <code>TimedOut</code> (this includes both Delivery and Execution time outs)
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Cancelling</code>
+     *        <code>AccessDenied</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>DeliveryTimedOut</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ExecutionTimedOut</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Incomplete</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>NoInstancesInTag</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LimitExceeded</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        The status values you can specify for <code>ListCommandInvocations</code> are:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>Pending</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>InProgress</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Delayed</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Success</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Cancelled</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Failed</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>TimedOut</code> (this includes both Delivery and Execution time outs)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AccessDenied</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>DeliveryTimedOut</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ExecutionTimedOut</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Undeliverable</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>InvalidPlatform</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Terminated</code>
      *        </p>
      *        </li>
      *        </ul>

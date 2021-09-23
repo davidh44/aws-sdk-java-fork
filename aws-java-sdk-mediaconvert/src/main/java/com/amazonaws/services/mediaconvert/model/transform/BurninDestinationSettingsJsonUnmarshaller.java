@@ -52,6 +52,10 @@ public class BurninDestinationSettingsJsonUnmarshaller implements Unmarshaller<B
                     context.nextToken();
                     burninDestinationSettings.setAlignment(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("applyFontColor", targetDepth)) {
+                    context.nextToken();
+                    burninDestinationSettings.setApplyFontColor(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("backgroundColor", targetDepth)) {
                     context.nextToken();
                     burninDestinationSettings.setBackgroundColor(context.getUnmarshaller(String.class).unmarshall(context));
@@ -59,6 +63,10 @@ public class BurninDestinationSettingsJsonUnmarshaller implements Unmarshaller<B
                 if (context.testExpression("backgroundOpacity", targetDepth)) {
                     context.nextToken();
                     burninDestinationSettings.setBackgroundOpacity(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("fallbackFont", targetDepth)) {
+                    context.nextToken();
+                    burninDestinationSettings.setFallbackFont(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("fontColor", targetDepth)) {
                     context.nextToken();
@@ -79,6 +87,10 @@ public class BurninDestinationSettingsJsonUnmarshaller implements Unmarshaller<B
                 if (context.testExpression("fontSize", targetDepth)) {
                     context.nextToken();
                     burninDestinationSettings.setFontSize(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("hexFontColor", targetDepth)) {
+                    context.nextToken();
+                    burninDestinationSettings.setHexFontColor(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("outlineColor", targetDepth)) {
                     context.nextToken();
@@ -103,6 +115,10 @@ public class BurninDestinationSettingsJsonUnmarshaller implements Unmarshaller<B
                 if (context.testExpression("shadowYOffset", targetDepth)) {
                     context.nextToken();
                     burninDestinationSettings.setShadowYOffset(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("stylePassthrough", targetDepth)) {
+                    context.nextToken();
+                    burninDestinationSettings.setStylePassthrough(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("teletextSpacing", targetDepth)) {
                     context.nextToken();

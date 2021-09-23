@@ -36,7 +36,11 @@ public class JobTemplateSettings implements Serializable, Cloneable, StructuredP
     private AvailBlanking availBlanking;
     /** Settings for Event Signaling And Messaging (ESAM). If you don't do ad insertion, you can ignore these settings. */
     private EsamSettings esam;
-    /** Hexadecimal value as per EIA-608 Line 21 Data Services, section 9.5.1.5 05h Content Advisory. */
+    /**
+     * If your source content has EIA-608 Line 21 Data Services, enable this feature to specify what MediaConvert does
+     * with the Extended Data Services (XDS) packets. You can choose to pass through XDS packets, or remove them from
+     * the output. For more information about XDS, see EIA-608 Line Data Services, section 9.5.1.5 05h Content Advisory.
+     */
     private ExtendedDataServices extendedDataServices;
     /**
      * Use Inputs (inputs) to define the source file used in the transcode job. There can only be one input in a job
@@ -206,10 +210,15 @@ public class JobTemplateSettings implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * Hexadecimal value as per EIA-608 Line 21 Data Services, section 9.5.1.5 05h Content Advisory.
+     * If your source content has EIA-608 Line 21 Data Services, enable this feature to specify what MediaConvert does
+     * with the Extended Data Services (XDS) packets. You can choose to pass through XDS packets, or remove them from
+     * the output. For more information about XDS, see EIA-608 Line Data Services, section 9.5.1.5 05h Content Advisory.
      * 
      * @param extendedDataServices
-     *        Hexadecimal value as per EIA-608 Line 21 Data Services, section 9.5.1.5 05h Content Advisory.
+     *        If your source content has EIA-608 Line 21 Data Services, enable this feature to specify what MediaConvert
+     *        does with the Extended Data Services (XDS) packets. You can choose to pass through XDS packets, or remove
+     *        them from the output. For more information about XDS, see EIA-608 Line Data Services, section 9.5.1.5 05h
+     *        Content Advisory.
      */
 
     public void setExtendedDataServices(ExtendedDataServices extendedDataServices) {
@@ -217,9 +226,14 @@ public class JobTemplateSettings implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * Hexadecimal value as per EIA-608 Line 21 Data Services, section 9.5.1.5 05h Content Advisory.
+     * If your source content has EIA-608 Line 21 Data Services, enable this feature to specify what MediaConvert does
+     * with the Extended Data Services (XDS) packets. You can choose to pass through XDS packets, or remove them from
+     * the output. For more information about XDS, see EIA-608 Line Data Services, section 9.5.1.5 05h Content Advisory.
      * 
-     * @return Hexadecimal value as per EIA-608 Line 21 Data Services, section 9.5.1.5 05h Content Advisory.
+     * @return If your source content has EIA-608 Line 21 Data Services, enable this feature to specify what
+     *         MediaConvert does with the Extended Data Services (XDS) packets. You can choose to pass through XDS
+     *         packets, or remove them from the output. For more information about XDS, see EIA-608 Line Data Services,
+     *         section 9.5.1.5 05h Content Advisory.
      */
 
     public ExtendedDataServices getExtendedDataServices() {
@@ -227,10 +241,15 @@ public class JobTemplateSettings implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * Hexadecimal value as per EIA-608 Line 21 Data Services, section 9.5.1.5 05h Content Advisory.
+     * If your source content has EIA-608 Line 21 Data Services, enable this feature to specify what MediaConvert does
+     * with the Extended Data Services (XDS) packets. You can choose to pass through XDS packets, or remove them from
+     * the output. For more information about XDS, see EIA-608 Line Data Services, section 9.5.1.5 05h Content Advisory.
      * 
      * @param extendedDataServices
-     *        Hexadecimal value as per EIA-608 Line 21 Data Services, section 9.5.1.5 05h Content Advisory.
+     *        If your source content has EIA-608 Line 21 Data Services, enable this feature to specify what MediaConvert
+     *        does with the Extended Data Services (XDS) packets. You can choose to pass through XDS packets, or remove
+     *        them from the output. For more information about XDS, see EIA-608 Line Data Services, section 9.5.1.5 05h
+     *        Content Advisory.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

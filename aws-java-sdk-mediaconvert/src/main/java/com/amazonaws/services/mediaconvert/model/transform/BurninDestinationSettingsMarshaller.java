@@ -29,10 +29,14 @@ public class BurninDestinationSettingsMarshaller {
 
     private static final MarshallingInfo<String> ALIGNMENT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("alignment").build();
+    private static final MarshallingInfo<String> APPLYFONTCOLOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("applyFontColor").build();
     private static final MarshallingInfo<String> BACKGROUNDCOLOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("backgroundColor").build();
     private static final MarshallingInfo<Integer> BACKGROUNDOPACITY_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("backgroundOpacity").build();
+    private static final MarshallingInfo<String> FALLBACKFONT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fallbackFont").build();
     private static final MarshallingInfo<String> FONTCOLOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("fontColor").build();
     private static final MarshallingInfo<Integer> FONTOPACITY_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
@@ -43,6 +47,8 @@ public class BurninDestinationSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fontScript").build();
     private static final MarshallingInfo<Integer> FONTSIZE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fontSize").build();
+    private static final MarshallingInfo<String> HEXFONTCOLOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("hexFontColor").build();
     private static final MarshallingInfo<String> OUTLINECOLOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("outlineColor").build();
     private static final MarshallingInfo<Integer> OUTLINESIZE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
@@ -55,6 +61,8 @@ public class BurninDestinationSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("shadowXOffset").build();
     private static final MarshallingInfo<Integer> SHADOWYOFFSET_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("shadowYOffset").build();
+    private static final MarshallingInfo<String> STYLEPASSTHROUGH_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("stylePassthrough").build();
     private static final MarshallingInfo<String> TELETEXTSPACING_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("teletextSpacing").build();
     private static final MarshallingInfo<Integer> XPOSITION_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
@@ -79,19 +87,23 @@ public class BurninDestinationSettingsMarshaller {
 
         try {
             protocolMarshaller.marshall(burninDestinationSettings.getAlignment(), ALIGNMENT_BINDING);
+            protocolMarshaller.marshall(burninDestinationSettings.getApplyFontColor(), APPLYFONTCOLOR_BINDING);
             protocolMarshaller.marshall(burninDestinationSettings.getBackgroundColor(), BACKGROUNDCOLOR_BINDING);
             protocolMarshaller.marshall(burninDestinationSettings.getBackgroundOpacity(), BACKGROUNDOPACITY_BINDING);
+            protocolMarshaller.marshall(burninDestinationSettings.getFallbackFont(), FALLBACKFONT_BINDING);
             protocolMarshaller.marshall(burninDestinationSettings.getFontColor(), FONTCOLOR_BINDING);
             protocolMarshaller.marshall(burninDestinationSettings.getFontOpacity(), FONTOPACITY_BINDING);
             protocolMarshaller.marshall(burninDestinationSettings.getFontResolution(), FONTRESOLUTION_BINDING);
             protocolMarshaller.marshall(burninDestinationSettings.getFontScript(), FONTSCRIPT_BINDING);
             protocolMarshaller.marshall(burninDestinationSettings.getFontSize(), FONTSIZE_BINDING);
+            protocolMarshaller.marshall(burninDestinationSettings.getHexFontColor(), HEXFONTCOLOR_BINDING);
             protocolMarshaller.marshall(burninDestinationSettings.getOutlineColor(), OUTLINECOLOR_BINDING);
             protocolMarshaller.marshall(burninDestinationSettings.getOutlineSize(), OUTLINESIZE_BINDING);
             protocolMarshaller.marshall(burninDestinationSettings.getShadowColor(), SHADOWCOLOR_BINDING);
             protocolMarshaller.marshall(burninDestinationSettings.getShadowOpacity(), SHADOWOPACITY_BINDING);
             protocolMarshaller.marshall(burninDestinationSettings.getShadowXOffset(), SHADOWXOFFSET_BINDING);
             protocolMarshaller.marshall(burninDestinationSettings.getShadowYOffset(), SHADOWYOFFSET_BINDING);
+            protocolMarshaller.marshall(burninDestinationSettings.getStylePassthrough(), STYLEPASSTHROUGH_BINDING);
             protocolMarshaller.marshall(burninDestinationSettings.getTeletextSpacing(), TELETEXTSPACING_BINDING);
             protocolMarshaller.marshall(burninDestinationSettings.getXPosition(), XPOSITION_BINDING);
             protocolMarshaller.marshall(burninDestinationSettings.getYPosition(), YPOSITION_BINDING);

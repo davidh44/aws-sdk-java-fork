@@ -27,7 +27,8 @@ public enum BurninSubtitleOutlineColor {
     YELLOW("YELLOW"),
     RED("RED"),
     GREEN("GREEN"),
-    BLUE("BLUE");
+    BLUE("BLUE"),
+    AUTO("AUTO");
 
     private String value;
 

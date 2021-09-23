@@ -86,6 +86,10 @@ public class CmafGroupSettingsJsonUnmarshaller implements Unmarshaller<CmafGroup
                     context.nextToken();
                     cmafGroupSettings.setImageBasedTrickPlay(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("imageBasedTrickPlaySettings", targetDepth)) {
+                    context.nextToken();
+                    cmafGroupSettings.setImageBasedTrickPlaySettings(CmafImageBasedTrickPlaySettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("manifestCompression", targetDepth)) {
                     context.nextToken();
                     cmafGroupSettings.setManifestCompression(context.getUnmarshaller(String.class).unmarshall(context));

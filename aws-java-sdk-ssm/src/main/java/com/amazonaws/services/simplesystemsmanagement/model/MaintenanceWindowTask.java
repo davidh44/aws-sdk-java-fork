@@ -130,6 +130,13 @@ public class MaintenanceWindowTask implements Serializable, Cloneable, Structure
      * </p>
      */
     private String description;
+    /**
+     * <p>
+     * The specification for whether tasks should continue to run after the cutoff time specified in the maintenance
+     * windows is reached.
+     * </p>
+     */
+    private String cutoffBehavior;
 
     /**
      * <p>
@@ -882,6 +889,89 @@ public class MaintenanceWindowTask implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The specification for whether tasks should continue to run after the cutoff time specified in the maintenance
+     * windows is reached.
+     * </p>
+     * 
+     * @param cutoffBehavior
+     *        The specification for whether tasks should continue to run after the cutoff time specified in the
+     *        maintenance windows is reached.
+     * @see MaintenanceWindowTaskCutoffBehavior
+     */
+
+    public void setCutoffBehavior(String cutoffBehavior) {
+        this.cutoffBehavior = cutoffBehavior;
+    }
+
+    /**
+     * <p>
+     * The specification for whether tasks should continue to run after the cutoff time specified in the maintenance
+     * windows is reached.
+     * </p>
+     * 
+     * @return The specification for whether tasks should continue to run after the cutoff time specified in the
+     *         maintenance windows is reached.
+     * @see MaintenanceWindowTaskCutoffBehavior
+     */
+
+    public String getCutoffBehavior() {
+        return this.cutoffBehavior;
+    }
+
+    /**
+     * <p>
+     * The specification for whether tasks should continue to run after the cutoff time specified in the maintenance
+     * windows is reached.
+     * </p>
+     * 
+     * @param cutoffBehavior
+     *        The specification for whether tasks should continue to run after the cutoff time specified in the
+     *        maintenance windows is reached.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see MaintenanceWindowTaskCutoffBehavior
+     */
+
+    public MaintenanceWindowTask withCutoffBehavior(String cutoffBehavior) {
+        setCutoffBehavior(cutoffBehavior);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The specification for whether tasks should continue to run after the cutoff time specified in the maintenance
+     * windows is reached.
+     * </p>
+     * 
+     * @param cutoffBehavior
+     *        The specification for whether tasks should continue to run after the cutoff time specified in the
+     *        maintenance windows is reached.
+     * @see MaintenanceWindowTaskCutoffBehavior
+     */
+
+    public void setCutoffBehavior(MaintenanceWindowTaskCutoffBehavior cutoffBehavior) {
+        withCutoffBehavior(cutoffBehavior);
+    }
+
+    /**
+     * <p>
+     * The specification for whether tasks should continue to run after the cutoff time specified in the maintenance
+     * windows is reached.
+     * </p>
+     * 
+     * @param cutoffBehavior
+     *        The specification for whether tasks should continue to run after the cutoff time specified in the
+     *        maintenance windows is reached.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see MaintenanceWindowTaskCutoffBehavior
+     */
+
+    public MaintenanceWindowTask withCutoffBehavior(MaintenanceWindowTaskCutoffBehavior cutoffBehavior) {
+        this.cutoffBehavior = cutoffBehavior.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -918,7 +1008,9 @@ public class MaintenanceWindowTask implements Serializable, Cloneable, Structure
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getDescription() != null)
-            sb.append("Description: ").append("***Sensitive Data Redacted***");
+            sb.append("Description: ").append("***Sensitive Data Redacted***").append(",");
+        if (getCutoffBehavior() != null)
+            sb.append("CutoffBehavior: ").append(getCutoffBehavior());
         sb.append("}");
         return sb.toString();
     }
@@ -985,6 +1077,10 @@ public class MaintenanceWindowTask implements Serializable, Cloneable, Structure
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
+        if (other.getCutoffBehavior() == null ^ this.getCutoffBehavior() == null)
+            return false;
+        if (other.getCutoffBehavior() != null && other.getCutoffBehavior().equals(this.getCutoffBehavior()) == false)
+            return false;
         return true;
     }
 
@@ -1006,6 +1102,7 @@ public class MaintenanceWindowTask implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getMaxErrors() == null) ? 0 : getMaxErrors().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getCutoffBehavior() == null) ? 0 : getCutoffBehavior().hashCode());
         return hashCode;
     }
 

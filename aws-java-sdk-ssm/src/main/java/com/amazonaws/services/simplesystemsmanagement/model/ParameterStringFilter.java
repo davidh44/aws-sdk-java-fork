@@ -38,11 +38,11 @@ public class ParameterStringFilter implements Serializable, Cloneable, Structure
      * be used with both operations.
      * </p>
      * <p>
-     * For <code>DescribeActions</code>, all of the listed patterns are valid, with the exception of <code>Label</code>.
+     * For <code>DescribeActions</code>, all of the listed patterns are valid except <code>Label</code>.
      * </p>
      * <p>
      * For <code>GetParametersByPath</code>, the following patterns listed for <code>Key</code> aren't valid:
-     * <code>tag</code>, <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
+     * <code>tag</code>, <code>DataType</code>, <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
      * </p>
      * <p>
      * For examples of Amazon Web Services CLI commands demonstrating valid parameter filter constructions, see <a
@@ -82,11 +82,11 @@ public class ParameterStringFilter implements Serializable, Cloneable, Structure
      * be used with both operations.
      * </p>
      * <p>
-     * For <code>DescribeActions</code>, all of the listed patterns are valid, with the exception of <code>Label</code>.
+     * For <code>DescribeActions</code>, all of the listed patterns are valid except <code>Label</code>.
      * </p>
      * <p>
      * For <code>GetParametersByPath</code>, the following patterns listed for <code>Key</code> aren't valid:
-     * <code>tag</code>, <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
+     * <code>tag</code>, <code>DataType</code>, <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
      * </p>
      * <p>
      * For examples of Amazon Web Services CLI commands demonstrating valid parameter filter constructions, see <a
@@ -102,12 +102,11 @@ public class ParameterStringFilter implements Serializable, Cloneable, Structure
      *        <code>Key</code> can be used with both operations.
      *        </p>
      *        <p>
-     *        For <code>DescribeActions</code>, all of the listed patterns are valid, with the exception of
-     *        <code>Label</code>.
+     *        For <code>DescribeActions</code>, all of the listed patterns are valid except <code>Label</code>.
      *        </p>
      *        <p>
      *        For <code>GetParametersByPath</code>, the following patterns listed for <code>Key</code> aren't valid:
-     *        <code>tag</code>, <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
+     *        <code>tag</code>, <code>DataType</code>, <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
      *        </p>
      *        <p>
      *        For examples of Amazon Web Services CLI commands demonstrating valid parameter filter constructions, see
@@ -129,11 +128,11 @@ public class ParameterStringFilter implements Serializable, Cloneable, Structure
      * be used with both operations.
      * </p>
      * <p>
-     * For <code>DescribeActions</code>, all of the listed patterns are valid, with the exception of <code>Label</code>.
+     * For <code>DescribeActions</code>, all of the listed patterns are valid except <code>Label</code>.
      * </p>
      * <p>
      * For <code>GetParametersByPath</code>, the following patterns listed for <code>Key</code> aren't valid:
-     * <code>tag</code>, <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
+     * <code>tag</code>, <code>DataType</code>, <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
      * </p>
      * <p>
      * For examples of Amazon Web Services CLI commands demonstrating valid parameter filter constructions, see <a
@@ -148,12 +147,11 @@ public class ParameterStringFilter implements Serializable, Cloneable, Structure
      *         <code>Key</code> can be used with both operations.
      *         </p>
      *         <p>
-     *         For <code>DescribeActions</code>, all of the listed patterns are valid, with the exception of
-     *         <code>Label</code>.
+     *         For <code>DescribeActions</code>, all of the listed patterns are valid except <code>Label</code>.
      *         </p>
      *         <p>
      *         For <code>GetParametersByPath</code>, the following patterns listed for <code>Key</code> aren't valid:
-     *         <code>tag</code>, <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
+     *         <code>tag</code>, <code>DataType</code>, <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
      *         </p>
      *         <p>
      *         For examples of Amazon Web Services CLI commands demonstrating valid parameter filter constructions, see
@@ -175,11 +173,11 @@ public class ParameterStringFilter implements Serializable, Cloneable, Structure
      * be used with both operations.
      * </p>
      * <p>
-     * For <code>DescribeActions</code>, all of the listed patterns are valid, with the exception of <code>Label</code>.
+     * For <code>DescribeActions</code>, all of the listed patterns are valid except <code>Label</code>.
      * </p>
      * <p>
      * For <code>GetParametersByPath</code>, the following patterns listed for <code>Key</code> aren't valid:
-     * <code>tag</code>, <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
+     * <code>tag</code>, <code>DataType</code>, <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
      * </p>
      * <p>
      * For examples of Amazon Web Services CLI commands demonstrating valid parameter filter constructions, see <a
@@ -195,12 +193,11 @@ public class ParameterStringFilter implements Serializable, Cloneable, Structure
      *        <code>Key</code> can be used with both operations.
      *        </p>
      *        <p>
-     *        For <code>DescribeActions</code>, all of the listed patterns are valid, with the exception of
-     *        <code>Label</code>.
+     *        For <code>DescribeActions</code>, all of the listed patterns are valid except <code>Label</code>.
      *        </p>
      *        <p>
      *        For <code>GetParametersByPath</code>, the following patterns listed for <code>Key</code> aren't valid:
-     *        <code>tag</code>, <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
+     *        <code>tag</code>, <code>DataType</code>, <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
      *        </p>
      *        <p>
      *        For examples of Amazon Web Services CLI commands demonstrating valid parameter filter constructions, see

@@ -200,6 +200,44 @@ public class UpdateMaintenanceWindowTaskRequest extends com.amazonaws.AmazonWebS
      * </p>
      */
     private Boolean replace;
+    /**
+     * <p>
+     * Indicates whether tasks should continue to run after the cutoff time specified in the maintenance windows is
+     * reached.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>CONTINUE_TASK</code>: When the cutoff time is reached, any tasks that are running continue. The default
+     * value.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CANCEL_TASK</code>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For Automation, Lambda, Step Functions tasks: When the cutoff time is reached, any task invocations that are
+     * already running continue, but no new task invocations are started.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For Run Command tasks: When the cutoff time is reached, the system sends a <a>CancelCommand</a> operation that
+     * attempts to cancel the command associated with the task. However, there is no guarantee that the command will be
+     * terminated and the underlying process stopped.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The status for tasks that are not completed is <code>TIMED_OUT</code>.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private String cutoffBehavior;
 
     /**
      * <p>
@@ -1369,6 +1407,317 @@ public class UpdateMaintenanceWindowTaskRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * Indicates whether tasks should continue to run after the cutoff time specified in the maintenance windows is
+     * reached.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>CONTINUE_TASK</code>: When the cutoff time is reached, any tasks that are running continue. The default
+     * value.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CANCEL_TASK</code>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For Automation, Lambda, Step Functions tasks: When the cutoff time is reached, any task invocations that are
+     * already running continue, but no new task invocations are started.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For Run Command tasks: When the cutoff time is reached, the system sends a <a>CancelCommand</a> operation that
+     * attempts to cancel the command associated with the task. However, there is no guarantee that the command will be
+     * terminated and the underlying process stopped.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The status for tasks that are not completed is <code>TIMED_OUT</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param cutoffBehavior
+     *        Indicates whether tasks should continue to run after the cutoff time specified in the maintenance windows
+     *        is reached. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>CONTINUE_TASK</code>: When the cutoff time is reached, any tasks that are running continue. The
+     *        default value.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CANCEL_TASK</code>:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For Automation, Lambda, Step Functions tasks: When the cutoff time is reached, any task invocations that
+     *        are already running continue, but no new task invocations are started.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For Run Command tasks: When the cutoff time is reached, the system sends a <a>CancelCommand</a> operation
+     *        that attempts to cancel the command associated with the task. However, there is no guarantee that the
+     *        command will be terminated and the underlying process stopped.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        The status for tasks that are not completed is <code>TIMED_OUT</code>.
+     *        </p>
+     *        </li>
+     * @see MaintenanceWindowTaskCutoffBehavior
+     */
+
+    public void setCutoffBehavior(String cutoffBehavior) {
+        this.cutoffBehavior = cutoffBehavior;
+    }
+
+    /**
+     * <p>
+     * Indicates whether tasks should continue to run after the cutoff time specified in the maintenance windows is
+     * reached.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>CONTINUE_TASK</code>: When the cutoff time is reached, any tasks that are running continue. The default
+     * value.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CANCEL_TASK</code>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For Automation, Lambda, Step Functions tasks: When the cutoff time is reached, any task invocations that are
+     * already running continue, but no new task invocations are started.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For Run Command tasks: When the cutoff time is reached, the system sends a <a>CancelCommand</a> operation that
+     * attempts to cancel the command associated with the task. However, there is no guarantee that the command will be
+     * terminated and the underlying process stopped.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The status for tasks that are not completed is <code>TIMED_OUT</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return Indicates whether tasks should continue to run after the cutoff time specified in the maintenance windows
+     *         is reached. </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>CONTINUE_TASK</code>: When the cutoff time is reached, any tasks that are running continue. The
+     *         default value.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>CANCEL_TASK</code>:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         For Automation, Lambda, Step Functions tasks: When the cutoff time is reached, any task invocations that
+     *         are already running continue, but no new task invocations are started.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For Run Command tasks: When the cutoff time is reached, the system sends a <a>CancelCommand</a> operation
+     *         that attempts to cancel the command associated with the task. However, there is no guarantee that the
+     *         command will be terminated and the underlying process stopped.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         The status for tasks that are not completed is <code>TIMED_OUT</code>.
+     *         </p>
+     *         </li>
+     * @see MaintenanceWindowTaskCutoffBehavior
+     */
+
+    public String getCutoffBehavior() {
+        return this.cutoffBehavior;
+    }
+
+    /**
+     * <p>
+     * Indicates whether tasks should continue to run after the cutoff time specified in the maintenance windows is
+     * reached.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>CONTINUE_TASK</code>: When the cutoff time is reached, any tasks that are running continue. The default
+     * value.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CANCEL_TASK</code>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For Automation, Lambda, Step Functions tasks: When the cutoff time is reached, any task invocations that are
+     * already running continue, but no new task invocations are started.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For Run Command tasks: When the cutoff time is reached, the system sends a <a>CancelCommand</a> operation that
+     * attempts to cancel the command associated with the task. However, there is no guarantee that the command will be
+     * terminated and the underlying process stopped.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The status for tasks that are not completed is <code>TIMED_OUT</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param cutoffBehavior
+     *        Indicates whether tasks should continue to run after the cutoff time specified in the maintenance windows
+     *        is reached. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>CONTINUE_TASK</code>: When the cutoff time is reached, any tasks that are running continue. The
+     *        default value.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CANCEL_TASK</code>:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For Automation, Lambda, Step Functions tasks: When the cutoff time is reached, any task invocations that
+     *        are already running continue, but no new task invocations are started.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For Run Command tasks: When the cutoff time is reached, the system sends a <a>CancelCommand</a> operation
+     *        that attempts to cancel the command associated with the task. However, there is no guarantee that the
+     *        command will be terminated and the underlying process stopped.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        The status for tasks that are not completed is <code>TIMED_OUT</code>.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see MaintenanceWindowTaskCutoffBehavior
+     */
+
+    public UpdateMaintenanceWindowTaskRequest withCutoffBehavior(String cutoffBehavior) {
+        setCutoffBehavior(cutoffBehavior);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether tasks should continue to run after the cutoff time specified in the maintenance windows is
+     * reached.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>CONTINUE_TASK</code>: When the cutoff time is reached, any tasks that are running continue. The default
+     * value.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CANCEL_TASK</code>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For Automation, Lambda, Step Functions tasks: When the cutoff time is reached, any task invocations that are
+     * already running continue, but no new task invocations are started.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For Run Command tasks: When the cutoff time is reached, the system sends a <a>CancelCommand</a> operation that
+     * attempts to cancel the command associated with the task. However, there is no guarantee that the command will be
+     * terminated and the underlying process stopped.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The status for tasks that are not completed is <code>TIMED_OUT</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param cutoffBehavior
+     *        Indicates whether tasks should continue to run after the cutoff time specified in the maintenance windows
+     *        is reached. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>CONTINUE_TASK</code>: When the cutoff time is reached, any tasks that are running continue. The
+     *        default value.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CANCEL_TASK</code>:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For Automation, Lambda, Step Functions tasks: When the cutoff time is reached, any task invocations that
+     *        are already running continue, but no new task invocations are started.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For Run Command tasks: When the cutoff time is reached, the system sends a <a>CancelCommand</a> operation
+     *        that attempts to cancel the command associated with the task. However, there is no guarantee that the
+     *        command will be terminated and the underlying process stopped.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        The status for tasks that are not completed is <code>TIMED_OUT</code>.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see MaintenanceWindowTaskCutoffBehavior
+     */
+
+    public UpdateMaintenanceWindowTaskRequest withCutoffBehavior(MaintenanceWindowTaskCutoffBehavior cutoffBehavior) {
+        this.cutoffBehavior = cutoffBehavior.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1407,7 +1756,9 @@ public class UpdateMaintenanceWindowTaskRequest extends com.amazonaws.AmazonWebS
         if (getDescription() != null)
             sb.append("Description: ").append("***Sensitive Data Redacted***").append(",");
         if (getReplace() != null)
-            sb.append("Replace: ").append(getReplace());
+            sb.append("Replace: ").append(getReplace()).append(",");
+        if (getCutoffBehavior() != null)
+            sb.append("CutoffBehavior: ").append(getCutoffBehavior());
         sb.append("}");
         return sb.toString();
     }
@@ -1478,6 +1829,10 @@ public class UpdateMaintenanceWindowTaskRequest extends com.amazonaws.AmazonWebS
             return false;
         if (other.getReplace() != null && other.getReplace().equals(this.getReplace()) == false)
             return false;
+        if (other.getCutoffBehavior() == null ^ this.getCutoffBehavior() == null)
+            return false;
+        if (other.getCutoffBehavior() != null && other.getCutoffBehavior().equals(this.getCutoffBehavior()) == false)
+            return false;
         return true;
     }
 
@@ -1500,6 +1855,7 @@ public class UpdateMaintenanceWindowTaskRequest extends com.amazonaws.AmazonWebS
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getReplace() == null) ? 0 : getReplace().hashCode());
+        hashCode = prime * hashCode + ((getCutoffBehavior() == null) ? 0 : getCutoffBehavior().hashCode());
         return hashCode;
     }
 

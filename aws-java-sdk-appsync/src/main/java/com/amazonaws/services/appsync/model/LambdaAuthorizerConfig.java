@@ -40,12 +40,13 @@ public class LambdaAuthorizerConfig implements Serializable, Cloneable, Structur
     private Integer authorizerResultTtlInSeconds;
     /**
      * <p>
-     * The ARN of the lambda function to be called for authorization. This may be a standard Lambda ARN, a version ARN (
+     * The ARN of the Lambda function to be called for authorization. This may be a standard Lambda ARN, a version ARN (
      * <code>.../v3</code>) or alias ARN.
      * </p>
      * <p>
      * <i>Note</i>: This Lambda function must have the following resource-based policy assigned to it. When configuring
-     * Lambda authorizers in the Console, this is done for you. To do so with the AWS CLI, run the following:
+     * Lambda authorizers in the Console, this is done for you. To do so with the Amazon Web Services CLI, run the
+     * following:
      * </p>
      * <p>
      * <code>aws lambda add-permission --function-name "arn:aws:lambda:us-east-2:111122223333:function:my-function" --statement-id "appsync" --principal appsync.amazonaws.com --action lambda:InvokeFunction</code>
@@ -54,7 +55,7 @@ public class LambdaAuthorizerConfig implements Serializable, Cloneable, Structur
     private String authorizerUri;
     /**
      * <p>
-     * A regular expression for validation of tokens before the Lambda Function is called.
+     * A regular expression for validation of tokens before the Lambda function is called.
      * </p>
      */
     private String identityValidationExpression;
@@ -113,24 +114,25 @@ public class LambdaAuthorizerConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ARN of the lambda function to be called for authorization. This may be a standard Lambda ARN, a version ARN (
+     * The ARN of the Lambda function to be called for authorization. This may be a standard Lambda ARN, a version ARN (
      * <code>.../v3</code>) or alias ARN.
      * </p>
      * <p>
      * <i>Note</i>: This Lambda function must have the following resource-based policy assigned to it. When configuring
-     * Lambda authorizers in the Console, this is done for you. To do so with the AWS CLI, run the following:
+     * Lambda authorizers in the Console, this is done for you. To do so with the Amazon Web Services CLI, run the
+     * following:
      * </p>
      * <p>
      * <code>aws lambda add-permission --function-name "arn:aws:lambda:us-east-2:111122223333:function:my-function" --statement-id "appsync" --principal appsync.amazonaws.com --action lambda:InvokeFunction</code>
      * </p>
      * 
      * @param authorizerUri
-     *        The ARN of the lambda function to be called for authorization. This may be a standard Lambda ARN, a
+     *        The ARN of the Lambda function to be called for authorization. This may be a standard Lambda ARN, a
      *        version ARN (<code>.../v3</code>) or alias ARN. </p>
      *        <p>
      *        <i>Note</i>: This Lambda function must have the following resource-based policy assigned to it. When
-     *        configuring Lambda authorizers in the Console, this is done for you. To do so with the AWS CLI, run the
-     *        following:
+     *        configuring Lambda authorizers in the Console, this is done for you. To do so with the Amazon Web Services
+     *        CLI, run the following:
      *        </p>
      *        <p>
      *        <code>aws lambda add-permission --function-name "arn:aws:lambda:us-east-2:111122223333:function:my-function" --statement-id "appsync" --principal appsync.amazonaws.com --action lambda:InvokeFunction</code>
@@ -142,23 +144,24 @@ public class LambdaAuthorizerConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ARN of the lambda function to be called for authorization. This may be a standard Lambda ARN, a version ARN (
+     * The ARN of the Lambda function to be called for authorization. This may be a standard Lambda ARN, a version ARN (
      * <code>.../v3</code>) or alias ARN.
      * </p>
      * <p>
      * <i>Note</i>: This Lambda function must have the following resource-based policy assigned to it. When configuring
-     * Lambda authorizers in the Console, this is done for you. To do so with the AWS CLI, run the following:
+     * Lambda authorizers in the Console, this is done for you. To do so with the Amazon Web Services CLI, run the
+     * following:
      * </p>
      * <p>
      * <code>aws lambda add-permission --function-name "arn:aws:lambda:us-east-2:111122223333:function:my-function" --statement-id "appsync" --principal appsync.amazonaws.com --action lambda:InvokeFunction</code>
      * </p>
      * 
-     * @return The ARN of the lambda function to be called for authorization. This may be a standard Lambda ARN, a
+     * @return The ARN of the Lambda function to be called for authorization. This may be a standard Lambda ARN, a
      *         version ARN (<code>.../v3</code>) or alias ARN. </p>
      *         <p>
      *         <i>Note</i>: This Lambda function must have the following resource-based policy assigned to it. When
-     *         configuring Lambda authorizers in the Console, this is done for you. To do so with the AWS CLI, run the
-     *         following:
+     *         configuring Lambda authorizers in the Console, this is done for you. To do so with the Amazon Web
+     *         Services CLI, run the following:
      *         </p>
      *         <p>
      *         <code>aws lambda add-permission --function-name "arn:aws:lambda:us-east-2:111122223333:function:my-function" --statement-id "appsync" --principal appsync.amazonaws.com --action lambda:InvokeFunction</code>
@@ -170,24 +173,25 @@ public class LambdaAuthorizerConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ARN of the lambda function to be called for authorization. This may be a standard Lambda ARN, a version ARN (
+     * The ARN of the Lambda function to be called for authorization. This may be a standard Lambda ARN, a version ARN (
      * <code>.../v3</code>) or alias ARN.
      * </p>
      * <p>
      * <i>Note</i>: This Lambda function must have the following resource-based policy assigned to it. When configuring
-     * Lambda authorizers in the Console, this is done for you. To do so with the AWS CLI, run the following:
+     * Lambda authorizers in the Console, this is done for you. To do so with the Amazon Web Services CLI, run the
+     * following:
      * </p>
      * <p>
      * <code>aws lambda add-permission --function-name "arn:aws:lambda:us-east-2:111122223333:function:my-function" --statement-id "appsync" --principal appsync.amazonaws.com --action lambda:InvokeFunction</code>
      * </p>
      * 
      * @param authorizerUri
-     *        The ARN of the lambda function to be called for authorization. This may be a standard Lambda ARN, a
+     *        The ARN of the Lambda function to be called for authorization. This may be a standard Lambda ARN, a
      *        version ARN (<code>.../v3</code>) or alias ARN. </p>
      *        <p>
      *        <i>Note</i>: This Lambda function must have the following resource-based policy assigned to it. When
-     *        configuring Lambda authorizers in the Console, this is done for you. To do so with the AWS CLI, run the
-     *        following:
+     *        configuring Lambda authorizers in the Console, this is done for you. To do so with the Amazon Web Services
+     *        CLI, run the following:
      *        </p>
      *        <p>
      *        <code>aws lambda add-permission --function-name "arn:aws:lambda:us-east-2:111122223333:function:my-function" --statement-id "appsync" --principal appsync.amazonaws.com --action lambda:InvokeFunction</code>
@@ -201,11 +205,11 @@ public class LambdaAuthorizerConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * A regular expression for validation of tokens before the Lambda Function is called.
+     * A regular expression for validation of tokens before the Lambda function is called.
      * </p>
      * 
      * @param identityValidationExpression
-     *        A regular expression for validation of tokens before the Lambda Function is called.
+     *        A regular expression for validation of tokens before the Lambda function is called.
      */
 
     public void setIdentityValidationExpression(String identityValidationExpression) {
@@ -214,10 +218,10 @@ public class LambdaAuthorizerConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * A regular expression for validation of tokens before the Lambda Function is called.
+     * A regular expression for validation of tokens before the Lambda function is called.
      * </p>
      * 
-     * @return A regular expression for validation of tokens before the Lambda Function is called.
+     * @return A regular expression for validation of tokens before the Lambda function is called.
      */
 
     public String getIdentityValidationExpression() {
@@ -226,11 +230,11 @@ public class LambdaAuthorizerConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * A regular expression for validation of tokens before the Lambda Function is called.
+     * A regular expression for validation of tokens before the Lambda function is called.
      * </p>
      * 
      * @param identityValidationExpression
-     *        A regular expression for validation of tokens before the Lambda Function is called.
+     *        A regular expression for validation of tokens before the Lambda function is called.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,25 +27,24 @@ public class DisassociateOpsItemRelatedItemRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The ID of the OpsItem for which you want to delete an association between the OpsItem and a related resource.
+     * The ID of the OpsItem for which you want to delete an association between the OpsItem and a related item.
      * </p>
      */
     private String opsItemId;
     /**
      * <p>
-     * The ID of the association for which you want to delete an association between the OpsItem and a related resource.
+     * The ID of the association for which you want to delete an association between the OpsItem and a related item.
      * </p>
      */
     private String associationId;
 
     /**
      * <p>
-     * The ID of the OpsItem for which you want to delete an association between the OpsItem and a related resource.
+     * The ID of the OpsItem for which you want to delete an association between the OpsItem and a related item.
      * </p>
      * 
      * @param opsItemId
-     *        The ID of the OpsItem for which you want to delete an association between the OpsItem and a related
-     *        resource.
+     *        The ID of the OpsItem for which you want to delete an association between the OpsItem and a related item.
      */
 
     public void setOpsItemId(String opsItemId) {
@@ -54,11 +53,10 @@ public class DisassociateOpsItemRelatedItemRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The ID of the OpsItem for which you want to delete an association between the OpsItem and a related resource.
+     * The ID of the OpsItem for which you want to delete an association between the OpsItem and a related item.
      * </p>
      * 
-     * @return The ID of the OpsItem for which you want to delete an association between the OpsItem and a related
-     *         resource.
+     * @return The ID of the OpsItem for which you want to delete an association between the OpsItem and a related item.
      */
 
     public String getOpsItemId() {
@@ -67,12 +65,11 @@ public class DisassociateOpsItemRelatedItemRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The ID of the OpsItem for which you want to delete an association between the OpsItem and a related resource.
+     * The ID of the OpsItem for which you want to delete an association between the OpsItem and a related item.
      * </p>
      * 
      * @param opsItemId
-     *        The ID of the OpsItem for which you want to delete an association between the OpsItem and a related
-     *        resource.
+     *        The ID of the OpsItem for which you want to delete an association between the OpsItem and a related item.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,12 +80,12 @@ public class DisassociateOpsItemRelatedItemRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The ID of the association for which you want to delete an association between the OpsItem and a related resource.
+     * The ID of the association for which you want to delete an association between the OpsItem and a related item.
      * </p>
      * 
      * @param associationId
      *        The ID of the association for which you want to delete an association between the OpsItem and a related
-     *        resource.
+     *        item.
      */
 
     public void setAssociationId(String associationId) {
@@ -97,11 +94,11 @@ public class DisassociateOpsItemRelatedItemRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The ID of the association for which you want to delete an association between the OpsItem and a related resource.
+     * The ID of the association for which you want to delete an association between the OpsItem and a related item.
      * </p>
      * 
      * @return The ID of the association for which you want to delete an association between the OpsItem and a related
-     *         resource.
+     *         item.
      */
 
     public String getAssociationId() {
@@ -110,12 +107,12 @@ public class DisassociateOpsItemRelatedItemRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The ID of the association for which you want to delete an association between the OpsItem and a related resource.
+     * The ID of the association for which you want to delete an association between the OpsItem and a related item.
      * </p>
      * 
      * @param associationId
      *        The ID of the association for which you want to delete an association between the OpsItem and a related
-     *        resource.
+     *        item.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

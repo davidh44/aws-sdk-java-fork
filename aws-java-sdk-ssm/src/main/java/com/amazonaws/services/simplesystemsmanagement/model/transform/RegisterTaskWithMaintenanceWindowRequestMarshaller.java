@@ -60,6 +60,8 @@ public class RegisterTaskWithMaintenanceWindowRequestMarshaller {
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ClientToken")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
+    private static final MarshallingInfo<String> CUTOFFBEHAVIOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CutoffBehavior").build();
 
     private static final RegisterTaskWithMaintenanceWindowRequestMarshaller instance = new RegisterTaskWithMaintenanceWindowRequestMarshaller();
 
@@ -91,6 +93,7 @@ public class RegisterTaskWithMaintenanceWindowRequestMarshaller {
             protocolMarshaller.marshall(registerTaskWithMaintenanceWindowRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(registerTaskWithMaintenanceWindowRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(registerTaskWithMaintenanceWindowRequest.getClientToken(), CLIENTTOKEN_BINDING);
+            protocolMarshaller.marshall(registerTaskWithMaintenanceWindowRequest.getCutoffBehavior(), CUTOFFBEHAVIOR_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

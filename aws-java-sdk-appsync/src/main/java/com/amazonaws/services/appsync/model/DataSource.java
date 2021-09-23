@@ -53,17 +53,22 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
+     * <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <b>AMAZON_DYNAMODB</b>: The data source is an Amazon DynamoDB table.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>AMAZON_ELASTICSEARCH</b>: The data source is an Amazon Elasticsearch Service domain.
+     * <b>AMAZON_ELASTICSEARCH</b>: The data source is an Amazon OpenSearch Service domain.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
+     * <b>AMAZON_OPENSEARCH_SERVICE</b>: The data source is an Amazon OpenSearch Service domain.
      * </p>
      * </li>
      * <li>
@@ -107,10 +112,16 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
     private LambdaDataSourceConfig lambdaConfig;
     /**
      * <p>
-     * Amazon Elasticsearch Service settings.
+     * Amazon OpenSearch Service settings.
      * </p>
      */
     private ElasticsearchDataSourceConfig elasticsearchConfig;
+    /**
+     * <p>
+     * Amazon OpenSearch Service settings.
+     * </p>
+     */
+    private OpenSearchServiceDataSourceConfig openSearchServiceConfig;
     /**
      * <p>
      * HTTP endpoint settings.
@@ -251,17 +262,22 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
+     * <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <b>AMAZON_DYNAMODB</b>: The data source is an Amazon DynamoDB table.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>AMAZON_ELASTICSEARCH</b>: The data source is an Amazon Elasticsearch Service domain.
+     * <b>AMAZON_ELASTICSEARCH</b>: The data source is an Amazon OpenSearch Service domain.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
+     * <b>AMAZON_OPENSEARCH_SERVICE</b>: The data source is an Amazon OpenSearch Service domain.
      * </p>
      * </li>
      * <li>
@@ -288,17 +304,22 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
+     *        <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <b>AMAZON_DYNAMODB</b>: The data source is an Amazon DynamoDB table.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>AMAZON_ELASTICSEARCH</b>: The data source is an Amazon Elasticsearch Service domain.
+     *        <b>AMAZON_ELASTICSEARCH</b>: The data source is an Amazon OpenSearch Service domain.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
+     *        <b>AMAZON_OPENSEARCH_SERVICE</b>: The data source is an Amazon OpenSearch Service domain.
      *        </p>
      *        </li>
      *        <li>
@@ -332,17 +353,22 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
+     * <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <b>AMAZON_DYNAMODB</b>: The data source is an Amazon DynamoDB table.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>AMAZON_ELASTICSEARCH</b>: The data source is an Amazon Elasticsearch Service domain.
+     * <b>AMAZON_ELASTICSEARCH</b>: The data source is an Amazon OpenSearch Service domain.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
+     * <b>AMAZON_OPENSEARCH_SERVICE</b>: The data source is an Amazon OpenSearch Service domain.
      * </p>
      * </li>
      * <li>
@@ -368,17 +394,22 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
+     *         <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         <b>AMAZON_DYNAMODB</b>: The data source is an Amazon DynamoDB table.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <b>AMAZON_ELASTICSEARCH</b>: The data source is an Amazon Elasticsearch Service domain.
+     *         <b>AMAZON_ELASTICSEARCH</b>: The data source is an Amazon OpenSearch Service domain.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
+     *         <b>AMAZON_OPENSEARCH_SERVICE</b>: The data source is an Amazon OpenSearch Service domain.
      *         </p>
      *         </li>
      *         <li>
@@ -412,17 +443,22 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
+     * <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <b>AMAZON_DYNAMODB</b>: The data source is an Amazon DynamoDB table.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>AMAZON_ELASTICSEARCH</b>: The data source is an Amazon Elasticsearch Service domain.
+     * <b>AMAZON_ELASTICSEARCH</b>: The data source is an Amazon OpenSearch Service domain.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
+     * <b>AMAZON_OPENSEARCH_SERVICE</b>: The data source is an Amazon OpenSearch Service domain.
      * </p>
      * </li>
      * <li>
@@ -449,17 +485,22 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
+     *        <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <b>AMAZON_DYNAMODB</b>: The data source is an Amazon DynamoDB table.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>AMAZON_ELASTICSEARCH</b>: The data source is an Amazon Elasticsearch Service domain.
+     *        <b>AMAZON_ELASTICSEARCH</b>: The data source is an Amazon OpenSearch Service domain.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
+     *        <b>AMAZON_OPENSEARCH_SERVICE</b>: The data source is an Amazon OpenSearch Service domain.
      *        </p>
      *        </li>
      *        <li>
@@ -495,17 +536,22 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
+     * <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <b>AMAZON_DYNAMODB</b>: The data source is an Amazon DynamoDB table.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>AMAZON_ELASTICSEARCH</b>: The data source is an Amazon Elasticsearch Service domain.
+     * <b>AMAZON_ELASTICSEARCH</b>: The data source is an Amazon OpenSearch Service domain.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
+     * <b>AMAZON_OPENSEARCH_SERVICE</b>: The data source is an Amazon OpenSearch Service domain.
      * </p>
      * </li>
      * <li>
@@ -532,17 +578,22 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
+     *        <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <b>AMAZON_DYNAMODB</b>: The data source is an Amazon DynamoDB table.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>AMAZON_ELASTICSEARCH</b>: The data source is an Amazon Elasticsearch Service domain.
+     *        <b>AMAZON_ELASTICSEARCH</b>: The data source is an Amazon OpenSearch Service domain.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
+     *        <b>AMAZON_OPENSEARCH_SERVICE</b>: The data source is an Amazon OpenSearch Service domain.
      *        </p>
      *        </li>
      *        <li>
@@ -699,11 +750,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Amazon Elasticsearch Service settings.
+     * Amazon OpenSearch Service settings.
      * </p>
      * 
      * @param elasticsearchConfig
-     *        Amazon Elasticsearch Service settings.
+     *        Amazon OpenSearch Service settings.
      */
 
     public void setElasticsearchConfig(ElasticsearchDataSourceConfig elasticsearchConfig) {
@@ -712,10 +763,10 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Amazon Elasticsearch Service settings.
+     * Amazon OpenSearch Service settings.
      * </p>
      * 
-     * @return Amazon Elasticsearch Service settings.
+     * @return Amazon OpenSearch Service settings.
      */
 
     public ElasticsearchDataSourceConfig getElasticsearchConfig() {
@@ -724,16 +775,56 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Amazon Elasticsearch Service settings.
+     * Amazon OpenSearch Service settings.
      * </p>
      * 
      * @param elasticsearchConfig
-     *        Amazon Elasticsearch Service settings.
+     *        Amazon OpenSearch Service settings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public DataSource withElasticsearchConfig(ElasticsearchDataSourceConfig elasticsearchConfig) {
         setElasticsearchConfig(elasticsearchConfig);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Amazon OpenSearch Service settings.
+     * </p>
+     * 
+     * @param openSearchServiceConfig
+     *        Amazon OpenSearch Service settings.
+     */
+
+    public void setOpenSearchServiceConfig(OpenSearchServiceDataSourceConfig openSearchServiceConfig) {
+        this.openSearchServiceConfig = openSearchServiceConfig;
+    }
+
+    /**
+     * <p>
+     * Amazon OpenSearch Service settings.
+     * </p>
+     * 
+     * @return Amazon OpenSearch Service settings.
+     */
+
+    public OpenSearchServiceDataSourceConfig getOpenSearchServiceConfig() {
+        return this.openSearchServiceConfig;
+    }
+
+    /**
+     * <p>
+     * Amazon OpenSearch Service settings.
+     * </p>
+     * 
+     * @param openSearchServiceConfig
+     *        Amazon OpenSearch Service settings.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataSource withOpenSearchServiceConfig(OpenSearchServiceDataSourceConfig openSearchServiceConfig) {
+        setOpenSearchServiceConfig(openSearchServiceConfig);
         return this;
     }
 
@@ -845,6 +936,8 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
             sb.append("LambdaConfig: ").append(getLambdaConfig()).append(",");
         if (getElasticsearchConfig() != null)
             sb.append("ElasticsearchConfig: ").append(getElasticsearchConfig()).append(",");
+        if (getOpenSearchServiceConfig() != null)
+            sb.append("OpenSearchServiceConfig: ").append(getOpenSearchServiceConfig()).append(",");
         if (getHttpConfig() != null)
             sb.append("HttpConfig: ").append(getHttpConfig()).append(",");
         if (getRelationalDatabaseConfig() != null)
@@ -895,6 +988,10 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getElasticsearchConfig() != null && other.getElasticsearchConfig().equals(this.getElasticsearchConfig()) == false)
             return false;
+        if (other.getOpenSearchServiceConfig() == null ^ this.getOpenSearchServiceConfig() == null)
+            return false;
+        if (other.getOpenSearchServiceConfig() != null && other.getOpenSearchServiceConfig().equals(this.getOpenSearchServiceConfig()) == false)
+            return false;
         if (other.getHttpConfig() == null ^ this.getHttpConfig() == null)
             return false;
         if (other.getHttpConfig() != null && other.getHttpConfig().equals(this.getHttpConfig()) == false)
@@ -919,6 +1016,7 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getDynamodbConfig() == null) ? 0 : getDynamodbConfig().hashCode());
         hashCode = prime * hashCode + ((getLambdaConfig() == null) ? 0 : getLambdaConfig().hashCode());
         hashCode = prime * hashCode + ((getElasticsearchConfig() == null) ? 0 : getElasticsearchConfig().hashCode());
+        hashCode = prime * hashCode + ((getOpenSearchServiceConfig() == null) ? 0 : getOpenSearchServiceConfig().hashCode());
         hashCode = prime * hashCode + ((getHttpConfig() == null) ? 0 : getHttpConfig().hashCode());
         hashCode = prime * hashCode + ((getRelationalDatabaseConfig() == null) ? 0 : getRelationalDatabaseConfig().hashCode());
         return hashCode;

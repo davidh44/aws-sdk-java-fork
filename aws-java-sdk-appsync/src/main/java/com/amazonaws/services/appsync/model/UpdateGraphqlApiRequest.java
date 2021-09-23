@@ -75,7 +75,7 @@ public class UpdateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
     private Boolean xrayEnabled;
     /**
      * <p>
-     * Configuration for AWS Lambda function authorization.
+     * Configuration for Amazon Web Services Lambda function authorization.
      * </p>
      */
     private LambdaAuthorizerConfig lambdaAuthorizerConfig;
@@ -464,11 +464,11 @@ public class UpdateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Configuration for AWS Lambda function authorization.
+     * Configuration for Amazon Web Services Lambda function authorization.
      * </p>
      * 
      * @param lambdaAuthorizerConfig
-     *        Configuration for AWS Lambda function authorization.
+     *        Configuration for Amazon Web Services Lambda function authorization.
      */
 
     public void setLambdaAuthorizerConfig(LambdaAuthorizerConfig lambdaAuthorizerConfig) {
@@ -477,10 +477,10 @@ public class UpdateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Configuration for AWS Lambda function authorization.
+     * Configuration for Amazon Web Services Lambda function authorization.
      * </p>
      * 
-     * @return Configuration for AWS Lambda function authorization.
+     * @return Configuration for Amazon Web Services Lambda function authorization.
      */
 
     public LambdaAuthorizerConfig getLambdaAuthorizerConfig() {
@@ -489,11 +489,11 @@ public class UpdateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Configuration for AWS Lambda function authorization.
+     * Configuration for Amazon Web Services Lambda function authorization.
      * </p>
      * 
      * @param lambdaAuthorizerConfig
-     *        Configuration for AWS Lambda function authorization.
+     *        Configuration for Amazon Web Services Lambda function authorization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -22,7 +22,8 @@ public enum BurninSubtitleBackgroundColor {
 
     NONE("NONE"),
     BLACK("BLACK"),
-    WHITE("WHITE");
+    WHITE("WHITE"),
+    AUTO("AUTO");
 
     private String value;
 

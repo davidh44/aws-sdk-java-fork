@@ -63,11 +63,17 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * The name of the Amazon Web Services Systems Manager document (SSM document) to run. This can be a public document
-     * or a custom document. To run a shared document belonging to another account, specify the document ARN. For more
-     * information about how to use shared documents, see <a
+     * or a custom document. To run a shared document belonging to another account, specify the document Amazon Resource
+     * Name (ARN). For more information about how to use shared documents, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-using-shared.html">Using shared SSM
      * documents</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * If you specify a document name or ARN that hasn't been shared with your account, you receive an
+     * <code>InvalidDocument</code> error.
+     * </p>
+     * </note>
      */
     private String documentName;
     /**
@@ -522,18 +528,28 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * The name of the Amazon Web Services Systems Manager document (SSM document) to run. This can be a public document
-     * or a custom document. To run a shared document belonging to another account, specify the document ARN. For more
-     * information about how to use shared documents, see <a
+     * or a custom document. To run a shared document belonging to another account, specify the document Amazon Resource
+     * Name (ARN). For more information about how to use shared documents, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-using-shared.html">Using shared SSM
      * documents</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * If you specify a document name or ARN that hasn't been shared with your account, you receive an
+     * <code>InvalidDocument</code> error.
+     * </p>
+     * </note>
      * 
      * @param documentName
      *        The name of the Amazon Web Services Systems Manager document (SSM document) to run. This can be a public
      *        document or a custom document. To run a shared document belonging to another account, specify the document
-     *        ARN. For more information about how to use shared documents, see <a
+     *        Amazon Resource Name (ARN). For more information about how to use shared documents, see <a
      *        href="https://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-using-shared.html">Using shared SSM
-     *        documents</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *        documents</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.</p> <note>
+     *        <p>
+     *        If you specify a document name or ARN that hasn't been shared with your account, you receive an
+     *        <code>InvalidDocument</code> error.
+     *        </p>
      */
 
     public void setDocumentName(String documentName) {
@@ -543,17 +559,27 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * The name of the Amazon Web Services Systems Manager document (SSM document) to run. This can be a public document
-     * or a custom document. To run a shared document belonging to another account, specify the document ARN. For more
-     * information about how to use shared documents, see <a
+     * or a custom document. To run a shared document belonging to another account, specify the document Amazon Resource
+     * Name (ARN). For more information about how to use shared documents, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-using-shared.html">Using shared SSM
      * documents</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * If you specify a document name or ARN that hasn't been shared with your account, you receive an
+     * <code>InvalidDocument</code> error.
+     * </p>
+     * </note>
      * 
      * @return The name of the Amazon Web Services Systems Manager document (SSM document) to run. This can be a public
      *         document or a custom document. To run a shared document belonging to another account, specify the
-     *         document ARN. For more information about how to use shared documents, see <a
+     *         document Amazon Resource Name (ARN). For more information about how to use shared documents, see <a
      *         href="https://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-using-shared.html">Using shared
-     *         SSM documents</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *         SSM documents</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.</p> <note>
+     *         <p>
+     *         If you specify a document name or ARN that hasn't been shared with your account, you receive an
+     *         <code>InvalidDocument</code> error.
+     *         </p>
      */
 
     public String getDocumentName() {
@@ -563,18 +589,28 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * The name of the Amazon Web Services Systems Manager document (SSM document) to run. This can be a public document
-     * or a custom document. To run a shared document belonging to another account, specify the document ARN. For more
-     * information about how to use shared documents, see <a
+     * or a custom document. To run a shared document belonging to another account, specify the document Amazon Resource
+     * Name (ARN). For more information about how to use shared documents, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-using-shared.html">Using shared SSM
      * documents</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * If you specify a document name or ARN that hasn't been shared with your account, you receive an
+     * <code>InvalidDocument</code> error.
+     * </p>
+     * </note>
      * 
      * @param documentName
      *        The name of the Amazon Web Services Systems Manager document (SSM document) to run. This can be a public
      *        document or a custom document. To run a shared document belonging to another account, specify the document
-     *        ARN. For more information about how to use shared documents, see <a
+     *        Amazon Resource Name (ARN). For more information about how to use shared documents, see <a
      *        href="https://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-using-shared.html">Using shared SSM
-     *        documents</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *        documents</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.</p> <note>
+     *        <p>
+     *        If you specify a document name or ARN that hasn't been shared with your account, you receive an
+     *        <code>InvalidDocument</code> error.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

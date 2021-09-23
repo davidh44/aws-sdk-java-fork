@@ -46,6 +46,8 @@ public class DashIsoGroupSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("hbbtvCompliance").build();
     private static final MarshallingInfo<String> IMAGEBASEDTRICKPLAY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("imageBasedTrickPlay").build();
+    private static final MarshallingInfo<StructuredPojo> IMAGEBASEDTRICKPLAYSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("imageBasedTrickPlaySettings").build();
     private static final MarshallingInfo<Integer> MINBUFFERTIME_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("minBufferTime").build();
     private static final MarshallingInfo<Double> MINFINALSEGMENTLENGTH_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
@@ -88,6 +90,7 @@ public class DashIsoGroupSettingsMarshaller {
             protocolMarshaller.marshall(dashIsoGroupSettings.getFragmentLength(), FRAGMENTLENGTH_BINDING);
             protocolMarshaller.marshall(dashIsoGroupSettings.getHbbtvCompliance(), HBBTVCOMPLIANCE_BINDING);
             protocolMarshaller.marshall(dashIsoGroupSettings.getImageBasedTrickPlay(), IMAGEBASEDTRICKPLAY_BINDING);
+            protocolMarshaller.marshall(dashIsoGroupSettings.getImageBasedTrickPlaySettings(), IMAGEBASEDTRICKPLAYSETTINGS_BINDING);
             protocolMarshaller.marshall(dashIsoGroupSettings.getMinBufferTime(), MINBUFFERTIME_BINDING);
             protocolMarshaller.marshall(dashIsoGroupSettings.getMinFinalSegmentLength(), MINFINALSEGMENTLENGTH_BINDING);
             protocolMarshaller.marshall(dashIsoGroupSettings.getMpdProfile(), MPDPROFILE_BINDING);

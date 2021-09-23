@@ -87,6 +87,10 @@ public class DashIsoGroupSettingsJsonUnmarshaller implements Unmarshaller<DashIs
                     context.nextToken();
                     dashIsoGroupSettings.setImageBasedTrickPlay(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("imageBasedTrickPlaySettings", targetDepth)) {
+                    context.nextToken();
+                    dashIsoGroupSettings.setImageBasedTrickPlaySettings(DashIsoImageBasedTrickPlaySettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("minBufferTime", targetDepth)) {
                     context.nextToken();
                     dashIsoGroupSettings.setMinBufferTime(context.getUnmarshaller(Integer.class).unmarshall(context));

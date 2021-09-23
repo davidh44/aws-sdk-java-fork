@@ -101,9 +101,8 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
      */
     private String wafWebAclArn;
     /**
-     * <p/>
      * <p>
-     * Configuration for AWS Lambda function authorization.
+     * Configuration for Amazon Web Services Lambda function authorization.
      * </p>
      */
     private LambdaAuthorizerConfig lambdaAuthorizerConfig;
@@ -706,14 +705,12 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
      * <p>
-     * Configuration for AWS Lambda function authorization.
+     * Configuration for Amazon Web Services Lambda function authorization.
      * </p>
      * 
      * @param lambdaAuthorizerConfig
-     *        <p>
-     *        Configuration for AWS Lambda function authorization.
+     *        Configuration for Amazon Web Services Lambda function authorization.
      */
 
     public void setLambdaAuthorizerConfig(LambdaAuthorizerConfig lambdaAuthorizerConfig) {
@@ -721,13 +718,11 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
      * <p>
-     * Configuration for AWS Lambda function authorization.
+     * Configuration for Amazon Web Services Lambda function authorization.
      * </p>
      * 
-     * @return <p>
-     *         Configuration for AWS Lambda function authorization.
+     * @return Configuration for Amazon Web Services Lambda function authorization.
      */
 
     public LambdaAuthorizerConfig getLambdaAuthorizerConfig() {
@@ -735,14 +730,12 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
      * <p>
-     * Configuration for AWS Lambda function authorization.
+     * Configuration for Amazon Web Services Lambda function authorization.
      * </p>
      * 
      * @param lambdaAuthorizerConfig
-     *        <p>
-     *        Configuration for AWS Lambda function authorization.
+     *        Configuration for Amazon Web Services Lambda function authorization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -70,10 +70,21 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     private LambdaDataSourceConfig lambdaConfig;
     /**
      * <p>
-     * Amazon Elasticsearch Service settings.
+     * Amazon OpenSearch Service settings.
+     * </p>
+     * <p>
+     * As of September 2021, Amazon Elasticsearch service is Amazon OpenSearch Service. This configuration is
+     * deprecated. For new data sources, use <a>CreateDataSourceRequest$openSearchServiceConfig</a> to create an
+     * OpenSearch data source.
      * </p>
      */
     private ElasticsearchDataSourceConfig elasticsearchConfig;
+    /**
+     * <p>
+     * Amazon OpenSearch Service settings.
+     * </p>
+     */
+    private OpenSearchServiceDataSourceConfig openSearchServiceConfig;
     /**
      * <p>
      * HTTP endpoint settings.
@@ -394,11 +405,20 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Amazon Elasticsearch Service settings.
+     * Amazon OpenSearch Service settings.
+     * </p>
+     * <p>
+     * As of September 2021, Amazon Elasticsearch service is Amazon OpenSearch Service. This configuration is
+     * deprecated. For new data sources, use <a>CreateDataSourceRequest$openSearchServiceConfig</a> to create an
+     * OpenSearch data source.
      * </p>
      * 
      * @param elasticsearchConfig
-     *        Amazon Elasticsearch Service settings.
+     *        Amazon OpenSearch Service settings.</p>
+     *        <p>
+     *        As of September 2021, Amazon Elasticsearch service is Amazon OpenSearch Service. This configuration is
+     *        deprecated. For new data sources, use <a>CreateDataSourceRequest$openSearchServiceConfig</a> to create an
+     *        OpenSearch data source.
      */
 
     public void setElasticsearchConfig(ElasticsearchDataSourceConfig elasticsearchConfig) {
@@ -407,10 +427,19 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Amazon Elasticsearch Service settings.
+     * Amazon OpenSearch Service settings.
+     * </p>
+     * <p>
+     * As of September 2021, Amazon Elasticsearch service is Amazon OpenSearch Service. This configuration is
+     * deprecated. For new data sources, use <a>CreateDataSourceRequest$openSearchServiceConfig</a> to create an
+     * OpenSearch data source.
      * </p>
      * 
-     * @return Amazon Elasticsearch Service settings.
+     * @return Amazon OpenSearch Service settings.</p>
+     *         <p>
+     *         As of September 2021, Amazon Elasticsearch service is Amazon OpenSearch Service. This configuration is
+     *         deprecated. For new data sources, use <a>CreateDataSourceRequest$openSearchServiceConfig</a> to create an
+     *         OpenSearch data source.
      */
 
     public ElasticsearchDataSourceConfig getElasticsearchConfig() {
@@ -419,16 +448,65 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Amazon Elasticsearch Service settings.
+     * Amazon OpenSearch Service settings.
+     * </p>
+     * <p>
+     * As of September 2021, Amazon Elasticsearch service is Amazon OpenSearch Service. This configuration is
+     * deprecated. For new data sources, use <a>CreateDataSourceRequest$openSearchServiceConfig</a> to create an
+     * OpenSearch data source.
      * </p>
      * 
      * @param elasticsearchConfig
-     *        Amazon Elasticsearch Service settings.
+     *        Amazon OpenSearch Service settings.</p>
+     *        <p>
+     *        As of September 2021, Amazon Elasticsearch service is Amazon OpenSearch Service. This configuration is
+     *        deprecated. For new data sources, use <a>CreateDataSourceRequest$openSearchServiceConfig</a> to create an
+     *        OpenSearch data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public CreateDataSourceRequest withElasticsearchConfig(ElasticsearchDataSourceConfig elasticsearchConfig) {
         setElasticsearchConfig(elasticsearchConfig);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Amazon OpenSearch Service settings.
+     * </p>
+     * 
+     * @param openSearchServiceConfig
+     *        Amazon OpenSearch Service settings.
+     */
+
+    public void setOpenSearchServiceConfig(OpenSearchServiceDataSourceConfig openSearchServiceConfig) {
+        this.openSearchServiceConfig = openSearchServiceConfig;
+    }
+
+    /**
+     * <p>
+     * Amazon OpenSearch Service settings.
+     * </p>
+     * 
+     * @return Amazon OpenSearch Service settings.
+     */
+
+    public OpenSearchServiceDataSourceConfig getOpenSearchServiceConfig() {
+        return this.openSearchServiceConfig;
+    }
+
+    /**
+     * <p>
+     * Amazon OpenSearch Service settings.
+     * </p>
+     * 
+     * @param openSearchServiceConfig
+     *        Amazon OpenSearch Service settings.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDataSourceRequest withOpenSearchServiceConfig(OpenSearchServiceDataSourceConfig openSearchServiceConfig) {
+        setOpenSearchServiceConfig(openSearchServiceConfig);
         return this;
     }
 
@@ -540,6 +618,8 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
             sb.append("LambdaConfig: ").append(getLambdaConfig()).append(",");
         if (getElasticsearchConfig() != null)
             sb.append("ElasticsearchConfig: ").append(getElasticsearchConfig()).append(",");
+        if (getOpenSearchServiceConfig() != null)
+            sb.append("OpenSearchServiceConfig: ").append(getOpenSearchServiceConfig()).append(",");
         if (getHttpConfig() != null)
             sb.append("HttpConfig: ").append(getHttpConfig()).append(",");
         if (getRelationalDatabaseConfig() != null)
@@ -590,6 +670,10 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getElasticsearchConfig() != null && other.getElasticsearchConfig().equals(this.getElasticsearchConfig()) == false)
             return false;
+        if (other.getOpenSearchServiceConfig() == null ^ this.getOpenSearchServiceConfig() == null)
+            return false;
+        if (other.getOpenSearchServiceConfig() != null && other.getOpenSearchServiceConfig().equals(this.getOpenSearchServiceConfig()) == false)
+            return false;
         if (other.getHttpConfig() == null ^ this.getHttpConfig() == null)
             return false;
         if (other.getHttpConfig() != null && other.getHttpConfig().equals(this.getHttpConfig()) == false)
@@ -614,6 +698,7 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getDynamodbConfig() == null) ? 0 : getDynamodbConfig().hashCode());
         hashCode = prime * hashCode + ((getLambdaConfig() == null) ? 0 : getLambdaConfig().hashCode());
         hashCode = prime * hashCode + ((getElasticsearchConfig() == null) ? 0 : getElasticsearchConfig().hashCode());
+        hashCode = prime * hashCode + ((getOpenSearchServiceConfig() == null) ? 0 : getOpenSearchServiceConfig().hashCode());
         hashCode = prime * hashCode + ((getHttpConfig() == null) ? 0 : getHttpConfig().hashCode());
         hashCode = prime * hashCode + ((getRelationalDatabaseConfig() == null) ? 0 : getRelationalDatabaseConfig().hashCode());
         return hashCode;

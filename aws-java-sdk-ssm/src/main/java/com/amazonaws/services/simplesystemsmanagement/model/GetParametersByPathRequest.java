@@ -54,12 +54,12 @@ public class GetParametersByPathRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * <note>
      * <p>
-     * For <code>GetParametersByPath</code>, the following filter <code>Key</code> names are supported:
-     * <code>Type</code>, <code>KeyId</code>, <code>Label</code>, and <code>DataType</code>.
+     * The following <code>Key</code> values are supported for <code>GetParametersByPath</code>: <code>Type</code>,
+     * <code>KeyId</code>, and <code>Label</code>.
      * </p>
      * <p>
-     * The following <code>Key</code> values are not supported for <code>GetParametersByPath</code>: <code>tag</code>,
-     * <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
+     * The following <code>Key</code> values aren't supported for <code>GetParametersByPath</code>: <code>tag</code>,
+     * <code>DataType</code>, <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
      * </p>
      * </note>
      */
@@ -256,23 +256,23 @@ public class GetParametersByPathRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * <note>
      * <p>
-     * For <code>GetParametersByPath</code>, the following filter <code>Key</code> names are supported:
-     * <code>Type</code>, <code>KeyId</code>, <code>Label</code>, and <code>DataType</code>.
+     * The following <code>Key</code> values are supported for <code>GetParametersByPath</code>: <code>Type</code>,
+     * <code>KeyId</code>, and <code>Label</code>.
      * </p>
      * <p>
-     * The following <code>Key</code> values are not supported for <code>GetParametersByPath</code>: <code>tag</code>,
-     * <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
+     * The following <code>Key</code> values aren't supported for <code>GetParametersByPath</code>: <code>tag</code>,
+     * <code>DataType</code>, <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
      * </p>
      * </note>
      * 
      * @return Filters to limit the request results.</p> <note>
      *         <p>
-     *         For <code>GetParametersByPath</code>, the following filter <code>Key</code> names are supported:
-     *         <code>Type</code>, <code>KeyId</code>, <code>Label</code>, and <code>DataType</code>.
+     *         The following <code>Key</code> values are supported for <code>GetParametersByPath</code>:
+     *         <code>Type</code>, <code>KeyId</code>, and <code>Label</code>.
      *         </p>
      *         <p>
-     *         The following <code>Key</code> values are not supported for <code>GetParametersByPath</code>:
-     *         <code>tag</code>, <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
+     *         The following <code>Key</code> values aren't supported for <code>GetParametersByPath</code>:
+     *         <code>tag</code>, <code>DataType</code>, <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
      *         </p>
      */
 
@@ -289,24 +289,24 @@ public class GetParametersByPathRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * <note>
      * <p>
-     * For <code>GetParametersByPath</code>, the following filter <code>Key</code> names are supported:
-     * <code>Type</code>, <code>KeyId</code>, <code>Label</code>, and <code>DataType</code>.
+     * The following <code>Key</code> values are supported for <code>GetParametersByPath</code>: <code>Type</code>,
+     * <code>KeyId</code>, and <code>Label</code>.
      * </p>
      * <p>
-     * The following <code>Key</code> values are not supported for <code>GetParametersByPath</code>: <code>tag</code>,
-     * <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
+     * The following <code>Key</code> values aren't supported for <code>GetParametersByPath</code>: <code>tag</code>,
+     * <code>DataType</code>, <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
      * </p>
      * </note>
      * 
      * @param parameterFilters
      *        Filters to limit the request results.</p> <note>
      *        <p>
-     *        For <code>GetParametersByPath</code>, the following filter <code>Key</code> names are supported:
-     *        <code>Type</code>, <code>KeyId</code>, <code>Label</code>, and <code>DataType</code>.
+     *        The following <code>Key</code> values are supported for <code>GetParametersByPath</code>:
+     *        <code>Type</code>, <code>KeyId</code>, and <code>Label</code>.
      *        </p>
      *        <p>
-     *        The following <code>Key</code> values are not supported for <code>GetParametersByPath</code>:
-     *        <code>tag</code>, <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
+     *        The following <code>Key</code> values aren't supported for <code>GetParametersByPath</code>:
+     *        <code>tag</code>, <code>DataType</code>, <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
      *        </p>
      */
 
@@ -325,12 +325,12 @@ public class GetParametersByPathRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * <note>
      * <p>
-     * For <code>GetParametersByPath</code>, the following filter <code>Key</code> names are supported:
-     * <code>Type</code>, <code>KeyId</code>, <code>Label</code>, and <code>DataType</code>.
+     * The following <code>Key</code> values are supported for <code>GetParametersByPath</code>: <code>Type</code>,
+     * <code>KeyId</code>, and <code>Label</code>.
      * </p>
      * <p>
-     * The following <code>Key</code> values are not supported for <code>GetParametersByPath</code>: <code>tag</code>,
-     * <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
+     * The following <code>Key</code> values aren't supported for <code>GetParametersByPath</code>: <code>tag</code>,
+     * <code>DataType</code>, <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
      * </p>
      * </note>
      * <p>
@@ -342,12 +342,12 @@ public class GetParametersByPathRequest extends com.amazonaws.AmazonWebServiceRe
      * @param parameterFilters
      *        Filters to limit the request results.</p> <note>
      *        <p>
-     *        For <code>GetParametersByPath</code>, the following filter <code>Key</code> names are supported:
-     *        <code>Type</code>, <code>KeyId</code>, <code>Label</code>, and <code>DataType</code>.
+     *        The following <code>Key</code> values are supported for <code>GetParametersByPath</code>:
+     *        <code>Type</code>, <code>KeyId</code>, and <code>Label</code>.
      *        </p>
      *        <p>
-     *        The following <code>Key</code> values are not supported for <code>GetParametersByPath</code>:
-     *        <code>tag</code>, <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
+     *        The following <code>Key</code> values aren't supported for <code>GetParametersByPath</code>:
+     *        <code>tag</code>, <code>DataType</code>, <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -368,24 +368,24 @@ public class GetParametersByPathRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * <note>
      * <p>
-     * For <code>GetParametersByPath</code>, the following filter <code>Key</code> names are supported:
-     * <code>Type</code>, <code>KeyId</code>, <code>Label</code>, and <code>DataType</code>.
+     * The following <code>Key</code> values are supported for <code>GetParametersByPath</code>: <code>Type</code>,
+     * <code>KeyId</code>, and <code>Label</code>.
      * </p>
      * <p>
-     * The following <code>Key</code> values are not supported for <code>GetParametersByPath</code>: <code>tag</code>,
-     * <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
+     * The following <code>Key</code> values aren't supported for <code>GetParametersByPath</code>: <code>tag</code>,
+     * <code>DataType</code>, <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
      * </p>
      * </note>
      * 
      * @param parameterFilters
      *        Filters to limit the request results.</p> <note>
      *        <p>
-     *        For <code>GetParametersByPath</code>, the following filter <code>Key</code> names are supported:
-     *        <code>Type</code>, <code>KeyId</code>, <code>Label</code>, and <code>DataType</code>.
+     *        The following <code>Key</code> values are supported for <code>GetParametersByPath</code>:
+     *        <code>Type</code>, <code>KeyId</code>, and <code>Label</code>.
      *        </p>
      *        <p>
-     *        The following <code>Key</code> values are not supported for <code>GetParametersByPath</code>:
-     *        <code>tag</code>, <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
+     *        The following <code>Key</code> values aren't supported for <code>GetParametersByPath</code>:
+     *        <code>tag</code>, <code>DataType</code>, <code>Name</code>, <code>Path</code>, and <code>Tier</code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

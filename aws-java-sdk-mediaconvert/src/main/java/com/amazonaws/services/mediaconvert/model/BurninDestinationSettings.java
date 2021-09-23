@@ -38,6 +38,15 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
      */
     private String alignment;
     /**
+     * Ignore this setting unless your input captions are STL, any type of 608, teletext, or TTML, and your output
+     * captions are burned in. Specify how the service applies the color specified in the setting Font color
+     * (BurninSubtitleFontColor). By default, this color is white. When you choose WHITE_TEXT_ONLY, the service uses the
+     * specified font color only for text that is white in the input. When you choose ALL_TEXT, the service uses the
+     * specified font color for all output captions text. If you leave both settings at their default value, your output
+     * font color is the same as your input font color.
+     */
+    private String applyFontColor;
+    /**
      * Specifies the color of the rectangle behind the captions. All burn-in and DVB-Sub font settings must match.
      */
     private String backgroundColor;
@@ -46,6 +55,15 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
      * is equivalent to setting it to 0 (transparent). All burn-in and DVB-Sub font settings must match.
      */
     private Integer backgroundOpacity;
+    /**
+     * Specify the font that you want the service to use for your burn in captions when your input captions specify a
+     * font that MediaConvert doesn't support. When you keep the default value, Best match (BEST_MATCH), MediaConvert
+     * uses a supported font that most closely matches the font that your input captions specify. When there are multiple
+     * unsupported fonts in your input captions, MediaConvert matches each font with the supported font that matches
+     * best. When you explicitly choose a replacement font, MediaConvert uses that font to replace all unsupported fonts
+     * from your input.
+     */
+    private String fallbackFont;
     /**
      * Specifies the color of the burned-in captions. This option is not valid for source captions that are STL,
      * 608/embedded or teletext. These source settings are already pre-defined by the caption stream. All burn-in and
@@ -72,6 +90,13 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
      * burn-in and DVB-Sub font settings must match.
      */
     private Integer fontSize;
+    /**
+     * Ignore this setting unless your BurninSubtitleFontColor setting is HEX. Format is six or eight hexidecimal
+     * digits, representing the red, green, and blue components, with the two extra digits used for an optional alpha
+     * value. For example a value of 1122AABB is a red value of 0x11, a green value of 0x22, a blue value of 0xAA, and an
+     * alpha value of 0xBB.
+     */
+    private String hexFontColor;
     /**
      * Specifies font outline color. This option is not valid for source captions that are either 608/embedded or
      * teletext. These source settings are already pre-defined by the caption stream. All burn-in and DVB-Sub font
@@ -103,6 +128,14 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
      * shadow offset 2 pixels above the text. All burn-in and DVB-Sub font settings must match.
      */
     private Integer shadowYOffset;
+    /**
+     * Ignore this setting unless your output captions are burned in. Choose which set of style and position values the
+     * service applies to your output captions. When you choose ENABLED, the service uses the input style and position
+     * information from your input. When you choose DISABLED, the service uses any style values that you specify in your
+     * output settings. If you don't specify values, the service uses default style and position values. When you choose
+     * DISABLED, the service ignores all style and position values from your input.
+     */
+    private String stylePassthrough;
     /**
      * Only applies to jobs with input captions in Teletext or STL formats. Specify whether the spacing between letters
      * in your captions is set by the captions grid or varies depending on letter width. Choose fixed grid to conform to
@@ -219,6 +252,97 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
     }
 
     /**
+     * Ignore this setting unless your input captions are STL, any type of 608, teletext, or TTML, and your output
+     * captions are burned in. Specify how the service applies the color specified in the setting Font color
+     * (BurninSubtitleFontColor). By default, this color is white. When you choose WHITE_TEXT_ONLY, the service uses the
+     * specified font color only for text that is white in the input. When you choose ALL_TEXT, the service uses the
+     * specified font color for all output captions text. If you leave both settings at their default value, your output
+     * font color is the same as your input font color.
+     * 
+     * @param applyFontColor
+     *        Ignore this setting unless your input captions are STL, any type of 608, teletext, or TTML, and your
+     *        output captions are burned in. Specify how the service applies the color specified in the setting Font
+     *        color (BurninSubtitleFontColor). By default, this color is white. When you choose WHITE_TEXT_ONLY, the
+     *        service uses the specified font color only for text that is white in the input. When you choose ALL_TEXT,
+     *        the service uses the specified font color for all output captions text. If you leave both settings at
+     *        their default value, your output font color is the same as your input font color.
+     * @see BurninSubtitleApplyFontColor
+     */
+
+    public void setApplyFontColor(String applyFontColor) {
+        this.applyFontColor = applyFontColor;
+    }
+
+    /**
+     * Ignore this setting unless your input captions are STL, any type of 608, teletext, or TTML, and your output
+     * captions are burned in. Specify how the service applies the color specified in the setting Font color
+     * (BurninSubtitleFontColor). By default, this color is white. When you choose WHITE_TEXT_ONLY, the service uses the
+     * specified font color only for text that is white in the input. When you choose ALL_TEXT, the service uses the
+     * specified font color for all output captions text. If you leave both settings at their default value, your output
+     * font color is the same as your input font color.
+     * 
+     * @return Ignore this setting unless your input captions are STL, any type of 608, teletext, or TTML, and your
+     *         output captions are burned in. Specify how the service applies the color specified in the setting Font
+     *         color (BurninSubtitleFontColor). By default, this color is white. When you choose WHITE_TEXT_ONLY, the
+     *         service uses the specified font color only for text that is white in the input. When you choose ALL_TEXT,
+     *         the service uses the specified font color for all output captions text. If you leave both settings at
+     *         their default value, your output font color is the same as your input font color.
+     * @see BurninSubtitleApplyFontColor
+     */
+
+    public String getApplyFontColor() {
+        return this.applyFontColor;
+    }
+
+    /**
+     * Ignore this setting unless your input captions are STL, any type of 608, teletext, or TTML, and your output
+     * captions are burned in. Specify how the service applies the color specified in the setting Font color
+     * (BurninSubtitleFontColor). By default, this color is white. When you choose WHITE_TEXT_ONLY, the service uses the
+     * specified font color only for text that is white in the input. When you choose ALL_TEXT, the service uses the
+     * specified font color for all output captions text. If you leave both settings at their default value, your output
+     * font color is the same as your input font color.
+     * 
+     * @param applyFontColor
+     *        Ignore this setting unless your input captions are STL, any type of 608, teletext, or TTML, and your
+     *        output captions are burned in. Specify how the service applies the color specified in the setting Font
+     *        color (BurninSubtitleFontColor). By default, this color is white. When you choose WHITE_TEXT_ONLY, the
+     *        service uses the specified font color only for text that is white in the input. When you choose ALL_TEXT,
+     *        the service uses the specified font color for all output captions text. If you leave both settings at
+     *        their default value, your output font color is the same as your input font color.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see BurninSubtitleApplyFontColor
+     */
+
+    public BurninDestinationSettings withApplyFontColor(String applyFontColor) {
+        setApplyFontColor(applyFontColor);
+        return this;
+    }
+
+    /**
+     * Ignore this setting unless your input captions are STL, any type of 608, teletext, or TTML, and your output
+     * captions are burned in. Specify how the service applies the color specified in the setting Font color
+     * (BurninSubtitleFontColor). By default, this color is white. When you choose WHITE_TEXT_ONLY, the service uses the
+     * specified font color only for text that is white in the input. When you choose ALL_TEXT, the service uses the
+     * specified font color for all output captions text. If you leave both settings at their default value, your output
+     * font color is the same as your input font color.
+     * 
+     * @param applyFontColor
+     *        Ignore this setting unless your input captions are STL, any type of 608, teletext, or TTML, and your
+     *        output captions are burned in. Specify how the service applies the color specified in the setting Font
+     *        color (BurninSubtitleFontColor). By default, this color is white. When you choose WHITE_TEXT_ONLY, the
+     *        service uses the specified font color only for text that is white in the input. When you choose ALL_TEXT,
+     *        the service uses the specified font color for all output captions text. If you leave both settings at
+     *        their default value, your output font color is the same as your input font color.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see BurninSubtitleApplyFontColor
+     */
+
+    public BurninDestinationSettings withApplyFontColor(BurninSubtitleApplyFontColor applyFontColor) {
+        this.applyFontColor = applyFontColor.toString();
+        return this;
+    }
+
+    /**
      * Specifies the color of the rectangle behind the captions. All burn-in and DVB-Sub font settings must match.
      * 
      * @param backgroundColor
@@ -311,6 +435,97 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
 
     public BurninDestinationSettings withBackgroundOpacity(Integer backgroundOpacity) {
         setBackgroundOpacity(backgroundOpacity);
+        return this;
+    }
+
+    /**
+     * Specify the font that you want the service to use for your burn in captions when your input captions specify a
+     * font that MediaConvert doesn't support. When you keep the default value, Best match (BEST_MATCH), MediaConvert
+     * uses a supported font that most closely matches the font that your input captions specify. When there are multiple
+     * unsupported fonts in your input captions, MediaConvert matches each font with the supported font that matches
+     * best. When you explicitly choose a replacement font, MediaConvert uses that font to replace all unsupported fonts
+     * from your input.
+     * 
+     * @param fallbackFont
+     *        Specify the font that you want the service to use for your burn in captions when your input captions
+     *        specify a font that MediaConvert doesn't support. When you keep the default value, Best match
+     *        (BEST_MATCH), MediaConvert uses a supported font that most closely matches the font that your input
+     *        captions specify. When there are multiple unsupported fonts in your input captions, MediaConvert matches
+     *        each font with the supported font that matches best. When you explicitly choose a replacement font,
+     *        MediaConvert uses that font to replace all unsupported fonts from your input.
+     * @see BurninSubtitleFallbackFont
+     */
+
+    public void setFallbackFont(String fallbackFont) {
+        this.fallbackFont = fallbackFont;
+    }
+
+    /**
+     * Specify the font that you want the service to use for your burn in captions when your input captions specify a
+     * font that MediaConvert doesn't support. When you keep the default value, Best match (BEST_MATCH), MediaConvert
+     * uses a supported font that most closely matches the font that your input captions specify. When there are multiple
+     * unsupported fonts in your input captions, MediaConvert matches each font with the supported font that matches
+     * best. When you explicitly choose a replacement font, MediaConvert uses that font to replace all unsupported fonts
+     * from your input.
+     * 
+     * @return Specify the font that you want the service to use for your burn in captions when your input captions
+     *         specify a font that MediaConvert doesn't support. When you keep the default value, Best match
+     *         (BEST_MATCH), MediaConvert uses a supported font that most closely matches the font that your input
+     *         captions specify. When there are multiple unsupported fonts in your input captions, MediaConvert matches
+     *         each font with the supported font that matches best. When you explicitly choose a replacement font,
+     *         MediaConvert uses that font to replace all unsupported fonts from your input.
+     * @see BurninSubtitleFallbackFont
+     */
+
+    public String getFallbackFont() {
+        return this.fallbackFont;
+    }
+
+    /**
+     * Specify the font that you want the service to use for your burn in captions when your input captions specify a
+     * font that MediaConvert doesn't support. When you keep the default value, Best match (BEST_MATCH), MediaConvert
+     * uses a supported font that most closely matches the font that your input captions specify. When there are multiple
+     * unsupported fonts in your input captions, MediaConvert matches each font with the supported font that matches
+     * best. When you explicitly choose a replacement font, MediaConvert uses that font to replace all unsupported fonts
+     * from your input.
+     * 
+     * @param fallbackFont
+     *        Specify the font that you want the service to use for your burn in captions when your input captions
+     *        specify a font that MediaConvert doesn't support. When you keep the default value, Best match
+     *        (BEST_MATCH), MediaConvert uses a supported font that most closely matches the font that your input
+     *        captions specify. When there are multiple unsupported fonts in your input captions, MediaConvert matches
+     *        each font with the supported font that matches best. When you explicitly choose a replacement font,
+     *        MediaConvert uses that font to replace all unsupported fonts from your input.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see BurninSubtitleFallbackFont
+     */
+
+    public BurninDestinationSettings withFallbackFont(String fallbackFont) {
+        setFallbackFont(fallbackFont);
+        return this;
+    }
+
+    /**
+     * Specify the font that you want the service to use for your burn in captions when your input captions specify a
+     * font that MediaConvert doesn't support. When you keep the default value, Best match (BEST_MATCH), MediaConvert
+     * uses a supported font that most closely matches the font that your input captions specify. When there are multiple
+     * unsupported fonts in your input captions, MediaConvert matches each font with the supported font that matches
+     * best. When you explicitly choose a replacement font, MediaConvert uses that font to replace all unsupported fonts
+     * from your input.
+     * 
+     * @param fallbackFont
+     *        Specify the font that you want the service to use for your burn in captions when your input captions
+     *        specify a font that MediaConvert doesn't support. When you keep the default value, Best match
+     *        (BEST_MATCH), MediaConvert uses a supported font that most closely matches the font that your input
+     *        captions specify. When there are multiple unsupported fonts in your input captions, MediaConvert matches
+     *        each font with the supported font that matches best. When you explicitly choose a replacement font,
+     *        MediaConvert uses that font to replace all unsupported fonts from your input.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see BurninSubtitleFallbackFont
+     */
+
+    public BurninDestinationSettings withFallbackFont(BurninSubtitleFallbackFont fallbackFont) {
+        this.fallbackFont = fallbackFont.toString();
         return this;
     }
 
@@ -562,6 +777,58 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
 
     public BurninDestinationSettings withFontSize(Integer fontSize) {
         setFontSize(fontSize);
+        return this;
+    }
+
+    /**
+     * Ignore this setting unless your BurninSubtitleFontColor setting is HEX. Format is six or eight hexidecimal
+     * digits, representing the red, green, and blue components, with the two extra digits used for an optional alpha
+     * value. For example a value of 1122AABB is a red value of 0x11, a green value of 0x22, a blue value of 0xAA, and an
+     * alpha value of 0xBB.
+     * 
+     * @param hexFontColor
+     *        Ignore this setting unless your BurninSubtitleFontColor setting is HEX. Format is six or eight hexidecimal
+     *        digits, representing the red, green, and blue components, with the two extra digits used for an optional
+     *        alpha value. For example a value of 1122AABB is a red value of 0x11, a green value of 0x22, a blue value
+     *        of 0xAA, and an alpha value of 0xBB.
+     */
+
+    public void setHexFontColor(String hexFontColor) {
+        this.hexFontColor = hexFontColor;
+    }
+
+    /**
+     * Ignore this setting unless your BurninSubtitleFontColor setting is HEX. Format is six or eight hexidecimal
+     * digits, representing the red, green, and blue components, with the two extra digits used for an optional alpha
+     * value. For example a value of 1122AABB is a red value of 0x11, a green value of 0x22, a blue value of 0xAA, and an
+     * alpha value of 0xBB.
+     * 
+     * @return Ignore this setting unless your BurninSubtitleFontColor setting is HEX. Format is six or eight
+     *         hexidecimal digits, representing the red, green, and blue components, with the two extra digits used for
+     *         an optional alpha value. For example a value of 1122AABB is a red value of 0x11, a green value of 0x22, a
+     *         blue value of 0xAA, and an alpha value of 0xBB.
+     */
+
+    public String getHexFontColor() {
+        return this.hexFontColor;
+    }
+
+    /**
+     * Ignore this setting unless your BurninSubtitleFontColor setting is HEX. Format is six or eight hexidecimal
+     * digits, representing the red, green, and blue components, with the two extra digits used for an optional alpha
+     * value. For example a value of 1122AABB is a red value of 0x11, a green value of 0x22, a blue value of 0xAA, and an
+     * alpha value of 0xBB.
+     * 
+     * @param hexFontColor
+     *        Ignore this setting unless your BurninSubtitleFontColor setting is HEX. Format is six or eight hexidecimal
+     *        digits, representing the red, green, and blue components, with the two extra digits used for an optional
+     *        alpha value. For example a value of 1122AABB is a red value of 0x11, a green value of 0x22, a blue value
+     *        of 0xAA, and an alpha value of 0xBB.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BurninDestinationSettings withHexFontColor(String hexFontColor) {
+        setHexFontColor(hexFontColor);
         return this;
     }
 
@@ -850,6 +1117,93 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
     }
 
     /**
+     * Ignore this setting unless your output captions are burned in. Choose which set of style and position values the
+     * service applies to your output captions. When you choose ENABLED, the service uses the input style and position
+     * information from your input. When you choose DISABLED, the service uses any style values that you specify in your
+     * output settings. If you don't specify values, the service uses default style and position values. When you choose
+     * DISABLED, the service ignores all style and position values from your input.
+     * 
+     * @param stylePassthrough
+     *        Ignore this setting unless your output captions are burned in. Choose which set of style and position
+     *        values the service applies to your output captions. When you choose ENABLED, the service uses the input
+     *        style and position information from your input. When you choose DISABLED, the service uses any style
+     *        values that you specify in your output settings. If you don't specify values, the service uses default
+     *        style and position values. When you choose DISABLED, the service ignores all style and position values
+     *        from your input.
+     * @see BurnInSubtitleStylePassthrough
+     */
+
+    public void setStylePassthrough(String stylePassthrough) {
+        this.stylePassthrough = stylePassthrough;
+    }
+
+    /**
+     * Ignore this setting unless your output captions are burned in. Choose which set of style and position values the
+     * service applies to your output captions. When you choose ENABLED, the service uses the input style and position
+     * information from your input. When you choose DISABLED, the service uses any style values that you specify in your
+     * output settings. If you don't specify values, the service uses default style and position values. When you choose
+     * DISABLED, the service ignores all style and position values from your input.
+     * 
+     * @return Ignore this setting unless your output captions are burned in. Choose which set of style and position
+     *         values the service applies to your output captions. When you choose ENABLED, the service uses the input
+     *         style and position information from your input. When you choose DISABLED, the service uses any style
+     *         values that you specify in your output settings. If you don't specify values, the service uses default
+     *         style and position values. When you choose DISABLED, the service ignores all style and position values
+     *         from your input.
+     * @see BurnInSubtitleStylePassthrough
+     */
+
+    public String getStylePassthrough() {
+        return this.stylePassthrough;
+    }
+
+    /**
+     * Ignore this setting unless your output captions are burned in. Choose which set of style and position values the
+     * service applies to your output captions. When you choose ENABLED, the service uses the input style and position
+     * information from your input. When you choose DISABLED, the service uses any style values that you specify in your
+     * output settings. If you don't specify values, the service uses default style and position values. When you choose
+     * DISABLED, the service ignores all style and position values from your input.
+     * 
+     * @param stylePassthrough
+     *        Ignore this setting unless your output captions are burned in. Choose which set of style and position
+     *        values the service applies to your output captions. When you choose ENABLED, the service uses the input
+     *        style and position information from your input. When you choose DISABLED, the service uses any style
+     *        values that you specify in your output settings. If you don't specify values, the service uses default
+     *        style and position values. When you choose DISABLED, the service ignores all style and position values
+     *        from your input.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see BurnInSubtitleStylePassthrough
+     */
+
+    public BurninDestinationSettings withStylePassthrough(String stylePassthrough) {
+        setStylePassthrough(stylePassthrough);
+        return this;
+    }
+
+    /**
+     * Ignore this setting unless your output captions are burned in. Choose which set of style and position values the
+     * service applies to your output captions. When you choose ENABLED, the service uses the input style and position
+     * information from your input. When you choose DISABLED, the service uses any style values that you specify in your
+     * output settings. If you don't specify values, the service uses default style and position values. When you choose
+     * DISABLED, the service ignores all style and position values from your input.
+     * 
+     * @param stylePassthrough
+     *        Ignore this setting unless your output captions are burned in. Choose which set of style and position
+     *        values the service applies to your output captions. When you choose ENABLED, the service uses the input
+     *        style and position information from your input. When you choose DISABLED, the service uses any style
+     *        values that you specify in your output settings. If you don't specify values, the service uses default
+     *        style and position values. When you choose DISABLED, the service ignores all style and position values
+     *        from your input.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see BurnInSubtitleStylePassthrough
+     */
+
+    public BurninDestinationSettings withStylePassthrough(BurnInSubtitleStylePassthrough stylePassthrough) {
+        this.stylePassthrough = stylePassthrough.toString();
+        return this;
+    }
+
+    /**
      * Only applies to jobs with input captions in Teletext or STL formats. Specify whether the spacing between letters
      * in your captions is set by the captions grid or varies depending on letter width. Choose fixed grid to conform to
      * the spacing specified in the captions file more accurately. Choose proportional to make the text easier to read if
@@ -1054,10 +1408,14 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
         sb.append("{");
         if (getAlignment() != null)
             sb.append("Alignment: ").append(getAlignment()).append(",");
+        if (getApplyFontColor() != null)
+            sb.append("ApplyFontColor: ").append(getApplyFontColor()).append(",");
         if (getBackgroundColor() != null)
             sb.append("BackgroundColor: ").append(getBackgroundColor()).append(",");
         if (getBackgroundOpacity() != null)
             sb.append("BackgroundOpacity: ").append(getBackgroundOpacity()).append(",");
+        if (getFallbackFont() != null)
+            sb.append("FallbackFont: ").append(getFallbackFont()).append(",");
         if (getFontColor() != null)
             sb.append("FontColor: ").append(getFontColor()).append(",");
         if (getFontOpacity() != null)
@@ -1068,6 +1426,8 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
             sb.append("FontScript: ").append(getFontScript()).append(",");
         if (getFontSize() != null)
             sb.append("FontSize: ").append(getFontSize()).append(",");
+        if (getHexFontColor() != null)
+            sb.append("HexFontColor: ").append(getHexFontColor()).append(",");
         if (getOutlineColor() != null)
             sb.append("OutlineColor: ").append(getOutlineColor()).append(",");
         if (getOutlineSize() != null)
@@ -1080,6 +1440,8 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
             sb.append("ShadowXOffset: ").append(getShadowXOffset()).append(",");
         if (getShadowYOffset() != null)
             sb.append("ShadowYOffset: ").append(getShadowYOffset()).append(",");
+        if (getStylePassthrough() != null)
+            sb.append("StylePassthrough: ").append(getStylePassthrough()).append(",");
         if (getTeletextSpacing() != null)
             sb.append("TeletextSpacing: ").append(getTeletextSpacing()).append(",");
         if (getXPosition() != null)
@@ -1104,6 +1466,10 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
             return false;
         if (other.getAlignment() != null && other.getAlignment().equals(this.getAlignment()) == false)
             return false;
+        if (other.getApplyFontColor() == null ^ this.getApplyFontColor() == null)
+            return false;
+        if (other.getApplyFontColor() != null && other.getApplyFontColor().equals(this.getApplyFontColor()) == false)
+            return false;
         if (other.getBackgroundColor() == null ^ this.getBackgroundColor() == null)
             return false;
         if (other.getBackgroundColor() != null && other.getBackgroundColor().equals(this.getBackgroundColor()) == false)
@@ -1111,6 +1477,10 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
         if (other.getBackgroundOpacity() == null ^ this.getBackgroundOpacity() == null)
             return false;
         if (other.getBackgroundOpacity() != null && other.getBackgroundOpacity().equals(this.getBackgroundOpacity()) == false)
+            return false;
+        if (other.getFallbackFont() == null ^ this.getFallbackFont() == null)
+            return false;
+        if (other.getFallbackFont() != null && other.getFallbackFont().equals(this.getFallbackFont()) == false)
             return false;
         if (other.getFontColor() == null ^ this.getFontColor() == null)
             return false;
@@ -1131,6 +1501,10 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
         if (other.getFontSize() == null ^ this.getFontSize() == null)
             return false;
         if (other.getFontSize() != null && other.getFontSize().equals(this.getFontSize()) == false)
+            return false;
+        if (other.getHexFontColor() == null ^ this.getHexFontColor() == null)
+            return false;
+        if (other.getHexFontColor() != null && other.getHexFontColor().equals(this.getHexFontColor()) == false)
             return false;
         if (other.getOutlineColor() == null ^ this.getOutlineColor() == null)
             return false;
@@ -1156,6 +1530,10 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
             return false;
         if (other.getShadowYOffset() != null && other.getShadowYOffset().equals(this.getShadowYOffset()) == false)
             return false;
+        if (other.getStylePassthrough() == null ^ this.getStylePassthrough() == null)
+            return false;
+        if (other.getStylePassthrough() != null && other.getStylePassthrough().equals(this.getStylePassthrough()) == false)
+            return false;
         if (other.getTeletextSpacing() == null ^ this.getTeletextSpacing() == null)
             return false;
         if (other.getTeletextSpacing() != null && other.getTeletextSpacing().equals(this.getTeletextSpacing()) == false)
@@ -1177,19 +1555,23 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAlignment() == null) ? 0 : getAlignment().hashCode());
+        hashCode = prime * hashCode + ((getApplyFontColor() == null) ? 0 : getApplyFontColor().hashCode());
         hashCode = prime * hashCode + ((getBackgroundColor() == null) ? 0 : getBackgroundColor().hashCode());
         hashCode = prime * hashCode + ((getBackgroundOpacity() == null) ? 0 : getBackgroundOpacity().hashCode());
+        hashCode = prime * hashCode + ((getFallbackFont() == null) ? 0 : getFallbackFont().hashCode());
         hashCode = prime * hashCode + ((getFontColor() == null) ? 0 : getFontColor().hashCode());
         hashCode = prime * hashCode + ((getFontOpacity() == null) ? 0 : getFontOpacity().hashCode());
         hashCode = prime * hashCode + ((getFontResolution() == null) ? 0 : getFontResolution().hashCode());
         hashCode = prime * hashCode + ((getFontScript() == null) ? 0 : getFontScript().hashCode());
         hashCode = prime * hashCode + ((getFontSize() == null) ? 0 : getFontSize().hashCode());
+        hashCode = prime * hashCode + ((getHexFontColor() == null) ? 0 : getHexFontColor().hashCode());
         hashCode = prime * hashCode + ((getOutlineColor() == null) ? 0 : getOutlineColor().hashCode());
         hashCode = prime * hashCode + ((getOutlineSize() == null) ? 0 : getOutlineSize().hashCode());
         hashCode = prime * hashCode + ((getShadowColor() == null) ? 0 : getShadowColor().hashCode());
         hashCode = prime * hashCode + ((getShadowOpacity() == null) ? 0 : getShadowOpacity().hashCode());
         hashCode = prime * hashCode + ((getShadowXOffset() == null) ? 0 : getShadowXOffset().hashCode());
         hashCode = prime * hashCode + ((getShadowYOffset() == null) ? 0 : getShadowYOffset().hashCode());
+        hashCode = prime * hashCode + ((getStylePassthrough() == null) ? 0 : getStylePassthrough().hashCode());
         hashCode = prime * hashCode + ((getTeletextSpacing() == null) ? 0 : getTeletextSpacing().hashCode());
         hashCode = prime * hashCode + ((getXPosition() == null) ? 0 : getXPosition().hashCode());
         hashCode = prime * hashCode + ((getYPosition() == null) ? 0 : getYPosition().hashCode());

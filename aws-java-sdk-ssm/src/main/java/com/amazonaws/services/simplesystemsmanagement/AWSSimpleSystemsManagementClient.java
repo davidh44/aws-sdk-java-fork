@@ -852,9 +852,9 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
 
     /**
      * <p>
-     * Associates a related resource to a Systems Manager OpsCenter OpsItem. For example, you can associate an Incident
-     * Manager incident or analysis with an OpsItem. Incident Manager is a capability of Amazon Web Services Systems
-     * Manager.
+     * Associates a related item to a Systems Manager OpsCenter OpsItem. For example, you can associate an Incident
+     * Manager incident or analysis with an OpsItem. Incident Manager and OpsCenter are capabilities of Amazon Web
+     * Services Systems Manager.
      * </p>
      * 
      * @param associateOpsItemRelatedItemRequest
@@ -4607,6 +4607,13 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
      * results, it stops the operation and returns the matching values up to that point and a <code>NextToken</code>.
      * You can specify the <code>NextToken</code> in a subsequent call to get the next set of results.
      * </p>
+     * <important>
+     * <p>
+     * If you change the KMS key alias for the KMS key used to encrypt a parameter, then you must also update the key
+     * alias the parameter uses to reference KMS. Otherwise, <code>DescribeParameters</code> retrieves whatever the
+     * original key alias was referencing.
+     * </p>
+     * </important>
      * 
      * @param describeParametersRequest
      * @return Result of the DescribeParameters operation returned by the service.
@@ -5037,7 +5044,7 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
 
     /**
      * <p>
-     * Deletes the association between an OpsItem and a related resource. For example, this API operation can delete an
+     * Deletes the association between an OpsItem and a related item. For example, this API operation can delete an
      * Incident Manager incident from an OpsItem. Incident Manager is a capability of Amazon Web Services Systems
      * Manager.
      * </p>
@@ -6342,6 +6349,13 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
      * <p>
      * Retrieves the history of all changes to a parameter.
      * </p>
+     * <important>
+     * <p>
+     * If you change the KMS key alias for the KMS key used to encrypt a parameter, then you must also update the key
+     * alias the parameter uses to reference KMS. Otherwise, <code>GetParameterHistory</code> retrieves whatever the
+     * original key alias was referencing.
+     * </p>
+     * </important>
      * 
      * @param getParameterHistoryRequest
      * @return Result of the GetParameterHistory operation returned by the service.
@@ -7645,7 +7659,8 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
 
     /**
      * <p>
-     * Lists all related-item resources associated with an OpsItem.
+     * Lists all related-item resources associated with a Systems Manager OpsCenter OpsItem. OpsCenter is a capability
+     * of Amazon Web Services Systems Manager.
      * </p>
      * 
      * @param listOpsItemRelatedItemsRequest

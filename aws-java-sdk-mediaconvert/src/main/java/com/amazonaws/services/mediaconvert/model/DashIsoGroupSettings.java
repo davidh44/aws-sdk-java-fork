@@ -79,6 +79,8 @@ public class DashIsoGroupSettings implements Serializable, Cloneable, Structured
      * https://developer.roku.com/docs/developer-program/media-playback/trick-mode/hls-and-dash.md
      */
     private String imageBasedTrickPlay;
+    /** Tile and thumbnail settings applicable when imageBasedTrickPlay is ADVANCED */
+    private DashIsoImageBasedTrickPlaySettings imageBasedTrickPlaySettings;
     /** Minimum time of initially buffered media that is needed to ensure smooth playout. */
     private Integer minBufferTime;
     /**
@@ -676,6 +678,40 @@ public class DashIsoGroupSettings implements Serializable, Cloneable, Structured
     }
 
     /**
+     * Tile and thumbnail settings applicable when imageBasedTrickPlay is ADVANCED
+     * 
+     * @param imageBasedTrickPlaySettings
+     *        Tile and thumbnail settings applicable when imageBasedTrickPlay is ADVANCED
+     */
+
+    public void setImageBasedTrickPlaySettings(DashIsoImageBasedTrickPlaySettings imageBasedTrickPlaySettings) {
+        this.imageBasedTrickPlaySettings = imageBasedTrickPlaySettings;
+    }
+
+    /**
+     * Tile and thumbnail settings applicable when imageBasedTrickPlay is ADVANCED
+     * 
+     * @return Tile and thumbnail settings applicable when imageBasedTrickPlay is ADVANCED
+     */
+
+    public DashIsoImageBasedTrickPlaySettings getImageBasedTrickPlaySettings() {
+        return this.imageBasedTrickPlaySettings;
+    }
+
+    /**
+     * Tile and thumbnail settings applicable when imageBasedTrickPlay is ADVANCED
+     * 
+     * @param imageBasedTrickPlaySettings
+     *        Tile and thumbnail settings applicable when imageBasedTrickPlay is ADVANCED
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DashIsoGroupSettings withImageBasedTrickPlaySettings(DashIsoImageBasedTrickPlaySettings imageBasedTrickPlaySettings) {
+        setImageBasedTrickPlaySettings(imageBasedTrickPlaySettings);
+        return this;
+    }
+
+    /**
      * Minimum time of initially buffered media that is needed to ensure smooth playout.
      * 
      * @param minBufferTime
@@ -1269,6 +1305,8 @@ public class DashIsoGroupSettings implements Serializable, Cloneable, Structured
             sb.append("HbbtvCompliance: ").append(getHbbtvCompliance()).append(",");
         if (getImageBasedTrickPlay() != null)
             sb.append("ImageBasedTrickPlay: ").append(getImageBasedTrickPlay()).append(",");
+        if (getImageBasedTrickPlaySettings() != null)
+            sb.append("ImageBasedTrickPlaySettings: ").append(getImageBasedTrickPlaySettings()).append(",");
         if (getMinBufferTime() != null)
             sb.append("MinBufferTime: ").append(getMinBufferTime()).append(",");
         if (getMinFinalSegmentLength() != null)
@@ -1336,6 +1374,10 @@ public class DashIsoGroupSettings implements Serializable, Cloneable, Structured
             return false;
         if (other.getImageBasedTrickPlay() != null && other.getImageBasedTrickPlay().equals(this.getImageBasedTrickPlay()) == false)
             return false;
+        if (other.getImageBasedTrickPlaySettings() == null ^ this.getImageBasedTrickPlaySettings() == null)
+            return false;
+        if (other.getImageBasedTrickPlaySettings() != null && other.getImageBasedTrickPlaySettings().equals(this.getImageBasedTrickPlaySettings()) == false)
+            return false;
         if (other.getMinBufferTime() == null ^ this.getMinBufferTime() == null)
             return false;
         if (other.getMinBufferTime() != null && other.getMinBufferTime().equals(this.getMinBufferTime()) == false)
@@ -1386,6 +1428,7 @@ public class DashIsoGroupSettings implements Serializable, Cloneable, Structured
         hashCode = prime * hashCode + ((getFragmentLength() == null) ? 0 : getFragmentLength().hashCode());
         hashCode = prime * hashCode + ((getHbbtvCompliance() == null) ? 0 : getHbbtvCompliance().hashCode());
         hashCode = prime * hashCode + ((getImageBasedTrickPlay() == null) ? 0 : getImageBasedTrickPlay().hashCode());
+        hashCode = prime * hashCode + ((getImageBasedTrickPlaySettings() == null) ? 0 : getImageBasedTrickPlaySettings().hashCode());
         hashCode = prime * hashCode + ((getMinBufferTime() == null) ? 0 : getMinBufferTime().hashCode());
         hashCode = prime * hashCode + ((getMinFinalSegmentLength() == null) ? 0 : getMinFinalSegmentLength().hashCode());
         hashCode = prime * hashCode + ((getMpdProfile() == null) ? 0 : getMpdProfile().hashCode());

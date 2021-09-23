@@ -13,6 +13,7 @@
 
 package com.amazonaws.services.simplesystemsmanagement.waiters;
 
+import com.amazonaws.AmazonServiceException;
 import com.amazonaws.annotation.SdkInternalApi;
 import com.amazonaws.waiters.WaiterAcceptor;
 import com.amazonaws.waiters.WaiterState;
@@ -339,6 +340,31 @@ class CommandExecuted {
         @Override
         public WaiterState getState() {
             return WaiterState.FAILURE;
+        }
+    }
+
+    static class IsInvocationDoesNotExistMatcher extends WaiterAcceptor<GetCommandInvocationResult> {
+        /**
+         * Takes the response exception and determines whether this exception matches the expected exception, by
+         * comparing the respective error codes.
+         * 
+         * @param e
+         *        Response Exception
+         * @return True if it matches, False otherwise
+         */
+        @Override
+        public boolean matches(AmazonServiceException e) {
+            return "InvocationDoesNotExist".equals(e.getErrorCode());
+        }
+
+        /**
+         * Represents the current waiter state in the case where resource state matches the expected state
+         * 
+         * @return Corresponding state of the waiter
+         */
+        @Override
+        public WaiterState getState() {
+            return WaiterState.RETRY;
         }
     }
 }

@@ -57,6 +57,8 @@ public class UpdateMaintenanceWindowTaskRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
     private static final MarshallingInfo<Boolean> REPLACE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Replace").build();
+    private static final MarshallingInfo<String> CUTOFFBEHAVIOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CutoffBehavior").build();
 
     private static final UpdateMaintenanceWindowTaskRequestMarshaller instance = new UpdateMaintenanceWindowTaskRequestMarshaller();
 
@@ -88,6 +90,7 @@ public class UpdateMaintenanceWindowTaskRequestMarshaller {
             protocolMarshaller.marshall(updateMaintenanceWindowTaskRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(updateMaintenanceWindowTaskRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(updateMaintenanceWindowTaskRequest.getReplace(), REPLACE_BINDING);
+            protocolMarshaller.marshall(updateMaintenanceWindowTaskRequest.getCutoffBehavior(), CUTOFFBEHAVIOR_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

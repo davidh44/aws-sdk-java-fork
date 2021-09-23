@@ -80,6 +80,10 @@ public class DataSourceJsonUnmarshaller implements Unmarshaller<DataSource, Json
                     context.nextToken();
                     dataSource.setElasticsearchConfig(ElasticsearchDataSourceConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("openSearchServiceConfig", targetDepth)) {
+                    context.nextToken();
+                    dataSource.setOpenSearchServiceConfig(OpenSearchServiceDataSourceConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("httpConfig", targetDepth)) {
                     context.nextToken();
                     dataSource.setHttpConfig(HttpDataSourceConfigJsonUnmarshaller.getInstance().unmarshall(context));

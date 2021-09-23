@@ -43,6 +43,8 @@ public class UpdateDataSourceRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lambdaConfig").build();
     private static final MarshallingInfo<StructuredPojo> ELASTICSEARCHCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("elasticsearchConfig").build();
+    private static final MarshallingInfo<StructuredPojo> OPENSEARCHSERVICECONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("openSearchServiceConfig").build();
     private static final MarshallingInfo<StructuredPojo> HTTPCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("httpConfig").build();
     private static final MarshallingInfo<StructuredPojo> RELATIONALDATABASECONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -72,6 +74,7 @@ public class UpdateDataSourceRequestMarshaller {
             protocolMarshaller.marshall(updateDataSourceRequest.getDynamodbConfig(), DYNAMODBCONFIG_BINDING);
             protocolMarshaller.marshall(updateDataSourceRequest.getLambdaConfig(), LAMBDACONFIG_BINDING);
             protocolMarshaller.marshall(updateDataSourceRequest.getElasticsearchConfig(), ELASTICSEARCHCONFIG_BINDING);
+            protocolMarshaller.marshall(updateDataSourceRequest.getOpenSearchServiceConfig(), OPENSEARCHSERVICECONFIG_BINDING);
             protocolMarshaller.marshall(updateDataSourceRequest.getHttpConfig(), HTTPCONFIG_BINDING);
             protocolMarshaller.marshall(updateDataSourceRequest.getRelationalDatabaseConfig(), RELATIONALDATABASECONFIG_BINDING);
         } catch (Exception e) {

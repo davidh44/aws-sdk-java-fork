@@ -24,7 +24,8 @@ import javax.annotation.Generated;
 public enum DvbSubtitleTeletextSpacing {
 
     FIXED_GRID("FIXED_GRID"),
-    PROPORTIONAL("PROPORTIONAL");
+    PROPORTIONAL("PROPORTIONAL"),
+    AUTO("AUTO");
 
     private String value;
 

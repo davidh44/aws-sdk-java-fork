@@ -22,7 +22,8 @@ public enum DvbSubtitleBackgroundColor {
 
     NONE("NONE"),
     BLACK("BLACK"),
-    WHITE("WHITE");
+    WHITE("WHITE"),
+    AUTO("AUTO");
 
     private String value;
 

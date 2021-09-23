@@ -69,10 +69,21 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     private LambdaDataSourceConfig lambdaConfig;
     /**
      * <p>
-     * The new Elasticsearch Service configuration.
+     * The new OpenSearch configuration.
+     * </p>
+     * <p>
+     * As of September 2021, Amazon Elasticsearch service is Amazon OpenSearch Service. This configuration is
+     * deprecated. Instead, use <a>UpdateDataSourceRequest$openSearchServiceConfig</a> to update an OpenSearch data
+     * source.
      * </p>
      */
     private ElasticsearchDataSourceConfig elasticsearchConfig;
+    /**
+     * <p>
+     * The new OpenSearch configuration.
+     * </p>
+     */
+    private OpenSearchServiceDataSourceConfig openSearchServiceConfig;
     /**
      * <p>
      * The new HTTP endpoint configuration.
@@ -387,11 +398,20 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The new Elasticsearch Service configuration.
+     * The new OpenSearch configuration.
+     * </p>
+     * <p>
+     * As of September 2021, Amazon Elasticsearch service is Amazon OpenSearch Service. This configuration is
+     * deprecated. Instead, use <a>UpdateDataSourceRequest$openSearchServiceConfig</a> to update an OpenSearch data
+     * source.
      * </p>
      * 
      * @param elasticsearchConfig
-     *        The new Elasticsearch Service configuration.
+     *        The new OpenSearch configuration.</p>
+     *        <p>
+     *        As of September 2021, Amazon Elasticsearch service is Amazon OpenSearch Service. This configuration is
+     *        deprecated. Instead, use <a>UpdateDataSourceRequest$openSearchServiceConfig</a> to update an OpenSearch
+     *        data source.
      */
 
     public void setElasticsearchConfig(ElasticsearchDataSourceConfig elasticsearchConfig) {
@@ -400,10 +420,19 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The new Elasticsearch Service configuration.
+     * The new OpenSearch configuration.
+     * </p>
+     * <p>
+     * As of September 2021, Amazon Elasticsearch service is Amazon OpenSearch Service. This configuration is
+     * deprecated. Instead, use <a>UpdateDataSourceRequest$openSearchServiceConfig</a> to update an OpenSearch data
+     * source.
      * </p>
      * 
-     * @return The new Elasticsearch Service configuration.
+     * @return The new OpenSearch configuration.</p>
+     *         <p>
+     *         As of September 2021, Amazon Elasticsearch service is Amazon OpenSearch Service. This configuration is
+     *         deprecated. Instead, use <a>UpdateDataSourceRequest$openSearchServiceConfig</a> to update an OpenSearch
+     *         data source.
      */
 
     public ElasticsearchDataSourceConfig getElasticsearchConfig() {
@@ -412,16 +441,65 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The new Elasticsearch Service configuration.
+     * The new OpenSearch configuration.
+     * </p>
+     * <p>
+     * As of September 2021, Amazon Elasticsearch service is Amazon OpenSearch Service. This configuration is
+     * deprecated. Instead, use <a>UpdateDataSourceRequest$openSearchServiceConfig</a> to update an OpenSearch data
+     * source.
      * </p>
      * 
      * @param elasticsearchConfig
-     *        The new Elasticsearch Service configuration.
+     *        The new OpenSearch configuration.</p>
+     *        <p>
+     *        As of September 2021, Amazon Elasticsearch service is Amazon OpenSearch Service. This configuration is
+     *        deprecated. Instead, use <a>UpdateDataSourceRequest$openSearchServiceConfig</a> to update an OpenSearch
+     *        data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public UpdateDataSourceRequest withElasticsearchConfig(ElasticsearchDataSourceConfig elasticsearchConfig) {
         setElasticsearchConfig(elasticsearchConfig);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The new OpenSearch configuration.
+     * </p>
+     * 
+     * @param openSearchServiceConfig
+     *        The new OpenSearch configuration.
+     */
+
+    public void setOpenSearchServiceConfig(OpenSearchServiceDataSourceConfig openSearchServiceConfig) {
+        this.openSearchServiceConfig = openSearchServiceConfig;
+    }
+
+    /**
+     * <p>
+     * The new OpenSearch configuration.
+     * </p>
+     * 
+     * @return The new OpenSearch configuration.
+     */
+
+    public OpenSearchServiceDataSourceConfig getOpenSearchServiceConfig() {
+        return this.openSearchServiceConfig;
+    }
+
+    /**
+     * <p>
+     * The new OpenSearch configuration.
+     * </p>
+     * 
+     * @param openSearchServiceConfig
+     *        The new OpenSearch configuration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateDataSourceRequest withOpenSearchServiceConfig(OpenSearchServiceDataSourceConfig openSearchServiceConfig) {
+        setOpenSearchServiceConfig(openSearchServiceConfig);
         return this;
     }
 
@@ -533,6 +611,8 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
             sb.append("LambdaConfig: ").append(getLambdaConfig()).append(",");
         if (getElasticsearchConfig() != null)
             sb.append("ElasticsearchConfig: ").append(getElasticsearchConfig()).append(",");
+        if (getOpenSearchServiceConfig() != null)
+            sb.append("OpenSearchServiceConfig: ").append(getOpenSearchServiceConfig()).append(",");
         if (getHttpConfig() != null)
             sb.append("HttpConfig: ").append(getHttpConfig()).append(",");
         if (getRelationalDatabaseConfig() != null)
@@ -583,6 +663,10 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getElasticsearchConfig() != null && other.getElasticsearchConfig().equals(this.getElasticsearchConfig()) == false)
             return false;
+        if (other.getOpenSearchServiceConfig() == null ^ this.getOpenSearchServiceConfig() == null)
+            return false;
+        if (other.getOpenSearchServiceConfig() != null && other.getOpenSearchServiceConfig().equals(this.getOpenSearchServiceConfig()) == false)
+            return false;
         if (other.getHttpConfig() == null ^ this.getHttpConfig() == null)
             return false;
         if (other.getHttpConfig() != null && other.getHttpConfig().equals(this.getHttpConfig()) == false)
@@ -607,6 +691,7 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getDynamodbConfig() == null) ? 0 : getDynamodbConfig().hashCode());
         hashCode = prime * hashCode + ((getLambdaConfig() == null) ? 0 : getLambdaConfig().hashCode());
         hashCode = prime * hashCode + ((getElasticsearchConfig() == null) ? 0 : getElasticsearchConfig().hashCode());
+        hashCode = prime * hashCode + ((getOpenSearchServiceConfig() == null) ? 0 : getOpenSearchServiceConfig().hashCode());
         hashCode = prime * hashCode + ((getHttpConfig() == null) ? 0 : getHttpConfig().hashCode());
         hashCode = prime * hashCode + ((getRelationalDatabaseConfig() == null) ? 0 : getRelationalDatabaseConfig().hashCode());
         return hashCode;
