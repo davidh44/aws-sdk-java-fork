@@ -48,7 +48,7 @@ public class InstanceBlockDeviceMapping implements Serializable, Cloneable, Stru
     private String virtualName;
     /**
      * <p>
-     * Use to remove a mapping from the parent image.
+     * Use to remove a mapping from the base image.
      * </p>
      */
     private String noDevice;
@@ -175,11 +175,11 @@ public class InstanceBlockDeviceMapping implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Use to remove a mapping from the parent image.
+     * Use to remove a mapping from the base image.
      * </p>
      * 
      * @param noDevice
-     *        Use to remove a mapping from the parent image.
+     *        Use to remove a mapping from the base image.
      */
 
     public void setNoDevice(String noDevice) {
@@ -188,10 +188,10 @@ public class InstanceBlockDeviceMapping implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Use to remove a mapping from the parent image.
+     * Use to remove a mapping from the base image.
      * </p>
      * 
-     * @return Use to remove a mapping from the parent image.
+     * @return Use to remove a mapping from the base image.
      */
 
     public String getNoDevice() {
@@ -200,11 +200,11 @@ public class InstanceBlockDeviceMapping implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Use to remove a mapping from the parent image.
+     * Use to remove a mapping from the base image.
      * </p>
      * 
      * @param noDevice
-     *        Use to remove a mapping from the parent image.
+     *        Use to remove a mapping from the base image.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

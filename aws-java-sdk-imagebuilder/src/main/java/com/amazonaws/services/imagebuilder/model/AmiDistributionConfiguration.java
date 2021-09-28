@@ -30,7 +30,7 @@ public class AmiDistributionConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The name of the distribution configuration.
+     * The name of the output AMI.
      * </p>
      */
     private String name;
@@ -68,11 +68,11 @@ public class AmiDistributionConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The name of the distribution configuration.
+     * The name of the output AMI.
      * </p>
      * 
      * @param name
-     *        The name of the distribution configuration.
+     *        The name of the output AMI.
      */
 
     public void setName(String name) {
@@ -81,10 +81,10 @@ public class AmiDistributionConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The name of the distribution configuration.
+     * The name of the output AMI.
      * </p>
      * 
-     * @return The name of the distribution configuration.
+     * @return The name of the output AMI.
      */
 
     public String getName() {
@@ -93,11 +93,11 @@ public class AmiDistributionConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The name of the distribution configuration.
+     * The name of the output AMI.
      * </p>
      * 
      * @param name
-     *        The name of the distribution configuration.
+     *        The name of the output AMI.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

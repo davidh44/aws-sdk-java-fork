@@ -91,19 +91,19 @@ public class CreateContainerRecipeRequest extends com.amazonaws.AmazonWebService
     private String dockerfileTemplateUri;
     /**
      * <p>
-     * Specifies the operating system platform when you use a custom source image.
+     * Specifies the operating system platform when you use a custom base image.
      * </p>
      */
     private String platformOverride;
     /**
      * <p>
-     * Specifies the operating system version for the source image.
+     * Specifies the operating system version for the base image.
      * </p>
      */
     private String imageOsVersionOverride;
     /**
      * <p>
-     * The source image for the container recipe.
+     * The base image for the container recipe.
      * </p>
      */
     private String parentImage;
@@ -600,11 +600,11 @@ public class CreateContainerRecipeRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Specifies the operating system platform when you use a custom source image.
+     * Specifies the operating system platform when you use a custom base image.
      * </p>
      * 
      * @param platformOverride
-     *        Specifies the operating system platform when you use a custom source image.
+     *        Specifies the operating system platform when you use a custom base image.
      * @see Platform
      */
 
@@ -614,10 +614,10 @@ public class CreateContainerRecipeRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Specifies the operating system platform when you use a custom source image.
+     * Specifies the operating system platform when you use a custom base image.
      * </p>
      * 
-     * @return Specifies the operating system platform when you use a custom source image.
+     * @return Specifies the operating system platform when you use a custom base image.
      * @see Platform
      */
 
@@ -627,11 +627,11 @@ public class CreateContainerRecipeRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Specifies the operating system platform when you use a custom source image.
+     * Specifies the operating system platform when you use a custom base image.
      * </p>
      * 
      * @param platformOverride
-     *        Specifies the operating system platform when you use a custom source image.
+     *        Specifies the operating system platform when you use a custom base image.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Platform
      */
@@ -643,11 +643,11 @@ public class CreateContainerRecipeRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Specifies the operating system platform when you use a custom source image.
+     * Specifies the operating system platform when you use a custom base image.
      * </p>
      * 
      * @param platformOverride
-     *        Specifies the operating system platform when you use a custom source image.
+     *        Specifies the operating system platform when you use a custom base image.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Platform
      */
@@ -659,11 +659,11 @@ public class CreateContainerRecipeRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Specifies the operating system version for the source image.
+     * Specifies the operating system version for the base image.
      * </p>
      * 
      * @param imageOsVersionOverride
-     *        Specifies the operating system version for the source image.
+     *        Specifies the operating system version for the base image.
      */
 
     public void setImageOsVersionOverride(String imageOsVersionOverride) {
@@ -672,10 +672,10 @@ public class CreateContainerRecipeRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Specifies the operating system version for the source image.
+     * Specifies the operating system version for the base image.
      * </p>
      * 
-     * @return Specifies the operating system version for the source image.
+     * @return Specifies the operating system version for the base image.
      */
 
     public String getImageOsVersionOverride() {
@@ -684,11 +684,11 @@ public class CreateContainerRecipeRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Specifies the operating system version for the source image.
+     * Specifies the operating system version for the base image.
      * </p>
      * 
      * @param imageOsVersionOverride
-     *        Specifies the operating system version for the source image.
+     *        Specifies the operating system version for the base image.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -699,11 +699,11 @@ public class CreateContainerRecipeRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The source image for the container recipe.
+     * The base image for the container recipe.
      * </p>
      * 
      * @param parentImage
-     *        The source image for the container recipe.
+     *        The base image for the container recipe.
      */
 
     public void setParentImage(String parentImage) {
@@ -712,10 +712,10 @@ public class CreateContainerRecipeRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The source image for the container recipe.
+     * The base image for the container recipe.
      * </p>
      * 
-     * @return The source image for the container recipe.
+     * @return The base image for the container recipe.
      */
 
     public String getParentImage() {
@@ -724,11 +724,11 @@ public class CreateContainerRecipeRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The source image for the container recipe.
+     * The base image for the container recipe.
      * </p>
      * 
      * @param parentImage
-     *        The source image for the container recipe.
+     *        The base image for the container recipe.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

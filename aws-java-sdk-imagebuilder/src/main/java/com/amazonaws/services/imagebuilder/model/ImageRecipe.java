@@ -78,7 +78,7 @@ public class ImageRecipe implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<ComponentConfiguration> components;
     /**
      * <p>
-     * The parent image of the image recipe.
+     * The base image of the image recipe.
      * </p>
      */
     private String parentImage;
@@ -505,11 +505,11 @@ public class ImageRecipe implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The parent image of the image recipe.
+     * The base image of the image recipe.
      * </p>
      * 
      * @param parentImage
-     *        The parent image of the image recipe.
+     *        The base image of the image recipe.
      */
 
     public void setParentImage(String parentImage) {
@@ -518,10 +518,10 @@ public class ImageRecipe implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The parent image of the image recipe.
+     * The base image of the image recipe.
      * </p>
      * 
-     * @return The parent image of the image recipe.
+     * @return The base image of the image recipe.
      */
 
     public String getParentImage() {
@@ -530,11 +530,11 @@ public class ImageRecipe implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The parent image of the image recipe.
+     * The base image of the image recipe.
      * </p>
      * 
      * @param parentImage
-     *        The parent image of the image recipe.
+     *        The base image of the image recipe.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

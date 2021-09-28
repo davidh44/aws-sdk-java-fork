@@ -36,7 +36,7 @@ public class InputFileLocation implements Serializable, Cloneable, StructuredPoj
     private S3InputFileLocation s3FileLocation;
     /**
      * <p>
-     * Specifies the details for the Amazon EFS file being copied.
+     * Reserved for future use.
      * </p>
      */
     private EfsFileLocation efsFileLocation;
@@ -83,11 +83,11 @@ public class InputFileLocation implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specifies the details for the Amazon EFS file being copied.
+     * Reserved for future use.
      * </p>
      * 
      * @param efsFileLocation
-     *        Specifies the details for the Amazon EFS file being copied.
+     *        Reserved for future use.
      */
 
     public void setEfsFileLocation(EfsFileLocation efsFileLocation) {
@@ -96,10 +96,10 @@ public class InputFileLocation implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specifies the details for the Amazon EFS file being copied.
+     * Reserved for future use.
      * </p>
      * 
-     * @return Specifies the details for the Amazon EFS file being copied.
+     * @return Reserved for future use.
      */
 
     public EfsFileLocation getEfsFileLocation() {
@@ -108,11 +108,11 @@ public class InputFileLocation implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specifies the details for the Amazon EFS file being copied.
+     * Reserved for future use.
      * </p>
      * 
      * @param efsFileLocation
-     *        Specifies the details for the Amazon EFS file being copied.
+     *        Reserved for future use.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

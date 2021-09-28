@@ -56,7 +56,7 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * The following is an <code>Entry</code> and <code>Target</code> pair example.
      * </p>
      * <p>
-     * <code>[ { "Entry": "your-personal-report.pdf", "Target": "/bucket3/customized-reports/${transfer:UserName}.pdf" } ]</code>
+     * <code>[ { "Entry": "/directory1", "Target": "/bucket_name/home/mydirectory" } ]</code>
      * </p>
      * <p>
      * In most cases, you can use this value instead of the session policy to lock your user down to the designated home
@@ -312,7 +312,7 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * The following is an <code>Entry</code> and <code>Target</code> pair example.
      * </p>
      * <p>
-     * <code>[ { "Entry": "your-personal-report.pdf", "Target": "/bucket3/customized-reports/${transfer:UserName}.pdf" } ]</code>
+     * <code>[ { "Entry": "/directory1", "Target": "/bucket_name/home/mydirectory" } ]</code>
      * </p>
      * <p>
      * In most cases, you can use this value instead of the session policy to lock your user down to the designated home
@@ -347,7 +347,7 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *         The following is an <code>Entry</code> and <code>Target</code> pair example.
      *         </p>
      *         <p>
-     *         <code>[ { "Entry": "your-personal-report.pdf", "Target": "/bucket3/customized-reports/${transfer:UserName}.pdf" } ]</code>
+     *         <code>[ { "Entry": "/directory1", "Target": "/bucket_name/home/mydirectory" } ]</code>
      *         </p>
      *         <p>
      *         In most cases, you can use this value instead of the session policy to lock your user down to the
@@ -388,7 +388,7 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * The following is an <code>Entry</code> and <code>Target</code> pair example.
      * </p>
      * <p>
-     * <code>[ { "Entry": "your-personal-report.pdf", "Target": "/bucket3/customized-reports/${transfer:UserName}.pdf" } ]</code>
+     * <code>[ { "Entry": "/directory1", "Target": "/bucket_name/home/mydirectory" } ]</code>
      * </p>
      * <p>
      * In most cases, you can use this value instead of the session policy to lock your user down to the designated home
@@ -424,7 +424,7 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        The following is an <code>Entry</code> and <code>Target</code> pair example.
      *        </p>
      *        <p>
-     *        <code>[ { "Entry": "your-personal-report.pdf", "Target": "/bucket3/customized-reports/${transfer:UserName}.pdf" } ]</code>
+     *        <code>[ { "Entry": "/directory1", "Target": "/bucket_name/home/mydirectory" } ]</code>
      *        </p>
      *        <p>
      *        In most cases, you can use this value instead of the session policy to lock your user down to the
@@ -470,7 +470,7 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * The following is an <code>Entry</code> and <code>Target</code> pair example.
      * </p>
      * <p>
-     * <code>[ { "Entry": "your-personal-report.pdf", "Target": "/bucket3/customized-reports/${transfer:UserName}.pdf" } ]</code>
+     * <code>[ { "Entry": "/directory1", "Target": "/bucket_name/home/mydirectory" } ]</code>
      * </p>
      * <p>
      * In most cases, you can use this value instead of the session policy to lock your user down to the designated home
@@ -511,7 +511,7 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        The following is an <code>Entry</code> and <code>Target</code> pair example.
      *        </p>
      *        <p>
-     *        <code>[ { "Entry": "your-personal-report.pdf", "Target": "/bucket3/customized-reports/${transfer:UserName}.pdf" } ]</code>
+     *        <code>[ { "Entry": "/directory1", "Target": "/bucket_name/home/mydirectory" } ]</code>
      *        </p>
      *        <p>
      *        In most cases, you can use this value instead of the session policy to lock your user down to the
@@ -559,7 +559,7 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * The following is an <code>Entry</code> and <code>Target</code> pair example.
      * </p>
      * <p>
-     * <code>[ { "Entry": "your-personal-report.pdf", "Target": "/bucket3/customized-reports/${transfer:UserName}.pdf" } ]</code>
+     * <code>[ { "Entry": "/directory1", "Target": "/bucket_name/home/mydirectory" } ]</code>
      * </p>
      * <p>
      * In most cases, you can use this value instead of the session policy to lock your user down to the designated home
@@ -595,7 +595,7 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        The following is an <code>Entry</code> and <code>Target</code> pair example.
      *        </p>
      *        <p>
-     *        <code>[ { "Entry": "your-personal-report.pdf", "Target": "/bucket3/customized-reports/${transfer:UserName}.pdf" } ]</code>
+     *        <code>[ { "Entry": "/directory1", "Target": "/bucket_name/home/mydirectory" } ]</code>
      *        </p>
      *        <p>
      *        In most cases, you can use this value instead of the session policy to lock your user down to the

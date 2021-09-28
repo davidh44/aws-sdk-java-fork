@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Defines a custom source AMI and block device mapping configurations of an instance used for building and testing
+ * Defines a custom base AMI and block device mapping configurations of an instance used for building and testing
  * container images.
  * </p>
  * 

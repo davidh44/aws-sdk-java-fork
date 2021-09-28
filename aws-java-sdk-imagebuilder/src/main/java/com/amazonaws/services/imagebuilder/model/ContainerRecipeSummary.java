@@ -60,7 +60,7 @@ public class ContainerRecipeSummary implements Serializable, Cloneable, Structur
     private String owner;
     /**
      * <p>
-     * The source image for the container recipe.
+     * The base image for the container recipe.
      * </p>
      */
     private String parentImage;
@@ -317,11 +317,11 @@ public class ContainerRecipeSummary implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The source image for the container recipe.
+     * The base image for the container recipe.
      * </p>
      * 
      * @param parentImage
-     *        The source image for the container recipe.
+     *        The base image for the container recipe.
      */
 
     public void setParentImage(String parentImage) {
@@ -330,10 +330,10 @@ public class ContainerRecipeSummary implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The source image for the container recipe.
+     * The base image for the container recipe.
      * </p>
      * 
-     * @return The source image for the container recipe.
+     * @return The base image for the container recipe.
      */
 
     public String getParentImage() {
@@ -342,11 +342,11 @@ public class ContainerRecipeSummary implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The source image for the container recipe.
+     * The base image for the container recipe.
      * </p>
      * 
      * @param parentImage
-     *        The source image for the container recipe.
+     *        The base image for the container recipe.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

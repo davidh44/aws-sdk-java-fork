@@ -71,7 +71,7 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * An S3 or EFS location for the destination of the file copy.
+     * An S3 location for the destination of the file copy.
      * </p>
      * </li>
      * <li>
@@ -94,7 +94,7 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
     private CustomStepDetails customStepDetails;
     /**
      * <p>
-     * You need to specify the name of the file to be deleted.
+     * Details for a step that deletes the file.
      * </p>
      */
     private DeleteStepDetails deleteStepDetails;
@@ -354,7 +354,7 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * An S3 or EFS location for the destination of the file copy.
+     * An S3 location for the destination of the file copy.
      * </p>
      * </li>
      * <li>
@@ -378,7 +378,7 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        An S3 or EFS location for the destination of the file copy.
+     *        An S3 location for the destination of the file copy.
      *        </p>
      *        </li>
      *        <li>
@@ -408,7 +408,7 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * An S3 or EFS location for the destination of the file copy.
+     * An S3 location for the destination of the file copy.
      * </p>
      * </li>
      * <li>
@@ -431,7 +431,7 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         An S3 or EFS location for the destination of the file copy.
+     *         An S3 location for the destination of the file copy.
      *         </p>
      *         </li>
      *         <li>
@@ -461,7 +461,7 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * An S3 or EFS location for the destination of the file copy.
+     * An S3 location for the destination of the file copy.
      * </p>
      * </li>
      * <li>
@@ -485,7 +485,7 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        An S3 or EFS location for the destination of the file copy.
+     *        An S3 location for the destination of the file copy.
      *        </p>
      *        </li>
      *        <li>
@@ -559,11 +559,11 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * You need to specify the name of the file to be deleted.
+     * Details for a step that deletes the file.
      * </p>
      * 
      * @param deleteStepDetails
-     *        You need to specify the name of the file to be deleted.
+     *        Details for a step that deletes the file.
      */
 
     public void setDeleteStepDetails(DeleteStepDetails deleteStepDetails) {
@@ -572,10 +572,10 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * You need to specify the name of the file to be deleted.
+     * Details for a step that deletes the file.
      * </p>
      * 
-     * @return You need to specify the name of the file to be deleted.
+     * @return Details for a step that deletes the file.
      */
 
     public DeleteStepDetails getDeleteStepDetails() {
@@ -584,11 +584,11 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * You need to specify the name of the file to be deleted.
+     * Details for a step that deletes the file.
      * </p>
      * 
      * @param deleteStepDetails
-     *        You need to specify the name of the file to be deleted.
+     *        Details for a step that deletes the file.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

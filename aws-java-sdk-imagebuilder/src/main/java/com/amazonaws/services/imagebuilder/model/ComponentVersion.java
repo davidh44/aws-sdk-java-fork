@@ -85,8 +85,8 @@ public class ComponentVersion implements Serializable, Cloneable, StructuredPojo
      * </p>
      * <p>
      * <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the most
-     * recent versions or nodes when selecting the source image or components for your recipe. When you use a wildcard
-     * in any node, all nodes to the right of the first wildcard must also be wildcards.
+     * recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in
+     * any node, all nodes to the right of the first wildcard must also be wildcards.
      * </p>
      * </note>
      */
@@ -106,7 +106,7 @@ public class ComponentVersion implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * he operating system (OS) version supported by the component. If the OS information is available, a prefix match
-     * is performed against the parent image OS version during image recipe creation.
+     * is performed against the base image OS version during image recipe creation.
      * </p>
      */
     private java.util.List<String> supportedOsVersions;
@@ -369,8 +369,8 @@ public class ComponentVersion implements Serializable, Cloneable, StructuredPojo
      * </p>
      * <p>
      * <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the most
-     * recent versions or nodes when selecting the source image or components for your recipe. When you use a wildcard
-     * in any node, all nodes to the right of the first wildcard must also be wildcards.
+     * recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in
+     * any node, all nodes to the right of the first wildcard must also be wildcards.
      * </p>
      * </note>
      * 
@@ -392,8 +392,8 @@ public class ComponentVersion implements Serializable, Cloneable, StructuredPojo
      *        </p>
      *        <p>
      *        <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the
-     *        most recent versions or nodes when selecting the source image or components for your recipe. When you use
-     *        a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.
+     *        most recent versions or nodes when selecting the base image or components for your recipe. When you use a
+     *        wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.
      *        </p>
      */
 
@@ -422,8 +422,8 @@ public class ComponentVersion implements Serializable, Cloneable, StructuredPojo
      * </p>
      * <p>
      * <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the most
-     * recent versions or nodes when selecting the source image or components for your recipe. When you use a wildcard
-     * in any node, all nodes to the right of the first wildcard must also be wildcards.
+     * recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in
+     * any node, all nodes to the right of the first wildcard must also be wildcards.
      * </p>
      * </note>
      * 
@@ -444,8 +444,8 @@ public class ComponentVersion implements Serializable, Cloneable, StructuredPojo
      *         </p>
      *         <p>
      *         <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the
-     *         most recent versions or nodes when selecting the source image or components for your recipe. When you use
-     *         a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.
+     *         most recent versions or nodes when selecting the base image or components for your recipe. When you use a
+     *         wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.
      *         </p>
      */
 
@@ -474,8 +474,8 @@ public class ComponentVersion implements Serializable, Cloneable, StructuredPojo
      * </p>
      * <p>
      * <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the most
-     * recent versions or nodes when selecting the source image or components for your recipe. When you use a wildcard
-     * in any node, all nodes to the right of the first wildcard must also be wildcards.
+     * recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in
+     * any node, all nodes to the right of the first wildcard must also be wildcards.
      * </p>
      * </note>
      * 
@@ -497,8 +497,8 @@ public class ComponentVersion implements Serializable, Cloneable, StructuredPojo
      *        </p>
      *        <p>
      *        <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the
-     *        most recent versions or nodes when selecting the source image or components for your recipe. When you use
-     *        a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.
+     *        most recent versions or nodes when selecting the base image or components for your recipe. When you use a
+     *        wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -610,11 +610,11 @@ public class ComponentVersion implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * he operating system (OS) version supported by the component. If the OS information is available, a prefix match
-     * is performed against the parent image OS version during image recipe creation.
+     * is performed against the base image OS version during image recipe creation.
      * </p>
      * 
      * @return he operating system (OS) version supported by the component. If the OS information is available, a prefix
-     *         match is performed against the parent image OS version during image recipe creation.
+     *         match is performed against the base image OS version during image recipe creation.
      */
 
     public java.util.List<String> getSupportedOsVersions() {
@@ -624,12 +624,12 @@ public class ComponentVersion implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * he operating system (OS) version supported by the component. If the OS information is available, a prefix match
-     * is performed against the parent image OS version during image recipe creation.
+     * is performed against the base image OS version during image recipe creation.
      * </p>
      * 
      * @param supportedOsVersions
      *        he operating system (OS) version supported by the component. If the OS information is available, a prefix
-     *        match is performed against the parent image OS version during image recipe creation.
+     *        match is performed against the base image OS version during image recipe creation.
      */
 
     public void setSupportedOsVersions(java.util.Collection<String> supportedOsVersions) {
@@ -644,7 +644,7 @@ public class ComponentVersion implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * he operating system (OS) version supported by the component. If the OS information is available, a prefix match
-     * is performed against the parent image OS version during image recipe creation.
+     * is performed against the base image OS version during image recipe creation.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -654,7 +654,7 @@ public class ComponentVersion implements Serializable, Cloneable, StructuredPojo
      * 
      * @param supportedOsVersions
      *        he operating system (OS) version supported by the component. If the OS information is available, a prefix
-     *        match is performed against the parent image OS version during image recipe creation.
+     *        match is performed against the base image OS version during image recipe creation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -671,12 +671,12 @@ public class ComponentVersion implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * he operating system (OS) version supported by the component. If the OS information is available, a prefix match
-     * is performed against the parent image OS version during image recipe creation.
+     * is performed against the base image OS version during image recipe creation.
      * </p>
      * 
      * @param supportedOsVersions
      *        he operating system (OS) version supported by the component. If the OS information is available, a prefix
-     *        match is performed against the parent image OS version during image recipe creation.
+     *        match is performed against the base image OS version during image recipe creation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

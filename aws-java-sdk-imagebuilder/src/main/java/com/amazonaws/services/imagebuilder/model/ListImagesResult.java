@@ -40,8 +40,8 @@ public class ListImagesResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * </p>
      * <p>
      * <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the most
-     * recent versions or nodes when selecting the source image or components for your recipe. When you use a wildcard
-     * in any node, all nodes to the right of the first wildcard must also be wildcards.
+     * recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in
+     * any node, all nodes to the right of the first wildcard must also be wildcards.
      * </p>
      * </note>
      */
@@ -105,8 +105,8 @@ public class ListImagesResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * </p>
      * <p>
      * <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the most
-     * recent versions or nodes when selecting the source image or components for your recipe. When you use a wildcard
-     * in any node, all nodes to the right of the first wildcard must also be wildcards.
+     * recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in
+     * any node, all nodes to the right of the first wildcard must also be wildcards.
      * </p>
      * </note>
      * 
@@ -117,8 +117,8 @@ public class ListImagesResult extends com.amazonaws.AmazonWebServiceResult<com.a
      *         </p>
      *         <p>
      *         <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the
-     *         most recent versions or nodes when selecting the source image or components for your recipe. When you use
-     *         a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.
+     *         most recent versions or nodes when selecting the base image or components for your recipe. When you use a
+     *         wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.
      *         </p>
      */
 
@@ -137,8 +137,8 @@ public class ListImagesResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * </p>
      * <p>
      * <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the most
-     * recent versions or nodes when selecting the source image or components for your recipe. When you use a wildcard
-     * in any node, all nodes to the right of the first wildcard must also be wildcards.
+     * recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in
+     * any node, all nodes to the right of the first wildcard must also be wildcards.
      * </p>
      * </note>
      * 
@@ -150,8 +150,8 @@ public class ListImagesResult extends com.amazonaws.AmazonWebServiceResult<com.a
      *        </p>
      *        <p>
      *        <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the
-     *        most recent versions or nodes when selecting the source image or components for your recipe. When you use
-     *        a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.
+     *        most recent versions or nodes when selecting the base image or components for your recipe. When you use a
+     *        wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.
      *        </p>
      */
 
@@ -175,8 +175,8 @@ public class ListImagesResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * </p>
      * <p>
      * <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the most
-     * recent versions or nodes when selecting the source image or components for your recipe. When you use a wildcard
-     * in any node, all nodes to the right of the first wildcard must also be wildcards.
+     * recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in
+     * any node, all nodes to the right of the first wildcard must also be wildcards.
      * </p>
      * </note>
      * <p>
@@ -193,8 +193,8 @@ public class ListImagesResult extends com.amazonaws.AmazonWebServiceResult<com.a
      *        </p>
      *        <p>
      *        <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the
-     *        most recent versions or nodes when selecting the source image or components for your recipe. When you use
-     *        a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.
+     *        most recent versions or nodes when selecting the base image or components for your recipe. When you use a
+     *        wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -220,8 +220,8 @@ public class ListImagesResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * </p>
      * <p>
      * <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the most
-     * recent versions or nodes when selecting the source image or components for your recipe. When you use a wildcard
-     * in any node, all nodes to the right of the first wildcard must also be wildcards.
+     * recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in
+     * any node, all nodes to the right of the first wildcard must also be wildcards.
      * </p>
      * </note>
      * 
@@ -233,8 +233,8 @@ public class ListImagesResult extends com.amazonaws.AmazonWebServiceResult<com.a
      *        </p>
      *        <p>
      *        <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the
-     *        most recent versions or nodes when selecting the source image or components for your recipe. When you use
-     *        a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.
+     *        most recent versions or nodes when selecting the base image or components for your recipe. When you use a
+     *        wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

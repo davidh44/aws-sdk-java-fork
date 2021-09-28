@@ -54,7 +54,7 @@ public class ImageRecipeSummary implements Serializable, Cloneable, StructuredPo
     private String owner;
     /**
      * <p>
-     * The parent image of the image recipe.
+     * The base image of the image recipe.
      * </p>
      */
     private String parentImage;
@@ -252,11 +252,11 @@ public class ImageRecipeSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The parent image of the image recipe.
+     * The base image of the image recipe.
      * </p>
      * 
      * @param parentImage
-     *        The parent image of the image recipe.
+     *        The base image of the image recipe.
      */
 
     public void setParentImage(String parentImage) {
@@ -265,10 +265,10 @@ public class ImageRecipeSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The parent image of the image recipe.
+     * The base image of the image recipe.
      * </p>
      * 
-     * @return The parent image of the image recipe.
+     * @return The base image of the image recipe.
      */
 
     public String getParentImage() {
@@ -277,11 +277,11 @@ public class ImageRecipeSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The parent image of the image recipe.
+     * The base image of the image recipe.
      * </p>
      * 
      * @param parentImage
-     *        The parent image of the image recipe.
+     *        The base image of the image recipe.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

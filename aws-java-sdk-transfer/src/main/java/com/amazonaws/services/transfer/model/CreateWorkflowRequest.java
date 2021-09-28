@@ -60,6 +60,11 @@ public class CreateWorkflowRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * Currently, copying and tagging are supported only on S3.
+     * </p>
+     * </note>
      * <p>
      * For file location, you specify either the S3 bucket and key, or the EFS filesystem ID and path.
      * </p>
@@ -67,8 +72,15 @@ public class CreateWorkflowRequest extends com.amazonaws.AmazonWebServiceRequest
     private java.util.List<WorkflowStep> steps;
     /**
      * <p>
-     * Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     * Specifies the steps (actions) to take if errors are encountered during execution of the workflow.
      * </p>
+     * <note>
+     * <p>
+     * For custom steps, the lambda function needs to send <code>FAILURE</code> to the call back API to kick off the
+     * exception steps. Additionally, if the lambda does not send <code>SUCCESS</code> before it times out, the
+     * exception steps are executed.
+     * </p>
+     * </note>
      */
     private java.util.List<WorkflowStep> onExceptionSteps;
     /**
@@ -148,6 +160,11 @@ public class CreateWorkflowRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * Currently, copying and tagging are supported only on S3.
+     * </p>
+     * </note>
      * <p>
      * For file location, you specify either the S3 bucket and key, or the EFS filesystem ID and path.
      * </p>
@@ -178,6 +195,11 @@ public class CreateWorkflowRequest extends com.amazonaws.AmazonWebServiceRequest
      *         </p>
      *         </li>
      *         </ul>
+     *         <note>
+     *         <p>
+     *         Currently, copying and tagging are supported only on S3.
+     *         </p>
+     *         </note>
      *         <p>
      *         For file location, you specify either the S3 bucket and key, or the EFS filesystem ID and path.
      */
@@ -215,6 +237,11 @@ public class CreateWorkflowRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * Currently, copying and tagging are supported only on S3.
+     * </p>
+     * </note>
      * <p>
      * For file location, you specify either the S3 bucket and key, or the EFS filesystem ID and path.
      * </p>
@@ -246,6 +273,11 @@ public class CreateWorkflowRequest extends com.amazonaws.AmazonWebServiceRequest
      *        </p>
      *        </li>
      *        </ul>
+     *        <note>
+     *        <p>
+     *        Currently, copying and tagging are supported only on S3.
+     *        </p>
+     *        </note>
      *        <p>
      *        For file location, you specify either the S3 bucket and key, or the EFS filesystem ID and path.
      */
@@ -288,6 +320,11 @@ public class CreateWorkflowRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * Currently, copying and tagging are supported only on S3.
+     * </p>
+     * </note>
      * <p>
      * For file location, you specify either the S3 bucket and key, or the EFS filesystem ID and path.
      * </p>
@@ -324,6 +361,11 @@ public class CreateWorkflowRequest extends com.amazonaws.AmazonWebServiceRequest
      *        </p>
      *        </li>
      *        </ul>
+     *        <note>
+     *        <p>
+     *        Currently, copying and tagging are supported only on S3.
+     *        </p>
+     *        </note>
      *        <p>
      *        For file location, you specify either the S3 bucket and key, or the EFS filesystem ID and path.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -368,6 +410,11 @@ public class CreateWorkflowRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * Currently, copying and tagging are supported only on S3.
+     * </p>
+     * </note>
      * <p>
      * For file location, you specify either the S3 bucket and key, or the EFS filesystem ID and path.
      * </p>
@@ -399,6 +446,11 @@ public class CreateWorkflowRequest extends com.amazonaws.AmazonWebServiceRequest
      *        </p>
      *        </li>
      *        </ul>
+     *        <note>
+     *        <p>
+     *        Currently, copying and tagging are supported only on S3.
+     *        </p>
+     *        </note>
      *        <p>
      *        For file location, you specify either the S3 bucket and key, or the EFS filesystem ID and path.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -411,10 +463,23 @@ public class CreateWorkflowRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     * Specifies the steps (actions) to take if errors are encountered during execution of the workflow.
      * </p>
+     * <note>
+     * <p>
+     * For custom steps, the lambda function needs to send <code>FAILURE</code> to the call back API to kick off the
+     * exception steps. Additionally, if the lambda does not send <code>SUCCESS</code> before it times out, the
+     * exception steps are executed.
+     * </p>
+     * </note>
      * 
-     * @return Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     * @return Specifies the steps (actions) to take if errors are encountered during execution of the workflow.</p>
+     *         <note>
+     *         <p>
+     *         For custom steps, the lambda function needs to send <code>FAILURE</code> to the call back API to kick off
+     *         the exception steps. Additionally, if the lambda does not send <code>SUCCESS</code> before it times out,
+     *         the exception steps are executed.
+     *         </p>
      */
 
     public java.util.List<WorkflowStep> getOnExceptionSteps() {
@@ -423,11 +488,24 @@ public class CreateWorkflowRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     * Specifies the steps (actions) to take if errors are encountered during execution of the workflow.
      * </p>
+     * <note>
+     * <p>
+     * For custom steps, the lambda function needs to send <code>FAILURE</code> to the call back API to kick off the
+     * exception steps. Additionally, if the lambda does not send <code>SUCCESS</code> before it times out, the
+     * exception steps are executed.
+     * </p>
+     * </note>
      * 
      * @param onExceptionSteps
-     *        Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     *        Specifies the steps (actions) to take if errors are encountered during execution of the workflow.</p>
+     *        <note>
+     *        <p>
+     *        For custom steps, the lambda function needs to send <code>FAILURE</code> to the call back API to kick off
+     *        the exception steps. Additionally, if the lambda does not send <code>SUCCESS</code> before it times out,
+     *        the exception steps are executed.
+     *        </p>
      */
 
     public void setOnExceptionSteps(java.util.Collection<WorkflowStep> onExceptionSteps) {
@@ -441,8 +519,15 @@ public class CreateWorkflowRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     * Specifies the steps (actions) to take if errors are encountered during execution of the workflow.
      * </p>
+     * <note>
+     * <p>
+     * For custom steps, the lambda function needs to send <code>FAILURE</code> to the call back API to kick off the
+     * exception steps. Additionally, if the lambda does not send <code>SUCCESS</code> before it times out, the
+     * exception steps are executed.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setOnExceptionSteps(java.util.Collection)} or {@link #withOnExceptionSteps(java.util.Collection)} if you
@@ -450,7 +535,13 @@ public class CreateWorkflowRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param onExceptionSteps
-     *        Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     *        Specifies the steps (actions) to take if errors are encountered during execution of the workflow.</p>
+     *        <note>
+     *        <p>
+     *        For custom steps, the lambda function needs to send <code>FAILURE</code> to the call back API to kick off
+     *        the exception steps. Additionally, if the lambda does not send <code>SUCCESS</code> before it times out,
+     *        the exception steps are executed.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -466,11 +557,24 @@ public class CreateWorkflowRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     * Specifies the steps (actions) to take if errors are encountered during execution of the workflow.
      * </p>
+     * <note>
+     * <p>
+     * For custom steps, the lambda function needs to send <code>FAILURE</code> to the call back API to kick off the
+     * exception steps. Additionally, if the lambda does not send <code>SUCCESS</code> before it times out, the
+     * exception steps are executed.
+     * </p>
+     * </note>
      * 
      * @param onExceptionSteps
-     *        Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     *        Specifies the steps (actions) to take if errors are encountered during execution of the workflow.</p>
+     *        <note>
+     *        <p>
+     *        For custom steps, the lambda function needs to send <code>FAILURE</code> to the call back API to kick off
+     *        the exception steps. Additionally, if the lambda does not send <code>SUCCESS</code> before it times out,
+     *        the exception steps are executed.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

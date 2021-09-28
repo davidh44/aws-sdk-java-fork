@@ -55,7 +55,7 @@ public class ComponentSummary implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * The operating system (OS) version supported by the component. If the OS information is available, a prefix match
-     * is performed against the parent image OS version during image recipe creation.
+     * is performed against the base image OS version during image recipe creation.
      * </p>
      */
     private java.util.List<String> supportedOsVersions;
@@ -284,11 +284,11 @@ public class ComponentSummary implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * The operating system (OS) version supported by the component. If the OS information is available, a prefix match
-     * is performed against the parent image OS version during image recipe creation.
+     * is performed against the base image OS version during image recipe creation.
      * </p>
      * 
      * @return The operating system (OS) version supported by the component. If the OS information is available, a
-     *         prefix match is performed against the parent image OS version during image recipe creation.
+     *         prefix match is performed against the base image OS version during image recipe creation.
      */
 
     public java.util.List<String> getSupportedOsVersions() {
@@ -298,12 +298,12 @@ public class ComponentSummary implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * The operating system (OS) version supported by the component. If the OS information is available, a prefix match
-     * is performed against the parent image OS version during image recipe creation.
+     * is performed against the base image OS version during image recipe creation.
      * </p>
      * 
      * @param supportedOsVersions
      *        The operating system (OS) version supported by the component. If the OS information is available, a prefix
-     *        match is performed against the parent image OS version during image recipe creation.
+     *        match is performed against the base image OS version during image recipe creation.
      */
 
     public void setSupportedOsVersions(java.util.Collection<String> supportedOsVersions) {
@@ -318,7 +318,7 @@ public class ComponentSummary implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * The operating system (OS) version supported by the component. If the OS information is available, a prefix match
-     * is performed against the parent image OS version during image recipe creation.
+     * is performed against the base image OS version during image recipe creation.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -328,7 +328,7 @@ public class ComponentSummary implements Serializable, Cloneable, StructuredPojo
      * 
      * @param supportedOsVersions
      *        The operating system (OS) version supported by the component. If the OS information is available, a prefix
-     *        match is performed against the parent image OS version during image recipe creation.
+     *        match is performed against the base image OS version during image recipe creation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -345,12 +345,12 @@ public class ComponentSummary implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * The operating system (OS) version supported by the component. If the OS information is available, a prefix match
-     * is performed against the parent image OS version during image recipe creation.
+     * is performed against the base image OS version during image recipe creation.
      * </p>
      * 
      * @param supportedOsVersions
      *        The operating system (OS) version supported by the component. If the OS information is available, a prefix
-     *        match is performed against the parent image OS version during image recipe creation.
+     *        match is performed against the base image OS version during image recipe creation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

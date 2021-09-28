@@ -44,7 +44,7 @@ public class AdditionalInstanceConfiguration implements Serializable, Cloneable,
      * <p>
      * The userDataOverride property replaces any commands that Image Builder might have added to ensure that Systems
      * Manager is installed on your Linux build instance. If you override the user data, make sure that you add commands
-     * to install Systems Manager, if it is not pre-installed on your source image.
+     * to install Systems Manager, if it is not pre-installed on your base image.
      * </p>
      * </note>
      */
@@ -98,7 +98,7 @@ public class AdditionalInstanceConfiguration implements Serializable, Cloneable,
      * <p>
      * The userDataOverride property replaces any commands that Image Builder might have added to ensure that Systems
      * Manager is installed on your Linux build instance. If you override the user data, make sure that you add commands
-     * to install Systems Manager, if it is not pre-installed on your source image.
+     * to install Systems Manager, if it is not pre-installed on your base image.
      * </p>
      * </note>
      * 
@@ -108,7 +108,7 @@ public class AdditionalInstanceConfiguration implements Serializable, Cloneable,
      *        <p>
      *        The userDataOverride property replaces any commands that Image Builder might have added to ensure that
      *        Systems Manager is installed on your Linux build instance. If you override the user data, make sure that
-     *        you add commands to install Systems Manager, if it is not pre-installed on your source image.
+     *        you add commands to install Systems Manager, if it is not pre-installed on your base image.
      *        </p>
      */
 
@@ -124,7 +124,7 @@ public class AdditionalInstanceConfiguration implements Serializable, Cloneable,
      * <p>
      * The userDataOverride property replaces any commands that Image Builder might have added to ensure that Systems
      * Manager is installed on your Linux build instance. If you override the user data, make sure that you add commands
-     * to install Systems Manager, if it is not pre-installed on your source image.
+     * to install Systems Manager, if it is not pre-installed on your base image.
      * </p>
      * </note>
      * 
@@ -133,7 +133,7 @@ public class AdditionalInstanceConfiguration implements Serializable, Cloneable,
      *         <p>
      *         The userDataOverride property replaces any commands that Image Builder might have added to ensure that
      *         Systems Manager is installed on your Linux build instance. If you override the user data, make sure that
-     *         you add commands to install Systems Manager, if it is not pre-installed on your source image.
+     *         you add commands to install Systems Manager, if it is not pre-installed on your base image.
      *         </p>
      */
 
@@ -149,7 +149,7 @@ public class AdditionalInstanceConfiguration implements Serializable, Cloneable,
      * <p>
      * The userDataOverride property replaces any commands that Image Builder might have added to ensure that Systems
      * Manager is installed on your Linux build instance. If you override the user data, make sure that you add commands
-     * to install Systems Manager, if it is not pre-installed on your source image.
+     * to install Systems Manager, if it is not pre-installed on your base image.
      * </p>
      * </note>
      * 
@@ -159,7 +159,7 @@ public class AdditionalInstanceConfiguration implements Serializable, Cloneable,
      *        <p>
      *        The userDataOverride property replaces any commands that Image Builder might have added to ensure that
      *        Systems Manager is installed on your Linux build instance. If you override the user data, make sure that
-     *        you add commands to install Systems Manager, if it is not pre-installed on your source image.
+     *        you add commands to install Systems Manager, if it is not pre-installed on your base image.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

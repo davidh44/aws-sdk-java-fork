@@ -48,7 +48,7 @@ public class DescribedWorkflow implements Serializable, Cloneable, StructuredPoj
     private java.util.List<WorkflowStep> steps;
     /**
      * <p>
-     * Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     * Specifies the steps (actions) to take if errors are encountered during execution of the workflow.
      * </p>
      */
     private java.util.List<WorkflowStep> onExceptionSteps;
@@ -218,10 +218,10 @@ public class DescribedWorkflow implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     * Specifies the steps (actions) to take if errors are encountered during execution of the workflow.
      * </p>
      * 
-     * @return Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     * @return Specifies the steps (actions) to take if errors are encountered during execution of the workflow.
      */
 
     public java.util.List<WorkflowStep> getOnExceptionSteps() {
@@ -230,11 +230,11 @@ public class DescribedWorkflow implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     * Specifies the steps (actions) to take if errors are encountered during execution of the workflow.
      * </p>
      * 
      * @param onExceptionSteps
-     *        Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     *        Specifies the steps (actions) to take if errors are encountered during execution of the workflow.
      */
 
     public void setOnExceptionSteps(java.util.Collection<WorkflowStep> onExceptionSteps) {
@@ -248,7 +248,7 @@ public class DescribedWorkflow implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     * Specifies the steps (actions) to take if errors are encountered during execution of the workflow.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -257,7 +257,7 @@ public class DescribedWorkflow implements Serializable, Cloneable, StructuredPoj
      * </p>
      * 
      * @param onExceptionSteps
-     *        Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     *        Specifies the steps (actions) to take if errors are encountered during execution of the workflow.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -273,11 +273,11 @@ public class DescribedWorkflow implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     * Specifies the steps (actions) to take if errors are encountered during execution of the workflow.
      * </p>
      * 
      * @param onExceptionSteps
-     *        Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     *        Specifies the steps (actions) to take if errors are encountered during execution of the workflow.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

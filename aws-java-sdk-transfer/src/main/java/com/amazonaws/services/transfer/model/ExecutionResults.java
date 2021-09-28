@@ -36,7 +36,7 @@ public class ExecutionResults implements Serializable, Cloneable, StructuredPojo
     private java.util.List<ExecutionStepResult> steps;
     /**
      * <p>
-     * Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     * Specifies the steps (actions) to take if errors are encountered during execution of the workflow.
      * </p>
      */
     private java.util.List<ExecutionStepResult> onExceptionSteps;
@@ -113,10 +113,10 @@ public class ExecutionResults implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     * Specifies the steps (actions) to take if errors are encountered during execution of the workflow.
      * </p>
      * 
-     * @return Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     * @return Specifies the steps (actions) to take if errors are encountered during execution of the workflow.
      */
 
     public java.util.List<ExecutionStepResult> getOnExceptionSteps() {
@@ -125,11 +125,11 @@ public class ExecutionResults implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     * Specifies the steps (actions) to take if errors are encountered during execution of the workflow.
      * </p>
      * 
      * @param onExceptionSteps
-     *        Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     *        Specifies the steps (actions) to take if errors are encountered during execution of the workflow.
      */
 
     public void setOnExceptionSteps(java.util.Collection<ExecutionStepResult> onExceptionSteps) {
@@ -143,7 +143,7 @@ public class ExecutionResults implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     * Specifies the steps (actions) to take if errors are encountered during execution of the workflow.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -152,7 +152,7 @@ public class ExecutionResults implements Serializable, Cloneable, StructuredPojo
      * </p>
      * 
      * @param onExceptionSteps
-     *        Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     *        Specifies the steps (actions) to take if errors are encountered during execution of the workflow.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -168,11 +168,11 @@ public class ExecutionResults implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     * Specifies the steps (actions) to take if errors are encountered during execution of the workflow.
      * </p>
      * 
      * @param onExceptionSteps
-     *        Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     *        Specifies the steps (actions) to take if errors are encountered during execution of the workflow.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

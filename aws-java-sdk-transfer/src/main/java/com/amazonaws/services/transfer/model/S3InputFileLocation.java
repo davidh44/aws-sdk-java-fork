@@ -19,7 +19,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specifies the details for the S3 file being copied.
+ * Specifies the customer input S3 file location. If it is used inside
+ * <code>copyStepDetails.DestinationFileLocation</code>, it should be the S3 copy destination.
+ * </p>
+ * <p>
+ * You need to provide the bucket and key. The key can represent either a path or a file. This is determined by whether
+ * or not you end the key value with the forward slash (/) character. If the final character is "/", then your file is
+ * copied to the folder, and its name does not change. If, rather, the final character is alphanumeric, your uploaded
+ * file is renamed to the path value. In this case, if a file with that name already exists, it is overwritten.
+ * </p>
+ * <p>
+ * For example, if your path is <code>shared-files/bob/</code>, your uploaded files are copied to the
+ * <code>shared-files/bob/</code>, folder. If your path is <code>shared-files/today</code>, each uploaded file is copied
+ * to the <code>shared-files</code> folder and named <code>today</code>: each upload overwrites the previous version of
+ * the <i>bob</i> file.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/S3InputFileLocation" target="_top">AWS API
@@ -30,7 +43,7 @@ public class S3InputFileLocation implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Specifies the S3 bucket that contains the file being copied.
+     * Specifies the S3 bucket for the customer input file.
      * </p>
      */
     private String bucket;
@@ -43,11 +56,11 @@ public class S3InputFileLocation implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Specifies the S3 bucket that contains the file being copied.
+     * Specifies the S3 bucket for the customer input file.
      * </p>
      * 
      * @param bucket
-     *        Specifies the S3 bucket that contains the file being copied.
+     *        Specifies the S3 bucket for the customer input file.
      */
 
     public void setBucket(String bucket) {
@@ -56,10 +69,10 @@ public class S3InputFileLocation implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Specifies the S3 bucket that contains the file being copied.
+     * Specifies the S3 bucket for the customer input file.
      * </p>
      * 
-     * @return Specifies the S3 bucket that contains the file being copied.
+     * @return Specifies the S3 bucket for the customer input file.
      */
 
     public String getBucket() {
@@ -68,11 +81,11 @@ public class S3InputFileLocation implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Specifies the S3 bucket that contains the file being copied.
+     * Specifies the S3 bucket for the customer input file.
      * </p>
      * 
      * @param bucket
-     *        Specifies the S3 bucket that contains the file being copied.
+     *        Specifies the S3 bucket for the customer input file.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

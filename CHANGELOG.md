@@ -1,3 +1,12 @@
+# __1.12.76__ __2021-09-28__
+## __AWS Transfer Family__
+  - ### Features
+    - Added changes for managed workflows feature APIs.
+
+## __EC2 Image Builder__
+  - ### Features
+    - Fix description for AmiDistributionConfiguration Name property, which actually refers to the output AMI name. Also updated for consistent terminology to use "base" image, and another update to fix description text.
+
 # __1.12.75__ __2021-09-27__
 ## __Amazon AppIntegrations Service__
   - ### Features
