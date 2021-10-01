@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes the runtime configuration of an AWS App Runner service instance (scaling unit).
+ * Describes the runtime configuration of an App Runner service instance (scaling unit).
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/InstanceConfiguration" target="_top">AWS
@@ -49,7 +49,7 @@ public class InstanceConfiguration implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are
-     * permissions that your code needs when it calls any AWS APIs.
+     * permissions that your code needs when it calls any Amazon Web Services APIs.
      * </p>
      */
     private String instanceRoleArn;
@@ -167,12 +167,12 @@ public class InstanceConfiguration implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are
-     * permissions that your code needs when it calls any AWS APIs.
+     * permissions that your code needs when it calls any Amazon Web Services APIs.
      * </p>
      * 
      * @param instanceRoleArn
      *        The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These
-     *        are permissions that your code needs when it calls any AWS APIs.
+     *        are permissions that your code needs when it calls any Amazon Web Services APIs.
      */
 
     public void setInstanceRoleArn(String instanceRoleArn) {
@@ -182,11 +182,11 @@ public class InstanceConfiguration implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are
-     * permissions that your code needs when it calls any AWS APIs.
+     * permissions that your code needs when it calls any Amazon Web Services APIs.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These
-     *         are permissions that your code needs when it calls any AWS APIs.
+     *         are permissions that your code needs when it calls any Amazon Web Services APIs.
      */
 
     public String getInstanceRoleArn() {
@@ -196,12 +196,12 @@ public class InstanceConfiguration implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are
-     * permissions that your code needs when it calls any AWS APIs.
+     * permissions that your code needs when it calls any Amazon Web Services APIs.
      * </p>
      * 
      * @param instanceRoleArn
      *        The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These
-     *        are permissions that your code needs when it calls any AWS APIs.
+     *        are permissions that your code needs when it calls any Amazon Web Services APIs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

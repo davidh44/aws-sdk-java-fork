@@ -27,9 +27,9 @@ public class CreateAutoScalingConfigurationRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A name for the auto scaling configuration. When you use it for the first time in an AWS Region, App Runner
-     * creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner
-     * creates incremental revisions of the configuration.
+     * A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services Region,
+     * App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls,
+     * App Runner creates incremental revisions of the configuration.
      * </p>
      */
     private String autoScalingConfigurationName;
@@ -79,15 +79,15 @@ public class CreateAutoScalingConfigurationRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A name for the auto scaling configuration. When you use it for the first time in an AWS Region, App Runner
-     * creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner
-     * creates incremental revisions of the configuration.
+     * A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services Region,
+     * App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls,
+     * App Runner creates incremental revisions of the configuration.
      * </p>
      * 
      * @param autoScalingConfigurationName
-     *        A name for the auto scaling configuration. When you use it for the first time in an AWS Region, App Runner
-     *        creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App
-     *        Runner creates incremental revisions of the configuration.
+     *        A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services
+     *        Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in
+     *        subsequent calls, App Runner creates incremental revisions of the configuration.
      */
 
     public void setAutoScalingConfigurationName(String autoScalingConfigurationName) {
@@ -96,14 +96,14 @@ public class CreateAutoScalingConfigurationRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A name for the auto scaling configuration. When you use it for the first time in an AWS Region, App Runner
-     * creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner
-     * creates incremental revisions of the configuration.
+     * A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services Region,
+     * App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls,
+     * App Runner creates incremental revisions of the configuration.
      * </p>
      * 
-     * @return A name for the auto scaling configuration. When you use it for the first time in an AWS Region, App
-     *         Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent
-     *         calls, App Runner creates incremental revisions of the configuration.
+     * @return A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services
+     *         Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in
+     *         subsequent calls, App Runner creates incremental revisions of the configuration.
      */
 
     public String getAutoScalingConfigurationName() {
@@ -112,15 +112,15 @@ public class CreateAutoScalingConfigurationRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A name for the auto scaling configuration. When you use it for the first time in an AWS Region, App Runner
-     * creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner
-     * creates incremental revisions of the configuration.
+     * A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services Region,
+     * App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls,
+     * App Runner creates incremental revisions of the configuration.
      * </p>
      * 
      * @param autoScalingConfigurationName
-     *        A name for the auto scaling configuration. When you use it for the first time in an AWS Region, App Runner
-     *        creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App
-     *        Runner creates incremental revisions of the configuration.
+     *        A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services
+     *        Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in
+     *        subsequent calls, App Runner creates incremental revisions of the configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

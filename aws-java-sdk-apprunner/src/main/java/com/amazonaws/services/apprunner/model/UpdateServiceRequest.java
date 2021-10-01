@@ -59,7 +59,7 @@ public class UpdateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String autoScalingConfigurationArn;
     /**
      * <p>
-     * The settings for the health check that AWS App Runner performs to monitor the health of your service.
+     * The settings for the health check that App Runner performs to monitor the health of your service.
      * </p>
      */
     private HealthCheckConfiguration healthCheckConfiguration;
@@ -271,11 +271,11 @@ public class UpdateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The settings for the health check that AWS App Runner performs to monitor the health of your service.
+     * The settings for the health check that App Runner performs to monitor the health of your service.
      * </p>
      * 
      * @param healthCheckConfiguration
-     *        The settings for the health check that AWS App Runner performs to monitor the health of your service.
+     *        The settings for the health check that App Runner performs to monitor the health of your service.
      */
 
     public void setHealthCheckConfiguration(HealthCheckConfiguration healthCheckConfiguration) {
@@ -284,10 +284,10 @@ public class UpdateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The settings for the health check that AWS App Runner performs to monitor the health of your service.
+     * The settings for the health check that App Runner performs to monitor the health of your service.
      * </p>
      * 
-     * @return The settings for the health check that AWS App Runner performs to monitor the health of your service.
+     * @return The settings for the health check that App Runner performs to monitor the health of your service.
      */
 
     public HealthCheckConfiguration getHealthCheckConfiguration() {
@@ -296,11 +296,11 @@ public class UpdateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The settings for the health check that AWS App Runner performs to monitor the health of your service.
+     * The settings for the health check that App Runner performs to monitor the health of your service.
      * </p>
      * 
      * @param healthCheckConfiguration
-     *        The settings for the health check that AWS App Runner performs to monitor the health of your service.
+     *        The settings for the health check that App Runner performs to monitor the health of your service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

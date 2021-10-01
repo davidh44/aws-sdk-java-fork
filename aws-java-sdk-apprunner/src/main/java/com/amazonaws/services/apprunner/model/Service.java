@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes an AWS App Runner service. It can describe a service in any state, including deleted services.
+ * Describes an App Runner service. It can describe a service in any state, including deleted services.
  * </p>
  * <p>
  * This type contains the full information about a service, including configuration details. It's returned by the <a
@@ -45,7 +45,7 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     private String serviceName;
     /**
      * <p>
-     * An ID that App Runner generated for this service. It's unique within the AWS Region.
+     * An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.
      * </p>
      */
     private String serviceId;
@@ -119,7 +119,8 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that
-     * App Runner maintains for the service. It can be either a customer-provided encryption key or an AWS managed CMK.
+     * App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web
+     * Services managed CMK.
      * </p>
      */
     private EncryptionConfiguration encryptionConfiguration;
@@ -179,11 +180,11 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An ID that App Runner generated for this service. It's unique within the AWS Region.
+     * An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.
      * </p>
      * 
      * @param serviceId
-     *        An ID that App Runner generated for this service. It's unique within the AWS Region.
+     *        An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.
      */
 
     public void setServiceId(String serviceId) {
@@ -192,10 +193,10 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An ID that App Runner generated for this service. It's unique within the AWS Region.
+     * An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.
      * </p>
      * 
-     * @return An ID that App Runner generated for this service. It's unique within the AWS Region.
+     * @return An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.
      */
 
     public String getServiceId() {
@@ -204,11 +205,11 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An ID that App Runner generated for this service. It's unique within the AWS Region.
+     * An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.
      * </p>
      * 
      * @param serviceId
-     *        An ID that App Runner generated for this service. It's unique within the AWS Region.
+     *        An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -705,13 +706,14 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that
-     * App Runner maintains for the service. It can be either a customer-provided encryption key or an AWS managed CMK.
+     * App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web
+     * Services managed CMK.
      * </p>
      * 
      * @param encryptionConfiguration
      *        The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository
-     *        that App Runner maintains for the service. It can be either a customer-provided encryption key or an AWS
-     *        managed CMK.
+     *        that App Runner maintains for the service. It can be either a customer-provided encryption key or an
+     *        Amazon Web Services managed CMK.
      */
 
     public void setEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
@@ -721,12 +723,13 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that
-     * App Runner maintains for the service. It can be either a customer-provided encryption key or an AWS managed CMK.
+     * App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web
+     * Services managed CMK.
      * </p>
      * 
      * @return The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository
-     *         that App Runner maintains for the service. It can be either a customer-provided encryption key or an AWS
-     *         managed CMK.
+     *         that App Runner maintains for the service. It can be either a customer-provided encryption key or an
+     *         Amazon Web Services managed CMK.
      */
 
     public EncryptionConfiguration getEncryptionConfiguration() {
@@ -736,13 +739,14 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that
-     * App Runner maintains for the service. It can be either a customer-provided encryption key or an AWS managed CMK.
+     * App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web
+     * Services managed CMK.
      * </p>
      * 
      * @param encryptionConfiguration
      *        The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository
-     *        that App Runner maintains for the service. It can be either a customer-provided encryption key or an AWS
-     *        managed CMK.
+     *        that App Runner maintains for the service. It can be either a customer-provided encryption key or an
+     *        Amazon Web Services managed CMK.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

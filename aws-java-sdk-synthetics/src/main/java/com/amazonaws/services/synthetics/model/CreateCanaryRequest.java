@@ -151,6 +151,13 @@ public class CreateCanaryRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * A structure that contains the configuration for canary artifacts, including the encryption-at-rest settings for
+     * artifacts that the canary uploads to Amazon S3.
+     * </p>
+     */
+    private ArtifactConfigInput artifactConfig;
 
     /**
      * <p>
@@ -979,6 +986,52 @@ public class CreateCanaryRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
+     * <p>
+     * A structure that contains the configuration for canary artifacts, including the encryption-at-rest settings for
+     * artifacts that the canary uploads to Amazon S3.
+     * </p>
+     * 
+     * @param artifactConfig
+     *        A structure that contains the configuration for canary artifacts, including the encryption-at-rest
+     *        settings for artifacts that the canary uploads to Amazon S3.
+     */
+
+    public void setArtifactConfig(ArtifactConfigInput artifactConfig) {
+        this.artifactConfig = artifactConfig;
+    }
+
+    /**
+     * <p>
+     * A structure that contains the configuration for canary artifacts, including the encryption-at-rest settings for
+     * artifacts that the canary uploads to Amazon S3.
+     * </p>
+     * 
+     * @return A structure that contains the configuration for canary artifacts, including the encryption-at-rest
+     *         settings for artifacts that the canary uploads to Amazon S3.
+     */
+
+    public ArtifactConfigInput getArtifactConfig() {
+        return this.artifactConfig;
+    }
+
+    /**
+     * <p>
+     * A structure that contains the configuration for canary artifacts, including the encryption-at-rest settings for
+     * artifacts that the canary uploads to Amazon S3.
+     * </p>
+     * 
+     * @param artifactConfig
+     *        A structure that contains the configuration for canary artifacts, including the encryption-at-rest
+     *        settings for artifacts that the canary uploads to Amazon S3.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateCanaryRequest withArtifactConfig(ArtifactConfigInput artifactConfig) {
+        setArtifactConfig(artifactConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1011,7 +1064,9 @@ public class CreateCanaryRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (getVpcConfig() != null)
             sb.append("VpcConfig: ").append(getVpcConfig()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getArtifactConfig() != null)
+            sb.append("ArtifactConfig: ").append(getArtifactConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -1070,6 +1125,10 @@ public class CreateCanaryRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getArtifactConfig() == null ^ this.getArtifactConfig() == null)
+            return false;
+        if (other.getArtifactConfig() != null && other.getArtifactConfig().equals(this.getArtifactConfig()) == false)
+            return false;
         return true;
     }
 
@@ -1089,6 +1148,7 @@ public class CreateCanaryRequest extends com.amazonaws.AmazonWebServiceRequest i
         hashCode = prime * hashCode + ((getRuntimeVersion() == null) ? 0 : getRuntimeVersion().hashCode());
         hashCode = prime * hashCode + ((getVpcConfig() == null) ? 0 : getVpcConfig().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getArtifactConfig() == null) ? 0 : getArtifactConfig().hashCode());
         return hashCode;
     }
 

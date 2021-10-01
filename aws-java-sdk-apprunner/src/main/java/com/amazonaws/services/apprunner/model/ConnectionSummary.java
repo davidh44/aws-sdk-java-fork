@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides summary information about an AWS App Runner connection resource.
+ * Provides summary information about an App Runner connection resource.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/ConnectionSummary" target="_top">AWS API

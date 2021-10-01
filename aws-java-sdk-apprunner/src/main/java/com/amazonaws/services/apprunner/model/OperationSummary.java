@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides summary information for an operation that occurred on an AWS App Runner service.
+ * Provides summary information for an operation that occurred on an App Runner service.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/OperationSummary" target="_top">AWS API

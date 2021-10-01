@@ -19,8 +19,8 @@ import javax.annotation.Generated;
  * App Runner can't create this resource. You've reached your account quota for this resource type.
  * </p>
  * <p>
- * For App Runner per-resource quotas, see <a href="https://docs.aws.amazon.com/general/latest/gr/apprunner.html">AWS
- * App Runner endpoints and quotas</a> in the <i>AWS General Reference</i>.
+ * For App Runner per-resource quotas, see <a href="https://docs.aws.amazon.com/general/latest/gr/apprunner.html">App
+ * Runner endpoints and quotas</a> in the <i>Amazon Web Services General Reference</i>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

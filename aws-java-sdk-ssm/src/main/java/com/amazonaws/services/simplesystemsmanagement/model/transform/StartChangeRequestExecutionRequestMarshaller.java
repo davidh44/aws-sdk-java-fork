@@ -41,6 +41,8 @@ public class StartChangeRequestExecutionRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ChangeRequestName").build();
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ClientToken").build();
+    private static final MarshallingInfo<Boolean> AUTOAPPROVE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AutoApprove").build();
     private static final MarshallingInfo<List> RUNBOOKS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Runbooks").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
@@ -72,6 +74,7 @@ public class StartChangeRequestExecutionRequestMarshaller {
             protocolMarshaller.marshall(startChangeRequestExecutionRequest.getParameters(), PARAMETERS_BINDING);
             protocolMarshaller.marshall(startChangeRequestExecutionRequest.getChangeRequestName(), CHANGEREQUESTNAME_BINDING);
             protocolMarshaller.marshall(startChangeRequestExecutionRequest.getClientToken(), CLIENTTOKEN_BINDING);
+            protocolMarshaller.marshall(startChangeRequestExecutionRequest.getAutoApprove(), AUTOAPPROVE_BINDING);
             protocolMarshaller.marshall(startChangeRequestExecutionRequest.getRunbooks(), RUNBOOKS_BINDING);
             protocolMarshaller.marshall(startChangeRequestExecutionRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(startChangeRequestExecutionRequest.getScheduledEndTime(), SCHEDULEDENDTIME_BINDING);

@@ -146,6 +146,20 @@ public class UpdateCanaryRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      */
     private VisualReferenceInput visualReference;
+    /**
+     * <p>
+     * The location in Amazon S3 where Synthetics stores artifacts from the test runs of this canary. Artifacts include
+     * the log file, screenshots, and HAR files. The name of the S3 bucket can't include a period (.).
+     * </p>
+     */
+    private String artifactS3Location;
+    /**
+     * <p>
+     * A structure that contains the configuration for canary artifacts, including the encryption-at-rest settings for
+     * artifacts that the canary uploads to Amazon S3.
+     * </p>
+     */
+    private ArtifactConfigInput artifactConfig;
 
     /**
      * <p>
@@ -908,6 +922,98 @@ public class UpdateCanaryRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
+     * <p>
+     * The location in Amazon S3 where Synthetics stores artifacts from the test runs of this canary. Artifacts include
+     * the log file, screenshots, and HAR files. The name of the S3 bucket can't include a period (.).
+     * </p>
+     * 
+     * @param artifactS3Location
+     *        The location in Amazon S3 where Synthetics stores artifacts from the test runs of this canary. Artifacts
+     *        include the log file, screenshots, and HAR files. The name of the S3 bucket can't include a period (.).
+     */
+
+    public void setArtifactS3Location(String artifactS3Location) {
+        this.artifactS3Location = artifactS3Location;
+    }
+
+    /**
+     * <p>
+     * The location in Amazon S3 where Synthetics stores artifacts from the test runs of this canary. Artifacts include
+     * the log file, screenshots, and HAR files. The name of the S3 bucket can't include a period (.).
+     * </p>
+     * 
+     * @return The location in Amazon S3 where Synthetics stores artifacts from the test runs of this canary. Artifacts
+     *         include the log file, screenshots, and HAR files. The name of the S3 bucket can't include a period (.).
+     */
+
+    public String getArtifactS3Location() {
+        return this.artifactS3Location;
+    }
+
+    /**
+     * <p>
+     * The location in Amazon S3 where Synthetics stores artifacts from the test runs of this canary. Artifacts include
+     * the log file, screenshots, and HAR files. The name of the S3 bucket can't include a period (.).
+     * </p>
+     * 
+     * @param artifactS3Location
+     *        The location in Amazon S3 where Synthetics stores artifacts from the test runs of this canary. Artifacts
+     *        include the log file, screenshots, and HAR files. The name of the S3 bucket can't include a period (.).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateCanaryRequest withArtifactS3Location(String artifactS3Location) {
+        setArtifactS3Location(artifactS3Location);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A structure that contains the configuration for canary artifacts, including the encryption-at-rest settings for
+     * artifacts that the canary uploads to Amazon S3.
+     * </p>
+     * 
+     * @param artifactConfig
+     *        A structure that contains the configuration for canary artifacts, including the encryption-at-rest
+     *        settings for artifacts that the canary uploads to Amazon S3.
+     */
+
+    public void setArtifactConfig(ArtifactConfigInput artifactConfig) {
+        this.artifactConfig = artifactConfig;
+    }
+
+    /**
+     * <p>
+     * A structure that contains the configuration for canary artifacts, including the encryption-at-rest settings for
+     * artifacts that the canary uploads to Amazon S3.
+     * </p>
+     * 
+     * @return A structure that contains the configuration for canary artifacts, including the encryption-at-rest
+     *         settings for artifacts that the canary uploads to Amazon S3.
+     */
+
+    public ArtifactConfigInput getArtifactConfig() {
+        return this.artifactConfig;
+    }
+
+    /**
+     * <p>
+     * A structure that contains the configuration for canary artifacts, including the encryption-at-rest settings for
+     * artifacts that the canary uploads to Amazon S3.
+     * </p>
+     * 
+     * @param artifactConfig
+     *        A structure that contains the configuration for canary artifacts, including the encryption-at-rest
+     *        settings for artifacts that the canary uploads to Amazon S3.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateCanaryRequest withArtifactConfig(ArtifactConfigInput artifactConfig) {
+        setArtifactConfig(artifactConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -938,7 +1044,11 @@ public class UpdateCanaryRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (getVpcConfig() != null)
             sb.append("VpcConfig: ").append(getVpcConfig()).append(",");
         if (getVisualReference() != null)
-            sb.append("VisualReference: ").append(getVisualReference());
+            sb.append("VisualReference: ").append(getVisualReference()).append(",");
+        if (getArtifactS3Location() != null)
+            sb.append("ArtifactS3Location: ").append(getArtifactS3Location()).append(",");
+        if (getArtifactConfig() != null)
+            sb.append("ArtifactConfig: ").append(getArtifactConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -993,6 +1103,14 @@ public class UpdateCanaryRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getVisualReference() != null && other.getVisualReference().equals(this.getVisualReference()) == false)
             return false;
+        if (other.getArtifactS3Location() == null ^ this.getArtifactS3Location() == null)
+            return false;
+        if (other.getArtifactS3Location() != null && other.getArtifactS3Location().equals(this.getArtifactS3Location()) == false)
+            return false;
+        if (other.getArtifactConfig() == null ^ this.getArtifactConfig() == null)
+            return false;
+        if (other.getArtifactConfig() != null && other.getArtifactConfig().equals(this.getArtifactConfig()) == false)
+            return false;
         return true;
     }
 
@@ -1011,6 +1129,8 @@ public class UpdateCanaryRequest extends com.amazonaws.AmazonWebServiceRequest i
         hashCode = prime * hashCode + ((getFailureRetentionPeriodInDays() == null) ? 0 : getFailureRetentionPeriodInDays().hashCode());
         hashCode = prime * hashCode + ((getVpcConfig() == null) ? 0 : getVpcConfig().hashCode());
         hashCode = prime * hashCode + ((getVisualReference() == null) ? 0 : getVisualReference().hashCode());
+        hashCode = prime * hashCode + ((getArtifactS3Location() == null) ? 0 : getArtifactS3Location().hashCode());
+        hashCode = prime * hashCode + ((getArtifactConfig() == null) ? 0 : getArtifactConfig().hashCode());
         return hashCode;
     }
 

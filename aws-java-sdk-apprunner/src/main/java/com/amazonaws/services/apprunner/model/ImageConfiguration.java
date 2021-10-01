@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes the configuration that AWS App Runner uses to run an App Runner service using an image pulled from a source
+ * Describes the configuration that App Runner uses to run an App Runner service using an image pulled from a source
  * image repository.
  * </p>
  * 

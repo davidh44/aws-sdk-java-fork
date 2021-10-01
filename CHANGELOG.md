@@ -1,3 +1,20 @@
+# __1.12.79__ __2021-10-01__
+## __AWS App Runner__
+  - ### Features
+    - This release contains several minor bug fixes.
+
+## __AWS SDK for Java__
+  - ### Features
+    - Fall back to 'profile X' if the SDK is configured with profile 'X' and 'X' does not exist in the SDK configuration files. No longer log when a configuration file includes 'profile X'.
+
+## __Amazon Simple Systems Manager (SSM)__
+  - ### Features
+    - When "AutoApprovable" is true for a Change Template, then specifying --auto-approve (boolean) in Start-Change-Request-Execution will create a change request that bypasses approver review. (except for change calendar restrictions)
+
+## __Synthetics__
+  - ### Features
+    - CloudWatch Synthetics now enables customers to choose a customer managed AWS KMS key or an Amazon S3-managed key instead of an AWS managed key (default) for the encryption of artifacts that the canary stores in Amazon S3. CloudWatch Synthetics also supports artifact S3 location updation now.
+
 # __1.12.78__ __2021-09-30__
 ## __AWS Account__
   - ### Features

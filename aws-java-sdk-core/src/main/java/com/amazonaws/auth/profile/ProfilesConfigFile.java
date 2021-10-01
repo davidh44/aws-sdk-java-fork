@@ -179,6 +179,10 @@ public class ProfilesConfigFile {
         credentialProviderCache.clear();
     }
 
+    public BasicProfile getBasicProfile(String profile) {
+        return allProfiles.getProfile(profile);
+    }
+
     public Map<String, BasicProfile> getAllBasicProfiles() {
         return allProfiles.getProfiles();
     }

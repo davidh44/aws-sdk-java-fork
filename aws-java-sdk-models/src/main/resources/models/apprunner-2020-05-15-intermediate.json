@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientConstructors", "EnumSetterOverload", "ClientMutationMethods" ],
+    "deprecatedSuppressions" : [ "ClientConstructors", "ClientMutationMethods", "EnumSetterOverload" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -56,7 +56,7 @@
     "defaultEndpoint" : "apprunner.us-east-1.amazonaws.com",
     "defaultEndpointWithoutHttpProtocol" : "apprunner.us-east-1.amazonaws.com",
     "defaultRegion" : null,
-    "documentation" : "<fullname>AWS App Runner</fullname> <p>AWS App Runner is an application service that provides a fast, simple, and cost-effective way to go directly from an existing container image or source code to a running service in the AWS cloud in seconds. You don't need to learn new technologies, decide which compute service to use, or understand how to provision and configure AWS resources.</p> <p>App Runner connects directly to your container registry or source code repository. It provides an automatic delivery pipeline with fully managed operations, high performance, scalability, and security.</p> <p>For more information about App Runner, see the <a href=\"https://docs.aws.amazon.com/apprunner/latest/dg/\">AWS App Runner Developer Guide</a>. For release information, see the <a href=\"https://docs.aws.amazon.com/apprunner/latest/relnotes/\">AWS App Runner Release Notes</a>.</p> <p> To install the Software Development Kits (SDKs), Integrated Development Environment (IDE) Toolkits, and command line tools that you can use to access the API, see <a href=\"http://aws.amazon.com/tools/\">Tools for Amazon Web Services</a>.</p> <p> <b>Endpoints</b> </p> <p>For a list of Region-specific endpoints that App Runner supports, see <a href=\"https://docs.aws.amazon.com/general/latest/gr/apprunner.html\">AWS App Runner endpoints and quotas</a> in the <i>AWS General Reference</i>.</p>",
+    "documentation" : "<fullname>App Runner</fullname> <p>App Runner is an application service that provides a fast, simple, and cost-effective way to go directly from an existing container image or source code to a running service in the Amazon Web Services Cloud in seconds. You don't need to learn new technologies, decide which compute service to use, or understand how to provision and configure Amazon Web Services resources.</p> <p>App Runner connects directly to your container registry or source code repository. It provides an automatic delivery pipeline with fully managed operations, high performance, scalability, and security.</p> <p>For more information about App Runner, see the <a href=\"https://docs.aws.amazon.com/apprunner/latest/dg/\">App Runner Developer Guide</a>. For release information, see the <a href=\"https://docs.aws.amazon.com/apprunner/latest/relnotes/\">App Runner Release Notes</a>.</p> <p> To install the Software Development Kits (SDKs), Integrated Development Environment (IDE) Toolkits, and command line tools that you can use to access the API, see <a href=\"http://aws.amazon.com/tools/\">Tools for Amazon Web Services</a>.</p> <p> <b>Endpoints</b> </p> <p>For a list of Region-specific endpoints that App Runner supports, see <a href=\"https://docs.aws.amazon.com/general/latest/gr/apprunner.html\">App Runner endpoints and quotas</a> in the <i>Amazon Web Services General Reference</i>.</p>",
     "endpointPrefix" : "apprunner",
     "hasApiWithStreamInput" : false,
     "ionProtocol" : false,
@@ -92,7 +92,7 @@
       "asyncReturnType" : "AssociateCustomDomainResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Associate your own domain name with the AWS App Runner subdomain URL of your App Runner service.</p> <p>After you call <code>AssociateCustomDomain</code> and receive a successful response, use the information in the <a>CustomDomain</a> record that's returned to add CNAME records to your Domain Name System (DNS). For each mapped domain name, add a mapping to the target App Runner subdomain and one or more certificate validation records. App Runner then performs DNS validation to verify that you own or control the domain name that you associated. App Runner tracks domain validity in a certificate stored in <a href=\"https://docs.aws.amazon.com/acm/latest/userguide\">AWS Certificate Manager (ACM)</a>.</p>",
+      "documentation" : "<p>Associate your own domain name with the App Runner subdomain URL of your App Runner service.</p> <p>After you call <code>AssociateCustomDomain</code> and receive a successful response, use the information in the <a>CustomDomain</a> record that's returned to add CNAME records to your Domain Name System (DNS). For each mapped domain name, add a mapping to the target App Runner subdomain and one or more certificate validation records. App Runner then performs DNS validation to verify that you own or control the domain name that you associated. App Runner tracks domain validity in a certificate stored in <a href=\"https://docs.aws.amazon.com/acm/latest/userguide\">AWS Certificate Manager (ACM)</a>.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -137,7 +137,7 @@
       "asyncReturnType" : "CreateAutoScalingConfigurationResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Create an AWS App Runner automatic scaling configuration resource. App Runner requires this resource when you create App Runner services that require non-default auto scaling settings. You can share an auto scaling configuration across multiple services.</p> <p>Create multiple revisions of a configuration by using the same <code>AutoScalingConfigurationName</code> and different <code>AutoScalingConfigurationRevision</code> values. When you create a service, you can set it to use the latest active revision of an auto scaling configuration or a specific revision.</p> <p>Configure a higher <code>MinSize</code> to increase the spread of your App Runner service over more Availability Zones in the AWS Region. The tradeoff is a higher minimal cost.</p> <p>Configure a lower <code>MaxSize</code> to control your cost. The tradeoff is lower responsiveness during peak demand.</p>",
+      "documentation" : "<p>Create an App Runner automatic scaling configuration resource. App Runner requires this resource when you create App Runner services that require non-default auto scaling settings. You can share an auto scaling configuration across multiple services.</p> <p>Create multiple revisions of a configuration by using the same <code>AutoScalingConfigurationName</code> and different <code>AutoScalingConfigurationRevision</code> values. When you create a service, you can set it to use the latest active revision of an auto scaling configuration or a specific revision.</p> <p>Configure a higher <code>MinSize</code> to increase the spread of your App Runner service over more Availability Zones in the Amazon Web Services Region. The tradeoff is a higher minimal cost.</p> <p>Configure a lower <code>MaxSize</code> to control your cost. The tradeoff is lower responsiveness during peak demand.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -152,7 +152,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>App Runner can't create this resource. You've reached your account quota for this resource type.</p> <p>For App Runner per-resource quotas, see <a href=\"https://docs.aws.amazon.com/general/latest/gr/apprunner.html\">AWS App Runner endpoints and quotas</a> in the <i>AWS General Reference</i>.</p>",
+        "documentation" : "<p>App Runner can't create this resource. You've reached your account quota for this resource type.</p> <p>For App Runner per-resource quotas, see <a href=\"https://docs.aws.amazon.com/general/latest/gr/apprunner.html\">App Runner endpoints and quotas</a> in the <i>Amazon Web Services General Reference</i>.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -182,7 +182,7 @@
       "asyncReturnType" : "CreateConnectionResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Create an AWS App Runner connection resource. App Runner requires a connection resource when you create App Runner services that access private repositories from certain third-party providers. You can share a connection across multiple services.</p> <p>A connection resource is needed to access GitHub repositories. GitHub requires a user interface approval process through the App Runner console before you can use the connection.</p>",
+      "documentation" : "<p>Create an App Runner connection resource. App Runner requires a connection resource when you create App Runner services that access private repositories from certain third-party providers. You can share a connection across multiple services.</p> <p>A connection resource is needed to access GitHub repositories. GitHub requires a user interface approval process through the App Runner console before you can use the connection.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -197,7 +197,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>App Runner can't create this resource. You've reached your account quota for this resource type.</p> <p>For App Runner per-resource quotas, see <a href=\"https://docs.aws.amazon.com/general/latest/gr/apprunner.html\">AWS App Runner endpoints and quotas</a> in the <i>AWS General Reference</i>.</p>",
+        "documentation" : "<p>App Runner can't create this resource. You've reached your account quota for this resource type.</p> <p>For App Runner per-resource quotas, see <a href=\"https://docs.aws.amazon.com/general/latest/gr/apprunner.html\">App Runner endpoints and quotas</a> in the <i>Amazon Web Services General Reference</i>.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -227,7 +227,7 @@
       "asyncReturnType" : "CreateServiceResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Create an AWS App Runner service. After the service is created, the action also automatically starts a deployment.</p> <p>This is an asynchronous operation. On a successful call, you can use the returned <code>OperationId</code> and the <a href=\"https://docs.aws.amazon.com/apprunner/latest/api/API_ListOperations.html\">ListOperations</a> call to track the operation's progress.</p>",
+      "documentation" : "<p>Create an App Runner service. After the service is created, the action also automatically starts a deployment.</p> <p>This is an asynchronous operation. On a successful call, you can use the returned <code>OperationId</code> and the <a href=\"https://docs.aws.amazon.com/apprunner/latest/api/API_ListOperations.html\">ListOperations</a> call to track the operation's progress.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -242,7 +242,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
-        "documentation" : "<p>App Runner can't create this resource. You've reached your account quota for this resource type.</p> <p>For App Runner per-resource quotas, see <a href=\"https://docs.aws.amazon.com/general/latest/gr/apprunner.html\">AWS App Runner endpoints and quotas</a> in the <i>AWS General Reference</i>.</p>",
+        "documentation" : "<p>App Runner can't create this resource. You've reached your account quota for this resource type.</p> <p>For App Runner per-resource quotas, see <a href=\"https://docs.aws.amazon.com/general/latest/gr/apprunner.html\">App Runner endpoints and quotas</a> in the <i>Amazon Web Services General Reference</i>.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -272,7 +272,7 @@
       "asyncReturnType" : "DeleteAutoScalingConfigurationResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Delete an AWS App Runner automatic scaling configuration resource. You can delete a specific revision or the latest active revision. You can't delete a configuration that's used by one or more App Runner services.</p>",
+      "documentation" : "<p>Delete an App Runner automatic scaling configuration resource. You can delete a specific revision or the latest active revision. You can't delete a configuration that's used by one or more App Runner services.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -287,7 +287,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your AWS account.</p>",
+        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your Amazon Web Services account.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -317,7 +317,7 @@
       "asyncReturnType" : "DeleteConnectionResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Delete an AWS App Runner connection. You must first ensure that there are no running App Runner services that use this connection. If there are any, the <code>DeleteConnection</code> action fails.</p>",
+      "documentation" : "<p>Delete an App Runner connection. You must first ensure that there are no running App Runner services that use this connection. If there are any, the <code>DeleteConnection</code> action fails.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -328,7 +328,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your AWS account.</p>",
+        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your Amazon Web Services account.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServiceErrorException",
@@ -362,7 +362,7 @@
       "asyncReturnType" : "DeleteServiceResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Delete an AWS App Runner service.</p> <p>This is an asynchronous operation. On a successful call, you can use the returned <code>OperationId</code> and the <a>ListOperations</a> call to track the operation's progress.</p>",
+      "documentation" : "<p>Delete an App Runner service.</p> <p>This is an asynchronous operation. On a successful call, you can use the returned <code>OperationId</code> and the <a>ListOperations</a> call to track the operation's progress.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -373,7 +373,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your AWS account.</p>",
+        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your Amazon Web Services account.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InvalidStateException",
@@ -411,7 +411,7 @@
       "asyncReturnType" : "DescribeAutoScalingConfigurationResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Return a full description of an AWS App Runner automatic scaling configuration resource.</p>",
+      "documentation" : "<p>Return a full description of an App Runner automatic scaling configuration resource.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -426,7 +426,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your AWS account.</p>",
+        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your Amazon Web Services account.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -456,7 +456,7 @@
       "asyncReturnType" : "DescribeCustomDomainsResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Return a description of custom domain names that are associated with an AWS App Runner service.</p>",
+      "documentation" : "<p>Return a description of custom domain names that are associated with an App Runner service.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -471,7 +471,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your AWS account.</p>",
+        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your Amazon Web Services account.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -501,7 +501,7 @@
       "asyncReturnType" : "DescribeServiceResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Return a full description of an AWS App Runner service.</p>",
+      "documentation" : "<p>Return a full description of an App Runner service.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -512,7 +512,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your AWS account.</p>",
+        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your Amazon Web Services account.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServiceErrorException",
@@ -546,7 +546,7 @@
       "asyncReturnType" : "DisassociateCustomDomainResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Disassociate a custom domain name from an AWS App Runner service.</p> <p>Certificates tracking domain validity are associated with a custom domain and are stored in <a href=\"https://docs.aws.amazon.com/acm/latest/userguide\">AWS Certificate Manager (ACM)</a>. These certificates aren't deleted as part of this action. App Runner delays certificate deletion for 30 days after a domain is disassociated from your service.</p>",
+      "documentation" : "<p>Disassociate a custom domain name from an App Runner service.</p> <p>Certificates tracking domain validity are associated with a custom domain and are stored in <a href=\"https://docs.aws.amazon.com/acm/latest/userguide\">AWS Certificate Manager (ACM)</a>. These certificates aren't deleted as part of this action. App Runner delays certificate deletion for 30 days after a domain is disassociated from your service.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -561,7 +561,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your AWS account.</p>",
+        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your Amazon Web Services account.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InvalidStateException",
@@ -595,7 +595,7 @@
       "asyncReturnType" : "ListAutoScalingConfigurationsResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Returns a list of AWS App Runner automatic scaling configurations in your AWS account. You can query the revisions for a specific configuration name or the revisions for all configurations in your account. You can optionally query only the latest revision of each requested name.</p>",
+      "documentation" : "<p>Returns a list of App Runner automatic scaling configurations in your Amazon Web Services account. You can query the revisions for a specific configuration name or the revisions for all configurations in your account. You can optionally query only the latest revision of each requested name.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -636,7 +636,7 @@
       "asyncReturnType" : "ListConnectionsResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Returns a list of AWS App Runner connections that are associated with your AWS account.</p>",
+      "documentation" : "<p>Returns a list of App Runner connections that are associated with your Amazon Web Services account.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -677,7 +677,7 @@
       "asyncReturnType" : "ListOperationsResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Return a list of operations that occurred on an AWS App Runner service.</p> <p>The resulting list of <a>OperationSummary</a> objects is sorted in reverse chronological order. The first object on the list represents the last started operation.</p>",
+      "documentation" : "<p>Return a list of operations that occurred on an App Runner service.</p> <p>The resulting list of <a>OperationSummary</a> objects is sorted in reverse chronological order. The first object on the list represents the last started operation.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -692,7 +692,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your AWS account.</p>",
+        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your Amazon Web Services account.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -722,7 +722,7 @@
       "asyncReturnType" : "ListServicesResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Returns a list of running AWS App Runner services in your AWS account.</p>",
+      "documentation" : "<p>Returns a list of running App Runner services in your Amazon Web Services account.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -763,14 +763,14 @@
       "asyncReturnType" : "ListTagsForResourceResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>List tags that are associated with for an AWS App Runner resource. The response contains a list of tag key-value pairs.</p>",
+      "documentation" : "<p>List tags that are associated with for an App Runner resource. The response contains a list of tag key-value pairs.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your AWS account.</p>",
+        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your Amazon Web Services account.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServiceErrorException",
@@ -812,7 +812,7 @@
       "asyncReturnType" : "PauseServiceResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Pause an active AWS App Runner service. App Runner reduces compute capacity for the service to zero and loses state (for example, ephemeral storage is removed).</p> <p>This is an asynchronous operation. On a successful call, you can use the returned <code>OperationId</code> and the <a>ListOperations</a> call to track the operation's progress.</p>",
+      "documentation" : "<p>Pause an active App Runner service. App Runner reduces compute capacity for the service to zero and loses state (for example, ephemeral storage is removed).</p> <p>This is an asynchronous operation. On a successful call, you can use the returned <code>OperationId</code> and the <a>ListOperations</a> call to track the operation's progress.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -823,7 +823,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your AWS account.</p>",
+        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your Amazon Web Services account.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServiceErrorException",
@@ -861,7 +861,7 @@
       "asyncReturnType" : "ResumeServiceResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Resume an active AWS App Runner service. App Runner provisions compute capacity for the service.</p> <p>This is an asynchronous operation. On a successful call, you can use the returned <code>OperationId</code> and the <a>ListOperations</a> call to track the operation's progress.</p>",
+      "documentation" : "<p>Resume an active App Runner service. App Runner provisions compute capacity for the service.</p> <p>This is an asynchronous operation. On a successful call, you can use the returned <code>OperationId</code> and the <a>ListOperations</a> call to track the operation's progress.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -872,7 +872,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your AWS account.</p>",
+        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your Amazon Web Services account.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServiceErrorException",
@@ -910,7 +910,7 @@
       "asyncReturnType" : "StartDeploymentResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Initiate a manual deployment of the latest commit in a source code repository or the latest image in a source image repository to an AWS App Runner service.</p> <p>For a source code repository, App Runner retrieves the commit and builds a Docker image. For a source image repository, App Runner retrieves the latest Docker image. In both cases, App Runner then deploys the new image to your service and starts a new container instance.</p> <p>This is an asynchronous operation. On a successful call, you can use the returned <code>OperationId</code> and the <a>ListOperations</a> call to track the operation's progress.</p>",
+      "documentation" : "<p>Initiate a manual deployment of the latest commit in a source code repository or the latest image in a source image repository to an App Runner service.</p> <p>For a source code repository, App Runner retrieves the commit and builds a Docker image. For a source image repository, App Runner retrieves the latest Docker image. In both cases, App Runner then deploys the new image to your service and starts a new container instance.</p> <p>This is an asynchronous operation. On a successful call, you can use the returned <code>OperationId</code> and the <a>ListOperations</a> call to track the operation's progress.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -921,7 +921,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your AWS account.</p>",
+        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your Amazon Web Services account.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServiceErrorException",
@@ -962,7 +962,7 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your AWS account.</p>",
+        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your Amazon Web Services account.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServiceErrorException",
@@ -1011,7 +1011,7 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your AWS account.</p>",
+        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your Amazon Web Services account.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServiceErrorException",
@@ -1053,7 +1053,7 @@
       "asyncReturnType" : "UpdateServiceResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Update an AWS App Runner service. You can update the source configuration and instance configuration of the service. You can also update the ARN of the auto scaling configuration resource that's associated with the service. However, you can't change the name or the encryption configuration of the service. These can be set only when you create the service.</p> <p>To update the tags applied to your service, use the separate actions <a>TagResource</a> and <a>UntagResource</a>.</p> <p>This is an asynchronous operation. On a successful call, you can use the returned <code>OperationId</code> and the <a>ListOperations</a> call to track the operation's progress.</p>",
+      "documentation" : "<p>Update an App Runner service. You can update the source configuration and instance configuration of the service. You can also update the ARN of the auto scaling configuration resource that's associated with the service. However, you can't change the name or the encryption configuration of the service. These can be set only when you create the service.</p> <p>To update the tags applied to your service, use the separate actions <a>TagResource</a> and <a>UntagResource</a>.</p> <p>This is an asynchronous operation. On a successful call, you can use the returned <code>OperationId</code> and the <a>ListOperations</a> call to track the operation's progress.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -1064,7 +1064,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your AWS account.</p>",
+        "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your Amazon Web Services account.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InvalidStateException",
@@ -2357,7 +2357,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>Describes an AWS App Runner automatic scaling configuration resource. Multiple revisions of a configuration have the same <code>AutoScalingConfigurationName</code> and different <code>AutoScalingConfigurationRevision</code> values.</p> <p>A higher <code>MinSize</code> increases the spread of your App Runner service over more Availability Zones in the AWS Region. The tradeoff is a higher minimal cost.</p> <p>A lower <code>MaxSize</code> controls your cost. The tradeoff is lower responsiveness during peak demand.</p>",
+      "documentation" : "<p>Describes an App Runner automatic scaling configuration resource. Multiple revisions of a configuration have the same <code>AutoScalingConfigurationName</code> and different <code>AutoScalingConfigurationRevision</code> values.</p> <p>A higher <code>MinSize</code> increases the spread of your App Runner service over more Availability Zones in the Amazon Web Services Region. The tradeoff is a higher minimal cost.</p> <p>A lower <code>MaxSize</code> controls your cost. The tradeoff is lower responsiveness during peak demand.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -3842,7 +3842,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>Provides summary information about an AWS App Runner automatic scaling configuration resource.</p> <p>This type contains limited information about an auto scaling configuration. It includes only identification information, without configuration details. It's returned by the <a>ListAutoScalingConfigurations</a> action. Complete configuration information is returned by the <a>CreateAutoScalingConfiguration</a>, <a>DescribeAutoScalingConfiguration</a>, and <a>DeleteAutoScalingConfiguration</a> actions using the <a>AutoScalingConfiguration</a> type.</p>",
+      "documentation" : "<p>Provides summary information about an App Runner automatic scaling configuration resource.</p> <p>This type contains limited information about an auto scaling configuration. It includes only identification information, without configuration details. It's returned by the <a>ListAutoScalingConfigurations</a> action. Complete configuration information is returned by the <a>CreateAutoScalingConfiguration</a>, <a>DescribeAutoScalingConfiguration</a>, and <a>DeleteAutoScalingConfiguration</a> actions using the <a>AutoScalingConfiguration</a> type.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -4958,7 +4958,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>Describes the configuration that AWS App Runner uses to build and run an App Runner service from a source code repository.</p>",
+      "documentation" : "<p>Describes the configuration that App Runner uses to build and run an App Runner service from a source code repository.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -5281,7 +5281,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>Describes the basic configuration needed for building and running an AWS App Runner service. This type doesn't support the full set of possible configuration options. Fur full configuration capabilities, use a <code>apprunner.yaml</code> file in the source code repository.</p>",
+      "documentation" : "<p>Describes the basic configuration needed for building and running an App Runner service. This type doesn't support the full set of possible configuration options. Fur full configuration capabilities, use a <code>apprunner.yaml</code> file in the source code repository.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -6701,7 +6701,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>Describes an AWS App Runner connection resource.</p>",
+      "documentation" : "<p>Describes an App Runner connection resource.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -7497,7 +7497,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>Provides summary information about an AWS App Runner connection resource.</p>",
+      "documentation" : "<p>Provides summary information about an App Runner connection resource.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -8259,12 +8259,12 @@
         "c2jName" : "AutoScalingConfigurationName",
         "c2jShape" : "AutoScalingConfigurationName",
         "deprecated" : false,
-        "documentation" : "<p>A name for the auto scaling configuration. When you use it for the first time in an AWS Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.</p>",
+        "documentation" : "<p>A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>A name for the auto scaling configuration. When you use it for the first time in an AWS Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.</p>\n@param autoScalingConfigurationName A name for the auto scaling configuration. When you use it for the first time in an AWS Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.</p>\n@param autoScalingConfigurationName A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withAutoScalingConfigurationName",
-        "getterDocumentation" : "/**<p>A name for the auto scaling configuration. When you use it for the first time in an AWS Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.</p>\n@return A name for the auto scaling configuration. When you use it for the first time in an AWS Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.*/",
+        "getterDocumentation" : "/**<p>A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.</p>\n@return A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.*/",
         "getterMethodName" : "getAutoScalingConfigurationName",
         "getterModel" : {
           "returnType" : "String",
@@ -8298,7 +8298,7 @@
         "marshallingType" : "STRING",
         "name" : "AutoScalingConfigurationName",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>A name for the auto scaling configuration. When you use it for the first time in an AWS Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.</p>\n@param autoScalingConfigurationName A name for the auto scaling configuration. When you use it for the first time in an AWS Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.*/",
+        "setterDocumentation" : "/**<p>A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.</p>\n@param autoScalingConfigurationName A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.*/",
         "setterMethodName" : "setAutoScalingConfigurationName",
         "setterModel" : {
           "timestampFormat" : null,
@@ -8313,13 +8313,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>A name for the auto scaling configuration. When you use it for the first time in an AWS Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.</p>\n@param autoScalingConfigurationName A name for the auto scaling configuration. When you use it for the first time in an AWS Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.</p>\n@param autoScalingConfigurationName A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "autoScalingConfigurationName",
           "variableType" : "String",
-          "documentation" : "<p>A name for the auto scaling configuration. When you use it for the first time in an AWS Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.</p>",
+          "documentation" : "<p>A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -8690,12 +8690,12 @@
           "c2jName" : "AutoScalingConfigurationName",
           "c2jShape" : "AutoScalingConfigurationName",
           "deprecated" : false,
-          "documentation" : "<p>A name for the auto scaling configuration. When you use it for the first time in an AWS Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.</p>",
+          "documentation" : "<p>A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>A name for the auto scaling configuration. When you use it for the first time in an AWS Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.</p>\n@param autoScalingConfigurationName A name for the auto scaling configuration. When you use it for the first time in an AWS Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.</p>\n@param autoScalingConfigurationName A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withAutoScalingConfigurationName",
-          "getterDocumentation" : "/**<p>A name for the auto scaling configuration. When you use it for the first time in an AWS Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.</p>\n@return A name for the auto scaling configuration. When you use it for the first time in an AWS Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.*/",
+          "getterDocumentation" : "/**<p>A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.</p>\n@return A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.*/",
           "getterMethodName" : "getAutoScalingConfigurationName",
           "getterModel" : {
             "returnType" : "String",
@@ -8729,7 +8729,7 @@
           "marshallingType" : "STRING",
           "name" : "AutoScalingConfigurationName",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>A name for the auto scaling configuration. When you use it for the first time in an AWS Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.</p>\n@param autoScalingConfigurationName A name for the auto scaling configuration. When you use it for the first time in an AWS Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.*/",
+          "setterDocumentation" : "/**<p>A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.</p>\n@param autoScalingConfigurationName A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.*/",
           "setterMethodName" : "setAutoScalingConfigurationName",
           "setterModel" : {
             "timestampFormat" : null,
@@ -8744,13 +8744,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>A name for the auto scaling configuration. When you use it for the first time in an AWS Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.</p>\n@param autoScalingConfigurationName A name for the auto scaling configuration. When you use it for the first time in an AWS Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.</p>\n@param autoScalingConfigurationName A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "autoScalingConfigurationName",
             "variableType" : "String",
-            "documentation" : "<p>A name for the auto scaling configuration. When you use it for the first time in an AWS Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.</p>",
+            "documentation" : "<p>A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -9355,12 +9355,12 @@
         "c2jName" : "ConnectionName",
         "c2jShape" : "ConnectionName",
         "deprecated" : false,
-        "documentation" : "<p>A name for the new connection. It must be unique across all App Runner connections for the AWS account in the AWS Region.</p>",
+        "documentation" : "<p>A name for the new connection. It must be unique across all App Runner connections for the Amazon Web Services account in the Amazon Web Services Region.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>A name for the new connection. It must be unique across all App Runner connections for the AWS account in the AWS Region.</p>\n@param connectionName A name for the new connection. It must be unique across all App Runner connections for the AWS account in the AWS Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>A name for the new connection. It must be unique across all App Runner connections for the Amazon Web Services account in the Amazon Web Services Region.</p>\n@param connectionName A name for the new connection. It must be unique across all App Runner connections for the Amazon Web Services account in the Amazon Web Services Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withConnectionName",
-        "getterDocumentation" : "/**<p>A name for the new connection. It must be unique across all App Runner connections for the AWS account in the AWS Region.</p>\n@return A name for the new connection. It must be unique across all App Runner connections for the AWS account in the AWS Region.*/",
+        "getterDocumentation" : "/**<p>A name for the new connection. It must be unique across all App Runner connections for the Amazon Web Services account in the Amazon Web Services Region.</p>\n@return A name for the new connection. It must be unique across all App Runner connections for the Amazon Web Services account in the Amazon Web Services Region.*/",
         "getterMethodName" : "getConnectionName",
         "getterModel" : {
           "returnType" : "String",
@@ -9394,7 +9394,7 @@
         "marshallingType" : "STRING",
         "name" : "ConnectionName",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>A name for the new connection. It must be unique across all App Runner connections for the AWS account in the AWS Region.</p>\n@param connectionName A name for the new connection. It must be unique across all App Runner connections for the AWS account in the AWS Region.*/",
+        "setterDocumentation" : "/**<p>A name for the new connection. It must be unique across all App Runner connections for the Amazon Web Services account in the Amazon Web Services Region.</p>\n@param connectionName A name for the new connection. It must be unique across all App Runner connections for the Amazon Web Services account in the Amazon Web Services Region.*/",
         "setterMethodName" : "setConnectionName",
         "setterModel" : {
           "timestampFormat" : null,
@@ -9409,13 +9409,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>A name for the new connection. It must be unique across all App Runner connections for the AWS account in the AWS Region.</p>\n@param connectionName A name for the new connection. It must be unique across all App Runner connections for the AWS account in the AWS Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>A name for the new connection. It must be unique across all App Runner connections for the Amazon Web Services account in the Amazon Web Services Region.</p>\n@param connectionName A name for the new connection. It must be unique across all App Runner connections for the Amazon Web Services account in the Amazon Web Services Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "connectionName",
           "variableType" : "String",
-          "documentation" : "<p>A name for the new connection. It must be unique across all App Runner connections for the AWS account in the AWS Region.</p>",
+          "documentation" : "<p>A name for the new connection. It must be unique across all App Runner connections for the Amazon Web Services account in the Amazon Web Services Region.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -9648,12 +9648,12 @@
           "c2jName" : "ConnectionName",
           "c2jShape" : "ConnectionName",
           "deprecated" : false,
-          "documentation" : "<p>A name for the new connection. It must be unique across all App Runner connections for the AWS account in the AWS Region.</p>",
+          "documentation" : "<p>A name for the new connection. It must be unique across all App Runner connections for the Amazon Web Services account in the Amazon Web Services Region.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>A name for the new connection. It must be unique across all App Runner connections for the AWS account in the AWS Region.</p>\n@param connectionName A name for the new connection. It must be unique across all App Runner connections for the AWS account in the AWS Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>A name for the new connection. It must be unique across all App Runner connections for the Amazon Web Services account in the Amazon Web Services Region.</p>\n@param connectionName A name for the new connection. It must be unique across all App Runner connections for the Amazon Web Services account in the Amazon Web Services Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withConnectionName",
-          "getterDocumentation" : "/**<p>A name for the new connection. It must be unique across all App Runner connections for the AWS account in the AWS Region.</p>\n@return A name for the new connection. It must be unique across all App Runner connections for the AWS account in the AWS Region.*/",
+          "getterDocumentation" : "/**<p>A name for the new connection. It must be unique across all App Runner connections for the Amazon Web Services account in the Amazon Web Services Region.</p>\n@return A name for the new connection. It must be unique across all App Runner connections for the Amazon Web Services account in the Amazon Web Services Region.*/",
           "getterMethodName" : "getConnectionName",
           "getterModel" : {
             "returnType" : "String",
@@ -9687,7 +9687,7 @@
           "marshallingType" : "STRING",
           "name" : "ConnectionName",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>A name for the new connection. It must be unique across all App Runner connections for the AWS account in the AWS Region.</p>\n@param connectionName A name for the new connection. It must be unique across all App Runner connections for the AWS account in the AWS Region.*/",
+          "setterDocumentation" : "/**<p>A name for the new connection. It must be unique across all App Runner connections for the Amazon Web Services account in the Amazon Web Services Region.</p>\n@param connectionName A name for the new connection. It must be unique across all App Runner connections for the Amazon Web Services account in the Amazon Web Services Region.*/",
           "setterMethodName" : "setConnectionName",
           "setterModel" : {
             "timestampFormat" : null,
@@ -9702,13 +9702,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>A name for the new connection. It must be unique across all App Runner connections for the AWS account in the AWS Region.</p>\n@param connectionName A name for the new connection. It must be unique across all App Runner connections for the AWS account in the AWS Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>A name for the new connection. It must be unique across all App Runner connections for the Amazon Web Services account in the Amazon Web Services Region.</p>\n@param connectionName A name for the new connection. It must be unique across all App Runner connections for the Amazon Web Services account in the Amazon Web Services Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "connectionName",
             "variableType" : "String",
-            "documentation" : "<p>A name for the new connection. It must be unique across all App Runner connections for the AWS account in the AWS Region.</p>",
+            "documentation" : "<p>A name for the new connection. It must be unique across all App Runner connections for the Amazon Web Services account in the Amazon Web Services Region.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -10173,12 +10173,12 @@
         "c2jName" : "ServiceName",
         "c2jShape" : "ServiceName",
         "deprecated" : false,
-        "documentation" : "<p>A name for the new service. It must be unique across all the running App Runner services in your AWS account in the AWS Region.</p>",
+        "documentation" : "<p>A name for the new service. It must be unique across all the running App Runner services in your Amazon Web Services account in the Amazon Web Services Region.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>A name for the new service. It must be unique across all the running App Runner services in your AWS account in the AWS Region.</p>\n@param serviceName A name for the new service. It must be unique across all the running App Runner services in your AWS account in the AWS Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>A name for the new service. It must be unique across all the running App Runner services in your Amazon Web Services account in the Amazon Web Services Region.</p>\n@param serviceName A name for the new service. It must be unique across all the running App Runner services in your Amazon Web Services account in the Amazon Web Services Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withServiceName",
-        "getterDocumentation" : "/**<p>A name for the new service. It must be unique across all the running App Runner services in your AWS account in the AWS Region.</p>\n@return A name for the new service. It must be unique across all the running App Runner services in your AWS account in the AWS Region.*/",
+        "getterDocumentation" : "/**<p>A name for the new service. It must be unique across all the running App Runner services in your Amazon Web Services account in the Amazon Web Services Region.</p>\n@return A name for the new service. It must be unique across all the running App Runner services in your Amazon Web Services account in the Amazon Web Services Region.*/",
         "getterMethodName" : "getServiceName",
         "getterModel" : {
           "returnType" : "String",
@@ -10212,7 +10212,7 @@
         "marshallingType" : "STRING",
         "name" : "ServiceName",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>A name for the new service. It must be unique across all the running App Runner services in your AWS account in the AWS Region.</p>\n@param serviceName A name for the new service. It must be unique across all the running App Runner services in your AWS account in the AWS Region.*/",
+        "setterDocumentation" : "/**<p>A name for the new service. It must be unique across all the running App Runner services in your Amazon Web Services account in the Amazon Web Services Region.</p>\n@param serviceName A name for the new service. It must be unique across all the running App Runner services in your Amazon Web Services account in the Amazon Web Services Region.*/",
         "setterMethodName" : "setServiceName",
         "setterModel" : {
           "timestampFormat" : null,
@@ -10227,13 +10227,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>A name for the new service. It must be unique across all the running App Runner services in your AWS account in the AWS Region.</p>\n@param serviceName A name for the new service. It must be unique across all the running App Runner services in your AWS account in the AWS Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>A name for the new service. It must be unique across all the running App Runner services in your Amazon Web Services account in the Amazon Web Services Region.</p>\n@param serviceName A name for the new service. It must be unique across all the running App Runner services in your Amazon Web Services account in the Amazon Web Services Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "serviceName",
           "variableType" : "String",
-          "documentation" : "<p>A name for the new service. It must be unique across all the running App Runner services in your AWS account in the AWS Region.</p>",
+          "documentation" : "<p>A name for the new service. It must be unique across all the running App Runner services in your Amazon Web Services account in the Amazon Web Services Region.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -10533,12 +10533,12 @@
         "c2jName" : "EncryptionConfiguration",
         "c2jShape" : "EncryptionConfiguration",
         "deprecated" : false,
-        "documentation" : "<p>An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK.</p>",
+        "documentation" : "<p>An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK.</p>\n@param encryptionConfiguration An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.</p>\n@param encryptionConfiguration An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withEncryptionConfiguration",
-        "getterDocumentation" : "/**<p>An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK.</p>\n@return An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK.*/",
+        "getterDocumentation" : "/**<p>An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.</p>\n@return An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.*/",
         "getterMethodName" : "getEncryptionConfiguration",
         "getterModel" : {
           "returnType" : "EncryptionConfiguration",
@@ -10572,7 +10572,7 @@
         "marshallingType" : "STRUCTURED",
         "name" : "EncryptionConfiguration",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK.</p>\n@param encryptionConfiguration An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK.*/",
+        "setterDocumentation" : "/**<p>An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.</p>\n@param encryptionConfiguration An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.*/",
         "setterMethodName" : "setEncryptionConfiguration",
         "setterModel" : {
           "timestampFormat" : null,
@@ -10587,13 +10587,13 @@
         "shouldFullyQualify" : false,
         "simple" : false,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK.</p>\n@param encryptionConfiguration An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.</p>\n@param encryptionConfiguration An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "EncryptionConfiguration",
           "variableName" : "encryptionConfiguration",
           "variableType" : "EncryptionConfiguration",
-          "documentation" : "<p>An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK.</p>",
+          "documentation" : "<p>An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.</p>",
           "simpleType" : "EncryptionConfiguration",
           "variableSetterType" : "EncryptionConfiguration"
         },
@@ -10602,12 +10602,12 @@
         "c2jName" : "HealthCheckConfiguration",
         "c2jShape" : "HealthCheckConfiguration",
         "deprecated" : false,
-        "documentation" : "<p>The settings for the health check that AWS App Runner performs to monitor the health of your service.</p>",
+        "documentation" : "<p>The settings for the health check that App Runner performs to monitor the health of your service.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>The settings for the health check that AWS App Runner performs to monitor the health of your service.</p>\n@param healthCheckConfiguration The settings for the health check that AWS App Runner performs to monitor the health of your service.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>The settings for the health check that App Runner performs to monitor the health of your service.</p>\n@param healthCheckConfiguration The settings for the health check that App Runner performs to monitor the health of your service.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withHealthCheckConfiguration",
-        "getterDocumentation" : "/**<p>The settings for the health check that AWS App Runner performs to monitor the health of your service.</p>\n@return The settings for the health check that AWS App Runner performs to monitor the health of your service.*/",
+        "getterDocumentation" : "/**<p>The settings for the health check that App Runner performs to monitor the health of your service.</p>\n@return The settings for the health check that App Runner performs to monitor the health of your service.*/",
         "getterMethodName" : "getHealthCheckConfiguration",
         "getterModel" : {
           "returnType" : "HealthCheckConfiguration",
@@ -10641,7 +10641,7 @@
         "marshallingType" : "STRUCTURED",
         "name" : "HealthCheckConfiguration",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The settings for the health check that AWS App Runner performs to monitor the health of your service.</p>\n@param healthCheckConfiguration The settings for the health check that AWS App Runner performs to monitor the health of your service.*/",
+        "setterDocumentation" : "/**<p>The settings for the health check that App Runner performs to monitor the health of your service.</p>\n@param healthCheckConfiguration The settings for the health check that App Runner performs to monitor the health of your service.*/",
         "setterMethodName" : "setHealthCheckConfiguration",
         "setterModel" : {
           "timestampFormat" : null,
@@ -10656,13 +10656,13 @@
         "shouldFullyQualify" : false,
         "simple" : false,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The settings for the health check that AWS App Runner performs to monitor the health of your service.</p>\n@param healthCheckConfiguration The settings for the health check that AWS App Runner performs to monitor the health of your service.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The settings for the health check that App Runner performs to monitor the health of your service.</p>\n@param healthCheckConfiguration The settings for the health check that App Runner performs to monitor the health of your service.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "HealthCheckConfiguration",
           "variableName" : "healthCheckConfiguration",
           "variableType" : "HealthCheckConfiguration",
-          "documentation" : "<p>The settings for the health check that AWS App Runner performs to monitor the health of your service.</p>",
+          "documentation" : "<p>The settings for the health check that App Runner performs to monitor the health of your service.</p>",
           "simpleType" : "HealthCheckConfiguration",
           "variableSetterType" : "HealthCheckConfiguration"
         },
@@ -10812,12 +10812,12 @@
           "c2jName" : "EncryptionConfiguration",
           "c2jShape" : "EncryptionConfiguration",
           "deprecated" : false,
-          "documentation" : "<p>An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK.</p>",
+          "documentation" : "<p>An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK.</p>\n@param encryptionConfiguration An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.</p>\n@param encryptionConfiguration An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withEncryptionConfiguration",
-          "getterDocumentation" : "/**<p>An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK.</p>\n@return An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK.*/",
+          "getterDocumentation" : "/**<p>An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.</p>\n@return An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.*/",
           "getterMethodName" : "getEncryptionConfiguration",
           "getterModel" : {
             "returnType" : "EncryptionConfiguration",
@@ -10851,7 +10851,7 @@
           "marshallingType" : "STRUCTURED",
           "name" : "EncryptionConfiguration",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK.</p>\n@param encryptionConfiguration An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK.*/",
+          "setterDocumentation" : "/**<p>An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.</p>\n@param encryptionConfiguration An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.*/",
           "setterMethodName" : "setEncryptionConfiguration",
           "setterModel" : {
             "timestampFormat" : null,
@@ -10866,13 +10866,13 @@
           "shouldFullyQualify" : false,
           "simple" : false,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK.</p>\n@param encryptionConfiguration An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.</p>\n@param encryptionConfiguration An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "EncryptionConfiguration",
             "variableName" : "encryptionConfiguration",
             "variableType" : "EncryptionConfiguration",
-            "documentation" : "<p>An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK.</p>",
+            "documentation" : "<p>An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.</p>",
             "simpleType" : "EncryptionConfiguration",
             "variableSetterType" : "EncryptionConfiguration"
           },
@@ -10882,12 +10882,12 @@
           "c2jName" : "HealthCheckConfiguration",
           "c2jShape" : "HealthCheckConfiguration",
           "deprecated" : false,
-          "documentation" : "<p>The settings for the health check that AWS App Runner performs to monitor the health of your service.</p>",
+          "documentation" : "<p>The settings for the health check that App Runner performs to monitor the health of your service.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>The settings for the health check that AWS App Runner performs to monitor the health of your service.</p>\n@param healthCheckConfiguration The settings for the health check that AWS App Runner performs to monitor the health of your service.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>The settings for the health check that App Runner performs to monitor the health of your service.</p>\n@param healthCheckConfiguration The settings for the health check that App Runner performs to monitor the health of your service.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withHealthCheckConfiguration",
-          "getterDocumentation" : "/**<p>The settings for the health check that AWS App Runner performs to monitor the health of your service.</p>\n@return The settings for the health check that AWS App Runner performs to monitor the health of your service.*/",
+          "getterDocumentation" : "/**<p>The settings for the health check that App Runner performs to monitor the health of your service.</p>\n@return The settings for the health check that App Runner performs to monitor the health of your service.*/",
           "getterMethodName" : "getHealthCheckConfiguration",
           "getterModel" : {
             "returnType" : "HealthCheckConfiguration",
@@ -10921,7 +10921,7 @@
           "marshallingType" : "STRUCTURED",
           "name" : "HealthCheckConfiguration",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The settings for the health check that AWS App Runner performs to monitor the health of your service.</p>\n@param healthCheckConfiguration The settings for the health check that AWS App Runner performs to monitor the health of your service.*/",
+          "setterDocumentation" : "/**<p>The settings for the health check that App Runner performs to monitor the health of your service.</p>\n@param healthCheckConfiguration The settings for the health check that App Runner performs to monitor the health of your service.*/",
           "setterMethodName" : "setHealthCheckConfiguration",
           "setterModel" : {
             "timestampFormat" : null,
@@ -10936,13 +10936,13 @@
           "shouldFullyQualify" : false,
           "simple" : false,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The settings for the health check that AWS App Runner performs to monitor the health of your service.</p>\n@param healthCheckConfiguration The settings for the health check that AWS App Runner performs to monitor the health of your service.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>The settings for the health check that App Runner performs to monitor the health of your service.</p>\n@param healthCheckConfiguration The settings for the health check that App Runner performs to monitor the health of your service.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "HealthCheckConfiguration",
             "variableName" : "healthCheckConfiguration",
             "variableType" : "HealthCheckConfiguration",
-            "documentation" : "<p>The settings for the health check that AWS App Runner performs to monitor the health of your service.</p>",
+            "documentation" : "<p>The settings for the health check that App Runner performs to monitor the health of your service.</p>",
             "simpleType" : "HealthCheckConfiguration",
             "variableSetterType" : "HealthCheckConfiguration"
           },
@@ -11022,12 +11022,12 @@
           "c2jName" : "ServiceName",
           "c2jShape" : "ServiceName",
           "deprecated" : false,
-          "documentation" : "<p>A name for the new service. It must be unique across all the running App Runner services in your AWS account in the AWS Region.</p>",
+          "documentation" : "<p>A name for the new service. It must be unique across all the running App Runner services in your Amazon Web Services account in the Amazon Web Services Region.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>A name for the new service. It must be unique across all the running App Runner services in your AWS account in the AWS Region.</p>\n@param serviceName A name for the new service. It must be unique across all the running App Runner services in your AWS account in the AWS Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>A name for the new service. It must be unique across all the running App Runner services in your Amazon Web Services account in the Amazon Web Services Region.</p>\n@param serviceName A name for the new service. It must be unique across all the running App Runner services in your Amazon Web Services account in the Amazon Web Services Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withServiceName",
-          "getterDocumentation" : "/**<p>A name for the new service. It must be unique across all the running App Runner services in your AWS account in the AWS Region.</p>\n@return A name for the new service. It must be unique across all the running App Runner services in your AWS account in the AWS Region.*/",
+          "getterDocumentation" : "/**<p>A name for the new service. It must be unique across all the running App Runner services in your Amazon Web Services account in the Amazon Web Services Region.</p>\n@return A name for the new service. It must be unique across all the running App Runner services in your Amazon Web Services account in the Amazon Web Services Region.*/",
           "getterMethodName" : "getServiceName",
           "getterModel" : {
             "returnType" : "String",
@@ -11061,7 +11061,7 @@
           "marshallingType" : "STRING",
           "name" : "ServiceName",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>A name for the new service. It must be unique across all the running App Runner services in your AWS account in the AWS Region.</p>\n@param serviceName A name for the new service. It must be unique across all the running App Runner services in your AWS account in the AWS Region.*/",
+          "setterDocumentation" : "/**<p>A name for the new service. It must be unique across all the running App Runner services in your Amazon Web Services account in the Amazon Web Services Region.</p>\n@param serviceName A name for the new service. It must be unique across all the running App Runner services in your Amazon Web Services account in the Amazon Web Services Region.*/",
           "setterMethodName" : "setServiceName",
           "setterModel" : {
             "timestampFormat" : null,
@@ -11076,13 +11076,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>A name for the new service. It must be unique across all the running App Runner services in your AWS account in the AWS Region.</p>\n@param serviceName A name for the new service. It must be unique across all the running App Runner services in your AWS account in the AWS Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>A name for the new service. It must be unique across all the running App Runner services in your Amazon Web Services account in the Amazon Web Services Region.</p>\n@param serviceName A name for the new service. It must be unique across all the running App Runner services in your Amazon Web Services account in the Amazon Web Services Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "serviceName",
             "variableType" : "String",
-            "documentation" : "<p>A name for the new service. It must be unique across all the running App Runner services in your AWS account in the AWS Region.</p>",
+            "documentation" : "<p>A name for the new service. It must be unique across all the running App Runner services in your Amazon Web Services account in the Amazon Web Services Region.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -11664,7 +11664,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>Describes a custom domain that's associated with an AWS App Runner service.</p>",
+      "documentation" : "<p>Describes a custom domain that's associated with an App Runner service.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -16521,7 +16521,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>Describes a custom encryption key that AWS App Runner uses to encrypt copies of the source repository and service logs.</p>",
+      "documentation" : "<p>Describes a custom encryption key that App Runner uses to encrypt copies of the source repository and service logs.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -16705,7 +16705,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>Describes the settings for the health check that AWS App Runner performs to monitor the health of a service.</p>",
+      "documentation" : "<p>Describes the settings for the health check that App Runner performs to monitor the health of a service.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -16787,7 +16787,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "Path",
-        "c2jShape" : "String",
+        "c2jShape" : "HealthCheckPath",
         "deprecated" : false,
         "documentation" : "<p>The URL that health check requests are sent to.</p> <p> <code>Path</code> is only applicable when you set <code>Protocol</code> to <code>HTTP</code>.</p> <p>Default: <code>\"/\"</code> </p>",
         "endpointDiscoveryId" : false,
@@ -16996,12 +16996,12 @@
         "c2jName" : "HealthyThreshold",
         "c2jShape" : "HealthCheckHealthyThreshold",
         "deprecated" : false,
-        "documentation" : "<p>The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>3</code> </p>",
+        "documentation" : "<p>The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>1</code> </p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>3</code> </p>\n@param healthyThreshold The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>3</code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>1</code> </p>\n@param healthyThreshold The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>1</code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withHealthyThreshold",
-        "getterDocumentation" : "/**<p>The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>3</code> </p>\n@return The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>3</code>*/",
+        "getterDocumentation" : "/**<p>The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>1</code> </p>\n@return The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>1</code>*/",
         "getterMethodName" : "getHealthyThreshold",
         "getterModel" : {
           "returnType" : "Integer",
@@ -17035,7 +17035,7 @@
         "marshallingType" : "INTEGER",
         "name" : "HealthyThreshold",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>3</code> </p>\n@param healthyThreshold The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>3</code>*/",
+        "setterDocumentation" : "/**<p>The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>1</code> </p>\n@param healthyThreshold The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>1</code>*/",
         "setterMethodName" : "setHealthyThreshold",
         "setterModel" : {
           "timestampFormat" : null,
@@ -17050,13 +17050,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>3</code> </p>\n@param healthyThreshold The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>3</code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>1</code> </p>\n@param healthyThreshold The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>1</code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "Integer",
           "variableName" : "healthyThreshold",
           "variableType" : "Integer",
-          "documentation" : "<p>The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>3</code> </p>",
+          "documentation" : "<p>The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>1</code> </p>",
           "simpleType" : "Integer",
           "variableSetterType" : "Integer"
         },
@@ -17065,12 +17065,12 @@
         "c2jName" : "UnhealthyThreshold",
         "c2jShape" : "HealthCheckUnhealthyThreshold",
         "deprecated" : false,
-        "documentation" : "<p>The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>3</code> </p>",
+        "documentation" : "<p>The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>5</code> </p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>3</code> </p>\n@param unhealthyThreshold The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>3</code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>5</code> </p>\n@param unhealthyThreshold The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>5</code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withUnhealthyThreshold",
-        "getterDocumentation" : "/**<p>The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>3</code> </p>\n@return The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>3</code>*/",
+        "getterDocumentation" : "/**<p>The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>5</code> </p>\n@return The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>5</code>*/",
         "getterMethodName" : "getUnhealthyThreshold",
         "getterModel" : {
           "returnType" : "Integer",
@@ -17104,7 +17104,7 @@
         "marshallingType" : "INTEGER",
         "name" : "UnhealthyThreshold",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>3</code> </p>\n@param unhealthyThreshold The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>3</code>*/",
+        "setterDocumentation" : "/**<p>The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>5</code> </p>\n@param unhealthyThreshold The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>5</code>*/",
         "setterMethodName" : "setUnhealthyThreshold",
         "setterModel" : {
           "timestampFormat" : null,
@@ -17119,13 +17119,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>3</code> </p>\n@param unhealthyThreshold The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>3</code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>5</code> </p>\n@param unhealthyThreshold The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>5</code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "Integer",
           "variableName" : "unhealthyThreshold",
           "variableType" : "Integer",
-          "documentation" : "<p>The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>3</code> </p>",
+          "documentation" : "<p>The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>5</code> </p>",
           "simpleType" : "Integer",
           "variableSetterType" : "Integer"
         },
@@ -17136,12 +17136,12 @@
           "c2jName" : "HealthyThreshold",
           "c2jShape" : "HealthCheckHealthyThreshold",
           "deprecated" : false,
-          "documentation" : "<p>The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>3</code> </p>",
+          "documentation" : "<p>The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>1</code> </p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>3</code> </p>\n@param healthyThreshold The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>3</code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>1</code> </p>\n@param healthyThreshold The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>1</code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withHealthyThreshold",
-          "getterDocumentation" : "/**<p>The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>3</code> </p>\n@return The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>3</code>*/",
+          "getterDocumentation" : "/**<p>The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>1</code> </p>\n@return The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>1</code>*/",
           "getterMethodName" : "getHealthyThreshold",
           "getterModel" : {
             "returnType" : "Integer",
@@ -17175,7 +17175,7 @@
           "marshallingType" : "INTEGER",
           "name" : "HealthyThreshold",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>3</code> </p>\n@param healthyThreshold The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>3</code>*/",
+          "setterDocumentation" : "/**<p>The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>1</code> </p>\n@param healthyThreshold The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>1</code>*/",
           "setterMethodName" : "setHealthyThreshold",
           "setterModel" : {
             "timestampFormat" : null,
@@ -17190,13 +17190,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>3</code> </p>\n@param healthyThreshold The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>3</code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>1</code> </p>\n@param healthyThreshold The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>1</code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "Integer",
             "variableName" : "healthyThreshold",
             "variableType" : "Integer",
-            "documentation" : "<p>The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>3</code> </p>",
+            "documentation" : "<p>The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>1</code> </p>",
             "simpleType" : "Integer",
             "variableSetterType" : "Integer"
           },
@@ -17274,7 +17274,7 @@
         },
         "Path" : {
           "c2jName" : "Path",
-          "c2jShape" : "String",
+          "c2jShape" : "HealthCheckPath",
           "deprecated" : false,
           "documentation" : "<p>The URL that health check requests are sent to.</p> <p> <code>Path</code> is only applicable when you set <code>Protocol</code> to <code>HTTP</code>.</p> <p>Default: <code>\"/\"</code> </p>",
           "endpointDiscoveryId" : false,
@@ -17486,12 +17486,12 @@
           "c2jName" : "UnhealthyThreshold",
           "c2jShape" : "HealthCheckUnhealthyThreshold",
           "deprecated" : false,
-          "documentation" : "<p>The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>3</code> </p>",
+          "documentation" : "<p>The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>5</code> </p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>3</code> </p>\n@param unhealthyThreshold The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>3</code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>5</code> </p>\n@param unhealthyThreshold The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>5</code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withUnhealthyThreshold",
-          "getterDocumentation" : "/**<p>The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>3</code> </p>\n@return The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>3</code>*/",
+          "getterDocumentation" : "/**<p>The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>5</code> </p>\n@return The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>5</code>*/",
           "getterMethodName" : "getUnhealthyThreshold",
           "getterModel" : {
             "returnType" : "Integer",
@@ -17525,7 +17525,7 @@
           "marshallingType" : "INTEGER",
           "name" : "UnhealthyThreshold",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>3</code> </p>\n@param unhealthyThreshold The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>3</code>*/",
+          "setterDocumentation" : "/**<p>The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>5</code> </p>\n@param unhealthyThreshold The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>5</code>*/",
           "setterMethodName" : "setUnhealthyThreshold",
           "setterModel" : {
             "timestampFormat" : null,
@@ -17540,13 +17540,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>3</code> </p>\n@param unhealthyThreshold The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>3</code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>5</code> </p>\n@param unhealthyThreshold The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>5</code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "Integer",
             "variableName" : "unhealthyThreshold",
             "variableType" : "Integer",
-            "documentation" : "<p>The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>3</code> </p>",
+            "documentation" : "<p>The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>5</code> </p>",
             "simpleType" : "Integer",
             "variableSetterType" : "Integer"
           },
@@ -17634,7 +17634,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>Describes the configuration that AWS App Runner uses to run an App Runner service using an image pulled from a source image repository.</p>",
+      "documentation" : "<p>Describes the configuration that App Runner uses to run an App Runner service using an image pulled from a source image repository.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -18776,7 +18776,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>Describes the runtime configuration of an AWS App Runner service instance (scaling unit).</p>",
+      "documentation" : "<p>Describes the runtime configuration of an App Runner service instance (scaling unit).</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -18929,12 +18929,12 @@
         "c2jName" : "InstanceRoleArn",
         "c2jShape" : "RoleArn",
         "deprecated" : false,
-        "documentation" : "<p>The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any AWS APIs.</p>",
+        "documentation" : "<p>The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any Amazon Web Services APIs.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any AWS APIs.</p>\n@param instanceRoleArn The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any AWS APIs.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any Amazon Web Services APIs.</p>\n@param instanceRoleArn The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any Amazon Web Services APIs.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withInstanceRoleArn",
-        "getterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any AWS APIs.</p>\n@return The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any AWS APIs.*/",
+        "getterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any Amazon Web Services APIs.</p>\n@return The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any Amazon Web Services APIs.*/",
         "getterMethodName" : "getInstanceRoleArn",
         "getterModel" : {
           "returnType" : "String",
@@ -18968,7 +18968,7 @@
         "marshallingType" : "STRING",
         "name" : "InstanceRoleArn",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any AWS APIs.</p>\n@param instanceRoleArn The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any AWS APIs.*/",
+        "setterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any Amazon Web Services APIs.</p>\n@param instanceRoleArn The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any Amazon Web Services APIs.*/",
         "setterMethodName" : "setInstanceRoleArn",
         "setterModel" : {
           "timestampFormat" : null,
@@ -18983,13 +18983,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any AWS APIs.</p>\n@param instanceRoleArn The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any AWS APIs.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any Amazon Web Services APIs.</p>\n@param instanceRoleArn The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any Amazon Web Services APIs.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "instanceRoleArn",
           "variableType" : "String",
-          "documentation" : "<p>The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any AWS APIs.</p>",
+          "documentation" : "<p>The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any Amazon Web Services APIs.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -19070,12 +19070,12 @@
           "c2jName" : "InstanceRoleArn",
           "c2jShape" : "RoleArn",
           "deprecated" : false,
-          "documentation" : "<p>The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any AWS APIs.</p>",
+          "documentation" : "<p>The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any Amazon Web Services APIs.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any AWS APIs.</p>\n@param instanceRoleArn The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any AWS APIs.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any Amazon Web Services APIs.</p>\n@param instanceRoleArn The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any Amazon Web Services APIs.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withInstanceRoleArn",
-          "getterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any AWS APIs.</p>\n@return The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any AWS APIs.*/",
+          "getterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any Amazon Web Services APIs.</p>\n@return The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any Amazon Web Services APIs.*/",
           "getterMethodName" : "getInstanceRoleArn",
           "getterModel" : {
             "returnType" : "String",
@@ -19109,7 +19109,7 @@
           "marshallingType" : "STRING",
           "name" : "InstanceRoleArn",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any AWS APIs.</p>\n@param instanceRoleArn The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any AWS APIs.*/",
+          "setterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any Amazon Web Services APIs.</p>\n@param instanceRoleArn The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any Amazon Web Services APIs.*/",
           "setterMethodName" : "setInstanceRoleArn",
           "setterModel" : {
             "timestampFormat" : null,
@@ -19124,13 +19124,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any AWS APIs.</p>\n@param instanceRoleArn The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any AWS APIs.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any Amazon Web Services APIs.</p>\n@param instanceRoleArn The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any Amazon Web Services APIs.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "instanceRoleArn",
             "variableType" : "String",
-            "documentation" : "<p>The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any AWS APIs.</p>",
+            "documentation" : "<p>The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any Amazon Web Services APIs.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -23794,7 +23794,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>Provides summary information for an operation that occurred on an AWS App Runner service.</p>",
+      "documentation" : "<p>Provides summary information for an operation that occurred on an App Runner service.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -25429,7 +25429,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your AWS account.</p>",
+      "documentation" : "<p>A resource doesn't exist for the specified Amazon Resource Name (ARN) in your Amazon Web Services account.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : "ResourceNotFoundException",
@@ -26031,7 +26031,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>Describes an AWS App Runner service. It can describe a service in any state, including deleted services.</p> <p>This type contains the full information about a service, including configuration details. It's returned by the <a href=\"https://docs.aws.amazon.com/apprunner/latest/api/API_CreateService.html\">CreateService</a>, <a href=\"https://docs.aws.amazon.com/apprunner/latest/api/API_DescribeService.html\">DescribeService</a>, and <a href=\"https://docs.aws.amazon.com/apprunner/latest/api/API_DeleteService.html\">DeleteService</a> actions. A subset of this information is returned by the <a href=\"https://docs.aws.amazon.com/apprunner/latest/api/API_ListServices.html\">ListServices</a> action using the <a href=\"https://docs.aws.amazon.com/apprunner/latest/api/API_ServiceSummary.html\">ServiceSummary</a> type.</p>",
+      "documentation" : "<p>Describes an App Runner service. It can describe a service in any state, including deleted services.</p> <p>This type contains the full information about a service, including configuration details. It's returned by the <a href=\"https://docs.aws.amazon.com/apprunner/latest/api/API_CreateService.html\">CreateService</a>, <a href=\"https://docs.aws.amazon.com/apprunner/latest/api/API_DescribeService.html\">DescribeService</a>, and <a href=\"https://docs.aws.amazon.com/apprunner/latest/api/API_DeleteService.html\">DeleteService</a> actions. A subset of this information is returned by the <a href=\"https://docs.aws.amazon.com/apprunner/latest/api/API_ListServices.html\">ListServices</a> action using the <a href=\"https://docs.aws.amazon.com/apprunner/latest/api/API_ServiceSummary.html\">ServiceSummary</a> type.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -26115,12 +26115,12 @@
         "c2jName" : "ServiceId",
         "c2jShape" : "ServiceId",
         "deprecated" : false,
-        "documentation" : "<p>An ID that App Runner generated for this service. It's unique within the AWS Region.</p>",
+        "documentation" : "<p>An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the AWS Region.</p>\n@param serviceId An ID that App Runner generated for this service. It's unique within the AWS Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.</p>\n@param serviceId An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withServiceId",
-        "getterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the AWS Region.</p>\n@return An ID that App Runner generated for this service. It's unique within the AWS Region.*/",
+        "getterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.</p>\n@return An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.*/",
         "getterMethodName" : "getServiceId",
         "getterModel" : {
           "returnType" : "String",
@@ -26154,7 +26154,7 @@
         "marshallingType" : "STRING",
         "name" : "ServiceId",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the AWS Region.</p>\n@param serviceId An ID that App Runner generated for this service. It's unique within the AWS Region.*/",
+        "setterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.</p>\n@param serviceId An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.*/",
         "setterMethodName" : "setServiceId",
         "setterModel" : {
           "timestampFormat" : null,
@@ -26169,13 +26169,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the AWS Region.</p>\n@param serviceId An ID that App Runner generated for this service. It's unique within the AWS Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.</p>\n@param serviceId An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "serviceId",
           "variableType" : "String",
-          "documentation" : "<p>An ID that App Runner generated for this service. It's unique within the AWS Region.</p>",
+          "documentation" : "<p>An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -26736,12 +26736,12 @@
         "c2jName" : "EncryptionConfiguration",
         "c2jShape" : "EncryptionConfiguration",
         "deprecated" : false,
-        "documentation" : "<p>The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an AWS managed CMK.</p>",
+        "documentation" : "<p>The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web Services managed CMK.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an AWS managed CMK.</p>\n@param encryptionConfiguration The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an AWS managed CMK.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web Services managed CMK.</p>\n@param encryptionConfiguration The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web Services managed CMK.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withEncryptionConfiguration",
-        "getterDocumentation" : "/**<p>The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an AWS managed CMK.</p>\n@return The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an AWS managed CMK.*/",
+        "getterDocumentation" : "/**<p>The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web Services managed CMK.</p>\n@return The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web Services managed CMK.*/",
         "getterMethodName" : "getEncryptionConfiguration",
         "getterModel" : {
           "returnType" : "EncryptionConfiguration",
@@ -26775,7 +26775,7 @@
         "marshallingType" : "STRUCTURED",
         "name" : "EncryptionConfiguration",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an AWS managed CMK.</p>\n@param encryptionConfiguration The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an AWS managed CMK.*/",
+        "setterDocumentation" : "/**<p>The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web Services managed CMK.</p>\n@param encryptionConfiguration The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web Services managed CMK.*/",
         "setterMethodName" : "setEncryptionConfiguration",
         "setterModel" : {
           "timestampFormat" : null,
@@ -26790,13 +26790,13 @@
         "shouldFullyQualify" : false,
         "simple" : false,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an AWS managed CMK.</p>\n@param encryptionConfiguration The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an AWS managed CMK.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web Services managed CMK.</p>\n@param encryptionConfiguration The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web Services managed CMK.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "EncryptionConfiguration",
           "variableName" : "encryptionConfiguration",
           "variableType" : "EncryptionConfiguration",
-          "documentation" : "<p>The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an AWS managed CMK.</p>",
+          "documentation" : "<p>The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web Services managed CMK.</p>",
           "simpleType" : "EncryptionConfiguration",
           "variableSetterType" : "EncryptionConfiguration"
         },
@@ -27155,12 +27155,12 @@
           "c2jName" : "EncryptionConfiguration",
           "c2jShape" : "EncryptionConfiguration",
           "deprecated" : false,
-          "documentation" : "<p>The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an AWS managed CMK.</p>",
+          "documentation" : "<p>The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web Services managed CMK.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an AWS managed CMK.</p>\n@param encryptionConfiguration The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an AWS managed CMK.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web Services managed CMK.</p>\n@param encryptionConfiguration The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web Services managed CMK.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withEncryptionConfiguration",
-          "getterDocumentation" : "/**<p>The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an AWS managed CMK.</p>\n@return The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an AWS managed CMK.*/",
+          "getterDocumentation" : "/**<p>The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web Services managed CMK.</p>\n@return The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web Services managed CMK.*/",
           "getterMethodName" : "getEncryptionConfiguration",
           "getterModel" : {
             "returnType" : "EncryptionConfiguration",
@@ -27194,7 +27194,7 @@
           "marshallingType" : "STRUCTURED",
           "name" : "EncryptionConfiguration",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an AWS managed CMK.</p>\n@param encryptionConfiguration The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an AWS managed CMK.*/",
+          "setterDocumentation" : "/**<p>The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web Services managed CMK.</p>\n@param encryptionConfiguration The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web Services managed CMK.*/",
           "setterMethodName" : "setEncryptionConfiguration",
           "setterModel" : {
             "timestampFormat" : null,
@@ -27209,13 +27209,13 @@
           "shouldFullyQualify" : false,
           "simple" : false,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an AWS managed CMK.</p>\n@param encryptionConfiguration The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an AWS managed CMK.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web Services managed CMK.</p>\n@param encryptionConfiguration The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web Services managed CMK.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "EncryptionConfiguration",
             "variableName" : "encryptionConfiguration",
             "variableType" : "EncryptionConfiguration",
-            "documentation" : "<p>The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an AWS managed CMK.</p>",
+            "documentation" : "<p>The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web Services managed CMK.</p>",
             "simpleType" : "EncryptionConfiguration",
             "variableSetterType" : "EncryptionConfiguration"
           },
@@ -27435,12 +27435,12 @@
           "c2jName" : "ServiceId",
           "c2jShape" : "ServiceId",
           "deprecated" : false,
-          "documentation" : "<p>An ID that App Runner generated for this service. It's unique within the AWS Region.</p>",
+          "documentation" : "<p>An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the AWS Region.</p>\n@param serviceId An ID that App Runner generated for this service. It's unique within the AWS Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.</p>\n@param serviceId An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withServiceId",
-          "getterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the AWS Region.</p>\n@return An ID that App Runner generated for this service. It's unique within the AWS Region.*/",
+          "getterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.</p>\n@return An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.*/",
           "getterMethodName" : "getServiceId",
           "getterModel" : {
             "returnType" : "String",
@@ -27474,7 +27474,7 @@
           "marshallingType" : "STRING",
           "name" : "ServiceId",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the AWS Region.</p>\n@param serviceId An ID that App Runner generated for this service. It's unique within the AWS Region.*/",
+          "setterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.</p>\n@param serviceId An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.*/",
           "setterMethodName" : "setServiceId",
           "setterModel" : {
             "timestampFormat" : null,
@@ -27489,13 +27489,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the AWS Region.</p>\n@param serviceId An ID that App Runner generated for this service. It's unique within the AWS Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.</p>\n@param serviceId An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "serviceId",
             "variableType" : "String",
-            "documentation" : "<p>An ID that App Runner generated for this service. It's unique within the AWS Region.</p>",
+            "documentation" : "<p>An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -27883,7 +27883,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>App Runner can't create this resource. You've reached your account quota for this resource type.</p> <p>For App Runner per-resource quotas, see <a href=\"https://docs.aws.amazon.com/general/latest/gr/apprunner.html\">AWS App Runner endpoints and quotas</a> in the <i>AWS General Reference</i>.</p>",
+      "documentation" : "<p>App Runner can't create this resource. You've reached your account quota for this resource type.</p> <p>For App Runner per-resource quotas, see <a href=\"https://docs.aws.amazon.com/general/latest/gr/apprunner.html\">App Runner endpoints and quotas</a> in the <i>Amazon Web Services General Reference</i>.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : "ServiceQuotaExceededException",
@@ -27986,7 +27986,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>Provides summary information for an AWS App Runner service.</p> <p>This type contains limited information about a service. It doesn't include configuration details. It's returned by the <a href=\"https://docs.aws.amazon.com/apprunner/latest/api/API_ListServices.html\">ListServices</a> action. Complete service information is returned by the <a href=\"https://docs.aws.amazon.com/apprunner/latest/api/API_CreateService.html\">CreateService</a>, <a href=\"https://docs.aws.amazon.com/apprunner/latest/api/API_DescribeService.html\">DescribeService</a>, and <a href=\"https://docs.aws.amazon.com/apprunner/latest/api/API_DeleteService.html\">DeleteService</a> actions using the <a href=\"https://docs.aws.amazon.com/apprunner/latest/api/API_Service.html\">Service</a> type.</p>",
+      "documentation" : "<p>Provides summary information for an App Runner service.</p> <p>This type contains limited information about a service. It doesn't include configuration details. It's returned by the <a href=\"https://docs.aws.amazon.com/apprunner/latest/api/API_ListServices.html\">ListServices</a> action. Complete service information is returned by the <a href=\"https://docs.aws.amazon.com/apprunner/latest/api/API_CreateService.html\">CreateService</a>, <a href=\"https://docs.aws.amazon.com/apprunner/latest/api/API_DescribeService.html\">DescribeService</a>, and <a href=\"https://docs.aws.amazon.com/apprunner/latest/api/API_DeleteService.html\">DeleteService</a> actions using the <a href=\"https://docs.aws.amazon.com/apprunner/latest/api/API_Service.html\">Service</a> type.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -28070,12 +28070,12 @@
         "c2jName" : "ServiceId",
         "c2jShape" : "ServiceId",
         "deprecated" : false,
-        "documentation" : "<p>An ID that App Runner generated for this service. It's unique within the AWS Region.</p>",
+        "documentation" : "<p>An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the AWS Region.</p>\n@param serviceId An ID that App Runner generated for this service. It's unique within the AWS Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.</p>\n@param serviceId An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withServiceId",
-        "getterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the AWS Region.</p>\n@return An ID that App Runner generated for this service. It's unique within the AWS Region.*/",
+        "getterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.</p>\n@return An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.*/",
         "getterMethodName" : "getServiceId",
         "getterModel" : {
           "returnType" : "String",
@@ -28109,7 +28109,7 @@
         "marshallingType" : "STRING",
         "name" : "ServiceId",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the AWS Region.</p>\n@param serviceId An ID that App Runner generated for this service. It's unique within the AWS Region.*/",
+        "setterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.</p>\n@param serviceId An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.*/",
         "setterMethodName" : "setServiceId",
         "setterModel" : {
           "timestampFormat" : null,
@@ -28124,13 +28124,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the AWS Region.</p>\n@param serviceId An ID that App Runner generated for this service. It's unique within the AWS Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.</p>\n@param serviceId An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "serviceId",
           "variableType" : "String",
-          "documentation" : "<p>An ID that App Runner generated for this service. It's unique within the AWS Region.</p>",
+          "documentation" : "<p>An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -28626,12 +28626,12 @@
           "c2jName" : "ServiceId",
           "c2jShape" : "ServiceId",
           "deprecated" : false,
-          "documentation" : "<p>An ID that App Runner generated for this service. It's unique within the AWS Region.</p>",
+          "documentation" : "<p>An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the AWS Region.</p>\n@param serviceId An ID that App Runner generated for this service. It's unique within the AWS Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.</p>\n@param serviceId An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withServiceId",
-          "getterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the AWS Region.</p>\n@return An ID that App Runner generated for this service. It's unique within the AWS Region.*/",
+          "getterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.</p>\n@return An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.*/",
           "getterMethodName" : "getServiceId",
           "getterModel" : {
             "returnType" : "String",
@@ -28665,7 +28665,7 @@
           "marshallingType" : "STRING",
           "name" : "ServiceId",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the AWS Region.</p>\n@param serviceId An ID that App Runner generated for this service. It's unique within the AWS Region.*/",
+          "setterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.</p>\n@param serviceId An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.*/",
           "setterMethodName" : "setServiceId",
           "setterModel" : {
             "timestampFormat" : null,
@@ -28680,13 +28680,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the AWS Region.</p>\n@param serviceId An ID that App Runner generated for this service. It's unique within the AWS Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.</p>\n@param serviceId An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "serviceId",
             "variableType" : "String",
-            "documentation" : "<p>An ID that App Runner generated for this service. It's unique within the AWS Region.</p>",
+            "documentation" : "<p>An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -29004,7 +29004,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>Identifies a version of code that AWS App Runner refers to within a source code repository.</p>",
+      "documentation" : "<p>Identifies a version of code that App Runner refers to within a source code repository.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -29374,7 +29374,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>Describes the source deployed to an AWS App Runner service. It can be a code or an image repository.</p>",
+      "documentation" : "<p>Describes the source deployed to an App Runner service. It can be a code or an image repository.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -29527,12 +29527,12 @@
         "c2jName" : "AutoDeploymentsEnabled",
         "c2jShape" : "NullableBoolean",
         "deprecated" : false,
-        "documentation" : "<p>If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (source code commit or new image version) starts a deployment.</p> <p>Default: <code>true</code> </p>",
+        "documentation" : "<p>If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (including any source code commit or new image version) starts a deployment.</p> <p>Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an ECR repository that's in an Amazon Web Services account other than the one that the service is in. App Runner sets to <code>true</code> in all other cases (which currently include a source code repository or a source image using a same-account ECR repository).</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (source code commit or new image version) starts a deployment.</p> <p>Default: <code>true</code> </p>\n@param autoDeploymentsEnabled If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (source code commit or new image version) starts a deployment.</p> <p>Default: <code>true</code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (including any source code commit or new image version) starts a deployment.</p> <p>Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an ECR repository that's in an Amazon Web Services account other than the one that the service is in. App Runner sets to <code>true</code> in all other cases (which currently include a source code repository or a source image using a same-account ECR repository).</p>\n@param autoDeploymentsEnabled If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (including any source code commit or new image version) starts a deployment.</p> <p>Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an ECR repository that's in an Amazon Web Services account other than the one that the service is in. App Runner sets to <code>true</code> in all other cases (which currently include a source code repository or a source image using a same-account ECR repository).\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withAutoDeploymentsEnabled",
-        "getterDocumentation" : "/**<p>If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (source code commit or new image version) starts a deployment.</p> <p>Default: <code>true</code> </p>\n@return If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (source code commit or new image version) starts a deployment.</p> <p>Default: <code>true</code>*/",
+        "getterDocumentation" : "/**<p>If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (including any source code commit or new image version) starts a deployment.</p> <p>Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an ECR repository that's in an Amazon Web Services account other than the one that the service is in. App Runner sets to <code>true</code> in all other cases (which currently include a source code repository or a source image using a same-account ECR repository).</p>\n@return If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (including any source code commit or new image version) starts a deployment.</p> <p>Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an ECR repository that's in an Amazon Web Services account other than the one that the service is in. App Runner sets to <code>true</code> in all other cases (which currently include a source code repository or a source image using a same-account ECR repository).*/",
         "getterMethodName" : "getAutoDeploymentsEnabled",
         "getterModel" : {
           "returnType" : "Boolean",
@@ -29566,7 +29566,7 @@
         "marshallingType" : "BOOLEAN",
         "name" : "AutoDeploymentsEnabled",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (source code commit or new image version) starts a deployment.</p> <p>Default: <code>true</code> </p>\n@param autoDeploymentsEnabled If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (source code commit or new image version) starts a deployment.</p> <p>Default: <code>true</code>*/",
+        "setterDocumentation" : "/**<p>If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (including any source code commit or new image version) starts a deployment.</p> <p>Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an ECR repository that's in an Amazon Web Services account other than the one that the service is in. App Runner sets to <code>true</code> in all other cases (which currently include a source code repository or a source image using a same-account ECR repository).</p>\n@param autoDeploymentsEnabled If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (including any source code commit or new image version) starts a deployment.</p> <p>Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an ECR repository that's in an Amazon Web Services account other than the one that the service is in. App Runner sets to <code>true</code> in all other cases (which currently include a source code repository or a source image using a same-account ECR repository).*/",
         "setterMethodName" : "setAutoDeploymentsEnabled",
         "setterModel" : {
           "timestampFormat" : null,
@@ -29581,13 +29581,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (source code commit or new image version) starts a deployment.</p> <p>Default: <code>true</code> </p>\n@param autoDeploymentsEnabled If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (source code commit or new image version) starts a deployment.</p> <p>Default: <code>true</code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (including any source code commit or new image version) starts a deployment.</p> <p>Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an ECR repository that's in an Amazon Web Services account other than the one that the service is in. App Runner sets to <code>true</code> in all other cases (which currently include a source code repository or a source image using a same-account ECR repository).</p>\n@param autoDeploymentsEnabled If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (including any source code commit or new image version) starts a deployment.</p> <p>Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an ECR repository that's in an Amazon Web Services account other than the one that the service is in. App Runner sets to <code>true</code> in all other cases (which currently include a source code repository or a source image using a same-account ECR repository).\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "Boolean",
           "variableName" : "autoDeploymentsEnabled",
           "variableType" : "Boolean",
-          "documentation" : "<p>If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (source code commit or new image version) starts a deployment.</p> <p>Default: <code>true</code> </p>",
+          "documentation" : "<p>If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (including any source code commit or new image version) starts a deployment.</p> <p>Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an ECR repository that's in an Amazon Web Services account other than the one that the service is in. App Runner sets to <code>true</code> in all other cases (which currently include a source code repository or a source image using a same-account ECR repository).</p>",
           "simpleType" : "Boolean",
           "variableSetterType" : "Boolean"
         },
@@ -29737,12 +29737,12 @@
           "c2jName" : "AutoDeploymentsEnabled",
           "c2jShape" : "NullableBoolean",
           "deprecated" : false,
-          "documentation" : "<p>If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (source code commit or new image version) starts a deployment.</p> <p>Default: <code>true</code> </p>",
+          "documentation" : "<p>If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (including any source code commit or new image version) starts a deployment.</p> <p>Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an ECR repository that's in an Amazon Web Services account other than the one that the service is in. App Runner sets to <code>true</code> in all other cases (which currently include a source code repository or a source image using a same-account ECR repository).</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (source code commit or new image version) starts a deployment.</p> <p>Default: <code>true</code> </p>\n@param autoDeploymentsEnabled If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (source code commit or new image version) starts a deployment.</p> <p>Default: <code>true</code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (including any source code commit or new image version) starts a deployment.</p> <p>Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an ECR repository that's in an Amazon Web Services account other than the one that the service is in. App Runner sets to <code>true</code> in all other cases (which currently include a source code repository or a source image using a same-account ECR repository).</p>\n@param autoDeploymentsEnabled If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (including any source code commit or new image version) starts a deployment.</p> <p>Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an ECR repository that's in an Amazon Web Services account other than the one that the service is in. App Runner sets to <code>true</code> in all other cases (which currently include a source code repository or a source image using a same-account ECR repository).\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withAutoDeploymentsEnabled",
-          "getterDocumentation" : "/**<p>If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (source code commit or new image version) starts a deployment.</p> <p>Default: <code>true</code> </p>\n@return If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (source code commit or new image version) starts a deployment.</p> <p>Default: <code>true</code>*/",
+          "getterDocumentation" : "/**<p>If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (including any source code commit or new image version) starts a deployment.</p> <p>Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an ECR repository that's in an Amazon Web Services account other than the one that the service is in. App Runner sets to <code>true</code> in all other cases (which currently include a source code repository or a source image using a same-account ECR repository).</p>\n@return If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (including any source code commit or new image version) starts a deployment.</p> <p>Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an ECR repository that's in an Amazon Web Services account other than the one that the service is in. App Runner sets to <code>true</code> in all other cases (which currently include a source code repository or a source image using a same-account ECR repository).*/",
           "getterMethodName" : "getAutoDeploymentsEnabled",
           "getterModel" : {
             "returnType" : "Boolean",
@@ -29776,7 +29776,7 @@
           "marshallingType" : "BOOLEAN",
           "name" : "AutoDeploymentsEnabled",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (source code commit or new image version) starts a deployment.</p> <p>Default: <code>true</code> </p>\n@param autoDeploymentsEnabled If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (source code commit or new image version) starts a deployment.</p> <p>Default: <code>true</code>*/",
+          "setterDocumentation" : "/**<p>If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (including any source code commit or new image version) starts a deployment.</p> <p>Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an ECR repository that's in an Amazon Web Services account other than the one that the service is in. App Runner sets to <code>true</code> in all other cases (which currently include a source code repository or a source image using a same-account ECR repository).</p>\n@param autoDeploymentsEnabled If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (including any source code commit or new image version) starts a deployment.</p> <p>Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an ECR repository that's in an Amazon Web Services account other than the one that the service is in. App Runner sets to <code>true</code> in all other cases (which currently include a source code repository or a source image using a same-account ECR repository).*/",
           "setterMethodName" : "setAutoDeploymentsEnabled",
           "setterModel" : {
             "timestampFormat" : null,
@@ -29791,13 +29791,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (source code commit or new image version) starts a deployment.</p> <p>Default: <code>true</code> </p>\n@param autoDeploymentsEnabled If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (source code commit or new image version) starts a deployment.</p> <p>Default: <code>true</code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (including any source code commit or new image version) starts a deployment.</p> <p>Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an ECR repository that's in an Amazon Web Services account other than the one that the service is in. App Runner sets to <code>true</code> in all other cases (which currently include a source code repository or a source image using a same-account ECR repository).</p>\n@param autoDeploymentsEnabled If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (including any source code commit or new image version) starts a deployment.</p> <p>Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an ECR repository that's in an Amazon Web Services account other than the one that the service is in. App Runner sets to <code>true</code> in all other cases (which currently include a source code repository or a source image using a same-account ECR repository).\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "Boolean",
             "variableName" : "autoDeploymentsEnabled",
             "variableType" : "Boolean",
-            "documentation" : "<p>If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (source code commit or new image version) starts a deployment.</p> <p>Default: <code>true</code> </p>",
+            "documentation" : "<p>If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (including any source code commit or new image version) starts a deployment.</p> <p>Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an ECR repository that's in an Amazon Web Services account other than the one that the service is in. App Runner sets to <code>true</code> in all other cases (which currently include a source code repository or a source image using a same-account ECR repository).</p>",
             "simpleType" : "Boolean",
             "variableSetterType" : "Boolean"
           },
@@ -30347,7 +30347,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>Describes a tag that is applied to an AWS App Runner resource. A tag is a metadata item consisting of a key-value pair.</p>",
+      "documentation" : "<p>Describes a tag that is applied to an App Runner resource. A tag is a metadata item consisting of a key-value pair.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -32046,12 +32046,12 @@
         "c2jName" : "HealthCheckConfiguration",
         "c2jShape" : "HealthCheckConfiguration",
         "deprecated" : false,
-        "documentation" : "<p>The settings for the health check that AWS App Runner performs to monitor the health of your service.</p>",
+        "documentation" : "<p>The settings for the health check that App Runner performs to monitor the health of your service.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>The settings for the health check that AWS App Runner performs to monitor the health of your service.</p>\n@param healthCheckConfiguration The settings for the health check that AWS App Runner performs to monitor the health of your service.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>The settings for the health check that App Runner performs to monitor the health of your service.</p>\n@param healthCheckConfiguration The settings for the health check that App Runner performs to monitor the health of your service.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withHealthCheckConfiguration",
-        "getterDocumentation" : "/**<p>The settings for the health check that AWS App Runner performs to monitor the health of your service.</p>\n@return The settings for the health check that AWS App Runner performs to monitor the health of your service.*/",
+        "getterDocumentation" : "/**<p>The settings for the health check that App Runner performs to monitor the health of your service.</p>\n@return The settings for the health check that App Runner performs to monitor the health of your service.*/",
         "getterMethodName" : "getHealthCheckConfiguration",
         "getterModel" : {
           "returnType" : "HealthCheckConfiguration",
@@ -32085,7 +32085,7 @@
         "marshallingType" : "STRUCTURED",
         "name" : "HealthCheckConfiguration",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The settings for the health check that AWS App Runner performs to monitor the health of your service.</p>\n@param healthCheckConfiguration The settings for the health check that AWS App Runner performs to monitor the health of your service.*/",
+        "setterDocumentation" : "/**<p>The settings for the health check that App Runner performs to monitor the health of your service.</p>\n@param healthCheckConfiguration The settings for the health check that App Runner performs to monitor the health of your service.*/",
         "setterMethodName" : "setHealthCheckConfiguration",
         "setterModel" : {
           "timestampFormat" : null,
@@ -32100,13 +32100,13 @@
         "shouldFullyQualify" : false,
         "simple" : false,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The settings for the health check that AWS App Runner performs to monitor the health of your service.</p>\n@param healthCheckConfiguration The settings for the health check that AWS App Runner performs to monitor the health of your service.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The settings for the health check that App Runner performs to monitor the health of your service.</p>\n@param healthCheckConfiguration The settings for the health check that App Runner performs to monitor the health of your service.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "HealthCheckConfiguration",
           "variableName" : "healthCheckConfiguration",
           "variableType" : "HealthCheckConfiguration",
-          "documentation" : "<p>The settings for the health check that AWS App Runner performs to monitor the health of your service.</p>",
+          "documentation" : "<p>The settings for the health check that App Runner performs to monitor the health of your service.</p>",
           "simpleType" : "HealthCheckConfiguration",
           "variableSetterType" : "HealthCheckConfiguration"
         },
@@ -32187,12 +32187,12 @@
           "c2jName" : "HealthCheckConfiguration",
           "c2jShape" : "HealthCheckConfiguration",
           "deprecated" : false,
-          "documentation" : "<p>The settings for the health check that AWS App Runner performs to monitor the health of your service.</p>",
+          "documentation" : "<p>The settings for the health check that App Runner performs to monitor the health of your service.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>The settings for the health check that AWS App Runner performs to monitor the health of your service.</p>\n@param healthCheckConfiguration The settings for the health check that AWS App Runner performs to monitor the health of your service.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>The settings for the health check that App Runner performs to monitor the health of your service.</p>\n@param healthCheckConfiguration The settings for the health check that App Runner performs to monitor the health of your service.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withHealthCheckConfiguration",
-          "getterDocumentation" : "/**<p>The settings for the health check that AWS App Runner performs to monitor the health of your service.</p>\n@return The settings for the health check that AWS App Runner performs to monitor the health of your service.*/",
+          "getterDocumentation" : "/**<p>The settings for the health check that App Runner performs to monitor the health of your service.</p>\n@return The settings for the health check that App Runner performs to monitor the health of your service.*/",
           "getterMethodName" : "getHealthCheckConfiguration",
           "getterModel" : {
             "returnType" : "HealthCheckConfiguration",
@@ -32226,7 +32226,7 @@
           "marshallingType" : "STRUCTURED",
           "name" : "HealthCheckConfiguration",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The settings for the health check that AWS App Runner performs to monitor the health of your service.</p>\n@param healthCheckConfiguration The settings for the health check that AWS App Runner performs to monitor the health of your service.*/",
+          "setterDocumentation" : "/**<p>The settings for the health check that App Runner performs to monitor the health of your service.</p>\n@param healthCheckConfiguration The settings for the health check that App Runner performs to monitor the health of your service.*/",
           "setterMethodName" : "setHealthCheckConfiguration",
           "setterModel" : {
             "timestampFormat" : null,
@@ -32241,13 +32241,13 @@
           "shouldFullyQualify" : false,
           "simple" : false,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The settings for the health check that AWS App Runner performs to monitor the health of your service.</p>\n@param healthCheckConfiguration The settings for the health check that AWS App Runner performs to monitor the health of your service.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>The settings for the health check that App Runner performs to monitor the health of your service.</p>\n@param healthCheckConfiguration The settings for the health check that App Runner performs to monitor the health of your service.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "HealthCheckConfiguration",
             "variableName" : "healthCheckConfiguration",
             "variableType" : "HealthCheckConfiguration",
-            "documentation" : "<p>The settings for the health check that AWS App Runner performs to monitor the health of your service.</p>",
+            "documentation" : "<p>The settings for the health check that App Runner performs to monitor the health of your service.</p>",
             "simpleType" : "HealthCheckConfiguration",
             "variableSetterType" : "HealthCheckConfiguration"
           },

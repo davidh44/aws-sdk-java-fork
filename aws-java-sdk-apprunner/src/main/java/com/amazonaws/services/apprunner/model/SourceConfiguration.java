@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes the source deployed to an AWS App Runner service. It can be a code or an image repository.
+ * Describes the source deployed to an App Runner service. It can be a code or an image repository.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/SourceConfiguration" target="_top">AWS API
@@ -49,10 +49,13 @@ public class SourceConfiguration implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service.
-     * Each repository change (source code commit or new image version) starts a deployment.
+     * Each repository change (including any source code commit or new image version) starts a deployment.
      * </p>
      * <p>
-     * Default: <code>true</code>
+     * Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an ECR
+     * repository that's in an Amazon Web Services account other than the one that the service is in. App Runner sets to
+     * <code>true</code> in all other cases (which currently include a source code repository or a source image using a
+     * same-account ECR repository).
      * </p>
      */
     private Boolean autoDeploymentsEnabled;
@@ -176,17 +179,24 @@ public class SourceConfiguration implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service.
-     * Each repository change (source code commit or new image version) starts a deployment.
+     * Each repository change (including any source code commit or new image version) starts a deployment.
      * </p>
      * <p>
-     * Default: <code>true</code>
+     * Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an ECR
+     * repository that's in an Amazon Web Services account other than the one that the service is in. App Runner sets to
+     * <code>true</code> in all other cases (which currently include a source code repository or a source image using a
+     * same-account ECR repository).
      * </p>
      * 
      * @param autoDeploymentsEnabled
      *        If <code>true</code>, continuous integration from the source repository is enabled for the App Runner
-     *        service. Each repository change (source code commit or new image version) starts a deployment.</p>
+     *        service. Each repository change (including any source code commit or new image version) starts a
+     *        deployment.</p>
      *        <p>
-     *        Default: <code>true</code>
+     *        Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an
+     *        ECR repository that's in an Amazon Web Services account other than the one that the service is in. App
+     *        Runner sets to <code>true</code> in all other cases (which currently include a source code repository or a
+     *        source image using a same-account ECR repository).
      */
 
     public void setAutoDeploymentsEnabled(Boolean autoDeploymentsEnabled) {
@@ -196,16 +206,23 @@ public class SourceConfiguration implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service.
-     * Each repository change (source code commit or new image version) starts a deployment.
+     * Each repository change (including any source code commit or new image version) starts a deployment.
      * </p>
      * <p>
-     * Default: <code>true</code>
+     * Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an ECR
+     * repository that's in an Amazon Web Services account other than the one that the service is in. App Runner sets to
+     * <code>true</code> in all other cases (which currently include a source code repository or a source image using a
+     * same-account ECR repository).
      * </p>
      * 
      * @return If <code>true</code>, continuous integration from the source repository is enabled for the App Runner
-     *         service. Each repository change (source code commit or new image version) starts a deployment.</p>
+     *         service. Each repository change (including any source code commit or new image version) starts a
+     *         deployment.</p>
      *         <p>
-     *         Default: <code>true</code>
+     *         Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or
+     *         an ECR repository that's in an Amazon Web Services account other than the one that the service is in. App
+     *         Runner sets to <code>true</code> in all other cases (which currently include a source code repository or
+     *         a source image using a same-account ECR repository).
      */
 
     public Boolean getAutoDeploymentsEnabled() {
@@ -215,17 +232,24 @@ public class SourceConfiguration implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service.
-     * Each repository change (source code commit or new image version) starts a deployment.
+     * Each repository change (including any source code commit or new image version) starts a deployment.
      * </p>
      * <p>
-     * Default: <code>true</code>
+     * Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an ECR
+     * repository that's in an Amazon Web Services account other than the one that the service is in. App Runner sets to
+     * <code>true</code> in all other cases (which currently include a source code repository or a source image using a
+     * same-account ECR repository).
      * </p>
      * 
      * @param autoDeploymentsEnabled
      *        If <code>true</code>, continuous integration from the source repository is enabled for the App Runner
-     *        service. Each repository change (source code commit or new image version) starts a deployment.</p>
+     *        service. Each repository change (including any source code commit or new image version) starts a
+     *        deployment.</p>
      *        <p>
-     *        Default: <code>true</code>
+     *        Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an
+     *        ECR repository that's in an Amazon Web Services account other than the one that the service is in. App
+     *        Runner sets to <code>true</code> in all other cases (which currently include a source code repository or a
+     *        source image using a same-account ECR repository).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -237,16 +261,23 @@ public class SourceConfiguration implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service.
-     * Each repository change (source code commit or new image version) starts a deployment.
+     * Each repository change (including any source code commit or new image version) starts a deployment.
      * </p>
      * <p>
-     * Default: <code>true</code>
+     * Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an ECR
+     * repository that's in an Amazon Web Services account other than the one that the service is in. App Runner sets to
+     * <code>true</code> in all other cases (which currently include a source code repository or a source image using a
+     * same-account ECR repository).
      * </p>
      * 
      * @return If <code>true</code>, continuous integration from the source repository is enabled for the App Runner
-     *         service. Each repository change (source code commit or new image version) starts a deployment.</p>
+     *         service. Each repository change (including any source code commit or new image version) starts a
+     *         deployment.</p>
      *         <p>
-     *         Default: <code>true</code>
+     *         Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or
+     *         an ECR repository that's in an Amazon Web Services account other than the one that the service is in. App
+     *         Runner sets to <code>true</code> in all other cases (which currently include a source code repository or
+     *         a source image using a same-account ECR repository).
      */
 
     public Boolean isAutoDeploymentsEnabled() {

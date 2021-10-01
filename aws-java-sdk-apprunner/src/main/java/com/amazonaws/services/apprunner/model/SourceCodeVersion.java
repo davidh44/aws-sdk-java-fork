@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Identifies a version of code that AWS App Runner refers to within a source code repository.
+ * Identifies a version of code that App Runner refers to within a source code repository.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/SourceCodeVersion" target="_top">AWS API

@@ -27,8 +27,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A name for the new service. It must be unique across all the running App Runner services in your AWS account in
-     * the AWS Region.
+     * A name for the new service. It must be unique across all the running App Runner services in your Amazon Web
+     * Services account in the Amazon Web Services Region.
      * </p>
      */
     private String serviceName;
@@ -53,13 +53,13 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it
-     * maintains and your service logs. By default, App Runner uses an AWS managed CMK.
+     * maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.
      * </p>
      */
     private EncryptionConfiguration encryptionConfiguration;
     /**
      * <p>
-     * The settings for the health check that AWS App Runner performs to monitor the health of your service.
+     * The settings for the health check that App Runner performs to monitor the health of your service.
      * </p>
      */
     private HealthCheckConfiguration healthCheckConfiguration;
@@ -74,13 +74,13 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A name for the new service. It must be unique across all the running App Runner services in your AWS account in
-     * the AWS Region.
+     * A name for the new service. It must be unique across all the running App Runner services in your Amazon Web
+     * Services account in the Amazon Web Services Region.
      * </p>
      * 
      * @param serviceName
-     *        A name for the new service. It must be unique across all the running App Runner services in your AWS
-     *        account in the AWS Region.
+     *        A name for the new service. It must be unique across all the running App Runner services in your Amazon
+     *        Web Services account in the Amazon Web Services Region.
      */
 
     public void setServiceName(String serviceName) {
@@ -89,12 +89,12 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A name for the new service. It must be unique across all the running App Runner services in your AWS account in
-     * the AWS Region.
+     * A name for the new service. It must be unique across all the running App Runner services in your Amazon Web
+     * Services account in the Amazon Web Services Region.
      * </p>
      * 
-     * @return A name for the new service. It must be unique across all the running App Runner services in your AWS
-     *         account in the AWS Region.
+     * @return A name for the new service. It must be unique across all the running App Runner services in your Amazon
+     *         Web Services account in the Amazon Web Services Region.
      */
 
     public String getServiceName() {
@@ -103,13 +103,13 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A name for the new service. It must be unique across all the running App Runner services in your AWS account in
-     * the AWS Region.
+     * A name for the new service. It must be unique across all the running App Runner services in your Amazon Web
+     * Services account in the Amazon Web Services Region.
      * </p>
      * 
      * @param serviceName
-     *        A name for the new service. It must be unique across all the running App Runner services in your AWS
-     *        account in the AWS Region.
+     *        A name for the new service. It must be unique across all the running App Runner services in your Amazon
+     *        Web Services account in the Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -275,12 +275,12 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it
-     * maintains and your service logs. By default, App Runner uses an AWS managed CMK.
+     * maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.
      * </p>
      * 
      * @param encryptionConfiguration
      *        An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that
-     *        it maintains and your service logs. By default, App Runner uses an AWS managed CMK.
+     *        it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.
      */
 
     public void setEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
@@ -290,11 +290,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it
-     * maintains and your service logs. By default, App Runner uses an AWS managed CMK.
+     * maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.
      * </p>
      * 
      * @return An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that
-     *         it maintains and your service logs. By default, App Runner uses an AWS managed CMK.
+     *         it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.
      */
 
     public EncryptionConfiguration getEncryptionConfiguration() {
@@ -304,12 +304,12 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it
-     * maintains and your service logs. By default, App Runner uses an AWS managed CMK.
+     * maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.
      * </p>
      * 
      * @param encryptionConfiguration
      *        An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that
-     *        it maintains and your service logs. By default, App Runner uses an AWS managed CMK.
+     *        it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -320,11 +320,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The settings for the health check that AWS App Runner performs to monitor the health of your service.
+     * The settings for the health check that App Runner performs to monitor the health of your service.
      * </p>
      * 
      * @param healthCheckConfiguration
-     *        The settings for the health check that AWS App Runner performs to monitor the health of your service.
+     *        The settings for the health check that App Runner performs to monitor the health of your service.
      */
 
     public void setHealthCheckConfiguration(HealthCheckConfiguration healthCheckConfiguration) {
@@ -333,10 +333,10 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The settings for the health check that AWS App Runner performs to monitor the health of your service.
+     * The settings for the health check that App Runner performs to monitor the health of your service.
      * </p>
      * 
-     * @return The settings for the health check that AWS App Runner performs to monitor the health of your service.
+     * @return The settings for the health check that App Runner performs to monitor the health of your service.
      */
 
     public HealthCheckConfiguration getHealthCheckConfiguration() {
@@ -345,11 +345,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The settings for the health check that AWS App Runner performs to monitor the health of your service.
+     * The settings for the health check that App Runner performs to monitor the health of your service.
      * </p>
      * 
      * @param healthCheckConfiguration
-     *        The settings for the health check that AWS App Runner performs to monitor the health of your service.
+     *        The settings for the health check that App Runner performs to monitor the health of your service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

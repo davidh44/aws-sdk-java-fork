@@ -47,6 +47,10 @@ public class UpdateCanaryRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VpcConfig").build();
     private static final MarshallingInfo<StructuredPojo> VISUALREFERENCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VisualReference").build();
+    private static final MarshallingInfo<String> ARTIFACTS3LOCATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ArtifactS3Location").build();
+    private static final MarshallingInfo<StructuredPojo> ARTIFACTCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ArtifactConfig").build();
 
     private static final UpdateCanaryRequestMarshaller instance = new UpdateCanaryRequestMarshaller();
 
@@ -74,6 +78,8 @@ public class UpdateCanaryRequestMarshaller {
             protocolMarshaller.marshall(updateCanaryRequest.getFailureRetentionPeriodInDays(), FAILURERETENTIONPERIODINDAYS_BINDING);
             protocolMarshaller.marshall(updateCanaryRequest.getVpcConfig(), VPCCONFIG_BINDING);
             protocolMarshaller.marshall(updateCanaryRequest.getVisualReference(), VISUALREFERENCE_BINDING);
+            protocolMarshaller.marshall(updateCanaryRequest.getArtifactS3Location(), ARTIFACTS3LOCATION_BINDING);
+            protocolMarshaller.marshall(updateCanaryRequest.getArtifactConfig(), ARTIFACTCONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -38,6 +38,11 @@ public class AllProfiles {
     }
 
     public BasicProfile getProfile(String profileName) {
-        return profiles.get(profileName);
+        BasicProfile profile = profiles.get(profileName);
+        if (profile != null) {
+            return profile;
+        }
+
+        return profiles.get("profile " + profileName);
     }
 }

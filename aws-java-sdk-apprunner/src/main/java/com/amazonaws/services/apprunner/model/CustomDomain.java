@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes a custom domain that's associated with an AWS App Runner service.
+ * Describes a custom domain that's associated with an App Runner service.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/CustomDomain" target="_top">AWS API

@@ -18,6 +18,7 @@ import com.amazonaws.AmazonClientException;
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.AWSSessionCredentials;
 import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.auth.profile.internal.BasicProfile;
 import com.amazonaws.auth.profile.internal.Profile;
 
 import org.junit.Test;
@@ -176,6 +177,20 @@ public class CredentialProfilesTest {
         assertEquals(profile.getCredentials(PROFILE_NAME_TEST).getAWSAccessKeyId(), "test");
 
         assertEquals(profile.getCredentials(PROFILE_NAME_TEST).getAWSSecretKey(), "test key");
+    }
+
+    @Test
+    public void prefixProfilesCanBeLoaded() {
+        ProfilesConfigFile profile = new ProfilesConfigFile(ProfileResourceLoader.profileWithProfilePrefix().asFile());
+
+        assertEquals("withPrefix", profile.getCredentials("test").getAWSAccessKeyId());
+    }
+
+    @Test
+    public void prefixProfilesAreLowerPriorityThanNonPrefixProfiles() {
+        ProfilesConfigFile profile =
+            new ProfilesConfigFile(ProfileResourceLoader.duplicateProfileWithAndWithoutProfilePrefix().asFile());
+        assertEquals("withoutPrefix", profile.getCredentials("test").getAWSAccessKeyId());
     }
 
     /**

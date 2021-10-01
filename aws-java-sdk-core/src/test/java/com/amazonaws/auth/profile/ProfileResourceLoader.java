@@ -137,4 +137,12 @@ public class ProfileResourceLoader {
         return new ProfileResourceLoader("RoleProfileWithRoleSource.tst");
     }
 
+    public static ProfileResourceLoader profileWithProfilePrefix() {
+        return new ProfileResourceLoader("ProfileWithProfilePrefix.tst");
+    }
+
+    public static ProfileResourceLoader duplicateProfileWithAndWithoutProfilePrefix() {
+        return new ProfileResourceLoader("DuplicateProfileWithAndWithoutProfilePrefix.tst");
+    }
+
 }

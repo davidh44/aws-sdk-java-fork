@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes the settings for the health check that AWS App Runner performs to monitor the health of a service.
+ * Describes the settings for the health check that App Runner performs to monitor the health of a service.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/HealthCheckConfiguration" target="_top">AWS
@@ -76,7 +76,7 @@ public class HealthCheckConfiguration implements Serializable, Cloneable, Struct
      * The number of consecutive checks that must succeed before App Runner decides that the service is healthy.
      * </p>
      * <p>
-     * Default: <code>3</code>
+     * Default: <code>1</code>
      * </p>
      */
     private Integer healthyThreshold;
@@ -85,7 +85,7 @@ public class HealthCheckConfiguration implements Serializable, Cloneable, Struct
      * The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.
      * </p>
      * <p>
-     * Default: <code>3</code>
+     * Default: <code>5</code>
      * </p>
      */
     private Integer unhealthyThreshold;
@@ -389,14 +389,14 @@ public class HealthCheckConfiguration implements Serializable, Cloneable, Struct
      * The number of consecutive checks that must succeed before App Runner decides that the service is healthy.
      * </p>
      * <p>
-     * Default: <code>3</code>
+     * Default: <code>1</code>
      * </p>
      * 
      * @param healthyThreshold
      *        The number of consecutive checks that must succeed before App Runner decides that the service is
      *        healthy.</p>
      *        <p>
-     *        Default: <code>3</code>
+     *        Default: <code>1</code>
      */
 
     public void setHealthyThreshold(Integer healthyThreshold) {
@@ -408,13 +408,13 @@ public class HealthCheckConfiguration implements Serializable, Cloneable, Struct
      * The number of consecutive checks that must succeed before App Runner decides that the service is healthy.
      * </p>
      * <p>
-     * Default: <code>3</code>
+     * Default: <code>1</code>
      * </p>
      * 
      * @return The number of consecutive checks that must succeed before App Runner decides that the service is
      *         healthy.</p>
      *         <p>
-     *         Default: <code>3</code>
+     *         Default: <code>1</code>
      */
 
     public Integer getHealthyThreshold() {
@@ -426,14 +426,14 @@ public class HealthCheckConfiguration implements Serializable, Cloneable, Struct
      * The number of consecutive checks that must succeed before App Runner decides that the service is healthy.
      * </p>
      * <p>
-     * Default: <code>3</code>
+     * Default: <code>1</code>
      * </p>
      * 
      * @param healthyThreshold
      *        The number of consecutive checks that must succeed before App Runner decides that the service is
      *        healthy.</p>
      *        <p>
-     *        Default: <code>3</code>
+     *        Default: <code>1</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -447,14 +447,14 @@ public class HealthCheckConfiguration implements Serializable, Cloneable, Struct
      * The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.
      * </p>
      * <p>
-     * Default: <code>3</code>
+     * Default: <code>5</code>
      * </p>
      * 
      * @param unhealthyThreshold
      *        The number of consecutive checks that must fail before App Runner decides that the service is
      *        unhealthy.</p>
      *        <p>
-     *        Default: <code>3</code>
+     *        Default: <code>5</code>
      */
 
     public void setUnhealthyThreshold(Integer unhealthyThreshold) {
@@ -466,13 +466,13 @@ public class HealthCheckConfiguration implements Serializable, Cloneable, Struct
      * The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.
      * </p>
      * <p>
-     * Default: <code>3</code>
+     * Default: <code>5</code>
      * </p>
      * 
      * @return The number of consecutive checks that must fail before App Runner decides that the service is
      *         unhealthy.</p>
      *         <p>
-     *         Default: <code>3</code>
+     *         Default: <code>5</code>
      */
 
     public Integer getUnhealthyThreshold() {
@@ -484,14 +484,14 @@ public class HealthCheckConfiguration implements Serializable, Cloneable, Struct
      * The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.
      * </p>
      * <p>
-     * Default: <code>3</code>
+     * Default: <code>5</code>
      * </p>
      * 
      * @param unhealthyThreshold
      *        The number of consecutive checks that must fail before App Runner decides that the service is
      *        unhealthy.</p>
      *        <p>
-     *        Default: <code>3</code>
+     *        Default: <code>5</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

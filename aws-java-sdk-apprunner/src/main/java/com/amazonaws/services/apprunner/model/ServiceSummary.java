@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides summary information for an AWS App Runner service.
+ * Provides summary information for an App Runner service.
  * </p>
  * <p>
  * This type contains limited information about a service. It doesn't include configuration details. It's returned by
@@ -45,7 +45,7 @@ public class ServiceSummary implements Serializable, Cloneable, StructuredPojo {
     private String serviceName;
     /**
      * <p>
-     * An ID that App Runner generated for this service. It's unique within the AWS Region.
+     * An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.
      * </p>
      */
     private String serviceId;
@@ -141,11 +141,11 @@ public class ServiceSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An ID that App Runner generated for this service. It's unique within the AWS Region.
+     * An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.
      * </p>
      * 
      * @param serviceId
-     *        An ID that App Runner generated for this service. It's unique within the AWS Region.
+     *        An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.
      */
 
     public void setServiceId(String serviceId) {
@@ -154,10 +154,10 @@ public class ServiceSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An ID that App Runner generated for this service. It's unique within the AWS Region.
+     * An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.
      * </p>
      * 
-     * @return An ID that App Runner generated for this service. It's unique within the AWS Region.
+     * @return An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.
      */
 
     public String getServiceId() {
@@ -166,11 +166,11 @@ public class ServiceSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An ID that App Runner generated for this service. It's unique within the AWS Region.
+     * An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.
      * </p>
      * 
      * @param serviceId
-     *        An ID that App Runner generated for this service. It's unique within the AWS Region.
+     *        An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

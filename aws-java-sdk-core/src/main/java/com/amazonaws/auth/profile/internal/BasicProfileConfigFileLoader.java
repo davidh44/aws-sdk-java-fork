@@ -54,7 +54,7 @@ public final class BasicProfileConfigFileLoader {
     public BasicProfile getProfile() {
         ProfilesConfigFile profilesConfigFile = getProfilesConfigFile();
         if (profilesConfigFile != null) {
-            return profilesConfigFile.getAllBasicProfiles().get(getProfileName());
+            return profilesConfigFile.getBasicProfile(getProfileName());
         }
         return null;
     }

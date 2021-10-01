@@ -84,8 +84,9 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The targets for the association. You can target instances by using tags, Amazon Web Services resource groups, all
-     * instances in an Amazon Web Services account, or individual instance IDs. For more information about choosing
-     * targets for an association, see <a href=
+     * instances in an Amazon Web Services account, or individual instance IDs. You can target all instances in an
+     * Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>. For
+     * more information about choosing targets for an association, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
      * >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
      * Manager User Guide</i>.
@@ -576,16 +577,18 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The targets for the association. You can target instances by using tags, Amazon Web Services resource groups, all
-     * instances in an Amazon Web Services account, or individual instance IDs. For more information about choosing
-     * targets for an association, see <a href=
+     * instances in an Amazon Web Services account, or individual instance IDs. You can target all instances in an
+     * Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>. For
+     * more information about choosing targets for an association, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
      * >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
      * Manager User Guide</i>.
      * </p>
      * 
      * @return The targets for the association. You can target instances by using tags, Amazon Web Services resource
-     *         groups, all instances in an Amazon Web Services account, or individual instance IDs. For more information
-     *         about choosing targets for an association, see <a href=
+     *         groups, all instances in an Amazon Web Services account, or individual instance IDs. You can target all
+     *         instances in an Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value
+     *         of <code>*</code>. For more information about choosing targets for an association, see <a href=
      *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
      *         >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services
      *         Systems Manager User Guide</i>.
@@ -601,8 +604,9 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The targets for the association. You can target instances by using tags, Amazon Web Services resource groups, all
-     * instances in an Amazon Web Services account, or individual instance IDs. For more information about choosing
-     * targets for an association, see <a href=
+     * instances in an Amazon Web Services account, or individual instance IDs. You can target all instances in an
+     * Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>. For
+     * more information about choosing targets for an association, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
      * >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
      * Manager User Guide</i>.
@@ -610,8 +614,9 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param targets
      *        The targets for the association. You can target instances by using tags, Amazon Web Services resource
-     *        groups, all instances in an Amazon Web Services account, or individual instance IDs. For more information
-     *        about choosing targets for an association, see <a href=
+     *        groups, all instances in an Amazon Web Services account, or individual instance IDs. You can target all
+     *        instances in an Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of
+     *        <code>*</code>. For more information about choosing targets for an association, see <a href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
      *        >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
      *        Manager User Guide</i>.
@@ -629,8 +634,9 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The targets for the association. You can target instances by using tags, Amazon Web Services resource groups, all
-     * instances in an Amazon Web Services account, or individual instance IDs. For more information about choosing
-     * targets for an association, see <a href=
+     * instances in an Amazon Web Services account, or individual instance IDs. You can target all instances in an
+     * Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>. For
+     * more information about choosing targets for an association, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
      * >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
      * Manager User Guide</i>.
@@ -643,8 +649,9 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param targets
      *        The targets for the association. You can target instances by using tags, Amazon Web Services resource
-     *        groups, all instances in an Amazon Web Services account, or individual instance IDs. For more information
-     *        about choosing targets for an association, see <a href=
+     *        groups, all instances in an Amazon Web Services account, or individual instance IDs. You can target all
+     *        instances in an Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of
+     *        <code>*</code>. For more information about choosing targets for an association, see <a href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
      *        >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
      *        Manager User Guide</i>.
@@ -664,8 +671,9 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The targets for the association. You can target instances by using tags, Amazon Web Services resource groups, all
-     * instances in an Amazon Web Services account, or individual instance IDs. For more information about choosing
-     * targets for an association, see <a href=
+     * instances in an Amazon Web Services account, or individual instance IDs. You can target all instances in an
+     * Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>. For
+     * more information about choosing targets for an association, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
      * >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
      * Manager User Guide</i>.
@@ -673,8 +681,9 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param targets
      *        The targets for the association. You can target instances by using tags, Amazon Web Services resource
-     *        groups, all instances in an Amazon Web Services account, or individual instance IDs. For more information
-     *        about choosing targets for an association, see <a href=
+     *        groups, all instances in an Amazon Web Services account, or individual instance IDs. You can target all
+     *        instances in an Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of
+     *        <code>*</code>. For more information about choosing targets for an association, see <a href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
      *        >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
      *        Manager User Guide</i>.

@@ -133,7 +133,7 @@ public final class ProfileCsmConfigurationProvider implements CsmConfigurationPr
     }
 
     private synchronized BasicProfile getProfile(String profileName) {
-        return getProfilesConfigFile().getAllBasicProfiles().get(profileName);
+        return getProfilesConfigFile().getBasicProfile(profileName);
     }
 
     // ProfilesConfigFile immediately loads the profiles at construction time

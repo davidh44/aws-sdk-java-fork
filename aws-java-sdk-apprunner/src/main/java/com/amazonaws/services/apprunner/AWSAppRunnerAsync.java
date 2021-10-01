@@ -25,20 +25,21 @@ import com.amazonaws.services.apprunner.model.*;
  * {@link com.amazonaws.services.apprunner.AbstractAWSAppRunnerAsync} instead.
  * </p>
  * <p>
- * <fullname>AWS App Runner</fullname>
+ * <fullname>App Runner</fullname>
  * <p>
- * AWS App Runner is an application service that provides a fast, simple, and cost-effective way to go directly from an
- * existing container image or source code to a running service in the AWS cloud in seconds. You don't need to learn new
- * technologies, decide which compute service to use, or understand how to provision and configure AWS resources.
+ * App Runner is an application service that provides a fast, simple, and cost-effective way to go directly from an
+ * existing container image or source code to a running service in the Amazon Web Services Cloud in seconds. You don't
+ * need to learn new technologies, decide which compute service to use, or understand how to provision and configure
+ * Amazon Web Services resources.
  * </p>
  * <p>
  * App Runner connects directly to your container registry or source code repository. It provides an automatic delivery
  * pipeline with fully managed operations, high performance, scalability, and security.
  * </p>
  * <p>
- * For more information about App Runner, see the <a href="https://docs.aws.amazon.com/apprunner/latest/dg/">AWS App
- * Runner Developer Guide</a>. For release information, see the <a
- * href="https://docs.aws.amazon.com/apprunner/latest/relnotes/">AWS App Runner Release Notes</a>.
+ * For more information about App Runner, see the <a href="https://docs.aws.amazon.com/apprunner/latest/dg/">App Runner
+ * Developer Guide</a>. For release information, see the <a
+ * href="https://docs.aws.amazon.com/apprunner/latest/relnotes/">App Runner Release Notes</a>.
  * </p>
  * <p>
  * To install the Software Development Kits (SDKs), Integrated Development Environment (IDE) Toolkits, and command line
@@ -50,8 +51,8 @@ import com.amazonaws.services.apprunner.model.*;
  * </p>
  * <p>
  * For a list of Region-specific endpoints that App Runner supports, see <a
- * href="https://docs.aws.amazon.com/general/latest/gr/apprunner.html">AWS App Runner endpoints and quotas</a> in the
- * <i>AWS General Reference</i>.
+ * href="https://docs.aws.amazon.com/general/latest/gr/apprunner.html">App Runner endpoints and quotas</a> in the
+ * <i>Amazon Web Services General Reference</i>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -59,7 +60,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Associate your own domain name with the AWS App Runner subdomain URL of your App Runner service.
+     * Associate your own domain name with the App Runner subdomain URL of your App Runner service.
      * </p>
      * <p>
      * After you call <code>AssociateCustomDomain</code> and receive a successful response, use the information in the
@@ -80,7 +81,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Associate your own domain name with the AWS App Runner subdomain URL of your App Runner service.
+     * Associate your own domain name with the App Runner subdomain URL of your App Runner service.
      * </p>
      * <p>
      * After you call <code>AssociateCustomDomain</code> and receive a successful response, use the information in the
@@ -106,9 +107,9 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Create an AWS App Runner automatic scaling configuration resource. App Runner requires this resource when you
-     * create App Runner services that require non-default auto scaling settings. You can share an auto scaling
-     * configuration across multiple services.
+     * Create an App Runner automatic scaling configuration resource. App Runner requires this resource when you create
+     * App Runner services that require non-default auto scaling settings. You can share an auto scaling configuration
+     * across multiple services.
      * </p>
      * <p>
      * Create multiple revisions of a configuration by using the same <code>AutoScalingConfigurationName</code> and
@@ -117,7 +118,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
      * </p>
      * <p>
      * Configure a higher <code>MinSize</code> to increase the spread of your App Runner service over more Availability
-     * Zones in the AWS Region. The tradeoff is a higher minimal cost.
+     * Zones in the Amazon Web Services Region. The tradeoff is a higher minimal cost.
      * </p>
      * <p>
      * Configure a lower <code>MaxSize</code> to control your cost. The tradeoff is lower responsiveness during peak
@@ -136,9 +137,9 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Create an AWS App Runner automatic scaling configuration resource. App Runner requires this resource when you
-     * create App Runner services that require non-default auto scaling settings. You can share an auto scaling
-     * configuration across multiple services.
+     * Create an App Runner automatic scaling configuration resource. App Runner requires this resource when you create
+     * App Runner services that require non-default auto scaling settings. You can share an auto scaling configuration
+     * across multiple services.
      * </p>
      * <p>
      * Create multiple revisions of a configuration by using the same <code>AutoScalingConfigurationName</code> and
@@ -147,7 +148,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
      * </p>
      * <p>
      * Configure a higher <code>MinSize</code> to increase the spread of your App Runner service over more Availability
-     * Zones in the AWS Region. The tradeoff is a higher minimal cost.
+     * Zones in the Amazon Web Services Region. The tradeoff is a higher minimal cost.
      * </p>
      * <p>
      * Configure a lower <code>MaxSize</code> to control your cost. The tradeoff is lower responsiveness during peak
@@ -171,9 +172,9 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Create an AWS App Runner connection resource. App Runner requires a connection resource when you create App
-     * Runner services that access private repositories from certain third-party providers. You can share a connection
-     * across multiple services.
+     * Create an App Runner connection resource. App Runner requires a connection resource when you create App Runner
+     * services that access private repositories from certain third-party providers. You can share a connection across
+     * multiple services.
      * </p>
      * <p>
      * A connection resource is needed to access GitHub repositories. GitHub requires a user interface approval process
@@ -190,9 +191,9 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Create an AWS App Runner connection resource. App Runner requires a connection resource when you create App
-     * Runner services that access private repositories from certain third-party providers. You can share a connection
-     * across multiple services.
+     * Create an App Runner connection resource. App Runner requires a connection resource when you create App Runner
+     * services that access private repositories from certain third-party providers. You can share a connection across
+     * multiple services.
      * </p>
      * <p>
      * A connection resource is needed to access GitHub repositories. GitHub requires a user interface approval process
@@ -214,8 +215,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Create an AWS App Runner service. After the service is created, the action also automatically starts a
-     * deployment.
+     * Create an App Runner service. After the service is created, the action also automatically starts a deployment.
      * </p>
      * <p>
      * This is an asynchronous operation. On a successful call, you can use the returned <code>OperationId</code> and
@@ -233,8 +233,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Create an AWS App Runner service. After the service is created, the action also automatically starts a
-     * deployment.
+     * Create an App Runner service. After the service is created, the action also automatically starts a deployment.
      * </p>
      * <p>
      * This is an asynchronous operation. On a successful call, you can use the returned <code>OperationId</code> and
@@ -257,8 +256,8 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Delete an AWS App Runner automatic scaling configuration resource. You can delete a specific revision or the
-     * latest active revision. You can't delete a configuration that's used by one or more App Runner services.
+     * Delete an App Runner automatic scaling configuration resource. You can delete a specific revision or the latest
+     * active revision. You can't delete a configuration that's used by one or more App Runner services.
      * </p>
      * 
      * @param deleteAutoScalingConfigurationRequest
@@ -273,8 +272,8 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Delete an AWS App Runner automatic scaling configuration resource. You can delete a specific revision or the
-     * latest active revision. You can't delete a configuration that's used by one or more App Runner services.
+     * Delete an App Runner automatic scaling configuration resource. You can delete a specific revision or the latest
+     * active revision. You can't delete a configuration that's used by one or more App Runner services.
      * </p>
      * 
      * @param deleteAutoScalingConfigurationRequest
@@ -294,7 +293,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Delete an AWS App Runner connection. You must first ensure that there are no running App Runner services that use
+     * Delete an App Runner connection. You must first ensure that there are no running App Runner services that use
      * this connection. If there are any, the <code>DeleteConnection</code> action fails.
      * </p>
      * 
@@ -308,7 +307,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Delete an AWS App Runner connection. You must first ensure that there are no running App Runner services that use
+     * Delete an App Runner connection. You must first ensure that there are no running App Runner services that use
      * this connection. If there are any, the <code>DeleteConnection</code> action fails.
      * </p>
      * 
@@ -327,7 +326,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Delete an AWS App Runner service.
+     * Delete an App Runner service.
      * </p>
      * <p>
      * This is an asynchronous operation. On a successful call, you can use the returned <code>OperationId</code> and
@@ -344,7 +343,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Delete an AWS App Runner service.
+     * Delete an App Runner service.
      * </p>
      * <p>
      * This is an asynchronous operation. On a successful call, you can use the returned <code>OperationId</code> and
@@ -366,7 +365,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Return a full description of an AWS App Runner automatic scaling configuration resource.
+     * Return a full description of an App Runner automatic scaling configuration resource.
      * </p>
      * 
      * @param describeAutoScalingConfigurationRequest
@@ -381,7 +380,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Return a full description of an AWS App Runner automatic scaling configuration resource.
+     * Return a full description of an App Runner automatic scaling configuration resource.
      * </p>
      * 
      * @param describeAutoScalingConfigurationRequest
@@ -401,7 +400,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Return a description of custom domain names that are associated with an AWS App Runner service.
+     * Return a description of custom domain names that are associated with an App Runner service.
      * </p>
      * 
      * @param describeCustomDomainsRequest
@@ -414,7 +413,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Return a description of custom domain names that are associated with an AWS App Runner service.
+     * Return a description of custom domain names that are associated with an App Runner service.
      * </p>
      * 
      * @param describeCustomDomainsRequest
@@ -432,7 +431,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Return a full description of an AWS App Runner service.
+     * Return a full description of an App Runner service.
      * </p>
      * 
      * @param describeServiceRequest
@@ -445,7 +444,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Return a full description of an AWS App Runner service.
+     * Return a full description of an App Runner service.
      * </p>
      * 
      * @param describeServiceRequest
@@ -463,7 +462,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Disassociate a custom domain name from an AWS App Runner service.
+     * Disassociate a custom domain name from an App Runner service.
      * </p>
      * <p>
      * Certificates tracking domain validity are associated with a custom domain and are stored in <a
@@ -482,7 +481,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Disassociate a custom domain name from an AWS App Runner service.
+     * Disassociate a custom domain name from an App Runner service.
      * </p>
      * <p>
      * Certificates tracking domain validity are associated with a custom domain and are stored in <a
@@ -506,8 +505,8 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Returns a list of AWS App Runner automatic scaling configurations in your AWS account. You can query the
-     * revisions for a specific configuration name or the revisions for all configurations in your account. You can
+     * Returns a list of App Runner automatic scaling configurations in your Amazon Web Services account. You can query
+     * the revisions for a specific configuration name or the revisions for all configurations in your account. You can
      * optionally query only the latest revision of each requested name.
      * </p>
      * 
@@ -523,8 +522,8 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Returns a list of AWS App Runner automatic scaling configurations in your AWS account. You can query the
-     * revisions for a specific configuration name or the revisions for all configurations in your account. You can
+     * Returns a list of App Runner automatic scaling configurations in your Amazon Web Services account. You can query
+     * the revisions for a specific configuration name or the revisions for all configurations in your account. You can
      * optionally query only the latest revision of each requested name.
      * </p>
      * 
@@ -545,7 +544,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Returns a list of AWS App Runner connections that are associated with your AWS account.
+     * Returns a list of App Runner connections that are associated with your Amazon Web Services account.
      * </p>
      * 
      * @param listConnectionsRequest
@@ -558,7 +557,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Returns a list of AWS App Runner connections that are associated with your AWS account.
+     * Returns a list of App Runner connections that are associated with your Amazon Web Services account.
      * </p>
      * 
      * @param listConnectionsRequest
@@ -576,7 +575,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Return a list of operations that occurred on an AWS App Runner service.
+     * Return a list of operations that occurred on an App Runner service.
      * </p>
      * <p>
      * The resulting list of <a>OperationSummary</a> objects is sorted in reverse chronological order. The first object
@@ -593,7 +592,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Return a list of operations that occurred on an AWS App Runner service.
+     * Return a list of operations that occurred on an App Runner service.
      * </p>
      * <p>
      * The resulting list of <a>OperationSummary</a> objects is sorted in reverse chronological order. The first object
@@ -615,7 +614,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Returns a list of running AWS App Runner services in your AWS account.
+     * Returns a list of running App Runner services in your Amazon Web Services account.
      * </p>
      * 
      * @param listServicesRequest
@@ -628,7 +627,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Returns a list of running AWS App Runner services in your AWS account.
+     * Returns a list of running App Runner services in your Amazon Web Services account.
      * </p>
      * 
      * @param listServicesRequest
@@ -646,7 +645,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * List tags that are associated with for an AWS App Runner resource. The response contains a list of tag key-value
+     * List tags that are associated with for an App Runner resource. The response contains a list of tag key-value
      * pairs.
      * </p>
      * 
@@ -660,7 +659,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * List tags that are associated with for an AWS App Runner resource. The response contains a list of tag key-value
+     * List tags that are associated with for an App Runner resource. The response contains a list of tag key-value
      * pairs.
      * </p>
      * 
@@ -679,8 +678,8 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Pause an active AWS App Runner service. App Runner reduces compute capacity for the service to zero and loses
-     * state (for example, ephemeral storage is removed).
+     * Pause an active App Runner service. App Runner reduces compute capacity for the service to zero and loses state
+     * (for example, ephemeral storage is removed).
      * </p>
      * <p>
      * This is an asynchronous operation. On a successful call, you can use the returned <code>OperationId</code> and
@@ -697,8 +696,8 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Pause an active AWS App Runner service. App Runner reduces compute capacity for the service to zero and loses
-     * state (for example, ephemeral storage is removed).
+     * Pause an active App Runner service. App Runner reduces compute capacity for the service to zero and loses state
+     * (for example, ephemeral storage is removed).
      * </p>
      * <p>
      * This is an asynchronous operation. On a successful call, you can use the returned <code>OperationId</code> and
@@ -720,7 +719,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Resume an active AWS App Runner service. App Runner provisions compute capacity for the service.
+     * Resume an active App Runner service. App Runner provisions compute capacity for the service.
      * </p>
      * <p>
      * This is an asynchronous operation. On a successful call, you can use the returned <code>OperationId</code> and
@@ -737,7 +736,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Resume an active AWS App Runner service. App Runner provisions compute capacity for the service.
+     * Resume an active App Runner service. App Runner provisions compute capacity for the service.
      * </p>
      * <p>
      * This is an asynchronous operation. On a successful call, you can use the returned <code>OperationId</code> and
@@ -760,7 +759,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
     /**
      * <p>
      * Initiate a manual deployment of the latest commit in a source code repository or the latest image in a source
-     * image repository to an AWS App Runner service.
+     * image repository to an App Runner service.
      * </p>
      * <p>
      * For a source code repository, App Runner retrieves the commit and builds a Docker image. For a source image
@@ -783,7 +782,7 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
     /**
      * <p>
      * Initiate a manual deployment of the latest commit in a source code repository or the latest image in a source
-     * image repository to an AWS App Runner service.
+     * image repository to an App Runner service.
      * </p>
      * <p>
      * For a source code repository, App Runner retrieves the commit and builds a Docker image. For a source image
@@ -872,10 +871,10 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Update an AWS App Runner service. You can update the source configuration and instance configuration of the
-     * service. You can also update the ARN of the auto scaling configuration resource that's associated with the
-     * service. However, you can't change the name or the encryption configuration of the service. These can be set only
-     * when you create the service.
+     * Update an App Runner service. You can update the source configuration and instance configuration of the service.
+     * You can also update the ARN of the auto scaling configuration resource that's associated with the service.
+     * However, you can't change the name or the encryption configuration of the service. These can be set only when you
+     * create the service.
      * </p>
      * <p>
      * To update the tags applied to your service, use the separate actions <a>TagResource</a> and <a>UntagResource</a>.
@@ -895,10 +894,10 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Update an AWS App Runner service. You can update the source configuration and instance configuration of the
-     * service. You can also update the ARN of the auto scaling configuration resource that's associated with the
-     * service. However, you can't change the name or the encryption configuration of the service. These can be set only
-     * when you create the service.
+     * Update an App Runner service. You can update the source configuration and instance configuration of the service.
+     * You can also update the ARN of the auto scaling configuration resource that's associated with the service.
+     * However, you can't change the name or the encryption configuration of the service. These can be set only when you
+     * create the service.
      * </p>
      * <p>
      * To update the tags applied to your service, use the separate actions <a>TagResource</a> and <a>UntagResource</a>.

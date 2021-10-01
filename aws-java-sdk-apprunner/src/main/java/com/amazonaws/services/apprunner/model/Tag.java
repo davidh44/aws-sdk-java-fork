@@ -19,8 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes a tag that is applied to an AWS App Runner resource. A tag is a metadata item consisting of a key-value
- * pair.
+ * Describes a tag that is applied to an App Runner resource. A tag is a metadata item consisting of a key-value pair.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/Tag" target="_top">AWS API

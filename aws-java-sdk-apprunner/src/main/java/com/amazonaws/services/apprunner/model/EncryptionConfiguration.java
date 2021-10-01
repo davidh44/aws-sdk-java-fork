@@ -19,8 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes a custom encryption key that AWS App Runner uses to encrypt copies of the source repository and service
- * logs.
+ * Describes a custom encryption key that App Runner uses to encrypt copies of the source repository and service logs.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/EncryptionConfiguration" target="_top">AWS

@@ -61,7 +61,8 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
     private String documentVersion;
     /**
      * <p>
-     * The instances targeted by the request to create an association.
+     * The instances targeted by the request to create an association. You can target all instances in an Amazon Web
+     * Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Target> targets;
@@ -299,10 +300,12 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The instances targeted by the request to create an association.
+     * The instances targeted by the request to create an association. You can target all instances in an Amazon Web
+     * Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>.
      * </p>
      * 
-     * @return The instances targeted by the request to create an association.
+     * @return The instances targeted by the request to create an association. You can target all instances in an Amazon
+     *         Web Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>.
      */
 
     public java.util.List<Target> getTargets() {
@@ -314,11 +317,13 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The instances targeted by the request to create an association.
+     * The instances targeted by the request to create an association. You can target all instances in an Amazon Web
+     * Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>.
      * </p>
      * 
      * @param targets
-     *        The instances targeted by the request to create an association.
+     *        The instances targeted by the request to create an association. You can target all instances in an Amazon
+     *        Web Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>.
      */
 
     public void setTargets(java.util.Collection<Target> targets) {
@@ -332,7 +337,8 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The instances targeted by the request to create an association.
+     * The instances targeted by the request to create an association. You can target all instances in an Amazon Web
+     * Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -341,7 +347,8 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param targets
-     *        The instances targeted by the request to create an association.
+     *        The instances targeted by the request to create an association. You can target all instances in an Amazon
+     *        Web Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -357,11 +364,13 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The instances targeted by the request to create an association.
+     * The instances targeted by the request to create an association. You can target all instances in an Amazon Web
+     * Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>.
      * </p>
      * 
      * @param targets
-     *        The instances targeted by the request to create an association.
+     *        The instances targeted by the request to create an association. You can target all instances in an Amazon
+     *        Web Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

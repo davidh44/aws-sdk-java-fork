@@ -27,8 +27,8 @@ public class CreateConnectionRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A name for the new connection. It must be unique across all App Runner connections for the AWS account in the AWS
-     * Region.
+     * A name for the new connection. It must be unique across all App Runner connections for the Amazon Web Services
+     * account in the Amazon Web Services Region.
      * </p>
      */
     private String connectionName;
@@ -47,13 +47,13 @@ public class CreateConnectionRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A name for the new connection. It must be unique across all App Runner connections for the AWS account in the AWS
-     * Region.
+     * A name for the new connection. It must be unique across all App Runner connections for the Amazon Web Services
+     * account in the Amazon Web Services Region.
      * </p>
      * 
      * @param connectionName
-     *        A name for the new connection. It must be unique across all App Runner connections for the AWS account in
-     *        the AWS Region.
+     *        A name for the new connection. It must be unique across all App Runner connections for the Amazon Web
+     *        Services account in the Amazon Web Services Region.
      */
 
     public void setConnectionName(String connectionName) {
@@ -62,12 +62,12 @@ public class CreateConnectionRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A name for the new connection. It must be unique across all App Runner connections for the AWS account in the AWS
-     * Region.
+     * A name for the new connection. It must be unique across all App Runner connections for the Amazon Web Services
+     * account in the Amazon Web Services Region.
      * </p>
      * 
-     * @return A name for the new connection. It must be unique across all App Runner connections for the AWS account in
-     *         the AWS Region.
+     * @return A name for the new connection. It must be unique across all App Runner connections for the Amazon Web
+     *         Services account in the Amazon Web Services Region.
      */
 
     public String getConnectionName() {
@@ -76,13 +76,13 @@ public class CreateConnectionRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A name for the new connection. It must be unique across all App Runner connections for the AWS account in the AWS
-     * Region.
+     * A name for the new connection. It must be unique across all App Runner connections for the Amazon Web Services
+     * account in the Amazon Web Services Region.
      * </p>
      * 
      * @param connectionName
-     *        A name for the new connection. It must be unique across all App Runner connections for the AWS account in
-     *        the AWS Region.
+     *        A name for the new connection. It must be unique across all App Runner connections for the Amazon Web
+     *        Services account in the Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

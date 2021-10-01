@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides summary information about an AWS App Runner automatic scaling configuration resource.
+ * Provides summary information about an App Runner automatic scaling configuration resource.
  * </p>
  * <p>
  * This type contains limited information about an auto scaling configuration. It includes only identification

@@ -70,6 +70,24 @@ public class StartChangeRequestExecutionRequest extends com.amazonaws.AmazonWebS
     private String clientToken;
     /**
      * <p>
+     * Indicates whether the change request can be approved automatically without the need for manual approvals.
+     * </p>
+     * <p>
+     * If <code>AutoApprovable</code> is enabled in a change template, then setting <code>AutoApprove</code> to
+     * <code>true</code> in <code>StartChangeRequestExecution</code> creates a change request that bypasses approver
+     * review.
+     * </p>
+     * <note>
+     * <p>
+     * Change Calendar restrictions are not bypassed in this scenario. If the state of an associated calendar is
+     * <code>CLOSED</code>, change freeze approvers must still grant permission for this change request to run. If they
+     * don't, the change won't be processed until the calendar state is again <code>OPEN</code>.
+     * </p>
+     * </note>
+     */
+    private Boolean autoApprove;
+    /**
+     * <p>
      * Information about the Automation runbooks that are run during the runbook workflow.
      * </p>
      * <note>
@@ -418,6 +436,154 @@ public class StartChangeRequestExecutionRequest extends com.amazonaws.AmazonWebS
     public StartChangeRequestExecutionRequest withClientToken(String clientToken) {
         setClientToken(clientToken);
         return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the change request can be approved automatically without the need for manual approvals.
+     * </p>
+     * <p>
+     * If <code>AutoApprovable</code> is enabled in a change template, then setting <code>AutoApprove</code> to
+     * <code>true</code> in <code>StartChangeRequestExecution</code> creates a change request that bypasses approver
+     * review.
+     * </p>
+     * <note>
+     * <p>
+     * Change Calendar restrictions are not bypassed in this scenario. If the state of an associated calendar is
+     * <code>CLOSED</code>, change freeze approvers must still grant permission for this change request to run. If they
+     * don't, the change won't be processed until the calendar state is again <code>OPEN</code>.
+     * </p>
+     * </note>
+     * 
+     * @param autoApprove
+     *        Indicates whether the change request can be approved automatically without the need for manual
+     *        approvals.</p>
+     *        <p>
+     *        If <code>AutoApprovable</code> is enabled in a change template, then setting <code>AutoApprove</code> to
+     *        <code>true</code> in <code>StartChangeRequestExecution</code> creates a change request that bypasses
+     *        approver review.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Change Calendar restrictions are not bypassed in this scenario. If the state of an associated calendar is
+     *        <code>CLOSED</code>, change freeze approvers must still grant permission for this change request to run.
+     *        If they don't, the change won't be processed until the calendar state is again <code>OPEN</code>.
+     *        </p>
+     */
+
+    public void setAutoApprove(Boolean autoApprove) {
+        this.autoApprove = autoApprove;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the change request can be approved automatically without the need for manual approvals.
+     * </p>
+     * <p>
+     * If <code>AutoApprovable</code> is enabled in a change template, then setting <code>AutoApprove</code> to
+     * <code>true</code> in <code>StartChangeRequestExecution</code> creates a change request that bypasses approver
+     * review.
+     * </p>
+     * <note>
+     * <p>
+     * Change Calendar restrictions are not bypassed in this scenario. If the state of an associated calendar is
+     * <code>CLOSED</code>, change freeze approvers must still grant permission for this change request to run. If they
+     * don't, the change won't be processed until the calendar state is again <code>OPEN</code>.
+     * </p>
+     * </note>
+     * 
+     * @return Indicates whether the change request can be approved automatically without the need for manual
+     *         approvals.</p>
+     *         <p>
+     *         If <code>AutoApprovable</code> is enabled in a change template, then setting <code>AutoApprove</code> to
+     *         <code>true</code> in <code>StartChangeRequestExecution</code> creates a change request that bypasses
+     *         approver review.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         Change Calendar restrictions are not bypassed in this scenario. If the state of an associated calendar is
+     *         <code>CLOSED</code>, change freeze approvers must still grant permission for this change request to run.
+     *         If they don't, the change won't be processed until the calendar state is again <code>OPEN</code>.
+     *         </p>
+     */
+
+    public Boolean getAutoApprove() {
+        return this.autoApprove;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the change request can be approved automatically without the need for manual approvals.
+     * </p>
+     * <p>
+     * If <code>AutoApprovable</code> is enabled in a change template, then setting <code>AutoApprove</code> to
+     * <code>true</code> in <code>StartChangeRequestExecution</code> creates a change request that bypasses approver
+     * review.
+     * </p>
+     * <note>
+     * <p>
+     * Change Calendar restrictions are not bypassed in this scenario. If the state of an associated calendar is
+     * <code>CLOSED</code>, change freeze approvers must still grant permission for this change request to run. If they
+     * don't, the change won't be processed until the calendar state is again <code>OPEN</code>.
+     * </p>
+     * </note>
+     * 
+     * @param autoApprove
+     *        Indicates whether the change request can be approved automatically without the need for manual
+     *        approvals.</p>
+     *        <p>
+     *        If <code>AutoApprovable</code> is enabled in a change template, then setting <code>AutoApprove</code> to
+     *        <code>true</code> in <code>StartChangeRequestExecution</code> creates a change request that bypasses
+     *        approver review.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Change Calendar restrictions are not bypassed in this scenario. If the state of an associated calendar is
+     *        <code>CLOSED</code>, change freeze approvers must still grant permission for this change request to run.
+     *        If they don't, the change won't be processed until the calendar state is again <code>OPEN</code>.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartChangeRequestExecutionRequest withAutoApprove(Boolean autoApprove) {
+        setAutoApprove(autoApprove);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the change request can be approved automatically without the need for manual approvals.
+     * </p>
+     * <p>
+     * If <code>AutoApprovable</code> is enabled in a change template, then setting <code>AutoApprove</code> to
+     * <code>true</code> in <code>StartChangeRequestExecution</code> creates a change request that bypasses approver
+     * review.
+     * </p>
+     * <note>
+     * <p>
+     * Change Calendar restrictions are not bypassed in this scenario. If the state of an associated calendar is
+     * <code>CLOSED</code>, change freeze approvers must still grant permission for this change request to run. If they
+     * don't, the change won't be processed until the calendar state is again <code>OPEN</code>.
+     * </p>
+     * </note>
+     * 
+     * @return Indicates whether the change request can be approved automatically without the need for manual
+     *         approvals.</p>
+     *         <p>
+     *         If <code>AutoApprovable</code> is enabled in a change template, then setting <code>AutoApprove</code> to
+     *         <code>true</code> in <code>StartChangeRequestExecution</code> creates a change request that bypasses
+     *         approver review.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         Change Calendar restrictions are not bypassed in this scenario. If the state of an associated calendar is
+     *         <code>CLOSED</code>, change freeze approvers must still grant permission for this change request to run.
+     *         If they don't, the change won't be processed until the calendar state is again <code>OPEN</code>.
+     *         </p>
+     */
+
+    public Boolean isAutoApprove() {
+        return this.autoApprove;
     }
 
     /**
@@ -838,6 +1004,8 @@ public class StartChangeRequestExecutionRequest extends com.amazonaws.AmazonWebS
             sb.append("ChangeRequestName: ").append(getChangeRequestName()).append(",");
         if (getClientToken() != null)
             sb.append("ClientToken: ").append(getClientToken()).append(",");
+        if (getAutoApprove() != null)
+            sb.append("AutoApprove: ").append(getAutoApprove()).append(",");
         if (getRunbooks() != null)
             sb.append("Runbooks: ").append(getRunbooks()).append(",");
         if (getTags() != null)
@@ -884,6 +1052,10 @@ public class StartChangeRequestExecutionRequest extends com.amazonaws.AmazonWebS
             return false;
         if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
             return false;
+        if (other.getAutoApprove() == null ^ this.getAutoApprove() == null)
+            return false;
+        if (other.getAutoApprove() != null && other.getAutoApprove().equals(this.getAutoApprove()) == false)
+            return false;
         if (other.getRunbooks() == null ^ this.getRunbooks() == null)
             return false;
         if (other.getRunbooks() != null && other.getRunbooks().equals(this.getRunbooks()) == false)
@@ -914,6 +1086,7 @@ public class StartChangeRequestExecutionRequest extends com.amazonaws.AmazonWebS
         hashCode = prime * hashCode + ((getParameters() == null) ? 0 : getParameters().hashCode());
         hashCode = prime * hashCode + ((getChangeRequestName() == null) ? 0 : getChangeRequestName().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
+        hashCode = prime * hashCode + ((getAutoApprove() == null) ? 0 : getAutoApprove().hashCode());
         hashCode = prime * hashCode + ((getRunbooks() == null) ? 0 : getRunbooks().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getScheduledEndTime() == null) ? 0 : getScheduledEndTime().hashCode());
