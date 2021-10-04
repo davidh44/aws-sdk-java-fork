@@ -112,7 +112,7 @@ public class UpdateProjectRequest extends com.amazonaws.AmazonWebServiceRequest 
     private ProjectArtifacts artifacts;
     /**
      * <p>
-     * An array of <code>ProjectSource</code> objects.
+     * An array of <code>ProjectArtifact</code> objects.
      * </p>
      */
     private java.util.List<ProjectArtifacts> secondaryArtifacts;
@@ -814,10 +814,10 @@ public class UpdateProjectRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * An array of <code>ProjectSource</code> objects.
+     * An array of <code>ProjectArtifact</code> objects.
      * </p>
      * 
-     * @return An array of <code>ProjectSource</code> objects.
+     * @return An array of <code>ProjectArtifact</code> objects.
      */
 
     public java.util.List<ProjectArtifacts> getSecondaryArtifacts() {
@@ -826,11 +826,11 @@ public class UpdateProjectRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * An array of <code>ProjectSource</code> objects.
+     * An array of <code>ProjectArtifact</code> objects.
      * </p>
      * 
      * @param secondaryArtifacts
-     *        An array of <code>ProjectSource</code> objects.
+     *        An array of <code>ProjectArtifact</code> objects.
      */
 
     public void setSecondaryArtifacts(java.util.Collection<ProjectArtifacts> secondaryArtifacts) {
@@ -844,7 +844,7 @@ public class UpdateProjectRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * An array of <code>ProjectSource</code> objects.
+     * An array of <code>ProjectArtifact</code> objects.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -853,7 +853,7 @@ public class UpdateProjectRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param secondaryArtifacts
-     *        An array of <code>ProjectSource</code> objects.
+     *        An array of <code>ProjectArtifact</code> objects.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -869,11 +869,11 @@ public class UpdateProjectRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * An array of <code>ProjectSource</code> objects.
+     * An array of <code>ProjectArtifact</code> objects.
      * </p>
      * 
      * @param secondaryArtifacts
-     *        An array of <code>ProjectSource</code> objects.
+     *        An array of <code>ProjectArtifact</code> objects.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

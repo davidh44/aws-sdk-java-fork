@@ -25,7 +25,7 @@ public class ListBuildsForProjectResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of build IDs for the specified build project, with each build ID representing a single build.
+     * A list of build identifiers for the specified build project, with each build ID representing a single build.
      * </p>
      */
     private java.util.List<String> ids;
@@ -40,10 +40,11 @@ public class ListBuildsForProjectResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of build IDs for the specified build project, with each build ID representing a single build.
+     * A list of build identifiers for the specified build project, with each build ID representing a single build.
      * </p>
      * 
-     * @return A list of build IDs for the specified build project, with each build ID representing a single build.
+     * @return A list of build identifiers for the specified build project, with each build ID representing a single
+     *         build.
      */
 
     public java.util.List<String> getIds() {
@@ -52,11 +53,12 @@ public class ListBuildsForProjectResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of build IDs for the specified build project, with each build ID representing a single build.
+     * A list of build identifiers for the specified build project, with each build ID representing a single build.
      * </p>
      * 
      * @param ids
-     *        A list of build IDs for the specified build project, with each build ID representing a single build.
+     *        A list of build identifiers for the specified build project, with each build ID representing a single
+     *        build.
      */
 
     public void setIds(java.util.Collection<String> ids) {
@@ -70,7 +72,7 @@ public class ListBuildsForProjectResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of build IDs for the specified build project, with each build ID representing a single build.
+     * A list of build identifiers for the specified build project, with each build ID representing a single build.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -79,7 +81,8 @@ public class ListBuildsForProjectResult extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param ids
-     *        A list of build IDs for the specified build project, with each build ID representing a single build.
+     *        A list of build identifiers for the specified build project, with each build ID representing a single
+     *        build.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -95,11 +98,12 @@ public class ListBuildsForProjectResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of build IDs for the specified build project, with each build ID representing a single build.
+     * A list of build identifiers for the specified build project, with each build ID representing a single build.
      * </p>
      * 
      * @param ids
-     *        A list of build IDs for the specified build project, with each build ID representing a single build.
+     *        A list of build identifiers for the specified build project, with each build ID representing a single
+     *        build.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

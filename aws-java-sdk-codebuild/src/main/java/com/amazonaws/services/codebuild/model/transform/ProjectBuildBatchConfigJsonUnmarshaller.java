@@ -64,6 +64,10 @@ public class ProjectBuildBatchConfigJsonUnmarshaller implements Unmarshaller<Pro
                     context.nextToken();
                     projectBuildBatchConfig.setTimeoutInMins(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("batchReportMode", targetDepth)) {
+                    context.nextToken();
+                    projectBuildBatchConfig.setBatchReportMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

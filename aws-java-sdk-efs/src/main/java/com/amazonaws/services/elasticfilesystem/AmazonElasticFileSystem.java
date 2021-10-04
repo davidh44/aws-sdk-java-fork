@@ -1052,6 +1052,9 @@ public interface AmazonElasticFileSystem {
      * 
      * @param putAccountPreferencesRequest
      * @return Result of the PutAccountPreferences operation returned by the service.
+     * @throws BadRequestException
+     *         Returned if the request is malformed or contains an error such as an invalid parameter value or a missing
+     *         required parameter.
      * @throws InternalServerErrorException
      *         Returned if an error occurred on the server side.
      * @sample AmazonElasticFileSystem.PutAccountPreferences

@@ -1115,6 +1115,10 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "BadRequestException",
+        "documentation" : "<p>Returned if the request is malformed or contains an error such as an invalid parameter value or a missing required parameter.</p>",
+        "httpStatusCode" : 400
+      }, {
         "exceptionName" : "InternalServerErrorException",
         "documentation" : "<p>Returned if an error occurred on the server side.</p>",
         "httpStatusCode" : 500
