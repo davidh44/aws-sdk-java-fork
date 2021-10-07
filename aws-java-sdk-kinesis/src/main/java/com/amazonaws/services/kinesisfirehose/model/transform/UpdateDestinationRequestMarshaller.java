@@ -41,6 +41,8 @@ public class UpdateDestinationRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RedshiftDestinationUpdate").build();
     private static final MarshallingInfo<StructuredPojo> ELASTICSEARCHDESTINATIONUPDATE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ElasticsearchDestinationUpdate").build();
+    private static final MarshallingInfo<StructuredPojo> AMAZONOPENSEARCHSERVICEDESTINATIONUPDATE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AmazonopensearchserviceDestinationUpdate").build();
     private static final MarshallingInfo<StructuredPojo> SPLUNKDESTINATIONUPDATE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SplunkDestinationUpdate").build();
     private static final MarshallingInfo<StructuredPojo> HTTPENDPOINTDESTINATIONUPDATE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -69,6 +71,8 @@ public class UpdateDestinationRequestMarshaller {
             protocolMarshaller.marshall(updateDestinationRequest.getExtendedS3DestinationUpdate(), EXTENDEDS3DESTINATIONUPDATE_BINDING);
             protocolMarshaller.marshall(updateDestinationRequest.getRedshiftDestinationUpdate(), REDSHIFTDESTINATIONUPDATE_BINDING);
             protocolMarshaller.marshall(updateDestinationRequest.getElasticsearchDestinationUpdate(), ELASTICSEARCHDESTINATIONUPDATE_BINDING);
+            protocolMarshaller.marshall(updateDestinationRequest.getAmazonopensearchserviceDestinationUpdate(),
+                    AMAZONOPENSEARCHSERVICEDESTINATIONUPDATE_BINDING);
             protocolMarshaller.marshall(updateDestinationRequest.getSplunkDestinationUpdate(), SPLUNKDESTINATIONUPDATE_BINDING);
             protocolMarshaller.marshall(updateDestinationRequest.getHttpEndpointDestinationUpdate(), HTTPENDPOINTDESTINATIONUPDATE_BINDING);
         } catch (Exception e) {

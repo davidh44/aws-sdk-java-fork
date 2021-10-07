@@ -23,7 +23,8 @@ public enum ScoreConfidence {
     VERY_HIGH("VERY_HIGH"),
     HIGH("HIGH"),
     MEDIUM("MEDIUM"),
-    LOW("LOW");
+    LOW("LOW"),
+    NOT_AVAILABLE("NOT_AVAILABLE");
 
     private String value;
 

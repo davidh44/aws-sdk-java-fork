@@ -314,6 +314,37 @@ public interface AWSBackup {
 
     /**
      * <p>
+     * Deletes Backup Vault Lock from a backup vault specified by a backup vault name.
+     * </p>
+     * <p>
+     * If the Vault Lock configuration is immutable, then you cannot delete Vault Lock using API operations, and you
+     * will receive an <code>InvalidRequestException</code> if you attempt to do so. For more information, see <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/vault-lock.html">Vault Lock</a> in the <i>Backup
+     * Developer Guide</i>.
+     * </p>
+     * 
+     * @param deleteBackupVaultLockConfigurationRequest
+     * @return Result of the DeleteBackupVaultLockConfiguration operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws InvalidParameterValueException
+     *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws MissingParameterValueException
+     *         Indicates that a required parameter is missing.
+     * @throws InvalidRequestException
+     *         Indicates that something is wrong with the input to the request. For example, a parameter is of the wrong
+     *         type.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.DeleteBackupVaultLockConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/DeleteBackupVaultLockConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteBackupVaultLockConfigurationResult deleteBackupVaultLockConfiguration(
+            DeleteBackupVaultLockConfigurationRequest deleteBackupVaultLockConfigurationRequest);
+
+    /**
+     * <p>
      * Deletes event notifications for the specified backup vault.
      * </p>
      * 
@@ -1195,6 +1226,33 @@ public interface AWSBackup {
      *      target="_top">AWS API Documentation</a>
      */
     PutBackupVaultAccessPolicyResult putBackupVaultAccessPolicy(PutBackupVaultAccessPolicyRequest putBackupVaultAccessPolicyRequest);
+
+    /**
+     * <p>
+     * Applies Backup Vault Lock to a backup vault, preventing attempts to delete any recovery point stored in or
+     * created in a backup vault. Vault Lock also prevents attempts to update the lifecycle policy that controls the
+     * retention period of any recovery point currently stored in a backup vault. If specified, Vault Lock enforces a
+     * minimum and maximum retention period for future backup and copy jobs that target a backup vault.
+     * </p>
+     * 
+     * @param putBackupVaultLockConfigurationRequest
+     * @return Result of the PutBackupVaultLockConfiguration operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws InvalidParameterValueException
+     *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws MissingParameterValueException
+     *         Indicates that a required parameter is missing.
+     * @throws InvalidRequestException
+     *         Indicates that something is wrong with the input to the request. For example, a parameter is of the wrong
+     *         type.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.PutBackupVaultLockConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/PutBackupVaultLockConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    PutBackupVaultLockConfigurationResult putBackupVaultLockConfiguration(PutBackupVaultLockConfigurationRequest putBackupVaultLockConfigurationRequest);
 
     /**
      * <p>

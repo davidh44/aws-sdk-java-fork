@@ -70,6 +70,11 @@ public class DestinationDescriptionJsonUnmarshaller implements Unmarshaller<Dest
                     destinationDescription.setElasticsearchDestinationDescription(ElasticsearchDestinationDescriptionJsonUnmarshaller.getInstance().unmarshall(
                             context));
                 }
+                if (context.testExpression("AmazonopensearchserviceDestinationDescription", targetDepth)) {
+                    context.nextToken();
+                    destinationDescription.setAmazonopensearchserviceDestinationDescription(AmazonopensearchserviceDestinationDescriptionJsonUnmarshaller
+                            .getInstance().unmarshall(context));
+                }
                 if (context.testExpression("SplunkDestinationDescription", targetDepth)) {
                     context.nextToken();
                     destinationDescription.setSplunkDestinationDescription(SplunkDestinationDescriptionJsonUnmarshaller.getInstance().unmarshall(context));

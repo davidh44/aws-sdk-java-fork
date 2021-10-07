@@ -43,6 +43,8 @@ public class MediaCapturePipelineMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreatedTimestamp").timestampFormat("iso8601").build();
     private static final MarshallingInfo<java.util.Date> UPDATEDTIMESTAMP_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UpdatedTimestamp").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<StructuredPojo> CHIMESDKMEETINGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ChimeSdkMeetingConfiguration").build();
 
     private static final MediaCapturePipelineMarshaller instance = new MediaCapturePipelineMarshaller();
 
@@ -68,6 +70,7 @@ public class MediaCapturePipelineMarshaller {
             protocolMarshaller.marshall(mediaCapturePipeline.getSinkArn(), SINKARN_BINDING);
             protocolMarshaller.marshall(mediaCapturePipeline.getCreatedTimestamp(), CREATEDTIMESTAMP_BINDING);
             protocolMarshaller.marshall(mediaCapturePipeline.getUpdatedTimestamp(), UPDATEDTIMESTAMP_BINDING);
+            protocolMarshaller.marshall(mediaCapturePipeline.getChimeSdkMeetingConfiguration(), CHIMESDKMEETINGCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

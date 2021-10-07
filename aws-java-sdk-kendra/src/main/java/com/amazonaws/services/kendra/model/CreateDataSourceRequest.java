@@ -103,6 +103,15 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private String clientToken;
+    /**
+     * <p>
+     * The code for a language. This allows you to support a language for all documents when creating the data source.
+     * English is supported by default. For more information on supported languages, including their codes, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding documents in languages other
+     * than English</a>.
+     * </p>
+     */
+    private String languageCode;
 
     /**
      * <p>
@@ -654,6 +663,64 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The code for a language. This allows you to support a language for all documents when creating the data source.
+     * English is supported by default. For more information on supported languages, including their codes, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding documents in languages other
+     * than English</a>.
+     * </p>
+     * 
+     * @param languageCode
+     *        The code for a language. This allows you to support a language for all documents when creating the data
+     *        source. English is supported by default. For more information on supported languages, including their
+     *        codes, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding
+     *        documents in languages other than English</a>.
+     */
+
+    public void setLanguageCode(String languageCode) {
+        this.languageCode = languageCode;
+    }
+
+    /**
+     * <p>
+     * The code for a language. This allows you to support a language for all documents when creating the data source.
+     * English is supported by default. For more information on supported languages, including their codes, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding documents in languages other
+     * than English</a>.
+     * </p>
+     * 
+     * @return The code for a language. This allows you to support a language for all documents when creating the data
+     *         source. English is supported by default. For more information on supported languages, including their
+     *         codes, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding
+     *         documents in languages other than English</a>.
+     */
+
+    public String getLanguageCode() {
+        return this.languageCode;
+    }
+
+    /**
+     * <p>
+     * The code for a language. This allows you to support a language for all documents when creating the data source.
+     * English is supported by default. For more information on supported languages, including their codes, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding documents in languages other
+     * than English</a>.
+     * </p>
+     * 
+     * @param languageCode
+     *        The code for a language. This allows you to support a language for all documents when creating the data
+     *        source. English is supported by default. For more information on supported languages, including their
+     *        codes, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding
+     *        documents in languages other than English</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDataSourceRequest withLanguageCode(String languageCode) {
+        setLanguageCode(languageCode);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -682,7 +749,9 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getClientToken() != null)
-            sb.append("ClientToken: ").append(getClientToken());
+            sb.append("ClientToken: ").append(getClientToken()).append(",");
+        if (getLanguageCode() != null)
+            sb.append("LanguageCode: ").append(getLanguageCode());
         sb.append("}");
         return sb.toString();
     }
@@ -733,6 +802,10 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
             return false;
+        if (other.getLanguageCode() == null ^ this.getLanguageCode() == null)
+            return false;
+        if (other.getLanguageCode() != null && other.getLanguageCode().equals(this.getLanguageCode()) == false)
+            return false;
         return true;
     }
 
@@ -750,6 +823,7 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
+        hashCode = prime * hashCode + ((getLanguageCode() == null) ? 0 : getLanguageCode().hashCode());
         return hashCode;
     }
 

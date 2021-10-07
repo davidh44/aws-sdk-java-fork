@@ -55,6 +55,13 @@ public class CreateMediaCapturePipelineRequest extends com.amazonaws.AmazonWebSe
      * </p>
      */
     private String clientRequestToken;
+    /**
+     * <p>
+     * The configuration for a specified media capture pipeline. <code>SourceType</code> must be
+     * <code>ChimeSdkMeeting</code>.
+     * </p>
+     */
+    private ChimeSdkMeetingConfiguration chimeSdkMeetingConfiguration;
 
     /**
      * <p>
@@ -299,6 +306,52 @@ public class CreateMediaCapturePipelineRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * The configuration for a specified media capture pipeline. <code>SourceType</code> must be
+     * <code>ChimeSdkMeeting</code>.
+     * </p>
+     * 
+     * @param chimeSdkMeetingConfiguration
+     *        The configuration for a specified media capture pipeline. <code>SourceType</code> must be
+     *        <code>ChimeSdkMeeting</code>.
+     */
+
+    public void setChimeSdkMeetingConfiguration(ChimeSdkMeetingConfiguration chimeSdkMeetingConfiguration) {
+        this.chimeSdkMeetingConfiguration = chimeSdkMeetingConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration for a specified media capture pipeline. <code>SourceType</code> must be
+     * <code>ChimeSdkMeeting</code>.
+     * </p>
+     * 
+     * @return The configuration for a specified media capture pipeline. <code>SourceType</code> must be
+     *         <code>ChimeSdkMeeting</code>.
+     */
+
+    public ChimeSdkMeetingConfiguration getChimeSdkMeetingConfiguration() {
+        return this.chimeSdkMeetingConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration for a specified media capture pipeline. <code>SourceType</code> must be
+     * <code>ChimeSdkMeeting</code>.
+     * </p>
+     * 
+     * @param chimeSdkMeetingConfiguration
+     *        The configuration for a specified media capture pipeline. <code>SourceType</code> must be
+     *        <code>ChimeSdkMeeting</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateMediaCapturePipelineRequest withChimeSdkMeetingConfiguration(ChimeSdkMeetingConfiguration chimeSdkMeetingConfiguration) {
+        setChimeSdkMeetingConfiguration(chimeSdkMeetingConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -319,7 +372,9 @@ public class CreateMediaCapturePipelineRequest extends com.amazonaws.AmazonWebSe
         if (getSinkArn() != null)
             sb.append("SinkArn: ").append("***Sensitive Data Redacted***").append(",");
         if (getClientRequestToken() != null)
-            sb.append("ClientRequestToken: ").append("***Sensitive Data Redacted***");
+            sb.append("ClientRequestToken: ").append("***Sensitive Data Redacted***").append(",");
+        if (getChimeSdkMeetingConfiguration() != null)
+            sb.append("ChimeSdkMeetingConfiguration: ").append(getChimeSdkMeetingConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -354,6 +409,10 @@ public class CreateMediaCapturePipelineRequest extends com.amazonaws.AmazonWebSe
             return false;
         if (other.getClientRequestToken() != null && other.getClientRequestToken().equals(this.getClientRequestToken()) == false)
             return false;
+        if (other.getChimeSdkMeetingConfiguration() == null ^ this.getChimeSdkMeetingConfiguration() == null)
+            return false;
+        if (other.getChimeSdkMeetingConfiguration() != null && other.getChimeSdkMeetingConfiguration().equals(this.getChimeSdkMeetingConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -367,6 +426,7 @@ public class CreateMediaCapturePipelineRequest extends com.amazonaws.AmazonWebSe
         hashCode = prime * hashCode + ((getSinkType() == null) ? 0 : getSinkType().hashCode());
         hashCode = prime * hashCode + ((getSinkArn() == null) ? 0 : getSinkArn().hashCode());
         hashCode = prime * hashCode + ((getClientRequestToken() == null) ? 0 : getClientRequestToken().hashCode());
+        hashCode = prime * hashCode + ((getChimeSdkMeetingConfiguration() == null) ? 0 : getChimeSdkMeetingConfiguration().hashCode());
         return hashCode;
     }
 

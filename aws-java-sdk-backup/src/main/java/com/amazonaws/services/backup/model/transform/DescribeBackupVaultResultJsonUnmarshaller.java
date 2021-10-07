@@ -72,6 +72,22 @@ public class DescribeBackupVaultResultJsonUnmarshaller implements Unmarshaller<D
                     context.nextToken();
                     describeBackupVaultResult.setNumberOfRecoveryPoints(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
+                if (context.testExpression("Locked", targetDepth)) {
+                    context.nextToken();
+                    describeBackupVaultResult.setLocked(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("MinRetentionDays", targetDepth)) {
+                    context.nextToken();
+                    describeBackupVaultResult.setMinRetentionDays(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
+                if (context.testExpression("MaxRetentionDays", targetDepth)) {
+                    context.nextToken();
+                    describeBackupVaultResult.setMaxRetentionDays(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
+                if (context.testExpression("LockDate", targetDepth)) {
+                    context.nextToken();
+                    describeBackupVaultResult.setLockDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

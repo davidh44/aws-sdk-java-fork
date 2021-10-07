@@ -99,6 +99,15 @@ public class DescribeDataSourceResult extends com.amazonaws.AmazonWebServiceResu
      * </p>
      */
     private String errorMessage;
+    /**
+     * <p>
+     * The code for a language. This shows a supported language for all documents in the data source. English is
+     * supported by default. For more information on supported languages, including their codes, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding documents in languages other
+     * than English</a>.
+     * </p>
+     */
+    private String languageCode;
 
     /**
      * <p>
@@ -647,6 +656,64 @@ public class DescribeDataSourceResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
+     * <p>
+     * The code for a language. This shows a supported language for all documents in the data source. English is
+     * supported by default. For more information on supported languages, including their codes, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding documents in languages other
+     * than English</a>.
+     * </p>
+     * 
+     * @param languageCode
+     *        The code for a language. This shows a supported language for all documents in the data source. English is
+     *        supported by default. For more information on supported languages, including their codes, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding documents in languages
+     *        other than English</a>.
+     */
+
+    public void setLanguageCode(String languageCode) {
+        this.languageCode = languageCode;
+    }
+
+    /**
+     * <p>
+     * The code for a language. This shows a supported language for all documents in the data source. English is
+     * supported by default. For more information on supported languages, including their codes, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding documents in languages other
+     * than English</a>.
+     * </p>
+     * 
+     * @return The code for a language. This shows a supported language for all documents in the data source. English is
+     *         supported by default. For more information on supported languages, including their codes, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding documents in
+     *         languages other than English</a>.
+     */
+
+    public String getLanguageCode() {
+        return this.languageCode;
+    }
+
+    /**
+     * <p>
+     * The code for a language. This shows a supported language for all documents in the data source. English is
+     * supported by default. For more information on supported languages, including their codes, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding documents in languages other
+     * than English</a>.
+     * </p>
+     * 
+     * @param languageCode
+     *        The code for a language. This shows a supported language for all documents in the data source. English is
+     *        supported by default. For more information on supported languages, including their codes, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding documents in languages
+     *        other than English</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeDataSourceResult withLanguageCode(String languageCode) {
+        setLanguageCode(languageCode);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -681,7 +748,9 @@ public class DescribeDataSourceResult extends com.amazonaws.AmazonWebServiceResu
         if (getRoleArn() != null)
             sb.append("RoleArn: ").append(getRoleArn()).append(",");
         if (getErrorMessage() != null)
-            sb.append("ErrorMessage: ").append(getErrorMessage());
+            sb.append("ErrorMessage: ").append(getErrorMessage()).append(",");
+        if (getLanguageCode() != null)
+            sb.append("LanguageCode: ").append(getLanguageCode());
         sb.append("}");
         return sb.toString();
     }
@@ -744,6 +813,10 @@ public class DescribeDataSourceResult extends com.amazonaws.AmazonWebServiceResu
             return false;
         if (other.getErrorMessage() != null && other.getErrorMessage().equals(this.getErrorMessage()) == false)
             return false;
+        if (other.getLanguageCode() == null ^ this.getLanguageCode() == null)
+            return false;
+        if (other.getLanguageCode() != null && other.getLanguageCode().equals(this.getLanguageCode()) == false)
+            return false;
         return true;
     }
 
@@ -764,6 +837,7 @@ public class DescribeDataSourceResult extends com.amazonaws.AmazonWebServiceResu
         hashCode = prime * hashCode + ((getSchedule() == null) ? 0 : getSchedule().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getErrorMessage() == null) ? 0 : getErrorMessage().hashCode());
+        hashCode = prime * hashCode + ((getLanguageCode() == null) ? 0 : getLanguageCode().hashCode());
         return hashCode;
     }
 

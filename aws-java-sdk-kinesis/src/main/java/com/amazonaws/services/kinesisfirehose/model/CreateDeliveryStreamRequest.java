@@ -90,6 +90,8 @@ public class CreateDeliveryStreamRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      */
     private ElasticsearchDestinationConfiguration elasticsearchDestinationConfiguration;
+
+    private AmazonopensearchserviceDestinationConfiguration amazonopensearchserviceDestinationConfiguration;
     /**
      * <p>
      * The destination in Splunk. You can specify only one destination.
@@ -577,6 +579,34 @@ public class CreateDeliveryStreamRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * @param amazonopensearchserviceDestinationConfiguration
+     */
+
+    public void setAmazonopensearchserviceDestinationConfiguration(
+            AmazonopensearchserviceDestinationConfiguration amazonopensearchserviceDestinationConfiguration) {
+        this.amazonopensearchserviceDestinationConfiguration = amazonopensearchserviceDestinationConfiguration;
+    }
+
+    /**
+     * @return
+     */
+
+    public AmazonopensearchserviceDestinationConfiguration getAmazonopensearchserviceDestinationConfiguration() {
+        return this.amazonopensearchserviceDestinationConfiguration;
+    }
+
+    /**
+     * @param amazonopensearchserviceDestinationConfiguration
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDeliveryStreamRequest withAmazonopensearchserviceDestinationConfiguration(
+            AmazonopensearchserviceDestinationConfiguration amazonopensearchserviceDestinationConfiguration) {
+        setAmazonopensearchserviceDestinationConfiguration(amazonopensearchserviceDestinationConfiguration);
+        return this;
+    }
+
+    /**
      * <p>
      * The destination in Splunk. You can specify only one destination.
      * </p>
@@ -812,6 +842,8 @@ public class CreateDeliveryStreamRequest extends com.amazonaws.AmazonWebServiceR
             sb.append("RedshiftDestinationConfiguration: ").append(getRedshiftDestinationConfiguration()).append(",");
         if (getElasticsearchDestinationConfiguration() != null)
             sb.append("ElasticsearchDestinationConfiguration: ").append(getElasticsearchDestinationConfiguration()).append(",");
+        if (getAmazonopensearchserviceDestinationConfiguration() != null)
+            sb.append("AmazonopensearchserviceDestinationConfiguration: ").append(getAmazonopensearchserviceDestinationConfiguration()).append(",");
         if (getSplunkDestinationConfiguration() != null)
             sb.append("SplunkDestinationConfiguration: ").append(getSplunkDestinationConfiguration()).append(",");
         if (getHttpEndpointDestinationConfiguration() != null)
@@ -869,6 +901,11 @@ public class CreateDeliveryStreamRequest extends com.amazonaws.AmazonWebServiceR
         if (other.getElasticsearchDestinationConfiguration() != null
                 && other.getElasticsearchDestinationConfiguration().equals(this.getElasticsearchDestinationConfiguration()) == false)
             return false;
+        if (other.getAmazonopensearchserviceDestinationConfiguration() == null ^ this.getAmazonopensearchserviceDestinationConfiguration() == null)
+            return false;
+        if (other.getAmazonopensearchserviceDestinationConfiguration() != null
+                && other.getAmazonopensearchserviceDestinationConfiguration().equals(this.getAmazonopensearchserviceDestinationConfiguration()) == false)
+            return false;
         if (other.getSplunkDestinationConfiguration() == null ^ this.getSplunkDestinationConfiguration() == null)
             return false;
         if (other.getSplunkDestinationConfiguration() != null
@@ -900,6 +937,8 @@ public class CreateDeliveryStreamRequest extends com.amazonaws.AmazonWebServiceR
         hashCode = prime * hashCode + ((getExtendedS3DestinationConfiguration() == null) ? 0 : getExtendedS3DestinationConfiguration().hashCode());
         hashCode = prime * hashCode + ((getRedshiftDestinationConfiguration() == null) ? 0 : getRedshiftDestinationConfiguration().hashCode());
         hashCode = prime * hashCode + ((getElasticsearchDestinationConfiguration() == null) ? 0 : getElasticsearchDestinationConfiguration().hashCode());
+        hashCode = prime * hashCode
+                + ((getAmazonopensearchserviceDestinationConfiguration() == null) ? 0 : getAmazonopensearchserviceDestinationConfiguration().hashCode());
         hashCode = prime * hashCode + ((getSplunkDestinationConfiguration() == null) ? 0 : getSplunkDestinationConfiguration().hashCode());
         hashCode = prime * hashCode + ((getHttpEndpointDestinationConfiguration() == null) ? 0 : getHttpEndpointDestinationConfiguration().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());

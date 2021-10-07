@@ -73,6 +73,11 @@ public class AbstractAWSBackup implements AWSBackup {
     }
 
     @Override
+    public DeleteBackupVaultLockConfigurationResult deleteBackupVaultLockConfiguration(DeleteBackupVaultLockConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteBackupVaultNotificationsResult deleteBackupVaultNotifications(DeleteBackupVaultNotificationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -274,6 +279,11 @@ public class AbstractAWSBackup implements AWSBackup {
 
     @Override
     public PutBackupVaultAccessPolicyResult putBackupVaultAccessPolicy(PutBackupVaultAccessPolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutBackupVaultLockConfigurationResult putBackupVaultLockConfiguration(PutBackupVaultLockConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

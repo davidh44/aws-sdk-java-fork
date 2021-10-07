@@ -72,6 +72,8 @@ public class UpdateDestinationRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      */
     private ElasticsearchDestinationUpdate elasticsearchDestinationUpdate;
+
+    private AmazonopensearchserviceDestinationUpdate amazonopensearchserviceDestinationUpdate;
     /**
      * <p>
      * Describes an update for a destination in Splunk.
@@ -390,6 +392,33 @@ public class UpdateDestinationRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * @param amazonopensearchserviceDestinationUpdate
+     */
+
+    public void setAmazonopensearchserviceDestinationUpdate(AmazonopensearchserviceDestinationUpdate amazonopensearchserviceDestinationUpdate) {
+        this.amazonopensearchserviceDestinationUpdate = amazonopensearchserviceDestinationUpdate;
+    }
+
+    /**
+     * @return
+     */
+
+    public AmazonopensearchserviceDestinationUpdate getAmazonopensearchserviceDestinationUpdate() {
+        return this.amazonopensearchserviceDestinationUpdate;
+    }
+
+    /**
+     * @param amazonopensearchserviceDestinationUpdate
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateDestinationRequest withAmazonopensearchserviceDestinationUpdate(
+            AmazonopensearchserviceDestinationUpdate amazonopensearchserviceDestinationUpdate) {
+        setAmazonopensearchserviceDestinationUpdate(amazonopensearchserviceDestinationUpdate);
+        return this;
+    }
+
+    /**
      * <p>
      * Describes an update for a destination in Splunk.
      * </p>
@@ -495,6 +524,8 @@ public class UpdateDestinationRequest extends com.amazonaws.AmazonWebServiceRequ
             sb.append("RedshiftDestinationUpdate: ").append(getRedshiftDestinationUpdate()).append(",");
         if (getElasticsearchDestinationUpdate() != null)
             sb.append("ElasticsearchDestinationUpdate: ").append(getElasticsearchDestinationUpdate()).append(",");
+        if (getAmazonopensearchserviceDestinationUpdate() != null)
+            sb.append("AmazonopensearchserviceDestinationUpdate: ").append(getAmazonopensearchserviceDestinationUpdate()).append(",");
         if (getSplunkDestinationUpdate() != null)
             sb.append("SplunkDestinationUpdate: ").append(getSplunkDestinationUpdate()).append(",");
         if (getHttpEndpointDestinationUpdate() != null)
@@ -543,6 +574,11 @@ public class UpdateDestinationRequest extends com.amazonaws.AmazonWebServiceRequ
         if (other.getElasticsearchDestinationUpdate() != null
                 && other.getElasticsearchDestinationUpdate().equals(this.getElasticsearchDestinationUpdate()) == false)
             return false;
+        if (other.getAmazonopensearchserviceDestinationUpdate() == null ^ this.getAmazonopensearchserviceDestinationUpdate() == null)
+            return false;
+        if (other.getAmazonopensearchserviceDestinationUpdate() != null
+                && other.getAmazonopensearchserviceDestinationUpdate().equals(this.getAmazonopensearchserviceDestinationUpdate()) == false)
+            return false;
         if (other.getSplunkDestinationUpdate() == null ^ this.getSplunkDestinationUpdate() == null)
             return false;
         if (other.getSplunkDestinationUpdate() != null && other.getSplunkDestinationUpdate().equals(this.getSplunkDestinationUpdate()) == false)
@@ -567,6 +603,7 @@ public class UpdateDestinationRequest extends com.amazonaws.AmazonWebServiceRequ
         hashCode = prime * hashCode + ((getExtendedS3DestinationUpdate() == null) ? 0 : getExtendedS3DestinationUpdate().hashCode());
         hashCode = prime * hashCode + ((getRedshiftDestinationUpdate() == null) ? 0 : getRedshiftDestinationUpdate().hashCode());
         hashCode = prime * hashCode + ((getElasticsearchDestinationUpdate() == null) ? 0 : getElasticsearchDestinationUpdate().hashCode());
+        hashCode = prime * hashCode + ((getAmazonopensearchserviceDestinationUpdate() == null) ? 0 : getAmazonopensearchserviceDestinationUpdate().hashCode());
         hashCode = prime * hashCode + ((getSplunkDestinationUpdate() == null) ? 0 : getSplunkDestinationUpdate().hashCode());
         hashCode = prime * hashCode + ((getHttpEndpointDestinationUpdate() == null) ? 0 : getHttpEndpointDestinationUpdate().hashCode());
         return hashCode;

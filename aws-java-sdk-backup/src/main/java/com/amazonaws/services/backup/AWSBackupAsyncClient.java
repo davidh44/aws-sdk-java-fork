@@ -375,6 +375,41 @@ public class AWSBackupAsyncClient extends AWSBackupClient implements AWSBackupAs
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteBackupVaultLockConfigurationResult> deleteBackupVaultLockConfigurationAsync(
+            DeleteBackupVaultLockConfigurationRequest request) {
+
+        return deleteBackupVaultLockConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteBackupVaultLockConfigurationResult> deleteBackupVaultLockConfigurationAsync(
+            final DeleteBackupVaultLockConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteBackupVaultLockConfigurationRequest, DeleteBackupVaultLockConfigurationResult> asyncHandler) {
+        final DeleteBackupVaultLockConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteBackupVaultLockConfigurationResult>() {
+            @Override
+            public DeleteBackupVaultLockConfigurationResult call() throws Exception {
+                DeleteBackupVaultLockConfigurationResult result = null;
+
+                try {
+                    result = executeDeleteBackupVaultLockConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteBackupVaultNotificationsResult> deleteBackupVaultNotificationsAsync(DeleteBackupVaultNotificationsRequest request) {
 
         return deleteBackupVaultNotificationsAsync(request, null);
@@ -1717,6 +1752,41 @@ public class AWSBackupAsyncClient extends AWSBackupClient implements AWSBackupAs
 
                 try {
                     result = executePutBackupVaultAccessPolicy(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutBackupVaultLockConfigurationResult> putBackupVaultLockConfigurationAsync(
+            PutBackupVaultLockConfigurationRequest request) {
+
+        return putBackupVaultLockConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutBackupVaultLockConfigurationResult> putBackupVaultLockConfigurationAsync(
+            final PutBackupVaultLockConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PutBackupVaultLockConfigurationRequest, PutBackupVaultLockConfigurationResult> asyncHandler) {
+        final PutBackupVaultLockConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PutBackupVaultLockConfigurationResult>() {
+            @Override
+            public PutBackupVaultLockConfigurationResult call() throws Exception {
+                PutBackupVaultLockConfigurationResult result = null;
+
+                try {
+                    result = executePutBackupVaultLockConfiguration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

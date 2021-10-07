@@ -810,6 +810,81 @@ public class AWSBackupClient extends AmazonWebServiceClient implements AWSBackup
 
     /**
      * <p>
+     * Deletes Backup Vault Lock from a backup vault specified by a backup vault name.
+     * </p>
+     * <p>
+     * If the Vault Lock configuration is immutable, then you cannot delete Vault Lock using API operations, and you
+     * will receive an <code>InvalidRequestException</code> if you attempt to do so. For more information, see <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/vault-lock.html">Vault Lock</a> in the <i>Backup
+     * Developer Guide</i>.
+     * </p>
+     * 
+     * @param deleteBackupVaultLockConfigurationRequest
+     * @return Result of the DeleteBackupVaultLockConfiguration operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws InvalidParameterValueException
+     *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws MissingParameterValueException
+     *         Indicates that a required parameter is missing.
+     * @throws InvalidRequestException
+     *         Indicates that something is wrong with the input to the request. For example, a parameter is of the wrong
+     *         type.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.DeleteBackupVaultLockConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/DeleteBackupVaultLockConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteBackupVaultLockConfigurationResult deleteBackupVaultLockConfiguration(DeleteBackupVaultLockConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteBackupVaultLockConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final DeleteBackupVaultLockConfigurationResult executeDeleteBackupVaultLockConfiguration(
+            DeleteBackupVaultLockConfigurationRequest deleteBackupVaultLockConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteBackupVaultLockConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteBackupVaultLockConfigurationRequest> request = null;
+        Response<DeleteBackupVaultLockConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteBackupVaultLockConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteBackupVaultLockConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Backup");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteBackupVaultLockConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteBackupVaultLockConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteBackupVaultLockConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes event notifications for the specified backup vault.
      * </p>
      * 
@@ -3438,6 +3513,78 @@ public class AWSBackupClient extends AmazonWebServiceClient implements AWSBackup
             HttpResponseHandler<AmazonWebServiceResponse<PutBackupVaultAccessPolicyResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new PutBackupVaultAccessPolicyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Applies Backup Vault Lock to a backup vault, preventing attempts to delete any recovery point stored in or
+     * created in a backup vault. Vault Lock also prevents attempts to update the lifecycle policy that controls the
+     * retention period of any recovery point currently stored in a backup vault. If specified, Vault Lock enforces a
+     * minimum and maximum retention period for future backup and copy jobs that target a backup vault.
+     * </p>
+     * 
+     * @param putBackupVaultLockConfigurationRequest
+     * @return Result of the PutBackupVaultLockConfiguration operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws InvalidParameterValueException
+     *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws MissingParameterValueException
+     *         Indicates that a required parameter is missing.
+     * @throws InvalidRequestException
+     *         Indicates that something is wrong with the input to the request. For example, a parameter is of the wrong
+     *         type.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.PutBackupVaultLockConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/PutBackupVaultLockConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public PutBackupVaultLockConfigurationResult putBackupVaultLockConfiguration(PutBackupVaultLockConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executePutBackupVaultLockConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final PutBackupVaultLockConfigurationResult executePutBackupVaultLockConfiguration(
+            PutBackupVaultLockConfigurationRequest putBackupVaultLockConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(putBackupVaultLockConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PutBackupVaultLockConfigurationRequest> request = null;
+        Response<PutBackupVaultLockConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PutBackupVaultLockConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(putBackupVaultLockConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Backup");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutBackupVaultLockConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<PutBackupVaultLockConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new PutBackupVaultLockConfigurationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

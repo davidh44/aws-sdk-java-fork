@@ -13620,6 +13620,8 @@ public class AmazonChimeClient extends AmazonWebServiceClient implements AmazonC
      *         The input parameters don't match the service's restrictions.
      * @throws ThrottledClientException
      *         The client exceeded its request rate limit.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource.
      * @throws ServiceUnavailableException
      *         The service is currently unavailable.
      * @throws ServiceFailureException

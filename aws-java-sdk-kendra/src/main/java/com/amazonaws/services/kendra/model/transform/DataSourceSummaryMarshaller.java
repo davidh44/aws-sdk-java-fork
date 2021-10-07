@@ -39,6 +39,8 @@ public class DataSourceSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UpdatedAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Status").build();
+    private static final MarshallingInfo<String> LANGUAGECODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LanguageCode").build();
 
     private static final DataSourceSummaryMarshaller instance = new DataSourceSummaryMarshaller();
 
@@ -62,6 +64,7 @@ public class DataSourceSummaryMarshaller {
             protocolMarshaller.marshall(dataSourceSummary.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(dataSourceSummary.getUpdatedAt(), UPDATEDAT_BINDING);
             protocolMarshaller.marshall(dataSourceSummary.getStatus(), STATUS_BINDING);
+            protocolMarshaller.marshall(dataSourceSummary.getLanguageCode(), LANGUAGECODE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

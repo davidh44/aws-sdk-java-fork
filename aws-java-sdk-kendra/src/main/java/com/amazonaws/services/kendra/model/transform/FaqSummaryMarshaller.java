@@ -39,6 +39,8 @@ public class FaqSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UpdatedAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> FILEFORMAT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FileFormat").build();
+    private static final MarshallingInfo<String> LANGUAGECODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LanguageCode").build();
 
     private static final FaqSummaryMarshaller instance = new FaqSummaryMarshaller();
 
@@ -62,6 +64,7 @@ public class FaqSummaryMarshaller {
             protocolMarshaller.marshall(faqSummary.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(faqSummary.getUpdatedAt(), UPDATEDAT_BINDING);
             protocolMarshaller.marshall(faqSummary.getFileFormat(), FILEFORMAT_BINDING);
+            protocolMarshaller.marshall(faqSummary.getLanguageCode(), LANGUAGECODE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

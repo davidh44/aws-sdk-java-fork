@@ -66,6 +66,54 @@ public class DescribeBackupVaultResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      */
     private Long numberOfRecoveryPoints;
+    /**
+     * <p>
+     * A Boolean that indicates whether Backup Vault Lock is currently protecting the backup vault. <code>True</code>
+     * means that Vault Lock causes delete or update operations on the recovery points stored in the vault to fail.
+     * </p>
+     */
+    private Boolean locked;
+    /**
+     * <p>
+     * The Backup Vault Lock setting that specifies the minimum retention period that the vault retains its recovery
+     * points. If this parameter is not specified, Vault Lock does not enforce a minimum retention period.
+     * </p>
+     * <p>
+     * If specified, any backup or copy job to the vault must have a lifecycle policy with a retention period equal to
+     * or longer than the minimum retention period. If the job's retention period is shorter than that minimum retention
+     * period, then the vault fails the backup or copy job, and you should either modify your lifecycle settings or use
+     * a different vault. Recovery points already stored in the vault prior to Vault Lock are not affected.
+     * </p>
+     */
+    private Long minRetentionDays;
+    /**
+     * <p>
+     * The Backup Vault Lock setting that specifies the maximum retention period that the vault retains its recovery
+     * points. If this parameter is not specified, Vault Lock does not enforce a maximum retention period on the
+     * recovery points in the vault (allowing indefinite storage).
+     * </p>
+     * <p>
+     * If specified, any backup or copy job to the vault must have a lifecycle policy with a retention period equal to
+     * or shorter than the maximum retention period. If the job's retention period is longer than that maximum retention
+     * period, then the vault fails the backup or copy job, and you should either modify your lifecycle settings or use
+     * a different vault. Recovery points already stored in the vault prior to Vault Lock are not affected.
+     * </p>
+     */
+    private Long maxRetentionDays;
+    /**
+     * <p>
+     * The date and time when Backup Vault Lock configuration cannot be changed or deleted.
+     * </p>
+     * <p>
+     * If you applied Vault Lock to your vault without specifying a lock date, you can change any of your Vault Lock
+     * settings, or delete Vault Lock from the vault entirely, at any time.
+     * </p>
+     * <p>
+     * This value is in Unix format, Coordinated Universal Time (UTC), and accurate to milliseconds. For example, the
+     * value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.
+     * </p>
+     */
+    private java.util.Date lockDate;
 
     /**
      * <p>
@@ -350,6 +398,328 @@ public class DescribeBackupVaultResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
+     * <p>
+     * A Boolean that indicates whether Backup Vault Lock is currently protecting the backup vault. <code>True</code>
+     * means that Vault Lock causes delete or update operations on the recovery points stored in the vault to fail.
+     * </p>
+     * 
+     * @param locked
+     *        A Boolean that indicates whether Backup Vault Lock is currently protecting the backup vault.
+     *        <code>True</code> means that Vault Lock causes delete or update operations on the recovery points stored
+     *        in the vault to fail.
+     */
+
+    public void setLocked(Boolean locked) {
+        this.locked = locked;
+    }
+
+    /**
+     * <p>
+     * A Boolean that indicates whether Backup Vault Lock is currently protecting the backup vault. <code>True</code>
+     * means that Vault Lock causes delete or update operations on the recovery points stored in the vault to fail.
+     * </p>
+     * 
+     * @return A Boolean that indicates whether Backup Vault Lock is currently protecting the backup vault.
+     *         <code>True</code> means that Vault Lock causes delete or update operations on the recovery points stored
+     *         in the vault to fail.
+     */
+
+    public Boolean getLocked() {
+        return this.locked;
+    }
+
+    /**
+     * <p>
+     * A Boolean that indicates whether Backup Vault Lock is currently protecting the backup vault. <code>True</code>
+     * means that Vault Lock causes delete or update operations on the recovery points stored in the vault to fail.
+     * </p>
+     * 
+     * @param locked
+     *        A Boolean that indicates whether Backup Vault Lock is currently protecting the backup vault.
+     *        <code>True</code> means that Vault Lock causes delete or update operations on the recovery points stored
+     *        in the vault to fail.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeBackupVaultResult withLocked(Boolean locked) {
+        setLocked(locked);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A Boolean that indicates whether Backup Vault Lock is currently protecting the backup vault. <code>True</code>
+     * means that Vault Lock causes delete or update operations on the recovery points stored in the vault to fail.
+     * </p>
+     * 
+     * @return A Boolean that indicates whether Backup Vault Lock is currently protecting the backup vault.
+     *         <code>True</code> means that Vault Lock causes delete or update operations on the recovery points stored
+     *         in the vault to fail.
+     */
+
+    public Boolean isLocked() {
+        return this.locked;
+    }
+
+    /**
+     * <p>
+     * The Backup Vault Lock setting that specifies the minimum retention period that the vault retains its recovery
+     * points. If this parameter is not specified, Vault Lock does not enforce a minimum retention period.
+     * </p>
+     * <p>
+     * If specified, any backup or copy job to the vault must have a lifecycle policy with a retention period equal to
+     * or longer than the minimum retention period. If the job's retention period is shorter than that minimum retention
+     * period, then the vault fails the backup or copy job, and you should either modify your lifecycle settings or use
+     * a different vault. Recovery points already stored in the vault prior to Vault Lock are not affected.
+     * </p>
+     * 
+     * @param minRetentionDays
+     *        The Backup Vault Lock setting that specifies the minimum retention period that the vault retains its
+     *        recovery points. If this parameter is not specified, Vault Lock does not enforce a minimum retention
+     *        period.</p>
+     *        <p>
+     *        If specified, any backup or copy job to the vault must have a lifecycle policy with a retention period
+     *        equal to or longer than the minimum retention period. If the job's retention period is shorter than that
+     *        minimum retention period, then the vault fails the backup or copy job, and you should either modify your
+     *        lifecycle settings or use a different vault. Recovery points already stored in the vault prior to Vault
+     *        Lock are not affected.
+     */
+
+    public void setMinRetentionDays(Long minRetentionDays) {
+        this.minRetentionDays = minRetentionDays;
+    }
+
+    /**
+     * <p>
+     * The Backup Vault Lock setting that specifies the minimum retention period that the vault retains its recovery
+     * points. If this parameter is not specified, Vault Lock does not enforce a minimum retention period.
+     * </p>
+     * <p>
+     * If specified, any backup or copy job to the vault must have a lifecycle policy with a retention period equal to
+     * or longer than the minimum retention period. If the job's retention period is shorter than that minimum retention
+     * period, then the vault fails the backup or copy job, and you should either modify your lifecycle settings or use
+     * a different vault. Recovery points already stored in the vault prior to Vault Lock are not affected.
+     * </p>
+     * 
+     * @return The Backup Vault Lock setting that specifies the minimum retention period that the vault retains its
+     *         recovery points. If this parameter is not specified, Vault Lock does not enforce a minimum retention
+     *         period.</p>
+     *         <p>
+     *         If specified, any backup or copy job to the vault must have a lifecycle policy with a retention period
+     *         equal to or longer than the minimum retention period. If the job's retention period is shorter than that
+     *         minimum retention period, then the vault fails the backup or copy job, and you should either modify your
+     *         lifecycle settings or use a different vault. Recovery points already stored in the vault prior to Vault
+     *         Lock are not affected.
+     */
+
+    public Long getMinRetentionDays() {
+        return this.minRetentionDays;
+    }
+
+    /**
+     * <p>
+     * The Backup Vault Lock setting that specifies the minimum retention period that the vault retains its recovery
+     * points. If this parameter is not specified, Vault Lock does not enforce a minimum retention period.
+     * </p>
+     * <p>
+     * If specified, any backup or copy job to the vault must have a lifecycle policy with a retention period equal to
+     * or longer than the minimum retention period. If the job's retention period is shorter than that minimum retention
+     * period, then the vault fails the backup or copy job, and you should either modify your lifecycle settings or use
+     * a different vault. Recovery points already stored in the vault prior to Vault Lock are not affected.
+     * </p>
+     * 
+     * @param minRetentionDays
+     *        The Backup Vault Lock setting that specifies the minimum retention period that the vault retains its
+     *        recovery points. If this parameter is not specified, Vault Lock does not enforce a minimum retention
+     *        period.</p>
+     *        <p>
+     *        If specified, any backup or copy job to the vault must have a lifecycle policy with a retention period
+     *        equal to or longer than the minimum retention period. If the job's retention period is shorter than that
+     *        minimum retention period, then the vault fails the backup or copy job, and you should either modify your
+     *        lifecycle settings or use a different vault. Recovery points already stored in the vault prior to Vault
+     *        Lock are not affected.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeBackupVaultResult withMinRetentionDays(Long minRetentionDays) {
+        setMinRetentionDays(minRetentionDays);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Backup Vault Lock setting that specifies the maximum retention period that the vault retains its recovery
+     * points. If this parameter is not specified, Vault Lock does not enforce a maximum retention period on the
+     * recovery points in the vault (allowing indefinite storage).
+     * </p>
+     * <p>
+     * If specified, any backup or copy job to the vault must have a lifecycle policy with a retention period equal to
+     * or shorter than the maximum retention period. If the job's retention period is longer than that maximum retention
+     * period, then the vault fails the backup or copy job, and you should either modify your lifecycle settings or use
+     * a different vault. Recovery points already stored in the vault prior to Vault Lock are not affected.
+     * </p>
+     * 
+     * @param maxRetentionDays
+     *        The Backup Vault Lock setting that specifies the maximum retention period that the vault retains its
+     *        recovery points. If this parameter is not specified, Vault Lock does not enforce a maximum retention
+     *        period on the recovery points in the vault (allowing indefinite storage).</p>
+     *        <p>
+     *        If specified, any backup or copy job to the vault must have a lifecycle policy with a retention period
+     *        equal to or shorter than the maximum retention period. If the job's retention period is longer than that
+     *        maximum retention period, then the vault fails the backup or copy job, and you should either modify your
+     *        lifecycle settings or use a different vault. Recovery points already stored in the vault prior to Vault
+     *        Lock are not affected.
+     */
+
+    public void setMaxRetentionDays(Long maxRetentionDays) {
+        this.maxRetentionDays = maxRetentionDays;
+    }
+
+    /**
+     * <p>
+     * The Backup Vault Lock setting that specifies the maximum retention period that the vault retains its recovery
+     * points. If this parameter is not specified, Vault Lock does not enforce a maximum retention period on the
+     * recovery points in the vault (allowing indefinite storage).
+     * </p>
+     * <p>
+     * If specified, any backup or copy job to the vault must have a lifecycle policy with a retention period equal to
+     * or shorter than the maximum retention period. If the job's retention period is longer than that maximum retention
+     * period, then the vault fails the backup or copy job, and you should either modify your lifecycle settings or use
+     * a different vault. Recovery points already stored in the vault prior to Vault Lock are not affected.
+     * </p>
+     * 
+     * @return The Backup Vault Lock setting that specifies the maximum retention period that the vault retains its
+     *         recovery points. If this parameter is not specified, Vault Lock does not enforce a maximum retention
+     *         period on the recovery points in the vault (allowing indefinite storage).</p>
+     *         <p>
+     *         If specified, any backup or copy job to the vault must have a lifecycle policy with a retention period
+     *         equal to or shorter than the maximum retention period. If the job's retention period is longer than that
+     *         maximum retention period, then the vault fails the backup or copy job, and you should either modify your
+     *         lifecycle settings or use a different vault. Recovery points already stored in the vault prior to Vault
+     *         Lock are not affected.
+     */
+
+    public Long getMaxRetentionDays() {
+        return this.maxRetentionDays;
+    }
+
+    /**
+     * <p>
+     * The Backup Vault Lock setting that specifies the maximum retention period that the vault retains its recovery
+     * points. If this parameter is not specified, Vault Lock does not enforce a maximum retention period on the
+     * recovery points in the vault (allowing indefinite storage).
+     * </p>
+     * <p>
+     * If specified, any backup or copy job to the vault must have a lifecycle policy with a retention period equal to
+     * or shorter than the maximum retention period. If the job's retention period is longer than that maximum retention
+     * period, then the vault fails the backup or copy job, and you should either modify your lifecycle settings or use
+     * a different vault. Recovery points already stored in the vault prior to Vault Lock are not affected.
+     * </p>
+     * 
+     * @param maxRetentionDays
+     *        The Backup Vault Lock setting that specifies the maximum retention period that the vault retains its
+     *        recovery points. If this parameter is not specified, Vault Lock does not enforce a maximum retention
+     *        period on the recovery points in the vault (allowing indefinite storage).</p>
+     *        <p>
+     *        If specified, any backup or copy job to the vault must have a lifecycle policy with a retention period
+     *        equal to or shorter than the maximum retention period. If the job's retention period is longer than that
+     *        maximum retention period, then the vault fails the backup or copy job, and you should either modify your
+     *        lifecycle settings or use a different vault. Recovery points already stored in the vault prior to Vault
+     *        Lock are not affected.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeBackupVaultResult withMaxRetentionDays(Long maxRetentionDays) {
+        setMaxRetentionDays(maxRetentionDays);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The date and time when Backup Vault Lock configuration cannot be changed or deleted.
+     * </p>
+     * <p>
+     * If you applied Vault Lock to your vault without specifying a lock date, you can change any of your Vault Lock
+     * settings, or delete Vault Lock from the vault entirely, at any time.
+     * </p>
+     * <p>
+     * This value is in Unix format, Coordinated Universal Time (UTC), and accurate to milliseconds. For example, the
+     * value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.
+     * </p>
+     * 
+     * @param lockDate
+     *        The date and time when Backup Vault Lock configuration cannot be changed or deleted.</p>
+     *        <p>
+     *        If you applied Vault Lock to your vault without specifying a lock date, you can change any of your Vault
+     *        Lock settings, or delete Vault Lock from the vault entirely, at any time.
+     *        </p>
+     *        <p>
+     *        This value is in Unix format, Coordinated Universal Time (UTC), and accurate to milliseconds. For example,
+     *        the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.
+     */
+
+    public void setLockDate(java.util.Date lockDate) {
+        this.lockDate = lockDate;
+    }
+
+    /**
+     * <p>
+     * The date and time when Backup Vault Lock configuration cannot be changed or deleted.
+     * </p>
+     * <p>
+     * If you applied Vault Lock to your vault without specifying a lock date, you can change any of your Vault Lock
+     * settings, or delete Vault Lock from the vault entirely, at any time.
+     * </p>
+     * <p>
+     * This value is in Unix format, Coordinated Universal Time (UTC), and accurate to milliseconds. For example, the
+     * value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.
+     * </p>
+     * 
+     * @return The date and time when Backup Vault Lock configuration cannot be changed or deleted.</p>
+     *         <p>
+     *         If you applied Vault Lock to your vault without specifying a lock date, you can change any of your Vault
+     *         Lock settings, or delete Vault Lock from the vault entirely, at any time.
+     *         </p>
+     *         <p>
+     *         This value is in Unix format, Coordinated Universal Time (UTC), and accurate to milliseconds. For
+     *         example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.
+     */
+
+    public java.util.Date getLockDate() {
+        return this.lockDate;
+    }
+
+    /**
+     * <p>
+     * The date and time when Backup Vault Lock configuration cannot be changed or deleted.
+     * </p>
+     * <p>
+     * If you applied Vault Lock to your vault without specifying a lock date, you can change any of your Vault Lock
+     * settings, or delete Vault Lock from the vault entirely, at any time.
+     * </p>
+     * <p>
+     * This value is in Unix format, Coordinated Universal Time (UTC), and accurate to milliseconds. For example, the
+     * value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.
+     * </p>
+     * 
+     * @param lockDate
+     *        The date and time when Backup Vault Lock configuration cannot be changed or deleted.</p>
+     *        <p>
+     *        If you applied Vault Lock to your vault without specifying a lock date, you can change any of your Vault
+     *        Lock settings, or delete Vault Lock from the vault entirely, at any time.
+     *        </p>
+     *        <p>
+     *        This value is in Unix format, Coordinated Universal Time (UTC), and accurate to milliseconds. For example,
+     *        the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeBackupVaultResult withLockDate(java.util.Date lockDate) {
+        setLockDate(lockDate);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -372,7 +742,15 @@ public class DescribeBackupVaultResult extends com.amazonaws.AmazonWebServiceRes
         if (getCreatorRequestId() != null)
             sb.append("CreatorRequestId: ").append(getCreatorRequestId()).append(",");
         if (getNumberOfRecoveryPoints() != null)
-            sb.append("NumberOfRecoveryPoints: ").append(getNumberOfRecoveryPoints());
+            sb.append("NumberOfRecoveryPoints: ").append(getNumberOfRecoveryPoints()).append(",");
+        if (getLocked() != null)
+            sb.append("Locked: ").append(getLocked()).append(",");
+        if (getMinRetentionDays() != null)
+            sb.append("MinRetentionDays: ").append(getMinRetentionDays()).append(",");
+        if (getMaxRetentionDays() != null)
+            sb.append("MaxRetentionDays: ").append(getMaxRetentionDays()).append(",");
+        if (getLockDate() != null)
+            sb.append("LockDate: ").append(getLockDate());
         sb.append("}");
         return sb.toString();
     }
@@ -411,6 +789,22 @@ public class DescribeBackupVaultResult extends com.amazonaws.AmazonWebServiceRes
             return false;
         if (other.getNumberOfRecoveryPoints() != null && other.getNumberOfRecoveryPoints().equals(this.getNumberOfRecoveryPoints()) == false)
             return false;
+        if (other.getLocked() == null ^ this.getLocked() == null)
+            return false;
+        if (other.getLocked() != null && other.getLocked().equals(this.getLocked()) == false)
+            return false;
+        if (other.getMinRetentionDays() == null ^ this.getMinRetentionDays() == null)
+            return false;
+        if (other.getMinRetentionDays() != null && other.getMinRetentionDays().equals(this.getMinRetentionDays()) == false)
+            return false;
+        if (other.getMaxRetentionDays() == null ^ this.getMaxRetentionDays() == null)
+            return false;
+        if (other.getMaxRetentionDays() != null && other.getMaxRetentionDays().equals(this.getMaxRetentionDays()) == false)
+            return false;
+        if (other.getLockDate() == null ^ this.getLockDate() == null)
+            return false;
+        if (other.getLockDate() != null && other.getLockDate().equals(this.getLockDate()) == false)
+            return false;
         return true;
     }
 
@@ -425,6 +819,10 @@ public class DescribeBackupVaultResult extends com.amazonaws.AmazonWebServiceRes
         hashCode = prime * hashCode + ((getCreationDate() == null) ? 0 : getCreationDate().hashCode());
         hashCode = prime * hashCode + ((getCreatorRequestId() == null) ? 0 : getCreatorRequestId().hashCode());
         hashCode = prime * hashCode + ((getNumberOfRecoveryPoints() == null) ? 0 : getNumberOfRecoveryPoints().hashCode());
+        hashCode = prime * hashCode + ((getLocked() == null) ? 0 : getLocked().hashCode());
+        hashCode = prime * hashCode + ((getMinRetentionDays() == null) ? 0 : getMinRetentionDays().hashCode());
+        hashCode = prime * hashCode + ((getMaxRetentionDays() == null) ? 0 : getMaxRetentionDays().hashCode());
+        hashCode = prime * hashCode + ((getLockDate() == null) ? 0 : getLockDate().hashCode());
         return hashCode;
     }
 

@@ -72,6 +72,22 @@ public class BackupVaultListMemberJsonUnmarshaller implements Unmarshaller<Backu
                     context.nextToken();
                     backupVaultListMember.setNumberOfRecoveryPoints(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
+                if (context.testExpression("Locked", targetDepth)) {
+                    context.nextToken();
+                    backupVaultListMember.setLocked(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("MinRetentionDays", targetDepth)) {
+                    context.nextToken();
+                    backupVaultListMember.setMinRetentionDays(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
+                if (context.testExpression("MaxRetentionDays", targetDepth)) {
+                    context.nextToken();
+                    backupVaultListMember.setMaxRetentionDays(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
+                if (context.testExpression("LockDate", targetDepth)) {
+                    context.nextToken();
+                    backupVaultListMember.setLockDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

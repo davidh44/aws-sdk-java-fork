@@ -41,6 +41,8 @@ public class UpdateDataSourceRequestMarshaller {
             .marshallLocationName("Schedule").build();
     private static final MarshallingInfo<String> ROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("RoleArn").build();
+    private static final MarshallingInfo<String> LANGUAGECODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LanguageCode").build();
 
     private static final UpdateDataSourceRequestMarshaller instance = new UpdateDataSourceRequestMarshaller();
 
@@ -65,6 +67,7 @@ public class UpdateDataSourceRequestMarshaller {
             protocolMarshaller.marshall(updateDataSourceRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(updateDataSourceRequest.getSchedule(), SCHEDULE_BINDING);
             protocolMarshaller.marshall(updateDataSourceRequest.getRoleArn(), ROLEARN_BINDING);
+            protocolMarshaller.marshall(updateDataSourceRequest.getLanguageCode(), LANGUAGECODE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

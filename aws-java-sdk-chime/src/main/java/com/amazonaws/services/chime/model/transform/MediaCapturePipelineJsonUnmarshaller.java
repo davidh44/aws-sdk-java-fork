@@ -80,6 +80,10 @@ public class MediaCapturePipelineJsonUnmarshaller implements Unmarshaller<MediaC
                     context.nextToken();
                     mediaCapturePipeline.setUpdatedTimestamp(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
+                if (context.testExpression("ChimeSdkMeetingConfiguration", targetDepth)) {
+                    context.nextToken();
+                    mediaCapturePipeline.setChimeSdkMeetingConfiguration(ChimeSdkMeetingConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

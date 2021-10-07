@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A media capture pipeline object. A string consisting of an ID, source type, a source ARN, a sink type, and a sink
- * ARN.
+ * A media capture pipeline object consisting of an ID, source type, source ARN, a sink type, a sink ARN, and a
+ * configuration object.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/MediaCapturePipeline" target="_top">AWS API
@@ -77,6 +77,13 @@ public class MediaCapturePipeline implements Serializable, Cloneable, Structured
      * </p>
      */
     private java.util.Date updatedTimestamp;
+    /**
+     * <p>
+     * The configuration for a specified media capture pipeline. <code>SourceType</code> must be
+     * <code>ChimeSdkMeeting</code>.
+     * </p>
+     */
+    private ChimeSdkMeetingConfiguration chimeSdkMeetingConfiguration;
 
     /**
      * <p>
@@ -456,6 +463,52 @@ public class MediaCapturePipeline implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The configuration for a specified media capture pipeline. <code>SourceType</code> must be
+     * <code>ChimeSdkMeeting</code>.
+     * </p>
+     * 
+     * @param chimeSdkMeetingConfiguration
+     *        The configuration for a specified media capture pipeline. <code>SourceType</code> must be
+     *        <code>ChimeSdkMeeting</code>.
+     */
+
+    public void setChimeSdkMeetingConfiguration(ChimeSdkMeetingConfiguration chimeSdkMeetingConfiguration) {
+        this.chimeSdkMeetingConfiguration = chimeSdkMeetingConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration for a specified media capture pipeline. <code>SourceType</code> must be
+     * <code>ChimeSdkMeeting</code>.
+     * </p>
+     * 
+     * @return The configuration for a specified media capture pipeline. <code>SourceType</code> must be
+     *         <code>ChimeSdkMeeting</code>.
+     */
+
+    public ChimeSdkMeetingConfiguration getChimeSdkMeetingConfiguration() {
+        return this.chimeSdkMeetingConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration for a specified media capture pipeline. <code>SourceType</code> must be
+     * <code>ChimeSdkMeeting</code>.
+     * </p>
+     * 
+     * @param chimeSdkMeetingConfiguration
+     *        The configuration for a specified media capture pipeline. <code>SourceType</code> must be
+     *        <code>ChimeSdkMeeting</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MediaCapturePipeline withChimeSdkMeetingConfiguration(ChimeSdkMeetingConfiguration chimeSdkMeetingConfiguration) {
+        setChimeSdkMeetingConfiguration(chimeSdkMeetingConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -482,7 +535,9 @@ public class MediaCapturePipeline implements Serializable, Cloneable, Structured
         if (getCreatedTimestamp() != null)
             sb.append("CreatedTimestamp: ").append(getCreatedTimestamp()).append(",");
         if (getUpdatedTimestamp() != null)
-            sb.append("UpdatedTimestamp: ").append(getUpdatedTimestamp());
+            sb.append("UpdatedTimestamp: ").append(getUpdatedTimestamp()).append(",");
+        if (getChimeSdkMeetingConfiguration() != null)
+            sb.append("ChimeSdkMeetingConfiguration: ").append(getChimeSdkMeetingConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -529,6 +584,10 @@ public class MediaCapturePipeline implements Serializable, Cloneable, Structured
             return false;
         if (other.getUpdatedTimestamp() != null && other.getUpdatedTimestamp().equals(this.getUpdatedTimestamp()) == false)
             return false;
+        if (other.getChimeSdkMeetingConfiguration() == null ^ this.getChimeSdkMeetingConfiguration() == null)
+            return false;
+        if (other.getChimeSdkMeetingConfiguration() != null && other.getChimeSdkMeetingConfiguration().equals(this.getChimeSdkMeetingConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -545,6 +604,7 @@ public class MediaCapturePipeline implements Serializable, Cloneable, Structured
         hashCode = prime * hashCode + ((getSinkArn() == null) ? 0 : getSinkArn().hashCode());
         hashCode = prime * hashCode + ((getCreatedTimestamp() == null) ? 0 : getCreatedTimestamp().hashCode());
         hashCode = prime * hashCode + ((getUpdatedTimestamp() == null) ? 0 : getUpdatedTimestamp().hashCode());
+        hashCode = prime * hashCode + ((getChimeSdkMeetingConfiguration() == null) ? 0 : getChimeSdkMeetingConfiguration().hashCode());
         return hashCode;
     }
 

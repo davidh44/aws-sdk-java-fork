@@ -58,6 +58,8 @@ public class DestinationDescription implements Serializable, Cloneable, Structur
      * </p>
      */
     private ElasticsearchDestinationDescription elasticsearchDestinationDescription;
+
+    private AmazonopensearchserviceDestinationDescription amazonopensearchserviceDestinationDescription;
     /**
      * <p>
      * The destination in Splunk.
@@ -272,6 +274,33 @@ public class DestinationDescription implements Serializable, Cloneable, Structur
     }
 
     /**
+     * @param amazonopensearchserviceDestinationDescription
+     */
+
+    public void setAmazonopensearchserviceDestinationDescription(AmazonopensearchserviceDestinationDescription amazonopensearchserviceDestinationDescription) {
+        this.amazonopensearchserviceDestinationDescription = amazonopensearchserviceDestinationDescription;
+    }
+
+    /**
+     * @return
+     */
+
+    public AmazonopensearchserviceDestinationDescription getAmazonopensearchserviceDestinationDescription() {
+        return this.amazonopensearchserviceDestinationDescription;
+    }
+
+    /**
+     * @param amazonopensearchserviceDestinationDescription
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DestinationDescription withAmazonopensearchserviceDestinationDescription(
+            AmazonopensearchserviceDestinationDescription amazonopensearchserviceDestinationDescription) {
+        setAmazonopensearchserviceDestinationDescription(amazonopensearchserviceDestinationDescription);
+        return this;
+    }
+
+    /**
      * <p>
      * The destination in Splunk.
      * </p>
@@ -373,6 +402,8 @@ public class DestinationDescription implements Serializable, Cloneable, Structur
             sb.append("RedshiftDestinationDescription: ").append(getRedshiftDestinationDescription()).append(",");
         if (getElasticsearchDestinationDescription() != null)
             sb.append("ElasticsearchDestinationDescription: ").append(getElasticsearchDestinationDescription()).append(",");
+        if (getAmazonopensearchserviceDestinationDescription() != null)
+            sb.append("AmazonopensearchserviceDestinationDescription: ").append(getAmazonopensearchserviceDestinationDescription()).append(",");
         if (getSplunkDestinationDescription() != null)
             sb.append("SplunkDestinationDescription: ").append(getSplunkDestinationDescription()).append(",");
         if (getHttpEndpointDestinationDescription() != null)
@@ -414,6 +445,11 @@ public class DestinationDescription implements Serializable, Cloneable, Structur
         if (other.getElasticsearchDestinationDescription() != null
                 && other.getElasticsearchDestinationDescription().equals(this.getElasticsearchDestinationDescription()) == false)
             return false;
+        if (other.getAmazonopensearchserviceDestinationDescription() == null ^ this.getAmazonopensearchserviceDestinationDescription() == null)
+            return false;
+        if (other.getAmazonopensearchserviceDestinationDescription() != null
+                && other.getAmazonopensearchserviceDestinationDescription().equals(this.getAmazonopensearchserviceDestinationDescription()) == false)
+            return false;
         if (other.getSplunkDestinationDescription() == null ^ this.getSplunkDestinationDescription() == null)
             return false;
         if (other.getSplunkDestinationDescription() != null && other.getSplunkDestinationDescription().equals(this.getSplunkDestinationDescription()) == false)
@@ -436,6 +472,8 @@ public class DestinationDescription implements Serializable, Cloneable, Structur
         hashCode = prime * hashCode + ((getExtendedS3DestinationDescription() == null) ? 0 : getExtendedS3DestinationDescription().hashCode());
         hashCode = prime * hashCode + ((getRedshiftDestinationDescription() == null) ? 0 : getRedshiftDestinationDescription().hashCode());
         hashCode = prime * hashCode + ((getElasticsearchDestinationDescription() == null) ? 0 : getElasticsearchDestinationDescription().hashCode());
+        hashCode = prime * hashCode
+                + ((getAmazonopensearchserviceDestinationDescription() == null) ? 0 : getAmazonopensearchserviceDestinationDescription().hashCode());
         hashCode = prime * hashCode + ((getSplunkDestinationDescription() == null) ? 0 : getSplunkDestinationDescription().hashCode());
         hashCode = prime * hashCode + ((getHttpEndpointDestinationDescription() == null) ? 0 : getHttpEndpointDestinationDescription().hashCode());
         return hashCode;

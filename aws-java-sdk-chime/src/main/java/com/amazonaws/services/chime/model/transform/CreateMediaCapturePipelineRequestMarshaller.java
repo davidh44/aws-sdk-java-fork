@@ -40,6 +40,8 @@ public class CreateMediaCapturePipelineRequestMarshaller {
     private static final MarshallingInfo<String> CLIENTREQUESTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ClientRequestToken")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
+    private static final MarshallingInfo<StructuredPojo> CHIMESDKMEETINGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ChimeSdkMeetingConfiguration").build();
 
     private static final CreateMediaCapturePipelineRequestMarshaller instance = new CreateMediaCapturePipelineRequestMarshaller();
 
@@ -62,6 +64,7 @@ public class CreateMediaCapturePipelineRequestMarshaller {
             protocolMarshaller.marshall(createMediaCapturePipelineRequest.getSinkType(), SINKTYPE_BINDING);
             protocolMarshaller.marshall(createMediaCapturePipelineRequest.getSinkArn(), SINKARN_BINDING);
             protocolMarshaller.marshall(createMediaCapturePipelineRequest.getClientRequestToken(), CLIENTREQUESTTOKEN_BINDING);
+            protocolMarshaller.marshall(createMediaCapturePipelineRequest.getChimeSdkMeetingConfiguration(), CHIMESDKMEETINGCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

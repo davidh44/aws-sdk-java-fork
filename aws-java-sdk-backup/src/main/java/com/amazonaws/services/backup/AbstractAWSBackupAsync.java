@@ -144,6 +144,21 @@ public class AbstractAWSBackupAsync extends AbstractAWSBackup implements AWSBack
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteBackupVaultLockConfigurationResult> deleteBackupVaultLockConfigurationAsync(
+            DeleteBackupVaultLockConfigurationRequest request) {
+
+        return deleteBackupVaultLockConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteBackupVaultLockConfigurationResult> deleteBackupVaultLockConfigurationAsync(
+            DeleteBackupVaultLockConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteBackupVaultLockConfigurationRequest, DeleteBackupVaultLockConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteBackupVaultNotificationsResult> deleteBackupVaultNotificationsAsync(DeleteBackupVaultNotificationsRequest request) {
 
         return deleteBackupVaultNotificationsAsync(request, null);
@@ -676,6 +691,21 @@ public class AbstractAWSBackupAsync extends AbstractAWSBackup implements AWSBack
     @Override
     public java.util.concurrent.Future<PutBackupVaultAccessPolicyResult> putBackupVaultAccessPolicyAsync(PutBackupVaultAccessPolicyRequest request,
             com.amazonaws.handlers.AsyncHandler<PutBackupVaultAccessPolicyRequest, PutBackupVaultAccessPolicyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutBackupVaultLockConfigurationResult> putBackupVaultLockConfigurationAsync(
+            PutBackupVaultLockConfigurationRequest request) {
+
+        return putBackupVaultLockConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutBackupVaultLockConfigurationResult> putBackupVaultLockConfigurationAsync(
+            PutBackupVaultLockConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<PutBackupVaultLockConfigurationRequest, PutBackupVaultLockConfigurationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

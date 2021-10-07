@@ -39,6 +39,14 @@ public class BackupVaultListMemberMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreatorRequestId").build();
     private static final MarshallingInfo<Long> NUMBEROFRECOVERYPOINTS_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NumberOfRecoveryPoints").build();
+    private static final MarshallingInfo<Boolean> LOCKED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Locked").build();
+    private static final MarshallingInfo<Long> MINRETENTIONDAYS_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MinRetentionDays").build();
+    private static final MarshallingInfo<Long> MAXRETENTIONDAYS_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxRetentionDays").build();
+    private static final MarshallingInfo<java.util.Date> LOCKDATE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LockDate").timestampFormat("unixTimestamp").build();
 
     private static final BackupVaultListMemberMarshaller instance = new BackupVaultListMemberMarshaller();
 
@@ -62,6 +70,10 @@ public class BackupVaultListMemberMarshaller {
             protocolMarshaller.marshall(backupVaultListMember.getEncryptionKeyArn(), ENCRYPTIONKEYARN_BINDING);
             protocolMarshaller.marshall(backupVaultListMember.getCreatorRequestId(), CREATORREQUESTID_BINDING);
             protocolMarshaller.marshall(backupVaultListMember.getNumberOfRecoveryPoints(), NUMBEROFRECOVERYPOINTS_BINDING);
+            protocolMarshaller.marshall(backupVaultListMember.getLocked(), LOCKED_BINDING);
+            protocolMarshaller.marshall(backupVaultListMember.getMinRetentionDays(), MINRETENTIONDAYS_BINDING);
+            protocolMarshaller.marshall(backupVaultListMember.getMaxRetentionDays(), MAXRETENTIONDAYS_BINDING);
+            protocolMarshaller.marshall(backupVaultListMember.getLockDate(), LOCKDATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -72,7 +72,7 @@ public class MediaPlacement implements Serializable, Cloneable, StructuredPojo {
     private String turnControlUrl;
     /**
      * <p>
-     * The URL of the S3 bucket used to store the captured media.
+     * The event ingestion URL.
      * </p>
      */
     private String eventIngestionUrl;
@@ -359,11 +359,11 @@ public class MediaPlacement implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The URL of the S3 bucket used to store the captured media.
+     * The event ingestion URL.
      * </p>
      * 
      * @param eventIngestionUrl
-     *        The URL of the S3 bucket used to store the captured media.
+     *        The event ingestion URL.
      */
 
     public void setEventIngestionUrl(String eventIngestionUrl) {
@@ -372,10 +372,10 @@ public class MediaPlacement implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The URL of the S3 bucket used to store the captured media.
+     * The event ingestion URL.
      * </p>
      * 
-     * @return The URL of the S3 bucket used to store the captured media.
+     * @return The event ingestion URL.
      */
 
     public String getEventIngestionUrl() {
@@ -384,11 +384,11 @@ public class MediaPlacement implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The URL of the S3 bucket used to store the captured media.
+     * The event ingestion URL.
      * </p>
      * 
      * @param eventIngestionUrl
-     *        The URL of the S3 bucket used to store the captured media.
+     *        The event ingestion URL.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

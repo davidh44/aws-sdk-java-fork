@@ -37,6 +37,9 @@ public class DestinationDescriptionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RedshiftDestinationDescription").build();
     private static final MarshallingInfo<StructuredPojo> ELASTICSEARCHDESTINATIONDESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ElasticsearchDestinationDescription").build();
+    private static final MarshallingInfo<StructuredPojo> AMAZONOPENSEARCHSERVICEDESTINATIONDESCRIPTION_BINDING = MarshallingInfo
+            .builder(MarshallingType.STRUCTURED).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("AmazonopensearchserviceDestinationDescription").build();
     private static final MarshallingInfo<StructuredPojo> SPLUNKDESTINATIONDESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SplunkDestinationDescription").build();
     private static final MarshallingInfo<StructuredPojo> HTTPENDPOINTDESTINATIONDESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -63,6 +66,8 @@ public class DestinationDescriptionMarshaller {
             protocolMarshaller.marshall(destinationDescription.getExtendedS3DestinationDescription(), EXTENDEDS3DESTINATIONDESCRIPTION_BINDING);
             protocolMarshaller.marshall(destinationDescription.getRedshiftDestinationDescription(), REDSHIFTDESTINATIONDESCRIPTION_BINDING);
             protocolMarshaller.marshall(destinationDescription.getElasticsearchDestinationDescription(), ELASTICSEARCHDESTINATIONDESCRIPTION_BINDING);
+            protocolMarshaller.marshall(destinationDescription.getAmazonopensearchserviceDestinationDescription(),
+                    AMAZONOPENSEARCHSERVICEDESTINATIONDESCRIPTION_BINDING);
             protocolMarshaller.marshall(destinationDescription.getSplunkDestinationDescription(), SPLUNKDESTINATIONDESCRIPTION_BINDING);
             protocolMarshaller.marshall(destinationDescription.getHttpEndpointDestinationDescription(), HTTPENDPOINTDESTINATIONDESCRIPTION_BINDING);
         } catch (Exception e) {

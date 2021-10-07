@@ -64,6 +64,15 @@ public class FaqSummary implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String fileFormat;
+    /**
+     * <p>
+     * The code for a language. This shows a supported language for the FAQ document as part of the summary information
+     * for FAQs. English is supported by default. For more information on supported languages, including their codes,
+     * see <a href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding documents in languages
+     * other than English</a>.
+     * </p>
+     */
+    private String languageCode;
 
     /**
      * <p>
@@ -344,6 +353,67 @@ public class FaqSummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The code for a language. This shows a supported language for the FAQ document as part of the summary information
+     * for FAQs. English is supported by default. For more information on supported languages, including their codes,
+     * see <a href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding documents in languages
+     * other than English</a>.
+     * </p>
+     * 
+     * @param languageCode
+     *        The code for a language. This shows a supported language for the FAQ document as part of the summary
+     *        information for FAQs. English is supported by default. For more information on supported languages,
+     *        including their codes, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding documents in languages
+     *        other than English</a>.
+     */
+
+    public void setLanguageCode(String languageCode) {
+        this.languageCode = languageCode;
+    }
+
+    /**
+     * <p>
+     * The code for a language. This shows a supported language for the FAQ document as part of the summary information
+     * for FAQs. English is supported by default. For more information on supported languages, including their codes,
+     * see <a href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding documents in languages
+     * other than English</a>.
+     * </p>
+     * 
+     * @return The code for a language. This shows a supported language for the FAQ document as part of the summary
+     *         information for FAQs. English is supported by default. For more information on supported languages,
+     *         including their codes, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding documents in
+     *         languages other than English</a>.
+     */
+
+    public String getLanguageCode() {
+        return this.languageCode;
+    }
+
+    /**
+     * <p>
+     * The code for a language. This shows a supported language for the FAQ document as part of the summary information
+     * for FAQs. English is supported by default. For more information on supported languages, including their codes,
+     * see <a href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding documents in languages
+     * other than English</a>.
+     * </p>
+     * 
+     * @param languageCode
+     *        The code for a language. This shows a supported language for the FAQ document as part of the summary
+     *        information for FAQs. English is supported by default. For more information on supported languages,
+     *        including their codes, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding documents in languages
+     *        other than English</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FaqSummary withLanguageCode(String languageCode) {
+        setLanguageCode(languageCode);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -366,7 +436,9 @@ public class FaqSummary implements Serializable, Cloneable, StructuredPojo {
         if (getUpdatedAt() != null)
             sb.append("UpdatedAt: ").append(getUpdatedAt()).append(",");
         if (getFileFormat() != null)
-            sb.append("FileFormat: ").append(getFileFormat());
+            sb.append("FileFormat: ").append(getFileFormat()).append(",");
+        if (getLanguageCode() != null)
+            sb.append("LanguageCode: ").append(getLanguageCode());
         sb.append("}");
         return sb.toString();
     }
@@ -405,6 +477,10 @@ public class FaqSummary implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getFileFormat() != null && other.getFileFormat().equals(this.getFileFormat()) == false)
             return false;
+        if (other.getLanguageCode() == null ^ this.getLanguageCode() == null)
+            return false;
+        if (other.getLanguageCode() != null && other.getLanguageCode().equals(this.getLanguageCode()) == false)
+            return false;
         return true;
     }
 
@@ -419,6 +495,7 @@ public class FaqSummary implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
         hashCode = prime * hashCode + ((getFileFormat() == null) ? 0 : getFileFormat().hashCode());
+        hashCode = prime * hashCode + ((getLanguageCode() == null) ? 0 : getLanguageCode().hashCode());
         return hashCode;
     }
 

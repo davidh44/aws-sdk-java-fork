@@ -446,6 +446,53 @@ public interface AWSBackupAsync extends AWSBackup {
 
     /**
      * <p>
+     * Deletes Backup Vault Lock from a backup vault specified by a backup vault name.
+     * </p>
+     * <p>
+     * If the Vault Lock configuration is immutable, then you cannot delete Vault Lock using API operations, and you
+     * will receive an <code>InvalidRequestException</code> if you attempt to do so. For more information, see <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/vault-lock.html">Vault Lock</a> in the <i>Backup
+     * Developer Guide</i>.
+     * </p>
+     * 
+     * @param deleteBackupVaultLockConfigurationRequest
+     * @return A Java Future containing the result of the DeleteBackupVaultLockConfiguration operation returned by the
+     *         service.
+     * @sample AWSBackupAsync.DeleteBackupVaultLockConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/DeleteBackupVaultLockConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteBackupVaultLockConfigurationResult> deleteBackupVaultLockConfigurationAsync(
+            DeleteBackupVaultLockConfigurationRequest deleteBackupVaultLockConfigurationRequest);
+
+    /**
+     * <p>
+     * Deletes Backup Vault Lock from a backup vault specified by a backup vault name.
+     * </p>
+     * <p>
+     * If the Vault Lock configuration is immutable, then you cannot delete Vault Lock using API operations, and you
+     * will receive an <code>InvalidRequestException</code> if you attempt to do so. For more information, see <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/vault-lock.html">Vault Lock</a> in the <i>Backup
+     * Developer Guide</i>.
+     * </p>
+     * 
+     * @param deleteBackupVaultLockConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteBackupVaultLockConfiguration operation returned by the
+     *         service.
+     * @sample AWSBackupAsyncHandler.DeleteBackupVaultLockConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/DeleteBackupVaultLockConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteBackupVaultLockConfigurationResult> deleteBackupVaultLockConfigurationAsync(
+            DeleteBackupVaultLockConfigurationRequest deleteBackupVaultLockConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteBackupVaultLockConfigurationRequest, DeleteBackupVaultLockConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes event notifications for the specified backup vault.
      * </p>
      * 
@@ -1818,6 +1865,47 @@ public interface AWSBackupAsync extends AWSBackup {
     java.util.concurrent.Future<PutBackupVaultAccessPolicyResult> putBackupVaultAccessPolicyAsync(
             PutBackupVaultAccessPolicyRequest putBackupVaultAccessPolicyRequest,
             com.amazonaws.handlers.AsyncHandler<PutBackupVaultAccessPolicyRequest, PutBackupVaultAccessPolicyResult> asyncHandler);
+
+    /**
+     * <p>
+     * Applies Backup Vault Lock to a backup vault, preventing attempts to delete any recovery point stored in or
+     * created in a backup vault. Vault Lock also prevents attempts to update the lifecycle policy that controls the
+     * retention period of any recovery point currently stored in a backup vault. If specified, Vault Lock enforces a
+     * minimum and maximum retention period for future backup and copy jobs that target a backup vault.
+     * </p>
+     * 
+     * @param putBackupVaultLockConfigurationRequest
+     * @return A Java Future containing the result of the PutBackupVaultLockConfiguration operation returned by the
+     *         service.
+     * @sample AWSBackupAsync.PutBackupVaultLockConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/PutBackupVaultLockConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutBackupVaultLockConfigurationResult> putBackupVaultLockConfigurationAsync(
+            PutBackupVaultLockConfigurationRequest putBackupVaultLockConfigurationRequest);
+
+    /**
+     * <p>
+     * Applies Backup Vault Lock to a backup vault, preventing attempts to delete any recovery point stored in or
+     * created in a backup vault. Vault Lock also prevents attempts to update the lifecycle policy that controls the
+     * retention period of any recovery point currently stored in a backup vault. If specified, Vault Lock enforces a
+     * minimum and maximum retention period for future backup and copy jobs that target a backup vault.
+     * </p>
+     * 
+     * @param putBackupVaultLockConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PutBackupVaultLockConfiguration operation returned by the
+     *         service.
+     * @sample AWSBackupAsyncHandler.PutBackupVaultLockConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/PutBackupVaultLockConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutBackupVaultLockConfigurationResult> putBackupVaultLockConfigurationAsync(
+            PutBackupVaultLockConfigurationRequest putBackupVaultLockConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<PutBackupVaultLockConfigurationRequest, PutBackupVaultLockConfigurationResult> asyncHandler);
 
     /**
      * <p>
