@@ -46,7 +46,8 @@ public class ModifyFpgaImageAttributeRequest extends AmazonWebServiceRequest imp
     private String operationType;
     /**
      * <p>
-     * The AWS account IDs. This parameter is valid only when modifying the <code>loadPermission</code> attribute.
+     * The Amazon Web Services account IDs. This parameter is valid only when modifying the <code>loadPermission</code>
+     * attribute.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> userIds;
@@ -242,11 +243,12 @@ public class ModifyFpgaImageAttributeRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The AWS account IDs. This parameter is valid only when modifying the <code>loadPermission</code> attribute.
+     * The Amazon Web Services account IDs. This parameter is valid only when modifying the <code>loadPermission</code>
+     * attribute.
      * </p>
      * 
-     * @return The AWS account IDs. This parameter is valid only when modifying the <code>loadPermission</code>
-     *         attribute.
+     * @return The Amazon Web Services account IDs. This parameter is valid only when modifying the
+     *         <code>loadPermission</code> attribute.
      */
 
     public java.util.List<String> getUserIds() {
@@ -258,12 +260,13 @@ public class ModifyFpgaImageAttributeRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The AWS account IDs. This parameter is valid only when modifying the <code>loadPermission</code> attribute.
+     * The Amazon Web Services account IDs. This parameter is valid only when modifying the <code>loadPermission</code>
+     * attribute.
      * </p>
      * 
      * @param userIds
-     *        The AWS account IDs. This parameter is valid only when modifying the <code>loadPermission</code>
-     *        attribute.
+     *        The Amazon Web Services account IDs. This parameter is valid only when modifying the
+     *        <code>loadPermission</code> attribute.
      */
 
     public void setUserIds(java.util.Collection<String> userIds) {
@@ -277,7 +280,8 @@ public class ModifyFpgaImageAttributeRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The AWS account IDs. This parameter is valid only when modifying the <code>loadPermission</code> attribute.
+     * The Amazon Web Services account IDs. This parameter is valid only when modifying the <code>loadPermission</code>
+     * attribute.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -286,8 +290,8 @@ public class ModifyFpgaImageAttributeRequest extends AmazonWebServiceRequest imp
      * </p>
      * 
      * @param userIds
-     *        The AWS account IDs. This parameter is valid only when modifying the <code>loadPermission</code>
-     *        attribute.
+     *        The Amazon Web Services account IDs. This parameter is valid only when modifying the
+     *        <code>loadPermission</code> attribute.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -303,12 +307,13 @@ public class ModifyFpgaImageAttributeRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The AWS account IDs. This parameter is valid only when modifying the <code>loadPermission</code> attribute.
+     * The Amazon Web Services account IDs. This parameter is valid only when modifying the <code>loadPermission</code>
+     * attribute.
      * </p>
      * 
      * @param userIds
-     *        The AWS account IDs. This parameter is valid only when modifying the <code>loadPermission</code>
-     *        attribute.
+     *        The Amazon Web Services account IDs. This parameter is valid only when modifying the
+     *        <code>loadPermission</code> attribute.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

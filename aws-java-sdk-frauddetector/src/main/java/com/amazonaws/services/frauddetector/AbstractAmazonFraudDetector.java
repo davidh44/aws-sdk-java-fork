@@ -38,7 +38,17 @@ public class AbstractAmazonFraudDetector implements AmazonFraudDetector {
     }
 
     @Override
+    public CancelBatchImportJobResult cancelBatchImportJob(CancelBatchImportJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CancelBatchPredictionJobResult cancelBatchPredictionJob(CancelBatchPredictionJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateBatchImportJobResult createBatchImportJob(CreateBatchImportJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -73,6 +83,11 @@ public class AbstractAmazonFraudDetector implements AmazonFraudDetector {
     }
 
     @Override
+    public DeleteBatchImportJobResult deleteBatchImportJob(DeleteBatchImportJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteBatchPredictionJobResult deleteBatchPredictionJob(DeleteBatchPredictionJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -99,6 +114,11 @@ public class AbstractAmazonFraudDetector implements AmazonFraudDetector {
 
     @Override
     public DeleteEventTypeResult deleteEventType(DeleteEventTypeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteEventsByEventTypeResult deleteEventsByEventType(DeleteEventsByEventTypeRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -148,7 +168,17 @@ public class AbstractAmazonFraudDetector implements AmazonFraudDetector {
     }
 
     @Override
+    public GetBatchImportJobsResult getBatchImportJobs(GetBatchImportJobsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetBatchPredictionJobsResult getBatchPredictionJobs(GetBatchPredictionJobsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetDeleteEventsByEventTypeStatusResult getDeleteEventsByEventTypeStatus(GetDeleteEventsByEventTypeStatusRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -164,6 +194,11 @@ public class AbstractAmazonFraudDetector implements AmazonFraudDetector {
 
     @Override
     public GetEntityTypesResult getEntityTypes(GetEntityTypesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetEventResult getEvent(GetEventRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -258,6 +293,11 @@ public class AbstractAmazonFraudDetector implements AmazonFraudDetector {
     }
 
     @Override
+    public SendEventResult sendEvent(SendEventRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public TagResourceResult tagResource(TagResourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -279,6 +319,11 @@ public class AbstractAmazonFraudDetector implements AmazonFraudDetector {
 
     @Override
     public UpdateDetectorVersionStatusResult updateDetectorVersionStatus(UpdateDetectorVersionStatusRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateEventLabelResult updateEventLabel(UpdateEventLabelRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -172,8 +172,8 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
     /**
      * <p>
      * The usage operation value. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing information
-     * fields</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/vm-import/latest/userguide/vmie_prereqs.html#prerequisites">Licensing
+     * options</a> in the <i>VM Import/Export User Guide</i>.
      * </p>
      */
     private String usageOperation;
@@ -1217,14 +1217,14 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
     /**
      * <p>
      * The usage operation value. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing information
-     * fields</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/vm-import/latest/userguide/vmie_prereqs.html#prerequisites">Licensing
+     * options</a> in the <i>VM Import/Export User Guide</i>.
      * </p>
      * 
      * @param usageOperation
      *        The usage operation value. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing
-     *        information fields</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        href="https://docs.aws.amazon.com/vm-import/latest/userguide/vmie_prereqs.html#prerequisites">Licensing
+     *        options</a> in the <i>VM Import/Export User Guide</i>.
      */
 
     public void setUsageOperation(String usageOperation) {
@@ -1234,13 +1234,13 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
     /**
      * <p>
      * The usage operation value. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing information
-     * fields</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/vm-import/latest/userguide/vmie_prereqs.html#prerequisites">Licensing
+     * options</a> in the <i>VM Import/Export User Guide</i>.
      * </p>
      * 
      * @return The usage operation value. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing
-     *         information fields</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *         href="https://docs.aws.amazon.com/vm-import/latest/userguide/vmie_prereqs.html#prerequisites">Licensing
+     *         options</a> in the <i>VM Import/Export User Guide</i>.
      */
 
     public String getUsageOperation() {
@@ -1250,14 +1250,14 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
     /**
      * <p>
      * The usage operation value. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing information
-     * fields</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/vm-import/latest/userguide/vmie_prereqs.html#prerequisites">Licensing
+     * options</a> in the <i>VM Import/Export User Guide</i>.
      * </p>
      * 
      * @param usageOperation
      *        The usage operation value. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing
-     *        information fields</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        href="https://docs.aws.amazon.com/vm-import/latest/userguide/vmie_prereqs.html#prerequisites">Licensing
+     *        options</a> in the <i>VM Import/Export User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

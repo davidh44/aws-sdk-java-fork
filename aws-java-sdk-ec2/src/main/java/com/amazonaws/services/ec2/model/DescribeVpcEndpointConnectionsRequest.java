@@ -38,7 +38,7 @@ public class DescribeVpcEndpointConnectionsRequest extends AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * <code>vpc-endpoint-owner</code> - The AWS account number of the owner of the endpoint.
+     * <code>vpc-endpoint-owner</code> - The ID of the Amazon Web Services account ID that owns the endpoint.
      * </p>
      * </li>
      * <li>
@@ -84,7 +84,7 @@ public class DescribeVpcEndpointConnectionsRequest extends AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * <code>vpc-endpoint-owner</code> - The AWS account number of the owner of the endpoint.
+     * <code>vpc-endpoint-owner</code> - The ID of the Amazon Web Services account ID that owns the endpoint.
      * </p>
      * </li>
      * <li>
@@ -110,7 +110,7 @@ public class DescribeVpcEndpointConnectionsRequest extends AmazonWebServiceReque
      *         </li>
      *         <li>
      *         <p>
-     *         <code>vpc-endpoint-owner</code> - The AWS account number of the owner of the endpoint.
+     *         <code>vpc-endpoint-owner</code> - The ID of the Amazon Web Services account ID that owns the endpoint.
      *         </p>
      *         </li>
      *         <li>
@@ -146,7 +146,7 @@ public class DescribeVpcEndpointConnectionsRequest extends AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * <code>vpc-endpoint-owner</code> - The AWS account number of the owner of the endpoint.
+     * <code>vpc-endpoint-owner</code> - The ID of the Amazon Web Services account ID that owns the endpoint.
      * </p>
      * </li>
      * <li>
@@ -173,7 +173,7 @@ public class DescribeVpcEndpointConnectionsRequest extends AmazonWebServiceReque
      *        </li>
      *        <li>
      *        <p>
-     *        <code>vpc-endpoint-owner</code> - The AWS account number of the owner of the endpoint.
+     *        <code>vpc-endpoint-owner</code> - The ID of the Amazon Web Services account ID that owns the endpoint.
      *        </p>
      *        </li>
      *        <li>
@@ -211,7 +211,7 @@ public class DescribeVpcEndpointConnectionsRequest extends AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * <code>vpc-endpoint-owner</code> - The AWS account number of the owner of the endpoint.
+     * <code>vpc-endpoint-owner</code> - The ID of the Amazon Web Services account ID that owns the endpoint.
      * </p>
      * </li>
      * <li>
@@ -243,7 +243,7 @@ public class DescribeVpcEndpointConnectionsRequest extends AmazonWebServiceReque
      *        </li>
      *        <li>
      *        <p>
-     *        <code>vpc-endpoint-owner</code> - The AWS account number of the owner of the endpoint.
+     *        <code>vpc-endpoint-owner</code> - The ID of the Amazon Web Services account ID that owns the endpoint.
      *        </p>
      *        </li>
      *        <li>
@@ -283,7 +283,7 @@ public class DescribeVpcEndpointConnectionsRequest extends AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * <code>vpc-endpoint-owner</code> - The AWS account number of the owner of the endpoint.
+     * <code>vpc-endpoint-owner</code> - The ID of the Amazon Web Services account ID that owns the endpoint.
      * </p>
      * </li>
      * <li>
@@ -310,7 +310,7 @@ public class DescribeVpcEndpointConnectionsRequest extends AmazonWebServiceReque
      *        </li>
      *        <li>
      *        <p>
-     *        <code>vpc-endpoint-owner</code> - The AWS account number of the owner of the endpoint.
+     *        <code>vpc-endpoint-owner</code> - The ID of the Amazon Web Services account ID that owns the endpoint.
      *        </p>
      *        </li>
      *        <li>

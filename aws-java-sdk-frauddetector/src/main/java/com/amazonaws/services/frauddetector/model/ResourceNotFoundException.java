@@ -16,8 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * An exception indicating the specified resource was not found. This can occur if you submit a request, such as
- * <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
+ * An exception indicating the specified resource was not found.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

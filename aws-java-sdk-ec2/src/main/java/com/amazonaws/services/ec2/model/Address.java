@@ -88,8 +88,8 @@ public class Address implements Serializable, Cloneable {
     private String publicIpv4Pool;
     /**
      * <p>
-     * The name of the unique set of Availability Zones, Local Zones, or Wavelength Zones from which AWS advertises IP
-     * addresses.
+     * The name of the unique set of Availability Zones, Local Zones, or Wavelength Zones from which Amazon Web Services
+     * advertises IP addresses.
      * </p>
      */
     private String networkBorderGroup;
@@ -591,13 +591,13 @@ public class Address implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name of the unique set of Availability Zones, Local Zones, or Wavelength Zones from which AWS advertises IP
-     * addresses.
+     * The name of the unique set of Availability Zones, Local Zones, or Wavelength Zones from which Amazon Web Services
+     * advertises IP addresses.
      * </p>
      * 
      * @param networkBorderGroup
-     *        The name of the unique set of Availability Zones, Local Zones, or Wavelength Zones from which AWS
-     *        advertises IP addresses.
+     *        The name of the unique set of Availability Zones, Local Zones, or Wavelength Zones from which Amazon Web
+     *        Services advertises IP addresses.
      */
 
     public void setNetworkBorderGroup(String networkBorderGroup) {
@@ -606,12 +606,12 @@ public class Address implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name of the unique set of Availability Zones, Local Zones, or Wavelength Zones from which AWS advertises IP
-     * addresses.
+     * The name of the unique set of Availability Zones, Local Zones, or Wavelength Zones from which Amazon Web Services
+     * advertises IP addresses.
      * </p>
      * 
-     * @return The name of the unique set of Availability Zones, Local Zones, or Wavelength Zones from which AWS
-     *         advertises IP addresses.
+     * @return The name of the unique set of Availability Zones, Local Zones, or Wavelength Zones from which Amazon Web
+     *         Services advertises IP addresses.
      */
 
     public String getNetworkBorderGroup() {
@@ -620,13 +620,13 @@ public class Address implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name of the unique set of Availability Zones, Local Zones, or Wavelength Zones from which AWS advertises IP
-     * addresses.
+     * The name of the unique set of Availability Zones, Local Zones, or Wavelength Zones from which Amazon Web Services
+     * advertises IP addresses.
      * </p>
      * 
      * @param networkBorderGroup
-     *        The name of the unique set of Availability Zones, Local Zones, or Wavelength Zones from which AWS
-     *        advertises IP addresses.
+     *        The name of the unique set of Availability Zones, Local Zones, or Wavelength Zones from which Amazon Web
+     *        Services advertises IP addresses.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

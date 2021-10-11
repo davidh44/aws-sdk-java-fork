@@ -98,6 +98,37 @@ public interface AmazonFraudDetectorAsync extends AmazonFraudDetector {
 
     /**
      * <p>
+     * Cancels an in-progress batch import job.
+     * </p>
+     * 
+     * @param cancelBatchImportJobRequest
+     * @return A Java Future containing the result of the CancelBatchImportJob operation returned by the service.
+     * @sample AmazonFraudDetectorAsync.CancelBatchImportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/CancelBatchImportJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CancelBatchImportJobResult> cancelBatchImportJobAsync(CancelBatchImportJobRequest cancelBatchImportJobRequest);
+
+    /**
+     * <p>
+     * Cancels an in-progress batch import job.
+     * </p>
+     * 
+     * @param cancelBatchImportJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CancelBatchImportJob operation returned by the service.
+     * @sample AmazonFraudDetectorAsyncHandler.CancelBatchImportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/CancelBatchImportJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CancelBatchImportJobResult> cancelBatchImportJobAsync(CancelBatchImportJobRequest cancelBatchImportJobRequest,
+            com.amazonaws.handlers.AsyncHandler<CancelBatchImportJobRequest, CancelBatchImportJobResult> asyncHandler);
+
+    /**
+     * <p>
      * Cancels the specified batch prediction job.
      * </p>
      * 
@@ -126,6 +157,37 @@ public interface AmazonFraudDetectorAsync extends AmazonFraudDetector {
      */
     java.util.concurrent.Future<CancelBatchPredictionJobResult> cancelBatchPredictionJobAsync(CancelBatchPredictionJobRequest cancelBatchPredictionJobRequest,
             com.amazonaws.handlers.AsyncHandler<CancelBatchPredictionJobRequest, CancelBatchPredictionJobResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a batch import job.
+     * </p>
+     * 
+     * @param createBatchImportJobRequest
+     * @return A Java Future containing the result of the CreateBatchImportJob operation returned by the service.
+     * @sample AmazonFraudDetectorAsync.CreateBatchImportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/CreateBatchImportJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateBatchImportJobResult> createBatchImportJobAsync(CreateBatchImportJobRequest createBatchImportJobRequest);
+
+    /**
+     * <p>
+     * Creates a batch import job.
+     * </p>
+     * 
+     * @param createBatchImportJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateBatchImportJob operation returned by the service.
+     * @sample AmazonFraudDetectorAsyncHandler.CreateBatchImportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/CreateBatchImportJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateBatchImportJobResult> createBatchImportJobAsync(CreateBatchImportJobRequest createBatchImportJobRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateBatchImportJobRequest, CreateBatchImportJobResult> asyncHandler);
 
     /**
      * <p>
@@ -312,6 +374,37 @@ public interface AmazonFraudDetectorAsync extends AmazonFraudDetector {
      */
     java.util.concurrent.Future<CreateVariableResult> createVariableAsync(CreateVariableRequest createVariableRequest,
             com.amazonaws.handlers.AsyncHandler<CreateVariableRequest, CreateVariableResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes data that was batch imported to Amazon Fraud Detector.
+     * </p>
+     * 
+     * @param deleteBatchImportJobRequest
+     * @return A Java Future containing the result of the DeleteBatchImportJob operation returned by the service.
+     * @sample AmazonFraudDetectorAsync.DeleteBatchImportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/DeleteBatchImportJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteBatchImportJobResult> deleteBatchImportJobAsync(DeleteBatchImportJobRequest deleteBatchImportJobRequest);
+
+    /**
+     * <p>
+     * Deletes data that was batch imported to Amazon Fraud Detector.
+     * </p>
+     * 
+     * @param deleteBatchImportJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteBatchImportJob operation returned by the service.
+     * @sample AmazonFraudDetectorAsyncHandler.DeleteBatchImportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/DeleteBatchImportJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteBatchImportJobResult> deleteBatchImportJobAsync(DeleteBatchImportJobRequest deleteBatchImportJobRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteBatchImportJobRequest, DeleteBatchImportJobResult> asyncHandler);
 
     /**
      * <p>
@@ -516,7 +609,7 @@ public interface AmazonFraudDetectorAsync extends AmazonFraudDetector {
      * You cannot delete an event type that is used in a detector or a model.
      * </p>
      * <p>
-     * When you delete an entity type, Amazon Fraud Detector permanently deletes that entity type and the data is no
+     * When you delete an event type, Amazon Fraud Detector permanently deletes that event type and the data is no
      * longer stored in Amazon Fraud Detector.
      * </p>
      * 
@@ -536,7 +629,7 @@ public interface AmazonFraudDetectorAsync extends AmazonFraudDetector {
      * You cannot delete an event type that is used in a detector or a model.
      * </p>
      * <p>
-     * When you delete an entity type, Amazon Fraud Detector permanently deletes that entity type and the data is no
+     * When you delete an event type, Amazon Fraud Detector permanently deletes that event type and the data is no
      * longer stored in Amazon Fraud Detector.
      * </p>
      * 
@@ -552,6 +645,37 @@ public interface AmazonFraudDetectorAsync extends AmazonFraudDetector {
      */
     java.util.concurrent.Future<DeleteEventTypeResult> deleteEventTypeAsync(DeleteEventTypeRequest deleteEventTypeRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteEventTypeRequest, DeleteEventTypeResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes all events of a particular event type.
+     * </p>
+     * 
+     * @param deleteEventsByEventTypeRequest
+     * @return A Java Future containing the result of the DeleteEventsByEventType operation returned by the service.
+     * @sample AmazonFraudDetectorAsync.DeleteEventsByEventType
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/DeleteEventsByEventType"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteEventsByEventTypeResult> deleteEventsByEventTypeAsync(DeleteEventsByEventTypeRequest deleteEventsByEventTypeRequest);
+
+    /**
+     * <p>
+     * Deletes all events of a particular event type.
+     * </p>
+     * 
+     * @param deleteEventsByEventTypeRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteEventsByEventType operation returned by the service.
+     * @sample AmazonFraudDetectorAsyncHandler.DeleteEventsByEventType
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/DeleteEventsByEventType"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteEventsByEventTypeResult> deleteEventsByEventTypeAsync(DeleteEventsByEventTypeRequest deleteEventsByEventTypeRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteEventsByEventTypeRequest, DeleteEventsByEventTypeResult> asyncHandler);
 
     /**
      * <p>
@@ -942,6 +1066,45 @@ public interface AmazonFraudDetectorAsync extends AmazonFraudDetector {
 
     /**
      * <p>
+     * Gets all batch import jobs or a specific job of the specified ID. This is a paginated API. If you provide a null
+     * <code>maxResults</code>, this action retrieves a maximum of 50 records per page. If you provide a
+     * <code>maxResults</code>, the value must be between 1 and 50. To get the next page results, provide the pagination
+     * token from the <code>GetBatchImportJobsResponse</code> as part of your request. A null pagination token fetches
+     * the records from the beginning.
+     * </p>
+     * 
+     * @param getBatchImportJobsRequest
+     * @return A Java Future containing the result of the GetBatchImportJobs operation returned by the service.
+     * @sample AmazonFraudDetectorAsync.GetBatchImportJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/GetBatchImportJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetBatchImportJobsResult> getBatchImportJobsAsync(GetBatchImportJobsRequest getBatchImportJobsRequest);
+
+    /**
+     * <p>
+     * Gets all batch import jobs or a specific job of the specified ID. This is a paginated API. If you provide a null
+     * <code>maxResults</code>, this action retrieves a maximum of 50 records per page. If you provide a
+     * <code>maxResults</code>, the value must be between 1 and 50. To get the next page results, provide the pagination
+     * token from the <code>GetBatchImportJobsResponse</code> as part of your request. A null pagination token fetches
+     * the records from the beginning.
+     * </p>
+     * 
+     * @param getBatchImportJobsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetBatchImportJobs operation returned by the service.
+     * @sample AmazonFraudDetectorAsyncHandler.GetBatchImportJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/GetBatchImportJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetBatchImportJobsResult> getBatchImportJobsAsync(GetBatchImportJobsRequest getBatchImportJobsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetBatchImportJobsRequest, GetBatchImportJobsResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets all batch prediction jobs or a specific job if you specify a job ID. This is a paginated API. If you provide
      * a null maxResults, this action retrieves a maximum of 50 records per page. If you provide a maxResults, the value
      * must be between 1 and 50. To get the next page results, provide the pagination token from the
@@ -978,6 +1141,41 @@ public interface AmazonFraudDetectorAsync extends AmazonFraudDetector {
      */
     java.util.concurrent.Future<GetBatchPredictionJobsResult> getBatchPredictionJobsAsync(GetBatchPredictionJobsRequest getBatchPredictionJobsRequest,
             com.amazonaws.handlers.AsyncHandler<GetBatchPredictionJobsRequest, GetBatchPredictionJobsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves the status of a <code>DeleteEventsByEventType</code> action.
+     * </p>
+     * 
+     * @param getDeleteEventsByEventTypeStatusRequest
+     * @return A Java Future containing the result of the GetDeleteEventsByEventTypeStatus operation returned by the
+     *         service.
+     * @sample AmazonFraudDetectorAsync.GetDeleteEventsByEventTypeStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/GetDeleteEventsByEventTypeStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetDeleteEventsByEventTypeStatusResult> getDeleteEventsByEventTypeStatusAsync(
+            GetDeleteEventsByEventTypeStatusRequest getDeleteEventsByEventTypeStatusRequest);
+
+    /**
+     * <p>
+     * Retrieves the status of a <code>DeleteEventsByEventType</code> action.
+     * </p>
+     * 
+     * @param getDeleteEventsByEventTypeStatusRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetDeleteEventsByEventTypeStatus operation returned by the
+     *         service.
+     * @sample AmazonFraudDetectorAsyncHandler.GetDeleteEventsByEventTypeStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/GetDeleteEventsByEventTypeStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetDeleteEventsByEventTypeStatusResult> getDeleteEventsByEventTypeStatusAsync(
+            GetDeleteEventsByEventTypeStatusRequest getDeleteEventsByEventTypeStatusRequest,
+            com.amazonaws.handlers.AsyncHandler<GetDeleteEventsByEventTypeStatusRequest, GetDeleteEventsByEventTypeStatusResult> asyncHandler);
 
     /**
      * <p>
@@ -1087,6 +1285,37 @@ public interface AmazonFraudDetectorAsync extends AmazonFraudDetector {
      */
     java.util.concurrent.Future<GetEntityTypesResult> getEntityTypesAsync(GetEntityTypesRequest getEntityTypesRequest,
             com.amazonaws.handlers.AsyncHandler<GetEntityTypesRequest, GetEntityTypesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves details of events stored with Amazon Fraud Detector. This action does not retrieve prediction results.
+     * </p>
+     * 
+     * @param getEventRequest
+     * @return A Java Future containing the result of the GetEvent operation returned by the service.
+     * @sample AmazonFraudDetectorAsync.GetEvent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/GetEvent" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetEventResult> getEventAsync(GetEventRequest getEventRequest);
+
+    /**
+     * <p>
+     * Retrieves details of events stored with Amazon Fraud Detector. This action does not retrieve prediction results.
+     * </p>
+     * 
+     * @param getEventRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetEvent operation returned by the service.
+     * @sample AmazonFraudDetectorAsyncHandler.GetEvent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/GetEvent" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetEventResult> getEventAsync(GetEventRequest getEventRequest,
+            com.amazonaws.handlers.AsyncHandler<GetEventRequest, GetEventResult> asyncHandler);
 
     /**
      * <p>
@@ -1201,8 +1430,7 @@ public interface AmazonFraudDetectorAsync extends AmazonFraudDetector {
 
     /**
      * <p>
-     * Gets the encryption key if a Key Management Service (KMS) customer master key (CMK) has been specified to be used
-     * to encrypt content in Amazon Fraud Detector.
+     * Gets the encryption key if a KMS key has been specified to be used to encrypt content in Amazon Fraud Detector.
      * </p>
      * 
      * @param getKMSEncryptionKeyRequest
@@ -1215,8 +1443,7 @@ public interface AmazonFraudDetectorAsync extends AmazonFraudDetector {
 
     /**
      * <p>
-     * Gets the encryption key if a Key Management Service (KMS) customer master key (CMK) has been specified to be used
-     * to encrypt content in Amazon Fraud Detector.
+     * Gets the encryption key if a KMS key has been specified to be used to encrypt content in Amazon Fraud Detector.
      * </p>
      * 
      * @param getKMSEncryptionKeyRequest
@@ -1645,8 +1872,7 @@ public interface AmazonFraudDetectorAsync extends AmazonFraudDetector {
 
     /**
      * <p>
-     * Specifies the Key Management Service (KMS) customer master key (CMK) to be used to encrypt content in Amazon
-     * Fraud Detector.
+     * Specifies the KMS key to be used to encrypt content in Amazon Fraud Detector.
      * </p>
      * 
      * @param putKMSEncryptionKeyRequest
@@ -1659,8 +1885,7 @@ public interface AmazonFraudDetectorAsync extends AmazonFraudDetector {
 
     /**
      * <p>
-     * Specifies the Key Management Service (KMS) customer master key (CMK) to be used to encrypt content in Amazon
-     * Fraud Detector.
+     * Specifies the KMS key to be used to encrypt content in Amazon Fraud Detector.
      * </p>
      * 
      * @param putKMSEncryptionKeyRequest
@@ -1739,6 +1964,39 @@ public interface AmazonFraudDetectorAsync extends AmazonFraudDetector {
      */
     java.util.concurrent.Future<PutOutcomeResult> putOutcomeAsync(PutOutcomeRequest putOutcomeRequest,
             com.amazonaws.handlers.AsyncHandler<PutOutcomeRequest, PutOutcomeResult> asyncHandler);
+
+    /**
+     * <p>
+     * Stores events in Amazon Fraud Detector without generating fraud predictions for those events. For example, you
+     * can use <code>SendEvent</code> to upload a historical dataset, which you can then later use to train a model.
+     * </p>
+     * 
+     * @param sendEventRequest
+     * @return A Java Future containing the result of the SendEvent operation returned by the service.
+     * @sample AmazonFraudDetectorAsync.SendEvent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/SendEvent" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<SendEventResult> sendEventAsync(SendEventRequest sendEventRequest);
+
+    /**
+     * <p>
+     * Stores events in Amazon Fraud Detector without generating fraud predictions for those events. For example, you
+     * can use <code>SendEvent</code> to upload a historical dataset, which you can then later use to train a model.
+     * </p>
+     * 
+     * @param sendEventRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SendEvent operation returned by the service.
+     * @sample AmazonFraudDetectorAsyncHandler.SendEvent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/SendEvent" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<SendEventResult> sendEventAsync(SendEventRequest sendEventRequest,
+            com.amazonaws.handlers.AsyncHandler<SendEventRequest, SendEventResult> asyncHandler);
 
     /**
      * <p>
@@ -1913,7 +2171,38 @@ public interface AmazonFraudDetectorAsync extends AmazonFraudDetector {
 
     /**
      * <p>
-     * Updates a model. You can update the description attribute using this action.
+     * Updates the specified event with a new label.
+     * </p>
+     * 
+     * @param updateEventLabelRequest
+     * @return A Java Future containing the result of the UpdateEventLabel operation returned by the service.
+     * @sample AmazonFraudDetectorAsync.UpdateEventLabel
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/UpdateEventLabel" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateEventLabelResult> updateEventLabelAsync(UpdateEventLabelRequest updateEventLabelRequest);
+
+    /**
+     * <p>
+     * Updates the specified event with a new label.
+     * </p>
+     * 
+     * @param updateEventLabelRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateEventLabel operation returned by the service.
+     * @sample AmazonFraudDetectorAsyncHandler.UpdateEventLabel
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/UpdateEventLabel" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateEventLabelResult> updateEventLabelAsync(UpdateEventLabelRequest updateEventLabelRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateEventLabelRequest, UpdateEventLabelResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates model description.
      * </p>
      * 
      * @param updateModelRequest
@@ -1926,7 +2215,7 @@ public interface AmazonFraudDetectorAsync extends AmazonFraudDetector {
 
     /**
      * <p>
-     * Updates a model. You can update the description attribute using this action.
+     * Updates model description.
      * </p>
      * 
      * @param updateModelRequest
@@ -1994,7 +2283,7 @@ public interface AmazonFraudDetectorAsync extends AmazonFraudDetector {
      * </li>
      * <li>
      * <p>
-     * Change <code>ACTIVE</code>to <code>INACTIVE</code>.
+     * Change <code>ACTIVE</code> to <code>INACTIVE</code>.
      * </p>
      * </li>
      * </ol>
@@ -2022,7 +2311,7 @@ public interface AmazonFraudDetectorAsync extends AmazonFraudDetector {
      * </li>
      * <li>
      * <p>
-     * Change <code>ACTIVE</code>to <code>INACTIVE</code>.
+     * Change <code>ACTIVE</code> to <code>INACTIVE</code>.
      * </p>
      * </li>
      * </ol>

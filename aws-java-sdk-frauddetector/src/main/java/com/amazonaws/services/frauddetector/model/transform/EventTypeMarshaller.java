@@ -38,6 +38,10 @@ public class EventTypeMarshaller {
             .marshallLocationName("labels").build();
     private static final MarshallingInfo<List> ENTITYTYPES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("entityTypes").build();
+    private static final MarshallingInfo<String> EVENTINGESTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("eventIngestion").build();
+    private static final MarshallingInfo<StructuredPojo> INGESTEDEVENTSTATISTICS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ingestedEventStatistics").build();
     private static final MarshallingInfo<String> LASTUPDATEDTIME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lastUpdatedTime").build();
     private static final MarshallingInfo<String> CREATEDTIME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -66,6 +70,8 @@ public class EventTypeMarshaller {
             protocolMarshaller.marshall(eventType.getEventVariables(), EVENTVARIABLES_BINDING);
             protocolMarshaller.marshall(eventType.getLabels(), LABELS_BINDING);
             protocolMarshaller.marshall(eventType.getEntityTypes(), ENTITYTYPES_BINDING);
+            protocolMarshaller.marshall(eventType.getEventIngestion(), EVENTINGESTION_BINDING);
+            protocolMarshaller.marshall(eventType.getIngestedEventStatistics(), INGESTEDEVENTSTATISTICS_BINDING);
             protocolMarshaller.marshall(eventType.getLastUpdatedTime(), LASTUPDATEDTIME_BINDING);
             protocolMarshaller.marshall(eventType.getCreatedTime(), CREATEDTIME_BINDING);
             protocolMarshaller.marshall(eventType.getArn(), ARN_BINDING);

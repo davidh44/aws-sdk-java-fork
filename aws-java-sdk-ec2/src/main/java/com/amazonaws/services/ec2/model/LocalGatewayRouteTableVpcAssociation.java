@@ -58,7 +58,7 @@ public class LocalGatewayRouteTableVpcAssociation implements Serializable, Clone
     private String vpcId;
     /**
      * <p>
-     * The AWS account ID that owns the local gateway route table for the association.
+     * The ID of the Amazon Web Services account that owns the local gateway route table for the association.
      * </p>
      */
     private String ownerId;
@@ -277,11 +277,11 @@ public class LocalGatewayRouteTableVpcAssociation implements Serializable, Clone
 
     /**
      * <p>
-     * The AWS account ID that owns the local gateway route table for the association.
+     * The ID of the Amazon Web Services account that owns the local gateway route table for the association.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID that owns the local gateway route table for the association.
+     *        The ID of the Amazon Web Services account that owns the local gateway route table for the association.
      */
 
     public void setOwnerId(String ownerId) {
@@ -290,10 +290,10 @@ public class LocalGatewayRouteTableVpcAssociation implements Serializable, Clone
 
     /**
      * <p>
-     * The AWS account ID that owns the local gateway route table for the association.
+     * The ID of the Amazon Web Services account that owns the local gateway route table for the association.
      * </p>
      * 
-     * @return The AWS account ID that owns the local gateway route table for the association.
+     * @return The ID of the Amazon Web Services account that owns the local gateway route table for the association.
      */
 
     public String getOwnerId() {
@@ -302,11 +302,11 @@ public class LocalGatewayRouteTableVpcAssociation implements Serializable, Clone
 
     /**
      * <p>
-     * The AWS account ID that owns the local gateway route table for the association.
+     * The ID of the Amazon Web Services account that owns the local gateway route table for the association.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID that owns the local gateway route table for the association.
+     *        The ID of the Amazon Web Services account that owns the local gateway route table for the association.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -582,6 +582,79 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
     }
 
     /**
+     * Send a request to claim an AWS Elemental device that you have purchased from a third-party vendor. After the
+     * request succeeds, you will own the device.
+     * 
+     * @param claimDeviceRequest
+     *        A request to claim an AWS Elemental device that you have purchased from a third-party vendor.
+     * @return Result of the ClaimDevice operation returned by the service.
+     * @throws BadRequestException
+     *         This request was invalid.
+     * @throws UnprocessableEntityException
+     *         Claim operation failed, device id could not be validated.
+     * @throws InternalServerErrorException
+     *         Unexpected internal service error.
+     * @throws ForbiddenException
+     *         You don't have the IAM access permissions to claim this device. You must have permission for the
+     *         WriteClaim operation.
+     * @throws BadGatewayException
+     *         Bad gateway error.
+     * @throws NotFoundException
+     *         Device not found or you called an unsupported region.
+     * @throws GatewayTimeoutException
+     *         Bad gateway error. Try again.
+     * @throws TooManyRequestsException
+     *         Request limit exceeded. Your have sent this request too many times. There might be a bug in your API
+     *         client.
+     * @sample AWSMediaLive.ClaimDevice
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/ClaimDevice" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ClaimDeviceResult claimDevice(ClaimDeviceRequest request) {
+        request = beforeClientExecution(request);
+        return executeClaimDevice(request);
+    }
+
+    @SdkInternalApi
+    final ClaimDeviceResult executeClaimDevice(ClaimDeviceRequest claimDeviceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(claimDeviceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ClaimDeviceRequest> request = null;
+        Response<ClaimDeviceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ClaimDeviceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(claimDeviceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "MediaLive");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ClaimDevice");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ClaimDeviceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ClaimDeviceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
      * Creates a new channel
      * 
      * @param createChannelRequest

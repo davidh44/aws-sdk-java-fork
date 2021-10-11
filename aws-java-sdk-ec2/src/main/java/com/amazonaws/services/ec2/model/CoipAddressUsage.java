@@ -34,13 +34,13 @@ public class CoipAddressUsage implements Serializable, Cloneable {
     private String allocationId;
     /**
      * <p>
-     * The AWS account ID.
+     * The Amazon Web Services account ID.
      * </p>
      */
     private String awsAccountId;
     /**
      * <p>
-     * The AWS service.
+     * The Amazon Web Services service.
      * </p>
      */
     private String awsService;
@@ -93,11 +93,11 @@ public class CoipAddressUsage implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID.
+     * The Amazon Web Services account ID.
      * </p>
      * 
      * @param awsAccountId
-     *        The AWS account ID.
+     *        The Amazon Web Services account ID.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -106,10 +106,10 @@ public class CoipAddressUsage implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID.
+     * The Amazon Web Services account ID.
      * </p>
      * 
-     * @return The AWS account ID.
+     * @return The Amazon Web Services account ID.
      */
 
     public String getAwsAccountId() {
@@ -118,11 +118,11 @@ public class CoipAddressUsage implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID.
+     * The Amazon Web Services account ID.
      * </p>
      * 
      * @param awsAccountId
-     *        The AWS account ID.
+     *        The Amazon Web Services account ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -133,11 +133,11 @@ public class CoipAddressUsage implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS service.
+     * The Amazon Web Services service.
      * </p>
      * 
      * @param awsService
-     *        The AWS service.
+     *        The Amazon Web Services service.
      */
 
     public void setAwsService(String awsService) {
@@ -146,10 +146,10 @@ public class CoipAddressUsage implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS service.
+     * The Amazon Web Services service.
      * </p>
      * 
-     * @return The AWS service.
+     * @return The Amazon Web Services service.
      */
 
     public String getAwsService() {
@@ -158,11 +158,11 @@ public class CoipAddressUsage implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS service.
+     * The Amazon Web Services service.
      * </p>
      * 
      * @param awsService
-     *        The AWS service.
+     *        The Amazon Web Services service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

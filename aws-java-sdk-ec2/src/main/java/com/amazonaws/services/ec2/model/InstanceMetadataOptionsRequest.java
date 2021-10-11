@@ -59,14 +59,12 @@ public class InstanceMetadataOptionsRequest implements Serializable, Cloneable {
     private Integer httpPutResponseHopLimit;
     /**
      * <p>
-     * This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     * specified, the default state is <code>enabled</code>.
+     * Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the default
+     * state is <code>enabled</code>.
      * </p>
-     * <note>
      * <p>
      * If you specify a value of <code>disabled</code>, you will not be able to access your instance metadata.
      * </p>
-     * </note>
      */
     private String httpEndpoint;
     /**
@@ -308,21 +306,18 @@ public class InstanceMetadataOptionsRequest implements Serializable, Cloneable {
 
     /**
      * <p>
-     * This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     * specified, the default state is <code>enabled</code>.
+     * Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the default
+     * state is <code>enabled</code>.
      * </p>
-     * <note>
      * <p>
      * If you specify a value of <code>disabled</code>, you will not be able to access your instance metadata.
      * </p>
-     * </note>
      * 
      * @param httpEndpoint
-     *        This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     *        specified, the default state is <code>enabled</code>.</p> <note>
+     *        Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the
+     *        default state is <code>enabled</code>.</p>
      *        <p>
      *        If you specify a value of <code>disabled</code>, you will not be able to access your instance metadata.
-     *        </p>
      * @see InstanceMetadataEndpointState
      */
 
@@ -332,20 +327,17 @@ public class InstanceMetadataOptionsRequest implements Serializable, Cloneable {
 
     /**
      * <p>
-     * This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     * specified, the default state is <code>enabled</code>.
+     * Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the default
+     * state is <code>enabled</code>.
      * </p>
-     * <note>
      * <p>
      * If you specify a value of <code>disabled</code>, you will not be able to access your instance metadata.
      * </p>
-     * </note>
      * 
-     * @return This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     *         specified, the default state is <code>enabled</code>.</p> <note>
+     * @return Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the
+     *         default state is <code>enabled</code>.</p>
      *         <p>
      *         If you specify a value of <code>disabled</code>, you will not be able to access your instance metadata.
-     *         </p>
      * @see InstanceMetadataEndpointState
      */
 
@@ -355,21 +347,18 @@ public class InstanceMetadataOptionsRequest implements Serializable, Cloneable {
 
     /**
      * <p>
-     * This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     * specified, the default state is <code>enabled</code>.
+     * Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the default
+     * state is <code>enabled</code>.
      * </p>
-     * <note>
      * <p>
      * If you specify a value of <code>disabled</code>, you will not be able to access your instance metadata.
      * </p>
-     * </note>
      * 
      * @param httpEndpoint
-     *        This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     *        specified, the default state is <code>enabled</code>.</p> <note>
+     *        Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the
+     *        default state is <code>enabled</code>.</p>
      *        <p>
      *        If you specify a value of <code>disabled</code>, you will not be able to access your instance metadata.
-     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceMetadataEndpointState
      */
@@ -381,21 +370,18 @@ public class InstanceMetadataOptionsRequest implements Serializable, Cloneable {
 
     /**
      * <p>
-     * This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     * specified, the default state is <code>enabled</code>.
+     * Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the default
+     * state is <code>enabled</code>.
      * </p>
-     * <note>
      * <p>
      * If you specify a value of <code>disabled</code>, you will not be able to access your instance metadata.
      * </p>
-     * </note>
      * 
      * @param httpEndpoint
-     *        This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     *        specified, the default state is <code>enabled</code>.</p> <note>
+     *        Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the
+     *        default state is <code>enabled</code>.</p>
      *        <p>
      *        If you specify a value of <code>disabled</code>, you will not be able to access your instance metadata.
-     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceMetadataEndpointState
      */

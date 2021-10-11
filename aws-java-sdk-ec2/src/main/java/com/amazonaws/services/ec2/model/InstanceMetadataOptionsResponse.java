@@ -72,19 +72,13 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
     private Integer httpPutResponseHopLimit;
     /**
      * <p>
-     * This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     * specified, the default state is <code>enabled</code>.
+     * Indicates whether the HTTP metadata endpoint on your instances is enabled or disabled.
      * </p>
-     * <note>
-     * <p>
-     * If you specify a value of <code>disabled</code>, you will not be able to access your instance metadata.
-     * </p>
-     * </note>
      */
     private String httpEndpoint;
     /**
      * <p>
-     * Whether or not the IPv6 endpoint for the instance metadata service is enabled or disabled.
+     * Indicates whether the IPv6 endpoint for the instance metadata service is enabled or disabled.
      * </p>
      */
     private String httpProtocolIpv6;
@@ -432,21 +426,11 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
 
     /**
      * <p>
-     * This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     * specified, the default state is <code>enabled</code>.
+     * Indicates whether the HTTP metadata endpoint on your instances is enabled or disabled.
      * </p>
-     * <note>
-     * <p>
-     * If you specify a value of <code>disabled</code>, you will not be able to access your instance metadata.
-     * </p>
-     * </note>
      * 
      * @param httpEndpoint
-     *        This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     *        specified, the default state is <code>enabled</code>.</p> <note>
-     *        <p>
-     *        If you specify a value of <code>disabled</code>, you will not be able to access your instance metadata.
-     *        </p>
+     *        Indicates whether the HTTP metadata endpoint on your instances is enabled or disabled.
      * @see InstanceMetadataEndpointState
      */
 
@@ -456,20 +440,10 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
 
     /**
      * <p>
-     * This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     * specified, the default state is <code>enabled</code>.
+     * Indicates whether the HTTP metadata endpoint on your instances is enabled or disabled.
      * </p>
-     * <note>
-     * <p>
-     * If you specify a value of <code>disabled</code>, you will not be able to access your instance metadata.
-     * </p>
-     * </note>
      * 
-     * @return This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     *         specified, the default state is <code>enabled</code>.</p> <note>
-     *         <p>
-     *         If you specify a value of <code>disabled</code>, you will not be able to access your instance metadata.
-     *         </p>
+     * @return Indicates whether the HTTP metadata endpoint on your instances is enabled or disabled.
      * @see InstanceMetadataEndpointState
      */
 
@@ -479,21 +453,11 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
 
     /**
      * <p>
-     * This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     * specified, the default state is <code>enabled</code>.
+     * Indicates whether the HTTP metadata endpoint on your instances is enabled or disabled.
      * </p>
-     * <note>
-     * <p>
-     * If you specify a value of <code>disabled</code>, you will not be able to access your instance metadata.
-     * </p>
-     * </note>
      * 
      * @param httpEndpoint
-     *        This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     *        specified, the default state is <code>enabled</code>.</p> <note>
-     *        <p>
-     *        If you specify a value of <code>disabled</code>, you will not be able to access your instance metadata.
-     *        </p>
+     *        Indicates whether the HTTP metadata endpoint on your instances is enabled or disabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceMetadataEndpointState
      */
@@ -505,21 +469,11 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
 
     /**
      * <p>
-     * This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     * specified, the default state is <code>enabled</code>.
+     * Indicates whether the HTTP metadata endpoint on your instances is enabled or disabled.
      * </p>
-     * <note>
-     * <p>
-     * If you specify a value of <code>disabled</code>, you will not be able to access your instance metadata.
-     * </p>
-     * </note>
      * 
      * @param httpEndpoint
-     *        This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     *        specified, the default state is <code>enabled</code>.</p> <note>
-     *        <p>
-     *        If you specify a value of <code>disabled</code>, you will not be able to access your instance metadata.
-     *        </p>
+     *        Indicates whether the HTTP metadata endpoint on your instances is enabled or disabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceMetadataEndpointState
      */
@@ -531,11 +485,11 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
 
     /**
      * <p>
-     * Whether or not the IPv6 endpoint for the instance metadata service is enabled or disabled.
+     * Indicates whether the IPv6 endpoint for the instance metadata service is enabled or disabled.
      * </p>
      * 
      * @param httpProtocolIpv6
-     *        Whether or not the IPv6 endpoint for the instance metadata service is enabled or disabled.
+     *        Indicates whether the IPv6 endpoint for the instance metadata service is enabled or disabled.
      * @see InstanceMetadataProtocolState
      */
 
@@ -545,10 +499,10 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
 
     /**
      * <p>
-     * Whether or not the IPv6 endpoint for the instance metadata service is enabled or disabled.
+     * Indicates whether the IPv6 endpoint for the instance metadata service is enabled or disabled.
      * </p>
      * 
-     * @return Whether or not the IPv6 endpoint for the instance metadata service is enabled or disabled.
+     * @return Indicates whether the IPv6 endpoint for the instance metadata service is enabled or disabled.
      * @see InstanceMetadataProtocolState
      */
 
@@ -558,11 +512,11 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
 
     /**
      * <p>
-     * Whether or not the IPv6 endpoint for the instance metadata service is enabled or disabled.
+     * Indicates whether the IPv6 endpoint for the instance metadata service is enabled or disabled.
      * </p>
      * 
      * @param httpProtocolIpv6
-     *        Whether or not the IPv6 endpoint for the instance metadata service is enabled or disabled.
+     *        Indicates whether the IPv6 endpoint for the instance metadata service is enabled or disabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceMetadataProtocolState
      */
@@ -574,11 +528,11 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
 
     /**
      * <p>
-     * Whether or not the IPv6 endpoint for the instance metadata service is enabled or disabled.
+     * Indicates whether the IPv6 endpoint for the instance metadata service is enabled or disabled.
      * </p>
      * 
      * @param httpProtocolIpv6
-     *        Whether or not the IPv6 endpoint for the instance metadata service is enabled or disabled.
+     *        Indicates whether the IPv6 endpoint for the instance metadata service is enabled or disabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceMetadataProtocolState
      */

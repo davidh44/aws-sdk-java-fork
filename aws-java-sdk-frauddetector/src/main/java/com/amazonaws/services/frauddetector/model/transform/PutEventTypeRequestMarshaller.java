@@ -38,6 +38,8 @@ public class PutEventTypeRequestMarshaller {
             .marshallLocationName("labels").build();
     private static final MarshallingInfo<List> ENTITYTYPES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("entityTypes").build();
+    private static final MarshallingInfo<String> EVENTINGESTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("eventIngestion").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
 
@@ -62,6 +64,7 @@ public class PutEventTypeRequestMarshaller {
             protocolMarshaller.marshall(putEventTypeRequest.getEventVariables(), EVENTVARIABLES_BINDING);
             protocolMarshaller.marshall(putEventTypeRequest.getLabels(), LABELS_BINDING);
             protocolMarshaller.marshall(putEventTypeRequest.getEntityTypes(), ENTITYTYPES_BINDING);
+            protocolMarshaller.marshall(putEventTypeRequest.getEventIngestion(), EVENTINGESTION_BINDING);
             protocolMarshaller.marshall(putEventTypeRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

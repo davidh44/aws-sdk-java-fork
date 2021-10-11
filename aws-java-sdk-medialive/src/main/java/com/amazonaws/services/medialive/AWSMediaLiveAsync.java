@@ -209,6 +209,37 @@ public interface AWSMediaLiveAsync extends AWSMediaLive {
             com.amazonaws.handlers.AsyncHandler<CancelInputDeviceTransferRequest, CancelInputDeviceTransferResult> asyncHandler);
 
     /**
+     * Send a request to claim an AWS Elemental device that you have purchased from a third-party vendor. After the
+     * request succeeds, you will own the device.
+     * 
+     * @param claimDeviceRequest
+     *        A request to claim an AWS Elemental device that you have purchased from a third-party vendor.
+     * @return A Java Future containing the result of the ClaimDevice operation returned by the service.
+     * @sample AWSMediaLiveAsync.ClaimDevice
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/ClaimDevice" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ClaimDeviceResult> claimDeviceAsync(ClaimDeviceRequest claimDeviceRequest);
+
+    /**
+     * Send a request to claim an AWS Elemental device that you have purchased from a third-party vendor. After the
+     * request succeeds, you will own the device.
+     * 
+     * @param claimDeviceRequest
+     *        A request to claim an AWS Elemental device that you have purchased from a third-party vendor.
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ClaimDevice operation returned by the service.
+     * @sample AWSMediaLiveAsyncHandler.ClaimDevice
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/ClaimDevice" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ClaimDeviceResult> claimDeviceAsync(ClaimDeviceRequest claimDeviceRequest,
+            com.amazonaws.handlers.AsyncHandler<ClaimDeviceRequest, ClaimDeviceResult> asyncHandler);
+
+    /**
      * Creates a new channel
      * 
      * @param createChannelRequest

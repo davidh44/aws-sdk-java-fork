@@ -74,6 +74,14 @@ public class EventTypeJsonUnmarshaller implements Unmarshaller<EventType, JsonUn
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("eventIngestion", targetDepth)) {
+                    context.nextToken();
+                    eventType.setEventIngestion(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("ingestedEventStatistics", targetDepth)) {
+                    context.nextToken();
+                    eventType.setIngestedEventStatistics(IngestedEventStatisticsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("lastUpdatedTime", targetDepth)) {
                     context.nextToken();
                     eventType.setLastUpdatedTime(context.getUnmarshaller(String.class).unmarshall(context));

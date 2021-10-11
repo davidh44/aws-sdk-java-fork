@@ -106,6 +106,19 @@ public class AbstractAWSMediaLiveAsync extends AbstractAWSMediaLive implements A
     }
 
     @Override
+    public java.util.concurrent.Future<ClaimDeviceResult> claimDeviceAsync(ClaimDeviceRequest request) {
+
+        return claimDeviceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ClaimDeviceResult> claimDeviceAsync(ClaimDeviceRequest request,
+            com.amazonaws.handlers.AsyncHandler<ClaimDeviceRequest, ClaimDeviceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateChannelResult> createChannelAsync(CreateChannelRequest request) {
 
         return createChannelAsync(request, null);

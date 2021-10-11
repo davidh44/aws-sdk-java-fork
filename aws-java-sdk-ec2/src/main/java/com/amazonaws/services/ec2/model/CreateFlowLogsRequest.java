@@ -120,8 +120,8 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
      * parameter, you must specify at least one field.
      * </p>
      * <p>
-     * Specify the fields using the <code>${field-id}</code> format, separated by spaces. For the CLI, use single
-     * quotation marks (' ') to surround the parameter value.
+     * Specify the fields using the <code>${field-id}</code> format, separated by spaces. For the CLI, surround this
+     * parameter value with single quotes on Linux or double quotes on Windows.
      * </p>
      */
     private String logFormat;
@@ -873,8 +873,8 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
      * parameter, you must specify at least one field.
      * </p>
      * <p>
-     * Specify the fields using the <code>${field-id}</code> format, separated by spaces. For the CLI, use single
-     * quotation marks (' ') to surround the parameter value.
+     * Specify the fields using the <code>${field-id}</code> format, separated by spaces. For the CLI, surround this
+     * parameter value with single quotes on Linux or double quotes on Windows.
      * </p>
      * 
      * @param logFormat
@@ -884,8 +884,8 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
      *        records</a>. If you omit this parameter, the flow log is created using the default format. If you specify
      *        this parameter, you must specify at least one field.</p>
      *        <p>
-     *        Specify the fields using the <code>${field-id}</code> format, separated by spaces. For the CLI, use single
-     *        quotation marks (' ') to surround the parameter value.
+     *        Specify the fields using the <code>${field-id}</code> format, separated by spaces. For the CLI, surround
+     *        this parameter value with single quotes on Linux or double quotes on Windows.
      */
 
     public void setLogFormat(String logFormat) {
@@ -900,8 +900,8 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
      * parameter, you must specify at least one field.
      * </p>
      * <p>
-     * Specify the fields using the <code>${field-id}</code> format, separated by spaces. For the CLI, use single
-     * quotation marks (' ') to surround the parameter value.
+     * Specify the fields using the <code>${field-id}</code> format, separated by spaces. For the CLI, surround this
+     * parameter value with single quotes on Linux or double quotes on Windows.
      * </p>
      * 
      * @return The fields to include in the flow log record, in the order in which they should appear. For a list of
@@ -910,8 +910,8 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
      *         records</a>. If you omit this parameter, the flow log is created using the default format. If you specify
      *         this parameter, you must specify at least one field.</p>
      *         <p>
-     *         Specify the fields using the <code>${field-id}</code> format, separated by spaces. For the CLI, use
-     *         single quotation marks (' ') to surround the parameter value.
+     *         Specify the fields using the <code>${field-id}</code> format, separated by spaces. For the CLI, surround
+     *         this parameter value with single quotes on Linux or double quotes on Windows.
      */
 
     public String getLogFormat() {
@@ -926,8 +926,8 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
      * parameter, you must specify at least one field.
      * </p>
      * <p>
-     * Specify the fields using the <code>${field-id}</code> format, separated by spaces. For the CLI, use single
-     * quotation marks (' ') to surround the parameter value.
+     * Specify the fields using the <code>${field-id}</code> format, separated by spaces. For the CLI, surround this
+     * parameter value with single quotes on Linux or double quotes on Windows.
      * </p>
      * 
      * @param logFormat
@@ -937,8 +937,8 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
      *        records</a>. If you omit this parameter, the flow log is created using the default format. If you specify
      *        this parameter, you must specify at least one field.</p>
      *        <p>
-     *        Specify the fields using the <code>${field-id}</code> format, separated by spaces. For the CLI, use single
-     *        quotation marks (' ') to surround the parameter value.
+     *        Specify the fields using the <code>${field-id}</code> format, separated by spaces. For the CLI, surround
+     *        this parameter value with single quotes on Linux or double quotes on Windows.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -54,7 +54,7 @@ public class BatchPrediction implements Serializable, Cloneable, StructuredPojo 
     private String startTime;
     /**
      * <p>
-     * Timestamp of when the batch prediction job comleted.
+     * Timestamp of when the batch prediction job completed.
      * </p>
      */
     private String completionTime;
@@ -300,11 +300,11 @@ public class BatchPrediction implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Timestamp of when the batch prediction job comleted.
+     * Timestamp of when the batch prediction job completed.
      * </p>
      * 
      * @param completionTime
-     *        Timestamp of when the batch prediction job comleted.
+     *        Timestamp of when the batch prediction job completed.
      */
 
     public void setCompletionTime(String completionTime) {
@@ -313,10 +313,10 @@ public class BatchPrediction implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Timestamp of when the batch prediction job comleted.
+     * Timestamp of when the batch prediction job completed.
      * </p>
      * 
-     * @return Timestamp of when the batch prediction job comleted.
+     * @return Timestamp of when the batch prediction job completed.
      */
 
     public String getCompletionTime() {
@@ -325,11 +325,11 @@ public class BatchPrediction implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Timestamp of when the batch prediction job comleted.
+     * Timestamp of when the batch prediction job completed.
      * </p>
      * 
      * @param completionTime
-     *        Timestamp of when the batch prediction job comleted.
+     *        Timestamp of when the batch prediction job completed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

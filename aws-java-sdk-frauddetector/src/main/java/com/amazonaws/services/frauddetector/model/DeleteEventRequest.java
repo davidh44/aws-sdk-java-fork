@@ -37,6 +37,12 @@ public class DeleteEventRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private String eventTypeName;
+    /**
+     * <p>
+     * Specifies whether or not to delete any predictions associated with the event.
+     * </p>
+     */
+    private Boolean deleteAuditHistory;
 
     /**
      * <p>
@@ -119,6 +125,58 @@ public class DeleteEventRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * Specifies whether or not to delete any predictions associated with the event.
+     * </p>
+     * 
+     * @param deleteAuditHistory
+     *        Specifies whether or not to delete any predictions associated with the event.
+     */
+
+    public void setDeleteAuditHistory(Boolean deleteAuditHistory) {
+        this.deleteAuditHistory = deleteAuditHistory;
+    }
+
+    /**
+     * <p>
+     * Specifies whether or not to delete any predictions associated with the event.
+     * </p>
+     * 
+     * @return Specifies whether or not to delete any predictions associated with the event.
+     */
+
+    public Boolean getDeleteAuditHistory() {
+        return this.deleteAuditHistory;
+    }
+
+    /**
+     * <p>
+     * Specifies whether or not to delete any predictions associated with the event.
+     * </p>
+     * 
+     * @param deleteAuditHistory
+     *        Specifies whether or not to delete any predictions associated with the event.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteEventRequest withDeleteAuditHistory(Boolean deleteAuditHistory) {
+        setDeleteAuditHistory(deleteAuditHistory);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether or not to delete any predictions associated with the event.
+     * </p>
+     * 
+     * @return Specifies whether or not to delete any predictions associated with the event.
+     */
+
+    public Boolean isDeleteAuditHistory() {
+        return this.deleteAuditHistory;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -133,7 +191,9 @@ public class DeleteEventRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getEventId() != null)
             sb.append("EventId: ").append(getEventId()).append(",");
         if (getEventTypeName() != null)
-            sb.append("EventTypeName: ").append(getEventTypeName());
+            sb.append("EventTypeName: ").append(getEventTypeName()).append(",");
+        if (getDeleteAuditHistory() != null)
+            sb.append("DeleteAuditHistory: ").append(getDeleteAuditHistory());
         sb.append("}");
         return sb.toString();
     }
@@ -156,6 +216,10 @@ public class DeleteEventRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getEventTypeName() != null && other.getEventTypeName().equals(this.getEventTypeName()) == false)
             return false;
+        if (other.getDeleteAuditHistory() == null ^ this.getDeleteAuditHistory() == null)
+            return false;
+        if (other.getDeleteAuditHistory() != null && other.getDeleteAuditHistory().equals(this.getDeleteAuditHistory()) == false)
+            return false;
         return true;
     }
 
@@ -166,6 +230,7 @@ public class DeleteEventRequest extends com.amazonaws.AmazonWebServiceRequest im
 
         hashCode = prime * hashCode + ((getEventId() == null) ? 0 : getEventId().hashCode());
         hashCode = prime * hashCode + ((getEventTypeName() == null) ? 0 : getEventTypeName().hashCode());
+        hashCode = prime * hashCode + ((getDeleteAuditHistory() == null) ? 0 : getDeleteAuditHistory().hashCode());
         return hashCode;
     }
 

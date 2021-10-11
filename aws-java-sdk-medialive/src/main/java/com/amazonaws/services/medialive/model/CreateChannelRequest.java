@@ -56,7 +56,7 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String roleArn;
     /** A collection of key-value pairs. */
     private java.util.Map<String, String> tags;
-    /** Settings for VPC output */
+    /** Settings for the VPC outputs */
     private VpcOutputSettings vpc;
 
     /**
@@ -576,10 +576,10 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * Settings for VPC output
+     * Settings for the VPC outputs
      * 
      * @param vpc
-     *        Settings for VPC output
+     *        Settings for the VPC outputs
      */
 
     public void setVpc(VpcOutputSettings vpc) {
@@ -587,9 +587,9 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * Settings for VPC output
+     * Settings for the VPC outputs
      * 
-     * @return Settings for VPC output
+     * @return Settings for the VPC outputs
      */
 
     public VpcOutputSettings getVpc() {
@@ -597,10 +597,10 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * Settings for VPC output
+     * Settings for the VPC outputs
      * 
      * @param vpc
-     *        Settings for VPC output
+     *        Settings for the VPC outputs
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

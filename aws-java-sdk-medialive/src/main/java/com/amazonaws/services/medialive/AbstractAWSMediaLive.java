@@ -59,6 +59,11 @@ public class AbstractAWSMediaLive implements AWSMediaLive {
     }
 
     @Override
+    public ClaimDeviceResult claimDevice(ClaimDeviceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateChannelResult createChannel(CreateChannelRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

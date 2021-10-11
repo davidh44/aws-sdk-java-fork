@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum TrainingDataSourceEnum {
 
-    EXTERNAL_EVENTS("EXTERNAL_EVENTS");
+    EXTERNAL_EVENTS("EXTERNAL_EVENTS"),
+    INGESTED_EVENTS("INGESTED_EVENTS");
 
     private String value;
 

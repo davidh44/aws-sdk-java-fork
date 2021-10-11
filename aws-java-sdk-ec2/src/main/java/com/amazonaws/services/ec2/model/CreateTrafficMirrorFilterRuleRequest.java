@@ -34,7 +34,7 @@ public class CreateTrafficMirrorFilterRuleRequest extends AmazonWebServiceReques
     private String trafficMirrorFilterId;
     /**
      * <p>
-     * The type of traffic (<code>ingress</code> | <code>egress</code>).
+     * The type of traffic.
      * </p>
      */
     private String trafficDirection;
@@ -47,7 +47,7 @@ public class CreateTrafficMirrorFilterRuleRequest extends AmazonWebServiceReques
     private Integer ruleNumber;
     /**
      * <p>
-     * The action to take (<code>accept</code> | <code>reject</code>) on the filtered traffic.
+     * The action to take on the filtered traffic.
      * </p>
      */
     private String ruleAction;
@@ -96,8 +96,8 @@ public class CreateTrafficMirrorFilterRuleRequest extends AmazonWebServiceReques
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to Ensure
-     * Idempotency</a>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
+     * idempotency</a>.
      * </p>
      */
     private String clientToken;
@@ -144,11 +144,11 @@ public class CreateTrafficMirrorFilterRuleRequest extends AmazonWebServiceReques
 
     /**
      * <p>
-     * The type of traffic (<code>ingress</code> | <code>egress</code>).
+     * The type of traffic.
      * </p>
      * 
      * @param trafficDirection
-     *        The type of traffic (<code>ingress</code> | <code>egress</code>).
+     *        The type of traffic.
      * @see TrafficDirection
      */
 
@@ -158,10 +158,10 @@ public class CreateTrafficMirrorFilterRuleRequest extends AmazonWebServiceReques
 
     /**
      * <p>
-     * The type of traffic (<code>ingress</code> | <code>egress</code>).
+     * The type of traffic.
      * </p>
      * 
-     * @return The type of traffic (<code>ingress</code> | <code>egress</code>).
+     * @return The type of traffic.
      * @see TrafficDirection
      */
 
@@ -171,11 +171,11 @@ public class CreateTrafficMirrorFilterRuleRequest extends AmazonWebServiceReques
 
     /**
      * <p>
-     * The type of traffic (<code>ingress</code> | <code>egress</code>).
+     * The type of traffic.
      * </p>
      * 
      * @param trafficDirection
-     *        The type of traffic (<code>ingress</code> | <code>egress</code>).
+     *        The type of traffic.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TrafficDirection
      */
@@ -187,11 +187,11 @@ public class CreateTrafficMirrorFilterRuleRequest extends AmazonWebServiceReques
 
     /**
      * <p>
-     * The type of traffic (<code>ingress</code> | <code>egress</code>).
+     * The type of traffic.
      * </p>
      * 
      * @param trafficDirection
-     *        The type of traffic (<code>ingress</code> | <code>egress</code>).
+     *        The type of traffic.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TrafficDirection
      */
@@ -249,11 +249,11 @@ public class CreateTrafficMirrorFilterRuleRequest extends AmazonWebServiceReques
 
     /**
      * <p>
-     * The action to take (<code>accept</code> | <code>reject</code>) on the filtered traffic.
+     * The action to take on the filtered traffic.
      * </p>
      * 
      * @param ruleAction
-     *        The action to take (<code>accept</code> | <code>reject</code>) on the filtered traffic.
+     *        The action to take on the filtered traffic.
      * @see TrafficMirrorRuleAction
      */
 
@@ -263,10 +263,10 @@ public class CreateTrafficMirrorFilterRuleRequest extends AmazonWebServiceReques
 
     /**
      * <p>
-     * The action to take (<code>accept</code> | <code>reject</code>) on the filtered traffic.
+     * The action to take on the filtered traffic.
      * </p>
      * 
-     * @return The action to take (<code>accept</code> | <code>reject</code>) on the filtered traffic.
+     * @return The action to take on the filtered traffic.
      * @see TrafficMirrorRuleAction
      */
 
@@ -276,11 +276,11 @@ public class CreateTrafficMirrorFilterRuleRequest extends AmazonWebServiceReques
 
     /**
      * <p>
-     * The action to take (<code>accept</code> | <code>reject</code>) on the filtered traffic.
+     * The action to take on the filtered traffic.
      * </p>
      * 
      * @param ruleAction
-     *        The action to take (<code>accept</code> | <code>reject</code>) on the filtered traffic.
+     *        The action to take on the filtered traffic.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TrafficMirrorRuleAction
      */
@@ -292,11 +292,11 @@ public class CreateTrafficMirrorFilterRuleRequest extends AmazonWebServiceReques
 
     /**
      * <p>
-     * The action to take (<code>accept</code> | <code>reject</code>) on the filtered traffic.
+     * The action to take on the filtered traffic.
      * </p>
      * 
      * @param ruleAction
-     *        The action to take (<code>accept</code> | <code>reject</code>) on the filtered traffic.
+     *        The action to take on the filtered traffic.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TrafficMirrorRuleAction
      */
@@ -577,15 +577,15 @@ public class CreateTrafficMirrorFilterRuleRequest extends AmazonWebServiceReques
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to Ensure
-     * Idempotency</a>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
+     * idempotency</a>.
      * </p>
      * 
      * @param clientToken
      *        Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to Ensure
-     *        Idempotency</a>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
+     *        idempotency</a>.
      */
 
     public void setClientToken(String clientToken) {
@@ -596,14 +596,14 @@ public class CreateTrafficMirrorFilterRuleRequest extends AmazonWebServiceReques
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to Ensure
-     * Idempotency</a>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
+     * idempotency</a>.
      * </p>
      * 
      * @return Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      *         information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to Ensure
-     *         Idempotency</a>.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
+     *         idempotency</a>.
      */
 
     public String getClientToken() {
@@ -614,15 +614,15 @@ public class CreateTrafficMirrorFilterRuleRequest extends AmazonWebServiceReques
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to Ensure
-     * Idempotency</a>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
+     * idempotency</a>.
      * </p>
      * 
      * @param clientToken
      *        Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to Ensure
-     *        Idempotency</a>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
+     *        idempotency</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

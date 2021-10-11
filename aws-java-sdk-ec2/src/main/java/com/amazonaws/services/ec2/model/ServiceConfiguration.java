@@ -58,7 +58,8 @@ public class ServiceConfiguration implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<String> availabilityZones;
     /**
      * <p>
-     * Indicates whether requests from other AWS accounts to create an endpoint to the service must first be accepted.
+     * Indicates whether requests from other Amazon Web Services accounts to create an endpoint to the service must
+     * first be accepted.
      * </p>
      */
     private Boolean acceptanceRequired;
@@ -393,12 +394,13 @@ public class ServiceConfiguration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether requests from other AWS accounts to create an endpoint to the service must first be accepted.
+     * Indicates whether requests from other Amazon Web Services accounts to create an endpoint to the service must
+     * first be accepted.
      * </p>
      * 
      * @param acceptanceRequired
-     *        Indicates whether requests from other AWS accounts to create an endpoint to the service must first be
-     *        accepted.
+     *        Indicates whether requests from other Amazon Web Services accounts to create an endpoint to the service
+     *        must first be accepted.
      */
 
     public void setAcceptanceRequired(Boolean acceptanceRequired) {
@@ -407,11 +409,12 @@ public class ServiceConfiguration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether requests from other AWS accounts to create an endpoint to the service must first be accepted.
+     * Indicates whether requests from other Amazon Web Services accounts to create an endpoint to the service must
+     * first be accepted.
      * </p>
      * 
-     * @return Indicates whether requests from other AWS accounts to create an endpoint to the service must first be
-     *         accepted.
+     * @return Indicates whether requests from other Amazon Web Services accounts to create an endpoint to the service
+     *         must first be accepted.
      */
 
     public Boolean getAcceptanceRequired() {
@@ -420,12 +423,13 @@ public class ServiceConfiguration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether requests from other AWS accounts to create an endpoint to the service must first be accepted.
+     * Indicates whether requests from other Amazon Web Services accounts to create an endpoint to the service must
+     * first be accepted.
      * </p>
      * 
      * @param acceptanceRequired
-     *        Indicates whether requests from other AWS accounts to create an endpoint to the service must first be
-     *        accepted.
+     *        Indicates whether requests from other Amazon Web Services accounts to create an endpoint to the service
+     *        must first be accepted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -436,11 +440,12 @@ public class ServiceConfiguration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether requests from other AWS accounts to create an endpoint to the service must first be accepted.
+     * Indicates whether requests from other Amazon Web Services accounts to create an endpoint to the service must
+     * first be accepted.
      * </p>
      * 
-     * @return Indicates whether requests from other AWS accounts to create an endpoint to the service must first be
-     *         accepted.
+     * @return Indicates whether requests from other Amazon Web Services accounts to create an endpoint to the service
+     *         must first be accepted.
      */
 
     public Boolean isAcceptanceRequired() {

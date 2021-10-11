@@ -135,6 +135,10 @@ public class CreateTargetGroupRequestMarshaller implements Marshaller<Request<Cr
             }
         }
 
+        if (createTargetGroupRequest.getIpAddressType() != null) {
+            request.addParameter("IpAddressType", StringUtils.fromString(createTargetGroupRequest.getIpAddressType()));
+        }
+
         return request;
     }
 

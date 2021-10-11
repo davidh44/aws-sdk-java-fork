@@ -40,6 +40,12 @@ public class LabelSchema implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Map<String, java.util.List<String>> labelMapper;
+    /**
+     * <p>
+     * The action to take for unlabeled events.
+     * </p>
+     */
+    private String unlabeledEventsTreatment;
 
     /**
      * <p>
@@ -149,6 +155,65 @@ public class LabelSchema implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The action to take for unlabeled events.
+     * </p>
+     * 
+     * @param unlabeledEventsTreatment
+     *        The action to take for unlabeled events.
+     * @see UnlabeledEventsTreatment
+     */
+
+    public void setUnlabeledEventsTreatment(String unlabeledEventsTreatment) {
+        this.unlabeledEventsTreatment = unlabeledEventsTreatment;
+    }
+
+    /**
+     * <p>
+     * The action to take for unlabeled events.
+     * </p>
+     * 
+     * @return The action to take for unlabeled events.
+     * @see UnlabeledEventsTreatment
+     */
+
+    public String getUnlabeledEventsTreatment() {
+        return this.unlabeledEventsTreatment;
+    }
+
+    /**
+     * <p>
+     * The action to take for unlabeled events.
+     * </p>
+     * 
+     * @param unlabeledEventsTreatment
+     *        The action to take for unlabeled events.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see UnlabeledEventsTreatment
+     */
+
+    public LabelSchema withUnlabeledEventsTreatment(String unlabeledEventsTreatment) {
+        setUnlabeledEventsTreatment(unlabeledEventsTreatment);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The action to take for unlabeled events.
+     * </p>
+     * 
+     * @param unlabeledEventsTreatment
+     *        The action to take for unlabeled events.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see UnlabeledEventsTreatment
+     */
+
+    public LabelSchema withUnlabeledEventsTreatment(UnlabeledEventsTreatment unlabeledEventsTreatment) {
+        this.unlabeledEventsTreatment = unlabeledEventsTreatment.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -161,7 +226,9 @@ public class LabelSchema implements Serializable, Cloneable, StructuredPojo {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getLabelMapper() != null)
-            sb.append("LabelMapper: ").append(getLabelMapper());
+            sb.append("LabelMapper: ").append(getLabelMapper()).append(",");
+        if (getUnlabeledEventsTreatment() != null)
+            sb.append("UnlabeledEventsTreatment: ").append(getUnlabeledEventsTreatment());
         sb.append("}");
         return sb.toString();
     }
@@ -180,6 +247,10 @@ public class LabelSchema implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getLabelMapper() != null && other.getLabelMapper().equals(this.getLabelMapper()) == false)
             return false;
+        if (other.getUnlabeledEventsTreatment() == null ^ this.getUnlabeledEventsTreatment() == null)
+            return false;
+        if (other.getUnlabeledEventsTreatment() != null && other.getUnlabeledEventsTreatment().equals(this.getUnlabeledEventsTreatment()) == false)
+            return false;
         return true;
     }
 
@@ -189,6 +260,7 @@ public class LabelSchema implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getLabelMapper() == null) ? 0 : getLabelMapper().hashCode());
+        hashCode = prime * hashCode + ((getUnlabeledEventsTreatment() == null) ? 0 : getUnlabeledEventsTreatment().hashCode());
         return hashCode;
     }
 

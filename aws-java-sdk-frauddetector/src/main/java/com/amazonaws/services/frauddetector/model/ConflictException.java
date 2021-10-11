@@ -16,30 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * An exception indicating there was a conflict during a delete operation. The following delete operations can cause a
- * conflict exception:
+ * An exception indicating there was a conflict during a delete operation.
  * </p>
- * <ul>
- * <li>
- * <p>
- * DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or
- * <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or
- * <code>DetectorVersions</code>.
- * </p>
- * </li>
- * <li>
- * <p>
- * DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is
- * <code>ACTIVE</code>.
- * </p>
- * </li>
- * <li>
- * <p>
- * DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated
- * <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.
- * </p>
- * </li>
- * </ul>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ConflictException extends com.amazonaws.services.frauddetector.model.AmazonFraudDetectorException {

@@ -60,6 +60,20 @@ public class EventType implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<String> entityTypes;
     /**
      * <p>
+     * If <code>Enabled</code>, Amazon Fraud Detector stores event data when you generate a prediction and uses that
+     * data to update calculated variables in near real-time. Amazon Fraud Detector uses this data, known as
+     * <code>INGESTED_EVENTS</code>, to train your model and improve fraud predictions.
+     * </p>
+     */
+    private String eventIngestion;
+    /**
+     * <p>
+     * Data about the stored events.
+     * </p>
+     */
+    private IngestedEventStatistics ingestedEventStatistics;
+    /**
+     * <p>
      * Timestamp of when the event type was last updated.
      * </p>
      */
@@ -369,6 +383,121 @@ public class EventType implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * If <code>Enabled</code>, Amazon Fraud Detector stores event data when you generate a prediction and uses that
+     * data to update calculated variables in near real-time. Amazon Fraud Detector uses this data, known as
+     * <code>INGESTED_EVENTS</code>, to train your model and improve fraud predictions.
+     * </p>
+     * 
+     * @param eventIngestion
+     *        If <code>Enabled</code>, Amazon Fraud Detector stores event data when you generate a prediction and uses
+     *        that data to update calculated variables in near real-time. Amazon Fraud Detector uses this data, known as
+     *        <code>INGESTED_EVENTS</code>, to train your model and improve fraud predictions.
+     * @see EventIngestion
+     */
+
+    public void setEventIngestion(String eventIngestion) {
+        this.eventIngestion = eventIngestion;
+    }
+
+    /**
+     * <p>
+     * If <code>Enabled</code>, Amazon Fraud Detector stores event data when you generate a prediction and uses that
+     * data to update calculated variables in near real-time. Amazon Fraud Detector uses this data, known as
+     * <code>INGESTED_EVENTS</code>, to train your model and improve fraud predictions.
+     * </p>
+     * 
+     * @return If <code>Enabled</code>, Amazon Fraud Detector stores event data when you generate a prediction and uses
+     *         that data to update calculated variables in near real-time. Amazon Fraud Detector uses this data, known
+     *         as <code>INGESTED_EVENTS</code>, to train your model and improve fraud predictions.
+     * @see EventIngestion
+     */
+
+    public String getEventIngestion() {
+        return this.eventIngestion;
+    }
+
+    /**
+     * <p>
+     * If <code>Enabled</code>, Amazon Fraud Detector stores event data when you generate a prediction and uses that
+     * data to update calculated variables in near real-time. Amazon Fraud Detector uses this data, known as
+     * <code>INGESTED_EVENTS</code>, to train your model and improve fraud predictions.
+     * </p>
+     * 
+     * @param eventIngestion
+     *        If <code>Enabled</code>, Amazon Fraud Detector stores event data when you generate a prediction and uses
+     *        that data to update calculated variables in near real-time. Amazon Fraud Detector uses this data, known as
+     *        <code>INGESTED_EVENTS</code>, to train your model and improve fraud predictions.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see EventIngestion
+     */
+
+    public EventType withEventIngestion(String eventIngestion) {
+        setEventIngestion(eventIngestion);
+        return this;
+    }
+
+    /**
+     * <p>
+     * If <code>Enabled</code>, Amazon Fraud Detector stores event data when you generate a prediction and uses that
+     * data to update calculated variables in near real-time. Amazon Fraud Detector uses this data, known as
+     * <code>INGESTED_EVENTS</code>, to train your model and improve fraud predictions.
+     * </p>
+     * 
+     * @param eventIngestion
+     *        If <code>Enabled</code>, Amazon Fraud Detector stores event data when you generate a prediction and uses
+     *        that data to update calculated variables in near real-time. Amazon Fraud Detector uses this data, known as
+     *        <code>INGESTED_EVENTS</code>, to train your model and improve fraud predictions.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see EventIngestion
+     */
+
+    public EventType withEventIngestion(EventIngestion eventIngestion) {
+        this.eventIngestion = eventIngestion.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Data about the stored events.
+     * </p>
+     * 
+     * @param ingestedEventStatistics
+     *        Data about the stored events.
+     */
+
+    public void setIngestedEventStatistics(IngestedEventStatistics ingestedEventStatistics) {
+        this.ingestedEventStatistics = ingestedEventStatistics;
+    }
+
+    /**
+     * <p>
+     * Data about the stored events.
+     * </p>
+     * 
+     * @return Data about the stored events.
+     */
+
+    public IngestedEventStatistics getIngestedEventStatistics() {
+        return this.ingestedEventStatistics;
+    }
+
+    /**
+     * <p>
+     * Data about the stored events.
+     * </p>
+     * 
+     * @param ingestedEventStatistics
+     *        Data about the stored events.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EventType withIngestedEventStatistics(IngestedEventStatistics ingestedEventStatistics) {
+        setIngestedEventStatistics(ingestedEventStatistics);
+        return this;
+    }
+
+    /**
+     * <p>
      * Timestamp of when the event type was last updated.
      * </p>
      * 
@@ -509,6 +638,10 @@ public class EventType implements Serializable, Cloneable, StructuredPojo {
             sb.append("Labels: ").append(getLabels()).append(",");
         if (getEntityTypes() != null)
             sb.append("EntityTypes: ").append(getEntityTypes()).append(",");
+        if (getEventIngestion() != null)
+            sb.append("EventIngestion: ").append(getEventIngestion()).append(",");
+        if (getIngestedEventStatistics() != null)
+            sb.append("IngestedEventStatistics: ").append(getIngestedEventStatistics()).append(",");
         if (getLastUpdatedTime() != null)
             sb.append("LastUpdatedTime: ").append(getLastUpdatedTime()).append(",");
         if (getCreatedTime() != null)
@@ -549,6 +682,14 @@ public class EventType implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getEntityTypes() != null && other.getEntityTypes().equals(this.getEntityTypes()) == false)
             return false;
+        if (other.getEventIngestion() == null ^ this.getEventIngestion() == null)
+            return false;
+        if (other.getEventIngestion() != null && other.getEventIngestion().equals(this.getEventIngestion()) == false)
+            return false;
+        if (other.getIngestedEventStatistics() == null ^ this.getIngestedEventStatistics() == null)
+            return false;
+        if (other.getIngestedEventStatistics() != null && other.getIngestedEventStatistics().equals(this.getIngestedEventStatistics()) == false)
+            return false;
         if (other.getLastUpdatedTime() == null ^ this.getLastUpdatedTime() == null)
             return false;
         if (other.getLastUpdatedTime() != null && other.getLastUpdatedTime().equals(this.getLastUpdatedTime()) == false)
@@ -574,6 +715,8 @@ public class EventType implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getEventVariables() == null) ? 0 : getEventVariables().hashCode());
         hashCode = prime * hashCode + ((getLabels() == null) ? 0 : getLabels().hashCode());
         hashCode = prime * hashCode + ((getEntityTypes() == null) ? 0 : getEntityTypes().hashCode());
+        hashCode = prime * hashCode + ((getEventIngestion() == null) ? 0 : getEventIngestion().hashCode());
+        hashCode = prime * hashCode + ((getIngestedEventStatistics() == null) ? 0 : getIngestedEventStatistics().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedTime() == null) ? 0 : getLastUpdatedTime().hashCode());
         hashCode = prime * hashCode + ((getCreatedTime() == null) ? 0 : getCreatedTime().hashCode());
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());

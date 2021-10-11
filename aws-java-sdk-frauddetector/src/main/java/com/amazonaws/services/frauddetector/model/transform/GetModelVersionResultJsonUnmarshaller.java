@@ -72,6 +72,10 @@ public class GetModelVersionResultJsonUnmarshaller implements Unmarshaller<GetMo
                     context.nextToken();
                     getModelVersionResult.setExternalEventsDetail(ExternalEventsDetailJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ingestedEventsDetail", targetDepth)) {
+                    context.nextToken();
+                    getModelVersionResult.setIngestedEventsDetail(IngestedEventsDetailJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("status", targetDepth)) {
                     context.nextToken();
                     getModelVersionResult.setStatus(context.getUnmarshaller(String.class).unmarshall(context));

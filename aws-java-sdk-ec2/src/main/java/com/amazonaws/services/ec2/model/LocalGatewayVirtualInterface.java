@@ -70,7 +70,7 @@ public class LocalGatewayVirtualInterface implements Serializable, Cloneable {
     private Integer peerBgpAsn;
     /**
      * <p>
-     * The AWS account ID that owns the local gateway virtual interface.
+     * The ID of the Amazon Web Services account that owns the local gateway virtual interface.
      * </p>
      */
     private String ownerId;
@@ -363,11 +363,11 @@ public class LocalGatewayVirtualInterface implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID that owns the local gateway virtual interface.
+     * The ID of the Amazon Web Services account that owns the local gateway virtual interface.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID that owns the local gateway virtual interface.
+     *        The ID of the Amazon Web Services account that owns the local gateway virtual interface.
      */
 
     public void setOwnerId(String ownerId) {
@@ -376,10 +376,10 @@ public class LocalGatewayVirtualInterface implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID that owns the local gateway virtual interface.
+     * The ID of the Amazon Web Services account that owns the local gateway virtual interface.
      * </p>
      * 
-     * @return The AWS account ID that owns the local gateway virtual interface.
+     * @return The ID of the Amazon Web Services account that owns the local gateway virtual interface.
      */
 
     public String getOwnerId() {
@@ -388,11 +388,11 @@ public class LocalGatewayVirtualInterface implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID that owns the local gateway virtual interface.
+     * The ID of the Amazon Web Services account that owns the local gateway virtual interface.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID that owns the local gateway virtual interface.
+     *        The ID of the Amazon Web Services account that owns the local gateway virtual interface.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

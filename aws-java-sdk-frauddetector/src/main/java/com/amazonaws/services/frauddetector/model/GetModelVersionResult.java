@@ -55,10 +55,18 @@ public class GetModelVersionResult extends com.amazonaws.AmazonWebServiceResult<
     private TrainingDataSchema trainingDataSchema;
     /**
      * <p>
-     * The event details.
+     * The details of the external events data used for training the model version. This will be populated if the
+     * <code>trainingDataSource</code> is <code>EXTERNAL_EVENTS</code>
      * </p>
      */
     private ExternalEventsDetail externalEventsDetail;
+    /**
+     * <p>
+     * The details of the ingested events data used for training the model version. This will be populated if the
+     * <code>trainingDataSource</code> is <code>INGESTED_EVENTS</code>.
+     * </p>
+     */
+    private IngestedEventsDetail ingestedEventsDetail;
     /**
      * <p>
      * The model version status.
@@ -362,11 +370,13 @@ public class GetModelVersionResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The event details.
+     * The details of the external events data used for training the model version. This will be populated if the
+     * <code>trainingDataSource</code> is <code>EXTERNAL_EVENTS</code>
      * </p>
      * 
      * @param externalEventsDetail
-     *        The event details.
+     *        The details of the external events data used for training the model version. This will be populated if the
+     *        <code>trainingDataSource</code> is <code>EXTERNAL_EVENTS</code>
      */
 
     public void setExternalEventsDetail(ExternalEventsDetail externalEventsDetail) {
@@ -375,10 +385,12 @@ public class GetModelVersionResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The event details.
+     * The details of the external events data used for training the model version. This will be populated if the
+     * <code>trainingDataSource</code> is <code>EXTERNAL_EVENTS</code>
      * </p>
      * 
-     * @return The event details.
+     * @return The details of the external events data used for training the model version. This will be populated if
+     *         the <code>trainingDataSource</code> is <code>EXTERNAL_EVENTS</code>
      */
 
     public ExternalEventsDetail getExternalEventsDetail() {
@@ -387,16 +399,64 @@ public class GetModelVersionResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The event details.
+     * The details of the external events data used for training the model version. This will be populated if the
+     * <code>trainingDataSource</code> is <code>EXTERNAL_EVENTS</code>
      * </p>
      * 
      * @param externalEventsDetail
-     *        The event details.
+     *        The details of the external events data used for training the model version. This will be populated if the
+     *        <code>trainingDataSource</code> is <code>EXTERNAL_EVENTS</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public GetModelVersionResult withExternalEventsDetail(ExternalEventsDetail externalEventsDetail) {
         setExternalEventsDetail(externalEventsDetail);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The details of the ingested events data used for training the model version. This will be populated if the
+     * <code>trainingDataSource</code> is <code>INGESTED_EVENTS</code>.
+     * </p>
+     * 
+     * @param ingestedEventsDetail
+     *        The details of the ingested events data used for training the model version. This will be populated if the
+     *        <code>trainingDataSource</code> is <code>INGESTED_EVENTS</code>.
+     */
+
+    public void setIngestedEventsDetail(IngestedEventsDetail ingestedEventsDetail) {
+        this.ingestedEventsDetail = ingestedEventsDetail;
+    }
+
+    /**
+     * <p>
+     * The details of the ingested events data used for training the model version. This will be populated if the
+     * <code>trainingDataSource</code> is <code>INGESTED_EVENTS</code>.
+     * </p>
+     * 
+     * @return The details of the ingested events data used for training the model version. This will be populated if
+     *         the <code>trainingDataSource</code> is <code>INGESTED_EVENTS</code>.
+     */
+
+    public IngestedEventsDetail getIngestedEventsDetail() {
+        return this.ingestedEventsDetail;
+    }
+
+    /**
+     * <p>
+     * The details of the ingested events data used for training the model version. This will be populated if the
+     * <code>trainingDataSource</code> is <code>INGESTED_EVENTS</code>.
+     * </p>
+     * 
+     * @param ingestedEventsDetail
+     *        The details of the ingested events data used for training the model version. This will be populated if the
+     *        <code>trainingDataSource</code> is <code>INGESTED_EVENTS</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetModelVersionResult withIngestedEventsDetail(IngestedEventsDetail ingestedEventsDetail) {
+        setIngestedEventsDetail(ingestedEventsDetail);
         return this;
     }
 
@@ -801,6 +861,8 @@ public class GetModelVersionResult extends com.amazonaws.AmazonWebServiceResult<
             sb.append("TrainingDataSchema: ").append(getTrainingDataSchema()).append(",");
         if (getExternalEventsDetail() != null)
             sb.append("ExternalEventsDetail: ").append(getExternalEventsDetail()).append(",");
+        if (getIngestedEventsDetail() != null)
+            sb.append("IngestedEventsDetail: ").append(getIngestedEventsDetail()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
         if (getArn() != null)
@@ -843,6 +905,10 @@ public class GetModelVersionResult extends com.amazonaws.AmazonWebServiceResult<
             return false;
         if (other.getExternalEventsDetail() != null && other.getExternalEventsDetail().equals(this.getExternalEventsDetail()) == false)
             return false;
+        if (other.getIngestedEventsDetail() == null ^ this.getIngestedEventsDetail() == null)
+            return false;
+        if (other.getIngestedEventsDetail() != null && other.getIngestedEventsDetail().equals(this.getIngestedEventsDetail()) == false)
+            return false;
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
@@ -865,6 +931,7 @@ public class GetModelVersionResult extends com.amazonaws.AmazonWebServiceResult<
         hashCode = prime * hashCode + ((getTrainingDataSource() == null) ? 0 : getTrainingDataSource().hashCode());
         hashCode = prime * hashCode + ((getTrainingDataSchema() == null) ? 0 : getTrainingDataSchema().hashCode());
         hashCode = prime * hashCode + ((getExternalEventsDetail() == null) ? 0 : getExternalEventsDetail().hashCode());
+        hashCode = prime * hashCode + ((getIngestedEventsDetail() == null) ? 0 : getIngestedEventsDetail().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
         return hashCode;

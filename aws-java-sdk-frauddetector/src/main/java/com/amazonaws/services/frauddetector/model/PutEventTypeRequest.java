@@ -57,6 +57,12 @@ public class PutEventTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
     private java.util.List<String> entityTypes;
     /**
      * <p>
+     * Specifies if ingenstion is enabled or disabled.
+     * </p>
+     */
+    private String eventIngestion;
+    /**
+     * <p>
      * A collection of key and value pairs.
      * </p>
      */
@@ -354,6 +360,65 @@ public class PutEventTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
+     * Specifies if ingenstion is enabled or disabled.
+     * </p>
+     * 
+     * @param eventIngestion
+     *        Specifies if ingenstion is enabled or disabled.
+     * @see EventIngestion
+     */
+
+    public void setEventIngestion(String eventIngestion) {
+        this.eventIngestion = eventIngestion;
+    }
+
+    /**
+     * <p>
+     * Specifies if ingenstion is enabled or disabled.
+     * </p>
+     * 
+     * @return Specifies if ingenstion is enabled or disabled.
+     * @see EventIngestion
+     */
+
+    public String getEventIngestion() {
+        return this.eventIngestion;
+    }
+
+    /**
+     * <p>
+     * Specifies if ingenstion is enabled or disabled.
+     * </p>
+     * 
+     * @param eventIngestion
+     *        Specifies if ingenstion is enabled or disabled.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see EventIngestion
+     */
+
+    public PutEventTypeRequest withEventIngestion(String eventIngestion) {
+        setEventIngestion(eventIngestion);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies if ingenstion is enabled or disabled.
+     * </p>
+     * 
+     * @param eventIngestion
+     *        Specifies if ingenstion is enabled or disabled.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see EventIngestion
+     */
+
+    public PutEventTypeRequest withEventIngestion(EventIngestion eventIngestion) {
+        this.eventIngestion = eventIngestion.toString();
+        return this;
+    }
+
+    /**
+     * <p>
      * A collection of key and value pairs.
      * </p>
      * 
@@ -444,6 +509,8 @@ public class PutEventTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
             sb.append("Labels: ").append(getLabels()).append(",");
         if (getEntityTypes() != null)
             sb.append("EntityTypes: ").append(getEntityTypes()).append(",");
+        if (getEventIngestion() != null)
+            sb.append("EventIngestion: ").append(getEventIngestion()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -480,6 +547,10 @@ public class PutEventTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getEntityTypes() != null && other.getEntityTypes().equals(this.getEntityTypes()) == false)
             return false;
+        if (other.getEventIngestion() == null ^ this.getEventIngestion() == null)
+            return false;
+        if (other.getEventIngestion() != null && other.getEventIngestion().equals(this.getEventIngestion()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -497,6 +568,7 @@ public class PutEventTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
         hashCode = prime * hashCode + ((getEventVariables() == null) ? 0 : getEventVariables().hashCode());
         hashCode = prime * hashCode + ((getLabels() == null) ? 0 : getLabels().hashCode());
         hashCode = prime * hashCode + ((getEntityTypes() == null) ? 0 : getEntityTypes().hashCode());
+        hashCode = prime * hashCode + ((getEventIngestion() == null) ? 0 : getEventIngestion().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

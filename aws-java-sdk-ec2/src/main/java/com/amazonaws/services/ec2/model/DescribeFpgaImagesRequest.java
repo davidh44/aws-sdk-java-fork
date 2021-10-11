@@ -33,8 +33,9 @@ public class DescribeFpgaImagesRequest extends AmazonWebServiceRequest implement
     private com.amazonaws.internal.SdkInternalList<String> fpgaImageIds;
     /**
      * <p>
-     * Filters the AFI by owner. Specify an AWS account ID, <code>self</code> (owner is the sender of the request), or
-     * an AWS owner alias (valid values are <code>amazon</code> | <code>aws-marketplace</code>).
+     * Filters the AFI by owner. Specify an Amazon Web Services account ID, <code>self</code> (owner is the sender of
+     * the request), or an Amazon Web Services owner alias (valid values are <code>amazon</code> |
+     * <code>aws-marketplace</code>).
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> owners;
@@ -65,7 +66,7 @@ public class DescribeFpgaImagesRequest extends AmazonWebServiceRequest implement
      * </li>
      * <li>
      * <p>
-     * <code>owner-id</code> - The AWS account ID of the AFI owner.
+     * <code>owner-id</code> - The Amazon Web Services account ID of the AFI owner.
      * </p>
      * </li>
      * <li>
@@ -75,7 +76,7 @@ public class DescribeFpgaImagesRequest extends AmazonWebServiceRequest implement
      * </li>
      * <li>
      * <p>
-     * <code>shell-version</code> - The version of the AWS Shell that was used to create the bitstream.
+     * <code>shell-version</code> - The version of the Amazon Web Services Shell that was used to create the bitstream.
      * </p>
      * </li>
      * <li>
@@ -194,12 +195,14 @@ public class DescribeFpgaImagesRequest extends AmazonWebServiceRequest implement
 
     /**
      * <p>
-     * Filters the AFI by owner. Specify an AWS account ID, <code>self</code> (owner is the sender of the request), or
-     * an AWS owner alias (valid values are <code>amazon</code> | <code>aws-marketplace</code>).
+     * Filters the AFI by owner. Specify an Amazon Web Services account ID, <code>self</code> (owner is the sender of
+     * the request), or an Amazon Web Services owner alias (valid values are <code>amazon</code> |
+     * <code>aws-marketplace</code>).
      * </p>
      * 
-     * @return Filters the AFI by owner. Specify an AWS account ID, <code>self</code> (owner is the sender of the
-     *         request), or an AWS owner alias (valid values are <code>amazon</code> | <code>aws-marketplace</code>).
+     * @return Filters the AFI by owner. Specify an Amazon Web Services account ID, <code>self</code> (owner is the
+     *         sender of the request), or an Amazon Web Services owner alias (valid values are <code>amazon</code> |
+     *         <code>aws-marketplace</code>).
      */
 
     public java.util.List<String> getOwners() {
@@ -211,13 +214,15 @@ public class DescribeFpgaImagesRequest extends AmazonWebServiceRequest implement
 
     /**
      * <p>
-     * Filters the AFI by owner. Specify an AWS account ID, <code>self</code> (owner is the sender of the request), or
-     * an AWS owner alias (valid values are <code>amazon</code> | <code>aws-marketplace</code>).
+     * Filters the AFI by owner. Specify an Amazon Web Services account ID, <code>self</code> (owner is the sender of
+     * the request), or an Amazon Web Services owner alias (valid values are <code>amazon</code> |
+     * <code>aws-marketplace</code>).
      * </p>
      * 
      * @param owners
-     *        Filters the AFI by owner. Specify an AWS account ID, <code>self</code> (owner is the sender of the
-     *        request), or an AWS owner alias (valid values are <code>amazon</code> | <code>aws-marketplace</code>).
+     *        Filters the AFI by owner. Specify an Amazon Web Services account ID, <code>self</code> (owner is the
+     *        sender of the request), or an Amazon Web Services owner alias (valid values are <code>amazon</code> |
+     *        <code>aws-marketplace</code>).
      */
 
     public void setOwners(java.util.Collection<String> owners) {
@@ -231,8 +236,9 @@ public class DescribeFpgaImagesRequest extends AmazonWebServiceRequest implement
 
     /**
      * <p>
-     * Filters the AFI by owner. Specify an AWS account ID, <code>self</code> (owner is the sender of the request), or
-     * an AWS owner alias (valid values are <code>amazon</code> | <code>aws-marketplace</code>).
+     * Filters the AFI by owner. Specify an Amazon Web Services account ID, <code>self</code> (owner is the sender of
+     * the request), or an Amazon Web Services owner alias (valid values are <code>amazon</code> |
+     * <code>aws-marketplace</code>).
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -241,8 +247,9 @@ public class DescribeFpgaImagesRequest extends AmazonWebServiceRequest implement
      * </p>
      * 
      * @param owners
-     *        Filters the AFI by owner. Specify an AWS account ID, <code>self</code> (owner is the sender of the
-     *        request), or an AWS owner alias (valid values are <code>amazon</code> | <code>aws-marketplace</code>).
+     *        Filters the AFI by owner. Specify an Amazon Web Services account ID, <code>self</code> (owner is the
+     *        sender of the request), or an Amazon Web Services owner alias (valid values are <code>amazon</code> |
+     *        <code>aws-marketplace</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -258,13 +265,15 @@ public class DescribeFpgaImagesRequest extends AmazonWebServiceRequest implement
 
     /**
      * <p>
-     * Filters the AFI by owner. Specify an AWS account ID, <code>self</code> (owner is the sender of the request), or
-     * an AWS owner alias (valid values are <code>amazon</code> | <code>aws-marketplace</code>).
+     * Filters the AFI by owner. Specify an Amazon Web Services account ID, <code>self</code> (owner is the sender of
+     * the request), or an Amazon Web Services owner alias (valid values are <code>amazon</code> |
+     * <code>aws-marketplace</code>).
      * </p>
      * 
      * @param owners
-     *        Filters the AFI by owner. Specify an AWS account ID, <code>self</code> (owner is the sender of the
-     *        request), or an AWS owner alias (valid values are <code>amazon</code> | <code>aws-marketplace</code>).
+     *        Filters the AFI by owner. Specify an Amazon Web Services account ID, <code>self</code> (owner is the
+     *        sender of the request), or an Amazon Web Services owner alias (valid values are <code>amazon</code> |
+     *        <code>aws-marketplace</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -300,7 +309,7 @@ public class DescribeFpgaImagesRequest extends AmazonWebServiceRequest implement
      * </li>
      * <li>
      * <p>
-     * <code>owner-id</code> - The AWS account ID of the AFI owner.
+     * <code>owner-id</code> - The Amazon Web Services account ID of the AFI owner.
      * </p>
      * </li>
      * <li>
@@ -310,7 +319,7 @@ public class DescribeFpgaImagesRequest extends AmazonWebServiceRequest implement
      * </li>
      * <li>
      * <p>
-     * <code>shell-version</code> - The version of the AWS Shell that was used to create the bitstream.
+     * <code>shell-version</code> - The version of the Amazon Web Services Shell that was used to create the bitstream.
      * </p>
      * </li>
      * <li>
@@ -364,7 +373,7 @@ public class DescribeFpgaImagesRequest extends AmazonWebServiceRequest implement
      *         </li>
      *         <li>
      *         <p>
-     *         <code>owner-id</code> - The AWS account ID of the AFI owner.
+     *         <code>owner-id</code> - The Amazon Web Services account ID of the AFI owner.
      *         </p>
      *         </li>
      *         <li>
@@ -374,7 +383,8 @@ public class DescribeFpgaImagesRequest extends AmazonWebServiceRequest implement
      *         </li>
      *         <li>
      *         <p>
-     *         <code>shell-version</code> - The version of the AWS Shell that was used to create the bitstream.
+     *         <code>shell-version</code> - The version of the Amazon Web Services Shell that was used to create the
+     *         bitstream.
      *         </p>
      *         </li>
      *         <li>
@@ -438,7 +448,7 @@ public class DescribeFpgaImagesRequest extends AmazonWebServiceRequest implement
      * </li>
      * <li>
      * <p>
-     * <code>owner-id</code> - The AWS account ID of the AFI owner.
+     * <code>owner-id</code> - The Amazon Web Services account ID of the AFI owner.
      * </p>
      * </li>
      * <li>
@@ -448,7 +458,7 @@ public class DescribeFpgaImagesRequest extends AmazonWebServiceRequest implement
      * </li>
      * <li>
      * <p>
-     * <code>shell-version</code> - The version of the AWS Shell that was used to create the bitstream.
+     * <code>shell-version</code> - The version of the Amazon Web Services Shell that was used to create the bitstream.
      * </p>
      * </li>
      * <li>
@@ -503,7 +513,7 @@ public class DescribeFpgaImagesRequest extends AmazonWebServiceRequest implement
      *        </li>
      *        <li>
      *        <p>
-     *        <code>owner-id</code> - The AWS account ID of the AFI owner.
+     *        <code>owner-id</code> - The Amazon Web Services account ID of the AFI owner.
      *        </p>
      *        </li>
      *        <li>
@@ -513,7 +523,8 @@ public class DescribeFpgaImagesRequest extends AmazonWebServiceRequest implement
      *        </li>
      *        <li>
      *        <p>
-     *        <code>shell-version</code> - The version of the AWS Shell that was used to create the bitstream.
+     *        <code>shell-version</code> - The version of the Amazon Web Services Shell that was used to create the
+     *        bitstream.
      *        </p>
      *        </li>
      *        <li>
@@ -579,7 +590,7 @@ public class DescribeFpgaImagesRequest extends AmazonWebServiceRequest implement
      * </li>
      * <li>
      * <p>
-     * <code>owner-id</code> - The AWS account ID of the AFI owner.
+     * <code>owner-id</code> - The Amazon Web Services account ID of the AFI owner.
      * </p>
      * </li>
      * <li>
@@ -589,7 +600,7 @@ public class DescribeFpgaImagesRequest extends AmazonWebServiceRequest implement
      * </li>
      * <li>
      * <p>
-     * <code>shell-version</code> - The version of the AWS Shell that was used to create the bitstream.
+     * <code>shell-version</code> - The version of the Amazon Web Services Shell that was used to create the bitstream.
      * </p>
      * </li>
      * <li>
@@ -649,7 +660,7 @@ public class DescribeFpgaImagesRequest extends AmazonWebServiceRequest implement
      *        </li>
      *        <li>
      *        <p>
-     *        <code>owner-id</code> - The AWS account ID of the AFI owner.
+     *        <code>owner-id</code> - The Amazon Web Services account ID of the AFI owner.
      *        </p>
      *        </li>
      *        <li>
@@ -659,7 +670,8 @@ public class DescribeFpgaImagesRequest extends AmazonWebServiceRequest implement
      *        </li>
      *        <li>
      *        <p>
-     *        <code>shell-version</code> - The version of the AWS Shell that was used to create the bitstream.
+     *        <code>shell-version</code> - The version of the Amazon Web Services Shell that was used to create the
+     *        bitstream.
      *        </p>
      *        </li>
      *        <li>
@@ -727,7 +739,7 @@ public class DescribeFpgaImagesRequest extends AmazonWebServiceRequest implement
      * </li>
      * <li>
      * <p>
-     * <code>owner-id</code> - The AWS account ID of the AFI owner.
+     * <code>owner-id</code> - The Amazon Web Services account ID of the AFI owner.
      * </p>
      * </li>
      * <li>
@@ -737,7 +749,7 @@ public class DescribeFpgaImagesRequest extends AmazonWebServiceRequest implement
      * </li>
      * <li>
      * <p>
-     * <code>shell-version</code> - The version of the AWS Shell that was used to create the bitstream.
+     * <code>shell-version</code> - The version of the Amazon Web Services Shell that was used to create the bitstream.
      * </p>
      * </li>
      * <li>
@@ -792,7 +804,7 @@ public class DescribeFpgaImagesRequest extends AmazonWebServiceRequest implement
      *        </li>
      *        <li>
      *        <p>
-     *        <code>owner-id</code> - The AWS account ID of the AFI owner.
+     *        <code>owner-id</code> - The Amazon Web Services account ID of the AFI owner.
      *        </p>
      *        </li>
      *        <li>
@@ -802,7 +814,8 @@ public class DescribeFpgaImagesRequest extends AmazonWebServiceRequest implement
      *        </li>
      *        <li>
      *        <p>
-     *        <code>shell-version</code> - The version of the AWS Shell that was used to create the bitstream.
+     *        <code>shell-version</code> - The version of the Amazon Web Services Shell that was used to create the
+     *        bitstream.
      *        </p>
      *        </li>
      *        <li>

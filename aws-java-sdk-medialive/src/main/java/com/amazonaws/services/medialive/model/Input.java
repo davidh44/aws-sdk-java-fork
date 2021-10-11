@@ -48,7 +48,7 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<String> inputPartnerIds;
     /**
      * Certain pull input sources can be dynamic, meaning that they can have their URL's dynamically changes during
-     * input switch actions. Presently, this functionality only works with MP4_FILE inputs.
+     * input switch actions. Presently, this functionality only works with MP4_FILE and TS_FILE inputs.
      */
     private String inputSourceType;
     /** A list of MediaConnect Flows for this input. */
@@ -477,11 +477,11 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * Certain pull input sources can be dynamic, meaning that they can have their URL's dynamically changes during
-     * input switch actions. Presently, this functionality only works with MP4_FILE inputs.
+     * input switch actions. Presently, this functionality only works with MP4_FILE and TS_FILE inputs.
      * 
      * @param inputSourceType
      *        Certain pull input sources can be dynamic, meaning that they can have their URL's dynamically changes
-     *        during input switch actions. Presently, this functionality only works with MP4_FILE inputs.
+     *        during input switch actions. Presently, this functionality only works with MP4_FILE and TS_FILE inputs.
      * @see InputSourceType
      */
 
@@ -491,10 +491,10 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * Certain pull input sources can be dynamic, meaning that they can have their URL's dynamically changes during
-     * input switch actions. Presently, this functionality only works with MP4_FILE inputs.
+     * input switch actions. Presently, this functionality only works with MP4_FILE and TS_FILE inputs.
      * 
      * @return Certain pull input sources can be dynamic, meaning that they can have their URL's dynamically changes
-     *         during input switch actions. Presently, this functionality only works with MP4_FILE inputs.
+     *         during input switch actions. Presently, this functionality only works with MP4_FILE and TS_FILE inputs.
      * @see InputSourceType
      */
 
@@ -504,11 +504,11 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * Certain pull input sources can be dynamic, meaning that they can have their URL's dynamically changes during
-     * input switch actions. Presently, this functionality only works with MP4_FILE inputs.
+     * input switch actions. Presently, this functionality only works with MP4_FILE and TS_FILE inputs.
      * 
      * @param inputSourceType
      *        Certain pull input sources can be dynamic, meaning that they can have their URL's dynamically changes
-     *        during input switch actions. Presently, this functionality only works with MP4_FILE inputs.
+     *        during input switch actions. Presently, this functionality only works with MP4_FILE and TS_FILE inputs.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InputSourceType
      */
@@ -520,11 +520,11 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * Certain pull input sources can be dynamic, meaning that they can have their URL's dynamically changes during
-     * input switch actions. Presently, this functionality only works with MP4_FILE inputs.
+     * input switch actions. Presently, this functionality only works with MP4_FILE and TS_FILE inputs.
      * 
      * @param inputSourceType
      *        Certain pull input sources can be dynamic, meaning that they can have their URL's dynamically changes
-     *        during input switch actions. Presently, this functionality only works with MP4_FILE inputs.
+     *        during input switch actions. Presently, this functionality only works with MP4_FILE and TS_FILE inputs.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InputSourceType
      */

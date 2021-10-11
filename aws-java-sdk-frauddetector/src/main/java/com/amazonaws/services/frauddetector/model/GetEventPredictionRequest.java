@@ -58,7 +58,8 @@ public class GetEventPredictionRequest extends com.amazonaws.AmazonWebServiceReq
     private java.util.List<Entity> entities;
     /**
      * <p>
-     * Timestamp that defines when the event under evaluation occurred.
+     * Timestamp that defines when the event under evaluation occurred. The timestamp must be specified using ISO 8601
+     * standard in UTC.
      * </p>
      */
     private String eventTimestamp;
@@ -68,21 +69,12 @@ public class GetEventPredictionRequest extends com.amazonaws.AmazonWebServiceReq
      * corresponding values for the event you are sending for evaluation.
      * </p>
      * <important>
-     * <ul>
-     * <li>
      * <p>
      * You must provide at least one eventVariable
      * </p>
-     * </li>
-     * <li>
-     * <p>
-     * If detectorVersion is associated with a modelVersion, you must provide at least one associated eventVariable
-     * </p>
-     * </li>
-     * </ul>
      * </important>
      * <p>
-     * To ensure highest possible fraud prediction and to simplify your data preparation, Amazon Fraud Detector will
+     * To ensure most accurate fraud prediction and to simplify your data preparation, Amazon Fraud Detector will
      * replace all missing variables or values as follows:
      * </p>
      * <p>
@@ -94,7 +86,7 @@ public class GetEventPredictionRequest extends com.amazonaws.AmazonWebServiceReq
      * for numeric variables and with special values for categorical variables.
      * </p>
      * <p>
-     * <b>For External models ( for example, imported SageMaker):</b>
+     * <b>For imported SageMaker models:</b>
      * </p>
      * <p>
      * If a null value is provided explicitly for a variable, the model and rules will use “null” as the value. If a
@@ -350,11 +342,13 @@ public class GetEventPredictionRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Timestamp that defines when the event under evaluation occurred.
+     * Timestamp that defines when the event under evaluation occurred. The timestamp must be specified using ISO 8601
+     * standard in UTC.
      * </p>
      * 
      * @param eventTimestamp
-     *        Timestamp that defines when the event under evaluation occurred.
+     *        Timestamp that defines when the event under evaluation occurred. The timestamp must be specified using ISO
+     *        8601 standard in UTC.
      */
 
     public void setEventTimestamp(String eventTimestamp) {
@@ -363,10 +357,12 @@ public class GetEventPredictionRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Timestamp that defines when the event under evaluation occurred.
+     * Timestamp that defines when the event under evaluation occurred. The timestamp must be specified using ISO 8601
+     * standard in UTC.
      * </p>
      * 
-     * @return Timestamp that defines when the event under evaluation occurred.
+     * @return Timestamp that defines when the event under evaluation occurred. The timestamp must be specified using
+     *         ISO 8601 standard in UTC.
      */
 
     public String getEventTimestamp() {
@@ -375,11 +371,13 @@ public class GetEventPredictionRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Timestamp that defines when the event under evaluation occurred.
+     * Timestamp that defines when the event under evaluation occurred. The timestamp must be specified using ISO 8601
+     * standard in UTC.
      * </p>
      * 
      * @param eventTimestamp
-     *        Timestamp that defines when the event under evaluation occurred.
+     *        Timestamp that defines when the event under evaluation occurred. The timestamp must be specified using ISO
+     *        8601 standard in UTC.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -394,21 +392,12 @@ public class GetEventPredictionRequest extends com.amazonaws.AmazonWebServiceReq
      * corresponding values for the event you are sending for evaluation.
      * </p>
      * <important>
-     * <ul>
-     * <li>
      * <p>
      * You must provide at least one eventVariable
      * </p>
-     * </li>
-     * <li>
-     * <p>
-     * If detectorVersion is associated with a modelVersion, you must provide at least one associated eventVariable
-     * </p>
-     * </li>
-     * </ul>
      * </important>
      * <p>
-     * To ensure highest possible fraud prediction and to simplify your data preparation, Amazon Fraud Detector will
+     * To ensure most accurate fraud prediction and to simplify your data preparation, Amazon Fraud Detector will
      * replace all missing variables or values as follows:
      * </p>
      * <p>
@@ -420,7 +409,7 @@ public class GetEventPredictionRequest extends com.amazonaws.AmazonWebServiceReq
      * for numeric variables and with special values for categorical variables.
      * </p>
      * <p>
-     * <b>For External models ( for example, imported SageMaker):</b>
+     * <b>For imported SageMaker models:</b>
      * </p>
      * <p>
      * If a null value is provided explicitly for a variable, the model and rules will use “null” as the value. If a
@@ -430,22 +419,12 @@ public class GetEventPredictionRequest extends com.amazonaws.AmazonWebServiceReq
      * 
      * @return Names of the event type's variables you defined in Amazon Fraud Detector to represent data elements and
      *         their corresponding values for the event you are sending for evaluation.</p> <important>
-     *         <ul>
-     *         <li>
      *         <p>
      *         You must provide at least one eventVariable
      *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         If detectorVersion is associated with a modelVersion, you must provide at least one associated
-     *         eventVariable
-     *         </p>
-     *         </li>
-     *         </ul>
      *         </important>
      *         <p>
-     *         To ensure highest possible fraud prediction and to simplify your data preparation, Amazon Fraud Detector
+     *         To ensure most accurate fraud prediction and to simplify your data preparation, Amazon Fraud Detector
      *         will replace all missing variables or values as follows:
      *         </p>
      *         <p>
@@ -457,7 +436,7 @@ public class GetEventPredictionRequest extends com.amazonaws.AmazonWebServiceReq
      *         mean/medians for numeric variables and with special values for categorical variables.
      *         </p>
      *         <p>
-     *         <b>For External models ( for example, imported SageMaker):</b>
+     *         <b>For imported SageMaker models:</b>
      *         </p>
      *         <p>
      *         If a null value is provided explicitly for a variable, the model and rules will use “null” as the value.
@@ -475,21 +454,12 @@ public class GetEventPredictionRequest extends com.amazonaws.AmazonWebServiceReq
      * corresponding values for the event you are sending for evaluation.
      * </p>
      * <important>
-     * <ul>
-     * <li>
      * <p>
      * You must provide at least one eventVariable
      * </p>
-     * </li>
-     * <li>
-     * <p>
-     * If detectorVersion is associated with a modelVersion, you must provide at least one associated eventVariable
-     * </p>
-     * </li>
-     * </ul>
      * </important>
      * <p>
-     * To ensure highest possible fraud prediction and to simplify your data preparation, Amazon Fraud Detector will
+     * To ensure most accurate fraud prediction and to simplify your data preparation, Amazon Fraud Detector will
      * replace all missing variables or values as follows:
      * </p>
      * <p>
@@ -501,7 +471,7 @@ public class GetEventPredictionRequest extends com.amazonaws.AmazonWebServiceReq
      * for numeric variables and with special values for categorical variables.
      * </p>
      * <p>
-     * <b>For External models ( for example, imported SageMaker):</b>
+     * <b>For imported SageMaker models:</b>
      * </p>
      * <p>
      * If a null value is provided explicitly for a variable, the model and rules will use “null” as the value. If a
@@ -512,23 +482,13 @@ public class GetEventPredictionRequest extends com.amazonaws.AmazonWebServiceReq
      * @param eventVariables
      *        Names of the event type's variables you defined in Amazon Fraud Detector to represent data elements and
      *        their corresponding values for the event you are sending for evaluation.</p> <important>
-     *        <ul>
-     *        <li>
      *        <p>
      *        You must provide at least one eventVariable
      *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        If detectorVersion is associated with a modelVersion, you must provide at least one associated
-     *        eventVariable
-     *        </p>
-     *        </li>
-     *        </ul>
      *        </important>
      *        <p>
-     *        To ensure highest possible fraud prediction and to simplify your data preparation, Amazon Fraud Detector
-     *        will replace all missing variables or values as follows:
+     *        To ensure most accurate fraud prediction and to simplify your data preparation, Amazon Fraud Detector will
+     *        replace all missing variables or values as follows:
      *        </p>
      *        <p>
      *        <b>For Amazon Fraud Detector trained models:</b>
@@ -539,7 +499,7 @@ public class GetEventPredictionRequest extends com.amazonaws.AmazonWebServiceReq
      *        mean/medians for numeric variables and with special values for categorical variables.
      *        </p>
      *        <p>
-     *        <b>For External models ( for example, imported SageMaker):</b>
+     *        <b>For imported SageMaker models:</b>
      *        </p>
      *        <p>
      *        If a null value is provided explicitly for a variable, the model and rules will use “null” as the value.
@@ -557,21 +517,12 @@ public class GetEventPredictionRequest extends com.amazonaws.AmazonWebServiceReq
      * corresponding values for the event you are sending for evaluation.
      * </p>
      * <important>
-     * <ul>
-     * <li>
      * <p>
      * You must provide at least one eventVariable
      * </p>
-     * </li>
-     * <li>
-     * <p>
-     * If detectorVersion is associated with a modelVersion, you must provide at least one associated eventVariable
-     * </p>
-     * </li>
-     * </ul>
      * </important>
      * <p>
-     * To ensure highest possible fraud prediction and to simplify your data preparation, Amazon Fraud Detector will
+     * To ensure most accurate fraud prediction and to simplify your data preparation, Amazon Fraud Detector will
      * replace all missing variables or values as follows:
      * </p>
      * <p>
@@ -583,7 +534,7 @@ public class GetEventPredictionRequest extends com.amazonaws.AmazonWebServiceReq
      * for numeric variables and with special values for categorical variables.
      * </p>
      * <p>
-     * <b>For External models ( for example, imported SageMaker):</b>
+     * <b>For imported SageMaker models:</b>
      * </p>
      * <p>
      * If a null value is provided explicitly for a variable, the model and rules will use “null” as the value. If a
@@ -594,23 +545,13 @@ public class GetEventPredictionRequest extends com.amazonaws.AmazonWebServiceReq
      * @param eventVariables
      *        Names of the event type's variables you defined in Amazon Fraud Detector to represent data elements and
      *        their corresponding values for the event you are sending for evaluation.</p> <important>
-     *        <ul>
-     *        <li>
      *        <p>
      *        You must provide at least one eventVariable
      *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        If detectorVersion is associated with a modelVersion, you must provide at least one associated
-     *        eventVariable
-     *        </p>
-     *        </li>
-     *        </ul>
      *        </important>
      *        <p>
-     *        To ensure highest possible fraud prediction and to simplify your data preparation, Amazon Fraud Detector
-     *        will replace all missing variables or values as follows:
+     *        To ensure most accurate fraud prediction and to simplify your data preparation, Amazon Fraud Detector will
+     *        replace all missing variables or values as follows:
      *        </p>
      *        <p>
      *        <b>For Amazon Fraud Detector trained models:</b>
@@ -621,7 +562,7 @@ public class GetEventPredictionRequest extends com.amazonaws.AmazonWebServiceReq
      *        mean/medians for numeric variables and with special values for categorical variables.
      *        </p>
      *        <p>
-     *        <b>For External models ( for example, imported SageMaker):</b>
+     *        <b>For imported SageMaker models:</b>
      *        </p>
      *        <p>
      *        If a null value is provided explicitly for a variable, the model and rules will use “null” as the value.

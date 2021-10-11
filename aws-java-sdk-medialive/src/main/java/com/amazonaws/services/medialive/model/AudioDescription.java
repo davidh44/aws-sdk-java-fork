@@ -39,6 +39,8 @@ public class AudioDescription implements Serializable, Cloneable, StructuredPojo
      * audioType are both ignored if inputType is broadcasterMixedAd.
      */
     private String audioTypeControl;
+    /** Settings to configure one or more solutions that insert audio watermarks in the audio encode */
+    private AudioWatermarkSettings audioWatermarkingSettings;
     /** Audio codec settings. */
     private AudioCodecSettings codecSettings;
     /**
@@ -260,6 +262,40 @@ public class AudioDescription implements Serializable, Cloneable, StructuredPojo
 
     public AudioDescription withAudioTypeControl(AudioDescriptionAudioTypeControl audioTypeControl) {
         this.audioTypeControl = audioTypeControl.toString();
+        return this;
+    }
+
+    /**
+     * Settings to configure one or more solutions that insert audio watermarks in the audio encode
+     * 
+     * @param audioWatermarkingSettings
+     *        Settings to configure one or more solutions that insert audio watermarks in the audio encode
+     */
+
+    public void setAudioWatermarkingSettings(AudioWatermarkSettings audioWatermarkingSettings) {
+        this.audioWatermarkingSettings = audioWatermarkingSettings;
+    }
+
+    /**
+     * Settings to configure one or more solutions that insert audio watermarks in the audio encode
+     * 
+     * @return Settings to configure one or more solutions that insert audio watermarks in the audio encode
+     */
+
+    public AudioWatermarkSettings getAudioWatermarkingSettings() {
+        return this.audioWatermarkingSettings;
+    }
+
+    /**
+     * Settings to configure one or more solutions that insert audio watermarks in the audio encode
+     * 
+     * @param audioWatermarkingSettings
+     *        Settings to configure one or more solutions that insert audio watermarks in the audio encode
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AudioDescription withAudioWatermarkingSettings(AudioWatermarkSettings audioWatermarkingSettings) {
+        setAudioWatermarkingSettings(audioWatermarkingSettings);
         return this;
     }
 
@@ -538,6 +574,8 @@ public class AudioDescription implements Serializable, Cloneable, StructuredPojo
             sb.append("AudioType: ").append(getAudioType()).append(",");
         if (getAudioTypeControl() != null)
             sb.append("AudioTypeControl: ").append(getAudioTypeControl()).append(",");
+        if (getAudioWatermarkingSettings() != null)
+            sb.append("AudioWatermarkingSettings: ").append(getAudioWatermarkingSettings()).append(",");
         if (getCodecSettings() != null)
             sb.append("CodecSettings: ").append(getCodecSettings()).append(",");
         if (getLanguageCode() != null)
@@ -580,6 +618,10 @@ public class AudioDescription implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getAudioTypeControl() != null && other.getAudioTypeControl().equals(this.getAudioTypeControl()) == false)
             return false;
+        if (other.getAudioWatermarkingSettings() == null ^ this.getAudioWatermarkingSettings() == null)
+            return false;
+        if (other.getAudioWatermarkingSettings() != null && other.getAudioWatermarkingSettings().equals(this.getAudioWatermarkingSettings()) == false)
+            return false;
         if (other.getCodecSettings() == null ^ this.getCodecSettings() == null)
             return false;
         if (other.getCodecSettings() != null && other.getCodecSettings().equals(this.getCodecSettings()) == false)
@@ -616,6 +658,7 @@ public class AudioDescription implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getAudioSelectorName() == null) ? 0 : getAudioSelectorName().hashCode());
         hashCode = prime * hashCode + ((getAudioType() == null) ? 0 : getAudioType().hashCode());
         hashCode = prime * hashCode + ((getAudioTypeControl() == null) ? 0 : getAudioTypeControl().hashCode());
+        hashCode = prime * hashCode + ((getAudioWatermarkingSettings() == null) ? 0 : getAudioWatermarkingSettings().hashCode());
         hashCode = prime * hashCode + ((getCodecSettings() == null) ? 0 : getCodecSettings().hashCode());
         hashCode = prime * hashCode + ((getLanguageCode() == null) ? 0 : getLanguageCode().hashCode());
         hashCode = prime * hashCode + ((getLanguageCodeControl() == null) ? 0 : getLanguageCodeControl().hashCode());

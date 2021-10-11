@@ -40,7 +40,7 @@ public class VpcEndpointConnection implements Serializable, Cloneable {
     private String vpcEndpointId;
     /**
      * <p>
-     * The AWS account ID of the owner of the VPC endpoint.
+     * The ID of the Amazon Web Services account that owns the VPC endpoint.
      * </p>
      */
     private String vpcEndpointOwner;
@@ -157,11 +157,11 @@ public class VpcEndpointConnection implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID of the owner of the VPC endpoint.
+     * The ID of the Amazon Web Services account that owns the VPC endpoint.
      * </p>
      * 
      * @param vpcEndpointOwner
-     *        The AWS account ID of the owner of the VPC endpoint.
+     *        The ID of the Amazon Web Services account that owns the VPC endpoint.
      */
 
     public void setVpcEndpointOwner(String vpcEndpointOwner) {
@@ -170,10 +170,10 @@ public class VpcEndpointConnection implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID of the owner of the VPC endpoint.
+     * The ID of the Amazon Web Services account that owns the VPC endpoint.
      * </p>
      * 
-     * @return The AWS account ID of the owner of the VPC endpoint.
+     * @return The ID of the Amazon Web Services account that owns the VPC endpoint.
      */
 
     public String getVpcEndpointOwner() {
@@ -182,11 +182,11 @@ public class VpcEndpointConnection implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID of the owner of the VPC endpoint.
+     * The ID of the Amazon Web Services account that owns the VPC endpoint.
      * </p>
      * 
      * @param vpcEndpointOwner
-     *        The AWS account ID of the owner of the VPC endpoint.
+     *        The ID of the Amazon Web Services account that owns the VPC endpoint.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -59,7 +59,7 @@ public class LocalGatewayRouteTableVirtualInterfaceGroupAssociation implements S
     private String localGatewayRouteTableArn;
     /**
      * <p>
-     * The AWS account ID that owns the local gateway virtual interface group association.
+     * The ID of the Amazon Web Services account that owns the local gateway virtual interface group association.
      * </p>
      */
     private String ownerId;
@@ -279,11 +279,11 @@ public class LocalGatewayRouteTableVirtualInterfaceGroupAssociation implements S
 
     /**
      * <p>
-     * The AWS account ID that owns the local gateway virtual interface group association.
+     * The ID of the Amazon Web Services account that owns the local gateway virtual interface group association.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID that owns the local gateway virtual interface group association.
+     *        The ID of the Amazon Web Services account that owns the local gateway virtual interface group association.
      */
 
     public void setOwnerId(String ownerId) {
@@ -292,10 +292,11 @@ public class LocalGatewayRouteTableVirtualInterfaceGroupAssociation implements S
 
     /**
      * <p>
-     * The AWS account ID that owns the local gateway virtual interface group association.
+     * The ID of the Amazon Web Services account that owns the local gateway virtual interface group association.
      * </p>
      * 
-     * @return The AWS account ID that owns the local gateway virtual interface group association.
+     * @return The ID of the Amazon Web Services account that owns the local gateway virtual interface group
+     *         association.
      */
 
     public String getOwnerId() {
@@ -304,11 +305,11 @@ public class LocalGatewayRouteTableVirtualInterfaceGroupAssociation implements S
 
     /**
      * <p>
-     * The AWS account ID that owns the local gateway virtual interface group association.
+     * The ID of the Amazon Web Services account that owns the local gateway virtual interface group association.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID that owns the local gateway virtual interface group association.
+     *        The ID of the Amazon Web Services account that owns the local gateway virtual interface group association.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

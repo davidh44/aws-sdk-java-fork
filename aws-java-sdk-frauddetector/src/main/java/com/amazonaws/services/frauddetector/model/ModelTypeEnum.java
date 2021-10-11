@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum ModelTypeEnum {
 
-    ONLINE_FRAUD_INSIGHTS("ONLINE_FRAUD_INSIGHTS");
+    ONLINE_FRAUD_INSIGHTS("ONLINE_FRAUD_INSIGHTS"),
+    TRANSACTION_FRAUD_INSIGHTS("TRANSACTION_FRAUD_INSIGHTS");
 
     private String value;
 

@@ -60,7 +60,7 @@ public class ChannelSummary implements Serializable, Cloneable, StructuredPojo {
     private String state;
     /** A collection of key-value pairs. */
     private java.util.Map<String, String> tags;
-    /** Settings for VPC output */
+    /** Settings for any VPC outputs. */
     private VpcOutputSettingsDescription vpc;
 
     /**
@@ -709,10 +709,10 @@ public class ChannelSummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Settings for VPC output
+     * Settings for any VPC outputs.
      * 
      * @param vpc
-     *        Settings for VPC output
+     *        Settings for any VPC outputs.
      */
 
     public void setVpc(VpcOutputSettingsDescription vpc) {
@@ -720,9 +720,9 @@ public class ChannelSummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Settings for VPC output
+     * Settings for any VPC outputs.
      * 
-     * @return Settings for VPC output
+     * @return Settings for any VPC outputs.
      */
 
     public VpcOutputSettingsDescription getVpc() {
@@ -730,10 +730,10 @@ public class ChannelSummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Settings for VPC output
+     * Settings for any VPC outputs.
      * 
      * @param vpc
-     *        Settings for VPC output
+     *        Settings for any VPC outputs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

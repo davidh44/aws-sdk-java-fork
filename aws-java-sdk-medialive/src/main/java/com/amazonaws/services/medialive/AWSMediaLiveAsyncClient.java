@@ -270,6 +270,39 @@ public class AWSMediaLiveAsyncClient extends AWSMediaLiveClient implements AWSMe
     }
 
     @Override
+    public java.util.concurrent.Future<ClaimDeviceResult> claimDeviceAsync(ClaimDeviceRequest request) {
+
+        return claimDeviceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ClaimDeviceResult> claimDeviceAsync(final ClaimDeviceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ClaimDeviceRequest, ClaimDeviceResult> asyncHandler) {
+        final ClaimDeviceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ClaimDeviceResult>() {
+            @Override
+            public ClaimDeviceResult call() throws Exception {
+                ClaimDeviceResult result = null;
+
+                try {
+                    result = executeClaimDevice(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateChannelResult> createChannelAsync(CreateChannelRequest request) {
 
         return createChannelAsync(request, null);

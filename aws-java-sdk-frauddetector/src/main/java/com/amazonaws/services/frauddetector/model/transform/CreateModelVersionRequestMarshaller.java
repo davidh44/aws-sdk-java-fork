@@ -38,6 +38,8 @@ public class CreateModelVersionRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("trainingDataSchema").build();
     private static final MarshallingInfo<StructuredPojo> EXTERNALEVENTSDETAIL_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("externalEventsDetail").build();
+    private static final MarshallingInfo<StructuredPojo> INGESTEDEVENTSDETAIL_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ingestedEventsDetail").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
 
@@ -62,6 +64,7 @@ public class CreateModelVersionRequestMarshaller {
             protocolMarshaller.marshall(createModelVersionRequest.getTrainingDataSource(), TRAININGDATASOURCE_BINDING);
             protocolMarshaller.marshall(createModelVersionRequest.getTrainingDataSchema(), TRAININGDATASCHEMA_BINDING);
             protocolMarshaller.marshall(createModelVersionRequest.getExternalEventsDetail(), EXTERNALEVENTSDETAIL_BINDING);
+            protocolMarshaller.marshall(createModelVersionRequest.getIngestedEventsDetail(), INGESTEDEVENTSDETAIL_BINDING);
             protocolMarshaller.marshall(createModelVersionRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

@@ -52,7 +52,7 @@ public class FpgaImage implements Serializable, Cloneable {
     private String description;
     /**
      * <p>
-     * The version of the AWS Shell that was used to create the bitstream.
+     * The version of the Amazon Web Services Shell that was used to create the bitstream.
      * </p>
      */
     private String shellVersion;
@@ -82,7 +82,7 @@ public class FpgaImage implements Serializable, Cloneable {
     private java.util.Date updateTime;
     /**
      * <p>
-     * The AWS account ID of the AFI owner.
+     * The ID of the Amazon Web Services account that owns the AFI.
      * </p>
      */
     private String ownerId;
@@ -280,11 +280,11 @@ public class FpgaImage implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The version of the AWS Shell that was used to create the bitstream.
+     * The version of the Amazon Web Services Shell that was used to create the bitstream.
      * </p>
      * 
      * @param shellVersion
-     *        The version of the AWS Shell that was used to create the bitstream.
+     *        The version of the Amazon Web Services Shell that was used to create the bitstream.
      */
 
     public void setShellVersion(String shellVersion) {
@@ -293,10 +293,10 @@ public class FpgaImage implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The version of the AWS Shell that was used to create the bitstream.
+     * The version of the Amazon Web Services Shell that was used to create the bitstream.
      * </p>
      * 
-     * @return The version of the AWS Shell that was used to create the bitstream.
+     * @return The version of the Amazon Web Services Shell that was used to create the bitstream.
      */
 
     public String getShellVersion() {
@@ -305,11 +305,11 @@ public class FpgaImage implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The version of the AWS Shell that was used to create the bitstream.
+     * The version of the Amazon Web Services Shell that was used to create the bitstream.
      * </p>
      * 
      * @param shellVersion
-     *        The version of the AWS Shell that was used to create the bitstream.
+     *        The version of the Amazon Web Services Shell that was used to create the bitstream.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -480,11 +480,11 @@ public class FpgaImage implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID of the AFI owner.
+     * The ID of the Amazon Web Services account that owns the AFI.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID of the AFI owner.
+     *        The ID of the Amazon Web Services account that owns the AFI.
      */
 
     public void setOwnerId(String ownerId) {
@@ -493,10 +493,10 @@ public class FpgaImage implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID of the AFI owner.
+     * The ID of the Amazon Web Services account that owns the AFI.
      * </p>
      * 
-     * @return The AWS account ID of the AFI owner.
+     * @return The ID of the Amazon Web Services account that owns the AFI.
      */
 
     public String getOwnerId() {
@@ -505,11 +505,11 @@ public class FpgaImage implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID of the AFI owner.
+     * The ID of the Amazon Web Services account that owns the AFI.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID of the AFI owner.
+     *        The ID of the Amazon Web Services account that owns the AFI.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

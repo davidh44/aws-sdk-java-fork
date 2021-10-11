@@ -41,6 +41,8 @@ public class ModelVersionDetailMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("trainingDataSchema").build();
     private static final MarshallingInfo<StructuredPojo> EXTERNALEVENTSDETAIL_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("externalEventsDetail").build();
+    private static final MarshallingInfo<StructuredPojo> INGESTEDEVENTSDETAIL_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ingestedEventsDetail").build();
     private static final MarshallingInfo<StructuredPojo> TRAININGRESULT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("trainingResult").build();
     private static final MarshallingInfo<String> LASTUPDATEDTIME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -73,6 +75,7 @@ public class ModelVersionDetailMarshaller {
             protocolMarshaller.marshall(modelVersionDetail.getTrainingDataSource(), TRAININGDATASOURCE_BINDING);
             protocolMarshaller.marshall(modelVersionDetail.getTrainingDataSchema(), TRAININGDATASCHEMA_BINDING);
             protocolMarshaller.marshall(modelVersionDetail.getExternalEventsDetail(), EXTERNALEVENTSDETAIL_BINDING);
+            protocolMarshaller.marshall(modelVersionDetail.getIngestedEventsDetail(), INGESTEDEVENTSDETAIL_BINDING);
             protocolMarshaller.marshall(modelVersionDetail.getTrainingResult(), TRAININGRESULT_BINDING);
             protocolMarshaller.marshall(modelVersionDetail.getLastUpdatedTime(), LASTUPDATEDTIME_BINDING);
             protocolMarshaller.marshall(modelVersionDetail.getCreatedTime(), CREATEDTIME_BINDING);

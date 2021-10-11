@@ -4205,8 +4205,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * </p>
      * <p>
      * An AFI contains the FPGA bitstream that is ready to download to an FPGA. You can securely deploy an AFI on
-     * multiple FPGA-accelerated instances. For more information, see the <a href="https://github.com/aws/aws-fpga/">AWS
-     * FPGA Hardware Development Kit</a>.
+     * multiple FPGA-accelerated instances. For more information, see the <a
+     * href="https://github.com/aws/aws-fpga/">Amazon Web Services FPGA Hardware Development Kit</a>.
      * </p>
      * 
      * @param createFpgaImageRequest
@@ -4620,7 +4620,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * instance using <a>RunInstances</a>, you can specify a launch template instead of providing the launch parameters
      * in the request. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html">Launching an instance from a
-     * launch template</a>in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * launch template</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param createLaunchTemplateRequest
@@ -7286,14 +7286,15 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
     /**
      * <p>
      * Creates a VPC endpoint for a specified service. An endpoint enables you to create a private connection between
-     * your VPC and the service. The service may be provided by AWS, an AWS Marketplace Partner, or another AWS account.
-     * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html">VPC
-     * Endpoints</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * your VPC and the service. The service may be provided by Amazon Web Services, an Amazon Web Services Marketplace
+     * Partner, or another Amazon Web Services account. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html">VPC Endpoints</a> in the <i>Amazon
+     * Virtual Private Cloud User Guide</i>.
      * </p>
      * <p>
      * A <code>gateway</code> endpoint serves as a target for a route in your route table for traffic destined for the
-     * AWS service. You can specify an endpoint policy to attach to the endpoint, which will control access to the
-     * service from your VPC. You can also specify the VPC route tables that use the endpoint.
+     * Amazon Web Service. You can specify an endpoint policy to attach to the endpoint, which will control access to
+     * the service from your VPC. You can also specify the VPC route tables that use the endpoint.
      * </p>
      * <p>
      * An <code>interface</code> endpoint is a network interface in your subnet that serves as an endpoint for
@@ -7426,8 +7427,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Creates a VPC endpoint service configuration to which service consumers (AWS accounts, IAM users, and IAM roles)
-     * can connect.
+     * Creates a VPC endpoint service configuration to which service consumers (Amazon Web Services accounts, IAM users,
+     * and IAM roles) can connect.
      * </p>
      * <p>
      * To create an endpoint service configuration, you must first create one of the following for your service:
@@ -11736,8 +11737,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * </p>
      * <p>
      * For more information about Availability Zones, Local Zones, and Wavelength Zones, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html">Regions, Zones
-     * and Outposts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html">Regions and
+     * zones</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param describeAvailabilityZonesRequest
@@ -12993,8 +12994,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet.html#monitor-ec2-fleet">Monitoring your EC2
-     * Fleet</a> in the <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/fleet-monitor.html">Monitor fleet events using Amazon
+     * EventBridge</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param describeFleetHistoryRequest
@@ -13291,7 +13292,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
     /**
      * <p>
      * Describes the Amazon FPGA Images (AFIs) available to you. These include public AFIs, private AFIs that you own,
-     * and AFIs owned by other AWS accounts for which you have load permissions.
+     * and AFIs owned by other Amazon Web Services accounts for which you have load permissions.
      * </p>
      * 
      * @param describeFpgaImagesRequest
@@ -13608,11 +13609,11 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <code>vpn-connection</code> | <code>vpn-gateway</code>.
      * </p>
      * <p>
-     * These settings apply to the IAM user who makes the request; they do not apply to the entire AWS account. By
-     * default, an IAM user defaults to the same settings as the root user, unless they explicitly override the settings
-     * by running the <a>ModifyIdFormat</a> command. Resources created with longer IDs are visible to all IAM users,
-     * regardless of these settings and provided that they have permission to use the relevant <code>Describe</code>
-     * command for the resource type.
+     * These settings apply to the IAM user who makes the request; they do not apply to the entire Amazon Web Services
+     * account. By default, an IAM user defaults to the same settings as the root user, unless they explicitly override
+     * the settings by running the <a>ModifyIdFormat</a> command. Resources created with longer IDs are visible to all
+     * IAM users, regardless of these settings and provided that they have permission to use the relevant
+     * <code>Describe</code> command for the resource type.
      * </p>
      * 
      * @param describeIdFormatRequest
@@ -16002,12 +16003,13 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * </p>
      * <p>
      * For a list of the Regions supported by Amazon EC2, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/rande.html#ec2_region"> Regions and Endpoints</a>.
+     * href="https://docs.aws.amazon.com/general/latest/gr/ec2-service.html"> Amazon Elastic Compute Cloud endpoints and
+     * quotas</a>.
      * </p>
      * <p>
      * For information about enabling and disabling Regions for your account, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/rande-manage.html">Managing AWS Regions</a> in the <i>AWS
-     * General Reference</i>.
+     * href="https://docs.aws.amazon.com/general/latest/gr/rande-manage.html">Managing Amazon Web Services Regions</a>
+     * in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * 
      * @param describeRegionsRequest
@@ -17111,6 +17113,11 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * Spot Fleet events are delayed by up to 30 seconds before they can be described. This ensures that you can query
      * by the last evaluated time and not miss a recorded event. Spot Fleet events are available for 48 hours.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/fleet-monitor.html">Monitor fleet events using Amazon
+     * EventBridge</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * 
      * @param describeSpotFleetRequestHistoryRequest
@@ -23157,8 +23164,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Download an AWS-provided sample configuration file to be used with the customer gateway device specified for your
-     * Site-to-Site VPN connection.
+     * Download an Amazon Web Services-provided sample configuration file to be used with the customer gateway device
+     * specified for your Site-to-Site VPN connection.
      * </p>
      * 
      * @param getVpnConnectionDeviceSampleConfigurationRequest
@@ -24326,10 +24333,10 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <code>vpn-connection</code> | <code>vpn-gateway</code>.
      * </p>
      * <p>
-     * This setting applies to the IAM user who makes the request; it does not apply to the entire AWS account. By
-     * default, an IAM user defaults to the same settings as the root user. If you're using this action as the root
-     * user, then these settings apply to the entire account, unless an IAM user explicitly overrides these settings for
-     * themselves. For more information, see <a
+     * This setting applies to the IAM user who makes the request; it does not apply to the entire Amazon Web Services
+     * account. By default, an IAM user defaults to the same settings as the root user. If you're using this action as
+     * the root user, then these settings apply to the entire account, unless an IAM user explicitly overrides these
+     * settings for themselves. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/resource-ids.html">Resource IDs</a> in the <i>Amazon
      * Elastic Compute Cloud User Guide</i>.
      * </p>
@@ -25528,11 +25535,6 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * all traffic related to that network service will be mirrored. When you no longer want to mirror network services,
      * use <code>RemoveNetworkServices</code> to remove the network services from the Traffic Mirror filter.
      * </p>
-     * <p>
-     * For information about filter rule properties, see <a
-     * href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-considerations.html">Network
-     * Services</a> in the <i>Traffic Mirroring User Guide </i>.
-     * </p>
      * 
      * @param modifyTrafficMirrorFilterNetworkServicesRequest
      * @return Result of the ModifyTrafficMirrorFilterNetworkServices operation returned by the service.
@@ -26269,8 +26271,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * Modifies the permissions for your <a
      * href="https://docs.aws.amazon.com/vpc/latest/userguide/endpoint-service.html">VPC endpoint service</a>. You can
-     * add or remove permissions for service consumers (IAM users, IAM roles, and AWS accounts) to connect to your
-     * endpoint service.
+     * add or remove permissions for service consumers (IAM users, IAM roles, and Amazon Web Services accounts) to
+     * connect to your endpoint service.
      * </p>
      * <p>
      * If you grant permissions to all principals, the service is public. Any users who know the name of a public

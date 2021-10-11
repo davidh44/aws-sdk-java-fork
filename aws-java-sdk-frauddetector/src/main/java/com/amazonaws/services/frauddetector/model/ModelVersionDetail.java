@@ -66,10 +66,18 @@ public class ModelVersionDetail implements Serializable, Cloneable, StructuredPo
     private TrainingDataSchema trainingDataSchema;
     /**
      * <p>
-     * The event details.
+     * The external events data details. This will be populated if the <code>trainingDataSource</code> for the model
+     * version is specified as <code>EXTERNAL_EVENTS</code>.
      * </p>
      */
     private ExternalEventsDetail externalEventsDetail;
+    /**
+     * <p>
+     * The ingested events data details. This will be populated if the <code>trainingDataSource</code> for the model
+     * version is specified as <code>INGESTED_EVENTS</code>.
+     * </p>
+     */
+    private IngestedEventsDetail ingestedEventsDetail;
     /**
      * <p>
      * The training results.
@@ -375,11 +383,13 @@ public class ModelVersionDetail implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The event details.
+     * The external events data details. This will be populated if the <code>trainingDataSource</code> for the model
+     * version is specified as <code>EXTERNAL_EVENTS</code>.
      * </p>
      * 
      * @param externalEventsDetail
-     *        The event details.
+     *        The external events data details. This will be populated if the <code>trainingDataSource</code> for the
+     *        model version is specified as <code>EXTERNAL_EVENTS</code>.
      */
 
     public void setExternalEventsDetail(ExternalEventsDetail externalEventsDetail) {
@@ -388,10 +398,12 @@ public class ModelVersionDetail implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The event details.
+     * The external events data details. This will be populated if the <code>trainingDataSource</code> for the model
+     * version is specified as <code>EXTERNAL_EVENTS</code>.
      * </p>
      * 
-     * @return The event details.
+     * @return The external events data details. This will be populated if the <code>trainingDataSource</code> for the
+     *         model version is specified as <code>EXTERNAL_EVENTS</code>.
      */
 
     public ExternalEventsDetail getExternalEventsDetail() {
@@ -400,16 +412,64 @@ public class ModelVersionDetail implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The event details.
+     * The external events data details. This will be populated if the <code>trainingDataSource</code> for the model
+     * version is specified as <code>EXTERNAL_EVENTS</code>.
      * </p>
      * 
      * @param externalEventsDetail
-     *        The event details.
+     *        The external events data details. This will be populated if the <code>trainingDataSource</code> for the
+     *        model version is specified as <code>EXTERNAL_EVENTS</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public ModelVersionDetail withExternalEventsDetail(ExternalEventsDetail externalEventsDetail) {
         setExternalEventsDetail(externalEventsDetail);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ingested events data details. This will be populated if the <code>trainingDataSource</code> for the model
+     * version is specified as <code>INGESTED_EVENTS</code>.
+     * </p>
+     * 
+     * @param ingestedEventsDetail
+     *        The ingested events data details. This will be populated if the <code>trainingDataSource</code> for the
+     *        model version is specified as <code>INGESTED_EVENTS</code>.
+     */
+
+    public void setIngestedEventsDetail(IngestedEventsDetail ingestedEventsDetail) {
+        this.ingestedEventsDetail = ingestedEventsDetail;
+    }
+
+    /**
+     * <p>
+     * The ingested events data details. This will be populated if the <code>trainingDataSource</code> for the model
+     * version is specified as <code>INGESTED_EVENTS</code>.
+     * </p>
+     * 
+     * @return The ingested events data details. This will be populated if the <code>trainingDataSource</code> for the
+     *         model version is specified as <code>INGESTED_EVENTS</code>.
+     */
+
+    public IngestedEventsDetail getIngestedEventsDetail() {
+        return this.ingestedEventsDetail;
+    }
+
+    /**
+     * <p>
+     * The ingested events data details. This will be populated if the <code>trainingDataSource</code> for the model
+     * version is specified as <code>INGESTED_EVENTS</code>.
+     * </p>
+     * 
+     * @param ingestedEventsDetail
+     *        The ingested events data details. This will be populated if the <code>trainingDataSource</code> for the
+     *        model version is specified as <code>INGESTED_EVENTS</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModelVersionDetail withIngestedEventsDetail(IngestedEventsDetail ingestedEventsDetail) {
+        setIngestedEventsDetail(ingestedEventsDetail);
         return this;
     }
 
@@ -599,6 +659,8 @@ public class ModelVersionDetail implements Serializable, Cloneable, StructuredPo
             sb.append("TrainingDataSchema: ").append(getTrainingDataSchema()).append(",");
         if (getExternalEventsDetail() != null)
             sb.append("ExternalEventsDetail: ").append(getExternalEventsDetail()).append(",");
+        if (getIngestedEventsDetail() != null)
+            sb.append("IngestedEventsDetail: ").append(getIngestedEventsDetail()).append(",");
         if (getTrainingResult() != null)
             sb.append("TrainingResult: ").append(getTrainingResult()).append(",");
         if (getLastUpdatedTime() != null)
@@ -649,6 +711,10 @@ public class ModelVersionDetail implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getExternalEventsDetail() != null && other.getExternalEventsDetail().equals(this.getExternalEventsDetail()) == false)
             return false;
+        if (other.getIngestedEventsDetail() == null ^ this.getIngestedEventsDetail() == null)
+            return false;
+        if (other.getIngestedEventsDetail() != null && other.getIngestedEventsDetail().equals(this.getIngestedEventsDetail()) == false)
+            return false;
         if (other.getTrainingResult() == null ^ this.getTrainingResult() == null)
             return false;
         if (other.getTrainingResult() != null && other.getTrainingResult().equals(this.getTrainingResult()) == false)
@@ -680,6 +746,7 @@ public class ModelVersionDetail implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getTrainingDataSource() == null) ? 0 : getTrainingDataSource().hashCode());
         hashCode = prime * hashCode + ((getTrainingDataSchema() == null) ? 0 : getTrainingDataSchema().hashCode());
         hashCode = prime * hashCode + ((getExternalEventsDetail() == null) ? 0 : getExternalEventsDetail().hashCode());
+        hashCode = prime * hashCode + ((getIngestedEventsDetail() == null) ? 0 : getIngestedEventsDetail().hashCode());
         hashCode = prime * hashCode + ((getTrainingResult() == null) ? 0 : getTrainingResult().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedTime() == null) ? 0 : getLastUpdatedTime().hashCode());
         hashCode = prime * hashCode + ((getCreatedTime() == null) ? 0 : getCreatedTime().hashCode());

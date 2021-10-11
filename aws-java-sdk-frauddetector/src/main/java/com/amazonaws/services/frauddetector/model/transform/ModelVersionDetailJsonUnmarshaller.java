@@ -76,6 +76,10 @@ public class ModelVersionDetailJsonUnmarshaller implements Unmarshaller<ModelVer
                     context.nextToken();
                     modelVersionDetail.setExternalEventsDetail(ExternalEventsDetailJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ingestedEventsDetail", targetDepth)) {
+                    context.nextToken();
+                    modelVersionDetail.setIngestedEventsDetail(IngestedEventsDetailJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("trainingResult", targetDepth)) {
                     context.nextToken();
                     modelVersionDetail.setTrainingResult(TrainingResultJsonUnmarshaller.getInstance().unmarshall(context));

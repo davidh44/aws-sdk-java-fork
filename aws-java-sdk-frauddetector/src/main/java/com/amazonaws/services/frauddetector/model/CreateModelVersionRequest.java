@@ -51,11 +51,18 @@ public class CreateModelVersionRequest extends com.amazonaws.AmazonWebServiceReq
     private TrainingDataSchema trainingDataSchema;
     /**
      * <p>
-     * Details for the external events data used for model version training. Required if <code>trainingDataSource</code>
+     * Details of the external events data used for model version training. Required if <code>trainingDataSource</code>
      * is <code>EXTERNAL_EVENTS</code>.
      * </p>
      */
     private ExternalEventsDetail externalEventsDetail;
+    /**
+     * <p>
+     * Details of the ingested events data used for model version training. Required if <code>trainingDataSource</code>
+     * is <code>INGESTED_EVENTS</code>.
+     * </p>
+     */
+    private IngestedEventsDetail ingestedEventsDetail;
     /**
      * <p>
      * A collection of key and value pairs.
@@ -263,12 +270,12 @@ public class CreateModelVersionRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Details for the external events data used for model version training. Required if <code>trainingDataSource</code>
+     * Details of the external events data used for model version training. Required if <code>trainingDataSource</code>
      * is <code>EXTERNAL_EVENTS</code>.
      * </p>
      * 
      * @param externalEventsDetail
-     *        Details for the external events data used for model version training. Required if
+     *        Details of the external events data used for model version training. Required if
      *        <code>trainingDataSource</code> is <code>EXTERNAL_EVENTS</code>.
      */
 
@@ -278,11 +285,11 @@ public class CreateModelVersionRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Details for the external events data used for model version training. Required if <code>trainingDataSource</code>
+     * Details of the external events data used for model version training. Required if <code>trainingDataSource</code>
      * is <code>EXTERNAL_EVENTS</code>.
      * </p>
      * 
-     * @return Details for the external events data used for model version training. Required if
+     * @return Details of the external events data used for model version training. Required if
      *         <code>trainingDataSource</code> is <code>EXTERNAL_EVENTS</code>.
      */
 
@@ -292,18 +299,64 @@ public class CreateModelVersionRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Details for the external events data used for model version training. Required if <code>trainingDataSource</code>
+     * Details of the external events data used for model version training. Required if <code>trainingDataSource</code>
      * is <code>EXTERNAL_EVENTS</code>.
      * </p>
      * 
      * @param externalEventsDetail
-     *        Details for the external events data used for model version training. Required if
+     *        Details of the external events data used for model version training. Required if
      *        <code>trainingDataSource</code> is <code>EXTERNAL_EVENTS</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public CreateModelVersionRequest withExternalEventsDetail(ExternalEventsDetail externalEventsDetail) {
         setExternalEventsDetail(externalEventsDetail);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Details of the ingested events data used for model version training. Required if <code>trainingDataSource</code>
+     * is <code>INGESTED_EVENTS</code>.
+     * </p>
+     * 
+     * @param ingestedEventsDetail
+     *        Details of the ingested events data used for model version training. Required if
+     *        <code>trainingDataSource</code> is <code>INGESTED_EVENTS</code>.
+     */
+
+    public void setIngestedEventsDetail(IngestedEventsDetail ingestedEventsDetail) {
+        this.ingestedEventsDetail = ingestedEventsDetail;
+    }
+
+    /**
+     * <p>
+     * Details of the ingested events data used for model version training. Required if <code>trainingDataSource</code>
+     * is <code>INGESTED_EVENTS</code>.
+     * </p>
+     * 
+     * @return Details of the ingested events data used for model version training. Required if
+     *         <code>trainingDataSource</code> is <code>INGESTED_EVENTS</code>.
+     */
+
+    public IngestedEventsDetail getIngestedEventsDetail() {
+        return this.ingestedEventsDetail;
+    }
+
+    /**
+     * <p>
+     * Details of the ingested events data used for model version training. Required if <code>trainingDataSource</code>
+     * is <code>INGESTED_EVENTS</code>.
+     * </p>
+     * 
+     * @param ingestedEventsDetail
+     *        Details of the ingested events data used for model version training. Required if
+     *        <code>trainingDataSource</code> is <code>INGESTED_EVENTS</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateModelVersionRequest withIngestedEventsDetail(IngestedEventsDetail ingestedEventsDetail) {
+        setIngestedEventsDetail(ingestedEventsDetail);
         return this;
     }
 
@@ -399,6 +452,8 @@ public class CreateModelVersionRequest extends com.amazonaws.AmazonWebServiceReq
             sb.append("TrainingDataSchema: ").append(getTrainingDataSchema()).append(",");
         if (getExternalEventsDetail() != null)
             sb.append("ExternalEventsDetail: ").append(getExternalEventsDetail()).append(",");
+        if (getIngestedEventsDetail() != null)
+            sb.append("IngestedEventsDetail: ").append(getIngestedEventsDetail()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -435,6 +490,10 @@ public class CreateModelVersionRequest extends com.amazonaws.AmazonWebServiceReq
             return false;
         if (other.getExternalEventsDetail() != null && other.getExternalEventsDetail().equals(this.getExternalEventsDetail()) == false)
             return false;
+        if (other.getIngestedEventsDetail() == null ^ this.getIngestedEventsDetail() == null)
+            return false;
+        if (other.getIngestedEventsDetail() != null && other.getIngestedEventsDetail().equals(this.getIngestedEventsDetail()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -452,6 +511,7 @@ public class CreateModelVersionRequest extends com.amazonaws.AmazonWebServiceReq
         hashCode = prime * hashCode + ((getTrainingDataSource() == null) ? 0 : getTrainingDataSource().hashCode());
         hashCode = prime * hashCode + ((getTrainingDataSchema() == null) ? 0 : getTrainingDataSchema().hashCode());
         hashCode = prime * hashCode + ((getExternalEventsDetail() == null) ? 0 : getExternalEventsDetail().hashCode());
+        hashCode = prime * hashCode + ((getIngestedEventsDetail() == null) ? 0 : getIngestedEventsDetail().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

@@ -31,6 +31,8 @@ public class LabelSchemaMarshaller {
 
     private static final MarshallingInfo<Map> LABELMAPPER_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("labelMapper").build();
+    private static final MarshallingInfo<String> UNLABELEDEVENTSTREATMENT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("unlabeledEventsTreatment").build();
 
     private static final LabelSchemaMarshaller instance = new LabelSchemaMarshaller();
 
@@ -49,6 +51,7 @@ public class LabelSchemaMarshaller {
 
         try {
             protocolMarshaller.marshall(labelSchema.getLabelMapper(), LABELMAPPER_BINDING);
+            protocolMarshaller.marshall(labelSchema.getUnlabeledEventsTreatment(), UNLABELEDEVENTSTREATMENT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

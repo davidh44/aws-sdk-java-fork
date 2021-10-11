@@ -133,6 +133,14 @@ public class TargetGroup implements Serializable, Cloneable {
      * </p>
      */
     private String protocolVersion;
+    /**
+     * <p>
+     * The type of IP address used for this target group. The possible values are <code>ipv4</code> and
+     * <code>ipv6</code>. This is an optional parameter. If not specified, the IP address type defaults to
+     * <code>ipv4</code>.
+     * </p>
+     */
+    private String ipAddressType;
 
     /**
      * <p>
@@ -1003,6 +1011,99 @@ public class TargetGroup implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The type of IP address used for this target group. The possible values are <code>ipv4</code> and
+     * <code>ipv6</code>. This is an optional parameter. If not specified, the IP address type defaults to
+     * <code>ipv4</code>.
+     * </p>
+     * 
+     * @param ipAddressType
+     *        The type of IP address used for this target group. The possible values are <code>ipv4</code> and
+     *        <code>ipv6</code>. This is an optional parameter. If not specified, the IP address type defaults to
+     *        <code>ipv4</code>.
+     * @see TargetGroupIpAddressTypeEnum
+     */
+
+    public void setIpAddressType(String ipAddressType) {
+        this.ipAddressType = ipAddressType;
+    }
+
+    /**
+     * <p>
+     * The type of IP address used for this target group. The possible values are <code>ipv4</code> and
+     * <code>ipv6</code>. This is an optional parameter. If not specified, the IP address type defaults to
+     * <code>ipv4</code>.
+     * </p>
+     * 
+     * @return The type of IP address used for this target group. The possible values are <code>ipv4</code> and
+     *         <code>ipv6</code>. This is an optional parameter. If not specified, the IP address type defaults to
+     *         <code>ipv4</code>.
+     * @see TargetGroupIpAddressTypeEnum
+     */
+
+    public String getIpAddressType() {
+        return this.ipAddressType;
+    }
+
+    /**
+     * <p>
+     * The type of IP address used for this target group. The possible values are <code>ipv4</code> and
+     * <code>ipv6</code>. This is an optional parameter. If not specified, the IP address type defaults to
+     * <code>ipv4</code>.
+     * </p>
+     * 
+     * @param ipAddressType
+     *        The type of IP address used for this target group. The possible values are <code>ipv4</code> and
+     *        <code>ipv6</code>. This is an optional parameter. If not specified, the IP address type defaults to
+     *        <code>ipv4</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TargetGroupIpAddressTypeEnum
+     */
+
+    public TargetGroup withIpAddressType(String ipAddressType) {
+        setIpAddressType(ipAddressType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of IP address used for this target group. The possible values are <code>ipv4</code> and
+     * <code>ipv6</code>. This is an optional parameter. If not specified, the IP address type defaults to
+     * <code>ipv4</code>.
+     * </p>
+     * 
+     * @param ipAddressType
+     *        The type of IP address used for this target group. The possible values are <code>ipv4</code> and
+     *        <code>ipv6</code>. This is an optional parameter. If not specified, the IP address type defaults to
+     *        <code>ipv4</code>.
+     * @see TargetGroupIpAddressTypeEnum
+     */
+
+    public void setIpAddressType(TargetGroupIpAddressTypeEnum ipAddressType) {
+        withIpAddressType(ipAddressType);
+    }
+
+    /**
+     * <p>
+     * The type of IP address used for this target group. The possible values are <code>ipv4</code> and
+     * <code>ipv6</code>. This is an optional parameter. If not specified, the IP address type defaults to
+     * <code>ipv4</code>.
+     * </p>
+     * 
+     * @param ipAddressType
+     *        The type of IP address used for this target group. The possible values are <code>ipv4</code> and
+     *        <code>ipv6</code>. This is an optional parameter. If not specified, the IP address type defaults to
+     *        <code>ipv4</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TargetGroupIpAddressTypeEnum
+     */
+
+    public TargetGroup withIpAddressType(TargetGroupIpAddressTypeEnum ipAddressType) {
+        this.ipAddressType = ipAddressType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1047,7 +1148,9 @@ public class TargetGroup implements Serializable, Cloneable {
         if (getTargetType() != null)
             sb.append("TargetType: ").append(getTargetType()).append(",");
         if (getProtocolVersion() != null)
-            sb.append("ProtocolVersion: ").append(getProtocolVersion());
+            sb.append("ProtocolVersion: ").append(getProtocolVersion()).append(",");
+        if (getIpAddressType() != null)
+            sb.append("IpAddressType: ").append(getIpAddressType());
         sb.append("}");
         return sb.toString();
     }
@@ -1130,6 +1233,10 @@ public class TargetGroup implements Serializable, Cloneable {
             return false;
         if (other.getProtocolVersion() != null && other.getProtocolVersion().equals(this.getProtocolVersion()) == false)
             return false;
+        if (other.getIpAddressType() == null ^ this.getIpAddressType() == null)
+            return false;
+        if (other.getIpAddressType() != null && other.getIpAddressType().equals(this.getIpAddressType()) == false)
+            return false;
         return true;
     }
 
@@ -1155,6 +1262,7 @@ public class TargetGroup implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getLoadBalancerArns() == null) ? 0 : getLoadBalancerArns().hashCode());
         hashCode = prime * hashCode + ((getTargetType() == null) ? 0 : getTargetType().hashCode());
         hashCode = prime * hashCode + ((getProtocolVersion() == null) ? 0 : getProtocolVersion().hashCode());
+        hashCode = prime * hashCode + ((getIpAddressType() == null) ? 0 : getIpAddressType().hashCode());
         return hashCode;
     }
 

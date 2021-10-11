@@ -15,7 +15,7 @@ package com.amazonaws.services.medialive.model;
 import javax.annotation.Generated;
 
 /**
- * Placeholder documentation for InputType
+ * The different types of inputs that AWS Elemental MediaLive supports.
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum InputType {
@@ -28,7 +28,8 @@ public enum InputType {
     MP4_FILE("MP4_FILE"),
     MEDIACONNECT("MEDIACONNECT"),
     INPUT_DEVICE("INPUT_DEVICE"),
-    AWS_CDI("AWS_CDI");
+    AWS_CDI("AWS_CDI"),
+    TS_FILE("TS_FILE");
 
     private String value;
 

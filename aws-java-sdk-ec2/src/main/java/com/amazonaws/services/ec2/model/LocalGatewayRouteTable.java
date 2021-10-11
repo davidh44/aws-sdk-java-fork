@@ -52,7 +52,7 @@ public class LocalGatewayRouteTable implements Serializable, Cloneable {
     private String outpostArn;
     /**
      * <p>
-     * The AWS account ID that owns the local gateway route table.
+     * The ID of the Amazon Web Services account that owns the local gateway route table.
      * </p>
      */
     private String ownerId;
@@ -231,11 +231,11 @@ public class LocalGatewayRouteTable implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID that owns the local gateway route table.
+     * The ID of the Amazon Web Services account that owns the local gateway route table.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID that owns the local gateway route table.
+     *        The ID of the Amazon Web Services account that owns the local gateway route table.
      */
 
     public void setOwnerId(String ownerId) {
@@ -244,10 +244,10 @@ public class LocalGatewayRouteTable implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID that owns the local gateway route table.
+     * The ID of the Amazon Web Services account that owns the local gateway route table.
      * </p>
      * 
-     * @return The AWS account ID that owns the local gateway route table.
+     * @return The ID of the Amazon Web Services account that owns the local gateway route table.
      */
 
     public String getOwnerId() {
@@ -256,11 +256,11 @@ public class LocalGatewayRouteTable implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID that owns the local gateway route table.
+     * The ID of the Amazon Web Services account that owns the local gateway route table.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID that owns the local gateway route table.
+     *        The ID of the Amazon Web Services account that owns the local gateway route table.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

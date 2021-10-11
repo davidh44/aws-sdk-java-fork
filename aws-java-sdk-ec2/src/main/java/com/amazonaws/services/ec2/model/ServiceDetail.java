@@ -52,7 +52,7 @@ public class ServiceDetail implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<String> availabilityZones;
     /**
      * <p>
-     * The AWS account ID of the service owner.
+     * The Amazon Web Services account ID of the service owner.
      * </p>
      */
     private String owner;
@@ -337,11 +337,11 @@ public class ServiceDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID of the service owner.
+     * The Amazon Web Services account ID of the service owner.
      * </p>
      * 
      * @param owner
-     *        The AWS account ID of the service owner.
+     *        The Amazon Web Services account ID of the service owner.
      */
 
     public void setOwner(String owner) {
@@ -350,10 +350,10 @@ public class ServiceDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID of the service owner.
+     * The Amazon Web Services account ID of the service owner.
      * </p>
      * 
-     * @return The AWS account ID of the service owner.
+     * @return The Amazon Web Services account ID of the service owner.
      */
 
     public String getOwner() {
@@ -362,11 +362,11 @@ public class ServiceDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID of the service owner.
+     * The Amazon Web Services account ID of the service owner.
      * </p>
      * 
      * @param owner
-     *        The AWS account ID of the service owner.
+     *        The Amazon Web Services account ID of the service owner.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

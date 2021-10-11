@@ -44,7 +44,8 @@ public class AllocateAddressResult extends com.amazonaws.AmazonWebServiceResult<
     private String publicIpv4Pool;
     /**
      * <p>
-     * The set of Availability Zones, Local Zones, or Wavelength Zones from which AWS advertises IP addresses.
+     * The set of Availability Zones, Local Zones, or Wavelength Zones from which Amazon Web Services advertises IP
+     * addresses.
      * </p>
      */
     private String networkBorderGroup;
@@ -203,11 +204,13 @@ public class AllocateAddressResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The set of Availability Zones, Local Zones, or Wavelength Zones from which AWS advertises IP addresses.
+     * The set of Availability Zones, Local Zones, or Wavelength Zones from which Amazon Web Services advertises IP
+     * addresses.
      * </p>
      * 
      * @param networkBorderGroup
-     *        The set of Availability Zones, Local Zones, or Wavelength Zones from which AWS advertises IP addresses.
+     *        The set of Availability Zones, Local Zones, or Wavelength Zones from which Amazon Web Services advertises
+     *        IP addresses.
      */
 
     public void setNetworkBorderGroup(String networkBorderGroup) {
@@ -216,10 +219,12 @@ public class AllocateAddressResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The set of Availability Zones, Local Zones, or Wavelength Zones from which AWS advertises IP addresses.
+     * The set of Availability Zones, Local Zones, or Wavelength Zones from which Amazon Web Services advertises IP
+     * addresses.
      * </p>
      * 
-     * @return The set of Availability Zones, Local Zones, or Wavelength Zones from which AWS advertises IP addresses.
+     * @return The set of Availability Zones, Local Zones, or Wavelength Zones from which Amazon Web Services advertises
+     *         IP addresses.
      */
 
     public String getNetworkBorderGroup() {
@@ -228,11 +233,13 @@ public class AllocateAddressResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The set of Availability Zones, Local Zones, or Wavelength Zones from which AWS advertises IP addresses.
+     * The set of Availability Zones, Local Zones, or Wavelength Zones from which Amazon Web Services advertises IP
+     * addresses.
      * </p>
      * 
      * @param networkBorderGroup
-     *        The set of Availability Zones, Local Zones, or Wavelength Zones from which AWS advertises IP addresses.
+     *        The set of Availability Zones, Local Zones, or Wavelength Zones from which Amazon Web Services advertises
+     *        IP addresses.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

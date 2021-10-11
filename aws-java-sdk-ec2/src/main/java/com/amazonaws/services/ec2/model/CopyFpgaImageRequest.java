@@ -54,7 +54,7 @@ public class CopyFpgaImageRequest extends AmazonWebServiceRequest implements Ser
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">Ensuring
-     * Idempotency</a>.
+     * idempotency</a>.
      * </p>
      */
     private String clientToken;
@@ -224,14 +224,14 @@ public class CopyFpgaImageRequest extends AmazonWebServiceRequest implements Ser
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">Ensuring
-     * Idempotency</a>.
+     * idempotency</a>.
      * </p>
      * 
      * @param clientToken
      *        Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      *        information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">Ensuring
-     *        Idempotency</a>.
+     *        idempotency</a>.
      */
 
     public void setClientToken(String clientToken) {
@@ -243,13 +243,13 @@ public class CopyFpgaImageRequest extends AmazonWebServiceRequest implements Ser
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">Ensuring
-     * Idempotency</a>.
+     * idempotency</a>.
      * </p>
      * 
      * @return Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      *         information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">Ensuring
-     *         Idempotency</a>.
+     *         idempotency</a>.
      */
 
     public String getClientToken() {
@@ -261,14 +261,14 @@ public class CopyFpgaImageRequest extends AmazonWebServiceRequest implements Ser
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">Ensuring
-     * Idempotency</a>.
+     * idempotency</a>.
      * </p>
      * 
      * @param clientToken
      *        Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      *        information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">Ensuring
-     *        Idempotency</a>.
+     *        idempotency</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

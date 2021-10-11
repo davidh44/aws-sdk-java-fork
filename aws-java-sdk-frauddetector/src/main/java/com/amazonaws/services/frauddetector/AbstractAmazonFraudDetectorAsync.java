@@ -54,6 +54,19 @@ public class AbstractAmazonFraudDetectorAsync extends AbstractAmazonFraudDetecto
     }
 
     @Override
+    public java.util.concurrent.Future<CancelBatchImportJobResult> cancelBatchImportJobAsync(CancelBatchImportJobRequest request) {
+
+        return cancelBatchImportJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CancelBatchImportJobResult> cancelBatchImportJobAsync(CancelBatchImportJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<CancelBatchImportJobRequest, CancelBatchImportJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CancelBatchPredictionJobResult> cancelBatchPredictionJobAsync(CancelBatchPredictionJobRequest request) {
 
         return cancelBatchPredictionJobAsync(request, null);
@@ -62,6 +75,19 @@ public class AbstractAmazonFraudDetectorAsync extends AbstractAmazonFraudDetecto
     @Override
     public java.util.concurrent.Future<CancelBatchPredictionJobResult> cancelBatchPredictionJobAsync(CancelBatchPredictionJobRequest request,
             com.amazonaws.handlers.AsyncHandler<CancelBatchPredictionJobRequest, CancelBatchPredictionJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateBatchImportJobResult> createBatchImportJobAsync(CreateBatchImportJobRequest request) {
+
+        return createBatchImportJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateBatchImportJobResult> createBatchImportJobAsync(CreateBatchImportJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateBatchImportJobRequest, CreateBatchImportJobResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -145,6 +171,19 @@ public class AbstractAmazonFraudDetectorAsync extends AbstractAmazonFraudDetecto
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteBatchImportJobResult> deleteBatchImportJobAsync(DeleteBatchImportJobRequest request) {
+
+        return deleteBatchImportJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteBatchImportJobResult> deleteBatchImportJobAsync(DeleteBatchImportJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteBatchImportJobRequest, DeleteBatchImportJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteBatchPredictionJobResult> deleteBatchPredictionJobAsync(DeleteBatchPredictionJobRequest request) {
 
         return deleteBatchPredictionJobAsync(request, null);
@@ -218,6 +257,19 @@ public class AbstractAmazonFraudDetectorAsync extends AbstractAmazonFraudDetecto
     @Override
     public java.util.concurrent.Future<DeleteEventTypeResult> deleteEventTypeAsync(DeleteEventTypeRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteEventTypeRequest, DeleteEventTypeResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEventsByEventTypeResult> deleteEventsByEventTypeAsync(DeleteEventsByEventTypeRequest request) {
+
+        return deleteEventsByEventTypeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEventsByEventTypeResult> deleteEventsByEventTypeAsync(DeleteEventsByEventTypeRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteEventsByEventTypeRequest, DeleteEventsByEventTypeResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -340,6 +392,19 @@ public class AbstractAmazonFraudDetectorAsync extends AbstractAmazonFraudDetecto
     }
 
     @Override
+    public java.util.concurrent.Future<GetBatchImportJobsResult> getBatchImportJobsAsync(GetBatchImportJobsRequest request) {
+
+        return getBatchImportJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetBatchImportJobsResult> getBatchImportJobsAsync(GetBatchImportJobsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetBatchImportJobsRequest, GetBatchImportJobsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetBatchPredictionJobsResult> getBatchPredictionJobsAsync(GetBatchPredictionJobsRequest request) {
 
         return getBatchPredictionJobsAsync(request, null);
@@ -348,6 +413,21 @@ public class AbstractAmazonFraudDetectorAsync extends AbstractAmazonFraudDetecto
     @Override
     public java.util.concurrent.Future<GetBatchPredictionJobsResult> getBatchPredictionJobsAsync(GetBatchPredictionJobsRequest request,
             com.amazonaws.handlers.AsyncHandler<GetBatchPredictionJobsRequest, GetBatchPredictionJobsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetDeleteEventsByEventTypeStatusResult> getDeleteEventsByEventTypeStatusAsync(
+            GetDeleteEventsByEventTypeStatusRequest request) {
+
+        return getDeleteEventsByEventTypeStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetDeleteEventsByEventTypeStatusResult> getDeleteEventsByEventTypeStatusAsync(
+            GetDeleteEventsByEventTypeStatusRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetDeleteEventsByEventTypeStatusRequest, GetDeleteEventsByEventTypeStatusResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -387,6 +467,19 @@ public class AbstractAmazonFraudDetectorAsync extends AbstractAmazonFraudDetecto
     @Override
     public java.util.concurrent.Future<GetEntityTypesResult> getEntityTypesAsync(GetEntityTypesRequest request,
             com.amazonaws.handlers.AsyncHandler<GetEntityTypesRequest, GetEntityTypesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEventResult> getEventAsync(GetEventRequest request) {
+
+        return getEventAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEventResult> getEventAsync(GetEventRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetEventRequest, GetEventResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -626,6 +719,19 @@ public class AbstractAmazonFraudDetectorAsync extends AbstractAmazonFraudDetecto
     }
 
     @Override
+    public java.util.concurrent.Future<SendEventResult> sendEventAsync(SendEventRequest request) {
+
+        return sendEventAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SendEventResult> sendEventAsync(SendEventRequest request,
+            com.amazonaws.handlers.AsyncHandler<SendEventRequest, SendEventResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest request) {
 
         return tagResourceAsync(request, null);
@@ -686,6 +792,19 @@ public class AbstractAmazonFraudDetectorAsync extends AbstractAmazonFraudDetecto
     @Override
     public java.util.concurrent.Future<UpdateDetectorVersionStatusResult> updateDetectorVersionStatusAsync(UpdateDetectorVersionStatusRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateDetectorVersionStatusRequest, UpdateDetectorVersionStatusResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEventLabelResult> updateEventLabelAsync(UpdateEventLabelRequest request) {
+
+        return updateEventLabelAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEventLabelResult> updateEventLabelAsync(UpdateEventLabelRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateEventLabelRequest, UpdateEventLabelResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

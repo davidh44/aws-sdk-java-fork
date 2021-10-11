@@ -46,7 +46,7 @@ public class LocalGatewayVirtualInterfaceGroup implements Serializable, Cloneabl
     private String localGatewayId;
     /**
      * <p>
-     * The AWS account ID that owns the local gateway virtual interface group.
+     * The ID of the Amazon Web Services account that owns the local gateway virtual interface group.
      * </p>
      */
     private String ownerId;
@@ -212,11 +212,11 @@ public class LocalGatewayVirtualInterfaceGroup implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The AWS account ID that owns the local gateway virtual interface group.
+     * The ID of the Amazon Web Services account that owns the local gateway virtual interface group.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID that owns the local gateway virtual interface group.
+     *        The ID of the Amazon Web Services account that owns the local gateway virtual interface group.
      */
 
     public void setOwnerId(String ownerId) {
@@ -225,10 +225,10 @@ public class LocalGatewayVirtualInterfaceGroup implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The AWS account ID that owns the local gateway virtual interface group.
+     * The ID of the Amazon Web Services account that owns the local gateway virtual interface group.
      * </p>
      * 
-     * @return The AWS account ID that owns the local gateway virtual interface group.
+     * @return The ID of the Amazon Web Services account that owns the local gateway virtual interface group.
      */
 
     public String getOwnerId() {
@@ -237,11 +237,11 @@ public class LocalGatewayVirtualInterfaceGroup implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The AWS account ID that owns the local gateway virtual interface group.
+     * The ID of the Amazon Web Services account that owns the local gateway virtual interface group.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID that owns the local gateway virtual interface group.
+     *        The ID of the Amazon Web Services account that owns the local gateway virtual interface group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

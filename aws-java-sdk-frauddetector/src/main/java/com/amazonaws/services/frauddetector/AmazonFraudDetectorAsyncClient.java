@@ -144,6 +144,39 @@ public class AmazonFraudDetectorAsyncClient extends AmazonFraudDetectorClient im
     }
 
     @Override
+    public java.util.concurrent.Future<CancelBatchImportJobResult> cancelBatchImportJobAsync(CancelBatchImportJobRequest request) {
+
+        return cancelBatchImportJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CancelBatchImportJobResult> cancelBatchImportJobAsync(final CancelBatchImportJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CancelBatchImportJobRequest, CancelBatchImportJobResult> asyncHandler) {
+        final CancelBatchImportJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CancelBatchImportJobResult>() {
+            @Override
+            public CancelBatchImportJobResult call() throws Exception {
+                CancelBatchImportJobResult result = null;
+
+                try {
+                    result = executeCancelBatchImportJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CancelBatchPredictionJobResult> cancelBatchPredictionJobAsync(CancelBatchPredictionJobRequest request) {
 
         return cancelBatchPredictionJobAsync(request, null);
@@ -161,6 +194,39 @@ public class AmazonFraudDetectorAsyncClient extends AmazonFraudDetectorClient im
 
                 try {
                     result = executeCancelBatchPredictionJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateBatchImportJobResult> createBatchImportJobAsync(CreateBatchImportJobRequest request) {
+
+        return createBatchImportJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateBatchImportJobResult> createBatchImportJobAsync(final CreateBatchImportJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateBatchImportJobRequest, CreateBatchImportJobResult> asyncHandler) {
+        final CreateBatchImportJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateBatchImportJobResult>() {
+            @Override
+            public CreateBatchImportJobResult call() throws Exception {
+                CreateBatchImportJobResult result = null;
+
+                try {
+                    result = executeCreateBatchImportJob(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -375,6 +441,39 @@ public class AmazonFraudDetectorAsyncClient extends AmazonFraudDetectorClient im
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteBatchImportJobResult> deleteBatchImportJobAsync(DeleteBatchImportJobRequest request) {
+
+        return deleteBatchImportJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteBatchImportJobResult> deleteBatchImportJobAsync(final DeleteBatchImportJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteBatchImportJobRequest, DeleteBatchImportJobResult> asyncHandler) {
+        final DeleteBatchImportJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteBatchImportJobResult>() {
+            @Override
+            public DeleteBatchImportJobResult call() throws Exception {
+                DeleteBatchImportJobResult result = null;
+
+                try {
+                    result = executeDeleteBatchImportJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteBatchPredictionJobResult> deleteBatchPredictionJobAsync(DeleteBatchPredictionJobRequest request) {
 
         return deleteBatchPredictionJobAsync(request, null);
@@ -557,6 +656,39 @@ public class AmazonFraudDetectorAsyncClient extends AmazonFraudDetectorClient im
 
                 try {
                     result = executeDeleteEventType(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEventsByEventTypeResult> deleteEventsByEventTypeAsync(DeleteEventsByEventTypeRequest request) {
+
+        return deleteEventsByEventTypeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEventsByEventTypeResult> deleteEventsByEventTypeAsync(final DeleteEventsByEventTypeRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteEventsByEventTypeRequest, DeleteEventsByEventTypeResult> asyncHandler) {
+        final DeleteEventsByEventTypeRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteEventsByEventTypeResult>() {
+            @Override
+            public DeleteEventsByEventTypeResult call() throws Exception {
+                DeleteEventsByEventTypeResult result = null;
+
+                try {
+                    result = executeDeleteEventsByEventType(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -870,6 +1002,39 @@ public class AmazonFraudDetectorAsyncClient extends AmazonFraudDetectorClient im
     }
 
     @Override
+    public java.util.concurrent.Future<GetBatchImportJobsResult> getBatchImportJobsAsync(GetBatchImportJobsRequest request) {
+
+        return getBatchImportJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetBatchImportJobsResult> getBatchImportJobsAsync(final GetBatchImportJobsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetBatchImportJobsRequest, GetBatchImportJobsResult> asyncHandler) {
+        final GetBatchImportJobsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetBatchImportJobsResult>() {
+            @Override
+            public GetBatchImportJobsResult call() throws Exception {
+                GetBatchImportJobsResult result = null;
+
+                try {
+                    result = executeGetBatchImportJobs(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetBatchPredictionJobsResult> getBatchPredictionJobsAsync(GetBatchPredictionJobsRequest request) {
 
         return getBatchPredictionJobsAsync(request, null);
@@ -887,6 +1052,41 @@ public class AmazonFraudDetectorAsyncClient extends AmazonFraudDetectorClient im
 
                 try {
                     result = executeGetBatchPredictionJobs(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetDeleteEventsByEventTypeStatusResult> getDeleteEventsByEventTypeStatusAsync(
+            GetDeleteEventsByEventTypeStatusRequest request) {
+
+        return getDeleteEventsByEventTypeStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetDeleteEventsByEventTypeStatusResult> getDeleteEventsByEventTypeStatusAsync(
+            final GetDeleteEventsByEventTypeStatusRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetDeleteEventsByEventTypeStatusRequest, GetDeleteEventsByEventTypeStatusResult> asyncHandler) {
+        final GetDeleteEventsByEventTypeStatusRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetDeleteEventsByEventTypeStatusResult>() {
+            @Override
+            public GetDeleteEventsByEventTypeStatusResult call() throws Exception {
+                GetDeleteEventsByEventTypeStatusResult result = null;
+
+                try {
+                    result = executeGetDeleteEventsByEventTypeStatus(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -986,6 +1186,39 @@ public class AmazonFraudDetectorAsyncClient extends AmazonFraudDetectorClient im
 
                 try {
                     result = executeGetEntityTypes(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEventResult> getEventAsync(GetEventRequest request) {
+
+        return getEventAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEventResult> getEventAsync(final GetEventRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetEventRequest, GetEventResult> asyncHandler) {
+        final GetEventRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetEventResult>() {
+            @Override
+            public GetEventResult call() throws Exception {
+                GetEventResult result = null;
+
+                try {
+                    result = executeGetEvent(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1596,6 +1829,39 @@ public class AmazonFraudDetectorAsyncClient extends AmazonFraudDetectorClient im
     }
 
     @Override
+    public java.util.concurrent.Future<SendEventResult> sendEventAsync(SendEventRequest request) {
+
+        return sendEventAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SendEventResult> sendEventAsync(final SendEventRequest request,
+            final com.amazonaws.handlers.AsyncHandler<SendEventRequest, SendEventResult> asyncHandler) {
+        final SendEventRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<SendEventResult>() {
+            @Override
+            public SendEventResult call() throws Exception {
+                SendEventResult result = null;
+
+                try {
+                    result = executeSendEvent(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest request) {
 
         return tagResourceAsync(request, null);
@@ -1746,6 +2012,39 @@ public class AmazonFraudDetectorAsyncClient extends AmazonFraudDetectorClient im
 
                 try {
                     result = executeUpdateDetectorVersionStatus(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEventLabelResult> updateEventLabelAsync(UpdateEventLabelRequest request) {
+
+        return updateEventLabelAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEventLabelResult> updateEventLabelAsync(final UpdateEventLabelRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateEventLabelRequest, UpdateEventLabelResult> asyncHandler) {
+        final UpdateEventLabelRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateEventLabelResult>() {
+            @Override
+            public UpdateEventLabelResult call() throws Exception {
+                UpdateEventLabelResult result = null;
+
+                try {
+                    result = executeUpdateEventLabel(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

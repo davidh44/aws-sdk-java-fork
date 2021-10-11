@@ -64,6 +64,10 @@ public class AudioDescriptionJsonUnmarshaller implements Unmarshaller<AudioDescr
                     context.nextToken();
                     audioDescription.setAudioTypeControl(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("audioWatermarkingSettings", targetDepth)) {
+                    context.nextToken();
+                    audioDescription.setAudioWatermarkingSettings(AudioWatermarkSettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("codecSettings", targetDepth)) {
                     context.nextToken();
                     audioDescription.setCodecSettings(AudioCodecSettingsJsonUnmarshaller.getInstance().unmarshall(context));

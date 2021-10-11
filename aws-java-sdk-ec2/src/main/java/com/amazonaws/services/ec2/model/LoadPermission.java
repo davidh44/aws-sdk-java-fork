@@ -28,7 +28,7 @@ public class LoadPermission implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID.
+     * The Amazon Web Services account ID.
      * </p>
      */
     private String userId;
@@ -41,11 +41,11 @@ public class LoadPermission implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID.
+     * The Amazon Web Services account ID.
      * </p>
      * 
      * @param userId
-     *        The AWS account ID.
+     *        The Amazon Web Services account ID.
      */
 
     public void setUserId(String userId) {
@@ -54,10 +54,10 @@ public class LoadPermission implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID.
+     * The Amazon Web Services account ID.
      * </p>
      * 
-     * @return The AWS account ID.
+     * @return The Amazon Web Services account ID.
      */
 
     public String getUserId() {
@@ -66,11 +66,11 @@ public class LoadPermission implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID.
+     * The Amazon Web Services account ID.
      * </p>
      * 
      * @param userId
-     *        The AWS account ID.
+     *        The Amazon Web Services account ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

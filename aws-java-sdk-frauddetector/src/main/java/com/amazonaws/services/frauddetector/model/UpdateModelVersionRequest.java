@@ -45,10 +45,18 @@ public class UpdateModelVersionRequest extends com.amazonaws.AmazonWebServiceReq
     private String majorVersionNumber;
     /**
      * <p>
-     * The event details.
+     * The details of the external events data used for training the model version. Required if
+     * <code>trainingDataSource</code> is <code>EXTERNAL_EVENTS</code>.
      * </p>
      */
     private ExternalEventsDetail externalEventsDetail;
+    /**
+     * <p>
+     * The details of the ingested event used for training the model version. Required if your
+     * <code>trainingDataSource</code> is <code>INGESTED_EVENTS</code>.
+     * </p>
+     */
+    private IngestedEventsDetail ingestedEventsDetail;
     /**
      * <p>
      * A collection of key and value pairs.
@@ -197,11 +205,13 @@ public class UpdateModelVersionRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The event details.
+     * The details of the external events data used for training the model version. Required if
+     * <code>trainingDataSource</code> is <code>EXTERNAL_EVENTS</code>.
      * </p>
      * 
      * @param externalEventsDetail
-     *        The event details.
+     *        The details of the external events data used for training the model version. Required if
+     *        <code>trainingDataSource</code> is <code>EXTERNAL_EVENTS</code>.
      */
 
     public void setExternalEventsDetail(ExternalEventsDetail externalEventsDetail) {
@@ -210,10 +220,12 @@ public class UpdateModelVersionRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The event details.
+     * The details of the external events data used for training the model version. Required if
+     * <code>trainingDataSource</code> is <code>EXTERNAL_EVENTS</code>.
      * </p>
      * 
-     * @return The event details.
+     * @return The details of the external events data used for training the model version. Required if
+     *         <code>trainingDataSource</code> is <code>EXTERNAL_EVENTS</code>.
      */
 
     public ExternalEventsDetail getExternalEventsDetail() {
@@ -222,16 +234,64 @@ public class UpdateModelVersionRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The event details.
+     * The details of the external events data used for training the model version. Required if
+     * <code>trainingDataSource</code> is <code>EXTERNAL_EVENTS</code>.
      * </p>
      * 
      * @param externalEventsDetail
-     *        The event details.
+     *        The details of the external events data used for training the model version. Required if
+     *        <code>trainingDataSource</code> is <code>EXTERNAL_EVENTS</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public UpdateModelVersionRequest withExternalEventsDetail(ExternalEventsDetail externalEventsDetail) {
         setExternalEventsDetail(externalEventsDetail);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The details of the ingested event used for training the model version. Required if your
+     * <code>trainingDataSource</code> is <code>INGESTED_EVENTS</code>.
+     * </p>
+     * 
+     * @param ingestedEventsDetail
+     *        The details of the ingested event used for training the model version. Required if your
+     *        <code>trainingDataSource</code> is <code>INGESTED_EVENTS</code>.
+     */
+
+    public void setIngestedEventsDetail(IngestedEventsDetail ingestedEventsDetail) {
+        this.ingestedEventsDetail = ingestedEventsDetail;
+    }
+
+    /**
+     * <p>
+     * The details of the ingested event used for training the model version. Required if your
+     * <code>trainingDataSource</code> is <code>INGESTED_EVENTS</code>.
+     * </p>
+     * 
+     * @return The details of the ingested event used for training the model version. Required if your
+     *         <code>trainingDataSource</code> is <code>INGESTED_EVENTS</code>.
+     */
+
+    public IngestedEventsDetail getIngestedEventsDetail() {
+        return this.ingestedEventsDetail;
+    }
+
+    /**
+     * <p>
+     * The details of the ingested event used for training the model version. Required if your
+     * <code>trainingDataSource</code> is <code>INGESTED_EVENTS</code>.
+     * </p>
+     * 
+     * @param ingestedEventsDetail
+     *        The details of the ingested event used for training the model version. Required if your
+     *        <code>trainingDataSource</code> is <code>INGESTED_EVENTS</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateModelVersionRequest withIngestedEventsDetail(IngestedEventsDetail ingestedEventsDetail) {
+        setIngestedEventsDetail(ingestedEventsDetail);
         return this;
     }
 
@@ -325,6 +385,8 @@ public class UpdateModelVersionRequest extends com.amazonaws.AmazonWebServiceReq
             sb.append("MajorVersionNumber: ").append(getMajorVersionNumber()).append(",");
         if (getExternalEventsDetail() != null)
             sb.append("ExternalEventsDetail: ").append(getExternalEventsDetail()).append(",");
+        if (getIngestedEventsDetail() != null)
+            sb.append("IngestedEventsDetail: ").append(getIngestedEventsDetail()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -357,6 +419,10 @@ public class UpdateModelVersionRequest extends com.amazonaws.AmazonWebServiceReq
             return false;
         if (other.getExternalEventsDetail() != null && other.getExternalEventsDetail().equals(this.getExternalEventsDetail()) == false)
             return false;
+        if (other.getIngestedEventsDetail() == null ^ this.getIngestedEventsDetail() == null)
+            return false;
+        if (other.getIngestedEventsDetail() != null && other.getIngestedEventsDetail().equals(this.getIngestedEventsDetail()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -373,6 +439,7 @@ public class UpdateModelVersionRequest extends com.amazonaws.AmazonWebServiceReq
         hashCode = prime * hashCode + ((getModelType() == null) ? 0 : getModelType().hashCode());
         hashCode = prime * hashCode + ((getMajorVersionNumber() == null) ? 0 : getMajorVersionNumber().hashCode());
         hashCode = prime * hashCode + ((getExternalEventsDetail() == null) ? 0 : getExternalEventsDetail().hashCode());
+        hashCode = prime * hashCode + ((getIngestedEventsDetail() == null) ? 0 : getIngestedEventsDetail().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

@@ -213,6 +213,37 @@ public interface AWSMediaLive {
     CancelInputDeviceTransferResult cancelInputDeviceTransfer(CancelInputDeviceTransferRequest cancelInputDeviceTransferRequest);
 
     /**
+     * Send a request to claim an AWS Elemental device that you have purchased from a third-party vendor. After the
+     * request succeeds, you will own the device.
+     * 
+     * @param claimDeviceRequest
+     *        A request to claim an AWS Elemental device that you have purchased from a third-party vendor.
+     * @return Result of the ClaimDevice operation returned by the service.
+     * @throws BadRequestException
+     *         This request was invalid.
+     * @throws UnprocessableEntityException
+     *         Claim operation failed, device id could not be validated.
+     * @throws InternalServerErrorException
+     *         Unexpected internal service error.
+     * @throws ForbiddenException
+     *         You don't have the IAM access permissions to claim this device. You must have permission for the
+     *         WriteClaim operation.
+     * @throws BadGatewayException
+     *         Bad gateway error.
+     * @throws NotFoundException
+     *         Device not found or you called an unsupported region.
+     * @throws GatewayTimeoutException
+     *         Bad gateway error. Try again.
+     * @throws TooManyRequestsException
+     *         Request limit exceeded. Your have sent this request too many times. There might be a bug in your API
+     *         client.
+     * @sample AWSMediaLive.ClaimDevice
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/ClaimDevice" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ClaimDeviceResult claimDevice(ClaimDeviceRequest claimDeviceRequest);
+
+    /**
      * Creates a new channel
      * 
      * @param createChannelRequest
