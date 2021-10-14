@@ -32,22 +32,35 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The simulation unit limit. Your simulation is allocated CPU and memory proportional to the supplied simulation
      * unit limit. A simulation unit is 1 vcpu and 2GB of memory. You are only billed for the SU utilization you consume
-     * up to the maximim value provided. The default is 15.
+     * up to the maximum value provided. The default is 15.
      * </p>
      */
     private Integer simulationUnitLimit;
+    /**
+     * <p>
+     * Compute type information for the simulation job.
+     * </p>
+     */
+    private String computeType;
+    /**
+     * <p>
+     * Compute GPU unit limit for the simulation job. It is the same as the number of GPUs allocated to the
+     * SimulationJob.
+     * </p>
+     */
+    private Integer gpuUnitLimit;
 
     /**
      * <p>
      * The simulation unit limit. Your simulation is allocated CPU and memory proportional to the supplied simulation
      * unit limit. A simulation unit is 1 vcpu and 2GB of memory. You are only billed for the SU utilization you consume
-     * up to the maximim value provided. The default is 15.
+     * up to the maximum value provided. The default is 15.
      * </p>
      * 
      * @param simulationUnitLimit
      *        The simulation unit limit. Your simulation is allocated CPU and memory proportional to the supplied
      *        simulation unit limit. A simulation unit is 1 vcpu and 2GB of memory. You are only billed for the SU
-     *        utilization you consume up to the maximim value provided. The default is 15.
+     *        utilization you consume up to the maximum value provided. The default is 15.
      */
 
     public void setSimulationUnitLimit(Integer simulationUnitLimit) {
@@ -58,12 +71,12 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The simulation unit limit. Your simulation is allocated CPU and memory proportional to the supplied simulation
      * unit limit. A simulation unit is 1 vcpu and 2GB of memory. You are only billed for the SU utilization you consume
-     * up to the maximim value provided. The default is 15.
+     * up to the maximum value provided. The default is 15.
      * </p>
      * 
      * @return The simulation unit limit. Your simulation is allocated CPU and memory proportional to the supplied
      *         simulation unit limit. A simulation unit is 1 vcpu and 2GB of memory. You are only billed for the SU
-     *         utilization you consume up to the maximim value provided. The default is 15.
+     *         utilization you consume up to the maximum value provided. The default is 15.
      */
 
     public Integer getSimulationUnitLimit() {
@@ -74,18 +87,123 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The simulation unit limit. Your simulation is allocated CPU and memory proportional to the supplied simulation
      * unit limit. A simulation unit is 1 vcpu and 2GB of memory. You are only billed for the SU utilization you consume
-     * up to the maximim value provided. The default is 15.
+     * up to the maximum value provided. The default is 15.
      * </p>
      * 
      * @param simulationUnitLimit
      *        The simulation unit limit. Your simulation is allocated CPU and memory proportional to the supplied
      *        simulation unit limit. A simulation unit is 1 vcpu and 2GB of memory. You are only billed for the SU
-     *        utilization you consume up to the maximim value provided. The default is 15.
+     *        utilization you consume up to the maximum value provided. The default is 15.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public Compute withSimulationUnitLimit(Integer simulationUnitLimit) {
         setSimulationUnitLimit(simulationUnitLimit);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Compute type information for the simulation job.
+     * </p>
+     * 
+     * @param computeType
+     *        Compute type information for the simulation job.
+     * @see ComputeType
+     */
+
+    public void setComputeType(String computeType) {
+        this.computeType = computeType;
+    }
+
+    /**
+     * <p>
+     * Compute type information for the simulation job.
+     * </p>
+     * 
+     * @return Compute type information for the simulation job.
+     * @see ComputeType
+     */
+
+    public String getComputeType() {
+        return this.computeType;
+    }
+
+    /**
+     * <p>
+     * Compute type information for the simulation job.
+     * </p>
+     * 
+     * @param computeType
+     *        Compute type information for the simulation job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ComputeType
+     */
+
+    public Compute withComputeType(String computeType) {
+        setComputeType(computeType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Compute type information for the simulation job.
+     * </p>
+     * 
+     * @param computeType
+     *        Compute type information for the simulation job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ComputeType
+     */
+
+    public Compute withComputeType(ComputeType computeType) {
+        this.computeType = computeType.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Compute GPU unit limit for the simulation job. It is the same as the number of GPUs allocated to the
+     * SimulationJob.
+     * </p>
+     * 
+     * @param gpuUnitLimit
+     *        Compute GPU unit limit for the simulation job. It is the same as the number of GPUs allocated to the
+     *        SimulationJob.
+     */
+
+    public void setGpuUnitLimit(Integer gpuUnitLimit) {
+        this.gpuUnitLimit = gpuUnitLimit;
+    }
+
+    /**
+     * <p>
+     * Compute GPU unit limit for the simulation job. It is the same as the number of GPUs allocated to the
+     * SimulationJob.
+     * </p>
+     * 
+     * @return Compute GPU unit limit for the simulation job. It is the same as the number of GPUs allocated to the
+     *         SimulationJob.
+     */
+
+    public Integer getGpuUnitLimit() {
+        return this.gpuUnitLimit;
+    }
+
+    /**
+     * <p>
+     * Compute GPU unit limit for the simulation job. It is the same as the number of GPUs allocated to the
+     * SimulationJob.
+     * </p>
+     * 
+     * @param gpuUnitLimit
+     *        Compute GPU unit limit for the simulation job. It is the same as the number of GPUs allocated to the
+     *        SimulationJob.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Compute withGpuUnitLimit(Integer gpuUnitLimit) {
+        setGpuUnitLimit(gpuUnitLimit);
         return this;
     }
 
@@ -102,7 +220,11 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getSimulationUnitLimit() != null)
-            sb.append("SimulationUnitLimit: ").append(getSimulationUnitLimit());
+            sb.append("SimulationUnitLimit: ").append(getSimulationUnitLimit()).append(",");
+        if (getComputeType() != null)
+            sb.append("ComputeType: ").append(getComputeType()).append(",");
+        if (getGpuUnitLimit() != null)
+            sb.append("GpuUnitLimit: ").append(getGpuUnitLimit());
         sb.append("}");
         return sb.toString();
     }
@@ -121,6 +243,14 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSimulationUnitLimit() != null && other.getSimulationUnitLimit().equals(this.getSimulationUnitLimit()) == false)
             return false;
+        if (other.getComputeType() == null ^ this.getComputeType() == null)
+            return false;
+        if (other.getComputeType() != null && other.getComputeType().equals(this.getComputeType()) == false)
+            return false;
+        if (other.getGpuUnitLimit() == null ^ this.getGpuUnitLimit() == null)
+            return false;
+        if (other.getGpuUnitLimit() != null && other.getGpuUnitLimit().equals(this.getGpuUnitLimit()) == false)
+            return false;
         return true;
     }
 
@@ -130,6 +260,8 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getSimulationUnitLimit() == null) ? 0 : getSimulationUnitLimit().hashCode());
+        hashCode = prime * hashCode + ((getComputeType() == null) ? 0 : getComputeType().hashCode());
+        hashCode = prime * hashCode + ((getGpuUnitLimit() == null) ? 0 : getGpuUnitLimit().hashCode());
         return hashCode;
     }
 

@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum SimulationSoftwareSuiteType {
 
     Gazebo("Gazebo"),
-    RosbagPlay("RosbagPlay");
+    RosbagPlay("RosbagPlay"),
+    SimulationRuntime("SimulationRuntime");
 
     private String value;
 

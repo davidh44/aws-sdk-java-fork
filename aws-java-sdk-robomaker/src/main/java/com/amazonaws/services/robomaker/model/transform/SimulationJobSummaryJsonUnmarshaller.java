@@ -82,6 +82,10 @@ public class SimulationJobSummaryJsonUnmarshaller implements Unmarshaller<Simula
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("computeType", targetDepth)) {
+                    context.nextToken();
+                    simulationJobSummary.setComputeType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

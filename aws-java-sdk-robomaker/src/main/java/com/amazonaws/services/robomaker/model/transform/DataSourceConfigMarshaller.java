@@ -34,6 +34,10 @@ public class DataSourceConfigMarshaller {
             .marshallLocationName("s3Bucket").build();
     private static final MarshallingInfo<List> S3KEYS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("s3Keys").build();
+    private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("type").build();
+    private static final MarshallingInfo<String> DESTINATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("destination").build();
 
     private static final DataSourceConfigMarshaller instance = new DataSourceConfigMarshaller();
 
@@ -54,6 +58,8 @@ public class DataSourceConfigMarshaller {
             protocolMarshaller.marshall(dataSourceConfig.getName(), NAME_BINDING);
             protocolMarshaller.marshall(dataSourceConfig.getS3Bucket(), S3BUCKET_BINDING);
             protocolMarshaller.marshall(dataSourceConfig.getS3Keys(), S3KEYS_BINDING);
+            protocolMarshaller.marshall(dataSourceConfig.getType(), TYPE_BINDING);
+            protocolMarshaller.marshall(dataSourceConfig.getDestination(), DESTINATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -43,6 +43,12 @@ public class DescribeSSLPoliciesRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private Integer pageSize;
+    /**
+     * <p>
+     * The type of load balancer. The default lists the SSL policies for all load balancers.
+     * </p>
+     */
+    private String loadBalancerType;
 
     /**
      * <p>
@@ -195,6 +201,65 @@ public class DescribeSSLPoliciesRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The type of load balancer. The default lists the SSL policies for all load balancers.
+     * </p>
+     * 
+     * @param loadBalancerType
+     *        The type of load balancer. The default lists the SSL policies for all load balancers.
+     * @see LoadBalancerTypeEnum
+     */
+
+    public void setLoadBalancerType(String loadBalancerType) {
+        this.loadBalancerType = loadBalancerType;
+    }
+
+    /**
+     * <p>
+     * The type of load balancer. The default lists the SSL policies for all load balancers.
+     * </p>
+     * 
+     * @return The type of load balancer. The default lists the SSL policies for all load balancers.
+     * @see LoadBalancerTypeEnum
+     */
+
+    public String getLoadBalancerType() {
+        return this.loadBalancerType;
+    }
+
+    /**
+     * <p>
+     * The type of load balancer. The default lists the SSL policies for all load balancers.
+     * </p>
+     * 
+     * @param loadBalancerType
+     *        The type of load balancer. The default lists the SSL policies for all load balancers.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LoadBalancerTypeEnum
+     */
+
+    public DescribeSSLPoliciesRequest withLoadBalancerType(String loadBalancerType) {
+        setLoadBalancerType(loadBalancerType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of load balancer. The default lists the SSL policies for all load balancers.
+     * </p>
+     * 
+     * @param loadBalancerType
+     *        The type of load balancer. The default lists the SSL policies for all load balancers.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LoadBalancerTypeEnum
+     */
+
+    public DescribeSSLPoliciesRequest withLoadBalancerType(LoadBalancerTypeEnum loadBalancerType) {
+        this.loadBalancerType = loadBalancerType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -211,7 +276,9 @@ public class DescribeSSLPoliciesRequest extends com.amazonaws.AmazonWebServiceRe
         if (getMarker() != null)
             sb.append("Marker: ").append(getMarker()).append(",");
         if (getPageSize() != null)
-            sb.append("PageSize: ").append(getPageSize());
+            sb.append("PageSize: ").append(getPageSize()).append(",");
+        if (getLoadBalancerType() != null)
+            sb.append("LoadBalancerType: ").append(getLoadBalancerType());
         sb.append("}");
         return sb.toString();
     }
@@ -238,6 +305,10 @@ public class DescribeSSLPoliciesRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getPageSize() != null && other.getPageSize().equals(this.getPageSize()) == false)
             return false;
+        if (other.getLoadBalancerType() == null ^ this.getLoadBalancerType() == null)
+            return false;
+        if (other.getLoadBalancerType() != null && other.getLoadBalancerType().equals(this.getLoadBalancerType()) == false)
+            return false;
         return true;
     }
 
@@ -249,6 +320,7 @@ public class DescribeSSLPoliciesRequest extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getNames() == null) ? 0 : getNames().hashCode());
         hashCode = prime * hashCode + ((getMarker() == null) ? 0 : getMarker().hashCode());
         hashCode = prime * hashCode + ((getPageSize() == null) ? 0 : getPageSize().hashCode());
+        hashCode = prime * hashCode + ((getLoadBalancerType() == null) ? 0 : getLoadBalancerType().hashCode());
         return hashCode;
     }
 

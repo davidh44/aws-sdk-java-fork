@@ -209,7 +209,7 @@ public class CreateLaunchConfigurationRequest extends com.amazonaws.AmazonWebSer
      * stack to provide optimal I/O performance. This optimization is not available with all instance types. Additional
      * fees are incurred when you enable EBS optimization for an instance type that is not EBS-optimized by default. For
      * more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">Amazon
-     * EBS-Optimized Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * EBS-optimized instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * <p>
      * The default value is <code>false</code>.
@@ -1516,7 +1516,7 @@ public class CreateLaunchConfigurationRequest extends com.amazonaws.AmazonWebSer
      * stack to provide optimal I/O performance. This optimization is not available with all instance types. Additional
      * fees are incurred when you enable EBS optimization for an instance type that is not EBS-optimized by default. For
      * more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">Amazon
-     * EBS-Optimized Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * EBS-optimized instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * <p>
      * The default value is <code>false</code>.
@@ -1528,8 +1528,8 @@ public class CreateLaunchConfigurationRequest extends com.amazonaws.AmazonWebSer
      *        configuration stack to provide optimal I/O performance. This optimization is not available with all
      *        instance types. Additional fees are incurred when you enable EBS optimization for an instance type that is
      *        not EBS-optimized by default. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">Amazon EBS-Optimized
-     *        Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">Amazon EBS-optimized
+     *        instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
      *        <p>
      *        The default value is <code>false</code>.
      */
@@ -1545,7 +1545,7 @@ public class CreateLaunchConfigurationRequest extends com.amazonaws.AmazonWebSer
      * stack to provide optimal I/O performance. This optimization is not available with all instance types. Additional
      * fees are incurred when you enable EBS optimization for an instance type that is not EBS-optimized by default. For
      * more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">Amazon
-     * EBS-Optimized Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * EBS-optimized instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * <p>
      * The default value is <code>false</code>.
@@ -1556,8 +1556,8 @@ public class CreateLaunchConfigurationRequest extends com.amazonaws.AmazonWebSer
      *         configuration stack to provide optimal I/O performance. This optimization is not available with all
      *         instance types. Additional fees are incurred when you enable EBS optimization for an instance type that
      *         is not EBS-optimized by default. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">Amazon EBS-Optimized
-     *         Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">Amazon EBS-optimized
+     *         instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
      *         <p>
      *         The default value is <code>false</code>.
      */
@@ -1573,7 +1573,7 @@ public class CreateLaunchConfigurationRequest extends com.amazonaws.AmazonWebSer
      * stack to provide optimal I/O performance. This optimization is not available with all instance types. Additional
      * fees are incurred when you enable EBS optimization for an instance type that is not EBS-optimized by default. For
      * more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">Amazon
-     * EBS-Optimized Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * EBS-optimized instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * <p>
      * The default value is <code>false</code>.
@@ -1585,8 +1585,8 @@ public class CreateLaunchConfigurationRequest extends com.amazonaws.AmazonWebSer
      *        configuration stack to provide optimal I/O performance. This optimization is not available with all
      *        instance types. Additional fees are incurred when you enable EBS optimization for an instance type that is
      *        not EBS-optimized by default. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">Amazon EBS-Optimized
-     *        Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">Amazon EBS-optimized
+     *        instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
      *        <p>
      *        The default value is <code>false</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1604,7 +1604,7 @@ public class CreateLaunchConfigurationRequest extends com.amazonaws.AmazonWebSer
      * stack to provide optimal I/O performance. This optimization is not available with all instance types. Additional
      * fees are incurred when you enable EBS optimization for an instance type that is not EBS-optimized by default. For
      * more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">Amazon
-     * EBS-Optimized Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * EBS-optimized instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * <p>
      * The default value is <code>false</code>.
@@ -1615,8 +1615,8 @@ public class CreateLaunchConfigurationRequest extends com.amazonaws.AmazonWebSer
      *         configuration stack to provide optimal I/O performance. This optimization is not available with all
      *         instance types. Additional fees are incurred when you enable EBS optimization for an instance type that
      *         is not EBS-optimized by default. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">Amazon EBS-Optimized
-     *         Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">Amazon EBS-optimized
+     *         instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
      *         <p>
      *         The default value is <code>false</code>.
      */

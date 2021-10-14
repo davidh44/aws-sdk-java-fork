@@ -60,6 +60,17 @@ public class LaunchConfig implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Boolean streamUI;
+    /**
+     * <p>
+     * If you've specified <code>General</code> as the value for your <code>RobotSoftwareSuite</code>, you can use this
+     * field to specify a list of commands for your container image.
+     * </p>
+     * <p>
+     * If you've specified <code>SimulationRuntime</code> as the value for your <code>SimulationSoftwareSuite</code>,
+     * you can use this field to specify a list of commands for your container image.
+     * </p>
+     */
+    private java.util.List<String> command;
 
     /**
      * <p>
@@ -322,6 +333,116 @@ public class LaunchConfig implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * If you've specified <code>General</code> as the value for your <code>RobotSoftwareSuite</code>, you can use this
+     * field to specify a list of commands for your container image.
+     * </p>
+     * <p>
+     * If you've specified <code>SimulationRuntime</code> as the value for your <code>SimulationSoftwareSuite</code>,
+     * you can use this field to specify a list of commands for your container image.
+     * </p>
+     * 
+     * @return If you've specified <code>General</code> as the value for your <code>RobotSoftwareSuite</code>, you can
+     *         use this field to specify a list of commands for your container image.</p>
+     *         <p>
+     *         If you've specified <code>SimulationRuntime</code> as the value for your
+     *         <code>SimulationSoftwareSuite</code>, you can use this field to specify a list of commands for your
+     *         container image.
+     */
+
+    public java.util.List<String> getCommand() {
+        return command;
+    }
+
+    /**
+     * <p>
+     * If you've specified <code>General</code> as the value for your <code>RobotSoftwareSuite</code>, you can use this
+     * field to specify a list of commands for your container image.
+     * </p>
+     * <p>
+     * If you've specified <code>SimulationRuntime</code> as the value for your <code>SimulationSoftwareSuite</code>,
+     * you can use this field to specify a list of commands for your container image.
+     * </p>
+     * 
+     * @param command
+     *        If you've specified <code>General</code> as the value for your <code>RobotSoftwareSuite</code>, you can
+     *        use this field to specify a list of commands for your container image.</p>
+     *        <p>
+     *        If you've specified <code>SimulationRuntime</code> as the value for your
+     *        <code>SimulationSoftwareSuite</code>, you can use this field to specify a list of commands for your
+     *        container image.
+     */
+
+    public void setCommand(java.util.Collection<String> command) {
+        if (command == null) {
+            this.command = null;
+            return;
+        }
+
+        this.command = new java.util.ArrayList<String>(command);
+    }
+
+    /**
+     * <p>
+     * If you've specified <code>General</code> as the value for your <code>RobotSoftwareSuite</code>, you can use this
+     * field to specify a list of commands for your container image.
+     * </p>
+     * <p>
+     * If you've specified <code>SimulationRuntime</code> as the value for your <code>SimulationSoftwareSuite</code>,
+     * you can use this field to specify a list of commands for your container image.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setCommand(java.util.Collection)} or {@link #withCommand(java.util.Collection)} if you want to override
+     * the existing values.
+     * </p>
+     * 
+     * @param command
+     *        If you've specified <code>General</code> as the value for your <code>RobotSoftwareSuite</code>, you can
+     *        use this field to specify a list of commands for your container image.</p>
+     *        <p>
+     *        If you've specified <code>SimulationRuntime</code> as the value for your
+     *        <code>SimulationSoftwareSuite</code>, you can use this field to specify a list of commands for your
+     *        container image.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LaunchConfig withCommand(String... command) {
+        if (this.command == null) {
+            setCommand(new java.util.ArrayList<String>(command.length));
+        }
+        for (String ele : command) {
+            this.command.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * If you've specified <code>General</code> as the value for your <code>RobotSoftwareSuite</code>, you can use this
+     * field to specify a list of commands for your container image.
+     * </p>
+     * <p>
+     * If you've specified <code>SimulationRuntime</code> as the value for your <code>SimulationSoftwareSuite</code>,
+     * you can use this field to specify a list of commands for your container image.
+     * </p>
+     * 
+     * @param command
+     *        If you've specified <code>General</code> as the value for your <code>RobotSoftwareSuite</code>, you can
+     *        use this field to specify a list of commands for your container image.</p>
+     *        <p>
+     *        If you've specified <code>SimulationRuntime</code> as the value for your
+     *        <code>SimulationSoftwareSuite</code>, you can use this field to specify a list of commands for your
+     *        container image.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LaunchConfig withCommand(java.util.Collection<String> command) {
+        setCommand(command);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -342,7 +463,9 @@ public class LaunchConfig implements Serializable, Cloneable, StructuredPojo {
         if (getPortForwardingConfig() != null)
             sb.append("PortForwardingConfig: ").append(getPortForwardingConfig()).append(",");
         if (getStreamUI() != null)
-            sb.append("StreamUI: ").append(getStreamUI());
+            sb.append("StreamUI: ").append(getStreamUI()).append(",");
+        if (getCommand() != null)
+            sb.append("Command: ").append(getCommand());
         sb.append("}");
         return sb.toString();
     }
@@ -377,6 +500,10 @@ public class LaunchConfig implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getStreamUI() != null && other.getStreamUI().equals(this.getStreamUI()) == false)
             return false;
+        if (other.getCommand() == null ^ this.getCommand() == null)
+            return false;
+        if (other.getCommand() != null && other.getCommand().equals(this.getCommand()) == false)
+            return false;
         return true;
     }
 
@@ -390,6 +517,7 @@ public class LaunchConfig implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getEnvironmentVariables() == null) ? 0 : getEnvironmentVariables().hashCode());
         hashCode = prime * hashCode + ((getPortForwardingConfig() == null) ? 0 : getPortForwardingConfig().hashCode());
         hashCode = prime * hashCode + ((getStreamUI() == null) ? 0 : getStreamUI().hashCode());
+        hashCode = prime * hashCode + ((getCommand() == null) ? 0 : getCommand().hashCode());
         return hashCode;
     }
 

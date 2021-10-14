@@ -52,6 +52,14 @@ public class ComputeJsonUnmarshaller implements Unmarshaller<Compute, JsonUnmars
                     context.nextToken();
                     compute.setSimulationUnitLimit(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("computeType", targetDepth)) {
+                    context.nextToken();
+                    compute.setComputeType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("gpuUnitLimit", targetDepth)) {
+                    context.nextToken();
+                    compute.setGpuUnitLimit(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

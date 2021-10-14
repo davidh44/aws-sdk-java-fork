@@ -42,6 +42,8 @@ public class SimulationJobSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("robotApplicationNames").build();
     private static final MarshallingInfo<List> DATASOURCENAMES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dataSourceNames").build();
+    private static final MarshallingInfo<String> COMPUTETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("computeType").build();
 
     private static final SimulationJobSummaryMarshaller instance = new SimulationJobSummaryMarshaller();
 
@@ -66,6 +68,7 @@ public class SimulationJobSummaryMarshaller {
             protocolMarshaller.marshall(simulationJobSummary.getSimulationApplicationNames(), SIMULATIONAPPLICATIONNAMES_BINDING);
             protocolMarshaller.marshall(simulationJobSummary.getRobotApplicationNames(), ROBOTAPPLICATIONNAMES_BINDING);
             protocolMarshaller.marshall(simulationJobSummary.getDataSourceNames(), DATASOURCENAMES_BINDING);
+            protocolMarshaller.marshall(simulationJobSummary.getComputeType(), COMPUTETYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

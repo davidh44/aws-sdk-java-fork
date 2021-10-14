@@ -69,6 +69,12 @@ public class LaunchConfigJsonUnmarshaller implements Unmarshaller<LaunchConfig, 
                     context.nextToken();
                     launchConfig.setStreamUI(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("command", targetDepth)) {
+                    context.nextToken();
+                    launchConfig.setCommand(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -69,6 +69,17 @@ public class SslPolicyStaxUnmarshaller implements Unmarshaller<SslPolicy, StaxUn
                     sslPolicy.setName(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("SupportedLoadBalancerTypes", targetDepth)) {
+                    sslPolicy.withSupportedLoadBalancerTypes(new ArrayList<String>());
+                    continue;
+                }
+
+                if (context.testExpression("SupportedLoadBalancerTypes/member", targetDepth)) {
+                    sslPolicy.withSupportedLoadBalancerTypes(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return sslPolicy;

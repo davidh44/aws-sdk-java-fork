@@ -66,6 +66,10 @@ public class DescribeSSLPoliciesRequestMarshaller implements Marshaller<Request<
             request.addParameter("PageSize", StringUtils.fromInteger(describeSSLPoliciesRequest.getPageSize()));
         }
 
+        if (describeSSLPoliciesRequest.getLoadBalancerType() != null) {
+            request.addParameter("LoadBalancerType", StringUtils.fromString(describeSSLPoliciesRequest.getLoadBalancerType()));
+        }
+
         return request;
     }
 

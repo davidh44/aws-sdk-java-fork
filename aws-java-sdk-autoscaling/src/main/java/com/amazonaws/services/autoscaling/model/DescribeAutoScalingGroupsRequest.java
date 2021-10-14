@@ -48,6 +48,12 @@ public class DescribeAutoScalingGroupsRequest extends com.amazonaws.AmazonWebSer
      * </p>
      */
     private Integer maxRecords;
+    /**
+     * <p>
+     * One or more filters to limit the results based on specific tags.
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<Filter> filters;
 
     /**
      * <p>
@@ -237,6 +243,79 @@ public class DescribeAutoScalingGroupsRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * One or more filters to limit the results based on specific tags.
+     * </p>
+     * 
+     * @return One or more filters to limit the results based on specific tags.
+     */
+
+    public java.util.List<Filter> getFilters() {
+        if (filters == null) {
+            filters = new com.amazonaws.internal.SdkInternalList<Filter>();
+        }
+        return filters;
+    }
+
+    /**
+     * <p>
+     * One or more filters to limit the results based on specific tags.
+     * </p>
+     * 
+     * @param filters
+     *        One or more filters to limit the results based on specific tags.
+     */
+
+    public void setFilters(java.util.Collection<Filter> filters) {
+        if (filters == null) {
+            this.filters = null;
+            return;
+        }
+
+        this.filters = new com.amazonaws.internal.SdkInternalList<Filter>(filters);
+    }
+
+    /**
+     * <p>
+     * One or more filters to limit the results based on specific tags.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setFilters(java.util.Collection)} or {@link #withFilters(java.util.Collection)} if you want to override
+     * the existing values.
+     * </p>
+     * 
+     * @param filters
+     *        One or more filters to limit the results based on specific tags.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeAutoScalingGroupsRequest withFilters(Filter... filters) {
+        if (this.filters == null) {
+            setFilters(new com.amazonaws.internal.SdkInternalList<Filter>(filters.length));
+        }
+        for (Filter ele : filters) {
+            this.filters.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * One or more filters to limit the results based on specific tags.
+     * </p>
+     * 
+     * @param filters
+     *        One or more filters to limit the results based on specific tags.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeAutoScalingGroupsRequest withFilters(java.util.Collection<Filter> filters) {
+        setFilters(filters);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -253,7 +332,9 @@ public class DescribeAutoScalingGroupsRequest extends com.amazonaws.AmazonWebSer
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getMaxRecords() != null)
-            sb.append("MaxRecords: ").append(getMaxRecords());
+            sb.append("MaxRecords: ").append(getMaxRecords()).append(",");
+        if (getFilters() != null)
+            sb.append("Filters: ").append(getFilters());
         sb.append("}");
         return sb.toString();
     }
@@ -280,6 +361,10 @@ public class DescribeAutoScalingGroupsRequest extends com.amazonaws.AmazonWebSer
             return false;
         if (other.getMaxRecords() != null && other.getMaxRecords().equals(this.getMaxRecords()) == false)
             return false;
+        if (other.getFilters() == null ^ this.getFilters() == null)
+            return false;
+        if (other.getFilters() != null && other.getFilters().equals(this.getFilters()) == false)
+            return false;
         return true;
     }
 
@@ -291,6 +376,7 @@ public class DescribeAutoScalingGroupsRequest extends com.amazonaws.AmazonWebSer
         hashCode = prime * hashCode + ((getAutoScalingGroupNames() == null) ? 0 : getAutoScalingGroupNames().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMaxRecords() == null) ? 0 : getMaxRecords().hashCode());
+        hashCode = prime * hashCode + ((getFilters() == null) ? 0 : getFilters().hashCode());
         return hashCode;
     }
 

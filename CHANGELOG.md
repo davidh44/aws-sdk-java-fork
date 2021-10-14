@@ -1,3 +1,20 @@
+# __1.12.88__ __2021-10-14__
+## __AWS RoboMaker__
+  - ### Features
+    - Adding support to GPU simulation jobs as well as non-ROS simulation jobs.
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - This release updates the provisioning artifact ID to an optional parameter in CreateProject API. The provisioning artifact ID defaults to the latest provisioning artifact ID of the product if you don't provide one.
+
+## __Auto Scaling__
+  - ### Features
+    - Amazon EC2 Auto Scaling now supports filtering describe Auto Scaling groups API using tags
+
+## __Elastic Load Balancing__
+  - ### Features
+    - Adds new option to filter by availability on each type of load balancer when describing ssl policies.
+
 # __1.12.87__ __2021-10-13__
 ## __AWS Config__
   - ### Features

@@ -64,6 +64,38 @@ public class DescribeAutoScalingGroupsRequestMarshaller implements Marshaller<Re
             request.addParameter("MaxRecords", StringUtils.fromInteger(describeAutoScalingGroupsRequest.getMaxRecords()));
         }
 
+        if (!describeAutoScalingGroupsRequest.getFilters().isEmpty()
+                || !((com.amazonaws.internal.SdkInternalList<Filter>) describeAutoScalingGroupsRequest.getFilters()).isAutoConstruct()) {
+            com.amazonaws.internal.SdkInternalList<Filter> filtersList = (com.amazonaws.internal.SdkInternalList<Filter>) describeAutoScalingGroupsRequest
+                    .getFilters();
+            int filtersListIndex = 1;
+
+            for (Filter filtersListValue : filtersList) {
+                if (filtersListValue != null) {
+
+                    if (filtersListValue.getName() != null) {
+                        request.addParameter("Filters.member." + filtersListIndex + ".Name", StringUtils.fromString(filtersListValue.getName()));
+                    }
+
+                    if (!filtersListValue.getValues().isEmpty()
+                            || !((com.amazonaws.internal.SdkInternalList<String>) filtersListValue.getValues()).isAutoConstruct()) {
+                        com.amazonaws.internal.SdkInternalList<String> valuesList = (com.amazonaws.internal.SdkInternalList<String>) filtersListValue
+                                .getValues();
+                        int valuesListIndex = 1;
+
+                        for (String valuesListValue : valuesList) {
+                            if (valuesListValue != null) {
+                                request.addParameter("Filters.member." + filtersListIndex + ".Values.member." + valuesListIndex,
+                                        StringUtils.fromString(valuesListValue));
+                            }
+                            valuesListIndex++;
+                        }
+                    }
+                }
+                filtersListIndex++;
+            }
+        }
+
         return request;
     }
 

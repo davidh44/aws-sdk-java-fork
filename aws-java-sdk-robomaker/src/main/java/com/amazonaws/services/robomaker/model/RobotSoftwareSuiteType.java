@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum RobotSoftwareSuiteType {
 
     ROS("ROS"),
-    ROS2("ROS2");
+    ROS2("ROS2"),
+    General("General");
 
     private String value;
 

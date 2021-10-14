@@ -46,6 +46,35 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<S3KeyOutput> s3Keys;
+    /**
+     * <p>
+     * The data type for the data source that you're using for your container image or simulation job. You can use this
+     * field to specify whether your data source is an Archive, an Amazon S3 prefix, or a file.
+     * </p>
+     * <p>
+     * If you don't specify a field, the default value is <code>File</code>.
+     * </p>
+     */
+    private String type;
+    /**
+     * <p>
+     * The location where your files are mounted in the container image.
+     * </p>
+     * <p>
+     * If you've specified the <code>type</code> of the data source as an <code>Archive</code>, you must provide an
+     * Amazon S3 object key to your archive. The object key must point to either a <code>.zip</code> or
+     * <code>.tar.gz</code> file.
+     * </p>
+     * <p>
+     * If you've specified the <code>type</code> of the data source as a <code>Prefix</code>, you provide the Amazon S3
+     * prefix that points to the files that you are using for your data source.
+     * </p>
+     * <p>
+     * If you've specified the <code>type</code> of the data source as a <code>File</code>, you provide the Amazon S3
+     * path to the file that you're using as your data source.
+     * </p>
+     */
+    private String destination;
 
     /**
      * <p>
@@ -198,6 +227,208 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The data type for the data source that you're using for your container image or simulation job. You can use this
+     * field to specify whether your data source is an Archive, an Amazon S3 prefix, or a file.
+     * </p>
+     * <p>
+     * If you don't specify a field, the default value is <code>File</code>.
+     * </p>
+     * 
+     * @param type
+     *        The data type for the data source that you're using for your container image or simulation job. You can
+     *        use this field to specify whether your data source is an Archive, an Amazon S3 prefix, or a file.</p>
+     *        <p>
+     *        If you don't specify a field, the default value is <code>File</code>.
+     * @see DataSourceType
+     */
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    /**
+     * <p>
+     * The data type for the data source that you're using for your container image or simulation job. You can use this
+     * field to specify whether your data source is an Archive, an Amazon S3 prefix, or a file.
+     * </p>
+     * <p>
+     * If you don't specify a field, the default value is <code>File</code>.
+     * </p>
+     * 
+     * @return The data type for the data source that you're using for your container image or simulation job. You can
+     *         use this field to specify whether your data source is an Archive, an Amazon S3 prefix, or a file.</p>
+     *         <p>
+     *         If you don't specify a field, the default value is <code>File</code>.
+     * @see DataSourceType
+     */
+
+    public String getType() {
+        return this.type;
+    }
+
+    /**
+     * <p>
+     * The data type for the data source that you're using for your container image or simulation job. You can use this
+     * field to specify whether your data source is an Archive, an Amazon S3 prefix, or a file.
+     * </p>
+     * <p>
+     * If you don't specify a field, the default value is <code>File</code>.
+     * </p>
+     * 
+     * @param type
+     *        The data type for the data source that you're using for your container image or simulation job. You can
+     *        use this field to specify whether your data source is an Archive, an Amazon S3 prefix, or a file.</p>
+     *        <p>
+     *        If you don't specify a field, the default value is <code>File</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DataSourceType
+     */
+
+    public DataSource withType(String type) {
+        setType(type);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The data type for the data source that you're using for your container image or simulation job. You can use this
+     * field to specify whether your data source is an Archive, an Amazon S3 prefix, or a file.
+     * </p>
+     * <p>
+     * If you don't specify a field, the default value is <code>File</code>.
+     * </p>
+     * 
+     * @param type
+     *        The data type for the data source that you're using for your container image or simulation job. You can
+     *        use this field to specify whether your data source is an Archive, an Amazon S3 prefix, or a file.</p>
+     *        <p>
+     *        If you don't specify a field, the default value is <code>File</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DataSourceType
+     */
+
+    public DataSource withType(DataSourceType type) {
+        this.type = type.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The location where your files are mounted in the container image.
+     * </p>
+     * <p>
+     * If you've specified the <code>type</code> of the data source as an <code>Archive</code>, you must provide an
+     * Amazon S3 object key to your archive. The object key must point to either a <code>.zip</code> or
+     * <code>.tar.gz</code> file.
+     * </p>
+     * <p>
+     * If you've specified the <code>type</code> of the data source as a <code>Prefix</code>, you provide the Amazon S3
+     * prefix that points to the files that you are using for your data source.
+     * </p>
+     * <p>
+     * If you've specified the <code>type</code> of the data source as a <code>File</code>, you provide the Amazon S3
+     * path to the file that you're using as your data source.
+     * </p>
+     * 
+     * @param destination
+     *        The location where your files are mounted in the container image.</p>
+     *        <p>
+     *        If you've specified the <code>type</code> of the data source as an <code>Archive</code>, you must provide
+     *        an Amazon S3 object key to your archive. The object key must point to either a <code>.zip</code> or
+     *        <code>.tar.gz</code> file.
+     *        </p>
+     *        <p>
+     *        If you've specified the <code>type</code> of the data source as a <code>Prefix</code>, you provide the
+     *        Amazon S3 prefix that points to the files that you are using for your data source.
+     *        </p>
+     *        <p>
+     *        If you've specified the <code>type</code> of the data source as a <code>File</code>, you provide the
+     *        Amazon S3 path to the file that you're using as your data source.
+     */
+
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
+
+    /**
+     * <p>
+     * The location where your files are mounted in the container image.
+     * </p>
+     * <p>
+     * If you've specified the <code>type</code> of the data source as an <code>Archive</code>, you must provide an
+     * Amazon S3 object key to your archive. The object key must point to either a <code>.zip</code> or
+     * <code>.tar.gz</code> file.
+     * </p>
+     * <p>
+     * If you've specified the <code>type</code> of the data source as a <code>Prefix</code>, you provide the Amazon S3
+     * prefix that points to the files that you are using for your data source.
+     * </p>
+     * <p>
+     * If you've specified the <code>type</code> of the data source as a <code>File</code>, you provide the Amazon S3
+     * path to the file that you're using as your data source.
+     * </p>
+     * 
+     * @return The location where your files are mounted in the container image.</p>
+     *         <p>
+     *         If you've specified the <code>type</code> of the data source as an <code>Archive</code>, you must provide
+     *         an Amazon S3 object key to your archive. The object key must point to either a <code>.zip</code> or
+     *         <code>.tar.gz</code> file.
+     *         </p>
+     *         <p>
+     *         If you've specified the <code>type</code> of the data source as a <code>Prefix</code>, you provide the
+     *         Amazon S3 prefix that points to the files that you are using for your data source.
+     *         </p>
+     *         <p>
+     *         If you've specified the <code>type</code> of the data source as a <code>File</code>, you provide the
+     *         Amazon S3 path to the file that you're using as your data source.
+     */
+
+    public String getDestination() {
+        return this.destination;
+    }
+
+    /**
+     * <p>
+     * The location where your files are mounted in the container image.
+     * </p>
+     * <p>
+     * If you've specified the <code>type</code> of the data source as an <code>Archive</code>, you must provide an
+     * Amazon S3 object key to your archive. The object key must point to either a <code>.zip</code> or
+     * <code>.tar.gz</code> file.
+     * </p>
+     * <p>
+     * If you've specified the <code>type</code> of the data source as a <code>Prefix</code>, you provide the Amazon S3
+     * prefix that points to the files that you are using for your data source.
+     * </p>
+     * <p>
+     * If you've specified the <code>type</code> of the data source as a <code>File</code>, you provide the Amazon S3
+     * path to the file that you're using as your data source.
+     * </p>
+     * 
+     * @param destination
+     *        The location where your files are mounted in the container image.</p>
+     *        <p>
+     *        If you've specified the <code>type</code> of the data source as an <code>Archive</code>, you must provide
+     *        an Amazon S3 object key to your archive. The object key must point to either a <code>.zip</code> or
+     *        <code>.tar.gz</code> file.
+     *        </p>
+     *        <p>
+     *        If you've specified the <code>type</code> of the data source as a <code>Prefix</code>, you provide the
+     *        Amazon S3 prefix that points to the files that you are using for your data source.
+     *        </p>
+     *        <p>
+     *        If you've specified the <code>type</code> of the data source as a <code>File</code>, you provide the
+     *        Amazon S3 path to the file that you're using as your data source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataSource withDestination(String destination) {
+        setDestination(destination);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -214,7 +445,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
         if (getS3Bucket() != null)
             sb.append("S3Bucket: ").append(getS3Bucket()).append(",");
         if (getS3Keys() != null)
-            sb.append("S3Keys: ").append(getS3Keys());
+            sb.append("S3Keys: ").append(getS3Keys()).append(",");
+        if (getType() != null)
+            sb.append("Type: ").append(getType()).append(",");
+        if (getDestination() != null)
+            sb.append("Destination: ").append(getDestination());
         sb.append("}");
         return sb.toString();
     }
@@ -241,6 +476,14 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getS3Keys() != null && other.getS3Keys().equals(this.getS3Keys()) == false)
             return false;
+        if (other.getType() == null ^ this.getType() == null)
+            return false;
+        if (other.getType() != null && other.getType().equals(this.getType()) == false)
+            return false;
+        if (other.getDestination() == null ^ this.getDestination() == null)
+            return false;
+        if (other.getDestination() != null && other.getDestination().equals(this.getDestination()) == false)
+            return false;
         return true;
     }
 
@@ -252,6 +495,8 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getS3Bucket() == null) ? 0 : getS3Bucket().hashCode());
         hashCode = prime * hashCode + ((getS3Keys() == null) ? 0 : getS3Keys().hashCode());
+        hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
+        hashCode = prime * hashCode + ((getDestination() == null) ? 0 : getDestination().hashCode());
         return hashCode;
     }
 

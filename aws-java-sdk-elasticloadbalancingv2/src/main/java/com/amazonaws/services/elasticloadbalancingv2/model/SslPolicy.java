@@ -44,6 +44,12 @@ public class SslPolicy implements Serializable, Cloneable {
      * </p>
      */
     private String name;
+    /**
+     * <p>
+     * The supported load balancers.
+     * </p>
+     */
+    private java.util.List<String> supportedLoadBalancerTypes;
 
     /**
      * <p>
@@ -226,6 +232,76 @@ public class SslPolicy implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The supported load balancers.
+     * </p>
+     * 
+     * @return The supported load balancers.
+     */
+
+    public java.util.List<String> getSupportedLoadBalancerTypes() {
+        return supportedLoadBalancerTypes;
+    }
+
+    /**
+     * <p>
+     * The supported load balancers.
+     * </p>
+     * 
+     * @param supportedLoadBalancerTypes
+     *        The supported load balancers.
+     */
+
+    public void setSupportedLoadBalancerTypes(java.util.Collection<String> supportedLoadBalancerTypes) {
+        if (supportedLoadBalancerTypes == null) {
+            this.supportedLoadBalancerTypes = null;
+            return;
+        }
+
+        this.supportedLoadBalancerTypes = new java.util.ArrayList<String>(supportedLoadBalancerTypes);
+    }
+
+    /**
+     * <p>
+     * The supported load balancers.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setSupportedLoadBalancerTypes(java.util.Collection)} or
+     * {@link #withSupportedLoadBalancerTypes(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param supportedLoadBalancerTypes
+     *        The supported load balancers.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SslPolicy withSupportedLoadBalancerTypes(String... supportedLoadBalancerTypes) {
+        if (this.supportedLoadBalancerTypes == null) {
+            setSupportedLoadBalancerTypes(new java.util.ArrayList<String>(supportedLoadBalancerTypes.length));
+        }
+        for (String ele : supportedLoadBalancerTypes) {
+            this.supportedLoadBalancerTypes.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The supported load balancers.
+     * </p>
+     * 
+     * @param supportedLoadBalancerTypes
+     *        The supported load balancers.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SslPolicy withSupportedLoadBalancerTypes(java.util.Collection<String> supportedLoadBalancerTypes) {
+        setSupportedLoadBalancerTypes(supportedLoadBalancerTypes);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -242,7 +318,9 @@ public class SslPolicy implements Serializable, Cloneable {
         if (getCiphers() != null)
             sb.append("Ciphers: ").append(getCiphers()).append(",");
         if (getName() != null)
-            sb.append("Name: ").append(getName());
+            sb.append("Name: ").append(getName()).append(",");
+        if (getSupportedLoadBalancerTypes() != null)
+            sb.append("SupportedLoadBalancerTypes: ").append(getSupportedLoadBalancerTypes());
         sb.append("}");
         return sb.toString();
     }
@@ -269,6 +347,10 @@ public class SslPolicy implements Serializable, Cloneable {
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
+        if (other.getSupportedLoadBalancerTypes() == null ^ this.getSupportedLoadBalancerTypes() == null)
+            return false;
+        if (other.getSupportedLoadBalancerTypes() != null && other.getSupportedLoadBalancerTypes().equals(this.getSupportedLoadBalancerTypes()) == false)
+            return false;
         return true;
     }
 
@@ -280,6 +362,7 @@ public class SslPolicy implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getSslProtocols() == null) ? 0 : getSslProtocols().hashCode());
         hashCode = prime * hashCode + ((getCiphers() == null) ? 0 : getCiphers().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getSupportedLoadBalancerTypes() == null) ? 0 : getSupportedLoadBalancerTypes().hashCode());
         return hashCode;
     }
 

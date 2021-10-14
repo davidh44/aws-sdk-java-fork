@@ -17,7 +17,11 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Describes a filter that is used to return a more specific list of results when describing tags.
+ * Describes a filter that is used to return a more specific list of results from a describe operation.
+ * </p>
+ * <p>
+ * If you specify multiple filters, the filters are joined with an <code>AND</code>, and the request returns only
+ * results that match all of the specified filters.
  * </p>
  * <p>
  * For more information, see <a
@@ -33,27 +37,219 @@ public class Filter implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name of the filter. The valid values are: <code>auto-scaling-group</code>, <code>key</code>,
-     * <code>value</code>, and <code>propagate-at-launch</code>.
+     * The name of the filter.
      * </p>
+     * <p>
+     * The valid values for <code>Name</code> depend on the API operation that you are including the filter in,
+     * <a>DescribeAutoScalingGroups</a> or <a>DescribeTags</a>.
+     * </p>
+     * <p>
+     * <b>DescribeAutoScalingGroups</b>
+     * </p>
+     * <p>
+     * Valid values for <code>Name</code> include the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>tag-key</code> - Accepts tag keys. The results will only include information about the Auto Scaling groups
+     * associated with these tag keys.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>tag-value</code> - Accepts tag values. The results will only include information about the Auto Scaling
+     * groups associated with these tag values.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>tag:&lt;key&gt;</code> - Accepts the key/value combination of the tag. Use the tag key in the filter name
+     * and the tag value as the filter value. The results will only include information about the Auto Scaling groups
+     * associated with the specified key/value combination.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * <b>DescribeTags</b>
+     * </p>
+     * <p>
+     * Valid values for <code>Name</code> include the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>auto-scaling-group</code> - Accepts the names of Auto Scaling groups. The results will only include
+     * information about the tags associated with these Auto Scaling groups.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>key</code> - Accepts tag keys. The results will only include information about the tags associated with
+     * these tag keys.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>value</code> - Accepts tag values. The results will only include information about the tags associated with
+     * these tag values.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>propagate-at-launch</code> - Accepts a boolean value, which specifies whether tags propagate to instances
+     * at launch. The results will only include information about the tags associated with the specified boolean value.
+     * </p>
+     * </li>
+     * </ul>
      */
     private String name;
     /**
      * <p>
      * One or more filter values. Filter values are case-sensitive.
      * </p>
+     * <p>
+     * If you specify multiple values for a filter, the values are joined with an <code>OR</code>, and the request
+     * returns all results that match any of the specified values. For example, specify "tag:environment" for the filter
+     * name and "production,development" for the filter values to find Auto Scaling groups with the tag
+     * "environment=production" or "environment=development".
+     * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> values;
 
     /**
      * <p>
-     * The name of the filter. The valid values are: <code>auto-scaling-group</code>, <code>key</code>,
-     * <code>value</code>, and <code>propagate-at-launch</code>.
+     * The name of the filter.
      * </p>
+     * <p>
+     * The valid values for <code>Name</code> depend on the API operation that you are including the filter in,
+     * <a>DescribeAutoScalingGroups</a> or <a>DescribeTags</a>.
+     * </p>
+     * <p>
+     * <b>DescribeAutoScalingGroups</b>
+     * </p>
+     * <p>
+     * Valid values for <code>Name</code> include the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>tag-key</code> - Accepts tag keys. The results will only include information about the Auto Scaling groups
+     * associated with these tag keys.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>tag-value</code> - Accepts tag values. The results will only include information about the Auto Scaling
+     * groups associated with these tag values.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>tag:&lt;key&gt;</code> - Accepts the key/value combination of the tag. Use the tag key in the filter name
+     * and the tag value as the filter value. The results will only include information about the Auto Scaling groups
+     * associated with the specified key/value combination.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * <b>DescribeTags</b>
+     * </p>
+     * <p>
+     * Valid values for <code>Name</code> include the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>auto-scaling-group</code> - Accepts the names of Auto Scaling groups. The results will only include
+     * information about the tags associated with these Auto Scaling groups.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>key</code> - Accepts tag keys. The results will only include information about the tags associated with
+     * these tag keys.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>value</code> - Accepts tag values. The results will only include information about the tags associated with
+     * these tag values.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>propagate-at-launch</code> - Accepts a boolean value, which specifies whether tags propagate to instances
+     * at launch. The results will only include information about the tags associated with the specified boolean value.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param name
-     *        The name of the filter. The valid values are: <code>auto-scaling-group</code>, <code>key</code>,
-     *        <code>value</code>, and <code>propagate-at-launch</code>.
+     *        The name of the filter.</p>
+     *        <p>
+     *        The valid values for <code>Name</code> depend on the API operation that you are including the filter in,
+     *        <a>DescribeAutoScalingGroups</a> or <a>DescribeTags</a>.
+     *        </p>
+     *        <p>
+     *        <b>DescribeAutoScalingGroups</b>
+     *        </p>
+     *        <p>
+     *        Valid values for <code>Name</code> include the following:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>tag-key</code> - Accepts tag keys. The results will only include information about the Auto Scaling
+     *        groups associated with these tag keys.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>tag-value</code> - Accepts tag values. The results will only include information about the Auto
+     *        Scaling groups associated with these tag values.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>tag:&lt;key&gt;</code> - Accepts the key/value combination of the tag. Use the tag key in the filter
+     *        name and the tag value as the filter value. The results will only include information about the Auto
+     *        Scaling groups associated with the specified key/value combination.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        <b>DescribeTags</b>
+     *        </p>
+     *        <p>
+     *        Valid values for <code>Name</code> include the following:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>auto-scaling-group</code> - Accepts the names of Auto Scaling groups. The results will only include
+     *        information about the tags associated with these Auto Scaling groups.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>key</code> - Accepts tag keys. The results will only include information about the tags associated
+     *        with these tag keys.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>value</code> - Accepts tag values. The results will only include information about the tags
+     *        associated with these tag values.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>propagate-at-launch</code> - Accepts a boolean value, which specifies whether tags propagate to
+     *        instances at launch. The results will only include information about the tags associated with the
+     *        specified boolean value.
+     *        </p>
+     *        </li>
      */
 
     public void setName(String name) {
@@ -62,12 +258,136 @@ public class Filter implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name of the filter. The valid values are: <code>auto-scaling-group</code>, <code>key</code>,
-     * <code>value</code>, and <code>propagate-at-launch</code>.
+     * The name of the filter.
      * </p>
+     * <p>
+     * The valid values for <code>Name</code> depend on the API operation that you are including the filter in,
+     * <a>DescribeAutoScalingGroups</a> or <a>DescribeTags</a>.
+     * </p>
+     * <p>
+     * <b>DescribeAutoScalingGroups</b>
+     * </p>
+     * <p>
+     * Valid values for <code>Name</code> include the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>tag-key</code> - Accepts tag keys. The results will only include information about the Auto Scaling groups
+     * associated with these tag keys.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>tag-value</code> - Accepts tag values. The results will only include information about the Auto Scaling
+     * groups associated with these tag values.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>tag:&lt;key&gt;</code> - Accepts the key/value combination of the tag. Use the tag key in the filter name
+     * and the tag value as the filter value. The results will only include information about the Auto Scaling groups
+     * associated with the specified key/value combination.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * <b>DescribeTags</b>
+     * </p>
+     * <p>
+     * Valid values for <code>Name</code> include the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>auto-scaling-group</code> - Accepts the names of Auto Scaling groups. The results will only include
+     * information about the tags associated with these Auto Scaling groups.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>key</code> - Accepts tag keys. The results will only include information about the tags associated with
+     * these tag keys.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>value</code> - Accepts tag values. The results will only include information about the tags associated with
+     * these tag values.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>propagate-at-launch</code> - Accepts a boolean value, which specifies whether tags propagate to instances
+     * at launch. The results will only include information about the tags associated with the specified boolean value.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The name of the filter. The valid values are: <code>auto-scaling-group</code>, <code>key</code>,
-     *         <code>value</code>, and <code>propagate-at-launch</code>.
+     * @return The name of the filter.</p>
+     *         <p>
+     *         The valid values for <code>Name</code> depend on the API operation that you are including the filter in,
+     *         <a>DescribeAutoScalingGroups</a> or <a>DescribeTags</a>.
+     *         </p>
+     *         <p>
+     *         <b>DescribeAutoScalingGroups</b>
+     *         </p>
+     *         <p>
+     *         Valid values for <code>Name</code> include the following:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>tag-key</code> - Accepts tag keys. The results will only include information about the Auto Scaling
+     *         groups associated with these tag keys.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>tag-value</code> - Accepts tag values. The results will only include information about the Auto
+     *         Scaling groups associated with these tag values.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>tag:&lt;key&gt;</code> - Accepts the key/value combination of the tag. Use the tag key in the
+     *         filter name and the tag value as the filter value. The results will only include information about the
+     *         Auto Scaling groups associated with the specified key/value combination.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         <b>DescribeTags</b>
+     *         </p>
+     *         <p>
+     *         Valid values for <code>Name</code> include the following:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>auto-scaling-group</code> - Accepts the names of Auto Scaling groups. The results will only include
+     *         information about the tags associated with these Auto Scaling groups.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>key</code> - Accepts tag keys. The results will only include information about the tags associated
+     *         with these tag keys.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>value</code> - Accepts tag values. The results will only include information about the tags
+     *         associated with these tag values.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>propagate-at-launch</code> - Accepts a boolean value, which specifies whether tags propagate to
+     *         instances at launch. The results will only include information about the tags associated with the
+     *         specified boolean value.
+     *         </p>
+     *         </li>
      */
 
     public String getName() {
@@ -76,13 +396,137 @@ public class Filter implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name of the filter. The valid values are: <code>auto-scaling-group</code>, <code>key</code>,
-     * <code>value</code>, and <code>propagate-at-launch</code>.
+     * The name of the filter.
      * </p>
+     * <p>
+     * The valid values for <code>Name</code> depend on the API operation that you are including the filter in,
+     * <a>DescribeAutoScalingGroups</a> or <a>DescribeTags</a>.
+     * </p>
+     * <p>
+     * <b>DescribeAutoScalingGroups</b>
+     * </p>
+     * <p>
+     * Valid values for <code>Name</code> include the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>tag-key</code> - Accepts tag keys. The results will only include information about the Auto Scaling groups
+     * associated with these tag keys.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>tag-value</code> - Accepts tag values. The results will only include information about the Auto Scaling
+     * groups associated with these tag values.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>tag:&lt;key&gt;</code> - Accepts the key/value combination of the tag. Use the tag key in the filter name
+     * and the tag value as the filter value. The results will only include information about the Auto Scaling groups
+     * associated with the specified key/value combination.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * <b>DescribeTags</b>
+     * </p>
+     * <p>
+     * Valid values for <code>Name</code> include the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>auto-scaling-group</code> - Accepts the names of Auto Scaling groups. The results will only include
+     * information about the tags associated with these Auto Scaling groups.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>key</code> - Accepts tag keys. The results will only include information about the tags associated with
+     * these tag keys.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>value</code> - Accepts tag values. The results will only include information about the tags associated with
+     * these tag values.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>propagate-at-launch</code> - Accepts a boolean value, which specifies whether tags propagate to instances
+     * at launch. The results will only include information about the tags associated with the specified boolean value.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param name
-     *        The name of the filter. The valid values are: <code>auto-scaling-group</code>, <code>key</code>,
-     *        <code>value</code>, and <code>propagate-at-launch</code>.
+     *        The name of the filter.</p>
+     *        <p>
+     *        The valid values for <code>Name</code> depend on the API operation that you are including the filter in,
+     *        <a>DescribeAutoScalingGroups</a> or <a>DescribeTags</a>.
+     *        </p>
+     *        <p>
+     *        <b>DescribeAutoScalingGroups</b>
+     *        </p>
+     *        <p>
+     *        Valid values for <code>Name</code> include the following:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>tag-key</code> - Accepts tag keys. The results will only include information about the Auto Scaling
+     *        groups associated with these tag keys.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>tag-value</code> - Accepts tag values. The results will only include information about the Auto
+     *        Scaling groups associated with these tag values.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>tag:&lt;key&gt;</code> - Accepts the key/value combination of the tag. Use the tag key in the filter
+     *        name and the tag value as the filter value. The results will only include information about the Auto
+     *        Scaling groups associated with the specified key/value combination.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        <b>DescribeTags</b>
+     *        </p>
+     *        <p>
+     *        Valid values for <code>Name</code> include the following:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>auto-scaling-group</code> - Accepts the names of Auto Scaling groups. The results will only include
+     *        information about the tags associated with these Auto Scaling groups.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>key</code> - Accepts tag keys. The results will only include information about the tags associated
+     *        with these tag keys.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>value</code> - Accepts tag values. The results will only include information about the tags
+     *        associated with these tag values.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>propagate-at-launch</code> - Accepts a boolean value, which specifies whether tags propagate to
+     *        instances at launch. The results will only include information about the tags associated with the
+     *        specified boolean value.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -95,8 +539,19 @@ public class Filter implements Serializable, Cloneable {
      * <p>
      * One or more filter values. Filter values are case-sensitive.
      * </p>
+     * <p>
+     * If you specify multiple values for a filter, the values are joined with an <code>OR</code>, and the request
+     * returns all results that match any of the specified values. For example, specify "tag:environment" for the filter
+     * name and "production,development" for the filter values to find Auto Scaling groups with the tag
+     * "environment=production" or "environment=development".
+     * </p>
      * 
-     * @return One or more filter values. Filter values are case-sensitive.
+     * @return One or more filter values. Filter values are case-sensitive. </p>
+     *         <p>
+     *         If you specify multiple values for a filter, the values are joined with an <code>OR</code>, and the
+     *         request returns all results that match any of the specified values. For example, specify
+     *         "tag:environment" for the filter name and "production,development" for the filter values to find Auto
+     *         Scaling groups with the tag "environment=production" or "environment=development".
      */
 
     public java.util.List<String> getValues() {
@@ -110,9 +565,20 @@ public class Filter implements Serializable, Cloneable {
      * <p>
      * One or more filter values. Filter values are case-sensitive.
      * </p>
+     * <p>
+     * If you specify multiple values for a filter, the values are joined with an <code>OR</code>, and the request
+     * returns all results that match any of the specified values. For example, specify "tag:environment" for the filter
+     * name and "production,development" for the filter values to find Auto Scaling groups with the tag
+     * "environment=production" or "environment=development".
+     * </p>
      * 
      * @param values
-     *        One or more filter values. Filter values are case-sensitive.
+     *        One or more filter values. Filter values are case-sensitive. </p>
+     *        <p>
+     *        If you specify multiple values for a filter, the values are joined with an <code>OR</code>, and the
+     *        request returns all results that match any of the specified values. For example, specify "tag:environment"
+     *        for the filter name and "production,development" for the filter values to find Auto Scaling groups with
+     *        the tag "environment=production" or "environment=development".
      */
 
     public void setValues(java.util.Collection<String> values) {
@@ -129,13 +595,24 @@ public class Filter implements Serializable, Cloneable {
      * One or more filter values. Filter values are case-sensitive.
      * </p>
      * <p>
+     * If you specify multiple values for a filter, the values are joined with an <code>OR</code>, and the request
+     * returns all results that match any of the specified values. For example, specify "tag:environment" for the filter
+     * name and "production,development" for the filter values to find Auto Scaling groups with the tag
+     * "environment=production" or "environment=development".
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setValues(java.util.Collection)} or {@link #withValues(java.util.Collection)} if you want to override the
      * existing values.
      * </p>
      * 
      * @param values
-     *        One or more filter values. Filter values are case-sensitive.
+     *        One or more filter values. Filter values are case-sensitive. </p>
+     *        <p>
+     *        If you specify multiple values for a filter, the values are joined with an <code>OR</code>, and the
+     *        request returns all results that match any of the specified values. For example, specify "tag:environment"
+     *        for the filter name and "production,development" for the filter values to find Auto Scaling groups with
+     *        the tag "environment=production" or "environment=development".
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -153,9 +630,20 @@ public class Filter implements Serializable, Cloneable {
      * <p>
      * One or more filter values. Filter values are case-sensitive.
      * </p>
+     * <p>
+     * If you specify multiple values for a filter, the values are joined with an <code>OR</code>, and the request
+     * returns all results that match any of the specified values. For example, specify "tag:environment" for the filter
+     * name and "production,development" for the filter values to find Auto Scaling groups with the tag
+     * "environment=production" or "environment=development".
+     * </p>
      * 
      * @param values
-     *        One or more filter values. Filter values are case-sensitive.
+     *        One or more filter values. Filter values are case-sensitive. </p>
+     *        <p>
+     *        If you specify multiple values for a filter, the values are joined with an <code>OR</code>, and the
+     *        request returns all results that match any of the specified values. For example, specify "tag:environment"
+     *        for the filter name and "production,development" for the filter values to find Auto Scaling groups with
+     *        the tag "environment=production" or "environment=development".
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

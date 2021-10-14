@@ -29,6 +29,10 @@ public class ComputeMarshaller {
 
     private static final MarshallingInfo<Integer> SIMULATIONUNITLIMIT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("simulationUnitLimit").build();
+    private static final MarshallingInfo<String> COMPUTETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("computeType").build();
+    private static final MarshallingInfo<Integer> GPUUNITLIMIT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("gpuUnitLimit").build();
 
     private static final ComputeMarshaller instance = new ComputeMarshaller();
 
@@ -47,6 +51,8 @@ public class ComputeMarshaller {
 
         try {
             protocolMarshaller.marshall(compute.getSimulationUnitLimit(), SIMULATIONUNITLIMIT_BINDING);
+            protocolMarshaller.marshall(compute.getComputeType(), COMPUTETYPE_BINDING);
+            protocolMarshaller.marshall(compute.getGpuUnitLimit(), GPUUNITLIMIT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -62,6 +62,14 @@ public class DataSourceConfigJsonUnmarshaller implements Unmarshaller<DataSource
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("type", targetDepth)) {
+                    context.nextToken();
+                    dataSourceConfig.setType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("destination", targetDepth)) {
+                    context.nextToken();
+                    dataSourceConfig.setDestination(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
