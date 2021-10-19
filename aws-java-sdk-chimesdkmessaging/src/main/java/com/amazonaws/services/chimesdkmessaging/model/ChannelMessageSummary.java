@@ -82,6 +82,13 @@ public class ChannelMessageSummary implements Serializable, Cloneable, Structure
      * </p>
      */
     private Boolean redacted;
+    /**
+     * <p>
+     * The message status. The status value is <code>SENT</code> for messages sent to a channel without a channel flow.
+     * For channels associated with channel flow, the value determines the processing stage.
+     * </p>
+     */
+    private ChannelMessageStatusStructure status;
 
     /**
      * <p>
@@ -475,6 +482,52 @@ public class ChannelMessageSummary implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The message status. The status value is <code>SENT</code> for messages sent to a channel without a channel flow.
+     * For channels associated with channel flow, the value determines the processing stage.
+     * </p>
+     * 
+     * @param status
+     *        The message status. The status value is <code>SENT</code> for messages sent to a channel without a channel
+     *        flow. For channels associated with channel flow, the value determines the processing stage.
+     */
+
+    public void setStatus(ChannelMessageStatusStructure status) {
+        this.status = status;
+    }
+
+    /**
+     * <p>
+     * The message status. The status value is <code>SENT</code> for messages sent to a channel without a channel flow.
+     * For channels associated with channel flow, the value determines the processing stage.
+     * </p>
+     * 
+     * @return The message status. The status value is <code>SENT</code> for messages sent to a channel without a
+     *         channel flow. For channels associated with channel flow, the value determines the processing stage.
+     */
+
+    public ChannelMessageStatusStructure getStatus() {
+        return this.status;
+    }
+
+    /**
+     * <p>
+     * The message status. The status value is <code>SENT</code> for messages sent to a channel without a channel flow.
+     * For channels associated with channel flow, the value determines the processing stage.
+     * </p>
+     * 
+     * @param status
+     *        The message status. The status value is <code>SENT</code> for messages sent to a channel without a channel
+     *        flow. For channels associated with channel flow, the value determines the processing stage.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ChannelMessageSummary withStatus(ChannelMessageStatusStructure status) {
+        setStatus(status);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -503,7 +556,9 @@ public class ChannelMessageSummary implements Serializable, Cloneable, Structure
         if (getSender() != null)
             sb.append("Sender: ").append(getSender()).append(",");
         if (getRedacted() != null)
-            sb.append("Redacted: ").append(getRedacted());
+            sb.append("Redacted: ").append(getRedacted()).append(",");
+        if (getStatus() != null)
+            sb.append("Status: ").append(getStatus());
         sb.append("}");
         return sb.toString();
     }
@@ -554,6 +609,10 @@ public class ChannelMessageSummary implements Serializable, Cloneable, Structure
             return false;
         if (other.getRedacted() != null && other.getRedacted().equals(this.getRedacted()) == false)
             return false;
+        if (other.getStatus() == null ^ this.getStatus() == null)
+            return false;
+        if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
+            return false;
         return true;
     }
 
@@ -571,6 +630,7 @@ public class ChannelMessageSummary implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getLastEditedTimestamp() == null) ? 0 : getLastEditedTimestamp().hashCode());
         hashCode = prime * hashCode + ((getSender() == null) ? 0 : getSender().hashCode());
         hashCode = prime * hashCode + ((getRedacted() == null) ? 0 : getRedacted().hashCode());
+        hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         return hashCode;
     }
 

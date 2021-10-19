@@ -58,6 +58,12 @@ public class ResponseDetails implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private ImportAssetsFromS3ResponseDetails importAssetsFromS3;
+    /**
+     * <p>
+     * Details from an import from Amazon Redshift datashare response.
+     * </p>
+     */
+    private ImportAssetsFromRedshiftDataSharesResponseDetails importAssetsFromRedshiftDataShares;
 
     /**
      * <p>
@@ -260,6 +266,46 @@ public class ResponseDetails implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * Details from an import from Amazon Redshift datashare response.
+     * </p>
+     * 
+     * @param importAssetsFromRedshiftDataShares
+     *        Details from an import from Amazon Redshift datashare response.
+     */
+
+    public void setImportAssetsFromRedshiftDataShares(ImportAssetsFromRedshiftDataSharesResponseDetails importAssetsFromRedshiftDataShares) {
+        this.importAssetsFromRedshiftDataShares = importAssetsFromRedshiftDataShares;
+    }
+
+    /**
+     * <p>
+     * Details from an import from Amazon Redshift datashare response.
+     * </p>
+     * 
+     * @return Details from an import from Amazon Redshift datashare response.
+     */
+
+    public ImportAssetsFromRedshiftDataSharesResponseDetails getImportAssetsFromRedshiftDataShares() {
+        return this.importAssetsFromRedshiftDataShares;
+    }
+
+    /**
+     * <p>
+     * Details from an import from Amazon Redshift datashare response.
+     * </p>
+     * 
+     * @param importAssetsFromRedshiftDataShares
+     *        Details from an import from Amazon Redshift datashare response.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResponseDetails withImportAssetsFromRedshiftDataShares(ImportAssetsFromRedshiftDataSharesResponseDetails importAssetsFromRedshiftDataShares) {
+        setImportAssetsFromRedshiftDataShares(importAssetsFromRedshiftDataShares);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -280,7 +326,9 @@ public class ResponseDetails implements Serializable, Cloneable, StructuredPojo 
         if (getImportAssetFromSignedUrl() != null)
             sb.append("ImportAssetFromSignedUrl: ").append(getImportAssetFromSignedUrl()).append(",");
         if (getImportAssetsFromS3() != null)
-            sb.append("ImportAssetsFromS3: ").append(getImportAssetsFromS3());
+            sb.append("ImportAssetsFromS3: ").append(getImportAssetsFromS3()).append(",");
+        if (getImportAssetsFromRedshiftDataShares() != null)
+            sb.append("ImportAssetsFromRedshiftDataShares: ").append(getImportAssetsFromRedshiftDataShares());
         sb.append("}");
         return sb.toString();
     }
@@ -315,6 +363,11 @@ public class ResponseDetails implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getImportAssetsFromS3() != null && other.getImportAssetsFromS3().equals(this.getImportAssetsFromS3()) == false)
             return false;
+        if (other.getImportAssetsFromRedshiftDataShares() == null ^ this.getImportAssetsFromRedshiftDataShares() == null)
+            return false;
+        if (other.getImportAssetsFromRedshiftDataShares() != null
+                && other.getImportAssetsFromRedshiftDataShares().equals(this.getImportAssetsFromRedshiftDataShares()) == false)
+            return false;
         return true;
     }
 
@@ -328,6 +381,7 @@ public class ResponseDetails implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getExportRevisionsToS3() == null) ? 0 : getExportRevisionsToS3().hashCode());
         hashCode = prime * hashCode + ((getImportAssetFromSignedUrl() == null) ? 0 : getImportAssetFromSignedUrl().hashCode());
         hashCode = prime * hashCode + ((getImportAssetsFromS3() == null) ? 0 : getImportAssetsFromS3().hashCode());
+        hashCode = prime * hashCode + ((getImportAssetsFromRedshiftDataShares() == null) ? 0 : getImportAssetsFromRedshiftDataShares().hashCode());
         return hashCode;
     }
 

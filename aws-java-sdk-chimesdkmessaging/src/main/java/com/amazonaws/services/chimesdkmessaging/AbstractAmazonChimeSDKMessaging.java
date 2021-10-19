@@ -28,7 +28,17 @@ public class AbstractAmazonChimeSDKMessaging implements AmazonChimeSDKMessaging 
     }
 
     @Override
+    public AssociateChannelFlowResult associateChannelFlow(AssociateChannelFlowRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public BatchCreateChannelMembershipResult batchCreateChannelMembership(BatchCreateChannelMembershipRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ChannelFlowCallbackResult channelFlowCallback(ChannelFlowCallbackRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -39,6 +49,11 @@ public class AbstractAmazonChimeSDKMessaging implements AmazonChimeSDKMessaging 
 
     @Override
     public CreateChannelBanResult createChannelBan(CreateChannelBanRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateChannelFlowResult createChannelFlow(CreateChannelFlowRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -59,6 +74,11 @@ public class AbstractAmazonChimeSDKMessaging implements AmazonChimeSDKMessaging 
 
     @Override
     public DeleteChannelBanResult deleteChannelBan(DeleteChannelBanRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteChannelFlowResult deleteChannelFlow(DeleteChannelFlowRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -88,6 +108,11 @@ public class AbstractAmazonChimeSDKMessaging implements AmazonChimeSDKMessaging 
     }
 
     @Override
+    public DescribeChannelFlowResult describeChannelFlow(DescribeChannelFlowRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeChannelMembershipResult describeChannelMembership(DescribeChannelMembershipRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -109,7 +134,17 @@ public class AbstractAmazonChimeSDKMessaging implements AmazonChimeSDKMessaging 
     }
 
     @Override
+    public DisassociateChannelFlowResult disassociateChannelFlow(DisassociateChannelFlowRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetChannelMessageResult getChannelMessage(GetChannelMessageRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetChannelMessageStatusResult getChannelMessageStatus(GetChannelMessageStatusRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -120,6 +155,11 @@ public class AbstractAmazonChimeSDKMessaging implements AmazonChimeSDKMessaging 
 
     @Override
     public ListChannelBansResult listChannelBans(ListChannelBansRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListChannelFlowsResult listChannelFlows(ListChannelFlowsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -149,7 +189,17 @@ public class AbstractAmazonChimeSDKMessaging implements AmazonChimeSDKMessaging 
     }
 
     @Override
+    public ListChannelsAssociatedWithChannelFlowResult listChannelsAssociatedWithChannelFlow(ListChannelsAssociatedWithChannelFlowRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListChannelsModeratedByAppInstanceUserResult listChannelsModeratedByAppInstanceUser(ListChannelsModeratedByAppInstanceUserRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -164,7 +214,22 @@ public class AbstractAmazonChimeSDKMessaging implements AmazonChimeSDKMessaging 
     }
 
     @Override
+    public TagResourceResult tagResource(TagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UntagResourceResult untagResource(UntagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateChannelResult updateChannel(UpdateChannelRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateChannelFlowResult updateChannelFlow(UpdateChannelFlowRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * Information about the asset.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/AssetDetails" target="_top">AWS API
  *      Documentation</a>
@@ -25,10 +28,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class AssetDetails implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The S3 object that is the asset.
+     * </p>
+     */
     private S3SnapshotAsset s3SnapshotAsset;
+    /**
+     * <p>
+     * The Amazon Redshift datashare that is the asset.
+     * </p>
+     */
+    private RedshiftDataShareAsset redshiftDataShareAsset;
 
     /**
+     * <p>
+     * The S3 object that is the asset.
+     * </p>
+     * 
      * @param s3SnapshotAsset
+     *        The S3 object that is the asset.
      */
 
     public void setS3SnapshotAsset(S3SnapshotAsset s3SnapshotAsset) {
@@ -36,7 +55,11 @@ public class AssetDetails implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The S3 object that is the asset.
+     * </p>
+     * 
+     * @return The S3 object that is the asset.
      */
 
     public S3SnapshotAsset getS3SnapshotAsset() {
@@ -44,12 +67,57 @@ public class AssetDetails implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The S3 object that is the asset.
+     * </p>
+     * 
      * @param s3SnapshotAsset
+     *        The S3 object that is the asset.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public AssetDetails withS3SnapshotAsset(S3SnapshotAsset s3SnapshotAsset) {
         setS3SnapshotAsset(s3SnapshotAsset);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Redshift datashare that is the asset.
+     * </p>
+     * 
+     * @param redshiftDataShareAsset
+     *        The Amazon Redshift datashare that is the asset.
+     */
+
+    public void setRedshiftDataShareAsset(RedshiftDataShareAsset redshiftDataShareAsset) {
+        this.redshiftDataShareAsset = redshiftDataShareAsset;
+    }
+
+    /**
+     * <p>
+     * The Amazon Redshift datashare that is the asset.
+     * </p>
+     * 
+     * @return The Amazon Redshift datashare that is the asset.
+     */
+
+    public RedshiftDataShareAsset getRedshiftDataShareAsset() {
+        return this.redshiftDataShareAsset;
+    }
+
+    /**
+     * <p>
+     * The Amazon Redshift datashare that is the asset.
+     * </p>
+     * 
+     * @param redshiftDataShareAsset
+     *        The Amazon Redshift datashare that is the asset.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AssetDetails withRedshiftDataShareAsset(RedshiftDataShareAsset redshiftDataShareAsset) {
+        setRedshiftDataShareAsset(redshiftDataShareAsset);
         return this;
     }
 
@@ -66,7 +134,9 @@ public class AssetDetails implements Serializable, Cloneable, StructuredPojo {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getS3SnapshotAsset() != null)
-            sb.append("S3SnapshotAsset: ").append(getS3SnapshotAsset());
+            sb.append("S3SnapshotAsset: ").append(getS3SnapshotAsset()).append(",");
+        if (getRedshiftDataShareAsset() != null)
+            sb.append("RedshiftDataShareAsset: ").append(getRedshiftDataShareAsset());
         sb.append("}");
         return sb.toString();
     }
@@ -85,6 +155,10 @@ public class AssetDetails implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getS3SnapshotAsset() != null && other.getS3SnapshotAsset().equals(this.getS3SnapshotAsset()) == false)
             return false;
+        if (other.getRedshiftDataShareAsset() == null ^ this.getRedshiftDataShareAsset() == null)
+            return false;
+        if (other.getRedshiftDataShareAsset() != null && other.getRedshiftDataShareAsset().equals(this.getRedshiftDataShareAsset()) == false)
+            return false;
         return true;
     }
 
@@ -94,6 +168,7 @@ public class AssetDetails implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getS3SnapshotAsset() == null) ? 0 : getS3SnapshotAsset().hashCode());
+        hashCode = prime * hashCode + ((getRedshiftDataShareAsset() == null) ? 0 : getRedshiftDataShareAsset().hashCode());
         return hashCode;
     }
 

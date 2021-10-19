@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * Information about the job error.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/Details" target="_top">AWS API
  *      Documentation</a>
@@ -25,12 +28,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class Details implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Information about the job error.
+     * </p>
+     */
     private ImportAssetFromSignedUrlJobErrorDetails importAssetFromSignedUrlJobErrorDetails;
-
+    /**
+     * <p>
+     * Information about the job error.
+     * </p>
+     */
     private java.util.List<AssetSourceEntry> importAssetsFromS3JobErrorDetails;
 
     /**
+     * <p>
+     * Information about the job error.
+     * </p>
+     * 
      * @param importAssetFromSignedUrlJobErrorDetails
+     *        Information about the job error.
      */
 
     public void setImportAssetFromSignedUrlJobErrorDetails(ImportAssetFromSignedUrlJobErrorDetails importAssetFromSignedUrlJobErrorDetails) {
@@ -38,7 +55,11 @@ public class Details implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * Information about the job error.
+     * </p>
+     * 
+     * @return Information about the job error.
      */
 
     public ImportAssetFromSignedUrlJobErrorDetails getImportAssetFromSignedUrlJobErrorDetails() {
@@ -46,7 +67,12 @@ public class Details implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Information about the job error.
+     * </p>
+     * 
      * @param importAssetFromSignedUrlJobErrorDetails
+     *        Information about the job error.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +82,11 @@ public class Details implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * Information about the job error.
+     * </p>
+     * 
+     * @return Information about the job error.
      */
 
     public java.util.List<AssetSourceEntry> getImportAssetsFromS3JobErrorDetails() {
@@ -64,7 +94,12 @@ public class Details implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Information about the job error.
+     * </p>
+     * 
      * @param importAssetsFromS3JobErrorDetails
+     *        Information about the job error.
      */
 
     public void setImportAssetsFromS3JobErrorDetails(java.util.Collection<AssetSourceEntry> importAssetsFromS3JobErrorDetails) {
@@ -78,12 +113,16 @@ public class Details implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Information about the job error.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setImportAssetsFromS3JobErrorDetails(java.util.Collection)} or
      * {@link #withImportAssetsFromS3JobErrorDetails(java.util.Collection)} if you want to override the existing values.
      * </p>
      * 
      * @param importAssetsFromS3JobErrorDetails
+     *        Information about the job error.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -98,7 +137,12 @@ public class Details implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Information about the job error.
+     * </p>
+     * 
      * @param importAssetsFromS3JobErrorDetails
+     *        Information about the job error.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

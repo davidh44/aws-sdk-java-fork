@@ -47,6 +47,43 @@ public interface AmazonChimeSDKMessaging {
 
     /**
      * <p>
+     * Associates a channel flow with a channel. Once associated, all messages to that channel go through channel flow
+     * processors. To stop processing, use the <code>DisassociateChannelFlow</code> API.
+     * </p>
+     * <note>
+     * <p>
+     * Only administrators or channel moderators can associate a channel flow. The <code>x-amz-chime-bearer</code>
+     * request header is mandatory. Use the <code>AppInstanceUserArn</code> of the user that makes the API call as the
+     * value in the header.
+     * </p>
+     * </note>
+     * 
+     * @param associateChannelFlowRequest
+     * @return Result of the AssociateChannelFlow operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws NotFoundException
+     *         One or more of the resources in the request does not exist in the system.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMessaging.AssociateChannelFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-messaging-2021-05-15/AssociateChannelFlow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    AssociateChannelFlowResult associateChannelFlow(AssociateChannelFlowRequest associateChannelFlowRequest);
+
+    /**
+     * <p>
      * Adds a specified number of users to a channel.
      * </p>
      * 
@@ -69,6 +106,54 @@ public interface AmazonChimeSDKMessaging {
      *      target="_top">AWS API Documentation</a>
      */
     BatchCreateChannelMembershipResult batchCreateChannelMembership(BatchCreateChannelMembershipRequest batchCreateChannelMembershipRequest);
+
+    /**
+     * <p>
+     * Calls back Chime SDK Messaging with a processing response message. This should be invoked from the processor
+     * Lambda. This is a developer API.
+     * </p>
+     * <p>
+     * You can return one of the following processing responses:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Update message content or metadata
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Deny a message
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Make no changes to the message
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param channelFlowCallbackRequest
+     * @return Result of the ChannelFlowCallback operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMessaging.ChannelFlowCallback
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-messaging-2021-05-15/ChannelFlowCallback"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ChannelFlowCallbackResult channelFlowCallback(ChannelFlowCallbackRequest channelFlowCallbackRequest);
 
     /**
      * <p>
@@ -147,6 +232,65 @@ public interface AmazonChimeSDKMessaging {
      *      target="_top">AWS API Documentation</a>
      */
     CreateChannelBanResult createChannelBan(CreateChannelBanRequest createChannelBanRequest);
+
+    /**
+     * <p>
+     * Creates a channel flow, a container for processors. Processors are AWS Lambda functions that perform actions on
+     * chat messages, such as stripping out profanity. You can associate channel flows with channels, and the processors
+     * in the channel flow then take action on all messages sent to that channel. This is a developer API.
+     * </p>
+     * <p>
+     * Channel flows process the following items:
+     * </p>
+     * <ol>
+     * <li>
+     * <p>
+     * New and updated messages
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Persistent and non-persistent messages
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Standard message type
+     * </p>
+     * </li>
+     * </ol>
+     * <note>
+     * <p>
+     * Channel flows don't process Control or System messages. For more information about the message types provided by
+     * Chime SDK Messaging, refer to <a
+     * href="https://docs.aws.amazon.com/chime/latest/dg/using-the-messaging-sdk.html#msg-types">Message types</a> in
+     * the <i>Amazon Chime developer guide</i>.
+     * </p>
+     * </note>
+     * 
+     * @param createChannelFlowRequest
+     * @return Result of the CreateChannelFlow operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource.
+     * @throws ResourceLimitExceededException
+     *         The request exceeds the resource limit.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMessaging.CreateChannelFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-messaging-2021-05-15/CreateChannelFlow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateChannelFlowResult createChannelFlow(CreateChannelFlowRequest createChannelFlowRequest);
 
     /**
      * <p>
@@ -353,6 +497,40 @@ public interface AmazonChimeSDKMessaging {
 
     /**
      * <p>
+     * Deletes a channel flow, an irreversible process. This is a developer API.
+     * </p>
+     * <note>
+     * <p>
+     * This API works only when the channel flow is not associated with any channel. To get a list of all channels that
+     * a channel flow is associated with, use the <code>ListChannelsAssociatedWithChannelFlow</code> API. Use the
+     * <code>DisassociateChannelFlow</code> API to disassociate a channel flow from all channels.
+     * </p>
+     * </note>
+     * 
+     * @param deleteChannelFlowRequest
+     * @return Result of the DeleteChannelFlow operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMessaging.DeleteChannelFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-messaging-2021-05-15/DeleteChannelFlow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteChannelFlowResult deleteChannelFlow(DeleteChannelFlowRequest deleteChannelFlowRequest);
+
+    /**
+     * <p>
      * Removes a member from a channel.
      * </p>
      * <note>
@@ -513,6 +691,31 @@ public interface AmazonChimeSDKMessaging {
 
     /**
      * <p>
+     * Returns the full details of a channel flow in an Amazon Chime <code>AppInstance</code>. This is a developer API.
+     * </p>
+     * 
+     * @param describeChannelFlowRequest
+     * @return Result of the DescribeChannelFlow operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMessaging.DescribeChannelFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-messaging-2021-05-15/DescribeChannelFlow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeChannelFlowResult describeChannelFlow(DescribeChannelFlowRequest describeChannelFlowRequest);
+
+    /**
+     * <p>
      * Returns the full details of a user's channel membership.
      * </p>
      * <note>
@@ -645,6 +848,43 @@ public interface AmazonChimeSDKMessaging {
 
     /**
      * <p>
+     * Disassociates a channel flow from all its channels. Once disassociated, all messages to that channel stop going
+     * through the channel flow processor.
+     * </p>
+     * <note>
+     * <p>
+     * Only administrators or channel moderators can disassociate a channel flow. The <code>x-amz-chime-bearer</code>
+     * request header is mandatory. Use the <code>AppInstanceUserArn</code> of the user that makes the API call as the
+     * value in the header.
+     * </p>
+     * </note>
+     * 
+     * @param disassociateChannelFlowRequest
+     * @return Result of the DisassociateChannelFlow operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws NotFoundException
+     *         One or more of the resources in the request does not exist in the system.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMessaging.DisassociateChannelFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-messaging-2021-05-15/DisassociateChannelFlow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DisassociateChannelFlowResult disassociateChannelFlow(DisassociateChannelFlowRequest disassociateChannelFlowRequest);
+
+    /**
+     * <p>
      * Gets the full details of a channel message.
      * </p>
      * <note>
@@ -675,6 +915,83 @@ public interface AmazonChimeSDKMessaging {
      *      target="_top">AWS API Documentation</a>
      */
     GetChannelMessageResult getChannelMessage(GetChannelMessageRequest getChannelMessageRequest);
+
+    /**
+     * <p>
+     * Gets message status for a specified <code>messageId</code>. Use this API to determine the intermediate status of
+     * messages going through channel flow processing. The API provides an alternative to retrieving message status if
+     * the event was not received because a client wasn't connected to a websocket.
+     * </p>
+     * <p>
+     * Messages can have any one of these statuses.
+     * </p>
+     * <dl>
+     * <dt>SENT</dt>
+     * <dd>
+     * <p>
+     * Message processed successfully
+     * </p>
+     * </dd>
+     * <dt>PENDING</dt>
+     * <dd>
+     * <p>
+     * Ongoing processing
+     * </p>
+     * </dd>
+     * <dt>FAILED</dt>
+     * <dd>
+     * <p>
+     * Processing failed
+     * </p>
+     * </dd>
+     * <dt>DENIED</dt>
+     * <dd>
+     * <p>
+     * Messasge denied by the processor
+     * </p>
+     * </dd>
+     * </dl>
+     * <note>
+     * <ul>
+     * <li>
+     * <p>
+     * This API does not return statuses for denied messages, because we don't store them once the processor denies
+     * them.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Only the message sender can invoke this API.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the <code>AppInstanceUserArn</code> of the
+     * user that makes the API call as the value in the header
+     * </p>
+     * </li>
+     * </ul>
+     * </note>
+     * 
+     * @param getChannelMessageStatusRequest
+     * @return Result of the GetChannelMessageStatus operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMessaging.GetChannelMessageStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-messaging-2021-05-15/GetChannelMessageStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetChannelMessageStatusResult getChannelMessageStatus(GetChannelMessageStatusRequest getChannelMessageStatusRequest);
 
     /**
      * <p>
@@ -729,6 +1046,31 @@ public interface AmazonChimeSDKMessaging {
      *      target="_top">AWS API Documentation</a>
      */
     ListChannelBansResult listChannelBans(ListChannelBansRequest listChannelBansRequest);
+
+    /**
+     * <p>
+     * Returns a paginated lists of all the channel flows created under a single Chime. This is a developer API.
+     * </p>
+     * 
+     * @param listChannelFlowsRequest
+     * @return Result of the ListChannelFlows operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMessaging.ListChannelFlows
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-messaging-2021-05-15/ListChannelFlows"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListChannelFlowsResult listChannelFlows(ListChannelFlowsRequest listChannelFlowsRequest);
 
     /**
      * <p>
@@ -912,6 +1254,34 @@ public interface AmazonChimeSDKMessaging {
 
     /**
      * <p>
+     * Lists all channels associated with a specified channel flow. You can associate a channel flow with multiple
+     * channels, but you can only associate a channel with one channel flow. This is a developer API.
+     * </p>
+     * 
+     * @param listChannelsAssociatedWithChannelFlowRequest
+     * @return Result of the ListChannelsAssociatedWithChannelFlow operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMessaging.ListChannelsAssociatedWithChannelFlow
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-messaging-2021-05-15/ListChannelsAssociatedWithChannelFlow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListChannelsAssociatedWithChannelFlowResult listChannelsAssociatedWithChannelFlow(
+            ListChannelsAssociatedWithChannelFlowRequest listChannelsAssociatedWithChannelFlowRequest);
+
+    /**
+     * <p>
      * A list of the channels moderated by an <code>AppInstanceUser</code>.
      * </p>
      * <note>
@@ -942,6 +1312,31 @@ public interface AmazonChimeSDKMessaging {
      */
     ListChannelsModeratedByAppInstanceUserResult listChannelsModeratedByAppInstanceUser(
             ListChannelsModeratedByAppInstanceUserRequest listChannelsModeratedByAppInstanceUserRequest);
+
+    /**
+     * <p>
+     * Lists the tags applied to an Amazon Chime SDK messaging resource.
+     * </p>
+     * 
+     * @param listTagsForResourceRequest
+     * @return Result of the ListTagsForResource operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMessaging.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-messaging-2021-05-15/ListTagsForResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
 
     /**
      * <p>
@@ -1014,6 +1409,58 @@ public interface AmazonChimeSDKMessaging {
 
     /**
      * <p>
+     * Applies the specified tags to the specified Amazon Chime SDK messaging resource.
+     * </p>
+     * 
+     * @param tagResourceRequest
+     * @return Result of the TagResource operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ResourceLimitExceededException
+     *         The request exceeds the resource limit.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMessaging.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-messaging-2021-05-15/TagResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    TagResourceResult tagResource(TagResourceRequest tagResourceRequest);
+
+    /**
+     * <p>
+     * Removes the specified tags from the specified Amazon Chime SDK messaging resource.
+     * </p>
+     * 
+     * @param untagResourceRequest
+     * @return Result of the UntagResource operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMessaging.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-messaging-2021-05-15/UntagResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
+
+    /**
+     * <p>
      * Update a channel's attributes.
      * </p>
      * <p>
@@ -1047,6 +1494,33 @@ public interface AmazonChimeSDKMessaging {
      *      target="_top">AWS API Documentation</a>
      */
     UpdateChannelResult updateChannel(UpdateChannelRequest updateChannelRequest);
+
+    /**
+     * <p>
+     * Updates channel flow attributes. This is a developer API.
+     * </p>
+     * 
+     * @param updateChannelFlowRequest
+     * @return Result of the UpdateChannelFlow operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMessaging.UpdateChannelFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-messaging-2021-05-15/UpdateChannelFlow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateChannelFlowResult updateChannelFlow(UpdateChannelFlowRequest updateChannelFlowRequest);
 
     /**
      * <p>

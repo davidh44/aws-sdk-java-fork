@@ -37,7 +37,7 @@ public class EventActionEntry implements Serializable, Cloneable, StructuredPojo
     private Action action;
     /**
      * <p>
-     * The ARN for the event action.
+     * The Amazon Resource Name (ARN) for the event action.
      * </p>
      */
     private String arn;
@@ -108,11 +108,11 @@ public class EventActionEntry implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The ARN for the event action.
+     * The Amazon Resource Name (ARN) for the event action.
      * </p>
      * 
      * @param arn
-     *        The ARN for the event action.
+     *        The Amazon Resource Name (ARN) for the event action.
      */
 
     public void setArn(String arn) {
@@ -121,10 +121,10 @@ public class EventActionEntry implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The ARN for the event action.
+     * The Amazon Resource Name (ARN) for the event action.
      * </p>
      * 
-     * @return The ARN for the event action.
+     * @return The Amazon Resource Name (ARN) for the event action.
      */
 
     public String getArn() {
@@ -133,11 +133,11 @@ public class EventActionEntry implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The ARN for the event action.
+     * The Amazon Resource Name (ARN) for the event action.
      * </p>
      * 
      * @param arn
-     *        The ARN for the event action.
+     *        The Amazon Resource Name (ARN) for the event action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

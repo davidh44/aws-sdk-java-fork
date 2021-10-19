@@ -82,6 +82,12 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Date lastUpdatedTimestamp;
+    /**
+     * <p>
+     * The ARN of the channel flow.
+     * </p>
+     */
+    private String channelFlowArn;
 
     /**
      * <p>
@@ -482,6 +488,46 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The ARN of the channel flow.
+     * </p>
+     * 
+     * @param channelFlowArn
+     *        The ARN of the channel flow.
+     */
+
+    public void setChannelFlowArn(String channelFlowArn) {
+        this.channelFlowArn = channelFlowArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the channel flow.
+     * </p>
+     * 
+     * @return The ARN of the channel flow.
+     */
+
+    public String getChannelFlowArn() {
+        return this.channelFlowArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the channel flow.
+     * </p>
+     * 
+     * @param channelFlowArn
+     *        The ARN of the channel flow.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Channel withChannelFlowArn(String channelFlowArn) {
+        setChannelFlowArn(channelFlowArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -510,7 +556,9 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
         if (getLastMessageTimestamp() != null)
             sb.append("LastMessageTimestamp: ").append(getLastMessageTimestamp()).append(",");
         if (getLastUpdatedTimestamp() != null)
-            sb.append("LastUpdatedTimestamp: ").append(getLastUpdatedTimestamp());
+            sb.append("LastUpdatedTimestamp: ").append(getLastUpdatedTimestamp()).append(",");
+        if (getChannelFlowArn() != null)
+            sb.append("ChannelFlowArn: ").append(getChannelFlowArn());
         sb.append("}");
         return sb.toString();
     }
@@ -561,6 +609,10 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getLastUpdatedTimestamp() != null && other.getLastUpdatedTimestamp().equals(this.getLastUpdatedTimestamp()) == false)
             return false;
+        if (other.getChannelFlowArn() == null ^ this.getChannelFlowArn() == null)
+            return false;
+        if (other.getChannelFlowArn() != null && other.getChannelFlowArn().equals(this.getChannelFlowArn()) == false)
+            return false;
         return true;
     }
 
@@ -578,6 +630,7 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getCreatedTimestamp() == null) ? 0 : getCreatedTimestamp().hashCode());
         hashCode = prime * hashCode + ((getLastMessageTimestamp() == null) ? 0 : getLastMessageTimestamp().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedTimestamp() == null) ? 0 : getLastUpdatedTimestamp().hashCode());
+        hashCode = prime * hashCode + ((getChannelFlowArn() == null) ? 0 : getChannelFlowArn().hashCode());
         return hashCode;
     }
 

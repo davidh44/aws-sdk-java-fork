@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum JobErrorLimitName {
 
     AssetsPerRevision("Assets per revision"),
-    AssetSizeInGB("Asset size in GB");
+    AssetSizeInGB("Asset size in GB"),
+    AmazonRedshiftDatashareAssetsPerRevision("Amazon Redshift datashare assets per revision");
 
     private String value;
 

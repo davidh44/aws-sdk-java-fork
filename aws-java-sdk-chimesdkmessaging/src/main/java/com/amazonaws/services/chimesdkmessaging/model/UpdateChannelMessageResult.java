@@ -35,6 +35,12 @@ public class UpdateChannelMessageResult extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private String messageId;
+    /**
+     * <p>
+     * The status of the message update.
+     * </p>
+     */
+    private ChannelMessageStatusStructure status;
 
     /**
      * <p>
@@ -117,6 +123,46 @@ public class UpdateChannelMessageResult extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The status of the message update.
+     * </p>
+     * 
+     * @param status
+     *        The status of the message update.
+     */
+
+    public void setStatus(ChannelMessageStatusStructure status) {
+        this.status = status;
+    }
+
+    /**
+     * <p>
+     * The status of the message update.
+     * </p>
+     * 
+     * @return The status of the message update.
+     */
+
+    public ChannelMessageStatusStructure getStatus() {
+        return this.status;
+    }
+
+    /**
+     * <p>
+     * The status of the message update.
+     * </p>
+     * 
+     * @param status
+     *        The status of the message update.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateChannelMessageResult withStatus(ChannelMessageStatusStructure status) {
+        setStatus(status);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -131,7 +177,9 @@ public class UpdateChannelMessageResult extends com.amazonaws.AmazonWebServiceRe
         if (getChannelArn() != null)
             sb.append("ChannelArn: ").append(getChannelArn()).append(",");
         if (getMessageId() != null)
-            sb.append("MessageId: ").append(getMessageId());
+            sb.append("MessageId: ").append(getMessageId()).append(",");
+        if (getStatus() != null)
+            sb.append("Status: ").append(getStatus());
         sb.append("}");
         return sb.toString();
     }
@@ -154,6 +202,10 @@ public class UpdateChannelMessageResult extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getMessageId() != null && other.getMessageId().equals(this.getMessageId()) == false)
             return false;
+        if (other.getStatus() == null ^ this.getStatus() == null)
+            return false;
+        if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
+            return false;
         return true;
     }
 
@@ -164,6 +216,7 @@ public class UpdateChannelMessageResult extends com.amazonaws.AmazonWebServiceRe
 
         hashCode = prime * hashCode + ((getChannelArn() == null) ? 0 : getChannelArn().hashCode());
         hashCode = prime * hashCode + ((getMessageId() == null) ? 0 : getMessageId().hashCode());
+        hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         return hashCode;
     }
 

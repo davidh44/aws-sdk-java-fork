@@ -52,6 +52,10 @@ public class AssetDetailsJsonUnmarshaller implements Unmarshaller<AssetDetails, 
                     context.nextToken();
                     assetDetails.setS3SnapshotAsset(S3SnapshotAssetJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("RedshiftDataShareAsset", targetDepth)) {
+                    context.nextToken();
+                    assetDetails.setRedshiftDataShareAsset(RedshiftDataShareAssetJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

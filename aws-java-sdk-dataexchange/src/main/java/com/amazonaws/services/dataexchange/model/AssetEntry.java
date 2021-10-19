@@ -19,9 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An asset in AWS Data Exchange is a piece of data that can be stored as an S3 object. The asset can be a structured
- * data file, an image file, or some other data file. When you create an import job for your files, you create an asset
- * in AWS Data Exchange for each of those files.
+ * An asset in AWS Data Exchange is a piece of data. The asset can be a structured data file, an image file, or some
+ * other data file that can be stored as an S3 object, or an Amazon Redshift datashare (Preview). When you create an
+ * import job for your files, you create an asset in AWS Data Exchange for each of those files.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/AssetEntry" target="_top">AWS API
@@ -38,13 +38,13 @@ public class AssetEntry implements Serializable, Cloneable, StructuredPojo {
     private String arn;
     /**
      * <p>
-     * Information about the asset, including its size.
+     * Information about the asset.
      * </p>
      */
     private AssetDetails assetDetails;
     /**
      * <p>
-     * The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+     * The type of asset that is added to a data set.
      * </p>
      */
     private String assetType;
@@ -135,11 +135,11 @@ public class AssetEntry implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Information about the asset, including its size.
+     * Information about the asset.
      * </p>
      * 
      * @param assetDetails
-     *        Information about the asset, including its size.
+     *        Information about the asset.
      */
 
     public void setAssetDetails(AssetDetails assetDetails) {
@@ -148,10 +148,10 @@ public class AssetEntry implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Information about the asset, including its size.
+     * Information about the asset.
      * </p>
      * 
-     * @return Information about the asset, including its size.
+     * @return Information about the asset.
      */
 
     public AssetDetails getAssetDetails() {
@@ -160,11 +160,11 @@ public class AssetEntry implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Information about the asset, including its size.
+     * Information about the asset.
      * </p>
      * 
      * @param assetDetails
-     *        Information about the asset, including its size.
+     *        Information about the asset.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -175,11 +175,11 @@ public class AssetEntry implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+     * The type of asset that is added to a data set.
      * </p>
      * 
      * @param assetType
-     *        The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+     *        The type of asset that is added to a data set.
      * @see AssetType
      */
 
@@ -189,10 +189,10 @@ public class AssetEntry implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+     * The type of asset that is added to a data set.
      * </p>
      * 
-     * @return The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+     * @return The type of asset that is added to a data set.
      * @see AssetType
      */
 
@@ -202,11 +202,11 @@ public class AssetEntry implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+     * The type of asset that is added to a data set.
      * </p>
      * 
      * @param assetType
-     *        The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+     *        The type of asset that is added to a data set.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AssetType
      */
@@ -218,11 +218,11 @@ public class AssetEntry implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+     * The type of asset that is added to a data set.
      * </p>
      * 
      * @param assetType
-     *        The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+     *        The type of asset that is added to a data set.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AssetType
      */

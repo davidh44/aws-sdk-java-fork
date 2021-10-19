@@ -30,7 +30,7 @@ public class ImportAssetFromSignedUrlResponseDetails implements Serializable, Cl
 
     /**
      * <p>
-     * The name for the asset associated with this import response.
+     * The name for the asset associated with this import job.
      * </p>
      */
     private String assetName;
@@ -67,11 +67,11 @@ public class ImportAssetFromSignedUrlResponseDetails implements Serializable, Cl
 
     /**
      * <p>
-     * The name for the asset associated with this import response.
+     * The name for the asset associated with this import job.
      * </p>
      * 
      * @param assetName
-     *        The name for the asset associated with this import response.
+     *        The name for the asset associated with this import job.
      */
 
     public void setAssetName(String assetName) {
@@ -80,10 +80,10 @@ public class ImportAssetFromSignedUrlResponseDetails implements Serializable, Cl
 
     /**
      * <p>
-     * The name for the asset associated with this import response.
+     * The name for the asset associated with this import job.
      * </p>
      * 
-     * @return The name for the asset associated with this import response.
+     * @return The name for the asset associated with this import job.
      */
 
     public String getAssetName() {
@@ -92,11 +92,11 @@ public class ImportAssetFromSignedUrlResponseDetails implements Serializable, Cl
 
     /**
      * <p>
-     * The name for the asset associated with this import response.
+     * The name for the asset associated with this import job.
      * </p>
      * 
      * @param assetName
-     *        The name for the asset associated with this import response.
+     *        The name for the asset associated with this import job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

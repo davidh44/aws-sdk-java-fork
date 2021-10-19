@@ -63,6 +63,10 @@ public class ExportRevisionsToS3ResponseDetailsJsonUnmarshaller implements Unmar
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("EventActionArn", targetDepth)) {
+                    context.nextToken();
+                    exportRevisionsToS3ResponseDetails.setEventActionArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

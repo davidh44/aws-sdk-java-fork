@@ -80,6 +80,39 @@ public class AmazonChimeSDKMessagingAsyncClient extends AmazonChimeSDKMessagingC
     }
 
     @Override
+    public java.util.concurrent.Future<AssociateChannelFlowResult> associateChannelFlowAsync(AssociateChannelFlowRequest request) {
+
+        return associateChannelFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateChannelFlowResult> associateChannelFlowAsync(final AssociateChannelFlowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<AssociateChannelFlowRequest, AssociateChannelFlowResult> asyncHandler) {
+        final AssociateChannelFlowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<AssociateChannelFlowResult>() {
+            @Override
+            public AssociateChannelFlowResult call() throws Exception {
+                AssociateChannelFlowResult result = null;
+
+                try {
+                    result = executeAssociateChannelFlow(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<BatchCreateChannelMembershipResult> batchCreateChannelMembershipAsync(BatchCreateChannelMembershipRequest request) {
 
         return batchCreateChannelMembershipAsync(request, null);
@@ -97,6 +130,39 @@ public class AmazonChimeSDKMessagingAsyncClient extends AmazonChimeSDKMessagingC
 
                 try {
                     result = executeBatchCreateChannelMembership(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ChannelFlowCallbackResult> channelFlowCallbackAsync(ChannelFlowCallbackRequest request) {
+
+        return channelFlowCallbackAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ChannelFlowCallbackResult> channelFlowCallbackAsync(final ChannelFlowCallbackRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ChannelFlowCallbackRequest, ChannelFlowCallbackResult> asyncHandler) {
+        final ChannelFlowCallbackRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ChannelFlowCallbackResult>() {
+            @Override
+            public ChannelFlowCallbackResult call() throws Exception {
+                ChannelFlowCallbackResult result = null;
+
+                try {
+                    result = executeChannelFlowCallback(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -163,6 +229,39 @@ public class AmazonChimeSDKMessagingAsyncClient extends AmazonChimeSDKMessagingC
 
                 try {
                     result = executeCreateChannelBan(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateChannelFlowResult> createChannelFlowAsync(CreateChannelFlowRequest request) {
+
+        return createChannelFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateChannelFlowResult> createChannelFlowAsync(final CreateChannelFlowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateChannelFlowRequest, CreateChannelFlowResult> asyncHandler) {
+        final CreateChannelFlowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateChannelFlowResult>() {
+            @Override
+            public CreateChannelFlowResult call() throws Exception {
+                CreateChannelFlowResult result = null;
+
+                try {
+                    result = executeCreateChannelFlow(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -295,6 +394,39 @@ public class AmazonChimeSDKMessagingAsyncClient extends AmazonChimeSDKMessagingC
 
                 try {
                     result = executeDeleteChannelBan(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteChannelFlowResult> deleteChannelFlowAsync(DeleteChannelFlowRequest request) {
+
+        return deleteChannelFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteChannelFlowResult> deleteChannelFlowAsync(final DeleteChannelFlowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteChannelFlowRequest, DeleteChannelFlowResult> asyncHandler) {
+        final DeleteChannelFlowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteChannelFlowResult>() {
+            @Override
+            public DeleteChannelFlowResult call() throws Exception {
+                DeleteChannelFlowResult result = null;
+
+                try {
+                    result = executeDeleteChannelFlow(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -476,6 +608,39 @@ public class AmazonChimeSDKMessagingAsyncClient extends AmazonChimeSDKMessagingC
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeChannelFlowResult> describeChannelFlowAsync(DescribeChannelFlowRequest request) {
+
+        return describeChannelFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeChannelFlowResult> describeChannelFlowAsync(final DescribeChannelFlowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeChannelFlowRequest, DescribeChannelFlowResult> asyncHandler) {
+        final DescribeChannelFlowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeChannelFlowResult>() {
+            @Override
+            public DescribeChannelFlowResult call() throws Exception {
+                DescribeChannelFlowResult result = null;
+
+                try {
+                    result = executeDescribeChannelFlow(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeChannelMembershipResult> describeChannelMembershipAsync(DescribeChannelMembershipRequest request) {
 
         return describeChannelMembershipAsync(request, null);
@@ -612,6 +777,39 @@ public class AmazonChimeSDKMessagingAsyncClient extends AmazonChimeSDKMessagingC
     }
 
     @Override
+    public java.util.concurrent.Future<DisassociateChannelFlowResult> disassociateChannelFlowAsync(DisassociateChannelFlowRequest request) {
+
+        return disassociateChannelFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateChannelFlowResult> disassociateChannelFlowAsync(final DisassociateChannelFlowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DisassociateChannelFlowRequest, DisassociateChannelFlowResult> asyncHandler) {
+        final DisassociateChannelFlowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DisassociateChannelFlowResult>() {
+            @Override
+            public DisassociateChannelFlowResult call() throws Exception {
+                DisassociateChannelFlowResult result = null;
+
+                try {
+                    result = executeDisassociateChannelFlow(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetChannelMessageResult> getChannelMessageAsync(GetChannelMessageRequest request) {
 
         return getChannelMessageAsync(request, null);
@@ -629,6 +827,39 @@ public class AmazonChimeSDKMessagingAsyncClient extends AmazonChimeSDKMessagingC
 
                 try {
                     result = executeGetChannelMessage(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetChannelMessageStatusResult> getChannelMessageStatusAsync(GetChannelMessageStatusRequest request) {
+
+        return getChannelMessageStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetChannelMessageStatusResult> getChannelMessageStatusAsync(final GetChannelMessageStatusRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetChannelMessageStatusRequest, GetChannelMessageStatusResult> asyncHandler) {
+        final GetChannelMessageStatusRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetChannelMessageStatusResult>() {
+            @Override
+            public GetChannelMessageStatusResult call() throws Exception {
+                GetChannelMessageStatusResult result = null;
+
+                try {
+                    result = executeGetChannelMessageStatus(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -695,6 +926,39 @@ public class AmazonChimeSDKMessagingAsyncClient extends AmazonChimeSDKMessagingC
 
                 try {
                     result = executeListChannelBans(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListChannelFlowsResult> listChannelFlowsAsync(ListChannelFlowsRequest request) {
+
+        return listChannelFlowsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListChannelFlowsResult> listChannelFlowsAsync(final ListChannelFlowsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListChannelFlowsRequest, ListChannelFlowsResult> asyncHandler) {
+        final ListChannelFlowsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListChannelFlowsResult>() {
+            @Override
+            public ListChannelFlowsResult call() throws Exception {
+                ListChannelFlowsResult result = null;
+
+                try {
+                    result = executeListChannelFlows(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -878,6 +1142,41 @@ public class AmazonChimeSDKMessagingAsyncClient extends AmazonChimeSDKMessagingC
     }
 
     @Override
+    public java.util.concurrent.Future<ListChannelsAssociatedWithChannelFlowResult> listChannelsAssociatedWithChannelFlowAsync(
+            ListChannelsAssociatedWithChannelFlowRequest request) {
+
+        return listChannelsAssociatedWithChannelFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListChannelsAssociatedWithChannelFlowResult> listChannelsAssociatedWithChannelFlowAsync(
+            final ListChannelsAssociatedWithChannelFlowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListChannelsAssociatedWithChannelFlowRequest, ListChannelsAssociatedWithChannelFlowResult> asyncHandler) {
+        final ListChannelsAssociatedWithChannelFlowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListChannelsAssociatedWithChannelFlowResult>() {
+            @Override
+            public ListChannelsAssociatedWithChannelFlowResult call() throws Exception {
+                ListChannelsAssociatedWithChannelFlowResult result = null;
+
+                try {
+                    result = executeListChannelsAssociatedWithChannelFlow(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListChannelsModeratedByAppInstanceUserResult> listChannelsModeratedByAppInstanceUserAsync(
             ListChannelsModeratedByAppInstanceUserRequest request) {
 
@@ -897,6 +1196,39 @@ public class AmazonChimeSDKMessagingAsyncClient extends AmazonChimeSDKMessagingC
 
                 try {
                     result = executeListChannelsModeratedByAppInstanceUser(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request) {
+
+        return listTagsForResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(final ListTagsForResourceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
+        final ListTagsForResourceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListTagsForResourceResult>() {
+            @Override
+            public ListTagsForResourceResult call() throws Exception {
+                ListTagsForResourceResult result = null;
+
+                try {
+                    result = executeListTagsForResource(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -979,6 +1311,72 @@ public class AmazonChimeSDKMessagingAsyncClient extends AmazonChimeSDKMessagingC
     }
 
     @Override
+    public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest request) {
+
+        return tagResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(final TagResourceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<TagResourceRequest, TagResourceResult> asyncHandler) {
+        final TagResourceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<TagResourceResult>() {
+            @Override
+            public TagResourceResult call() throws Exception {
+                TagResourceResult result = null;
+
+                try {
+                    result = executeTagResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request) {
+
+        return untagResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(final UntagResourceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler) {
+        final UntagResourceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UntagResourceResult>() {
+            @Override
+            public UntagResourceResult call() throws Exception {
+                UntagResourceResult result = null;
+
+                try {
+                    result = executeUntagResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateChannelResult> updateChannelAsync(UpdateChannelRequest request) {
 
         return updateChannelAsync(request, null);
@@ -996,6 +1394,39 @@ public class AmazonChimeSDKMessagingAsyncClient extends AmazonChimeSDKMessagingC
 
                 try {
                     result = executeUpdateChannel(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateChannelFlowResult> updateChannelFlowAsync(UpdateChannelFlowRequest request) {
+
+        return updateChannelFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateChannelFlowResult> updateChannelFlowAsync(final UpdateChannelFlowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateChannelFlowRequest, UpdateChannelFlowResult> asyncHandler) {
+        final UpdateChannelFlowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateChannelFlowResult>() {
+            @Override
+            public UpdateChannelFlowResult call() throws Exception {
+                UpdateChannelFlowResult result = null;
+
+                try {
+                    result = executeUpdateChannelFlow(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -34,6 +34,8 @@ public class ExportRevisionsToS3ResponseDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Encryption").build();
     private static final MarshallingInfo<List> REVISIONDESTINATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RevisionDestinations").build();
+    private static final MarshallingInfo<String> EVENTACTIONARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EventActionArn").build();
 
     private static final ExportRevisionsToS3ResponseDetailsMarshaller instance = new ExportRevisionsToS3ResponseDetailsMarshaller();
 
@@ -54,6 +56,7 @@ public class ExportRevisionsToS3ResponseDetailsMarshaller {
             protocolMarshaller.marshall(exportRevisionsToS3ResponseDetails.getDataSetId(), DATASETID_BINDING);
             protocolMarshaller.marshall(exportRevisionsToS3ResponseDetails.getEncryption(), ENCRYPTION_BINDING);
             protocolMarshaller.marshall(exportRevisionsToS3ResponseDetails.getRevisionDestinations(), REVISIONDESTINATIONS_BINDING);
+            protocolMarshaller.marshall(exportRevisionsToS3ResponseDetails.getEventActionArn(), EVENTACTIONARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

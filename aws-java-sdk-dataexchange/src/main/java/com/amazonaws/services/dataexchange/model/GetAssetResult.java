@@ -31,13 +31,13 @@ public class GetAssetResult extends com.amazonaws.AmazonWebServiceResult<com.ama
     private String arn;
     /**
      * <p>
-     * Information about the asset, including its size.
+     * Information about the asset.
      * </p>
      */
     private AssetDetails assetDetails;
     /**
      * <p>
-     * The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+     * The type of asset that is added to a data set.
      * </p>
      */
     private String assetType;
@@ -61,7 +61,7 @@ public class GetAssetResult extends com.amazonaws.AmazonWebServiceResult<com.ama
     private String id;
     /**
      * <p>
-     * The name of the asset When importing from Amazon S3, the S3 object key is used as the asset name. When exporting
+     * The name of the asset. When importing from Amazon S3, the S3 object key is used as the asset name. When exporting
      * to Amazon S3, the asset name is used as default target S3 object key.
      * </p>
      */
@@ -128,11 +128,11 @@ public class GetAssetResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * Information about the asset, including its size.
+     * Information about the asset.
      * </p>
      * 
      * @param assetDetails
-     *        Information about the asset, including its size.
+     *        Information about the asset.
      */
 
     public void setAssetDetails(AssetDetails assetDetails) {
@@ -141,10 +141,10 @@ public class GetAssetResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * Information about the asset, including its size.
+     * Information about the asset.
      * </p>
      * 
-     * @return Information about the asset, including its size.
+     * @return Information about the asset.
      */
 
     public AssetDetails getAssetDetails() {
@@ -153,11 +153,11 @@ public class GetAssetResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * Information about the asset, including its size.
+     * Information about the asset.
      * </p>
      * 
      * @param assetDetails
-     *        Information about the asset, including its size.
+     *        Information about the asset.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -168,11 +168,11 @@ public class GetAssetResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+     * The type of asset that is added to a data set.
      * </p>
      * 
      * @param assetType
-     *        The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+     *        The type of asset that is added to a data set.
      * @see AssetType
      */
 
@@ -182,10 +182,10 @@ public class GetAssetResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+     * The type of asset that is added to a data set.
      * </p>
      * 
-     * @return The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+     * @return The type of asset that is added to a data set.
      * @see AssetType
      */
 
@@ -195,11 +195,11 @@ public class GetAssetResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+     * The type of asset that is added to a data set.
      * </p>
      * 
      * @param assetType
-     *        The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+     *        The type of asset that is added to a data set.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AssetType
      */
@@ -211,11 +211,11 @@ public class GetAssetResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+     * The type of asset that is added to a data set.
      * </p>
      * 
      * @param assetType
-     *        The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+     *        The type of asset that is added to a data set.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AssetType
      */
@@ -347,12 +347,12 @@ public class GetAssetResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The name of the asset When importing from Amazon S3, the S3 object key is used as the asset name. When exporting
+     * The name of the asset. When importing from Amazon S3, the S3 object key is used as the asset name. When exporting
      * to Amazon S3, the asset name is used as default target S3 object key.
      * </p>
      * 
      * @param name
-     *        The name of the asset When importing from Amazon S3, the S3 object key is used as the asset name. When
+     *        The name of the asset. When importing from Amazon S3, the S3 object key is used as the asset name. When
      *        exporting to Amazon S3, the asset name is used as default target S3 object key.
      */
 
@@ -362,11 +362,11 @@ public class GetAssetResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The name of the asset When importing from Amazon S3, the S3 object key is used as the asset name. When exporting
+     * The name of the asset. When importing from Amazon S3, the S3 object key is used as the asset name. When exporting
      * to Amazon S3, the asset name is used as default target S3 object key.
      * </p>
      * 
-     * @return The name of the asset When importing from Amazon S3, the S3 object key is used as the asset name. When
+     * @return The name of the asset. When importing from Amazon S3, the S3 object key is used as the asset name. When
      *         exporting to Amazon S3, the asset name is used as default target S3 object key.
      */
 
@@ -376,12 +376,12 @@ public class GetAssetResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The name of the asset When importing from Amazon S3, the S3 object key is used as the asset name. When exporting
+     * The name of the asset. When importing from Amazon S3, the S3 object key is used as the asset name. When exporting
      * to Amazon S3, the asset name is used as default target S3 object key.
      * </p>
      * 
      * @param name
-     *        The name of the asset When importing from Amazon S3, the S3 object key is used as the asset name. When
+     *        The name of the asset. When importing from Amazon S3, the S3 object key is used as the asset name. When
      *        exporting to Amazon S3, the asset name is used as default target S3 object key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

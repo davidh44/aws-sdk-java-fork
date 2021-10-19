@@ -28,13 +28,17 @@ public enum LimitName {
     AssetsPerImportJobFromAmazonS3("Assets per import job from Amazon S3"),
     AssetPerExportJobFromAmazonS3("Asset per export job from Amazon S3"),
     AssetSizeInGB("Asset size in GB"),
-    ConcurrentInProgressJobsToImportAssetsFromAmazonS3("Concurrent in progress jobs to import assets from Amazon S3"),
-    ConcurrentInProgressJobsToImportAssetsFromASignedURL("Concurrent in progress jobs to import assets from a signed URL"),
     ConcurrentInProgressJobsToExportAssetsToAmazonS3("Concurrent in progress jobs to export assets to Amazon S3"),
     ConcurrentInProgressJobsToExportAssetsToASignedURL("Concurrent in progress jobs to export assets to a signed URL"),
+    ConcurrentInProgressJobsToImportAssetsFromAmazonS3("Concurrent in progress jobs to import assets from Amazon S3"),
+    ConcurrentInProgressJobsToImportAssetsFromASignedURL("Concurrent in progress jobs to import assets from a signed URL"),
     ConcurrentInProgressJobsToExportRevisionsToAmazonS3("Concurrent in progress jobs to export revisions to Amazon S3"),
     EventActionsPerAccount("Event actions per account"),
-    AutoExportEventActionsPerDataSet("Auto export event actions per data set");
+    AutoExportEventActionsPerDataSet("Auto export event actions per data set"),
+    AmazonRedshiftDatashareAssetsPerImportJobFromRedshift("Amazon Redshift datashare assets per import job from Redshift"),
+    ConcurrentInProgressJobsToImportAssetsFromAmazonRedshiftDatashares("Concurrent in progress jobs to import assets from Amazon Redshift datashares"),
+    RevisionsPerAmazonRedshiftDatashareDataSet("Revisions per Amazon Redshift datashare data set"),
+    AmazonRedshiftDatashareAssetsPerRevision("Amazon Redshift datashare assets per revision");
 
     private String value;
 

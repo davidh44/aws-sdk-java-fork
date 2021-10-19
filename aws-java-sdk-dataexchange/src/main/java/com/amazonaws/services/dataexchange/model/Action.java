@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * What occurs after a certain event.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/Action" target="_top">AWS API
  *      Documentation</a>
@@ -25,10 +28,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class Action implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Details for the export revision to Amazon S3 action.
+     * </p>
+     */
     private AutoExportRevisionToS3RequestDetails exportRevisionToS3;
 
     /**
+     * <p>
+     * Details for the export revision to Amazon S3 action.
+     * </p>
+     * 
      * @param exportRevisionToS3
+     *        Details for the export revision to Amazon S3 action.
      */
 
     public void setExportRevisionToS3(AutoExportRevisionToS3RequestDetails exportRevisionToS3) {
@@ -36,7 +49,11 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * Details for the export revision to Amazon S3 action.
+     * </p>
+     * 
+     * @return Details for the export revision to Amazon S3 action.
      */
 
     public AutoExportRevisionToS3RequestDetails getExportRevisionToS3() {
@@ -44,7 +61,12 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Details for the export revision to Amazon S3 action.
+     * </p>
+     * 
      * @param exportRevisionToS3
+     *        Details for the export revision to Amazon S3 action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

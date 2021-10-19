@@ -28,6 +28,19 @@ public class AbstractAmazonChimeSDKMessagingAsync extends AbstractAmazonChimeSDK
     }
 
     @Override
+    public java.util.concurrent.Future<AssociateChannelFlowResult> associateChannelFlowAsync(AssociateChannelFlowRequest request) {
+
+        return associateChannelFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateChannelFlowResult> associateChannelFlowAsync(AssociateChannelFlowRequest request,
+            com.amazonaws.handlers.AsyncHandler<AssociateChannelFlowRequest, AssociateChannelFlowResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<BatchCreateChannelMembershipResult> batchCreateChannelMembershipAsync(BatchCreateChannelMembershipRequest request) {
 
         return batchCreateChannelMembershipAsync(request, null);
@@ -36,6 +49,19 @@ public class AbstractAmazonChimeSDKMessagingAsync extends AbstractAmazonChimeSDK
     @Override
     public java.util.concurrent.Future<BatchCreateChannelMembershipResult> batchCreateChannelMembershipAsync(BatchCreateChannelMembershipRequest request,
             com.amazonaws.handlers.AsyncHandler<BatchCreateChannelMembershipRequest, BatchCreateChannelMembershipResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ChannelFlowCallbackResult> channelFlowCallbackAsync(ChannelFlowCallbackRequest request) {
+
+        return channelFlowCallbackAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ChannelFlowCallbackResult> channelFlowCallbackAsync(ChannelFlowCallbackRequest request,
+            com.amazonaws.handlers.AsyncHandler<ChannelFlowCallbackRequest, ChannelFlowCallbackResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -62,6 +88,19 @@ public class AbstractAmazonChimeSDKMessagingAsync extends AbstractAmazonChimeSDK
     @Override
     public java.util.concurrent.Future<CreateChannelBanResult> createChannelBanAsync(CreateChannelBanRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateChannelBanRequest, CreateChannelBanResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateChannelFlowResult> createChannelFlowAsync(CreateChannelFlowRequest request) {
+
+        return createChannelFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateChannelFlowResult> createChannelFlowAsync(CreateChannelFlowRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateChannelFlowRequest, CreateChannelFlowResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -114,6 +153,19 @@ public class AbstractAmazonChimeSDKMessagingAsync extends AbstractAmazonChimeSDK
     @Override
     public java.util.concurrent.Future<DeleteChannelBanResult> deleteChannelBanAsync(DeleteChannelBanRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteChannelBanRequest, DeleteChannelBanResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteChannelFlowResult> deleteChannelFlowAsync(DeleteChannelFlowRequest request) {
+
+        return deleteChannelFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteChannelFlowResult> deleteChannelFlowAsync(DeleteChannelFlowRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteChannelFlowRequest, DeleteChannelFlowResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -184,6 +236,19 @@ public class AbstractAmazonChimeSDKMessagingAsync extends AbstractAmazonChimeSDK
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeChannelFlowResult> describeChannelFlowAsync(DescribeChannelFlowRequest request) {
+
+        return describeChannelFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeChannelFlowResult> describeChannelFlowAsync(DescribeChannelFlowRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeChannelFlowRequest, DescribeChannelFlowResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeChannelMembershipResult> describeChannelMembershipAsync(DescribeChannelMembershipRequest request) {
 
         return describeChannelMembershipAsync(request, null);
@@ -240,6 +305,19 @@ public class AbstractAmazonChimeSDKMessagingAsync extends AbstractAmazonChimeSDK
     }
 
     @Override
+    public java.util.concurrent.Future<DisassociateChannelFlowResult> disassociateChannelFlowAsync(DisassociateChannelFlowRequest request) {
+
+        return disassociateChannelFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateChannelFlowResult> disassociateChannelFlowAsync(DisassociateChannelFlowRequest request,
+            com.amazonaws.handlers.AsyncHandler<DisassociateChannelFlowRequest, DisassociateChannelFlowResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetChannelMessageResult> getChannelMessageAsync(GetChannelMessageRequest request) {
 
         return getChannelMessageAsync(request, null);
@@ -248,6 +326,19 @@ public class AbstractAmazonChimeSDKMessagingAsync extends AbstractAmazonChimeSDK
     @Override
     public java.util.concurrent.Future<GetChannelMessageResult> getChannelMessageAsync(GetChannelMessageRequest request,
             com.amazonaws.handlers.AsyncHandler<GetChannelMessageRequest, GetChannelMessageResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetChannelMessageStatusResult> getChannelMessageStatusAsync(GetChannelMessageStatusRequest request) {
+
+        return getChannelMessageStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetChannelMessageStatusResult> getChannelMessageStatusAsync(GetChannelMessageStatusRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetChannelMessageStatusRequest, GetChannelMessageStatusResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -274,6 +365,19 @@ public class AbstractAmazonChimeSDKMessagingAsync extends AbstractAmazonChimeSDK
     @Override
     public java.util.concurrent.Future<ListChannelBansResult> listChannelBansAsync(ListChannelBansRequest request,
             com.amazonaws.handlers.AsyncHandler<ListChannelBansRequest, ListChannelBansResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListChannelFlowsResult> listChannelFlowsAsync(ListChannelFlowsRequest request) {
+
+        return listChannelFlowsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListChannelFlowsResult> listChannelFlowsAsync(ListChannelFlowsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListChannelFlowsRequest, ListChannelFlowsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -346,6 +450,21 @@ public class AbstractAmazonChimeSDKMessagingAsync extends AbstractAmazonChimeSDK
     }
 
     @Override
+    public java.util.concurrent.Future<ListChannelsAssociatedWithChannelFlowResult> listChannelsAssociatedWithChannelFlowAsync(
+            ListChannelsAssociatedWithChannelFlowRequest request) {
+
+        return listChannelsAssociatedWithChannelFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListChannelsAssociatedWithChannelFlowResult> listChannelsAssociatedWithChannelFlowAsync(
+            ListChannelsAssociatedWithChannelFlowRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListChannelsAssociatedWithChannelFlowRequest, ListChannelsAssociatedWithChannelFlowResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListChannelsModeratedByAppInstanceUserResult> listChannelsModeratedByAppInstanceUserAsync(
             ListChannelsModeratedByAppInstanceUserRequest request) {
 
@@ -356,6 +475,19 @@ public class AbstractAmazonChimeSDKMessagingAsync extends AbstractAmazonChimeSDK
     public java.util.concurrent.Future<ListChannelsModeratedByAppInstanceUserResult> listChannelsModeratedByAppInstanceUserAsync(
             ListChannelsModeratedByAppInstanceUserRequest request,
             com.amazonaws.handlers.AsyncHandler<ListChannelsModeratedByAppInstanceUserRequest, ListChannelsModeratedByAppInstanceUserResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request) {
+
+        return listTagsForResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -387,6 +519,32 @@ public class AbstractAmazonChimeSDKMessagingAsync extends AbstractAmazonChimeSDK
     }
 
     @Override
+    public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest request) {
+
+        return tagResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest request,
+            com.amazonaws.handlers.AsyncHandler<TagResourceRequest, TagResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request) {
+
+        return untagResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request,
+            com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateChannelResult> updateChannelAsync(UpdateChannelRequest request) {
 
         return updateChannelAsync(request, null);
@@ -395,6 +553,19 @@ public class AbstractAmazonChimeSDKMessagingAsync extends AbstractAmazonChimeSDK
     @Override
     public java.util.concurrent.Future<UpdateChannelResult> updateChannelAsync(UpdateChannelRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateChannelRequest, UpdateChannelResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateChannelFlowResult> updateChannelFlowAsync(UpdateChannelFlowRequest request) {
+
+        return updateChannelFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateChannelFlowResult> updateChannelFlowAsync(UpdateChannelFlowRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateChannelFlowRequest, UpdateChannelFlowResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

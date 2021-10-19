@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * What occurs to start an action.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/Event" target="_top">AWS API
  *      Documentation</a>
@@ -25,10 +28,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class Event implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * What occurs to start the revision publish action.
+     * </p>
+     */
     private RevisionPublished revisionPublished;
 
     /**
+     * <p>
+     * What occurs to start the revision publish action.
+     * </p>
+     * 
      * @param revisionPublished
+     *        What occurs to start the revision publish action.
      */
 
     public void setRevisionPublished(RevisionPublished revisionPublished) {
@@ -36,7 +49,11 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * What occurs to start the revision publish action.
+     * </p>
+     * 
+     * @return What occurs to start the revision publish action.
      */
 
     public RevisionPublished getRevisionPublished() {
@@ -44,7 +61,12 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * What occurs to start the revision publish action.
+     * </p>
+     * 
      * @param revisionPublished
+     *        What occurs to start the revision publish action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

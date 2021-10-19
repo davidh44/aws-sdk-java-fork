@@ -37,6 +37,8 @@ public class ResponseDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ImportAssetFromSignedUrl").build();
     private static final MarshallingInfo<StructuredPojo> IMPORTASSETSFROMS3_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ImportAssetsFromS3").build();
+    private static final MarshallingInfo<StructuredPojo> IMPORTASSETSFROMREDSHIFTDATASHARES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ImportAssetsFromRedshiftDataShares").build();
 
     private static final ResponseDetailsMarshaller instance = new ResponseDetailsMarshaller();
 
@@ -59,6 +61,7 @@ public class ResponseDetailsMarshaller {
             protocolMarshaller.marshall(responseDetails.getExportRevisionsToS3(), EXPORTREVISIONSTOS3_BINDING);
             protocolMarshaller.marshall(responseDetails.getImportAssetFromSignedUrl(), IMPORTASSETFROMSIGNEDURL_BINDING);
             protocolMarshaller.marshall(responseDetails.getImportAssetsFromS3(), IMPORTASSETSFROMS3_BINDING);
+            protocolMarshaller.marshall(responseDetails.getImportAssetsFromRedshiftDataShares(), IMPORTASSETSFROMREDSHIFTDATASHARES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

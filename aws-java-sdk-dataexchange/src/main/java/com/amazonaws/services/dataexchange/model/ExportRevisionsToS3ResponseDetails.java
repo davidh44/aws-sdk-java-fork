@@ -46,6 +46,12 @@ public class ExportRevisionsToS3ResponseDetails implements Serializable, Cloneab
      * </p>
      */
     private java.util.List<RevisionDestinationEntry> revisionDestinations;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the event action.
+     * </p>
+     */
+    private String eventActionArn;
 
     /**
      * <p>
@@ -198,6 +204,46 @@ public class ExportRevisionsToS3ResponseDetails implements Serializable, Cloneab
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the event action.
+     * </p>
+     * 
+     * @param eventActionArn
+     *        The Amazon Resource Name (ARN) of the event action.
+     */
+
+    public void setEventActionArn(String eventActionArn) {
+        this.eventActionArn = eventActionArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the event action.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the event action.
+     */
+
+    public String getEventActionArn() {
+        return this.eventActionArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the event action.
+     * </p>
+     * 
+     * @param eventActionArn
+     *        The Amazon Resource Name (ARN) of the event action.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ExportRevisionsToS3ResponseDetails withEventActionArn(String eventActionArn) {
+        setEventActionArn(eventActionArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -214,7 +260,9 @@ public class ExportRevisionsToS3ResponseDetails implements Serializable, Cloneab
         if (getEncryption() != null)
             sb.append("Encryption: ").append(getEncryption()).append(",");
         if (getRevisionDestinations() != null)
-            sb.append("RevisionDestinations: ").append(getRevisionDestinations());
+            sb.append("RevisionDestinations: ").append(getRevisionDestinations()).append(",");
+        if (getEventActionArn() != null)
+            sb.append("EventActionArn: ").append(getEventActionArn());
         sb.append("}");
         return sb.toString();
     }
@@ -241,6 +289,10 @@ public class ExportRevisionsToS3ResponseDetails implements Serializable, Cloneab
             return false;
         if (other.getRevisionDestinations() != null && other.getRevisionDestinations().equals(this.getRevisionDestinations()) == false)
             return false;
+        if (other.getEventActionArn() == null ^ this.getEventActionArn() == null)
+            return false;
+        if (other.getEventActionArn() != null && other.getEventActionArn().equals(this.getEventActionArn()) == false)
+            return false;
         return true;
     }
 
@@ -252,6 +304,7 @@ public class ExportRevisionsToS3ResponseDetails implements Serializable, Cloneab
         hashCode = prime * hashCode + ((getDataSetId() == null) ? 0 : getDataSetId().hashCode());
         hashCode = prime * hashCode + ((getEncryption() == null) ? 0 : getEncryption().hashCode());
         hashCode = prime * hashCode + ((getRevisionDestinations() == null) ? 0 : getRevisionDestinations().hashCode());
+        hashCode = prime * hashCode + ((getEventActionArn() == null) ? 0 : getEventActionArn().hashCode());
         return hashCode;
     }
 

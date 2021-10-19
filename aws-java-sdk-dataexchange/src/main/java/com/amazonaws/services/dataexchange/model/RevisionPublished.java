@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * Information about the published revision.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/RevisionPublished" target="_top">AWS API
  *      Documentation</a>
@@ -25,10 +28,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class RevisionPublished implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The data set ID of the published revision.
+     * </p>
+     */
     private String dataSetId;
 
     /**
+     * <p>
+     * The data set ID of the published revision.
+     * </p>
+     * 
      * @param dataSetId
+     *        The data set ID of the published revision.
      */
 
     public void setDataSetId(String dataSetId) {
@@ -36,7 +49,11 @@ public class RevisionPublished implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * @return
+     * <p>
+     * The data set ID of the published revision.
+     * </p>
+     * 
+     * @return The data set ID of the published revision.
      */
 
     public String getDataSetId() {
@@ -44,7 +61,12 @@ public class RevisionPublished implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The data set ID of the published revision.
+     * </p>
+     * 
      * @param dataSetId
+     *        The data set ID of the published revision.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

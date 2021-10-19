@@ -28,12 +28,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class AutoExportRevisionToS3RequestDetails implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Encryption configuration for the auto export job.
+     * </p>
+     */
     private ExportServerSideEncryption encryption;
-
+    /**
+     * <p>
+     * A revision destination is the Amazon S3 bucket folder destination to where the export will be sent.
+     * </p>
+     */
     private AutoExportRevisionDestinationEntry revisionDestination;
 
     /**
+     * <p>
+     * Encryption configuration for the auto export job.
+     * </p>
+     * 
      * @param encryption
+     *        Encryption configuration for the auto export job.
      */
 
     public void setEncryption(ExportServerSideEncryption encryption) {
@@ -41,7 +55,11 @@ public class AutoExportRevisionToS3RequestDetails implements Serializable, Clone
     }
 
     /**
-     * @return
+     * <p>
+     * Encryption configuration for the auto export job.
+     * </p>
+     * 
+     * @return Encryption configuration for the auto export job.
      */
 
     public ExportServerSideEncryption getEncryption() {
@@ -49,7 +67,12 @@ public class AutoExportRevisionToS3RequestDetails implements Serializable, Clone
     }
 
     /**
+     * <p>
+     * Encryption configuration for the auto export job.
+     * </p>
+     * 
      * @param encryption
+     *        Encryption configuration for the auto export job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -59,7 +82,12 @@ public class AutoExportRevisionToS3RequestDetails implements Serializable, Clone
     }
 
     /**
+     * <p>
+     * A revision destination is the Amazon S3 bucket folder destination to where the export will be sent.
+     * </p>
+     * 
      * @param revisionDestination
+     *        A revision destination is the Amazon S3 bucket folder destination to where the export will be sent.
      */
 
     public void setRevisionDestination(AutoExportRevisionDestinationEntry revisionDestination) {
@@ -67,7 +95,11 @@ public class AutoExportRevisionToS3RequestDetails implements Serializable, Clone
     }
 
     /**
-     * @return
+     * <p>
+     * A revision destination is the Amazon S3 bucket folder destination to where the export will be sent.
+     * </p>
+     * 
+     * @return A revision destination is the Amazon S3 bucket folder destination to where the export will be sent.
      */
 
     public AutoExportRevisionDestinationEntry getRevisionDestination() {
@@ -75,7 +107,12 @@ public class AutoExportRevisionToS3RequestDetails implements Serializable, Clone
     }
 
     /**
+     * <p>
+     * A revision destination is the Amazon S3 bucket folder destination to where the export will be sent.
+     * </p>
+     * 
      * @param revisionDestination
+     *        A revision destination is the Amazon S3 bucket folder destination to where the export will be sent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

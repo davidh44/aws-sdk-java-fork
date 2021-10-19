@@ -138,16 +138,16 @@ public interface AWSDataExchange {
      * @param createJobRequest
      *        The request body for CreateJob.
      * @return Result of the CreateJob operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         404 response
+     * @throws ThrottlingException
+     *         429 response
      * @throws ValidationException
      *         400 response
      * @throws InternalServerException
      *         500 response
      * @throws AccessDeniedException
      *         403 response
-     * @throws ResourceNotFoundException
-     *         404 response
-     * @throws ThrottlingException
-     *         429 response
      * @sample AWSDataExchange.CreateJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/CreateJob" target="_top">AWS API
      *      Documentation</a>

@@ -31,7 +31,7 @@ public class CreateDataSetResult extends com.amazonaws.AmazonWebServiceResult<co
     private String arn;
     /**
      * <p>
-     * The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+     * The type of asset that is added to a data set.
      * </p>
      */
     private String assetType;
@@ -134,11 +134,11 @@ public class CreateDataSetResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+     * The type of asset that is added to a data set.
      * </p>
      * 
      * @param assetType
-     *        The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+     *        The type of asset that is added to a data set.
      * @see AssetType
      */
 
@@ -148,10 +148,10 @@ public class CreateDataSetResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+     * The type of asset that is added to a data set.
      * </p>
      * 
-     * @return The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+     * @return The type of asset that is added to a data set.
      * @see AssetType
      */
 
@@ -161,11 +161,11 @@ public class CreateDataSetResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+     * The type of asset that is added to a data set.
      * </p>
      * 
      * @param assetType
-     *        The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+     *        The type of asset that is added to a data set.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AssetType
      */
@@ -177,11 +177,11 @@ public class CreateDataSetResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+     * The type of asset that is added to a data set.
      * </p>
      * 
      * @param assetType
-     *        The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+     *        The type of asset that is added to a data set.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AssetType
      */

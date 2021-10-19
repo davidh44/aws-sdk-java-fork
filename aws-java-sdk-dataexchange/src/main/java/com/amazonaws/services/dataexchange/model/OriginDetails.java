@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * Information about the origin of the data set.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/OriginDetails" target="_top">AWS API
  *      Documentation</a>
@@ -25,10 +28,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class OriginDetails implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The product ID of the origin of the data set.
+     * </p>
+     */
     private String productId;
 
     /**
+     * <p>
+     * The product ID of the origin of the data set.
+     * </p>
+     * 
      * @param productId
+     *        The product ID of the origin of the data set.
      */
 
     public void setProductId(String productId) {
@@ -36,7 +49,11 @@ public class OriginDetails implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The product ID of the origin of the data set.
+     * </p>
+     * 
+     * @return The product ID of the origin of the data set.
      */
 
     public String getProductId() {
@@ -44,7 +61,12 @@ public class OriginDetails implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The product ID of the origin of the data set.
+     * </p>
+     * 
      * @param productId
+     *        The product ID of the origin of the data set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

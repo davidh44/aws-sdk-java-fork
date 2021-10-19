@@ -92,6 +92,10 @@ public class ChannelMessageJsonUnmarshaller implements Unmarshaller<ChannelMessa
                     context.nextToken();
                     channelMessage.setPersistence(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Status", targetDepth)) {
+                    context.nextToken();
+                    channelMessage.setStatus(ChannelMessageStatusStructureJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

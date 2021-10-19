@@ -25,7 +25,7 @@ public class CreateRevisionResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ARN for the revision
+     * The ARN for the revision.
      * </p>
      */
     private String arn;
@@ -88,11 +88,11 @@ public class CreateRevisionResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ARN for the revision
+     * The ARN for the revision.
      * </p>
      * 
      * @param arn
-     *        The ARN for the revision
+     *        The ARN for the revision.
      */
 
     public void setArn(String arn) {
@@ -101,10 +101,10 @@ public class CreateRevisionResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ARN for the revision
+     * The ARN for the revision.
      * </p>
      * 
-     * @return The ARN for the revision
+     * @return The ARN for the revision.
      */
 
     public String getArn() {
@@ -113,11 +113,11 @@ public class CreateRevisionResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ARN for the revision
+     * The ARN for the revision.
      * </p>
      * 
      * @param arn
-     *        The ARN for the revision
+     *        The ARN for the revision.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

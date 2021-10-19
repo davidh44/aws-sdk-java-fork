@@ -49,6 +49,8 @@ public class ChannelMessageMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Redacted").build();
     private static final MarshallingInfo<String> PERSISTENCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Persistence").build();
+    private static final MarshallingInfo<StructuredPojo> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Status").build();
 
     private static final ChannelMessageMarshaller instance = new ChannelMessageMarshaller();
 
@@ -77,6 +79,7 @@ public class ChannelMessageMarshaller {
             protocolMarshaller.marshall(channelMessage.getSender(), SENDER_BINDING);
             protocolMarshaller.marshall(channelMessage.getRedacted(), REDACTED_BINDING);
             protocolMarshaller.marshall(channelMessage.getPersistence(), PERSISTENCE_BINDING);
+            protocolMarshaller.marshall(channelMessage.getStatus(), STATUS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

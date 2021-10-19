@@ -16,13 +16,14 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The type of file your data is stored in. Currently, the supported asset type is S3_SNAPSHOT.
+ * The type of asset that is added to a data set.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum AssetType {
 
-    S3_SNAPSHOT("S3_SNAPSHOT");
+    S3_SNAPSHOT("S3_SNAPSHOT"),
+    REDSHIFT_DATA_SHARE("REDSHIFT_DATA_SHARE");
 
     private String value;
 

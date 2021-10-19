@@ -84,6 +84,10 @@ public class ChannelJsonUnmarshaller implements Unmarshaller<Channel, JsonUnmars
                     context.nextToken();
                     channel.setLastUpdatedTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("ChannelFlowArn", targetDepth)) {
+                    context.nextToken();
+                    channel.setChannelFlowArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -28,7 +28,11 @@ public class JobError implements Serializable, Cloneable, StructuredPojo {
 
     /** The code for the job error. */
     private String code;
-
+    /**
+     * <p>
+     * The details about the job error.
+     * </p>
+     */
     private Details details;
     /**
      * <p>
@@ -97,7 +101,12 @@ public class JobError implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The details about the job error.
+     * </p>
+     * 
      * @param details
+     *        The details about the job error.
      */
 
     public void setDetails(Details details) {
@@ -105,7 +114,11 @@ public class JobError implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The details about the job error.
+     * </p>
+     * 
+     * @return The details about the job error.
      */
 
     public Details getDetails() {
@@ -113,7 +126,12 @@ public class JobError implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The details about the job error.
+     * </p>
+     * 
      * @param details
+     *        The details about the job error.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
