@@ -36,6 +36,8 @@ public class HlsPackageMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("adsOnDeliveryRestrictions").build();
     private static final MarshallingInfo<StructuredPojo> ENCRYPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("encryption").build();
+    private static final MarshallingInfo<Boolean> INCLUDEDVBSUBTITLES_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("includeDvbSubtitles").build();
     private static final MarshallingInfo<Boolean> INCLUDEIFRAMEONLYSTREAM_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("includeIframeOnlyStream").build();
     private static final MarshallingInfo<String> PLAYLISTTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -71,6 +73,7 @@ public class HlsPackageMarshaller {
             protocolMarshaller.marshall(hlsPackage.getAdTriggers(), ADTRIGGERS_BINDING);
             protocolMarshaller.marshall(hlsPackage.getAdsOnDeliveryRestrictions(), ADSONDELIVERYRESTRICTIONS_BINDING);
             protocolMarshaller.marshall(hlsPackage.getEncryption(), ENCRYPTION_BINDING);
+            protocolMarshaller.marshall(hlsPackage.getIncludeDvbSubtitles(), INCLUDEDVBSUBTITLES_BINDING);
             protocolMarshaller.marshall(hlsPackage.getIncludeIframeOnlyStream(), INCLUDEIFRAMEONLYSTREAM_BINDING);
             protocolMarshaller.marshall(hlsPackage.getPlaylistType(), PLAYLISTTYPE_BINDING);
             protocolMarshaller.marshall(hlsPackage.getPlaylistWindowSeconds(), PLAYLISTWINDOWSECONDS_BINDING);

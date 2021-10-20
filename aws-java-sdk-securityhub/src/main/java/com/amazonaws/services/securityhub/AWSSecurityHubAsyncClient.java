@@ -360,6 +360,39 @@ public class AWSSecurityHubAsyncClient extends AWSSecurityHubClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<CreateFindingAggregatorResult> createFindingAggregatorAsync(CreateFindingAggregatorRequest request) {
+
+        return createFindingAggregatorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateFindingAggregatorResult> createFindingAggregatorAsync(final CreateFindingAggregatorRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateFindingAggregatorRequest, CreateFindingAggregatorResult> asyncHandler) {
+        final CreateFindingAggregatorRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateFindingAggregatorResult>() {
+            @Override
+            public CreateFindingAggregatorResult call() throws Exception {
+                CreateFindingAggregatorResult result = null;
+
+                try {
+                    result = executeCreateFindingAggregator(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateInsightResult> createInsightAsync(CreateInsightRequest request) {
 
         return createInsightAsync(request, null);
@@ -476,6 +509,39 @@ public class AWSSecurityHubAsyncClient extends AWSSecurityHubClient implements A
 
                 try {
                     result = executeDeleteActionTarget(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteFindingAggregatorResult> deleteFindingAggregatorAsync(DeleteFindingAggregatorRequest request) {
+
+        return deleteFindingAggregatorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteFindingAggregatorResult> deleteFindingAggregatorAsync(final DeleteFindingAggregatorRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteFindingAggregatorRequest, DeleteFindingAggregatorResult> asyncHandler) {
+        final DeleteFindingAggregatorRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteFindingAggregatorResult>() {
+            @Override
+            public DeleteFindingAggregatorResult call() throws Exception {
+                DeleteFindingAggregatorResult result = null;
+
+                try {
+                    result = executeDeleteFindingAggregator(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1165,6 +1231,39 @@ public class AWSSecurityHubAsyncClient extends AWSSecurityHubClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<GetFindingAggregatorResult> getFindingAggregatorAsync(GetFindingAggregatorRequest request) {
+
+        return getFindingAggregatorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetFindingAggregatorResult> getFindingAggregatorAsync(final GetFindingAggregatorRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetFindingAggregatorRequest, GetFindingAggregatorResult> asyncHandler) {
+        final GetFindingAggregatorRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetFindingAggregatorResult>() {
+            @Override
+            public GetFindingAggregatorResult call() throws Exception {
+                GetFindingAggregatorResult result = null;
+
+                try {
+                    result = executeGetFindingAggregator(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetFindingsResult> getFindingsAsync(GetFindingsRequest request) {
 
         return getFindingsAsync(request, null);
@@ -1431,6 +1530,39 @@ public class AWSSecurityHubAsyncClient extends AWSSecurityHubClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<ListFindingAggregatorsResult> listFindingAggregatorsAsync(ListFindingAggregatorsRequest request) {
+
+        return listFindingAggregatorsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListFindingAggregatorsResult> listFindingAggregatorsAsync(final ListFindingAggregatorsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListFindingAggregatorsRequest, ListFindingAggregatorsResult> asyncHandler) {
+        final ListFindingAggregatorsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListFindingAggregatorsResult>() {
+            @Override
+            public ListFindingAggregatorsResult call() throws Exception {
+                ListFindingAggregatorsResult result = null;
+
+                try {
+                    result = executeListFindingAggregators(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListInvitationsResult> listInvitationsAsync(ListInvitationsRequest request) {
 
         return listInvitationsAsync(request, null);
@@ -1647,6 +1779,39 @@ public class AWSSecurityHubAsyncClient extends AWSSecurityHubClient implements A
 
                 try {
                     result = executeUpdateActionTarget(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateFindingAggregatorResult> updateFindingAggregatorAsync(UpdateFindingAggregatorRequest request) {
+
+        return updateFindingAggregatorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateFindingAggregatorResult> updateFindingAggregatorAsync(final UpdateFindingAggregatorRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateFindingAggregatorRequest, UpdateFindingAggregatorResult> asyncHandler) {
+        final UpdateFindingAggregatorRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateFindingAggregatorResult>() {
+            @Override
+            public UpdateFindingAggregatorResult call() throws Exception {
+                UpdateFindingAggregatorResult result = null;
+
+                try {
+                    result = executeUpdateFindingAggregator(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

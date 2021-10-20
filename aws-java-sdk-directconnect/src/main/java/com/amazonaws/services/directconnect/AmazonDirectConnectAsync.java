@@ -28,10 +28,10 @@ import com.amazonaws.services.directconnect.model.*;
  * <p>
  * Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable.
  * One end of the cable is connected to your router, the other to an Direct Connect router. With this connection in
- * place, you can create virtual interfaces directly to the Cloud (for example, to Amazon EC2 and Amazon S3) and to
- * Amazon VPC, bypassing Internet service providers in your network path. A connection provides access to all Regions
- * except the China (Beijing) and (China) Ningxia Regions. Amazon Web Services resources in the China Regions can only
- * be accessed through locations associated with those Regions.
+ * place, you can create virtual interfaces directly to the Amazon Web Services Cloud (for example, to Amazon EC2 and
+ * Amazon S3) and to Amazon VPC, bypassing Internet service providers in your network path. A connection provides access
+ * to all Amazon Web Services Regions except the China (Beijing) and (China) Ningxia Regions. Amazon Web Services
+ * resources in the China Regions can only be accessed through locations associated with those Regions.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -190,7 +190,7 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
 
     /**
      * <p>
-     * Provisions a private virtual interface to be owned by the specified account.
+     * Provisions a private virtual interface to be owned by the specified Amazon Web Services account.
      * </p>
      * <p>
      * Virtual interfaces created using this action must be confirmed by the owner using
@@ -210,7 +210,7 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
 
     /**
      * <p>
-     * Provisions a private virtual interface to be owned by the specified account.
+     * Provisions a private virtual interface to be owned by the specified Amazon Web Services account.
      * </p>
      * <p>
      * Virtual interfaces created using this action must be confirmed by the owner using
@@ -235,11 +235,11 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
 
     /**
      * <p>
-     * Provisions a public virtual interface to be owned by the specified account.
+     * Provisions a public virtual interface to be owned by the specified Amazon Web Services account.
      * </p>
      * <p>
      * The owner of a connection calls this function to provision a public virtual interface to be owned by the
-     * specified account.
+     * specified Amazon Web Services account.
      * </p>
      * <p>
      * Virtual interfaces created using this function must be confirmed by the owner using
@@ -263,11 +263,11 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
 
     /**
      * <p>
-     * Provisions a public virtual interface to be owned by the specified account.
+     * Provisions a public virtual interface to be owned by the specified Amazon Web Services account.
      * </p>
      * <p>
      * The owner of a connection calls this function to provision a public virtual interface to be owned by the
-     * specified account.
+     * specified Amazon Web Services account.
      * </p>
      * <p>
      * Virtual interfaces created using this function must be confirmed by the owner using
@@ -296,11 +296,12 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
 
     /**
      * <p>
-     * Provisions a transit virtual interface to be owned by the specified account. Use this type of interface to
-     * connect a transit gateway to your Direct Connect gateway.
+     * Provisions a transit virtual interface to be owned by the specified Amazon Web Services account. Use this type of
+     * interface to connect a transit gateway to your Direct Connect gateway.
      * </p>
      * <p>
-     * The owner of a connection provisions a transit virtual interface to be owned by the specified account.
+     * The owner of a connection provisions a transit virtual interface to be owned by the specified Amazon Web Services
+     * account.
      * </p>
      * <p>
      * After you create a transit virtual interface, it must be confirmed by the owner using
@@ -320,11 +321,12 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
 
     /**
      * <p>
-     * Provisions a transit virtual interface to be owned by the specified account. Use this type of interface to
-     * connect a transit gateway to your Direct Connect gateway.
+     * Provisions a transit virtual interface to be owned by the specified Amazon Web Services account. Use this type of
+     * interface to connect a transit gateway to your Direct Connect gateway.
      * </p>
      * <p>
-     * The owner of a connection provisions a transit virtual interface to be owned by the specified account.
+     * The owner of a connection provisions a transit virtual interface to be owned by the specified Amazon Web Services
+     * account.
      * </p>
      * <p>
      * After you create a transit virtual interface, it must be confirmed by the owner using
@@ -606,7 +608,38 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
 
     /**
      * <p>
-     * Accepts ownership of a private virtual interface created by another account.
+     * The confirmation of the terms of agreement when creating the connection/link aggregation group (LAG).
+     * </p>
+     * 
+     * @param confirmCustomerAgreementRequest
+     * @return A Java Future containing the result of the ConfirmCustomerAgreement operation returned by the service.
+     * @sample AmazonDirectConnectAsync.ConfirmCustomerAgreement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/ConfirmCustomerAgreement"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ConfirmCustomerAgreementResult> confirmCustomerAgreementAsync(ConfirmCustomerAgreementRequest confirmCustomerAgreementRequest);
+
+    /**
+     * <p>
+     * The confirmation of the terms of agreement when creating the connection/link aggregation group (LAG).
+     * </p>
+     * 
+     * @param confirmCustomerAgreementRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ConfirmCustomerAgreement operation returned by the service.
+     * @sample AmazonDirectConnectAsyncHandler.ConfirmCustomerAgreement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/ConfirmCustomerAgreement"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ConfirmCustomerAgreementResult> confirmCustomerAgreementAsync(ConfirmCustomerAgreementRequest confirmCustomerAgreementRequest,
+            com.amazonaws.handlers.AsyncHandler<ConfirmCustomerAgreementRequest, ConfirmCustomerAgreementResult> asyncHandler);
+
+    /**
+     * <p>
+     * Accepts ownership of a private virtual interface created by another Amazon Web Services account.
      * </p>
      * <p>
      * After the virtual interface owner makes this call, the virtual interface is created and attached to the specified
@@ -625,7 +658,7 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
 
     /**
      * <p>
-     * Accepts ownership of a private virtual interface created by another account.
+     * Accepts ownership of a private virtual interface created by another Amazon Web Services account.
      * </p>
      * <p>
      * After the virtual interface owner makes this call, the virtual interface is created and attached to the specified
@@ -649,7 +682,7 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
 
     /**
      * <p>
-     * Accepts ownership of a public virtual interface created by another account.
+     * Accepts ownership of a public virtual interface created by another Amazon Web Services account.
      * </p>
      * <p>
      * After the virtual interface owner makes this call, the specified virtual interface is created and made available
@@ -668,7 +701,7 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
 
     /**
      * <p>
-     * Accepts ownership of a public virtual interface created by another account.
+     * Accepts ownership of a public virtual interface created by another Amazon Web Services account.
      * </p>
      * <p>
      * After the virtual interface owner makes this call, the specified virtual interface is created and made available
@@ -692,7 +725,7 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
 
     /**
      * <p>
-     * Accepts ownership of a transit virtual interface created by another account.
+     * Accepts ownership of a transit virtual interface created by another Amazon Web Services account.
      * </p>
      * <p>
      * After the owner of the transit virtual interface makes this call, the specified transit virtual interface is
@@ -711,7 +744,7 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
 
     /**
      * <p>
-     * Accepts ownership of a transit virtual interface created by another account.
+     * Accepts ownership of a transit virtual interface created by another Amazon Web Services account.
      * </p>
      * <p>
      * After the owner of the transit virtual interface makes this call, the specified transit virtual interface is
@@ -854,10 +887,11 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
     /**
      * <p>
      * Creates a Direct Connect gateway, which is an intermediate object that enables you to connect a set of virtual
-     * interfaces and virtual private gateways. A Direct Connect gateway is global and visible in any Region after it is
-     * created. The virtual interfaces and virtual private gateways that are connected through a Direct Connect gateway
-     * can be in different Regions. This enables you to connect to a VPC in any Region, regardless of the Region in
-     * which the virtual interfaces are located, and pass traffic between them.
+     * interfaces and virtual private gateways. A Direct Connect gateway is global and visible in any Amazon Web
+     * Services Region after it is created. The virtual interfaces and virtual private gateways that are connected
+     * through a Direct Connect gateway can be in different Amazon Web Services Regions. This enables you to connect to
+     * a VPC in any Region, regardless of the Region in which the virtual interfaces are located, and pass traffic
+     * between them.
      * </p>
      * 
      * @param createDirectConnectGatewayRequest
@@ -872,10 +906,11 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
     /**
      * <p>
      * Creates a Direct Connect gateway, which is an intermediate object that enables you to connect a set of virtual
-     * interfaces and virtual private gateways. A Direct Connect gateway is global and visible in any Region after it is
-     * created. The virtual interfaces and virtual private gateways that are connected through a Direct Connect gateway
-     * can be in different Regions. This enables you to connect to a VPC in any Region, regardless of the Region in
-     * which the virtual interfaces are located, and pass traffic between them.
+     * interfaces and virtual private gateways. A Direct Connect gateway is global and visible in any Amazon Web
+     * Services Region after it is created. The virtual interfaces and virtual private gateways that are connected
+     * through a Direct Connect gateway can be in different Amazon Web Services Regions. This enables you to connect to
+     * a VPC in any Region, regardless of the Region in which the virtual interfaces are located, and pass traffic
+     * between them.
      * </p>
      * 
      * @param createDirectConnectGatewayRequest
@@ -938,7 +973,7 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
      * </p>
      * <p>
      * You can associate a Direct Connect gateway and virtual private gateway or transit gateway that is owned by any
-     * account.
+     * Amazon Web Services account.
      * </p>
      * 
      * @param createDirectConnectGatewayAssociationProposalRequest
@@ -959,7 +994,7 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
      * </p>
      * <p>
      * You can associate a Direct Connect gateway and virtual private gateway or transit gateway that is owned by any
-     * account.
+     * Amazon Web Services account.
      * </p>
      * 
      * @param createDirectConnectGatewayAssociationProposalRequest
@@ -1076,9 +1111,9 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
      * automatically disassociated and re-associated with the LAG. The connection ID does not change.
      * </p>
      * <p>
-     * If the account used to create a LAG is a registered Direct Connect Partner, the LAG is automatically enabled to
-     * host sub-connections. For a LAG owned by a partner, any associated virtual interfaces cannot be directly
-     * configured.
+     * If the Amazon Web Services account used to create a LAG is a registered Direct Connect Partner, the LAG is
+     * automatically enabled to host sub-connections. For a LAG owned by a partner, any associated virtual interfaces
+     * cannot be directly configured.
      * </p>
      * 
      * @param createLagRequest
@@ -1112,9 +1147,9 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
      * automatically disassociated and re-associated with the LAG. The connection ID does not change.
      * </p>
      * <p>
-     * If the account used to create a LAG is a registered Direct Connect Partner, the LAG is automatically enabled to
-     * host sub-connections. For a LAG owned by a partner, any associated virtual interfaces cannot be directly
-     * configured.
+     * If the Amazon Web Services account used to create a LAG is a registered Direct Connect Partner, the LAG is
+     * automatically enabled to host sub-connections. For a LAG owned by a partner, any associated virtual interfaces
+     * cannot be directly configured.
      * </p>
      * 
      * @param createLagRequest
@@ -1135,8 +1170,8 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
      * Creates a private virtual interface. A virtual interface is the VLAN that transports Direct Connect traffic. A
      * private virtual interface can be connected to either a Direct Connect gateway or a Virtual Private Gateway (VGW).
      * Connecting the private virtual interface to a Direct Connect gateway enables the possibility for connecting to
-     * multiple VPCs, including VPCs in different Regions. Connecting the private virtual interface to a VGW only
-     * provides access to a single VPC within the same Region.
+     * multiple VPCs, including VPCs in different Amazon Web Services Regions. Connecting the private virtual interface
+     * to a VGW only provides access to a single VPC within the same Region.
      * </p>
      * <p>
      * Setting the MTU of a virtual interface to 9001 (jumbo frames) can cause an update to the underlying physical
@@ -1161,8 +1196,8 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
      * Creates a private virtual interface. A virtual interface is the VLAN that transports Direct Connect traffic. A
      * private virtual interface can be connected to either a Direct Connect gateway or a Virtual Private Gateway (VGW).
      * Connecting the private virtual interface to a Direct Connect gateway enables the possibility for connecting to
-     * multiple VPCs, including VPCs in different Regions. Connecting the private virtual interface to a VGW only
-     * provides access to a single VPC within the same Region.
+     * multiple VPCs, including VPCs in different Amazon Web Services Regions. Connecting the private virtual interface
+     * to a VGW only provides access to a single VPC within the same Region.
      * </p>
      * <p>
      * Setting the MTU of a virtual interface to 9001 (jumbo frames) can cause an update to the underlying physical
@@ -1761,6 +1796,39 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
 
     /**
      * <p>
+     * Get and view a list of customer agreements, along with their signed status and whether the customer is an
+     * NNIPartner, NNIPartnerV2, or a nonPartner.
+     * </p>
+     * 
+     * @param describeCustomerMetadataRequest
+     * @return A Java Future containing the result of the DescribeCustomerMetadata operation returned by the service.
+     * @sample AmazonDirectConnectAsync.DescribeCustomerMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DescribeCustomerMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeCustomerMetadataResult> describeCustomerMetadataAsync(DescribeCustomerMetadataRequest describeCustomerMetadataRequest);
+
+    /**
+     * <p>
+     * Get and view a list of customer agreements, along with their signed status and whether the customer is an
+     * NNIPartner, NNIPartnerV2, or a nonPartner.
+     * </p>
+     * 
+     * @param describeCustomerMetadataRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeCustomerMetadata operation returned by the service.
+     * @sample AmazonDirectConnectAsyncHandler.DescribeCustomerMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DescribeCustomerMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeCustomerMetadataResult> describeCustomerMetadataAsync(DescribeCustomerMetadataRequest describeCustomerMetadataRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeCustomerMetadataRequest, DescribeCustomerMetadataResult> asyncHandler);
+
+    /**
+     * <p>
      * Describes one or more association proposals for connection between a virtual private gateway or transit gateway
      * and a Direct Connect gateway.
      * </p>
@@ -2103,7 +2171,7 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
 
     /**
      * <p>
-     * Lists the interconnects owned by the account or only the specified interconnect.
+     * Lists the interconnects owned by the Amazon Web Services account or only the specified interconnect.
      * </p>
      * 
      * @param describeInterconnectsRequest
@@ -2116,7 +2184,7 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
 
     /**
      * <p>
-     * Lists the interconnects owned by the account or only the specified interconnect.
+     * Lists the interconnects owned by the Amazon Web Services account or only the specified interconnect.
      * </p>
      * 
      * @param describeInterconnectsRequest
@@ -2223,8 +2291,8 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
 
     /**
      * <p>
-     * Lists the Direct Connect locations in the current Region. These are the locations that can be selected when
-     * calling <a>CreateConnection</a> or <a>CreateInterconnect</a>.
+     * Lists the Direct Connect locations in the current Amazon Web Services Region. These are the locations that can be
+     * selected when calling <a>CreateConnection</a> or <a>CreateInterconnect</a>.
      * </p>
      * 
      * @param describeLocationsRequest
@@ -2237,8 +2305,8 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
 
     /**
      * <p>
-     * Lists the Direct Connect locations in the current Region. These are the locations that can be selected when
-     * calling <a>CreateConnection</a> or <a>CreateInterconnect</a>.
+     * Lists the Direct Connect locations in the current Amazon Web Services Region. These are the locations that can be
+     * selected when calling <a>CreateConnection</a> or <a>CreateInterconnect</a>.
      * </p>
      * 
      * @param describeLocationsRequest
@@ -2268,6 +2336,41 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
      */
     java.util.concurrent.Future<DescribeLocationsResult> describeLocationsAsync(
             com.amazonaws.handlers.AsyncHandler<DescribeLocationsRequest, DescribeLocationsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Details about the router.
+     * </p>
+     * 
+     * @param describeRouterConfigurationRequest
+     *        Provides the details about a virtual interface's router.
+     * @return A Java Future containing the result of the DescribeRouterConfiguration operation returned by the service.
+     * @sample AmazonDirectConnectAsync.DescribeRouterConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DescribeRouterConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeRouterConfigurationResult> describeRouterConfigurationAsync(
+            DescribeRouterConfigurationRequest describeRouterConfigurationRequest);
+
+    /**
+     * <p>
+     * Details about the router.
+     * </p>
+     * 
+     * @param describeRouterConfigurationRequest
+     *        Provides the details about a virtual interface's router.
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeRouterConfiguration operation returned by the service.
+     * @sample AmazonDirectConnectAsyncHandler.DescribeRouterConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DescribeRouterConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeRouterConfigurationResult> describeRouterConfigurationAsync(
+            DescribeRouterConfigurationRequest describeRouterConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeRouterConfigurationRequest, DescribeRouterConfigurationResult> asyncHandler);
 
     /**
      * <p>
@@ -2302,7 +2405,7 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
 
     /**
      * <p>
-     * Lists the virtual private gateways owned by the account.
+     * Lists the virtual private gateways owned by the Amazon Web Services account.
      * </p>
      * <p>
      * You can create one or more Direct Connect private virtual interfaces linked to a virtual private gateway.
@@ -2318,7 +2421,7 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
 
     /**
      * <p>
-     * Lists the virtual private gateways owned by the account.
+     * Lists the virtual private gateways owned by the Amazon Web Services account.
      * </p>
      * <p>
      * You can create one or more Direct Connect private virtual interfaces linked to a virtual private gateway.
@@ -2354,9 +2457,10 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
 
     /**
      * <p>
-     * Displays all virtual interfaces for an account. Virtual interfaces deleted fewer than 15 minutes before you make
-     * the request are also returned. If you specify a connection ID, only the virtual interfaces associated with the
-     * connection are returned. If you specify a virtual interface ID, then only a single virtual interface is returned.
+     * Displays all virtual interfaces for an Amazon Web Services account. Virtual interfaces deleted fewer than 15
+     * minutes before you make the request are also returned. If you specify a connection ID, only the virtual
+     * interfaces associated with the connection are returned. If you specify a virtual interface ID, then only a single
+     * virtual interface is returned.
      * </p>
      * <p>
      * A virtual interface (VLAN) transmits the traffic between the Direct Connect location and the customer network.
@@ -2373,9 +2477,10 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
 
     /**
      * <p>
-     * Displays all virtual interfaces for an account. Virtual interfaces deleted fewer than 15 minutes before you make
-     * the request are also returned. If you specify a connection ID, only the virtual interfaces associated with the
-     * connection are returned. If you specify a virtual interface ID, then only a single virtual interface is returned.
+     * Displays all virtual interfaces for an Amazon Web Services account. Virtual interfaces deleted fewer than 15
+     * minutes before you make the request are also returned. If you specify a connection ID, only the virtual
+     * interfaces associated with the connection are returned. If you specify a virtual interface ID, then only a single
+     * virtual interface is returned.
      * </p>
      * <p>
      * A virtual interface (VLAN) transmits the traffic between the Direct Connect location and the customer network.
@@ -2749,6 +2854,39 @@ public interface AmazonDirectConnectAsync extends AmazonDirectConnect {
      */
     java.util.concurrent.Future<UpdateConnectionResult> updateConnectionAsync(UpdateConnectionRequest updateConnectionRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateConnectionRequest, UpdateConnectionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the name of a current Direct Connect gateway.
+     * </p>
+     * 
+     * @param updateDirectConnectGatewayRequest
+     * @return A Java Future containing the result of the UpdateDirectConnectGateway operation returned by the service.
+     * @sample AmazonDirectConnectAsync.UpdateDirectConnectGateway
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/UpdateDirectConnectGateway"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateDirectConnectGatewayResult> updateDirectConnectGatewayAsync(
+            UpdateDirectConnectGatewayRequest updateDirectConnectGatewayRequest);
+
+    /**
+     * <p>
+     * Updates the name of a current Direct Connect gateway.
+     * </p>
+     * 
+     * @param updateDirectConnectGatewayRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateDirectConnectGateway operation returned by the service.
+     * @sample AmazonDirectConnectAsyncHandler.UpdateDirectConnectGateway
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/UpdateDirectConnectGateway"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateDirectConnectGatewayResult> updateDirectConnectGatewayAsync(
+            UpdateDirectConnectGatewayRequest updateDirectConnectGatewayRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateDirectConnectGatewayRequest, UpdateDirectConnectGatewayResult> asyncHandler);
 
     /**
      * <p>

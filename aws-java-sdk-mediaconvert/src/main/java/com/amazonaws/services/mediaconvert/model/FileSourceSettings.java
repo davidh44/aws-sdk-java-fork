@@ -37,8 +37,8 @@ public class FileSourceSettings implements Serializable, Cloneable, StructuredPo
     /**
      * Ignore this setting unless your input captions format is SCC. To have the service compensate for differing frame
      * rates between your input captions and input video, specify the frame rate of the captions file. Specify this
-     * value as a fraction, using the settings Framerate numerator (framerateNumerator) and Framerate denominator
-     * (framerateDenominator). For example, you might specify 24 / 1 for 24 fps, 25 / 1 for 25 fps, 24000 / 1001 for
+     * value as a fraction. When you work directly in your JSON job specification, use the settings framerateNumerator
+     * and framerateDenominator. For example, you might specify 24 / 1 for 24 fps, 25 / 1 for 25 fps, 24000 / 1001 for
      * 23.976 fps, or 30000 / 1001 for 29.97 fps.
      */
     private CaptionSourceFramerate framerate;
@@ -47,8 +47,24 @@ public class FileSourceSettings implements Serializable, Cloneable, StructuredPo
      * 'srt', 'xml', 'smi', 'webvtt', and 'vtt'.
      */
     private String sourceFile;
-    /** Specifies a time delta in seconds to offset the captions from the source file. */
+    /**
+     * Optional. Use this setting when you need to adjust the sync between your sidecar captions and your video. For
+     * more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/time-delta-use-cases.html. Enter a
+     * positive or negative number to modify the times in the captions file. For example, type 15 to add 15 seconds to
+     * all the times in the captions file. Type -5 to subtract 5 seconds from the times in the captions file. You can
+     * optionally specify your time delta in milliseconds instead of seconds. When you do so, set the related setting,
+     * Time delta units (TimeDeltaUnits) to Milliseconds (MILLISECONDS). Note that, when you specify a time delta for
+     * timecode-based caption sources, such as SCC and STL, and your time delta isn't a multiple of the input frame rate,
+     * MediaConvert snaps the captions to the nearest frame. For example, when your input video frame rate is 25 fps and
+     * you specify 1010ms for time delta, MediaConvert delays your captions by 1000 ms.
+     */
     private Integer timeDelta;
+    /**
+     * When you use the setting Time delta (TimeDelta) to adjust the sync between your sidecar captions and your video,
+     * use this setting to specify the units for the delta that you specify. When you don't specify a value for Time
+     * delta units (TimeDeltaUnits), MediaConvert uses seconds by default.
+     */
+    private String timeDeltaUnits;
 
     /**
      * Specify whether this set of input captions appears in your outputs in both 608 and 708 format. If you choose
@@ -124,15 +140,15 @@ public class FileSourceSettings implements Serializable, Cloneable, StructuredPo
     /**
      * Ignore this setting unless your input captions format is SCC. To have the service compensate for differing frame
      * rates between your input captions and input video, specify the frame rate of the captions file. Specify this
-     * value as a fraction, using the settings Framerate numerator (framerateNumerator) and Framerate denominator
-     * (framerateDenominator). For example, you might specify 24 / 1 for 24 fps, 25 / 1 for 25 fps, 24000 / 1001 for
+     * value as a fraction. When you work directly in your JSON job specification, use the settings framerateNumerator
+     * and framerateDenominator. For example, you might specify 24 / 1 for 24 fps, 25 / 1 for 25 fps, 24000 / 1001 for
      * 23.976 fps, or 30000 / 1001 for 29.97 fps.
      * 
      * @param framerate
      *        Ignore this setting unless your input captions format is SCC. To have the service compensate for differing
      *        frame rates between your input captions and input video, specify the frame rate of the captions file.
-     *        Specify this value as a fraction, using the settings Framerate numerator (framerateNumerator) and
-     *        Framerate denominator (framerateDenominator). For example, you might specify 24 / 1 for 24 fps, 25 / 1 for
+     *        Specify this value as a fraction. When you work directly in your JSON job specification, use the settings
+     *        framerateNumerator and framerateDenominator. For example, you might specify 24 / 1 for 24 fps, 25 / 1 for
      *        25 fps, 24000 / 1001 for 23.976 fps, or 30000 / 1001 for 29.97 fps.
      */
 
@@ -143,15 +159,15 @@ public class FileSourceSettings implements Serializable, Cloneable, StructuredPo
     /**
      * Ignore this setting unless your input captions format is SCC. To have the service compensate for differing frame
      * rates between your input captions and input video, specify the frame rate of the captions file. Specify this
-     * value as a fraction, using the settings Framerate numerator (framerateNumerator) and Framerate denominator
-     * (framerateDenominator). For example, you might specify 24 / 1 for 24 fps, 25 / 1 for 25 fps, 24000 / 1001 for
+     * value as a fraction. When you work directly in your JSON job specification, use the settings framerateNumerator
+     * and framerateDenominator. For example, you might specify 24 / 1 for 24 fps, 25 / 1 for 25 fps, 24000 / 1001 for
      * 23.976 fps, or 30000 / 1001 for 29.97 fps.
      * 
      * @return Ignore this setting unless your input captions format is SCC. To have the service compensate for
      *         differing frame rates between your input captions and input video, specify the frame rate of the captions
-     *         file. Specify this value as a fraction, using the settings Framerate numerator (framerateNumerator) and
-     *         Framerate denominator (framerateDenominator). For example, you might specify 24 / 1 for 24 fps, 25 / 1
-     *         for 25 fps, 24000 / 1001 for 23.976 fps, or 30000 / 1001 for 29.97 fps.
+     *         file. Specify this value as a fraction. When you work directly in your JSON job specification, use the
+     *         settings framerateNumerator and framerateDenominator. For example, you might specify 24 / 1 for 24 fps,
+     *         25 / 1 for 25 fps, 24000 / 1001 for 23.976 fps, or 30000 / 1001 for 29.97 fps.
      */
 
     public CaptionSourceFramerate getFramerate() {
@@ -161,15 +177,15 @@ public class FileSourceSettings implements Serializable, Cloneable, StructuredPo
     /**
      * Ignore this setting unless your input captions format is SCC. To have the service compensate for differing frame
      * rates between your input captions and input video, specify the frame rate of the captions file. Specify this
-     * value as a fraction, using the settings Framerate numerator (framerateNumerator) and Framerate denominator
-     * (framerateDenominator). For example, you might specify 24 / 1 for 24 fps, 25 / 1 for 25 fps, 24000 / 1001 for
+     * value as a fraction. When you work directly in your JSON job specification, use the settings framerateNumerator
+     * and framerateDenominator. For example, you might specify 24 / 1 for 24 fps, 25 / 1 for 25 fps, 24000 / 1001 for
      * 23.976 fps, or 30000 / 1001 for 29.97 fps.
      * 
      * @param framerate
      *        Ignore this setting unless your input captions format is SCC. To have the service compensate for differing
      *        frame rates between your input captions and input video, specify the frame rate of the captions file.
-     *        Specify this value as a fraction, using the settings Framerate numerator (framerateNumerator) and
-     *        Framerate denominator (framerateDenominator). For example, you might specify 24 / 1 for 24 fps, 25 / 1 for
+     *        Specify this value as a fraction. When you work directly in your JSON job specification, use the settings
+     *        framerateNumerator and framerateDenominator. For example, you might specify 24 / 1 for 24 fps, 25 / 1 for
      *        25 fps, 24000 / 1001 for 23.976 fps, or 30000 / 1001 for 29.97 fps.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -220,10 +236,27 @@ public class FileSourceSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Specifies a time delta in seconds to offset the captions from the source file.
+     * Optional. Use this setting when you need to adjust the sync between your sidecar captions and your video. For
+     * more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/time-delta-use-cases.html. Enter a
+     * positive or negative number to modify the times in the captions file. For example, type 15 to add 15 seconds to
+     * all the times in the captions file. Type -5 to subtract 5 seconds from the times in the captions file. You can
+     * optionally specify your time delta in milliseconds instead of seconds. When you do so, set the related setting,
+     * Time delta units (TimeDeltaUnits) to Milliseconds (MILLISECONDS). Note that, when you specify a time delta for
+     * timecode-based caption sources, such as SCC and STL, and your time delta isn't a multiple of the input frame rate,
+     * MediaConvert snaps the captions to the nearest frame. For example, when your input video frame rate is 25 fps and
+     * you specify 1010ms for time delta, MediaConvert delays your captions by 1000 ms.
      * 
      * @param timeDelta
-     *        Specifies a time delta in seconds to offset the captions from the source file.
+     *        Optional. Use this setting when you need to adjust the sync between your sidecar captions and your video.
+     *        For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/time-delta-use-cases.html.
+     *        Enter a positive or negative number to modify the times in the captions file. For example, type 15 to add
+     *        15 seconds to all the times in the captions file. Type -5 to subtract 5 seconds from the times in the
+     *        captions file. You can optionally specify your time delta in milliseconds instead of seconds. When you do
+     *        so, set the related setting, Time delta units (TimeDeltaUnits) to Milliseconds (MILLISECONDS). Note that,
+     *        when you specify a time delta for timecode-based caption sources, such as SCC and STL, and your time delta
+     *        isn't a multiple of the input frame rate, MediaConvert snaps the captions to the nearest frame. For
+     *        example, when your input video frame rate is 25 fps and you specify 1010ms for time delta, MediaConvert
+     *        delays your captions by 1000 ms.
      */
 
     public void setTimeDelta(Integer timeDelta) {
@@ -231,9 +264,26 @@ public class FileSourceSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Specifies a time delta in seconds to offset the captions from the source file.
+     * Optional. Use this setting when you need to adjust the sync between your sidecar captions and your video. For
+     * more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/time-delta-use-cases.html. Enter a
+     * positive or negative number to modify the times in the captions file. For example, type 15 to add 15 seconds to
+     * all the times in the captions file. Type -5 to subtract 5 seconds from the times in the captions file. You can
+     * optionally specify your time delta in milliseconds instead of seconds. When you do so, set the related setting,
+     * Time delta units (TimeDeltaUnits) to Milliseconds (MILLISECONDS). Note that, when you specify a time delta for
+     * timecode-based caption sources, such as SCC and STL, and your time delta isn't a multiple of the input frame rate,
+     * MediaConvert snaps the captions to the nearest frame. For example, when your input video frame rate is 25 fps and
+     * you specify 1010ms for time delta, MediaConvert delays your captions by 1000 ms.
      * 
-     * @return Specifies a time delta in seconds to offset the captions from the source file.
+     * @return Optional. Use this setting when you need to adjust the sync between your sidecar captions and your video.
+     *         For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/time-delta-use-cases.html.
+     *         Enter a positive or negative number to modify the times in the captions file. For example, type 15 to add
+     *         15 seconds to all the times in the captions file. Type -5 to subtract 5 seconds from the times in the
+     *         captions file. You can optionally specify your time delta in milliseconds instead of seconds. When you do
+     *         so, set the related setting, Time delta units (TimeDeltaUnits) to Milliseconds (MILLISECONDS). Note that,
+     *         when you specify a time delta for timecode-based caption sources, such as SCC and STL, and your time
+     *         delta isn't a multiple of the input frame rate, MediaConvert snaps the captions to the nearest frame. For
+     *         example, when your input video frame rate is 25 fps and you specify 1010ms for time delta, MediaConvert
+     *         delays your captions by 1000 ms.
      */
 
     public Integer getTimeDelta() {
@@ -241,15 +291,99 @@ public class FileSourceSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Specifies a time delta in seconds to offset the captions from the source file.
+     * Optional. Use this setting when you need to adjust the sync between your sidecar captions and your video. For
+     * more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/time-delta-use-cases.html. Enter a
+     * positive or negative number to modify the times in the captions file. For example, type 15 to add 15 seconds to
+     * all the times in the captions file. Type -5 to subtract 5 seconds from the times in the captions file. You can
+     * optionally specify your time delta in milliseconds instead of seconds. When you do so, set the related setting,
+     * Time delta units (TimeDeltaUnits) to Milliseconds (MILLISECONDS). Note that, when you specify a time delta for
+     * timecode-based caption sources, such as SCC and STL, and your time delta isn't a multiple of the input frame rate,
+     * MediaConvert snaps the captions to the nearest frame. For example, when your input video frame rate is 25 fps and
+     * you specify 1010ms for time delta, MediaConvert delays your captions by 1000 ms.
      * 
      * @param timeDelta
-     *        Specifies a time delta in seconds to offset the captions from the source file.
+     *        Optional. Use this setting when you need to adjust the sync between your sidecar captions and your video.
+     *        For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/time-delta-use-cases.html.
+     *        Enter a positive or negative number to modify the times in the captions file. For example, type 15 to add
+     *        15 seconds to all the times in the captions file. Type -5 to subtract 5 seconds from the times in the
+     *        captions file. You can optionally specify your time delta in milliseconds instead of seconds. When you do
+     *        so, set the related setting, Time delta units (TimeDeltaUnits) to Milliseconds (MILLISECONDS). Note that,
+     *        when you specify a time delta for timecode-based caption sources, such as SCC and STL, and your time delta
+     *        isn't a multiple of the input frame rate, MediaConvert snaps the captions to the nearest frame. For
+     *        example, when your input video frame rate is 25 fps and you specify 1010ms for time delta, MediaConvert
+     *        delays your captions by 1000 ms.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public FileSourceSettings withTimeDelta(Integer timeDelta) {
         setTimeDelta(timeDelta);
+        return this;
+    }
+
+    /**
+     * When you use the setting Time delta (TimeDelta) to adjust the sync between your sidecar captions and your video,
+     * use this setting to specify the units for the delta that you specify. When you don't specify a value for Time
+     * delta units (TimeDeltaUnits), MediaConvert uses seconds by default.
+     * 
+     * @param timeDeltaUnits
+     *        When you use the setting Time delta (TimeDelta) to adjust the sync between your sidecar captions and your
+     *        video, use this setting to specify the units for the delta that you specify. When you don't specify a
+     *        value for Time delta units (TimeDeltaUnits), MediaConvert uses seconds by default.
+     * @see FileSourceTimeDeltaUnits
+     */
+
+    public void setTimeDeltaUnits(String timeDeltaUnits) {
+        this.timeDeltaUnits = timeDeltaUnits;
+    }
+
+    /**
+     * When you use the setting Time delta (TimeDelta) to adjust the sync between your sidecar captions and your video,
+     * use this setting to specify the units for the delta that you specify. When you don't specify a value for Time
+     * delta units (TimeDeltaUnits), MediaConvert uses seconds by default.
+     * 
+     * @return When you use the setting Time delta (TimeDelta) to adjust the sync between your sidecar captions and your
+     *         video, use this setting to specify the units for the delta that you specify. When you don't specify a
+     *         value for Time delta units (TimeDeltaUnits), MediaConvert uses seconds by default.
+     * @see FileSourceTimeDeltaUnits
+     */
+
+    public String getTimeDeltaUnits() {
+        return this.timeDeltaUnits;
+    }
+
+    /**
+     * When you use the setting Time delta (TimeDelta) to adjust the sync between your sidecar captions and your video,
+     * use this setting to specify the units for the delta that you specify. When you don't specify a value for Time
+     * delta units (TimeDeltaUnits), MediaConvert uses seconds by default.
+     * 
+     * @param timeDeltaUnits
+     *        When you use the setting Time delta (TimeDelta) to adjust the sync between your sidecar captions and your
+     *        video, use this setting to specify the units for the delta that you specify. When you don't specify a
+     *        value for Time delta units (TimeDeltaUnits), MediaConvert uses seconds by default.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see FileSourceTimeDeltaUnits
+     */
+
+    public FileSourceSettings withTimeDeltaUnits(String timeDeltaUnits) {
+        setTimeDeltaUnits(timeDeltaUnits);
+        return this;
+    }
+
+    /**
+     * When you use the setting Time delta (TimeDelta) to adjust the sync between your sidecar captions and your video,
+     * use this setting to specify the units for the delta that you specify. When you don't specify a value for Time
+     * delta units (TimeDeltaUnits), MediaConvert uses seconds by default.
+     * 
+     * @param timeDeltaUnits
+     *        When you use the setting Time delta (TimeDelta) to adjust the sync between your sidecar captions and your
+     *        video, use this setting to specify the units for the delta that you specify. When you don't specify a
+     *        value for Time delta units (TimeDeltaUnits), MediaConvert uses seconds by default.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see FileSourceTimeDeltaUnits
+     */
+
+    public FileSourceSettings withTimeDeltaUnits(FileSourceTimeDeltaUnits timeDeltaUnits) {
+        this.timeDeltaUnits = timeDeltaUnits.toString();
         return this;
     }
 
@@ -272,7 +406,9 @@ public class FileSourceSettings implements Serializable, Cloneable, StructuredPo
         if (getSourceFile() != null)
             sb.append("SourceFile: ").append(getSourceFile()).append(",");
         if (getTimeDelta() != null)
-            sb.append("TimeDelta: ").append(getTimeDelta());
+            sb.append("TimeDelta: ").append(getTimeDelta()).append(",");
+        if (getTimeDeltaUnits() != null)
+            sb.append("TimeDeltaUnits: ").append(getTimeDeltaUnits());
         sb.append("}");
         return sb.toString();
     }
@@ -303,6 +439,10 @@ public class FileSourceSettings implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getTimeDelta() != null && other.getTimeDelta().equals(this.getTimeDelta()) == false)
             return false;
+        if (other.getTimeDeltaUnits() == null ^ this.getTimeDeltaUnits() == null)
+            return false;
+        if (other.getTimeDeltaUnits() != null && other.getTimeDeltaUnits().equals(this.getTimeDeltaUnits()) == false)
+            return false;
         return true;
     }
 
@@ -315,6 +455,7 @@ public class FileSourceSettings implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getFramerate() == null) ? 0 : getFramerate().hashCode());
         hashCode = prime * hashCode + ((getSourceFile() == null) ? 0 : getSourceFile().hashCode());
         hashCode = prime * hashCode + ((getTimeDelta() == null) ? 0 : getTimeDelta().hashCode());
+        hashCode = prime * hashCode + ((getTimeDeltaUnits() == null) ? 0 : getTimeDeltaUnits().hashCode());
         return hashCode;
     }
 

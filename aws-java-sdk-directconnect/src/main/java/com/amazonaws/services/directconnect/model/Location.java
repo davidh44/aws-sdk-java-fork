@@ -42,7 +42,7 @@ public class Location implements Serializable, Cloneable, StructuredPojo {
     private String locationName;
     /**
      * <p>
-     * The Region for the location.
+     * The Amazon Web Services Region for the location.
      * </p>
      */
     private String region;
@@ -150,11 +150,11 @@ public class Location implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Region for the location.
+     * The Amazon Web Services Region for the location.
      * </p>
      * 
      * @param region
-     *        The Region for the location.
+     *        The Amazon Web Services Region for the location.
      */
 
     public void setRegion(String region) {
@@ -163,10 +163,10 @@ public class Location implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Region for the location.
+     * The Amazon Web Services Region for the location.
      * </p>
      * 
-     * @return The Region for the location.
+     * @return The Amazon Web Services Region for the location.
      */
 
     public String getRegion() {
@@ -175,11 +175,11 @@ public class Location implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Region for the location.
+     * The Amazon Web Services Region for the location.
      * </p>
      * 
      * @param region
-     *        The Region for the location.
+     *        The Amazon Web Services Region for the location.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

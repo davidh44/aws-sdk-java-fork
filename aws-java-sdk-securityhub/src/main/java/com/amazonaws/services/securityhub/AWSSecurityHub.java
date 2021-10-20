@@ -429,6 +429,36 @@ public interface AWSSecurityHub {
 
     /**
      * <p>
+     * Used to enable finding aggregation. Must be called from the aggregation Region.
+     * </p>
+     * <p>
+     * For more details about cross-Region replication, see <a
+     * href="securityhub/latest/userguide/finding-aggregation.html">Configuring finding aggregation</a> in the
+     * <i>Security Hub User Guide</i>.
+     * </p>
+     * 
+     * @param createFindingAggregatorRequest
+     * @return Result of the CreateFindingAggregator operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws InvalidAccessException
+     *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
+     *         account, or the account does not have permission to perform this action.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @sample AWSSecurityHub.CreateFindingAggregator
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/CreateFindingAggregator"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateFindingAggregatorResult createFindingAggregator(CreateFindingAggregatorRequest createFindingAggregatorRequest);
+
+    /**
+     * <p>
      * Creates a custom insight in Security Hub. An insight is a consolidation of findings that relate to a security
      * issue that requires attention or remediation.
      * </p>
@@ -590,6 +620,37 @@ public interface AWSSecurityHub {
      *      API Documentation</a>
      */
     DeleteActionTargetResult deleteActionTarget(DeleteActionTargetRequest deleteActionTargetRequest);
+
+    /**
+     * <p>
+     * Deletes a finding aggregator. When you delete the finding aggregator, you stop finding aggregation.
+     * </p>
+     * <p>
+     * When you stop finding aggregation, findings that were already aggregated to the aggregation Region are still
+     * visible from the aggregation Region. New findings and finding updates are not aggregated.
+     * </p>
+     * 
+     * @param deleteFindingAggregatorRequest
+     * @return Result of the DeleteFindingAggregator operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws InvalidAccessException
+     *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
+     *         account, or the account does not have permission to perform this action.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @sample AWSSecurityHub.DeleteFindingAggregator
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DeleteFindingAggregator"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteFindingAggregatorResult deleteFindingAggregator(DeleteFindingAggregatorRequest deleteFindingAggregatorRequest);
 
     /**
      * <p>
@@ -1176,7 +1237,38 @@ public interface AWSSecurityHub {
 
     /**
      * <p>
+     * Returns the current finding aggregation configuration.
+     * </p>
+     * 
+     * @param getFindingAggregatorRequest
+     * @return Result of the GetFindingAggregator operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws InvalidAccessException
+     *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
+     *         account, or the account does not have permission to perform this action.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @sample AWSSecurityHub.GetFindingAggregator
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/GetFindingAggregator"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetFindingAggregatorResult getFindingAggregator(GetFindingAggregatorRequest getFindingAggregatorRequest);
+
+    /**
+     * <p>
      * Returns a list of findings that match the specified criteria.
+     * </p>
+     * <p>
+     * If finding aggregation is enabled, then when you call <code>GetFindings</code> from the aggregation Region, the
+     * results include all of the matching findings from both the aggregation Region and the linked Regions.
      * </p>
      * 
      * @param getFindingsRequest
@@ -1405,6 +1497,32 @@ public interface AWSSecurityHub {
 
     /**
      * <p>
+     * If finding aggregation is enabled, then <code>ListFindingAggregators</code> returns the ARN of the finding
+     * aggregator. You can run this operation from any Region.
+     * </p>
+     * 
+     * @param listFindingAggregatorsRequest
+     * @return Result of the ListFindingAggregators operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws InvalidAccessException
+     *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
+     *         account, or the account does not have permission to perform this action.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @sample AWSSecurityHub.ListFindingAggregators
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListFindingAggregators"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListFindingAggregatorsResult listFindingAggregators(ListFindingAggregatorsRequest listFindingAggregatorsRequest);
+
+    /**
+     * <p>
      * Lists all Security Hub membership invitations that were sent to the current Amazon Web Services account.
      * </p>
      * <p>
@@ -1560,6 +1678,37 @@ public interface AWSSecurityHub {
      *      API Documentation</a>
      */
     UpdateActionTargetResult updateActionTarget(UpdateActionTargetRequest updateActionTargetRequest);
+
+    /**
+     * <p>
+     * Updates the finding aggregation configuration. Used to update the Region linking mode and the list of included or
+     * excluded Regions. You cannot use <code>UpdateFindingAggregator</code> to change the aggregation Region.
+     * </p>
+     * <p>
+     * You must run <code>UpdateFindingAggregator</code> from the current aggregation Region.
+     * </p>
+     * 
+     * @param updateFindingAggregatorRequest
+     * @return Result of the UpdateFindingAggregator operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws InvalidAccessException
+     *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
+     *         account, or the account does not have permission to perform this action.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @sample AWSSecurityHub.UpdateFindingAggregator
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateFindingAggregator"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateFindingAggregatorResult updateFindingAggregator(UpdateFindingAggregatorRequest updateFindingAggregatorRequest);
 
     /**
      * <p>

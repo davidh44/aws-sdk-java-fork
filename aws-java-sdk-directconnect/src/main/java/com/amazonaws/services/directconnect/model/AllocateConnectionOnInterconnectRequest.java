@@ -41,7 +41,7 @@ public class AllocateConnectionOnInterconnectRequest extends com.amazonaws.Amazo
     private String connectionName;
     /**
      * <p>
-     * The ID of the account of the customer for whom the connection will be provisioned.
+     * The ID of the Amazon Web Services account of the customer for whom the connection will be provisioned.
      * </p>
      */
     private String ownerAccount;
@@ -152,11 +152,11 @@ public class AllocateConnectionOnInterconnectRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The ID of the account of the customer for whom the connection will be provisioned.
+     * The ID of the Amazon Web Services account of the customer for whom the connection will be provisioned.
      * </p>
      * 
      * @param ownerAccount
-     *        The ID of the account of the customer for whom the connection will be provisioned.
+     *        The ID of the Amazon Web Services account of the customer for whom the connection will be provisioned.
      */
 
     public void setOwnerAccount(String ownerAccount) {
@@ -165,10 +165,10 @@ public class AllocateConnectionOnInterconnectRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The ID of the account of the customer for whom the connection will be provisioned.
+     * The ID of the Amazon Web Services account of the customer for whom the connection will be provisioned.
      * </p>
      * 
-     * @return The ID of the account of the customer for whom the connection will be provisioned.
+     * @return The ID of the Amazon Web Services account of the customer for whom the connection will be provisioned.
      */
 
     public String getOwnerAccount() {
@@ -177,11 +177,11 @@ public class AllocateConnectionOnInterconnectRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The ID of the account of the customer for whom the connection will be provisioned.
+     * The ID of the Amazon Web Services account of the customer for whom the connection will be provisioned.
      * </p>
      * 
      * @param ownerAccount
-     *        The ID of the account of the customer for whom the connection will be provisioned.
+     *        The ID of the Amazon Web Services account of the customer for whom the connection will be provisioned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

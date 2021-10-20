@@ -84,7 +84,7 @@ public class CreateInterconnectResult extends com.amazonaws.AmazonWebServiceResu
     private String interconnectState;
     /**
      * <p>
-     * The Region where the connection is located.
+     * The Amazon Web Services Region where the connection is located.
      * </p>
      */
     private String region;
@@ -686,11 +686,11 @@ public class CreateInterconnectResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The Region where the connection is located.
+     * The Amazon Web Services Region where the connection is located.
      * </p>
      * 
      * @param region
-     *        The Region where the connection is located.
+     *        The Amazon Web Services Region where the connection is located.
      */
 
     public void setRegion(String region) {
@@ -699,10 +699,10 @@ public class CreateInterconnectResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The Region where the connection is located.
+     * The Amazon Web Services Region where the connection is located.
      * </p>
      * 
-     * @return The Region where the connection is located.
+     * @return The Amazon Web Services Region where the connection is located.
      */
 
     public String getRegion() {
@@ -711,11 +711,11 @@ public class CreateInterconnectResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The Region where the connection is located.
+     * The Amazon Web Services Region where the connection is located.
      * </p>
      * 
      * @param region
-     *        The Region where the connection is located.
+     *        The Amazon Web Services Region where the connection is located.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

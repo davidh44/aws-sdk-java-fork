@@ -831,6 +831,80 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
 
     /**
      * <p>
+     * Used to enable finding aggregation. Must be called from the aggregation Region.
+     * </p>
+     * <p>
+     * For more details about cross-Region replication, see <a
+     * href="securityhub/latest/userguide/finding-aggregation.html">Configuring finding aggregation</a> in the
+     * <i>Security Hub User Guide</i>.
+     * </p>
+     * 
+     * @param createFindingAggregatorRequest
+     * @return Result of the CreateFindingAggregator operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws InvalidAccessException
+     *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
+     *         account, or the account does not have permission to perform this action.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @sample AWSSecurityHub.CreateFindingAggregator
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/CreateFindingAggregator"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateFindingAggregatorResult createFindingAggregator(CreateFindingAggregatorRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateFindingAggregator(request);
+    }
+
+    @SdkInternalApi
+    final CreateFindingAggregatorResult executeCreateFindingAggregator(CreateFindingAggregatorRequest createFindingAggregatorRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createFindingAggregatorRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateFindingAggregatorRequest> request = null;
+        Response<CreateFindingAggregatorResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateFindingAggregatorRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createFindingAggregatorRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SecurityHub");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateFindingAggregator");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateFindingAggregatorResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateFindingAggregatorResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a custom insight in Security Hub. An insight is a consolidation of findings that relate to a security
      * issue that requires attention or remediation.
      * </p>
@@ -1151,6 +1225,81 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteActionTargetResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteActionTargetResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a finding aggregator. When you delete the finding aggregator, you stop finding aggregation.
+     * </p>
+     * <p>
+     * When you stop finding aggregation, findings that were already aggregated to the aggregation Region are still
+     * visible from the aggregation Region. New findings and finding updates are not aggregated.
+     * </p>
+     * 
+     * @param deleteFindingAggregatorRequest
+     * @return Result of the DeleteFindingAggregator operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws InvalidAccessException
+     *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
+     *         account, or the account does not have permission to perform this action.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @sample AWSSecurityHub.DeleteFindingAggregator
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DeleteFindingAggregator"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteFindingAggregatorResult deleteFindingAggregator(DeleteFindingAggregatorRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteFindingAggregator(request);
+    }
+
+    @SdkInternalApi
+    final DeleteFindingAggregatorResult executeDeleteFindingAggregator(DeleteFindingAggregatorRequest deleteFindingAggregatorRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteFindingAggregatorRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteFindingAggregatorRequest> request = null;
+        Response<DeleteFindingAggregatorResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteFindingAggregatorRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteFindingAggregatorRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SecurityHub");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteFindingAggregator");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteFindingAggregatorResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteFindingAggregatorResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2608,7 +2757,80 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
 
     /**
      * <p>
+     * Returns the current finding aggregation configuration.
+     * </p>
+     * 
+     * @param getFindingAggregatorRequest
+     * @return Result of the GetFindingAggregator operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws InvalidAccessException
+     *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
+     *         account, or the account does not have permission to perform this action.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @sample AWSSecurityHub.GetFindingAggregator
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/GetFindingAggregator"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetFindingAggregatorResult getFindingAggregator(GetFindingAggregatorRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetFindingAggregator(request);
+    }
+
+    @SdkInternalApi
+    final GetFindingAggregatorResult executeGetFindingAggregator(GetFindingAggregatorRequest getFindingAggregatorRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getFindingAggregatorRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetFindingAggregatorRequest> request = null;
+        Response<GetFindingAggregatorResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetFindingAggregatorRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getFindingAggregatorRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SecurityHub");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetFindingAggregator");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetFindingAggregatorResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetFindingAggregatorResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns a list of findings that match the specified criteria.
+     * </p>
+     * <p>
+     * If finding aggregation is enabled, then when you call <code>GetFindings</code> from the aggregation Region, the
+     * results include all of the matching findings from both the aggregation Region and the linked Regions.
      * </p>
      * 
      * @param getFindingsRequest
@@ -3175,6 +3397,75 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
 
     /**
      * <p>
+     * If finding aggregation is enabled, then <code>ListFindingAggregators</code> returns the ARN of the finding
+     * aggregator. You can run this operation from any Region.
+     * </p>
+     * 
+     * @param listFindingAggregatorsRequest
+     * @return Result of the ListFindingAggregators operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws InvalidAccessException
+     *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
+     *         account, or the account does not have permission to perform this action.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @sample AWSSecurityHub.ListFindingAggregators
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListFindingAggregators"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListFindingAggregatorsResult listFindingAggregators(ListFindingAggregatorsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListFindingAggregators(request);
+    }
+
+    @SdkInternalApi
+    final ListFindingAggregatorsResult executeListFindingAggregators(ListFindingAggregatorsRequest listFindingAggregatorsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listFindingAggregatorsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListFindingAggregatorsRequest> request = null;
+        Response<ListFindingAggregatorsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListFindingAggregatorsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listFindingAggregatorsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SecurityHub");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListFindingAggregators");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListFindingAggregatorsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListFindingAggregatorsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Lists all Security Hub membership invitations that were sent to the current Amazon Web Services account.
      * </p>
      * <p>
@@ -3617,6 +3908,81 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateActionTargetResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateActionTargetResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the finding aggregation configuration. Used to update the Region linking mode and the list of included or
+     * excluded Regions. You cannot use <code>UpdateFindingAggregator</code> to change the aggregation Region.
+     * </p>
+     * <p>
+     * You must run <code>UpdateFindingAggregator</code> from the current aggregation Region.
+     * </p>
+     * 
+     * @param updateFindingAggregatorRequest
+     * @return Result of the UpdateFindingAggregator operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws InvalidAccessException
+     *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
+     *         account, or the account does not have permission to perform this action.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @sample AWSSecurityHub.UpdateFindingAggregator
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateFindingAggregator"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateFindingAggregatorResult updateFindingAggregator(UpdateFindingAggregatorRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateFindingAggregator(request);
+    }
+
+    @SdkInternalApi
+    final UpdateFindingAggregatorResult executeUpdateFindingAggregator(UpdateFindingAggregatorRequest updateFindingAggregatorRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateFindingAggregatorRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateFindingAggregatorRequest> request = null;
+        Response<UpdateFindingAggregatorResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateFindingAggregatorRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateFindingAggregatorRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SecurityHub");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateFindingAggregator");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateFindingAggregatorResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateFindingAggregatorResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

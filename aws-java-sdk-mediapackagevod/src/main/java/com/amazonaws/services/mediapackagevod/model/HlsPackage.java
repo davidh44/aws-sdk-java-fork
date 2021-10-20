@@ -29,6 +29,8 @@ public class HlsPackage implements Serializable, Cloneable, StructuredPojo {
     private HlsEncryption encryption;
     /** A list of HLS manifest configurations. */
     private java.util.List<HlsManifest> hlsManifests;
+    /** When enabled, MediaPackage passes through digital video broadcasting (DVB) subtitles into the output. */
+    private Boolean includeDvbSubtitles;
     /**
      * Duration (in seconds) of each fragment. Actual fragments will be rounded to the nearest multiple of the source
      * fragment duration.
@@ -123,6 +125,50 @@ public class HlsPackage implements Serializable, Cloneable, StructuredPojo {
     public HlsPackage withHlsManifests(java.util.Collection<HlsManifest> hlsManifests) {
         setHlsManifests(hlsManifests);
         return this;
+    }
+
+    /**
+     * When enabled, MediaPackage passes through digital video broadcasting (DVB) subtitles into the output.
+     * 
+     * @param includeDvbSubtitles
+     *        When enabled, MediaPackage passes through digital video broadcasting (DVB) subtitles into the output.
+     */
+
+    public void setIncludeDvbSubtitles(Boolean includeDvbSubtitles) {
+        this.includeDvbSubtitles = includeDvbSubtitles;
+    }
+
+    /**
+     * When enabled, MediaPackage passes through digital video broadcasting (DVB) subtitles into the output.
+     * 
+     * @return When enabled, MediaPackage passes through digital video broadcasting (DVB) subtitles into the output.
+     */
+
+    public Boolean getIncludeDvbSubtitles() {
+        return this.includeDvbSubtitles;
+    }
+
+    /**
+     * When enabled, MediaPackage passes through digital video broadcasting (DVB) subtitles into the output.
+     * 
+     * @param includeDvbSubtitles
+     *        When enabled, MediaPackage passes through digital video broadcasting (DVB) subtitles into the output.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public HlsPackage withIncludeDvbSubtitles(Boolean includeDvbSubtitles) {
+        setIncludeDvbSubtitles(includeDvbSubtitles);
+        return this;
+    }
+
+    /**
+     * When enabled, MediaPackage passes through digital video broadcasting (DVB) subtitles into the output.
+     * 
+     * @return When enabled, MediaPackage passes through digital video broadcasting (DVB) subtitles into the output.
+     */
+
+    public Boolean isIncludeDvbSubtitles() {
+        return this.includeDvbSubtitles;
     }
 
     /**
@@ -225,6 +271,8 @@ public class HlsPackage implements Serializable, Cloneable, StructuredPojo {
             sb.append("Encryption: ").append(getEncryption()).append(",");
         if (getHlsManifests() != null)
             sb.append("HlsManifests: ").append(getHlsManifests()).append(",");
+        if (getIncludeDvbSubtitles() != null)
+            sb.append("IncludeDvbSubtitles: ").append(getIncludeDvbSubtitles()).append(",");
         if (getSegmentDurationSeconds() != null)
             sb.append("SegmentDurationSeconds: ").append(getSegmentDurationSeconds()).append(",");
         if (getUseAudioRenditionGroup() != null)
@@ -251,6 +299,10 @@ public class HlsPackage implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getHlsManifests() != null && other.getHlsManifests().equals(this.getHlsManifests()) == false)
             return false;
+        if (other.getIncludeDvbSubtitles() == null ^ this.getIncludeDvbSubtitles() == null)
+            return false;
+        if (other.getIncludeDvbSubtitles() != null && other.getIncludeDvbSubtitles().equals(this.getIncludeDvbSubtitles()) == false)
+            return false;
         if (other.getSegmentDurationSeconds() == null ^ this.getSegmentDurationSeconds() == null)
             return false;
         if (other.getSegmentDurationSeconds() != null && other.getSegmentDurationSeconds().equals(this.getSegmentDurationSeconds()) == false)
@@ -269,6 +321,7 @@ public class HlsPackage implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getEncryption() == null) ? 0 : getEncryption().hashCode());
         hashCode = prime * hashCode + ((getHlsManifests() == null) ? 0 : getHlsManifests().hashCode());
+        hashCode = prime * hashCode + ((getIncludeDvbSubtitles() == null) ? 0 : getIncludeDvbSubtitles().hashCode());
         hashCode = prime * hashCode + ((getSegmentDurationSeconds() == null) ? 0 : getSegmentDurationSeconds().hashCode());
         hashCode = prime * hashCode + ((getUseAudioRenditionGroup() == null) ? 0 : getUseAudioRenditionGroup().hashCode());
         return hashCode;

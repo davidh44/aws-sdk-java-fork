@@ -15,8 +15,10 @@ package com.amazonaws.services.mediaconvert.model;
 import javax.annotation.Generated;
 
 /**
- * Choose Enabled (ENABLED) to have MediaConvert use the font style, color, and position information from the captions
- * source in the input. Keep the default value, Disabled (DISABLED), for simplified output captions.
+ * Set Style passthrough (StylePassthrough) to ENABLED to use the available style, color, and position information from
+ * your input captions. MediaConvert uses default settings for any missing style and position information in your input
+ * captions. Set Style passthrough to DISABLED, or leave blank, to ignore the style and position information from your
+ * input captions and use simplified output captions.
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum SrtStylePassthrough {

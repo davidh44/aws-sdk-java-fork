@@ -41,6 +41,8 @@ public class HlsPackage implements Serializable, Cloneable, StructuredPojo {
     private String adsOnDeliveryRestrictions;
 
     private HlsEncryption encryption;
+    /** When enabled, MediaPackage passes through digital video broadcasting (DVB) subtitles into the output. */
+    private Boolean includeDvbSubtitles;
     /** When enabled, an I-Frame only stream will be included in the output. */
     private Boolean includeIframeOnlyStream;
     /**
@@ -298,6 +300,50 @@ public class HlsPackage implements Serializable, Cloneable, StructuredPojo {
     public HlsPackage withEncryption(HlsEncryption encryption) {
         setEncryption(encryption);
         return this;
+    }
+
+    /**
+     * When enabled, MediaPackage passes through digital video broadcasting (DVB) subtitles into the output.
+     * 
+     * @param includeDvbSubtitles
+     *        When enabled, MediaPackage passes through digital video broadcasting (DVB) subtitles into the output.
+     */
+
+    public void setIncludeDvbSubtitles(Boolean includeDvbSubtitles) {
+        this.includeDvbSubtitles = includeDvbSubtitles;
+    }
+
+    /**
+     * When enabled, MediaPackage passes through digital video broadcasting (DVB) subtitles into the output.
+     * 
+     * @return When enabled, MediaPackage passes through digital video broadcasting (DVB) subtitles into the output.
+     */
+
+    public Boolean getIncludeDvbSubtitles() {
+        return this.includeDvbSubtitles;
+    }
+
+    /**
+     * When enabled, MediaPackage passes through digital video broadcasting (DVB) subtitles into the output.
+     * 
+     * @param includeDvbSubtitles
+     *        When enabled, MediaPackage passes through digital video broadcasting (DVB) subtitles into the output.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public HlsPackage withIncludeDvbSubtitles(Boolean includeDvbSubtitles) {
+        setIncludeDvbSubtitles(includeDvbSubtitles);
+        return this;
+    }
+
+    /**
+     * When enabled, MediaPackage passes through digital video broadcasting (DVB) subtitles into the output.
+     * 
+     * @return When enabled, MediaPackage passes through digital video broadcasting (DVB) subtitles into the output.
+     */
+
+    public Boolean isIncludeDvbSubtitles() {
+        return this.includeDvbSubtitles;
     }
 
     /**
@@ -628,6 +674,8 @@ public class HlsPackage implements Serializable, Cloneable, StructuredPojo {
             sb.append("AdsOnDeliveryRestrictions: ").append(getAdsOnDeliveryRestrictions()).append(",");
         if (getEncryption() != null)
             sb.append("Encryption: ").append(getEncryption()).append(",");
+        if (getIncludeDvbSubtitles() != null)
+            sb.append("IncludeDvbSubtitles: ").append(getIncludeDvbSubtitles()).append(",");
         if (getIncludeIframeOnlyStream() != null)
             sb.append("IncludeIframeOnlyStream: ").append(getIncludeIframeOnlyStream()).append(",");
         if (getPlaylistType() != null)
@@ -672,6 +720,10 @@ public class HlsPackage implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getEncryption() != null && other.getEncryption().equals(this.getEncryption()) == false)
             return false;
+        if (other.getIncludeDvbSubtitles() == null ^ this.getIncludeDvbSubtitles() == null)
+            return false;
+        if (other.getIncludeDvbSubtitles() != null && other.getIncludeDvbSubtitles().equals(this.getIncludeDvbSubtitles()) == false)
+            return false;
         if (other.getIncludeIframeOnlyStream() == null ^ this.getIncludeIframeOnlyStream() == null)
             return false;
         if (other.getIncludeIframeOnlyStream() != null && other.getIncludeIframeOnlyStream().equals(this.getIncludeIframeOnlyStream()) == false)
@@ -713,6 +765,7 @@ public class HlsPackage implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getAdTriggers() == null) ? 0 : getAdTriggers().hashCode());
         hashCode = prime * hashCode + ((getAdsOnDeliveryRestrictions() == null) ? 0 : getAdsOnDeliveryRestrictions().hashCode());
         hashCode = prime * hashCode + ((getEncryption() == null) ? 0 : getEncryption().hashCode());
+        hashCode = prime * hashCode + ((getIncludeDvbSubtitles() == null) ? 0 : getIncludeDvbSubtitles().hashCode());
         hashCode = prime * hashCode + ((getIncludeIframeOnlyStream() == null) ? 0 : getIncludeIframeOnlyStream().hashCode());
         hashCode = prime * hashCode + ((getPlaylistType() == null) ? 0 : getPlaylistType().hashCode());
         hashCode = prime * hashCode + ((getPlaylistWindowSeconds() == null) ? 0 : getPlaylistWindowSeconds().hashCode());

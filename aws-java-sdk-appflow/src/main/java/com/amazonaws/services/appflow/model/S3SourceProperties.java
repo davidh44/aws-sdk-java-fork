@@ -41,6 +41,8 @@ public class S3SourceProperties implements Serializable, Cloneable, StructuredPo
      */
     private String bucketPrefix;
 
+    private S3InputFormatConfig s3InputFormatConfig;
+
     /**
      * <p>
      * The Amazon S3 bucket name where the source files are stored.
@@ -122,6 +124,32 @@ public class S3SourceProperties implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * @param s3InputFormatConfig
+     */
+
+    public void setS3InputFormatConfig(S3InputFormatConfig s3InputFormatConfig) {
+        this.s3InputFormatConfig = s3InputFormatConfig;
+    }
+
+    /**
+     * @return
+     */
+
+    public S3InputFormatConfig getS3InputFormatConfig() {
+        return this.s3InputFormatConfig;
+    }
+
+    /**
+     * @param s3InputFormatConfig
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public S3SourceProperties withS3InputFormatConfig(S3InputFormatConfig s3InputFormatConfig) {
+        setS3InputFormatConfig(s3InputFormatConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -136,7 +164,9 @@ public class S3SourceProperties implements Serializable, Cloneable, StructuredPo
         if (getBucketName() != null)
             sb.append("BucketName: ").append(getBucketName()).append(",");
         if (getBucketPrefix() != null)
-            sb.append("BucketPrefix: ").append(getBucketPrefix());
+            sb.append("BucketPrefix: ").append(getBucketPrefix()).append(",");
+        if (getS3InputFormatConfig() != null)
+            sb.append("S3InputFormatConfig: ").append(getS3InputFormatConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -159,6 +189,10 @@ public class S3SourceProperties implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getBucketPrefix() != null && other.getBucketPrefix().equals(this.getBucketPrefix()) == false)
             return false;
+        if (other.getS3InputFormatConfig() == null ^ this.getS3InputFormatConfig() == null)
+            return false;
+        if (other.getS3InputFormatConfig() != null && other.getS3InputFormatConfig().equals(this.getS3InputFormatConfig()) == false)
+            return false;
         return true;
     }
 
@@ -169,6 +203,7 @@ public class S3SourceProperties implements Serializable, Cloneable, StructuredPo
 
         hashCode = prime * hashCode + ((getBucketName() == null) ? 0 : getBucketName().hashCode());
         hashCode = prime * hashCode + ((getBucketPrefix() == null) ? 0 : getBucketPrefix().hashCode());
+        hashCode = prime * hashCode + ((getS3InputFormatConfig() == null) ? 0 : getS3InputFormatConfig().hashCode());
         return hashCode;
     }
 

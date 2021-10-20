@@ -33,10 +33,10 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
  * <p>
  * Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable.
  * One end of the cable is connected to your router, the other to an Direct Connect router. With this connection in
- * place, you can create virtual interfaces directly to the Cloud (for example, to Amazon EC2 and Amazon S3) and to
- * Amazon VPC, bypassing Internet service providers in your network path. A connection provides access to all Regions
- * except the China (Beijing) and (China) Ningxia Regions. Amazon Web Services resources in the China Regions can only
- * be accessed through locations associated with those Regions.
+ * place, you can create virtual interfaces directly to the Amazon Web Services Cloud (for example, to Amazon EC2 and
+ * Amazon S3) and to Amazon VPC, bypassing Internet service providers in your network path. A connection provides access
+ * to all Amazon Web Services Regions except the China (Beijing) and (China) Ningxia Regions. Amazon Web Services
+ * resources in the China Regions can only be accessed through locations associated with those Regions.
  * </p>
  */
 @ThreadSafe
@@ -622,6 +622,39 @@ public class AmazonDirectConnectAsyncClient extends AmazonDirectConnectClient im
 
                 try {
                     result = executeConfirmConnection(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ConfirmCustomerAgreementResult> confirmCustomerAgreementAsync(ConfirmCustomerAgreementRequest request) {
+
+        return confirmCustomerAgreementAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ConfirmCustomerAgreementResult> confirmCustomerAgreementAsync(final ConfirmCustomerAgreementRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ConfirmCustomerAgreementRequest, ConfirmCustomerAgreementResult> asyncHandler) {
+        final ConfirmCustomerAgreementRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ConfirmCustomerAgreementResult>() {
+            @Override
+            public ConfirmCustomerAgreementResult call() throws Exception {
+                ConfirmCustomerAgreementResult result = null;
+
+                try {
+                    result = executeConfirmCustomerAgreement(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1472,6 +1505,39 @@ public class AmazonDirectConnectAsyncClient extends AmazonDirectConnectClient im
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeCustomerMetadataResult> describeCustomerMetadataAsync(DescribeCustomerMetadataRequest request) {
+
+        return describeCustomerMetadataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeCustomerMetadataResult> describeCustomerMetadataAsync(final DescribeCustomerMetadataRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeCustomerMetadataRequest, DescribeCustomerMetadataResult> asyncHandler) {
+        final DescribeCustomerMetadataRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeCustomerMetadataResult>() {
+            @Override
+            public DescribeCustomerMetadataResult call() throws Exception {
+                DescribeCustomerMetadataResult result = null;
+
+                try {
+                    result = executeDescribeCustomerMetadata(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeDirectConnectGatewayAssociationProposalsResult> describeDirectConnectGatewayAssociationProposalsAsync(
             DescribeDirectConnectGatewayAssociationProposalsRequest request) {
 
@@ -1854,6 +1920,39 @@ public class AmazonDirectConnectAsyncClient extends AmazonDirectConnectClient im
             com.amazonaws.handlers.AsyncHandler<DescribeLocationsRequest, DescribeLocationsResult> asyncHandler) {
 
         return describeLocationsAsync(new DescribeLocationsRequest(), asyncHandler);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeRouterConfigurationResult> describeRouterConfigurationAsync(DescribeRouterConfigurationRequest request) {
+
+        return describeRouterConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeRouterConfigurationResult> describeRouterConfigurationAsync(final DescribeRouterConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeRouterConfigurationRequest, DescribeRouterConfigurationResult> asyncHandler) {
+        final DescribeRouterConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeRouterConfigurationResult>() {
+            @Override
+            public DescribeRouterConfigurationResult call() throws Exception {
+                DescribeRouterConfigurationResult result = null;
+
+                try {
+                    result = executeDescribeRouterConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
     }
 
     @Override
@@ -2253,6 +2352,39 @@ public class AmazonDirectConnectAsyncClient extends AmazonDirectConnectClient im
 
                 try {
                     result = executeUpdateConnection(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateDirectConnectGatewayResult> updateDirectConnectGatewayAsync(UpdateDirectConnectGatewayRequest request) {
+
+        return updateDirectConnectGatewayAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateDirectConnectGatewayResult> updateDirectConnectGatewayAsync(final UpdateDirectConnectGatewayRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateDirectConnectGatewayRequest, UpdateDirectConnectGatewayResult> asyncHandler) {
+        final UpdateDirectConnectGatewayRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateDirectConnectGatewayResult>() {
+            @Override
+            public UpdateDirectConnectGatewayResult call() throws Exception {
+                UpdateDirectConnectGatewayResult result = null;
+
+                try {
+                    result = executeUpdateDirectConnectGateway(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -121,6 +121,19 @@ public class AbstractAWSSecurityHubAsync extends AbstractAWSSecurityHub implemen
     }
 
     @Override
+    public java.util.concurrent.Future<CreateFindingAggregatorResult> createFindingAggregatorAsync(CreateFindingAggregatorRequest request) {
+
+        return createFindingAggregatorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateFindingAggregatorResult> createFindingAggregatorAsync(CreateFindingAggregatorRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateFindingAggregatorRequest, CreateFindingAggregatorResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateInsightResult> createInsightAsync(CreateInsightRequest request) {
 
         return createInsightAsync(request, null);
@@ -168,6 +181,19 @@ public class AbstractAWSSecurityHubAsync extends AbstractAWSSecurityHub implemen
     @Override
     public java.util.concurrent.Future<DeleteActionTargetResult> deleteActionTargetAsync(DeleteActionTargetRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteActionTargetRequest, DeleteActionTargetResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteFindingAggregatorResult> deleteFindingAggregatorAsync(DeleteFindingAggregatorRequest request) {
+
+        return deleteFindingAggregatorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteFindingAggregatorResult> deleteFindingAggregatorAsync(DeleteFindingAggregatorRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteFindingAggregatorRequest, DeleteFindingAggregatorResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -443,6 +469,19 @@ public class AbstractAWSSecurityHubAsync extends AbstractAWSSecurityHub implemen
     }
 
     @Override
+    public java.util.concurrent.Future<GetFindingAggregatorResult> getFindingAggregatorAsync(GetFindingAggregatorRequest request) {
+
+        return getFindingAggregatorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetFindingAggregatorResult> getFindingAggregatorAsync(GetFindingAggregatorRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetFindingAggregatorRequest, GetFindingAggregatorResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetFindingsResult> getFindingsAsync(GetFindingsRequest request) {
 
         return getFindingsAsync(request, null);
@@ -549,6 +588,19 @@ public class AbstractAWSSecurityHubAsync extends AbstractAWSSecurityHub implemen
     }
 
     @Override
+    public java.util.concurrent.Future<ListFindingAggregatorsResult> listFindingAggregatorsAsync(ListFindingAggregatorsRequest request) {
+
+        return listFindingAggregatorsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListFindingAggregatorsResult> listFindingAggregatorsAsync(ListFindingAggregatorsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListFindingAggregatorsRequest, ListFindingAggregatorsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListInvitationsResult> listInvitationsAsync(ListInvitationsRequest request) {
 
         return listInvitationsAsync(request, null);
@@ -635,6 +687,19 @@ public class AbstractAWSSecurityHubAsync extends AbstractAWSSecurityHub implemen
     @Override
     public java.util.concurrent.Future<UpdateActionTargetResult> updateActionTargetAsync(UpdateActionTargetRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateActionTargetRequest, UpdateActionTargetResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateFindingAggregatorResult> updateFindingAggregatorAsync(UpdateFindingAggregatorRequest request) {
+
+        return updateFindingAggregatorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateFindingAggregatorResult> updateFindingAggregatorAsync(UpdateFindingAggregatorRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateFindingAggregatorRequest, UpdateFindingAggregatorResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

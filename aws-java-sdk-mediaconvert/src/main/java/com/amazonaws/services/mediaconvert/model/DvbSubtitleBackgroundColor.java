@@ -15,7 +15,8 @@ package com.amazonaws.services.mediaconvert.model;
 import javax.annotation.Generated;
 
 /**
- * Specifies the color of the rectangle behind the captions. All burn-in and DVB-Sub font settings must match.
+ * Specify the color of the rectangle behind the captions. Leave background color (BackgroundColor) blank and set Style
+ * passthrough (StylePassthrough) to enabled to use the background color data from your input captions, if present.
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum DvbSubtitleBackgroundColor {

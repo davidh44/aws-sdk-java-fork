@@ -30,7 +30,7 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the account that owns the connection.
+     * The ID of the Amazon Web Services account that owns the connection.
      * </p>
      */
     private String ownerAccount;
@@ -104,7 +104,7 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
     private String connectionState;
     /**
      * <p>
-     * The Region where the connection is located.
+     * The Amazon Web Services Region where the connection is located.
      * </p>
      */
     private String region;
@@ -221,11 +221,11 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the account that owns the connection.
+     * The ID of the Amazon Web Services account that owns the connection.
      * </p>
      * 
      * @param ownerAccount
-     *        The ID of the account that owns the connection.
+     *        The ID of the Amazon Web Services account that owns the connection.
      */
 
     public void setOwnerAccount(String ownerAccount) {
@@ -234,10 +234,10 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the account that owns the connection.
+     * The ID of the Amazon Web Services account that owns the connection.
      * </p>
      * 
-     * @return The ID of the account that owns the connection.
+     * @return The ID of the Amazon Web Services account that owns the connection.
      */
 
     public String getOwnerAccount() {
@@ -246,11 +246,11 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the account that owns the connection.
+     * The ID of the Amazon Web Services account that owns the connection.
      * </p>
      * 
      * @param ownerAccount
-     *        The ID of the account that owns the connection.
+     *        The ID of the Amazon Web Services account that owns the connection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -914,11 +914,11 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Region where the connection is located.
+     * The Amazon Web Services Region where the connection is located.
      * </p>
      * 
      * @param region
-     *        The Region where the connection is located.
+     *        The Amazon Web Services Region where the connection is located.
      */
 
     public void setRegion(String region) {
@@ -927,10 +927,10 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Region where the connection is located.
+     * The Amazon Web Services Region where the connection is located.
      * </p>
      * 
-     * @return The Region where the connection is located.
+     * @return The Amazon Web Services Region where the connection is located.
      */
 
     public String getRegion() {
@@ -939,11 +939,11 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Region where the connection is located.
+     * The Amazon Web Services Region where the connection is located.
      * </p>
      * 
      * @param region
-     *        The Region where the connection is located.
+     *        The Amazon Web Services Region where the connection is located.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -58,6 +58,10 @@ public class HlsPackageJsonUnmarshaller implements Unmarshaller<HlsPackage, Json
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("includeDvbSubtitles", targetDepth)) {
+                    context.nextToken();
+                    hlsPackage.setIncludeDvbSubtitles(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("segmentDurationSeconds", targetDepth)) {
                     context.nextToken();
                     hlsPackage.setSegmentDurationSeconds(context.getUnmarshaller(Integer.class).unmarshall(context));

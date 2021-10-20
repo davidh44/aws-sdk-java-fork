@@ -30,10 +30,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 public class CaptionDestinationSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
-     * Settings related to burn-in captions. Set up burn-in captions in the same output as your video. For more
-     * information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/burn-in-output-captions.html. When you work
-     * directly in your JSON job specification, include this object and any required children when you set
-     * destinationType to BURN_IN.
+     * Burn-in is a captions delivery method, rather than a captions format. Burn-in writes the captions directly on
+     * your video frames, replacing pixels of video content with the captions. Set up burn-in captions in the same
+     * output as your video. For more information, see
+     * https://docs.aws.amazon.com/mediaconvert/latest/ug/burn-in-output-captions.html. When you work directly in your
+     * JSON job specification, include this object and any required children when you set destinationType to BURN_IN.
      */
     private BurninDestinationSettings burninDestinationSettings;
     /**
@@ -76,7 +77,12 @@ public class CaptionDestinationSettings implements Serializable, Cloneable, Stru
      * destinationType to SCC.
      */
     private SccDestinationSettings sccDestinationSettings;
-    /** SRT Destination Settings */
+    /**
+     * Settings related to SRT captions. SRT is a sidecar format that holds captions in a file that is separate from the
+     * video container. Set up sidecar captions in the same output group, but different output from your video. When you
+     * work directly in your JSON job specification, include this object and any required children when you set
+     * destinationType to SRT.
+     */
     private SrtDestinationSettings srtDestinationSettings;
     /**
      * Settings related to teletext captions. Set up teletext captions in the same output as your video. For more
@@ -93,20 +99,29 @@ public class CaptionDestinationSettings implements Serializable, Cloneable, Stru
      * destinationType to TTML.
      */
     private TtmlDestinationSettings ttmlDestinationSettings;
-    /** WEBVTT Destination Settings */
+    /**
+     * Settings related to WebVTT captions. WebVTT is a sidecar format that holds captions in a file that is separate
+     * from the video container. Set up sidecar captions in the same output group, but different output from your video.
+     * For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/ttml-and-webvtt-output-captions.html.
+     * When you work directly in your JSON job specification, include this object and any required children when you set
+     * destinationType to WebVTT.
+     */
     private WebvttDestinationSettings webvttDestinationSettings;
 
     /**
-     * Settings related to burn-in captions. Set up burn-in captions in the same output as your video. For more
-     * information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/burn-in-output-captions.html. When you work
-     * directly in your JSON job specification, include this object and any required children when you set
-     * destinationType to BURN_IN.
+     * Burn-in is a captions delivery method, rather than a captions format. Burn-in writes the captions directly on
+     * your video frames, replacing pixels of video content with the captions. Set up burn-in captions in the same
+     * output as your video. For more information, see
+     * https://docs.aws.amazon.com/mediaconvert/latest/ug/burn-in-output-captions.html. When you work directly in your
+     * JSON job specification, include this object and any required children when you set destinationType to BURN_IN.
      * 
      * @param burninDestinationSettings
-     *        Settings related to burn-in captions. Set up burn-in captions in the same output as your video. For more
-     *        information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/burn-in-output-captions.html. When you
-     *        work directly in your JSON job specification, include this object and any required children when you set
-     *        destinationType to BURN_IN.
+     *        Burn-in is a captions delivery method, rather than a captions format. Burn-in writes the captions directly
+     *        on your video frames, replacing pixels of video content with the captions. Set up burn-in captions in the
+     *        same output as your video. For more information, see
+     *        https://docs.aws.amazon.com/mediaconvert/latest/ug/burn-in-output-captions.html. When you work directly in
+     *        your JSON job specification, include this object and any required children when you set destinationType to
+     *        BURN_IN.
      */
 
     public void setBurninDestinationSettings(BurninDestinationSettings burninDestinationSettings) {
@@ -114,15 +129,18 @@ public class CaptionDestinationSettings implements Serializable, Cloneable, Stru
     }
 
     /**
-     * Settings related to burn-in captions. Set up burn-in captions in the same output as your video. For more
-     * information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/burn-in-output-captions.html. When you work
-     * directly in your JSON job specification, include this object and any required children when you set
-     * destinationType to BURN_IN.
+     * Burn-in is a captions delivery method, rather than a captions format. Burn-in writes the captions directly on
+     * your video frames, replacing pixels of video content with the captions. Set up burn-in captions in the same
+     * output as your video. For more information, see
+     * https://docs.aws.amazon.com/mediaconvert/latest/ug/burn-in-output-captions.html. When you work directly in your
+     * JSON job specification, include this object and any required children when you set destinationType to BURN_IN.
      * 
-     * @return Settings related to burn-in captions. Set up burn-in captions in the same output as your video. For more
-     *         information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/burn-in-output-captions.html. When
-     *         you work directly in your JSON job specification, include this object and any required children when you
-     *         set destinationType to BURN_IN.
+     * @return Burn-in is a captions delivery method, rather than a captions format. Burn-in writes the captions
+     *         directly on your video frames, replacing pixels of video content with the captions. Set up burn-in
+     *         captions in the same output as your video. For more information, see
+     *         https://docs.aws.amazon.com/mediaconvert/latest/ug/burn-in-output-captions.html. When you work directly
+     *         in your JSON job specification, include this object and any required children when you set
+     *         destinationType to BURN_IN.
      */
 
     public BurninDestinationSettings getBurninDestinationSettings() {
@@ -130,16 +148,19 @@ public class CaptionDestinationSettings implements Serializable, Cloneable, Stru
     }
 
     /**
-     * Settings related to burn-in captions. Set up burn-in captions in the same output as your video. For more
-     * information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/burn-in-output-captions.html. When you work
-     * directly in your JSON job specification, include this object and any required children when you set
-     * destinationType to BURN_IN.
+     * Burn-in is a captions delivery method, rather than a captions format. Burn-in writes the captions directly on
+     * your video frames, replacing pixels of video content with the captions. Set up burn-in captions in the same
+     * output as your video. For more information, see
+     * https://docs.aws.amazon.com/mediaconvert/latest/ug/burn-in-output-captions.html. When you work directly in your
+     * JSON job specification, include this object and any required children when you set destinationType to BURN_IN.
      * 
      * @param burninDestinationSettings
-     *        Settings related to burn-in captions. Set up burn-in captions in the same output as your video. For more
-     *        information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/burn-in-output-captions.html. When you
-     *        work directly in your JSON job specification, include this object and any required children when you set
-     *        destinationType to BURN_IN.
+     *        Burn-in is a captions delivery method, rather than a captions format. Burn-in writes the captions directly
+     *        on your video frames, replacing pixels of video content with the captions. Set up burn-in captions in the
+     *        same output as your video. For more information, see
+     *        https://docs.aws.amazon.com/mediaconvert/latest/ug/burn-in-output-captions.html. When you work directly in
+     *        your JSON job specification, include this object and any required children when you set destinationType to
+     *        BURN_IN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -473,10 +494,16 @@ public class CaptionDestinationSettings implements Serializable, Cloneable, Stru
     }
 
     /**
-     * SRT Destination Settings
+     * Settings related to SRT captions. SRT is a sidecar format that holds captions in a file that is separate from the
+     * video container. Set up sidecar captions in the same output group, but different output from your video. When you
+     * work directly in your JSON job specification, include this object and any required children when you set
+     * destinationType to SRT.
      * 
      * @param srtDestinationSettings
-     *        SRT Destination Settings
+     *        Settings related to SRT captions. SRT is a sidecar format that holds captions in a file that is separate
+     *        from the video container. Set up sidecar captions in the same output group, but different output from your
+     *        video. When you work directly in your JSON job specification, include this object and any required
+     *        children when you set destinationType to SRT.
      */
 
     public void setSrtDestinationSettings(SrtDestinationSettings srtDestinationSettings) {
@@ -484,9 +511,15 @@ public class CaptionDestinationSettings implements Serializable, Cloneable, Stru
     }
 
     /**
-     * SRT Destination Settings
+     * Settings related to SRT captions. SRT is a sidecar format that holds captions in a file that is separate from the
+     * video container. Set up sidecar captions in the same output group, but different output from your video. When you
+     * work directly in your JSON job specification, include this object and any required children when you set
+     * destinationType to SRT.
      * 
-     * @return SRT Destination Settings
+     * @return Settings related to SRT captions. SRT is a sidecar format that holds captions in a file that is separate
+     *         from the video container. Set up sidecar captions in the same output group, but different output from
+     *         your video. When you work directly in your JSON job specification, include this object and any required
+     *         children when you set destinationType to SRT.
      */
 
     public SrtDestinationSettings getSrtDestinationSettings() {
@@ -494,10 +527,16 @@ public class CaptionDestinationSettings implements Serializable, Cloneable, Stru
     }
 
     /**
-     * SRT Destination Settings
+     * Settings related to SRT captions. SRT is a sidecar format that holds captions in a file that is separate from the
+     * video container. Set up sidecar captions in the same output group, but different output from your video. When you
+     * work directly in your JSON job specification, include this object and any required children when you set
+     * destinationType to SRT.
      * 
      * @param srtDestinationSettings
-     *        SRT Destination Settings
+     *        Settings related to SRT captions. SRT is a sidecar format that holds captions in a file that is separate
+     *        from the video container. Set up sidecar captions in the same output group, but different output from your
+     *        video. When you work directly in your JSON job specification, include this object and any required
+     *        children when you set destinationType to SRT.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -620,10 +659,19 @@ public class CaptionDestinationSettings implements Serializable, Cloneable, Stru
     }
 
     /**
-     * WEBVTT Destination Settings
+     * Settings related to WebVTT captions. WebVTT is a sidecar format that holds captions in a file that is separate
+     * from the video container. Set up sidecar captions in the same output group, but different output from your video.
+     * For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/ttml-and-webvtt-output-captions.html.
+     * When you work directly in your JSON job specification, include this object and any required children when you set
+     * destinationType to WebVTT.
      * 
      * @param webvttDestinationSettings
-     *        WEBVTT Destination Settings
+     *        Settings related to WebVTT captions. WebVTT is a sidecar format that holds captions in a file that is
+     *        separate from the video container. Set up sidecar captions in the same output group, but different output
+     *        from your video. For more information, see
+     *        https://docs.aws.amazon.com/mediaconvert/latest/ug/ttml-and-webvtt-output-captions.html. When you work
+     *        directly in your JSON job specification, include this object and any required children when you set
+     *        destinationType to WebVTT.
      */
 
     public void setWebvttDestinationSettings(WebvttDestinationSettings webvttDestinationSettings) {
@@ -631,9 +679,18 @@ public class CaptionDestinationSettings implements Serializable, Cloneable, Stru
     }
 
     /**
-     * WEBVTT Destination Settings
+     * Settings related to WebVTT captions. WebVTT is a sidecar format that holds captions in a file that is separate
+     * from the video container. Set up sidecar captions in the same output group, but different output from your video.
+     * For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/ttml-and-webvtt-output-captions.html.
+     * When you work directly in your JSON job specification, include this object and any required children when you set
+     * destinationType to WebVTT.
      * 
-     * @return WEBVTT Destination Settings
+     * @return Settings related to WebVTT captions. WebVTT is a sidecar format that holds captions in a file that is
+     *         separate from the video container. Set up sidecar captions in the same output group, but different output
+     *         from your video. For more information, see
+     *         https://docs.aws.amazon.com/mediaconvert/latest/ug/ttml-and-webvtt-output-captions.html. When you work
+     *         directly in your JSON job specification, include this object and any required children when you set
+     *         destinationType to WebVTT.
      */
 
     public WebvttDestinationSettings getWebvttDestinationSettings() {
@@ -641,10 +698,19 @@ public class CaptionDestinationSettings implements Serializable, Cloneable, Stru
     }
 
     /**
-     * WEBVTT Destination Settings
+     * Settings related to WebVTT captions. WebVTT is a sidecar format that holds captions in a file that is separate
+     * from the video container. Set up sidecar captions in the same output group, but different output from your video.
+     * For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/ttml-and-webvtt-output-captions.html.
+     * When you work directly in your JSON job specification, include this object and any required children when you set
+     * destinationType to WebVTT.
      * 
      * @param webvttDestinationSettings
-     *        WEBVTT Destination Settings
+     *        Settings related to WebVTT captions. WebVTT is a sidecar format that holds captions in a file that is
+     *        separate from the video container. Set up sidecar captions in the same output group, but different output
+     *        from your video. For more information, see
+     *        https://docs.aws.amazon.com/mediaconvert/latest/ug/ttml-and-webvtt-output-captions.html. When you work
+     *        directly in your JSON job specification, include this object and any required children when you set
+     *        destinationType to WebVTT.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

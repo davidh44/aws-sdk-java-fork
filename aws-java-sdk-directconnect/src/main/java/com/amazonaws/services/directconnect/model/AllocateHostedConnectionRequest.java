@@ -33,7 +33,7 @@ public class AllocateHostedConnectionRequest extends com.amazonaws.AmazonWebServ
     private String connectionId;
     /**
      * <p>
-     * The ID of the account ID of the customer for the connection.
+     * The ID of the Amazon Web Services account ID of the customer for the connection.
      * </p>
      */
     private String ownerAccount;
@@ -106,11 +106,11 @@ public class AllocateHostedConnectionRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The ID of the account ID of the customer for the connection.
+     * The ID of the Amazon Web Services account ID of the customer for the connection.
      * </p>
      * 
      * @param ownerAccount
-     *        The ID of the account ID of the customer for the connection.
+     *        The ID of the Amazon Web Services account ID of the customer for the connection.
      */
 
     public void setOwnerAccount(String ownerAccount) {
@@ -119,10 +119,10 @@ public class AllocateHostedConnectionRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The ID of the account ID of the customer for the connection.
+     * The ID of the Amazon Web Services account ID of the customer for the connection.
      * </p>
      * 
-     * @return The ID of the account ID of the customer for the connection.
+     * @return The ID of the Amazon Web Services account ID of the customer for the connection.
      */
 
     public String getOwnerAccount() {
@@ -131,11 +131,11 @@ public class AllocateHostedConnectionRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The ID of the account ID of the customer for the connection.
+     * The ID of the Amazon Web Services account ID of the customer for the connection.
      * </p>
      * 
      * @param ownerAccount
-     *        The ID of the account ID of the customer for the connection.
+     *        The ID of the Amazon Web Services account ID of the customer for the connection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

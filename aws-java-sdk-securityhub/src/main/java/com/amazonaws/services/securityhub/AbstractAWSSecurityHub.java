@@ -64,6 +64,11 @@ public class AbstractAWSSecurityHub implements AWSSecurityHub {
     }
 
     @Override
+    public CreateFindingAggregatorResult createFindingAggregator(CreateFindingAggregatorRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateInsightResult createInsight(CreateInsightRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -80,6 +85,11 @@ public class AbstractAWSSecurityHub implements AWSSecurityHub {
 
     @Override
     public DeleteActionTargetResult deleteActionTarget(DeleteActionTargetRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteFindingAggregatorResult deleteFindingAggregator(DeleteFindingAggregatorRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -185,6 +195,11 @@ public class AbstractAWSSecurityHub implements AWSSecurityHub {
     }
 
     @Override
+    public GetFindingAggregatorResult getFindingAggregator(GetFindingAggregatorRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetFindingsResult getFindings(GetFindingsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -226,6 +241,11 @@ public class AbstractAWSSecurityHub implements AWSSecurityHub {
     }
 
     @Override
+    public ListFindingAggregatorsResult listFindingAggregators(ListFindingAggregatorsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListInvitationsResult listInvitations(ListInvitationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -257,6 +277,11 @@ public class AbstractAWSSecurityHub implements AWSSecurityHub {
 
     @Override
     public UpdateActionTargetResult updateActionTarget(UpdateActionTargetRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateFindingAggregatorResult updateFindingAggregator(UpdateFindingAggregatorRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

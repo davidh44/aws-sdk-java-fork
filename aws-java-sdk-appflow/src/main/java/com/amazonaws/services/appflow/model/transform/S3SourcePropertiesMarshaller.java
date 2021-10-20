@@ -31,6 +31,8 @@ public class S3SourcePropertiesMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("bucketName").build();
     private static final MarshallingInfo<String> BUCKETPREFIX_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("bucketPrefix").build();
+    private static final MarshallingInfo<StructuredPojo> S3INPUTFORMATCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("s3InputFormatConfig").build();
 
     private static final S3SourcePropertiesMarshaller instance = new S3SourcePropertiesMarshaller();
 
@@ -50,6 +52,7 @@ public class S3SourcePropertiesMarshaller {
         try {
             protocolMarshaller.marshall(s3SourceProperties.getBucketName(), BUCKETNAME_BINDING);
             protocolMarshaller.marshall(s3SourceProperties.getBucketPrefix(), BUCKETPREFIX_BINDING);
+            protocolMarshaller.marshall(s3SourceProperties.getS3InputFormatConfig(), S3INPUTFORMATCONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

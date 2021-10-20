@@ -28,7 +28,7 @@ public class AssociateVirtualInterfaceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The ID of the account that owns the virtual interface.
+     * The ID of the Amazon Web Services account that owns the virtual interface.
      * </p>
      */
     private String ownerAccount;
@@ -215,7 +215,7 @@ public class AssociateVirtualInterfaceResult extends com.amazonaws.AmazonWebServ
     private com.amazonaws.internal.SdkInternalList<BGPPeer> bgpPeers;
     /**
      * <p>
-     * The Region where the virtual interface is located.
+     * The Amazon Web Services Region where the virtual interface is located.
      * </p>
      */
     private String region;
@@ -241,11 +241,11 @@ public class AssociateVirtualInterfaceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The ID of the account that owns the virtual interface.
+     * The ID of the Amazon Web Services account that owns the virtual interface.
      * </p>
      * 
      * @param ownerAccount
-     *        The ID of the account that owns the virtual interface.
+     *        The ID of the Amazon Web Services account that owns the virtual interface.
      */
 
     public void setOwnerAccount(String ownerAccount) {
@@ -254,10 +254,10 @@ public class AssociateVirtualInterfaceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The ID of the account that owns the virtual interface.
+     * The ID of the Amazon Web Services account that owns the virtual interface.
      * </p>
      * 
-     * @return The ID of the account that owns the virtual interface.
+     * @return The ID of the Amazon Web Services account that owns the virtual interface.
      */
 
     public String getOwnerAccount() {
@@ -266,11 +266,11 @@ public class AssociateVirtualInterfaceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The ID of the account that owns the virtual interface.
+     * The ID of the Amazon Web Services account that owns the virtual interface.
      * </p>
      * 
      * @param ownerAccount
-     *        The ID of the account that owns the virtual interface.
+     *        The ID of the Amazon Web Services account that owns the virtual interface.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1808,11 +1808,11 @@ public class AssociateVirtualInterfaceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Region where the virtual interface is located.
+     * The Amazon Web Services Region where the virtual interface is located.
      * </p>
      * 
      * @param region
-     *        The Region where the virtual interface is located.
+     *        The Amazon Web Services Region where the virtual interface is located.
      */
 
     public void setRegion(String region) {
@@ -1821,10 +1821,10 @@ public class AssociateVirtualInterfaceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Region where the virtual interface is located.
+     * The Amazon Web Services Region where the virtual interface is located.
      * </p>
      * 
-     * @return The Region where the virtual interface is located.
+     * @return The Amazon Web Services Region where the virtual interface is located.
      */
 
     public String getRegion() {
@@ -1833,11 +1833,11 @@ public class AssociateVirtualInterfaceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Region where the virtual interface is located.
+     * The Amazon Web Services Region where the virtual interface is located.
      * </p>
      * 
      * @param region
-     *        The Region where the virtual interface is located.
+     *        The Amazon Web Services Region where the virtual interface is located.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

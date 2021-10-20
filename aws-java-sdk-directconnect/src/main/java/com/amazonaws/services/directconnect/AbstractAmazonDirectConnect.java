@@ -95,6 +95,11 @@ public class AbstractAmazonDirectConnect implements AmazonDirectConnect {
     }
 
     @Override
+    public ConfirmCustomerAgreementResult confirmCustomerAgreement(ConfirmCustomerAgreementRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ConfirmPrivateVirtualInterfaceResult confirmPrivateVirtualInterface(ConfirmPrivateVirtualInterfaceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -224,6 +229,11 @@ public class AbstractAmazonDirectConnect implements AmazonDirectConnect {
     }
 
     @Override
+    public DescribeCustomerMetadataResult describeCustomerMetadata(DescribeCustomerMetadataRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeDirectConnectGatewayAssociationProposalsResult describeDirectConnectGatewayAssociationProposals(
             DescribeDirectConnectGatewayAssociationProposalsRequest request) {
         throw new java.lang.UnsupportedOperationException();
@@ -283,6 +293,11 @@ public class AbstractAmazonDirectConnect implements AmazonDirectConnect {
     @Override
     public DescribeLocationsResult describeLocations() {
         return describeLocations(new DescribeLocationsRequest());
+    }
+
+    @Override
+    public DescribeRouterConfigurationResult describeRouterConfiguration(DescribeRouterConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
@@ -347,6 +362,11 @@ public class AbstractAmazonDirectConnect implements AmazonDirectConnect {
 
     @Override
     public UpdateConnectionResult updateConnection(UpdateConnectionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateDirectConnectGatewayResult updateDirectConnectGateway(UpdateDirectConnectGatewayRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -641,6 +641,47 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
 
     /**
      * <p>
+     * Used to enable finding aggregation. Must be called from the aggregation Region.
+     * </p>
+     * <p>
+     * For more details about cross-Region replication, see <a
+     * href="securityhub/latest/userguide/finding-aggregation.html">Configuring finding aggregation</a> in the
+     * <i>Security Hub User Guide</i>.
+     * </p>
+     * 
+     * @param createFindingAggregatorRequest
+     * @return A Java Future containing the result of the CreateFindingAggregator operation returned by the service.
+     * @sample AWSSecurityHubAsync.CreateFindingAggregator
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/CreateFindingAggregator"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateFindingAggregatorResult> createFindingAggregatorAsync(CreateFindingAggregatorRequest createFindingAggregatorRequest);
+
+    /**
+     * <p>
+     * Used to enable finding aggregation. Must be called from the aggregation Region.
+     * </p>
+     * <p>
+     * For more details about cross-Region replication, see <a
+     * href="securityhub/latest/userguide/finding-aggregation.html">Configuring finding aggregation</a> in the
+     * <i>Security Hub User Guide</i>.
+     * </p>
+     * 
+     * @param createFindingAggregatorRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateFindingAggregator operation returned by the service.
+     * @sample AWSSecurityHubAsyncHandler.CreateFindingAggregator
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/CreateFindingAggregator"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateFindingAggregatorResult> createFindingAggregatorAsync(CreateFindingAggregatorRequest createFindingAggregatorRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateFindingAggregatorRequest, CreateFindingAggregatorResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a custom insight in Security Hub. An insight is a consolidation of findings that relate to a security
      * issue that requires attention or remediation.
      * </p>
@@ -902,6 +943,45 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
      */
     java.util.concurrent.Future<DeleteActionTargetResult> deleteActionTargetAsync(DeleteActionTargetRequest deleteActionTargetRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteActionTargetRequest, DeleteActionTargetResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a finding aggregator. When you delete the finding aggregator, you stop finding aggregation.
+     * </p>
+     * <p>
+     * When you stop finding aggregation, findings that were already aggregated to the aggregation Region are still
+     * visible from the aggregation Region. New findings and finding updates are not aggregated.
+     * </p>
+     * 
+     * @param deleteFindingAggregatorRequest
+     * @return A Java Future containing the result of the DeleteFindingAggregator operation returned by the service.
+     * @sample AWSSecurityHubAsync.DeleteFindingAggregator
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DeleteFindingAggregator"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteFindingAggregatorResult> deleteFindingAggregatorAsync(DeleteFindingAggregatorRequest deleteFindingAggregatorRequest);
+
+    /**
+     * <p>
+     * Deletes a finding aggregator. When you delete the finding aggregator, you stop finding aggregation.
+     * </p>
+     * <p>
+     * When you stop finding aggregation, findings that were already aggregated to the aggregation Region are still
+     * visible from the aggregation Region. New findings and finding updates are not aggregated.
+     * </p>
+     * 
+     * @param deleteFindingAggregatorRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteFindingAggregator operation returned by the service.
+     * @sample AWSSecurityHubAsyncHandler.DeleteFindingAggregator
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DeleteFindingAggregator"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteFindingAggregatorResult> deleteFindingAggregatorAsync(DeleteFindingAggregatorRequest deleteFindingAggregatorRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteFindingAggregatorRequest, DeleteFindingAggregatorResult> asyncHandler);
 
     /**
      * <p>
@@ -1765,7 +1845,42 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
 
     /**
      * <p>
+     * Returns the current finding aggregation configuration.
+     * </p>
+     * 
+     * @param getFindingAggregatorRequest
+     * @return A Java Future containing the result of the GetFindingAggregator operation returned by the service.
+     * @sample AWSSecurityHubAsync.GetFindingAggregator
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/GetFindingAggregator"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetFindingAggregatorResult> getFindingAggregatorAsync(GetFindingAggregatorRequest getFindingAggregatorRequest);
+
+    /**
+     * <p>
+     * Returns the current finding aggregation configuration.
+     * </p>
+     * 
+     * @param getFindingAggregatorRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetFindingAggregator operation returned by the service.
+     * @sample AWSSecurityHubAsyncHandler.GetFindingAggregator
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/GetFindingAggregator"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetFindingAggregatorResult> getFindingAggregatorAsync(GetFindingAggregatorRequest getFindingAggregatorRequest,
+            com.amazonaws.handlers.AsyncHandler<GetFindingAggregatorRequest, GetFindingAggregatorResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of findings that match the specified criteria.
+     * </p>
+     * <p>
+     * If finding aggregation is enabled, then when you call <code>GetFindings</code> from the aggregation Region, the
+     * results include all of the matching findings from both the aggregation Region and the linked Regions.
      * </p>
      * 
      * @param getFindingsRequest
@@ -1779,6 +1894,10 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
     /**
      * <p>
      * Returns a list of findings that match the specified criteria.
+     * </p>
+     * <p>
+     * If finding aggregation is enabled, then when you call <code>GetFindings</code> from the aggregation Region, the
+     * results include all of the matching findings from both the aggregation Region and the linked Regions.
      * </p>
      * 
      * @param getFindingsRequest
@@ -2091,6 +2210,39 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
 
     /**
      * <p>
+     * If finding aggregation is enabled, then <code>ListFindingAggregators</code> returns the ARN of the finding
+     * aggregator. You can run this operation from any Region.
+     * </p>
+     * 
+     * @param listFindingAggregatorsRequest
+     * @return A Java Future containing the result of the ListFindingAggregators operation returned by the service.
+     * @sample AWSSecurityHubAsync.ListFindingAggregators
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListFindingAggregators"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListFindingAggregatorsResult> listFindingAggregatorsAsync(ListFindingAggregatorsRequest listFindingAggregatorsRequest);
+
+    /**
+     * <p>
+     * If finding aggregation is enabled, then <code>ListFindingAggregators</code> returns the ARN of the finding
+     * aggregator. You can run this operation from any Region.
+     * </p>
+     * 
+     * @param listFindingAggregatorsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListFindingAggregators operation returned by the service.
+     * @sample AWSSecurityHubAsyncHandler.ListFindingAggregators
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListFindingAggregators"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListFindingAggregatorsResult> listFindingAggregatorsAsync(ListFindingAggregatorsRequest listFindingAggregatorsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListFindingAggregatorsRequest, ListFindingAggregatorsResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists all Security Hub membership invitations that were sent to the current Amazon Web Services account.
      * </p>
      * <p>
@@ -2325,6 +2477,45 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
      */
     java.util.concurrent.Future<UpdateActionTargetResult> updateActionTargetAsync(UpdateActionTargetRequest updateActionTargetRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateActionTargetRequest, UpdateActionTargetResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the finding aggregation configuration. Used to update the Region linking mode and the list of included or
+     * excluded Regions. You cannot use <code>UpdateFindingAggregator</code> to change the aggregation Region.
+     * </p>
+     * <p>
+     * You must run <code>UpdateFindingAggregator</code> from the current aggregation Region.
+     * </p>
+     * 
+     * @param updateFindingAggregatorRequest
+     * @return A Java Future containing the result of the UpdateFindingAggregator operation returned by the service.
+     * @sample AWSSecurityHubAsync.UpdateFindingAggregator
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateFindingAggregator"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateFindingAggregatorResult> updateFindingAggregatorAsync(UpdateFindingAggregatorRequest updateFindingAggregatorRequest);
+
+    /**
+     * <p>
+     * Updates the finding aggregation configuration. Used to update the Region linking mode and the list of included or
+     * excluded Regions. You cannot use <code>UpdateFindingAggregator</code> to change the aggregation Region.
+     * </p>
+     * <p>
+     * You must run <code>UpdateFindingAggregator</code> from the current aggregation Region.
+     * </p>
+     * 
+     * @param updateFindingAggregatorRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateFindingAggregator operation returned by the service.
+     * @sample AWSSecurityHubAsyncHandler.UpdateFindingAggregator
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateFindingAggregator"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateFindingAggregatorResult> updateFindingAggregatorAsync(UpdateFindingAggregatorRequest updateFindingAggregatorRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateFindingAggregatorRequest, UpdateFindingAggregatorResult> asyncHandler);
 
     /**
      * <p>

@@ -47,6 +47,8 @@ public enum DirectConnectActions implements Action {
     AssociateVirtualInterface("directconnect:AssociateVirtualInterface"),
     /** Action for the ConfirmConnection operation. */
     ConfirmConnection("directconnect:ConfirmConnection"),
+    /** Action for the ConfirmCustomerAgreement operation. */
+    ConfirmCustomerAgreement("directconnect:ConfirmCustomerAgreement"),
     /** Action for the ConfirmPrivateVirtualInterface operation. */
     ConfirmPrivateVirtualInterface("directconnect:ConfirmPrivateVirtualInterface"),
     /** Action for the ConfirmPublicVirtualInterface operation. */
@@ -95,6 +97,8 @@ public enum DirectConnectActions implements Action {
     DescribeConnections("directconnect:DescribeConnections"),
     /** Action for the DescribeConnectionsOnInterconnect operation. */
     DescribeConnectionsOnInterconnect("directconnect:DescribeConnectionsOnInterconnect"),
+    /** Action for the DescribeCustomerMetadata operation. */
+    DescribeCustomerMetadata("directconnect:DescribeCustomerMetadata"),
     /** Action for the DescribeDirectConnectGatewayAssociationProposals operation. */
     DescribeDirectConnectGatewayAssociationProposals("directconnect:DescribeDirectConnectGatewayAssociationProposals"),
     /** Action for the DescribeDirectConnectGatewayAssociations operation. */
@@ -115,6 +119,8 @@ public enum DirectConnectActions implements Action {
     DescribeLoa("directconnect:DescribeLoa"),
     /** Action for the DescribeLocations operation. */
     DescribeLocations("directconnect:DescribeLocations"),
+    /** Action for the DescribeRouterConfiguration operation. */
+    DescribeRouterConfiguration("directconnect:DescribeRouterConfiguration"),
     /** Action for the DescribeTags operation. */
     DescribeTags("directconnect:DescribeTags"),
     /** Action for the DescribeVirtualGateways operation. */
@@ -137,6 +143,8 @@ public enum DirectConnectActions implements Action {
     UntagResource("directconnect:UntagResource"),
     /** Action for the UpdateConnection operation. */
     UpdateConnection("directconnect:UpdateConnection"),
+    /** Action for the UpdateDirectConnectGateway operation. */
+    UpdateDirectConnectGateway("directconnect:UpdateDirectConnectGateway"),
     /** Action for the UpdateDirectConnectGatewayAssociation operation. */
     UpdateDirectConnectGatewayAssociation("directconnect:UpdateDirectConnectGatewayAssociation"),
     /** Action for the UpdateLag operation. */

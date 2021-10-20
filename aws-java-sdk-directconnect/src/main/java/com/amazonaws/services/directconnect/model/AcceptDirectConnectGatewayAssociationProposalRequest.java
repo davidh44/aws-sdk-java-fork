@@ -40,7 +40,7 @@ public class AcceptDirectConnectGatewayAssociationProposalRequest extends com.am
     private String proposalId;
     /**
      * <p>
-     * The ID of the account that owns the virtual private gateway or transit gateway.
+     * The ID of the Amazon Web Services account that owns the virtual private gateway or transit gateway.
      * </p>
      */
     private String associatedGatewayOwnerAccount;
@@ -138,11 +138,11 @@ public class AcceptDirectConnectGatewayAssociationProposalRequest extends com.am
 
     /**
      * <p>
-     * The ID of the account that owns the virtual private gateway or transit gateway.
+     * The ID of the Amazon Web Services account that owns the virtual private gateway or transit gateway.
      * </p>
      * 
      * @param associatedGatewayOwnerAccount
-     *        The ID of the account that owns the virtual private gateway or transit gateway.
+     *        The ID of the Amazon Web Services account that owns the virtual private gateway or transit gateway.
      */
 
     public void setAssociatedGatewayOwnerAccount(String associatedGatewayOwnerAccount) {
@@ -151,10 +151,10 @@ public class AcceptDirectConnectGatewayAssociationProposalRequest extends com.am
 
     /**
      * <p>
-     * The ID of the account that owns the virtual private gateway or transit gateway.
+     * The ID of the Amazon Web Services account that owns the virtual private gateway or transit gateway.
      * </p>
      * 
-     * @return The ID of the account that owns the virtual private gateway or transit gateway.
+     * @return The ID of the Amazon Web Services account that owns the virtual private gateway or transit gateway.
      */
 
     public String getAssociatedGatewayOwnerAccount() {
@@ -163,11 +163,11 @@ public class AcceptDirectConnectGatewayAssociationProposalRequest extends com.am
 
     /**
      * <p>
-     * The ID of the account that owns the virtual private gateway or transit gateway.
+     * The ID of the Amazon Web Services account that owns the virtual private gateway or transit gateway.
      * </p>
      * 
      * @param associatedGatewayOwnerAccount
-     *        The ID of the account that owns the virtual private gateway or transit gateway.
+     *        The ID of the Amazon Web Services account that owns the virtual private gateway or transit gateway.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

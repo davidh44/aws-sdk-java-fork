@@ -35,6 +35,8 @@ public class FileSourceSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sourceFile").build();
     private static final MarshallingInfo<Integer> TIMEDELTA_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("timeDelta").build();
+    private static final MarshallingInfo<String> TIMEDELTAUNITS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("timeDeltaUnits").build();
 
     private static final FileSourceSettingsMarshaller instance = new FileSourceSettingsMarshaller();
 
@@ -56,6 +58,7 @@ public class FileSourceSettingsMarshaller {
             protocolMarshaller.marshall(fileSourceSettings.getFramerate(), FRAMERATE_BINDING);
             protocolMarshaller.marshall(fileSourceSettings.getSourceFile(), SOURCEFILE_BINDING);
             protocolMarshaller.marshall(fileSourceSettings.getTimeDelta(), TIMEDELTA_BINDING);
+            protocolMarshaller.marshall(fileSourceSettings.getTimeDeltaUnits(), TIMEDELTAUNITS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

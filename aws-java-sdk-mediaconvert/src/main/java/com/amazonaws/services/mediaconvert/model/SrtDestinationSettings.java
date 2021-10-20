@@ -18,7 +18,10 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * SRT Destination Settings
+ * Settings related to SRT captions. SRT is a sidecar format that holds captions in a file that is separate from the
+ * video container. Set up sidecar captions in the same output group, but different output from your video. When you
+ * work directly in your JSON job specification, include this object and any required children when you set
+ * destinationType to SRT.
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/SrtDestinationSettings"
  *      target="_top">AWS API Documentation</a>
@@ -27,18 +30,24 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 public class SrtDestinationSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
-     * Choose Enabled (ENABLED) to have MediaConvert use the font style, color, and position information from the
-     * captions source in the input. Keep the default value, Disabled (DISABLED), for simplified output captions.
+     * Set Style passthrough (StylePassthrough) to ENABLED to use the available style, color, and position information
+     * from your input captions. MediaConvert uses default settings for any missing style and position information in
+     * your input captions. Set Style passthrough to DISABLED, or leave blank, to ignore the style and position
+     * information from your input captions and use simplified output captions.
      */
     private String stylePassthrough;
 
     /**
-     * Choose Enabled (ENABLED) to have MediaConvert use the font style, color, and position information from the
-     * captions source in the input. Keep the default value, Disabled (DISABLED), for simplified output captions.
+     * Set Style passthrough (StylePassthrough) to ENABLED to use the available style, color, and position information
+     * from your input captions. MediaConvert uses default settings for any missing style and position information in
+     * your input captions. Set Style passthrough to DISABLED, or leave blank, to ignore the style and position
+     * information from your input captions and use simplified output captions.
      * 
      * @param stylePassthrough
-     *        Choose Enabled (ENABLED) to have MediaConvert use the font style, color, and position information from the
-     *        captions source in the input. Keep the default value, Disabled (DISABLED), for simplified output captions.
+     *        Set Style passthrough (StylePassthrough) to ENABLED to use the available style, color, and position
+     *        information from your input captions. MediaConvert uses default settings for any missing style and
+     *        position information in your input captions. Set Style passthrough to DISABLED, or leave blank, to ignore
+     *        the style and position information from your input captions and use simplified output captions.
      * @see SrtStylePassthrough
      */
 
@@ -47,12 +56,15 @@ public class SrtDestinationSettings implements Serializable, Cloneable, Structur
     }
 
     /**
-     * Choose Enabled (ENABLED) to have MediaConvert use the font style, color, and position information from the
-     * captions source in the input. Keep the default value, Disabled (DISABLED), for simplified output captions.
+     * Set Style passthrough (StylePassthrough) to ENABLED to use the available style, color, and position information
+     * from your input captions. MediaConvert uses default settings for any missing style and position information in
+     * your input captions. Set Style passthrough to DISABLED, or leave blank, to ignore the style and position
+     * information from your input captions and use simplified output captions.
      * 
-     * @return Choose Enabled (ENABLED) to have MediaConvert use the font style, color, and position information from
-     *         the captions source in the input. Keep the default value, Disabled (DISABLED), for simplified output
-     *         captions.
+     * @return Set Style passthrough (StylePassthrough) to ENABLED to use the available style, color, and position
+     *         information from your input captions. MediaConvert uses default settings for any missing style and
+     *         position information in your input captions. Set Style passthrough to DISABLED, or leave blank, to ignore
+     *         the style and position information from your input captions and use simplified output captions.
      * @see SrtStylePassthrough
      */
 
@@ -61,12 +73,16 @@ public class SrtDestinationSettings implements Serializable, Cloneable, Structur
     }
 
     /**
-     * Choose Enabled (ENABLED) to have MediaConvert use the font style, color, and position information from the
-     * captions source in the input. Keep the default value, Disabled (DISABLED), for simplified output captions.
+     * Set Style passthrough (StylePassthrough) to ENABLED to use the available style, color, and position information
+     * from your input captions. MediaConvert uses default settings for any missing style and position information in
+     * your input captions. Set Style passthrough to DISABLED, or leave blank, to ignore the style and position
+     * information from your input captions and use simplified output captions.
      * 
      * @param stylePassthrough
-     *        Choose Enabled (ENABLED) to have MediaConvert use the font style, color, and position information from the
-     *        captions source in the input. Keep the default value, Disabled (DISABLED), for simplified output captions.
+     *        Set Style passthrough (StylePassthrough) to ENABLED to use the available style, color, and position
+     *        information from your input captions. MediaConvert uses default settings for any missing style and
+     *        position information in your input captions. Set Style passthrough to DISABLED, or leave blank, to ignore
+     *        the style and position information from your input captions and use simplified output captions.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SrtStylePassthrough
      */
@@ -77,12 +93,16 @@ public class SrtDestinationSettings implements Serializable, Cloneable, Structur
     }
 
     /**
-     * Choose Enabled (ENABLED) to have MediaConvert use the font style, color, and position information from the
-     * captions source in the input. Keep the default value, Disabled (DISABLED), for simplified output captions.
+     * Set Style passthrough (StylePassthrough) to ENABLED to use the available style, color, and position information
+     * from your input captions. MediaConvert uses default settings for any missing style and position information in
+     * your input captions. Set Style passthrough to DISABLED, or leave blank, to ignore the style and position
+     * information from your input captions and use simplified output captions.
      * 
      * @param stylePassthrough
-     *        Choose Enabled (ENABLED) to have MediaConvert use the font style, color, and position information from the
-     *        captions source in the input. Keep the default value, Disabled (DISABLED), for simplified output captions.
+     *        Set Style passthrough (StylePassthrough) to ENABLED to use the available style, color, and position
+     *        information from your input captions. MediaConvert uses default settings for any missing style and
+     *        position information in your input captions. Set Style passthrough to DISABLED, or leave blank, to ignore
+     *        the style and position information from your input captions and use simplified output captions.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SrtStylePassthrough
      */

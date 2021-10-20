@@ -66,6 +66,10 @@ public class HlsPackageJsonUnmarshaller implements Unmarshaller<HlsPackage, Json
                     context.nextToken();
                     hlsPackage.setEncryption(HlsEncryptionJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("includeDvbSubtitles", targetDepth)) {
+                    context.nextToken();
+                    hlsPackage.setIncludeDvbSubtitles(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("includeIframeOnlyStream", targetDepth)) {
                     context.nextToken();
                     hlsPackage.setIncludeIframeOnlyStream(context.getUnmarshaller(Boolean.class).unmarshall(context));
