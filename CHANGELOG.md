@@ -1,3 +1,8 @@
+# __1.12.93__ __2021-10-21__
+## __Amazon Connect Service__
+  - ### Features
+    - Released Amazon Connect hours of operation API for general availability (GA). This API also supports AWS CloudFormation. For more information, see Amazon Connect Resource Type Reference in the AWS CloudFormation User Guide.
+
 # __1.12.92__ __2021-10-20__
 ## __AWS Direct Connect__
   - ### Features

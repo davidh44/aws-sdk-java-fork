@@ -362,9 +362,6 @@ public interface AmazonConnect {
 
     /**
      * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
-     * <p>
      * Creates hours of operation.
      * </p>
      * 
@@ -615,9 +612,6 @@ public interface AmazonConnect {
 
     /**
      * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
-     * <p>
      * Deletes an hours of operation.
      * </p>
      * 
@@ -843,9 +837,6 @@ public interface AmazonConnect {
     DescribeContactFlowResult describeContactFlow(DescribeContactFlowRequest describeContactFlowRequest);
 
     /**
-     * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
      * <p>
      * Describes the hours of operation.
      * </p>
@@ -2471,9 +2462,6 @@ public interface AmazonConnect {
     UpdateContactFlowNameResult updateContactFlowName(UpdateContactFlowNameRequest updateContactFlowNameRequest);
 
     /**
-     * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
      * <p>
      * Updates the hours of operation.
      * </p>

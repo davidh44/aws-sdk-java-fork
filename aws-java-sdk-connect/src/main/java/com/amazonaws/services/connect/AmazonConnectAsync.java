@@ -443,9 +443,6 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
-     * <p>
      * Creates hours of operation.
      * </p>
      * 
@@ -458,9 +455,6 @@ public interface AmazonConnectAsync extends AmazonConnect {
     java.util.concurrent.Future<CreateHoursOfOperationResult> createHoursOfOperationAsync(CreateHoursOfOperationRequest createHoursOfOperationRequest);
 
     /**
-     * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
      * <p>
      * Creates hours of operation.
      * </p>
@@ -770,9 +764,6 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
-     * <p>
      * Deletes an hours of operation.
      * </p>
      * 
@@ -785,9 +776,6 @@ public interface AmazonConnectAsync extends AmazonConnect {
     java.util.concurrent.Future<DeleteHoursOfOperationResult> deleteHoursOfOperationAsync(DeleteHoursOfOperationRequest deleteHoursOfOperationRequest);
 
     /**
-     * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
      * <p>
      * Deletes an hours of operation.
      * </p>
@@ -1105,9 +1093,6 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
-     * <p>
      * Describes the hours of operation.
      * </p>
      * 
@@ -1120,9 +1105,6 @@ public interface AmazonConnectAsync extends AmazonConnect {
     java.util.concurrent.Future<DescribeHoursOfOperationResult> describeHoursOfOperationAsync(DescribeHoursOfOperationRequest describeHoursOfOperationRequest);
 
     /**
-     * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
      * <p>
      * Describes the hours of operation.
      * </p>
@@ -3539,9 +3521,6 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
-     * <p>
      * Updates the hours of operation.
      * </p>
      * 
@@ -3554,9 +3533,6 @@ public interface AmazonConnectAsync extends AmazonConnect {
     java.util.concurrent.Future<UpdateHoursOfOperationResult> updateHoursOfOperationAsync(UpdateHoursOfOperationRequest updateHoursOfOperationRequest);
 
     /**
-     * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
      * <p>
      * Updates the hours of operation.
      * </p>

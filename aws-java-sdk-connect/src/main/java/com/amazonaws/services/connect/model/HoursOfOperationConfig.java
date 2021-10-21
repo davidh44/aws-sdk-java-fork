@@ -36,13 +36,13 @@ public class HoursOfOperationConfig implements Serializable, Cloneable, Structur
     private String day;
     /**
      * <p>
-     * The start time that your contact center is open.
+     * The start time that your contact center opens.
      * </p>
      */
     private HoursOfOperationTimeSlice startTime;
     /**
      * <p>
-     * The end time that your contact center is closes.
+     * The end time that your contact center closes.
      * </p>
      */
     private HoursOfOperationTimeSlice endTime;
@@ -108,11 +108,11 @@ public class HoursOfOperationConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The start time that your contact center is open.
+     * The start time that your contact center opens.
      * </p>
      * 
      * @param startTime
-     *        The start time that your contact center is open.
+     *        The start time that your contact center opens.
      */
 
     public void setStartTime(HoursOfOperationTimeSlice startTime) {
@@ -121,10 +121,10 @@ public class HoursOfOperationConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The start time that your contact center is open.
+     * The start time that your contact center opens.
      * </p>
      * 
-     * @return The start time that your contact center is open.
+     * @return The start time that your contact center opens.
      */
 
     public HoursOfOperationTimeSlice getStartTime() {
@@ -133,11 +133,11 @@ public class HoursOfOperationConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The start time that your contact center is open.
+     * The start time that your contact center opens.
      * </p>
      * 
      * @param startTime
-     *        The start time that your contact center is open.
+     *        The start time that your contact center opens.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -148,11 +148,11 @@ public class HoursOfOperationConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The end time that your contact center is closes.
+     * The end time that your contact center closes.
      * </p>
      * 
      * @param endTime
-     *        The end time that your contact center is closes.
+     *        The end time that your contact center closes.
      */
 
     public void setEndTime(HoursOfOperationTimeSlice endTime) {
@@ -161,10 +161,10 @@ public class HoursOfOperationConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The end time that your contact center is closes.
+     * The end time that your contact center closes.
      * </p>
      * 
-     * @return The end time that your contact center is closes.
+     * @return The end time that your contact center closes.
      */
 
     public HoursOfOperationTimeSlice getEndTime() {
@@ -173,11 +173,11 @@ public class HoursOfOperationConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The end time that your contact center is closes.
+     * The end time that your contact center closes.
      * </p>
      * 
      * @param endTime
-     *        The end time that your contact center is closes.
+     *        The end time that your contact center closes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
