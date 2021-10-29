@@ -40,6 +40,8 @@ public class CelebrityDetailMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BoundingBox").build();
     private static final MarshallingInfo<StructuredPojo> FACE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Face").build();
+    private static final MarshallingInfo<StructuredPojo> KNOWNGENDER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KnownGender").build();
 
     private static final CelebrityDetailMarshaller instance = new CelebrityDetailMarshaller();
 
@@ -63,6 +65,7 @@ public class CelebrityDetailMarshaller {
             protocolMarshaller.marshall(celebrityDetail.getConfidence(), CONFIDENCE_BINDING);
             protocolMarshaller.marshall(celebrityDetail.getBoundingBox(), BOUNDINGBOX_BINDING);
             protocolMarshaller.marshall(celebrityDetail.getFace(), FACE_BINDING);
+            protocolMarshaller.marshall(celebrityDetail.getKnownGender(), KNOWNGENDER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

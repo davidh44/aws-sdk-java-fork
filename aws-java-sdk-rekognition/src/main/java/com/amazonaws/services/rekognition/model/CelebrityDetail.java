@@ -61,6 +61,12 @@ public class CelebrityDetail implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private FaceDetail face;
+    /**
+     * <p>
+     * Retrieves the known gender for the celebrity.
+     * </p>
+     */
+    private KnownGender knownGender;
 
     /**
      * <p>
@@ -333,6 +339,46 @@ public class CelebrityDetail implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * Retrieves the known gender for the celebrity.
+     * </p>
+     * 
+     * @param knownGender
+     *        Retrieves the known gender for the celebrity.
+     */
+
+    public void setKnownGender(KnownGender knownGender) {
+        this.knownGender = knownGender;
+    }
+
+    /**
+     * <p>
+     * Retrieves the known gender for the celebrity.
+     * </p>
+     * 
+     * @return Retrieves the known gender for the celebrity.
+     */
+
+    public KnownGender getKnownGender() {
+        return this.knownGender;
+    }
+
+    /**
+     * <p>
+     * Retrieves the known gender for the celebrity.
+     * </p>
+     * 
+     * @param knownGender
+     *        Retrieves the known gender for the celebrity.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CelebrityDetail withKnownGender(KnownGender knownGender) {
+        setKnownGender(knownGender);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -355,7 +401,9 @@ public class CelebrityDetail implements Serializable, Cloneable, StructuredPojo 
         if (getBoundingBox() != null)
             sb.append("BoundingBox: ").append(getBoundingBox()).append(",");
         if (getFace() != null)
-            sb.append("Face: ").append(getFace());
+            sb.append("Face: ").append(getFace()).append(",");
+        if (getKnownGender() != null)
+            sb.append("KnownGender: ").append(getKnownGender());
         sb.append("}");
         return sb.toString();
     }
@@ -394,6 +442,10 @@ public class CelebrityDetail implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getFace() != null && other.getFace().equals(this.getFace()) == false)
             return false;
+        if (other.getKnownGender() == null ^ this.getKnownGender() == null)
+            return false;
+        if (other.getKnownGender() != null && other.getKnownGender().equals(this.getKnownGender()) == false)
+            return false;
         return true;
     }
 
@@ -408,6 +460,7 @@ public class CelebrityDetail implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getConfidence() == null) ? 0 : getConfidence().hashCode());
         hashCode = prime * hashCode + ((getBoundingBox() == null) ? 0 : getBoundingBox().hashCode());
         hashCode = prime * hashCode + ((getFace() == null) ? 0 : getFace().hashCode());
+        hashCode = prime * hashCode + ((getKnownGender() == null) ? 0 : getKnownGender().hashCode());
         return hashCode;
     }
 

@@ -74,6 +74,13 @@ public class CallAnalyticsJobSettings implements Serializable, Cloneable, Struct
      * </p>
      */
     private java.util.List<String> languageOptions;
+    /**
+     * <p>
+     * The language identification settings associated with your call analytics job. These settings include
+     * <code>VocabularyName</code>, <code>VocabularyFilterName</code>, and <code>LanguageModelName</code>.
+     * </p>
+     */
+    private java.util.Map<String, LanguageIdSettings> languageIdSettings;
 
     /**
      * <p>
@@ -502,6 +509,80 @@ public class CallAnalyticsJobSettings implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * The language identification settings associated with your call analytics job. These settings include
+     * <code>VocabularyName</code>, <code>VocabularyFilterName</code>, and <code>LanguageModelName</code>.
+     * </p>
+     * 
+     * @return The language identification settings associated with your call analytics job. These settings include
+     *         <code>VocabularyName</code>, <code>VocabularyFilterName</code>, and <code>LanguageModelName</code>.
+     */
+
+    public java.util.Map<String, LanguageIdSettings> getLanguageIdSettings() {
+        return languageIdSettings;
+    }
+
+    /**
+     * <p>
+     * The language identification settings associated with your call analytics job. These settings include
+     * <code>VocabularyName</code>, <code>VocabularyFilterName</code>, and <code>LanguageModelName</code>.
+     * </p>
+     * 
+     * @param languageIdSettings
+     *        The language identification settings associated with your call analytics job. These settings include
+     *        <code>VocabularyName</code>, <code>VocabularyFilterName</code>, and <code>LanguageModelName</code>.
+     */
+
+    public void setLanguageIdSettings(java.util.Map<String, LanguageIdSettings> languageIdSettings) {
+        this.languageIdSettings = languageIdSettings;
+    }
+
+    /**
+     * <p>
+     * The language identification settings associated with your call analytics job. These settings include
+     * <code>VocabularyName</code>, <code>VocabularyFilterName</code>, and <code>LanguageModelName</code>.
+     * </p>
+     * 
+     * @param languageIdSettings
+     *        The language identification settings associated with your call analytics job. These settings include
+     *        <code>VocabularyName</code>, <code>VocabularyFilterName</code>, and <code>LanguageModelName</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CallAnalyticsJobSettings withLanguageIdSettings(java.util.Map<String, LanguageIdSettings> languageIdSettings) {
+        setLanguageIdSettings(languageIdSettings);
+        return this;
+    }
+
+    /**
+     * Add a single LanguageIdSettings entry
+     *
+     * @see CallAnalyticsJobSettings#withLanguageIdSettings
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CallAnalyticsJobSettings addLanguageIdSettingsEntry(String key, LanguageIdSettings value) {
+        if (null == this.languageIdSettings) {
+            this.languageIdSettings = new java.util.HashMap<String, LanguageIdSettings>();
+        }
+        if (this.languageIdSettings.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.languageIdSettings.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into LanguageIdSettings.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CallAnalyticsJobSettings clearLanguageIdSettingsEntries() {
+        this.languageIdSettings = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -524,7 +605,9 @@ public class CallAnalyticsJobSettings implements Serializable, Cloneable, Struct
         if (getContentRedaction() != null)
             sb.append("ContentRedaction: ").append(getContentRedaction()).append(",");
         if (getLanguageOptions() != null)
-            sb.append("LanguageOptions: ").append(getLanguageOptions());
+            sb.append("LanguageOptions: ").append(getLanguageOptions()).append(",");
+        if (getLanguageIdSettings() != null)
+            sb.append("LanguageIdSettings: ").append(getLanguageIdSettings());
         sb.append("}");
         return sb.toString();
     }
@@ -563,6 +646,10 @@ public class CallAnalyticsJobSettings implements Serializable, Cloneable, Struct
             return false;
         if (other.getLanguageOptions() != null && other.getLanguageOptions().equals(this.getLanguageOptions()) == false)
             return false;
+        if (other.getLanguageIdSettings() == null ^ this.getLanguageIdSettings() == null)
+            return false;
+        if (other.getLanguageIdSettings() != null && other.getLanguageIdSettings().equals(this.getLanguageIdSettings()) == false)
+            return false;
         return true;
     }
 
@@ -577,6 +664,7 @@ public class CallAnalyticsJobSettings implements Serializable, Cloneable, Struct
         hashCode = prime * hashCode + ((getLanguageModelName() == null) ? 0 : getLanguageModelName().hashCode());
         hashCode = prime * hashCode + ((getContentRedaction() == null) ? 0 : getContentRedaction().hashCode());
         hashCode = prime * hashCode + ((getLanguageOptions() == null) ? 0 : getLanguageOptions().hashCode());
+        hashCode = prime * hashCode + ((getLanguageIdSettings() == null) ? 0 : getLanguageIdSettings().hashCode());
         return hashCode;
     }
 

@@ -20,7 +20,12 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum ReferenceType {
 
-    URL("URL");
+    URL("URL"),
+    ATTACHMENT("ATTACHMENT"),
+    NUMBER("NUMBER"),
+    STRING("STRING"),
+    DATE("DATE"),
+    EMAIL("EMAIL");
 
     private String value;
 

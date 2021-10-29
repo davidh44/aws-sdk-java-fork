@@ -145,7 +145,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * </li>
      * <li>
      * <p>
-     * ARN of a KMS Key Alias: "arn:aws:kms:region:account ID:alias/ExampleAlias"
+     * ARN of a KMS Key Alias: "arn:aws:kms:region:account-ID:alias/ExampleAlias"
      * </p>
      * </li>
      * </ul>
@@ -223,6 +223,13 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * </p>
      */
     private java.util.List<Tag> tags;
+    /**
+     * <p>
+     * The language identification settings associated with your transcription job. These settings include
+     * <code>VocabularyName</code>, <code>VocabularyFilterName</code>, and <code>LanguageModelName</code>.
+     * </p>
+     */
+    private java.util.Map<String, LanguageIdSettings> languageIdSettings;
 
     /**
      * <p>
@@ -860,7 +867,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * </li>
      * <li>
      * <p>
-     * ARN of a KMS Key Alias: "arn:aws:kms:region:account ID:alias/ExampleAlias"
+     * ARN of a KMS Key Alias: "arn:aws:kms:region:account-ID:alias/ExampleAlias"
      * </p>
      * </li>
      * </ul>
@@ -904,7 +911,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      *        </li>
      *        <li>
      *        <p>
-     *        ARN of a KMS Key Alias: "arn:aws:kms:region:account ID:alias/ExampleAlias"
+     *        ARN of a KMS Key Alias: "arn:aws:kms:region:account-ID:alias/ExampleAlias"
      *        </p>
      *        </li>
      *        </ul>
@@ -953,7 +960,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * </li>
      * <li>
      * <p>
-     * ARN of a KMS Key Alias: "arn:aws:kms:region:account ID:alias/ExampleAlias"
+     * ARN of a KMS Key Alias: "arn:aws:kms:region:account-ID:alias/ExampleAlias"
      * </p>
      * </li>
      * </ul>
@@ -996,7 +1003,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      *         </li>
      *         <li>
      *         <p>
-     *         ARN of a KMS Key Alias: "arn:aws:kms:region:account ID:alias/ExampleAlias"
+     *         ARN of a KMS Key Alias: "arn:aws:kms:region:account-ID:alias/ExampleAlias"
      *         </p>
      *         </li>
      *         </ul>
@@ -1045,7 +1052,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * </li>
      * <li>
      * <p>
-     * ARN of a KMS Key Alias: "arn:aws:kms:region:account ID:alias/ExampleAlias"
+     * ARN of a KMS Key Alias: "arn:aws:kms:region:account-ID:alias/ExampleAlias"
      * </p>
      * </li>
      * </ul>
@@ -1089,7 +1096,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      *        </li>
      *        <li>
      *        <p>
-     *        ARN of a KMS Key Alias: "arn:aws:kms:region:account ID:alias/ExampleAlias"
+     *        ARN of a KMS Key Alias: "arn:aws:kms:region:account-ID:alias/ExampleAlias"
      *        </p>
      *        </li>
      *        </ul>
@@ -1681,6 +1688,80 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * The language identification settings associated with your transcription job. These settings include
+     * <code>VocabularyName</code>, <code>VocabularyFilterName</code>, and <code>LanguageModelName</code>.
+     * </p>
+     * 
+     * @return The language identification settings associated with your transcription job. These settings include
+     *         <code>VocabularyName</code>, <code>VocabularyFilterName</code>, and <code>LanguageModelName</code>.
+     */
+
+    public java.util.Map<String, LanguageIdSettings> getLanguageIdSettings() {
+        return languageIdSettings;
+    }
+
+    /**
+     * <p>
+     * The language identification settings associated with your transcription job. These settings include
+     * <code>VocabularyName</code>, <code>VocabularyFilterName</code>, and <code>LanguageModelName</code>.
+     * </p>
+     * 
+     * @param languageIdSettings
+     *        The language identification settings associated with your transcription job. These settings include
+     *        <code>VocabularyName</code>, <code>VocabularyFilterName</code>, and <code>LanguageModelName</code>.
+     */
+
+    public void setLanguageIdSettings(java.util.Map<String, LanguageIdSettings> languageIdSettings) {
+        this.languageIdSettings = languageIdSettings;
+    }
+
+    /**
+     * <p>
+     * The language identification settings associated with your transcription job. These settings include
+     * <code>VocabularyName</code>, <code>VocabularyFilterName</code>, and <code>LanguageModelName</code>.
+     * </p>
+     * 
+     * @param languageIdSettings
+     *        The language identification settings associated with your transcription job. These settings include
+     *        <code>VocabularyName</code>, <code>VocabularyFilterName</code>, and <code>LanguageModelName</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartTranscriptionJobRequest withLanguageIdSettings(java.util.Map<String, LanguageIdSettings> languageIdSettings) {
+        setLanguageIdSettings(languageIdSettings);
+        return this;
+    }
+
+    /**
+     * Add a single LanguageIdSettings entry
+     *
+     * @see StartTranscriptionJobRequest#withLanguageIdSettings
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartTranscriptionJobRequest addLanguageIdSettingsEntry(String key, LanguageIdSettings value) {
+        if (null == this.languageIdSettings) {
+            this.languageIdSettings = new java.util.HashMap<String, LanguageIdSettings>();
+        }
+        if (this.languageIdSettings.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.languageIdSettings.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into LanguageIdSettings.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartTranscriptionJobRequest clearLanguageIdSettingsEntries() {
+        this.languageIdSettings = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1725,7 +1806,9 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
         if (getSubtitles() != null)
             sb.append("Subtitles: ").append(getSubtitles()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getLanguageIdSettings() != null)
+            sb.append("LanguageIdSettings: ").append(getLanguageIdSettings());
         sb.append("}");
         return sb.toString();
     }
@@ -1808,6 +1891,10 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getLanguageIdSettings() == null ^ this.getLanguageIdSettings() == null)
+            return false;
+        if (other.getLanguageIdSettings() != null && other.getLanguageIdSettings().equals(this.getLanguageIdSettings()) == false)
+            return false;
         return true;
     }
 
@@ -1833,6 +1920,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
         hashCode = prime * hashCode + ((getLanguageOptions() == null) ? 0 : getLanguageOptions().hashCode());
         hashCode = prime * hashCode + ((getSubtitles() == null) ? 0 : getSubtitles().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getLanguageIdSettings() == null) ? 0 : getLanguageIdSettings().hashCode());
         return hashCode;
     }
 

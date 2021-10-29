@@ -58,6 +58,10 @@ public class ListProblemsResultJsonUnmarshaller implements Unmarshaller<ListProb
                     context.nextToken();
                     listProblemsResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ResourceGroupName", targetDepth)) {
+                    context.nextToken();
+                    listProblemsResult.setResourceGroupName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

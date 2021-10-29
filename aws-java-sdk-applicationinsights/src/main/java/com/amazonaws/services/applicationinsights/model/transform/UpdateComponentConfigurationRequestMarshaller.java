@@ -37,6 +37,8 @@ public class UpdateComponentConfigurationRequestMarshaller {
             .marshallLocationName("Tier").build();
     private static final MarshallingInfo<String> COMPONENTCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ComponentConfiguration").build();
+    private static final MarshallingInfo<Boolean> AUTOCONFIGENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AutoConfigEnabled").build();
 
     private static final UpdateComponentConfigurationRequestMarshaller instance = new UpdateComponentConfigurationRequestMarshaller();
 
@@ -59,6 +61,7 @@ public class UpdateComponentConfigurationRequestMarshaller {
             protocolMarshaller.marshall(updateComponentConfigurationRequest.getMonitor(), MONITOR_BINDING);
             protocolMarshaller.marshall(updateComponentConfigurationRequest.getTier(), TIER_BINDING);
             protocolMarshaller.marshall(updateComponentConfigurationRequest.getComponentConfiguration(), COMPONENTCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(updateComponentConfigurationRequest.getAutoConfigEnabled(), AUTOCONFIGENABLED_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

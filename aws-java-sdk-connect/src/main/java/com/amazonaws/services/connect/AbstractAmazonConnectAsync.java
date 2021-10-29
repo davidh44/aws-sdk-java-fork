@@ -1033,6 +1033,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     }
 
     @Override
+    public java.util.concurrent.Future<StartContactStreamingResult> startContactStreamingAsync(StartContactStreamingRequest request) {
+
+        return startContactStreamingAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartContactStreamingResult> startContactStreamingAsync(StartContactStreamingRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartContactStreamingRequest, StartContactStreamingResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<StartOutboundVoiceContactResult> startOutboundVoiceContactAsync(StartOutboundVoiceContactRequest request) {
 
         return startOutboundVoiceContactAsync(request, null);
@@ -1080,6 +1093,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     @Override
     public java.util.concurrent.Future<StopContactRecordingResult> stopContactRecordingAsync(StopContactRecordingRequest request,
             com.amazonaws.handlers.AsyncHandler<StopContactRecordingRequest, StopContactRecordingResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopContactStreamingResult> stopContactStreamingAsync(StopContactStreamingRequest request) {
+
+        return stopContactStreamingAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopContactStreamingResult> stopContactStreamingAsync(StopContactStreamingRequest request,
+            com.amazonaws.handlers.AsyncHandler<StopContactStreamingRequest, StopContactStreamingResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

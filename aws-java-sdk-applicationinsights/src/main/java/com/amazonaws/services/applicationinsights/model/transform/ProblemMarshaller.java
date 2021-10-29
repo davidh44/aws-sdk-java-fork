@@ -49,6 +49,10 @@ public class ProblemMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceGroupName").build();
     private static final MarshallingInfo<Map> FEEDBACK_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Feedback").build();
+    private static final MarshallingInfo<Long> RECURRINGCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RecurringCount").build();
+    private static final MarshallingInfo<java.util.Date> LASTRECURRENCETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastRecurrenceTime").timestampFormat("unixTimestamp").build();
 
     private static final ProblemMarshaller instance = new ProblemMarshaller();
 
@@ -76,6 +80,8 @@ public class ProblemMarshaller {
             protocolMarshaller.marshall(problem.getSeverityLevel(), SEVERITYLEVEL_BINDING);
             protocolMarshaller.marshall(problem.getResourceGroupName(), RESOURCEGROUPNAME_BINDING);
             protocolMarshaller.marshall(problem.getFeedback(), FEEDBACK_BINDING);
+            protocolMarshaller.marshall(problem.getRecurringCount(), RECURRINGCOUNT_BINDING);
+            protocolMarshaller.marshall(problem.getLastRecurrenceTime(), LASTRECURRENCETIME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -144,7 +144,8 @@ public class CallAnalyticsJob implements Serializable, Cloneable, StructuredPojo
     private String failureReason;
     /**
      * <p>
-     * The Amazon Resource Number (ARN) that you use to get access to the analytics job.
+     * The Amazon Resource Number (ARN) that you use to access the analytics job. ARNs have the format
+     * <code>arn:partition:service:region:account-id:resource-type/resource-id</code>.
      * </p>
      */
     private String dataAccessRoleArn;
@@ -996,11 +997,13 @@ public class CallAnalyticsJob implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) that you use to get access to the analytics job.
+     * The Amazon Resource Number (ARN) that you use to access the analytics job. ARNs have the format
+     * <code>arn:partition:service:region:account-id:resource-type/resource-id</code>.
      * </p>
      * 
      * @param dataAccessRoleArn
-     *        The Amazon Resource Number (ARN) that you use to get access to the analytics job.
+     *        The Amazon Resource Number (ARN) that you use to access the analytics job. ARNs have the format
+     *        <code>arn:partition:service:region:account-id:resource-type/resource-id</code>.
      */
 
     public void setDataAccessRoleArn(String dataAccessRoleArn) {
@@ -1009,10 +1012,12 @@ public class CallAnalyticsJob implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) that you use to get access to the analytics job.
+     * The Amazon Resource Number (ARN) that you use to access the analytics job. ARNs have the format
+     * <code>arn:partition:service:region:account-id:resource-type/resource-id</code>.
      * </p>
      * 
-     * @return The Amazon Resource Number (ARN) that you use to get access to the analytics job.
+     * @return The Amazon Resource Number (ARN) that you use to access the analytics job. ARNs have the format
+     *         <code>arn:partition:service:region:account-id:resource-type/resource-id</code>.
      */
 
     public String getDataAccessRoleArn() {
@@ -1021,11 +1026,13 @@ public class CallAnalyticsJob implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) that you use to get access to the analytics job.
+     * The Amazon Resource Number (ARN) that you use to access the analytics job. ARNs have the format
+     * <code>arn:partition:service:region:account-id:resource-type/resource-id</code>.
      * </p>
      * 
      * @param dataAccessRoleArn
-     *        The Amazon Resource Number (ARN) that you use to get access to the analytics job.
+     *        The Amazon Resource Number (ARN) that you use to access the analytics job. ARNs have the format
+     *        <code>arn:partition:service:region:account-id:resource-type/resource-id</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -413,6 +413,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public StartContactStreamingResult startContactStreaming(StartContactStreamingRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public StartOutboundVoiceContactResult startOutboundVoiceContact(StartOutboundVoiceContactRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -429,6 +434,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public StopContactRecordingResult stopContactRecording(StopContactRecordingRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StopContactStreamingResult stopContactStreaming(StopContactStreamingRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

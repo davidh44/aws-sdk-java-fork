@@ -106,9 +106,9 @@ public class InstanceRequirements implements Serializable, Cloneable {
      * <code>m5.8xlarge</code>, <code>c5*.*</code>, <code>m5a.*</code>, <code>r*</code>, <code>*3*</code>.
      * </p>
      * <p>
-     * For example, if you specify <code>c5*.*</code>, Amazon EC2 will exclude the entire C5 instance family (all C5a
-     * and C5n instance types). If you specify <code>c5a.*</code>, Amazon EC2 excludes all the C5a instance types, but
-     * does not exclude the C5n instance types.
+     * For example, if you specify <code>c5*</code>,Amazon EC2 will exclude the entire C5 instance family, which
+     * includes all C5a and C5n instance types. If you specify <code>m5a.*</code>, Amazon EC2 will exclude all the M5a
+     * instance types, but not the M5n instance types.
      * </p>
      * <p>
      * Default: No excluded instance types
@@ -954,9 +954,9 @@ public class InstanceRequirements implements Serializable, Cloneable {
      * <code>m5.8xlarge</code>, <code>c5*.*</code>, <code>m5a.*</code>, <code>r*</code>, <code>*3*</code>.
      * </p>
      * <p>
-     * For example, if you specify <code>c5*.*</code>, Amazon EC2 will exclude the entire C5 instance family (all C5a
-     * and C5n instance types). If you specify <code>c5a.*</code>, Amazon EC2 excludes all the C5a instance types, but
-     * does not exclude the C5n instance types.
+     * For example, if you specify <code>c5*</code>,Amazon EC2 will exclude the entire C5 instance family, which
+     * includes all C5a and C5n instance types. If you specify <code>m5a.*</code>, Amazon EC2 will exclude all the M5a
+     * instance types, but not the M5n instance types.
      * </p>
      * <p>
      * Default: No excluded instance types
@@ -966,9 +966,9 @@ public class InstanceRequirements implements Serializable, Cloneable {
      *         asterisk (<code>*</code>), to exclude an instance type, size, or generation. The following are examples:
      *         <code>m5.8xlarge</code>, <code>c5*.*</code>, <code>m5a.*</code>, <code>r*</code>, <code>*3*</code>.</p>
      *         <p>
-     *         For example, if you specify <code>c5*.*</code>, Amazon EC2 will exclude the entire C5 instance family
-     *         (all C5a and C5n instance types). If you specify <code>c5a.*</code>, Amazon EC2 excludes all the C5a
-     *         instance types, but does not exclude the C5n instance types.
+     *         For example, if you specify <code>c5*</code>,Amazon EC2 will exclude the entire C5 instance family, which
+     *         includes all C5a and C5n instance types. If you specify <code>m5a.*</code>, Amazon EC2 will exclude all
+     *         the M5a instance types, but not the M5n instance types.
      *         </p>
      *         <p>
      *         Default: No excluded instance types
@@ -988,9 +988,9 @@ public class InstanceRequirements implements Serializable, Cloneable {
      * <code>m5.8xlarge</code>, <code>c5*.*</code>, <code>m5a.*</code>, <code>r*</code>, <code>*3*</code>.
      * </p>
      * <p>
-     * For example, if you specify <code>c5*.*</code>, Amazon EC2 will exclude the entire C5 instance family (all C5a
-     * and C5n instance types). If you specify <code>c5a.*</code>, Amazon EC2 excludes all the C5a instance types, but
-     * does not exclude the C5n instance types.
+     * For example, if you specify <code>c5*</code>,Amazon EC2 will exclude the entire C5 instance family, which
+     * includes all C5a and C5n instance types. If you specify <code>m5a.*</code>, Amazon EC2 will exclude all the M5a
+     * instance types, but not the M5n instance types.
      * </p>
      * <p>
      * Default: No excluded instance types
@@ -1001,9 +1001,9 @@ public class InstanceRequirements implements Serializable, Cloneable {
      *        (<code>*</code>), to exclude an instance type, size, or generation. The following are examples:
      *        <code>m5.8xlarge</code>, <code>c5*.*</code>, <code>m5a.*</code>, <code>r*</code>, <code>*3*</code>.</p>
      *        <p>
-     *        For example, if you specify <code>c5*.*</code>, Amazon EC2 will exclude the entire C5 instance family (all
-     *        C5a and C5n instance types). If you specify <code>c5a.*</code>, Amazon EC2 excludes all the C5a instance
-     *        types, but does not exclude the C5n instance types.
+     *        For example, if you specify <code>c5*</code>,Amazon EC2 will exclude the entire C5 instance family, which
+     *        includes all C5a and C5n instance types. If you specify <code>m5a.*</code>, Amazon EC2 will exclude all
+     *        the M5a instance types, but not the M5n instance types.
      *        </p>
      *        <p>
      *        Default: No excluded instance types
@@ -1025,9 +1025,9 @@ public class InstanceRequirements implements Serializable, Cloneable {
      * <code>m5.8xlarge</code>, <code>c5*.*</code>, <code>m5a.*</code>, <code>r*</code>, <code>*3*</code>.
      * </p>
      * <p>
-     * For example, if you specify <code>c5*.*</code>, Amazon EC2 will exclude the entire C5 instance family (all C5a
-     * and C5n instance types). If you specify <code>c5a.*</code>, Amazon EC2 excludes all the C5a instance types, but
-     * does not exclude the C5n instance types.
+     * For example, if you specify <code>c5*</code>,Amazon EC2 will exclude the entire C5 instance family, which
+     * includes all C5a and C5n instance types. If you specify <code>m5a.*</code>, Amazon EC2 will exclude all the M5a
+     * instance types, but not the M5n instance types.
      * </p>
      * <p>
      * Default: No excluded instance types
@@ -1043,9 +1043,9 @@ public class InstanceRequirements implements Serializable, Cloneable {
      *        (<code>*</code>), to exclude an instance type, size, or generation. The following are examples:
      *        <code>m5.8xlarge</code>, <code>c5*.*</code>, <code>m5a.*</code>, <code>r*</code>, <code>*3*</code>.</p>
      *        <p>
-     *        For example, if you specify <code>c5*.*</code>, Amazon EC2 will exclude the entire C5 instance family (all
-     *        C5a and C5n instance types). If you specify <code>c5a.*</code>, Amazon EC2 excludes all the C5a instance
-     *        types, but does not exclude the C5n instance types.
+     *        For example, if you specify <code>c5*</code>,Amazon EC2 will exclude the entire C5 instance family, which
+     *        includes all C5a and C5n instance types. If you specify <code>m5a.*</code>, Amazon EC2 will exclude all
+     *        the M5a instance types, but not the M5n instance types.
      *        </p>
      *        <p>
      *        Default: No excluded instance types
@@ -1069,9 +1069,9 @@ public class InstanceRequirements implements Serializable, Cloneable {
      * <code>m5.8xlarge</code>, <code>c5*.*</code>, <code>m5a.*</code>, <code>r*</code>, <code>*3*</code>.
      * </p>
      * <p>
-     * For example, if you specify <code>c5*.*</code>, Amazon EC2 will exclude the entire C5 instance family (all C5a
-     * and C5n instance types). If you specify <code>c5a.*</code>, Amazon EC2 excludes all the C5a instance types, but
-     * does not exclude the C5n instance types.
+     * For example, if you specify <code>c5*</code>,Amazon EC2 will exclude the entire C5 instance family, which
+     * includes all C5a and C5n instance types. If you specify <code>m5a.*</code>, Amazon EC2 will exclude all the M5a
+     * instance types, but not the M5n instance types.
      * </p>
      * <p>
      * Default: No excluded instance types
@@ -1082,9 +1082,9 @@ public class InstanceRequirements implements Serializable, Cloneable {
      *        (<code>*</code>), to exclude an instance type, size, or generation. The following are examples:
      *        <code>m5.8xlarge</code>, <code>c5*.*</code>, <code>m5a.*</code>, <code>r*</code>, <code>*3*</code>.</p>
      *        <p>
-     *        For example, if you specify <code>c5*.*</code>, Amazon EC2 will exclude the entire C5 instance family (all
-     *        C5a and C5n instance types). If you specify <code>c5a.*</code>, Amazon EC2 excludes all the C5a instance
-     *        types, but does not exclude the C5n instance types.
+     *        For example, if you specify <code>c5*</code>,Amazon EC2 will exclude the entire C5 instance family, which
+     *        includes all C5a and C5n instance types. If you specify <code>m5a.*</code>, Amazon EC2 will exclude all
+     *        the M5a instance types, but not the M5n instance types.
      *        </p>
      *        <p>
      *        Default: No excluded instance types

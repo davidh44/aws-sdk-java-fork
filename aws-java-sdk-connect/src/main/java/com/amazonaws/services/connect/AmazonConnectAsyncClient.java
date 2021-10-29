@@ -2645,6 +2645,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<StartContactStreamingResult> startContactStreamingAsync(StartContactStreamingRequest request) {
+
+        return startContactStreamingAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartContactStreamingResult> startContactStreamingAsync(final StartContactStreamingRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartContactStreamingRequest, StartContactStreamingResult> asyncHandler) {
+        final StartContactStreamingRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartContactStreamingResult>() {
+            @Override
+            public StartContactStreamingResult call() throws Exception {
+                StartContactStreamingResult result = null;
+
+                try {
+                    result = executeStartContactStreaming(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<StartOutboundVoiceContactResult> startOutboundVoiceContactAsync(StartOutboundVoiceContactRequest request) {
 
         return startOutboundVoiceContactAsync(request, null);
@@ -2761,6 +2794,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeStopContactRecording(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopContactStreamingResult> stopContactStreamingAsync(StopContactStreamingRequest request) {
+
+        return stopContactStreamingAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopContactStreamingResult> stopContactStreamingAsync(final StopContactStreamingRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StopContactStreamingRequest, StopContactStreamingResult> asyncHandler) {
+        final StopContactStreamingRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StopContactStreamingResult>() {
+            @Override
+            public StopContactStreamingResult call() throws Exception {
+                StopContactStreamingResult result = null;
+
+                try {
+                    result = executeStopContactStreaming(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -56,6 +56,10 @@ public class QueueReferenceJsonUnmarshaller implements Unmarshaller<QueueReferen
                     context.nextToken();
                     queueReference.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("QueueType", targetDepth)) {
+                    context.nextToken();
+                    queueReference.setQueueType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -37,6 +37,8 @@ public class ListProblemsResult extends com.amazonaws.AmazonWebServiceResult<com
      */
     private String nextToken;
 
+    private String resourceGroupName;
+
     /**
      * <p>
      * The list of problems.
@@ -154,6 +156,32 @@ public class ListProblemsResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
+     * @param resourceGroupName
+     */
+
+    public void setResourceGroupName(String resourceGroupName) {
+        this.resourceGroupName = resourceGroupName;
+    }
+
+    /**
+     * @return
+     */
+
+    public String getResourceGroupName() {
+        return this.resourceGroupName;
+    }
+
+    /**
+     * @param resourceGroupName
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListProblemsResult withResourceGroupName(String resourceGroupName) {
+        setResourceGroupName(resourceGroupName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -168,7 +196,9 @@ public class ListProblemsResult extends com.amazonaws.AmazonWebServiceResult<com
         if (getProblemList() != null)
             sb.append("ProblemList: ").append(getProblemList()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getResourceGroupName() != null)
+            sb.append("ResourceGroupName: ").append(getResourceGroupName());
         sb.append("}");
         return sb.toString();
     }
@@ -191,6 +221,10 @@ public class ListProblemsResult extends com.amazonaws.AmazonWebServiceResult<com
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
+        if (other.getResourceGroupName() == null ^ this.getResourceGroupName() == null)
+            return false;
+        if (other.getResourceGroupName() != null && other.getResourceGroupName().equals(this.getResourceGroupName()) == false)
+            return false;
         return true;
     }
 
@@ -201,6 +235,7 @@ public class ListProblemsResult extends com.amazonaws.AmazonWebServiceResult<com
 
         hashCode = prime * hashCode + ((getProblemList() == null) ? 0 : getProblemList().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getResourceGroupName() == null) ? 0 : getResourceGroupName().hashCode());
         return hashCode;
     }
 

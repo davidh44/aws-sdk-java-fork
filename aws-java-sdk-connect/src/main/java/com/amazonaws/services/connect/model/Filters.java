@@ -36,6 +36,12 @@ public class Filters implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<String> queues;
     /**
      * <p>
+     * The filters used to sort routing profiles.
+     * </p>
+     */
+    private java.util.List<String> routingProfiles;
+    /**
+     * <p>
      * The channel to use to filter the metrics.
      * </p>
      */
@@ -108,6 +114,76 @@ public class Filters implements Serializable, Cloneable, StructuredPojo {
 
     public Filters withQueues(java.util.Collection<String> queues) {
         setQueues(queues);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The filters used to sort routing profiles.
+     * </p>
+     * 
+     * @return The filters used to sort routing profiles.
+     */
+
+    public java.util.List<String> getRoutingProfiles() {
+        return routingProfiles;
+    }
+
+    /**
+     * <p>
+     * The filters used to sort routing profiles.
+     * </p>
+     * 
+     * @param routingProfiles
+     *        The filters used to sort routing profiles.
+     */
+
+    public void setRoutingProfiles(java.util.Collection<String> routingProfiles) {
+        if (routingProfiles == null) {
+            this.routingProfiles = null;
+            return;
+        }
+
+        this.routingProfiles = new java.util.ArrayList<String>(routingProfiles);
+    }
+
+    /**
+     * <p>
+     * The filters used to sort routing profiles.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setRoutingProfiles(java.util.Collection)} or {@link #withRoutingProfiles(java.util.Collection)} if you
+     * want to override the existing values.
+     * </p>
+     * 
+     * @param routingProfiles
+     *        The filters used to sort routing profiles.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Filters withRoutingProfiles(String... routingProfiles) {
+        if (this.routingProfiles == null) {
+            setRoutingProfiles(new java.util.ArrayList<String>(routingProfiles.length));
+        }
+        for (String ele : routingProfiles) {
+            this.routingProfiles.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The filters used to sort routing profiles.
+     * </p>
+     * 
+     * @param routingProfiles
+     *        The filters used to sort routing profiles.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Filters withRoutingProfiles(java.util.Collection<String> routingProfiles) {
+        setRoutingProfiles(routingProfiles);
         return this;
     }
 
@@ -223,6 +299,8 @@ public class Filters implements Serializable, Cloneable, StructuredPojo {
         sb.append("{");
         if (getQueues() != null)
             sb.append("Queues: ").append(getQueues()).append(",");
+        if (getRoutingProfiles() != null)
+            sb.append("RoutingProfiles: ").append(getRoutingProfiles()).append(",");
         if (getChannels() != null)
             sb.append("Channels: ").append(getChannels());
         sb.append("}");
@@ -243,6 +321,10 @@ public class Filters implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getQueues() != null && other.getQueues().equals(this.getQueues()) == false)
             return false;
+        if (other.getRoutingProfiles() == null ^ this.getRoutingProfiles() == null)
+            return false;
+        if (other.getRoutingProfiles() != null && other.getRoutingProfiles().equals(this.getRoutingProfiles()) == false)
+            return false;
         if (other.getChannels() == null ^ this.getChannels() == null)
             return false;
         if (other.getChannels() != null && other.getChannels().equals(this.getChannels()) == false)
@@ -256,6 +338,7 @@ public class Filters implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getQueues() == null) ? 0 : getQueues().hashCode());
+        hashCode = prime * hashCode + ((getRoutingProfiles() == null) ? 0 : getRoutingProfiles().hashCode());
         hashCode = prime * hashCode + ((getChannels() == null) ? 0 : getChannels().hashCode());
         return hashCode;
     }

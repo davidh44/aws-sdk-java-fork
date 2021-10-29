@@ -89,6 +89,10 @@ public class Problem implements Serializable, Cloneable, StructuredPojo {
      */
     private java.util.Map<String, String> feedback;
 
+    private Long recurringCount;
+
+    private java.util.Date lastRecurrenceTime;
+
     /**
      * <p>
      * The ID of the problem.
@@ -556,6 +560,58 @@ public class Problem implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * @param recurringCount
+     */
+
+    public void setRecurringCount(Long recurringCount) {
+        this.recurringCount = recurringCount;
+    }
+
+    /**
+     * @return
+     */
+
+    public Long getRecurringCount() {
+        return this.recurringCount;
+    }
+
+    /**
+     * @param recurringCount
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Problem withRecurringCount(Long recurringCount) {
+        setRecurringCount(recurringCount);
+        return this;
+    }
+
+    /**
+     * @param lastRecurrenceTime
+     */
+
+    public void setLastRecurrenceTime(java.util.Date lastRecurrenceTime) {
+        this.lastRecurrenceTime = lastRecurrenceTime;
+    }
+
+    /**
+     * @return
+     */
+
+    public java.util.Date getLastRecurrenceTime() {
+        return this.lastRecurrenceTime;
+    }
+
+    /**
+     * @param lastRecurrenceTime
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Problem withLastRecurrenceTime(java.util.Date lastRecurrenceTime) {
+        setLastRecurrenceTime(lastRecurrenceTime);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -586,7 +642,11 @@ public class Problem implements Serializable, Cloneable, StructuredPojo {
         if (getResourceGroupName() != null)
             sb.append("ResourceGroupName: ").append(getResourceGroupName()).append(",");
         if (getFeedback() != null)
-            sb.append("Feedback: ").append(getFeedback());
+            sb.append("Feedback: ").append(getFeedback()).append(",");
+        if (getRecurringCount() != null)
+            sb.append("RecurringCount: ").append(getRecurringCount()).append(",");
+        if (getLastRecurrenceTime() != null)
+            sb.append("LastRecurrenceTime: ").append(getLastRecurrenceTime());
         sb.append("}");
         return sb.toString();
     }
@@ -641,6 +701,14 @@ public class Problem implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getFeedback() != null && other.getFeedback().equals(this.getFeedback()) == false)
             return false;
+        if (other.getRecurringCount() == null ^ this.getRecurringCount() == null)
+            return false;
+        if (other.getRecurringCount() != null && other.getRecurringCount().equals(this.getRecurringCount()) == false)
+            return false;
+        if (other.getLastRecurrenceTime() == null ^ this.getLastRecurrenceTime() == null)
+            return false;
+        if (other.getLastRecurrenceTime() != null && other.getLastRecurrenceTime().equals(this.getLastRecurrenceTime()) == false)
+            return false;
         return true;
     }
 
@@ -659,6 +727,8 @@ public class Problem implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getSeverityLevel() == null) ? 0 : getSeverityLevel().hashCode());
         hashCode = prime * hashCode + ((getResourceGroupName() == null) ? 0 : getResourceGroupName().hashCode());
         hashCode = prime * hashCode + ((getFeedback() == null) ? 0 : getFeedback().hashCode());
+        hashCode = prime * hashCode + ((getRecurringCount() == null) ? 0 : getRecurringCount().hashCode());
+        hashCode = prime * hashCode + ((getLastRecurrenceTime() == null) ? 0 : getLastRecurrenceTime().hashCode());
         return hashCode;
     }
 

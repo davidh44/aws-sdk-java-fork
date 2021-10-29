@@ -39,6 +39,10 @@ public class ApplicationInfoMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CWEMonitorEnabled").build();
     private static final MarshallingInfo<String> REMARKS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Remarks").build();
+    private static final MarshallingInfo<Boolean> AUTOCONFIGENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AutoConfigEnabled").build();
+    private static final MarshallingInfo<String> DISCOVERYTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DiscoveryType").build();
 
     private static final ApplicationInfoMarshaller instance = new ApplicationInfoMarshaller();
 
@@ -62,6 +66,8 @@ public class ApplicationInfoMarshaller {
             protocolMarshaller.marshall(applicationInfo.getOpsCenterEnabled(), OPSCENTERENABLED_BINDING);
             protocolMarshaller.marshall(applicationInfo.getCWEMonitorEnabled(), CWEMONITORENABLED_BINDING);
             protocolMarshaller.marshall(applicationInfo.getRemarks(), REMARKS_BINDING);
+            protocolMarshaller.marshall(applicationInfo.getAutoConfigEnabled(), AUTOCONFIGENABLED_BINDING);
+            protocolMarshaller.marshall(applicationInfo.getDiscoveryType(), DISCOVERYTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

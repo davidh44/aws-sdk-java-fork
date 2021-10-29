@@ -2128,6 +2128,34 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Initiates real-time message streaming for a new chat contact.
+     * </p>
+     * <p>
+     * For more information about message streaming, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/chat-message-streaming.html">Enable real-time chat
+     * message streaming</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param startContactStreamingRequest
+     * @return Result of the StartContactStreaming operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws LimitExceededException
+     *         The allowed limit for the resource has been exceeded.
+     * @sample AmazonConnect.StartContactStreaming
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/StartContactStreaming" target="_top">AWS
+     *      API Documentation</a>
+     */
+    StartContactStreamingResult startContactStreaming(StartContactStreamingRequest startContactStreamingRequest);
+
+    /**
+     * <p>
      * Places an outbound call to a contact, and then initiates the contact flow. It performs the actions in the contact
      * flow that's specified (in <code>ContactFlowId</code>).
      * </p>
@@ -2249,6 +2277,29 @@ public interface AmazonConnect {
      *      API Documentation</a>
      */
     StopContactRecordingResult stopContactRecording(StopContactRecordingRequest stopContactRecordingRequest);
+
+    /**
+     * <p>
+     * Ends message streaming on a specified contact. To restart message streaming on that contact, call the <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_StartContactStreaming.html"
+     * >StartContactStreaming</a> API.
+     * </p>
+     * 
+     * @param stopContactStreamingRequest
+     * @return Result of the StopContactStreaming operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.StopContactStreaming
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/StopContactStreaming" target="_top">AWS
+     *      API Documentation</a>
+     */
+    StopContactStreamingResult stopContactStreaming(StopContactStreamingRequest stopContactStreamingRequest);
 
     /**
      * <p>

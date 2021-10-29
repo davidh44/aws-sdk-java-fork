@@ -201,6 +201,14 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private SubtitlesOutput subtitles;
+    /**
+     * <p>
+     * Language-specific settings that can be specified when language identification is enabled for your transcription
+     * job. These settings include <code>VocabularyName</code>, <code>VocabularyFilterName</code>, and
+     * <code>LanguageModelName</code>LanguageModelName.
+     * </p>
+     */
+    private java.util.Map<String, LanguageIdSettings> languageIdSettings;
 
     /**
      * <p>
@@ -1485,6 +1493,86 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * Language-specific settings that can be specified when language identification is enabled for your transcription
+     * job. These settings include <code>VocabularyName</code>, <code>VocabularyFilterName</code>, and
+     * <code>LanguageModelName</code>LanguageModelName.
+     * </p>
+     * 
+     * @return Language-specific settings that can be specified when language identification is enabled for your
+     *         transcription job. These settings include <code>VocabularyName</code>, <code>VocabularyFilterName</code>,
+     *         and <code>LanguageModelName</code>LanguageModelName.
+     */
+
+    public java.util.Map<String, LanguageIdSettings> getLanguageIdSettings() {
+        return languageIdSettings;
+    }
+
+    /**
+     * <p>
+     * Language-specific settings that can be specified when language identification is enabled for your transcription
+     * job. These settings include <code>VocabularyName</code>, <code>VocabularyFilterName</code>, and
+     * <code>LanguageModelName</code>LanguageModelName.
+     * </p>
+     * 
+     * @param languageIdSettings
+     *        Language-specific settings that can be specified when language identification is enabled for your
+     *        transcription job. These settings include <code>VocabularyName</code>, <code>VocabularyFilterName</code>,
+     *        and <code>LanguageModelName</code>LanguageModelName.
+     */
+
+    public void setLanguageIdSettings(java.util.Map<String, LanguageIdSettings> languageIdSettings) {
+        this.languageIdSettings = languageIdSettings;
+    }
+
+    /**
+     * <p>
+     * Language-specific settings that can be specified when language identification is enabled for your transcription
+     * job. These settings include <code>VocabularyName</code>, <code>VocabularyFilterName</code>, and
+     * <code>LanguageModelName</code>LanguageModelName.
+     * </p>
+     * 
+     * @param languageIdSettings
+     *        Language-specific settings that can be specified when language identification is enabled for your
+     *        transcription job. These settings include <code>VocabularyName</code>, <code>VocabularyFilterName</code>,
+     *        and <code>LanguageModelName</code>LanguageModelName.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TranscriptionJob withLanguageIdSettings(java.util.Map<String, LanguageIdSettings> languageIdSettings) {
+        setLanguageIdSettings(languageIdSettings);
+        return this;
+    }
+
+    /**
+     * Add a single LanguageIdSettings entry
+     *
+     * @see TranscriptionJob#withLanguageIdSettings
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TranscriptionJob addLanguageIdSettingsEntry(String key, LanguageIdSettings value) {
+        if (null == this.languageIdSettings) {
+            this.languageIdSettings = new java.util.HashMap<String, LanguageIdSettings>();
+        }
+        if (this.languageIdSettings.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.languageIdSettings.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into LanguageIdSettings.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TranscriptionJob clearLanguageIdSettingsEntries() {
+        this.languageIdSettings = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1535,7 +1623,9 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getSubtitles() != null)
-            sb.append("Subtitles: ").append(getSubtitles());
+            sb.append("Subtitles: ").append(getSubtitles()).append(",");
+        if (getLanguageIdSettings() != null)
+            sb.append("LanguageIdSettings: ").append(getLanguageIdSettings());
         sb.append("}");
         return sb.toString();
     }
@@ -1630,6 +1720,10 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getSubtitles() != null && other.getSubtitles().equals(this.getSubtitles()) == false)
             return false;
+        if (other.getLanguageIdSettings() == null ^ this.getLanguageIdSettings() == null)
+            return false;
+        if (other.getLanguageIdSettings() != null && other.getLanguageIdSettings().equals(this.getLanguageIdSettings()) == false)
+            return false;
         return true;
     }
 
@@ -1658,6 +1752,7 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getIdentifiedLanguageScore() == null) ? 0 : getIdentifiedLanguageScore().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getSubtitles() == null) ? 0 : getSubtitles().hashCode());
+        hashCode = prime * hashCode + ((getLanguageIdSettings() == null) ? 0 : getLanguageIdSettings().hashCode());
         return hashCode;
     }
 

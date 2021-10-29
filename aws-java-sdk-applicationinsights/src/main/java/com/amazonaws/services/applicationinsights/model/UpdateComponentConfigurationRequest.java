@@ -63,6 +63,8 @@ public class UpdateComponentConfigurationRequest extends com.amazonaws.AmazonWeb
      */
     private String componentConfiguration;
 
+    private Boolean autoConfigEnabled;
+
     /**
      * <p>
      * The name of the resource group.
@@ -342,6 +344,40 @@ public class UpdateComponentConfigurationRequest extends com.amazonaws.AmazonWeb
     }
 
     /**
+     * @param autoConfigEnabled
+     */
+
+    public void setAutoConfigEnabled(Boolean autoConfigEnabled) {
+        this.autoConfigEnabled = autoConfigEnabled;
+    }
+
+    /**
+     * @return
+     */
+
+    public Boolean getAutoConfigEnabled() {
+        return this.autoConfigEnabled;
+    }
+
+    /**
+     * @param autoConfigEnabled
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateComponentConfigurationRequest withAutoConfigEnabled(Boolean autoConfigEnabled) {
+        setAutoConfigEnabled(autoConfigEnabled);
+        return this;
+    }
+
+    /**
+     * @return
+     */
+
+    public Boolean isAutoConfigEnabled() {
+        return this.autoConfigEnabled;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -362,7 +398,9 @@ public class UpdateComponentConfigurationRequest extends com.amazonaws.AmazonWeb
         if (getTier() != null)
             sb.append("Tier: ").append(getTier()).append(",");
         if (getComponentConfiguration() != null)
-            sb.append("ComponentConfiguration: ").append(getComponentConfiguration());
+            sb.append("ComponentConfiguration: ").append(getComponentConfiguration()).append(",");
+        if (getAutoConfigEnabled() != null)
+            sb.append("AutoConfigEnabled: ").append(getAutoConfigEnabled());
         sb.append("}");
         return sb.toString();
     }
@@ -397,6 +435,10 @@ public class UpdateComponentConfigurationRequest extends com.amazonaws.AmazonWeb
             return false;
         if (other.getComponentConfiguration() != null && other.getComponentConfiguration().equals(this.getComponentConfiguration()) == false)
             return false;
+        if (other.getAutoConfigEnabled() == null ^ this.getAutoConfigEnabled() == null)
+            return false;
+        if (other.getAutoConfigEnabled() != null && other.getAutoConfigEnabled().equals(this.getAutoConfigEnabled()) == false)
+            return false;
         return true;
     }
 
@@ -410,6 +452,7 @@ public class UpdateComponentConfigurationRequest extends com.amazonaws.AmazonWeb
         hashCode = prime * hashCode + ((getMonitor() == null) ? 0 : getMonitor().hashCode());
         hashCode = prime * hashCode + ((getTier() == null) ? 0 : getTier().hashCode());
         hashCode = prime * hashCode + ((getComponentConfiguration() == null) ? 0 : getComponentConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getAutoConfigEnabled() == null) ? 0 : getAutoConfigEnabled().hashCode());
         return hashCode;
     }
 

@@ -89,6 +89,14 @@ public class ProblemJsonUnmarshaller implements Unmarshaller<Problem, JsonUnmars
                     problem.setFeedback(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
                             .unmarshall(context));
                 }
+                if (context.testExpression("RecurringCount", targetDepth)) {
+                    context.nextToken();
+                    problem.setRecurringCount(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
+                if (context.testExpression("LastRecurrenceTime", targetDepth)) {
+                    context.nextToken();
+                    problem.setLastRecurrenceTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

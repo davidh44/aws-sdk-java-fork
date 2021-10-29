@@ -72,6 +72,14 @@ public class ApplicationInfoJsonUnmarshaller implements Unmarshaller<Application
                     context.nextToken();
                     applicationInfo.setRemarks(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("AutoConfigEnabled", targetDepth)) {
+                    context.nextToken();
+                    applicationInfo.setAutoConfigEnabled(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("DiscoveryType", targetDepth)) {
+                    context.nextToken();
+                    applicationInfo.setDiscoveryType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

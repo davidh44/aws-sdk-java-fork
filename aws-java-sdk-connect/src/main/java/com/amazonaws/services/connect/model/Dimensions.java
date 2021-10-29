@@ -40,6 +40,18 @@ public class Dimensions implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String channel;
+    /**
+     * <p>
+     * The routing profile.
+     * </p>
+     */
+    private RoutingProfileReference routingProfile;
+    /**
+     * <p>
+     * The instance reference.
+     * </p>
+     */
+    private InstanceReference instanceReference;
 
     /**
      * <p>
@@ -141,6 +153,86 @@ public class Dimensions implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The routing profile.
+     * </p>
+     * 
+     * @param routingProfile
+     *        The routing profile.
+     */
+
+    public void setRoutingProfile(RoutingProfileReference routingProfile) {
+        this.routingProfile = routingProfile;
+    }
+
+    /**
+     * <p>
+     * The routing profile.
+     * </p>
+     * 
+     * @return The routing profile.
+     */
+
+    public RoutingProfileReference getRoutingProfile() {
+        return this.routingProfile;
+    }
+
+    /**
+     * <p>
+     * The routing profile.
+     * </p>
+     * 
+     * @param routingProfile
+     *        The routing profile.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Dimensions withRoutingProfile(RoutingProfileReference routingProfile) {
+        setRoutingProfile(routingProfile);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The instance reference.
+     * </p>
+     * 
+     * @param instanceReference
+     *        The instance reference.
+     */
+
+    public void setInstanceReference(InstanceReference instanceReference) {
+        this.instanceReference = instanceReference;
+    }
+
+    /**
+     * <p>
+     * The instance reference.
+     * </p>
+     * 
+     * @return The instance reference.
+     */
+
+    public InstanceReference getInstanceReference() {
+        return this.instanceReference;
+    }
+
+    /**
+     * <p>
+     * The instance reference.
+     * </p>
+     * 
+     * @param instanceReference
+     *        The instance reference.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Dimensions withInstanceReference(InstanceReference instanceReference) {
+        setInstanceReference(instanceReference);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -155,7 +247,11 @@ public class Dimensions implements Serializable, Cloneable, StructuredPojo {
         if (getQueue() != null)
             sb.append("Queue: ").append(getQueue()).append(",");
         if (getChannel() != null)
-            sb.append("Channel: ").append(getChannel());
+            sb.append("Channel: ").append(getChannel()).append(",");
+        if (getRoutingProfile() != null)
+            sb.append("RoutingProfile: ").append(getRoutingProfile()).append(",");
+        if (getInstanceReference() != null)
+            sb.append("InstanceReference: ").append(getInstanceReference());
         sb.append("}");
         return sb.toString();
     }
@@ -178,6 +274,14 @@ public class Dimensions implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getChannel() != null && other.getChannel().equals(this.getChannel()) == false)
             return false;
+        if (other.getRoutingProfile() == null ^ this.getRoutingProfile() == null)
+            return false;
+        if (other.getRoutingProfile() != null && other.getRoutingProfile().equals(this.getRoutingProfile()) == false)
+            return false;
+        if (other.getInstanceReference() == null ^ this.getInstanceReference() == null)
+            return false;
+        if (other.getInstanceReference() != null && other.getInstanceReference().equals(this.getInstanceReference()) == false)
+            return false;
         return true;
     }
 
@@ -188,6 +292,8 @@ public class Dimensions implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getQueue() == null) ? 0 : getQueue().hashCode());
         hashCode = prime * hashCode + ((getChannel() == null) ? 0 : getChannel().hashCode());
+        hashCode = prime * hashCode + ((getRoutingProfile() == null) ? 0 : getRoutingProfile().hashCode());
+        hashCode = prime * hashCode + ((getInstanceReference() == null) ? 0 : getInstanceReference().hashCode());
         return hashCode;
     }
 

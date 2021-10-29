@@ -46,9 +46,11 @@ public class JobExecutionSettings implements Serializable, Cloneable, Structured
     private Boolean allowDeferredExecution;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a role that has access to the S3 bucket that contains the input files. Amazon
-     * Transcribe assumes this role to read queued media files. If you have specified an output S3 bucket for the
-     * transcription results, this role should have access to the output bucket as well.
+     * The Amazon Resource Name (ARN), in the form
+     * <code>arn:partition:service:region:account-id:resource-type/resource-id</code>, of a role that has access to the
+     * S3 bucket that contains the input files. Amazon Transcribe assumes this role to read queued media files. If you
+     * have specified an output S3 bucket for the transcription results, this role should have access to the output
+     * bucket as well.
      * </p>
      * <p>
      * If you specify the <code>AllowDeferredExecution</code> field, you must specify the <code>DataAccessRoleArn</code>
@@ -187,9 +189,11 @@ public class JobExecutionSettings implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a role that has access to the S3 bucket that contains the input files. Amazon
-     * Transcribe assumes this role to read queued media files. If you have specified an output S3 bucket for the
-     * transcription results, this role should have access to the output bucket as well.
+     * The Amazon Resource Name (ARN), in the form
+     * <code>arn:partition:service:region:account-id:resource-type/resource-id</code>, of a role that has access to the
+     * S3 bucket that contains the input files. Amazon Transcribe assumes this role to read queued media files. If you
+     * have specified an output S3 bucket for the transcription results, this role should have access to the output
+     * bucket as well.
      * </p>
      * <p>
      * If you specify the <code>AllowDeferredExecution</code> field, you must specify the <code>DataAccessRoleArn</code>
@@ -197,9 +201,11 @@ public class JobExecutionSettings implements Serializable, Cloneable, Structured
      * </p>
      * 
      * @param dataAccessRoleArn
-     *        The Amazon Resource Name (ARN) of a role that has access to the S3 bucket that contains the input files.
-     *        Amazon Transcribe assumes this role to read queued media files. If you have specified an output S3 bucket
-     *        for the transcription results, this role should have access to the output bucket as well.</p>
+     *        The Amazon Resource Name (ARN), in the form
+     *        <code>arn:partition:service:region:account-id:resource-type/resource-id</code>, of a role that has access
+     *        to the S3 bucket that contains the input files. Amazon Transcribe assumes this role to read queued media
+     *        files. If you have specified an output S3 bucket for the transcription results, this role should have
+     *        access to the output bucket as well.</p>
      *        <p>
      *        If you specify the <code>AllowDeferredExecution</code> field, you must specify the
      *        <code>DataAccessRoleArn</code> field.
@@ -211,18 +217,22 @@ public class JobExecutionSettings implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a role that has access to the S3 bucket that contains the input files. Amazon
-     * Transcribe assumes this role to read queued media files. If you have specified an output S3 bucket for the
-     * transcription results, this role should have access to the output bucket as well.
+     * The Amazon Resource Name (ARN), in the form
+     * <code>arn:partition:service:region:account-id:resource-type/resource-id</code>, of a role that has access to the
+     * S3 bucket that contains the input files. Amazon Transcribe assumes this role to read queued media files. If you
+     * have specified an output S3 bucket for the transcription results, this role should have access to the output
+     * bucket as well.
      * </p>
      * <p>
      * If you specify the <code>AllowDeferredExecution</code> field, you must specify the <code>DataAccessRoleArn</code>
      * field.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of a role that has access to the S3 bucket that contains the input files.
-     *         Amazon Transcribe assumes this role to read queued media files. If you have specified an output S3 bucket
-     *         for the transcription results, this role should have access to the output bucket as well.</p>
+     * @return The Amazon Resource Name (ARN), in the form
+     *         <code>arn:partition:service:region:account-id:resource-type/resource-id</code>, of a role that has access
+     *         to the S3 bucket that contains the input files. Amazon Transcribe assumes this role to read queued media
+     *         files. If you have specified an output S3 bucket for the transcription results, this role should have
+     *         access to the output bucket as well.</p>
      *         <p>
      *         If you specify the <code>AllowDeferredExecution</code> field, you must specify the
      *         <code>DataAccessRoleArn</code> field.
@@ -234,9 +244,11 @@ public class JobExecutionSettings implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a role that has access to the S3 bucket that contains the input files. Amazon
-     * Transcribe assumes this role to read queued media files. If you have specified an output S3 bucket for the
-     * transcription results, this role should have access to the output bucket as well.
+     * The Amazon Resource Name (ARN), in the form
+     * <code>arn:partition:service:region:account-id:resource-type/resource-id</code>, of a role that has access to the
+     * S3 bucket that contains the input files. Amazon Transcribe assumes this role to read queued media files. If you
+     * have specified an output S3 bucket for the transcription results, this role should have access to the output
+     * bucket as well.
      * </p>
      * <p>
      * If you specify the <code>AllowDeferredExecution</code> field, you must specify the <code>DataAccessRoleArn</code>
@@ -244,9 +256,11 @@ public class JobExecutionSettings implements Serializable, Cloneable, Structured
      * </p>
      * 
      * @param dataAccessRoleArn
-     *        The Amazon Resource Name (ARN) of a role that has access to the S3 bucket that contains the input files.
-     *        Amazon Transcribe assumes this role to read queued media files. If you have specified an output S3 bucket
-     *        for the transcription results, this role should have access to the output bucket as well.</p>
+     *        The Amazon Resource Name (ARN), in the form
+     *        <code>arn:partition:service:region:account-id:resource-type/resource-id</code>, of a role that has access
+     *        to the S3 bucket that contains the input files. Amazon Transcribe assumes this role to read queued media
+     *        files. If you have specified an output S3 bucket for the transcription results, this role should have
+     *        access to the output bucket as well.</p>
      *        <p>
      *        If you specify the <code>AllowDeferredExecution</code> field, you must specify the
      *        <code>DataAccessRoleArn</code> field.

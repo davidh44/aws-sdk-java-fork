@@ -71,6 +71,16 @@ public class ModifyImageAttributeRequestMarshaller implements Marshaller<Request
                         request.addParameter("LaunchPermission.Add." + addListIndex + ".UserId",
                                 StringUtils.fromString(launchPermissionModificationsAddListValue.getUserId()));
                     }
+
+                    if (launchPermissionModificationsAddListValue.getOrganizationArn() != null) {
+                        request.addParameter("LaunchPermission.Add." + addListIndex + ".OrganizationArn",
+                                StringUtils.fromString(launchPermissionModificationsAddListValue.getOrganizationArn()));
+                    }
+
+                    if (launchPermissionModificationsAddListValue.getOrganizationalUnitArn() != null) {
+                        request.addParameter("LaunchPermission.Add." + addListIndex + ".OrganizationalUnitArn",
+                                StringUtils.fromString(launchPermissionModificationsAddListValue.getOrganizationalUnitArn()));
+                    }
                     addListIndex++;
                 }
             }
@@ -90,6 +100,16 @@ public class ModifyImageAttributeRequestMarshaller implements Marshaller<Request
                     if (launchPermissionModificationsRemoveListValue.getUserId() != null) {
                         request.addParameter("LaunchPermission.Remove." + removeListIndex + ".UserId",
                                 StringUtils.fromString(launchPermissionModificationsRemoveListValue.getUserId()));
+                    }
+
+                    if (launchPermissionModificationsRemoveListValue.getOrganizationArn() != null) {
+                        request.addParameter("LaunchPermission.Remove." + removeListIndex + ".OrganizationArn",
+                                StringUtils.fromString(launchPermissionModificationsRemoveListValue.getOrganizationArn()));
+                    }
+
+                    if (launchPermissionModificationsRemoveListValue.getOrganizationalUnitArn() != null) {
+                        request.addParameter("LaunchPermission.Remove." + removeListIndex + ".OrganizationalUnitArn",
+                                StringUtils.fromString(launchPermissionModificationsRemoveListValue.getOrganizationalUnitArn()));
                     }
                     removeListIndex++;
                 }
@@ -141,6 +161,34 @@ public class ModifyImageAttributeRequestMarshaller implements Marshaller<Request
 
         if (modifyImageAttributeRequest.getValue() != null) {
             request.addParameter("Value", StringUtils.fromString(modifyImageAttributeRequest.getValue()));
+        }
+
+        com.amazonaws.internal.SdkInternalList<String> modifyImageAttributeRequestOrganizationArnsList = (com.amazonaws.internal.SdkInternalList<String>) modifyImageAttributeRequest
+                .getOrganizationArns();
+        if (!modifyImageAttributeRequestOrganizationArnsList.isEmpty() || !modifyImageAttributeRequestOrganizationArnsList.isAutoConstruct()) {
+            int organizationArnsListIndex = 1;
+
+            for (String modifyImageAttributeRequestOrganizationArnsListValue : modifyImageAttributeRequestOrganizationArnsList) {
+                if (modifyImageAttributeRequestOrganizationArnsListValue != null) {
+                    request.addParameter("OrganizationArn." + organizationArnsListIndex,
+                            StringUtils.fromString(modifyImageAttributeRequestOrganizationArnsListValue));
+                }
+                organizationArnsListIndex++;
+            }
+        }
+
+        com.amazonaws.internal.SdkInternalList<String> modifyImageAttributeRequestOrganizationalUnitArnsList = (com.amazonaws.internal.SdkInternalList<String>) modifyImageAttributeRequest
+                .getOrganizationalUnitArns();
+        if (!modifyImageAttributeRequestOrganizationalUnitArnsList.isEmpty() || !modifyImageAttributeRequestOrganizationalUnitArnsList.isAutoConstruct()) {
+            int organizationalUnitArnsListIndex = 1;
+
+            for (String modifyImageAttributeRequestOrganizationalUnitArnsListValue : modifyImageAttributeRequestOrganizationalUnitArnsList) {
+                if (modifyImageAttributeRequestOrganizationalUnitArnsListValue != null) {
+                    request.addParameter("OrganizationalUnitArn." + organizationalUnitArnsListIndex,
+                            StringUtils.fromString(modifyImageAttributeRequestOrganizationalUnitArnsListValue));
+                }
+                organizationalUnitArnsListIndex++;
+            }
         }
 
         return request;

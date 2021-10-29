@@ -840,7 +840,7 @@ public interface AmazonTranscribe {
 
     /**
      * <p>
-     * Tags a Amazon Transcribe resource with the given list of tags.
+     * Tags an Amazon Transcribe resource with the given list of tags.
      * </p>
      * 
      * @param tagResourceRequest

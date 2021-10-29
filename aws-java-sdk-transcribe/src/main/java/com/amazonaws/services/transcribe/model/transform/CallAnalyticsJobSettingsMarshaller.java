@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.transcribe.model.transform;
 
+import java.util.Map;
 import java.util.List;
 import javax.annotation.Generated;
 
@@ -40,6 +41,8 @@ public class CallAnalyticsJobSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ContentRedaction").build();
     private static final MarshallingInfo<List> LANGUAGEOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LanguageOptions").build();
+    private static final MarshallingInfo<Map> LANGUAGEIDSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LanguageIdSettings").build();
 
     private static final CallAnalyticsJobSettingsMarshaller instance = new CallAnalyticsJobSettingsMarshaller();
 
@@ -63,6 +66,7 @@ public class CallAnalyticsJobSettingsMarshaller {
             protocolMarshaller.marshall(callAnalyticsJobSettings.getLanguageModelName(), LANGUAGEMODELNAME_BINDING);
             protocolMarshaller.marshall(callAnalyticsJobSettings.getContentRedaction(), CONTENTREDACTION_BINDING);
             protocolMarshaller.marshall(callAnalyticsJobSettings.getLanguageOptions(), LANGUAGEOPTIONS_BINDING);
+            protocolMarshaller.marshall(callAnalyticsJobSettings.getLanguageIdSettings(), LANGUAGEIDSETTINGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -44,7 +44,8 @@ public class InputDataConfig implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The Amazon Resource Name (ARN) that uniquely identifies the permissions you've given Amazon Transcribe to access
-     * your Amazon S3 buckets containing your media files or text data.
+     * your Amazon S3 buckets containing your media files or text data. ARNs have the format
+     * <code>arn:partition:service:region:account-id:resource-type/resource-id</code>.
      * </p>
      */
     private String dataAccessRoleArn;
@@ -138,12 +139,14 @@ public class InputDataConfig implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The Amazon Resource Name (ARN) that uniquely identifies the permissions you've given Amazon Transcribe to access
-     * your Amazon S3 buckets containing your media files or text data.
+     * your Amazon S3 buckets containing your media files or text data. ARNs have the format
+     * <code>arn:partition:service:region:account-id:resource-type/resource-id</code>.
      * </p>
      * 
      * @param dataAccessRoleArn
      *        The Amazon Resource Name (ARN) that uniquely identifies the permissions you've given Amazon Transcribe to
-     *        access your Amazon S3 buckets containing your media files or text data.
+     *        access your Amazon S3 buckets containing your media files or text data. ARNs have the format
+     *        <code>arn:partition:service:region:account-id:resource-type/resource-id</code>.
      */
 
     public void setDataAccessRoleArn(String dataAccessRoleArn) {
@@ -153,11 +156,13 @@ public class InputDataConfig implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The Amazon Resource Name (ARN) that uniquely identifies the permissions you've given Amazon Transcribe to access
-     * your Amazon S3 buckets containing your media files or text data.
+     * your Amazon S3 buckets containing your media files or text data. ARNs have the format
+     * <code>arn:partition:service:region:account-id:resource-type/resource-id</code>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) that uniquely identifies the permissions you've given Amazon Transcribe to
-     *         access your Amazon S3 buckets containing your media files or text data.
+     *         access your Amazon S3 buckets containing your media files or text data. ARNs have the format
+     *         <code>arn:partition:service:region:account-id:resource-type/resource-id</code>.
      */
 
     public String getDataAccessRoleArn() {
@@ -167,12 +172,14 @@ public class InputDataConfig implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The Amazon Resource Name (ARN) that uniquely identifies the permissions you've given Amazon Transcribe to access
-     * your Amazon S3 buckets containing your media files or text data.
+     * your Amazon S3 buckets containing your media files or text data. ARNs have the format
+     * <code>arn:partition:service:region:account-id:resource-type/resource-id</code>.
      * </p>
      * 
      * @param dataAccessRoleArn
      *        The Amazon Resource Name (ARN) that uniquely identifies the permissions you've given Amazon Transcribe to
-     *        access your Amazon S3 buckets containing your media files or text data.
+     *        access your Amazon S3 buckets containing your media files or text data. ARNs have the format
+     *        <code>arn:partition:service:region:account-id:resource-type/resource-id</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -59,6 +59,8 @@ public class ListProblemsRequest extends com.amazonaws.AmazonWebServiceRequest i
      */
     private String nextToken;
 
+    private String componentName;
+
     /**
      * <p>
      * The name of the resource group.
@@ -278,6 +280,32 @@ public class ListProblemsRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
+     * @param componentName
+     */
+
+    public void setComponentName(String componentName) {
+        this.componentName = componentName;
+    }
+
+    /**
+     * @return
+     */
+
+    public String getComponentName() {
+        return this.componentName;
+    }
+
+    /**
+     * @param componentName
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListProblemsRequest withComponentName(String componentName) {
+        setComponentName(componentName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -298,7 +326,9 @@ public class ListProblemsRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getComponentName() != null)
+            sb.append("ComponentName: ").append(getComponentName());
         sb.append("}");
         return sb.toString();
     }
@@ -333,6 +363,10 @@ public class ListProblemsRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
+        if (other.getComponentName() == null ^ this.getComponentName() == null)
+            return false;
+        if (other.getComponentName() != null && other.getComponentName().equals(this.getComponentName()) == false)
+            return false;
         return true;
     }
 
@@ -346,6 +380,7 @@ public class ListProblemsRequest extends com.amazonaws.AmazonWebServiceRequest i
         hashCode = prime * hashCode + ((getEndTime() == null) ? 0 : getEndTime().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getComponentName() == null) ? 0 : getComponentName().hashCode());
         return hashCode;
     }
 

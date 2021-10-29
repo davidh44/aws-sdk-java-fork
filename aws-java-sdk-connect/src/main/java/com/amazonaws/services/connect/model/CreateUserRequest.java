@@ -633,7 +633,7 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
         if (getUsername() != null)
             sb.append("Username: ").append(getUsername()).append(",");
         if (getPassword() != null)
-            sb.append("Password: ").append(getPassword()).append(",");
+            sb.append("Password: ").append("***Sensitive Data Redacted***").append(",");
         if (getIdentityInfo() != null)
             sb.append("IdentityInfo: ").append(getIdentityInfo()).append(",");
         if (getPhoneConfig() != null)

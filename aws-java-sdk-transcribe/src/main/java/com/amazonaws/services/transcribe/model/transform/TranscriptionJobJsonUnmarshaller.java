@@ -132,6 +132,11 @@ public class TranscriptionJobJsonUnmarshaller implements Unmarshaller<Transcript
                     context.nextToken();
                     transcriptionJob.setSubtitles(SubtitlesOutputJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("LanguageIdSettings", targetDepth)) {
+                    context.nextToken();
+                    transcriptionJob.setLanguageIdSettings(new MapUnmarshaller<String, LanguageIdSettings>(context.getUnmarshaller(String.class),
+                            LanguageIdSettingsJsonUnmarshaller.getInstance()).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

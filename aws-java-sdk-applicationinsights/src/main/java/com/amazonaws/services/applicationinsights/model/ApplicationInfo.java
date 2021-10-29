@@ -81,6 +81,10 @@ public class ApplicationInfo implements Serializable, Cloneable, StructuredPojo 
      */
     private String remarks;
 
+    private Boolean autoConfigEnabled;
+
+    private String discoveryType;
+
     /**
      * <p>
      * The name of the resource group used for the application.
@@ -443,6 +447,80 @@ public class ApplicationInfo implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * @param autoConfigEnabled
+     */
+
+    public void setAutoConfigEnabled(Boolean autoConfigEnabled) {
+        this.autoConfigEnabled = autoConfigEnabled;
+    }
+
+    /**
+     * @return
+     */
+
+    public Boolean getAutoConfigEnabled() {
+        return this.autoConfigEnabled;
+    }
+
+    /**
+     * @param autoConfigEnabled
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ApplicationInfo withAutoConfigEnabled(Boolean autoConfigEnabled) {
+        setAutoConfigEnabled(autoConfigEnabled);
+        return this;
+    }
+
+    /**
+     * @return
+     */
+
+    public Boolean isAutoConfigEnabled() {
+        return this.autoConfigEnabled;
+    }
+
+    /**
+     * @param discoveryType
+     * @see DiscoveryType
+     */
+
+    public void setDiscoveryType(String discoveryType) {
+        this.discoveryType = discoveryType;
+    }
+
+    /**
+     * @return
+     * @see DiscoveryType
+     */
+
+    public String getDiscoveryType() {
+        return this.discoveryType;
+    }
+
+    /**
+     * @param discoveryType
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DiscoveryType
+     */
+
+    public ApplicationInfo withDiscoveryType(String discoveryType) {
+        setDiscoveryType(discoveryType);
+        return this;
+    }
+
+    /**
+     * @param discoveryType
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DiscoveryType
+     */
+
+    public ApplicationInfo withDiscoveryType(DiscoveryType discoveryType) {
+        this.discoveryType = discoveryType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -465,7 +543,11 @@ public class ApplicationInfo implements Serializable, Cloneable, StructuredPojo 
         if (getCWEMonitorEnabled() != null)
             sb.append("CWEMonitorEnabled: ").append(getCWEMonitorEnabled()).append(",");
         if (getRemarks() != null)
-            sb.append("Remarks: ").append(getRemarks());
+            sb.append("Remarks: ").append(getRemarks()).append(",");
+        if (getAutoConfigEnabled() != null)
+            sb.append("AutoConfigEnabled: ").append(getAutoConfigEnabled()).append(",");
+        if (getDiscoveryType() != null)
+            sb.append("DiscoveryType: ").append(getDiscoveryType());
         sb.append("}");
         return sb.toString();
     }
@@ -504,6 +586,14 @@ public class ApplicationInfo implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getRemarks() != null && other.getRemarks().equals(this.getRemarks()) == false)
             return false;
+        if (other.getAutoConfigEnabled() == null ^ this.getAutoConfigEnabled() == null)
+            return false;
+        if (other.getAutoConfigEnabled() != null && other.getAutoConfigEnabled().equals(this.getAutoConfigEnabled()) == false)
+            return false;
+        if (other.getDiscoveryType() == null ^ this.getDiscoveryType() == null)
+            return false;
+        if (other.getDiscoveryType() != null && other.getDiscoveryType().equals(this.getDiscoveryType()) == false)
+            return false;
         return true;
     }
 
@@ -518,6 +608,8 @@ public class ApplicationInfo implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getOpsCenterEnabled() == null) ? 0 : getOpsCenterEnabled().hashCode());
         hashCode = prime * hashCode + ((getCWEMonitorEnabled() == null) ? 0 : getCWEMonitorEnabled().hashCode());
         hashCode = prime * hashCode + ((getRemarks() == null) ? 0 : getRemarks().hashCode());
+        hashCode = prime * hashCode + ((getAutoConfigEnabled() == null) ? 0 : getAutoConfigEnabled().hashCode());
+        hashCode = prime * hashCode + ((getDiscoveryType() == null) ? 0 : getDiscoveryType().hashCode());
         return hashCode;
     }
 

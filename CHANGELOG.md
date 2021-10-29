@@ -1,3 +1,24 @@
+# __1.12.99__ __2021-10-29__
+## __Amazon CloudWatch Application Insights__
+  - ### Features
+    - Added Monitoring support for SQL Server Failover Cluster Instance. Additionally, added a new API to allow one-click monitoring of containers resources.
+
+## __Amazon Connect Service__
+  - ### Features
+    - Amazon Connect Chat now supports real-time message streaming.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Support added for AMI sharing with organizations and organizational units in ModifyImageAttribute API
+
+## __Amazon Rekognition__
+  - ### Features
+    - This release added new attributes to Rekognition Video GetCelebrityRecognition API operations.
+
+## __Amazon Transcribe Service__
+  - ### Features
+    - Transcribe and Transcribe Call Analytics now support automatic language identification along with custom vocabulary, vocabulary filter, custom language model and PII redaction.
+
 # __1.12.98__ __2021-10-28__
 ## __AWS Systems Manager Incident Manager__
   - ### Features

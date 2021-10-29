@@ -27,7 +27,12 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Transcribe resource you want to remove tags from.
+     * The Amazon Resource Name (ARN) of the Amazon Transcribe resource you want to remove tags from. ARNs have the
+     * format <code>arn:partition:service:region:account-id:resource-type/resource-id</code> (for example,
+     * <code>arn:aws:transcribe:us-east-1:account-id:transcription-job/your-job-name</code>). Valid values for
+     * <code>resource-type</code> are: <code>transcription-job</code>, <code>medical-transcription-job</code>,
+     * <code>vocabulary</code>, <code>medical-vocabulary</code>, <code>vocabulary-filter</code>, and
+     * <code>language-model</code>.
      * </p>
      */
     private String resourceArn;
@@ -40,11 +45,21 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Transcribe resource you want to remove tags from.
+     * The Amazon Resource Name (ARN) of the Amazon Transcribe resource you want to remove tags from. ARNs have the
+     * format <code>arn:partition:service:region:account-id:resource-type/resource-id</code> (for example,
+     * <code>arn:aws:transcribe:us-east-1:account-id:transcription-job/your-job-name</code>). Valid values for
+     * <code>resource-type</code> are: <code>transcription-job</code>, <code>medical-transcription-job</code>,
+     * <code>vocabulary</code>, <code>medical-vocabulary</code>, <code>vocabulary-filter</code>, and
+     * <code>language-model</code>.
      * </p>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) of the Amazon Transcribe resource you want to remove tags from.
+     *        The Amazon Resource Name (ARN) of the Amazon Transcribe resource you want to remove tags from. ARNs have
+     *        the format <code>arn:partition:service:region:account-id:resource-type/resource-id</code> (for example,
+     *        <code>arn:aws:transcribe:us-east-1:account-id:transcription-job/your-job-name</code>). Valid values for
+     *        <code>resource-type</code> are: <code>transcription-job</code>, <code>medical-transcription-job</code>,
+     *        <code>vocabulary</code>, <code>medical-vocabulary</code>, <code>vocabulary-filter</code>, and
+     *        <code>language-model</code>.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -53,10 +68,20 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Transcribe resource you want to remove tags from.
+     * The Amazon Resource Name (ARN) of the Amazon Transcribe resource you want to remove tags from. ARNs have the
+     * format <code>arn:partition:service:region:account-id:resource-type/resource-id</code> (for example,
+     * <code>arn:aws:transcribe:us-east-1:account-id:transcription-job/your-job-name</code>). Valid values for
+     * <code>resource-type</code> are: <code>transcription-job</code>, <code>medical-transcription-job</code>,
+     * <code>vocabulary</code>, <code>medical-vocabulary</code>, <code>vocabulary-filter</code>, and
+     * <code>language-model</code>.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Amazon Transcribe resource you want to remove tags from.
+     * @return The Amazon Resource Name (ARN) of the Amazon Transcribe resource you want to remove tags from. ARNs have
+     *         the format <code>arn:partition:service:region:account-id:resource-type/resource-id</code> (for example,
+     *         <code>arn:aws:transcribe:us-east-1:account-id:transcription-job/your-job-name</code>). Valid values for
+     *         <code>resource-type</code> are: <code>transcription-job</code>, <code>medical-transcription-job</code>,
+     *         <code>vocabulary</code>, <code>medical-vocabulary</code>, <code>vocabulary-filter</code>, and
+     *         <code>language-model</code>.
      */
 
     public String getResourceArn() {
@@ -65,11 +90,21 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Transcribe resource you want to remove tags from.
+     * The Amazon Resource Name (ARN) of the Amazon Transcribe resource you want to remove tags from. ARNs have the
+     * format <code>arn:partition:service:region:account-id:resource-type/resource-id</code> (for example,
+     * <code>arn:aws:transcribe:us-east-1:account-id:transcription-job/your-job-name</code>). Valid values for
+     * <code>resource-type</code> are: <code>transcription-job</code>, <code>medical-transcription-job</code>,
+     * <code>vocabulary</code>, <code>medical-vocabulary</code>, <code>vocabulary-filter</code>, and
+     * <code>language-model</code>.
      * </p>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) of the Amazon Transcribe resource you want to remove tags from.
+     *        The Amazon Resource Name (ARN) of the Amazon Transcribe resource you want to remove tags from. ARNs have
+     *        the format <code>arn:partition:service:region:account-id:resource-type/resource-id</code> (for example,
+     *        <code>arn:aws:transcribe:us-east-1:account-id:transcription-job/your-job-name</code>). Valid values for
+     *        <code>resource-type</code> are: <code>transcription-job</code>, <code>medical-transcription-job</code>,
+     *        <code>vocabulary</code>, <code>medical-vocabulary</code>, <code>vocabulary-filter</code>, and
+     *        <code>language-model</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

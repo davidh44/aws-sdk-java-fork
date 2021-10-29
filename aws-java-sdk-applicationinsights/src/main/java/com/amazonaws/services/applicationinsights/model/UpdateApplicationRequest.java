@@ -58,6 +58,8 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
      */
     private Boolean removeSNSTopic;
 
+    private Boolean autoConfigEnabled;
+
     /**
      * <p>
      * The name of the resource group.
@@ -309,6 +311,40 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * @param autoConfigEnabled
+     */
+
+    public void setAutoConfigEnabled(Boolean autoConfigEnabled) {
+        this.autoConfigEnabled = autoConfigEnabled;
+    }
+
+    /**
+     * @return
+     */
+
+    public Boolean getAutoConfigEnabled() {
+        return this.autoConfigEnabled;
+    }
+
+    /**
+     * @param autoConfigEnabled
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateApplicationRequest withAutoConfigEnabled(Boolean autoConfigEnabled) {
+        setAutoConfigEnabled(autoConfigEnabled);
+        return this;
+    }
+
+    /**
+     * @return
+     */
+
+    public Boolean isAutoConfigEnabled() {
+        return this.autoConfigEnabled;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -329,7 +365,9 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
         if (getOpsItemSNSTopicArn() != null)
             sb.append("OpsItemSNSTopicArn: ").append(getOpsItemSNSTopicArn()).append(",");
         if (getRemoveSNSTopic() != null)
-            sb.append("RemoveSNSTopic: ").append(getRemoveSNSTopic());
+            sb.append("RemoveSNSTopic: ").append(getRemoveSNSTopic()).append(",");
+        if (getAutoConfigEnabled() != null)
+            sb.append("AutoConfigEnabled: ").append(getAutoConfigEnabled());
         sb.append("}");
         return sb.toString();
     }
@@ -364,6 +402,10 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
             return false;
         if (other.getRemoveSNSTopic() != null && other.getRemoveSNSTopic().equals(this.getRemoveSNSTopic()) == false)
             return false;
+        if (other.getAutoConfigEnabled() == null ^ this.getAutoConfigEnabled() == null)
+            return false;
+        if (other.getAutoConfigEnabled() != null && other.getAutoConfigEnabled().equals(this.getAutoConfigEnabled()) == false)
+            return false;
         return true;
     }
 
@@ -377,6 +419,7 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
         hashCode = prime * hashCode + ((getCWEMonitorEnabled() == null) ? 0 : getCWEMonitorEnabled().hashCode());
         hashCode = prime * hashCode + ((getOpsItemSNSTopicArn() == null) ? 0 : getOpsItemSNSTopicArn().hashCode());
         hashCode = prime * hashCode + ((getRemoveSNSTopic() == null) ? 0 : getRemoveSNSTopic().hashCode());
+        hashCode = prime * hashCode + ((getAutoConfigEnabled() == null) ? 0 : getAutoConfigEnabled().hashCode());
         return hashCode;
     }
 

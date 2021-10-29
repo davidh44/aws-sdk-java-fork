@@ -52,6 +52,16 @@ public class LaunchPermissionStaxUnmarshaller implements Unmarshaller<LaunchPerm
                     launchPermission.setUserId(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("organizationArn", targetDepth)) {
+                    launchPermission.setOrganizationArn(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("organizationalUnitArn", targetDepth)) {
+                    launchPermission.setOrganizationalUnitArn(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return launchPermission;

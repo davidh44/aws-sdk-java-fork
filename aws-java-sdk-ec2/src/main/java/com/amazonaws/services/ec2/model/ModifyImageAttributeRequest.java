@@ -30,8 +30,10 @@ public class ModifyImageAttributeRequest extends AmazonWebServiceRequest impleme
 
     /**
      * <p>
-     * The name of the attribute to modify. The valid values are <code>description</code> and
-     * <code>launchPermission</code>.
+     * The name of the attribute to modify.
+     * </p>
+     * <p>
+     * Valid values: <code>description</code> | <code>launchPermission</code>
      * </p>
      */
     private String attribute;
@@ -87,6 +89,20 @@ public class ModifyImageAttributeRequest extends AmazonWebServiceRequest impleme
      * </p>
      */
     private String value;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of an organization. This parameter can be used only when the
+     * <code>Attribute</code> parameter is <code>launchPermission</code>.
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<String> organizationArns;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of an organizational unit (OU). This parameter can be used only when the
+     * <code>Attribute</code> parameter is <code>launchPermission</code>.
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<String> organizationalUnitArns;
 
     /**
      * Default constructor for ModifyImageAttributeRequest object. Callers should use the setter or fluent setter
@@ -102,8 +118,9 @@ public class ModifyImageAttributeRequest extends AmazonWebServiceRequest impleme
      * @param imageId
      *        The ID of the AMI.
      * @param attribute
-     *        The name of the attribute to modify. The valid values are <code>description</code> and
-     *        <code>launchPermission</code>.
+     *        The name of the attribute to modify.</p>
+     *        <p>
+     *        Valid values: <code>description</code> | <code>launchPermission</code>
      */
     public ModifyImageAttributeRequest(String imageId, String attribute) {
         setImageId(imageId);
@@ -112,13 +129,16 @@ public class ModifyImageAttributeRequest extends AmazonWebServiceRequest impleme
 
     /**
      * <p>
-     * The name of the attribute to modify. The valid values are <code>description</code> and
-     * <code>launchPermission</code>.
+     * The name of the attribute to modify.
+     * </p>
+     * <p>
+     * Valid values: <code>description</code> | <code>launchPermission</code>
      * </p>
      * 
      * @param attribute
-     *        The name of the attribute to modify. The valid values are <code>description</code> and
-     *        <code>launchPermission</code>.
+     *        The name of the attribute to modify.</p>
+     *        <p>
+     *        Valid values: <code>description</code> | <code>launchPermission</code>
      */
 
     public void setAttribute(String attribute) {
@@ -127,12 +147,15 @@ public class ModifyImageAttributeRequest extends AmazonWebServiceRequest impleme
 
     /**
      * <p>
-     * The name of the attribute to modify. The valid values are <code>description</code> and
-     * <code>launchPermission</code>.
+     * The name of the attribute to modify.
+     * </p>
+     * <p>
+     * Valid values: <code>description</code> | <code>launchPermission</code>
      * </p>
      * 
-     * @return The name of the attribute to modify. The valid values are <code>description</code> and
-     *         <code>launchPermission</code>.
+     * @return The name of the attribute to modify.</p>
+     *         <p>
+     *         Valid values: <code>description</code> | <code>launchPermission</code>
      */
 
     public String getAttribute() {
@@ -141,13 +164,16 @@ public class ModifyImageAttributeRequest extends AmazonWebServiceRequest impleme
 
     /**
      * <p>
-     * The name of the attribute to modify. The valid values are <code>description</code> and
-     * <code>launchPermission</code>.
+     * The name of the attribute to modify.
+     * </p>
+     * <p>
+     * Valid values: <code>description</code> | <code>launchPermission</code>
      * </p>
      * 
      * @param attribute
-     *        The name of the attribute to modify. The valid values are <code>description</code> and
-     *        <code>launchPermission</code>.
+     *        The name of the attribute to modify.</p>
+     *        <p>
+     *        Valid values: <code>description</code> | <code>launchPermission</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -641,6 +667,168 @@ public class ModifyImageAttributeRequest extends AmazonWebServiceRequest impleme
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of an organization. This parameter can be used only when the
+     * <code>Attribute</code> parameter is <code>launchPermission</code>.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of an organization. This parameter can be used only when the
+     *         <code>Attribute</code> parameter is <code>launchPermission</code>.
+     */
+
+    public java.util.List<String> getOrganizationArns() {
+        if (organizationArns == null) {
+            organizationArns = new com.amazonaws.internal.SdkInternalList<String>();
+        }
+        return organizationArns;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of an organization. This parameter can be used only when the
+     * <code>Attribute</code> parameter is <code>launchPermission</code>.
+     * </p>
+     * 
+     * @param organizationArns
+     *        The Amazon Resource Name (ARN) of an organization. This parameter can be used only when the
+     *        <code>Attribute</code> parameter is <code>launchPermission</code>.
+     */
+
+    public void setOrganizationArns(java.util.Collection<String> organizationArns) {
+        if (organizationArns == null) {
+            this.organizationArns = null;
+            return;
+        }
+
+        this.organizationArns = new com.amazonaws.internal.SdkInternalList<String>(organizationArns);
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of an organization. This parameter can be used only when the
+     * <code>Attribute</code> parameter is <code>launchPermission</code>.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setOrganizationArns(java.util.Collection)} or {@link #withOrganizationArns(java.util.Collection)} if you
+     * want to override the existing values.
+     * </p>
+     * 
+     * @param organizationArns
+     *        The Amazon Resource Name (ARN) of an organization. This parameter can be used only when the
+     *        <code>Attribute</code> parameter is <code>launchPermission</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyImageAttributeRequest withOrganizationArns(String... organizationArns) {
+        if (this.organizationArns == null) {
+            setOrganizationArns(new com.amazonaws.internal.SdkInternalList<String>(organizationArns.length));
+        }
+        for (String ele : organizationArns) {
+            this.organizationArns.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of an organization. This parameter can be used only when the
+     * <code>Attribute</code> parameter is <code>launchPermission</code>.
+     * </p>
+     * 
+     * @param organizationArns
+     *        The Amazon Resource Name (ARN) of an organization. This parameter can be used only when the
+     *        <code>Attribute</code> parameter is <code>launchPermission</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyImageAttributeRequest withOrganizationArns(java.util.Collection<String> organizationArns) {
+        setOrganizationArns(organizationArns);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of an organizational unit (OU). This parameter can be used only when the
+     * <code>Attribute</code> parameter is <code>launchPermission</code>.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of an organizational unit (OU). This parameter can be used only when the
+     *         <code>Attribute</code> parameter is <code>launchPermission</code>.
+     */
+
+    public java.util.List<String> getOrganizationalUnitArns() {
+        if (organizationalUnitArns == null) {
+            organizationalUnitArns = new com.amazonaws.internal.SdkInternalList<String>();
+        }
+        return organizationalUnitArns;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of an organizational unit (OU). This parameter can be used only when the
+     * <code>Attribute</code> parameter is <code>launchPermission</code>.
+     * </p>
+     * 
+     * @param organizationalUnitArns
+     *        The Amazon Resource Name (ARN) of an organizational unit (OU). This parameter can be used only when the
+     *        <code>Attribute</code> parameter is <code>launchPermission</code>.
+     */
+
+    public void setOrganizationalUnitArns(java.util.Collection<String> organizationalUnitArns) {
+        if (organizationalUnitArns == null) {
+            this.organizationalUnitArns = null;
+            return;
+        }
+
+        this.organizationalUnitArns = new com.amazonaws.internal.SdkInternalList<String>(organizationalUnitArns);
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of an organizational unit (OU). This parameter can be used only when the
+     * <code>Attribute</code> parameter is <code>launchPermission</code>.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setOrganizationalUnitArns(java.util.Collection)} or
+     * {@link #withOrganizationalUnitArns(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param organizationalUnitArns
+     *        The Amazon Resource Name (ARN) of an organizational unit (OU). This parameter can be used only when the
+     *        <code>Attribute</code> parameter is <code>launchPermission</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyImageAttributeRequest withOrganizationalUnitArns(String... organizationalUnitArns) {
+        if (this.organizationalUnitArns == null) {
+            setOrganizationalUnitArns(new com.amazonaws.internal.SdkInternalList<String>(organizationalUnitArns.length));
+        }
+        for (String ele : organizationalUnitArns) {
+            this.organizationalUnitArns.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of an organizational unit (OU). This parameter can be used only when the
+     * <code>Attribute</code> parameter is <code>launchPermission</code>.
+     * </p>
+     * 
+     * @param organizationalUnitArns
+     *        The Amazon Resource Name (ARN) of an organizational unit (OU). This parameter can be used only when the
+     *        <code>Attribute</code> parameter is <code>launchPermission</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyImageAttributeRequest withOrganizationalUnitArns(java.util.Collection<String> organizationalUnitArns) {
+        setOrganizationalUnitArns(organizationalUnitArns);
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -680,7 +868,11 @@ public class ModifyImageAttributeRequest extends AmazonWebServiceRequest impleme
         if (getUserIds() != null)
             sb.append("UserIds: ").append(getUserIds()).append(",");
         if (getValue() != null)
-            sb.append("Value: ").append(getValue());
+            sb.append("Value: ").append(getValue()).append(",");
+        if (getOrganizationArns() != null)
+            sb.append("OrganizationArns: ").append(getOrganizationArns()).append(",");
+        if (getOrganizationalUnitArns() != null)
+            sb.append("OrganizationalUnitArns: ").append(getOrganizationalUnitArns());
         sb.append("}");
         return sb.toString();
     }
@@ -731,6 +923,14 @@ public class ModifyImageAttributeRequest extends AmazonWebServiceRequest impleme
             return false;
         if (other.getValue() != null && other.getValue().equals(this.getValue()) == false)
             return false;
+        if (other.getOrganizationArns() == null ^ this.getOrganizationArns() == null)
+            return false;
+        if (other.getOrganizationArns() != null && other.getOrganizationArns().equals(this.getOrganizationArns()) == false)
+            return false;
+        if (other.getOrganizationalUnitArns() == null ^ this.getOrganizationalUnitArns() == null)
+            return false;
+        if (other.getOrganizationalUnitArns() != null && other.getOrganizationalUnitArns().equals(this.getOrganizationalUnitArns()) == false)
+            return false;
         return true;
     }
 
@@ -748,6 +948,8 @@ public class ModifyImageAttributeRequest extends AmazonWebServiceRequest impleme
         hashCode = prime * hashCode + ((getUserGroups() == null) ? 0 : getUserGroups().hashCode());
         hashCode = prime * hashCode + ((getUserIds() == null) ? 0 : getUserIds().hashCode());
         hashCode = prime * hashCode + ((getValue() == null) ? 0 : getValue().hashCode());
+        hashCode = prime * hashCode + ((getOrganizationArns() == null) ? 0 : getOrganizationArns().hashCode());
+        hashCode = prime * hashCode + ((getOrganizationalUnitArns() == null) ? 0 : getOrganizationalUnitArns().hashCode());
         return hashCode;
     }
 

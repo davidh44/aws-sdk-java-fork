@@ -30,6 +30,27 @@ public class DescribeImagesRequest extends AmazonWebServiceRequest implements Se
      * Scopes the images by users with explicit launch permissions. Specify an Amazon Web Services account ID,
      * <code>self</code> (the sender of the request), or <code>all</code> (public AMIs).
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you specify an Amazon Web Services account ID that is not your own, only AMIs shared with that specific Amazon
+     * Web Services account ID are returned. However, AMIs that are shared with the account’s organization or
+     * organizational unit (OU) are not returned.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>self</code> or your own Amazon Web Services account ID, AMIs shared with your account are
+     * returned. In addition, AMIs that are shared with the organization or OU of which you are member are also
+     * returned.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>all</code>, all public AMIs are returned.
+     * </p>
+     * </li>
+     * </ul>
      */
     private com.amazonaws.internal.SdkInternalList<String> executableUsers;
     /**
@@ -247,9 +268,50 @@ public class DescribeImagesRequest extends AmazonWebServiceRequest implements Se
      * Scopes the images by users with explicit launch permissions. Specify an Amazon Web Services account ID,
      * <code>self</code> (the sender of the request), or <code>all</code> (public AMIs).
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you specify an Amazon Web Services account ID that is not your own, only AMIs shared with that specific Amazon
+     * Web Services account ID are returned. However, AMIs that are shared with the account’s organization or
+     * organizational unit (OU) are not returned.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>self</code> or your own Amazon Web Services account ID, AMIs shared with your account are
+     * returned. In addition, AMIs that are shared with the organization or OU of which you are member are also
+     * returned.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>all</code>, all public AMIs are returned.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @return Scopes the images by users with explicit launch permissions. Specify an Amazon Web Services account ID,
-     *         <code>self</code> (the sender of the request), or <code>all</code> (public AMIs).
+     *         <code>self</code> (the sender of the request), or <code>all</code> (public AMIs).</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         If you specify an Amazon Web Services account ID that is not your own, only AMIs shared with that
+     *         specific Amazon Web Services account ID are returned. However, AMIs that are shared with the account’s
+     *         organization or organizational unit (OU) are not returned.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         If you specify <code>self</code> or your own Amazon Web Services account ID, AMIs shared with your
+     *         account are returned. In addition, AMIs that are shared with the organization or OU of which you are
+     *         member are also returned.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         If you specify <code>all</code>, all public AMIs are returned.
+     *         </p>
+     *         </li>
      */
 
     public java.util.List<String> getExecutableUsers() {
@@ -264,10 +326,51 @@ public class DescribeImagesRequest extends AmazonWebServiceRequest implements Se
      * Scopes the images by users with explicit launch permissions. Specify an Amazon Web Services account ID,
      * <code>self</code> (the sender of the request), or <code>all</code> (public AMIs).
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you specify an Amazon Web Services account ID that is not your own, only AMIs shared with that specific Amazon
+     * Web Services account ID are returned. However, AMIs that are shared with the account’s organization or
+     * organizational unit (OU) are not returned.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>self</code> or your own Amazon Web Services account ID, AMIs shared with your account are
+     * returned. In addition, AMIs that are shared with the organization or OU of which you are member are also
+     * returned.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>all</code>, all public AMIs are returned.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param executableUsers
      *        Scopes the images by users with explicit launch permissions. Specify an Amazon Web Services account ID,
-     *        <code>self</code> (the sender of the request), or <code>all</code> (public AMIs).
+     *        <code>self</code> (the sender of the request), or <code>all</code> (public AMIs).</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If you specify an Amazon Web Services account ID that is not your own, only AMIs shared with that specific
+     *        Amazon Web Services account ID are returned. However, AMIs that are shared with the account’s organization
+     *        or organizational unit (OU) are not returned.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify <code>self</code> or your own Amazon Web Services account ID, AMIs shared with your account
+     *        are returned. In addition, AMIs that are shared with the organization or OU of which you are member are
+     *        also returned.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify <code>all</code>, all public AMIs are returned.
+     *        </p>
+     *        </li>
      */
 
     public void setExecutableUsers(java.util.Collection<String> executableUsers) {
@@ -284,6 +387,27 @@ public class DescribeImagesRequest extends AmazonWebServiceRequest implements Se
      * Scopes the images by users with explicit launch permissions. Specify an Amazon Web Services account ID,
      * <code>self</code> (the sender of the request), or <code>all</code> (public AMIs).
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you specify an Amazon Web Services account ID that is not your own, only AMIs shared with that specific Amazon
+     * Web Services account ID are returned. However, AMIs that are shared with the account’s organization or
+     * organizational unit (OU) are not returned.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>self</code> or your own Amazon Web Services account ID, AMIs shared with your account are
+     * returned. In addition, AMIs that are shared with the organization or OU of which you are member are also
+     * returned.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>all</code>, all public AMIs are returned.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setExecutableUsers(java.util.Collection)} or {@link #withExecutableUsers(java.util.Collection)} if you
@@ -292,7 +416,27 @@ public class DescribeImagesRequest extends AmazonWebServiceRequest implements Se
      * 
      * @param executableUsers
      *        Scopes the images by users with explicit launch permissions. Specify an Amazon Web Services account ID,
-     *        <code>self</code> (the sender of the request), or <code>all</code> (public AMIs).
+     *        <code>self</code> (the sender of the request), or <code>all</code> (public AMIs).</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If you specify an Amazon Web Services account ID that is not your own, only AMIs shared with that specific
+     *        Amazon Web Services account ID are returned. However, AMIs that are shared with the account’s organization
+     *        or organizational unit (OU) are not returned.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify <code>self</code> or your own Amazon Web Services account ID, AMIs shared with your account
+     *        are returned. In addition, AMIs that are shared with the organization or OU of which you are member are
+     *        also returned.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify <code>all</code>, all public AMIs are returned.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -311,10 +455,51 @@ public class DescribeImagesRequest extends AmazonWebServiceRequest implements Se
      * Scopes the images by users with explicit launch permissions. Specify an Amazon Web Services account ID,
      * <code>self</code> (the sender of the request), or <code>all</code> (public AMIs).
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you specify an Amazon Web Services account ID that is not your own, only AMIs shared with that specific Amazon
+     * Web Services account ID are returned. However, AMIs that are shared with the account’s organization or
+     * organizational unit (OU) are not returned.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>self</code> or your own Amazon Web Services account ID, AMIs shared with your account are
+     * returned. In addition, AMIs that are shared with the organization or OU of which you are member are also
+     * returned.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>all</code>, all public AMIs are returned.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param executableUsers
      *        Scopes the images by users with explicit launch permissions. Specify an Amazon Web Services account ID,
-     *        <code>self</code> (the sender of the request), or <code>all</code> (public AMIs).
+     *        <code>self</code> (the sender of the request), or <code>all</code> (public AMIs).</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If you specify an Amazon Web Services account ID that is not your own, only AMIs shared with that specific
+     *        Amazon Web Services account ID are returned. However, AMIs that are shared with the account’s organization
+     *        or organizational unit (OU) are not returned.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify <code>self</code> or your own Amazon Web Services account ID, AMIs shared with your account
+     *        are returned. In addition, AMIs that are shared with the organization or OU of which you are member are
+     *        also returned.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify <code>all</code>, all public AMIs are returned.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

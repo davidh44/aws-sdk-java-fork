@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.transcribe.model.transform;
 
+import java.util.Map;
 import java.util.List;
 import javax.annotation.Generated;
 
@@ -68,6 +69,8 @@ public class TranscriptionJobMarshaller {
             .marshallLocationName("Tags").build();
     private static final MarshallingInfo<StructuredPojo> SUBTITLES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Subtitles").build();
+    private static final MarshallingInfo<Map> LANGUAGEIDSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LanguageIdSettings").build();
 
     private static final TranscriptionJobMarshaller instance = new TranscriptionJobMarshaller();
 
@@ -105,6 +108,7 @@ public class TranscriptionJobMarshaller {
             protocolMarshaller.marshall(transcriptionJob.getIdentifiedLanguageScore(), IDENTIFIEDLANGUAGESCORE_BINDING);
             protocolMarshaller.marshall(transcriptionJob.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(transcriptionJob.getSubtitles(), SUBTITLES_BINDING);
+            protocolMarshaller.marshall(transcriptionJob.getLanguageIdSettings(), LANGUAGEIDSETTINGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

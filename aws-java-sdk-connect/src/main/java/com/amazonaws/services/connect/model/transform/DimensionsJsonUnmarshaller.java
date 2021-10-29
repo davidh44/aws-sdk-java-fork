@@ -56,6 +56,14 @@ public class DimensionsJsonUnmarshaller implements Unmarshaller<Dimensions, Json
                     context.nextToken();
                     dimensions.setChannel(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("RoutingProfile", targetDepth)) {
+                    context.nextToken();
+                    dimensions.setRoutingProfile(RoutingProfileReferenceJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("InstanceReference", targetDepth)) {
+                    context.nextToken();
+                    dimensions.setInstanceReference(InstanceReferenceJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

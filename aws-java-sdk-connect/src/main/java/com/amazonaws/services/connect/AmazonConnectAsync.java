@@ -3022,6 +3022,47 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Initiates real-time message streaming for a new chat contact.
+     * </p>
+     * <p>
+     * For more information about message streaming, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/chat-message-streaming.html">Enable real-time chat
+     * message streaming</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param startContactStreamingRequest
+     * @return A Java Future containing the result of the StartContactStreaming operation returned by the service.
+     * @sample AmazonConnectAsync.StartContactStreaming
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/StartContactStreaming" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<StartContactStreamingResult> startContactStreamingAsync(StartContactStreamingRequest startContactStreamingRequest);
+
+    /**
+     * <p>
+     * Initiates real-time message streaming for a new chat contact.
+     * </p>
+     * <p>
+     * For more information about message streaming, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/chat-message-streaming.html">Enable real-time chat
+     * message streaming</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param startContactStreamingRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartContactStreaming operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.StartContactStreaming
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/StartContactStreaming" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<StartContactStreamingResult> startContactStreamingAsync(StartContactStreamingRequest startContactStreamingRequest,
+            com.amazonaws.handlers.AsyncHandler<StartContactStreamingRequest, StartContactStreamingResult> asyncHandler);
+
+    /**
+     * <p>
      * Places an outbound call to a contact, and then initiates the contact flow. It performs the actions in the contact
      * flow that's specified (in <code>ContactFlowId</code>).
      * </p>
@@ -3205,6 +3246,41 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<StopContactRecordingResult> stopContactRecordingAsync(StopContactRecordingRequest stopContactRecordingRequest,
             com.amazonaws.handlers.AsyncHandler<StopContactRecordingRequest, StopContactRecordingResult> asyncHandler);
+
+    /**
+     * <p>
+     * Ends message streaming on a specified contact. To restart message streaming on that contact, call the <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_StartContactStreaming.html"
+     * >StartContactStreaming</a> API.
+     * </p>
+     * 
+     * @param stopContactStreamingRequest
+     * @return A Java Future containing the result of the StopContactStreaming operation returned by the service.
+     * @sample AmazonConnectAsync.StopContactStreaming
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/StopContactStreaming" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<StopContactStreamingResult> stopContactStreamingAsync(StopContactStreamingRequest stopContactStreamingRequest);
+
+    /**
+     * <p>
+     * Ends message streaming on a specified contact. To restart message streaming on that contact, call the <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_StartContactStreaming.html"
+     * >StartContactStreaming</a> API.
+     * </p>
+     * 
+     * @param stopContactStreamingRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StopContactStreaming operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.StopContactStreaming
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/StopContactStreaming" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<StopContactStreamingResult> stopContactStreamingAsync(StopContactStreamingRequest stopContactStreamingRequest,
+            com.amazonaws.handlers.AsyncHandler<StopContactStreamingRequest, StopContactStreamingResult> asyncHandler);
 
     /**
      * <p>
