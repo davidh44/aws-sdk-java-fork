@@ -61,7 +61,11 @@ public class ProvisionByoipCidrRequest extends AmazonWebServiceRequest implement
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<TagSpecification> poolTagSpecifications;
-    /** <para>Reserved.</para> */
+    /**
+     * <p>
+     * Reserved.
+     * </p>
+     */
     private Boolean multiRegion;
 
     /**
@@ -348,7 +352,9 @@ public class ProvisionByoipCidrRequest extends AmazonWebServiceRequest implement
     }
 
     /**
-     * <para>Reserved.</para>
+     * <p>
+     * Reserved.
+     * </p>
      * 
      * @param multiRegion
      *        Reserved.
@@ -359,7 +365,9 @@ public class ProvisionByoipCidrRequest extends AmazonWebServiceRequest implement
     }
 
     /**
-     * <para>Reserved.</para>
+     * <p>
+     * Reserved.
+     * </p>
      * 
      * @return Reserved.
      */
@@ -369,7 +377,9 @@ public class ProvisionByoipCidrRequest extends AmazonWebServiceRequest implement
     }
 
     /**
-     * <para>Reserved.</para>
+     * <p>
+     * Reserved.
+     * </p>
      * 
      * @param multiRegion
      *        Reserved.
@@ -382,7 +392,9 @@ public class ProvisionByoipCidrRequest extends AmazonWebServiceRequest implement
     }
 
     /**
-     * <para>Reserved.</para>
+     * <p>
+     * Reserved.
+     * </p>
      * 
      * @return Reserved.
      */

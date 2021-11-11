@@ -129,9 +129,9 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
      * </li>
      * <li>
      * <p>
-     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The AWS KMS key used to encrypt the table in inaccessible.
-     * Table operations may fail due to failure to use the AWS KMS key. DynamoDB will initiate the table archival
-     * process when a table's AWS KMS key remains inaccessible for more than seven days.
+     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The KMS key used to encrypt the table in inaccessible. Table
+     * operations may fail due to failure to use the KMS key. DynamoDB will initiate the table archival process when a
+     * table's KMS key remains inaccessible for more than seven days.
      * </p>
      * </li>
      * <li>
@@ -409,7 +409,7 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * AWS customer ID
+     * Amazon Web Services customer ID
      * </p>
      * </li>
      * <li>
@@ -435,7 +435,7 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
      * <p>
      * Represents the version of <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GlobalTables.html">global tables</a> in
-     * use, if the table is replicated across AWS Regions.
+     * use, if the table is replicated across Amazon Web Services Regions.
      * </p>
      */
     private String globalTableVersion;
@@ -1111,9 +1111,9 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
      * </li>
      * <li>
      * <p>
-     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The AWS KMS key used to encrypt the table in inaccessible.
-     * Table operations may fail due to failure to use the AWS KMS key. DynamoDB will initiate the table archival
-     * process when a table's AWS KMS key remains inaccessible for more than seven days.
+     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The KMS key used to encrypt the table in inaccessible. Table
+     * operations may fail due to failure to use the KMS key. DynamoDB will initiate the table archival process when a
+     * table's KMS key remains inaccessible for more than seven days.
      * </p>
      * </li>
      * <li>
@@ -1153,9 +1153,9 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
      *        </li>
      *        <li>
      *        <p>
-     *        <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The AWS KMS key used to encrypt the table in
-     *        inaccessible. Table operations may fail due to failure to use the AWS KMS key. DynamoDB will initiate the
-     *        table archival process when a table's AWS KMS key remains inaccessible for more than seven days.
+     *        <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The KMS key used to encrypt the table in inaccessible.
+     *        Table operations may fail due to failure to use the KMS key. DynamoDB will initiate the table archival
+     *        process when a table's KMS key remains inaccessible for more than seven days.
      *        </p>
      *        </li>
      *        <li>
@@ -1203,9 +1203,9 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
      * </li>
      * <li>
      * <p>
-     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The AWS KMS key used to encrypt the table in inaccessible.
-     * Table operations may fail due to failure to use the AWS KMS key. DynamoDB will initiate the table archival
-     * process when a table's AWS KMS key remains inaccessible for more than seven days.
+     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The KMS key used to encrypt the table in inaccessible. Table
+     * operations may fail due to failure to use the KMS key. DynamoDB will initiate the table archival process when a
+     * table's KMS key remains inaccessible for more than seven days.
      * </p>
      * </li>
      * <li>
@@ -1244,9 +1244,9 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
      *         </li>
      *         <li>
      *         <p>
-     *         <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The AWS KMS key used to encrypt the table in
-     *         inaccessible. Table operations may fail due to failure to use the AWS KMS key. DynamoDB will initiate the
-     *         table archival process when a table's AWS KMS key remains inaccessible for more than seven days.
+     *         <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The KMS key used to encrypt the table in inaccessible.
+     *         Table operations may fail due to failure to use the KMS key. DynamoDB will initiate the table archival
+     *         process when a table's KMS key remains inaccessible for more than seven days.
      *         </p>
      *         </li>
      *         <li>
@@ -1294,9 +1294,9 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
      * </li>
      * <li>
      * <p>
-     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The AWS KMS key used to encrypt the table in inaccessible.
-     * Table operations may fail due to failure to use the AWS KMS key. DynamoDB will initiate the table archival
-     * process when a table's AWS KMS key remains inaccessible for more than seven days.
+     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The KMS key used to encrypt the table in inaccessible. Table
+     * operations may fail due to failure to use the KMS key. DynamoDB will initiate the table archival process when a
+     * table's KMS key remains inaccessible for more than seven days.
      * </p>
      * </li>
      * <li>
@@ -1336,9 +1336,9 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
      *        </li>
      *        <li>
      *        <p>
-     *        <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The AWS KMS key used to encrypt the table in
-     *        inaccessible. Table operations may fail due to failure to use the AWS KMS key. DynamoDB will initiate the
-     *        table archival process when a table's AWS KMS key remains inaccessible for more than seven days.
+     *        <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The KMS key used to encrypt the table in inaccessible.
+     *        Table operations may fail due to failure to use the KMS key. DynamoDB will initiate the table archival
+     *        process when a table's KMS key remains inaccessible for more than seven days.
      *        </p>
      *        </li>
      *        <li>
@@ -1388,9 +1388,9 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
      * </li>
      * <li>
      * <p>
-     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The AWS KMS key used to encrypt the table in inaccessible.
-     * Table operations may fail due to failure to use the AWS KMS key. DynamoDB will initiate the table archival
-     * process when a table's AWS KMS key remains inaccessible for more than seven days.
+     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The KMS key used to encrypt the table in inaccessible. Table
+     * operations may fail due to failure to use the KMS key. DynamoDB will initiate the table archival process when a
+     * table's KMS key remains inaccessible for more than seven days.
      * </p>
      * </li>
      * <li>
@@ -1430,9 +1430,9 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
      *        </li>
      *        <li>
      *        <p>
-     *        <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The AWS KMS key used to encrypt the table in
-     *        inaccessible. Table operations may fail due to failure to use the AWS KMS key. DynamoDB will initiate the
-     *        table archival process when a table's AWS KMS key remains inaccessible for more than seven days.
+     *        <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The KMS key used to encrypt the table in inaccessible.
+     *        Table operations may fail due to failure to use the KMS key. DynamoDB will initiate the table archival
+     *        process when a table's KMS key remains inaccessible for more than seven days.
      *        </p>
      *        </li>
      *        <li>
@@ -1480,9 +1480,9 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
      * </li>
      * <li>
      * <p>
-     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The AWS KMS key used to encrypt the table in inaccessible.
-     * Table operations may fail due to failure to use the AWS KMS key. DynamoDB will initiate the table archival
-     * process when a table's AWS KMS key remains inaccessible for more than seven days.
+     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The KMS key used to encrypt the table in inaccessible. Table
+     * operations may fail due to failure to use the KMS key. DynamoDB will initiate the table archival process when a
+     * table's KMS key remains inaccessible for more than seven days.
      * </p>
      * </li>
      * <li>
@@ -1522,9 +1522,9 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
      *        </li>
      *        <li>
      *        <p>
-     *        <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The AWS KMS key used to encrypt the table in
-     *        inaccessible. Table operations may fail due to failure to use the AWS KMS key. DynamoDB will initiate the
-     *        table archival process when a table's AWS KMS key remains inaccessible for more than seven days.
+     *        <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The KMS key used to encrypt the table in inaccessible.
+     *        Table operations may fail due to failure to use the KMS key. DynamoDB will initiate the table archival
+     *        process when a table's KMS key remains inaccessible for more than seven days.
      *        </p>
      *        </li>
      *        <li>
@@ -3536,7 +3536,7 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * AWS customer ID
+     * Amazon Web Services customer ID
      * </p>
      * </li>
      * <li>
@@ -3561,7 +3561,7 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        AWS customer ID
+     *        Amazon Web Services customer ID
      *        </p>
      *        </li>
      *        <li>
@@ -3592,7 +3592,7 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * AWS customer ID
+     * Amazon Web Services customer ID
      * </p>
      * </li>
      * <li>
@@ -3616,7 +3616,7 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
      *         <ul>
      *         <li>
      *         <p>
-     *         AWS customer ID
+     *         Amazon Web Services customer ID
      *         </p>
      *         </li>
      *         <li>
@@ -3647,7 +3647,7 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * AWS customer ID
+     * Amazon Web Services customer ID
      * </p>
      * </li>
      * <li>
@@ -3672,7 +3672,7 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        AWS customer ID
+     *        Amazon Web Services customer ID
      *        </p>
      *        </li>
      *        <li>
@@ -3737,13 +3737,13 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
      * <p>
      * Represents the version of <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GlobalTables.html">global tables</a> in
-     * use, if the table is replicated across AWS Regions.
+     * use, if the table is replicated across Amazon Web Services Regions.
      * </p>
      * 
      * @param globalTableVersion
      *        Represents the version of <a
      *        href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GlobalTables.html">global
-     *        tables</a> in use, if the table is replicated across AWS Regions.
+     *        tables</a> in use, if the table is replicated across Amazon Web Services Regions.
      */
 
     public void setGlobalTableVersion(String globalTableVersion) {
@@ -3754,12 +3754,12 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
      * <p>
      * Represents the version of <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GlobalTables.html">global tables</a> in
-     * use, if the table is replicated across AWS Regions.
+     * use, if the table is replicated across Amazon Web Services Regions.
      * </p>
      * 
      * @return Represents the version of <a
      *         href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GlobalTables.html">global
-     *         tables</a> in use, if the table is replicated across AWS Regions.
+     *         tables</a> in use, if the table is replicated across Amazon Web Services Regions.
      */
 
     public String getGlobalTableVersion() {
@@ -3770,13 +3770,13 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
      * <p>
      * Represents the version of <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GlobalTables.html">global tables</a> in
-     * use, if the table is replicated across AWS Regions.
+     * use, if the table is replicated across Amazon Web Services Regions.
      * </p>
      * 
      * @param globalTableVersion
      *        Represents the version of <a
      *        href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GlobalTables.html">global
-     *        tables</a> in use, if the table is replicated across AWS Regions.
+     *        tables</a> in use, if the table is replicated across Amazon Web Services Regions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

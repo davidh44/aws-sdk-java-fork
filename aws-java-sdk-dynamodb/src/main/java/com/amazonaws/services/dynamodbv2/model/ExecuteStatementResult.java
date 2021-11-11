@@ -25,7 +25,7 @@ public class ExecuteStatementResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * If a read operation was used, this property will contain the result of the reade operation; a map of attribute
+     * If a read operation was used, this property will contain the result of the read operation; a map of attribute
      * names and their values. For the write operations this value will be empty.
      * </p>
      */
@@ -40,11 +40,11 @@ public class ExecuteStatementResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * If a read operation was used, this property will contain the result of the reade operation; a map of attribute
+     * If a read operation was used, this property will contain the result of the read operation; a map of attribute
      * names and their values. For the write operations this value will be empty.
      * </p>
      * 
-     * @return If a read operation was used, this property will contain the result of the reade operation; a map of
+     * @return If a read operation was used, this property will contain the result of the read operation; a map of
      *         attribute names and their values. For the write operations this value will be empty.
      */
 
@@ -54,12 +54,12 @@ public class ExecuteStatementResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * If a read operation was used, this property will contain the result of the reade operation; a map of attribute
+     * If a read operation was used, this property will contain the result of the read operation; a map of attribute
      * names and their values. For the write operations this value will be empty.
      * </p>
      * 
      * @param items
-     *        If a read operation was used, this property will contain the result of the reade operation; a map of
+     *        If a read operation was used, this property will contain the result of the read operation; a map of
      *        attribute names and their values. For the write operations this value will be empty.
      */
 
@@ -74,7 +74,7 @@ public class ExecuteStatementResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * If a read operation was used, this property will contain the result of the reade operation; a map of attribute
+     * If a read operation was used, this property will contain the result of the read operation; a map of attribute
      * names and their values. For the write operations this value will be empty.
      * </p>
      * <p>
@@ -84,7 +84,7 @@ public class ExecuteStatementResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      * 
      * @param items
-     *        If a read operation was used, this property will contain the result of the reade operation; a map of
+     *        If a read operation was used, this property will contain the result of the read operation; a map of
      *        attribute names and their values. For the write operations this value will be empty.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -101,12 +101,12 @@ public class ExecuteStatementResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * If a read operation was used, this property will contain the result of the reade operation; a map of attribute
+     * If a read operation was used, this property will contain the result of the read operation; a map of attribute
      * names and their values. For the write operations this value will be empty.
      * </p>
      * 
      * @param items
-     *        If a read operation was used, this property will contain the result of the reade operation; a map of
+     *        If a read operation was used, this property will contain the result of the read operation; a map of
      *        attribute names and their values. For the write operations this value will be empty.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

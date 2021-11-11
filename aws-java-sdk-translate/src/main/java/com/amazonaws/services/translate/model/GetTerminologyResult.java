@@ -36,6 +36,14 @@ public class GetTerminologyResult extends com.amazonaws.AmazonWebServiceResult<c
      * </p>
      */
     private TerminologyDataLocation terminologyDataLocation;
+    /**
+     * <p>
+     * The Amazon S3 location of a file that provides any errors or warnings that were produced by your input file. This
+     * file was created when Amazon Translate attempted to create a terminology resource. The location is returned as a
+     * presigned URL to that has a 30 minute expiration.
+     * </p>
+     */
+    private TerminologyDataLocation auxiliaryDataLocation;
 
     /**
      * <p>
@@ -124,6 +132,58 @@ public class GetTerminologyResult extends com.amazonaws.AmazonWebServiceResult<c
     }
 
     /**
+     * <p>
+     * The Amazon S3 location of a file that provides any errors or warnings that were produced by your input file. This
+     * file was created when Amazon Translate attempted to create a terminology resource. The location is returned as a
+     * presigned URL to that has a 30 minute expiration.
+     * </p>
+     * 
+     * @param auxiliaryDataLocation
+     *        The Amazon S3 location of a file that provides any errors or warnings that were produced by your input
+     *        file. This file was created when Amazon Translate attempted to create a terminology resource. The location
+     *        is returned as a presigned URL to that has a 30 minute expiration.
+     */
+
+    public void setAuxiliaryDataLocation(TerminologyDataLocation auxiliaryDataLocation) {
+        this.auxiliaryDataLocation = auxiliaryDataLocation;
+    }
+
+    /**
+     * <p>
+     * The Amazon S3 location of a file that provides any errors or warnings that were produced by your input file. This
+     * file was created when Amazon Translate attempted to create a terminology resource. The location is returned as a
+     * presigned URL to that has a 30 minute expiration.
+     * </p>
+     * 
+     * @return The Amazon S3 location of a file that provides any errors or warnings that were produced by your input
+     *         file. This file was created when Amazon Translate attempted to create a terminology resource. The
+     *         location is returned as a presigned URL to that has a 30 minute expiration.
+     */
+
+    public TerminologyDataLocation getAuxiliaryDataLocation() {
+        return this.auxiliaryDataLocation;
+    }
+
+    /**
+     * <p>
+     * The Amazon S3 location of a file that provides any errors or warnings that were produced by your input file. This
+     * file was created when Amazon Translate attempted to create a terminology resource. The location is returned as a
+     * presigned URL to that has a 30 minute expiration.
+     * </p>
+     * 
+     * @param auxiliaryDataLocation
+     *        The Amazon S3 location of a file that provides any errors or warnings that were produced by your input
+     *        file. This file was created when Amazon Translate attempted to create a terminology resource. The location
+     *        is returned as a presigned URL to that has a 30 minute expiration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetTerminologyResult withAuxiliaryDataLocation(TerminologyDataLocation auxiliaryDataLocation) {
+        setAuxiliaryDataLocation(auxiliaryDataLocation);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -138,7 +198,9 @@ public class GetTerminologyResult extends com.amazonaws.AmazonWebServiceResult<c
         if (getTerminologyProperties() != null)
             sb.append("TerminologyProperties: ").append(getTerminologyProperties()).append(",");
         if (getTerminologyDataLocation() != null)
-            sb.append("TerminologyDataLocation: ").append(getTerminologyDataLocation());
+            sb.append("TerminologyDataLocation: ").append(getTerminologyDataLocation()).append(",");
+        if (getAuxiliaryDataLocation() != null)
+            sb.append("AuxiliaryDataLocation: ").append(getAuxiliaryDataLocation());
         sb.append("}");
         return sb.toString();
     }
@@ -161,6 +223,10 @@ public class GetTerminologyResult extends com.amazonaws.AmazonWebServiceResult<c
             return false;
         if (other.getTerminologyDataLocation() != null && other.getTerminologyDataLocation().equals(this.getTerminologyDataLocation()) == false)
             return false;
+        if (other.getAuxiliaryDataLocation() == null ^ this.getAuxiliaryDataLocation() == null)
+            return false;
+        if (other.getAuxiliaryDataLocation() != null && other.getAuxiliaryDataLocation().equals(this.getAuxiliaryDataLocation()) == false)
+            return false;
         return true;
     }
 
@@ -171,6 +237,7 @@ public class GetTerminologyResult extends com.amazonaws.AmazonWebServiceResult<c
 
         hashCode = prime * hashCode + ((getTerminologyProperties() == null) ? 0 : getTerminologyProperties().hashCode());
         hashCode = prime * hashCode + ((getTerminologyDataLocation() == null) ? 0 : getTerminologyDataLocation().hashCode());
+        hashCode = prime * hashCode + ((getAuxiliaryDataLocation() == null) ? 0 : getAuxiliaryDataLocation().hashCode());
         return hashCode;
     }
 

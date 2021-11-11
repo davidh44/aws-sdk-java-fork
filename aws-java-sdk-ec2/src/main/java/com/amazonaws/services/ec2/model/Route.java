@@ -134,6 +134,8 @@ public class Route implements Serializable, Cloneable {
      */
     private String vpcPeeringConnectionId;
 
+    private String coreNetworkArn;
+
     /**
      * <p>
      * The IPv4 CIDR block used for the destination match.
@@ -981,6 +983,32 @@ public class Route implements Serializable, Cloneable {
     }
 
     /**
+     * @param coreNetworkArn
+     */
+
+    public void setCoreNetworkArn(String coreNetworkArn) {
+        this.coreNetworkArn = coreNetworkArn;
+    }
+
+    /**
+     * @return
+     */
+
+    public String getCoreNetworkArn() {
+        return this.coreNetworkArn;
+    }
+
+    /**
+     * @param coreNetworkArn
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Route withCoreNetworkArn(String coreNetworkArn) {
+        setCoreNetworkArn(coreNetworkArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1021,7 +1049,9 @@ public class Route implements Serializable, Cloneable {
         if (getState() != null)
             sb.append("State: ").append(getState()).append(",");
         if (getVpcPeeringConnectionId() != null)
-            sb.append("VpcPeeringConnectionId: ").append(getVpcPeeringConnectionId());
+            sb.append("VpcPeeringConnectionId: ").append(getVpcPeeringConnectionId()).append(",");
+        if (getCoreNetworkArn() != null)
+            sb.append("CoreNetworkArn: ").append(getCoreNetworkArn());
         sb.append("}");
         return sb.toString();
     }
@@ -1096,6 +1126,10 @@ public class Route implements Serializable, Cloneable {
             return false;
         if (other.getVpcPeeringConnectionId() != null && other.getVpcPeeringConnectionId().equals(this.getVpcPeeringConnectionId()) == false)
             return false;
+        if (other.getCoreNetworkArn() == null ^ this.getCoreNetworkArn() == null)
+            return false;
+        if (other.getCoreNetworkArn() != null && other.getCoreNetworkArn().equals(this.getCoreNetworkArn()) == false)
+            return false;
         return true;
     }
 
@@ -1119,6 +1153,7 @@ public class Route implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getOrigin() == null) ? 0 : getOrigin().hashCode());
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
         hashCode = prime * hashCode + ((getVpcPeeringConnectionId() == null) ? 0 : getVpcPeeringConnectionId().hashCode());
+        hashCode = prime * hashCode + ((getCoreNetworkArn() == null) ? 0 : getCoreNetworkArn().hashCode());
         return hashCode;
     }
 

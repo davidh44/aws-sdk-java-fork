@@ -92,7 +92,7 @@ public class ExportDescription implements Serializable, Cloneable, StructuredPoj
     private String s3Bucket;
     /**
      * <p>
-     * The ID of the AWS account that owns the bucket containing the export.
+     * The ID of the Amazon Web Services account that owns the bucket containing the export.
      * </p>
      */
     private String s3BucketOwner;
@@ -115,7 +115,7 @@ public class ExportDescription implements Serializable, Cloneable, StructuredPoj
      * </li>
      * <li>
      * <p>
-     * <code>KMS</code> - server-side encryption with AWS KMS managed keys
+     * <code>KMS</code> - server-side encryption with KMS managed keys
      * </p>
      * </li>
      * </ul>
@@ -123,7 +123,7 @@ public class ExportDescription implements Serializable, Cloneable, StructuredPoj
     private String s3SseAlgorithm;
     /**
      * <p>
-     * The ID of the AWS KMS managed key used to encrypt the S3 bucket where export data is stored (if applicable).
+     * The ID of the KMS managed key used to encrypt the S3 bucket where export data is stored (if applicable).
      * </p>
      */
     private String s3SseKmsKeyId;
@@ -592,11 +592,11 @@ public class ExportDescription implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The ID of the AWS account that owns the bucket containing the export.
+     * The ID of the Amazon Web Services account that owns the bucket containing the export.
      * </p>
      * 
      * @param s3BucketOwner
-     *        The ID of the AWS account that owns the bucket containing the export.
+     *        The ID of the Amazon Web Services account that owns the bucket containing the export.
      */
 
     public void setS3BucketOwner(String s3BucketOwner) {
@@ -605,10 +605,10 @@ public class ExportDescription implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The ID of the AWS account that owns the bucket containing the export.
+     * The ID of the Amazon Web Services account that owns the bucket containing the export.
      * </p>
      * 
-     * @return The ID of the AWS account that owns the bucket containing the export.
+     * @return The ID of the Amazon Web Services account that owns the bucket containing the export.
      */
 
     public String getS3BucketOwner() {
@@ -617,11 +617,11 @@ public class ExportDescription implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The ID of the AWS account that owns the bucket containing the export.
+     * The ID of the Amazon Web Services account that owns the bucket containing the export.
      * </p>
      * 
      * @param s3BucketOwner
-     *        The ID of the AWS account that owns the bucket containing the export.
+     *        The ID of the Amazon Web Services account that owns the bucket containing the export.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -683,7 +683,7 @@ public class ExportDescription implements Serializable, Cloneable, StructuredPoj
      * </li>
      * <li>
      * <p>
-     * <code>KMS</code> - server-side encryption with AWS KMS managed keys
+     * <code>KMS</code> - server-side encryption with KMS managed keys
      * </p>
      * </li>
      * </ul>
@@ -699,7 +699,7 @@ public class ExportDescription implements Serializable, Cloneable, StructuredPoj
      *        </li>
      *        <li>
      *        <p>
-     *        <code>KMS</code> - server-side encryption with AWS KMS managed keys
+     *        <code>KMS</code> - server-side encryption with KMS managed keys
      *        </p>
      *        </li>
      * @see S3SseAlgorithm
@@ -722,7 +722,7 @@ public class ExportDescription implements Serializable, Cloneable, StructuredPoj
      * </li>
      * <li>
      * <p>
-     * <code>KMS</code> - server-side encryption with AWS KMS managed keys
+     * <code>KMS</code> - server-side encryption with KMS managed keys
      * </p>
      * </li>
      * </ul>
@@ -737,7 +737,7 @@ public class ExportDescription implements Serializable, Cloneable, StructuredPoj
      *         </li>
      *         <li>
      *         <p>
-     *         <code>KMS</code> - server-side encryption with AWS KMS managed keys
+     *         <code>KMS</code> - server-side encryption with KMS managed keys
      *         </p>
      *         </li>
      * @see S3SseAlgorithm
@@ -760,7 +760,7 @@ public class ExportDescription implements Serializable, Cloneable, StructuredPoj
      * </li>
      * <li>
      * <p>
-     * <code>KMS</code> - server-side encryption with AWS KMS managed keys
+     * <code>KMS</code> - server-side encryption with KMS managed keys
      * </p>
      * </li>
      * </ul>
@@ -776,7 +776,7 @@ public class ExportDescription implements Serializable, Cloneable, StructuredPoj
      *        </li>
      *        <li>
      *        <p>
-     *        <code>KMS</code> - server-side encryption with AWS KMS managed keys
+     *        <code>KMS</code> - server-side encryption with KMS managed keys
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -801,7 +801,7 @@ public class ExportDescription implements Serializable, Cloneable, StructuredPoj
      * </li>
      * <li>
      * <p>
-     * <code>KMS</code> - server-side encryption with AWS KMS managed keys
+     * <code>KMS</code> - server-side encryption with KMS managed keys
      * </p>
      * </li>
      * </ul>
@@ -817,7 +817,7 @@ public class ExportDescription implements Serializable, Cloneable, StructuredPoj
      *        </li>
      *        <li>
      *        <p>
-     *        <code>KMS</code> - server-side encryption with AWS KMS managed keys
+     *        <code>KMS</code> - server-side encryption with KMS managed keys
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -831,12 +831,11 @@ public class ExportDescription implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The ID of the AWS KMS managed key used to encrypt the S3 bucket where export data is stored (if applicable).
+     * The ID of the KMS managed key used to encrypt the S3 bucket where export data is stored (if applicable).
      * </p>
      * 
      * @param s3SseKmsKeyId
-     *        The ID of the AWS KMS managed key used to encrypt the S3 bucket where export data is stored (if
-     *        applicable).
+     *        The ID of the KMS managed key used to encrypt the S3 bucket where export data is stored (if applicable).
      */
 
     public void setS3SseKmsKeyId(String s3SseKmsKeyId) {
@@ -845,11 +844,10 @@ public class ExportDescription implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The ID of the AWS KMS managed key used to encrypt the S3 bucket where export data is stored (if applicable).
+     * The ID of the KMS managed key used to encrypt the S3 bucket where export data is stored (if applicable).
      * </p>
      * 
-     * @return The ID of the AWS KMS managed key used to encrypt the S3 bucket where export data is stored (if
-     *         applicable).
+     * @return The ID of the KMS managed key used to encrypt the S3 bucket where export data is stored (if applicable).
      */
 
     public String getS3SseKmsKeyId() {
@@ -858,12 +856,11 @@ public class ExportDescription implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The ID of the AWS KMS managed key used to encrypt the S3 bucket where export data is stored (if applicable).
+     * The ID of the KMS managed key used to encrypt the S3 bucket where export data is stored (if applicable).
      * </p>
      * 
      * @param s3SseKmsKeyId
-     *        The ID of the AWS KMS managed key used to encrypt the S3 bucket where export data is stored (if
-     *        applicable).
+     *        The ID of the KMS managed key used to encrypt the S3 bucket where export data is stored (if applicable).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

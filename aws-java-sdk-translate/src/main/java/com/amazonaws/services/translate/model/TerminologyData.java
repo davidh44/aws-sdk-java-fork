@@ -38,10 +38,39 @@ public class TerminologyData implements Serializable, Cloneable, StructuredPojo 
     private java.nio.ByteBuffer file;
     /**
      * <p>
-     * The data format of the custom terminology. Either CSV or TMX.
+     * The data format of the custom terminology.
      * </p>
      */
     private String format;
+    /**
+     * <p>
+     * The directionality of your terminology resource indicates whether it has one source language (uni-directional) or
+     * multiple (multi-directional).
+     * </p>
+     * <dl>
+     * <dt>UNI</dt>
+     * <dd>
+     * <p>
+     * The terminology resource has one source language (for example, the first column in a CSV file), and all of its
+     * other languages are target languages.
+     * </p>
+     * </dd>
+     * <dt>MULTI</dt>
+     * <dd>
+     * <p>
+     * Any language in the terminology resource can be the source language or a target language. A single
+     * multi-directional terminology resource can be used for jobs that translate different language pairs. For example,
+     * if the terminology contains terms in English and Spanish, then it can be used for jobs that translate English to
+     * Spanish and jobs that translate Spanish to English.
+     * </p>
+     * </dd>
+     * </dl>
+     * <p>
+     * When you create a custom terminology resource without specifying the directionality, it behaves as
+     * uni-directional terminology, although this parameter will have a null value.
+     * </p>
+     */
+    private String directionality;
 
     /**
      * <p>
@@ -124,11 +153,11 @@ public class TerminologyData implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The data format of the custom terminology. Either CSV or TMX.
+     * The data format of the custom terminology.
      * </p>
      * 
      * @param format
-     *        The data format of the custom terminology. Either CSV or TMX.
+     *        The data format of the custom terminology.
      * @see TerminologyDataFormat
      */
 
@@ -138,10 +167,10 @@ public class TerminologyData implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The data format of the custom terminology. Either CSV or TMX.
+     * The data format of the custom terminology.
      * </p>
      * 
-     * @return The data format of the custom terminology. Either CSV or TMX.
+     * @return The data format of the custom terminology.
      * @see TerminologyDataFormat
      */
 
@@ -151,11 +180,11 @@ public class TerminologyData implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The data format of the custom terminology. Either CSV or TMX.
+     * The data format of the custom terminology.
      * </p>
      * 
      * @param format
-     *        The data format of the custom terminology. Either CSV or TMX.
+     *        The data format of the custom terminology.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TerminologyDataFormat
      */
@@ -167,17 +196,256 @@ public class TerminologyData implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The data format of the custom terminology. Either CSV or TMX.
+     * The data format of the custom terminology.
      * </p>
      * 
      * @param format
-     *        The data format of the custom terminology. Either CSV or TMX.
+     *        The data format of the custom terminology.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TerminologyDataFormat
      */
 
     public TerminologyData withFormat(TerminologyDataFormat format) {
         this.format = format.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The directionality of your terminology resource indicates whether it has one source language (uni-directional) or
+     * multiple (multi-directional).
+     * </p>
+     * <dl>
+     * <dt>UNI</dt>
+     * <dd>
+     * <p>
+     * The terminology resource has one source language (for example, the first column in a CSV file), and all of its
+     * other languages are target languages.
+     * </p>
+     * </dd>
+     * <dt>MULTI</dt>
+     * <dd>
+     * <p>
+     * Any language in the terminology resource can be the source language or a target language. A single
+     * multi-directional terminology resource can be used for jobs that translate different language pairs. For example,
+     * if the terminology contains terms in English and Spanish, then it can be used for jobs that translate English to
+     * Spanish and jobs that translate Spanish to English.
+     * </p>
+     * </dd>
+     * </dl>
+     * <p>
+     * When you create a custom terminology resource without specifying the directionality, it behaves as
+     * uni-directional terminology, although this parameter will have a null value.
+     * </p>
+     * 
+     * @param directionality
+     *        The directionality of your terminology resource indicates whether it has one source language
+     *        (uni-directional) or multiple (multi-directional).</p>
+     *        <dl>
+     *        <dt>UNI</dt>
+     *        <dd>
+     *        <p>
+     *        The terminology resource has one source language (for example, the first column in a CSV file), and all of
+     *        its other languages are target languages.
+     *        </p>
+     *        </dd>
+     *        <dt>MULTI</dt>
+     *        <dd>
+     *        <p>
+     *        Any language in the terminology resource can be the source language or a target language. A single
+     *        multi-directional terminology resource can be used for jobs that translate different language pairs. For
+     *        example, if the terminology contains terms in English and Spanish, then it can be used for jobs that
+     *        translate English to Spanish and jobs that translate Spanish to English.
+     *        </p>
+     *        </dd>
+     *        </dl>
+     *        <p>
+     *        When you create a custom terminology resource without specifying the directionality, it behaves as
+     *        uni-directional terminology, although this parameter will have a null value.
+     * @see Directionality
+     */
+
+    public void setDirectionality(String directionality) {
+        this.directionality = directionality;
+    }
+
+    /**
+     * <p>
+     * The directionality of your terminology resource indicates whether it has one source language (uni-directional) or
+     * multiple (multi-directional).
+     * </p>
+     * <dl>
+     * <dt>UNI</dt>
+     * <dd>
+     * <p>
+     * The terminology resource has one source language (for example, the first column in a CSV file), and all of its
+     * other languages are target languages.
+     * </p>
+     * </dd>
+     * <dt>MULTI</dt>
+     * <dd>
+     * <p>
+     * Any language in the terminology resource can be the source language or a target language. A single
+     * multi-directional terminology resource can be used for jobs that translate different language pairs. For example,
+     * if the terminology contains terms in English and Spanish, then it can be used for jobs that translate English to
+     * Spanish and jobs that translate Spanish to English.
+     * </p>
+     * </dd>
+     * </dl>
+     * <p>
+     * When you create a custom terminology resource without specifying the directionality, it behaves as
+     * uni-directional terminology, although this parameter will have a null value.
+     * </p>
+     * 
+     * @return The directionality of your terminology resource indicates whether it has one source language
+     *         (uni-directional) or multiple (multi-directional).</p>
+     *         <dl>
+     *         <dt>UNI</dt>
+     *         <dd>
+     *         <p>
+     *         The terminology resource has one source language (for example, the first column in a CSV file), and all
+     *         of its other languages are target languages.
+     *         </p>
+     *         </dd>
+     *         <dt>MULTI</dt>
+     *         <dd>
+     *         <p>
+     *         Any language in the terminology resource can be the source language or a target language. A single
+     *         multi-directional terminology resource can be used for jobs that translate different language pairs. For
+     *         example, if the terminology contains terms in English and Spanish, then it can be used for jobs that
+     *         translate English to Spanish and jobs that translate Spanish to English.
+     *         </p>
+     *         </dd>
+     *         </dl>
+     *         <p>
+     *         When you create a custom terminology resource without specifying the directionality, it behaves as
+     *         uni-directional terminology, although this parameter will have a null value.
+     * @see Directionality
+     */
+
+    public String getDirectionality() {
+        return this.directionality;
+    }
+
+    /**
+     * <p>
+     * The directionality of your terminology resource indicates whether it has one source language (uni-directional) or
+     * multiple (multi-directional).
+     * </p>
+     * <dl>
+     * <dt>UNI</dt>
+     * <dd>
+     * <p>
+     * The terminology resource has one source language (for example, the first column in a CSV file), and all of its
+     * other languages are target languages.
+     * </p>
+     * </dd>
+     * <dt>MULTI</dt>
+     * <dd>
+     * <p>
+     * Any language in the terminology resource can be the source language or a target language. A single
+     * multi-directional terminology resource can be used for jobs that translate different language pairs. For example,
+     * if the terminology contains terms in English and Spanish, then it can be used for jobs that translate English to
+     * Spanish and jobs that translate Spanish to English.
+     * </p>
+     * </dd>
+     * </dl>
+     * <p>
+     * When you create a custom terminology resource without specifying the directionality, it behaves as
+     * uni-directional terminology, although this parameter will have a null value.
+     * </p>
+     * 
+     * @param directionality
+     *        The directionality of your terminology resource indicates whether it has one source language
+     *        (uni-directional) or multiple (multi-directional).</p>
+     *        <dl>
+     *        <dt>UNI</dt>
+     *        <dd>
+     *        <p>
+     *        The terminology resource has one source language (for example, the first column in a CSV file), and all of
+     *        its other languages are target languages.
+     *        </p>
+     *        </dd>
+     *        <dt>MULTI</dt>
+     *        <dd>
+     *        <p>
+     *        Any language in the terminology resource can be the source language or a target language. A single
+     *        multi-directional terminology resource can be used for jobs that translate different language pairs. For
+     *        example, if the terminology contains terms in English and Spanish, then it can be used for jobs that
+     *        translate English to Spanish and jobs that translate Spanish to English.
+     *        </p>
+     *        </dd>
+     *        </dl>
+     *        <p>
+     *        When you create a custom terminology resource without specifying the directionality, it behaves as
+     *        uni-directional terminology, although this parameter will have a null value.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see Directionality
+     */
+
+    public TerminologyData withDirectionality(String directionality) {
+        setDirectionality(directionality);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The directionality of your terminology resource indicates whether it has one source language (uni-directional) or
+     * multiple (multi-directional).
+     * </p>
+     * <dl>
+     * <dt>UNI</dt>
+     * <dd>
+     * <p>
+     * The terminology resource has one source language (for example, the first column in a CSV file), and all of its
+     * other languages are target languages.
+     * </p>
+     * </dd>
+     * <dt>MULTI</dt>
+     * <dd>
+     * <p>
+     * Any language in the terminology resource can be the source language or a target language. A single
+     * multi-directional terminology resource can be used for jobs that translate different language pairs. For example,
+     * if the terminology contains terms in English and Spanish, then it can be used for jobs that translate English to
+     * Spanish and jobs that translate Spanish to English.
+     * </p>
+     * </dd>
+     * </dl>
+     * <p>
+     * When you create a custom terminology resource without specifying the directionality, it behaves as
+     * uni-directional terminology, although this parameter will have a null value.
+     * </p>
+     * 
+     * @param directionality
+     *        The directionality of your terminology resource indicates whether it has one source language
+     *        (uni-directional) or multiple (multi-directional).</p>
+     *        <dl>
+     *        <dt>UNI</dt>
+     *        <dd>
+     *        <p>
+     *        The terminology resource has one source language (for example, the first column in a CSV file), and all of
+     *        its other languages are target languages.
+     *        </p>
+     *        </dd>
+     *        <dt>MULTI</dt>
+     *        <dd>
+     *        <p>
+     *        Any language in the terminology resource can be the source language or a target language. A single
+     *        multi-directional terminology resource can be used for jobs that translate different language pairs. For
+     *        example, if the terminology contains terms in English and Spanish, then it can be used for jobs that
+     *        translate English to Spanish and jobs that translate Spanish to English.
+     *        </p>
+     *        </dd>
+     *        </dl>
+     *        <p>
+     *        When you create a custom terminology resource without specifying the directionality, it behaves as
+     *        uni-directional terminology, although this parameter will have a null value.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see Directionality
+     */
+
+    public TerminologyData withDirectionality(Directionality directionality) {
+        this.directionality = directionality.toString();
         return this;
     }
 
@@ -196,7 +464,9 @@ public class TerminologyData implements Serializable, Cloneable, StructuredPojo 
         if (getFile() != null)
             sb.append("File: ").append("***Sensitive Data Redacted***").append(",");
         if (getFormat() != null)
-            sb.append("Format: ").append(getFormat());
+            sb.append("Format: ").append(getFormat()).append(",");
+        if (getDirectionality() != null)
+            sb.append("Directionality: ").append(getDirectionality());
         sb.append("}");
         return sb.toString();
     }
@@ -219,6 +489,10 @@ public class TerminologyData implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getFormat() != null && other.getFormat().equals(this.getFormat()) == false)
             return false;
+        if (other.getDirectionality() == null ^ this.getDirectionality() == null)
+            return false;
+        if (other.getDirectionality() != null && other.getDirectionality().equals(this.getDirectionality()) == false)
+            return false;
         return true;
     }
 
@@ -229,6 +503,7 @@ public class TerminologyData implements Serializable, Cloneable, StructuredPojo 
 
         hashCode = prime * hashCode + ((getFile() == null) ? 0 : getFile().hashCode());
         hashCode = prime * hashCode + ((getFormat() == null) ? 0 : getFormat().hashCode());
+        hashCode = prime * hashCode + ((getDirectionality() == null) ? 0 : getDirectionality().hashCode());
         return hashCode;
     }
 

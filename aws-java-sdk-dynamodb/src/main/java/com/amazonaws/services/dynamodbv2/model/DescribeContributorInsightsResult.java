@@ -37,13 +37,13 @@ public class DescribeContributorInsightsResult extends com.amazonaws.AmazonWebSe
     private String indexName;
     /**
      * <p>
-     * List of names of the associated Alpine rules.
+     * List of names of the associated contributor insights rules.
      * </p>
      */
     private java.util.List<String> contributorInsightsRuleList;
     /**
      * <p>
-     * Current Status contributor insights.
+     * Current status of contributor insights.
      * </p>
      */
     private String contributorInsightsStatus;
@@ -55,7 +55,7 @@ public class DescribeContributorInsightsResult extends com.amazonaws.AmazonWebSe
     private java.util.Date lastUpdateDateTime;
     /**
      * <p>
-     * Returns information about the last failure that encountered.
+     * Returns information about the last failure that was encountered.
      * </p>
      * <p>
      * The most common exceptions for a FAILED status are:
@@ -170,10 +170,10 @@ public class DescribeContributorInsightsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * List of names of the associated Alpine rules.
+     * List of names of the associated contributor insights rules.
      * </p>
      * 
-     * @return List of names of the associated Alpine rules.
+     * @return List of names of the associated contributor insights rules.
      */
 
     public java.util.List<String> getContributorInsightsRuleList() {
@@ -182,11 +182,11 @@ public class DescribeContributorInsightsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * List of names of the associated Alpine rules.
+     * List of names of the associated contributor insights rules.
      * </p>
      * 
      * @param contributorInsightsRuleList
-     *        List of names of the associated Alpine rules.
+     *        List of names of the associated contributor insights rules.
      */
 
     public void setContributorInsightsRuleList(java.util.Collection<String> contributorInsightsRuleList) {
@@ -200,7 +200,7 @@ public class DescribeContributorInsightsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * List of names of the associated Alpine rules.
+     * List of names of the associated contributor insights rules.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -209,7 +209,7 @@ public class DescribeContributorInsightsResult extends com.amazonaws.AmazonWebSe
      * </p>
      * 
      * @param contributorInsightsRuleList
-     *        List of names of the associated Alpine rules.
+     *        List of names of the associated contributor insights rules.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -225,11 +225,11 @@ public class DescribeContributorInsightsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * List of names of the associated Alpine rules.
+     * List of names of the associated contributor insights rules.
      * </p>
      * 
      * @param contributorInsightsRuleList
-     *        List of names of the associated Alpine rules.
+     *        List of names of the associated contributor insights rules.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -240,11 +240,11 @@ public class DescribeContributorInsightsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Current Status contributor insights.
+     * Current status of contributor insights.
      * </p>
      * 
      * @param contributorInsightsStatus
-     *        Current Status contributor insights.
+     *        Current status of contributor insights.
      * @see ContributorInsightsStatus
      */
 
@@ -254,10 +254,10 @@ public class DescribeContributorInsightsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Current Status contributor insights.
+     * Current status of contributor insights.
      * </p>
      * 
-     * @return Current Status contributor insights.
+     * @return Current status of contributor insights.
      * @see ContributorInsightsStatus
      */
 
@@ -267,11 +267,11 @@ public class DescribeContributorInsightsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Current Status contributor insights.
+     * Current status of contributor insights.
      * </p>
      * 
      * @param contributorInsightsStatus
-     *        Current Status contributor insights.
+     *        Current status of contributor insights.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ContributorInsightsStatus
      */
@@ -283,11 +283,11 @@ public class DescribeContributorInsightsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Current Status contributor insights.
+     * Current status of contributor insights.
      * </p>
      * 
      * @param contributorInsightsStatus
-     *        Current Status contributor insights.
+     *        Current status of contributor insights.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ContributorInsightsStatus
      */
@@ -339,7 +339,7 @@ public class DescribeContributorInsightsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Returns information about the last failure that encountered.
+     * Returns information about the last failure that was encountered.
      * </p>
      * <p>
      * The most common exceptions for a FAILED status are:
@@ -371,7 +371,7 @@ public class DescribeContributorInsightsResult extends com.amazonaws.AmazonWebSe
      * </ul>
      * 
      * @param failureException
-     *        Returns information about the last failure that encountered.</p>
+     *        Returns information about the last failure that was encountered.</p>
      *        <p>
      *        The most common exceptions for a FAILED status are:
      *        </p>
@@ -408,7 +408,7 @@ public class DescribeContributorInsightsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Returns information about the last failure that encountered.
+     * Returns information about the last failure that was encountered.
      * </p>
      * <p>
      * The most common exceptions for a FAILED status are:
@@ -439,7 +439,7 @@ public class DescribeContributorInsightsResult extends com.amazonaws.AmazonWebSe
      * </li>
      * </ul>
      * 
-     * @return Returns information about the last failure that encountered.</p>
+     * @return Returns information about the last failure that was encountered.</p>
      *         <p>
      *         The most common exceptions for a FAILED status are:
      *         </p>
@@ -477,7 +477,7 @@ public class DescribeContributorInsightsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Returns information about the last failure that encountered.
+     * Returns information about the last failure that was encountered.
      * </p>
      * <p>
      * The most common exceptions for a FAILED status are:
@@ -509,7 +509,7 @@ public class DescribeContributorInsightsResult extends com.amazonaws.AmazonWebSe
      * </ul>
      * 
      * @param failureException
-     *        Returns information about the last failure that encountered.</p>
+     *        Returns information about the last failure that was encountered.</p>
      *        <p>
      *        The most common exceptions for a FAILED status are:
      *        </p>

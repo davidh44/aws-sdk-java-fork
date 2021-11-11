@@ -41,7 +41,7 @@ public class ArchivalSummary implements Serializable, Cloneable, StructuredPojo 
      * <ul>
      * <li>
      * <p>
-     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The table was archived due to the table's AWS KMS key being
+     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The table was archived due to the table's KMS key being
      * inaccessible for more than seven days. An On-Demand backup was created at the archival time.
      * </p>
      * </li>
@@ -103,7 +103,7 @@ public class ArchivalSummary implements Serializable, Cloneable, StructuredPojo 
      * <ul>
      * <li>
      * <p>
-     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The table was archived due to the table's AWS KMS key being
+     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The table was archived due to the table's KMS key being
      * inaccessible for more than seven days. An On-Demand backup was created at the archival time.
      * </p>
      * </li>
@@ -114,8 +114,8 @@ public class ArchivalSummary implements Serializable, Cloneable, StructuredPojo 
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The table was archived due to the table's AWS KMS key
-     *        being inaccessible for more than seven days. An On-Demand backup was created at the archival time.
+     *        <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The table was archived due to the table's KMS key being
+     *        inaccessible for more than seven days. An On-Demand backup was created at the archival time.
      *        </p>
      *        </li>
      */
@@ -131,7 +131,7 @@ public class ArchivalSummary implements Serializable, Cloneable, StructuredPojo 
      * <ul>
      * <li>
      * <p>
-     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The table was archived due to the table's AWS KMS key being
+     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The table was archived due to the table's KMS key being
      * inaccessible for more than seven days. An On-Demand backup was created at the archival time.
      * </p>
      * </li>
@@ -141,7 +141,7 @@ public class ArchivalSummary implements Serializable, Cloneable, StructuredPojo 
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The table was archived due to the table's AWS KMS key
+     *         <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The table was archived due to the table's KMS key
      *         being inaccessible for more than seven days. An On-Demand backup was created at the archival time.
      *         </p>
      *         </li>
@@ -158,7 +158,7 @@ public class ArchivalSummary implements Serializable, Cloneable, StructuredPojo 
      * <ul>
      * <li>
      * <p>
-     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The table was archived due to the table's AWS KMS key being
+     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The table was archived due to the table's KMS key being
      * inaccessible for more than seven days. An On-Demand backup was created at the archival time.
      * </p>
      * </li>
@@ -169,8 +169,8 @@ public class ArchivalSummary implements Serializable, Cloneable, StructuredPojo 
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The table was archived due to the table's AWS KMS key
-     *        being inaccessible for more than seven days. An On-Demand backup was created at the archival time.
+     *        <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS</code> - The table was archived due to the table's KMS key being
+     *        inaccessible for more than seven days. An On-Demand backup was created at the archival time.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

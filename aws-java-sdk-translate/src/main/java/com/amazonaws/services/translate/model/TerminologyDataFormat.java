@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum TerminologyDataFormat {
 
     CSV("CSV"),
-    TMX("TMX");
+    TMX("TMX"),
+    TSV("TSV");
 
     private String value;
 

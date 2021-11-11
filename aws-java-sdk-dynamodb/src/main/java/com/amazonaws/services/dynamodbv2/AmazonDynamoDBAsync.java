@@ -35,13 +35,14 @@ import com.amazonaws.services.dynamodbv2.model.*;
  * <p>
  * With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  * request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- * degradation, and use the AWS Management Console to monitor resource utilization and performance metrics.
+ * degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
+ * metrics.
  * </p>
  * <p>
  * DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle
  * your throughput and storage requirements, while maintaining consistent and fast performance. All of your data is
- * stored on solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region,
- * providing built-in high availability and data durability.
+ * stored on solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web
+ * Services Region, providing built-in high availability and data durability.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -49,8 +50,13 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
 
     /**
      * <p>
-     * This operation allows you to perform batch reads and writes on data stored in DynamoDB, using PartiQL.
+     * This operation allows you to perform batch reads or writes on data stored in DynamoDB, using PartiQL.
      * </p>
+     * <note>
+     * <p>
+     * The entire batch must consist of either read statements or write statements, you cannot mix both in one batch.
+     * </p>
+     * </note>
      * 
      * @param batchExecuteStatementRequest
      * @return A Java Future containing the result of the BatchExecuteStatement operation returned by the service.
@@ -62,8 +68,13 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
 
     /**
      * <p>
-     * This operation allows you to perform batch reads and writes on data stored in DynamoDB, using PartiQL.
+     * This operation allows you to perform batch reads or writes on data stored in DynamoDB, using PartiQL.
      * </p>
+     * <note>
+     * <p>
+     * The entire batch must consist of either read statements or write statements, you cannot mix both in one batch.
+     * </p>
+     * </note>
      * 
      * @param batchExecuteStatementRequest
      * @param asyncHandler
@@ -805,9 +816,9 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
 
     /**
      * <p>
-     * The <code>CreateTable</code> operation adds a new table to your account. In an AWS account, table names must be
-     * unique within each Region. That is, you can have two tables with same name if you create the tables in different
-     * Regions.
+     * The <code>CreateTable</code> operation adds a new table to your account. In an Amazon Web Services account, table
+     * names must be unique within each Region. That is, you can have two tables with same name if you create the tables
+     * in different Regions.
      * </p>
      * <p>
      * <code>CreateTable</code> is an asynchronous operation. Upon receiving a <code>CreateTable</code> request,
@@ -835,9 +846,9 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
 
     /**
      * <p>
-     * The <code>CreateTable</code> operation adds a new table to your account. In an AWS account, table names must be
-     * unique within each Region. That is, you can have two tables with same name if you create the tables in different
-     * Regions.
+     * The <code>CreateTable</code> operation adds a new table to your account. In an Amazon Web Services account, table
+     * names must be unique within each Region. That is, you can have two tables with same name if you create the tables
+     * in different Regions.
      * </p>
      * <p>
      * <code>CreateTable</code> is an asynchronous operation. Upon receiving a <code>CreateTable</code> request,
@@ -1429,25 +1440,25 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
 
     /**
      * <p>
-     * Returns the current provisioned-capacity quotas for your AWS account in a Region, both for the Region as a whole
-     * and for any one DynamoDB table that you create there.
+     * Returns the current provisioned-capacity quotas for your Amazon Web Services account in a Region, both for the
+     * Region as a whole and for any one DynamoDB table that you create there.
      * </p>
      * <p>
-     * When you establish an AWS account, the account has initial quotas on the maximum read capacity units and write
-     * capacity units that you can provision across all of your DynamoDB tables in a given Region. Also, there are
-     * per-table quotas that apply when you create a table there. For more information, see <a
+     * When you establish an Amazon Web Services account, the account has initial quotas on the maximum read capacity
+     * units and write capacity units that you can provision across all of your DynamoDB tables in a given Region. Also,
+     * there are per-table quotas that apply when you create a table there. For more information, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html">Service, Account, and Table
      * Quotas</a> page in the <i>Amazon DynamoDB Developer Guide</i>.
      * </p>
      * <p>
      * Although you can increase these quotas by filing a case at <a
-     * href="https://console.aws.amazon.com/support/home#/">AWS Support Center</a>, obtaining the increase is not
-     * instantaneous. The <code>DescribeLimits</code> action lets you write code to compare the capacity you are
-     * currently using to those quotas imposed by your account so that you have enough time to apply for an increase
-     * before you hit a quota.
+     * href="https://console.aws.amazon.com/support/home#/">Amazon Web Services Support Center</a>, obtaining the
+     * increase is not instantaneous. The <code>DescribeLimits</code> action lets you write code to compare the capacity
+     * you are currently using to those quotas imposed by your account so that you have enough time to apply for an
+     * increase before you hit a quota.
      * </p>
      * <p>
-     * For example, you could use one of the AWS SDKs to do the following:
+     * For example, you could use one of the Amazon Web Services SDKs to do the following:
      * </p>
      * <ol>
      * <li>
@@ -1531,25 +1542,25 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
 
     /**
      * <p>
-     * Returns the current provisioned-capacity quotas for your AWS account in a Region, both for the Region as a whole
-     * and for any one DynamoDB table that you create there.
+     * Returns the current provisioned-capacity quotas for your Amazon Web Services account in a Region, both for the
+     * Region as a whole and for any one DynamoDB table that you create there.
      * </p>
      * <p>
-     * When you establish an AWS account, the account has initial quotas on the maximum read capacity units and write
-     * capacity units that you can provision across all of your DynamoDB tables in a given Region. Also, there are
-     * per-table quotas that apply when you create a table there. For more information, see <a
+     * When you establish an Amazon Web Services account, the account has initial quotas on the maximum read capacity
+     * units and write capacity units that you can provision across all of your DynamoDB tables in a given Region. Also,
+     * there are per-table quotas that apply when you create a table there. For more information, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html">Service, Account, and Table
      * Quotas</a> page in the <i>Amazon DynamoDB Developer Guide</i>.
      * </p>
      * <p>
      * Although you can increase these quotas by filing a case at <a
-     * href="https://console.aws.amazon.com/support/home#/">AWS Support Center</a>, obtaining the increase is not
-     * instantaneous. The <code>DescribeLimits</code> action lets you write code to compare the capacity you are
-     * currently using to those quotas imposed by your account so that you have enough time to apply for an increase
-     * before you hit a quota.
+     * href="https://console.aws.amazon.com/support/home#/">Amazon Web Services Support Center</a>, obtaining the
+     * increase is not instantaneous. The <code>DescribeLimits</code> action lets you write code to compare the capacity
+     * you are currently using to those quotas imposed by your account so that you have enough time to apply for an
+     * increase before you hit a quota.
      * </p>
      * <p>
-     * For example, you could use one of the AWS SDKs to do the following:
+     * For example, you could use one of the Amazon Web Services SDKs to do the following:
      * </p>
      * <ol>
      * <li>
@@ -1893,6 +1904,15 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * <p>
      * This operation allows you to perform transactional reads or writes on data stored in DynamoDB, using PartiQL.
      * </p>
+     * <note>
+     * <p>
+     * The entire transaction must consist of either read statements or write statements, you cannot mix both in one
+     * transaction. The EXISTS function is an exception and can be used to check the condition of specific attributes of
+     * the item in a similar manner to <code>ConditionCheck</code> in the <a href=
+     * "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/transaction-apis.html#transaction-apis-txwriteitems"
+     * >TransactWriteItems</a> API.
+     * </p>
+     * </note>
      * 
      * @param executeTransactionRequest
      * @return A Java Future containing the result of the ExecuteTransaction operation returned by the service.
@@ -1906,6 +1926,15 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * <p>
      * This operation allows you to perform transactional reads or writes on data stored in DynamoDB, using PartiQL.
      * </p>
+     * <note>
+     * <p>
+     * The entire transaction must consist of either read statements or write statements, you cannot mix both in one
+     * transaction. The EXISTS function is an exception and can be used to check the condition of specific attributes of
+     * the item in a similar manner to <code>ConditionCheck</code> in the <a href=
+     * "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/transaction-apis.html#transaction-apis-txwriteitems"
+     * >TransactWriteItems</a> API.
+     * </p>
+     * </note>
      * 
      * @param executeTransactionRequest
      * @param asyncHandler
@@ -2032,9 +2061,9 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
 
     /**
      * <p>
-     * List backups associated with an AWS account. To list backups for a given table, specify <code>TableName</code>.
-     * <code>ListBackups</code> returns a paginated list of results with at most 1 MB worth of items in a page. You can
-     * also specify a maximum number of entries to be returned in a page.
+     * List backups associated with an Amazon Web Services account. To list backups for a given table, specify
+     * <code>TableName</code>. <code>ListBackups</code> returns a paginated list of results with at most 1 MB worth of
+     * items in a page. You can also specify a maximum number of entries to be returned in a page.
      * </p>
      * <p>
      * In the request, start time is inclusive, but end time is exclusive. Note that these boundaries are for the time
@@ -2054,9 +2083,9 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
 
     /**
      * <p>
-     * List backups associated with an AWS account. To list backups for a given table, specify <code>TableName</code>.
-     * <code>ListBackups</code> returns a paginated list of results with at most 1 MB worth of items in a page. You can
-     * also specify a maximum number of entries to be returned in a page.
+     * List backups associated with an Amazon Web Services account. To list backups for a given table, specify
+     * <code>TableName</code>. <code>ListBackups</code> returns a paginated list of results with at most 1 MB worth of
+     * items in a page. You can also specify a maximum number of entries to be returned in a page.
      * </p>
      * <p>
      * In the request, start time is inclusive, but end time is exclusive. Note that these boundaries are for the time
@@ -2336,62 +2365,59 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * This topic provides general information about the <code>PutItem</code> API.
      * </p>
      * <p>
-     * For information on how to call the <code>PutItem</code> API using the AWS SDK in specific languages, see the
-     * following:
+     * For information on how to call the <code>PutItem</code> API using the Amazon Web Services SDK in specific
+     * languages, see the following:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <a href="http://docs.aws.amazon.com/goto/aws-cli/dynamodb-2012-08-10/PutItem"> PutItem in the AWS Command Line
+     * <a href="http://docs.aws.amazon.com/goto/aws-cli/dynamodb-2012-08-10/PutItem"> PutItem in the Command Line
      * Interface</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a href="http://docs.aws.amazon.com/goto/DotNetSDKV3/dynamodb-2012-08-10/PutItem"> PutItem in the AWS SDK for
+     * <a href="http://docs.aws.amazon.com/goto/DotNetSDKV3/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for
      * .NET</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a href="http://docs.aws.amazon.com/goto/SdkForCpp/dynamodb-2012-08-10/PutItem"> PutItem in the AWS SDK for
-     * C++</a>
+     * <a href="http://docs.aws.amazon.com/goto/SdkForCpp/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for C++</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a href="http://docs.aws.amazon.com/goto/SdkForGoV1/dynamodb-2012-08-10/PutItem"> PutItem in the AWS SDK for
-     * Go</a>
+     * <a href="http://docs.aws.amazon.com/goto/SdkForGoV1/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for Go</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a href="http://docs.aws.amazon.com/goto/SdkForJava/dynamodb-2012-08-10/PutItem"> PutItem in the AWS SDK for
-     * Java</a>
+     * <a href="http://docs.aws.amazon.com/goto/SdkForJava/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for Java</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a href="http://docs.aws.amazon.com/goto/AWSJavaScriptSDK/dynamodb-2012-08-10/PutItem"> PutItem in the AWS SDK
-     * for JavaScript</a>
+     * <a href="http://docs.aws.amazon.com/goto/AWSJavaScriptSDK/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for
+     * JavaScript</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a href="http://docs.aws.amazon.com/goto/SdkForPHPV3/dynamodb-2012-08-10/PutItem"> PutItem in the AWS SDK for PHP
+     * <a href="http://docs.aws.amazon.com/goto/SdkForPHPV3/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for PHP
      * V3</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a href="http://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/PutItem"> PutItem in the AWS SDK for
-     * Python</a>
+     * <a href="http://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for Python
+     * (Boto)</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a href="http://docs.aws.amazon.com/goto/SdkForRubyV2/dynamodb-2012-08-10/PutItem"> PutItem in the AWS SDK for
-     * Ruby V2</a>
+     * <a href="http://docs.aws.amazon.com/goto/SdkForRubyV2/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for Ruby
+     * V2</a>
      * </p>
      * </li>
      * </ul>
@@ -2444,62 +2470,59 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * This topic provides general information about the <code>PutItem</code> API.
      * </p>
      * <p>
-     * For information on how to call the <code>PutItem</code> API using the AWS SDK in specific languages, see the
-     * following:
+     * For information on how to call the <code>PutItem</code> API using the Amazon Web Services SDK in specific
+     * languages, see the following:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <a href="http://docs.aws.amazon.com/goto/aws-cli/dynamodb-2012-08-10/PutItem"> PutItem in the AWS Command Line
+     * <a href="http://docs.aws.amazon.com/goto/aws-cli/dynamodb-2012-08-10/PutItem"> PutItem in the Command Line
      * Interface</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a href="http://docs.aws.amazon.com/goto/DotNetSDKV3/dynamodb-2012-08-10/PutItem"> PutItem in the AWS SDK for
+     * <a href="http://docs.aws.amazon.com/goto/DotNetSDKV3/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for
      * .NET</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a href="http://docs.aws.amazon.com/goto/SdkForCpp/dynamodb-2012-08-10/PutItem"> PutItem in the AWS SDK for
-     * C++</a>
+     * <a href="http://docs.aws.amazon.com/goto/SdkForCpp/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for C++</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a href="http://docs.aws.amazon.com/goto/SdkForGoV1/dynamodb-2012-08-10/PutItem"> PutItem in the AWS SDK for
-     * Go</a>
+     * <a href="http://docs.aws.amazon.com/goto/SdkForGoV1/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for Go</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a href="http://docs.aws.amazon.com/goto/SdkForJava/dynamodb-2012-08-10/PutItem"> PutItem in the AWS SDK for
-     * Java</a>
+     * <a href="http://docs.aws.amazon.com/goto/SdkForJava/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for Java</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a href="http://docs.aws.amazon.com/goto/AWSJavaScriptSDK/dynamodb-2012-08-10/PutItem"> PutItem in the AWS SDK
-     * for JavaScript</a>
+     * <a href="http://docs.aws.amazon.com/goto/AWSJavaScriptSDK/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for
+     * JavaScript</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a href="http://docs.aws.amazon.com/goto/SdkForPHPV3/dynamodb-2012-08-10/PutItem"> PutItem in the AWS SDK for PHP
+     * <a href="http://docs.aws.amazon.com/goto/SdkForPHPV3/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for PHP
      * V3</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a href="http://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/PutItem"> PutItem in the AWS SDK for
-     * Python</a>
+     * <a href="http://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for Python
+     * (Boto)</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a href="http://docs.aws.amazon.com/goto/SdkForRubyV2/dynamodb-2012-08-10/PutItem"> PutItem in the AWS SDK for
-     * Ruby V2</a>
+     * <a href="http://docs.aws.amazon.com/goto/SdkForRubyV2/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for Ruby
+     * V2</a>
      * </p>
      * </li>
      * </ul>
@@ -2576,8 +2599,9 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
 
     /**
      * <p>
-     * The <code>Query</code> operation finds items based on primary key values. You can query any table or secondary
-     * index that has a composite primary key (a partition key and a sort key).
+     * You must provide the name of the partition key attribute and a single value for that attribute.
+     * <code>Query</code> returns all items with that partition key value. Optionally, you can provide a sort key
+     * attribute and use a comparison operator to refine the search results.
      * </p>
      * <p>
      * Use the <code>KeyConditionExpression</code> parameter to provide a specific value for the partition key. The
@@ -2643,8 +2667,9 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
 
     /**
      * <p>
-     * The <code>Query</code> operation finds items based on primary key values. You can query any table or secondary
-     * index that has a composite primary key (a partition key and a sort key).
+     * You must provide the name of the partition key attribute and a single value for that attribute.
+     * <code>Query</code> returns all items with that partition key value. Optionally, you can provide a sort key
+     * attribute and use a comparison operator to refine the search results.
      * </p>
      * <p>
      * Use the <code>KeyConditionExpression</code> parameter to provide a specific value for the partition key. The
@@ -3190,8 +3215,8 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * more tables (but not from indexes) in a single account and Region. A <code>TransactGetItems</code> call can
      * contain up to 25 <code>TransactGetItem</code> objects, each of which contains a <code>Get</code> structure that
      * specifies an item to retrieve from a table in the account and Region. A call to <code>TransactGetItems</code>
-     * cannot retrieve items from tables in more than one AWS account or Region. The aggregate size of the items in the
-     * transaction cannot exceed 4 MB.
+     * cannot retrieve items from tables in more than one Amazon Web Services account or Region. The aggregate size of
+     * the items in the transaction cannot exceed 4 MB.
      * </p>
      * <p>
      * DynamoDB rejects the entire <code>TransactGetItems</code> request if any of the following is true:
@@ -3233,8 +3258,8 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * more tables (but not from indexes) in a single account and Region. A <code>TransactGetItems</code> call can
      * contain up to 25 <code>TransactGetItem</code> objects, each of which contains a <code>Get</code> structure that
      * specifies an item to retrieve from a table in the account and Region. A call to <code>TransactGetItems</code>
-     * cannot retrieve items from tables in more than one AWS account or Region. The aggregate size of the items in the
-     * transaction cannot exceed 4 MB.
+     * cannot retrieve items from tables in more than one Amazon Web Services account or Region. The aggregate size of
+     * the items in the transaction cannot exceed 4 MB.
      * </p>
      * <p>
      * DynamoDB rejects the entire <code>TransactGetItems</code> request if any of the following is true:
@@ -3278,9 +3303,9 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
     /**
      * <p>
      * <code>TransactWriteItems</code> is a synchronous write operation that groups up to 25 action requests. These
-     * actions can target items in different tables, but not in different AWS accounts or Regions, and no two actions
-     * can target the same item. For example, you cannot both <code>ConditionCheck</code> and <code>Update</code> the
-     * same item. The aggregate size of the items in the transaction cannot exceed 4 MB.
+     * actions can target items in different tables, but not in different Amazon Web Services accounts or Regions, and
+     * no two actions can target the same item. For example, you cannot both <code>ConditionCheck</code> and
+     * <code>Update</code> the same item. The aggregate size of the items in the transaction cannot exceed 4 MB.
      * </p>
      * <p>
      * The actions are completed atomically so that either all of them succeed, or all of them fail. They are defined by
@@ -3289,15 +3314,15 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * <ul>
      * <li>
      * <p>
-     * <code>Put</code>  &#x97;   Initiates a <code>PutItem</code> operation to write a new item. This structure
-     * specifies the primary key of the item to be written, the name of the table to write it in, an optional condition
-     * expression that must be satisfied for the write to succeed, a list of the item's attributes, and a field
-     * indicating whether to retrieve the item's attributes if the condition is not met.
+     * <code>Put</code>  —   Initiates a <code>PutItem</code> operation to write a new item. This structure specifies
+     * the primary key of the item to be written, the name of the table to write it in, an optional condition expression
+     * that must be satisfied for the write to succeed, a list of the item's attributes, and a field indicating whether
+     * to retrieve the item's attributes if the condition is not met.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Update</code>  &#x97;   Initiates an <code>UpdateItem</code> operation to update an existing item. This
+     * <code>Update</code>  —   Initiates an <code>UpdateItem</code> operation to update an existing item. This
      * structure specifies the primary key of the item to be updated, the name of the table where it resides, an
      * optional condition expression that must be satisfied for the update to succeed, an expression that defines one or
      * more attributes to be updated, and a field indicating whether to retrieve the item's attributes if the condition
@@ -3306,18 +3331,18 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * </li>
      * <li>
      * <p>
-     * <code>Delete</code>  &#x97;   Initiates a <code>DeleteItem</code> operation to delete an existing item. This
-     * structure specifies the primary key of the item to be deleted, the name of the table where it resides, an
-     * optional condition expression that must be satisfied for the deletion to succeed, and a field indicating whether
-     * to retrieve the item's attributes if the condition is not met.
+     * <code>Delete</code>  —   Initiates a <code>DeleteItem</code> operation to delete an existing item. This structure
+     * specifies the primary key of the item to be deleted, the name of the table where it resides, an optional
+     * condition expression that must be satisfied for the deletion to succeed, and a field indicating whether to
+     * retrieve the item's attributes if the condition is not met.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ConditionCheck</code>  &#x97;   Applies a condition to an item that is not being modified by the
-     * transaction. This structure specifies the primary key of the item to be checked, the name of the table where it
-     * resides, a condition expression that must be satisfied for the transaction to succeed, and a field indicating
-     * whether to retrieve the item's attributes if the condition is not met.
+     * <code>ConditionCheck</code>  —   Applies a condition to an item that is not being modified by the transaction.
+     * This structure specifies the primary key of the item to be checked, the name of the table where it resides, a
+     * condition expression that must be satisfied for the transaction to succeed, and a field indicating whether to
+     * retrieve the item's attributes if the condition is not met.
      * </p>
      * </li>
      * </ul>
@@ -3369,9 +3394,9 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
     /**
      * <p>
      * <code>TransactWriteItems</code> is a synchronous write operation that groups up to 25 action requests. These
-     * actions can target items in different tables, but not in different AWS accounts or Regions, and no two actions
-     * can target the same item. For example, you cannot both <code>ConditionCheck</code> and <code>Update</code> the
-     * same item. The aggregate size of the items in the transaction cannot exceed 4 MB.
+     * actions can target items in different tables, but not in different Amazon Web Services accounts or Regions, and
+     * no two actions can target the same item. For example, you cannot both <code>ConditionCheck</code> and
+     * <code>Update</code> the same item. The aggregate size of the items in the transaction cannot exceed 4 MB.
      * </p>
      * <p>
      * The actions are completed atomically so that either all of them succeed, or all of them fail. They are defined by
@@ -3380,15 +3405,15 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * <ul>
      * <li>
      * <p>
-     * <code>Put</code>  &#x97;   Initiates a <code>PutItem</code> operation to write a new item. This structure
-     * specifies the primary key of the item to be written, the name of the table to write it in, an optional condition
-     * expression that must be satisfied for the write to succeed, a list of the item's attributes, and a field
-     * indicating whether to retrieve the item's attributes if the condition is not met.
+     * <code>Put</code>  —   Initiates a <code>PutItem</code> operation to write a new item. This structure specifies
+     * the primary key of the item to be written, the name of the table to write it in, an optional condition expression
+     * that must be satisfied for the write to succeed, a list of the item's attributes, and a field indicating whether
+     * to retrieve the item's attributes if the condition is not met.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Update</code>  &#x97;   Initiates an <code>UpdateItem</code> operation to update an existing item. This
+     * <code>Update</code>  —   Initiates an <code>UpdateItem</code> operation to update an existing item. This
      * structure specifies the primary key of the item to be updated, the name of the table where it resides, an
      * optional condition expression that must be satisfied for the update to succeed, an expression that defines one or
      * more attributes to be updated, and a field indicating whether to retrieve the item's attributes if the condition
@@ -3397,18 +3422,18 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * </li>
      * <li>
      * <p>
-     * <code>Delete</code>  &#x97;   Initiates a <code>DeleteItem</code> operation to delete an existing item. This
-     * structure specifies the primary key of the item to be deleted, the name of the table where it resides, an
-     * optional condition expression that must be satisfied for the deletion to succeed, and a field indicating whether
-     * to retrieve the item's attributes if the condition is not met.
+     * <code>Delete</code>  —   Initiates a <code>DeleteItem</code> operation to delete an existing item. This structure
+     * specifies the primary key of the item to be deleted, the name of the table where it resides, an optional
+     * condition expression that must be satisfied for the deletion to succeed, and a field indicating whether to
+     * retrieve the item's attributes if the condition is not met.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ConditionCheck</code>  &#x97;   Applies a condition to an item that is not being modified by the
-     * transaction. This structure specifies the primary key of the item to be checked, the name of the table where it
-     * resides, a condition expression that must be satisfied for the transaction to succeed, and a field indicating
-     * whether to retrieve the item's attributes if the condition is not met.
+     * <code>ConditionCheck</code>  —   Applies a condition to an item that is not being modified by the transaction.
+     * This structure specifies the primary key of the item to be checked, the name of the table where it resides, a
+     * condition expression that must be satisfied for the transaction to succeed, and a field indicating whether to
+     * retrieve the item's attributes if the condition is not met.
      * </p>
      * </li>
      * </ul>
@@ -3560,7 +3585,11 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
 
     /**
      * <p>
-     * Updates the status for contributor insights for a specific table or index.
+     * Updates the status for contributor insights for a specific table or index. CloudWatch Contributor Insights for
+     * DynamoDB graphs display the partition key and (if applicable) sort key of frequently accessed items and
+     * frequently throttled items in plaintext. If you require the use of AWS Key Management Service (KMS) to encrypt
+     * this table’s partition key and sort key data with an AWS managed key or customer managed key, you should not
+     * enable CloudWatch Contributor Insights for DynamoDB for this table.
      * </p>
      * 
      * @param updateContributorInsightsRequest
@@ -3574,7 +3603,11 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
 
     /**
      * <p>
-     * Updates the status for contributor insights for a specific table or index.
+     * Updates the status for contributor insights for a specific table or index. CloudWatch Contributor Insights for
+     * DynamoDB graphs display the partition key and (if applicable) sort key of frequently accessed items and
+     * frequently throttled items in plaintext. If you require the use of AWS Key Management Service (KMS) to encrypt
+     * this table’s partition key and sort key data with an AWS managed key or customer managed key, you should not
+     * enable CloudWatch Contributor Insights for DynamoDB for this table.
      * </p>
      * 
      * @param updateContributorInsightsRequest

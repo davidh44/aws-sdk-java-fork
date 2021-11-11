@@ -30,9 +30,10 @@ public class SSESpecification implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Indicates whether server-side encryption is done using an AWS managed CMK or an AWS owned CMK. If enabled (true),
-     * server-side encryption type is set to <code>KMS</code> and an AWS managed CMK is used (AWS KMS charges apply). If
-     * disabled (false) or not specified, server-side encryption is set to AWS owned CMK.
+     * Indicates whether server-side encryption is done using an Amazon Web Services managed key or an Amazon Web
+     * Services owned key. If enabled (true), server-side encryption type is set to <code>KMS</code> and an Amazon Web
+     * Services managed key is used (KMS charges apply). If disabled (false) or not specified, server-side encryption is
+     * set to Amazon Web Services owned key.
      * </p>
      */
     private Boolean enabled;
@@ -43,8 +44,8 @@ public class SSESpecification implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>KMS</code> - Server-side encryption that uses AWS Key Management Service. The key is stored in your account
-     * and is managed by AWS KMS (AWS KMS charges apply).
+     * <code>KMS</code> - Server-side encryption that uses Key Management Service. The key is stored in your account and
+     * is managed by KMS (KMS charges apply).
      * </p>
      * </li>
      * </ul>
@@ -52,24 +53,26 @@ public class SSESpecification implements Serializable, Cloneable, StructuredPojo
     private String sSEType;
     /**
      * <p>
-     * The AWS KMS customer master key (CMK) that should be used for the AWS KMS encryption. To specify a CMK, use its
-     * key ID, Amazon Resource Name (ARN), alias name, or alias ARN. Note that you should only provide this parameter if
-     * the key is different from the default DynamoDB customer master key alias/aws/dynamodb.
+     * The KMS key that should be used for the KMS encryption. To specify a key, use its key ID, Amazon Resource Name
+     * (ARN), alias name, or alias ARN. Note that you should only provide this parameter if the key is different from
+     * the default DynamoDB key <code>alias/aws/dynamodb</code>.
      * </p>
      */
     private String kMSMasterKeyId;
 
     /**
      * <p>
-     * Indicates whether server-side encryption is done using an AWS managed CMK or an AWS owned CMK. If enabled (true),
-     * server-side encryption type is set to <code>KMS</code> and an AWS managed CMK is used (AWS KMS charges apply). If
-     * disabled (false) or not specified, server-side encryption is set to AWS owned CMK.
+     * Indicates whether server-side encryption is done using an Amazon Web Services managed key or an Amazon Web
+     * Services owned key. If enabled (true), server-side encryption type is set to <code>KMS</code> and an Amazon Web
+     * Services managed key is used (KMS charges apply). If disabled (false) or not specified, server-side encryption is
+     * set to Amazon Web Services owned key.
      * </p>
      * 
      * @param enabled
-     *        Indicates whether server-side encryption is done using an AWS managed CMK or an AWS owned CMK. If enabled
-     *        (true), server-side encryption type is set to <code>KMS</code> and an AWS managed CMK is used (AWS KMS
-     *        charges apply). If disabled (false) or not specified, server-side encryption is set to AWS owned CMK.
+     *        Indicates whether server-side encryption is done using an Amazon Web Services managed key or an Amazon Web
+     *        Services owned key. If enabled (true), server-side encryption type is set to <code>KMS</code> and an
+     *        Amazon Web Services managed key is used (KMS charges apply). If disabled (false) or not specified,
+     *        server-side encryption is set to Amazon Web Services owned key.
      */
 
     public void setEnabled(Boolean enabled) {
@@ -78,14 +81,16 @@ public class SSESpecification implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Indicates whether server-side encryption is done using an AWS managed CMK or an AWS owned CMK. If enabled (true),
-     * server-side encryption type is set to <code>KMS</code> and an AWS managed CMK is used (AWS KMS charges apply). If
-     * disabled (false) or not specified, server-side encryption is set to AWS owned CMK.
+     * Indicates whether server-side encryption is done using an Amazon Web Services managed key or an Amazon Web
+     * Services owned key. If enabled (true), server-side encryption type is set to <code>KMS</code> and an Amazon Web
+     * Services managed key is used (KMS charges apply). If disabled (false) or not specified, server-side encryption is
+     * set to Amazon Web Services owned key.
      * </p>
      * 
-     * @return Indicates whether server-side encryption is done using an AWS managed CMK or an AWS owned CMK. If enabled
-     *         (true), server-side encryption type is set to <code>KMS</code> and an AWS managed CMK is used (AWS KMS
-     *         charges apply). If disabled (false) or not specified, server-side encryption is set to AWS owned CMK.
+     * @return Indicates whether server-side encryption is done using an Amazon Web Services managed key or an Amazon
+     *         Web Services owned key. If enabled (true), server-side encryption type is set to <code>KMS</code> and an
+     *         Amazon Web Services managed key is used (KMS charges apply). If disabled (false) or not specified,
+     *         server-side encryption is set to Amazon Web Services owned key.
      */
 
     public Boolean getEnabled() {
@@ -94,15 +99,17 @@ public class SSESpecification implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Indicates whether server-side encryption is done using an AWS managed CMK or an AWS owned CMK. If enabled (true),
-     * server-side encryption type is set to <code>KMS</code> and an AWS managed CMK is used (AWS KMS charges apply). If
-     * disabled (false) or not specified, server-side encryption is set to AWS owned CMK.
+     * Indicates whether server-side encryption is done using an Amazon Web Services managed key or an Amazon Web
+     * Services owned key. If enabled (true), server-side encryption type is set to <code>KMS</code> and an Amazon Web
+     * Services managed key is used (KMS charges apply). If disabled (false) or not specified, server-side encryption is
+     * set to Amazon Web Services owned key.
      * </p>
      * 
      * @param enabled
-     *        Indicates whether server-side encryption is done using an AWS managed CMK or an AWS owned CMK. If enabled
-     *        (true), server-side encryption type is set to <code>KMS</code> and an AWS managed CMK is used (AWS KMS
-     *        charges apply). If disabled (false) or not specified, server-side encryption is set to AWS owned CMK.
+     *        Indicates whether server-side encryption is done using an Amazon Web Services managed key or an Amazon Web
+     *        Services owned key. If enabled (true), server-side encryption type is set to <code>KMS</code> and an
+     *        Amazon Web Services managed key is used (KMS charges apply). If disabled (false) or not specified,
+     *        server-side encryption is set to Amazon Web Services owned key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -113,14 +120,16 @@ public class SSESpecification implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Indicates whether server-side encryption is done using an AWS managed CMK or an AWS owned CMK. If enabled (true),
-     * server-side encryption type is set to <code>KMS</code> and an AWS managed CMK is used (AWS KMS charges apply). If
-     * disabled (false) or not specified, server-side encryption is set to AWS owned CMK.
+     * Indicates whether server-side encryption is done using an Amazon Web Services managed key or an Amazon Web
+     * Services owned key. If enabled (true), server-side encryption type is set to <code>KMS</code> and an Amazon Web
+     * Services managed key is used (KMS charges apply). If disabled (false) or not specified, server-side encryption is
+     * set to Amazon Web Services owned key.
      * </p>
      * 
-     * @return Indicates whether server-side encryption is done using an AWS managed CMK or an AWS owned CMK. If enabled
-     *         (true), server-side encryption type is set to <code>KMS</code> and an AWS managed CMK is used (AWS KMS
-     *         charges apply). If disabled (false) or not specified, server-side encryption is set to AWS owned CMK.
+     * @return Indicates whether server-side encryption is done using an Amazon Web Services managed key or an Amazon
+     *         Web Services owned key. If enabled (true), server-side encryption type is set to <code>KMS</code> and an
+     *         Amazon Web Services managed key is used (KMS charges apply). If disabled (false) or not specified,
+     *         server-side encryption is set to Amazon Web Services owned key.
      */
 
     public Boolean isEnabled() {
@@ -134,8 +143,8 @@ public class SSESpecification implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>KMS</code> - Server-side encryption that uses AWS Key Management Service. The key is stored in your account
-     * and is managed by AWS KMS (AWS KMS charges apply).
+     * <code>KMS</code> - Server-side encryption that uses Key Management Service. The key is stored in your account and
+     * is managed by KMS (KMS charges apply).
      * </p>
      * </li>
      * </ul>
@@ -145,8 +154,8 @@ public class SSESpecification implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>KMS</code> - Server-side encryption that uses AWS Key Management Service. The key is stored in your
-     *        account and is managed by AWS KMS (AWS KMS charges apply).
+     *        <code>KMS</code> - Server-side encryption that uses Key Management Service. The key is stored in your
+     *        account and is managed by KMS (KMS charges apply).
      *        </p>
      *        </li>
      * @see SSEType
@@ -163,8 +172,8 @@ public class SSESpecification implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>KMS</code> - Server-side encryption that uses AWS Key Management Service. The key is stored in your account
-     * and is managed by AWS KMS (AWS KMS charges apply).
+     * <code>KMS</code> - Server-side encryption that uses Key Management Service. The key is stored in your account and
+     * is managed by KMS (KMS charges apply).
      * </p>
      * </li>
      * </ul>
@@ -173,8 +182,8 @@ public class SSESpecification implements Serializable, Cloneable, StructuredPojo
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>KMS</code> - Server-side encryption that uses AWS Key Management Service. The key is stored in your
-     *         account and is managed by AWS KMS (AWS KMS charges apply).
+     *         <code>KMS</code> - Server-side encryption that uses Key Management Service. The key is stored in your
+     *         account and is managed by KMS (KMS charges apply).
      *         </p>
      *         </li>
      * @see SSEType
@@ -191,8 +200,8 @@ public class SSESpecification implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>KMS</code> - Server-side encryption that uses AWS Key Management Service. The key is stored in your account
-     * and is managed by AWS KMS (AWS KMS charges apply).
+     * <code>KMS</code> - Server-side encryption that uses Key Management Service. The key is stored in your account and
+     * is managed by KMS (KMS charges apply).
      * </p>
      * </li>
      * </ul>
@@ -202,8 +211,8 @@ public class SSESpecification implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>KMS</code> - Server-side encryption that uses AWS Key Management Service. The key is stored in your
-     *        account and is managed by AWS KMS (AWS KMS charges apply).
+     *        <code>KMS</code> - Server-side encryption that uses Key Management Service. The key is stored in your
+     *        account and is managed by KMS (KMS charges apply).
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -222,8 +231,8 @@ public class SSESpecification implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>KMS</code> - Server-side encryption that uses AWS Key Management Service. The key is stored in your account
-     * and is managed by AWS KMS (AWS KMS charges apply).
+     * <code>KMS</code> - Server-side encryption that uses Key Management Service. The key is stored in your account and
+     * is managed by KMS (KMS charges apply).
      * </p>
      * </li>
      * </ul>
@@ -233,8 +242,8 @@ public class SSESpecification implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>KMS</code> - Server-side encryption that uses AWS Key Management Service. The key is stored in your
-     *        account and is managed by AWS KMS (AWS KMS charges apply).
+     *        <code>KMS</code> - Server-side encryption that uses Key Management Service. The key is stored in your
+     *        account and is managed by KMS (KMS charges apply).
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -248,15 +257,15 @@ public class SSESpecification implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The AWS KMS customer master key (CMK) that should be used for the AWS KMS encryption. To specify a CMK, use its
-     * key ID, Amazon Resource Name (ARN), alias name, or alias ARN. Note that you should only provide this parameter if
-     * the key is different from the default DynamoDB customer master key alias/aws/dynamodb.
+     * The KMS key that should be used for the KMS encryption. To specify a key, use its key ID, Amazon Resource Name
+     * (ARN), alias name, or alias ARN. Note that you should only provide this parameter if the key is different from
+     * the default DynamoDB key <code>alias/aws/dynamodb</code>.
      * </p>
      * 
      * @param kMSMasterKeyId
-     *        The AWS KMS customer master key (CMK) that should be used for the AWS KMS encryption. To specify a CMK,
-     *        use its key ID, Amazon Resource Name (ARN), alias name, or alias ARN. Note that you should only provide
-     *        this parameter if the key is different from the default DynamoDB customer master key alias/aws/dynamodb.
+     *        The KMS key that should be used for the KMS encryption. To specify a key, use its key ID, Amazon Resource
+     *        Name (ARN), alias name, or alias ARN. Note that you should only provide this parameter if the key is
+     *        different from the default DynamoDB key <code>alias/aws/dynamodb</code>.
      */
 
     public void setKMSMasterKeyId(String kMSMasterKeyId) {
@@ -265,14 +274,14 @@ public class SSESpecification implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The AWS KMS customer master key (CMK) that should be used for the AWS KMS encryption. To specify a CMK, use its
-     * key ID, Amazon Resource Name (ARN), alias name, or alias ARN. Note that you should only provide this parameter if
-     * the key is different from the default DynamoDB customer master key alias/aws/dynamodb.
+     * The KMS key that should be used for the KMS encryption. To specify a key, use its key ID, Amazon Resource Name
+     * (ARN), alias name, or alias ARN. Note that you should only provide this parameter if the key is different from
+     * the default DynamoDB key <code>alias/aws/dynamodb</code>.
      * </p>
      * 
-     * @return The AWS KMS customer master key (CMK) that should be used for the AWS KMS encryption. To specify a CMK,
-     *         use its key ID, Amazon Resource Name (ARN), alias name, or alias ARN. Note that you should only provide
-     *         this parameter if the key is different from the default DynamoDB customer master key alias/aws/dynamodb.
+     * @return The KMS key that should be used for the KMS encryption. To specify a key, use its key ID, Amazon Resource
+     *         Name (ARN), alias name, or alias ARN. Note that you should only provide this parameter if the key is
+     *         different from the default DynamoDB key <code>alias/aws/dynamodb</code>.
      */
 
     public String getKMSMasterKeyId() {
@@ -281,15 +290,15 @@ public class SSESpecification implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The AWS KMS customer master key (CMK) that should be used for the AWS KMS encryption. To specify a CMK, use its
-     * key ID, Amazon Resource Name (ARN), alias name, or alias ARN. Note that you should only provide this parameter if
-     * the key is different from the default DynamoDB customer master key alias/aws/dynamodb.
+     * The KMS key that should be used for the KMS encryption. To specify a key, use its key ID, Amazon Resource Name
+     * (ARN), alias name, or alias ARN. Note that you should only provide this parameter if the key is different from
+     * the default DynamoDB key <code>alias/aws/dynamodb</code>.
      * </p>
      * 
      * @param kMSMasterKeyId
-     *        The AWS KMS customer master key (CMK) that should be used for the AWS KMS encryption. To specify a CMK,
-     *        use its key ID, Amazon Resource Name (ARN), alias name, or alias ARN. Note that you should only provide
-     *        this parameter if the key is different from the default DynamoDB customer master key alias/aws/dynamodb.
+     *        The KMS key that should be used for the KMS encryption. To specify a key, use its key ID, Amazon Resource
+     *        Name (ARN), alias name, or alias ARN. Note that you should only provide this parameter if the key is
+     *        different from the default DynamoDB key <code>alias/aws/dynamodb</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

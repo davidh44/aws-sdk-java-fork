@@ -90,6 +90,22 @@ public class TerminologyPropertiesJsonUnmarshaller implements Unmarshaller<Termi
                     context.nextToken();
                     terminologyProperties.setLastUpdatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("Directionality", targetDepth)) {
+                    context.nextToken();
+                    terminologyProperties.setDirectionality(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Message", targetDepth)) {
+                    context.nextToken();
+                    terminologyProperties.setMessage(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("SkippedTermCount", targetDepth)) {
+                    context.nextToken();
+                    terminologyProperties.setSkippedTermCount(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("Format", targetDepth)) {
+                    context.nextToken();
+                    terminologyProperties.setFormat(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

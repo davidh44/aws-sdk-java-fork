@@ -48,6 +48,14 @@ public class TerminologyPropertiesMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreatedAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> LASTUPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastUpdatedAt").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<String> DIRECTIONALITY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Directionality").build();
+    private static final MarshallingInfo<String> MESSAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Message").build();
+    private static final MarshallingInfo<Integer> SKIPPEDTERMCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SkippedTermCount").build();
+    private static final MarshallingInfo<String> FORMAT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Format").build();
 
     private static final TerminologyPropertiesMarshaller instance = new TerminologyPropertiesMarshaller();
 
@@ -75,6 +83,10 @@ public class TerminologyPropertiesMarshaller {
             protocolMarshaller.marshall(terminologyProperties.getTermCount(), TERMCOUNT_BINDING);
             protocolMarshaller.marshall(terminologyProperties.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(terminologyProperties.getLastUpdatedAt(), LASTUPDATEDAT_BINDING);
+            protocolMarshaller.marshall(terminologyProperties.getDirectionality(), DIRECTIONALITY_BINDING);
+            protocolMarshaller.marshall(terminologyProperties.getMessage(), MESSAGE_BINDING);
+            protocolMarshaller.marshall(terminologyProperties.getSkippedTermCount(), SKIPPEDTERMCOUNT_BINDING);
+            protocolMarshaller.marshall(terminologyProperties.getFormat(), FORMAT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

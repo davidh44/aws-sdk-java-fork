@@ -36,9 +36,9 @@ public class CreateReplicationGroupMemberAction implements Serializable, Cloneab
     private String regionName;
     /**
      * <p>
-     * The AWS KMS customer master key (CMK) that should be used for AWS KMS encryption in the new replica. To specify a
-     * CMK, use its key ID, Amazon Resource Name (ARN), alias name, or alias ARN. Note that you should only provide this
-     * parameter if the key is different from the default DynamoDB KMS master key alias/aws/dynamodb.
+     * The KMS key that should be used for KMS encryption in the new replica. To specify a key, use its key ID, Amazon
+     * Resource Name (ARN), alias name, or alias ARN. Note that you should only provide this parameter if the key is
+     * different from the default DynamoDB KMS key <code>alias/aws/dynamodb</code>.
      * </p>
      */
     private String kMSMasterKeyId;
@@ -98,16 +98,15 @@ public class CreateReplicationGroupMemberAction implements Serializable, Cloneab
 
     /**
      * <p>
-     * The AWS KMS customer master key (CMK) that should be used for AWS KMS encryption in the new replica. To specify a
-     * CMK, use its key ID, Amazon Resource Name (ARN), alias name, or alias ARN. Note that you should only provide this
-     * parameter if the key is different from the default DynamoDB KMS master key alias/aws/dynamodb.
+     * The KMS key that should be used for KMS encryption in the new replica. To specify a key, use its key ID, Amazon
+     * Resource Name (ARN), alias name, or alias ARN. Note that you should only provide this parameter if the key is
+     * different from the default DynamoDB KMS key <code>alias/aws/dynamodb</code>.
      * </p>
      * 
      * @param kMSMasterKeyId
-     *        The AWS KMS customer master key (CMK) that should be used for AWS KMS encryption in the new replica. To
-     *        specify a CMK, use its key ID, Amazon Resource Name (ARN), alias name, or alias ARN. Note that you should
-     *        only provide this parameter if the key is different from the default DynamoDB KMS master key
-     *        alias/aws/dynamodb.
+     *        The KMS key that should be used for KMS encryption in the new replica. To specify a key, use its key ID,
+     *        Amazon Resource Name (ARN), alias name, or alias ARN. Note that you should only provide this parameter if
+     *        the key is different from the default DynamoDB KMS key <code>alias/aws/dynamodb</code>.
      */
 
     public void setKMSMasterKeyId(String kMSMasterKeyId) {
@@ -116,15 +115,14 @@ public class CreateReplicationGroupMemberAction implements Serializable, Cloneab
 
     /**
      * <p>
-     * The AWS KMS customer master key (CMK) that should be used for AWS KMS encryption in the new replica. To specify a
-     * CMK, use its key ID, Amazon Resource Name (ARN), alias name, or alias ARN. Note that you should only provide this
-     * parameter if the key is different from the default DynamoDB KMS master key alias/aws/dynamodb.
+     * The KMS key that should be used for KMS encryption in the new replica. To specify a key, use its key ID, Amazon
+     * Resource Name (ARN), alias name, or alias ARN. Note that you should only provide this parameter if the key is
+     * different from the default DynamoDB KMS key <code>alias/aws/dynamodb</code>.
      * </p>
      * 
-     * @return The AWS KMS customer master key (CMK) that should be used for AWS KMS encryption in the new replica. To
-     *         specify a CMK, use its key ID, Amazon Resource Name (ARN), alias name, or alias ARN. Note that you should
-     *         only provide this parameter if the key is different from the default DynamoDB KMS master key
-     *         alias/aws/dynamodb.
+     * @return The KMS key that should be used for KMS encryption in the new replica. To specify a key, use its key ID,
+     *         Amazon Resource Name (ARN), alias name, or alias ARN. Note that you should only provide this parameter if
+     *         the key is different from the default DynamoDB KMS key <code>alias/aws/dynamodb</code>.
      */
 
     public String getKMSMasterKeyId() {
@@ -133,16 +131,15 @@ public class CreateReplicationGroupMemberAction implements Serializable, Cloneab
 
     /**
      * <p>
-     * The AWS KMS customer master key (CMK) that should be used for AWS KMS encryption in the new replica. To specify a
-     * CMK, use its key ID, Amazon Resource Name (ARN), alias name, or alias ARN. Note that you should only provide this
-     * parameter if the key is different from the default DynamoDB KMS master key alias/aws/dynamodb.
+     * The KMS key that should be used for KMS encryption in the new replica. To specify a key, use its key ID, Amazon
+     * Resource Name (ARN), alias name, or alias ARN. Note that you should only provide this parameter if the key is
+     * different from the default DynamoDB KMS key <code>alias/aws/dynamodb</code>.
      * </p>
      * 
      * @param kMSMasterKeyId
-     *        The AWS KMS customer master key (CMK) that should be used for AWS KMS encryption in the new replica. To
-     *        specify a CMK, use its key ID, Amazon Resource Name (ARN), alias name, or alias ARN. Note that you should
-     *        only provide this parameter if the key is different from the default DynamoDB KMS master key
-     *        alias/aws/dynamodb.
+     *        The KMS key that should be used for KMS encryption in the new replica. To specify a key, use its key ID,
+     *        Amazon Resource Name (ARN), alias name, or alias ARN. Note that you should only provide this parameter if
+     *        the key is different from the default DynamoDB KMS key <code>alias/aws/dynamodb</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

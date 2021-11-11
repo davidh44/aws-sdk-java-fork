@@ -61,21 +61,22 @@ public class ReplicaDescription implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * <code>REGION_DISABLED</code> - The replica is inaccessible because the AWS Region has been disabled.
+     * <code>REGION_DISABLED</code> - The replica is inaccessible because the Amazon Web Services Region has been
+     * disabled.
      * </p>
      * <note>
      * <p>
-     * If the AWS Region remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the
-     * replication group. The replica will not be deleted and replication will stop from and to this region.
+     * If the Amazon Web Services Region remains inaccessible for more than 20 hours, DynamoDB will remove this replica
+     * from the replication group. The replica will not be deleted and replication will stop from and to this region.
      * </p>
      * </note></li>
      * <li>
      * <p>
-     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS </code> - The AWS KMS key used to encrypt the table is inaccessible.
+     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS </code> - The KMS key used to encrypt the table is inaccessible.
      * </p>
      * <note>
      * <p>
-     * If the AWS KMS key remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the
+     * If the KMS key remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the
      * replication group. The replica will not be deleted and replication will stop from and to this region.
      * </p>
      * </note></li>
@@ -96,7 +97,7 @@ public class ReplicaDescription implements Serializable, Cloneable, StructuredPo
     private String replicaStatusPercentProgress;
     /**
      * <p>
-     * The AWS KMS customer master key (CMK) of the replica that will be used for AWS KMS encryption.
+     * The KMS key of the replica that will be used for KMS encryption.
      * </p>
      */
     private String kMSMasterKeyId;
@@ -188,21 +189,22 @@ public class ReplicaDescription implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * <code>REGION_DISABLED</code> - The replica is inaccessible because the AWS Region has been disabled.
+     * <code>REGION_DISABLED</code> - The replica is inaccessible because the Amazon Web Services Region has been
+     * disabled.
      * </p>
      * <note>
      * <p>
-     * If the AWS Region remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the
-     * replication group. The replica will not be deleted and replication will stop from and to this region.
+     * If the Amazon Web Services Region remains inaccessible for more than 20 hours, DynamoDB will remove this replica
+     * from the replication group. The replica will not be deleted and replication will stop from and to this region.
      * </p>
      * </note></li>
      * <li>
      * <p>
-     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS </code> - The AWS KMS key used to encrypt the table is inaccessible.
+     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS </code> - The KMS key used to encrypt the table is inaccessible.
      * </p>
      * <note>
      * <p>
-     * If the AWS KMS key remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the
+     * If the KMS key remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the
      * replication group. The replica will not be deleted and replication will stop from and to this region.
      * </p>
      * </note></li>
@@ -233,22 +235,23 @@ public class ReplicaDescription implements Serializable, Cloneable, StructuredPo
      *        </li>
      *        <li>
      *        <p>
-     *        <code>REGION_DISABLED</code> - The replica is inaccessible because the AWS Region has been disabled.
+     *        <code>REGION_DISABLED</code> - The replica is inaccessible because the Amazon Web Services Region has been
+     *        disabled.
      *        </p>
      *        <note>
      *        <p>
-     *        If the AWS Region remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the
-     *        replication group. The replica will not be deleted and replication will stop from and to this region.
+     *        If the Amazon Web Services Region remains inaccessible for more than 20 hours, DynamoDB will remove this
+     *        replica from the replication group. The replica will not be deleted and replication will stop from and to
+     *        this region.
      *        </p>
      *        </note></li>
      *        <li>
      *        <p>
-     *        <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS </code> - The AWS KMS key used to encrypt the table is
-     *        inaccessible.
+     *        <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS </code> - The KMS key used to encrypt the table is inaccessible.
      *        </p>
      *        <note>
      *        <p>
-     *        If the AWS KMS key remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the
+     *        If the KMS key remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the
      *        replication group. The replica will not be deleted and replication will stop from and to this region.
      *        </p>
      *        </note></li>
@@ -286,21 +289,22 @@ public class ReplicaDescription implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * <code>REGION_DISABLED</code> - The replica is inaccessible because the AWS Region has been disabled.
+     * <code>REGION_DISABLED</code> - The replica is inaccessible because the Amazon Web Services Region has been
+     * disabled.
      * </p>
      * <note>
      * <p>
-     * If the AWS Region remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the
-     * replication group. The replica will not be deleted and replication will stop from and to this region.
+     * If the Amazon Web Services Region remains inaccessible for more than 20 hours, DynamoDB will remove this replica
+     * from the replication group. The replica will not be deleted and replication will stop from and to this region.
      * </p>
      * </note></li>
      * <li>
      * <p>
-     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS </code> - The AWS KMS key used to encrypt the table is inaccessible.
+     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS </code> - The KMS key used to encrypt the table is inaccessible.
      * </p>
      * <note>
      * <p>
-     * If the AWS KMS key remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the
+     * If the KMS key remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the
      * replication group. The replica will not be deleted and replication will stop from and to this region.
      * </p>
      * </note></li>
@@ -330,23 +334,25 @@ public class ReplicaDescription implements Serializable, Cloneable, StructuredPo
      *         </li>
      *         <li>
      *         <p>
-     *         <code>REGION_DISABLED</code> - The replica is inaccessible because the AWS Region has been disabled.
+     *         <code>REGION_DISABLED</code> - The replica is inaccessible because the Amazon Web Services Region has
+     *         been disabled.
      *         </p>
      *         <note>
      *         <p>
-     *         If the AWS Region remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the
-     *         replication group. The replica will not be deleted and replication will stop from and to this region.
+     *         If the Amazon Web Services Region remains inaccessible for more than 20 hours, DynamoDB will remove this
+     *         replica from the replication group. The replica will not be deleted and replication will stop from and to
+     *         this region.
      *         </p>
      *         </note></li>
      *         <li>
      *         <p>
-     *         <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS </code> - The AWS KMS key used to encrypt the table is
+     *         <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS </code> - The KMS key used to encrypt the table is
      *         inaccessible.
      *         </p>
      *         <note>
      *         <p>
-     *         If the AWS KMS key remains inaccessible for more than 20 hours, DynamoDB will remove this replica from
-     *         the replication group. The replica will not be deleted and replication will stop from and to this region.
+     *         If the KMS key remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the
+     *         replication group. The replica will not be deleted and replication will stop from and to this region.
      *         </p>
      *         </note></li>
      * @see ReplicaStatus
@@ -383,21 +389,22 @@ public class ReplicaDescription implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * <code>REGION_DISABLED</code> - The replica is inaccessible because the AWS Region has been disabled.
+     * <code>REGION_DISABLED</code> - The replica is inaccessible because the Amazon Web Services Region has been
+     * disabled.
      * </p>
      * <note>
      * <p>
-     * If the AWS Region remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the
-     * replication group. The replica will not be deleted and replication will stop from and to this region.
+     * If the Amazon Web Services Region remains inaccessible for more than 20 hours, DynamoDB will remove this replica
+     * from the replication group. The replica will not be deleted and replication will stop from and to this region.
      * </p>
      * </note></li>
      * <li>
      * <p>
-     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS </code> - The AWS KMS key used to encrypt the table is inaccessible.
+     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS </code> - The KMS key used to encrypt the table is inaccessible.
      * </p>
      * <note>
      * <p>
-     * If the AWS KMS key remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the
+     * If the KMS key remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the
      * replication group. The replica will not be deleted and replication will stop from and to this region.
      * </p>
      * </note></li>
@@ -428,22 +435,23 @@ public class ReplicaDescription implements Serializable, Cloneable, StructuredPo
      *        </li>
      *        <li>
      *        <p>
-     *        <code>REGION_DISABLED</code> - The replica is inaccessible because the AWS Region has been disabled.
+     *        <code>REGION_DISABLED</code> - The replica is inaccessible because the Amazon Web Services Region has been
+     *        disabled.
      *        </p>
      *        <note>
      *        <p>
-     *        If the AWS Region remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the
-     *        replication group. The replica will not be deleted and replication will stop from and to this region.
+     *        If the Amazon Web Services Region remains inaccessible for more than 20 hours, DynamoDB will remove this
+     *        replica from the replication group. The replica will not be deleted and replication will stop from and to
+     *        this region.
      *        </p>
      *        </note></li>
      *        <li>
      *        <p>
-     *        <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS </code> - The AWS KMS key used to encrypt the table is
-     *        inaccessible.
+     *        <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS </code> - The KMS key used to encrypt the table is inaccessible.
      *        </p>
      *        <note>
      *        <p>
-     *        If the AWS KMS key remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the
+     *        If the KMS key remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the
      *        replication group. The replica will not be deleted and replication will stop from and to this region.
      *        </p>
      *        </note></li>
@@ -483,21 +491,22 @@ public class ReplicaDescription implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * <code>REGION_DISABLED</code> - The replica is inaccessible because the AWS Region has been disabled.
+     * <code>REGION_DISABLED</code> - The replica is inaccessible because the Amazon Web Services Region has been
+     * disabled.
      * </p>
      * <note>
      * <p>
-     * If the AWS Region remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the
-     * replication group. The replica will not be deleted and replication will stop from and to this region.
+     * If the Amazon Web Services Region remains inaccessible for more than 20 hours, DynamoDB will remove this replica
+     * from the replication group. The replica will not be deleted and replication will stop from and to this region.
      * </p>
      * </note></li>
      * <li>
      * <p>
-     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS </code> - The AWS KMS key used to encrypt the table is inaccessible.
+     * <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS </code> - The KMS key used to encrypt the table is inaccessible.
      * </p>
      * <note>
      * <p>
-     * If the AWS KMS key remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the
+     * If the KMS key remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the
      * replication group. The replica will not be deleted and replication will stop from and to this region.
      * </p>
      * </note></li>
@@ -528,22 +537,23 @@ public class ReplicaDescription implements Serializable, Cloneable, StructuredPo
      *        </li>
      *        <li>
      *        <p>
-     *        <code>REGION_DISABLED</code> - The replica is inaccessible because the AWS Region has been disabled.
+     *        <code>REGION_DISABLED</code> - The replica is inaccessible because the Amazon Web Services Region has been
+     *        disabled.
      *        </p>
      *        <note>
      *        <p>
-     *        If the AWS Region remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the
-     *        replication group. The replica will not be deleted and replication will stop from and to this region.
+     *        If the Amazon Web Services Region remains inaccessible for more than 20 hours, DynamoDB will remove this
+     *        replica from the replication group. The replica will not be deleted and replication will stop from and to
+     *        this region.
      *        </p>
      *        </note></li>
      *        <li>
      *        <p>
-     *        <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS </code> - The AWS KMS key used to encrypt the table is
-     *        inaccessible.
+     *        <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS </code> - The KMS key used to encrypt the table is inaccessible.
      *        </p>
      *        <note>
      *        <p>
-     *        If the AWS KMS key remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the
+     *        If the KMS key remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the
      *        replication group. The replica will not be deleted and replication will stop from and to this region.
      *        </p>
      *        </note></li>
@@ -638,11 +648,11 @@ public class ReplicaDescription implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The AWS KMS customer master key (CMK) of the replica that will be used for AWS KMS encryption.
+     * The KMS key of the replica that will be used for KMS encryption.
      * </p>
      * 
      * @param kMSMasterKeyId
-     *        The AWS KMS customer master key (CMK) of the replica that will be used for AWS KMS encryption.
+     *        The KMS key of the replica that will be used for KMS encryption.
      */
 
     public void setKMSMasterKeyId(String kMSMasterKeyId) {
@@ -651,10 +661,10 @@ public class ReplicaDescription implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The AWS KMS customer master key (CMK) of the replica that will be used for AWS KMS encryption.
+     * The KMS key of the replica that will be used for KMS encryption.
      * </p>
      * 
-     * @return The AWS KMS customer master key (CMK) of the replica that will be used for AWS KMS encryption.
+     * @return The KMS key of the replica that will be used for KMS encryption.
      */
 
     public String getKMSMasterKeyId() {
@@ -663,11 +673,11 @@ public class ReplicaDescription implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The AWS KMS customer master key (CMK) of the replica that will be used for AWS KMS encryption.
+     * The KMS key of the replica that will be used for KMS encryption.
      * </p>
      * 
      * @param kMSMasterKeyId
-     *        The AWS KMS customer master key (CMK) of the replica that will be used for AWS KMS encryption.
+     *        The KMS key of the replica that will be used for KMS encryption.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

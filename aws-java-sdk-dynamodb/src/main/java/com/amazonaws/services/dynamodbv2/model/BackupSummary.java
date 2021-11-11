@@ -96,7 +96,7 @@ public class BackupSummary implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>AWS_BACKUP</code> - On-demand backup created by you from AWS Backup service.
+     * <code>AWS_BACKUP</code> - On-demand backup created by you from Backup service.
      * </p>
      * </li>
      * </ul>
@@ -473,7 +473,7 @@ public class BackupSummary implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>AWS_BACKUP</code> - On-demand backup created by you from AWS Backup service.
+     * <code>AWS_BACKUP</code> - On-demand backup created by you from Backup service.
      * </p>
      * </li>
      * </ul>
@@ -495,7 +495,7 @@ public class BackupSummary implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AWS_BACKUP</code> - On-demand backup created by you from AWS Backup service.
+     *        <code>AWS_BACKUP</code> - On-demand backup created by you from Backup service.
      *        </p>
      *        </li>
      * @see BackupType
@@ -524,7 +524,7 @@ public class BackupSummary implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>AWS_BACKUP</code> - On-demand backup created by you from AWS Backup service.
+     * <code>AWS_BACKUP</code> - On-demand backup created by you from Backup service.
      * </p>
      * </li>
      * </ul>
@@ -545,7 +545,7 @@ public class BackupSummary implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>AWS_BACKUP</code> - On-demand backup created by you from AWS Backup service.
+     *         <code>AWS_BACKUP</code> - On-demand backup created by you from Backup service.
      *         </p>
      *         </li>
      * @see BackupType
@@ -574,7 +574,7 @@ public class BackupSummary implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>AWS_BACKUP</code> - On-demand backup created by you from AWS Backup service.
+     * <code>AWS_BACKUP</code> - On-demand backup created by you from Backup service.
      * </p>
      * </li>
      * </ul>
@@ -596,7 +596,7 @@ public class BackupSummary implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AWS_BACKUP</code> - On-demand backup created by you from AWS Backup service.
+     *        <code>AWS_BACKUP</code> - On-demand backup created by you from Backup service.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -627,7 +627,7 @@ public class BackupSummary implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>AWS_BACKUP</code> - On-demand backup created by you from AWS Backup service.
+     * <code>AWS_BACKUP</code> - On-demand backup created by you from Backup service.
      * </p>
      * </li>
      * </ul>
@@ -649,7 +649,7 @@ public class BackupSummary implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AWS_BACKUP</code> - On-demand backup created by you from AWS Backup service.
+     *        <code>AWS_BACKUP</code> - On-demand backup created by you from Backup service.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

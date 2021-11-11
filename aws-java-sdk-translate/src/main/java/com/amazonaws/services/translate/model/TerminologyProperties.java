@@ -54,7 +54,7 @@ public class TerminologyProperties implements Serializable, Cloneable, Structure
     private String sourceLanguageCode;
     /**
      * <p>
-     * The language codes for the target languages available with the custom terminology file. All possible target
+     * The language codes for the target languages available with the custom terminology resource. All possible target
      * languages are returned in array.
      * </p>
      */
@@ -89,6 +89,47 @@ public class TerminologyProperties implements Serializable, Cloneable, Structure
      * </p>
      */
     private java.util.Date lastUpdatedAt;
+    /**
+     * <p>
+     * The directionality of your terminology resource indicates whether it has one source language (uni-directional) or
+     * multiple (multi-directional).
+     * </p>
+     * <dl>
+     * <dt>UNI</dt>
+     * <dd>
+     * <p>
+     * The terminology resource has one source language (the first column in a CSV file), and all of its other languages
+     * are target languages.
+     * </p>
+     * </dd>
+     * <dt>MULTI</dt>
+     * <dd>
+     * <p>
+     * Any language in the terminology resource can be the source language.
+     * </p>
+     * </dd>
+     * </dl>
+     */
+    private String directionality;
+    /**
+     * <p>
+     * Additional information from Amazon Translate about the terminology resource.
+     * </p>
+     */
+    private String message;
+    /**
+     * <p>
+     * The number of terms in the input file that Amazon Translate skipped when you created or updated the terminology
+     * resource.
+     * </p>
+     */
+    private Integer skippedTermCount;
+    /**
+     * <p>
+     * The format of the custom terminology input file.
+     * </p>
+     */
+    private String format;
 
     /**
      * <p>
@@ -255,11 +296,11 @@ public class TerminologyProperties implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The language codes for the target languages available with the custom terminology file. All possible target
+     * The language codes for the target languages available with the custom terminology resource. All possible target
      * languages are returned in array.
      * </p>
      * 
-     * @return The language codes for the target languages available with the custom terminology file. All possible
+     * @return The language codes for the target languages available with the custom terminology resource. All possible
      *         target languages are returned in array.
      */
 
@@ -269,12 +310,12 @@ public class TerminologyProperties implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The language codes for the target languages available with the custom terminology file. All possible target
+     * The language codes for the target languages available with the custom terminology resource. All possible target
      * languages are returned in array.
      * </p>
      * 
      * @param targetLanguageCodes
-     *        The language codes for the target languages available with the custom terminology file. All possible
+     *        The language codes for the target languages available with the custom terminology resource. All possible
      *        target languages are returned in array.
      */
 
@@ -289,7 +330,7 @@ public class TerminologyProperties implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The language codes for the target languages available with the custom terminology file. All possible target
+     * The language codes for the target languages available with the custom terminology resource. All possible target
      * languages are returned in array.
      * </p>
      * <p>
@@ -299,7 +340,7 @@ public class TerminologyProperties implements Serializable, Cloneable, Structure
      * </p>
      * 
      * @param targetLanguageCodes
-     *        The language codes for the target languages available with the custom terminology file. All possible
+     *        The language codes for the target languages available with the custom terminology resource. All possible
      *        target languages are returned in array.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -316,12 +357,12 @@ public class TerminologyProperties implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The language codes for the target languages available with the custom terminology file. All possible target
+     * The language codes for the target languages available with the custom terminology resource. All possible target
      * languages are returned in array.
      * </p>
      * 
      * @param targetLanguageCodes
-     *        The language codes for the target languages available with the custom terminology file. All possible
+     *        The language codes for the target languages available with the custom terminology resource. All possible
      *        target languages are returned in array.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -532,6 +573,334 @@ public class TerminologyProperties implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The directionality of your terminology resource indicates whether it has one source language (uni-directional) or
+     * multiple (multi-directional).
+     * </p>
+     * <dl>
+     * <dt>UNI</dt>
+     * <dd>
+     * <p>
+     * The terminology resource has one source language (the first column in a CSV file), and all of its other languages
+     * are target languages.
+     * </p>
+     * </dd>
+     * <dt>MULTI</dt>
+     * <dd>
+     * <p>
+     * Any language in the terminology resource can be the source language.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param directionality
+     *        The directionality of your terminology resource indicates whether it has one source language
+     *        (uni-directional) or multiple (multi-directional). </p>
+     *        <dl>
+     *        <dt>UNI</dt>
+     *        <dd>
+     *        <p>
+     *        The terminology resource has one source language (the first column in a CSV file), and all of its other
+     *        languages are target languages.
+     *        </p>
+     *        </dd>
+     *        <dt>MULTI</dt>
+     *        <dd>
+     *        <p>
+     *        Any language in the terminology resource can be the source language.
+     *        </p>
+     *        </dd>
+     * @see Directionality
+     */
+
+    public void setDirectionality(String directionality) {
+        this.directionality = directionality;
+    }
+
+    /**
+     * <p>
+     * The directionality of your terminology resource indicates whether it has one source language (uni-directional) or
+     * multiple (multi-directional).
+     * </p>
+     * <dl>
+     * <dt>UNI</dt>
+     * <dd>
+     * <p>
+     * The terminology resource has one source language (the first column in a CSV file), and all of its other languages
+     * are target languages.
+     * </p>
+     * </dd>
+     * <dt>MULTI</dt>
+     * <dd>
+     * <p>
+     * Any language in the terminology resource can be the source language.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @return The directionality of your terminology resource indicates whether it has one source language
+     *         (uni-directional) or multiple (multi-directional). </p>
+     *         <dl>
+     *         <dt>UNI</dt>
+     *         <dd>
+     *         <p>
+     *         The terminology resource has one source language (the first column in a CSV file), and all of its other
+     *         languages are target languages.
+     *         </p>
+     *         </dd>
+     *         <dt>MULTI</dt>
+     *         <dd>
+     *         <p>
+     *         Any language in the terminology resource can be the source language.
+     *         </p>
+     *         </dd>
+     * @see Directionality
+     */
+
+    public String getDirectionality() {
+        return this.directionality;
+    }
+
+    /**
+     * <p>
+     * The directionality of your terminology resource indicates whether it has one source language (uni-directional) or
+     * multiple (multi-directional).
+     * </p>
+     * <dl>
+     * <dt>UNI</dt>
+     * <dd>
+     * <p>
+     * The terminology resource has one source language (the first column in a CSV file), and all of its other languages
+     * are target languages.
+     * </p>
+     * </dd>
+     * <dt>MULTI</dt>
+     * <dd>
+     * <p>
+     * Any language in the terminology resource can be the source language.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param directionality
+     *        The directionality of your terminology resource indicates whether it has one source language
+     *        (uni-directional) or multiple (multi-directional). </p>
+     *        <dl>
+     *        <dt>UNI</dt>
+     *        <dd>
+     *        <p>
+     *        The terminology resource has one source language (the first column in a CSV file), and all of its other
+     *        languages are target languages.
+     *        </p>
+     *        </dd>
+     *        <dt>MULTI</dt>
+     *        <dd>
+     *        <p>
+     *        Any language in the terminology resource can be the source language.
+     *        </p>
+     *        </dd>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see Directionality
+     */
+
+    public TerminologyProperties withDirectionality(String directionality) {
+        setDirectionality(directionality);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The directionality of your terminology resource indicates whether it has one source language (uni-directional) or
+     * multiple (multi-directional).
+     * </p>
+     * <dl>
+     * <dt>UNI</dt>
+     * <dd>
+     * <p>
+     * The terminology resource has one source language (the first column in a CSV file), and all of its other languages
+     * are target languages.
+     * </p>
+     * </dd>
+     * <dt>MULTI</dt>
+     * <dd>
+     * <p>
+     * Any language in the terminology resource can be the source language.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param directionality
+     *        The directionality of your terminology resource indicates whether it has one source language
+     *        (uni-directional) or multiple (multi-directional). </p>
+     *        <dl>
+     *        <dt>UNI</dt>
+     *        <dd>
+     *        <p>
+     *        The terminology resource has one source language (the first column in a CSV file), and all of its other
+     *        languages are target languages.
+     *        </p>
+     *        </dd>
+     *        <dt>MULTI</dt>
+     *        <dd>
+     *        <p>
+     *        Any language in the terminology resource can be the source language.
+     *        </p>
+     *        </dd>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see Directionality
+     */
+
+    public TerminologyProperties withDirectionality(Directionality directionality) {
+        this.directionality = directionality.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Additional information from Amazon Translate about the terminology resource.
+     * </p>
+     * 
+     * @param message
+     *        Additional information from Amazon Translate about the terminology resource.
+     */
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    /**
+     * <p>
+     * Additional information from Amazon Translate about the terminology resource.
+     * </p>
+     * 
+     * @return Additional information from Amazon Translate about the terminology resource.
+     */
+
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
+     * <p>
+     * Additional information from Amazon Translate about the terminology resource.
+     * </p>
+     * 
+     * @param message
+     *        Additional information from Amazon Translate about the terminology resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TerminologyProperties withMessage(String message) {
+        setMessage(message);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The number of terms in the input file that Amazon Translate skipped when you created or updated the terminology
+     * resource.
+     * </p>
+     * 
+     * @param skippedTermCount
+     *        The number of terms in the input file that Amazon Translate skipped when you created or updated the
+     *        terminology resource.
+     */
+
+    public void setSkippedTermCount(Integer skippedTermCount) {
+        this.skippedTermCount = skippedTermCount;
+    }
+
+    /**
+     * <p>
+     * The number of terms in the input file that Amazon Translate skipped when you created or updated the terminology
+     * resource.
+     * </p>
+     * 
+     * @return The number of terms in the input file that Amazon Translate skipped when you created or updated the
+     *         terminology resource.
+     */
+
+    public Integer getSkippedTermCount() {
+        return this.skippedTermCount;
+    }
+
+    /**
+     * <p>
+     * The number of terms in the input file that Amazon Translate skipped when you created or updated the terminology
+     * resource.
+     * </p>
+     * 
+     * @param skippedTermCount
+     *        The number of terms in the input file that Amazon Translate skipped when you created or updated the
+     *        terminology resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TerminologyProperties withSkippedTermCount(Integer skippedTermCount) {
+        setSkippedTermCount(skippedTermCount);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The format of the custom terminology input file.
+     * </p>
+     * 
+     * @param format
+     *        The format of the custom terminology input file.
+     * @see TerminologyDataFormat
+     */
+
+    public void setFormat(String format) {
+        this.format = format;
+    }
+
+    /**
+     * <p>
+     * The format of the custom terminology input file.
+     * </p>
+     * 
+     * @return The format of the custom terminology input file.
+     * @see TerminologyDataFormat
+     */
+
+    public String getFormat() {
+        return this.format;
+    }
+
+    /**
+     * <p>
+     * The format of the custom terminology input file.
+     * </p>
+     * 
+     * @param format
+     *        The format of the custom terminology input file.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TerminologyDataFormat
+     */
+
+    public TerminologyProperties withFormat(String format) {
+        setFormat(format);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The format of the custom terminology input file.
+     * </p>
+     * 
+     * @param format
+     *        The format of the custom terminology input file.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TerminologyDataFormat
+     */
+
+    public TerminologyProperties withFormat(TerminologyDataFormat format) {
+        this.format = format.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -562,7 +931,15 @@ public class TerminologyProperties implements Serializable, Cloneable, Structure
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getLastUpdatedAt() != null)
-            sb.append("LastUpdatedAt: ").append(getLastUpdatedAt());
+            sb.append("LastUpdatedAt: ").append(getLastUpdatedAt()).append(",");
+        if (getDirectionality() != null)
+            sb.append("Directionality: ").append(getDirectionality()).append(",");
+        if (getMessage() != null)
+            sb.append("Message: ").append(getMessage()).append(",");
+        if (getSkippedTermCount() != null)
+            sb.append("SkippedTermCount: ").append(getSkippedTermCount()).append(",");
+        if (getFormat() != null)
+            sb.append("Format: ").append(getFormat());
         sb.append("}");
         return sb.toString();
     }
@@ -617,6 +994,22 @@ public class TerminologyProperties implements Serializable, Cloneable, Structure
             return false;
         if (other.getLastUpdatedAt() != null && other.getLastUpdatedAt().equals(this.getLastUpdatedAt()) == false)
             return false;
+        if (other.getDirectionality() == null ^ this.getDirectionality() == null)
+            return false;
+        if (other.getDirectionality() != null && other.getDirectionality().equals(this.getDirectionality()) == false)
+            return false;
+        if (other.getMessage() == null ^ this.getMessage() == null)
+            return false;
+        if (other.getMessage() != null && other.getMessage().equals(this.getMessage()) == false)
+            return false;
+        if (other.getSkippedTermCount() == null ^ this.getSkippedTermCount() == null)
+            return false;
+        if (other.getSkippedTermCount() != null && other.getSkippedTermCount().equals(this.getSkippedTermCount()) == false)
+            return false;
+        if (other.getFormat() == null ^ this.getFormat() == null)
+            return false;
+        if (other.getFormat() != null && other.getFormat().equals(this.getFormat()) == false)
+            return false;
         return true;
     }
 
@@ -635,6 +1028,10 @@ public class TerminologyProperties implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getTermCount() == null) ? 0 : getTermCount().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedAt() == null) ? 0 : getLastUpdatedAt().hashCode());
+        hashCode = prime * hashCode + ((getDirectionality() == null) ? 0 : getDirectionality().hashCode());
+        hashCode = prime * hashCode + ((getMessage() == null) ? 0 : getMessage().hashCode());
+        hashCode = prime * hashCode + ((getSkippedTermCount() == null) ? 0 : getSkippedTermCount().hashCode());
+        hashCode = prime * hashCode + ((getFormat() == null) ? 0 : getFormat().hashCode());
         return hashCode;
     }
 

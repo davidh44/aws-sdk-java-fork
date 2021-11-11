@@ -89,6 +89,9 @@ public class PutItemRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * The values returned are strongly consistent.
+     * </p>
      * <note>
      * <p>
      * The <code>ReturnValues</code> parameter is used by several DynamoDB operations; however, <code>PutItem</code>
@@ -339,6 +342,9 @@ public class PutItemRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        </p>
      *        </li>
      *        </ul>
+     *        <p>
+     *        The values returned are strongly consistent.
+     *        </p>
      *        <note>
      *        <p>
      *        The <code>ReturnValues</code> parameter is used by several DynamoDB operations; however,
@@ -398,6 +404,9 @@ public class PutItemRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        </p>
      *        </li>
      *        </ul>
+     *        <p>
+     *        The values returned are strongly consistent.
+     *        </p>
      *        <note>
      *        <p>
      *        The <code>ReturnValues</code> parameter is used by several DynamoDB operations; however,
@@ -749,6 +758,9 @@ public class PutItemRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * The values returned are strongly consistent.
+     * </p>
      * <note>
      * <p>
      * The <code>ReturnValues</code> parameter is used by several DynamoDB operations; however, <code>PutItem</code>
@@ -773,6 +785,9 @@ public class PutItemRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        </p>
      *        </li>
      *        </ul>
+     *        <p>
+     *        The values returned are strongly consistent.
+     *        </p>
      *        <note>
      *        <p>
      *        The <code>ReturnValues</code> parameter is used by several DynamoDB operations; however,
@@ -804,6 +819,9 @@ public class PutItemRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * The values returned are strongly consistent.
+     * </p>
      * <note>
      * <p>
      * The <code>ReturnValues</code> parameter is used by several DynamoDB operations; however, <code>PutItem</code>
@@ -827,6 +845,9 @@ public class PutItemRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *         </p>
      *         </li>
      *         </ul>
+     *         <p>
+     *         The values returned are strongly consistent.
+     *         </p>
      *         <note>
      *         <p>
      *         The <code>ReturnValues</code> parameter is used by several DynamoDB operations; however,
@@ -858,6 +879,9 @@ public class PutItemRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * The values returned are strongly consistent.
+     * </p>
      * <note>
      * <p>
      * The <code>ReturnValues</code> parameter is used by several DynamoDB operations; however, <code>PutItem</code>
@@ -882,6 +906,9 @@ public class PutItemRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        </p>
      *        </li>
      *        </ul>
+     *        <p>
+     *        The values returned are strongly consistent.
+     *        </p>
      *        <note>
      *        <p>
      *        The <code>ReturnValues</code> parameter is used by several DynamoDB operations; however,
@@ -915,6 +942,9 @@ public class PutItemRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * The values returned are strongly consistent.
+     * </p>
      * <note>
      * <p>
      * The <code>ReturnValues</code> parameter is used by several DynamoDB operations; however, <code>PutItem</code>
@@ -939,6 +969,9 @@ public class PutItemRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        </p>
      *        </li>
      *        </ul>
+     *        <p>
+     *        The values returned are strongly consistent.
+     *        </p>
      *        <note>
      *        <p>
      *        The <code>ReturnValues</code> parameter is used by several DynamoDB operations; however,
@@ -970,6 +1003,9 @@ public class PutItemRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * The values returned are strongly consistent.
+     * </p>
      * <note>
      * <p>
      * The <code>ReturnValues</code> parameter is used by several DynamoDB operations; however, <code>PutItem</code>
@@ -994,6 +1030,9 @@ public class PutItemRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        </p>
      *        </li>
      *        </ul>
+     *        <p>
+     *        The values returned are strongly consistent.
+     *        </p>
      *        <note>
      *        <p>
      *        The <code>ReturnValues</code> parameter is used by several DynamoDB operations; however,

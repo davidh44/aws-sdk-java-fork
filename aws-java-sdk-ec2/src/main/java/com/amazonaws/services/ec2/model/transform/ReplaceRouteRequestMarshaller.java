@@ -100,6 +100,10 @@ public class ReplaceRouteRequestMarshaller implements Marshaller<Request<Replace
             request.addParameter("VpcPeeringConnectionId", StringUtils.fromString(replaceRouteRequest.getVpcPeeringConnectionId()));
         }
 
+        if (replaceRouteRequest.getCoreNetworkArn() != null) {
+            request.addParameter("CoreNetworkArn", StringUtils.fromString(replaceRouteRequest.getCoreNetworkArn()));
+        }
+
         return request;
     }
 

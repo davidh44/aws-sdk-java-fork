@@ -29,8 +29,8 @@ public class TransactWriteItemsRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * An ordered array of up to 25 <code>TransactWriteItem</code> objects, each of which contains a
      * <code>ConditionCheck</code>, <code>Put</code>, <code>Update</code>, or <code>Delete</code> object. These can
-     * operate on items in different tables, but the tables must reside in the same AWS account and Region, and no two
-     * of them can operate on the same item.
+     * operate on items in different tables, but the tables must reside in the same Amazon Web Services account and
+     * Region, and no two of them can operate on the same item.
      * </p>
      */
     private java.util.List<TransactWriteItem> transactItems;
@@ -72,14 +72,14 @@ public class TransactWriteItemsRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * An ordered array of up to 25 <code>TransactWriteItem</code> objects, each of which contains a
      * <code>ConditionCheck</code>, <code>Put</code>, <code>Update</code>, or <code>Delete</code> object. These can
-     * operate on items in different tables, but the tables must reside in the same AWS account and Region, and no two
-     * of them can operate on the same item.
+     * operate on items in different tables, but the tables must reside in the same Amazon Web Services account and
+     * Region, and no two of them can operate on the same item.
      * </p>
      * 
      * @return An ordered array of up to 25 <code>TransactWriteItem</code> objects, each of which contains a
      *         <code>ConditionCheck</code>, <code>Put</code>, <code>Update</code>, or <code>Delete</code> object. These
-     *         can operate on items in different tables, but the tables must reside in the same AWS account and Region,
-     *         and no two of them can operate on the same item.
+     *         can operate on items in different tables, but the tables must reside in the same Amazon Web Services
+     *         account and Region, and no two of them can operate on the same item.
      */
 
     public java.util.List<TransactWriteItem> getTransactItems() {
@@ -90,15 +90,15 @@ public class TransactWriteItemsRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * An ordered array of up to 25 <code>TransactWriteItem</code> objects, each of which contains a
      * <code>ConditionCheck</code>, <code>Put</code>, <code>Update</code>, or <code>Delete</code> object. These can
-     * operate on items in different tables, but the tables must reside in the same AWS account and Region, and no two
-     * of them can operate on the same item.
+     * operate on items in different tables, but the tables must reside in the same Amazon Web Services account and
+     * Region, and no two of them can operate on the same item.
      * </p>
      * 
      * @param transactItems
      *        An ordered array of up to 25 <code>TransactWriteItem</code> objects, each of which contains a
      *        <code>ConditionCheck</code>, <code>Put</code>, <code>Update</code>, or <code>Delete</code> object. These
-     *        can operate on items in different tables, but the tables must reside in the same AWS account and Region,
-     *        and no two of them can operate on the same item.
+     *        can operate on items in different tables, but the tables must reside in the same Amazon Web Services
+     *        account and Region, and no two of them can operate on the same item.
      */
 
     public void setTransactItems(java.util.Collection<TransactWriteItem> transactItems) {
@@ -114,8 +114,8 @@ public class TransactWriteItemsRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * An ordered array of up to 25 <code>TransactWriteItem</code> objects, each of which contains a
      * <code>ConditionCheck</code>, <code>Put</code>, <code>Update</code>, or <code>Delete</code> object. These can
-     * operate on items in different tables, but the tables must reside in the same AWS account and Region, and no two
-     * of them can operate on the same item.
+     * operate on items in different tables, but the tables must reside in the same Amazon Web Services account and
+     * Region, and no two of them can operate on the same item.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -126,8 +126,8 @@ public class TransactWriteItemsRequest extends com.amazonaws.AmazonWebServiceReq
      * @param transactItems
      *        An ordered array of up to 25 <code>TransactWriteItem</code> objects, each of which contains a
      *        <code>ConditionCheck</code>, <code>Put</code>, <code>Update</code>, or <code>Delete</code> object. These
-     *        can operate on items in different tables, but the tables must reside in the same AWS account and Region,
-     *        and no two of them can operate on the same item.
+     *        can operate on items in different tables, but the tables must reside in the same Amazon Web Services
+     *        account and Region, and no two of them can operate on the same item.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -145,15 +145,15 @@ public class TransactWriteItemsRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * An ordered array of up to 25 <code>TransactWriteItem</code> objects, each of which contains a
      * <code>ConditionCheck</code>, <code>Put</code>, <code>Update</code>, or <code>Delete</code> object. These can
-     * operate on items in different tables, but the tables must reside in the same AWS account and Region, and no two
-     * of them can operate on the same item.
+     * operate on items in different tables, but the tables must reside in the same Amazon Web Services account and
+     * Region, and no two of them can operate on the same item.
      * </p>
      * 
      * @param transactItems
      *        An ordered array of up to 25 <code>TransactWriteItem</code> objects, each of which contains a
      *        <code>ConditionCheck</code>, <code>Put</code>, <code>Update</code>, or <code>Delete</code> object. These
-     *        can operate on items in different tables, but the tables must reside in the same AWS account and Region,
-     *        and no two of them can operate on the same item.
+     *        can operate on items in different tables, but the tables must reside in the same Amazon Web Services
+     *        account and Region, and no two of them can operate on the same item.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

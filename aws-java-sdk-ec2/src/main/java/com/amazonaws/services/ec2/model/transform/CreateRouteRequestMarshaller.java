@@ -96,6 +96,10 @@ public class CreateRouteRequestMarshaller implements Marshaller<Request<CreateRo
             request.addParameter("VpcPeeringConnectionId", StringUtils.fromString(createRouteRequest.getVpcPeeringConnectionId()));
         }
 
+        if (createRouteRequest.getCoreNetworkArn() != null) {
+            request.addParameter("CoreNetworkArn", StringUtils.fromString(createRouteRequest.getCoreNetworkArn()));
+        }
+
         return request;
     }
 

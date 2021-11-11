@@ -33,7 +33,16 @@ public class GetTerminologyRequest extends com.amazonaws.AmazonWebServiceRequest
     private String name;
     /**
      * <p>
-     * The data format of the custom terminology being retrieved, either CSV or TMX.
+     * The data format of the custom terminology being retrieved.
+     * </p>
+     * <p>
+     * If you don't specify this parameter, Amazon Translate returns a file that has the same format as the file that
+     * was imported to create the terminology.
+     * </p>
+     * <p>
+     * If you specify this parameter when you retrieve a multi-directional terminology resource, you must specify the
+     * same format as that of the input file that was imported to create it. Otherwise, Amazon Translate throws an
+     * error.
      * </p>
      */
     private String terminologyDataFormat;
@@ -80,11 +89,28 @@ public class GetTerminologyRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The data format of the custom terminology being retrieved, either CSV or TMX.
+     * The data format of the custom terminology being retrieved.
+     * </p>
+     * <p>
+     * If you don't specify this parameter, Amazon Translate returns a file that has the same format as the file that
+     * was imported to create the terminology.
+     * </p>
+     * <p>
+     * If you specify this parameter when you retrieve a multi-directional terminology resource, you must specify the
+     * same format as that of the input file that was imported to create it. Otherwise, Amazon Translate throws an
+     * error.
      * </p>
      * 
      * @param terminologyDataFormat
-     *        The data format of the custom terminology being retrieved, either CSV or TMX.
+     *        The data format of the custom terminology being retrieved.</p>
+     *        <p>
+     *        If you don't specify this parameter, Amazon Translate returns a file that has the same format as the file
+     *        that was imported to create the terminology.
+     *        </p>
+     *        <p>
+     *        If you specify this parameter when you retrieve a multi-directional terminology resource, you must specify
+     *        the same format as that of the input file that was imported to create it. Otherwise, Amazon Translate
+     *        throws an error.
      * @see TerminologyDataFormat
      */
 
@@ -94,10 +120,27 @@ public class GetTerminologyRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The data format of the custom terminology being retrieved, either CSV or TMX.
+     * The data format of the custom terminology being retrieved.
+     * </p>
+     * <p>
+     * If you don't specify this parameter, Amazon Translate returns a file that has the same format as the file that
+     * was imported to create the terminology.
+     * </p>
+     * <p>
+     * If you specify this parameter when you retrieve a multi-directional terminology resource, you must specify the
+     * same format as that of the input file that was imported to create it. Otherwise, Amazon Translate throws an
+     * error.
      * </p>
      * 
-     * @return The data format of the custom terminology being retrieved, either CSV or TMX.
+     * @return The data format of the custom terminology being retrieved.</p>
+     *         <p>
+     *         If you don't specify this parameter, Amazon Translate returns a file that has the same format as the file
+     *         that was imported to create the terminology.
+     *         </p>
+     *         <p>
+     *         If you specify this parameter when you retrieve a multi-directional terminology resource, you must
+     *         specify the same format as that of the input file that was imported to create it. Otherwise, Amazon
+     *         Translate throws an error.
      * @see TerminologyDataFormat
      */
 
@@ -107,11 +150,28 @@ public class GetTerminologyRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The data format of the custom terminology being retrieved, either CSV or TMX.
+     * The data format of the custom terminology being retrieved.
+     * </p>
+     * <p>
+     * If you don't specify this parameter, Amazon Translate returns a file that has the same format as the file that
+     * was imported to create the terminology.
+     * </p>
+     * <p>
+     * If you specify this parameter when you retrieve a multi-directional terminology resource, you must specify the
+     * same format as that of the input file that was imported to create it. Otherwise, Amazon Translate throws an
+     * error.
      * </p>
      * 
      * @param terminologyDataFormat
-     *        The data format of the custom terminology being retrieved, either CSV or TMX.
+     *        The data format of the custom terminology being retrieved.</p>
+     *        <p>
+     *        If you don't specify this parameter, Amazon Translate returns a file that has the same format as the file
+     *        that was imported to create the terminology.
+     *        </p>
+     *        <p>
+     *        If you specify this parameter when you retrieve a multi-directional terminology resource, you must specify
+     *        the same format as that of the input file that was imported to create it. Otherwise, Amazon Translate
+     *        throws an error.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TerminologyDataFormat
      */
@@ -123,11 +183,28 @@ public class GetTerminologyRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The data format of the custom terminology being retrieved, either CSV or TMX.
+     * The data format of the custom terminology being retrieved.
+     * </p>
+     * <p>
+     * If you don't specify this parameter, Amazon Translate returns a file that has the same format as the file that
+     * was imported to create the terminology.
+     * </p>
+     * <p>
+     * If you specify this parameter when you retrieve a multi-directional terminology resource, you must specify the
+     * same format as that of the input file that was imported to create it. Otherwise, Amazon Translate throws an
+     * error.
      * </p>
      * 
      * @param terminologyDataFormat
-     *        The data format of the custom terminology being retrieved, either CSV or TMX.
+     *        The data format of the custom terminology being retrieved.</p>
+     *        <p>
+     *        If you don't specify this parameter, Amazon Translate returns a file that has the same format as the file
+     *        that was imported to create the terminology.
+     *        </p>
+     *        <p>
+     *        If you specify this parameter when you retrieve a multi-directional terminology resource, you must specify
+     *        the same format as that of the input file that was imported to create it. Otherwise, Amazon Translate
+     *        throws an error.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TerminologyDataFormat
      */

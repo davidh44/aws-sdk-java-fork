@@ -62,7 +62,7 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
     private String s3Bucket;
     /**
      * <p>
-     * The ID of the AWS account that owns the bucket the export will be stored in.
+     * The ID of the Amazon Web Services account that owns the bucket the export will be stored in.
      * </p>
      */
     private String s3BucketOwner;
@@ -85,7 +85,7 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * <code>KMS</code> - server-side encryption with AWS KMS managed keys
+     * <code>KMS</code> - server-side encryption with KMS managed keys
      * </p>
      * </li>
      * </ul>
@@ -93,7 +93,7 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
     private String s3SseAlgorithm;
     /**
      * <p>
-     * The ID of the AWS KMS managed key used to encrypt the S3 bucket where export data will be stored (if applicable).
+     * The ID of the KMS managed key used to encrypt the S3 bucket where export data will be stored (if applicable).
      * </p>
      */
     private String s3SseKmsKeyId;
@@ -330,11 +330,11 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The ID of the AWS account that owns the bucket the export will be stored in.
+     * The ID of the Amazon Web Services account that owns the bucket the export will be stored in.
      * </p>
      * 
      * @param s3BucketOwner
-     *        The ID of the AWS account that owns the bucket the export will be stored in.
+     *        The ID of the Amazon Web Services account that owns the bucket the export will be stored in.
      */
 
     public void setS3BucketOwner(String s3BucketOwner) {
@@ -343,10 +343,10 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The ID of the AWS account that owns the bucket the export will be stored in.
+     * The ID of the Amazon Web Services account that owns the bucket the export will be stored in.
      * </p>
      * 
-     * @return The ID of the AWS account that owns the bucket the export will be stored in.
+     * @return The ID of the Amazon Web Services account that owns the bucket the export will be stored in.
      */
 
     public String getS3BucketOwner() {
@@ -355,11 +355,11 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The ID of the AWS account that owns the bucket the export will be stored in.
+     * The ID of the Amazon Web Services account that owns the bucket the export will be stored in.
      * </p>
      * 
      * @param s3BucketOwner
-     *        The ID of the AWS account that owns the bucket the export will be stored in.
+     *        The ID of the Amazon Web Services account that owns the bucket the export will be stored in.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -421,7 +421,7 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * <code>KMS</code> - server-side encryption with AWS KMS managed keys
+     * <code>KMS</code> - server-side encryption with KMS managed keys
      * </p>
      * </li>
      * </ul>
@@ -437,7 +437,7 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
      *        </li>
      *        <li>
      *        <p>
-     *        <code>KMS</code> - server-side encryption with AWS KMS managed keys
+     *        <code>KMS</code> - server-side encryption with KMS managed keys
      *        </p>
      *        </li>
      * @see S3SseAlgorithm
@@ -460,7 +460,7 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * <code>KMS</code> - server-side encryption with AWS KMS managed keys
+     * <code>KMS</code> - server-side encryption with KMS managed keys
      * </p>
      * </li>
      * </ul>
@@ -475,7 +475,7 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
      *         </li>
      *         <li>
      *         <p>
-     *         <code>KMS</code> - server-side encryption with AWS KMS managed keys
+     *         <code>KMS</code> - server-side encryption with KMS managed keys
      *         </p>
      *         </li>
      * @see S3SseAlgorithm
@@ -498,7 +498,7 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * <code>KMS</code> - server-side encryption with AWS KMS managed keys
+     * <code>KMS</code> - server-side encryption with KMS managed keys
      * </p>
      * </li>
      * </ul>
@@ -514,7 +514,7 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
      *        </li>
      *        <li>
      *        <p>
-     *        <code>KMS</code> - server-side encryption with AWS KMS managed keys
+     *        <code>KMS</code> - server-side encryption with KMS managed keys
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -539,7 +539,7 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * <code>KMS</code> - server-side encryption with AWS KMS managed keys
+     * <code>KMS</code> - server-side encryption with KMS managed keys
      * </p>
      * </li>
      * </ul>
@@ -555,7 +555,7 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
      *        </li>
      *        <li>
      *        <p>
-     *        <code>KMS</code> - server-side encryption with AWS KMS managed keys
+     *        <code>KMS</code> - server-side encryption with KMS managed keys
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -569,11 +569,11 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The ID of the AWS KMS managed key used to encrypt the S3 bucket where export data will be stored (if applicable).
+     * The ID of the KMS managed key used to encrypt the S3 bucket where export data will be stored (if applicable).
      * </p>
      * 
      * @param s3SseKmsKeyId
-     *        The ID of the AWS KMS managed key used to encrypt the S3 bucket where export data will be stored (if
+     *        The ID of the KMS managed key used to encrypt the S3 bucket where export data will be stored (if
      *        applicable).
      */
 
@@ -583,10 +583,10 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The ID of the AWS KMS managed key used to encrypt the S3 bucket where export data will be stored (if applicable).
+     * The ID of the KMS managed key used to encrypt the S3 bucket where export data will be stored (if applicable).
      * </p>
      * 
-     * @return The ID of the AWS KMS managed key used to encrypt the S3 bucket where export data will be stored (if
+     * @return The ID of the KMS managed key used to encrypt the S3 bucket where export data will be stored (if
      *         applicable).
      */
 
@@ -596,11 +596,11 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The ID of the AWS KMS managed key used to encrypt the S3 bucket where export data will be stored (if applicable).
+     * The ID of the KMS managed key used to encrypt the S3 bucket where export data will be stored (if applicable).
      * </p>
      * 
      * @param s3SseKmsKeyId
-     *        The ID of the AWS KMS managed key used to encrypt the S3 bucket where export data will be stored (if
+     *        The ID of the KMS managed key used to encrypt the S3 bucket where export data will be stored (if
      *        applicable).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
