@@ -16,7 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Specifies if DevOps Guru is enabled to create an AWS Systems Manager OpsItem for each created insight.
+ * Specifies if DevOps Guru is enabled to create an Amazon Web Services Systems Manager OpsItem for each created
+ * insight.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

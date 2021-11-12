@@ -25,13 +25,13 @@ public class ConflictException extends com.amazonaws.services.devopsguru.model.A
 
     /**
      * <p>
-     * The ID of the AWS resource in which a conflict occurred.
+     * The ID of the Amazon Web Services resource in which a conflict occurred.
      * </p>
      */
     private String resourceId;
     /**
      * <p>
-     * The type of the AWS resource in which a conflict occurred.
+     * The type of the Amazon Web Services resource in which a conflict occurred.
      * </p>
      */
     private String resourceType;
@@ -48,11 +48,11 @@ public class ConflictException extends com.amazonaws.services.devopsguru.model.A
 
     /**
      * <p>
-     * The ID of the AWS resource in which a conflict occurred.
+     * The ID of the Amazon Web Services resource in which a conflict occurred.
      * </p>
      * 
      * @param resourceId
-     *        The ID of the AWS resource in which a conflict occurred.
+     *        The ID of the Amazon Web Services resource in which a conflict occurred.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("ResourceId")
@@ -62,10 +62,10 @@ public class ConflictException extends com.amazonaws.services.devopsguru.model.A
 
     /**
      * <p>
-     * The ID of the AWS resource in which a conflict occurred.
+     * The ID of the Amazon Web Services resource in which a conflict occurred.
      * </p>
      * 
-     * @return The ID of the AWS resource in which a conflict occurred.
+     * @return The ID of the Amazon Web Services resource in which a conflict occurred.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("ResourceId")
@@ -75,11 +75,11 @@ public class ConflictException extends com.amazonaws.services.devopsguru.model.A
 
     /**
      * <p>
-     * The ID of the AWS resource in which a conflict occurred.
+     * The ID of the Amazon Web Services resource in which a conflict occurred.
      * </p>
      * 
      * @param resourceId
-     *        The ID of the AWS resource in which a conflict occurred.
+     *        The ID of the Amazon Web Services resource in which a conflict occurred.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -90,11 +90,11 @@ public class ConflictException extends com.amazonaws.services.devopsguru.model.A
 
     /**
      * <p>
-     * The type of the AWS resource in which a conflict occurred.
+     * The type of the Amazon Web Services resource in which a conflict occurred.
      * </p>
      * 
      * @param resourceType
-     *        The type of the AWS resource in which a conflict occurred.
+     *        The type of the Amazon Web Services resource in which a conflict occurred.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("ResourceType")
@@ -104,10 +104,10 @@ public class ConflictException extends com.amazonaws.services.devopsguru.model.A
 
     /**
      * <p>
-     * The type of the AWS resource in which a conflict occurred.
+     * The type of the Amazon Web Services resource in which a conflict occurred.
      * </p>
      * 
-     * @return The type of the AWS resource in which a conflict occurred.
+     * @return The type of the Amazon Web Services resource in which a conflict occurred.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("ResourceType")
@@ -117,11 +117,11 @@ public class ConflictException extends com.amazonaws.services.devopsguru.model.A
 
     /**
      * <p>
-     * The type of the AWS resource in which a conflict occurred.
+     * The type of the Amazon Web Services resource in which a conflict occurred.
      * </p>
      * 
      * @param resourceType
-     *        The type of the AWS resource in which a conflict occurred.
+     *        The type of the Amazon Web Services resource in which a conflict occurred.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -29,10 +29,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * account Amazon SNS topics</a>.
  * </p>
  * <p>
- * If you use an Amazon SNS topic that is encrypted by an AWS Key Management Service customer-managed key (CMK), then
- * you must add permissions to the CMK. For more information, see <a
- * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-kms-permissions.html">Permissions for AWS
- * KMS–encrypted Amazon SNS topics</a>.
+ * If you use an Amazon SNS topic that is encrypted by an Amazon Web Services Key Management Service customer-managed
+ * key (CMK), then you must add permissions to the CMK. For more information, see <a
+ * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-kms-permissions.html">Permissions for Amazon Web
+ * Services KMS–encrypted Amazon SNS topics</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/SnsChannelConfig" target="_top">AWS API

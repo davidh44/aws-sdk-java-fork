@@ -67,6 +67,12 @@ public class CloudWatchMetricsDetail implements Serializable, Cloneable, Structu
      * </p>
      */
     private Integer period;
+    /**
+     * <p>
+     * This object returns anomaly metric data.
+     * </p>
+     */
+    private CloudWatchMetricsDataSummary metricDataSummary;
 
     /**
      * <p>
@@ -380,6 +386,46 @@ public class CloudWatchMetricsDetail implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * This object returns anomaly metric data.
+     * </p>
+     * 
+     * @param metricDataSummary
+     *        This object returns anomaly metric data.
+     */
+
+    public void setMetricDataSummary(CloudWatchMetricsDataSummary metricDataSummary) {
+        this.metricDataSummary = metricDataSummary;
+    }
+
+    /**
+     * <p>
+     * This object returns anomaly metric data.
+     * </p>
+     * 
+     * @return This object returns anomaly metric data.
+     */
+
+    public CloudWatchMetricsDataSummary getMetricDataSummary() {
+        return this.metricDataSummary;
+    }
+
+    /**
+     * <p>
+     * This object returns anomaly metric data.
+     * </p>
+     * 
+     * @param metricDataSummary
+     *        This object returns anomaly metric data.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CloudWatchMetricsDetail withMetricDataSummary(CloudWatchMetricsDataSummary metricDataSummary) {
+        setMetricDataSummary(metricDataSummary);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -402,7 +448,9 @@ public class CloudWatchMetricsDetail implements Serializable, Cloneable, Structu
         if (getUnit() != null)
             sb.append("Unit: ").append(getUnit()).append(",");
         if (getPeriod() != null)
-            sb.append("Period: ").append(getPeriod());
+            sb.append("Period: ").append(getPeriod()).append(",");
+        if (getMetricDataSummary() != null)
+            sb.append("MetricDataSummary: ").append(getMetricDataSummary());
         sb.append("}");
         return sb.toString();
     }
@@ -441,6 +489,10 @@ public class CloudWatchMetricsDetail implements Serializable, Cloneable, Structu
             return false;
         if (other.getPeriod() != null && other.getPeriod().equals(this.getPeriod()) == false)
             return false;
+        if (other.getMetricDataSummary() == null ^ this.getMetricDataSummary() == null)
+            return false;
+        if (other.getMetricDataSummary() != null && other.getMetricDataSummary().equals(this.getMetricDataSummary()) == false)
+            return false;
         return true;
     }
 
@@ -455,6 +507,7 @@ public class CloudWatchMetricsDetail implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getStat() == null) ? 0 : getStat().hashCode());
         hashCode = prime * hashCode + ((getUnit() == null) ? 0 : getUnit().hashCode());
         hashCode = prime * hashCode + ((getPeriod() == null) ? 0 : getPeriod().hashCode());
+        hashCode = prime * hashCode + ((getMetricDataSummary() == null) ? 0 : getMetricDataSummary().hashCode());
         return hashCode;
     }
 

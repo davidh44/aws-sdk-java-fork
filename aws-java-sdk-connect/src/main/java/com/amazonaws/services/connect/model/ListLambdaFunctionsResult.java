@@ -25,7 +25,7 @@ public class ListLambdaFunctionsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The Lambda function ARNs associated with the specified instance.
+     * The Lambdafunction ARNs associated with the specified instance.
      * </p>
      */
     private java.util.List<String> lambdaFunctions;
@@ -38,10 +38,10 @@ public class ListLambdaFunctionsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The Lambda function ARNs associated with the specified instance.
+     * The Lambdafunction ARNs associated with the specified instance.
      * </p>
      * 
-     * @return The Lambda function ARNs associated with the specified instance.
+     * @return The Lambdafunction ARNs associated with the specified instance.
      */
 
     public java.util.List<String> getLambdaFunctions() {
@@ -50,11 +50,11 @@ public class ListLambdaFunctionsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The Lambda function ARNs associated with the specified instance.
+     * The Lambdafunction ARNs associated with the specified instance.
      * </p>
      * 
      * @param lambdaFunctions
-     *        The Lambda function ARNs associated with the specified instance.
+     *        The Lambdafunction ARNs associated with the specified instance.
      */
 
     public void setLambdaFunctions(java.util.Collection<String> lambdaFunctions) {
@@ -68,7 +68,7 @@ public class ListLambdaFunctionsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The Lambda function ARNs associated with the specified instance.
+     * The Lambdafunction ARNs associated with the specified instance.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +77,7 @@ public class ListLambdaFunctionsResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * 
      * @param lambdaFunctions
-     *        The Lambda function ARNs associated with the specified instance.
+     *        The Lambdafunction ARNs associated with the specified instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class ListLambdaFunctionsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The Lambda function ARNs associated with the specified instance.
+     * The Lambdafunction ARNs associated with the specified instance.
      * </p>
      * 
      * @param lambdaFunctions
-     *        The Lambda function ARNs associated with the specified instance.
+     *        The Lambdafunction ARNs associated with the specified instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

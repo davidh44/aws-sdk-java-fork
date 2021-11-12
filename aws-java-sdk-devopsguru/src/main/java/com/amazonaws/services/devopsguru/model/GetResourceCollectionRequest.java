@@ -27,8 +27,8 @@ public class GetResourceCollectionRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The type of AWS resource collections to return. The one valid value is <code>CLOUD_FORMATION</code> for AWS
-     * CloudFormation stacks.
+     * The type of Amazon Web Services resource collections to return. The one valid value is
+     * <code>CLOUD_FORMATION</code> for Amazon Web Services CloudFormation stacks.
      * </p>
      */
     private String resourceCollectionType;
@@ -42,13 +42,13 @@ public class GetResourceCollectionRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The type of AWS resource collections to return. The one valid value is <code>CLOUD_FORMATION</code> for AWS
-     * CloudFormation stacks.
+     * The type of Amazon Web Services resource collections to return. The one valid value is
+     * <code>CLOUD_FORMATION</code> for Amazon Web Services CloudFormation stacks.
      * </p>
      * 
      * @param resourceCollectionType
-     *        The type of AWS resource collections to return. The one valid value is <code>CLOUD_FORMATION</code> for
-     *        AWS CloudFormation stacks.
+     *        The type of Amazon Web Services resource collections to return. The one valid value is
+     *        <code>CLOUD_FORMATION</code> for Amazon Web Services CloudFormation stacks.
      * @see ResourceCollectionType
      */
 
@@ -58,12 +58,12 @@ public class GetResourceCollectionRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The type of AWS resource collections to return. The one valid value is <code>CLOUD_FORMATION</code> for AWS
-     * CloudFormation stacks.
+     * The type of Amazon Web Services resource collections to return. The one valid value is
+     * <code>CLOUD_FORMATION</code> for Amazon Web Services CloudFormation stacks.
      * </p>
      * 
-     * @return The type of AWS resource collections to return. The one valid value is <code>CLOUD_FORMATION</code> for
-     *         AWS CloudFormation stacks.
+     * @return The type of Amazon Web Services resource collections to return. The one valid value is
+     *         <code>CLOUD_FORMATION</code> for Amazon Web Services CloudFormation stacks.
      * @see ResourceCollectionType
      */
 
@@ -73,13 +73,13 @@ public class GetResourceCollectionRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The type of AWS resource collections to return. The one valid value is <code>CLOUD_FORMATION</code> for AWS
-     * CloudFormation stacks.
+     * The type of Amazon Web Services resource collections to return. The one valid value is
+     * <code>CLOUD_FORMATION</code> for Amazon Web Services CloudFormation stacks.
      * </p>
      * 
      * @param resourceCollectionType
-     *        The type of AWS resource collections to return. The one valid value is <code>CLOUD_FORMATION</code> for
-     *        AWS CloudFormation stacks.
+     *        The type of Amazon Web Services resource collections to return. The one valid value is
+     *        <code>CLOUD_FORMATION</code> for Amazon Web Services CloudFormation stacks.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceCollectionType
      */
@@ -91,13 +91,13 @@ public class GetResourceCollectionRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The type of AWS resource collections to return. The one valid value is <code>CLOUD_FORMATION</code> for AWS
-     * CloudFormation stacks.
+     * The type of Amazon Web Services resource collections to return. The one valid value is
+     * <code>CLOUD_FORMATION</code> for Amazon Web Services CloudFormation stacks.
      * </p>
      * 
      * @param resourceCollectionType
-     *        The type of AWS resource collections to return. The one valid value is <code>CLOUD_FORMATION</code> for
-     *        AWS CloudFormation stacks.
+     *        The type of Amazon Web Services resource collections to return. The one valid value is
+     *        <code>CLOUD_FORMATION</code> for Amazon Web Services CloudFormation stacks.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceCollectionType
      */

@@ -193,10 +193,10 @@ public class DvbSubDestinationSettings implements Serializable, Cloneable, Struc
      */
     private String subtitlingType;
     /**
-     * Specify whether the Text spacing (TextSpacing) in your captions is set by the captions grid, or varies depending
-     * on letter width. Choose fixed grid (FIXED_GRID) to conform to the spacing specified in the captions file more
-     * accurately. Choose proportional (PROPORTIONAL) to make the text easier to read for closed captions. Within your
-     * job settings, all of your DVB-Sub settings must be identical.
+     * Specify whether the Text spacing (TeletextSpacing) in your captions is set by the captions grid, or varies
+     * depending on letter width. Choose fixed grid (FIXED_GRID) to conform to the spacing specified in the captions
+     * file more accurately. Choose proportional (PROPORTIONAL) to make the text easier to read for closed captions.
+     * Within your job settings, all of your DVB-Sub settings must be identical.
      */
     private String teletextSpacing;
     /**
@@ -1721,13 +1721,13 @@ public class DvbSubDestinationSettings implements Serializable, Cloneable, Struc
     }
 
     /**
-     * Specify whether the Text spacing (TextSpacing) in your captions is set by the captions grid, or varies depending
-     * on letter width. Choose fixed grid (FIXED_GRID) to conform to the spacing specified in the captions file more
-     * accurately. Choose proportional (PROPORTIONAL) to make the text easier to read for closed captions. Within your
-     * job settings, all of your DVB-Sub settings must be identical.
+     * Specify whether the Text spacing (TeletextSpacing) in your captions is set by the captions grid, or varies
+     * depending on letter width. Choose fixed grid (FIXED_GRID) to conform to the spacing specified in the captions
+     * file more accurately. Choose proportional (PROPORTIONAL) to make the text easier to read for closed captions.
+     * Within your job settings, all of your DVB-Sub settings must be identical.
      * 
      * @param teletextSpacing
-     *        Specify whether the Text spacing (TextSpacing) in your captions is set by the captions grid, or varies
+     *        Specify whether the Text spacing (TeletextSpacing) in your captions is set by the captions grid, or varies
      *        depending on letter width. Choose fixed grid (FIXED_GRID) to conform to the spacing specified in the
      *        captions file more accurately. Choose proportional (PROPORTIONAL) to make the text easier to read for
      *        closed captions. Within your job settings, all of your DVB-Sub settings must be identical.
@@ -1739,14 +1739,14 @@ public class DvbSubDestinationSettings implements Serializable, Cloneable, Struc
     }
 
     /**
-     * Specify whether the Text spacing (TextSpacing) in your captions is set by the captions grid, or varies depending
-     * on letter width. Choose fixed grid (FIXED_GRID) to conform to the spacing specified in the captions file more
-     * accurately. Choose proportional (PROPORTIONAL) to make the text easier to read for closed captions. Within your
-     * job settings, all of your DVB-Sub settings must be identical.
+     * Specify whether the Text spacing (TeletextSpacing) in your captions is set by the captions grid, or varies
+     * depending on letter width. Choose fixed grid (FIXED_GRID) to conform to the spacing specified in the captions
+     * file more accurately. Choose proportional (PROPORTIONAL) to make the text easier to read for closed captions.
+     * Within your job settings, all of your DVB-Sub settings must be identical.
      * 
-     * @return Specify whether the Text spacing (TextSpacing) in your captions is set by the captions grid, or varies
-     *         depending on letter width. Choose fixed grid (FIXED_GRID) to conform to the spacing specified in the
-     *         captions file more accurately. Choose proportional (PROPORTIONAL) to make the text easier to read for
+     * @return Specify whether the Text spacing (TeletextSpacing) in your captions is set by the captions grid, or
+     *         varies depending on letter width. Choose fixed grid (FIXED_GRID) to conform to the spacing specified in
+     *         the captions file more accurately. Choose proportional (PROPORTIONAL) to make the text easier to read for
      *         closed captions. Within your job settings, all of your DVB-Sub settings must be identical.
      * @see DvbSubtitleTeletextSpacing
      */
@@ -1756,13 +1756,13 @@ public class DvbSubDestinationSettings implements Serializable, Cloneable, Struc
     }
 
     /**
-     * Specify whether the Text spacing (TextSpacing) in your captions is set by the captions grid, or varies depending
-     * on letter width. Choose fixed grid (FIXED_GRID) to conform to the spacing specified in the captions file more
-     * accurately. Choose proportional (PROPORTIONAL) to make the text easier to read for closed captions. Within your
-     * job settings, all of your DVB-Sub settings must be identical.
+     * Specify whether the Text spacing (TeletextSpacing) in your captions is set by the captions grid, or varies
+     * depending on letter width. Choose fixed grid (FIXED_GRID) to conform to the spacing specified in the captions
+     * file more accurately. Choose proportional (PROPORTIONAL) to make the text easier to read for closed captions.
+     * Within your job settings, all of your DVB-Sub settings must be identical.
      * 
      * @param teletextSpacing
-     *        Specify whether the Text spacing (TextSpacing) in your captions is set by the captions grid, or varies
+     *        Specify whether the Text spacing (TeletextSpacing) in your captions is set by the captions grid, or varies
      *        depending on letter width. Choose fixed grid (FIXED_GRID) to conform to the spacing specified in the
      *        captions file more accurately. Choose proportional (PROPORTIONAL) to make the text easier to read for
      *        closed captions. Within your job settings, all of your DVB-Sub settings must be identical.
@@ -1776,13 +1776,13 @@ public class DvbSubDestinationSettings implements Serializable, Cloneable, Struc
     }
 
     /**
-     * Specify whether the Text spacing (TextSpacing) in your captions is set by the captions grid, or varies depending
-     * on letter width. Choose fixed grid (FIXED_GRID) to conform to the spacing specified in the captions file more
-     * accurately. Choose proportional (PROPORTIONAL) to make the text easier to read for closed captions. Within your
-     * job settings, all of your DVB-Sub settings must be identical.
+     * Specify whether the Text spacing (TeletextSpacing) in your captions is set by the captions grid, or varies
+     * depending on letter width. Choose fixed grid (FIXED_GRID) to conform to the spacing specified in the captions
+     * file more accurately. Choose proportional (PROPORTIONAL) to make the text easier to read for closed captions.
+     * Within your job settings, all of your DVB-Sub settings must be identical.
      * 
      * @param teletextSpacing
-     *        Specify whether the Text spacing (TextSpacing) in your captions is set by the captions grid, or varies
+     *        Specify whether the Text spacing (TeletextSpacing) in your captions is set by the captions grid, or varies
      *        depending on letter width. Choose fixed grid (FIXED_GRID) to conform to the spacing specified in the
      *        captions file more accurately. Choose proportional (PROPORTIONAL) to make the text easier to read for
      *        closed captions. Within your job settings, all of your DVB-Sub settings must be identical.

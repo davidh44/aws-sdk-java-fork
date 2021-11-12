@@ -40,9 +40,8 @@ import java.util.concurrent.ExecutorService;
  * Service Quotas</a> in the <i>Amazon Connect Administrator Guide</i>.
  * </p>
  * <p>
- * You can connect programmatically to an Amazon Web Services service by using an endpoint. For a list of Amazon Connect
- * endpoints, see <a href="https://docs.aws.amazon.com/general/latest/gr/connect_region.html">Amazon Connect
- * Endpoints</a>.
+ * You can connect programmatically to an AWS service by using an endpoint. For a list of Amazon Connect endpoints, see
+ * <a href="https://docs.aws.amazon.com/general/latest/gr/connect_region.html">Amazon Connect Endpoints</a>.
  * </p>
  * <note>
  * <p>
@@ -1055,6 +1054,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeContactResult> describeContactAsync(DescribeContactRequest request) {
+
+        return describeContactAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeContactResult> describeContactAsync(final DescribeContactRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeContactRequest, DescribeContactResult> asyncHandler) {
+        final DescribeContactRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeContactResult>() {
+            @Override
+            public DescribeContactResult call() throws Exception {
+                DescribeContactResult result = null;
+
+                try {
+                    result = executeDescribeContact(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeContactFlowResult> describeContactFlowAsync(DescribeContactFlowRequest request) {
 
         return describeContactFlowAsync(request, null);
@@ -1970,6 +2002,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeListContactFlows(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListContactReferencesResult> listContactReferencesAsync(ListContactReferencesRequest request) {
+
+        return listContactReferencesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListContactReferencesResult> listContactReferencesAsync(final ListContactReferencesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListContactReferencesRequest, ListContactReferencesResult> asyncHandler) {
+        final ListContactReferencesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListContactReferencesResult>() {
+            @Override
+            public ListContactReferencesResult call() throws Exception {
+                ListContactReferencesResult result = null;
+
+                try {
+                    result = executeListContactReferences(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -3109,6 +3174,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateContactResult> updateContactAsync(UpdateContactRequest request) {
+
+        return updateContactAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateContactResult> updateContactAsync(final UpdateContactRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateContactRequest, UpdateContactResult> asyncHandler) {
+        final UpdateContactRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateContactResult>() {
+            @Override
+            public UpdateContactResult call() throws Exception {
+                UpdateContactResult result = null;
+
+                try {
+                    result = executeUpdateContact(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateContactAttributesResult> updateContactAttributesAsync(UpdateContactAttributesRequest request) {
 
         return updateContactAttributesAsync(request, null);
@@ -3192,6 +3290,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeUpdateContactFlowName(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateContactScheduleResult> updateContactScheduleAsync(UpdateContactScheduleRequest request) {
+
+        return updateContactScheduleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateContactScheduleResult> updateContactScheduleAsync(final UpdateContactScheduleRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateContactScheduleRequest, UpdateContactScheduleResult> asyncHandler) {
+        final UpdateContactScheduleRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateContactScheduleResult>() {
+            @Override
+            public UpdateContactScheduleResult call() throws Exception {
+                UpdateContactScheduleResult result = null;
+
+                try {
+                    result = executeUpdateContactSchedule(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

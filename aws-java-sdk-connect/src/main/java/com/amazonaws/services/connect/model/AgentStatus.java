@@ -72,7 +72,7 @@ public class AgentStatus implements Serializable, Cloneable, StructuredPojo {
     private String state;
     /**
      * <p>
-     * The tags used to organize, track, or control access for this resource.
+     * One or more tags.
      * </p>
      */
     private java.util.Map<String, String> tags;
@@ -397,10 +397,10 @@ public class AgentStatus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tags used to organize, track, or control access for this resource.
+     * One or more tags.
      * </p>
      * 
-     * @return The tags used to organize, track, or control access for this resource.
+     * @return One or more tags.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -409,11 +409,11 @@ public class AgentStatus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tags used to organize, track, or control access for this resource.
+     * One or more tags.
      * </p>
      * 
      * @param tags
-     *        The tags used to organize, track, or control access for this resource.
+     *        One or more tags.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -422,11 +422,11 @@ public class AgentStatus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tags used to organize, track, or control access for this resource.
+     * One or more tags.
      * </p>
      * 
      * @param tags
-     *        The tags used to organize, track, or control access for this resource.
+     *        One or more tags.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

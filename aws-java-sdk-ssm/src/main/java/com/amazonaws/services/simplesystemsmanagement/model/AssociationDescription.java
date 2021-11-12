@@ -78,8 +78,9 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
     private String documentVersion;
     /**
      * <p>
-     * Specify the target for the association. This target is required for associations that use an Automation runbook
-     * and target resources by using rate controls. Automation is a capability of Amazon Web Services Systems Manager.
+     * Choose the parameter that will define how your automation will branch out. This target is required for
+     * associations that use an Automation runbook and target resources by using rate controls. Automation is a
+     * capability of Amazon Web Services Systems Manager.
      * </p>
      */
     private String automationTargetParameterName;
@@ -532,14 +533,15 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Specify the target for the association. This target is required for associations that use an Automation runbook
-     * and target resources by using rate controls. Automation is a capability of Amazon Web Services Systems Manager.
+     * Choose the parameter that will define how your automation will branch out. This target is required for
+     * associations that use an Automation runbook and target resources by using rate controls. Automation is a
+     * capability of Amazon Web Services Systems Manager.
      * </p>
      * 
      * @param automationTargetParameterName
-     *        Specify the target for the association. This target is required for associations that use an Automation
-     *        runbook and target resources by using rate controls. Automation is a capability of Amazon Web Services
-     *        Systems Manager.
+     *        Choose the parameter that will define how your automation will branch out. This target is required for
+     *        associations that use an Automation runbook and target resources by using rate controls. Automation is a
+     *        capability of Amazon Web Services Systems Manager.
      */
 
     public void setAutomationTargetParameterName(String automationTargetParameterName) {
@@ -548,13 +550,14 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Specify the target for the association. This target is required for associations that use an Automation runbook
-     * and target resources by using rate controls. Automation is a capability of Amazon Web Services Systems Manager.
+     * Choose the parameter that will define how your automation will branch out. This target is required for
+     * associations that use an Automation runbook and target resources by using rate controls. Automation is a
+     * capability of Amazon Web Services Systems Manager.
      * </p>
      * 
-     * @return Specify the target for the association. This target is required for associations that use an Automation
-     *         runbook and target resources by using rate controls. Automation is a capability of Amazon Web Services
-     *         Systems Manager.
+     * @return Choose the parameter that will define how your automation will branch out. This target is required for
+     *         associations that use an Automation runbook and target resources by using rate controls. Automation is a
+     *         capability of Amazon Web Services Systems Manager.
      */
 
     public String getAutomationTargetParameterName() {
@@ -563,14 +566,15 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Specify the target for the association. This target is required for associations that use an Automation runbook
-     * and target resources by using rate controls. Automation is a capability of Amazon Web Services Systems Manager.
+     * Choose the parameter that will define how your automation will branch out. This target is required for
+     * associations that use an Automation runbook and target resources by using rate controls. Automation is a
+     * capability of Amazon Web Services Systems Manager.
      * </p>
      * 
      * @param automationTargetParameterName
-     *        Specify the target for the association. This target is required for associations that use an Automation
-     *        runbook and target resources by using rate controls. Automation is a capability of Amazon Web Services
-     *        Systems Manager.
+     *        Choose the parameter that will define how your automation will branch out. This target is required for
+     *        associations that use an Automation runbook and target resources by using rate controls. Automation is a
+     *        capability of Amazon Web Services Systems Manager.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

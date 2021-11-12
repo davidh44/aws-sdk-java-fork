@@ -19,8 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The time range during which an AWS event occurred. AWS resource events and metrics are analyzed by DevOps Guru to
- * find anomalous behavior and provide recommendations to improve your operational solutions.
+ * The time range during which an Amazon Web Services event occurred. Amazon Web Services resource events and metrics
+ * are analyzed by DevOps Guru to find anomalous behavior and provide recommendations to improve your operational
+ * solutions.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/EventTimeRange" target="_top">AWS API

@@ -60,7 +60,7 @@ public class ProactiveInsightSummary implements Serializable, Cloneable, Structu
     private ResourceCollection resourceCollection;
     /**
      * <p>
-     * A collection of the names of AWS services.
+     * A collection of the names of Amazon Web Services services.
      * </p>
      */
     private ServiceCollection serviceCollection;
@@ -343,11 +343,11 @@ public class ProactiveInsightSummary implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A collection of the names of AWS services.
+     * A collection of the names of Amazon Web Services services.
      * </p>
      * 
      * @param serviceCollection
-     *        A collection of the names of AWS services.
+     *        A collection of the names of Amazon Web Services services.
      */
 
     public void setServiceCollection(ServiceCollection serviceCollection) {
@@ -356,10 +356,10 @@ public class ProactiveInsightSummary implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A collection of the names of AWS services.
+     * A collection of the names of Amazon Web Services services.
      * </p>
      * 
-     * @return A collection of the names of AWS services.
+     * @return A collection of the names of Amazon Web Services services.
      */
 
     public ServiceCollection getServiceCollection() {
@@ -368,11 +368,11 @@ public class ProactiveInsightSummary implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A collection of the names of AWS services.
+     * A collection of the names of Amazon Web Services services.
      * </p>
      * 
      * @param serviceCollection
-     *        A collection of the names of AWS services.
+     *        A collection of the names of Amazon Web Services services.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

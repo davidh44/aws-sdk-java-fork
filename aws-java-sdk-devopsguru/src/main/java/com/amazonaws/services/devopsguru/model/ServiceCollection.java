@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A collection of the names of AWS services.
+ * A collection of the names of Amazon Web Services services.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/ServiceCollection" target="_top">AWS API
@@ -30,17 +30,17 @@ public class ServiceCollection implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * An array of strings that each specifies the name of an AWS service.
+     * An array of strings that each specifies the name of an Amazon Web Services service.
      * </p>
      */
     private java.util.List<String> serviceNames;
 
     /**
      * <p>
-     * An array of strings that each specifies the name of an AWS service.
+     * An array of strings that each specifies the name of an Amazon Web Services service.
      * </p>
      * 
-     * @return An array of strings that each specifies the name of an AWS service.
+     * @return An array of strings that each specifies the name of an Amazon Web Services service.
      * @see ServiceName
      */
 
@@ -50,11 +50,11 @@ public class ServiceCollection implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * An array of strings that each specifies the name of an AWS service.
+     * An array of strings that each specifies the name of an Amazon Web Services service.
      * </p>
      * 
      * @param serviceNames
-     *        An array of strings that each specifies the name of an AWS service.
+     *        An array of strings that each specifies the name of an Amazon Web Services service.
      * @see ServiceName
      */
 
@@ -69,7 +69,7 @@ public class ServiceCollection implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * An array of strings that each specifies the name of an AWS service.
+     * An array of strings that each specifies the name of an Amazon Web Services service.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -78,7 +78,7 @@ public class ServiceCollection implements Serializable, Cloneable, StructuredPoj
      * </p>
      * 
      * @param serviceNames
-     *        An array of strings that each specifies the name of an AWS service.
+     *        An array of strings that each specifies the name of an Amazon Web Services service.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceName
      */
@@ -95,11 +95,11 @@ public class ServiceCollection implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * An array of strings that each specifies the name of an AWS service.
+     * An array of strings that each specifies the name of an Amazon Web Services service.
      * </p>
      * 
      * @param serviceNames
-     *        An array of strings that each specifies the name of an AWS service.
+     *        An array of strings that each specifies the name of an Amazon Web Services service.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceName
      */
@@ -111,11 +111,11 @@ public class ServiceCollection implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * An array of strings that each specifies the name of an AWS service.
+     * An array of strings that each specifies the name of an Amazon Web Services service.
      * </p>
      * 
      * @param serviceNames
-     *        An array of strings that each specifies the name of an AWS service.
+     *        An array of strings that each specifies the name of an Amazon Web Services service.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceName
      */

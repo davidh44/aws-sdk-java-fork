@@ -40,9 +40,8 @@ import com.amazonaws.services.connect.model.*;
  * Service Quotas</a> in the <i>Amazon Connect Administrator Guide</i>.
  * </p>
  * <p>
- * You can connect programmatically to an Amazon Web Services service by using an endpoint. For a list of Amazon Connect
- * endpoints, see <a href="https://docs.aws.amazon.com/general/latest/gr/connect_region.html">Amazon Connect
- * Endpoints</a>.
+ * You can connect programmatically to an AWS service by using an endpoint. For a list of Amazon Connect endpoints, see
+ * <a href="https://docs.aws.amazon.com/general/latest/gr/connect_region.html">Amazon Connect Endpoints</a>.
  * </p>
  * <note>
  * <p>
@@ -528,7 +527,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Creates an Amazon Web Services resource association with an Amazon Connect instance.
+     * Creates an AWS resource association with an Amazon Connect instance.
      * </p>
      * 
      * @param createIntegrationAssociationRequest
@@ -543,7 +542,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Creates an Amazon Web Services resource association with an Amazon Connect instance.
+     * Creates an AWS resource association with an Amazon Connect instance.
      * </p>
      * 
      * @param createIntegrationAssociationRequest
@@ -882,8 +881,8 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Deletes an Amazon Web Services resource association from an Amazon Connect instance. The association must not
-     * have any use cases associated with it.
+     * Deletes an AWS resource association from an Amazon Connect instance. The association must not have any use cases
+     * associated with it.
      * </p>
      * 
      * @param deleteIntegrationAssociationRequest
@@ -898,8 +897,8 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Deletes an Amazon Web Services resource association from an Amazon Connect instance. The association must not
-     * have any use cases associated with it.
+     * Deletes an AWS resource association from an Amazon Connect instance. The association must not have any use cases
+     * associated with it.
      * </p>
      * 
      * @param deleteIntegrationAssociationRequest
@@ -1126,6 +1125,53 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<DescribeAgentStatusResult> describeAgentStatusAsync(DescribeAgentStatusRequest describeAgentStatusRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeAgentStatusRequest, DescribeAgentStatusResult> asyncHandler);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Describes the specified contact.
+     * </p>
+     * <important>
+     * <p>
+     * Contact information is available in Amazon Connect for 24 months, and then it is deleted.
+     * </p>
+     * </important>
+     * 
+     * @param describeContactRequest
+     * @return A Java Future containing the result of the DescribeContact operation returned by the service.
+     * @sample AmazonConnectAsync.DescribeContact
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeContact" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeContactResult> describeContactAsync(DescribeContactRequest describeContactRequest);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Describes the specified contact.
+     * </p>
+     * <important>
+     * <p>
+     * Contact information is available in Amazon Connect for 24 months, and then it is deleted.
+     * </p>
+     * </important>
+     * 
+     * @param describeContactRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeContact operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.DescribeContact
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeContact" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeContactResult> describeContactAsync(DescribeContactRequest describeContactRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeContactRequest, DescribeContactResult> asyncHandler);
 
     /**
      * <p>
@@ -2193,6 +2239,43 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * For the specified <code>referenceTypes</code>, returns a list of references associated with the contact.
+     * </p>
+     * 
+     * @param listContactReferencesRequest
+     * @return A Java Future containing the result of the ListContactReferences operation returned by the service.
+     * @sample AmazonConnectAsync.ListContactReferences
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListContactReferences" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListContactReferencesResult> listContactReferencesAsync(ListContactReferencesRequest listContactReferencesRequest);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * For the specified <code>referenceTypes</code>, returns a list of references associated with the contact.
+     * </p>
+     * 
+     * @param listContactReferencesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListContactReferences operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.ListContactReferences
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListContactReferences" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListContactReferencesResult> listContactReferencesAsync(ListContactReferencesRequest listContactReferencesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListContactReferencesRequest, ListContactReferencesResult> asyncHandler);
+
+    /**
+     * <p>
      * Provides information about the hours of operation for the specified Amazon Connect instance.
      * </p>
      * <p>
@@ -2351,8 +2434,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Provides summary information about the Amazon Web Services resource associations for the specified Amazon Connect
-     * instance.
+     * Provides summary information about the AWS resource associations for the specified Amazon Connect instance.
      * </p>
      * 
      * @param listIntegrationAssociationsRequest
@@ -2366,8 +2448,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Provides summary information about the Amazon Web Services resource associations for the specified Amazon Connect
-     * instance.
+     * Provides summary information about the AWS resource associations for the specified Amazon Connect instance.
      * </p>
      * 
      * @param listIntegrationAssociationsRequest
@@ -2805,9 +2886,6 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
-     * <p>
      * Provides summary information about the security profiles for the specified Amazon Connect instance.
      * </p>
      * <p>
@@ -2825,9 +2903,6 @@ public interface AmazonConnectAsync extends AmazonConnect {
     java.util.concurrent.Future<ListSecurityProfilesResult> listSecurityProfilesAsync(ListSecurityProfilesRequest listSecurityProfilesRequest);
 
     /**
-     * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
      * <p>
      * Provides summary information about the security profiles for the specified Amazon Connect instance.
      * </p>
@@ -3305,7 +3380,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Initiates a contact flow to start a new task.
+     * Initiates a contact flow to start a new task immediately or at a future date and time.
      * </p>
      * 
      * @param startTaskContactRequest
@@ -3318,7 +3393,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Initiates a contact flow to start a new task.
+     * Initiates a contact flow to start a new task immediately or at a future date and time.
      * </p>
      * 
      * @param startTaskContactRequest
@@ -3609,6 +3684,55 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Adds or updates user defined contact information associated with the specified contact. At least one field to be
+     * updated must be present in the request.
+     * </p>
+     * <important>
+     * <p>
+     * You can add or update user-defined contact information for both ongoing and completed contacts.
+     * </p>
+     * </important>
+     * 
+     * @param updateContactRequest
+     * @return A Java Future containing the result of the UpdateContact operation returned by the service.
+     * @sample AmazonConnectAsync.UpdateContact
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateContact" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateContactResult> updateContactAsync(UpdateContactRequest updateContactRequest);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Adds or updates user defined contact information associated with the specified contact. At least one field to be
+     * updated must be present in the request.
+     * </p>
+     * <important>
+     * <p>
+     * You can add or update user-defined contact information for both ongoing and completed contacts.
+     * </p>
+     * </important>
+     * 
+     * @param updateContactRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateContact operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.UpdateContact
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateContact" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateContactResult> updateContactAsync(UpdateContactRequest updateContactRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateContactRequest, UpdateContactResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates or updates user-defined contact attributes associated with the specified contact.
      * </p>
      * <p>
@@ -3755,6 +3879,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<UpdateContactFlowNameResult> updateContactFlowNameAsync(UpdateContactFlowNameRequest updateContactFlowNameRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateContactFlowNameRequest, UpdateContactFlowNameResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the scheduled time of a task contact that is already scheduled.
+     * </p>
+     * 
+     * @param updateContactScheduleRequest
+     * @return A Java Future containing the result of the UpdateContactSchedule operation returned by the service.
+     * @sample AmazonConnectAsync.UpdateContactSchedule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateContactSchedule" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateContactScheduleResult> updateContactScheduleAsync(UpdateContactScheduleRequest updateContactScheduleRequest);
+
+    /**
+     * <p>
+     * Updates the scheduled time of a task contact that is already scheduled.
+     * </p>
+     * 
+     * @param updateContactScheduleRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateContactSchedule operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.UpdateContactSchedule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateContactSchedule" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateContactScheduleResult> updateContactScheduleAsync(UpdateContactScheduleRequest updateContactScheduleRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateContactScheduleRequest, UpdateContactScheduleResult> asyncHandler);
 
     /**
      * <p>

@@ -25,15 +25,15 @@ public class DescribeAccountOverviewResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An integer that specifies the number of open reactive insights in your AWS account that were created during the
-     * time range passed in.
+     * An integer that specifies the number of open reactive insights in your Amazon Web Services account that were
+     * created during the time range passed in.
      * </p>
      */
     private Integer reactiveInsights;
     /**
      * <p>
-     * An integer that specifies the number of open proactive insights in your AWS account that were created during the
-     * time range passed in.
+     * An integer that specifies the number of open proactive insights in your Amazon Web Services account that were
+     * created during the time range passed in.
      * </p>
      */
     private Integer proactiveInsights;
@@ -46,13 +46,13 @@ public class DescribeAccountOverviewResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An integer that specifies the number of open reactive insights in your AWS account that were created during the
-     * time range passed in.
+     * An integer that specifies the number of open reactive insights in your Amazon Web Services account that were
+     * created during the time range passed in.
      * </p>
      * 
      * @param reactiveInsights
-     *        An integer that specifies the number of open reactive insights in your AWS account that were created
-     *        during the time range passed in.
+     *        An integer that specifies the number of open reactive insights in your Amazon Web Services account that
+     *        were created during the time range passed in.
      */
 
     public void setReactiveInsights(Integer reactiveInsights) {
@@ -61,12 +61,12 @@ public class DescribeAccountOverviewResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An integer that specifies the number of open reactive insights in your AWS account that were created during the
-     * time range passed in.
+     * An integer that specifies the number of open reactive insights in your Amazon Web Services account that were
+     * created during the time range passed in.
      * </p>
      * 
-     * @return An integer that specifies the number of open reactive insights in your AWS account that were created
-     *         during the time range passed in.
+     * @return An integer that specifies the number of open reactive insights in your Amazon Web Services account that
+     *         were created during the time range passed in.
      */
 
     public Integer getReactiveInsights() {
@@ -75,13 +75,13 @@ public class DescribeAccountOverviewResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An integer that specifies the number of open reactive insights in your AWS account that were created during the
-     * time range passed in.
+     * An integer that specifies the number of open reactive insights in your Amazon Web Services account that were
+     * created during the time range passed in.
      * </p>
      * 
      * @param reactiveInsights
-     *        An integer that specifies the number of open reactive insights in your AWS account that were created
-     *        during the time range passed in.
+     *        An integer that specifies the number of open reactive insights in your Amazon Web Services account that
+     *        were created during the time range passed in.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -92,13 +92,13 @@ public class DescribeAccountOverviewResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An integer that specifies the number of open proactive insights in your AWS account that were created during the
-     * time range passed in.
+     * An integer that specifies the number of open proactive insights in your Amazon Web Services account that were
+     * created during the time range passed in.
      * </p>
      * 
      * @param proactiveInsights
-     *        An integer that specifies the number of open proactive insights in your AWS account that were created
-     *        during the time range passed in.
+     *        An integer that specifies the number of open proactive insights in your Amazon Web Services account that
+     *        were created during the time range passed in.
      */
 
     public void setProactiveInsights(Integer proactiveInsights) {
@@ -107,12 +107,12 @@ public class DescribeAccountOverviewResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An integer that specifies the number of open proactive insights in your AWS account that were created during the
-     * time range passed in.
+     * An integer that specifies the number of open proactive insights in your Amazon Web Services account that were
+     * created during the time range passed in.
      * </p>
      * 
-     * @return An integer that specifies the number of open proactive insights in your AWS account that were created
-     *         during the time range passed in.
+     * @return An integer that specifies the number of open proactive insights in your Amazon Web Services account that
+     *         were created during the time range passed in.
      */
 
     public Integer getProactiveInsights() {
@@ -121,13 +121,13 @@ public class DescribeAccountOverviewResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An integer that specifies the number of open proactive insights in your AWS account that were created during the
-     * time range passed in.
+     * An integer that specifies the number of open proactive insights in your Amazon Web Services account that were
+     * created during the time range passed in.
      * </p>
      * 
      * @param proactiveInsights
-     *        An integer that specifies the number of open proactive insights in your AWS account that were created
-     *        during the time range passed in.
+     *        An integer that specifies the number of open proactive insights in your Amazon Web Services account that
+     *        were created during the time range passed in.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about the health of AWS resources in your account that are specified by an AWS CloudFormation stack.
+ * Information about the health of Amazon Web Services resources in your account that are specified by an Amazon Web
+ * Services CloudFormation stack.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/CloudFormationHealth" target="_top">AWS
@@ -36,9 +37,9 @@ public class CloudFormationHealth implements Serializable, Cloneable, Structured
     private String stackName;
     /**
      * <p>
-     * Information about the health of the AWS resources in your account that are specified by an AWS CloudFormation
-     * stack, including the number of open proactive, open reactive insights, and the Mean Time to Recover (MTTR) of
-     * closed insights.
+     * Information about the health of the Amazon Web Services resources in your account that are specified by an Amazon
+     * Web Services CloudFormation stack, including the number of open proactive, open reactive insights, and the Mean
+     * Time to Recover (MTTR) of closed insights.
      * </p>
      */
     private InsightHealth insight;
@@ -85,15 +86,15 @@ public class CloudFormationHealth implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Information about the health of the AWS resources in your account that are specified by an AWS CloudFormation
-     * stack, including the number of open proactive, open reactive insights, and the Mean Time to Recover (MTTR) of
-     * closed insights.
+     * Information about the health of the Amazon Web Services resources in your account that are specified by an Amazon
+     * Web Services CloudFormation stack, including the number of open proactive, open reactive insights, and the Mean
+     * Time to Recover (MTTR) of closed insights.
      * </p>
      * 
      * @param insight
-     *        Information about the health of the AWS resources in your account that are specified by an AWS
-     *        CloudFormation stack, including the number of open proactive, open reactive insights, and the Mean Time to
-     *        Recover (MTTR) of closed insights.
+     *        Information about the health of the Amazon Web Services resources in your account that are specified by an
+     *        Amazon Web Services CloudFormation stack, including the number of open proactive, open reactive insights,
+     *        and the Mean Time to Recover (MTTR) of closed insights.
      */
 
     public void setInsight(InsightHealth insight) {
@@ -102,14 +103,14 @@ public class CloudFormationHealth implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Information about the health of the AWS resources in your account that are specified by an AWS CloudFormation
-     * stack, including the number of open proactive, open reactive insights, and the Mean Time to Recover (MTTR) of
-     * closed insights.
+     * Information about the health of the Amazon Web Services resources in your account that are specified by an Amazon
+     * Web Services CloudFormation stack, including the number of open proactive, open reactive insights, and the Mean
+     * Time to Recover (MTTR) of closed insights.
      * </p>
      * 
-     * @return Information about the health of the AWS resources in your account that are specified by an AWS
-     *         CloudFormation stack, including the number of open proactive, open reactive insights, and the Mean Time
-     *         to Recover (MTTR) of closed insights.
+     * @return Information about the health of the Amazon Web Services resources in your account that are specified by
+     *         an Amazon Web Services CloudFormation stack, including the number of open proactive, open reactive
+     *         insights, and the Mean Time to Recover (MTTR) of closed insights.
      */
 
     public InsightHealth getInsight() {
@@ -118,15 +119,15 @@ public class CloudFormationHealth implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Information about the health of the AWS resources in your account that are specified by an AWS CloudFormation
-     * stack, including the number of open proactive, open reactive insights, and the Mean Time to Recover (MTTR) of
-     * closed insights.
+     * Information about the health of the Amazon Web Services resources in your account that are specified by an Amazon
+     * Web Services CloudFormation stack, including the number of open proactive, open reactive insights, and the Mean
+     * Time to Recover (MTTR) of closed insights.
      * </p>
      * 
      * @param insight
-     *        Information about the health of the AWS resources in your account that are specified by an AWS
-     *        CloudFormation stack, including the number of open proactive, open reactive insights, and the Mean Time to
-     *        Recover (MTTR) of closed insights.
+     *        Information about the health of the Amazon Web Services resources in your account that are specified by an
+     *        Amazon Web Services CloudFormation stack, including the number of open proactive, open reactive insights,
+     *        and the Mean Time to Recover (MTTR) of closed insights.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -29,6 +29,8 @@ public class DescribeAnomalyRequestMarshaller {
 
     private static final MarshallingInfo<String> ID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("Id").build();
+    private static final MarshallingInfo<String> ACCOUNTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("AccountId").build();
 
     private static final DescribeAnomalyRequestMarshaller instance = new DescribeAnomalyRequestMarshaller();
 
@@ -47,6 +49,7 @@ public class DescribeAnomalyRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(describeAnomalyRequest.getId(), ID_BINDING);
+            protocolMarshaller.marshall(describeAnomalyRequest.getAccountId(), ACCOUNTID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

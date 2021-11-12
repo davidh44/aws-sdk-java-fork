@@ -58,8 +58,8 @@ public class ReactiveInsight implements Serializable, Cloneable, StructuredPojo 
     private ResourceCollection resourceCollection;
     /**
      * <p>
-     * The ID of the AWS System Manager OpsItem created for this insight. You must enable the creation of OpstItems
-     * insights before they are created for each insight.
+     * The ID of the Amazon Web Services System Manager OpsItem created for this insight. You must enable the creation
+     * of OpstItems insights before they are created for each insight.
      * </p>
      */
     private String ssmOpsItemId;
@@ -316,13 +316,13 @@ public class ReactiveInsight implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ID of the AWS System Manager OpsItem created for this insight. You must enable the creation of OpstItems
-     * insights before they are created for each insight.
+     * The ID of the Amazon Web Services System Manager OpsItem created for this insight. You must enable the creation
+     * of OpstItems insights before they are created for each insight.
      * </p>
      * 
      * @param ssmOpsItemId
-     *        The ID of the AWS System Manager OpsItem created for this insight. You must enable the creation of
-     *        OpstItems insights before they are created for each insight.
+     *        The ID of the Amazon Web Services System Manager OpsItem created for this insight. You must enable the
+     *        creation of OpstItems insights before they are created for each insight.
      */
 
     public void setSsmOpsItemId(String ssmOpsItemId) {
@@ -331,12 +331,12 @@ public class ReactiveInsight implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ID of the AWS System Manager OpsItem created for this insight. You must enable the creation of OpstItems
-     * insights before they are created for each insight.
+     * The ID of the Amazon Web Services System Manager OpsItem created for this insight. You must enable the creation
+     * of OpstItems insights before they are created for each insight.
      * </p>
      * 
-     * @return The ID of the AWS System Manager OpsItem created for this insight. You must enable the creation of
-     *         OpstItems insights before they are created for each insight.
+     * @return The ID of the Amazon Web Services System Manager OpsItem created for this insight. You must enable the
+     *         creation of OpstItems insights before they are created for each insight.
      */
 
     public String getSsmOpsItemId() {
@@ -345,13 +345,13 @@ public class ReactiveInsight implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ID of the AWS System Manager OpsItem created for this insight. You must enable the creation of OpstItems
-     * insights before they are created for each insight.
+     * The ID of the Amazon Web Services System Manager OpsItem created for this insight. You must enable the creation
+     * of OpstItems insights before they are created for each insight.
      * </p>
      * 
      * @param ssmOpsItemId
-     *        The ID of the AWS System Manager OpsItem created for this insight. You must enable the creation of
-     *        OpstItems insights before they are created for each insight.
+     *        The ID of the Amazon Web Services System Manager OpsItem created for this insight. You must enable the
+     *        creation of OpstItems insights before they are created for each insight.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

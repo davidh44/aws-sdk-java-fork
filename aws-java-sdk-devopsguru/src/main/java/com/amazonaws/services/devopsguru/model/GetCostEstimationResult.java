@@ -25,7 +25,7 @@ public class GetCostEstimationResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The collection of the AWS resources used to create your monthly DevOps Guru cost estimate.
+     * The collection of the Amazon Web Services resources used to create your monthly DevOps Guru cost estimate.
      * </p>
      */
     private CostEstimationResourceCollectionFilter resourceCollection;
@@ -39,7 +39,7 @@ public class GetCostEstimationResult extends com.amazonaws.AmazonWebServiceResul
     /**
      * <p>
      * An array of <code>ResourceCost</code> objects that each contains details about the monthly cost estimate to
-     * analyze one of your AWS resources.
+     * analyze one of your Amazon Web Services resources.
      * </p>
      */
     private java.util.List<ServiceResourceCost> costs;
@@ -51,8 +51,8 @@ public class GetCostEstimationResult extends com.amazonaws.AmazonWebServiceResul
     private CostEstimationTimeRange timeRange;
     /**
      * <p>
-     * The estimated monthly cost to analyze the AWS resources. This value is the sum of the estimated costs to analyze
-     * each resource in the <code>Costs</code> object in this response.
+     * The estimated monthly cost to analyze the Amazon Web Services resources. This value is the sum of the estimated
+     * costs to analyze each resource in the <code>Costs</code> object in this response.
      * </p>
      */
     private Double totalCost;
@@ -66,11 +66,11 @@ public class GetCostEstimationResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The collection of the AWS resources used to create your monthly DevOps Guru cost estimate.
+     * The collection of the Amazon Web Services resources used to create your monthly DevOps Guru cost estimate.
      * </p>
      * 
      * @param resourceCollection
-     *        The collection of the AWS resources used to create your monthly DevOps Guru cost estimate.
+     *        The collection of the Amazon Web Services resources used to create your monthly DevOps Guru cost estimate.
      */
 
     public void setResourceCollection(CostEstimationResourceCollectionFilter resourceCollection) {
@@ -79,10 +79,11 @@ public class GetCostEstimationResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The collection of the AWS resources used to create your monthly DevOps Guru cost estimate.
+     * The collection of the Amazon Web Services resources used to create your monthly DevOps Guru cost estimate.
      * </p>
      * 
-     * @return The collection of the AWS resources used to create your monthly DevOps Guru cost estimate.
+     * @return The collection of the Amazon Web Services resources used to create your monthly DevOps Guru cost
+     *         estimate.
      */
 
     public CostEstimationResourceCollectionFilter getResourceCollection() {
@@ -91,11 +92,11 @@ public class GetCostEstimationResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The collection of the AWS resources used to create your monthly DevOps Guru cost estimate.
+     * The collection of the Amazon Web Services resources used to create your monthly DevOps Guru cost estimate.
      * </p>
      * 
      * @param resourceCollection
-     *        The collection of the AWS resources used to create your monthly DevOps Guru cost estimate.
+     *        The collection of the Amazon Web Services resources used to create your monthly DevOps Guru cost estimate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -174,11 +175,11 @@ public class GetCostEstimationResult extends com.amazonaws.AmazonWebServiceResul
     /**
      * <p>
      * An array of <code>ResourceCost</code> objects that each contains details about the monthly cost estimate to
-     * analyze one of your AWS resources.
+     * analyze one of your Amazon Web Services resources.
      * </p>
      * 
      * @return An array of <code>ResourceCost</code> objects that each contains details about the monthly cost estimate
-     *         to analyze one of your AWS resources.
+     *         to analyze one of your Amazon Web Services resources.
      */
 
     public java.util.List<ServiceResourceCost> getCosts() {
@@ -188,12 +189,12 @@ public class GetCostEstimationResult extends com.amazonaws.AmazonWebServiceResul
     /**
      * <p>
      * An array of <code>ResourceCost</code> objects that each contains details about the monthly cost estimate to
-     * analyze one of your AWS resources.
+     * analyze one of your Amazon Web Services resources.
      * </p>
      * 
      * @param costs
      *        An array of <code>ResourceCost</code> objects that each contains details about the monthly cost estimate
-     *        to analyze one of your AWS resources.
+     *        to analyze one of your Amazon Web Services resources.
      */
 
     public void setCosts(java.util.Collection<ServiceResourceCost> costs) {
@@ -208,7 +209,7 @@ public class GetCostEstimationResult extends com.amazonaws.AmazonWebServiceResul
     /**
      * <p>
      * An array of <code>ResourceCost</code> objects that each contains details about the monthly cost estimate to
-     * analyze one of your AWS resources.
+     * analyze one of your Amazon Web Services resources.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -218,7 +219,7 @@ public class GetCostEstimationResult extends com.amazonaws.AmazonWebServiceResul
      * 
      * @param costs
      *        An array of <code>ResourceCost</code> objects that each contains details about the monthly cost estimate
-     *        to analyze one of your AWS resources.
+     *        to analyze one of your Amazon Web Services resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -235,12 +236,12 @@ public class GetCostEstimationResult extends com.amazonaws.AmazonWebServiceResul
     /**
      * <p>
      * An array of <code>ResourceCost</code> objects that each contains details about the monthly cost estimate to
-     * analyze one of your AWS resources.
+     * analyze one of your Amazon Web Services resources.
      * </p>
      * 
      * @param costs
      *        An array of <code>ResourceCost</code> objects that each contains details about the monthly cost estimate
-     *        to analyze one of your AWS resources.
+     *        to analyze one of your Amazon Web Services resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -291,13 +292,13 @@ public class GetCostEstimationResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The estimated monthly cost to analyze the AWS resources. This value is the sum of the estimated costs to analyze
-     * each resource in the <code>Costs</code> object in this response.
+     * The estimated monthly cost to analyze the Amazon Web Services resources. This value is the sum of the estimated
+     * costs to analyze each resource in the <code>Costs</code> object in this response.
      * </p>
      * 
      * @param totalCost
-     *        The estimated monthly cost to analyze the AWS resources. This value is the sum of the estimated costs to
-     *        analyze each resource in the <code>Costs</code> object in this response.
+     *        The estimated monthly cost to analyze the Amazon Web Services resources. This value is the sum of the
+     *        estimated costs to analyze each resource in the <code>Costs</code> object in this response.
      */
 
     public void setTotalCost(Double totalCost) {
@@ -306,12 +307,12 @@ public class GetCostEstimationResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The estimated monthly cost to analyze the AWS resources. This value is the sum of the estimated costs to analyze
-     * each resource in the <code>Costs</code> object in this response.
+     * The estimated monthly cost to analyze the Amazon Web Services resources. This value is the sum of the estimated
+     * costs to analyze each resource in the <code>Costs</code> object in this response.
      * </p>
      * 
-     * @return The estimated monthly cost to analyze the AWS resources. This value is the sum of the estimated costs to
-     *         analyze each resource in the <code>Costs</code> object in this response.
+     * @return The estimated monthly cost to analyze the Amazon Web Services resources. This value is the sum of the
+     *         estimated costs to analyze each resource in the <code>Costs</code> object in this response.
      */
 
     public Double getTotalCost() {
@@ -320,13 +321,13 @@ public class GetCostEstimationResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The estimated monthly cost to analyze the AWS resources. This value is the sum of the estimated costs to analyze
-     * each resource in the <code>Costs</code> object in this response.
+     * The estimated monthly cost to analyze the Amazon Web Services resources. This value is the sum of the estimated
+     * costs to analyze each resource in the <code>Costs</code> object in this response.
      * </p>
      * 
      * @param totalCost
-     *        The estimated monthly cost to analyze the AWS resources. This value is the sum of the estimated costs to
-     *        analyze each resource in the <code>Costs</code> object in this response.
+     *        The estimated monthly cost to analyze the Amazon Web Services resources. This value is the sum of the
+     *        estimated costs to analyze each resource in the <code>Costs</code> object in this response.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

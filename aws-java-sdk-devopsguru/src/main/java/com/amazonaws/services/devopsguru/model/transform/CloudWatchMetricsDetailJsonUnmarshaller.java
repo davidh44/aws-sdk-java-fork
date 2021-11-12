@@ -75,6 +75,10 @@ public class CloudWatchMetricsDetailJsonUnmarshaller implements Unmarshaller<Clo
                     context.nextToken();
                     cloudWatchMetricsDetail.setPeriod(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("MetricDataSummary", targetDepth)) {
+                    context.nextToken();
+                    cloudWatchMetricsDetail.setMetricDataSummary(CloudWatchMetricsDataSummaryJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

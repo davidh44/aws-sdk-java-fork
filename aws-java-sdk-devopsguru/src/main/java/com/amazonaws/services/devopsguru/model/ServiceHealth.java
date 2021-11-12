@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Represents the health of an AWS service.
+ * Represents the health of an Amazon Web Services service.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/ServiceHealth" target="_top">AWS API
@@ -30,25 +30,25 @@ public class ServiceHealth implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the AWS service.
+     * The name of the Amazon Web Services service.
      * </p>
      */
     private String serviceName;
     /**
      * <p>
-     * Represents the health of an AWS service. This is a <code>ServiceInsightHealth</code> that contains the number of
-     * open proactive and reactive insights for this service.
+     * Represents the health of an Amazon Web Services service. This is a <code>ServiceInsightHealth</code> that
+     * contains the number of open proactive and reactive insights for this service.
      * </p>
      */
     private ServiceInsightHealth insight;
 
     /**
      * <p>
-     * The name of the AWS service.
+     * The name of the Amazon Web Services service.
      * </p>
      * 
      * @param serviceName
-     *        The name of the AWS service.
+     *        The name of the Amazon Web Services service.
      * @see ServiceName
      */
 
@@ -58,10 +58,10 @@ public class ServiceHealth implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the AWS service.
+     * The name of the Amazon Web Services service.
      * </p>
      * 
-     * @return The name of the AWS service.
+     * @return The name of the Amazon Web Services service.
      * @see ServiceName
      */
 
@@ -71,11 +71,11 @@ public class ServiceHealth implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the AWS service.
+     * The name of the Amazon Web Services service.
      * </p>
      * 
      * @param serviceName
-     *        The name of the AWS service.
+     *        The name of the Amazon Web Services service.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceName
      */
@@ -87,11 +87,11 @@ public class ServiceHealth implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the AWS service.
+     * The name of the Amazon Web Services service.
      * </p>
      * 
      * @param serviceName
-     *        The name of the AWS service.
+     *        The name of the Amazon Web Services service.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceName
      */
@@ -103,13 +103,13 @@ public class ServiceHealth implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Represents the health of an AWS service. This is a <code>ServiceInsightHealth</code> that contains the number of
-     * open proactive and reactive insights for this service.
+     * Represents the health of an Amazon Web Services service. This is a <code>ServiceInsightHealth</code> that
+     * contains the number of open proactive and reactive insights for this service.
      * </p>
      * 
      * @param insight
-     *        Represents the health of an AWS service. This is a <code>ServiceInsightHealth</code> that contains the
-     *        number of open proactive and reactive insights for this service.
+     *        Represents the health of an Amazon Web Services service. This is a <code>ServiceInsightHealth</code> that
+     *        contains the number of open proactive and reactive insights for this service.
      */
 
     public void setInsight(ServiceInsightHealth insight) {
@@ -118,12 +118,12 @@ public class ServiceHealth implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Represents the health of an AWS service. This is a <code>ServiceInsightHealth</code> that contains the number of
-     * open proactive and reactive insights for this service.
+     * Represents the health of an Amazon Web Services service. This is a <code>ServiceInsightHealth</code> that
+     * contains the number of open proactive and reactive insights for this service.
      * </p>
      * 
-     * @return Represents the health of an AWS service. This is a <code>ServiceInsightHealth</code> that contains the
-     *         number of open proactive and reactive insights for this service.
+     * @return Represents the health of an Amazon Web Services service. This is a <code>ServiceInsightHealth</code> that
+     *         contains the number of open proactive and reactive insights for this service.
      */
 
     public ServiceInsightHealth getInsight() {
@@ -132,13 +132,13 @@ public class ServiceHealth implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Represents the health of an AWS service. This is a <code>ServiceInsightHealth</code> that contains the number of
-     * open proactive and reactive insights for this service.
+     * Represents the health of an Amazon Web Services service. This is a <code>ServiceInsightHealth</code> that
+     * contains the number of open proactive and reactive insights for this service.
      * </p>
      * 
      * @param insight
-     *        Represents the health of an AWS service. This is a <code>ServiceInsightHealth</code> that contains the
-     *        number of open proactive and reactive insights for this service.
+     *        Represents the health of an Amazon Web Services service. This is a <code>ServiceInsightHealth</code> that
+     *        contains the number of open proactive and reactive insights for this service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

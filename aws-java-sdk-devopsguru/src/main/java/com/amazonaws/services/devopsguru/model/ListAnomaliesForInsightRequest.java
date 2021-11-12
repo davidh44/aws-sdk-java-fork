@@ -52,6 +52,12 @@ public class ListAnomaliesForInsightRequest extends com.amazonaws.AmazonWebServi
      * </p>
      */
     private String nextToken;
+    /**
+     * <p>
+     * The ID of the Amazon Web Services account.
+     * </p>
+     */
+    private String accountId;
 
     /**
      * <p>
@@ -232,6 +238,46 @@ public class ListAnomaliesForInsightRequest extends com.amazonaws.AmazonWebServi
     }
 
     /**
+     * <p>
+     * The ID of the Amazon Web Services account.
+     * </p>
+     * 
+     * @param accountId
+     *        The ID of the Amazon Web Services account.
+     */
+
+    public void setAccountId(String accountId) {
+        this.accountId = accountId;
+    }
+
+    /**
+     * <p>
+     * The ID of the Amazon Web Services account.
+     * </p>
+     * 
+     * @return The ID of the Amazon Web Services account.
+     */
+
+    public String getAccountId() {
+        return this.accountId;
+    }
+
+    /**
+     * <p>
+     * The ID of the Amazon Web Services account.
+     * </p>
+     * 
+     * @param accountId
+     *        The ID of the Amazon Web Services account.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListAnomaliesForInsightRequest withAccountId(String accountId) {
+        setAccountId(accountId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -250,7 +296,9 @@ public class ListAnomaliesForInsightRequest extends com.amazonaws.AmazonWebServi
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getAccountId() != null)
+            sb.append("AccountId: ").append(getAccountId());
         sb.append("}");
         return sb.toString();
     }
@@ -281,6 +329,10 @@ public class ListAnomaliesForInsightRequest extends com.amazonaws.AmazonWebServi
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
+        if (other.getAccountId() == null ^ this.getAccountId() == null)
+            return false;
+        if (other.getAccountId() != null && other.getAccountId().equals(this.getAccountId()) == false)
+            return false;
         return true;
     }
 
@@ -293,6 +345,7 @@ public class ListAnomaliesForInsightRequest extends com.amazonaws.AmazonWebServi
         hashCode = prime * hashCode + ((getStartTimeRange() == null) ? 0 : getStartTimeRange().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getAccountId() == null) ? 0 : getAccountId().hashCode());
         return hashCode;
     }
 

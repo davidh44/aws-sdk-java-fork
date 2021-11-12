@@ -41,9 +41,8 @@ import com.amazonaws.services.connect.model.*;
  * Service Quotas</a> in the <i>Amazon Connect Administrator Guide</i>.
  * </p>
  * <p>
- * You can connect programmatically to an Amazon Web Services service by using an endpoint. For a list of Amazon Connect
- * endpoints, see <a href="https://docs.aws.amazon.com/general/latest/gr/connect_region.html">Amazon Connect
- * Endpoints</a>.
+ * You can connect programmatically to an AWS service by using an endpoint. For a list of Amazon Connect endpoints, see
+ * <a href="https://docs.aws.amazon.com/general/latest/gr/connect_region.html">Amazon Connect Endpoints</a>.
  * </p>
  * <note>
  * <p>
@@ -424,7 +423,7 @@ public interface AmazonConnect {
 
     /**
      * <p>
-     * Creates an Amazon Web Services resource association with an Amazon Connect instance.
+     * Creates an AWS resource association with an Amazon Connect instance.
      * </p>
      * 
      * @param createIntegrationAssociationRequest
@@ -694,8 +693,8 @@ public interface AmazonConnect {
 
     /**
      * <p>
-     * Deletes an Amazon Web Services resource association from an Amazon Connect instance. The association must not
-     * have any use cases associated with it.
+     * Deletes an AWS resource association from an Amazon Connect instance. The association must not have any use cases
+     * associated with it.
      * </p>
      * 
      * @param deleteIntegrationAssociationRequest
@@ -867,6 +866,37 @@ public interface AmazonConnect {
      *      API Documentation</a>
      */
     DescribeAgentStatusResult describeAgentStatus(DescribeAgentStatusRequest describeAgentStatusRequest);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Describes the specified contact.
+     * </p>
+     * <important>
+     * <p>
+     * Contact information is available in Amazon Connect for 24 months, and then it is deleted.
+     * </p>
+     * </important>
+     * 
+     * @param describeContactRequest
+     * @return Result of the DescribeContact operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @sample AmazonConnect.DescribeContact
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeContact" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeContactResult describeContact(DescribeContactRequest describeContactRequest);
 
     /**
      * <p>
@@ -1590,6 +1620,32 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * For the specified <code>referenceTypes</code>, returns a list of references associated with the contact.
+     * </p>
+     * 
+     * @param listContactReferencesRequest
+     * @return Result of the ListContactReferences operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @sample AmazonConnect.ListContactReferences
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListContactReferences" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListContactReferencesResult listContactReferences(ListContactReferencesRequest listContactReferencesRequest);
+
+    /**
+     * <p>
      * Provides information about the hours of operation for the specified Amazon Connect instance.
      * </p>
      * <p>
@@ -1692,8 +1748,7 @@ public interface AmazonConnect {
 
     /**
      * <p>
-     * Provides summary information about the Amazon Web Services resource associations for the specified Amazon Connect
-     * instance.
+     * Provides summary information about the AWS resource associations for the specified Amazon Connect instance.
      * </p>
      * 
      * @param listIntegrationAssociationsRequest
@@ -2003,9 +2058,6 @@ public interface AmazonConnect {
     ListSecurityProfilePermissionsResult listSecurityProfilePermissions(ListSecurityProfilePermissionsRequest listSecurityProfilePermissionsRequest);
 
     /**
-     * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
      * <p>
      * Provides summary information about the security profiles for the specified Amazon Connect instance.
      * </p>
@@ -2324,7 +2376,7 @@ public interface AmazonConnect {
 
     /**
      * <p>
-     * Initiates a contact flow to start a new task.
+     * Initiates a contact flow to start a new task immediately or at a future date and time.
      * </p>
      * 
      * @param startTaskContactRequest
@@ -2532,6 +2584,38 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Adds or updates user defined contact information associated with the specified contact. At least one field to be
+     * updated must be present in the request.
+     * </p>
+     * <important>
+     * <p>
+     * You can add or update user-defined contact information for both ongoing and completed contacts.
+     * </p>
+     * </important>
+     * 
+     * @param updateContactRequest
+     * @return Result of the UpdateContact operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @sample AmazonConnect.UpdateContact
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateContact" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateContactResult updateContact(UpdateContactRequest updateContactRequest);
+
+    /**
+     * <p>
      * Creates or updates user-defined contact attributes associated with the specified contact.
      * </p>
      * <p>
@@ -2628,6 +2712,31 @@ public interface AmazonConnect {
      *      API Documentation</a>
      */
     UpdateContactFlowNameResult updateContactFlowName(UpdateContactFlowNameRequest updateContactFlowNameRequest);
+
+    /**
+     * <p>
+     * Updates the scheduled time of a task contact that is already scheduled.
+     * </p>
+     * 
+     * @param updateContactScheduleRequest
+     * @return Result of the UpdateContactSchedule operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws LimitExceededException
+     *         The allowed limit for the resource has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.UpdateContactSchedule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateContactSchedule" target="_top">AWS
+     *      API Documentation</a>
+     */
+    UpdateContactScheduleResult updateContactSchedule(UpdateContactScheduleRequest updateContactScheduleRequest);
 
     /**
      * <p>

@@ -19,9 +19,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An object that contains information about the estimated monthly cost to analyze an AWS resource. For more
- * information, see <a href="https://docs.aws.amazon.com/devops-guru/latest/userguide/cost-estimate.html">Estimate your
- * Amazon DevOps Guru costs</a> and <a href="http://aws.amazon.com/devops-guru/pricing/">Amazon DevOps Guru pricing</a>.
+ * An object that contains information about the estimated monthly cost to analyze an Amazon Web Services resource. For
+ * more information, see <a href="https://docs.aws.amazon.com/devops-guru/latest/userguide/cost-estimate.html">Estimate
+ * your Amazon DevOps Guru costs</a> and <a href="http://aws.amazon.com/devops-guru/pricing/">Amazon DevOps Guru
+ * pricing</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/ServiceResourceCost" target="_top">AWS
@@ -32,15 +33,15 @@ public class ServiceResourceCost implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The type of the AWS resource.
+     * The type of the Amazon Web Services resource.
      * </p>
      */
     private String type;
     /**
      * <p>
      * The state of the resource. The resource is <code>ACTIVE</code> if it produces metrics, events, or logs within an
-     * hour, otherwise it is <code>INACTIVE</code>. You pay for the number of active AWS resource hours analyzed for
-     * each resource. Inactive resources are not charged.
+     * hour, otherwise it is <code>INACTIVE</code>. You pay for the number of active Amazon Web Services resource hours
+     * analyzed for each resource. Inactive resources are not charged.
      * </p>
      */
     private String state;
@@ -67,11 +68,11 @@ public class ServiceResourceCost implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The type of the AWS resource.
+     * The type of the Amazon Web Services resource.
      * </p>
      * 
      * @param type
-     *        The type of the AWS resource.
+     *        The type of the Amazon Web Services resource.
      */
 
     public void setType(String type) {
@@ -80,10 +81,10 @@ public class ServiceResourceCost implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The type of the AWS resource.
+     * The type of the Amazon Web Services resource.
      * </p>
      * 
-     * @return The type of the AWS resource.
+     * @return The type of the Amazon Web Services resource.
      */
 
     public String getType() {
@@ -92,11 +93,11 @@ public class ServiceResourceCost implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The type of the AWS resource.
+     * The type of the Amazon Web Services resource.
      * </p>
      * 
      * @param type
-     *        The type of the AWS resource.
+     *        The type of the Amazon Web Services resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -108,14 +109,14 @@ public class ServiceResourceCost implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The state of the resource. The resource is <code>ACTIVE</code> if it produces metrics, events, or logs within an
-     * hour, otherwise it is <code>INACTIVE</code>. You pay for the number of active AWS resource hours analyzed for
-     * each resource. Inactive resources are not charged.
+     * hour, otherwise it is <code>INACTIVE</code>. You pay for the number of active Amazon Web Services resource hours
+     * analyzed for each resource. Inactive resources are not charged.
      * </p>
      * 
      * @param state
      *        The state of the resource. The resource is <code>ACTIVE</code> if it produces metrics, events, or logs
-     *        within an hour, otherwise it is <code>INACTIVE</code>. You pay for the number of active AWS resource hours
-     *        analyzed for each resource. Inactive resources are not charged.
+     *        within an hour, otherwise it is <code>INACTIVE</code>. You pay for the number of active Amazon Web
+     *        Services resource hours analyzed for each resource. Inactive resources are not charged.
      * @see CostEstimationServiceResourceState
      */
 
@@ -126,13 +127,13 @@ public class ServiceResourceCost implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The state of the resource. The resource is <code>ACTIVE</code> if it produces metrics, events, or logs within an
-     * hour, otherwise it is <code>INACTIVE</code>. You pay for the number of active AWS resource hours analyzed for
-     * each resource. Inactive resources are not charged.
+     * hour, otherwise it is <code>INACTIVE</code>. You pay for the number of active Amazon Web Services resource hours
+     * analyzed for each resource. Inactive resources are not charged.
      * </p>
      * 
      * @return The state of the resource. The resource is <code>ACTIVE</code> if it produces metrics, events, or logs
-     *         within an hour, otherwise it is <code>INACTIVE</code>. You pay for the number of active AWS resource
-     *         hours analyzed for each resource. Inactive resources are not charged.
+     *         within an hour, otherwise it is <code>INACTIVE</code>. You pay for the number of active Amazon Web
+     *         Services resource hours analyzed for each resource. Inactive resources are not charged.
      * @see CostEstimationServiceResourceState
      */
 
@@ -143,14 +144,14 @@ public class ServiceResourceCost implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The state of the resource. The resource is <code>ACTIVE</code> if it produces metrics, events, or logs within an
-     * hour, otherwise it is <code>INACTIVE</code>. You pay for the number of active AWS resource hours analyzed for
-     * each resource. Inactive resources are not charged.
+     * hour, otherwise it is <code>INACTIVE</code>. You pay for the number of active Amazon Web Services resource hours
+     * analyzed for each resource. Inactive resources are not charged.
      * </p>
      * 
      * @param state
      *        The state of the resource. The resource is <code>ACTIVE</code> if it produces metrics, events, or logs
-     *        within an hour, otherwise it is <code>INACTIVE</code>. You pay for the number of active AWS resource hours
-     *        analyzed for each resource. Inactive resources are not charged.
+     *        within an hour, otherwise it is <code>INACTIVE</code>. You pay for the number of active Amazon Web
+     *        Services resource hours analyzed for each resource. Inactive resources are not charged.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CostEstimationServiceResourceState
      */
@@ -163,14 +164,14 @@ public class ServiceResourceCost implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The state of the resource. The resource is <code>ACTIVE</code> if it produces metrics, events, or logs within an
-     * hour, otherwise it is <code>INACTIVE</code>. You pay for the number of active AWS resource hours analyzed for
-     * each resource. Inactive resources are not charged.
+     * hour, otherwise it is <code>INACTIVE</code>. You pay for the number of active Amazon Web Services resource hours
+     * analyzed for each resource. Inactive resources are not charged.
      * </p>
      * 
      * @param state
      *        The state of the resource. The resource is <code>ACTIVE</code> if it produces metrics, events, or logs
-     *        within an hour, otherwise it is <code>INACTIVE</code>. You pay for the number of active AWS resource hours
-     *        analyzed for each resource. Inactive resources are not charged.
+     *        within an hour, otherwise it is <code>INACTIVE</code>. You pay for the number of active Amazon Web
+     *        Services resource hours analyzed for each resource. Inactive resources are not charged.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CostEstimationServiceResourceState
      */

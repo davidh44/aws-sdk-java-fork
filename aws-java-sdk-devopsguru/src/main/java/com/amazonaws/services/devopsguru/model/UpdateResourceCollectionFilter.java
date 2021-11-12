@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains information used to update a collection of AWS resources.
+ * Contains information used to update a collection of Amazon Web Services resources.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/UpdateResourceCollectionFilter"
@@ -30,18 +30,21 @@ public class UpdateResourceCollectionFilter implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * An collection of AWS CloudFormation stacks. You can specify up to 500 AWS CloudFormation stacks.
+     * An collection of Amazon Web Services CloudFormation stacks. You can specify up to 500 Amazon Web Services
+     * CloudFormation stacks.
      * </p>
      */
     private UpdateCloudFormationCollectionFilter cloudFormation;
 
     /**
      * <p>
-     * An collection of AWS CloudFormation stacks. You can specify up to 500 AWS CloudFormation stacks.
+     * An collection of Amazon Web Services CloudFormation stacks. You can specify up to 500 Amazon Web Services
+     * CloudFormation stacks.
      * </p>
      * 
      * @param cloudFormation
-     *        An collection of AWS CloudFormation stacks. You can specify up to 500 AWS CloudFormation stacks.
+     *        An collection of Amazon Web Services CloudFormation stacks. You can specify up to 500 Amazon Web Services
+     *        CloudFormation stacks.
      */
 
     public void setCloudFormation(UpdateCloudFormationCollectionFilter cloudFormation) {
@@ -50,10 +53,12 @@ public class UpdateResourceCollectionFilter implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * An collection of AWS CloudFormation stacks. You can specify up to 500 AWS CloudFormation stacks.
+     * An collection of Amazon Web Services CloudFormation stacks. You can specify up to 500 Amazon Web Services
+     * CloudFormation stacks.
      * </p>
      * 
-     * @return An collection of AWS CloudFormation stacks. You can specify up to 500 AWS CloudFormation stacks.
+     * @return An collection of Amazon Web Services CloudFormation stacks. You can specify up to 500 Amazon Web Services
+     *         CloudFormation stacks.
      */
 
     public UpdateCloudFormationCollectionFilter getCloudFormation() {
@@ -62,11 +67,13 @@ public class UpdateResourceCollectionFilter implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * An collection of AWS CloudFormation stacks. You can specify up to 500 AWS CloudFormation stacks.
+     * An collection of Amazon Web Services CloudFormation stacks. You can specify up to 500 Amazon Web Services
+     * CloudFormation stacks.
      * </p>
      * 
      * @param cloudFormation
-     *        An collection of AWS CloudFormation stacks. You can specify up to 500 AWS CloudFormation stacks.
+     *        An collection of Amazon Web Services CloudFormation stacks. You can specify up to 500 Amazon Web Services
+     *        CloudFormation stacks.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

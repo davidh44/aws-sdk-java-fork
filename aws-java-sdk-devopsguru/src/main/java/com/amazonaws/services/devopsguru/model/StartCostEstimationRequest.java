@@ -27,7 +27,7 @@ public class StartCostEstimationRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The collection of AWS resources used to create a monthly DevOps Guru cost estimate.
+     * The collection of Amazon Web Services resources used to create a monthly DevOps Guru cost estimate.
      * </p>
      */
     private CostEstimationResourceCollectionFilter resourceCollection;
@@ -40,11 +40,11 @@ public class StartCostEstimationRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The collection of AWS resources used to create a monthly DevOps Guru cost estimate.
+     * The collection of Amazon Web Services resources used to create a monthly DevOps Guru cost estimate.
      * </p>
      * 
      * @param resourceCollection
-     *        The collection of AWS resources used to create a monthly DevOps Guru cost estimate.
+     *        The collection of Amazon Web Services resources used to create a monthly DevOps Guru cost estimate.
      */
 
     public void setResourceCollection(CostEstimationResourceCollectionFilter resourceCollection) {
@@ -53,10 +53,10 @@ public class StartCostEstimationRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The collection of AWS resources used to create a monthly DevOps Guru cost estimate.
+     * The collection of Amazon Web Services resources used to create a monthly DevOps Guru cost estimate.
      * </p>
      * 
-     * @return The collection of AWS resources used to create a monthly DevOps Guru cost estimate.
+     * @return The collection of Amazon Web Services resources used to create a monthly DevOps Guru cost estimate.
      */
 
     public CostEstimationResourceCollectionFilter getResourceCollection() {
@@ -65,11 +65,11 @@ public class StartCostEstimationRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The collection of AWS resources used to create a monthly DevOps Guru cost estimate.
+     * The collection of Amazon Web Services resources used to create a monthly DevOps Guru cost estimate.
      * </p>
      * 
      * @param resourceCollection
-     *        The collection of AWS resources used to create a monthly DevOps Guru cost estimate.
+     *        The collection of Amazon Web Services resources used to create a monthly DevOps Guru cost estimate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

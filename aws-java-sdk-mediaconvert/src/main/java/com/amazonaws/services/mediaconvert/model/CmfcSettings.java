@@ -50,10 +50,10 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     /**
      * List the audio rendition groups that you want included with this video rendition. Use a comma-separated list. For
      * example, say you want to include the audio rendition groups that have the audio group IDs "audio_aac_1" and
-     * "audio_dolby". Then you would specify this value: "audio_aac_1, audio_dolby". Related setting: The rendition
-     * groups that you include in your comma-separated list should all match values that you specify in the setting Audio
-     * group ID (AudioGroupId) for audio renditions in the same output group as this video rendition. Default behavior:
-     * If you don't specify anything here and for Audio group ID, MediaConvert puts each audio variant in its own audio
+     * "audio_dolby". Then you would specify this value: "audio_aac_1,audio_dolby". Related setting: The rendition groups
+     * that you include in your comma-separated list should all match values that you specify in the setting Audio group
+     * ID (AudioGroupId) for audio renditions in the same output group as this video rendition. Default behavior: If you
+     * don't specify anything here and for Audio group ID, MediaConvert puts each audio variant in its own audio
      * rendition group and associates it with every video variant. Each value in your list appears in your HLS parent
      * manifest in the EXT-X-STREAM-INF tag as the value for the AUDIO attribute. To continue the previous example, say
      * that the file name for the child manifest for your video rendition is "amazing_video_1.m3u8". Then, in your parent
@@ -292,10 +292,10 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     /**
      * List the audio rendition groups that you want included with this video rendition. Use a comma-separated list. For
      * example, say you want to include the audio rendition groups that have the audio group IDs "audio_aac_1" and
-     * "audio_dolby". Then you would specify this value: "audio_aac_1, audio_dolby". Related setting: The rendition
-     * groups that you include in your comma-separated list should all match values that you specify in the setting Audio
-     * group ID (AudioGroupId) for audio renditions in the same output group as this video rendition. Default behavior:
-     * If you don't specify anything here and for Audio group ID, MediaConvert puts each audio variant in its own audio
+     * "audio_dolby". Then you would specify this value: "audio_aac_1,audio_dolby". Related setting: The rendition groups
+     * that you include in your comma-separated list should all match values that you specify in the setting Audio group
+     * ID (AudioGroupId) for audio renditions in the same output group as this video rendition. Default behavior: If you
+     * don't specify anything here and for Audio group ID, MediaConvert puts each audio variant in its own audio
      * rendition group and associates it with every video variant. Each value in your list appears in your HLS parent
      * manifest in the EXT-X-STREAM-INF tag as the value for the AUDIO attribute. To continue the previous example, say
      * that the file name for the child manifest for your video rendition is "amazing_video_1.m3u8". Then, in your parent
@@ -305,7 +305,7 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      * @param audioRenditionSets
      *        List the audio rendition groups that you want included with this video rendition. Use a comma-separated
      *        list. For example, say you want to include the audio rendition groups that have the audio group IDs
-     *        "audio_aac_1" and "audio_dolby". Then you would specify this value: "audio_aac_1, audio_dolby". Related
+     *        "audio_aac_1" and "audio_dolby". Then you would specify this value: "audio_aac_1,audio_dolby". Related
      *        setting: The rendition groups that you include in your comma-separated list should all match values that
      *        you specify in the setting Audio group ID (AudioGroupId) for audio renditions in the same output group as
      *        this video rendition. Default behavior: If you don't specify anything here and for Audio group ID,
@@ -324,10 +324,10 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     /**
      * List the audio rendition groups that you want included with this video rendition. Use a comma-separated list. For
      * example, say you want to include the audio rendition groups that have the audio group IDs "audio_aac_1" and
-     * "audio_dolby". Then you would specify this value: "audio_aac_1, audio_dolby". Related setting: The rendition
-     * groups that you include in your comma-separated list should all match values that you specify in the setting Audio
-     * group ID (AudioGroupId) for audio renditions in the same output group as this video rendition. Default behavior:
-     * If you don't specify anything here and for Audio group ID, MediaConvert puts each audio variant in its own audio
+     * "audio_dolby". Then you would specify this value: "audio_aac_1,audio_dolby". Related setting: The rendition groups
+     * that you include in your comma-separated list should all match values that you specify in the setting Audio group
+     * ID (AudioGroupId) for audio renditions in the same output group as this video rendition. Default behavior: If you
+     * don't specify anything here and for Audio group ID, MediaConvert puts each audio variant in its own audio
      * rendition group and associates it with every video variant. Each value in your list appears in your HLS parent
      * manifest in the EXT-X-STREAM-INF tag as the value for the AUDIO attribute. To continue the previous example, say
      * that the file name for the child manifest for your video rendition is "amazing_video_1.m3u8". Then, in your parent
@@ -336,7 +336,7 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      * 
      * @return List the audio rendition groups that you want included with this video rendition. Use a comma-separated
      *         list. For example, say you want to include the audio rendition groups that have the audio group IDs
-     *         "audio_aac_1" and "audio_dolby". Then you would specify this value: "audio_aac_1, audio_dolby". Related
+     *         "audio_aac_1" and "audio_dolby". Then you would specify this value: "audio_aac_1,audio_dolby". Related
      *         setting: The rendition groups that you include in your comma-separated list should all match values that
      *         you specify in the setting Audio group ID (AudioGroupId) for audio renditions in the same output group as
      *         this video rendition. Default behavior: If you don't specify anything here and for Audio group ID,
@@ -355,10 +355,10 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     /**
      * List the audio rendition groups that you want included with this video rendition. Use a comma-separated list. For
      * example, say you want to include the audio rendition groups that have the audio group IDs "audio_aac_1" and
-     * "audio_dolby". Then you would specify this value: "audio_aac_1, audio_dolby". Related setting: The rendition
-     * groups that you include in your comma-separated list should all match values that you specify in the setting Audio
-     * group ID (AudioGroupId) for audio renditions in the same output group as this video rendition. Default behavior:
-     * If you don't specify anything here and for Audio group ID, MediaConvert puts each audio variant in its own audio
+     * "audio_dolby". Then you would specify this value: "audio_aac_1,audio_dolby". Related setting: The rendition groups
+     * that you include in your comma-separated list should all match values that you specify in the setting Audio group
+     * ID (AudioGroupId) for audio renditions in the same output group as this video rendition. Default behavior: If you
+     * don't specify anything here and for Audio group ID, MediaConvert puts each audio variant in its own audio
      * rendition group and associates it with every video variant. Each value in your list appears in your HLS parent
      * manifest in the EXT-X-STREAM-INF tag as the value for the AUDIO attribute. To continue the previous example, say
      * that the file name for the child manifest for your video rendition is "amazing_video_1.m3u8". Then, in your parent
@@ -368,7 +368,7 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      * @param audioRenditionSets
      *        List the audio rendition groups that you want included with this video rendition. Use a comma-separated
      *        list. For example, say you want to include the audio rendition groups that have the audio group IDs
-     *        "audio_aac_1" and "audio_dolby". Then you would specify this value: "audio_aac_1, audio_dolby". Related
+     *        "audio_aac_1" and "audio_dolby". Then you would specify this value: "audio_aac_1,audio_dolby". Related
      *        setting: The rendition groups that you include in your comma-separated list should all match values that
      *        you specify in the setting Audio group ID (AudioGroupId) for audio renditions in the same output group as
      *        this video rendition. Default behavior: If you don't specify anything here and for Audio group ID,

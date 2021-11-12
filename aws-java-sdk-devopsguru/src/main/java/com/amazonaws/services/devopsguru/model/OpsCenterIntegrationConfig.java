@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about whether DevOps Guru is configured to create an OpsItem in AWS Systems Manager OpsCenter for each
- * created insight.
+ * Information about whether DevOps Guru is configured to create an OpsItem in Amazon Web Services Systems Manager
+ * OpsCenter for each created insight.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/OpsCenterIntegrationConfig"
@@ -31,18 +31,21 @@ public class OpsCenterIntegrationConfig implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Specifies if DevOps Guru is enabled to create an AWS Systems Manager OpsItem for each created insight.
+     * Specifies if DevOps Guru is enabled to create an Amazon Web Services Systems Manager OpsItem for each created
+     * insight.
      * </p>
      */
     private String optInStatus;
 
     /**
      * <p>
-     * Specifies if DevOps Guru is enabled to create an AWS Systems Manager OpsItem for each created insight.
+     * Specifies if DevOps Guru is enabled to create an Amazon Web Services Systems Manager OpsItem for each created
+     * insight.
      * </p>
      * 
      * @param optInStatus
-     *        Specifies if DevOps Guru is enabled to create an AWS Systems Manager OpsItem for each created insight.
+     *        Specifies if DevOps Guru is enabled to create an Amazon Web Services Systems Manager OpsItem for each
+     *        created insight.
      * @see OptInStatus
      */
 
@@ -52,10 +55,12 @@ public class OpsCenterIntegrationConfig implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Specifies if DevOps Guru is enabled to create an AWS Systems Manager OpsItem for each created insight.
+     * Specifies if DevOps Guru is enabled to create an Amazon Web Services Systems Manager OpsItem for each created
+     * insight.
      * </p>
      * 
-     * @return Specifies if DevOps Guru is enabled to create an AWS Systems Manager OpsItem for each created insight.
+     * @return Specifies if DevOps Guru is enabled to create an Amazon Web Services Systems Manager OpsItem for each
+     *         created insight.
      * @see OptInStatus
      */
 
@@ -65,11 +70,13 @@ public class OpsCenterIntegrationConfig implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Specifies if DevOps Guru is enabled to create an AWS Systems Manager OpsItem for each created insight.
+     * Specifies if DevOps Guru is enabled to create an Amazon Web Services Systems Manager OpsItem for each created
+     * insight.
      * </p>
      * 
      * @param optInStatus
-     *        Specifies if DevOps Guru is enabled to create an AWS Systems Manager OpsItem for each created insight.
+     *        Specifies if DevOps Guru is enabled to create an Amazon Web Services Systems Manager OpsItem for each
+     *        created insight.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OptInStatus
      */
@@ -81,11 +88,13 @@ public class OpsCenterIntegrationConfig implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Specifies if DevOps Guru is enabled to create an AWS Systems Manager OpsItem for each created insight.
+     * Specifies if DevOps Guru is enabled to create an Amazon Web Services Systems Manager OpsItem for each created
+     * insight.
      * </p>
      * 
      * @param optInStatus
-     *        Specifies if DevOps Guru is enabled to create an AWS Systems Manager OpsItem for each created insight.
+     *        Specifies if DevOps Guru is enabled to create an Amazon Web Services Systems Manager OpsItem for each
+     *        created insight.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OptInStatus
      */

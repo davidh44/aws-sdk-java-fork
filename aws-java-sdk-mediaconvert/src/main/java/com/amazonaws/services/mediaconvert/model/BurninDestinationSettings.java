@@ -49,7 +49,7 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
     /**
      * Specify the color of the rectangle behind the captions. Leave background color (BackgroundColor) blank and set
      * Style passthrough (StylePassthrough) to enabled to use the background color data from your input captions, if
-     * present. Within your job settings, all of your DVB-Sub settings must be identical.
+     * present.
      */
     private String backgroundColor;
     /**
@@ -332,12 +332,12 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
     /**
      * Specify the color of the rectangle behind the captions. Leave background color (BackgroundColor) blank and set
      * Style passthrough (StylePassthrough) to enabled to use the background color data from your input captions, if
-     * present. Within your job settings, all of your DVB-Sub settings must be identical.
+     * present.
      * 
      * @param backgroundColor
      *        Specify the color of the rectangle behind the captions. Leave background color (BackgroundColor) blank and
      *        set Style passthrough (StylePassthrough) to enabled to use the background color data from your input
-     *        captions, if present. Within your job settings, all of your DVB-Sub settings must be identical.
+     *        captions, if present.
      * @see BurninSubtitleBackgroundColor
      */
 
@@ -348,11 +348,11 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
     /**
      * Specify the color of the rectangle behind the captions. Leave background color (BackgroundColor) blank and set
      * Style passthrough (StylePassthrough) to enabled to use the background color data from your input captions, if
-     * present. Within your job settings, all of your DVB-Sub settings must be identical.
+     * present.
      * 
      * @return Specify the color of the rectangle behind the captions. Leave background color (BackgroundColor) blank
      *         and set Style passthrough (StylePassthrough) to enabled to use the background color data from your input
-     *         captions, if present. Within your job settings, all of your DVB-Sub settings must be identical.
+     *         captions, if present.
      * @see BurninSubtitleBackgroundColor
      */
 
@@ -363,12 +363,12 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
     /**
      * Specify the color of the rectangle behind the captions. Leave background color (BackgroundColor) blank and set
      * Style passthrough (StylePassthrough) to enabled to use the background color data from your input captions, if
-     * present. Within your job settings, all of your DVB-Sub settings must be identical.
+     * present.
      * 
      * @param backgroundColor
      *        Specify the color of the rectangle behind the captions. Leave background color (BackgroundColor) blank and
      *        set Style passthrough (StylePassthrough) to enabled to use the background color data from your input
-     *        captions, if present. Within your job settings, all of your DVB-Sub settings must be identical.
+     *        captions, if present.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see BurninSubtitleBackgroundColor
      */
@@ -381,12 +381,12 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
     /**
      * Specify the color of the rectangle behind the captions. Leave background color (BackgroundColor) blank and set
      * Style passthrough (StylePassthrough) to enabled to use the background color data from your input captions, if
-     * present. Within your job settings, all of your DVB-Sub settings must be identical.
+     * present.
      * 
      * @param backgroundColor
      *        Specify the color of the rectangle behind the captions. Leave background color (BackgroundColor) blank and
      *        set Style passthrough (StylePassthrough) to enabled to use the background color data from your input
-     *        captions, if present. Within your job settings, all of your DVB-Sub settings must be identical.
+     *        captions, if present.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see BurninSubtitleBackgroundColor
      */

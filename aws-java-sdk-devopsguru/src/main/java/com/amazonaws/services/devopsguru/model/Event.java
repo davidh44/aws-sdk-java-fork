@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An AWS resource event. AWS resource events and metrics are analyzed by DevOps Guru to find anomalous behavior and
- * provide recommendations to improve your operational solutions.
+ * An Amazon Web Services resource event. Amazon Web Services resource events and metrics are analyzed by DevOps Guru to
+ * find anomalous behavior and provide recommendations to improve your operational solutions.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/Event" target="_top">AWS API
@@ -44,7 +44,7 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date time;
     /**
      * <p>
-     * The AWS source that emitted the event.
+     * The Amazon Web Services source that emitted the event.
      * </p>
      */
     private String eventSource;
@@ -183,11 +183,11 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS source that emitted the event.
+     * The Amazon Web Services source that emitted the event.
      * </p>
      * 
      * @param eventSource
-     *        The AWS source that emitted the event.
+     *        The Amazon Web Services source that emitted the event.
      */
 
     public void setEventSource(String eventSource) {
@@ -196,10 +196,10 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS source that emitted the event.
+     * The Amazon Web Services source that emitted the event.
      * </p>
      * 
-     * @return The AWS source that emitted the event.
+     * @return The Amazon Web Services source that emitted the event.
      */
 
     public String getEventSource() {
@@ -208,11 +208,11 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS source that emitted the event.
+     * The Amazon Web Services source that emitted the event.
      * </p>
      * 
      * @param eventSource
-     *        The AWS source that emitted the event.
+     *        The Amazon Web Services source that emitted the event.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

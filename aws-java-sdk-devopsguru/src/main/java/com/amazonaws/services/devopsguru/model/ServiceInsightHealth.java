@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains the number of open proactive and reactive insights in an analyzed AWS service.
+ * Contains the number of open proactive and reactive insights in an analyzed Amazon Web Services service.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/ServiceInsightHealth" target="_top">AWS
@@ -30,24 +30,24 @@ public class ServiceInsightHealth implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The number of open proactive insights in the AWS service
+     * The number of open proactive insights in the Amazon Web Services service
      * </p>
      */
     private Integer openProactiveInsights;
     /**
      * <p>
-     * The number of open reactive insights in the AWS service
+     * The number of open reactive insights in the Amazon Web Services service
      * </p>
      */
     private Integer openReactiveInsights;
 
     /**
      * <p>
-     * The number of open proactive insights in the AWS service
+     * The number of open proactive insights in the Amazon Web Services service
      * </p>
      * 
      * @param openProactiveInsights
-     *        The number of open proactive insights in the AWS service
+     *        The number of open proactive insights in the Amazon Web Services service
      */
 
     public void setOpenProactiveInsights(Integer openProactiveInsights) {
@@ -56,10 +56,10 @@ public class ServiceInsightHealth implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The number of open proactive insights in the AWS service
+     * The number of open proactive insights in the Amazon Web Services service
      * </p>
      * 
-     * @return The number of open proactive insights in the AWS service
+     * @return The number of open proactive insights in the Amazon Web Services service
      */
 
     public Integer getOpenProactiveInsights() {
@@ -68,11 +68,11 @@ public class ServiceInsightHealth implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The number of open proactive insights in the AWS service
+     * The number of open proactive insights in the Amazon Web Services service
      * </p>
      * 
      * @param openProactiveInsights
-     *        The number of open proactive insights in the AWS service
+     *        The number of open proactive insights in the Amazon Web Services service
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,11 +83,11 @@ public class ServiceInsightHealth implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The number of open reactive insights in the AWS service
+     * The number of open reactive insights in the Amazon Web Services service
      * </p>
      * 
      * @param openReactiveInsights
-     *        The number of open reactive insights in the AWS service
+     *        The number of open reactive insights in the Amazon Web Services service
      */
 
     public void setOpenReactiveInsights(Integer openReactiveInsights) {
@@ -96,10 +96,10 @@ public class ServiceInsightHealth implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The number of open reactive insights in the AWS service
+     * The number of open reactive insights in the Amazon Web Services service
      * </p>
      * 
-     * @return The number of open reactive insights in the AWS service
+     * @return The number of open reactive insights in the Amazon Web Services service
      */
 
     public Integer getOpenReactiveInsights() {
@@ -108,11 +108,11 @@ public class ServiceInsightHealth implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The number of open reactive insights in the AWS service
+     * The number of open reactive insights in the Amazon Web Services service
      * </p>
      * 
      * @param openReactiveInsights
-     *        The number of open reactive insights in the AWS service
+     *        The number of open reactive insights in the Amazon Web Services service
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

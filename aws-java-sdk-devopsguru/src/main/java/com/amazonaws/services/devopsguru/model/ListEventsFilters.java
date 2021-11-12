@@ -49,7 +49,7 @@ public class ListEventsFilters implements Serializable, Cloneable, StructuredPoj
     private String eventClass;
     /**
      * <p>
-     * The AWS source that emitted the events you want to filter for.
+     * The Amazon Web Services source that emitted the events you want to filter for.
      * </p>
      */
     private String eventSource;
@@ -211,11 +211,11 @@ public class ListEventsFilters implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The AWS source that emitted the events you want to filter for.
+     * The Amazon Web Services source that emitted the events you want to filter for.
      * </p>
      * 
      * @param eventSource
-     *        The AWS source that emitted the events you want to filter for.
+     *        The Amazon Web Services source that emitted the events you want to filter for.
      */
 
     public void setEventSource(String eventSource) {
@@ -224,10 +224,10 @@ public class ListEventsFilters implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The AWS source that emitted the events you want to filter for.
+     * The Amazon Web Services source that emitted the events you want to filter for.
      * </p>
      * 
-     * @return The AWS source that emitted the events you want to filter for.
+     * @return The Amazon Web Services source that emitted the events you want to filter for.
      */
 
     public String getEventSource() {
@@ -236,11 +236,11 @@ public class ListEventsFilters implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The AWS source that emitted the events you want to filter for.
+     * The Amazon Web Services source that emitted the events you want to filter for.
      * </p>
      * 
      * @param eventSource
-     *        The AWS source that emitted the events you want to filter for.
+     *        The Amazon Web Services source that emitted the events you want to filter for.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -31,6 +31,12 @@ public class DescribeInsightRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      */
     private String id;
+    /**
+     * <p>
+     * The ID of the member account in the organization.
+     * </p>
+     */
+    private String accountId;
 
     /**
      * <p>
@@ -73,6 +79,46 @@ public class DescribeInsightRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * The ID of the member account in the organization.
+     * </p>
+     * 
+     * @param accountId
+     *        The ID of the member account in the organization.
+     */
+
+    public void setAccountId(String accountId) {
+        this.accountId = accountId;
+    }
+
+    /**
+     * <p>
+     * The ID of the member account in the organization.
+     * </p>
+     * 
+     * @return The ID of the member account in the organization.
+     */
+
+    public String getAccountId() {
+        return this.accountId;
+    }
+
+    /**
+     * <p>
+     * The ID of the member account in the organization.
+     * </p>
+     * 
+     * @param accountId
+     *        The ID of the member account in the organization.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeInsightRequest withAccountId(String accountId) {
+        setAccountId(accountId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -85,7 +131,9 @@ public class DescribeInsightRequest extends com.amazonaws.AmazonWebServiceReques
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getId() != null)
-            sb.append("Id: ").append(getId());
+            sb.append("Id: ").append(getId()).append(",");
+        if (getAccountId() != null)
+            sb.append("AccountId: ").append(getAccountId());
         sb.append("}");
         return sb.toString();
     }
@@ -104,6 +152,10 @@ public class DescribeInsightRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getId() != null && other.getId().equals(this.getId()) == false)
             return false;
+        if (other.getAccountId() == null ^ this.getAccountId() == null)
+            return false;
+        if (other.getAccountId() != null && other.getAccountId().equals(this.getAccountId()) == false)
+            return false;
         return true;
     }
 
@@ -113,6 +165,7 @@ public class DescribeInsightRequest extends com.amazonaws.AmazonWebServiceReques
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getId() == null) ? 0 : getId().hashCode());
+        hashCode = prime * hashCode + ((getAccountId() == null) ? 0 : getAccountId().hashCode());
         return hashCode;
     }
 

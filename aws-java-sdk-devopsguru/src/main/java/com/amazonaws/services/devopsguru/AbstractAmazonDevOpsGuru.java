@@ -58,6 +58,22 @@ public class AbstractAmazonDevOpsGuru implements AmazonDevOpsGuru {
     }
 
     @Override
+    public DescribeOrganizationHealthResult describeOrganizationHealth(DescribeOrganizationHealthRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeOrganizationOverviewResult describeOrganizationOverview(DescribeOrganizationOverviewRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeOrganizationResourceCollectionHealthResult describeOrganizationResourceCollectionHealth(
+            DescribeOrganizationResourceCollectionHealthRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeResourceCollectionHealthResult describeResourceCollectionHealth(DescribeResourceCollectionHealthRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -98,6 +114,11 @@ public class AbstractAmazonDevOpsGuru implements AmazonDevOpsGuru {
     }
 
     @Override
+    public ListOrganizationInsightsResult listOrganizationInsights(ListOrganizationInsightsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListRecommendationsResult listRecommendations(ListRecommendationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -114,6 +135,11 @@ public class AbstractAmazonDevOpsGuru implements AmazonDevOpsGuru {
 
     @Override
     public SearchInsightsResult searchInsights(SearchInsightsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public SearchOrganizationInsightsResult searchOrganizationInsights(SearchOrganizationInsightsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

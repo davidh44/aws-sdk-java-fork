@@ -113,16 +113,30 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     /** If enable, use reference B frames for GOP structures that have B frames > 1. */
     private String gopBReference;
     /**
-     * Frequency of closed GOPs. In streaming applications, it is recommended that this be set to 1 so a decoder joining
-     * mid-stream will receive an IDR frame as quickly as possible. Setting this value to 0 will break output
-     * segmenting.
+     * Specify the relative frequency of open to closed GOPs in this output. For example, if you want to allow four open
+     * GOPs and then require a closed GOP, set this value to 5. We recommend that you have the transcoder automatically
+     * choose this value for you based on characteristics of your input video. To enable this automatic behavior, keep
+     * the default value by leaving this setting out of your JSON job specification. In the console, do this by keeping
+     * the default empty value. If you do explicitly specify a value, for segmented outputs, don't set this value to 0.
      */
     private Integer gopClosedCadence;
-    /** GOP Length (keyframe interval) in frames or seconds. Must be greater than zero. */
+    /**
+     * Use this setting only when you set GOP mode control (GopSizeUnits) to Specified, frames (FRAMES) or Specified,
+     * seconds (SECONDS). Specify the GOP length using a whole number of frames or a decimal value of seconds.
+     * MediaConvert will interpret this value as frames or seconds depending on the value you choose for GOP mode control
+     * (GopSizeUnits). If you want to allow MediaConvert to automatically determine GOP size, leave GOP size blank and
+     * set GOP mode control to Auto (AUTO). If your output group specifies HLS, DASH, or CMAF, leave GOP size blank and
+     * set GOP mode control to Auto in each output in your output group.
+     */
     private Double gopSize;
     /**
-     * Indicates if the GOP Size in H264 is specified in frames or seconds. If seconds the system will convert the GOP
-     * Size into a frame count at run time.
+     * Specify how the transcoder determines GOP size for this output. We recommend that you have the transcoder
+     * automatically choose this value for you based on characteristics of your input video. To enable this automatic
+     * behavior, choose Auto (AUTO) and and leave GOP size (GopSize) blank. By default, if you don't specify GOP mode
+     * control (GopSizeUnits), MediaConvert will use automatic behavior. If your output group specifies HLS, DASH, or
+     * CMAF, set GOP mode control to Auto and leave GOP size blank in each output in your output group. To explicitly
+     * specify the GOP length, choose Specified, frames (FRAMES) or Specified, seconds (SECONDS) and then provide the GOP
+     * length in the related setting GOP size (GopSize).
      */
     private String gopSizeUnits;
     /** Percentage of the buffer that should initially be filled (HRD buffer model). */
@@ -146,16 +160,25 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
      */
     private Integer maxBitrate;
     /**
-     * Enforces separation between repeated (cadence) I-frames and I-frames inserted by Scene Change Detection. If a
-     * scene change I-frame is within I-interval frames of a cadence I-frame, the GOP is shrunk and/or stretched to the
-     * scene change I-frame. GOP stretch requires enabling lookahead as well as setting I-interval. The normal cadence
-     * resumes for the next GOP. This setting is only used when Scene Change Detect is enabled. Note: Maximum GOP stretch
-     * = GOP size + Min-I-interval - 1
+     * Use this setting only when you also enable Scene change detection (SceneChangeDetect). This setting determines
+     * how the encoder manages the spacing between I-frames that it inserts as part of the I-frame cadence and the
+     * I-frames that it inserts for Scene change detection. We recommend that you have the transcoder automatically
+     * choose this value for you based on characteristics of your input video. To enable this automatic behavior, keep
+     * the default value by leaving this setting out of your JSON job specification. In the console, do this by keeping
+     * the default empty value. When you explicitly specify a value for this setting, the encoder determines whether to
+     * skip a cadence-driven I-frame by the value you set. For example, if you set Min I interval (minIInterval) to 5 and
+     * a cadence-driven I-frame would fall within 5 frames of a scene-change I-frame, then the encoder skips the
+     * cadence-driven I-frame. In this way, one GOP is shrunk slightly and one GOP is stretched slightly. When the
+     * cadence-driven I-frames are farther from the scene-change I-frame than the value you set, then the encoder leaves
+     * all I-frames in place and the GOPs surrounding the scene change are smaller than the usual cadence GOPs.
      */
     private Integer minIInterval;
     /**
-     * Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid values are
-     * whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
+     * This setting to determines the number of B-frames that MediaConvert puts between reference frames in this output.
+     * We recommend that you use automatic behavior to allow the transcoder to choose the best value based on
+     * characteristics of your input video. In the console, choose AUTO to select this automatic behavior. When you
+     * manually edit your JSON job specification, leave this setting out to choose automatic behavior. When you want to
+     * specify this number explicitly, choose a whole number from 0 through 7.
      */
     private Integer numberBFramesBetweenReferenceFrames;
     /**
@@ -1236,14 +1259,19 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Frequency of closed GOPs. In streaming applications, it is recommended that this be set to 1 so a decoder joining
-     * mid-stream will receive an IDR frame as quickly as possible. Setting this value to 0 will break output
-     * segmenting.
+     * Specify the relative frequency of open to closed GOPs in this output. For example, if you want to allow four open
+     * GOPs and then require a closed GOP, set this value to 5. We recommend that you have the transcoder automatically
+     * choose this value for you based on characteristics of your input video. To enable this automatic behavior, keep
+     * the default value by leaving this setting out of your JSON job specification. In the console, do this by keeping
+     * the default empty value. If you do explicitly specify a value, for segmented outputs, don't set this value to 0.
      * 
      * @param gopClosedCadence
-     *        Frequency of closed GOPs. In streaming applications, it is recommended that this be set to 1 so a decoder
-     *        joining mid-stream will receive an IDR frame as quickly as possible. Setting this value to 0 will break
-     *        output segmenting.
+     *        Specify the relative frequency of open to closed GOPs in this output. For example, if you want to allow
+     *        four open GOPs and then require a closed GOP, set this value to 5. We recommend that you have the
+     *        transcoder automatically choose this value for you based on characteristics of your input video. To enable
+     *        this automatic behavior, keep the default value by leaving this setting out of your JSON job
+     *        specification. In the console, do this by keeping the default empty value. If you do explicitly specify a
+     *        value, for segmented outputs, don't set this value to 0.
      */
 
     public void setGopClosedCadence(Integer gopClosedCadence) {
@@ -1251,13 +1279,18 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Frequency of closed GOPs. In streaming applications, it is recommended that this be set to 1 so a decoder joining
-     * mid-stream will receive an IDR frame as quickly as possible. Setting this value to 0 will break output
-     * segmenting.
+     * Specify the relative frequency of open to closed GOPs in this output. For example, if you want to allow four open
+     * GOPs and then require a closed GOP, set this value to 5. We recommend that you have the transcoder automatically
+     * choose this value for you based on characteristics of your input video. To enable this automatic behavior, keep
+     * the default value by leaving this setting out of your JSON job specification. In the console, do this by keeping
+     * the default empty value. If you do explicitly specify a value, for segmented outputs, don't set this value to 0.
      * 
-     * @return Frequency of closed GOPs. In streaming applications, it is recommended that this be set to 1 so a decoder
-     *         joining mid-stream will receive an IDR frame as quickly as possible. Setting this value to 0 will break
-     *         output segmenting.
+     * @return Specify the relative frequency of open to closed GOPs in this output. For example, if you want to allow
+     *         four open GOPs and then require a closed GOP, set this value to 5. We recommend that you have the
+     *         transcoder automatically choose this value for you based on characteristics of your input video. To
+     *         enable this automatic behavior, keep the default value by leaving this setting out of your JSON job
+     *         specification. In the console, do this by keeping the default empty value. If you do explicitly specify a
+     *         value, for segmented outputs, don't set this value to 0.
      */
 
     public Integer getGopClosedCadence() {
@@ -1265,14 +1298,19 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Frequency of closed GOPs. In streaming applications, it is recommended that this be set to 1 so a decoder joining
-     * mid-stream will receive an IDR frame as quickly as possible. Setting this value to 0 will break output
-     * segmenting.
+     * Specify the relative frequency of open to closed GOPs in this output. For example, if you want to allow four open
+     * GOPs and then require a closed GOP, set this value to 5. We recommend that you have the transcoder automatically
+     * choose this value for you based on characteristics of your input video. To enable this automatic behavior, keep
+     * the default value by leaving this setting out of your JSON job specification. In the console, do this by keeping
+     * the default empty value. If you do explicitly specify a value, for segmented outputs, don't set this value to 0.
      * 
      * @param gopClosedCadence
-     *        Frequency of closed GOPs. In streaming applications, it is recommended that this be set to 1 so a decoder
-     *        joining mid-stream will receive an IDR frame as quickly as possible. Setting this value to 0 will break
-     *        output segmenting.
+     *        Specify the relative frequency of open to closed GOPs in this output. For example, if you want to allow
+     *        four open GOPs and then require a closed GOP, set this value to 5. We recommend that you have the
+     *        transcoder automatically choose this value for you based on characteristics of your input video. To enable
+     *        this automatic behavior, keep the default value by leaving this setting out of your JSON job
+     *        specification. In the console, do this by keeping the default empty value. If you do explicitly specify a
+     *        value, for segmented outputs, don't set this value to 0.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1282,10 +1320,20 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * GOP Length (keyframe interval) in frames or seconds. Must be greater than zero.
+     * Use this setting only when you set GOP mode control (GopSizeUnits) to Specified, frames (FRAMES) or Specified,
+     * seconds (SECONDS). Specify the GOP length using a whole number of frames or a decimal value of seconds.
+     * MediaConvert will interpret this value as frames or seconds depending on the value you choose for GOP mode control
+     * (GopSizeUnits). If you want to allow MediaConvert to automatically determine GOP size, leave GOP size blank and
+     * set GOP mode control to Auto (AUTO). If your output group specifies HLS, DASH, or CMAF, leave GOP size blank and
+     * set GOP mode control to Auto in each output in your output group.
      * 
      * @param gopSize
-     *        GOP Length (keyframe interval) in frames or seconds. Must be greater than zero.
+     *        Use this setting only when you set GOP mode control (GopSizeUnits) to Specified, frames (FRAMES) or
+     *        Specified, seconds (SECONDS). Specify the GOP length using a whole number of frames or a decimal value of
+     *        seconds. MediaConvert will interpret this value as frames or seconds depending on the value you choose for
+     *        GOP mode control (GopSizeUnits). If you want to allow MediaConvert to automatically determine GOP size,
+     *        leave GOP size blank and set GOP mode control to Auto (AUTO). If your output group specifies HLS, DASH, or
+     *        CMAF, leave GOP size blank and set GOP mode control to Auto in each output in your output group.
      */
 
     public void setGopSize(Double gopSize) {
@@ -1293,9 +1341,19 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * GOP Length (keyframe interval) in frames or seconds. Must be greater than zero.
+     * Use this setting only when you set GOP mode control (GopSizeUnits) to Specified, frames (FRAMES) or Specified,
+     * seconds (SECONDS). Specify the GOP length using a whole number of frames or a decimal value of seconds.
+     * MediaConvert will interpret this value as frames or seconds depending on the value you choose for GOP mode control
+     * (GopSizeUnits). If you want to allow MediaConvert to automatically determine GOP size, leave GOP size blank and
+     * set GOP mode control to Auto (AUTO). If your output group specifies HLS, DASH, or CMAF, leave GOP size blank and
+     * set GOP mode control to Auto in each output in your output group.
      * 
-     * @return GOP Length (keyframe interval) in frames or seconds. Must be greater than zero.
+     * @return Use this setting only when you set GOP mode control (GopSizeUnits) to Specified, frames (FRAMES) or
+     *         Specified, seconds (SECONDS). Specify the GOP length using a whole number of frames or a decimal value of
+     *         seconds. MediaConvert will interpret this value as frames or seconds depending on the value you choose
+     *         for GOP mode control (GopSizeUnits). If you want to allow MediaConvert to automatically determine GOP
+     *         size, leave GOP size blank and set GOP mode control to Auto (AUTO). If your output group specifies HLS,
+     *         DASH, or CMAF, leave GOP size blank and set GOP mode control to Auto in each output in your output group.
      */
 
     public Double getGopSize() {
@@ -1303,10 +1361,20 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * GOP Length (keyframe interval) in frames or seconds. Must be greater than zero.
+     * Use this setting only when you set GOP mode control (GopSizeUnits) to Specified, frames (FRAMES) or Specified,
+     * seconds (SECONDS). Specify the GOP length using a whole number of frames or a decimal value of seconds.
+     * MediaConvert will interpret this value as frames or seconds depending on the value you choose for GOP mode control
+     * (GopSizeUnits). If you want to allow MediaConvert to automatically determine GOP size, leave GOP size blank and
+     * set GOP mode control to Auto (AUTO). If your output group specifies HLS, DASH, or CMAF, leave GOP size blank and
+     * set GOP mode control to Auto in each output in your output group.
      * 
      * @param gopSize
-     *        GOP Length (keyframe interval) in frames or seconds. Must be greater than zero.
+     *        Use this setting only when you set GOP mode control (GopSizeUnits) to Specified, frames (FRAMES) or
+     *        Specified, seconds (SECONDS). Specify the GOP length using a whole number of frames or a decimal value of
+     *        seconds. MediaConvert will interpret this value as frames or seconds depending on the value you choose for
+     *        GOP mode control (GopSizeUnits). If you want to allow MediaConvert to automatically determine GOP size,
+     *        leave GOP size blank and set GOP mode control to Auto (AUTO). If your output group specifies HLS, DASH, or
+     *        CMAF, leave GOP size blank and set GOP mode control to Auto in each output in your output group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1316,12 +1384,22 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Indicates if the GOP Size in H264 is specified in frames or seconds. If seconds the system will convert the GOP
-     * Size into a frame count at run time.
+     * Specify how the transcoder determines GOP size for this output. We recommend that you have the transcoder
+     * automatically choose this value for you based on characteristics of your input video. To enable this automatic
+     * behavior, choose Auto (AUTO) and and leave GOP size (GopSize) blank. By default, if you don't specify GOP mode
+     * control (GopSizeUnits), MediaConvert will use automatic behavior. If your output group specifies HLS, DASH, or
+     * CMAF, set GOP mode control to Auto and leave GOP size blank in each output in your output group. To explicitly
+     * specify the GOP length, choose Specified, frames (FRAMES) or Specified, seconds (SECONDS) and then provide the GOP
+     * length in the related setting GOP size (GopSize).
      * 
      * @param gopSizeUnits
-     *        Indicates if the GOP Size in H264 is specified in frames or seconds. If seconds the system will convert
-     *        the GOP Size into a frame count at run time.
+     *        Specify how the transcoder determines GOP size for this output. We recommend that you have the transcoder
+     *        automatically choose this value for you based on characteristics of your input video. To enable this
+     *        automatic behavior, choose Auto (AUTO) and and leave GOP size (GopSize) blank. By default, if you don't
+     *        specify GOP mode control (GopSizeUnits), MediaConvert will use automatic behavior. If your output group
+     *        specifies HLS, DASH, or CMAF, set GOP mode control to Auto and leave GOP size blank in each output in your
+     *        output group. To explicitly specify the GOP length, choose Specified, frames (FRAMES) or Specified,
+     *        seconds (SECONDS) and then provide the GOP length in the related setting GOP size (GopSize).
      * @see H264GopSizeUnits
      */
 
@@ -1330,11 +1408,21 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Indicates if the GOP Size in H264 is specified in frames or seconds. If seconds the system will convert the GOP
-     * Size into a frame count at run time.
+     * Specify how the transcoder determines GOP size for this output. We recommend that you have the transcoder
+     * automatically choose this value for you based on characteristics of your input video. To enable this automatic
+     * behavior, choose Auto (AUTO) and and leave GOP size (GopSize) blank. By default, if you don't specify GOP mode
+     * control (GopSizeUnits), MediaConvert will use automatic behavior. If your output group specifies HLS, DASH, or
+     * CMAF, set GOP mode control to Auto and leave GOP size blank in each output in your output group. To explicitly
+     * specify the GOP length, choose Specified, frames (FRAMES) or Specified, seconds (SECONDS) and then provide the GOP
+     * length in the related setting GOP size (GopSize).
      * 
-     * @return Indicates if the GOP Size in H264 is specified in frames or seconds. If seconds the system will convert
-     *         the GOP Size into a frame count at run time.
+     * @return Specify how the transcoder determines GOP size for this output. We recommend that you have the transcoder
+     *         automatically choose this value for you based on characteristics of your input video. To enable this
+     *         automatic behavior, choose Auto (AUTO) and and leave GOP size (GopSize) blank. By default, if you don't
+     *         specify GOP mode control (GopSizeUnits), MediaConvert will use automatic behavior. If your output group
+     *         specifies HLS, DASH, or CMAF, set GOP mode control to Auto and leave GOP size blank in each output in
+     *         your output group. To explicitly specify the GOP length, choose Specified, frames (FRAMES) or Specified,
+     *         seconds (SECONDS) and then provide the GOP length in the related setting GOP size (GopSize).
      * @see H264GopSizeUnits
      */
 
@@ -1343,12 +1431,22 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Indicates if the GOP Size in H264 is specified in frames or seconds. If seconds the system will convert the GOP
-     * Size into a frame count at run time.
+     * Specify how the transcoder determines GOP size for this output. We recommend that you have the transcoder
+     * automatically choose this value for you based on characteristics of your input video. To enable this automatic
+     * behavior, choose Auto (AUTO) and and leave GOP size (GopSize) blank. By default, if you don't specify GOP mode
+     * control (GopSizeUnits), MediaConvert will use automatic behavior. If your output group specifies HLS, DASH, or
+     * CMAF, set GOP mode control to Auto and leave GOP size blank in each output in your output group. To explicitly
+     * specify the GOP length, choose Specified, frames (FRAMES) or Specified, seconds (SECONDS) and then provide the GOP
+     * length in the related setting GOP size (GopSize).
      * 
      * @param gopSizeUnits
-     *        Indicates if the GOP Size in H264 is specified in frames or seconds. If seconds the system will convert
-     *        the GOP Size into a frame count at run time.
+     *        Specify how the transcoder determines GOP size for this output. We recommend that you have the transcoder
+     *        automatically choose this value for you based on characteristics of your input video. To enable this
+     *        automatic behavior, choose Auto (AUTO) and and leave GOP size (GopSize) blank. By default, if you don't
+     *        specify GOP mode control (GopSizeUnits), MediaConvert will use automatic behavior. If your output group
+     *        specifies HLS, DASH, or CMAF, set GOP mode control to Auto and leave GOP size blank in each output in your
+     *        output group. To explicitly specify the GOP length, choose Specified, frames (FRAMES) or Specified,
+     *        seconds (SECONDS) and then provide the GOP length in the related setting GOP size (GopSize).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see H264GopSizeUnits
      */
@@ -1359,12 +1457,22 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Indicates if the GOP Size in H264 is specified in frames or seconds. If seconds the system will convert the GOP
-     * Size into a frame count at run time.
+     * Specify how the transcoder determines GOP size for this output. We recommend that you have the transcoder
+     * automatically choose this value for you based on characteristics of your input video. To enable this automatic
+     * behavior, choose Auto (AUTO) and and leave GOP size (GopSize) blank. By default, if you don't specify GOP mode
+     * control (GopSizeUnits), MediaConvert will use automatic behavior. If your output group specifies HLS, DASH, or
+     * CMAF, set GOP mode control to Auto and leave GOP size blank in each output in your output group. To explicitly
+     * specify the GOP length, choose Specified, frames (FRAMES) or Specified, seconds (SECONDS) and then provide the GOP
+     * length in the related setting GOP size (GopSize).
      * 
      * @param gopSizeUnits
-     *        Indicates if the GOP Size in H264 is specified in frames or seconds. If seconds the system will convert
-     *        the GOP Size into a frame count at run time.
+     *        Specify how the transcoder determines GOP size for this output. We recommend that you have the transcoder
+     *        automatically choose this value for you based on characteristics of your input video. To enable this
+     *        automatic behavior, choose Auto (AUTO) and and leave GOP size (GopSize) blank. By default, if you don't
+     *        specify GOP mode control (GopSizeUnits), MediaConvert will use automatic behavior. If your output group
+     *        specifies HLS, DASH, or CMAF, set GOP mode control to Auto and leave GOP size blank in each output in your
+     *        output group. To explicitly specify the GOP length, choose Specified, frames (FRAMES) or Specified,
+     *        seconds (SECONDS) and then provide the GOP length in the related setting GOP size (GopSize).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see H264GopSizeUnits
      */
@@ -1594,18 +1702,31 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Enforces separation between repeated (cadence) I-frames and I-frames inserted by Scene Change Detection. If a
-     * scene change I-frame is within I-interval frames of a cadence I-frame, the GOP is shrunk and/or stretched to the
-     * scene change I-frame. GOP stretch requires enabling lookahead as well as setting I-interval. The normal cadence
-     * resumes for the next GOP. This setting is only used when Scene Change Detect is enabled. Note: Maximum GOP stretch
-     * = GOP size + Min-I-interval - 1
+     * Use this setting only when you also enable Scene change detection (SceneChangeDetect). This setting determines
+     * how the encoder manages the spacing between I-frames that it inserts as part of the I-frame cadence and the
+     * I-frames that it inserts for Scene change detection. We recommend that you have the transcoder automatically
+     * choose this value for you based on characteristics of your input video. To enable this automatic behavior, keep
+     * the default value by leaving this setting out of your JSON job specification. In the console, do this by keeping
+     * the default empty value. When you explicitly specify a value for this setting, the encoder determines whether to
+     * skip a cadence-driven I-frame by the value you set. For example, if you set Min I interval (minIInterval) to 5 and
+     * a cadence-driven I-frame would fall within 5 frames of a scene-change I-frame, then the encoder skips the
+     * cadence-driven I-frame. In this way, one GOP is shrunk slightly and one GOP is stretched slightly. When the
+     * cadence-driven I-frames are farther from the scene-change I-frame than the value you set, then the encoder leaves
+     * all I-frames in place and the GOPs surrounding the scene change are smaller than the usual cadence GOPs.
      * 
      * @param minIInterval
-     *        Enforces separation between repeated (cadence) I-frames and I-frames inserted by Scene Change Detection.
-     *        If a scene change I-frame is within I-interval frames of a cadence I-frame, the GOP is shrunk and/or
-     *        stretched to the scene change I-frame. GOP stretch requires enabling lookahead as well as setting
-     *        I-interval. The normal cadence resumes for the next GOP. This setting is only used when Scene Change
-     *        Detect is enabled. Note: Maximum GOP stretch = GOP size + Min-I-interval - 1
+     *        Use this setting only when you also enable Scene change detection (SceneChangeDetect). This setting
+     *        determines how the encoder manages the spacing between I-frames that it inserts as part of the I-frame
+     *        cadence and the I-frames that it inserts for Scene change detection. We recommend that you have the
+     *        transcoder automatically choose this value for you based on characteristics of your input video. To enable
+     *        this automatic behavior, keep the default value by leaving this setting out of your JSON job
+     *        specification. In the console, do this by keeping the default empty value. When you explicitly specify a
+     *        value for this setting, the encoder determines whether to skip a cadence-driven I-frame by the value you
+     *        set. For example, if you set Min I interval (minIInterval) to 5 and a cadence-driven I-frame would fall
+     *        within 5 frames of a scene-change I-frame, then the encoder skips the cadence-driven I-frame. In this way,
+     *        one GOP is shrunk slightly and one GOP is stretched slightly. When the cadence-driven I-frames are farther
+     *        from the scene-change I-frame than the value you set, then the encoder leaves all I-frames in place and
+     *        the GOPs surrounding the scene change are smaller than the usual cadence GOPs.
      */
 
     public void setMinIInterval(Integer minIInterval) {
@@ -1613,17 +1734,30 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Enforces separation between repeated (cadence) I-frames and I-frames inserted by Scene Change Detection. If a
-     * scene change I-frame is within I-interval frames of a cadence I-frame, the GOP is shrunk and/or stretched to the
-     * scene change I-frame. GOP stretch requires enabling lookahead as well as setting I-interval. The normal cadence
-     * resumes for the next GOP. This setting is only used when Scene Change Detect is enabled. Note: Maximum GOP stretch
-     * = GOP size + Min-I-interval - 1
+     * Use this setting only when you also enable Scene change detection (SceneChangeDetect). This setting determines
+     * how the encoder manages the spacing between I-frames that it inserts as part of the I-frame cadence and the
+     * I-frames that it inserts for Scene change detection. We recommend that you have the transcoder automatically
+     * choose this value for you based on characteristics of your input video. To enable this automatic behavior, keep
+     * the default value by leaving this setting out of your JSON job specification. In the console, do this by keeping
+     * the default empty value. When you explicitly specify a value for this setting, the encoder determines whether to
+     * skip a cadence-driven I-frame by the value you set. For example, if you set Min I interval (minIInterval) to 5 and
+     * a cadence-driven I-frame would fall within 5 frames of a scene-change I-frame, then the encoder skips the
+     * cadence-driven I-frame. In this way, one GOP is shrunk slightly and one GOP is stretched slightly. When the
+     * cadence-driven I-frames are farther from the scene-change I-frame than the value you set, then the encoder leaves
+     * all I-frames in place and the GOPs surrounding the scene change are smaller than the usual cadence GOPs.
      * 
-     * @return Enforces separation between repeated (cadence) I-frames and I-frames inserted by Scene Change Detection.
-     *         If a scene change I-frame is within I-interval frames of a cadence I-frame, the GOP is shrunk and/or
-     *         stretched to the scene change I-frame. GOP stretch requires enabling lookahead as well as setting
-     *         I-interval. The normal cadence resumes for the next GOP. This setting is only used when Scene Change
-     *         Detect is enabled. Note: Maximum GOP stretch = GOP size + Min-I-interval - 1
+     * @return Use this setting only when you also enable Scene change detection (SceneChangeDetect). This setting
+     *         determines how the encoder manages the spacing between I-frames that it inserts as part of the I-frame
+     *         cadence and the I-frames that it inserts for Scene change detection. We recommend that you have the
+     *         transcoder automatically choose this value for you based on characteristics of your input video. To
+     *         enable this automatic behavior, keep the default value by leaving this setting out of your JSON job
+     *         specification. In the console, do this by keeping the default empty value. When you explicitly specify a
+     *         value for this setting, the encoder determines whether to skip a cadence-driven I-frame by the value you
+     *         set. For example, if you set Min I interval (minIInterval) to 5 and a cadence-driven I-frame would fall
+     *         within 5 frames of a scene-change I-frame, then the encoder skips the cadence-driven I-frame. In this
+     *         way, one GOP is shrunk slightly and one GOP is stretched slightly. When the cadence-driven I-frames are
+     *         farther from the scene-change I-frame than the value you set, then the encoder leaves all I-frames in
+     *         place and the GOPs surrounding the scene change are smaller than the usual cadence GOPs.
      */
 
     public Integer getMinIInterval() {
@@ -1631,18 +1765,31 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Enforces separation between repeated (cadence) I-frames and I-frames inserted by Scene Change Detection. If a
-     * scene change I-frame is within I-interval frames of a cadence I-frame, the GOP is shrunk and/or stretched to the
-     * scene change I-frame. GOP stretch requires enabling lookahead as well as setting I-interval. The normal cadence
-     * resumes for the next GOP. This setting is only used when Scene Change Detect is enabled. Note: Maximum GOP stretch
-     * = GOP size + Min-I-interval - 1
+     * Use this setting only when you also enable Scene change detection (SceneChangeDetect). This setting determines
+     * how the encoder manages the spacing between I-frames that it inserts as part of the I-frame cadence and the
+     * I-frames that it inserts for Scene change detection. We recommend that you have the transcoder automatically
+     * choose this value for you based on characteristics of your input video. To enable this automatic behavior, keep
+     * the default value by leaving this setting out of your JSON job specification. In the console, do this by keeping
+     * the default empty value. When you explicitly specify a value for this setting, the encoder determines whether to
+     * skip a cadence-driven I-frame by the value you set. For example, if you set Min I interval (minIInterval) to 5 and
+     * a cadence-driven I-frame would fall within 5 frames of a scene-change I-frame, then the encoder skips the
+     * cadence-driven I-frame. In this way, one GOP is shrunk slightly and one GOP is stretched slightly. When the
+     * cadence-driven I-frames are farther from the scene-change I-frame than the value you set, then the encoder leaves
+     * all I-frames in place and the GOPs surrounding the scene change are smaller than the usual cadence GOPs.
      * 
      * @param minIInterval
-     *        Enforces separation between repeated (cadence) I-frames and I-frames inserted by Scene Change Detection.
-     *        If a scene change I-frame is within I-interval frames of a cadence I-frame, the GOP is shrunk and/or
-     *        stretched to the scene change I-frame. GOP stretch requires enabling lookahead as well as setting
-     *        I-interval. The normal cadence resumes for the next GOP. This setting is only used when Scene Change
-     *        Detect is enabled. Note: Maximum GOP stretch = GOP size + Min-I-interval - 1
+     *        Use this setting only when you also enable Scene change detection (SceneChangeDetect). This setting
+     *        determines how the encoder manages the spacing between I-frames that it inserts as part of the I-frame
+     *        cadence and the I-frames that it inserts for Scene change detection. We recommend that you have the
+     *        transcoder automatically choose this value for you based on characteristics of your input video. To enable
+     *        this automatic behavior, keep the default value by leaving this setting out of your JSON job
+     *        specification. In the console, do this by keeping the default empty value. When you explicitly specify a
+     *        value for this setting, the encoder determines whether to skip a cadence-driven I-frame by the value you
+     *        set. For example, if you set Min I interval (minIInterval) to 5 and a cadence-driven I-frame would fall
+     *        within 5 frames of a scene-change I-frame, then the encoder skips the cadence-driven I-frame. In this way,
+     *        one GOP is shrunk slightly and one GOP is stretched slightly. When the cadence-driven I-frames are farther
+     *        from the scene-change I-frame than the value you set, then the encoder leaves all I-frames in place and
+     *        the GOPs surrounding the scene change are smaller than the usual cadence GOPs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1652,12 +1799,18 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid values are
-     * whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
+     * This setting to determines the number of B-frames that MediaConvert puts between reference frames in this output.
+     * We recommend that you use automatic behavior to allow the transcoder to choose the best value based on
+     * characteristics of your input video. In the console, choose AUTO to select this automatic behavior. When you
+     * manually edit your JSON job specification, leave this setting out to choose automatic behavior. When you want to
+     * specify this number explicitly, choose a whole number from 0 through 7.
      * 
      * @param numberBFramesBetweenReferenceFrames
-     *        Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid
-     *        values are whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
+     *        This setting to determines the number of B-frames that MediaConvert puts between reference frames in this
+     *        output. We recommend that you use automatic behavior to allow the transcoder to choose the best value
+     *        based on characteristics of your input video. In the console, choose AUTO to select this automatic
+     *        behavior. When you manually edit your JSON job specification, leave this setting out to choose automatic
+     *        behavior. When you want to specify this number explicitly, choose a whole number from 0 through 7.
      */
 
     public void setNumberBFramesBetweenReferenceFrames(Integer numberBFramesBetweenReferenceFrames) {
@@ -1665,11 +1818,17 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid values are
-     * whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
+     * This setting to determines the number of B-frames that MediaConvert puts between reference frames in this output.
+     * We recommend that you use automatic behavior to allow the transcoder to choose the best value based on
+     * characteristics of your input video. In the console, choose AUTO to select this automatic behavior. When you
+     * manually edit your JSON job specification, leave this setting out to choose automatic behavior. When you want to
+     * specify this number explicitly, choose a whole number from 0 through 7.
      * 
-     * @return Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid
-     *         values are whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
+     * @return This setting to determines the number of B-frames that MediaConvert puts between reference frames in this
+     *         output. We recommend that you use automatic behavior to allow the transcoder to choose the best value
+     *         based on characteristics of your input video. In the console, choose AUTO to select this automatic
+     *         behavior. When you manually edit your JSON job specification, leave this setting out to choose automatic
+     *         behavior. When you want to specify this number explicitly, choose a whole number from 0 through 7.
      */
 
     public Integer getNumberBFramesBetweenReferenceFrames() {
@@ -1677,12 +1836,18 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid values are
-     * whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
+     * This setting to determines the number of B-frames that MediaConvert puts between reference frames in this output.
+     * We recommend that you use automatic behavior to allow the transcoder to choose the best value based on
+     * characteristics of your input video. In the console, choose AUTO to select this automatic behavior. When you
+     * manually edit your JSON job specification, leave this setting out to choose automatic behavior. When you want to
+     * specify this number explicitly, choose a whole number from 0 through 7.
      * 
      * @param numberBFramesBetweenReferenceFrames
-     *        Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid
-     *        values are whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
+     *        This setting to determines the number of B-frames that MediaConvert puts between reference frames in this
+     *        output. We recommend that you use automatic behavior to allow the transcoder to choose the best value
+     *        based on characteristics of your input video. In the console, choose AUTO to select this automatic
+     *        behavior. When you manually edit your JSON job specification, leave this setting out to choose automatic
+     *        behavior. When you want to specify this number explicitly, choose a whole number from 0 through 7.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

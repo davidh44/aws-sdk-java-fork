@@ -29,7 +29,8 @@ public enum OperatingSystem {
     CENTOS("CENTOS"),
     ORACLE_LINUX("ORACLE_LINUX"),
     DEBIAN("DEBIAN"),
-    MACOS("MACOS");
+    MACOS("MACOS"),
+    RASPBIAN("RASPBIAN");
 
     private String value;
 

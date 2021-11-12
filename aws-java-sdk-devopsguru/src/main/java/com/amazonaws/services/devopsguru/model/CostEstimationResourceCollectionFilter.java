@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about a filter used to specify which AWS resources are analyzed to create a monthly DevOps Guru cost
- * estimate. For more information, see <a
+ * Information about a filter used to specify which Amazon Web Services resources are analyzed to create a monthly
+ * DevOps Guru cost estimate. For more information, see <a
  * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/cost-estimate.html">Estimate your Amazon DevOps Guru
  * costs</a> and <a href="http://aws.amazon.com/devops-guru/pricing/">Amazon DevOps Guru pricing</a>.
  * </p>
@@ -33,21 +33,21 @@ public class CostEstimationResourceCollectionFilter implements Serializable, Clo
 
     /**
      * <p>
-     * An object that specifies the CloudFormation stack that defines the AWS resources used to create a monthly
-     * estimate for DevOps Guru.
+     * An object that specifies the CloudFormation stack that defines the Amazon Web Services resources used to create a
+     * monthly estimate for DevOps Guru.
      * </p>
      */
     private CloudFormationCostEstimationResourceCollectionFilter cloudFormation;
 
     /**
      * <p>
-     * An object that specifies the CloudFormation stack that defines the AWS resources used to create a monthly
-     * estimate for DevOps Guru.
+     * An object that specifies the CloudFormation stack that defines the Amazon Web Services resources used to create a
+     * monthly estimate for DevOps Guru.
      * </p>
      * 
      * @param cloudFormation
-     *        An object that specifies the CloudFormation stack that defines the AWS resources used to create a monthly
-     *        estimate for DevOps Guru.
+     *        An object that specifies the CloudFormation stack that defines the Amazon Web Services resources used to
+     *        create a monthly estimate for DevOps Guru.
      */
 
     public void setCloudFormation(CloudFormationCostEstimationResourceCollectionFilter cloudFormation) {
@@ -56,12 +56,12 @@ public class CostEstimationResourceCollectionFilter implements Serializable, Clo
 
     /**
      * <p>
-     * An object that specifies the CloudFormation stack that defines the AWS resources used to create a monthly
-     * estimate for DevOps Guru.
+     * An object that specifies the CloudFormation stack that defines the Amazon Web Services resources used to create a
+     * monthly estimate for DevOps Guru.
      * </p>
      * 
-     * @return An object that specifies the CloudFormation stack that defines the AWS resources used to create a monthly
-     *         estimate for DevOps Guru.
+     * @return An object that specifies the CloudFormation stack that defines the Amazon Web Services resources used to
+     *         create a monthly estimate for DevOps Guru.
      */
 
     public CloudFormationCostEstimationResourceCollectionFilter getCloudFormation() {
@@ -70,13 +70,13 @@ public class CostEstimationResourceCollectionFilter implements Serializable, Clo
 
     /**
      * <p>
-     * An object that specifies the CloudFormation stack that defines the AWS resources used to create a monthly
-     * estimate for DevOps Guru.
+     * An object that specifies the CloudFormation stack that defines the Amazon Web Services resources used to create a
+     * monthly estimate for DevOps Guru.
      * </p>
      * 
      * @param cloudFormation
-     *        An object that specifies the CloudFormation stack that defines the AWS resources used to create a monthly
-     *        estimate for DevOps Guru.
+     *        An object that specifies the CloudFormation stack that defines the Amazon Web Services resources used to
+     *        create a monthly estimate for DevOps Guru.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

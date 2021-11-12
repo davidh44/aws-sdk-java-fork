@@ -31,24 +31,27 @@ public class Reference implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A formatted URL that displays to an agent in the Contact Control Panel (CCP)
+     * A valid value for the reference. For example, for a URL reference, a formatted URL that is displayed to an agent
+     * in the Contact Control Panel (CCP).
      * </p>
      */
     private String value;
     /**
      * <p>
-     * A valid URL.
+     * The type of the reference. Only <code>URL</code> type can be added or updated on a contact.
      * </p>
      */
     private String type;
 
     /**
      * <p>
-     * A formatted URL that displays to an agent in the Contact Control Panel (CCP)
+     * A valid value for the reference. For example, for a URL reference, a formatted URL that is displayed to an agent
+     * in the Contact Control Panel (CCP).
      * </p>
      * 
      * @param value
-     *        A formatted URL that displays to an agent in the Contact Control Panel (CCP)
+     *        A valid value for the reference. For example, for a URL reference, a formatted URL that is displayed to an
+     *        agent in the Contact Control Panel (CCP).
      */
 
     public void setValue(String value) {
@@ -57,10 +60,12 @@ public class Reference implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A formatted URL that displays to an agent in the Contact Control Panel (CCP)
+     * A valid value for the reference. For example, for a URL reference, a formatted URL that is displayed to an agent
+     * in the Contact Control Panel (CCP).
      * </p>
      * 
-     * @return A formatted URL that displays to an agent in the Contact Control Panel (CCP)
+     * @return A valid value for the reference. For example, for a URL reference, a formatted URL that is displayed to
+     *         an agent in the Contact Control Panel (CCP).
      */
 
     public String getValue() {
@@ -69,11 +74,13 @@ public class Reference implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A formatted URL that displays to an agent in the Contact Control Panel (CCP)
+     * A valid value for the reference. For example, for a URL reference, a formatted URL that is displayed to an agent
+     * in the Contact Control Panel (CCP).
      * </p>
      * 
      * @param value
-     *        A formatted URL that displays to an agent in the Contact Control Panel (CCP)
+     *        A valid value for the reference. For example, for a URL reference, a formatted URL that is displayed to an
+     *        agent in the Contact Control Panel (CCP).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -84,11 +91,11 @@ public class Reference implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A valid URL.
+     * The type of the reference. Only <code>URL</code> type can be added or updated on a contact.
      * </p>
      * 
      * @param type
-     *        A valid URL.
+     *        The type of the reference. Only <code>URL</code> type can be added or updated on a contact.
      * @see ReferenceType
      */
 
@@ -98,10 +105,10 @@ public class Reference implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A valid URL.
+     * The type of the reference. Only <code>URL</code> type can be added or updated on a contact.
      * </p>
      * 
-     * @return A valid URL.
+     * @return The type of the reference. Only <code>URL</code> type can be added or updated on a contact.
      * @see ReferenceType
      */
 
@@ -111,11 +118,11 @@ public class Reference implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A valid URL.
+     * The type of the reference. Only <code>URL</code> type can be added or updated on a contact.
      * </p>
      * 
      * @param type
-     *        A valid URL.
+     *        The type of the reference. Only <code>URL</code> type can be added or updated on a contact.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ReferenceType
      */
@@ -127,11 +134,11 @@ public class Reference implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A valid URL.
+     * The type of the reference. Only <code>URL</code> type can be added or updated on a contact.
      * </p>
      * 
      * @param type
-     *        A valid URL.
+     *        The type of the reference. Only <code>URL</code> type can be added or updated on a contact.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ReferenceType
      */

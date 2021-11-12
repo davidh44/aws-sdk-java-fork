@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about the integration of DevOps Guru with another AWS service, such as AWS Systems Manager.
+ * Information about the integration of DevOps Guru with another Amazon Web Services service, such as Amazon Web
+ * Services Systems Manager.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/ServiceIntegrationConfig"
@@ -30,21 +31,21 @@ public class ServiceIntegrationConfig implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Information about whether DevOps Guru is configured to create an OpsItem in AWS Systems Manager OpsCenter for
-     * each created insight.
+     * Information about whether DevOps Guru is configured to create an OpsItem in Amazon Web Services Systems Manager
+     * OpsCenter for each created insight.
      * </p>
      */
     private OpsCenterIntegration opsCenter;
 
     /**
      * <p>
-     * Information about whether DevOps Guru is configured to create an OpsItem in AWS Systems Manager OpsCenter for
-     * each created insight.
+     * Information about whether DevOps Guru is configured to create an OpsItem in Amazon Web Services Systems Manager
+     * OpsCenter for each created insight.
      * </p>
      * 
      * @param opsCenter
-     *        Information about whether DevOps Guru is configured to create an OpsItem in AWS Systems Manager OpsCenter
-     *        for each created insight.
+     *        Information about whether DevOps Guru is configured to create an OpsItem in Amazon Web Services Systems
+     *        Manager OpsCenter for each created insight.
      */
 
     public void setOpsCenter(OpsCenterIntegration opsCenter) {
@@ -53,12 +54,12 @@ public class ServiceIntegrationConfig implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Information about whether DevOps Guru is configured to create an OpsItem in AWS Systems Manager OpsCenter for
-     * each created insight.
+     * Information about whether DevOps Guru is configured to create an OpsItem in Amazon Web Services Systems Manager
+     * OpsCenter for each created insight.
      * </p>
      * 
-     * @return Information about whether DevOps Guru is configured to create an OpsItem in AWS Systems Manager OpsCenter
-     *         for each created insight.
+     * @return Information about whether DevOps Guru is configured to create an OpsItem in Amazon Web Services Systems
+     *         Manager OpsCenter for each created insight.
      */
 
     public OpsCenterIntegration getOpsCenter() {
@@ -67,13 +68,13 @@ public class ServiceIntegrationConfig implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Information about whether DevOps Guru is configured to create an OpsItem in AWS Systems Manager OpsCenter for
-     * each created insight.
+     * Information about whether DevOps Guru is configured to create an OpsItem in Amazon Web Services Systems Manager
+     * OpsCenter for each created insight.
      * </p>
      * 
      * @param opsCenter
-     *        Information about whether DevOps Guru is configured to create an OpsItem in AWS Systems Manager OpsCenter
-     *        for each created insight.
+     *        Information about whether DevOps Guru is configured to create an OpsItem in Amazon Web Services Systems
+     *        Manager OpsCenter for each created insight.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

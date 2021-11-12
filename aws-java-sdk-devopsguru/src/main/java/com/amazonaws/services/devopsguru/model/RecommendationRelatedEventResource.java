@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about an AWS resource that emitted and event that is related to a recommendation in an insight.
+ * Information about an Amazon Web Services resource that emitted and event that is related to a recommendation in an
+ * insight.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/RecommendationRelatedEventResource"

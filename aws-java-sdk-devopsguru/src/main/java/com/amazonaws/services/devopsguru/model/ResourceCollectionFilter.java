@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about a filter used to specify which AWS resources are analyzed for anomalous behavior by DevOps Guru.
+ * Information about a filter used to specify which Amazon Web Services resources are analyzed for anomalous behavior by
+ * DevOps Guru.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/ResourceCollectionFilter"
@@ -30,27 +31,27 @@ public class ResourceCollectionFilter implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Information about AWS CloudFormation stacks. You can use up to 500 stacks to specify which AWS resources in your
-     * account to analyze. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html">Stacks</a> in the <i>AWS
-     * CloudFormation User Guide</i>.
+     * Information about Amazon Web Services CloudFormation stacks. You can use up to 500 stacks to specify which Amazon
+     * Web Services resources in your account to analyze. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html">Stacks</a> in the <i>Amazon Web
+     * Services CloudFormation User Guide</i>.
      * </p>
      */
     private CloudFormationCollectionFilter cloudFormation;
 
     /**
      * <p>
-     * Information about AWS CloudFormation stacks. You can use up to 500 stacks to specify which AWS resources in your
-     * account to analyze. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html">Stacks</a> in the <i>AWS
-     * CloudFormation User Guide</i>.
+     * Information about Amazon Web Services CloudFormation stacks. You can use up to 500 stacks to specify which Amazon
+     * Web Services resources in your account to analyze. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html">Stacks</a> in the <i>Amazon Web
+     * Services CloudFormation User Guide</i>.
      * </p>
      * 
      * @param cloudFormation
-     *        Information about AWS CloudFormation stacks. You can use up to 500 stacks to specify which AWS resources
-     *        in your account to analyze. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html">Stacks</a> in the <i>AWS
-     *        CloudFormation User Guide</i>.
+     *        Information about Amazon Web Services CloudFormation stacks. You can use up to 500 stacks to specify which
+     *        Amazon Web Services resources in your account to analyze. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html">Stacks</a> in the
+     *        <i>Amazon Web Services CloudFormation User Guide</i>.
      */
 
     public void setCloudFormation(CloudFormationCollectionFilter cloudFormation) {
@@ -59,16 +60,16 @@ public class ResourceCollectionFilter implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Information about AWS CloudFormation stacks. You can use up to 500 stacks to specify which AWS resources in your
-     * account to analyze. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html">Stacks</a> in the <i>AWS
-     * CloudFormation User Guide</i>.
+     * Information about Amazon Web Services CloudFormation stacks. You can use up to 500 stacks to specify which Amazon
+     * Web Services resources in your account to analyze. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html">Stacks</a> in the <i>Amazon Web
+     * Services CloudFormation User Guide</i>.
      * </p>
      * 
-     * @return Information about AWS CloudFormation stacks. You can use up to 500 stacks to specify which AWS resources
-     *         in your account to analyze. For more information, see <a
+     * @return Information about Amazon Web Services CloudFormation stacks. You can use up to 500 stacks to specify
+     *         which Amazon Web Services resources in your account to analyze. For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html">Stacks</a> in the
-     *         <i>AWS CloudFormation User Guide</i>.
+     *         <i>Amazon Web Services CloudFormation User Guide</i>.
      */
 
     public CloudFormationCollectionFilter getCloudFormation() {
@@ -77,17 +78,17 @@ public class ResourceCollectionFilter implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Information about AWS CloudFormation stacks. You can use up to 500 stacks to specify which AWS resources in your
-     * account to analyze. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html">Stacks</a> in the <i>AWS
-     * CloudFormation User Guide</i>.
+     * Information about Amazon Web Services CloudFormation stacks. You can use up to 500 stacks to specify which Amazon
+     * Web Services resources in your account to analyze. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html">Stacks</a> in the <i>Amazon Web
+     * Services CloudFormation User Guide</i>.
      * </p>
      * 
      * @param cloudFormation
-     *        Information about AWS CloudFormation stacks. You can use up to 500 stacks to specify which AWS resources
-     *        in your account to analyze. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html">Stacks</a> in the <i>AWS
-     *        CloudFormation User Guide</i>.
+     *        Information about Amazon Web Services CloudFormation stacks. You can use up to 500 stacks to specify which
+     *        Amazon Web Services resources in your account to analyze. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html">Stacks</a> in the
+     *        <i>Amazon Web Services CloudFormation User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

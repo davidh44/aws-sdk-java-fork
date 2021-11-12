@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about updating the integration status of an AWS service, such as AWS Systems Manager, with DevOps Guru.
+ * Information about updating the integration status of an Amazon Web Services service, such as Amazon Web Services
+ * Systems Manager, with DevOps Guru.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/UpdateServiceIntegrationConfig"

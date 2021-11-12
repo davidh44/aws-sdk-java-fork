@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains the names of AWS CloudFormation stacks used to update a collection of stacks. You can specify up to 500 AWS
- * CloudFormation stacks.
+ * Contains the names of Amazon Web Services CloudFormation stacks used to update a collection of stacks. You can
+ * specify up to 500 Amazon Web Services CloudFormation stacks.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/UpdateCloudFormationCollectionFilter"
@@ -31,20 +31,20 @@ public class UpdateCloudFormationCollectionFilter implements Serializable, Clone
 
     /**
      * <p>
-     * An array of the names of the AWS CloudFormation stacks to update. You can specify up to 500 AWS CloudFormation
-     * stacks.
+     * An array of the names of the Amazon Web Services CloudFormation stacks to update. You can specify up to 500
+     * Amazon Web Services CloudFormation stacks.
      * </p>
      */
     private java.util.List<String> stackNames;
 
     /**
      * <p>
-     * An array of the names of the AWS CloudFormation stacks to update. You can specify up to 500 AWS CloudFormation
-     * stacks.
+     * An array of the names of the Amazon Web Services CloudFormation stacks to update. You can specify up to 500
+     * Amazon Web Services CloudFormation stacks.
      * </p>
      * 
-     * @return An array of the names of the AWS CloudFormation stacks to update. You can specify up to 500 AWS
-     *         CloudFormation stacks.
+     * @return An array of the names of the Amazon Web Services CloudFormation stacks to update. You can specify up to
+     *         500 Amazon Web Services CloudFormation stacks.
      */
 
     public java.util.List<String> getStackNames() {
@@ -53,13 +53,13 @@ public class UpdateCloudFormationCollectionFilter implements Serializable, Clone
 
     /**
      * <p>
-     * An array of the names of the AWS CloudFormation stacks to update. You can specify up to 500 AWS CloudFormation
-     * stacks.
+     * An array of the names of the Amazon Web Services CloudFormation stacks to update. You can specify up to 500
+     * Amazon Web Services CloudFormation stacks.
      * </p>
      * 
      * @param stackNames
-     *        An array of the names of the AWS CloudFormation stacks to update. You can specify up to 500 AWS
-     *        CloudFormation stacks.
+     *        An array of the names of the Amazon Web Services CloudFormation stacks to update. You can specify up to
+     *        500 Amazon Web Services CloudFormation stacks.
      */
 
     public void setStackNames(java.util.Collection<String> stackNames) {
@@ -73,8 +73,8 @@ public class UpdateCloudFormationCollectionFilter implements Serializable, Clone
 
     /**
      * <p>
-     * An array of the names of the AWS CloudFormation stacks to update. You can specify up to 500 AWS CloudFormation
-     * stacks.
+     * An array of the names of the Amazon Web Services CloudFormation stacks to update. You can specify up to 500
+     * Amazon Web Services CloudFormation stacks.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -83,8 +83,8 @@ public class UpdateCloudFormationCollectionFilter implements Serializable, Clone
      * </p>
      * 
      * @param stackNames
-     *        An array of the names of the AWS CloudFormation stacks to update. You can specify up to 500 AWS
-     *        CloudFormation stacks.
+     *        An array of the names of the Amazon Web Services CloudFormation stacks to update. You can specify up to
+     *        500 Amazon Web Services CloudFormation stacks.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -100,13 +100,13 @@ public class UpdateCloudFormationCollectionFilter implements Serializable, Clone
 
     /**
      * <p>
-     * An array of the names of the AWS CloudFormation stacks to update. You can specify up to 500 AWS CloudFormation
-     * stacks.
+     * An array of the names of the Amazon Web Services CloudFormation stacks to update. You can specify up to 500
+     * Amazon Web Services CloudFormation stacks.
      * </p>
      * 
      * @param stackNames
-     *        An array of the names of the AWS CloudFormation stacks to update. You can specify up to 500 AWS
-     *        CloudFormation stacks.
+     *        An array of the names of the Amazon Web Services CloudFormation stacks to update. You can specify up to
+     *        500 Amazon Web Services CloudFormation stacks.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

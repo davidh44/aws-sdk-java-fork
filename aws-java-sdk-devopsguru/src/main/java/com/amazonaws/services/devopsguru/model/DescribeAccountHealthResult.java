@@ -25,36 +25,37 @@ public class DescribeAccountHealthResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An integer that specifies the number of open reactive insights in your AWS account.
+     * An integer that specifies the number of open reactive insights in your Amazon Web Services account.
      * </p>
      */
     private Integer openReactiveInsights;
     /**
      * <p>
-     * An integer that specifies the number of open proactive insights in your AWS account.
+     * An integer that specifies the number of open proactive insights in your Amazon Web Services account.
      * </p>
      */
     private Integer openProactiveInsights;
     /**
      * <p>
-     * An integer that specifies the number of metrics that have been analyzed in your AWS account.
+     * An integer that specifies the number of metrics that have been analyzed in your Amazon Web Services account.
      * </p>
      */
     private Integer metricsAnalyzed;
     /**
      * <p>
-     * The number of Amazon DevOps Guru resource analysis hours billed to the current AWS account in the last hour.
+     * The number of Amazon DevOps Guru resource analysis hours billed to the current Amazon Web Services account in the
+     * last hour.
      * </p>
      */
     private Long resourceHours;
 
     /**
      * <p>
-     * An integer that specifies the number of open reactive insights in your AWS account.
+     * An integer that specifies the number of open reactive insights in your Amazon Web Services account.
      * </p>
      * 
      * @param openReactiveInsights
-     *        An integer that specifies the number of open reactive insights in your AWS account.
+     *        An integer that specifies the number of open reactive insights in your Amazon Web Services account.
      */
 
     public void setOpenReactiveInsights(Integer openReactiveInsights) {
@@ -63,10 +64,10 @@ public class DescribeAccountHealthResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An integer that specifies the number of open reactive insights in your AWS account.
+     * An integer that specifies the number of open reactive insights in your Amazon Web Services account.
      * </p>
      * 
-     * @return An integer that specifies the number of open reactive insights in your AWS account.
+     * @return An integer that specifies the number of open reactive insights in your Amazon Web Services account.
      */
 
     public Integer getOpenReactiveInsights() {
@@ -75,11 +76,11 @@ public class DescribeAccountHealthResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An integer that specifies the number of open reactive insights in your AWS account.
+     * An integer that specifies the number of open reactive insights in your Amazon Web Services account.
      * </p>
      * 
      * @param openReactiveInsights
-     *        An integer that specifies the number of open reactive insights in your AWS account.
+     *        An integer that specifies the number of open reactive insights in your Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -90,11 +91,11 @@ public class DescribeAccountHealthResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An integer that specifies the number of open proactive insights in your AWS account.
+     * An integer that specifies the number of open proactive insights in your Amazon Web Services account.
      * </p>
      * 
      * @param openProactiveInsights
-     *        An integer that specifies the number of open proactive insights in your AWS account.
+     *        An integer that specifies the number of open proactive insights in your Amazon Web Services account.
      */
 
     public void setOpenProactiveInsights(Integer openProactiveInsights) {
@@ -103,10 +104,10 @@ public class DescribeAccountHealthResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An integer that specifies the number of open proactive insights in your AWS account.
+     * An integer that specifies the number of open proactive insights in your Amazon Web Services account.
      * </p>
      * 
-     * @return An integer that specifies the number of open proactive insights in your AWS account.
+     * @return An integer that specifies the number of open proactive insights in your Amazon Web Services account.
      */
 
     public Integer getOpenProactiveInsights() {
@@ -115,11 +116,11 @@ public class DescribeAccountHealthResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An integer that specifies the number of open proactive insights in your AWS account.
+     * An integer that specifies the number of open proactive insights in your Amazon Web Services account.
      * </p>
      * 
      * @param openProactiveInsights
-     *        An integer that specifies the number of open proactive insights in your AWS account.
+     *        An integer that specifies the number of open proactive insights in your Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -130,11 +131,12 @@ public class DescribeAccountHealthResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An integer that specifies the number of metrics that have been analyzed in your AWS account.
+     * An integer that specifies the number of metrics that have been analyzed in your Amazon Web Services account.
      * </p>
      * 
      * @param metricsAnalyzed
-     *        An integer that specifies the number of metrics that have been analyzed in your AWS account.
+     *        An integer that specifies the number of metrics that have been analyzed in your Amazon Web Services
+     *        account.
      */
 
     public void setMetricsAnalyzed(Integer metricsAnalyzed) {
@@ -143,10 +145,11 @@ public class DescribeAccountHealthResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An integer that specifies the number of metrics that have been analyzed in your AWS account.
+     * An integer that specifies the number of metrics that have been analyzed in your Amazon Web Services account.
      * </p>
      * 
-     * @return An integer that specifies the number of metrics that have been analyzed in your AWS account.
+     * @return An integer that specifies the number of metrics that have been analyzed in your Amazon Web Services
+     *         account.
      */
 
     public Integer getMetricsAnalyzed() {
@@ -155,11 +158,12 @@ public class DescribeAccountHealthResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An integer that specifies the number of metrics that have been analyzed in your AWS account.
+     * An integer that specifies the number of metrics that have been analyzed in your Amazon Web Services account.
      * </p>
      * 
      * @param metricsAnalyzed
-     *        An integer that specifies the number of metrics that have been analyzed in your AWS account.
+     *        An integer that specifies the number of metrics that have been analyzed in your Amazon Web Services
+     *        account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -170,12 +174,13 @@ public class DescribeAccountHealthResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The number of Amazon DevOps Guru resource analysis hours billed to the current AWS account in the last hour.
+     * The number of Amazon DevOps Guru resource analysis hours billed to the current Amazon Web Services account in the
+     * last hour.
      * </p>
      * 
      * @param resourceHours
-     *        The number of Amazon DevOps Guru resource analysis hours billed to the current AWS account in the last
-     *        hour.
+     *        The number of Amazon DevOps Guru resource analysis hours billed to the current Amazon Web Services account
+     *        in the last hour.
      */
 
     public void setResourceHours(Long resourceHours) {
@@ -184,11 +189,12 @@ public class DescribeAccountHealthResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The number of Amazon DevOps Guru resource analysis hours billed to the current AWS account in the last hour.
+     * The number of Amazon DevOps Guru resource analysis hours billed to the current Amazon Web Services account in the
+     * last hour.
      * </p>
      * 
-     * @return The number of Amazon DevOps Guru resource analysis hours billed to the current AWS account in the last
-     *         hour.
+     * @return The number of Amazon DevOps Guru resource analysis hours billed to the current Amazon Web Services
+     *         account in the last hour.
      */
 
     public Long getResourceHours() {
@@ -197,12 +203,13 @@ public class DescribeAccountHealthResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The number of Amazon DevOps Guru resource analysis hours billed to the current AWS account in the last hour.
+     * The number of Amazon DevOps Guru resource analysis hours billed to the current Amazon Web Services account in the
+     * last hour.
      * </p>
      * 
      * @param resourceHours
-     *        The number of Amazon DevOps Guru resource analysis hours billed to the current AWS account in the last
-     *        hour.
+     *        The number of Amazon DevOps Guru resource analysis hours billed to the current Amazon Web Services account
+     *        in the last hour.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,16 +27,16 @@ import java.util.concurrent.ExecutorService;
  * <p>
  * <p>
  * Amazon DevOps Guru is a fully managed service that helps you identify anomalous behavior in business critical
- * operational applications. You specify the AWS resources that you want DevOps Guru to cover, then the Amazon
- * CloudWatch metrics and AWS CloudTrail events related to those resources are analyzed. When anomalous behavior is
- * detected, DevOps Guru creates an <i>insight</i> that includes recommendations, related events, and related metrics
- * that can help you improve your operational applications. For more information, see <a
+ * operational applications. You specify the Amazon Web Services resources that you want DevOps Guru to cover, then the
+ * Amazon CloudWatch metrics and Amazon Web Services CloudTrail events related to those resources are analyzed. When
+ * anomalous behavior is detected, DevOps Guru creates an <i>insight</i> that includes recommendations, related events,
+ * and related metrics that can help you improve your operational applications. For more information, see <a
  * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/welcome.html">What is Amazon DevOps Guru</a>.
  * </p>
  * <p>
  * You can specify 1 or 2 Amazon Simple Notification Service topics so you are notified every time a new insight is
- * created. You can also enable DevOps Guru to generate an OpsItem in AWS Systems Manager for each insight to help you
- * manage and track your work addressing insights.
+ * created. You can also enable DevOps Guru to generate an OpsItem in Amazon Web Services Systems Manager for each
+ * insight to help you manage and track your work addressing insights.
  * </p>
  * <p>
  * To learn about the DevOps Guru workflow, see <a
@@ -274,6 +274,107 @@ public class AmazonDevOpsGuruAsyncClient extends AmazonDevOpsGuruClient implemen
 
                 try {
                     result = executeDescribeInsight(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeOrganizationHealthResult> describeOrganizationHealthAsync(DescribeOrganizationHealthRequest request) {
+
+        return describeOrganizationHealthAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeOrganizationHealthResult> describeOrganizationHealthAsync(final DescribeOrganizationHealthRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeOrganizationHealthRequest, DescribeOrganizationHealthResult> asyncHandler) {
+        final DescribeOrganizationHealthRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeOrganizationHealthResult>() {
+            @Override
+            public DescribeOrganizationHealthResult call() throws Exception {
+                DescribeOrganizationHealthResult result = null;
+
+                try {
+                    result = executeDescribeOrganizationHealth(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeOrganizationOverviewResult> describeOrganizationOverviewAsync(DescribeOrganizationOverviewRequest request) {
+
+        return describeOrganizationOverviewAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeOrganizationOverviewResult> describeOrganizationOverviewAsync(final DescribeOrganizationOverviewRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeOrganizationOverviewRequest, DescribeOrganizationOverviewResult> asyncHandler) {
+        final DescribeOrganizationOverviewRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeOrganizationOverviewResult>() {
+            @Override
+            public DescribeOrganizationOverviewResult call() throws Exception {
+                DescribeOrganizationOverviewResult result = null;
+
+                try {
+                    result = executeDescribeOrganizationOverview(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeOrganizationResourceCollectionHealthResult> describeOrganizationResourceCollectionHealthAsync(
+            DescribeOrganizationResourceCollectionHealthRequest request) {
+
+        return describeOrganizationResourceCollectionHealthAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeOrganizationResourceCollectionHealthResult> describeOrganizationResourceCollectionHealthAsync(
+            final DescribeOrganizationResourceCollectionHealthRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeOrganizationResourceCollectionHealthRequest, DescribeOrganizationResourceCollectionHealthResult> asyncHandler) {
+        final DescribeOrganizationResourceCollectionHealthRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeOrganizationResourceCollectionHealthResult>() {
+            @Override
+            public DescribeOrganizationResourceCollectionHealthResult call() throws Exception {
+                DescribeOrganizationResourceCollectionHealthResult result = null;
+
+                try {
+                    result = executeDescribeOrganizationResourceCollectionHealth(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -556,6 +657,39 @@ public class AmazonDevOpsGuruAsyncClient extends AmazonDevOpsGuruClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<ListOrganizationInsightsResult> listOrganizationInsightsAsync(ListOrganizationInsightsRequest request) {
+
+        return listOrganizationInsightsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListOrganizationInsightsResult> listOrganizationInsightsAsync(final ListOrganizationInsightsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListOrganizationInsightsRequest, ListOrganizationInsightsResult> asyncHandler) {
+        final ListOrganizationInsightsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListOrganizationInsightsResult>() {
+            @Override
+            public ListOrganizationInsightsResult call() throws Exception {
+                ListOrganizationInsightsResult result = null;
+
+                try {
+                    result = executeListOrganizationInsights(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListRecommendationsResult> listRecommendationsAsync(ListRecommendationsRequest request) {
 
         return listRecommendationsAsync(request, null);
@@ -672,6 +806,39 @@ public class AmazonDevOpsGuruAsyncClient extends AmazonDevOpsGuruClient implemen
 
                 try {
                     result = executeSearchInsights(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchOrganizationInsightsResult> searchOrganizationInsightsAsync(SearchOrganizationInsightsRequest request) {
+
+        return searchOrganizationInsightsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchOrganizationInsightsResult> searchOrganizationInsightsAsync(final SearchOrganizationInsightsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<SearchOrganizationInsightsRequest, SearchOrganizationInsightsResult> asyncHandler) {
+        final SearchOrganizationInsightsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<SearchOrganizationInsightsResult>() {
+            @Override
+            public SearchOrganizationInsightsResult call() throws Exception {
+                SearchOrganizationInsightsResult result = null;
+
+                try {
+                    result = executeSearchOrganizationInsights(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

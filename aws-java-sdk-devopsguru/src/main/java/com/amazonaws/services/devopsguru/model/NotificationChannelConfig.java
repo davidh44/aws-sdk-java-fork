@@ -42,10 +42,10 @@ public class NotificationChannelConfig implements Serializable, Cloneable, Struc
      * cross account Amazon SNS topics</a>.
      * </p>
      * <p>
-     * If you use an Amazon SNS topic that is encrypted by an AWS Key Management Service customer-managed key (CMK),
-     * then you must add permissions to the CMK. For more information, see <a
-     * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-kms-permissions.html">Permissions for AWS
-     * KMS–encrypted Amazon SNS topics</a>.
+     * If you use an Amazon SNS topic that is encrypted by an Amazon Web Services Key Management Service
+     * customer-managed key (CMK), then you must add permissions to the CMK. For more information, see <a
+     * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-kms-permissions.html">Permissions for Amazon
+     * Web Services KMS–encrypted Amazon SNS topics</a>.
      * </p>
      */
     private SnsChannelConfig sns;
@@ -63,10 +63,10 @@ public class NotificationChannelConfig implements Serializable, Cloneable, Struc
      * cross account Amazon SNS topics</a>.
      * </p>
      * <p>
-     * If you use an Amazon SNS topic that is encrypted by an AWS Key Management Service customer-managed key (CMK),
-     * then you must add permissions to the CMK. For more information, see <a
-     * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-kms-permissions.html">Permissions for AWS
-     * KMS–encrypted Amazon SNS topics</a>.
+     * If you use an Amazon SNS topic that is encrypted by an Amazon Web Services Key Management Service
+     * customer-managed key (CMK), then you must add permissions to the CMK. For more information, see <a
+     * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-kms-permissions.html">Permissions for Amazon
+     * Web Services KMS–encrypted Amazon SNS topics</a>.
      * </p>
      * 
      * @param sns
@@ -80,10 +80,10 @@ public class NotificationChannelConfig implements Serializable, Cloneable, Struc
      *        for cross account Amazon SNS topics</a>.
      *        </p>
      *        <p>
-     *        If you use an Amazon SNS topic that is encrypted by an AWS Key Management Service customer-managed key
-     *        (CMK), then you must add permissions to the CMK. For more information, see <a
+     *        If you use an Amazon SNS topic that is encrypted by an Amazon Web Services Key Management Service
+     *        customer-managed key (CMK), then you must add permissions to the CMK. For more information, see <a
      *        href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-kms-permissions.html">Permissions for
-     *        AWS KMS–encrypted Amazon SNS topics</a>.
+     *        Amazon Web Services KMS–encrypted Amazon SNS topics</a>.
      */
 
     public void setSns(SnsChannelConfig sns) {
@@ -103,10 +103,10 @@ public class NotificationChannelConfig implements Serializable, Cloneable, Struc
      * cross account Amazon SNS topics</a>.
      * </p>
      * <p>
-     * If you use an Amazon SNS topic that is encrypted by an AWS Key Management Service customer-managed key (CMK),
-     * then you must add permissions to the CMK. For more information, see <a
-     * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-kms-permissions.html">Permissions for AWS
-     * KMS–encrypted Amazon SNS topics</a>.
+     * If you use an Amazon SNS topic that is encrypted by an Amazon Web Services Key Management Service
+     * customer-managed key (CMK), then you must add permissions to the CMK. For more information, see <a
+     * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-kms-permissions.html">Permissions for Amazon
+     * Web Services KMS–encrypted Amazon SNS topics</a>.
      * </p>
      * 
      * @return Information about a notification channel configured in DevOps Guru to send notifications when insights
@@ -119,10 +119,10 @@ public class NotificationChannelConfig implements Serializable, Cloneable, Struc
      *         for cross account Amazon SNS topics</a>.
      *         </p>
      *         <p>
-     *         If you use an Amazon SNS topic that is encrypted by an AWS Key Management Service customer-managed key
-     *         (CMK), then you must add permissions to the CMK. For more information, see <a
+     *         If you use an Amazon SNS topic that is encrypted by an Amazon Web Services Key Management Service
+     *         customer-managed key (CMK), then you must add permissions to the CMK. For more information, see <a
      *         href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-kms-permissions.html">Permissions for
-     *         AWS KMS–encrypted Amazon SNS topics</a>.
+     *         Amazon Web Services KMS–encrypted Amazon SNS topics</a>.
      */
 
     public SnsChannelConfig getSns() {
@@ -142,10 +142,10 @@ public class NotificationChannelConfig implements Serializable, Cloneable, Struc
      * cross account Amazon SNS topics</a>.
      * </p>
      * <p>
-     * If you use an Amazon SNS topic that is encrypted by an AWS Key Management Service customer-managed key (CMK),
-     * then you must add permissions to the CMK. For more information, see <a
-     * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-kms-permissions.html">Permissions for AWS
-     * KMS–encrypted Amazon SNS topics</a>.
+     * If you use an Amazon SNS topic that is encrypted by an Amazon Web Services Key Management Service
+     * customer-managed key (CMK), then you must add permissions to the CMK. For more information, see <a
+     * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-kms-permissions.html">Permissions for Amazon
+     * Web Services KMS–encrypted Amazon SNS topics</a>.
      * </p>
      * 
      * @param sns
@@ -159,10 +159,10 @@ public class NotificationChannelConfig implements Serializable, Cloneable, Struc
      *        for cross account Amazon SNS topics</a>.
      *        </p>
      *        <p>
-     *        If you use an Amazon SNS topic that is encrypted by an AWS Key Management Service customer-managed key
-     *        (CMK), then you must add permissions to the CMK. For more information, see <a
+     *        If you use an Amazon SNS topic that is encrypted by an Amazon Web Services Key Management Service
+     *        customer-managed key (CMK), then you must add permissions to the CMK. For more information, see <a
      *        href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-kms-permissions.html">Permissions for
-     *        AWS KMS–encrypted Amazon SNS topics</a>.
+     *        Amazon Web Services KMS–encrypted Amazon SNS topics</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

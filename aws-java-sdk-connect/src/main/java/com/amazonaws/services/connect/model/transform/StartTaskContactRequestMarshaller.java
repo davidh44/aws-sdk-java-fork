@@ -48,6 +48,8 @@ public class StartTaskContactRequestMarshaller {
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ClientToken")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
+    private static final MarshallingInfo<java.util.Date> SCHEDULEDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ScheduledTime").timestampFormat("unixTimestamp").build();
 
     private static final StartTaskContactRequestMarshaller instance = new StartTaskContactRequestMarshaller();
 
@@ -73,6 +75,7 @@ public class StartTaskContactRequestMarshaller {
             protocolMarshaller.marshall(startTaskContactRequest.getReferences(), REFERENCES_BINDING);
             protocolMarshaller.marshall(startTaskContactRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(startTaskContactRequest.getClientToken(), CLIENTTOKEN_BINDING);
+            protocolMarshaller.marshall(startTaskContactRequest.getScheduledTime(), SCHEDULEDTIME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

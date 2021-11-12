@@ -28,16 +28,16 @@ import com.amazonaws.services.devopsguru.model.*;
  * <p>
  * <p>
  * Amazon DevOps Guru is a fully managed service that helps you identify anomalous behavior in business critical
- * operational applications. You specify the AWS resources that you want DevOps Guru to cover, then the Amazon
- * CloudWatch metrics and AWS CloudTrail events related to those resources are analyzed. When anomalous behavior is
- * detected, DevOps Guru creates an <i>insight</i> that includes recommendations, related events, and related metrics
- * that can help you improve your operational applications. For more information, see <a
+ * operational applications. You specify the Amazon Web Services resources that you want DevOps Guru to cover, then the
+ * Amazon CloudWatch metrics and Amazon Web Services CloudTrail events related to those resources are analyzed. When
+ * anomalous behavior is detected, DevOps Guru creates an <i>insight</i> that includes recommendations, related events,
+ * and related metrics that can help you improve your operational applications. For more information, see <a
  * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/welcome.html">What is Amazon DevOps Guru</a>.
  * </p>
  * <p>
  * You can specify 1 or 2 Amazon Simple Notification Service topics so you are notified every time a new insight is
- * created. You can also enable DevOps Guru to generate an OpsItem in AWS Systems Manager for each insight to help you
- * manage and track your work addressing insights.
+ * created. You can also enable DevOps Guru to generate an OpsItem in Amazon Web Services Systems Manager for each
+ * insight to help you manage and track your work addressing insights.
  * </p>
  * <p>
  * To learn about the DevOps Guru workflow, see <a
@@ -70,10 +70,10 @@ public interface AmazonDevOpsGuru {
      * cross account Amazon SNS topics</a>.
      * </p>
      * <p>
-     * If you use an Amazon SNS topic that is encrypted by an AWS Key Management Service customer-managed key (CMK),
-     * then you must add permissions to the CMK. For more information, see <a
-     * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-kms-permissions.html">Permissions for AWS
-     * KMS–encrypted Amazon SNS topics</a>.
+     * If you use an Amazon SNS topic that is encrypted by an Amazon Web Services Key Management Service
+     * customer-managed key (CMK), then you must add permissions to the CMK. For more information, see <a
+     * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-kms-permissions.html">Permissions for Amazon
+     * Web Services KMS–encrypted Amazon SNS topics</a>.
      * </p>
      * 
      * @param addNotificationChannelRequest
@@ -104,7 +104,8 @@ public interface AmazonDevOpsGuru {
     /**
      * <p>
      * Returns the number of open reactive insights, the number of open proactive insights, and the number of metrics
-     * analyzed in your AWS account. Use these numbers to gauge the health of operations in your AWS account.
+     * analyzed in your Amazon Web Services account. Use these numbers to gauge the health of operations in your Amazon
+     * Web Services account.
      * </p>
      * 
      * @param describeAccountHealthRequest
@@ -179,7 +180,7 @@ public interface AmazonDevOpsGuru {
 
     /**
      * <p>
-     * Returns the most recent feedback submitted in the current AWS account and Region.
+     * Returns the most recent feedback submitted in the current Amazon Web Services account and Region.
      * </p>
      * 
      * @param describeFeedbackRequest
@@ -231,11 +232,87 @@ public interface AmazonDevOpsGuru {
 
     /**
      * <p>
+     * Returns active insights, predictive insights, and resource hours analyzed in last hour.
+     * </p>
+     * 
+     * @param describeOrganizationHealthRequest
+     * @return Result of the DescribeOrganizationHealth operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have permissions to perform the requested operation. The user or role that is making the
+     *         request must have at least one IAM permissions policy attached that grants the required permissions. For
+     *         more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access
+     *         Management</a> in the <i>IAM User Guide</i>.
+     * @throws InternalServerException
+     *         An internal failure in an Amazon service occurred.
+     * @throws ThrottlingException
+     *         The request was denied due to a request throttling.
+     * @throws ValidationException
+     *         Contains information about data passed in to a field during a request that is not valid.
+     * @sample AmazonDevOpsGuru.DescribeOrganizationHealth
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeOrganizationHealth"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeOrganizationHealthResult describeOrganizationHealth(DescribeOrganizationHealthRequest describeOrganizationHealthRequest);
+
+    /**
+     * <p>
+     * Returns an overview of your organization's history based on the specified time range. The overview includes the
+     * total reactive and proactive insights.
+     * </p>
+     * 
+     * @param describeOrganizationOverviewRequest
+     * @return Result of the DescribeOrganizationOverview operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have permissions to perform the requested operation. The user or role that is making the
+     *         request must have at least one IAM permissions policy attached that grants the required permissions. For
+     *         more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access
+     *         Management</a> in the <i>IAM User Guide</i>.
+     * @throws InternalServerException
+     *         An internal failure in an Amazon service occurred.
+     * @throws ThrottlingException
+     *         The request was denied due to a request throttling.
+     * @throws ValidationException
+     *         Contains information about data passed in to a field during a request that is not valid.
+     * @sample AmazonDevOpsGuru.DescribeOrganizationOverview
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeOrganizationOverview"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeOrganizationOverviewResult describeOrganizationOverview(DescribeOrganizationOverviewRequest describeOrganizationOverviewRequest);
+
+    /**
+     * <p>
+     * Provides an overview of your system's health. If additional member accounts are part of your organization, you
+     * can filter those accounts using the <code>AccountIds</code> field.
+     * </p>
+     * 
+     * @param describeOrganizationResourceCollectionHealthRequest
+     * @return Result of the DescribeOrganizationResourceCollectionHealth operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have permissions to perform the requested operation. The user or role that is making the
+     *         request must have at least one IAM permissions policy attached that grants the required permissions. For
+     *         more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access
+     *         Management</a> in the <i>IAM User Guide</i>.
+     * @throws InternalServerException
+     *         An internal failure in an Amazon service occurred.
+     * @throws ThrottlingException
+     *         The request was denied due to a request throttling.
+     * @throws ValidationException
+     *         Contains information about data passed in to a field during a request that is not valid.
+     * @sample AmazonDevOpsGuru.DescribeOrganizationResourceCollectionHealth
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeOrganizationResourceCollectionHealth"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeOrganizationResourceCollectionHealthResult describeOrganizationResourceCollectionHealth(
+            DescribeOrganizationResourceCollectionHealthRequest describeOrganizationResourceCollectionHealthRequest);
+
+    /**
+     * <p>
      * Returns the number of open proactive insights, open reactive insights, and the Mean Time to Recover (MTTR) for
-     * all closed insights in resource collections in your account. You specify the type of AWS resources collection.
-     * The one type of AWS resource collection supported is AWS CloudFormation stacks. DevOps Guru can be configured to
-     * analyze only the AWS resources that are defined in the stacks. You can specify up to 500 AWS CloudFormation
-     * stacks.
+     * all closed insights in resource collections in your account. You specify the type of Amazon Web Services
+     * resources collection. The one type of Amazon Web Services resource collection supported is Amazon Web Services
+     * CloudFormation stacks. DevOps Guru can be configured to analyze only the Amazon Web Services resources that are
+     * defined in the stacks. You can specify up to 500 Amazon Web Services CloudFormation stacks.
      * </p>
      * 
      * @param describeResourceCollectionHealthRequest
@@ -260,8 +337,8 @@ public interface AmazonDevOpsGuru {
     /**
      * <p>
      * Returns the integration status of services that are integrated with DevOps Guru. The one service that can be
-     * integrated with DevOps Guru is AWS Systems Manager, which can be used to create an OpsItem for each generated
-     * insight.
+     * integrated with DevOps Guru is Amazon Web Services Systems Manager, which can be used to create an OpsItem for
+     * each generated insight.
      * </p>
      * 
      * @param describeServiceIntegrationRequest
@@ -285,9 +362,10 @@ public interface AmazonDevOpsGuru {
 
     /**
      * <p>
-     * Returns an estimate of the monthly cost for DevOps Guru to analyze your AWS resources. For more information, see
-     * <a href="https://docs.aws.amazon.com/devops-guru/latest/userguide/cost-estimate.html">Estimate your Amazon DevOps
-     * Guru costs</a> and <a href="http://aws.amazon.com/devops-guru/pricing/">Amazon DevOps Guru pricing</a>.
+     * Returns an estimate of the monthly cost for DevOps Guru to analyze your Amazon Web Services resources. For more
+     * information, see <a href="https://docs.aws.amazon.com/devops-guru/latest/userguide/cost-estimate.html">Estimate
+     * your Amazon DevOps Guru costs</a> and <a href="http://aws.amazon.com/devops-guru/pricing/">Amazon DevOps Guru
+     * pricing</a>.
      * </p>
      * 
      * @param getCostEstimationRequest
@@ -313,9 +391,10 @@ public interface AmazonDevOpsGuru {
 
     /**
      * <p>
-     * Returns lists AWS resources that are of the specified resource collection type. The one type of AWS resource
-     * collection supported is AWS CloudFormation stacks. DevOps Guru can be configured to analyze only the AWS
-     * resources that are defined in the stacks. You can specify up to 500 AWS CloudFormation stacks.
+     * Returns lists Amazon Web Services resources that are of the specified resource collection type. The one type of
+     * Amazon Web Services resource collection supported is Amazon Web Services CloudFormation stacks. DevOps Guru can
+     * be configured to analyze only the Amazon Web Services resources that are defined in the stacks. You can specify
+     * up to 500 Amazon Web Services CloudFormation stacks.
      * </p>
      * 
      * @param getResourceCollectionRequest
@@ -394,8 +473,8 @@ public interface AmazonDevOpsGuru {
 
     /**
      * <p>
-     * Returns a list of insights in your AWS account. You can specify which insights are returned by their start time
-     * and status (<code>ONGOING</code>, <code>CLOSED</code>, or <code>ANY</code>).
+     * Returns a list of insights in your Amazon Web Services account. You can specify which insights are returned by
+     * their start time and status (<code>ONGOING</code>, <code>CLOSED</code>, or <code>ANY</code>).
      * </p>
      * 
      * @param listInsightsRequest
@@ -442,6 +521,30 @@ public interface AmazonDevOpsGuru {
      *      target="_top">AWS API Documentation</a>
      */
     ListNotificationChannelsResult listNotificationChannels(ListNotificationChannelsRequest listNotificationChannelsRequest);
+
+    /**
+     * <p>
+     * Returns a list of insights associated with the account or OU Id.
+     * </p>
+     * 
+     * @param listOrganizationInsightsRequest
+     * @return Result of the ListOrganizationInsights operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have permissions to perform the requested operation. The user or role that is making the
+     *         request must have at least one IAM permissions policy attached that grants the required permissions. For
+     *         more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access
+     *         Management</a> in the <i>IAM User Guide</i>.
+     * @throws InternalServerException
+     *         An internal failure in an Amazon service occurred.
+     * @throws ThrottlingException
+     *         The request was denied due to a request throttling.
+     * @throws ValidationException
+     *         Contains information about data passed in to a field during a request that is not valid.
+     * @sample AmazonDevOpsGuru.ListOrganizationInsights
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/ListOrganizationInsights"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListOrganizationInsightsResult listOrganizationInsights(ListOrganizationInsightsRequest listOrganizationInsightsRequest);
 
     /**
      * <p>
@@ -529,10 +632,10 @@ public interface AmazonDevOpsGuru {
 
     /**
      * <p>
-     * Returns a list of insights in your AWS account. You can specify which insights are returned by their start time,
-     * one or more statuses (<code>ONGOING</code>, <code>CLOSED</code>, and <code>CLOSED</code>), one or more severities
-     * (<code>LOW</code>, <code>MEDIUM</code>, and <code>HIGH</code>), and type (<code>REACTIVE</code> or
-     * <code>PROACTIVE</code>).
+     * Returns a list of insights in your Amazon Web Services account. You can specify which insights are returned by
+     * their start time, one or more statuses (<code>ONGOING</code>, <code>CLOSED</code>, and <code>CLOSED</code>), one
+     * or more severities (<code>LOW</code>, <code>MEDIUM</code>, and <code>HIGH</code>), and type (
+     * <code>REACTIVE</code> or <code>PROACTIVE</code>).
      * </p>
      * <p>
      * Use the <code>Filters</code> parameter to specify status and severity search parameters. Use the
@@ -560,7 +663,38 @@ public interface AmazonDevOpsGuru {
 
     /**
      * <p>
-     * Starts the creation of an estimate of the monthly cost to analyze your AWS resources.
+     * Returns a list of insights in your organization. You can specify which insights are returned by their start time,
+     * one or more statuses (<code>ONGOING</code>, <code>CLOSED</code>, and <code>CLOSED</code>), one or more severities
+     * (<code>LOW</code>, <code>MEDIUM</code>, and <code>HIGH</code>), and type (<code>REACTIVE</code> or
+     * <code>PROACTIVE</code>).
+     * </p>
+     * <p>
+     * Use the <code>Filters</code> parameter to specify status and severity search parameters. Use the
+     * <code>Type</code> parameter to specify <code>REACTIVE</code> or <code>PROACTIVE</code> in your search.
+     * </p>
+     * 
+     * @param searchOrganizationInsightsRequest
+     * @return Result of the SearchOrganizationInsights operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have permissions to perform the requested operation. The user or role that is making the
+     *         request must have at least one IAM permissions policy attached that grants the required permissions. For
+     *         more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access
+     *         Management</a> in the <i>IAM User Guide</i>.
+     * @throws InternalServerException
+     *         An internal failure in an Amazon service occurred.
+     * @throws ThrottlingException
+     *         The request was denied due to a request throttling.
+     * @throws ValidationException
+     *         Contains information about data passed in to a field during a request that is not valid.
+     * @sample AmazonDevOpsGuru.SearchOrganizationInsights
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/SearchOrganizationInsights"
+     *      target="_top">AWS API Documentation</a>
+     */
+    SearchOrganizationInsightsResult searchOrganizationInsights(SearchOrganizationInsightsRequest searchOrganizationInsightsRequest);
+
+    /**
+     * <p>
+     * Starts the creation of an estimate of the monthly cost to analyze your Amazon Web Services resources.
      * </p>
      * 
      * @param startCostEstimationRequest
@@ -588,10 +722,10 @@ public interface AmazonDevOpsGuru {
 
     /**
      * <p>
-     * Updates the collection of resources that DevOps Guru analyzes. The one type of AWS resource collection supported
-     * is AWS CloudFormation stacks. DevOps Guru can be configured to analyze only the AWS resources that are defined in
-     * the stacks. You can specify up to 500 AWS CloudFormation stacks. This method also creates the IAM role required
-     * for you to use DevOps Guru.
+     * Updates the collection of resources that DevOps Guru analyzes. The one type of Amazon Web Services resource
+     * collection supported is Amazon Web Services CloudFormation stacks. DevOps Guru can be configured to analyze only
+     * the Amazon Web Services resources that are defined in the stacks. You can specify up to 500 Amazon Web Services
+     * CloudFormation stacks. This method also creates the IAM role required for you to use DevOps Guru.
      * </p>
      * 
      * @param updateResourceCollectionRequest
@@ -618,8 +752,8 @@ public interface AmazonDevOpsGuru {
     /**
      * <p>
      * Enables or disables integration with a service that can be integrated with DevOps Guru. The one service that can
-     * be integrated with DevOps Guru is AWS Systems Manager, which can be used to create an OpsItem for each generated
-     * insight.
+     * be integrated with DevOps Guru is Amazon Web Services Systems Manager, which can be used to create an OpsItem for
+     * each generated insight.
      * </p>
      * 
      * @param updateServiceIntegrationRequest

@@ -29,6 +29,8 @@ public class DescribeInsightRequestMarshaller {
 
     private static final MarshallingInfo<String> ID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("Id").build();
+    private static final MarshallingInfo<String> ACCOUNTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("AccountId").build();
 
     private static final DescribeInsightRequestMarshaller instance = new DescribeInsightRequestMarshaller();
 
@@ -47,6 +49,7 @@ public class DescribeInsightRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(describeInsightRequest.getId(), ID_BINDING);
+            protocolMarshaller.marshall(describeInsightRequest.getAccountId(), ACCOUNTID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

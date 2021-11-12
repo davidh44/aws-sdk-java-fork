@@ -33,8 +33,8 @@ public class DescribeResourceCollectionHealthResult extends com.amazonaws.Amazon
     private java.util.List<CloudFormationHealth> cloudFormation;
     /**
      * <p>
-     * An array of <code>ServiceHealth</code> objects that describes the health of the AWS services associated with the
-     * resources in the collection.
+     * An array of <code>ServiceHealth</code> objects that describes the health of the Amazon Web Services services
+     * associated with the resources in the collection.
      * </p>
      */
     private java.util.List<ServiceHealth> service;
@@ -126,12 +126,12 @@ public class DescribeResourceCollectionHealthResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * An array of <code>ServiceHealth</code> objects that describes the health of the AWS services associated with the
-     * resources in the collection.
+     * An array of <code>ServiceHealth</code> objects that describes the health of the Amazon Web Services services
+     * associated with the resources in the collection.
      * </p>
      * 
-     * @return An array of <code>ServiceHealth</code> objects that describes the health of the AWS services associated
-     *         with the resources in the collection.
+     * @return An array of <code>ServiceHealth</code> objects that describes the health of the Amazon Web Services
+     *         services associated with the resources in the collection.
      */
 
     public java.util.List<ServiceHealth> getService() {
@@ -140,13 +140,13 @@ public class DescribeResourceCollectionHealthResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * An array of <code>ServiceHealth</code> objects that describes the health of the AWS services associated with the
-     * resources in the collection.
+     * An array of <code>ServiceHealth</code> objects that describes the health of the Amazon Web Services services
+     * associated with the resources in the collection.
      * </p>
      * 
      * @param service
-     *        An array of <code>ServiceHealth</code> objects that describes the health of the AWS services associated
-     *        with the resources in the collection.
+     *        An array of <code>ServiceHealth</code> objects that describes the health of the Amazon Web Services
+     *        services associated with the resources in the collection.
      */
 
     public void setService(java.util.Collection<ServiceHealth> service) {
@@ -160,8 +160,8 @@ public class DescribeResourceCollectionHealthResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * An array of <code>ServiceHealth</code> objects that describes the health of the AWS services associated with the
-     * resources in the collection.
+     * An array of <code>ServiceHealth</code> objects that describes the health of the Amazon Web Services services
+     * associated with the resources in the collection.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -170,8 +170,8 @@ public class DescribeResourceCollectionHealthResult extends com.amazonaws.Amazon
      * </p>
      * 
      * @param service
-     *        An array of <code>ServiceHealth</code> objects that describes the health of the AWS services associated
-     *        with the resources in the collection.
+     *        An array of <code>ServiceHealth</code> objects that describes the health of the Amazon Web Services
+     *        services associated with the resources in the collection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -187,13 +187,13 @@ public class DescribeResourceCollectionHealthResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * An array of <code>ServiceHealth</code> objects that describes the health of the AWS services associated with the
-     * resources in the collection.
+     * An array of <code>ServiceHealth</code> objects that describes the health of the Amazon Web Services services
+     * associated with the resources in the collection.
      * </p>
      * 
      * @param service
-     *        An array of <code>ServiceHealth</code> objects that describes the health of the AWS services associated
-     *        with the resources in the collection.
+     *        An array of <code>ServiceHealth</code> objects that describes the health of the Amazon Web Services
+     *        services associated with the resources in the collection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

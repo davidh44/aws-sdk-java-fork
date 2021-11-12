@@ -106,6 +106,47 @@ public class AbstractAmazonDevOpsGuruAsync extends AbstractAmazonDevOpsGuru impl
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeOrganizationHealthResult> describeOrganizationHealthAsync(DescribeOrganizationHealthRequest request) {
+
+        return describeOrganizationHealthAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeOrganizationHealthResult> describeOrganizationHealthAsync(DescribeOrganizationHealthRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeOrganizationHealthRequest, DescribeOrganizationHealthResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeOrganizationOverviewResult> describeOrganizationOverviewAsync(DescribeOrganizationOverviewRequest request) {
+
+        return describeOrganizationOverviewAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeOrganizationOverviewResult> describeOrganizationOverviewAsync(DescribeOrganizationOverviewRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeOrganizationOverviewRequest, DescribeOrganizationOverviewResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeOrganizationResourceCollectionHealthResult> describeOrganizationResourceCollectionHealthAsync(
+            DescribeOrganizationResourceCollectionHealthRequest request) {
+
+        return describeOrganizationResourceCollectionHealthAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeOrganizationResourceCollectionHealthResult> describeOrganizationResourceCollectionHealthAsync(
+            DescribeOrganizationResourceCollectionHealthRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeOrganizationResourceCollectionHealthRequest, DescribeOrganizationResourceCollectionHealthResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeResourceCollectionHealthResult> describeResourceCollectionHealthAsync(
             DescribeResourceCollectionHealthRequest request) {
 
@@ -212,6 +253,19 @@ public class AbstractAmazonDevOpsGuruAsync extends AbstractAmazonDevOpsGuru impl
     }
 
     @Override
+    public java.util.concurrent.Future<ListOrganizationInsightsResult> listOrganizationInsightsAsync(ListOrganizationInsightsRequest request) {
+
+        return listOrganizationInsightsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListOrganizationInsightsResult> listOrganizationInsightsAsync(ListOrganizationInsightsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListOrganizationInsightsRequest, ListOrganizationInsightsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListRecommendationsResult> listRecommendationsAsync(ListRecommendationsRequest request) {
 
         return listRecommendationsAsync(request, null);
@@ -259,6 +313,19 @@ public class AbstractAmazonDevOpsGuruAsync extends AbstractAmazonDevOpsGuru impl
     @Override
     public java.util.concurrent.Future<SearchInsightsResult> searchInsightsAsync(SearchInsightsRequest request,
             com.amazonaws.handlers.AsyncHandler<SearchInsightsRequest, SearchInsightsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchOrganizationInsightsResult> searchOrganizationInsightsAsync(SearchOrganizationInsightsRequest request) {
+
+        return searchOrganizationInsightsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchOrganizationInsightsResult> searchOrganizationInsightsAsync(SearchOrganizationInsightsRequest request,
+            com.amazonaws.handlers.AsyncHandler<SearchOrganizationInsightsRequest, SearchOrganizationInsightsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -40,6 +40,8 @@ public class CloudWatchMetricsDetailMarshaller {
             .marshallLocationName("Unit").build();
     private static final MarshallingInfo<Integer> PERIOD_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Period").build();
+    private static final MarshallingInfo<StructuredPojo> METRICDATASUMMARY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MetricDataSummary").build();
 
     private static final CloudWatchMetricsDetailMarshaller instance = new CloudWatchMetricsDetailMarshaller();
 
@@ -63,6 +65,7 @@ public class CloudWatchMetricsDetailMarshaller {
             protocolMarshaller.marshall(cloudWatchMetricsDetail.getStat(), STAT_BINDING);
             protocolMarshaller.marshall(cloudWatchMetricsDetail.getUnit(), UNIT_BINDING);
             protocolMarshaller.marshall(cloudWatchMetricsDetail.getPeriod(), PERIOD_BINDING);
+            protocolMarshaller.marshall(cloudWatchMetricsDetail.getMetricDataSummary(), METRICDATASUMMARY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
