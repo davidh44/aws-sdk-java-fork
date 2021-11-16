@@ -45,6 +45,23 @@ public class Place implements Serializable, Cloneable, StructuredPojo {
     private PlaceGeometry geometry;
     /**
      * <p>
+     * <code>True</code> if the result is interpolated from other known places.
+     * </p>
+     * <p>
+     * <code>False</code> if the Place is a known place.
+     * </p>
+     * <p>
+     * Not returned when the partner does not provide the information.
+     * </p>
+     * <p>
+     * For example, returns <code>False</code> for an address location that is found in the partner data, but returns
+     * <code>True</code> if an address does not exist in the partner data and its location is calculated by
+     * interpolating between other known addresses.
+     * </p>
+     */
+    private Boolean interpolated;
+    /**
+     * <p>
      * The full name and address of the point of interest such as a city, region, or country. For example,
      * <code>123 Any Street, Any Town, USA</code>.
      * </p>
@@ -84,10 +101,16 @@ public class Place implements Serializable, Cloneable, StructuredPojo {
     private String street;
     /**
      * <p>
-     * A country, or an area that's part of a larger region . For example, <code>Metro Vancouver</code>.
+     * A country, or an area that's part of a larger region. For example, <code>Metro Vancouver</code>.
      * </p>
      */
     private String subRegion;
+    /**
+     * <p>
+     * The time zone in which the <code>Place</code> is located. Returned only when using Here as the selected partner.
+     * </p>
+     */
+    private TimeZone timeZone;
 
     /**
      * <p>
@@ -199,6 +222,142 @@ public class Place implements Serializable, Cloneable, StructuredPojo {
     public Place withGeometry(PlaceGeometry geometry) {
         setGeometry(geometry);
         return this;
+    }
+
+    /**
+     * <p>
+     * <code>True</code> if the result is interpolated from other known places.
+     * </p>
+     * <p>
+     * <code>False</code> if the Place is a known place.
+     * </p>
+     * <p>
+     * Not returned when the partner does not provide the information.
+     * </p>
+     * <p>
+     * For example, returns <code>False</code> for an address location that is found in the partner data, but returns
+     * <code>True</code> if an address does not exist in the partner data and its location is calculated by
+     * interpolating between other known addresses.
+     * </p>
+     * 
+     * @param interpolated
+     *        <code>True</code> if the result is interpolated from other known places.</p>
+     *        <p>
+     *        <code>False</code> if the Place is a known place.
+     *        </p>
+     *        <p>
+     *        Not returned when the partner does not provide the information.
+     *        </p>
+     *        <p>
+     *        For example, returns <code>False</code> for an address location that is found in the partner data, but
+     *        returns <code>True</code> if an address does not exist in the partner data and its location is calculated
+     *        by interpolating between other known addresses.
+     */
+
+    public void setInterpolated(Boolean interpolated) {
+        this.interpolated = interpolated;
+    }
+
+    /**
+     * <p>
+     * <code>True</code> if the result is interpolated from other known places.
+     * </p>
+     * <p>
+     * <code>False</code> if the Place is a known place.
+     * </p>
+     * <p>
+     * Not returned when the partner does not provide the information.
+     * </p>
+     * <p>
+     * For example, returns <code>False</code> for an address location that is found in the partner data, but returns
+     * <code>True</code> if an address does not exist in the partner data and its location is calculated by
+     * interpolating between other known addresses.
+     * </p>
+     * 
+     * @return <code>True</code> if the result is interpolated from other known places.</p>
+     *         <p>
+     *         <code>False</code> if the Place is a known place.
+     *         </p>
+     *         <p>
+     *         Not returned when the partner does not provide the information.
+     *         </p>
+     *         <p>
+     *         For example, returns <code>False</code> for an address location that is found in the partner data, but
+     *         returns <code>True</code> if an address does not exist in the partner data and its location is calculated
+     *         by interpolating between other known addresses.
+     */
+
+    public Boolean getInterpolated() {
+        return this.interpolated;
+    }
+
+    /**
+     * <p>
+     * <code>True</code> if the result is interpolated from other known places.
+     * </p>
+     * <p>
+     * <code>False</code> if the Place is a known place.
+     * </p>
+     * <p>
+     * Not returned when the partner does not provide the information.
+     * </p>
+     * <p>
+     * For example, returns <code>False</code> for an address location that is found in the partner data, but returns
+     * <code>True</code> if an address does not exist in the partner data and its location is calculated by
+     * interpolating between other known addresses.
+     * </p>
+     * 
+     * @param interpolated
+     *        <code>True</code> if the result is interpolated from other known places.</p>
+     *        <p>
+     *        <code>False</code> if the Place is a known place.
+     *        </p>
+     *        <p>
+     *        Not returned when the partner does not provide the information.
+     *        </p>
+     *        <p>
+     *        For example, returns <code>False</code> for an address location that is found in the partner data, but
+     *        returns <code>True</code> if an address does not exist in the partner data and its location is calculated
+     *        by interpolating between other known addresses.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Place withInterpolated(Boolean interpolated) {
+        setInterpolated(interpolated);
+        return this;
+    }
+
+    /**
+     * <p>
+     * <code>True</code> if the result is interpolated from other known places.
+     * </p>
+     * <p>
+     * <code>False</code> if the Place is a known place.
+     * </p>
+     * <p>
+     * Not returned when the partner does not provide the information.
+     * </p>
+     * <p>
+     * For example, returns <code>False</code> for an address location that is found in the partner data, but returns
+     * <code>True</code> if an address does not exist in the partner data and its location is calculated by
+     * interpolating between other known addresses.
+     * </p>
+     * 
+     * @return <code>True</code> if the result is interpolated from other known places.</p>
+     *         <p>
+     *         <code>False</code> if the Place is a known place.
+     *         </p>
+     *         <p>
+     *         Not returned when the partner does not provide the information.
+     *         </p>
+     *         <p>
+     *         For example, returns <code>False</code> for an address location that is found in the partner data, but
+     *         returns <code>True</code> if an address does not exist in the partner data and its location is calculated
+     *         by interpolating between other known addresses.
+     */
+
+    public Boolean isInterpolated() {
+        return this.interpolated;
     }
 
     /**
@@ -461,11 +620,11 @@ public class Place implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A country, or an area that's part of a larger region . For example, <code>Metro Vancouver</code>.
+     * A country, or an area that's part of a larger region. For example, <code>Metro Vancouver</code>.
      * </p>
      * 
      * @param subRegion
-     *        A country, or an area that's part of a larger region . For example, <code>Metro Vancouver</code>.
+     *        A country, or an area that's part of a larger region. For example, <code>Metro Vancouver</code>.
      */
 
     public void setSubRegion(String subRegion) {
@@ -474,10 +633,10 @@ public class Place implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A country, or an area that's part of a larger region . For example, <code>Metro Vancouver</code>.
+     * A country, or an area that's part of a larger region. For example, <code>Metro Vancouver</code>.
      * </p>
      * 
-     * @return A country, or an area that's part of a larger region . For example, <code>Metro Vancouver</code>.
+     * @return A country, or an area that's part of a larger region. For example, <code>Metro Vancouver</code>.
      */
 
     public String getSubRegion() {
@@ -486,16 +645,59 @@ public class Place implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A country, or an area that's part of a larger region . For example, <code>Metro Vancouver</code>.
+     * A country, or an area that's part of a larger region. For example, <code>Metro Vancouver</code>.
      * </p>
      * 
      * @param subRegion
-     *        A country, or an area that's part of a larger region . For example, <code>Metro Vancouver</code>.
+     *        A country, or an area that's part of a larger region. For example, <code>Metro Vancouver</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public Place withSubRegion(String subRegion) {
         setSubRegion(subRegion);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The time zone in which the <code>Place</code> is located. Returned only when using Here as the selected partner.
+     * </p>
+     * 
+     * @param timeZone
+     *        The time zone in which the <code>Place</code> is located. Returned only when using Here as the selected
+     *        partner.
+     */
+
+    public void setTimeZone(TimeZone timeZone) {
+        this.timeZone = timeZone;
+    }
+
+    /**
+     * <p>
+     * The time zone in which the <code>Place</code> is located. Returned only when using Here as the selected partner.
+     * </p>
+     * 
+     * @return The time zone in which the <code>Place</code> is located. Returned only when using Here as the selected
+     *         partner.
+     */
+
+    public TimeZone getTimeZone() {
+        return this.timeZone;
+    }
+
+    /**
+     * <p>
+     * The time zone in which the <code>Place</code> is located. Returned only when using Here as the selected partner.
+     * </p>
+     * 
+     * @param timeZone
+     *        The time zone in which the <code>Place</code> is located. Returned only when using Here as the selected
+     *        partner.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Place withTimeZone(TimeZone timeZone) {
+        setTimeZone(timeZone);
         return this;
     }
 
@@ -517,6 +719,8 @@ public class Place implements Serializable, Cloneable, StructuredPojo {
             sb.append("Country: ").append(getCountry()).append(",");
         if (getGeometry() != null)
             sb.append("Geometry: ").append(getGeometry()).append(",");
+        if (getInterpolated() != null)
+            sb.append("Interpolated: ").append(getInterpolated()).append(",");
         if (getLabel() != null)
             sb.append("Label: ").append(getLabel()).append(",");
         if (getMunicipality() != null)
@@ -530,7 +734,9 @@ public class Place implements Serializable, Cloneable, StructuredPojo {
         if (getStreet() != null)
             sb.append("Street: ").append(getStreet()).append(",");
         if (getSubRegion() != null)
-            sb.append("SubRegion: ").append(getSubRegion());
+            sb.append("SubRegion: ").append(getSubRegion()).append(",");
+        if (getTimeZone() != null)
+            sb.append("TimeZone: ").append(getTimeZone());
         sb.append("}");
         return sb.toString();
     }
@@ -556,6 +762,10 @@ public class Place implements Serializable, Cloneable, StructuredPojo {
         if (other.getGeometry() == null ^ this.getGeometry() == null)
             return false;
         if (other.getGeometry() != null && other.getGeometry().equals(this.getGeometry()) == false)
+            return false;
+        if (other.getInterpolated() == null ^ this.getInterpolated() == null)
+            return false;
+        if (other.getInterpolated() != null && other.getInterpolated().equals(this.getInterpolated()) == false)
             return false;
         if (other.getLabel() == null ^ this.getLabel() == null)
             return false;
@@ -585,6 +795,10 @@ public class Place implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSubRegion() != null && other.getSubRegion().equals(this.getSubRegion()) == false)
             return false;
+        if (other.getTimeZone() == null ^ this.getTimeZone() == null)
+            return false;
+        if (other.getTimeZone() != null && other.getTimeZone().equals(this.getTimeZone()) == false)
+            return false;
         return true;
     }
 
@@ -596,6 +810,7 @@ public class Place implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getAddressNumber() == null) ? 0 : getAddressNumber().hashCode());
         hashCode = prime * hashCode + ((getCountry() == null) ? 0 : getCountry().hashCode());
         hashCode = prime * hashCode + ((getGeometry() == null) ? 0 : getGeometry().hashCode());
+        hashCode = prime * hashCode + ((getInterpolated() == null) ? 0 : getInterpolated().hashCode());
         hashCode = prime * hashCode + ((getLabel() == null) ? 0 : getLabel().hashCode());
         hashCode = prime * hashCode + ((getMunicipality() == null) ? 0 : getMunicipality().hashCode());
         hashCode = prime * hashCode + ((getNeighborhood() == null) ? 0 : getNeighborhood().hashCode());
@@ -603,6 +818,7 @@ public class Place implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getRegion() == null) ? 0 : getRegion().hashCode());
         hashCode = prime * hashCode + ((getStreet() == null) ? 0 : getStreet().hashCode());
         hashCode = prime * hashCode + ((getSubRegion() == null) ? 0 : getSubRegion().hashCode());
+        hashCode = prime * hashCode + ((getTimeZone() == null) ? 0 : getTimeZone().hashCode());
         return hashCode;
     }
 

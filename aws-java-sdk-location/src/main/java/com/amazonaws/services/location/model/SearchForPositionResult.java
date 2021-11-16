@@ -19,8 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specifies a single point of interest, or Place as a result of a search query obtained from a dataset configured in
- * the place index resource.
+ * Contains a search result from a position search query that is run on a place index resource.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/SearchForPositionResult" target="_top">AWS
@@ -31,18 +30,100 @@ public class SearchForPositionResult implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Contains details about the relevant point of interest.
+     * The distance in meters of a great-circle arc between the query position and the result.
+     * </p>
+     * <note>
+     * <p>
+     * A great-circle arc is the shortest path on a sphere, in this case the Earth. This returns the shortest distance
+     * between two locations.
+     * </p>
+     * </note>
+     */
+    private Double distance;
+    /**
+     * <p>
+     * Details about the search result, such as its address and position.
      * </p>
      */
     private Place place;
 
     /**
      * <p>
-     * Contains details about the relevant point of interest.
+     * The distance in meters of a great-circle arc between the query position and the result.
+     * </p>
+     * <note>
+     * <p>
+     * A great-circle arc is the shortest path on a sphere, in this case the Earth. This returns the shortest distance
+     * between two locations.
+     * </p>
+     * </note>
+     * 
+     * @param distance
+     *        The distance in meters of a great-circle arc between the query position and the result.</p> <note>
+     *        <p>
+     *        A great-circle arc is the shortest path on a sphere, in this case the Earth. This returns the shortest
+     *        distance between two locations.
+     *        </p>
+     */
+
+    public void setDistance(Double distance) {
+        this.distance = distance;
+    }
+
+    /**
+     * <p>
+     * The distance in meters of a great-circle arc between the query position and the result.
+     * </p>
+     * <note>
+     * <p>
+     * A great-circle arc is the shortest path on a sphere, in this case the Earth. This returns the shortest distance
+     * between two locations.
+     * </p>
+     * </note>
+     * 
+     * @return The distance in meters of a great-circle arc between the query position and the result.</p> <note>
+     *         <p>
+     *         A great-circle arc is the shortest path on a sphere, in this case the Earth. This returns the shortest
+     *         distance between two locations.
+     *         </p>
+     */
+
+    public Double getDistance() {
+        return this.distance;
+    }
+
+    /**
+     * <p>
+     * The distance in meters of a great-circle arc between the query position and the result.
+     * </p>
+     * <note>
+     * <p>
+     * A great-circle arc is the shortest path on a sphere, in this case the Earth. This returns the shortest distance
+     * between two locations.
+     * </p>
+     * </note>
+     * 
+     * @param distance
+     *        The distance in meters of a great-circle arc between the query position and the result.</p> <note>
+     *        <p>
+     *        A great-circle arc is the shortest path on a sphere, in this case the Earth. This returns the shortest
+     *        distance between two locations.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SearchForPositionResult withDistance(Double distance) {
+        setDistance(distance);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Details about the search result, such as its address and position.
      * </p>
      * 
      * @param place
-     *        Contains details about the relevant point of interest.
+     *        Details about the search result, such as its address and position.
      */
 
     public void setPlace(Place place) {
@@ -51,10 +132,10 @@ public class SearchForPositionResult implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Contains details about the relevant point of interest.
+     * Details about the search result, such as its address and position.
      * </p>
      * 
-     * @return Contains details about the relevant point of interest.
+     * @return Details about the search result, such as its address and position.
      */
 
     public Place getPlace() {
@@ -63,11 +144,11 @@ public class SearchForPositionResult implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Contains details about the relevant point of interest.
+     * Details about the search result, such as its address and position.
      * </p>
      * 
      * @param place
-     *        Contains details about the relevant point of interest.
+     *        Details about the search result, such as its address and position.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -88,6 +169,8 @@ public class SearchForPositionResult implements Serializable, Cloneable, Structu
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getDistance() != null)
+            sb.append("Distance: ").append(getDistance()).append(",");
         if (getPlace() != null)
             sb.append("Place: ").append(getPlace());
         sb.append("}");
@@ -104,6 +187,10 @@ public class SearchForPositionResult implements Serializable, Cloneable, Structu
         if (obj instanceof SearchForPositionResult == false)
             return false;
         SearchForPositionResult other = (SearchForPositionResult) obj;
+        if (other.getDistance() == null ^ this.getDistance() == null)
+            return false;
+        if (other.getDistance() != null && other.getDistance().equals(this.getDistance()) == false)
+            return false;
         if (other.getPlace() == null ^ this.getPlace() == null)
             return false;
         if (other.getPlace() != null && other.getPlace().equals(this.getPlace()) == false)
@@ -116,6 +203,7 @@ public class SearchForPositionResult implements Serializable, Cloneable, Structu
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getDistance() == null) ? 0 : getDistance().hashCode());
         hashCode = prime * hashCode + ((getPlace() == null) ? 0 : getPlace().hashCode());
         return hashCode;
     }

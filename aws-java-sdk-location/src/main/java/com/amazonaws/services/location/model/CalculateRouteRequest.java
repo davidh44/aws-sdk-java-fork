@@ -27,7 +27,7 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The name of the route calculator resource that you want to use to calculate a route.
+     * The name of the route calculator resource that you want to use to calculate the route.
      * </p>
      */
     private String calculatorName;
@@ -81,7 +81,7 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
     private java.util.List<Double> departurePosition;
     /**
      * <p>
-     * Specifies the desired time of departure. Uses the given time to calculate a route. Otherwise, the best time of
+     * Specifies the desired time of departure. Uses the given time to calculate the route. Otherwise, the best time of
      * day to travel with the best traffic conditions is used to calculate the route.
      * </p>
      * <note>
@@ -214,11 +214,11 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The name of the route calculator resource that you want to use to calculate a route.
+     * The name of the route calculator resource that you want to use to calculate the route.
      * </p>
      * 
      * @param calculatorName
-     *        The name of the route calculator resource that you want to use to calculate a route.
+     *        The name of the route calculator resource that you want to use to calculate the route.
      */
 
     public void setCalculatorName(String calculatorName) {
@@ -227,10 +227,10 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The name of the route calculator resource that you want to use to calculate a route.
+     * The name of the route calculator resource that you want to use to calculate the route.
      * </p>
      * 
-     * @return The name of the route calculator resource that you want to use to calculate a route.
+     * @return The name of the route calculator resource that you want to use to calculate the route.
      */
 
     public String getCalculatorName() {
@@ -239,11 +239,11 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The name of the route calculator resource that you want to use to calculate a route.
+     * The name of the route calculator resource that you want to use to calculate the route.
      * </p>
      * 
      * @param calculatorName
-     *        The name of the route calculator resource that you want to use to calculate a route.
+     *        The name of the route calculator resource that you want to use to calculate the route.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -641,7 +641,7 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Specifies the desired time of departure. Uses the given time to calculate a route. Otherwise, the best time of
+     * Specifies the desired time of departure. Uses the given time to calculate the route. Otherwise, the best time of
      * day to travel with the best traffic conditions is used to calculate the route.
      * </p>
      * <note>
@@ -659,7 +659,7 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * </ul>
      * 
      * @param departureTime
-     *        Specifies the desired time of departure. Uses the given time to calculate a route. Otherwise, the best
+     *        Specifies the desired time of departure. Uses the given time to calculate the route. Otherwise, the best
      *        time of day to travel with the best traffic conditions is used to calculate the route.</p> <note>
      *        <p>
      *        Setting a departure time in the past returns a <code>400 ValidationException</code> error.
@@ -680,7 +680,7 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Specifies the desired time of departure. Uses the given time to calculate a route. Otherwise, the best time of
+     * Specifies the desired time of departure. Uses the given time to calculate the route. Otherwise, the best time of
      * day to travel with the best traffic conditions is used to calculate the route.
      * </p>
      * <note>
@@ -697,7 +697,7 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * </ul>
      * 
-     * @return Specifies the desired time of departure. Uses the given time to calculate a route. Otherwise, the best
+     * @return Specifies the desired time of departure. Uses the given time to calculate the route. Otherwise, the best
      *         time of day to travel with the best traffic conditions is used to calculate the route.</p> <note>
      *         <p>
      *         Setting a departure time in the past returns a <code>400 ValidationException</code> error.
@@ -718,7 +718,7 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Specifies the desired time of departure. Uses the given time to calculate a route. Otherwise, the best time of
+     * Specifies the desired time of departure. Uses the given time to calculate the route. Otherwise, the best time of
      * day to travel with the best traffic conditions is used to calculate the route.
      * </p>
      * <note>
@@ -736,7 +736,7 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * </ul>
      * 
      * @param departureTime
-     *        Specifies the desired time of departure. Uses the given time to calculate a route. Otherwise, the best
+     *        Specifies the desired time of departure. Uses the given time to calculate the route. Otherwise, the best
      *        time of day to travel with the best traffic conditions is used to calculate the route.</p> <note>
      *        <p>
      *        Setting a departure time in the past returns a <code>400 ValidationException</code> error.

@@ -30,6 +30,8 @@ public class SearchPlaceIndexForPositionSummaryMarshaller {
 
     private static final MarshallingInfo<String> DATASOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataSource").build();
+    private static final MarshallingInfo<String> LANGUAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Language").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
     private static final MarshallingInfo<List> POSITION_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
@@ -52,6 +54,7 @@ public class SearchPlaceIndexForPositionSummaryMarshaller {
 
         try {
             protocolMarshaller.marshall(searchPlaceIndexForPositionSummary.getDataSource(), DATASOURCE_BINDING);
+            protocolMarshaller.marshall(searchPlaceIndexForPositionSummary.getLanguage(), LANGUAGE_BINDING);
             protocolMarshaller.marshall(searchPlaceIndexForPositionSummary.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(searchPlaceIndexForPositionSummary.getPosition(), POSITION_BINDING);
         } catch (Exception e) {

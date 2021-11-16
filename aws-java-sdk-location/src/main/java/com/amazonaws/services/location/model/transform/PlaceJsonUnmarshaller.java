@@ -60,6 +60,10 @@ public class PlaceJsonUnmarshaller implements Unmarshaller<Place, JsonUnmarshall
                     context.nextToken();
                     place.setGeometry(PlaceGeometryJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("Interpolated", targetDepth)) {
+                    context.nextToken();
+                    place.setInterpolated(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("Label", targetDepth)) {
                     context.nextToken();
                     place.setLabel(context.getUnmarshaller(String.class).unmarshall(context));
@@ -87,6 +91,10 @@ public class PlaceJsonUnmarshaller implements Unmarshaller<Place, JsonUnmarshall
                 if (context.testExpression("SubRegion", targetDepth)) {
                     context.nextToken();
                     place.setSubRegion(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("TimeZone", targetDepth)) {
+                    context.nextToken();
+                    place.setTimeZone(TimeZoneJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

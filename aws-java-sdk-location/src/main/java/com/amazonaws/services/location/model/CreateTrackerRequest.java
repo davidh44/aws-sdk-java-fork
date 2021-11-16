@@ -56,9 +56,10 @@ public class CreateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <li>
      * <p>
      * <code>DistanceBased</code> - If the device has moved less than 30 m (98.4 ft), location updates are ignored.
-     * Location updates within this distance are neither evaluated against linked geofence collections, nor stored. This
-     * helps control costs by reducing the number of geofence evaluations and device positions to retrieve.
-     * Distance-based filtering can also reduce the jitter effect when displaying device trajectory on a map.
+     * Location updates within this area are neither evaluated against linked geofence collections, nor stored. This
+     * helps control costs by reducing the number of geofence evaluations and historical device positions to paginate
+     * through. Distance-based filtering can also reduce the effects of GPS noise when displaying device trajectories on
+     * a map.
      * </p>
      * </li>
      * </ul>
@@ -140,6 +141,11 @@ public class CreateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <li>
      * <p>
      * Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Cannot use "aws:" as a prefix for a key.
      * </p>
      * </li>
      * </ul>
@@ -279,9 +285,10 @@ public class CreateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <li>
      * <p>
      * <code>DistanceBased</code> - If the device has moved less than 30 m (98.4 ft), location updates are ignored.
-     * Location updates within this distance are neither evaluated against linked geofence collections, nor stored. This
-     * helps control costs by reducing the number of geofence evaluations and device positions to retrieve.
-     * Distance-based filtering can also reduce the jitter effect when displaying device trajectory on a map.
+     * Location updates within this area are neither evaluated against linked geofence collections, nor stored. This
+     * helps control costs by reducing the number of geofence evaluations and historical device positions to paginate
+     * through. Distance-based filtering can also reduce the effects of GPS noise when displaying device trajectories on
+     * a map.
      * </p>
      * </li>
      * </ul>
@@ -305,10 +312,10 @@ public class CreateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <li>
      *        <p>
      *        <code>DistanceBased</code> - If the device has moved less than 30 m (98.4 ft), location updates are
-     *        ignored. Location updates within this distance are neither evaluated against linked geofence collections,
-     *        nor stored. This helps control costs by reducing the number of geofence evaluations and device positions
-     *        to retrieve. Distance-based filtering can also reduce the jitter effect when displaying device trajectory
-     *        on a map.
+     *        ignored. Location updates within this area are neither evaluated against linked geofence collections, nor
+     *        stored. This helps control costs by reducing the number of geofence evaluations and historical device
+     *        positions to paginate through. Distance-based filtering can also reduce the effects of GPS noise when
+     *        displaying device trajectories on a map.
      *        </p>
      *        </li>
      *        </ul>
@@ -339,9 +346,10 @@ public class CreateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <li>
      * <p>
      * <code>DistanceBased</code> - If the device has moved less than 30 m (98.4 ft), location updates are ignored.
-     * Location updates within this distance are neither evaluated against linked geofence collections, nor stored. This
-     * helps control costs by reducing the number of geofence evaluations and device positions to retrieve.
-     * Distance-based filtering can also reduce the jitter effect when displaying device trajectory on a map.
+     * Location updates within this area are neither evaluated against linked geofence collections, nor stored. This
+     * helps control costs by reducing the number of geofence evaluations and historical device positions to paginate
+     * through. Distance-based filtering can also reduce the effects of GPS noise when displaying device trajectories on
+     * a map.
      * </p>
      * </li>
      * </ul>
@@ -364,10 +372,10 @@ public class CreateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         <li>
      *         <p>
      *         <code>DistanceBased</code> - If the device has moved less than 30 m (98.4 ft), location updates are
-     *         ignored. Location updates within this distance are neither evaluated against linked geofence collections,
-     *         nor stored. This helps control costs by reducing the number of geofence evaluations and device positions
-     *         to retrieve. Distance-based filtering can also reduce the jitter effect when displaying device trajectory
-     *         on a map.
+     *         ignored. Location updates within this area are neither evaluated against linked geofence collections, nor
+     *         stored. This helps control costs by reducing the number of geofence evaluations and historical device
+     *         positions to paginate through. Distance-based filtering can also reduce the effects of GPS noise when
+     *         displaying device trajectories on a map.
      *         </p>
      *         </li>
      *         </ul>
@@ -398,9 +406,10 @@ public class CreateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <li>
      * <p>
      * <code>DistanceBased</code> - If the device has moved less than 30 m (98.4 ft), location updates are ignored.
-     * Location updates within this distance are neither evaluated against linked geofence collections, nor stored. This
-     * helps control costs by reducing the number of geofence evaluations and device positions to retrieve.
-     * Distance-based filtering can also reduce the jitter effect when displaying device trajectory on a map.
+     * Location updates within this area are neither evaluated against linked geofence collections, nor stored. This
+     * helps control costs by reducing the number of geofence evaluations and historical device positions to paginate
+     * through. Distance-based filtering can also reduce the effects of GPS noise when displaying device trajectories on
+     * a map.
      * </p>
      * </li>
      * </ul>
@@ -424,10 +433,10 @@ public class CreateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <li>
      *        <p>
      *        <code>DistanceBased</code> - If the device has moved less than 30 m (98.4 ft), location updates are
-     *        ignored. Location updates within this distance are neither evaluated against linked geofence collections,
-     *        nor stored. This helps control costs by reducing the number of geofence evaluations and device positions
-     *        to retrieve. Distance-based filtering can also reduce the jitter effect when displaying device trajectory
-     *        on a map.
+     *        ignored. Location updates within this area are neither evaluated against linked geofence collections, nor
+     *        stored. This helps control costs by reducing the number of geofence evaluations and historical device
+     *        positions to paginate through. Distance-based filtering can also reduce the effects of GPS noise when
+     *        displaying device trajectories on a map.
      *        </p>
      *        </li>
      *        </ul>
@@ -460,9 +469,10 @@ public class CreateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <li>
      * <p>
      * <code>DistanceBased</code> - If the device has moved less than 30 m (98.4 ft), location updates are ignored.
-     * Location updates within this distance are neither evaluated against linked geofence collections, nor stored. This
-     * helps control costs by reducing the number of geofence evaluations and device positions to retrieve.
-     * Distance-based filtering can also reduce the jitter effect when displaying device trajectory on a map.
+     * Location updates within this area are neither evaluated against linked geofence collections, nor stored. This
+     * helps control costs by reducing the number of geofence evaluations and historical device positions to paginate
+     * through. Distance-based filtering can also reduce the effects of GPS noise when displaying device trajectories on
+     * a map.
      * </p>
      * </li>
      * </ul>
@@ -486,10 +496,10 @@ public class CreateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <li>
      *        <p>
      *        <code>DistanceBased</code> - If the device has moved less than 30 m (98.4 ft), location updates are
-     *        ignored. Location updates within this distance are neither evaluated against linked geofence collections,
-     *        nor stored. This helps control costs by reducing the number of geofence evaluations and device positions
-     *        to retrieve. Distance-based filtering can also reduce the jitter effect when displaying device trajectory
-     *        on a map.
+     *        ignored. Location updates within this area are neither evaluated against linked geofence collections, nor
+     *        stored. This helps control costs by reducing the number of geofence evaluations and historical device
+     *        positions to paginate through. Distance-based filtering can also reduce the effects of GPS noise when
+     *        displaying device trajectories on a map.
      *        </p>
      *        </li>
      *        </ul>
@@ -800,6 +810,11 @@ public class CreateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Cannot use "aws:" as a prefix for a key.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return Applies one or more tags to the tracker resource. A tag is a key-value pair helps manage, identify,
@@ -834,6 +849,11 @@ public class CreateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         <li>
      *         <p>
      *         Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Cannot use "aws:" as a prefix for a key.
      *         </p>
      *         </li>
      */
@@ -879,6 +899,11 @@ public class CreateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Cannot use "aws:" as a prefix for a key.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param tags
@@ -914,6 +939,11 @@ public class CreateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <li>
      *        <p>
      *        Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Cannot use "aws:" as a prefix for a key.
      *        </p>
      *        </li>
      */
@@ -959,6 +989,11 @@ public class CreateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Cannot use "aws:" as a prefix for a key.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param tags
@@ -994,6 +1029,11 @@ public class CreateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <li>
      *        <p>
      *        Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Cannot use "aws:" as a prefix for a key.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

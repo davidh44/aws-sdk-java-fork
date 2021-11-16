@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A summary of the reverse geocoding request sent using <code>SearchPlaceIndexForPosition</code>.
+ * A summary of the request sent by using <code>SearchPlaceIndexForPosition</code>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/SearchPlaceIndexForPositionSummary"
@@ -30,7 +30,8 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
 
     /**
      * <p>
-     * The data provider of geospatial data. Indicates one of the available providers:
+     * The geospatial data provider attached to the place index resource specified in the request. Values can be one of
+     * the following:
      * </p>
      * <ul>
      * <li>
@@ -40,12 +41,12 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
      * </li>
      * <li>
      * <p>
-     * HERE
+     * Here
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For additional details on data providers, see <a
+     * For more information about data providers, see <a
      * href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon Location
      * Service data providers</a>.
      * </p>
@@ -53,7 +54,14 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
     private String dataSource;
     /**
      * <p>
-     * An optional parameter. The maximum number of results returned per request.
+     * The preferred language used to return results. Matches the language in the request. The value is a valid <a
+     * href="https://tools.ietf.org/search/bcp47">BCP 47</a> language tag, for example, <code>en</code> for English.
+     * </p>
+     */
+    private String language;
+    /**
+     * <p>
+     * Contains the optional result count limit that is specified in the request.
      * </p>
      * <p>
      * Default value: <code>50</code>
@@ -62,14 +70,15 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
     private Integer maxResults;
     /**
      * <p>
-     * The position given in the reverse geocoding request.
+     * The position specified in the request.
      * </p>
      */
     private java.util.List<Double> position;
 
     /**
      * <p>
-     * The data provider of geospatial data. Indicates one of the available providers:
+     * The geospatial data provider attached to the place index resource specified in the request. Values can be one of
+     * the following:
      * </p>
      * <ul>
      * <li>
@@ -79,18 +88,19 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
      * </li>
      * <li>
      * <p>
-     * HERE
+     * Here
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For additional details on data providers, see <a
+     * For more information about data providers, see <a
      * href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon Location
      * Service data providers</a>.
      * </p>
      * 
      * @param dataSource
-     *        The data provider of geospatial data. Indicates one of the available providers:</p>
+     *        The geospatial data provider attached to the place index resource specified in the request. Values can be
+     *        one of the following:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -99,12 +109,12 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
      *        </li>
      *        <li>
      *        <p>
-     *        HERE
+     *        Here
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        For additional details on data providers, see <a
+     *        For more information about data providers, see <a
      *        href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon
      *        Location Service data providers</a>.
      */
@@ -115,7 +125,8 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
 
     /**
      * <p>
-     * The data provider of geospatial data. Indicates one of the available providers:
+     * The geospatial data provider attached to the place index resource specified in the request. Values can be one of
+     * the following:
      * </p>
      * <ul>
      * <li>
@@ -125,17 +136,18 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
      * </li>
      * <li>
      * <p>
-     * HERE
+     * Here
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For additional details on data providers, see <a
+     * For more information about data providers, see <a
      * href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon Location
      * Service data providers</a>.
      * </p>
      * 
-     * @return The data provider of geospatial data. Indicates one of the available providers:</p>
+     * @return The geospatial data provider attached to the place index resource specified in the request. Values can be
+     *         one of the following:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -144,12 +156,12 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
      *         </li>
      *         <li>
      *         <p>
-     *         HERE
+     *         Here
      *         </p>
      *         </li>
      *         </ul>
      *         <p>
-     *         For additional details on data providers, see <a
+     *         For more information about data providers, see <a
      *         href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon
      *         Location Service data providers</a>.
      */
@@ -160,7 +172,8 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
 
     /**
      * <p>
-     * The data provider of geospatial data. Indicates one of the available providers:
+     * The geospatial data provider attached to the place index resource specified in the request. Values can be one of
+     * the following:
      * </p>
      * <ul>
      * <li>
@@ -170,18 +183,19 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
      * </li>
      * <li>
      * <p>
-     * HERE
+     * Here
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For additional details on data providers, see <a
+     * For more information about data providers, see <a
      * href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon Location
      * Service data providers</a>.
      * </p>
      * 
      * @param dataSource
-     *        The data provider of geospatial data. Indicates one of the available providers:</p>
+     *        The geospatial data provider attached to the place index resource specified in the request. Values can be
+     *        one of the following:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -190,12 +204,12 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
      *        </li>
      *        <li>
      *        <p>
-     *        HERE
+     *        Here
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        For additional details on data providers, see <a
+     *        For more information about data providers, see <a
      *        href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon
      *        Location Service data providers</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -208,14 +222,63 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
 
     /**
      * <p>
-     * An optional parameter. The maximum number of results returned per request.
+     * The preferred language used to return results. Matches the language in the request. The value is a valid <a
+     * href="https://tools.ietf.org/search/bcp47">BCP 47</a> language tag, for example, <code>en</code> for English.
+     * </p>
+     * 
+     * @param language
+     *        The preferred language used to return results. Matches the language in the request. The value is a valid
+     *        <a href="https://tools.ietf.org/search/bcp47">BCP 47</a> language tag, for example, <code>en</code> for
+     *        English.
+     */
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
+    /**
+     * <p>
+     * The preferred language used to return results. Matches the language in the request. The value is a valid <a
+     * href="https://tools.ietf.org/search/bcp47">BCP 47</a> language tag, for example, <code>en</code> for English.
+     * </p>
+     * 
+     * @return The preferred language used to return results. Matches the language in the request. The value is a valid
+     *         <a href="https://tools.ietf.org/search/bcp47">BCP 47</a> language tag, for example, <code>en</code> for
+     *         English.
+     */
+
+    public String getLanguage() {
+        return this.language;
+    }
+
+    /**
+     * <p>
+     * The preferred language used to return results. Matches the language in the request. The value is a valid <a
+     * href="https://tools.ietf.org/search/bcp47">BCP 47</a> language tag, for example, <code>en</code> for English.
+     * </p>
+     * 
+     * @param language
+     *        The preferred language used to return results. Matches the language in the request. The value is a valid
+     *        <a href="https://tools.ietf.org/search/bcp47">BCP 47</a> language tag, for example, <code>en</code> for
+     *        English.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SearchPlaceIndexForPositionSummary withLanguage(String language) {
+        setLanguage(language);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains the optional result count limit that is specified in the request.
      * </p>
      * <p>
      * Default value: <code>50</code>
      * </p>
      * 
      * @param maxResults
-     *        An optional parameter. The maximum number of results returned per request. </p>
+     *        Contains the optional result count limit that is specified in the request.</p>
      *        <p>
      *        Default value: <code>50</code>
      */
@@ -226,13 +289,13 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
 
     /**
      * <p>
-     * An optional parameter. The maximum number of results returned per request.
+     * Contains the optional result count limit that is specified in the request.
      * </p>
      * <p>
      * Default value: <code>50</code>
      * </p>
      * 
-     * @return An optional parameter. The maximum number of results returned per request. </p>
+     * @return Contains the optional result count limit that is specified in the request.</p>
      *         <p>
      *         Default value: <code>50</code>
      */
@@ -243,14 +306,14 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
 
     /**
      * <p>
-     * An optional parameter. The maximum number of results returned per request.
+     * Contains the optional result count limit that is specified in the request.
      * </p>
      * <p>
      * Default value: <code>50</code>
      * </p>
      * 
      * @param maxResults
-     *        An optional parameter. The maximum number of results returned per request. </p>
+     *        Contains the optional result count limit that is specified in the request.</p>
      *        <p>
      *        Default value: <code>50</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -263,10 +326,10 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
 
     /**
      * <p>
-     * The position given in the reverse geocoding request.
+     * The position specified in the request.
      * </p>
      * 
-     * @return The position given in the reverse geocoding request.
+     * @return The position specified in the request.
      */
 
     public java.util.List<Double> getPosition() {
@@ -275,11 +338,11 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
 
     /**
      * <p>
-     * The position given in the reverse geocoding request.
+     * The position specified in the request.
      * </p>
      * 
      * @param position
-     *        The position given in the reverse geocoding request.
+     *        The position specified in the request.
      */
 
     public void setPosition(java.util.Collection<Double> position) {
@@ -293,7 +356,7 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
 
     /**
      * <p>
-     * The position given in the reverse geocoding request.
+     * The position specified in the request.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -302,7 +365,7 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
      * </p>
      * 
      * @param position
-     *        The position given in the reverse geocoding request.
+     *        The position specified in the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -318,11 +381,11 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
 
     /**
      * <p>
-     * The position given in the reverse geocoding request.
+     * The position specified in the request.
      * </p>
      * 
      * @param position
-     *        The position given in the reverse geocoding request.
+     *        The position specified in the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -345,6 +408,8 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
         sb.append("{");
         if (getDataSource() != null)
             sb.append("DataSource: ").append(getDataSource()).append(",");
+        if (getLanguage() != null)
+            sb.append("Language: ").append(getLanguage()).append(",");
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getPosition() != null)
@@ -367,6 +432,10 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
             return false;
         if (other.getDataSource() != null && other.getDataSource().equals(this.getDataSource()) == false)
             return false;
+        if (other.getLanguage() == null ^ this.getLanguage() == null)
+            return false;
+        if (other.getLanguage() != null && other.getLanguage().equals(this.getLanguage()) == false)
+            return false;
         if (other.getMaxResults() == null ^ this.getMaxResults() == null)
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
@@ -384,6 +453,7 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getDataSource() == null) ? 0 : getDataSource().hashCode());
+        hashCode = prime * hashCode + ((getLanguage() == null) ? 0 : getLanguage().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getPosition() == null) ? 0 : getPosition().hashCode());
         return hashCode;

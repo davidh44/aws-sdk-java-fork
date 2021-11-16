@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum PositionFiltering {
 
     TimeBased("TimeBased"),
-    DistanceBased("DistanceBased");
+    DistanceBased("DistanceBased"),
+    AccuracyBased("AccuracyBased");
 
     private String value;
 

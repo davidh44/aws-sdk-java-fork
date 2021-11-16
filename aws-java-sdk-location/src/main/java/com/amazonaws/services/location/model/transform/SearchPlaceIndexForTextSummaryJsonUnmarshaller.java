@@ -70,6 +70,10 @@ public class SearchPlaceIndexForTextSummaryJsonUnmarshaller implements Unmarshal
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("Language", targetDepth)) {
+                    context.nextToken();
+                    searchPlaceIndexForTextSummary.setLanguage(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("MaxResults", targetDepth)) {
                     context.nextToken();
                     searchPlaceIndexForTextSummary.setMaxResults(context.getUnmarshaller(Integer.class).unmarshall(context));

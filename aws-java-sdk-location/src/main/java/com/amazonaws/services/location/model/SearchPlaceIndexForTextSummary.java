@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A summary of the geocoding request sent using <code>SearchPlaceIndexForText</code>.
+ * A summary of the request sent by using <code>SearchPlaceIndexForText</code>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/SearchPlaceIndexForTextSummary"
@@ -30,13 +30,14 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Contains the coordinates for the bias position entered in the geocoding request.
+     * Contains the coordinates for the optional bias position specified in the request.
      * </p>
      */
     private java.util.List<Double> biasPosition;
     /**
      * <p>
-     * The data provider of geospatial data. Indicates one of the available providers:
+     * The geospatial data provider attached to the place index resource specified in the request. Values can be one of
+     * the following:
      * </p>
      * <ul>
      * <li>
@@ -46,12 +47,12 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
      * </li>
      * <li>
      * <p>
-     * HERE
+     * Here
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For additional details on data providers, see <a
+     * For more information about data providers, see <a
      * href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon Location
      * Service data providers</a>.
      * </p>
@@ -59,43 +60,54 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
     private String dataSource;
     /**
      * <p>
-     * Contains the coordinates for the optional bounding box coordinated entered in the geocoding request.
+     * Contains the coordinates for the optional bounding box specified in the request.
      * </p>
      */
     private java.util.List<Double> filterBBox;
     /**
      * <p>
-     * Contains the country filter entered in the geocoding request.
+     * Contains the optional country filter specified in the request.
      * </p>
      */
     private java.util.List<String> filterCountries;
     /**
      * <p>
-     * Contains the maximum number of results indicated for the request.
+     * The preferred language used to return results. Matches the language in the request. The value is a valid <a
+     * href="https://tools.ietf.org/search/bcp47">BCP 47</a> language tag, for example, <code>en</code> for English.
+     * </p>
+     */
+    private String language;
+    /**
+     * <p>
+     * Contains the optional result count limit specified in the request.
      * </p>
      */
     private Integer maxResults;
     /**
      * <p>
-     * A bounding box that contains the search results within the specified area indicated by <code>FilterBBox</code>. A
-     * subset of bounding box specified using <code>FilterBBox</code>.
+     * The bounding box that fully contains all search results.
      * </p>
+     * <note>
+     * <p>
+     * If you specified the optional <code>FilterBBox</code> parameter in the request, <code>ResultBBox</code> is
+     * contained within <code>FilterBBox</code>.
+     * </p>
+     * </note>
      */
     private java.util.List<Double> resultBBox;
     /**
      * <p>
-     * The address, name, city or region to be used in the geocoding request. In free-form text format. For example,
-     * <code>Vancouver</code>.
+     * The search text specified in the request.
      * </p>
      */
     private String text;
 
     /**
      * <p>
-     * Contains the coordinates for the bias position entered in the geocoding request.
+     * Contains the coordinates for the optional bias position specified in the request.
      * </p>
      * 
-     * @return Contains the coordinates for the bias position entered in the geocoding request.
+     * @return Contains the coordinates for the optional bias position specified in the request.
      */
 
     public java.util.List<Double> getBiasPosition() {
@@ -104,11 +116,11 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Contains the coordinates for the bias position entered in the geocoding request.
+     * Contains the coordinates for the optional bias position specified in the request.
      * </p>
      * 
      * @param biasPosition
-     *        Contains the coordinates for the bias position entered in the geocoding request.
+     *        Contains the coordinates for the optional bias position specified in the request.
      */
 
     public void setBiasPosition(java.util.Collection<Double> biasPosition) {
@@ -122,7 +134,7 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Contains the coordinates for the bias position entered in the geocoding request.
+     * Contains the coordinates for the optional bias position specified in the request.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -131,7 +143,7 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
      * </p>
      * 
      * @param biasPosition
-     *        Contains the coordinates for the bias position entered in the geocoding request.
+     *        Contains the coordinates for the optional bias position specified in the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -147,11 +159,11 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Contains the coordinates for the bias position entered in the geocoding request.
+     * Contains the coordinates for the optional bias position specified in the request.
      * </p>
      * 
      * @param biasPosition
-     *        Contains the coordinates for the bias position entered in the geocoding request.
+     *        Contains the coordinates for the optional bias position specified in the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -162,7 +174,8 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The data provider of geospatial data. Indicates one of the available providers:
+     * The geospatial data provider attached to the place index resource specified in the request. Values can be one of
+     * the following:
      * </p>
      * <ul>
      * <li>
@@ -172,18 +185,19 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
      * </li>
      * <li>
      * <p>
-     * HERE
+     * Here
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For additional details on data providers, see <a
+     * For more information about data providers, see <a
      * href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon Location
      * Service data providers</a>.
      * </p>
      * 
      * @param dataSource
-     *        The data provider of geospatial data. Indicates one of the available providers:</p>
+     *        The geospatial data provider attached to the place index resource specified in the request. Values can be
+     *        one of the following:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -192,12 +206,12 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
      *        </li>
      *        <li>
      *        <p>
-     *        HERE
+     *        Here
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        For additional details on data providers, see <a
+     *        For more information about data providers, see <a
      *        href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon
      *        Location Service data providers</a>.
      */
@@ -208,7 +222,8 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The data provider of geospatial data. Indicates one of the available providers:
+     * The geospatial data provider attached to the place index resource specified in the request. Values can be one of
+     * the following:
      * </p>
      * <ul>
      * <li>
@@ -218,17 +233,18 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
      * </li>
      * <li>
      * <p>
-     * HERE
+     * Here
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For additional details on data providers, see <a
+     * For more information about data providers, see <a
      * href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon Location
      * Service data providers</a>.
      * </p>
      * 
-     * @return The data provider of geospatial data. Indicates one of the available providers:</p>
+     * @return The geospatial data provider attached to the place index resource specified in the request. Values can be
+     *         one of the following:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -237,12 +253,12 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
      *         </li>
      *         <li>
      *         <p>
-     *         HERE
+     *         Here
      *         </p>
      *         </li>
      *         </ul>
      *         <p>
-     *         For additional details on data providers, see <a
+     *         For more information about data providers, see <a
      *         href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon
      *         Location Service data providers</a>.
      */
@@ -253,7 +269,8 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The data provider of geospatial data. Indicates one of the available providers:
+     * The geospatial data provider attached to the place index resource specified in the request. Values can be one of
+     * the following:
      * </p>
      * <ul>
      * <li>
@@ -263,18 +280,19 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
      * </li>
      * <li>
      * <p>
-     * HERE
+     * Here
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For additional details on data providers, see <a
+     * For more information about data providers, see <a
      * href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon Location
      * Service data providers</a>.
      * </p>
      * 
      * @param dataSource
-     *        The data provider of geospatial data. Indicates one of the available providers:</p>
+     *        The geospatial data provider attached to the place index resource specified in the request. Values can be
+     *        one of the following:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -283,12 +301,12 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
      *        </li>
      *        <li>
      *        <p>
-     *        HERE
+     *        Here
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        For additional details on data providers, see <a
+     *        For more information about data providers, see <a
      *        href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon
      *        Location Service data providers</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -301,10 +319,10 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Contains the coordinates for the optional bounding box coordinated entered in the geocoding request.
+     * Contains the coordinates for the optional bounding box specified in the request.
      * </p>
      * 
-     * @return Contains the coordinates for the optional bounding box coordinated entered in the geocoding request.
+     * @return Contains the coordinates for the optional bounding box specified in the request.
      */
 
     public java.util.List<Double> getFilterBBox() {
@@ -313,11 +331,11 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Contains the coordinates for the optional bounding box coordinated entered in the geocoding request.
+     * Contains the coordinates for the optional bounding box specified in the request.
      * </p>
      * 
      * @param filterBBox
-     *        Contains the coordinates for the optional bounding box coordinated entered in the geocoding request.
+     *        Contains the coordinates for the optional bounding box specified in the request.
      */
 
     public void setFilterBBox(java.util.Collection<Double> filterBBox) {
@@ -331,7 +349,7 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Contains the coordinates for the optional bounding box coordinated entered in the geocoding request.
+     * Contains the coordinates for the optional bounding box specified in the request.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -340,7 +358,7 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
      * </p>
      * 
      * @param filterBBox
-     *        Contains the coordinates for the optional bounding box coordinated entered in the geocoding request.
+     *        Contains the coordinates for the optional bounding box specified in the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -356,11 +374,11 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Contains the coordinates for the optional bounding box coordinated entered in the geocoding request.
+     * Contains the coordinates for the optional bounding box specified in the request.
      * </p>
      * 
      * @param filterBBox
-     *        Contains the coordinates for the optional bounding box coordinated entered in the geocoding request.
+     *        Contains the coordinates for the optional bounding box specified in the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -371,10 +389,10 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Contains the country filter entered in the geocoding request.
+     * Contains the optional country filter specified in the request.
      * </p>
      * 
-     * @return Contains the country filter entered in the geocoding request.
+     * @return Contains the optional country filter specified in the request.
      */
 
     public java.util.List<String> getFilterCountries() {
@@ -383,11 +401,11 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Contains the country filter entered in the geocoding request.
+     * Contains the optional country filter specified in the request.
      * </p>
      * 
      * @param filterCountries
-     *        Contains the country filter entered in the geocoding request.
+     *        Contains the optional country filter specified in the request.
      */
 
     public void setFilterCountries(java.util.Collection<String> filterCountries) {
@@ -401,7 +419,7 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Contains the country filter entered in the geocoding request.
+     * Contains the optional country filter specified in the request.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -410,7 +428,7 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
      * </p>
      * 
      * @param filterCountries
-     *        Contains the country filter entered in the geocoding request.
+     *        Contains the optional country filter specified in the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -426,11 +444,11 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Contains the country filter entered in the geocoding request.
+     * Contains the optional country filter specified in the request.
      * </p>
      * 
      * @param filterCountries
-     *        Contains the country filter entered in the geocoding request.
+     *        Contains the optional country filter specified in the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -441,11 +459,60 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Contains the maximum number of results indicated for the request.
+     * The preferred language used to return results. Matches the language in the request. The value is a valid <a
+     * href="https://tools.ietf.org/search/bcp47">BCP 47</a> language tag, for example, <code>en</code> for English.
+     * </p>
+     * 
+     * @param language
+     *        The preferred language used to return results. Matches the language in the request. The value is a valid
+     *        <a href="https://tools.ietf.org/search/bcp47">BCP 47</a> language tag, for example, <code>en</code> for
+     *        English.
+     */
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
+    /**
+     * <p>
+     * The preferred language used to return results. Matches the language in the request. The value is a valid <a
+     * href="https://tools.ietf.org/search/bcp47">BCP 47</a> language tag, for example, <code>en</code> for English.
+     * </p>
+     * 
+     * @return The preferred language used to return results. Matches the language in the request. The value is a valid
+     *         <a href="https://tools.ietf.org/search/bcp47">BCP 47</a> language tag, for example, <code>en</code> for
+     *         English.
+     */
+
+    public String getLanguage() {
+        return this.language;
+    }
+
+    /**
+     * <p>
+     * The preferred language used to return results. Matches the language in the request. The value is a valid <a
+     * href="https://tools.ietf.org/search/bcp47">BCP 47</a> language tag, for example, <code>en</code> for English.
+     * </p>
+     * 
+     * @param language
+     *        The preferred language used to return results. Matches the language in the request. The value is a valid
+     *        <a href="https://tools.ietf.org/search/bcp47">BCP 47</a> language tag, for example, <code>en</code> for
+     *        English.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SearchPlaceIndexForTextSummary withLanguage(String language) {
+        setLanguage(language);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains the optional result count limit specified in the request.
      * </p>
      * 
      * @param maxResults
-     *        Contains the maximum number of results indicated for the request.
+     *        Contains the optional result count limit specified in the request.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -454,10 +521,10 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Contains the maximum number of results indicated for the request.
+     * Contains the optional result count limit specified in the request.
      * </p>
      * 
-     * @return Contains the maximum number of results indicated for the request.
+     * @return Contains the optional result count limit specified in the request.
      */
 
     public Integer getMaxResults() {
@@ -466,11 +533,11 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Contains the maximum number of results indicated for the request.
+     * Contains the optional result count limit specified in the request.
      * </p>
      * 
      * @param maxResults
-     *        Contains the maximum number of results indicated for the request.
+     *        Contains the optional result count limit specified in the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -481,12 +548,20 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * A bounding box that contains the search results within the specified area indicated by <code>FilterBBox</code>. A
-     * subset of bounding box specified using <code>FilterBBox</code>.
+     * The bounding box that fully contains all search results.
      * </p>
+     * <note>
+     * <p>
+     * If you specified the optional <code>FilterBBox</code> parameter in the request, <code>ResultBBox</code> is
+     * contained within <code>FilterBBox</code>.
+     * </p>
+     * </note>
      * 
-     * @return A bounding box that contains the search results within the specified area indicated by
-     *         <code>FilterBBox</code>. A subset of bounding box specified using <code>FilterBBox</code>.
+     * @return The bounding box that fully contains all search results.</p> <note>
+     *         <p>
+     *         If you specified the optional <code>FilterBBox</code> parameter in the request, <code>ResultBBox</code>
+     *         is contained within <code>FilterBBox</code>.
+     *         </p>
      */
 
     public java.util.List<Double> getResultBBox() {
@@ -495,13 +570,21 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * A bounding box that contains the search results within the specified area indicated by <code>FilterBBox</code>. A
-     * subset of bounding box specified using <code>FilterBBox</code>.
+     * The bounding box that fully contains all search results.
      * </p>
+     * <note>
+     * <p>
+     * If you specified the optional <code>FilterBBox</code> parameter in the request, <code>ResultBBox</code> is
+     * contained within <code>FilterBBox</code>.
+     * </p>
+     * </note>
      * 
      * @param resultBBox
-     *        A bounding box that contains the search results within the specified area indicated by
-     *        <code>FilterBBox</code>. A subset of bounding box specified using <code>FilterBBox</code>.
+     *        The bounding box that fully contains all search results.</p> <note>
+     *        <p>
+     *        If you specified the optional <code>FilterBBox</code> parameter in the request, <code>ResultBBox</code> is
+     *        contained within <code>FilterBBox</code>.
+     *        </p>
      */
 
     public void setResultBBox(java.util.Collection<Double> resultBBox) {
@@ -515,9 +598,14 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * A bounding box that contains the search results within the specified area indicated by <code>FilterBBox</code>. A
-     * subset of bounding box specified using <code>FilterBBox</code>.
+     * The bounding box that fully contains all search results.
      * </p>
+     * <note>
+     * <p>
+     * If you specified the optional <code>FilterBBox</code> parameter in the request, <code>ResultBBox</code> is
+     * contained within <code>FilterBBox</code>.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setResultBBox(java.util.Collection)} or {@link #withResultBBox(java.util.Collection)} if you want to
@@ -525,8 +613,11 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
      * </p>
      * 
      * @param resultBBox
-     *        A bounding box that contains the search results within the specified area indicated by
-     *        <code>FilterBBox</code>. A subset of bounding box specified using <code>FilterBBox</code>.
+     *        The bounding box that fully contains all search results.</p> <note>
+     *        <p>
+     *        If you specified the optional <code>FilterBBox</code> parameter in the request, <code>ResultBBox</code> is
+     *        contained within <code>FilterBBox</code>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -542,13 +633,21 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * A bounding box that contains the search results within the specified area indicated by <code>FilterBBox</code>. A
-     * subset of bounding box specified using <code>FilterBBox</code>.
+     * The bounding box that fully contains all search results.
      * </p>
+     * <note>
+     * <p>
+     * If you specified the optional <code>FilterBBox</code> parameter in the request, <code>ResultBBox</code> is
+     * contained within <code>FilterBBox</code>.
+     * </p>
+     * </note>
      * 
      * @param resultBBox
-     *        A bounding box that contains the search results within the specified area indicated by
-     *        <code>FilterBBox</code>. A subset of bounding box specified using <code>FilterBBox</code>.
+     *        The bounding box that fully contains all search results.</p> <note>
+     *        <p>
+     *        If you specified the optional <code>FilterBBox</code> parameter in the request, <code>ResultBBox</code> is
+     *        contained within <code>FilterBBox</code>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -559,13 +658,11 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The address, name, city or region to be used in the geocoding request. In free-form text format. For example,
-     * <code>Vancouver</code>.
+     * The search text specified in the request.
      * </p>
      * 
      * @param text
-     *        The address, name, city or region to be used in the geocoding request. In free-form text format. For
-     *        example, <code>Vancouver</code>.
+     *        The search text specified in the request.
      */
 
     public void setText(String text) {
@@ -574,12 +671,10 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The address, name, city or region to be used in the geocoding request. In free-form text format. For example,
-     * <code>Vancouver</code>.
+     * The search text specified in the request.
      * </p>
      * 
-     * @return The address, name, city or region to be used in the geocoding request. In free-form text format. For
-     *         example, <code>Vancouver</code>.
+     * @return The search text specified in the request.
      */
 
     public String getText() {
@@ -588,13 +683,11 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The address, name, city or region to be used in the geocoding request. In free-form text format. For example,
-     * <code>Vancouver</code>.
+     * The search text specified in the request.
      * </p>
      * 
      * @param text
-     *        The address, name, city or region to be used in the geocoding request. In free-form text format. For
-     *        example, <code>Vancouver</code>.
+     *        The search text specified in the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -623,6 +716,8 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
             sb.append("FilterBBox: ").append("***Sensitive Data Redacted***").append(",");
         if (getFilterCountries() != null)
             sb.append("FilterCountries: ").append(getFilterCountries()).append(",");
+        if (getLanguage() != null)
+            sb.append("Language: ").append(getLanguage()).append(",");
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getResultBBox() != null)
@@ -659,6 +754,10 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
             return false;
         if (other.getFilterCountries() != null && other.getFilterCountries().equals(this.getFilterCountries()) == false)
             return false;
+        if (other.getLanguage() == null ^ this.getLanguage() == null)
+            return false;
+        if (other.getLanguage() != null && other.getLanguage().equals(this.getLanguage()) == false)
+            return false;
         if (other.getMaxResults() == null ^ this.getMaxResults() == null)
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
@@ -683,6 +782,7 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
         hashCode = prime * hashCode + ((getDataSource() == null) ? 0 : getDataSource().hashCode());
         hashCode = prime * hashCode + ((getFilterBBox() == null) ? 0 : getFilterBBox().hashCode());
         hashCode = prime * hashCode + ((getFilterCountries() == null) ? 0 : getFilterCountries().hashCode());
+        hashCode = prime * hashCode + ((getLanguage() == null) ? 0 : getLanguage().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getResultBBox() == null) ? 0 : getResultBBox().hashCode());
         hashCode = prime * hashCode + ((getText() == null) ? 0 : getText().hashCode());

@@ -48,9 +48,17 @@ public class SearchForTextResultJsonUnmarshaller implements Unmarshaller<SearchF
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("Distance", targetDepth)) {
+                    context.nextToken();
+                    searchForTextResult.setDistance(context.getUnmarshaller(Double.class).unmarshall(context));
+                }
                 if (context.testExpression("Place", targetDepth)) {
                     context.nextToken();
                     searchForTextResult.setPlace(PlaceJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("Relevance", targetDepth)) {
+                    context.nextToken();
+                    searchForTextResult.setRelevance(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

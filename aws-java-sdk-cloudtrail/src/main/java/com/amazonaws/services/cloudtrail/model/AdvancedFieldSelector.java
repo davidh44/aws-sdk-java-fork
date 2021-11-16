@@ -62,17 +62,63 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <b> <code>resources.type</code> </b> - This ﬁeld is required. <code>resources.type</code> can only use the
-     * <code>Equals</code> operator, and the value can be one of the following: <code>AWS::S3::Object</code>,
-     * <code>AWS::S3::AccessPoint</code>, <code>AWS::Lambda::Function</code>, <code>AWS::DynamoDB::Table</code>,
-     * <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>,
-     * <code>AWS::S3ObjectLambda::AccessPoint</code>, or <code>AWS::EC2::Snapshot</code>. You can have only one
-     * <code>resources.type</code> ﬁeld per selector. To log data events on more than one resource type, add another
-     * selector.
+     * <code>Equals</code> operator, and the value can be one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>AWS::S3::Object</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>resources.ARN</code> </b> - You can use any operator with resources.ARN, but if you use
+     * <code>AWS::Lambda::Function</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::DynamoDB::Table</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3Outposts::Object</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::ManagedBlockchain::Node</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3ObjectLambda::AccessPoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::EC2::Snapshot</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3::AccessPoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::DynamoDB::Stream</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can have only one <code>resources.type</code> ﬁeld per selector. To log data events on more than one resource
+     * type, add another selector.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b> <code>resources.ARN</code> </b> - You can use any operator with <code>resources.ARN</code>, but if you use
      * <code>Equals</code> or <code>NotEquals</code>, the value must exactly match the ARN of a valid resource of the
      * type you've speciﬁed in the template as the value of resources.type. For example, if resources.type equals
      * <code>AWS::S3::Object</code>, the ARN must be in one of the following formats. To log all data events for all
@@ -131,7 +177,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table:&lt;table_name&gt;</code>
+     * <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -176,6 +222,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::DynamoDB::Stream</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;/stream/&lt;date_time&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -261,17 +318,63 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <b> <code>resources.type</code> </b> - This ﬁeld is required. <code>resources.type</code> can only use the
-     * <code>Equals</code> operator, and the value can be one of the following: <code>AWS::S3::Object</code>,
-     * <code>AWS::S3::AccessPoint</code>, <code>AWS::Lambda::Function</code>, <code>AWS::DynamoDB::Table</code>,
-     * <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>,
-     * <code>AWS::S3ObjectLambda::AccessPoint</code>, or <code>AWS::EC2::Snapshot</code>. You can have only one
-     * <code>resources.type</code> ﬁeld per selector. To log data events on more than one resource type, add another
-     * selector.
+     * <code>Equals</code> operator, and the value can be one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>AWS::S3::Object</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>resources.ARN</code> </b> - You can use any operator with resources.ARN, but if you use
+     * <code>AWS::Lambda::Function</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::DynamoDB::Table</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3Outposts::Object</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::ManagedBlockchain::Node</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3ObjectLambda::AccessPoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::EC2::Snapshot</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3::AccessPoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::DynamoDB::Stream</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can have only one <code>resources.type</code> ﬁeld per selector. To log data events on more than one resource
+     * type, add another selector.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b> <code>resources.ARN</code> </b> - You can use any operator with <code>resources.ARN</code>, but if you use
      * <code>Equals</code> or <code>NotEquals</code>, the value must exactly match the ARN of a valid resource of the
      * type you've speciﬁed in the template as the value of resources.type. For example, if resources.type equals
      * <code>AWS::S3::Object</code>, the ARN must be in one of the following formats. To log all data events for all
@@ -330,7 +433,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table:&lt;table_name&gt;</code>
+     * <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -378,6 +481,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::DynamoDB::Stream</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;/stream/&lt;date_time&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
      * </li>
      * </ul>
      * 
@@ -415,22 +529,68 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <b> <code>resources.type</code> </b> - This ﬁeld is required. <code>resources.type</code> can only use the
-     *        <code>Equals</code> operator, and the value can be one of the following: <code>AWS::S3::Object</code>,
-     *        <code>AWS::S3::AccessPoint</code>, <code>AWS::Lambda::Function</code>, <code>AWS::DynamoDB::Table</code>,
-     *        <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>,
-     *        <code>AWS::S3ObjectLambda::AccessPoint</code>, or <code>AWS::EC2::Snapshot</code>. You can have only one
-     *        <code>resources.type</code> ﬁeld per selector. To log data events on more than one resource type, add
-     *        another selector.
+     *        <code>Equals</code> operator, and the value can be one of the following:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>AWS::S3::Object</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>resources.ARN</code> </b> - You can use any operator with resources.ARN, but if you use
-     *        <code>Equals</code> or <code>NotEquals</code>, the value must exactly match the ARN of a valid resource of
-     *        the type you've speciﬁed in the template as the value of resources.type. For example, if resources.type
-     *        equals <code>AWS::S3::Object</code>, the ARN must be in one of the following formats. To log all data
-     *        events for all objects in a specific S3 bucket, use the <code>StartsWith</code> operator, and include only
-     *        the bucket ARN as the matching value.
+     *        <code>AWS::Lambda::Function</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::DynamoDB::Table</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::S3Outposts::Object</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::ManagedBlockchain::Node</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::S3ObjectLambda::AccessPoint</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::EC2::Snapshot</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::S3::AccessPoint</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::DynamoDB::Stream</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        You can have only one <code>resources.type</code> ﬁeld per selector. To log data events on more than one
+     *        resource type, add another selector.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b> <code>resources.ARN</code> </b> - You can use any operator with <code>resources.ARN</code>, but if you
+     *        use <code>Equals</code> or <code>NotEquals</code>, the value must exactly match the ARN of a valid
+     *        resource of the type you've speciﬁed in the template as the value of resources.type. For example, if
+     *        resources.type equals <code>AWS::S3::Object</code>, the ARN must be in one of the following formats. To
+     *        log all data events for all objects in a specific S3 bucket, use the <code>StartsWith</code> operator, and
+     *        include only the bucket ARN as the matching value.
      *        </p>
      *        <p>
      *        The trailing slash is intentional; do not exclude it. Replace the text between less than and greater than
@@ -484,7 +644,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table:&lt;table_name&gt;</code>
+     *        <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -532,6 +692,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </p>
      *        </li>
      *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::DynamoDB::Stream</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;/stream/&lt;date_time&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
      *        </li>
      */
 
@@ -573,17 +744,63 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <b> <code>resources.type</code> </b> - This ﬁeld is required. <code>resources.type</code> can only use the
-     * <code>Equals</code> operator, and the value can be one of the following: <code>AWS::S3::Object</code>,
-     * <code>AWS::S3::AccessPoint</code>, <code>AWS::Lambda::Function</code>, <code>AWS::DynamoDB::Table</code>,
-     * <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>,
-     * <code>AWS::S3ObjectLambda::AccessPoint</code>, or <code>AWS::EC2::Snapshot</code>. You can have only one
-     * <code>resources.type</code> ﬁeld per selector. To log data events on more than one resource type, add another
-     * selector.
+     * <code>Equals</code> operator, and the value can be one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>AWS::S3::Object</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>resources.ARN</code> </b> - You can use any operator with resources.ARN, but if you use
+     * <code>AWS::Lambda::Function</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::DynamoDB::Table</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3Outposts::Object</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::ManagedBlockchain::Node</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3ObjectLambda::AccessPoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::EC2::Snapshot</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3::AccessPoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::DynamoDB::Stream</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can have only one <code>resources.type</code> ﬁeld per selector. To log data events on more than one resource
+     * type, add another selector.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b> <code>resources.ARN</code> </b> - You can use any operator with <code>resources.ARN</code>, but if you use
      * <code>Equals</code> or <code>NotEquals</code>, the value must exactly match the ARN of a valid resource of the
      * type you've speciﬁed in the template as the value of resources.type. For example, if resources.type equals
      * <code>AWS::S3::Object</code>, the ARN must be in one of the following formats. To log all data events for all
@@ -642,7 +859,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table:&lt;table_name&gt;</code>
+     * <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -690,6 +907,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::DynamoDB::Stream</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;/stream/&lt;date_time&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
      * </li>
      * </ul>
      * 
@@ -726,18 +954,65 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <li>
      *         <p>
      *         <b> <code>resources.type</code> </b> - This ﬁeld is required. <code>resources.type</code> can only use
-     *         the <code>Equals</code> operator, and the value can be one of the following: <code>AWS::S3::Object</code>, <code>AWS::S3::AccessPoint</code>, <code>AWS::Lambda::Function</code>,
-     *         <code>AWS::DynamoDB::Table</code>, <code>AWS::S3Outposts::Object</code>,
-     *         <code>AWS::ManagedBlockchain::Node</code>, <code>AWS::S3ObjectLambda::AccessPoint</code>, or
-     *         <code>AWS::EC2::Snapshot</code>. You can have only one <code>resources.type</code> ﬁeld per selector. To
-     *         log data events on more than one resource type, add another selector.
+     *         the <code>Equals</code> operator, and the value can be one of the following:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>AWS::S3::Object</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <b> <code>resources.ARN</code> </b> - You can use any operator with resources.ARN, but if you use
-     *         <code>Equals</code> or <code>NotEquals</code>, the value must exactly match the ARN of a valid resource
-     *         of the type you've speciﬁed in the template as the value of resources.type. For example, if
+     *         <code>AWS::Lambda::Function</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::DynamoDB::Table</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::S3Outposts::Object</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::ManagedBlockchain::Node</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::S3ObjectLambda::AccessPoint</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::EC2::Snapshot</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::S3::AccessPoint</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::DynamoDB::Stream</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         You can have only one <code>resources.type</code> ﬁeld per selector. To log data events on more than one
+     *         resource type, add another selector.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b> <code>resources.ARN</code> </b> - You can use any operator with <code>resources.ARN</code>, but if
+     *         you use <code>Equals</code> or <code>NotEquals</code>, the value must exactly match the ARN of a valid
+     *         resource of the type you've speciﬁed in the template as the value of resources.type. For example, if
      *         resources.type equals <code>AWS::S3::Object</code>, the ARN must be in one of the following formats. To
      *         log all data events for all objects in a specific S3 bucket, use the <code>StartsWith</code> operator,
      *         and include only the bucket ARN as the matching value.
@@ -794,7 +1069,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table:&lt;table_name&gt;</code>
+     *         <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -842,6 +1117,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </p>
      *         </li>
      *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::DynamoDB::Stream</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;/stream/&lt;date_time&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
      *         </li>
      */
 
@@ -883,17 +1169,63 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <b> <code>resources.type</code> </b> - This ﬁeld is required. <code>resources.type</code> can only use the
-     * <code>Equals</code> operator, and the value can be one of the following: <code>AWS::S3::Object</code>,
-     * <code>AWS::S3::AccessPoint</code>, <code>AWS::Lambda::Function</code>, <code>AWS::DynamoDB::Table</code>,
-     * <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>,
-     * <code>AWS::S3ObjectLambda::AccessPoint</code>, or <code>AWS::EC2::Snapshot</code>. You can have only one
-     * <code>resources.type</code> ﬁeld per selector. To log data events on more than one resource type, add another
-     * selector.
+     * <code>Equals</code> operator, and the value can be one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>AWS::S3::Object</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>resources.ARN</code> </b> - You can use any operator with resources.ARN, but if you use
+     * <code>AWS::Lambda::Function</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::DynamoDB::Table</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3Outposts::Object</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::ManagedBlockchain::Node</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3ObjectLambda::AccessPoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::EC2::Snapshot</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3::AccessPoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::DynamoDB::Stream</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can have only one <code>resources.type</code> ﬁeld per selector. To log data events on more than one resource
+     * type, add another selector.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b> <code>resources.ARN</code> </b> - You can use any operator with <code>resources.ARN</code>, but if you use
      * <code>Equals</code> or <code>NotEquals</code>, the value must exactly match the ARN of a valid resource of the
      * type you've speciﬁed in the template as the value of resources.type. For example, if resources.type equals
      * <code>AWS::S3::Object</code>, the ARN must be in one of the following formats. To log all data events for all
@@ -952,7 +1284,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table:&lt;table_name&gt;</code>
+     * <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -1000,6 +1332,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::DynamoDB::Stream</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;/stream/&lt;date_time&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
      * </li>
      * </ul>
      * 
@@ -1037,22 +1380,68 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <b> <code>resources.type</code> </b> - This ﬁeld is required. <code>resources.type</code> can only use the
-     *        <code>Equals</code> operator, and the value can be one of the following: <code>AWS::S3::Object</code>,
-     *        <code>AWS::S3::AccessPoint</code>, <code>AWS::Lambda::Function</code>, <code>AWS::DynamoDB::Table</code>,
-     *        <code>AWS::S3Outposts::Object</code>, <code>AWS::ManagedBlockchain::Node</code>,
-     *        <code>AWS::S3ObjectLambda::AccessPoint</code>, or <code>AWS::EC2::Snapshot</code>. You can have only one
-     *        <code>resources.type</code> ﬁeld per selector. To log data events on more than one resource type, add
-     *        another selector.
+     *        <code>Equals</code> operator, and the value can be one of the following:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>AWS::S3::Object</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>resources.ARN</code> </b> - You can use any operator with resources.ARN, but if you use
-     *        <code>Equals</code> or <code>NotEquals</code>, the value must exactly match the ARN of a valid resource of
-     *        the type you've speciﬁed in the template as the value of resources.type. For example, if resources.type
-     *        equals <code>AWS::S3::Object</code>, the ARN must be in one of the following formats. To log all data
-     *        events for all objects in a specific S3 bucket, use the <code>StartsWith</code> operator, and include only
-     *        the bucket ARN as the matching value.
+     *        <code>AWS::Lambda::Function</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::DynamoDB::Table</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::S3Outposts::Object</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::ManagedBlockchain::Node</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::S3ObjectLambda::AccessPoint</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::EC2::Snapshot</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::S3::AccessPoint</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::DynamoDB::Stream</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        You can have only one <code>resources.type</code> ﬁeld per selector. To log data events on more than one
+     *        resource type, add another selector.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b> <code>resources.ARN</code> </b> - You can use any operator with <code>resources.ARN</code>, but if you
+     *        use <code>Equals</code> or <code>NotEquals</code>, the value must exactly match the ARN of a valid
+     *        resource of the type you've speciﬁed in the template as the value of resources.type. For example, if
+     *        resources.type equals <code>AWS::S3::Object</code>, the ARN must be in one of the following formats. To
+     *        log all data events for all objects in a specific S3 bucket, use the <code>StartsWith</code> operator, and
+     *        include only the bucket ARN as the matching value.
      *        </p>
      *        <p>
      *        The trailing slash is intentional; do not exclude it. Replace the text between less than and greater than
@@ -1106,7 +1495,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table:&lt;table_name&gt;</code>
+     *        <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -1151,6 +1540,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::DynamoDB::Stream</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;/stream/&lt;date_time&gt;</code>
      *        </p>
      *        </li>
      *        </ul>

@@ -52,6 +52,10 @@ public class SearchPlaceIndexForPositionSummaryJsonUnmarshaller implements Unmar
                     context.nextToken();
                     searchPlaceIndexForPositionSummary.setDataSource(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Language", targetDepth)) {
+                    context.nextToken();
+                    searchPlaceIndexForPositionSummary.setLanguage(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("MaxResults", targetDepth)) {
                     context.nextToken();
                     searchPlaceIndexForPositionSummary.setMaxResults(context.getUnmarshaller(Integer.class).unmarshall(context));

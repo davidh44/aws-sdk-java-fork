@@ -33,7 +33,7 @@ public class DescribePlaceIndexResult extends com.amazonaws.AmazonWebServiceResu
     private java.util.Date createTime;
     /**
      * <p>
-     * The data provider of geospatial data. Indicates one of the available providers:
+     * The data provider of geospatial data. Values can be one of the following:
      * </p>
      * <ul>
      * <li>
@@ -48,7 +48,7 @@ public class DescribePlaceIndexResult extends com.amazonaws.AmazonWebServiceResu
      * </li>
      * </ul>
      * <p>
-     * For additional details on data providers, see <a
+     * For more information about data providers, see <a
      * href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon Location
      * Service data providers</a>.
      * </p>
@@ -164,7 +164,7 @@ public class DescribePlaceIndexResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The data provider of geospatial data. Indicates one of the available providers:
+     * The data provider of geospatial data. Values can be one of the following:
      * </p>
      * <ul>
      * <li>
@@ -179,13 +179,13 @@ public class DescribePlaceIndexResult extends com.amazonaws.AmazonWebServiceResu
      * </li>
      * </ul>
      * <p>
-     * For additional details on data providers, see <a
+     * For more information about data providers, see <a
      * href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon Location
      * Service data providers</a>.
      * </p>
      * 
      * @param dataSource
-     *        The data provider of geospatial data. Indicates one of the available providers:</p>
+     *        The data provider of geospatial data. Values can be one of the following:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -199,7 +199,7 @@ public class DescribePlaceIndexResult extends com.amazonaws.AmazonWebServiceResu
      *        </li>
      *        </ul>
      *        <p>
-     *        For additional details on data providers, see <a
+     *        For more information about data providers, see <a
      *        href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon
      *        Location Service data providers</a>.
      */
@@ -210,7 +210,7 @@ public class DescribePlaceIndexResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The data provider of geospatial data. Indicates one of the available providers:
+     * The data provider of geospatial data. Values can be one of the following:
      * </p>
      * <ul>
      * <li>
@@ -225,12 +225,12 @@ public class DescribePlaceIndexResult extends com.amazonaws.AmazonWebServiceResu
      * </li>
      * </ul>
      * <p>
-     * For additional details on data providers, see <a
+     * For more information about data providers, see <a
      * href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon Location
      * Service data providers</a>.
      * </p>
      * 
-     * @return The data provider of geospatial data. Indicates one of the available providers:</p>
+     * @return The data provider of geospatial data. Values can be one of the following:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -244,7 +244,7 @@ public class DescribePlaceIndexResult extends com.amazonaws.AmazonWebServiceResu
      *         </li>
      *         </ul>
      *         <p>
-     *         For additional details on data providers, see <a
+     *         For more information about data providers, see <a
      *         href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon
      *         Location Service data providers</a>.
      */
@@ -255,7 +255,7 @@ public class DescribePlaceIndexResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The data provider of geospatial data. Indicates one of the available providers:
+     * The data provider of geospatial data. Values can be one of the following:
      * </p>
      * <ul>
      * <li>
@@ -270,13 +270,13 @@ public class DescribePlaceIndexResult extends com.amazonaws.AmazonWebServiceResu
      * </li>
      * </ul>
      * <p>
-     * For additional details on data providers, see <a
+     * For more information about data providers, see <a
      * href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon Location
      * Service data providers</a>.
      * </p>
      * 
      * @param dataSource
-     *        The data provider of geospatial data. Indicates one of the available providers:</p>
+     *        The data provider of geospatial data. Values can be one of the following:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -290,7 +290,7 @@ public class DescribePlaceIndexResult extends com.amazonaws.AmazonWebServiceResu
      *        </li>
      *        </ul>
      *        <p>
-     *        For additional details on data providers, see <a
+     *        For more information about data providers, see <a
      *        href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon
      *        Location Service data providers</a>.
      * @return Returns a reference to this object so that method calls can be chained together.

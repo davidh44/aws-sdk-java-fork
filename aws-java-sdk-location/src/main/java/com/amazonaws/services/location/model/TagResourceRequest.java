@@ -40,13 +40,44 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String resourceArn;
     /**
      * <p>
-     * Tags that have been applied to the specified resource. Tags are mapped from the tag key to the tag value:
-     * <code>"TagKey" : "TagValue"</code>.
+     * Applies one or more tags to specific resource. A tag is a key-value pair that helps you manage, identify, search,
+     * and filter your resources.
+     * </p>
+     * <p>
+     * Format: <code>"key" : "value"</code>
+     * </p>
+     * <p>
+     * Restrictions:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Format example: <code>{"tag1" : "value1", "tag2" : "value2"} </code>
+     * Maximum 50 tags per resource.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Each tag key must be unique and must have exactly one associated value.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Maximum key length: 128 Unicode characters in UTF-8.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Maximum value length: 256 Unicode characters in UTF-8.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Cannot use "aws:" as a prefix for a key.
      * </p>
      * </li>
      * </ul>
@@ -134,23 +165,85 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Tags that have been applied to the specified resource. Tags are mapped from the tag key to the tag value:
-     * <code>"TagKey" : "TagValue"</code>.
+     * Applies one or more tags to specific resource. A tag is a key-value pair that helps you manage, identify, search,
+     * and filter your resources.
+     * </p>
+     * <p>
+     * Format: <code>"key" : "value"</code>
+     * </p>
+     * <p>
+     * Restrictions:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Format example: <code>{"tag1" : "value1", "tag2" : "value2"} </code>
+     * Maximum 50 tags per resource.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Each tag key must be unique and must have exactly one associated value.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Maximum key length: 128 Unicode characters in UTF-8.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Maximum value length: 256 Unicode characters in UTF-8.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Cannot use "aws:" as a prefix for a key.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return Tags that have been applied to the specified resource. Tags are mapped from the tag key to the tag value:
-     *         <code>"TagKey" : "TagValue"</code>.</p>
+     * @return Applies one or more tags to specific resource. A tag is a key-value pair that helps you manage, identify,
+     *         search, and filter your resources.</p>
+     *         <p>
+     *         Format: <code>"key" : "value"</code>
+     *         </p>
+     *         <p>
+     *         Restrictions:
+     *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         Format example: <code>{"tag1" : "value1", "tag2" : "value2"} </code>
+     *         Maximum 50 tags per resource.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Each tag key must be unique and must have exactly one associated value.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Maximum key length: 128 Unicode characters in UTF-8.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Maximum value length: 256 Unicode characters in UTF-8.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Cannot use "aws:" as a prefix for a key.
      *         </p>
      *         </li>
      */
@@ -161,24 +254,86 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Tags that have been applied to the specified resource. Tags are mapped from the tag key to the tag value:
-     * <code>"TagKey" : "TagValue"</code>.
+     * Applies one or more tags to specific resource. A tag is a key-value pair that helps you manage, identify, search,
+     * and filter your resources.
+     * </p>
+     * <p>
+     * Format: <code>"key" : "value"</code>
+     * </p>
+     * <p>
+     * Restrictions:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Format example: <code>{"tag1" : "value1", "tag2" : "value2"} </code>
+     * Maximum 50 tags per resource.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Each tag key must be unique and must have exactly one associated value.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Maximum key length: 128 Unicode characters in UTF-8.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Maximum value length: 256 Unicode characters in UTF-8.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Cannot use "aws:" as a prefix for a key.
      * </p>
      * </li>
      * </ul>
      * 
      * @param tags
-     *        Tags that have been applied to the specified resource. Tags are mapped from the tag key to the tag value:
-     *        <code>"TagKey" : "TagValue"</code>.</p>
+     *        Applies one or more tags to specific resource. A tag is a key-value pair that helps you manage, identify,
+     *        search, and filter your resources.</p>
+     *        <p>
+     *        Format: <code>"key" : "value"</code>
+     *        </p>
+     *        <p>
+     *        Restrictions:
+     *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Format example: <code>{"tag1" : "value1", "tag2" : "value2"} </code>
+     *        Maximum 50 tags per resource.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Each tag key must be unique and must have exactly one associated value.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Maximum key length: 128 Unicode characters in UTF-8.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Maximum value length: 256 Unicode characters in UTF-8.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Cannot use "aws:" as a prefix for a key.
      *        </p>
      *        </li>
      */
@@ -189,24 +344,86 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Tags that have been applied to the specified resource. Tags are mapped from the tag key to the tag value:
-     * <code>"TagKey" : "TagValue"</code>.
+     * Applies one or more tags to specific resource. A tag is a key-value pair that helps you manage, identify, search,
+     * and filter your resources.
+     * </p>
+     * <p>
+     * Format: <code>"key" : "value"</code>
+     * </p>
+     * <p>
+     * Restrictions:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Format example: <code>{"tag1" : "value1", "tag2" : "value2"} </code>
+     * Maximum 50 tags per resource.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Each tag key must be unique and must have exactly one associated value.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Maximum key length: 128 Unicode characters in UTF-8.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Maximum value length: 256 Unicode characters in UTF-8.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Cannot use "aws:" as a prefix for a key.
      * </p>
      * </li>
      * </ul>
      * 
      * @param tags
-     *        Tags that have been applied to the specified resource. Tags are mapped from the tag key to the tag value:
-     *        <code>"TagKey" : "TagValue"</code>.</p>
+     *        Applies one or more tags to specific resource. A tag is a key-value pair that helps you manage, identify,
+     *        search, and filter your resources.</p>
+     *        <p>
+     *        Format: <code>"key" : "value"</code>
+     *        </p>
+     *        <p>
+     *        Restrictions:
+     *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Format example: <code>{"tag1" : "value1", "tag2" : "value2"} </code>
+     *        Maximum 50 tags per resource.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Each tag key must be unique and must have exactly one associated value.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Maximum key length: 128 Unicode characters in UTF-8.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Maximum value length: 256 Unicode characters in UTF-8.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Cannot use "aws:" as a prefix for a key.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

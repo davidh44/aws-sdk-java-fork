@@ -361,7 +361,7 @@ public interface AmazonLocationAsync extends AmazonLocation {
      * given the following required parameters: <code>DeparturePostiton</code> and <code>DestinationPosition</code>.
      * Requires that you first <a
      * href="https://docs.aws.amazon.com/location-routes/latest/APIReference/API_CreateRouteCalculator.html">create a
-     * route calculator resource</a>
+     * route calculator resource</a>.
      * </p>
      * <p>
      * By default, a request that doesn't specify a departure time uses the best time of day to travel with the best
@@ -380,7 +380,7 @@ public interface AmazonLocationAsync extends AmazonLocation {
      * <note>
      * <p>
      * You can't specify both <code>DepartureTime</code> and <code>DepartureNow</code> in a single request. Specifying
-     * both parameters returns an error message.
+     * both parameters returns a validation error.
      * </p>
      * </note></li>
      * <li>
@@ -409,7 +409,7 @@ public interface AmazonLocationAsync extends AmazonLocation {
      * given the following required parameters: <code>DeparturePostiton</code> and <code>DestinationPosition</code>.
      * Requires that you first <a
      * href="https://docs.aws.amazon.com/location-routes/latest/APIReference/API_CreateRouteCalculator.html">create a
-     * route calculator resource</a>
+     * route calculator resource</a>.
      * </p>
      * <p>
      * By default, a request that doesn't specify a departure time uses the best time of day to travel with the best
@@ -428,7 +428,7 @@ public interface AmazonLocationAsync extends AmazonLocation {
      * <note>
      * <p>
      * You can't specify both <code>DepartureTime</code> and <code>DepartureNow</code> in a single request. Specifying
-     * both parameters returns an error message.
+     * both parameters returns a validation error.
      * </p>
      * </note></li>
      * <li>
@@ -522,8 +522,9 @@ public interface AmazonLocationAsync extends AmazonLocation {
 
     /**
      * <p>
-     * Creates a place index resource in your AWS account, which supports functions with geospatial data sourced from
-     * your chosen data provider.
+     * Creates a place index resource in your AWS account. Use a place index resource to geocode addresses and other
+     * text queries by using the <code>SearchPlaceIndexForText</code> operation, and reverse geocode coordinates by
+     * using the <code>SearchPlaceIndexForPosition</code> operation.
      * </p>
      * 
      * @param createPlaceIndexRequest
@@ -536,8 +537,9 @@ public interface AmazonLocationAsync extends AmazonLocation {
 
     /**
      * <p>
-     * Creates a place index resource in your AWS account, which supports functions with geospatial data sourced from
-     * your chosen data provider.
+     * Creates a place index resource in your AWS account. Use a place index resource to geocode addresses and other
+     * text queries by using the <code>SearchPlaceIndexForText</code> operation, and reverse geocode coordinates by
+     * using the <code>SearchPlaceIndexForPosition</code> operation.
      * </p>
      * 
      * @param createPlaceIndexRequest
@@ -1652,7 +1654,8 @@ public interface AmazonLocationAsync extends AmazonLocation {
      * interest.
      * </p>
      * <p>
-     * Includes the option to apply additional parameters to narrow your list of results.
+     * Optional parameters let you narrow your search results by bounding box or country, or bias your search toward a
+     * specific position on the globe.
      * </p>
      * <note>
      * <p>
@@ -1660,6 +1663,9 @@ public interface AmazonLocationAsync extends AmazonLocation {
      * bounding box using <code>FilterBBox</code>. Providing both parameters simultaneously returns an error.
      * </p>
      * </note>
+     * <p>
+     * Search results are returned in order of highest to lowest relevance.
+     * </p>
      * 
      * @param searchPlaceIndexForTextRequest
      * @return A Java Future containing the result of the SearchPlaceIndexForText operation returned by the service.
@@ -1675,7 +1681,8 @@ public interface AmazonLocationAsync extends AmazonLocation {
      * interest.
      * </p>
      * <p>
-     * Includes the option to apply additional parameters to narrow your list of results.
+     * Optional parameters let you narrow your search results by bounding box or country, or bias your search toward a
+     * specific position on the globe.
      * </p>
      * <note>
      * <p>
@@ -1683,6 +1690,9 @@ public interface AmazonLocationAsync extends AmazonLocation {
      * bounding box using <code>FilterBBox</code>. Providing both parameters simultaneously returns an error.
      * </p>
      * </note>
+     * <p>
+     * Search results are returned in order of highest to lowest relevance.
+     * </p>
      * 
      * @param searchPlaceIndexForTextRequest
      * @param asyncHandler

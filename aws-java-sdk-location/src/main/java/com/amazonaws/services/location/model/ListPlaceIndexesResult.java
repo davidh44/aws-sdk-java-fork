@@ -31,8 +31,8 @@ public class ListPlaceIndexesResult extends com.amazonaws.AmazonWebServiceResult
     private java.util.List<ListPlaceIndexesResponseEntry> entries;
     /**
      * <p>
-     * A pagination token indicating there are additional pages available. You can use the token in a following request
-     * to fetch the next set of results.
+     * A pagination token indicating that there are additional pages available. You can use the token in a new request
+     * to fetch the next page of results.
      * </p>
      */
     private String nextToken;
@@ -109,13 +109,13 @@ public class ListPlaceIndexesResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A pagination token indicating there are additional pages available. You can use the token in a following request
-     * to fetch the next set of results.
+     * A pagination token indicating that there are additional pages available. You can use the token in a new request
+     * to fetch the next page of results.
      * </p>
      * 
      * @param nextToken
-     *        A pagination token indicating there are additional pages available. You can use the token in a following
-     *        request to fetch the next set of results.
+     *        A pagination token indicating that there are additional pages available. You can use the token in a new
+     *        request to fetch the next page of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -124,12 +124,12 @@ public class ListPlaceIndexesResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A pagination token indicating there are additional pages available. You can use the token in a following request
-     * to fetch the next set of results.
+     * A pagination token indicating that there are additional pages available. You can use the token in a new request
+     * to fetch the next page of results.
      * </p>
      * 
-     * @return A pagination token indicating there are additional pages available. You can use the token in a following
-     *         request to fetch the next set of results.
+     * @return A pagination token indicating that there are additional pages available. You can use the token in a new
+     *         request to fetch the next page of results.
      */
 
     public String getNextToken() {
@@ -138,13 +138,13 @@ public class ListPlaceIndexesResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A pagination token indicating there are additional pages available. You can use the token in a following request
-     * to fetch the next set of results.
+     * A pagination token indicating that there are additional pages available. You can use the token in a new request
+     * to fetch the next page of results.
      * </p>
      * 
      * @param nextToken
-     *        A pagination token indicating there are additional pages available. You can use the token in a following
-     *        request to fetch the next set of results.
+     *        A pagination token indicating that there are additional pages available. You can use the token in a new
+     *        request to fetch the next page of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

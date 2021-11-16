@@ -66,7 +66,7 @@ public class CalculateRouteSummary implements Serializable, Cloneable, Structure
     private Double distance;
     /**
      * <p>
-     * The unit of measurement for the distance.
+     * The unit of measurement for route distances.
      * </p>
      */
     private String distanceUnit;
@@ -335,11 +335,11 @@ public class CalculateRouteSummary implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The unit of measurement for the distance.
+     * The unit of measurement for route distances.
      * </p>
      * 
      * @param distanceUnit
-     *        The unit of measurement for the distance.
+     *        The unit of measurement for route distances.
      * @see DistanceUnit
      */
 
@@ -349,10 +349,10 @@ public class CalculateRouteSummary implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The unit of measurement for the distance.
+     * The unit of measurement for route distances.
      * </p>
      * 
-     * @return The unit of measurement for the distance.
+     * @return The unit of measurement for route distances.
      * @see DistanceUnit
      */
 
@@ -362,11 +362,11 @@ public class CalculateRouteSummary implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The unit of measurement for the distance.
+     * The unit of measurement for route distances.
      * </p>
      * 
      * @param distanceUnit
-     *        The unit of measurement for the distance.
+     *        The unit of measurement for route distances.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DistanceUnit
      */
@@ -378,11 +378,11 @@ public class CalculateRouteSummary implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The unit of measurement for the distance.
+     * The unit of measurement for route distances.
      * </p>
      * 
      * @param distanceUnit
-     *        The unit of measurement for the distance.
+     *        The unit of measurement for route distances.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DistanceUnit
      */

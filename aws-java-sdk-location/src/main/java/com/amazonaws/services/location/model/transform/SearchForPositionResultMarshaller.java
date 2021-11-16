@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class SearchForPositionResultMarshaller {
 
+    private static final MarshallingInfo<Double> DISTANCE_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Distance").build();
     private static final MarshallingInfo<StructuredPojo> PLACE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Place").build();
 
@@ -46,6 +48,7 @@ public class SearchForPositionResultMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(searchForPositionResult.getDistance(), DISTANCE_BINDING);
             protocolMarshaller.marshall(searchForPositionResult.getPlace(), PLACE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

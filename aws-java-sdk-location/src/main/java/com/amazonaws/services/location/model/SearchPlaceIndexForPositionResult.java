@@ -32,7 +32,8 @@ public class SearchPlaceIndexForPositionResult extends com.amazonaws.AmazonWebSe
     private java.util.List<SearchForPositionResult> results;
     /**
      * <p>
-     * Contains a summary of the request.
+     * Contains a summary of the request. Echoes the input values for <code>Position</code>, <code>Language</code>,
+     * <code>MaxResults</code>, and the <code>DataSource</code> of the place index.
      * </p>
      */
     private SearchPlaceIndexForPositionSummary summary;
@@ -117,11 +118,13 @@ public class SearchPlaceIndexForPositionResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Contains a summary of the request.
+     * Contains a summary of the request. Echoes the input values for <code>Position</code>, <code>Language</code>,
+     * <code>MaxResults</code>, and the <code>DataSource</code> of the place index.
      * </p>
      * 
      * @param summary
-     *        Contains a summary of the request.
+     *        Contains a summary of the request. Echoes the input values for <code>Position</code>,
+     *        <code>Language</code>, <code>MaxResults</code>, and the <code>DataSource</code> of the place index.
      */
 
     public void setSummary(SearchPlaceIndexForPositionSummary summary) {
@@ -130,10 +133,12 @@ public class SearchPlaceIndexForPositionResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Contains a summary of the request.
+     * Contains a summary of the request. Echoes the input values for <code>Position</code>, <code>Language</code>,
+     * <code>MaxResults</code>, and the <code>DataSource</code> of the place index.
      * </p>
      * 
-     * @return Contains a summary of the request.
+     * @return Contains a summary of the request. Echoes the input values for <code>Position</code>,
+     *         <code>Language</code>, <code>MaxResults</code>, and the <code>DataSource</code> of the place index.
      */
 
     public SearchPlaceIndexForPositionSummary getSummary() {
@@ -142,11 +147,13 @@ public class SearchPlaceIndexForPositionResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Contains a summary of the request.
+     * Contains a summary of the request. Echoes the input values for <code>Position</code>, <code>Language</code>,
+     * <code>MaxResults</code>, and the <code>DataSource</code> of the place index.
      * </p>
      * 
      * @param summary
-     *        Contains a summary of the request.
+     *        Contains a summary of the request. Echoes the input values for <code>Position</code>,
+     *        <code>Language</code>, <code>MaxResults</code>, and the <code>DataSource</code> of the place index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

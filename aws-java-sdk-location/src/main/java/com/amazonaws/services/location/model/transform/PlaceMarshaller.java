@@ -33,6 +33,8 @@ public class PlaceMarshaller {
             .marshallLocationName("Country").build();
     private static final MarshallingInfo<StructuredPojo> GEOMETRY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Geometry").build();
+    private static final MarshallingInfo<Boolean> INTERPOLATED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Interpolated").build();
     private static final MarshallingInfo<String> LABEL_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Label").build();
     private static final MarshallingInfo<String> MUNICIPALITY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -47,6 +49,8 @@ public class PlaceMarshaller {
             .marshallLocationName("Street").build();
     private static final MarshallingInfo<String> SUBREGION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("SubRegion").build();
+    private static final MarshallingInfo<StructuredPojo> TIMEZONE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TimeZone").build();
 
     private static final PlaceMarshaller instance = new PlaceMarshaller();
 
@@ -67,6 +71,7 @@ public class PlaceMarshaller {
             protocolMarshaller.marshall(place.getAddressNumber(), ADDRESSNUMBER_BINDING);
             protocolMarshaller.marshall(place.getCountry(), COUNTRY_BINDING);
             protocolMarshaller.marshall(place.getGeometry(), GEOMETRY_BINDING);
+            protocolMarshaller.marshall(place.getInterpolated(), INTERPOLATED_BINDING);
             protocolMarshaller.marshall(place.getLabel(), LABEL_BINDING);
             protocolMarshaller.marshall(place.getMunicipality(), MUNICIPALITY_BINDING);
             protocolMarshaller.marshall(place.getNeighborhood(), NEIGHBORHOOD_BINDING);
@@ -74,6 +79,7 @@ public class PlaceMarshaller {
             protocolMarshaller.marshall(place.getRegion(), REGION_BINDING);
             protocolMarshaller.marshall(place.getStreet(), STREET_BINDING);
             protocolMarshaller.marshall(place.getSubRegion(), SUBREGION_BINDING);
+            protocolMarshaller.marshall(place.getTimeZone(), TIMEZONE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

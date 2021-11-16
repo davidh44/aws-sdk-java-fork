@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum InsightType {
 
-    ApiCallRateInsight("ApiCallRateInsight");
+    ApiCallRateInsight("ApiCallRateInsight"),
+    ApiErrorRateInsight("ApiErrorRateInsight");
 
     private String value;
 

@@ -48,6 +48,10 @@ public class SearchForPositionResultJsonUnmarshaller implements Unmarshaller<Sea
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("Distance", targetDepth)) {
+                    context.nextToken();
+                    searchForPositionResult.setDistance(context.getUnmarshaller(Double.class).unmarshall(context));
+                }
                 if (context.testExpression("Place", targetDepth)) {
                     context.nextToken();
                     searchForPositionResult.setPlace(PlaceJsonUnmarshaller.getInstance().unmarshall(context));

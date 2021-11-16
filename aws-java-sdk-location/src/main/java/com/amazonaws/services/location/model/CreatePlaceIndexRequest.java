@@ -27,7 +27,7 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Specifies the data provider of geospatial data.
+     * Specifies the geospatial data provider for the new place index.
      * </p>
      * <note>
      * <p>
@@ -57,7 +57,7 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <important>
      * <p>
-     * Place index resources using HERE Technologies as a data provider can't <a
+     * If you specify HERE Technologies (<code>Here</code>) as the data provider, you may not <a
      * href="https://docs.aws.amazon.com/location-places/latest/APIReference/API_DataSourceConfiguration.html">store
      * results</a> for locations in Japan. For more information, see the <a
      * href="https://aws.amazon.com/service-terms/">AWS Service Terms</a> for Amazon Location Service.
@@ -121,8 +121,8 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
     private String pricingPlan;
     /**
      * <p>
-     * Applies one or more tags to the place index resource. A tag is a key-value pair helps manage, identify, search,
-     * and filter your resources by labelling them.
+     * Applies one or more tags to the place index resource. A tag is a key-value pair that helps you manage, identify,
+     * search, and filter your resources.
      * </p>
      * <p>
      * Format: <code>"key" : "value"</code>
@@ -133,27 +133,32 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Maximum 50 tags per resource
+     * Maximum 50 tags per resource.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Each resource tag must be unique with a maximum of one value.
+     * Each tag key must be unique and must have exactly one associated value.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Maximum key length: 128 Unicode characters in UTF-8
+     * Maximum key length: 128 Unicode characters in UTF-8.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Maximum value length: 256 Unicode characters in UTF-8
+     * Maximum value length: 256 Unicode characters in UTF-8.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @.
+     * Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Cannot use "aws:" as a prefix for a key.
      * </p>
      * </li>
      * </ul>
@@ -162,7 +167,7 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Specifies the data provider of geospatial data.
+     * Specifies the geospatial data provider for the new place index.
      * </p>
      * <note>
      * <p>
@@ -192,7 +197,7 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <important>
      * <p>
-     * Place index resources using HERE Technologies as a data provider can't <a
+     * If you specify HERE Technologies (<code>Here</code>) as the data provider, you may not <a
      * href="https://docs.aws.amazon.com/location-places/latest/APIReference/API_DataSourceConfiguration.html">store
      * results</a> for locations in Japan. For more information, see the <a
      * href="https://aws.amazon.com/service-terms/">AWS Service Terms</a> for Amazon Location Service.
@@ -206,7 +211,7 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param dataSource
-     *        Specifies the data provider of geospatial data.</p> <note>
+     *        Specifies the geospatial data provider for the new place index.</p> <note>
      *        <p>
      *        This field is case-sensitive. Enter the valid values as shown. For example, entering <code>HERE</code>
      *        returns an error.
@@ -235,7 +240,7 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <important>
      *        <p>
-     *        Place index resources using HERE Technologies as a data provider can't <a
+     *        If you specify HERE Technologies (<code>Here</code>) as the data provider, you may not <a
      *        href="https://docs.aws.amazon.com/location-places/latest/APIReference/API_DataSourceConfiguration.html"
      *        >store results</a> for locations in Japan. For more information, see the <a
      *        href="https://aws.amazon.com/service-terms/">AWS Service Terms</a> for Amazon Location Service.
@@ -254,7 +259,7 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Specifies the data provider of geospatial data.
+     * Specifies the geospatial data provider for the new place index.
      * </p>
      * <note>
      * <p>
@@ -284,7 +289,7 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <important>
      * <p>
-     * Place index resources using HERE Technologies as a data provider can't <a
+     * If you specify HERE Technologies (<code>Here</code>) as the data provider, you may not <a
      * href="https://docs.aws.amazon.com/location-places/latest/APIReference/API_DataSourceConfiguration.html">store
      * results</a> for locations in Japan. For more information, see the <a
      * href="https://aws.amazon.com/service-terms/">AWS Service Terms</a> for Amazon Location Service.
@@ -297,7 +302,7 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
      * on the <i>Amazon Location Service Developer Guide</i>.
      * </p>
      * 
-     * @return Specifies the data provider of geospatial data.</p> <note>
+     * @return Specifies the geospatial data provider for the new place index.</p> <note>
      *         <p>
      *         This field is case-sensitive. Enter the valid values as shown. For example, entering <code>HERE</code>
      *         returns an error.
@@ -326,7 +331,7 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
      *         </p>
      *         <important>
      *         <p>
-     *         Place index resources using HERE Technologies as a data provider can't <a
+     *         If you specify HERE Technologies (<code>Here</code>) as the data provider, you may not <a
      *         href="https://docs.aws.amazon.com/location-places/latest/APIReference/API_DataSourceConfiguration.html"
      *         >store results</a> for locations in Japan. For more information, see the <a
      *         href="https://aws.amazon.com/service-terms/">AWS Service Terms</a> for Amazon Location Service.
@@ -345,7 +350,7 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Specifies the data provider of geospatial data.
+     * Specifies the geospatial data provider for the new place index.
      * </p>
      * <note>
      * <p>
@@ -375,7 +380,7 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <important>
      * <p>
-     * Place index resources using HERE Technologies as a data provider can't <a
+     * If you specify HERE Technologies (<code>Here</code>) as the data provider, you may not <a
      * href="https://docs.aws.amazon.com/location-places/latest/APIReference/API_DataSourceConfiguration.html">store
      * results</a> for locations in Japan. For more information, see the <a
      * href="https://aws.amazon.com/service-terms/">AWS Service Terms</a> for Amazon Location Service.
@@ -389,7 +394,7 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param dataSource
-     *        Specifies the data provider of geospatial data.</p> <note>
+     *        Specifies the geospatial data provider for the new place index.</p> <note>
      *        <p>
      *        This field is case-sensitive. Enter the valid values as shown. For example, entering <code>HERE</code>
      *        returns an error.
@@ -418,7 +423,7 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <important>
      *        <p>
-     *        Place index resources using HERE Technologies as a data provider can't <a
+     *        If you specify HERE Technologies (<code>Here</code>) as the data provider, you may not <a
      *        href="https://docs.aws.amazon.com/location-places/latest/APIReference/API_DataSourceConfiguration.html"
      *        >store results</a> for locations in Japan. For more information, see the <a
      *        href="https://aws.amazon.com/service-terms/">AWS Service Terms</a> for Amazon Location Service.
@@ -763,8 +768,8 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Applies one or more tags to the place index resource. A tag is a key-value pair helps manage, identify, search,
-     * and filter your resources by labelling them.
+     * Applies one or more tags to the place index resource. A tag is a key-value pair that helps you manage, identify,
+     * search, and filter your resources.
      * </p>
      * <p>
      * Format: <code>"key" : "value"</code>
@@ -775,33 +780,38 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Maximum 50 tags per resource
+     * Maximum 50 tags per resource.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Each resource tag must be unique with a maximum of one value.
+     * Each tag key must be unique and must have exactly one associated value.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Maximum key length: 128 Unicode characters in UTF-8
+     * Maximum key length: 128 Unicode characters in UTF-8.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Maximum value length: 256 Unicode characters in UTF-8
+     * Maximum value length: 256 Unicode characters in UTF-8.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @.
+     * Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Cannot use "aws:" as a prefix for a key.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return Applies one or more tags to the place index resource. A tag is a key-value pair helps manage, identify,
-     *         search, and filter your resources by labelling them.</p>
+     * @return Applies one or more tags to the place index resource. A tag is a key-value pair that helps you manage,
+     *         identify, search, and filter your resources.</p>
      *         <p>
      *         Format: <code>"key" : "value"</code>
      *         </p>
@@ -811,27 +821,32 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
      *         <ul>
      *         <li>
      *         <p>
-     *         Maximum 50 tags per resource
+     *         Maximum 50 tags per resource.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         Each resource tag must be unique with a maximum of one value.
+     *         Each tag key must be unique and must have exactly one associated value.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         Maximum key length: 128 Unicode characters in UTF-8
+     *         Maximum key length: 128 Unicode characters in UTF-8.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         Maximum value length: 256 Unicode characters in UTF-8
+     *         Maximum value length: 256 Unicode characters in UTF-8.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @.
+     *         Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Cannot use "aws:" as a prefix for a key.
      *         </p>
      *         </li>
      */
@@ -842,8 +857,8 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Applies one or more tags to the place index resource. A tag is a key-value pair helps manage, identify, search,
-     * and filter your resources by labelling them.
+     * Applies one or more tags to the place index resource. A tag is a key-value pair that helps you manage, identify,
+     * search, and filter your resources.
      * </p>
      * <p>
      * Format: <code>"key" : "value"</code>
@@ -854,34 +869,39 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Maximum 50 tags per resource
+     * Maximum 50 tags per resource.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Each resource tag must be unique with a maximum of one value.
+     * Each tag key must be unique and must have exactly one associated value.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Maximum key length: 128 Unicode characters in UTF-8
+     * Maximum key length: 128 Unicode characters in UTF-8.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Maximum value length: 256 Unicode characters in UTF-8
+     * Maximum value length: 256 Unicode characters in UTF-8.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @.
+     * Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Cannot use "aws:" as a prefix for a key.
      * </p>
      * </li>
      * </ul>
      * 
      * @param tags
-     *        Applies one or more tags to the place index resource. A tag is a key-value pair helps manage, identify,
-     *        search, and filter your resources by labelling them.</p>
+     *        Applies one or more tags to the place index resource. A tag is a key-value pair that helps you manage,
+     *        identify, search, and filter your resources.</p>
      *        <p>
      *        Format: <code>"key" : "value"</code>
      *        </p>
@@ -891,27 +911,32 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        Maximum 50 tags per resource
+     *        Maximum 50 tags per resource.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Each resource tag must be unique with a maximum of one value.
+     *        Each tag key must be unique and must have exactly one associated value.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Maximum key length: 128 Unicode characters in UTF-8
+     *        Maximum key length: 128 Unicode characters in UTF-8.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Maximum value length: 256 Unicode characters in UTF-8
+     *        Maximum value length: 256 Unicode characters in UTF-8.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @.
+     *        Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Cannot use "aws:" as a prefix for a key.
      *        </p>
      *        </li>
      */
@@ -922,8 +947,8 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Applies one or more tags to the place index resource. A tag is a key-value pair helps manage, identify, search,
-     * and filter your resources by labelling them.
+     * Applies one or more tags to the place index resource. A tag is a key-value pair that helps you manage, identify,
+     * search, and filter your resources.
      * </p>
      * <p>
      * Format: <code>"key" : "value"</code>
@@ -934,34 +959,39 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Maximum 50 tags per resource
+     * Maximum 50 tags per resource.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Each resource tag must be unique with a maximum of one value.
+     * Each tag key must be unique and must have exactly one associated value.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Maximum key length: 128 Unicode characters in UTF-8
+     * Maximum key length: 128 Unicode characters in UTF-8.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Maximum value length: 256 Unicode characters in UTF-8
+     * Maximum value length: 256 Unicode characters in UTF-8.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @.
+     * Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Cannot use "aws:" as a prefix for a key.
      * </p>
      * </li>
      * </ul>
      * 
      * @param tags
-     *        Applies one or more tags to the place index resource. A tag is a key-value pair helps manage, identify,
-     *        search, and filter your resources by labelling them.</p>
+     *        Applies one or more tags to the place index resource. A tag is a key-value pair that helps you manage,
+     *        identify, search, and filter your resources.</p>
      *        <p>
      *        Format: <code>"key" : "value"</code>
      *        </p>
@@ -971,27 +1001,32 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        Maximum 50 tags per resource
+     *        Maximum 50 tags per resource.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Each resource tag must be unique with a maximum of one value.
+     *        Each tag key must be unique and must have exactly one associated value.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Maximum key length: 128 Unicode characters in UTF-8
+     *        Maximum key length: 128 Unicode characters in UTF-8.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Maximum value length: 256 Unicode characters in UTF-8
+     *        Maximum value length: 256 Unicode characters in UTF-8.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @.
+     *        Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ : / @
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Cannot use "aws:" as a prefix for a key.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
