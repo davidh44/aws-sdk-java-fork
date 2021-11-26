@@ -36,6 +36,18 @@ public class DescribeSourceServersRequestFilters implements Serializable, Clonea
     private Boolean isArchived;
     /**
      * <p>
+     * Request to filter Source Servers list by life cycle states.
+     * </p>
+     */
+    private java.util.List<String> lifeCycleStates;
+    /**
+     * <p>
+     * Request to filter Source Servers list by replication type.
+     * </p>
+     */
+    private java.util.List<String> replicationTypes;
+    /**
+     * <p>
      * Request to filter Source Servers list by Source Server ID.
      * </p>
      */
@@ -91,6 +103,202 @@ public class DescribeSourceServersRequestFilters implements Serializable, Clonea
 
     public Boolean isArchived() {
         return this.isArchived;
+    }
+
+    /**
+     * <p>
+     * Request to filter Source Servers list by life cycle states.
+     * </p>
+     * 
+     * @return Request to filter Source Servers list by life cycle states.
+     * @see LifeCycleState
+     */
+
+    public java.util.List<String> getLifeCycleStates() {
+        return lifeCycleStates;
+    }
+
+    /**
+     * <p>
+     * Request to filter Source Servers list by life cycle states.
+     * </p>
+     * 
+     * @param lifeCycleStates
+     *        Request to filter Source Servers list by life cycle states.
+     * @see LifeCycleState
+     */
+
+    public void setLifeCycleStates(java.util.Collection<String> lifeCycleStates) {
+        if (lifeCycleStates == null) {
+            this.lifeCycleStates = null;
+            return;
+        }
+
+        this.lifeCycleStates = new java.util.ArrayList<String>(lifeCycleStates);
+    }
+
+    /**
+     * <p>
+     * Request to filter Source Servers list by life cycle states.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setLifeCycleStates(java.util.Collection)} or {@link #withLifeCycleStates(java.util.Collection)} if you
+     * want to override the existing values.
+     * </p>
+     * 
+     * @param lifeCycleStates
+     *        Request to filter Source Servers list by life cycle states.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LifeCycleState
+     */
+
+    public DescribeSourceServersRequestFilters withLifeCycleStates(String... lifeCycleStates) {
+        if (this.lifeCycleStates == null) {
+            setLifeCycleStates(new java.util.ArrayList<String>(lifeCycleStates.length));
+        }
+        for (String ele : lifeCycleStates) {
+            this.lifeCycleStates.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Request to filter Source Servers list by life cycle states.
+     * </p>
+     * 
+     * @param lifeCycleStates
+     *        Request to filter Source Servers list by life cycle states.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LifeCycleState
+     */
+
+    public DescribeSourceServersRequestFilters withLifeCycleStates(java.util.Collection<String> lifeCycleStates) {
+        setLifeCycleStates(lifeCycleStates);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Request to filter Source Servers list by life cycle states.
+     * </p>
+     * 
+     * @param lifeCycleStates
+     *        Request to filter Source Servers list by life cycle states.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LifeCycleState
+     */
+
+    public DescribeSourceServersRequestFilters withLifeCycleStates(LifeCycleState... lifeCycleStates) {
+        java.util.ArrayList<String> lifeCycleStatesCopy = new java.util.ArrayList<String>(lifeCycleStates.length);
+        for (LifeCycleState value : lifeCycleStates) {
+            lifeCycleStatesCopy.add(value.toString());
+        }
+        if (getLifeCycleStates() == null) {
+            setLifeCycleStates(lifeCycleStatesCopy);
+        } else {
+            getLifeCycleStates().addAll(lifeCycleStatesCopy);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Request to filter Source Servers list by replication type.
+     * </p>
+     * 
+     * @return Request to filter Source Servers list by replication type.
+     * @see ReplicationType
+     */
+
+    public java.util.List<String> getReplicationTypes() {
+        return replicationTypes;
+    }
+
+    /**
+     * <p>
+     * Request to filter Source Servers list by replication type.
+     * </p>
+     * 
+     * @param replicationTypes
+     *        Request to filter Source Servers list by replication type.
+     * @see ReplicationType
+     */
+
+    public void setReplicationTypes(java.util.Collection<String> replicationTypes) {
+        if (replicationTypes == null) {
+            this.replicationTypes = null;
+            return;
+        }
+
+        this.replicationTypes = new java.util.ArrayList<String>(replicationTypes);
+    }
+
+    /**
+     * <p>
+     * Request to filter Source Servers list by replication type.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setReplicationTypes(java.util.Collection)} or {@link #withReplicationTypes(java.util.Collection)} if you
+     * want to override the existing values.
+     * </p>
+     * 
+     * @param replicationTypes
+     *        Request to filter Source Servers list by replication type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ReplicationType
+     */
+
+    public DescribeSourceServersRequestFilters withReplicationTypes(String... replicationTypes) {
+        if (this.replicationTypes == null) {
+            setReplicationTypes(new java.util.ArrayList<String>(replicationTypes.length));
+        }
+        for (String ele : replicationTypes) {
+            this.replicationTypes.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Request to filter Source Servers list by replication type.
+     * </p>
+     * 
+     * @param replicationTypes
+     *        Request to filter Source Servers list by replication type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ReplicationType
+     */
+
+    public DescribeSourceServersRequestFilters withReplicationTypes(java.util.Collection<String> replicationTypes) {
+        setReplicationTypes(replicationTypes);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Request to filter Source Servers list by replication type.
+     * </p>
+     * 
+     * @param replicationTypes
+     *        Request to filter Source Servers list by replication type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ReplicationType
+     */
+
+    public DescribeSourceServersRequestFilters withReplicationTypes(ReplicationType... replicationTypes) {
+        java.util.ArrayList<String> replicationTypesCopy = new java.util.ArrayList<String>(replicationTypes.length);
+        for (ReplicationType value : replicationTypes) {
+            replicationTypesCopy.add(value.toString());
+        }
+        if (getReplicationTypes() == null) {
+            setReplicationTypes(replicationTypesCopy);
+        } else {
+            getReplicationTypes().addAll(replicationTypesCopy);
+        }
+        return this;
     }
 
     /**
@@ -177,6 +385,10 @@ public class DescribeSourceServersRequestFilters implements Serializable, Clonea
         sb.append("{");
         if (getIsArchived() != null)
             sb.append("IsArchived: ").append(getIsArchived()).append(",");
+        if (getLifeCycleStates() != null)
+            sb.append("LifeCycleStates: ").append(getLifeCycleStates()).append(",");
+        if (getReplicationTypes() != null)
+            sb.append("ReplicationTypes: ").append(getReplicationTypes()).append(",");
         if (getSourceServerIDs() != null)
             sb.append("SourceServerIDs: ").append(getSourceServerIDs());
         sb.append("}");
@@ -197,6 +409,14 @@ public class DescribeSourceServersRequestFilters implements Serializable, Clonea
             return false;
         if (other.getIsArchived() != null && other.getIsArchived().equals(this.getIsArchived()) == false)
             return false;
+        if (other.getLifeCycleStates() == null ^ this.getLifeCycleStates() == null)
+            return false;
+        if (other.getLifeCycleStates() != null && other.getLifeCycleStates().equals(this.getLifeCycleStates()) == false)
+            return false;
+        if (other.getReplicationTypes() == null ^ this.getReplicationTypes() == null)
+            return false;
+        if (other.getReplicationTypes() != null && other.getReplicationTypes().equals(this.getReplicationTypes()) == false)
+            return false;
         if (other.getSourceServerIDs() == null ^ this.getSourceServerIDs() == null)
             return false;
         if (other.getSourceServerIDs() != null && other.getSourceServerIDs().equals(this.getSourceServerIDs()) == false)
@@ -210,6 +430,8 @@ public class DescribeSourceServersRequestFilters implements Serializable, Clonea
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getIsArchived() == null) ? 0 : getIsArchived().hashCode());
+        hashCode = prime * hashCode + ((getLifeCycleStates() == null) ? 0 : getLifeCycleStates().hashCode());
+        hashCode = prime * hashCode + ((getReplicationTypes() == null) ? 0 : getReplicationTypes().hashCode());
         hashCode = prime * hashCode + ((getSourceServerIDs() == null) ? 0 : getSourceServerIDs().hashCode());
         return hashCode;
     }

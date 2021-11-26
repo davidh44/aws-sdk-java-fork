@@ -24,8 +24,8 @@ import javax.annotation.Generated;
  * <p>
  * For more information and examples, see <a href=
  * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/predictive-scaling-customized-metric-specification.html"
- * >Advanced predictive scaling policy configurations using customized metrics</a> in the <i>Amazon EC2 Auto Scaling
- * User Guide</i>.
+ * >Advanced predictive scaling policy configurations using custom metrics</a> in the <i>Amazon EC2 Auto Scaling User
+ * Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/MetricDataQuery" target="_top">AWS API
@@ -49,10 +49,6 @@ public class MetricDataQuery implements Serializable, Cloneable {
      * The math expression to perform on the returned data, if this object is performing a math expression. This
      * expression can use the <code>Id</code> of the other metrics to refer to those metrics, and can also use the
      * <code>Id</code> of other expressions to use the result of those expressions.
-     * </p>
-     * <p>
-     * For example, to use search expressions, use the SEARCH() function in your metric math expression to combine
-     * multiple metrics from Auto Scaling groups that use a specific name prefix.
      * </p>
      * <p>
      * Conditional: Within each <code>MetricDataQuery</code> object, you must specify either <code>Expression</code> or
@@ -82,13 +78,13 @@ public class MetricDataQuery implements Serializable, Cloneable {
      * Indicates whether to return the timestamps and raw data values of this metric.
      * </p>
      * <p>
-     * If you use any math expressions, specify <code>True</code> for this value for only the final math expression that
-     * the metric specification is based on. You must specify <code>False</code> for <code>ReturnData</code> for all the
+     * If you use any math expressions, specify <code>true</code> for this value for only the final math expression that
+     * the metric specification is based on. You must specify <code>false</code> for <code>ReturnData</code> for all the
      * other metrics and expressions used in the metric specification.
      * </p>
      * <p>
      * If you are only retrieving metrics and not performing any math expressions, do not specify anything for
-     * <code>ReturnData</code>. This sets it to its default (<code>True</code>).
+     * <code>ReturnData</code>. This sets it to its default (<code>true</code>).
      * </p>
      */
     private Boolean returnData;
@@ -164,10 +160,6 @@ public class MetricDataQuery implements Serializable, Cloneable {
      * <code>Id</code> of other expressions to use the result of those expressions.
      * </p>
      * <p>
-     * For example, to use search expressions, use the SEARCH() function in your metric math expression to combine
-     * multiple metrics from Auto Scaling groups that use a specific name prefix.
-     * </p>
-     * <p>
      * Conditional: Within each <code>MetricDataQuery</code> object, you must specify either <code>Expression</code> or
      * <code>MetricStat</code>, but not both.
      * </p>
@@ -176,10 +168,6 @@ public class MetricDataQuery implements Serializable, Cloneable {
      *        The math expression to perform on the returned data, if this object is performing a math expression. This
      *        expression can use the <code>Id</code> of the other metrics to refer to those metrics, and can also use
      *        the <code>Id</code> of other expressions to use the result of those expressions. </p>
-     *        <p>
-     *        For example, to use search expressions, use the SEARCH() function in your metric math expression to
-     *        combine multiple metrics from Auto Scaling groups that use a specific name prefix.
-     *        </p>
      *        <p>
      *        Conditional: Within each <code>MetricDataQuery</code> object, you must specify either
      *        <code>Expression</code> or <code>MetricStat</code>, but not both.
@@ -196,10 +184,6 @@ public class MetricDataQuery implements Serializable, Cloneable {
      * <code>Id</code> of other expressions to use the result of those expressions.
      * </p>
      * <p>
-     * For example, to use search expressions, use the SEARCH() function in your metric math expression to combine
-     * multiple metrics from Auto Scaling groups that use a specific name prefix.
-     * </p>
-     * <p>
      * Conditional: Within each <code>MetricDataQuery</code> object, you must specify either <code>Expression</code> or
      * <code>MetricStat</code>, but not both.
      * </p>
@@ -207,10 +191,6 @@ public class MetricDataQuery implements Serializable, Cloneable {
      * @return The math expression to perform on the returned data, if this object is performing a math expression. This
      *         expression can use the <code>Id</code> of the other metrics to refer to those metrics, and can also use
      *         the <code>Id</code> of other expressions to use the result of those expressions. </p>
-     *         <p>
-     *         For example, to use search expressions, use the SEARCH() function in your metric math expression to
-     *         combine multiple metrics from Auto Scaling groups that use a specific name prefix.
-     *         </p>
      *         <p>
      *         Conditional: Within each <code>MetricDataQuery</code> object, you must specify either
      *         <code>Expression</code> or <code>MetricStat</code>, but not both.
@@ -227,10 +207,6 @@ public class MetricDataQuery implements Serializable, Cloneable {
      * <code>Id</code> of other expressions to use the result of those expressions.
      * </p>
      * <p>
-     * For example, to use search expressions, use the SEARCH() function in your metric math expression to combine
-     * multiple metrics from Auto Scaling groups that use a specific name prefix.
-     * </p>
-     * <p>
      * Conditional: Within each <code>MetricDataQuery</code> object, you must specify either <code>Expression</code> or
      * <code>MetricStat</code>, but not both.
      * </p>
@@ -239,10 +215,6 @@ public class MetricDataQuery implements Serializable, Cloneable {
      *        The math expression to perform on the returned data, if this object is performing a math expression. This
      *        expression can use the <code>Id</code> of the other metrics to refer to those metrics, and can also use
      *        the <code>Id</code> of other expressions to use the result of those expressions. </p>
-     *        <p>
-     *        For example, to use search expressions, use the SEARCH() function in your metric math expression to
-     *        combine multiple metrics from Auto Scaling groups that use a specific name prefix.
-     *        </p>
      *        <p>
      *        Conditional: Within each <code>MetricDataQuery</code> object, you must specify either
      *        <code>Expression</code> or <code>MetricStat</code>, but not both.
@@ -366,25 +338,25 @@ public class MetricDataQuery implements Serializable, Cloneable {
      * Indicates whether to return the timestamps and raw data values of this metric.
      * </p>
      * <p>
-     * If you use any math expressions, specify <code>True</code> for this value for only the final math expression that
-     * the metric specification is based on. You must specify <code>False</code> for <code>ReturnData</code> for all the
+     * If you use any math expressions, specify <code>true</code> for this value for only the final math expression that
+     * the metric specification is based on. You must specify <code>false</code> for <code>ReturnData</code> for all the
      * other metrics and expressions used in the metric specification.
      * </p>
      * <p>
      * If you are only retrieving metrics and not performing any math expressions, do not specify anything for
-     * <code>ReturnData</code>. This sets it to its default (<code>True</code>).
+     * <code>ReturnData</code>. This sets it to its default (<code>true</code>).
      * </p>
      * 
      * @param returnData
      *        Indicates whether to return the timestamps and raw data values of this metric. </p>
      *        <p>
-     *        If you use any math expressions, specify <code>True</code> for this value for only the final math
-     *        expression that the metric specification is based on. You must specify <code>False</code> for
+     *        If you use any math expressions, specify <code>true</code> for this value for only the final math
+     *        expression that the metric specification is based on. You must specify <code>false</code> for
      *        <code>ReturnData</code> for all the other metrics and expressions used in the metric specification.
      *        </p>
      *        <p>
      *        If you are only retrieving metrics and not performing any math expressions, do not specify anything for
-     *        <code>ReturnData</code>. This sets it to its default (<code>True</code>).
+     *        <code>ReturnData</code>. This sets it to its default (<code>true</code>).
      */
 
     public void setReturnData(Boolean returnData) {
@@ -396,24 +368,24 @@ public class MetricDataQuery implements Serializable, Cloneable {
      * Indicates whether to return the timestamps and raw data values of this metric.
      * </p>
      * <p>
-     * If you use any math expressions, specify <code>True</code> for this value for only the final math expression that
-     * the metric specification is based on. You must specify <code>False</code> for <code>ReturnData</code> for all the
+     * If you use any math expressions, specify <code>true</code> for this value for only the final math expression that
+     * the metric specification is based on. You must specify <code>false</code> for <code>ReturnData</code> for all the
      * other metrics and expressions used in the metric specification.
      * </p>
      * <p>
      * If you are only retrieving metrics and not performing any math expressions, do not specify anything for
-     * <code>ReturnData</code>. This sets it to its default (<code>True</code>).
+     * <code>ReturnData</code>. This sets it to its default (<code>true</code>).
      * </p>
      * 
      * @return Indicates whether to return the timestamps and raw data values of this metric. </p>
      *         <p>
-     *         If you use any math expressions, specify <code>True</code> for this value for only the final math
-     *         expression that the metric specification is based on. You must specify <code>False</code> for
+     *         If you use any math expressions, specify <code>true</code> for this value for only the final math
+     *         expression that the metric specification is based on. You must specify <code>false</code> for
      *         <code>ReturnData</code> for all the other metrics and expressions used in the metric specification.
      *         </p>
      *         <p>
      *         If you are only retrieving metrics and not performing any math expressions, do not specify anything for
-     *         <code>ReturnData</code>. This sets it to its default (<code>True</code>).
+     *         <code>ReturnData</code>. This sets it to its default (<code>true</code>).
      */
 
     public Boolean getReturnData() {
@@ -425,25 +397,25 @@ public class MetricDataQuery implements Serializable, Cloneable {
      * Indicates whether to return the timestamps and raw data values of this metric.
      * </p>
      * <p>
-     * If you use any math expressions, specify <code>True</code> for this value for only the final math expression that
-     * the metric specification is based on. You must specify <code>False</code> for <code>ReturnData</code> for all the
+     * If you use any math expressions, specify <code>true</code> for this value for only the final math expression that
+     * the metric specification is based on. You must specify <code>false</code> for <code>ReturnData</code> for all the
      * other metrics and expressions used in the metric specification.
      * </p>
      * <p>
      * If you are only retrieving metrics and not performing any math expressions, do not specify anything for
-     * <code>ReturnData</code>. This sets it to its default (<code>True</code>).
+     * <code>ReturnData</code>. This sets it to its default (<code>true</code>).
      * </p>
      * 
      * @param returnData
      *        Indicates whether to return the timestamps and raw data values of this metric. </p>
      *        <p>
-     *        If you use any math expressions, specify <code>True</code> for this value for only the final math
-     *        expression that the metric specification is based on. You must specify <code>False</code> for
+     *        If you use any math expressions, specify <code>true</code> for this value for only the final math
+     *        expression that the metric specification is based on. You must specify <code>false</code> for
      *        <code>ReturnData</code> for all the other metrics and expressions used in the metric specification.
      *        </p>
      *        <p>
      *        If you are only retrieving metrics and not performing any math expressions, do not specify anything for
-     *        <code>ReturnData</code>. This sets it to its default (<code>True</code>).
+     *        <code>ReturnData</code>. This sets it to its default (<code>true</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -457,24 +429,24 @@ public class MetricDataQuery implements Serializable, Cloneable {
      * Indicates whether to return the timestamps and raw data values of this metric.
      * </p>
      * <p>
-     * If you use any math expressions, specify <code>True</code> for this value for only the final math expression that
-     * the metric specification is based on. You must specify <code>False</code> for <code>ReturnData</code> for all the
+     * If you use any math expressions, specify <code>true</code> for this value for only the final math expression that
+     * the metric specification is based on. You must specify <code>false</code> for <code>ReturnData</code> for all the
      * other metrics and expressions used in the metric specification.
      * </p>
      * <p>
      * If you are only retrieving metrics and not performing any math expressions, do not specify anything for
-     * <code>ReturnData</code>. This sets it to its default (<code>True</code>).
+     * <code>ReturnData</code>. This sets it to its default (<code>true</code>).
      * </p>
      * 
      * @return Indicates whether to return the timestamps and raw data values of this metric. </p>
      *         <p>
-     *         If you use any math expressions, specify <code>True</code> for this value for only the final math
-     *         expression that the metric specification is based on. You must specify <code>False</code> for
+     *         If you use any math expressions, specify <code>true</code> for this value for only the final math
+     *         expression that the metric specification is based on. You must specify <code>false</code> for
      *         <code>ReturnData</code> for all the other metrics and expressions used in the metric specification.
      *         </p>
      *         <p>
      *         If you are only retrieving metrics and not performing any math expressions, do not specify anything for
-     *         <code>ReturnData</code>. This sets it to its default (<code>True</code>).
+     *         <code>ReturnData</code>. This sets it to its default (<code>true</code>).
      */
 
     public Boolean isReturnData() {

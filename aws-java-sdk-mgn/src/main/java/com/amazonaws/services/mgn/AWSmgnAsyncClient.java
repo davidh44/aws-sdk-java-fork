@@ -243,6 +243,39 @@ public class AWSmgnAsyncClient extends AWSmgnClient implements AWSmgnAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteVcenterClientResult> deleteVcenterClientAsync(DeleteVcenterClientRequest request) {
+
+        return deleteVcenterClientAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteVcenterClientResult> deleteVcenterClientAsync(final DeleteVcenterClientRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteVcenterClientRequest, DeleteVcenterClientResult> asyncHandler) {
+        final DeleteVcenterClientRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteVcenterClientResult>() {
+            @Override
+            public DeleteVcenterClientResult call() throws Exception {
+                DeleteVcenterClientResult result = null;
+
+                try {
+                    result = executeDeleteVcenterClient(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeJobLogItemsResult> describeJobLogItemsAsync(DescribeJobLogItemsRequest request) {
 
         return describeJobLogItemsAsync(request, null);
@@ -361,6 +394,39 @@ public class AWSmgnAsyncClient extends AWSmgnClient implements AWSmgnAsync {
 
                 try {
                     result = executeDescribeSourceServers(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeVcenterClientsResult> describeVcenterClientsAsync(DescribeVcenterClientsRequest request) {
+
+        return describeVcenterClientsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeVcenterClientsResult> describeVcenterClientsAsync(final DescribeVcenterClientsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeVcenterClientsRequest, DescribeVcenterClientsResult> asyncHandler) {
+        final DescribeVcenterClientsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeVcenterClientsResult>() {
+            @Override
+            public DescribeVcenterClientsResult call() throws Exception {
+                DescribeVcenterClientsResult result = null;
+
+                try {
+                    result = executeDescribeVcenterClients(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -674,6 +740,39 @@ public class AWSmgnAsyncClient extends AWSmgnClient implements AWSmgnAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<StartReplicationResult> startReplicationAsync(StartReplicationRequest request) {
+
+        return startReplicationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartReplicationResult> startReplicationAsync(final StartReplicationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartReplicationRequest, StartReplicationResult> asyncHandler) {
+        final StartReplicationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartReplicationResult>() {
+            @Override
+            public StartReplicationResult call() throws Exception {
+                StartReplicationResult result = null;
+
+                try {
+                    result = executeStartReplication(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<StartTestResult> startTestAsync(StartTestRequest request) {
 
         return startTestAsync(request, null);
@@ -892,6 +991,41 @@ public class AWSmgnAsyncClient extends AWSmgnClient implements AWSmgnAsync {
 
                 try {
                     result = executeUpdateReplicationConfigurationTemplate(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSourceServerReplicationTypeResult> updateSourceServerReplicationTypeAsync(
+            UpdateSourceServerReplicationTypeRequest request) {
+
+        return updateSourceServerReplicationTypeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSourceServerReplicationTypeResult> updateSourceServerReplicationTypeAsync(
+            final UpdateSourceServerReplicationTypeRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateSourceServerReplicationTypeRequest, UpdateSourceServerReplicationTypeResult> asyncHandler) {
+        final UpdateSourceServerReplicationTypeRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateSourceServerReplicationTypeResult>() {
+            @Override
+            public UpdateSourceServerReplicationTypeResult call() throws Exception {
+                UpdateSourceServerReplicationTypeResult result = null;
+
+                try {
+                    result = executeUpdateSourceServerReplicationType(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

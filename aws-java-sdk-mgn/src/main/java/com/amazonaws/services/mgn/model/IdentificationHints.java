@@ -48,6 +48,12 @@ public class IdentificationHints implements Serializable, Cloneable, StructuredP
     private String hostname;
     /**
      * <p>
+     * vCenter VM path identification hint.
+     * </p>
+     */
+    private String vmPath;
+    /**
+     * <p>
      * vmWare UUID identification hint.
      * </p>
      */
@@ -175,6 +181,46 @@ public class IdentificationHints implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
+     * vCenter VM path identification hint.
+     * </p>
+     * 
+     * @param vmPath
+     *        vCenter VM path identification hint.
+     */
+
+    public void setVmPath(String vmPath) {
+        this.vmPath = vmPath;
+    }
+
+    /**
+     * <p>
+     * vCenter VM path identification hint.
+     * </p>
+     * 
+     * @return vCenter VM path identification hint.
+     */
+
+    public String getVmPath() {
+        return this.vmPath;
+    }
+
+    /**
+     * <p>
+     * vCenter VM path identification hint.
+     * </p>
+     * 
+     * @param vmPath
+     *        vCenter VM path identification hint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public IdentificationHints withVmPath(String vmPath) {
+        setVmPath(vmPath);
+        return this;
+    }
+
+    /**
+     * <p>
      * vmWare UUID identification hint.
      * </p>
      * 
@@ -231,6 +277,8 @@ public class IdentificationHints implements Serializable, Cloneable, StructuredP
             sb.append("Fqdn: ").append(getFqdn()).append(",");
         if (getHostname() != null)
             sb.append("Hostname: ").append(getHostname()).append(",");
+        if (getVmPath() != null)
+            sb.append("VmPath: ").append(getVmPath()).append(",");
         if (getVmWareUuid() != null)
             sb.append("VmWareUuid: ").append(getVmWareUuid());
         sb.append("}");
@@ -259,6 +307,10 @@ public class IdentificationHints implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getHostname() != null && other.getHostname().equals(this.getHostname()) == false)
             return false;
+        if (other.getVmPath() == null ^ this.getVmPath() == null)
+            return false;
+        if (other.getVmPath() != null && other.getVmPath().equals(this.getVmPath()) == false)
+            return false;
         if (other.getVmWareUuid() == null ^ this.getVmWareUuid() == null)
             return false;
         if (other.getVmWareUuid() != null && other.getVmWareUuid().equals(this.getVmWareUuid()) == false)
@@ -274,6 +326,7 @@ public class IdentificationHints implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getAwsInstanceID() == null) ? 0 : getAwsInstanceID().hashCode());
         hashCode = prime * hashCode + ((getFqdn() == null) ? 0 : getFqdn().hashCode());
         hashCode = prime * hashCode + ((getHostname() == null) ? 0 : getHostname().hashCode());
+        hashCode = prime * hashCode + ((getVmPath() == null) ? 0 : getVmPath().hashCode());
         hashCode = prime * hashCode + ((getVmWareUuid() == null) ? 0 : getVmWareUuid().hashCode());
         return hashCode;
     }

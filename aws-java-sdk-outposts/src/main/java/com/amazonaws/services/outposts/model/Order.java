@@ -30,7 +30,7 @@ public class Order implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the Outpost.
+     * The ID of the Outpost in the order.
      * </p>
      */
     private String outpostId;
@@ -42,8 +42,42 @@ public class Order implements Serializable, Cloneable, StructuredPojo {
     private String orderId;
     /**
      * <p>
-     * The status of the order
+     * The status of the order.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>PREPARING</code> - Order is received and being prepared.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>IN_PROGRESS</code> - Order is either being built, shipped, or installed. To get more details, see the
+     * <code>LineItem</code> status.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>COMPLETED</code> - Order is complete.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CANCELLED</code> - Order is cancelled.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ERROR</code> - Customer should contact support.
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * The following status are deprecated: <code>RECEIVED</code>, <code>PENDING</code>, <code>PROCESSING</code>,
+     * <code>INSTALLING</code>, and <code>FULFILLED</code>.
+     * </p>
+     * </note>
      */
     private String status;
     /**
@@ -73,11 +107,11 @@ public class Order implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the Outpost.
+     * The ID of the Outpost in the order.
      * </p>
      * 
      * @param outpostId
-     *        The ID of the Outpost.
+     *        The ID of the Outpost in the order.
      */
 
     public void setOutpostId(String outpostId) {
@@ -86,10 +120,10 @@ public class Order implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the Outpost.
+     * The ID of the Outpost in the order.
      * </p>
      * 
-     * @return The ID of the Outpost.
+     * @return The ID of the Outpost in the order.
      */
 
     public String getOutpostId() {
@@ -98,11 +132,11 @@ public class Order implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the Outpost.
+     * The ID of the Outpost in the order.
      * </p>
      * 
      * @param outpostId
-     *        The ID of the Outpost.
+     *        The ID of the Outpost in the order.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -153,11 +187,78 @@ public class Order implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the order
+     * The status of the order.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>PREPARING</code> - Order is received and being prepared.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>IN_PROGRESS</code> - Order is either being built, shipped, or installed. To get more details, see the
+     * <code>LineItem</code> status.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>COMPLETED</code> - Order is complete.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CANCELLED</code> - Order is cancelled.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ERROR</code> - Customer should contact support.
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * The following status are deprecated: <code>RECEIVED</code>, <code>PENDING</code>, <code>PROCESSING</code>,
+     * <code>INSTALLING</code>, and <code>FULFILLED</code>.
+     * </p>
+     * </note>
      * 
      * @param status
-     *        The status of the order
+     *        The status of the order.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>PREPARING</code> - Order is received and being prepared.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>IN_PROGRESS</code> - Order is either being built, shipped, or installed. To get more details, see
+     *        the <code>LineItem</code> status.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>COMPLETED</code> - Order is complete.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CANCELLED</code> - Order is cancelled.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ERROR</code> - Customer should contact support.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        The following status are deprecated: <code>RECEIVED</code>, <code>PENDING</code>, <code>PROCESSING</code>,
+     *        <code>INSTALLING</code>, and <code>FULFILLED</code>.
+     *        </p>
      * @see OrderStatus
      */
 
@@ -167,10 +268,76 @@ public class Order implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the order
+     * The status of the order.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>PREPARING</code> - Order is received and being prepared.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>IN_PROGRESS</code> - Order is either being built, shipped, or installed. To get more details, see the
+     * <code>LineItem</code> status.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>COMPLETED</code> - Order is complete.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CANCELLED</code> - Order is cancelled.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ERROR</code> - Customer should contact support.
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * The following status are deprecated: <code>RECEIVED</code>, <code>PENDING</code>, <code>PROCESSING</code>,
+     * <code>INSTALLING</code>, and <code>FULFILLED</code>.
+     * </p>
+     * </note>
      * 
-     * @return The status of the order
+     * @return The status of the order.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>PREPARING</code> - Order is received and being prepared.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>IN_PROGRESS</code> - Order is either being built, shipped, or installed. To get more details, see
+     *         the <code>LineItem</code> status.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>COMPLETED</code> - Order is complete.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>CANCELLED</code> - Order is cancelled.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>ERROR</code> - Customer should contact support.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <note>
+     *         <p>
+     *         The following status are deprecated: <code>RECEIVED</code>, <code>PENDING</code>, <code>PROCESSING</code>, <code>INSTALLING</code>, and <code>FULFILLED</code>.
+     *         </p>
      * @see OrderStatus
      */
 
@@ -180,11 +347,78 @@ public class Order implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the order
+     * The status of the order.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>PREPARING</code> - Order is received and being prepared.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>IN_PROGRESS</code> - Order is either being built, shipped, or installed. To get more details, see the
+     * <code>LineItem</code> status.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>COMPLETED</code> - Order is complete.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CANCELLED</code> - Order is cancelled.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ERROR</code> - Customer should contact support.
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * The following status are deprecated: <code>RECEIVED</code>, <code>PENDING</code>, <code>PROCESSING</code>,
+     * <code>INSTALLING</code>, and <code>FULFILLED</code>.
+     * </p>
+     * </note>
      * 
      * @param status
-     *        The status of the order
+     *        The status of the order.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>PREPARING</code> - Order is received and being prepared.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>IN_PROGRESS</code> - Order is either being built, shipped, or installed. To get more details, see
+     *        the <code>LineItem</code> status.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>COMPLETED</code> - Order is complete.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CANCELLED</code> - Order is cancelled.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ERROR</code> - Customer should contact support.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        The following status are deprecated: <code>RECEIVED</code>, <code>PENDING</code>, <code>PROCESSING</code>,
+     *        <code>INSTALLING</code>, and <code>FULFILLED</code>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OrderStatus
      */
@@ -196,11 +430,78 @@ public class Order implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the order
+     * The status of the order.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>PREPARING</code> - Order is received and being prepared.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>IN_PROGRESS</code> - Order is either being built, shipped, or installed. To get more details, see the
+     * <code>LineItem</code> status.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>COMPLETED</code> - Order is complete.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CANCELLED</code> - Order is cancelled.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ERROR</code> - Customer should contact support.
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * The following status are deprecated: <code>RECEIVED</code>, <code>PENDING</code>, <code>PROCESSING</code>,
+     * <code>INSTALLING</code>, and <code>FULFILLED</code>.
+     * </p>
+     * </note>
      * 
      * @param status
-     *        The status of the order
+     *        The status of the order.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>PREPARING</code> - Order is received and being prepared.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>IN_PROGRESS</code> - Order is either being built, shipped, or installed. To get more details, see
+     *        the <code>LineItem</code> status.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>COMPLETED</code> - Order is complete.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CANCELLED</code> - Order is cancelled.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ERROR</code> - Customer should contact support.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        The following status are deprecated: <code>RECEIVED</code>, <code>PENDING</code>, <code>PROCESSING</code>,
+     *        <code>INSTALLING</code>, and <code>FULFILLED</code>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OrderStatus
      */

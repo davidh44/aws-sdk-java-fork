@@ -33,6 +33,8 @@ public class IdentificationHintsMarshaller {
             .marshallLocationName("fqdn").build();
     private static final MarshallingInfo<String> HOSTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("hostname").build();
+    private static final MarshallingInfo<String> VMPATH_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("vmPath").build();
     private static final MarshallingInfo<String> VMWAREUUID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("vmWareUuid").build();
 
@@ -55,6 +57,7 @@ public class IdentificationHintsMarshaller {
             protocolMarshaller.marshall(identificationHints.getAwsInstanceID(), AWSINSTANCEID_BINDING);
             protocolMarshaller.marshall(identificationHints.getFqdn(), FQDN_BINDING);
             protocolMarshaller.marshall(identificationHints.getHostname(), HOSTNAME_BINDING);
+            protocolMarshaller.marshall(identificationHints.getVmPath(), VMPATH_BINDING);
             protocolMarshaller.marshall(identificationHints.getVmWareUuid(), VMWAREUUID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

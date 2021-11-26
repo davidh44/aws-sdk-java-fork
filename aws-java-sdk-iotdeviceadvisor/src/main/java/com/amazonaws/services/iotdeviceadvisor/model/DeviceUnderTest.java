@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information of a test device. Required to provide either a thing ARN or a certificate ARN.
+ * Information of a test device. A thing ARN or a certificate ARN is required.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotdeviceadvisor-2020-09-18/DeviceUnderTest" target="_top">AWS

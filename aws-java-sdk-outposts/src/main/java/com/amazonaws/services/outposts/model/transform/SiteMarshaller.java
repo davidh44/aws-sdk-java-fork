@@ -41,6 +41,16 @@ public class SiteMarshaller {
             .marshallLocationName("Tags").build();
     private static final MarshallingInfo<String> SITEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("SiteArn").build();
+    private static final MarshallingInfo<String> NOTES_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Notes").build();
+    private static final MarshallingInfo<String> OPERATINGADDRESSCOUNTRYCODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OperatingAddressCountryCode").build();
+    private static final MarshallingInfo<String> OPERATINGADDRESSSTATEORREGION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OperatingAddressStateOrRegion").build();
+    private static final MarshallingInfo<String> OPERATINGADDRESSCITY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OperatingAddressCity").build();
+    private static final MarshallingInfo<StructuredPojo> RACKPHYSICALPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RackPhysicalProperties").build();
 
     private static final SiteMarshaller instance = new SiteMarshaller();
 
@@ -64,6 +74,11 @@ public class SiteMarshaller {
             protocolMarshaller.marshall(site.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(site.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(site.getSiteArn(), SITEARN_BINDING);
+            protocolMarshaller.marshall(site.getNotes(), NOTES_BINDING);
+            protocolMarshaller.marshall(site.getOperatingAddressCountryCode(), OPERATINGADDRESSCOUNTRYCODE_BINDING);
+            protocolMarshaller.marshall(site.getOperatingAddressStateOrRegion(), OPERATINGADDRESSSTATEORREGION_BINDING);
+            protocolMarshaller.marshall(site.getOperatingAddressCity(), OPERATINGADDRESSCITY_BINDING);
+            protocolMarshaller.marshall(site.getRackPhysicalProperties(), RACKPHYSICALPROPERTIES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

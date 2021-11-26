@@ -54,7 +54,7 @@ public class SuiteDefinitionConfiguration implements Serializable, Cloneable, St
     private String rootGroup;
     /**
      * <p>
-     * Gets device permission ARN.
+     * Gets the device permission ARN.
      * </p>
      */
     private String devicePermissionRoleArn;
@@ -263,11 +263,11 @@ public class SuiteDefinitionConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * Gets device permission ARN.
+     * Gets the device permission ARN.
      * </p>
      * 
      * @param devicePermissionRoleArn
-     *        Gets device permission ARN.
+     *        Gets the device permission ARN.
      */
 
     public void setDevicePermissionRoleArn(String devicePermissionRoleArn) {
@@ -276,10 +276,10 @@ public class SuiteDefinitionConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * Gets device permission ARN.
+     * Gets the device permission ARN.
      * </p>
      * 
-     * @return Gets device permission ARN.
+     * @return Gets the device permission ARN.
      */
 
     public String getDevicePermissionRoleArn() {
@@ -288,11 +288,11 @@ public class SuiteDefinitionConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * Gets device permission ARN.
+     * Gets the device permission ARN.
      * </p>
      * 
      * @param devicePermissionRoleArn
-     *        Gets device permission ARN.
+     *        Gets the device permission ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

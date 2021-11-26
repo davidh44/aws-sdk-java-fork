@@ -33,8 +33,8 @@ public class ListSuiteRunsRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String suiteDefinitionId;
     /**
      * <p>
-     * Must be passed along with suiteDefinitionId. Lists the test suite runs of the specified test suite based on suite
-     * definition version.
+     * Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test suite
+     * based on suite definition version.
      * </p>
      */
     private String suiteDefinitionVersion;
@@ -93,13 +93,13 @@ public class ListSuiteRunsRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Must be passed along with suiteDefinitionId. Lists the test suite runs of the specified test suite based on suite
-     * definition version.
+     * Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test suite
+     * based on suite definition version.
      * </p>
      * 
      * @param suiteDefinitionVersion
-     *        Must be passed along with suiteDefinitionId. Lists the test suite runs of the specified test suite based
-     *        on suite definition version.
+     *        Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test
+     *        suite based on suite definition version.
      */
 
     public void setSuiteDefinitionVersion(String suiteDefinitionVersion) {
@@ -108,12 +108,12 @@ public class ListSuiteRunsRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Must be passed along with suiteDefinitionId. Lists the test suite runs of the specified test suite based on suite
-     * definition version.
+     * Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test suite
+     * based on suite definition version.
      * </p>
      * 
-     * @return Must be passed along with suiteDefinitionId. Lists the test suite runs of the specified test suite based
-     *         on suite definition version.
+     * @return Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test
+     *         suite based on suite definition version.
      */
 
     public String getSuiteDefinitionVersion() {
@@ -122,13 +122,13 @@ public class ListSuiteRunsRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Must be passed along with suiteDefinitionId. Lists the test suite runs of the specified test suite based on suite
-     * definition version.
+     * Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test suite
+     * based on suite definition version.
      * </p>
      * 
      * @param suiteDefinitionVersion
-     *        Must be passed along with suiteDefinitionId. Lists the test suite runs of the specified test suite based
-     *        on suite definition version.
+     *        Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test
+     *        suite based on suite definition version.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

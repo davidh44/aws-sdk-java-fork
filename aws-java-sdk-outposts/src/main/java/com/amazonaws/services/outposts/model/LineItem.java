@@ -180,6 +180,7 @@ public class LineItem implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param status
      *        The status of the line item.
+     * @see LineItemStatus
      */
 
     public void setStatus(String status) {
@@ -192,6 +193,7 @@ public class LineItem implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @return The status of the line item.
+     * @see LineItemStatus
      */
 
     public String getStatus() {
@@ -206,10 +208,27 @@ public class LineItem implements Serializable, Cloneable, StructuredPojo {
      * @param status
      *        The status of the line item.
      * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LineItemStatus
      */
 
     public LineItem withStatus(String status) {
         setStatus(status);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The status of the line item.
+     * </p>
+     * 
+     * @param status
+     *        The status of the line item.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LineItemStatus
+     */
+
+    public LineItem withStatus(LineItemStatus status) {
+        this.status = status.toString();
         return this;
     }
 

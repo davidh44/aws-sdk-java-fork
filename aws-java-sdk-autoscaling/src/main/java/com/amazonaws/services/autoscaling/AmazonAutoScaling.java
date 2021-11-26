@@ -167,6 +167,10 @@ public interface AmazonAutoScaling {
      * detach the target group from the Auto Scaling group, call the <a>DetachLoadBalancerTargetGroups</a> API.
      * </p>
      * <p>
+     * This operation is additive and does not detach existing target groups or Classic Load Balancers from the Auto
+     * Scaling group.
+     * </p>
+     * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html">Elastic Load
      * Balancing and Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
@@ -199,6 +203,10 @@ public interface AmazonAutoScaling {
      * <p>
      * To describe the load balancers for an Auto Scaling group, call the <a>DescribeLoadBalancers</a> API. To detach
      * the load balancer from the Auto Scaling group, call the <a>DetachLoadBalancers</a> API.
+     * </p>
+     * <p>
+     * This operation is additive and does not detach existing Classic Load Balancers or target groups from the Auto
+     * Scaling group.
      * </p>
      * <p>
      * For more information, see <a
@@ -306,7 +314,7 @@ public interface AmazonAutoScaling {
      * <ol>
      * <li>
      * <p>
-     * (Optional) Create a Lambda function and a rule that allows CloudWatch Events to invoke your Lambda function when
+     * (Optional) Create a Lambda function and a rule that allows Amazon EventBridge to invoke your Lambda function when
      * Amazon EC2 Auto Scaling launches or terminates instances.
      * </p>
      * </li>
@@ -328,7 +336,8 @@ public interface AmazonAutoScaling {
      * </li>
      * <li>
      * <p>
-     * <b>If you finish before the timeout period ends, complete the lifecycle action.</b>
+     * <b>If you finish before the timeout period ends, send a callback by using the <a>CompleteLifecycleAction</a> API
+     * call.</b>
      * </p>
      * </li>
      * </ol>
@@ -1526,8 +1535,8 @@ public interface AmazonAutoScaling {
      * Creates or updates a lifecycle hook for the specified Auto Scaling group.
      * </p>
      * <p>
-     * A lifecycle hook tells Amazon EC2 Auto Scaling to perform an action on an instance when the instance launches
-     * (before it is put into service) or as the instance terminates (before it is fully terminated).
+     * A lifecycle hook enables an Auto Scaling group to be aware of events in the Auto Scaling instance lifecycle, and
+     * then perform a custom action when the corresponding lifecycle event occurs.
      * </p>
      * <p>
      * This step is a part of the procedure for adding a lifecycle hook to an Auto Scaling group:
@@ -1535,7 +1544,7 @@ public interface AmazonAutoScaling {
      * <ol>
      * <li>
      * <p>
-     * (Optional) Create a Lambda function and a rule that allows CloudWatch Events to invoke your Lambda function when
+     * (Optional) Create a Lambda function and a rule that allows Amazon EventBridge to invoke your Lambda function when
      * Amazon EC2 Auto Scaling launches or terminates instances.
      * </p>
      * </li>
@@ -1558,8 +1567,8 @@ public interface AmazonAutoScaling {
      * </li>
      * <li>
      * <p>
-     * If you finish before the timeout period ends, complete the lifecycle action using the
-     * <a>CompleteLifecycleAction</a> API call.
+     * If you finish before the timeout period ends, send a callback by using the <a>CompleteLifecycleAction</a> API
+     * call.
      * </p>
      * </li>
      * </ol>
@@ -1747,7 +1756,7 @@ public interface AmazonAutoScaling {
      * <ol>
      * <li>
      * <p>
-     * (Optional) Create a Lambda function and a rule that allows CloudWatch Events to invoke your Lambda function when
+     * (Optional) Create a Lambda function and a rule that allows Amazon EventBridge to invoke your Lambda function when
      * Amazon EC2 Auto Scaling launches or terminates instances.
      * </p>
      * </li>
@@ -1769,7 +1778,8 @@ public interface AmazonAutoScaling {
      * </li>
      * <li>
      * <p>
-     * If you finish before the timeout period ends, complete the lifecycle action.
+     * If you finish before the timeout period ends, send a callback by using the <a>CompleteLifecycleAction</a> API
+     * call.
      * </p>
      * </li>
      * </ol>
@@ -1870,8 +1880,8 @@ public interface AmazonAutoScaling {
      * <p>
      * For more information about preventing instances that are part of an Auto Scaling group from terminating on scale
      * in, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html#instance-protection"
-     * >Instance scale-in protection</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-protection.html">Using
+     * instance scale-in protection</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * <p>
      * If you exceed your maximum limit of instance IDs, which is 50 per Auto Scaling group, the call fails.

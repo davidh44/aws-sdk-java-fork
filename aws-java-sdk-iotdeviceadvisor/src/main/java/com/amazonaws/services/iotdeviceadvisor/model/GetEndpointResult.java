@@ -23,10 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetEndpointResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The response of an Device Advisor endpoint.
+     * </p>
+     */
     private String endpoint;
 
     /**
+     * <p>
+     * The response of an Device Advisor endpoint.
+     * </p>
+     * 
      * @param endpoint
+     *        The response of an Device Advisor endpoint.
      */
 
     public void setEndpoint(String endpoint) {
@@ -34,7 +44,11 @@ public class GetEndpointResult extends com.amazonaws.AmazonWebServiceResult<com.
     }
 
     /**
-     * @return
+     * <p>
+     * The response of an Device Advisor endpoint.
+     * </p>
+     * 
+     * @return The response of an Device Advisor endpoint.
      */
 
     public String getEndpoint() {
@@ -42,7 +56,12 @@ public class GetEndpointResult extends com.amazonaws.AmazonWebServiceResult<com.
     }
 
     /**
+     * <p>
+     * The response of an Device Advisor endpoint.
+     * </p>
+     * 
      * @param endpoint
+     *        The response of an Device Advisor endpoint.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

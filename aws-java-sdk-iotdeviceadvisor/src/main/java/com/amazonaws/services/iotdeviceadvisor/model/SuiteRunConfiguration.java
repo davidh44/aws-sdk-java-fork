@@ -40,7 +40,11 @@ public class SuiteRunConfiguration implements Serializable, Cloneable, Structure
      * </p>
      */
     private java.util.List<String> selectedTestList;
-
+    /**
+     * <p>
+     * TRUE if multiple test suites run in parallel.
+     * </p>
+     */
     private Boolean parallelRun;
 
     /**
@@ -154,7 +158,12 @@ public class SuiteRunConfiguration implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * TRUE if multiple test suites run in parallel.
+     * </p>
+     * 
      * @param parallelRun
+     *        TRUE if multiple test suites run in parallel.
      */
 
     public void setParallelRun(Boolean parallelRun) {
@@ -162,7 +171,11 @@ public class SuiteRunConfiguration implements Serializable, Cloneable, Structure
     }
 
     /**
-     * @return
+     * <p>
+     * TRUE if multiple test suites run in parallel.
+     * </p>
+     * 
+     * @return TRUE if multiple test suites run in parallel.
      */
 
     public Boolean getParallelRun() {
@@ -170,7 +183,12 @@ public class SuiteRunConfiguration implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * TRUE if multiple test suites run in parallel.
+     * </p>
+     * 
      * @param parallelRun
+     *        TRUE if multiple test suites run in parallel.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -180,7 +198,11 @@ public class SuiteRunConfiguration implements Serializable, Cloneable, Structure
     }
 
     /**
-     * @return
+     * <p>
+     * TRUE if multiple test suites run in parallel.
+     * </p>
+     * 
+     * @return TRUE if multiple test suites run in parallel.
      */
 
     public Boolean isParallelRun() {

@@ -73,6 +73,26 @@ public class SiteJsonUnmarshaller implements Unmarshaller<Site, JsonUnmarshaller
                     context.nextToken();
                     site.setSiteArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Notes", targetDepth)) {
+                    context.nextToken();
+                    site.setNotes(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("OperatingAddressCountryCode", targetDepth)) {
+                    context.nextToken();
+                    site.setOperatingAddressCountryCode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("OperatingAddressStateOrRegion", targetDepth)) {
+                    context.nextToken();
+                    site.setOperatingAddressStateOrRegion(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("OperatingAddressCity", targetDepth)) {
+                    context.nextToken();
+                    site.setOperatingAddressCity(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("RackPhysicalProperties", targetDepth)) {
+                    context.nextToken();
+                    site.setRackPhysicalProperties(RackPhysicalPropertiesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

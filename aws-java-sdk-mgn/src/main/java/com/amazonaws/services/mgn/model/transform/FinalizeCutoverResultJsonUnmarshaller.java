@@ -68,6 +68,10 @@ public class FinalizeCutoverResultJsonUnmarshaller implements Unmarshaller<Final
                     context.nextToken();
                     finalizeCutoverResult.setLifeCycle(LifeCycleJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("replicationType", targetDepth)) {
+                    context.nextToken();
+                    finalizeCutoverResult.setReplicationType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("sourceProperties", targetDepth)) {
                     context.nextToken();
                     finalizeCutoverResult.setSourceProperties(SourcePropertiesJsonUnmarshaller.getInstance().unmarshall(context));
@@ -80,6 +84,10 @@ public class FinalizeCutoverResultJsonUnmarshaller implements Unmarshaller<Final
                     context.nextToken();
                     finalizeCutoverResult.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
                             .getUnmarshaller(String.class)).unmarshall(context));
+                }
+                if (context.testExpression("vcenterClientID", targetDepth)) {
+                    context.nextToken();
+                    finalizeCutoverResult.setVcenterClientID(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

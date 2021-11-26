@@ -30,6 +30,10 @@ public class DescribeSourceServersRequestFiltersMarshaller {
 
     private static final MarshallingInfo<Boolean> ISARCHIVED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("isArchived").build();
+    private static final MarshallingInfo<List> LIFECYCLESTATES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lifeCycleStates").build();
+    private static final MarshallingInfo<List> REPLICATIONTYPES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("replicationTypes").build();
     private static final MarshallingInfo<List> SOURCESERVERIDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sourceServerIDs").build();
 
@@ -50,6 +54,8 @@ public class DescribeSourceServersRequestFiltersMarshaller {
 
         try {
             protocolMarshaller.marshall(describeSourceServersRequestFilters.getIsArchived(), ISARCHIVED_BINDING);
+            protocolMarshaller.marshall(describeSourceServersRequestFilters.getLifeCycleStates(), LIFECYCLESTATES_BINDING);
+            protocolMarshaller.marshall(describeSourceServersRequestFilters.getReplicationTypes(), REPLICATIONTYPES_BINDING);
             protocolMarshaller.marshall(describeSourceServersRequestFilters.getSourceServerIDs(), SOURCESERVERIDS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

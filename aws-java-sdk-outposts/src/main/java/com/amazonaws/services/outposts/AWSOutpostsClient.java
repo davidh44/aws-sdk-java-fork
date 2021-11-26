@@ -51,10 +51,11 @@ import com.amazonaws.services.outposts.model.transform.*;
  * service call completes.
  * <p>
  * <p>
- * AWS Outposts is a fully managed service that extends AWS infrastructure, APIs, and tools to customer premises. By
- * providing local access to AWS managed infrastructure, AWS Outposts enables customers to build and run applications on
- * premises using the same programming interfaces as in AWS Regions, while using local compute and storage resources for
- * lower latency and local data processing needs.
+ * Amazon Web Services Outposts is a fully managed service that extends Amazon Web Services infrastructure, APIs, and
+ * tools to customer premises. By providing local access to Amazon Web Services managed infrastructure, Amazon Web
+ * Services Outposts enables customers to build and run applications on premises using the same programming interfaces
+ * as in Amazon Web Services Regions, while using local compute and storage resources for lower latency and local data
+ * processing needs.
  * </p>
  */
 @ThreadSafe
@@ -84,11 +85,11 @@ public class AWSOutpostsClient extends AmazonWebServiceClient implements AWSOutp
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.outposts.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.outposts.model.transform.ValidationExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
                                     com.amazonaws.services.outposts.model.transform.ConflictExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.outposts.model.transform.ValidationExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("NotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.outposts.model.transform.NotFoundExceptionUnmarshaller.getInstance()))
@@ -144,6 +145,71 @@ public class AWSOutpostsClient extends AmazonWebServiceClient implements AWSOutp
         requestHandler2s.addAll(chainFactory.newRequestHandlerChain("/com/amazonaws/services/outposts/request.handlers"));
         requestHandler2s.addAll(chainFactory.newRequestHandler2Chain("/com/amazonaws/services/outposts/request.handler2s"));
         requestHandler2s.addAll(chainFactory.getGlobalHandlers());
+    }
+
+    /**
+     * <p>
+     * Cancels an order for an Outpost.
+     * </p>
+     * 
+     * @param cancelOrderRequest
+     * @return Result of the CancelOrder operation returned by the service.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws ConflictException
+     *         Updating or deleting this resource can cause an inconsistent state.
+     * @throws AccessDeniedException
+     *         You do not have permission to perform this operation.
+     * @throws NotFoundException
+     *         The specified request is not valid.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSOutposts.CancelOrder
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/CancelOrder" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CancelOrderResult cancelOrder(CancelOrderRequest request) {
+        request = beforeClientExecution(request);
+        return executeCancelOrder(request);
+    }
+
+    @SdkInternalApi
+    final CancelOrderResult executeCancelOrder(CancelOrderRequest cancelOrderRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(cancelOrderRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CancelOrderRequest> request = null;
+        Response<CancelOrderResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CancelOrderRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(cancelOrderRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Outposts");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CancelOrder");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CancelOrderResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CancelOrderResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
 
     /**
@@ -273,6 +339,71 @@ public class AWSOutpostsClient extends AmazonWebServiceClient implements AWSOutp
 
             HttpResponseHandler<AmazonWebServiceResponse<CreateOutpostResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateOutpostResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a site for an Outpost.
+     * </p>
+     * 
+     * @param createSiteRequest
+     * @return Result of the CreateSite operation returned by the service.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws ConflictException
+     *         Updating or deleting this resource can cause an inconsistent state.
+     * @throws AccessDeniedException
+     *         You do not have permission to perform this operation.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @throws ServiceQuotaExceededException
+     *         You have exceeded a service quota.
+     * @sample AWSOutposts.CreateSite
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/CreateSite" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CreateSiteResult createSite(CreateSiteRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateSite(request);
+    }
+
+    @SdkInternalApi
+    final CreateSiteResult executeCreateSite(CreateSiteRequest createSiteRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createSiteRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateSiteRequest> request = null;
+        Response<CreateSiteResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateSiteRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createSiteRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Outposts");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateSite");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateSiteResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateSiteResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -415,6 +546,128 @@ public class AWSOutpostsClient extends AmazonWebServiceClient implements AWSOutp
 
     /**
      * <p>
+     * Gets information about a catalog item.
+     * </p>
+     * 
+     * @param getCatalogItemRequest
+     * @return Result of the GetCatalogItem operation returned by the service.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws NotFoundException
+     *         The specified request is not valid.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSOutposts.GetCatalogItem
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/GetCatalogItem" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetCatalogItemResult getCatalogItem(GetCatalogItemRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetCatalogItem(request);
+    }
+
+    @SdkInternalApi
+    final GetCatalogItemResult executeGetCatalogItem(GetCatalogItemRequest getCatalogItemRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getCatalogItemRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetCatalogItemRequest> request = null;
+        Response<GetCatalogItemResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetCatalogItemRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getCatalogItemRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Outposts");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetCatalogItem");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetCatalogItemResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetCatalogItemResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets an order.
+     * </p>
+     * 
+     * @param getOrderRequest
+     * @return Result of the GetOrder operation returned by the service.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws NotFoundException
+     *         The specified request is not valid.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSOutposts.GetOrder
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/GetOrder" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetOrderResult getOrder(GetOrderRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetOrder(request);
+    }
+
+    @SdkInternalApi
+    final GetOrderResult executeGetOrder(GetOrderRequest getOrderRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getOrderRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetOrderRequest> request = null;
+        Response<GetOrderResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetOrderRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getOrderRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Outposts");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetOrder");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetOrderResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetOrderResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets information about the specified Outpost.
      * </p>
      * 
@@ -543,9 +796,265 @@ public class AWSOutpostsClient extends AmazonWebServiceClient implements AWSOutp
 
     /**
      * <p>
-     * Create a list of the Outposts for your AWS account. Add filters to your request to return a more specific list of
-     * results. Use filters to match an Outpost lifecycle status, Availibility Zone (<code>us-east-1a</code>), and AZ ID
-     * (<code>use1-az1</code>).
+     * Gets information about the specified Outpost site.
+     * </p>
+     * 
+     * @param getSiteRequest
+     * @return Result of the GetSite operation returned by the service.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws NotFoundException
+     *         The specified request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have permission to perform this operation.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSOutposts.GetSite
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/GetSite" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetSiteResult getSite(GetSiteRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetSite(request);
+    }
+
+    @SdkInternalApi
+    final GetSiteResult executeGetSite(GetSiteRequest getSiteRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getSiteRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetSiteRequest> request = null;
+        Response<GetSiteResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetSiteRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getSiteRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Outposts");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetSite");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetSiteResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetSiteResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets the site address.
+     * </p>
+     * 
+     * @param getSiteAddressRequest
+     * @return Result of the GetSiteAddress operation returned by the service.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws AccessDeniedException
+     *         You do not have permission to perform this operation.
+     * @throws NotFoundException
+     *         The specified request is not valid.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSOutposts.GetSiteAddress
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/GetSiteAddress" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetSiteAddressResult getSiteAddress(GetSiteAddressRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetSiteAddress(request);
+    }
+
+    @SdkInternalApi
+    final GetSiteAddressResult executeGetSiteAddress(GetSiteAddressRequest getSiteAddressRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getSiteAddressRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetSiteAddressRequest> request = null;
+        Response<GetSiteAddressResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetSiteAddressRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getSiteAddressRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Outposts");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetSiteAddress");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetSiteAddressResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetSiteAddressResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Use to create a list of every item in the catalog. Add filters to your request to return a more specific list of
+     * results. Use filters to match an item class, storage option, or EC2 family.
+     * </p>
+     * <p>
+     * If you specify multiple filters, the filters are joined with an <code>AND</code>, and the request returns only
+     * results that match all of the specified filters.
+     * </p>
+     * 
+     * @param listCatalogItemsRequest
+     * @return Result of the ListCatalogItems operation returned by the service.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws NotFoundException
+     *         The specified request is not valid.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSOutposts.ListCatalogItems
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/ListCatalogItems" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListCatalogItemsResult listCatalogItems(ListCatalogItemsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListCatalogItems(request);
+    }
+
+    @SdkInternalApi
+    final ListCatalogItemsResult executeListCatalogItems(ListCatalogItemsRequest listCatalogItemsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listCatalogItemsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListCatalogItemsRequest> request = null;
+        Response<ListCatalogItemsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListCatalogItemsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listCatalogItemsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Outposts");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListCatalogItems");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListCatalogItemsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListCatalogItemsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Create a list of the Outpost orders for your Amazon Web Services account. You can filter your request by Outpost
+     * to return a more specific list of results.
+     * </p>
+     * 
+     * @param listOrdersRequest
+     * @return Result of the ListOrders operation returned by the service.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws NotFoundException
+     *         The specified request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have permission to perform this operation.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSOutposts.ListOrders
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/ListOrders" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListOrdersResult listOrders(ListOrdersRequest request) {
+        request = beforeClientExecution(request);
+        return executeListOrders(request);
+    }
+
+    @SdkInternalApi
+    final ListOrdersResult executeListOrders(ListOrdersRequest listOrdersRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listOrdersRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListOrdersRequest> request = null;
+        Response<ListOrdersResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListOrdersRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listOrdersRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Outposts");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListOrders");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListOrdersResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListOrdersResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Create a list of the Outposts for your Amazon Web Services account. Add filters to your request to return a more
+     * specific list of results. Use filters to match an Outpost lifecycle status, Availability Zone (
+     * <code>us-east-1a</code>), and AZ ID (<code>use1-az1</code>).
      * </p>
      * <p>
      * If you specify multiple filters, the filters are joined with an <code>AND</code>, and the request returns only
@@ -610,7 +1119,7 @@ public class AWSOutpostsClient extends AmazonWebServiceClient implements AWSOutp
 
     /**
      * <p>
-     * Lists the sites for the specified AWS account.
+     * Lists the sites for your Amazon Web Services account.
      * </p>
      * 
      * @param listSitesRequest
@@ -842,6 +1351,219 @@ public class AWSOutpostsClient extends AmazonWebServiceClient implements AWSOutp
 
             HttpResponseHandler<AmazonWebServiceResponse<UntagResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UntagResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the site.
+     * </p>
+     * 
+     * @param updateSiteRequest
+     * @return Result of the UpdateSite operation returned by the service.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws ConflictException
+     *         Updating or deleting this resource can cause an inconsistent state.
+     * @throws NotFoundException
+     *         The specified request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have permission to perform this operation.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSOutposts.UpdateSite
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/UpdateSite" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public UpdateSiteResult updateSite(UpdateSiteRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateSite(request);
+    }
+
+    @SdkInternalApi
+    final UpdateSiteResult executeUpdateSite(UpdateSiteRequest updateSiteRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateSiteRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateSiteRequest> request = null;
+        Response<UpdateSiteResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateSiteRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateSiteRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Outposts");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateSite");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateSiteResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateSiteResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the site address.
+     * </p>
+     * <p>
+     * To update a site address with an order <code>IN_PROGRESS</code>, you must wait for the order to complete or
+     * cancel the order.
+     * </p>
+     * <p>
+     * You can update the operating address before you place an order at the site, or after all Outposts that belong to
+     * the site have been deactivated.
+     * </p>
+     * 
+     * @param updateSiteAddressRequest
+     * @return Result of the UpdateSiteAddress operation returned by the service.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws AccessDeniedException
+     *         You do not have permission to perform this operation.
+     * @throws NotFoundException
+     *         The specified request is not valid.
+     * @throws ConflictException
+     *         Updating or deleting this resource can cause an inconsistent state.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSOutposts.UpdateSiteAddress
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/UpdateSiteAddress" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public UpdateSiteAddressResult updateSiteAddress(UpdateSiteAddressRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateSiteAddress(request);
+    }
+
+    @SdkInternalApi
+    final UpdateSiteAddressResult executeUpdateSiteAddress(UpdateSiteAddressRequest updateSiteAddressRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateSiteAddressRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateSiteAddressRequest> request = null;
+        Response<UpdateSiteAddressResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateSiteAddressRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateSiteAddressRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Outposts");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateSiteAddress");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateSiteAddressResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateSiteAddressResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Update the physical and logistical details for a rack at a site. For more information about hardware requirements
+     * for racks, see <a
+     * href="https://docs.aws.amazon.com/outposts/latest/userguide/outposts-requirements.html#checklist">Network
+     * readiness checklist</a> in the Amazon Web Services Outposts User Guide.
+     * </p>
+     * <p>
+     * To update a rack at a site with an order of <code>IN_PROGRESS</code>, you must wait for the order to complete or
+     * cancel the order.
+     * </p>
+     * 
+     * @param updateSiteRackPhysicalPropertiesRequest
+     * @return Result of the UpdateSiteRackPhysicalProperties operation returned by the service.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws ConflictException
+     *         Updating or deleting this resource can cause an inconsistent state.
+     * @throws NotFoundException
+     *         The specified request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have permission to perform this operation.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSOutposts.UpdateSiteRackPhysicalProperties
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/UpdateSiteRackPhysicalProperties"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateSiteRackPhysicalPropertiesResult updateSiteRackPhysicalProperties(UpdateSiteRackPhysicalPropertiesRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateSiteRackPhysicalProperties(request);
+    }
+
+    @SdkInternalApi
+    final UpdateSiteRackPhysicalPropertiesResult executeUpdateSiteRackPhysicalProperties(
+            UpdateSiteRackPhysicalPropertiesRequest updateSiteRackPhysicalPropertiesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateSiteRackPhysicalPropertiesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateSiteRackPhysicalPropertiesRequest> request = null;
+        Response<UpdateSiteRackPhysicalPropertiesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateSiteRackPhysicalPropertiesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateSiteRackPhysicalPropertiesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Outposts");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateSiteRackPhysicalProperties");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateSiteRackPhysicalPropertiesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateSiteRackPhysicalPropertiesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

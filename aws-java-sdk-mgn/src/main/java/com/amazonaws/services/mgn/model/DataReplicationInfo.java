@@ -60,6 +60,12 @@ public class DataReplicationInfo implements Serializable, Cloneable, StructuredP
     private String lagDuration;
     /**
      * <p>
+     * Request to query data replication last snapshot time.
+     * </p>
+     */
+    private String lastSnapshotDateTime;
+    /**
+     * <p>
      * Request to query disks replicated.
      * </p>
      */
@@ -286,6 +292,46 @@ public class DataReplicationInfo implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
+     * Request to query data replication last snapshot time.
+     * </p>
+     * 
+     * @param lastSnapshotDateTime
+     *        Request to query data replication last snapshot time.
+     */
+
+    public void setLastSnapshotDateTime(String lastSnapshotDateTime) {
+        this.lastSnapshotDateTime = lastSnapshotDateTime;
+    }
+
+    /**
+     * <p>
+     * Request to query data replication last snapshot time.
+     * </p>
+     * 
+     * @return Request to query data replication last snapshot time.
+     */
+
+    public String getLastSnapshotDateTime() {
+        return this.lastSnapshotDateTime;
+    }
+
+    /**
+     * <p>
+     * Request to query data replication last snapshot time.
+     * </p>
+     * 
+     * @param lastSnapshotDateTime
+     *        Request to query data replication last snapshot time.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataReplicationInfo withLastSnapshotDateTime(String lastSnapshotDateTime) {
+        setLastSnapshotDateTime(lastSnapshotDateTime);
+        return this;
+    }
+
+    /**
+     * <p>
      * Request to query disks replicated.
      * </p>
      * 
@@ -376,6 +422,8 @@ public class DataReplicationInfo implements Serializable, Cloneable, StructuredP
             sb.append("EtaDateTime: ").append(getEtaDateTime()).append(",");
         if (getLagDuration() != null)
             sb.append("LagDuration: ").append(getLagDuration()).append(",");
+        if (getLastSnapshotDateTime() != null)
+            sb.append("LastSnapshotDateTime: ").append(getLastSnapshotDateTime()).append(",");
         if (getReplicatedDisks() != null)
             sb.append("ReplicatedDisks: ").append(getReplicatedDisks());
         sb.append("}");
@@ -412,6 +460,10 @@ public class DataReplicationInfo implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getLagDuration() != null && other.getLagDuration().equals(this.getLagDuration()) == false)
             return false;
+        if (other.getLastSnapshotDateTime() == null ^ this.getLastSnapshotDateTime() == null)
+            return false;
+        if (other.getLastSnapshotDateTime() != null && other.getLastSnapshotDateTime().equals(this.getLastSnapshotDateTime()) == false)
+            return false;
         if (other.getReplicatedDisks() == null ^ this.getReplicatedDisks() == null)
             return false;
         if (other.getReplicatedDisks() != null && other.getReplicatedDisks().equals(this.getReplicatedDisks()) == false)
@@ -429,6 +481,7 @@ public class DataReplicationInfo implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getDataReplicationState() == null) ? 0 : getDataReplicationState().hashCode());
         hashCode = prime * hashCode + ((getEtaDateTime() == null) ? 0 : getEtaDateTime().hashCode());
         hashCode = prime * hashCode + ((getLagDuration() == null) ? 0 : getLagDuration().hashCode());
+        hashCode = prime * hashCode + ((getLastSnapshotDateTime() == null) ? 0 : getLastSnapshotDateTime().hashCode());
         hashCode = prime * hashCode + ((getReplicatedDisks() == null) ? 0 : getReplicatedDisks().hashCode());
         return hashCode;
     }

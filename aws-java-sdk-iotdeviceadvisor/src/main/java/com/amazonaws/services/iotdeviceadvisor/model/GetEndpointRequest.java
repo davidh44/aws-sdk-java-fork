@@ -25,12 +25,26 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetEndpointRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The thing ARN of the device. This is an optional parameter.
+     * </p>
+     */
     private String thingArn;
-
+    /**
+     * <p>
+     * The certificate ARN of the device. This is an optional parameter.
+     * </p>
+     */
     private String certificateArn;
 
     /**
+     * <p>
+     * The thing ARN of the device. This is an optional parameter.
+     * </p>
+     * 
      * @param thingArn
+     *        The thing ARN of the device. This is an optional parameter.
      */
 
     public void setThingArn(String thingArn) {
@@ -38,7 +52,11 @@ public class GetEndpointRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
-     * @return
+     * <p>
+     * The thing ARN of the device. This is an optional parameter.
+     * </p>
+     * 
+     * @return The thing ARN of the device. This is an optional parameter.
      */
 
     public String getThingArn() {
@@ -46,7 +64,12 @@ public class GetEndpointRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * The thing ARN of the device. This is an optional parameter.
+     * </p>
+     * 
      * @param thingArn
+     *        The thing ARN of the device. This is an optional parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +79,12 @@ public class GetEndpointRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * The certificate ARN of the device. This is an optional parameter.
+     * </p>
+     * 
      * @param certificateArn
+     *        The certificate ARN of the device. This is an optional parameter.
      */
 
     public void setCertificateArn(String certificateArn) {
@@ -64,7 +92,11 @@ public class GetEndpointRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
-     * @return
+     * <p>
+     * The certificate ARN of the device. This is an optional parameter.
+     * </p>
+     * 
+     * @return The certificate ARN of the device. This is an optional parameter.
      */
 
     public String getCertificateArn() {
@@ -72,7 +104,12 @@ public class GetEndpointRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * The certificate ARN of the device. This is an optional parameter.
+     * </p>
+     * 
      * @param certificateArn
+     *        The certificate ARN of the device. This is an optional parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

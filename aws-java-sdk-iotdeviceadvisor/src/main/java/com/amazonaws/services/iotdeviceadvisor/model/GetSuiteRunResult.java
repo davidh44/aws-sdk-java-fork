@@ -61,7 +61,7 @@ public class GetSuiteRunResult extends com.amazonaws.AmazonWebServiceResult<com.
     private TestResult testResult;
     /**
      * <p>
-     * Date (in Unix epoch time) when the test suite run was started.
+     * Date (in Unix epoch time) when the test suite run started.
      * </p>
      */
     private java.util.Date startTime;
@@ -332,11 +332,11 @@ public class GetSuiteRunResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Date (in Unix epoch time) when the test suite run was started.
+     * Date (in Unix epoch time) when the test suite run started.
      * </p>
      * 
      * @param startTime
-     *        Date (in Unix epoch time) when the test suite run was started.
+     *        Date (in Unix epoch time) when the test suite run started.
      */
 
     public void setStartTime(java.util.Date startTime) {
@@ -345,10 +345,10 @@ public class GetSuiteRunResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Date (in Unix epoch time) when the test suite run was started.
+     * Date (in Unix epoch time) when the test suite run started.
      * </p>
      * 
-     * @return Date (in Unix epoch time) when the test suite run was started.
+     * @return Date (in Unix epoch time) when the test suite run started.
      */
 
     public java.util.Date getStartTime() {
@@ -357,11 +357,11 @@ public class GetSuiteRunResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Date (in Unix epoch time) when the test suite run was started.
+     * Date (in Unix epoch time) when the test suite run started.
      * </p>
      * 
      * @param startTime
-     *        Date (in Unix epoch time) when the test suite run was started.
+     *        Date (in Unix epoch time) when the test suite run started.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

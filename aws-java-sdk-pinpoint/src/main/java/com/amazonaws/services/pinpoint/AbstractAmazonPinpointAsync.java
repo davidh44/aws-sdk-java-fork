@@ -1200,6 +1200,19 @@ public class AbstractAmazonPinpointAsync extends AbstractAmazonPinpoint implemen
     }
 
     @Override
+    public java.util.concurrent.Future<SendOTPMessageResult> sendOTPMessageAsync(SendOTPMessageRequest request) {
+
+        return sendOTPMessageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SendOTPMessageResult> sendOTPMessageAsync(SendOTPMessageRequest request,
+            com.amazonaws.handlers.AsyncHandler<SendOTPMessageRequest, SendOTPMessageResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<SendUsersMessagesResult> sendUsersMessagesAsync(SendUsersMessagesRequest request) {
 
         return sendUsersMessagesAsync(request, null);
@@ -1546,6 +1559,19 @@ public class AbstractAmazonPinpointAsync extends AbstractAmazonPinpoint implemen
     @Override
     public java.util.concurrent.Future<UpdateVoiceTemplateResult> updateVoiceTemplateAsync(UpdateVoiceTemplateRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateVoiceTemplateRequest, UpdateVoiceTemplateResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<VerifyOTPMessageResult> verifyOTPMessageAsync(VerifyOTPMessageRequest request) {
+
+        return verifyOTPMessageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<VerifyOTPMessageResult> verifyOTPMessageAsync(VerifyOTPMessageRequest request,
+            com.amazonaws.handlers.AsyncHandler<VerifyOTPMessageRequest, VerifyOTPMessageResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

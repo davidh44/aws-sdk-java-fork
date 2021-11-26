@@ -33,7 +33,7 @@ public class PutNotificationConfigurationRequest extends com.amazonaws.AmazonWeb
     private String autoScalingGroupName;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Simple Notification Service (Amazon SNS) topic.
+     * The Amazon Resource Name (ARN) of the Amazon SNS topic.
      * </p>
      */
     private String topicARN;
@@ -87,11 +87,11 @@ public class PutNotificationConfigurationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Simple Notification Service (Amazon SNS) topic.
+     * The Amazon Resource Name (ARN) of the Amazon SNS topic.
      * </p>
      * 
      * @param topicARN
-     *        The Amazon Resource Name (ARN) of the Amazon Simple Notification Service (Amazon SNS) topic.
+     *        The Amazon Resource Name (ARN) of the Amazon SNS topic.
      */
 
     public void setTopicARN(String topicARN) {
@@ -100,10 +100,10 @@ public class PutNotificationConfigurationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Simple Notification Service (Amazon SNS) topic.
+     * The Amazon Resource Name (ARN) of the Amazon SNS topic.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Amazon Simple Notification Service (Amazon SNS) topic.
+     * @return The Amazon Resource Name (ARN) of the Amazon SNS topic.
      */
 
     public String getTopicARN() {
@@ -112,11 +112,11 @@ public class PutNotificationConfigurationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Simple Notification Service (Amazon SNS) topic.
+     * The Amazon Resource Name (ARN) of the Amazon SNS topic.
      * </p>
      * 
      * @param topicARN
-     *        The Amazon Resource Name (ARN) of the Amazon Simple Notification Service (Amazon SNS) topic.
+     *        The Amazon Resource Name (ARN) of the Amazon SNS topic.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

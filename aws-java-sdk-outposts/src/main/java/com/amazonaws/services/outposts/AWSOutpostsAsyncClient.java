@@ -26,10 +26,11 @@ import java.util.concurrent.ExecutorService;
  * an asynchronous operation completes.
  * <p>
  * <p>
- * AWS Outposts is a fully managed service that extends AWS infrastructure, APIs, and tools to customer premises. By
- * providing local access to AWS managed infrastructure, AWS Outposts enables customers to build and run applications on
- * premises using the same programming interfaces as in AWS Regions, while using local compute and storage resources for
- * lower latency and local data processing needs.
+ * Amazon Web Services Outposts is a fully managed service that extends Amazon Web Services infrastructure, APIs, and
+ * tools to customer premises. By providing local access to Amazon Web Services managed infrastructure, Amazon Web
+ * Services Outposts enables customers to build and run applications on premises using the same programming interfaces
+ * as in Amazon Web Services Regions, while using local compute and storage resources for lower latency and local data
+ * processing needs.
  * </p>
  */
 @ThreadSafe
@@ -74,6 +75,39 @@ public class AWSOutpostsAsyncClient extends AWSOutpostsClient implements AWSOutp
      */
     public ExecutorService getExecutorService() {
         return executorService;
+    }
+
+    @Override
+    public java.util.concurrent.Future<CancelOrderResult> cancelOrderAsync(CancelOrderRequest request) {
+
+        return cancelOrderAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CancelOrderResult> cancelOrderAsync(final CancelOrderRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CancelOrderRequest, CancelOrderResult> asyncHandler) {
+        final CancelOrderRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CancelOrderResult>() {
+            @Override
+            public CancelOrderResult call() throws Exception {
+                CancelOrderResult result = null;
+
+                try {
+                    result = executeCancelOrder(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
     }
 
     @Override
@@ -127,6 +161,39 @@ public class AWSOutpostsAsyncClient extends AWSOutpostsClient implements AWSOutp
 
                 try {
                     result = executeCreateOutpost(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateSiteResult> createSiteAsync(CreateSiteRequest request) {
+
+        return createSiteAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateSiteResult> createSiteAsync(final CreateSiteRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateSiteRequest, CreateSiteResult> asyncHandler) {
+        final CreateSiteRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateSiteResult>() {
+            @Override
+            public CreateSiteResult call() throws Exception {
+                CreateSiteResult result = null;
+
+                try {
+                    result = executeCreateSite(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -209,6 +276,72 @@ public class AWSOutpostsAsyncClient extends AWSOutpostsClient implements AWSOutp
     }
 
     @Override
+    public java.util.concurrent.Future<GetCatalogItemResult> getCatalogItemAsync(GetCatalogItemRequest request) {
+
+        return getCatalogItemAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetCatalogItemResult> getCatalogItemAsync(final GetCatalogItemRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetCatalogItemRequest, GetCatalogItemResult> asyncHandler) {
+        final GetCatalogItemRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetCatalogItemResult>() {
+            @Override
+            public GetCatalogItemResult call() throws Exception {
+                GetCatalogItemResult result = null;
+
+                try {
+                    result = executeGetCatalogItem(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetOrderResult> getOrderAsync(GetOrderRequest request) {
+
+        return getOrderAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetOrderResult> getOrderAsync(final GetOrderRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetOrderRequest, GetOrderResult> asyncHandler) {
+        final GetOrderRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetOrderResult>() {
+            @Override
+            public GetOrderResult call() throws Exception {
+                GetOrderResult result = null;
+
+                try {
+                    result = executeGetOrder(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetOutpostResult> getOutpostAsync(GetOutpostRequest request) {
 
         return getOutpostAsync(request, null);
@@ -259,6 +392,138 @@ public class AWSOutpostsAsyncClient extends AWSOutpostsClient implements AWSOutp
 
                 try {
                     result = executeGetOutpostInstanceTypes(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSiteResult> getSiteAsync(GetSiteRequest request) {
+
+        return getSiteAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSiteResult> getSiteAsync(final GetSiteRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetSiteRequest, GetSiteResult> asyncHandler) {
+        final GetSiteRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetSiteResult>() {
+            @Override
+            public GetSiteResult call() throws Exception {
+                GetSiteResult result = null;
+
+                try {
+                    result = executeGetSite(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSiteAddressResult> getSiteAddressAsync(GetSiteAddressRequest request) {
+
+        return getSiteAddressAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSiteAddressResult> getSiteAddressAsync(final GetSiteAddressRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetSiteAddressRequest, GetSiteAddressResult> asyncHandler) {
+        final GetSiteAddressRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetSiteAddressResult>() {
+            @Override
+            public GetSiteAddressResult call() throws Exception {
+                GetSiteAddressResult result = null;
+
+                try {
+                    result = executeGetSiteAddress(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCatalogItemsResult> listCatalogItemsAsync(ListCatalogItemsRequest request) {
+
+        return listCatalogItemsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCatalogItemsResult> listCatalogItemsAsync(final ListCatalogItemsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListCatalogItemsRequest, ListCatalogItemsResult> asyncHandler) {
+        final ListCatalogItemsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListCatalogItemsResult>() {
+            @Override
+            public ListCatalogItemsResult call() throws Exception {
+                ListCatalogItemsResult result = null;
+
+                try {
+                    result = executeListCatalogItems(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListOrdersResult> listOrdersAsync(ListOrdersRequest request) {
+
+        return listOrdersAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListOrdersResult> listOrdersAsync(final ListOrdersRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListOrdersRequest, ListOrdersResult> asyncHandler) {
+        final ListOrdersRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListOrdersResult>() {
+            @Override
+            public ListOrdersResult call() throws Exception {
+                ListOrdersResult result = null;
+
+                try {
+                    result = executeListOrders(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -424,6 +689,107 @@ public class AWSOutpostsAsyncClient extends AWSOutpostsClient implements AWSOutp
 
                 try {
                     result = executeUntagResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSiteResult> updateSiteAsync(UpdateSiteRequest request) {
+
+        return updateSiteAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSiteResult> updateSiteAsync(final UpdateSiteRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateSiteRequest, UpdateSiteResult> asyncHandler) {
+        final UpdateSiteRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateSiteResult>() {
+            @Override
+            public UpdateSiteResult call() throws Exception {
+                UpdateSiteResult result = null;
+
+                try {
+                    result = executeUpdateSite(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSiteAddressResult> updateSiteAddressAsync(UpdateSiteAddressRequest request) {
+
+        return updateSiteAddressAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSiteAddressResult> updateSiteAddressAsync(final UpdateSiteAddressRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateSiteAddressRequest, UpdateSiteAddressResult> asyncHandler) {
+        final UpdateSiteAddressRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateSiteAddressResult>() {
+            @Override
+            public UpdateSiteAddressResult call() throws Exception {
+                UpdateSiteAddressResult result = null;
+
+                try {
+                    result = executeUpdateSiteAddress(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSiteRackPhysicalPropertiesResult> updateSiteRackPhysicalPropertiesAsync(
+            UpdateSiteRackPhysicalPropertiesRequest request) {
+
+        return updateSiteRackPhysicalPropertiesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSiteRackPhysicalPropertiesResult> updateSiteRackPhysicalPropertiesAsync(
+            final UpdateSiteRackPhysicalPropertiesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateSiteRackPhysicalPropertiesRequest, UpdateSiteRackPhysicalPropertiesResult> asyncHandler) {
+        final UpdateSiteRackPhysicalPropertiesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateSiteRackPhysicalPropertiesResult>() {
+            @Override
+            public UpdateSiteRackPhysicalPropertiesResult call() throws Exception {
+                UpdateSiteRackPhysicalPropertiesResult result = null;
+
+                try {
+                    result = executeUpdateSiteRackPhysicalProperties(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

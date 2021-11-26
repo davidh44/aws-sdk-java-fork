@@ -67,8 +67,9 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html">Auto Scaling groups with
-     * multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups.html">Auto
+     * Scaling groups with multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User
+     * Guide</i>.
      * </p>
      */
     private MixedInstancesPolicy mixedInstancesPolicy;
@@ -163,8 +164,8 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2
-     * instance that has come into service. During this time, any health check failures for the instance are ignored.
-     * The default value is <code>0</code>. For more information, see <a
+     * instance that has come into service and marking it unhealthy due to a failed health check. The default value is
+     * <code>0</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period">Health
      * check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
@@ -208,8 +209,8 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * Indicates whether newly launched instances are protected from termination by Amazon EC2 Auto Scaling when scaling
      * in. For more information about preventing instances from terminating on scale in, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html#instance-protection"
-     * >Instance scale-in protection</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-protection.html">Using
+     * instance scale-in protection</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      */
     private Boolean newInstancesProtectedFromScaleIn;
@@ -219,8 +220,8 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * Capacity Rebalancing, Amazon EC2 Auto Scaling attempts to launch a Spot Instance whenever Amazon EC2 notifies
      * that a Spot Instance is at an elevated risk of interruption. After launching a new instance, it then terminates
      * an old instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/capacity-rebalance.html">Amazon EC2 Auto Scaling
-     * Capacity Rebalancing</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-capacity-rebalancing.html">Amazon
+     * EC2 Auto Scaling Capacity Rebalancing</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      */
     private Boolean capacityRebalance;
@@ -513,16 +514,18 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html">Auto Scaling groups with
-     * multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups.html">Auto
+     * Scaling groups with multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User
+     * Guide</i>.
      * </p>
      * 
      * @param mixedInstancesPolicy
      *        An embedded object that specifies a mixed instances policy.</p>
      *        <p>
-     *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html">Auto Scaling groups
-     *        with multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        For more information, see <a href=
+     *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups.html">Auto
+     *        Scaling groups with multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling
+     *        User Guide</i>.
      */
 
     public void setMixedInstancesPolicy(MixedInstancesPolicy mixedInstancesPolicy) {
@@ -535,16 +538,17 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html">Auto Scaling groups with
-     * multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups.html">Auto
+     * Scaling groups with multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User
+     * Guide</i>.
      * </p>
      * 
      * @return An embedded object that specifies a mixed instances policy.</p>
      *         <p>
-     *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html">Auto Scaling
-     *         groups with multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User
-     *         Guide</i>.
+     *         For more information, see <a href=
+     *         "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups.html">Auto
+     *         Scaling groups with multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling
+     *         User Guide</i>.
      */
 
     public MixedInstancesPolicy getMixedInstancesPolicy() {
@@ -557,16 +561,18 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html">Auto Scaling groups with
-     * multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups.html">Auto
+     * Scaling groups with multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User
+     * Guide</i>.
      * </p>
      * 
      * @param mixedInstancesPolicy
      *        An embedded object that specifies a mixed instances policy.</p>
      *        <p>
-     *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html">Auto Scaling groups
-     *        with multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        For more information, see <a href=
+     *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups.html">Auto
+     *        Scaling groups with multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling
+     *        User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1263,8 +1269,8 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2
-     * instance that has come into service. During this time, any health check failures for the instance are ignored.
-     * The default value is <code>0</code>. For more information, see <a
+     * instance that has come into service and marking it unhealthy due to a failed health check. The default value is
+     * <code>0</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period">Health
      * check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
@@ -1274,8 +1280,8 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * 
      * @param healthCheckGracePeriod
      *        The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an
-     *        EC2 instance that has come into service. During this time, any health check failures for the instance are
-     *        ignored. The default value is <code>0</code>. For more information, see <a
+     *        EC2 instance that has come into service and marking it unhealthy due to a failed health check. The default
+     *        value is <code>0</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period"
      *        >Health check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
      *        <p>
@@ -1289,8 +1295,8 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2
-     * instance that has come into service. During this time, any health check failures for the instance are ignored.
-     * The default value is <code>0</code>. For more information, see <a
+     * instance that has come into service and marking it unhealthy due to a failed health check. The default value is
+     * <code>0</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period">Health
      * check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
@@ -1299,8 +1305,8 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @return The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of
-     *         an EC2 instance that has come into service. During this time, any health check failures for the instance
-     *         are ignored. The default value is <code>0</code>. For more information, see <a
+     *         an EC2 instance that has come into service and marking it unhealthy due to a failed health check. The
+     *         default value is <code>0</code>. For more information, see <a
      *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period"
      *         >Health check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
      *         <p>
@@ -1314,8 +1320,8 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2
-     * instance that has come into service. During this time, any health check failures for the instance are ignored.
-     * The default value is <code>0</code>. For more information, see <a
+     * instance that has come into service and marking it unhealthy due to a failed health check. The default value is
+     * <code>0</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period">Health
      * check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
@@ -1325,8 +1331,8 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * 
      * @param healthCheckGracePeriod
      *        The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an
-     *        EC2 instance that has come into service. During this time, any health check failures for the instance are
-     *        ignored. The default value is <code>0</code>. For more information, see <a
+     *        EC2 instance that has come into service and marking it unhealthy due to a failed health check. The default
+     *        value is <code>0</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period"
      *        >Health check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
      *        <p>
@@ -1582,15 +1588,15 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * Indicates whether newly launched instances are protected from termination by Amazon EC2 Auto Scaling when scaling
      * in. For more information about preventing instances from terminating on scale in, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html#instance-protection"
-     * >Instance scale-in protection</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-protection.html">Using
+     * instance scale-in protection</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param newInstancesProtectedFromScaleIn
      *        Indicates whether newly launched instances are protected from termination by Amazon EC2 Auto Scaling when
-     *        scaling in. For more information about preventing instances from terminating on scale in, see <a href=
-     *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html#instance-protection"
-     *        >Instance scale-in protection</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        scaling in. For more information about preventing instances from terminating on scale in, see <a
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-protection.html"
+     *        >Using instance scale-in protection</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public void setNewInstancesProtectedFromScaleIn(Boolean newInstancesProtectedFromScaleIn) {
@@ -1601,14 +1607,14 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * Indicates whether newly launched instances are protected from termination by Amazon EC2 Auto Scaling when scaling
      * in. For more information about preventing instances from terminating on scale in, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html#instance-protection"
-     * >Instance scale-in protection</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-protection.html">Using
+     * instance scale-in protection</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @return Indicates whether newly launched instances are protected from termination by Amazon EC2 Auto Scaling when
-     *         scaling in. For more information about preventing instances from terminating on scale in, see <a href=
-     *         "https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html#instance-protection"
-     *         >Instance scale-in protection</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *         scaling in. For more information about preventing instances from terminating on scale in, see <a
+     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-protection.html"
+     *         >Using instance scale-in protection</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public Boolean getNewInstancesProtectedFromScaleIn() {
@@ -1619,15 +1625,15 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * Indicates whether newly launched instances are protected from termination by Amazon EC2 Auto Scaling when scaling
      * in. For more information about preventing instances from terminating on scale in, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html#instance-protection"
-     * >Instance scale-in protection</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-protection.html">Using
+     * instance scale-in protection</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param newInstancesProtectedFromScaleIn
      *        Indicates whether newly launched instances are protected from termination by Amazon EC2 Auto Scaling when
-     *        scaling in. For more information about preventing instances from terminating on scale in, see <a href=
-     *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html#instance-protection"
-     *        >Instance scale-in protection</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        scaling in. For more information about preventing instances from terminating on scale in, see <a
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-protection.html"
+     *        >Using instance scale-in protection</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1640,14 +1646,14 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * Indicates whether newly launched instances are protected from termination by Amazon EC2 Auto Scaling when scaling
      * in. For more information about preventing instances from terminating on scale in, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html#instance-protection"
-     * >Instance scale-in protection</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-protection.html">Using
+     * instance scale-in protection</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @return Indicates whether newly launched instances are protected from termination by Amazon EC2 Auto Scaling when
-     *         scaling in. For more information about preventing instances from terminating on scale in, see <a href=
-     *         "https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html#instance-protection"
-     *         >Instance scale-in protection</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *         scaling in. For more information about preventing instances from terminating on scale in, see <a
+     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-protection.html"
+     *         >Using instance scale-in protection</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public Boolean isNewInstancesProtectedFromScaleIn() {
@@ -1660,8 +1666,8 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * Capacity Rebalancing, Amazon EC2 Auto Scaling attempts to launch a Spot Instance whenever Amazon EC2 notifies
      * that a Spot Instance is at an elevated risk of interruption. After launching a new instance, it then terminates
      * an old instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/capacity-rebalance.html">Amazon EC2 Auto Scaling
-     * Capacity Rebalancing</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-capacity-rebalancing.html">Amazon
+     * EC2 Auto Scaling Capacity Rebalancing</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param capacityRebalance
@@ -1669,8 +1675,8 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      *        turn on Capacity Rebalancing, Amazon EC2 Auto Scaling attempts to launch a Spot Instance whenever Amazon
      *        EC2 notifies that a Spot Instance is at an elevated risk of interruption. After launching a new instance,
      *        it then terminates an old instance. For more information, see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/capacity-rebalance.html">Amazon EC2 Auto
-     *        Scaling Capacity Rebalancing</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-capacity-rebalancing.html"
+     *        >Amazon EC2 Auto Scaling Capacity Rebalancing</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public void setCapacityRebalance(Boolean capacityRebalance) {
@@ -1683,16 +1689,16 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * Capacity Rebalancing, Amazon EC2 Auto Scaling attempts to launch a Spot Instance whenever Amazon EC2 notifies
      * that a Spot Instance is at an elevated risk of interruption. After launching a new instance, it then terminates
      * an old instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/capacity-rebalance.html">Amazon EC2 Auto Scaling
-     * Capacity Rebalancing</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-capacity-rebalancing.html">Amazon
+     * EC2 Auto Scaling Capacity Rebalancing</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @return Indicates whether Capacity Rebalancing is enabled. Otherwise, Capacity Rebalancing is disabled. When you
      *         turn on Capacity Rebalancing, Amazon EC2 Auto Scaling attempts to launch a Spot Instance whenever Amazon
      *         EC2 notifies that a Spot Instance is at an elevated risk of interruption. After launching a new instance,
      *         it then terminates an old instance. For more information, see <a
-     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/capacity-rebalance.html">Amazon EC2 Auto
-     *         Scaling Capacity Rebalancing</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-capacity-rebalancing.html"
+     *         >Amazon EC2 Auto Scaling Capacity Rebalancing</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public Boolean getCapacityRebalance() {
@@ -1705,8 +1711,8 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * Capacity Rebalancing, Amazon EC2 Auto Scaling attempts to launch a Spot Instance whenever Amazon EC2 notifies
      * that a Spot Instance is at an elevated risk of interruption. After launching a new instance, it then terminates
      * an old instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/capacity-rebalance.html">Amazon EC2 Auto Scaling
-     * Capacity Rebalancing</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-capacity-rebalancing.html">Amazon
+     * EC2 Auto Scaling Capacity Rebalancing</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param capacityRebalance
@@ -1714,8 +1720,8 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      *        turn on Capacity Rebalancing, Amazon EC2 Auto Scaling attempts to launch a Spot Instance whenever Amazon
      *        EC2 notifies that a Spot Instance is at an elevated risk of interruption. After launching a new instance,
      *        it then terminates an old instance. For more information, see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/capacity-rebalance.html">Amazon EC2 Auto
-     *        Scaling Capacity Rebalancing</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-capacity-rebalancing.html"
+     *        >Amazon EC2 Auto Scaling Capacity Rebalancing</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1730,16 +1736,16 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * Capacity Rebalancing, Amazon EC2 Auto Scaling attempts to launch a Spot Instance whenever Amazon EC2 notifies
      * that a Spot Instance is at an elevated risk of interruption. After launching a new instance, it then terminates
      * an old instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/capacity-rebalance.html">Amazon EC2 Auto Scaling
-     * Capacity Rebalancing</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-capacity-rebalancing.html">Amazon
+     * EC2 Auto Scaling Capacity Rebalancing</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @return Indicates whether Capacity Rebalancing is enabled. Otherwise, Capacity Rebalancing is disabled. When you
      *         turn on Capacity Rebalancing, Amazon EC2 Auto Scaling attempts to launch a Spot Instance whenever Amazon
      *         EC2 notifies that a Spot Instance is at an elevated risk of interruption. After launching a new instance,
      *         it then terminates an old instance. For more information, see <a
-     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/capacity-rebalance.html">Amazon EC2 Auto
-     *         Scaling Capacity Rebalancing</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-capacity-rebalancing.html"
+     *         >Amazon EC2 Auto Scaling Capacity Rebalancing</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public Boolean isCapacityRebalance() {

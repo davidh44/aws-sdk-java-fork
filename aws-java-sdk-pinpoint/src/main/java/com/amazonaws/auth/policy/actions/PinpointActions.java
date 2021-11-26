@@ -205,6 +205,8 @@ public enum PinpointActions implements Action {
     RemoveAttributes("pinpoint:RemoveAttributes"),
     /** Action for the SendMessages operation. */
     SendMessages("pinpoint:SendMessages"),
+    /** Action for the SendOTPMessage operation. */
+    SendOTPMessage("pinpoint:SendOTPMessage"),
     /** Action for the SendUsersMessages operation. */
     SendUsersMessages("pinpoint:SendUsersMessages"),
     /** Action for the TagResource operation. */
@@ -259,6 +261,8 @@ public enum PinpointActions implements Action {
     UpdateVoiceChannel("pinpoint:UpdateVoiceChannel"),
     /** Action for the UpdateVoiceTemplate operation. */
     UpdateVoiceTemplate("pinpoint:UpdateVoiceTemplate"),
+    /** Action for the VerifyOTPMessage operation. */
+    VerifyOTPMessage("pinpoint:VerifyOTPMessage"),
 
     ;
 

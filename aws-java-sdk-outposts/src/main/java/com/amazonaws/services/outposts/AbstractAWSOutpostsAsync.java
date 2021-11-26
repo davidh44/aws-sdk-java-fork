@@ -28,6 +28,19 @@ public class AbstractAWSOutpostsAsync extends AbstractAWSOutposts implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<CancelOrderResult> cancelOrderAsync(CancelOrderRequest request) {
+
+        return cancelOrderAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CancelOrderResult> cancelOrderAsync(CancelOrderRequest request,
+            com.amazonaws.handlers.AsyncHandler<CancelOrderRequest, CancelOrderResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateOrderResult> createOrderAsync(CreateOrderRequest request) {
 
         return createOrderAsync(request, null);
@@ -49,6 +62,19 @@ public class AbstractAWSOutpostsAsync extends AbstractAWSOutposts implements AWS
     @Override
     public java.util.concurrent.Future<CreateOutpostResult> createOutpostAsync(CreateOutpostRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateOutpostRequest, CreateOutpostResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateSiteResult> createSiteAsync(CreateSiteRequest request) {
+
+        return createSiteAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateSiteResult> createSiteAsync(CreateSiteRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateSiteRequest, CreateSiteResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -80,6 +106,32 @@ public class AbstractAWSOutpostsAsync extends AbstractAWSOutposts implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<GetCatalogItemResult> getCatalogItemAsync(GetCatalogItemRequest request) {
+
+        return getCatalogItemAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetCatalogItemResult> getCatalogItemAsync(GetCatalogItemRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetCatalogItemRequest, GetCatalogItemResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetOrderResult> getOrderAsync(GetOrderRequest request) {
+
+        return getOrderAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetOrderResult> getOrderAsync(GetOrderRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetOrderRequest, GetOrderResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetOutpostResult> getOutpostAsync(GetOutpostRequest request) {
 
         return getOutpostAsync(request, null);
@@ -101,6 +153,58 @@ public class AbstractAWSOutpostsAsync extends AbstractAWSOutposts implements AWS
     @Override
     public java.util.concurrent.Future<GetOutpostInstanceTypesResult> getOutpostInstanceTypesAsync(GetOutpostInstanceTypesRequest request,
             com.amazonaws.handlers.AsyncHandler<GetOutpostInstanceTypesRequest, GetOutpostInstanceTypesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSiteResult> getSiteAsync(GetSiteRequest request) {
+
+        return getSiteAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSiteResult> getSiteAsync(GetSiteRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetSiteRequest, GetSiteResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSiteAddressResult> getSiteAddressAsync(GetSiteAddressRequest request) {
+
+        return getSiteAddressAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSiteAddressResult> getSiteAddressAsync(GetSiteAddressRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetSiteAddressRequest, GetSiteAddressResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCatalogItemsResult> listCatalogItemsAsync(ListCatalogItemsRequest request) {
+
+        return listCatalogItemsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCatalogItemsResult> listCatalogItemsAsync(ListCatalogItemsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListCatalogItemsRequest, ListCatalogItemsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListOrdersResult> listOrdersAsync(ListOrdersRequest request) {
+
+        return listOrdersAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListOrdersResult> listOrdersAsync(ListOrdersRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListOrdersRequest, ListOrdersResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -166,6 +270,47 @@ public class AbstractAWSOutpostsAsync extends AbstractAWSOutposts implements AWS
     @Override
     public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSiteResult> updateSiteAsync(UpdateSiteRequest request) {
+
+        return updateSiteAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSiteResult> updateSiteAsync(UpdateSiteRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateSiteRequest, UpdateSiteResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSiteAddressResult> updateSiteAddressAsync(UpdateSiteAddressRequest request) {
+
+        return updateSiteAddressAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSiteAddressResult> updateSiteAddressAsync(UpdateSiteAddressRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateSiteAddressRequest, UpdateSiteAddressResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSiteRackPhysicalPropertiesResult> updateSiteRackPhysicalPropertiesAsync(
+            UpdateSiteRackPhysicalPropertiesRequest request) {
+
+        return updateSiteRackPhysicalPropertiesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSiteRackPhysicalPropertiesResult> updateSiteRackPhysicalPropertiesAsync(
+            UpdateSiteRackPhysicalPropertiesRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateSiteRackPhysicalPropertiesRequest, UpdateSiteRackPhysicalPropertiesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

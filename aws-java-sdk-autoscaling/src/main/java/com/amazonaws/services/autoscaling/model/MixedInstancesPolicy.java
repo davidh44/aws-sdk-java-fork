@@ -20,8 +20,9 @@ import javax.annotation.Generated;
  * Describes a mixed instances policy. A mixed instances policy contains the instance types that Amazon EC2 Auto Scaling
  * can launch and other information that Amazon EC2 Auto Scaling can use to launch instances and help optimize your
  * costs. For more information, see <a
- * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html">Auto Scaling groups with
- * multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups.html">Auto
+ * Scaling groups with multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User
+ * Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/MixedInstancesPolicy" target="_top">AWS

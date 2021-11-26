@@ -117,7 +117,11 @@ public class ReplaceRouteRequest extends AmazonWebServiceRequest implements Seri
      * </p>
      */
     private String vpcPeeringConnectionId;
-
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the core network.
+     * </p>
+     */
     private String coreNetworkArn;
 
     /**
@@ -745,7 +749,12 @@ public class ReplaceRouteRequest extends AmazonWebServiceRequest implements Seri
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the core network.
+     * </p>
+     * 
      * @param coreNetworkArn
+     *        The Amazon Resource Name (ARN) of the core network.
      */
 
     public void setCoreNetworkArn(String coreNetworkArn) {
@@ -753,7 +762,11 @@ public class ReplaceRouteRequest extends AmazonWebServiceRequest implements Seri
     }
 
     /**
-     * @return
+     * <p>
+     * The Amazon Resource Name (ARN) of the core network.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the core network.
      */
 
     public String getCoreNetworkArn() {
@@ -761,7 +774,12 @@ public class ReplaceRouteRequest extends AmazonWebServiceRequest implements Seri
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the core network.
+     * </p>
+     * 
      * @param coreNetworkArn
+     *        The Amazon Resource Name (ARN) of the core network.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

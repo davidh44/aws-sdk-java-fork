@@ -61,9 +61,9 @@ public interface AWSIoTDeviceAdvisor {
      * @param createSuiteDefinitionRequest
      * @return Result of the CreateSuiteDefinition operation returned by the service.
      * @throws ValidationException
-     *         Sends invalid request exception.
+     *         Sends a validation exception.
      * @throws InternalServerException
-     *         Sends Internal Failure Exception.
+     *         Sends an Internal Failure exception.
      * @sample AWSIoTDeviceAdvisor.CreateSuiteDefinition
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotdeviceadvisor-2020-09-18/CreateSuiteDefinition"
      *      target="_top">AWS API Documentation</a>
@@ -83,9 +83,9 @@ public interface AWSIoTDeviceAdvisor {
      * @param deleteSuiteDefinitionRequest
      * @return Result of the DeleteSuiteDefinition operation returned by the service.
      * @throws ValidationException
-     *         Sends invalid request exception.
+     *         Sends a validation exception.
      * @throws InternalServerException
-     *         Sends Internal Failure Exception.
+     *         Sends an Internal Failure exception.
      * @sample AWSIoTDeviceAdvisor.DeleteSuiteDefinition
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotdeviceadvisor-2020-09-18/DeleteSuiteDefinition"
      *      target="_top">AWS API Documentation</a>
@@ -93,14 +93,18 @@ public interface AWSIoTDeviceAdvisor {
     DeleteSuiteDefinitionResult deleteSuiteDefinition(DeleteSuiteDefinitionRequest deleteSuiteDefinitionRequest);
 
     /**
+     * <p>
+     * Gets information about an Device Advisor endpoint.
+     * </p>
+     * 
      * @param getEndpointRequest
      * @return Result of the GetEndpoint operation returned by the service.
      * @throws ValidationException
-     *         Sends invalid request exception.
+     *         Sends a validation exception.
      * @throws InternalServerException
-     *         Sends Internal Failure Exception.
+     *         Sends an Internal Failure exception.
      * @throws ResourceNotFoundException
-     *         Sends Resource Not Found Exception.
+     *         Sends a Resource Not Found exception.
      * @sample AWSIoTDeviceAdvisor.GetEndpoint
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotdeviceadvisor-2020-09-18/GetEndpoint" target="_top">AWS
      *      API Documentation</a>
@@ -120,11 +124,11 @@ public interface AWSIoTDeviceAdvisor {
      * @param getSuiteDefinitionRequest
      * @return Result of the GetSuiteDefinition operation returned by the service.
      * @throws ValidationException
-     *         Sends invalid request exception.
+     *         Sends a validation exception.
      * @throws InternalServerException
-     *         Sends Internal Failure Exception.
+     *         Sends an Internal Failure exception.
      * @throws ResourceNotFoundException
-     *         Sends Resource Not Found Exception.
+     *         Sends a Resource Not Found exception.
      * @sample AWSIoTDeviceAdvisor.GetSuiteDefinition
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotdeviceadvisor-2020-09-18/GetSuiteDefinition"
      *      target="_top">AWS API Documentation</a>
@@ -144,11 +148,11 @@ public interface AWSIoTDeviceAdvisor {
      * @param getSuiteRunRequest
      * @return Result of the GetSuiteRun operation returned by the service.
      * @throws ValidationException
-     *         Sends invalid request exception.
+     *         Sends a validation exception.
      * @throws InternalServerException
-     *         Sends Internal Failure Exception.
+     *         Sends an Internal Failure exception.
      * @throws ResourceNotFoundException
-     *         Sends Resource Not Found Exception.
+     *         Sends a Resource Not Found exception.
      * @sample AWSIoTDeviceAdvisor.GetSuiteRun
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotdeviceadvisor-2020-09-18/GetSuiteRun" target="_top">AWS
      *      API Documentation</a>
@@ -168,11 +172,11 @@ public interface AWSIoTDeviceAdvisor {
      * @param getSuiteRunReportRequest
      * @return Result of the GetSuiteRunReport operation returned by the service.
      * @throws ValidationException
-     *         Sends invalid request exception.
+     *         Sends a validation exception.
      * @throws InternalServerException
-     *         Sends Internal Failure Exception.
+     *         Sends an Internal Failure exception.
      * @throws ResourceNotFoundException
-     *         Sends Resource Not Found Exception.
+     *         Sends a Resource Not Found exception.
      * @sample AWSIoTDeviceAdvisor.GetSuiteRunReport
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotdeviceadvisor-2020-09-18/GetSuiteRunReport"
      *      target="_top">AWS API Documentation</a>
@@ -192,9 +196,9 @@ public interface AWSIoTDeviceAdvisor {
      * @param listSuiteDefinitionsRequest
      * @return Result of the ListSuiteDefinitions operation returned by the service.
      * @throws ValidationException
-     *         Sends invalid request exception.
+     *         Sends a validation exception.
      * @throws InternalServerException
-     *         Sends Internal Failure Exception.
+     *         Sends an Internal Failure exception.
      * @sample AWSIoTDeviceAdvisor.ListSuiteDefinitions
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotdeviceadvisor-2020-09-18/ListSuiteDefinitions"
      *      target="_top">AWS API Documentation</a>
@@ -203,8 +207,8 @@ public interface AWSIoTDeviceAdvisor {
 
     /**
      * <p>
-     * Lists the runs of the specified Device Advisor test suite. You can list all runs of the test suite, or the runs
-     * of a specific version of the test suite.
+     * Lists runs of the specified Device Advisor test suite. You can list all runs of the test suite, or the runs of a
+     * specific version of the test suite.
      * </p>
      * <p>
      * Requires permission to access the <a href=
@@ -215,9 +219,9 @@ public interface AWSIoTDeviceAdvisor {
      * @param listSuiteRunsRequest
      * @return Result of the ListSuiteRuns operation returned by the service.
      * @throws ValidationException
-     *         Sends invalid request exception.
+     *         Sends a validation exception.
      * @throws InternalServerException
-     *         Sends Internal Failure Exception.
+     *         Sends an Internal Failure exception.
      * @sample AWSIoTDeviceAdvisor.ListSuiteRuns
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotdeviceadvisor-2020-09-18/ListSuiteRuns" target="_top">AWS
      *      API Documentation</a>
@@ -237,11 +241,11 @@ public interface AWSIoTDeviceAdvisor {
      * @param listTagsForResourceRequest
      * @return Result of the ListTagsForResource operation returned by the service.
      * @throws InternalServerException
-     *         Sends Internal Failure Exception.
+     *         Sends an Internal Failure exception.
      * @throws ValidationException
-     *         Sends invalid request exception.
+     *         Sends a validation exception.
      * @throws ResourceNotFoundException
-     *         Sends Resource Not Found Exception.
+     *         Sends a Resource Not Found exception.
      * @sample AWSIoTDeviceAdvisor.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotdeviceadvisor-2020-09-18/ListTagsForResource"
      *      target="_top">AWS API Documentation</a>
@@ -261,11 +265,11 @@ public interface AWSIoTDeviceAdvisor {
      * @param startSuiteRunRequest
      * @return Result of the StartSuiteRun operation returned by the service.
      * @throws ValidationException
-     *         Sends invalid request exception.
+     *         Sends a validation exception.
      * @throws InternalServerException
-     *         Sends Internal Failure Exception.
+     *         Sends an Internal Failure exception.
      * @throws ConflictException
-     *         Sends Conflict Exception.
+     *         Sends a Conflict Exception.
      * @sample AWSIoTDeviceAdvisor.StartSuiteRun
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotdeviceadvisor-2020-09-18/StartSuiteRun" target="_top">AWS
      *      API Documentation</a>
@@ -285,11 +289,11 @@ public interface AWSIoTDeviceAdvisor {
      * @param stopSuiteRunRequest
      * @return Result of the StopSuiteRun operation returned by the service.
      * @throws ValidationException
-     *         Sends invalid request exception.
+     *         Sends a validation exception.
      * @throws ResourceNotFoundException
-     *         Sends Resource Not Found Exception.
+     *         Sends a Resource Not Found exception.
      * @throws InternalServerException
-     *         Sends Internal Failure Exception.
+     *         Sends an Internal Failure exception.
      * @sample AWSIoTDeviceAdvisor.StopSuiteRun
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotdeviceadvisor-2020-09-18/StopSuiteRun" target="_top">AWS
      *      API Documentation</a>
@@ -309,11 +313,11 @@ public interface AWSIoTDeviceAdvisor {
      * @param tagResourceRequest
      * @return Result of the TagResource operation returned by the service.
      * @throws InternalServerException
-     *         Sends Internal Failure Exception.
+     *         Sends an Internal Failure exception.
      * @throws ValidationException
-     *         Sends invalid request exception.
+     *         Sends a validation exception.
      * @throws ResourceNotFoundException
-     *         Sends Resource Not Found Exception.
+     *         Sends a Resource Not Found exception.
      * @sample AWSIoTDeviceAdvisor.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotdeviceadvisor-2020-09-18/TagResource" target="_top">AWS
      *      API Documentation</a>
@@ -333,11 +337,11 @@ public interface AWSIoTDeviceAdvisor {
      * @param untagResourceRequest
      * @return Result of the UntagResource operation returned by the service.
      * @throws InternalServerException
-     *         Sends Internal Failure Exception.
+     *         Sends an Internal Failure exception.
      * @throws ValidationException
-     *         Sends invalid request exception.
+     *         Sends a validation exception.
      * @throws ResourceNotFoundException
-     *         Sends Resource Not Found Exception.
+     *         Sends a Resource Not Found exception.
      * @sample AWSIoTDeviceAdvisor.UntagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotdeviceadvisor-2020-09-18/UntagResource" target="_top">AWS
      *      API Documentation</a>
@@ -357,9 +361,9 @@ public interface AWSIoTDeviceAdvisor {
      * @param updateSuiteDefinitionRequest
      * @return Result of the UpdateSuiteDefinition operation returned by the service.
      * @throws ValidationException
-     *         Sends invalid request exception.
+     *         Sends a validation exception.
      * @throws InternalServerException
-     *         Sends Internal Failure Exception.
+     *         Sends an Internal Failure exception.
      * @sample AWSIoTDeviceAdvisor.UpdateSuiteDefinition
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotdeviceadvisor-2020-09-18/UpdateSuiteDefinition"
      *      target="_top">AWS API Documentation</a>

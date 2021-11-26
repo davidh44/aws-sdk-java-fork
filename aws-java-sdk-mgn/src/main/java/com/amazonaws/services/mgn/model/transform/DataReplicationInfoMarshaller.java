@@ -38,6 +38,8 @@ public class DataReplicationInfoMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("etaDateTime").build();
     private static final MarshallingInfo<String> LAGDURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lagDuration").build();
+    private static final MarshallingInfo<String> LASTSNAPSHOTDATETIME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lastSnapshotDateTime").build();
     private static final MarshallingInfo<List> REPLICATEDDISKS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("replicatedDisks").build();
 
@@ -62,6 +64,7 @@ public class DataReplicationInfoMarshaller {
             protocolMarshaller.marshall(dataReplicationInfo.getDataReplicationState(), DATAREPLICATIONSTATE_BINDING);
             protocolMarshaller.marshall(dataReplicationInfo.getEtaDateTime(), ETADATETIME_BINDING);
             protocolMarshaller.marshall(dataReplicationInfo.getLagDuration(), LAGDURATION_BINDING);
+            protocolMarshaller.marshall(dataReplicationInfo.getLastSnapshotDateTime(), LASTSNAPSHOTDATETIME_BINDING);
             protocolMarshaller.marshall(dataReplicationInfo.getReplicatedDisks(), REPLICATEDDISKS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

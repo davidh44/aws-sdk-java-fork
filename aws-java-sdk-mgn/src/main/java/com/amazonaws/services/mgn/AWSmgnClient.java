@@ -84,6 +84,9 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
                             new JsonErrorShapeMetadata().withErrorCode("UninitializedAccountException").withExceptionUnmarshaller(
                                     com.amazonaws.services.mgn.model.transform.UninitializedAccountExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.mgn.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
                                     com.amazonaws.services.mgn.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -465,6 +468,67 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
 
     /**
      * <p>
+     * Deletes a single vCenter client by ID.
+     * </p>
+     * 
+     * @param deleteVcenterClientRequest
+     * @return Result of the DeleteVcenterClient operation returned by the service.
+     * @throws UninitializedAccountException
+     *         Unitialized account exception.
+     * @throws ResourceNotFoundException
+     *         Resource not found exception.
+     * @throws ValidationException
+     *         Validate exception.
+     * @sample AWSmgn.DeleteVcenterClient
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/DeleteVcenterClient" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteVcenterClientResult deleteVcenterClient(DeleteVcenterClientRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteVcenterClient(request);
+    }
+
+    @SdkInternalApi
+    final DeleteVcenterClientResult executeDeleteVcenterClient(DeleteVcenterClientRequest deleteVcenterClientRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteVcenterClientRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteVcenterClientRequest> request = null;
+        Response<DeleteVcenterClientResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteVcenterClientRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteVcenterClientRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "mgn");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteVcenterClient");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteVcenterClientResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteVcenterClientResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Retrieves detailed Job log with paging.
      * </p>
      * 
@@ -699,6 +763,68 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
             HttpResponseHandler<AmazonWebServiceResponse<DescribeSourceServersResult>> responseHandler = protocolFactory
                     .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                             new DescribeSourceServersResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists all vCenter clients.
+     * </p>
+     * 
+     * @param describeVcenterClientsRequest
+     * @return Result of the DescribeVcenterClients operation returned by the service.
+     * @throws UninitializedAccountException
+     *         Unitialized account exception.
+     * @throws ResourceNotFoundException
+     *         Resource not found exception.
+     * @throws ValidationException
+     *         Validate exception.
+     * @sample AWSmgn.DescribeVcenterClients
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/DescribeVcenterClients" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DescribeVcenterClientsResult describeVcenterClients(DescribeVcenterClientsRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeVcenterClients(request);
+    }
+
+    @SdkInternalApi
+    final DescribeVcenterClientsResult executeDescribeVcenterClients(DescribeVcenterClientsRequest describeVcenterClientsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeVcenterClientsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeVcenterClientsRequest> request = null;
+        Response<DescribeVcenterClientsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeVcenterClientsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describeVcenterClientsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "mgn");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeVcenterClients");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeVcenterClientsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeVcenterClientsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1282,6 +1408,71 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
 
     /**
      * <p>
+     * Starts replication on source server by ID.
+     * </p>
+     * 
+     * @param startReplicationRequest
+     * @return Result of the StartReplication operation returned by the service.
+     * @throws UninitializedAccountException
+     *         Unitialized account exception.
+     * @throws ResourceNotFoundException
+     *         Resource not found exception.
+     * @throws ValidationException
+     *         Validate exception.
+     * @throws ServiceQuotaExceededException
+     *         The request could not be completed because its exceeded the service quota.
+     * @throws ConflictException
+     *         The request could not be completed due to a conflict with the current state of the target resource.
+     * @sample AWSmgn.StartReplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/StartReplication" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public StartReplicationResult startReplication(StartReplicationRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartReplication(request);
+    }
+
+    @SdkInternalApi
+    final StartReplicationResult executeStartReplication(StartReplicationRequest startReplicationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startReplicationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartReplicationRequest> request = null;
+        Response<StartReplicationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartReplicationRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(startReplicationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "mgn");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartReplication");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartReplicationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StartReplicationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Lauches a Test Instance for specific Source Servers. This command starts a LAUNCH job whose initiatedBy property
      * is StartTest and changes the SourceServer.lifeCycle.state property to TESTING.
      * </p>
@@ -1726,6 +1917,72 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
             HttpResponseHandler<AmazonWebServiceResponse<UpdateReplicationConfigurationTemplateResult>> responseHandler = protocolFactory
                     .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                             new UpdateReplicationConfigurationTemplateResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates source server Replication Type by ID.
+     * </p>
+     * 
+     * @param updateSourceServerReplicationTypeRequest
+     * @return Result of the UpdateSourceServerReplicationType operation returned by the service.
+     * @throws UninitializedAccountException
+     *         Unitialized account exception.
+     * @throws ResourceNotFoundException
+     *         Resource not found exception.
+     * @throws ValidationException
+     *         Validate exception.
+     * @throws ConflictException
+     *         The request could not be completed due to a conflict with the current state of the target resource.
+     * @sample AWSmgn.UpdateSourceServerReplicationType
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/UpdateSourceServerReplicationType"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateSourceServerReplicationTypeResult updateSourceServerReplicationType(UpdateSourceServerReplicationTypeRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateSourceServerReplicationType(request);
+    }
+
+    @SdkInternalApi
+    final UpdateSourceServerReplicationTypeResult executeUpdateSourceServerReplicationType(
+            UpdateSourceServerReplicationTypeRequest updateSourceServerReplicationTypeRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateSourceServerReplicationTypeRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateSourceServerReplicationTypeRequest> request = null;
+        Response<UpdateSourceServerReplicationTypeResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateSourceServerReplicationTypeRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateSourceServerReplicationTypeRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "mgn");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateSourceServerReplicationType");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateSourceServerReplicationTypeResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateSourceServerReplicationTypeResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

@@ -488,6 +488,11 @@ public class AbstractAmazonPinpoint implements AmazonPinpoint {
     }
 
     @Override
+    public SendOTPMessageResult sendOTPMessage(SendOTPMessageRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public SendUsersMessagesResult sendUsersMessages(SendUsersMessagesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -619,6 +624,11 @@ public class AbstractAmazonPinpoint implements AmazonPinpoint {
 
     @Override
     public UpdateVoiceTemplateResult updateVoiceTemplate(UpdateVoiceTemplateRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public VerifyOTPMessageResult verifyOTPMessage(VerifyOTPMessageRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

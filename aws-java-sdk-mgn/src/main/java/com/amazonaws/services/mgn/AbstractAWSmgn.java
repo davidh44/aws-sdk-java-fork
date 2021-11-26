@@ -53,6 +53,11 @@ public class AbstractAWSmgn implements AWSmgn {
     }
 
     @Override
+    public DeleteVcenterClientResult deleteVcenterClient(DeleteVcenterClientRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeJobLogItemsResult describeJobLogItems(DescribeJobLogItemsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -69,6 +74,11 @@ public class AbstractAWSmgn implements AWSmgn {
 
     @Override
     public DescribeSourceServersResult describeSourceServers(DescribeSourceServersRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeVcenterClientsResult describeVcenterClients(DescribeVcenterClientsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -118,6 +128,11 @@ public class AbstractAWSmgn implements AWSmgn {
     }
 
     @Override
+    public StartReplicationResult startReplication(StartReplicationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public StartTestResult startTest(StartTestRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -149,6 +164,11 @@ public class AbstractAWSmgn implements AWSmgn {
 
     @Override
     public UpdateReplicationConfigurationTemplateResult updateReplicationConfigurationTemplate(UpdateReplicationConfigurationTemplateRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateSourceServerReplicationTypeResult updateSourceServerReplicationType(UpdateSourceServerReplicationTypeRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

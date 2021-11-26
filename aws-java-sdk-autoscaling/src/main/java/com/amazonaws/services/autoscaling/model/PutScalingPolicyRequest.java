@@ -160,7 +160,7 @@ public class PutScalingPolicyRequest extends com.amazonaws.AmazonWebServiceReque
     private Integer estimatedInstanceWarmup;
     /**
      * <p>
-     * A target tracking scaling policy. Provides support for predefined or customized metrics.
+     * A target tracking scaling policy. Provides support for predefined or custom metrics.
      * </p>
      * <p>
      * The following predefined metrics are available:
@@ -211,10 +211,10 @@ public class PutScalingPolicyRequest extends com.amazonaws.AmazonWebServiceReque
     private Boolean enabled;
     /**
      * <p>
-     * A predictive scaling policy. Provides support for only predefined metrics.
+     * A predictive scaling policy. Provides support for predefined and custom metrics.
      * </p>
      * <p>
-     * Predictive scaling works with CPU utilization, network in/out, and the Application Load Balancer request count.
+     * Predefined metrics include CPU utilization, network in/out, and the Application Load Balancer request count.
      * </p>
      * <p>
      * For more information, see <a
@@ -1095,7 +1095,7 @@ public class PutScalingPolicyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A target tracking scaling policy. Provides support for predefined or customized metrics.
+     * A target tracking scaling policy. Provides support for predefined or custom metrics.
      * </p>
      * <p>
      * The following predefined metrics are available:
@@ -1136,7 +1136,7 @@ public class PutScalingPolicyRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param targetTrackingConfiguration
-     *        A target tracking scaling policy. Provides support for predefined or customized metrics.</p>
+     *        A target tracking scaling policy. Provides support for predefined or custom metrics.</p>
      *        <p>
      *        The following predefined metrics are available:
      *        </p>
@@ -1181,7 +1181,7 @@ public class PutScalingPolicyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A target tracking scaling policy. Provides support for predefined or customized metrics.
+     * A target tracking scaling policy. Provides support for predefined or custom metrics.
      * </p>
      * <p>
      * The following predefined metrics are available:
@@ -1221,7 +1221,7 @@ public class PutScalingPolicyRequest extends com.amazonaws.AmazonWebServiceReque
      * Required if the policy type is <code>TargetTrackingScaling</code>.
      * </p>
      * 
-     * @return A target tracking scaling policy. Provides support for predefined or customized metrics.</p>
+     * @return A target tracking scaling policy. Provides support for predefined or custom metrics.</p>
      *         <p>
      *         The following predefined metrics are available:
      *         </p>
@@ -1266,7 +1266,7 @@ public class PutScalingPolicyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A target tracking scaling policy. Provides support for predefined or customized metrics.
+     * A target tracking scaling policy. Provides support for predefined or custom metrics.
      * </p>
      * <p>
      * The following predefined metrics are available:
@@ -1307,7 +1307,7 @@ public class PutScalingPolicyRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param targetTrackingConfiguration
-     *        A target tracking scaling policy. Provides support for predefined or customized metrics.</p>
+     *        A target tracking scaling policy. Provides support for predefined or custom metrics.</p>
      *        <p>
      *        The following predefined metrics are available:
      *        </p>
@@ -1426,10 +1426,10 @@ public class PutScalingPolicyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A predictive scaling policy. Provides support for only predefined metrics.
+     * A predictive scaling policy. Provides support for predefined and custom metrics.
      * </p>
      * <p>
-     * Predictive scaling works with CPU utilization, network in/out, and the Application Load Balancer request count.
+     * Predefined metrics include CPU utilization, network in/out, and the Application Load Balancer request count.
      * </p>
      * <p>
      * For more information, see <a
@@ -1441,9 +1441,9 @@ public class PutScalingPolicyRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param predictiveScalingConfiguration
-     *        A predictive scaling policy. Provides support for only predefined metrics.</p>
+     *        A predictive scaling policy. Provides support for predefined and custom metrics.</p>
      *        <p>
-     *        Predictive scaling works with CPU utilization, network in/out, and the Application Load Balancer request
+     *        Predefined metrics include CPU utilization, network in/out, and the Application Load Balancer request
      *        count.
      *        </p>
      *        <p>
@@ -1461,10 +1461,10 @@ public class PutScalingPolicyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A predictive scaling policy. Provides support for only predefined metrics.
+     * A predictive scaling policy. Provides support for predefined and custom metrics.
      * </p>
      * <p>
-     * Predictive scaling works with CPU utilization, network in/out, and the Application Load Balancer request count.
+     * Predefined metrics include CPU utilization, network in/out, and the Application Load Balancer request count.
      * </p>
      * <p>
      * For more information, see <a
@@ -1475,9 +1475,9 @@ public class PutScalingPolicyRequest extends com.amazonaws.AmazonWebServiceReque
      * Required if the policy type is <code>PredictiveScaling</code>.
      * </p>
      * 
-     * @return A predictive scaling policy. Provides support for only predefined metrics.</p>
+     * @return A predictive scaling policy. Provides support for predefined and custom metrics.</p>
      *         <p>
-     *         Predictive scaling works with CPU utilization, network in/out, and the Application Load Balancer request
+     *         Predefined metrics include CPU utilization, network in/out, and the Application Load Balancer request
      *         count.
      *         </p>
      *         <p>
@@ -1495,10 +1495,10 @@ public class PutScalingPolicyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A predictive scaling policy. Provides support for only predefined metrics.
+     * A predictive scaling policy. Provides support for predefined and custom metrics.
      * </p>
      * <p>
-     * Predictive scaling works with CPU utilization, network in/out, and the Application Load Balancer request count.
+     * Predefined metrics include CPU utilization, network in/out, and the Application Load Balancer request count.
      * </p>
      * <p>
      * For more information, see <a
@@ -1510,9 +1510,9 @@ public class PutScalingPolicyRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param predictiveScalingConfiguration
-     *        A predictive scaling policy. Provides support for only predefined metrics.</p>
+     *        A predictive scaling policy. Provides support for predefined and custom metrics.</p>
      *        <p>
-     *        Predictive scaling works with CPU utilization, network in/out, and the Application Load Balancer request
+     *        Predefined metrics include CPU utilization, network in/out, and the Application Load Balancer request
      *        count.
      *        </p>
      *        <p>

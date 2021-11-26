@@ -68,6 +68,10 @@ public class DataReplicationInfoJsonUnmarshaller implements Unmarshaller<DataRep
                     context.nextToken();
                     dataReplicationInfo.setLagDuration(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("lastSnapshotDateTime", targetDepth)) {
+                    context.nextToken();
+                    dataReplicationInfo.setLastSnapshotDateTime(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("replicatedDisks", targetDepth)) {
                     context.nextToken();
                     dataReplicationInfo.setReplicatedDisks(new ListUnmarshaller<DataReplicationInfoReplicatedDisk>(

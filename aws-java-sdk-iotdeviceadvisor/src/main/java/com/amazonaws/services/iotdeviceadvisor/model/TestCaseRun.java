@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides test case run.
+ * Provides the test case run.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotdeviceadvisor-2020-09-18/TestCaseRun" target="_top">AWS API
@@ -30,25 +30,25 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides test case run ID.
+     * Provides the test case run ID.
      * </p>
      */
     private String testCaseRunId;
     /**
      * <p>
-     * Provides test case run definition ID.
+     * Provides the test case run definition ID.
      * </p>
      */
     private String testCaseDefinitionId;
     /**
      * <p>
-     * Provides test case run definition Name.
+     * Provides the test case run definition name.
      * </p>
      */
     private String testCaseDefinitionName;
     /**
      * <p>
-     * Provides test case run status.
+     * Provides the test case run status. Status is one of the following:
      * </p>
      * <ul>
      * <li>
@@ -68,7 +68,7 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>RUNNING</code>: Test is running
+     * <code>RUNNING</code>: Test is running.
      * </p>
      * </li>
      * <li>
@@ -108,7 +108,7 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date endTime;
     /**
      * <p>
-     * Provides test case run log Url.
+     * Provides test case run log URL.
      * </p>
      */
     private String logUrl;
@@ -127,11 +127,11 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides test case run ID.
+     * Provides the test case run ID.
      * </p>
      * 
      * @param testCaseRunId
-     *        Provides test case run ID.
+     *        Provides the test case run ID.
      */
 
     public void setTestCaseRunId(String testCaseRunId) {
@@ -140,10 +140,10 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides test case run ID.
+     * Provides the test case run ID.
      * </p>
      * 
-     * @return Provides test case run ID.
+     * @return Provides the test case run ID.
      */
 
     public String getTestCaseRunId() {
@@ -152,11 +152,11 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides test case run ID.
+     * Provides the test case run ID.
      * </p>
      * 
      * @param testCaseRunId
-     *        Provides test case run ID.
+     *        Provides the test case run ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -167,11 +167,11 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides test case run definition ID.
+     * Provides the test case run definition ID.
      * </p>
      * 
      * @param testCaseDefinitionId
-     *        Provides test case run definition ID.
+     *        Provides the test case run definition ID.
      */
 
     public void setTestCaseDefinitionId(String testCaseDefinitionId) {
@@ -180,10 +180,10 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides test case run definition ID.
+     * Provides the test case run definition ID.
      * </p>
      * 
-     * @return Provides test case run definition ID.
+     * @return Provides the test case run definition ID.
      */
 
     public String getTestCaseDefinitionId() {
@@ -192,11 +192,11 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides test case run definition ID.
+     * Provides the test case run definition ID.
      * </p>
      * 
      * @param testCaseDefinitionId
-     *        Provides test case run definition ID.
+     *        Provides the test case run definition ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -207,11 +207,11 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides test case run definition Name.
+     * Provides the test case run definition name.
      * </p>
      * 
      * @param testCaseDefinitionName
-     *        Provides test case run definition Name.
+     *        Provides the test case run definition name.
      */
 
     public void setTestCaseDefinitionName(String testCaseDefinitionName) {
@@ -220,10 +220,10 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides test case run definition Name.
+     * Provides the test case run definition name.
      * </p>
      * 
-     * @return Provides test case run definition Name.
+     * @return Provides the test case run definition name.
      */
 
     public String getTestCaseDefinitionName() {
@@ -232,11 +232,11 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides test case run definition Name.
+     * Provides the test case run definition name.
      * </p>
      * 
      * @param testCaseDefinitionName
-     *        Provides test case run definition Name.
+     *        Provides the test case run definition name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -247,7 +247,7 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides test case run status.
+     * Provides the test case run status. Status is one of the following:
      * </p>
      * <ul>
      * <li>
@@ -267,7 +267,7 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>RUNNING</code>: Test is running
+     * <code>RUNNING</code>: Test is running.
      * </p>
      * </li>
      * <li>
@@ -293,7 +293,7 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param status
-     *        Provides test case run status.</p>
+     *        Provides the test case run status. Status is one of the following:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -312,7 +312,7 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>RUNNING</code>: Test is running
+     *        <code>RUNNING</code>: Test is running.
      *        </p>
      *        </li>
      *        <li>
@@ -345,7 +345,7 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides test case run status.
+     * Provides the test case run status. Status is one of the following:
      * </p>
      * <ul>
      * <li>
@@ -365,7 +365,7 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>RUNNING</code>: Test is running
+     * <code>RUNNING</code>: Test is running.
      * </p>
      * </li>
      * <li>
@@ -390,7 +390,7 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * </ul>
      * 
-     * @return Provides test case run status.</p>
+     * @return Provides the test case run status. Status is one of the following:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -409,7 +409,7 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>RUNNING</code>: Test is running
+     *         <code>RUNNING</code>: Test is running.
      *         </p>
      *         </li>
      *         <li>
@@ -442,7 +442,7 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides test case run status.
+     * Provides the test case run status. Status is one of the following:
      * </p>
      * <ul>
      * <li>
@@ -462,7 +462,7 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>RUNNING</code>: Test is running
+     * <code>RUNNING</code>: Test is running.
      * </p>
      * </li>
      * <li>
@@ -488,7 +488,7 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param status
-     *        Provides test case run status.</p>
+     *        Provides the test case run status. Status is one of the following:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -507,7 +507,7 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>RUNNING</code>: Test is running
+     *        <code>RUNNING</code>: Test is running.
      *        </p>
      *        </li>
      *        <li>
@@ -542,7 +542,7 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides test case run status.
+     * Provides the test case run status. Status is one of the following:
      * </p>
      * <ul>
      * <li>
@@ -562,7 +562,7 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>RUNNING</code>: Test is running
+     * <code>RUNNING</code>: Test is running.
      * </p>
      * </li>
      * <li>
@@ -588,7 +588,7 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param status
-     *        Provides test case run status.</p>
+     *        Provides the test case run status. Status is one of the following:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -607,7 +607,7 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>RUNNING</code>: Test is running
+     *        <code>RUNNING</code>: Test is running.
      *        </p>
      *        </li>
      *        <li>
@@ -722,11 +722,11 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides test case run log Url.
+     * Provides test case run log URL.
      * </p>
      * 
      * @param logUrl
-     *        Provides test case run log Url.
+     *        Provides test case run log URL.
      */
 
     public void setLogUrl(String logUrl) {
@@ -735,10 +735,10 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides test case run log Url.
+     * Provides test case run log URL.
      * </p>
      * 
-     * @return Provides test case run log Url.
+     * @return Provides test case run log URL.
      */
 
     public String getLogUrl() {
@@ -747,11 +747,11 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides test case run log Url.
+     * Provides test case run log URL.
      * </p>
      * 
      * @param logUrl
-     *        Provides test case run log Url.
+     *        Provides test case run log URL.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

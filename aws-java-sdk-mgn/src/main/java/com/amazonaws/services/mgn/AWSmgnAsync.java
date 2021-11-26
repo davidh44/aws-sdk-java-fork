@@ -203,6 +203,37 @@ public interface AWSmgnAsync extends AWSmgn {
 
     /**
      * <p>
+     * Deletes a single vCenter client by ID.
+     * </p>
+     * 
+     * @param deleteVcenterClientRequest
+     * @return A Java Future containing the result of the DeleteVcenterClient operation returned by the service.
+     * @sample AWSmgnAsync.DeleteVcenterClient
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/DeleteVcenterClient" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteVcenterClientResult> deleteVcenterClientAsync(DeleteVcenterClientRequest deleteVcenterClientRequest);
+
+    /**
+     * <p>
+     * Deletes a single vCenter client by ID.
+     * </p>
+     * 
+     * @param deleteVcenterClientRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteVcenterClient operation returned by the service.
+     * @sample AWSmgnAsyncHandler.DeleteVcenterClient
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/DeleteVcenterClient" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteVcenterClientResult> deleteVcenterClientAsync(DeleteVcenterClientRequest deleteVcenterClientRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteVcenterClientRequest, DeleteVcenterClientResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves detailed Job log with paging.
      * </p>
      * 
@@ -336,6 +367,37 @@ public interface AWSmgnAsync extends AWSmgn {
      */
     java.util.concurrent.Future<DescribeSourceServersResult> describeSourceServersAsync(DescribeSourceServersRequest describeSourceServersRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeSourceServersRequest, DescribeSourceServersResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists all vCenter clients.
+     * </p>
+     * 
+     * @param describeVcenterClientsRequest
+     * @return A Java Future containing the result of the DescribeVcenterClients operation returned by the service.
+     * @sample AWSmgnAsync.DescribeVcenterClients
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/DescribeVcenterClients" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeVcenterClientsResult> describeVcenterClientsAsync(DescribeVcenterClientsRequest describeVcenterClientsRequest);
+
+    /**
+     * <p>
+     * Lists all vCenter clients.
+     * </p>
+     * 
+     * @param describeVcenterClientsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeVcenterClients operation returned by the service.
+     * @sample AWSmgnAsyncHandler.DescribeVcenterClients
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/DescribeVcenterClients" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeVcenterClientsResult> describeVcenterClientsAsync(DescribeVcenterClientsRequest describeVcenterClientsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeVcenterClientsRequest, DescribeVcenterClientsResult> asyncHandler);
 
     /**
      * <p>
@@ -656,6 +718,37 @@ public interface AWSmgnAsync extends AWSmgn {
 
     /**
      * <p>
+     * Starts replication on source server by ID.
+     * </p>
+     * 
+     * @param startReplicationRequest
+     * @return A Java Future containing the result of the StartReplication operation returned by the service.
+     * @sample AWSmgnAsync.StartReplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/StartReplication" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StartReplicationResult> startReplicationAsync(StartReplicationRequest startReplicationRequest);
+
+    /**
+     * <p>
+     * Starts replication on source server by ID.
+     * </p>
+     * 
+     * @param startReplicationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartReplication operation returned by the service.
+     * @sample AWSmgnAsyncHandler.StartReplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/StartReplication" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StartReplicationResult> startReplicationAsync(StartReplicationRequest startReplicationRequest,
+            com.amazonaws.handlers.AsyncHandler<StartReplicationRequest, StartReplicationResult> asyncHandler);
+
+    /**
+     * <p>
      * Lauches a Test Instance for specific Source Servers. This command starts a LAUNCH job whose initiatedBy property
      * is StartTest and changes the SourceServer.lifeCycle.state property to TESTING.
      * </p>
@@ -888,5 +981,40 @@ public interface AWSmgnAsync extends AWSmgn {
     java.util.concurrent.Future<UpdateReplicationConfigurationTemplateResult> updateReplicationConfigurationTemplateAsync(
             UpdateReplicationConfigurationTemplateRequest updateReplicationConfigurationTemplateRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateReplicationConfigurationTemplateRequest, UpdateReplicationConfigurationTemplateResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates source server Replication Type by ID.
+     * </p>
+     * 
+     * @param updateSourceServerReplicationTypeRequest
+     * @return A Java Future containing the result of the UpdateSourceServerReplicationType operation returned by the
+     *         service.
+     * @sample AWSmgnAsync.UpdateSourceServerReplicationType
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/UpdateSourceServerReplicationType"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateSourceServerReplicationTypeResult> updateSourceServerReplicationTypeAsync(
+            UpdateSourceServerReplicationTypeRequest updateSourceServerReplicationTypeRequest);
+
+    /**
+     * <p>
+     * Updates source server Replication Type by ID.
+     * </p>
+     * 
+     * @param updateSourceServerReplicationTypeRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateSourceServerReplicationType operation returned by the
+     *         service.
+     * @sample AWSmgnAsyncHandler.UpdateSourceServerReplicationType
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/UpdateSourceServerReplicationType"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateSourceServerReplicationTypeResult> updateSourceServerReplicationTypeAsync(
+            UpdateSourceServerReplicationTypeRequest updateSourceServerReplicationTypeRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateSourceServerReplicationTypeRequest, UpdateSourceServerReplicationTypeResult> asyncHandler);
 
 }

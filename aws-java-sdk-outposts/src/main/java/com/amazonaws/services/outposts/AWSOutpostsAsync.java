@@ -26,14 +26,46 @@ import com.amazonaws.services.outposts.model.*;
  * </p>
  * <p>
  * <p>
- * AWS Outposts is a fully managed service that extends AWS infrastructure, APIs, and tools to customer premises. By
- * providing local access to AWS managed infrastructure, AWS Outposts enables customers to build and run applications on
- * premises using the same programming interfaces as in AWS Regions, while using local compute and storage resources for
- * lower latency and local data processing needs.
+ * Amazon Web Services Outposts is a fully managed service that extends Amazon Web Services infrastructure, APIs, and
+ * tools to customer premises. By providing local access to Amazon Web Services managed infrastructure, Amazon Web
+ * Services Outposts enables customers to build and run applications on premises using the same programming interfaces
+ * as in Amazon Web Services Regions, while using local compute and storage resources for lower latency and local data
+ * processing needs.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public interface AWSOutpostsAsync extends AWSOutposts {
+
+    /**
+     * <p>
+     * Cancels an order for an Outpost.
+     * </p>
+     * 
+     * @param cancelOrderRequest
+     * @return A Java Future containing the result of the CancelOrder operation returned by the service.
+     * @sample AWSOutpostsAsync.CancelOrder
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/CancelOrder" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CancelOrderResult> cancelOrderAsync(CancelOrderRequest cancelOrderRequest);
+
+    /**
+     * <p>
+     * Cancels an order for an Outpost.
+     * </p>
+     * 
+     * @param cancelOrderRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CancelOrder operation returned by the service.
+     * @sample AWSOutpostsAsyncHandler.CancelOrder
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/CancelOrder" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CancelOrderResult> cancelOrderAsync(CancelOrderRequest cancelOrderRequest,
+            com.amazonaws.handlers.AsyncHandler<CancelOrderRequest, CancelOrderResult> asyncHandler);
 
     /**
      * <p>
@@ -105,6 +137,37 @@ public interface AWSOutpostsAsync extends AWSOutposts {
 
     /**
      * <p>
+     * Creates a site for an Outpost.
+     * </p>
+     * 
+     * @param createSiteRequest
+     * @return A Java Future containing the result of the CreateSite operation returned by the service.
+     * @sample AWSOutpostsAsync.CreateSite
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/CreateSite" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateSiteResult> createSiteAsync(CreateSiteRequest createSiteRequest);
+
+    /**
+     * <p>
+     * Creates a site for an Outpost.
+     * </p>
+     * 
+     * @param createSiteRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateSite operation returned by the service.
+     * @sample AWSOutpostsAsyncHandler.CreateSite
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/CreateSite" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateSiteResult> createSiteAsync(CreateSiteRequest createSiteRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateSiteRequest, CreateSiteResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes the Outpost.
      * </p>
      * 
@@ -164,6 +227,68 @@ public interface AWSOutpostsAsync extends AWSOutposts {
      */
     java.util.concurrent.Future<DeleteSiteResult> deleteSiteAsync(DeleteSiteRequest deleteSiteRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteSiteRequest, DeleteSiteResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets information about a catalog item.
+     * </p>
+     * 
+     * @param getCatalogItemRequest
+     * @return A Java Future containing the result of the GetCatalogItem operation returned by the service.
+     * @sample AWSOutpostsAsync.GetCatalogItem
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/GetCatalogItem" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetCatalogItemResult> getCatalogItemAsync(GetCatalogItemRequest getCatalogItemRequest);
+
+    /**
+     * <p>
+     * Gets information about a catalog item.
+     * </p>
+     * 
+     * @param getCatalogItemRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetCatalogItem operation returned by the service.
+     * @sample AWSOutpostsAsyncHandler.GetCatalogItem
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/GetCatalogItem" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetCatalogItemResult> getCatalogItemAsync(GetCatalogItemRequest getCatalogItemRequest,
+            com.amazonaws.handlers.AsyncHandler<GetCatalogItemRequest, GetCatalogItemResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets an order.
+     * </p>
+     * 
+     * @param getOrderRequest
+     * @return A Java Future containing the result of the GetOrder operation returned by the service.
+     * @sample AWSOutpostsAsync.GetOrder
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/GetOrder" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetOrderResult> getOrderAsync(GetOrderRequest getOrderRequest);
+
+    /**
+     * <p>
+     * Gets an order.
+     * </p>
+     * 
+     * @param getOrderRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetOrder operation returned by the service.
+     * @sample AWSOutpostsAsyncHandler.GetOrder
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/GetOrder" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetOrderResult> getOrderAsync(GetOrderRequest getOrderRequest,
+            com.amazonaws.handlers.AsyncHandler<GetOrderRequest, GetOrderResult> asyncHandler);
 
     /**
      * <p>
@@ -229,9 +354,145 @@ public interface AWSOutpostsAsync extends AWSOutposts {
 
     /**
      * <p>
-     * Create a list of the Outposts for your AWS account. Add filters to your request to return a more specific list of
-     * results. Use filters to match an Outpost lifecycle status, Availibility Zone (<code>us-east-1a</code>), and AZ ID
-     * (<code>use1-az1</code>).
+     * Gets information about the specified Outpost site.
+     * </p>
+     * 
+     * @param getSiteRequest
+     * @return A Java Future containing the result of the GetSite operation returned by the service.
+     * @sample AWSOutpostsAsync.GetSite
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/GetSite" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetSiteResult> getSiteAsync(GetSiteRequest getSiteRequest);
+
+    /**
+     * <p>
+     * Gets information about the specified Outpost site.
+     * </p>
+     * 
+     * @param getSiteRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetSite operation returned by the service.
+     * @sample AWSOutpostsAsyncHandler.GetSite
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/GetSite" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetSiteResult> getSiteAsync(GetSiteRequest getSiteRequest,
+            com.amazonaws.handlers.AsyncHandler<GetSiteRequest, GetSiteResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets the site address.
+     * </p>
+     * 
+     * @param getSiteAddressRequest
+     * @return A Java Future containing the result of the GetSiteAddress operation returned by the service.
+     * @sample AWSOutpostsAsync.GetSiteAddress
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/GetSiteAddress" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetSiteAddressResult> getSiteAddressAsync(GetSiteAddressRequest getSiteAddressRequest);
+
+    /**
+     * <p>
+     * Gets the site address.
+     * </p>
+     * 
+     * @param getSiteAddressRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetSiteAddress operation returned by the service.
+     * @sample AWSOutpostsAsyncHandler.GetSiteAddress
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/GetSiteAddress" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetSiteAddressResult> getSiteAddressAsync(GetSiteAddressRequest getSiteAddressRequest,
+            com.amazonaws.handlers.AsyncHandler<GetSiteAddressRequest, GetSiteAddressResult> asyncHandler);
+
+    /**
+     * <p>
+     * Use to create a list of every item in the catalog. Add filters to your request to return a more specific list of
+     * results. Use filters to match an item class, storage option, or EC2 family.
+     * </p>
+     * <p>
+     * If you specify multiple filters, the filters are joined with an <code>AND</code>, and the request returns only
+     * results that match all of the specified filters.
+     * </p>
+     * 
+     * @param listCatalogItemsRequest
+     * @return A Java Future containing the result of the ListCatalogItems operation returned by the service.
+     * @sample AWSOutpostsAsync.ListCatalogItems
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/ListCatalogItems" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListCatalogItemsResult> listCatalogItemsAsync(ListCatalogItemsRequest listCatalogItemsRequest);
+
+    /**
+     * <p>
+     * Use to create a list of every item in the catalog. Add filters to your request to return a more specific list of
+     * results. Use filters to match an item class, storage option, or EC2 family.
+     * </p>
+     * <p>
+     * If you specify multiple filters, the filters are joined with an <code>AND</code>, and the request returns only
+     * results that match all of the specified filters.
+     * </p>
+     * 
+     * @param listCatalogItemsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListCatalogItems operation returned by the service.
+     * @sample AWSOutpostsAsyncHandler.ListCatalogItems
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/ListCatalogItems" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListCatalogItemsResult> listCatalogItemsAsync(ListCatalogItemsRequest listCatalogItemsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListCatalogItemsRequest, ListCatalogItemsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Create a list of the Outpost orders for your Amazon Web Services account. You can filter your request by Outpost
+     * to return a more specific list of results.
+     * </p>
+     * 
+     * @param listOrdersRequest
+     * @return A Java Future containing the result of the ListOrders operation returned by the service.
+     * @sample AWSOutpostsAsync.ListOrders
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/ListOrders" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListOrdersResult> listOrdersAsync(ListOrdersRequest listOrdersRequest);
+
+    /**
+     * <p>
+     * Create a list of the Outpost orders for your Amazon Web Services account. You can filter your request by Outpost
+     * to return a more specific list of results.
+     * </p>
+     * 
+     * @param listOrdersRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListOrders operation returned by the service.
+     * @sample AWSOutpostsAsyncHandler.ListOrders
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/ListOrders" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListOrdersResult> listOrdersAsync(ListOrdersRequest listOrdersRequest,
+            com.amazonaws.handlers.AsyncHandler<ListOrdersRequest, ListOrdersResult> asyncHandler);
+
+    /**
+     * <p>
+     * Create a list of the Outposts for your Amazon Web Services account. Add filters to your request to return a more
+     * specific list of results. Use filters to match an Outpost lifecycle status, Availability Zone (
+     * <code>us-east-1a</code>), and AZ ID (<code>use1-az1</code>).
      * </p>
      * <p>
      * If you specify multiple filters, the filters are joined with an <code>AND</code>, and the request returns only
@@ -248,9 +509,9 @@ public interface AWSOutpostsAsync extends AWSOutposts {
 
     /**
      * <p>
-     * Create a list of the Outposts for your AWS account. Add filters to your request to return a more specific list of
-     * results. Use filters to match an Outpost lifecycle status, Availibility Zone (<code>us-east-1a</code>), and AZ ID
-     * (<code>use1-az1</code>).
+     * Create a list of the Outposts for your Amazon Web Services account. Add filters to your request to return a more
+     * specific list of results. Use filters to match an Outpost lifecycle status, Availability Zone (
+     * <code>us-east-1a</code>), and AZ ID (<code>use1-az1</code>).
      * </p>
      * <p>
      * If you specify multiple filters, the filters are joined with an <code>AND</code>, and the request returns only
@@ -272,7 +533,7 @@ public interface AWSOutpostsAsync extends AWSOutposts {
 
     /**
      * <p>
-     * Lists the sites for the specified AWS account.
+     * Lists the sites for your Amazon Web Services account.
      * </p>
      * 
      * @param listSitesRequest
@@ -285,7 +546,7 @@ public interface AWSOutpostsAsync extends AWSOutposts {
 
     /**
      * <p>
-     * Lists the sites for the specified AWS account.
+     * Lists the sites for your Amazon Web Services account.
      * </p>
      * 
      * @param listSitesRequest
@@ -393,5 +654,132 @@ public interface AWSOutpostsAsync extends AWSOutposts {
      */
     java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest,
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the site.
+     * </p>
+     * 
+     * @param updateSiteRequest
+     * @return A Java Future containing the result of the UpdateSite operation returned by the service.
+     * @sample AWSOutpostsAsync.UpdateSite
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/UpdateSite" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateSiteResult> updateSiteAsync(UpdateSiteRequest updateSiteRequest);
+
+    /**
+     * <p>
+     * Updates the site.
+     * </p>
+     * 
+     * @param updateSiteRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateSite operation returned by the service.
+     * @sample AWSOutpostsAsyncHandler.UpdateSite
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/UpdateSite" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateSiteResult> updateSiteAsync(UpdateSiteRequest updateSiteRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateSiteRequest, UpdateSiteResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the site address.
+     * </p>
+     * <p>
+     * To update a site address with an order <code>IN_PROGRESS</code>, you must wait for the order to complete or
+     * cancel the order.
+     * </p>
+     * <p>
+     * You can update the operating address before you place an order at the site, or after all Outposts that belong to
+     * the site have been deactivated.
+     * </p>
+     * 
+     * @param updateSiteAddressRequest
+     * @return A Java Future containing the result of the UpdateSiteAddress operation returned by the service.
+     * @sample AWSOutpostsAsync.UpdateSiteAddress
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/UpdateSiteAddress" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateSiteAddressResult> updateSiteAddressAsync(UpdateSiteAddressRequest updateSiteAddressRequest);
+
+    /**
+     * <p>
+     * Updates the site address.
+     * </p>
+     * <p>
+     * To update a site address with an order <code>IN_PROGRESS</code>, you must wait for the order to complete or
+     * cancel the order.
+     * </p>
+     * <p>
+     * You can update the operating address before you place an order at the site, or after all Outposts that belong to
+     * the site have been deactivated.
+     * </p>
+     * 
+     * @param updateSiteAddressRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateSiteAddress operation returned by the service.
+     * @sample AWSOutpostsAsyncHandler.UpdateSiteAddress
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/UpdateSiteAddress" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateSiteAddressResult> updateSiteAddressAsync(UpdateSiteAddressRequest updateSiteAddressRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateSiteAddressRequest, UpdateSiteAddressResult> asyncHandler);
+
+    /**
+     * <p>
+     * Update the physical and logistical details for a rack at a site. For more information about hardware requirements
+     * for racks, see <a
+     * href="https://docs.aws.amazon.com/outposts/latest/userguide/outposts-requirements.html#checklist">Network
+     * readiness checklist</a> in the Amazon Web Services Outposts User Guide.
+     * </p>
+     * <p>
+     * To update a rack at a site with an order of <code>IN_PROGRESS</code>, you must wait for the order to complete or
+     * cancel the order.
+     * </p>
+     * 
+     * @param updateSiteRackPhysicalPropertiesRequest
+     * @return A Java Future containing the result of the UpdateSiteRackPhysicalProperties operation returned by the
+     *         service.
+     * @sample AWSOutpostsAsync.UpdateSiteRackPhysicalProperties
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/UpdateSiteRackPhysicalProperties"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateSiteRackPhysicalPropertiesResult> updateSiteRackPhysicalPropertiesAsync(
+            UpdateSiteRackPhysicalPropertiesRequest updateSiteRackPhysicalPropertiesRequest);
+
+    /**
+     * <p>
+     * Update the physical and logistical details for a rack at a site. For more information about hardware requirements
+     * for racks, see <a
+     * href="https://docs.aws.amazon.com/outposts/latest/userguide/outposts-requirements.html#checklist">Network
+     * readiness checklist</a> in the Amazon Web Services Outposts User Guide.
+     * </p>
+     * <p>
+     * To update a rack at a site with an order of <code>IN_PROGRESS</code>, you must wait for the order to complete or
+     * cancel the order.
+     * </p>
+     * 
+     * @param updateSiteRackPhysicalPropertiesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateSiteRackPhysicalProperties operation returned by the
+     *         service.
+     * @sample AWSOutpostsAsyncHandler.UpdateSiteRackPhysicalProperties
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/UpdateSiteRackPhysicalProperties"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateSiteRackPhysicalPropertiesResult> updateSiteRackPhysicalPropertiesAsync(
+            UpdateSiteRackPhysicalPropertiesRequest updateSiteRackPhysicalPropertiesRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateSiteRackPhysicalPropertiesRequest, UpdateSiteRackPhysicalPropertiesResult> asyncHandler);
 
 }

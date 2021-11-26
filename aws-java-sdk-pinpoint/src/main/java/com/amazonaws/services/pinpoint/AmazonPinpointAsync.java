@@ -2878,6 +2878,37 @@ public interface AmazonPinpointAsync extends AmazonPinpoint {
 
     /**
      * <p>
+     * Send an OTP message
+     * </p>
+     * 
+     * @param sendOTPMessageRequest
+     * @return A Java Future containing the result of the SendOTPMessage operation returned by the service.
+     * @sample AmazonPinpointAsync.SendOTPMessage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/SendOTPMessage" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<SendOTPMessageResult> sendOTPMessageAsync(SendOTPMessageRequest sendOTPMessageRequest);
+
+    /**
+     * <p>
+     * Send an OTP message
+     * </p>
+     * 
+     * @param sendOTPMessageRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SendOTPMessage operation returned by the service.
+     * @sample AmazonPinpointAsyncHandler.SendOTPMessage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/SendOTPMessage" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<SendOTPMessageResult> sendOTPMessageAsync(SendOTPMessageRequest sendOTPMessageRequest,
+            com.amazonaws.handlers.AsyncHandler<SendOTPMessageRequest, SendOTPMessageResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates and sends a message to a list of users.
      * </p>
      * 
@@ -3758,5 +3789,36 @@ public interface AmazonPinpointAsync extends AmazonPinpoint {
      */
     java.util.concurrent.Future<UpdateVoiceTemplateResult> updateVoiceTemplateAsync(UpdateVoiceTemplateRequest updateVoiceTemplateRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateVoiceTemplateRequest, UpdateVoiceTemplateResult> asyncHandler);
+
+    /**
+     * <p>
+     * Verify an OTP
+     * </p>
+     * 
+     * @param verifyOTPMessageRequest
+     * @return A Java Future containing the result of the VerifyOTPMessage operation returned by the service.
+     * @sample AmazonPinpointAsync.VerifyOTPMessage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/VerifyOTPMessage" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<VerifyOTPMessageResult> verifyOTPMessageAsync(VerifyOTPMessageRequest verifyOTPMessageRequest);
+
+    /**
+     * <p>
+     * Verify an OTP
+     * </p>
+     * 
+     * @param verifyOTPMessageRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the VerifyOTPMessage operation returned by the service.
+     * @sample AmazonPinpointAsyncHandler.VerifyOTPMessage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/VerifyOTPMessage" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<VerifyOTPMessageResult> verifyOTPMessageAsync(VerifyOTPMessageRequest verifyOTPMessageRequest,
+            com.amazonaws.handlers.AsyncHandler<VerifyOTPMessageRequest, VerifyOTPMessageResult> asyncHandler);
 
 }

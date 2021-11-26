@@ -27,10 +27,11 @@ import com.amazonaws.services.outposts.model.*;
  * </p>
  * <p>
  * <p>
- * AWS Outposts is a fully managed service that extends AWS infrastructure, APIs, and tools to customer premises. By
- * providing local access to AWS managed infrastructure, AWS Outposts enables customers to build and run applications on
- * premises using the same programming interfaces as in AWS Regions, while using local compute and storage resources for
- * lower latency and local data processing needs.
+ * Amazon Web Services Outposts is a fully managed service that extends Amazon Web Services infrastructure, APIs, and
+ * tools to customer premises. By providing local access to Amazon Web Services managed infrastructure, Amazon Web
+ * Services Outposts enables customers to build and run applications on premises using the same programming interfaces
+ * as in Amazon Web Services Regions, while using local compute and storage resources for lower latency and local data
+ * processing needs.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -43,6 +44,29 @@ public interface AWSOutposts {
      * @see RegionUtils#getRegionsForService(String)
      */
     String ENDPOINT_PREFIX = "outposts";
+
+    /**
+     * <p>
+     * Cancels an order for an Outpost.
+     * </p>
+     * 
+     * @param cancelOrderRequest
+     * @return Result of the CancelOrder operation returned by the service.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws ConflictException
+     *         Updating or deleting this resource can cause an inconsistent state.
+     * @throws AccessDeniedException
+     *         You do not have permission to perform this operation.
+     * @throws NotFoundException
+     *         The specified request is not valid.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSOutposts.CancelOrder
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/CancelOrder" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CancelOrderResult cancelOrder(CancelOrderRequest cancelOrderRequest);
 
     /**
      * <p>
@@ -99,6 +123,29 @@ public interface AWSOutposts {
 
     /**
      * <p>
+     * Creates a site for an Outpost.
+     * </p>
+     * 
+     * @param createSiteRequest
+     * @return Result of the CreateSite operation returned by the service.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws ConflictException
+     *         Updating or deleting this resource can cause an inconsistent state.
+     * @throws AccessDeniedException
+     *         You do not have permission to perform this operation.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @throws ServiceQuotaExceededException
+     *         You have exceeded a service quota.
+     * @sample AWSOutposts.CreateSite
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/CreateSite" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateSiteResult createSite(CreateSiteRequest createSiteRequest);
+
+    /**
+     * <p>
      * Deletes the Outpost.
      * </p>
      * 
@@ -145,6 +192,44 @@ public interface AWSOutposts {
 
     /**
      * <p>
+     * Gets information about a catalog item.
+     * </p>
+     * 
+     * @param getCatalogItemRequest
+     * @return Result of the GetCatalogItem operation returned by the service.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws NotFoundException
+     *         The specified request is not valid.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSOutposts.GetCatalogItem
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/GetCatalogItem" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetCatalogItemResult getCatalogItem(GetCatalogItemRequest getCatalogItemRequest);
+
+    /**
+     * <p>
+     * Gets an order.
+     * </p>
+     * 
+     * @param getOrderRequest
+     * @return Result of the GetOrder operation returned by the service.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws NotFoundException
+     *         The specified request is not valid.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSOutposts.GetOrder
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/GetOrder" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetOrderResult getOrder(GetOrderRequest getOrderRequest);
+
+    /**
+     * <p>
      * Gets information about the specified Outpost.
      * </p>
      * 
@@ -187,9 +272,97 @@ public interface AWSOutposts {
 
     /**
      * <p>
-     * Create a list of the Outposts for your AWS account. Add filters to your request to return a more specific list of
-     * results. Use filters to match an Outpost lifecycle status, Availibility Zone (<code>us-east-1a</code>), and AZ ID
-     * (<code>use1-az1</code>).
+     * Gets information about the specified Outpost site.
+     * </p>
+     * 
+     * @param getSiteRequest
+     * @return Result of the GetSite operation returned by the service.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws NotFoundException
+     *         The specified request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have permission to perform this operation.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSOutposts.GetSite
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/GetSite" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetSiteResult getSite(GetSiteRequest getSiteRequest);
+
+    /**
+     * <p>
+     * Gets the site address.
+     * </p>
+     * 
+     * @param getSiteAddressRequest
+     * @return Result of the GetSiteAddress operation returned by the service.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws AccessDeniedException
+     *         You do not have permission to perform this operation.
+     * @throws NotFoundException
+     *         The specified request is not valid.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSOutposts.GetSiteAddress
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/GetSiteAddress" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetSiteAddressResult getSiteAddress(GetSiteAddressRequest getSiteAddressRequest);
+
+    /**
+     * <p>
+     * Use to create a list of every item in the catalog. Add filters to your request to return a more specific list of
+     * results. Use filters to match an item class, storage option, or EC2 family.
+     * </p>
+     * <p>
+     * If you specify multiple filters, the filters are joined with an <code>AND</code>, and the request returns only
+     * results that match all of the specified filters.
+     * </p>
+     * 
+     * @param listCatalogItemsRequest
+     * @return Result of the ListCatalogItems operation returned by the service.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws NotFoundException
+     *         The specified request is not valid.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSOutposts.ListCatalogItems
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/ListCatalogItems" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListCatalogItemsResult listCatalogItems(ListCatalogItemsRequest listCatalogItemsRequest);
+
+    /**
+     * <p>
+     * Create a list of the Outpost orders for your Amazon Web Services account. You can filter your request by Outpost
+     * to return a more specific list of results.
+     * </p>
+     * 
+     * @param listOrdersRequest
+     * @return Result of the ListOrders operation returned by the service.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws NotFoundException
+     *         The specified request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have permission to perform this operation.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSOutposts.ListOrders
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/ListOrders" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListOrdersResult listOrders(ListOrdersRequest listOrdersRequest);
+
+    /**
+     * <p>
+     * Create a list of the Outposts for your Amazon Web Services account. Add filters to your request to return a more
+     * specific list of results. Use filters to match an Outpost lifecycle status, Availability Zone (
+     * <code>us-east-1a</code>), and AZ ID (<code>use1-az1</code>).
      * </p>
      * <p>
      * If you specify multiple filters, the filters are joined with an <code>AND</code>, and the request returns only
@@ -212,7 +385,7 @@ public interface AWSOutposts {
 
     /**
      * <p>
-     * Lists the sites for the specified AWS account.
+     * Lists the sites for your Amazon Web Services account.
      * </p>
      * 
      * @param listSitesRequest
@@ -285,6 +458,90 @@ public interface AWSOutposts {
      *      Documentation</a>
      */
     UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
+
+    /**
+     * <p>
+     * Updates the site.
+     * </p>
+     * 
+     * @param updateSiteRequest
+     * @return Result of the UpdateSite operation returned by the service.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws ConflictException
+     *         Updating or deleting this resource can cause an inconsistent state.
+     * @throws NotFoundException
+     *         The specified request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have permission to perform this operation.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSOutposts.UpdateSite
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/UpdateSite" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateSiteResult updateSite(UpdateSiteRequest updateSiteRequest);
+
+    /**
+     * <p>
+     * Updates the site address.
+     * </p>
+     * <p>
+     * To update a site address with an order <code>IN_PROGRESS</code>, you must wait for the order to complete or
+     * cancel the order.
+     * </p>
+     * <p>
+     * You can update the operating address before you place an order at the site, or after all Outposts that belong to
+     * the site have been deactivated.
+     * </p>
+     * 
+     * @param updateSiteAddressRequest
+     * @return Result of the UpdateSiteAddress operation returned by the service.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws AccessDeniedException
+     *         You do not have permission to perform this operation.
+     * @throws NotFoundException
+     *         The specified request is not valid.
+     * @throws ConflictException
+     *         Updating or deleting this resource can cause an inconsistent state.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSOutposts.UpdateSiteAddress
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/UpdateSiteAddress" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateSiteAddressResult updateSiteAddress(UpdateSiteAddressRequest updateSiteAddressRequest);
+
+    /**
+     * <p>
+     * Update the physical and logistical details for a rack at a site. For more information about hardware requirements
+     * for racks, see <a
+     * href="https://docs.aws.amazon.com/outposts/latest/userguide/outposts-requirements.html#checklist">Network
+     * readiness checklist</a> in the Amazon Web Services Outposts User Guide.
+     * </p>
+     * <p>
+     * To update a rack at a site with an order of <code>IN_PROGRESS</code>, you must wait for the order to complete or
+     * cancel the order.
+     * </p>
+     * 
+     * @param updateSiteRackPhysicalPropertiesRequest
+     * @return Result of the UpdateSiteRackPhysicalProperties operation returned by the service.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws ConflictException
+     *         Updating or deleting this resource can cause an inconsistent state.
+     * @throws NotFoundException
+     *         The specified request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have permission to perform this operation.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSOutposts.UpdateSiteRackPhysicalProperties
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/UpdateSiteRackPhysicalProperties"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateSiteRackPhysicalPropertiesResult updateSiteRackPhysicalProperties(UpdateSiteRackPhysicalPropertiesRequest updateSiteRackPhysicalPropertiesRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

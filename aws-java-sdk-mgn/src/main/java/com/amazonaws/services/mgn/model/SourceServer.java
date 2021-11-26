@@ -57,6 +57,12 @@ public class SourceServer implements Serializable, Cloneable, StructuredPojo {
     private LifeCycle lifeCycle;
     /**
      * <p>
+     * Source server replication type.
+     * </p>
+     */
+    private String replicationType;
+    /**
+     * <p>
      * Source server properties.
      * </p>
      */
@@ -73,6 +79,12 @@ public class SourceServer implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * Source server vCenter client id.
+     * </p>
+     */
+    private String vcenterClientID;
 
     /**
      * <p>
@@ -288,6 +300,65 @@ public class SourceServer implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Source server replication type.
+     * </p>
+     * 
+     * @param replicationType
+     *        Source server replication type.
+     * @see ReplicationType
+     */
+
+    public void setReplicationType(String replicationType) {
+        this.replicationType = replicationType;
+    }
+
+    /**
+     * <p>
+     * Source server replication type.
+     * </p>
+     * 
+     * @return Source server replication type.
+     * @see ReplicationType
+     */
+
+    public String getReplicationType() {
+        return this.replicationType;
+    }
+
+    /**
+     * <p>
+     * Source server replication type.
+     * </p>
+     * 
+     * @param replicationType
+     *        Source server replication type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ReplicationType
+     */
+
+    public SourceServer withReplicationType(String replicationType) {
+        setReplicationType(replicationType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Source server replication type.
+     * </p>
+     * 
+     * @param replicationType
+     *        Source server replication type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ReplicationType
+     */
+
+    public SourceServer withReplicationType(ReplicationType replicationType) {
+        this.replicationType = replicationType.toString();
+        return this;
+    }
+
+    /**
+     * <p>
      * Source server properties.
      * </p>
      * 
@@ -435,6 +506,46 @@ public class SourceServer implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Source server vCenter client id.
+     * </p>
+     * 
+     * @param vcenterClientID
+     *        Source server vCenter client id.
+     */
+
+    public void setVcenterClientID(String vcenterClientID) {
+        this.vcenterClientID = vcenterClientID;
+    }
+
+    /**
+     * <p>
+     * Source server vCenter client id.
+     * </p>
+     * 
+     * @return Source server vCenter client id.
+     */
+
+    public String getVcenterClientID() {
+        return this.vcenterClientID;
+    }
+
+    /**
+     * <p>
+     * Source server vCenter client id.
+     * </p>
+     * 
+     * @param vcenterClientID
+     *        Source server vCenter client id.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SourceServer withVcenterClientID(String vcenterClientID) {
+        setVcenterClientID(vcenterClientID);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -456,12 +567,16 @@ public class SourceServer implements Serializable, Cloneable, StructuredPojo {
             sb.append("LaunchedInstance: ").append(getLaunchedInstance()).append(",");
         if (getLifeCycle() != null)
             sb.append("LifeCycle: ").append(getLifeCycle()).append(",");
+        if (getReplicationType() != null)
+            sb.append("ReplicationType: ").append(getReplicationType()).append(",");
         if (getSourceProperties() != null)
             sb.append("SourceProperties: ").append(getSourceProperties()).append(",");
         if (getSourceServerID() != null)
             sb.append("SourceServerID: ").append(getSourceServerID()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append("***Sensitive Data Redacted***");
+            sb.append("Tags: ").append("***Sensitive Data Redacted***").append(",");
+        if (getVcenterClientID() != null)
+            sb.append("VcenterClientID: ").append(getVcenterClientID());
         sb.append("}");
         return sb.toString();
     }
@@ -496,6 +611,10 @@ public class SourceServer implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getLifeCycle() != null && other.getLifeCycle().equals(this.getLifeCycle()) == false)
             return false;
+        if (other.getReplicationType() == null ^ this.getReplicationType() == null)
+            return false;
+        if (other.getReplicationType() != null && other.getReplicationType().equals(this.getReplicationType()) == false)
+            return false;
         if (other.getSourceProperties() == null ^ this.getSourceProperties() == null)
             return false;
         if (other.getSourceProperties() != null && other.getSourceProperties().equals(this.getSourceProperties()) == false)
@@ -507,6 +626,10 @@ public class SourceServer implements Serializable, Cloneable, StructuredPojo {
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
+        if (other.getVcenterClientID() == null ^ this.getVcenterClientID() == null)
+            return false;
+        if (other.getVcenterClientID() != null && other.getVcenterClientID().equals(this.getVcenterClientID()) == false)
             return false;
         return true;
     }
@@ -521,9 +644,11 @@ public class SourceServer implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getIsArchived() == null) ? 0 : getIsArchived().hashCode());
         hashCode = prime * hashCode + ((getLaunchedInstance() == null) ? 0 : getLaunchedInstance().hashCode());
         hashCode = prime * hashCode + ((getLifeCycle() == null) ? 0 : getLifeCycle().hashCode());
+        hashCode = prime * hashCode + ((getReplicationType() == null) ? 0 : getReplicationType().hashCode());
         hashCode = prime * hashCode + ((getSourceProperties() == null) ? 0 : getSourceProperties().hashCode());
         hashCode = prime * hashCode + ((getSourceServerID() == null) ? 0 : getSourceServerID().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getVcenterClientID() == null) ? 0 : getVcenterClientID().hashCode());
         return hashCode;
     }
 

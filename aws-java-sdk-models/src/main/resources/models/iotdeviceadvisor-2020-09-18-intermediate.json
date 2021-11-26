@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientMutationMethods", "ClientConstructors" ],
+    "deprecatedSuppressions" : [ "ClientMutationMethods", "EnumSetterOverload", "ClientConstructors" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -99,11 +99,11 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>Sends invalid request exception.</p>",
+        "documentation" : "<p>Sends a validation exception.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
-        "documentation" : "<p>Sends Internal Failure Exception.</p>",
+        "documentation" : "<p>Sends an Internal Failure exception.</p>",
         "httpStatusCode" : 500
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -140,11 +140,11 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>Sends invalid request exception.</p>",
+        "documentation" : "<p>Sends a validation exception.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
-        "documentation" : "<p>Sends Internal Failure Exception.</p>",
+        "documentation" : "<p>Sends an Internal Failure exception.</p>",
         "httpStatusCode" : 500
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -174,22 +174,22 @@
       "asyncReturnType" : "GetEndpointResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "",
+      "documentation" : "<p>Gets information about an Device Advisor endpoint.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>Sends invalid request exception.</p>",
+        "documentation" : "<p>Sends a validation exception.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
-        "documentation" : "<p>Sends Internal Failure Exception.</p>",
+        "documentation" : "<p>Sends an Internal Failure exception.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>Sends Resource Not Found Exception.</p>",
+        "documentation" : "<p>Sends a Resource Not Found exception.</p>",
         "httpStatusCode" : 404
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -226,15 +226,15 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>Sends invalid request exception.</p>",
+        "documentation" : "<p>Sends a validation exception.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
-        "documentation" : "<p>Sends Internal Failure Exception.</p>",
+        "documentation" : "<p>Sends an Internal Failure exception.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>Sends Resource Not Found Exception.</p>",
+        "documentation" : "<p>Sends a Resource Not Found exception.</p>",
         "httpStatusCode" : 404
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -271,15 +271,15 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>Sends invalid request exception.</p>",
+        "documentation" : "<p>Sends a validation exception.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
-        "documentation" : "<p>Sends Internal Failure Exception.</p>",
+        "documentation" : "<p>Sends an Internal Failure exception.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>Sends Resource Not Found Exception.</p>",
+        "documentation" : "<p>Sends a Resource Not Found exception.</p>",
         "httpStatusCode" : 404
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -316,15 +316,15 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>Sends invalid request exception.</p>",
+        "documentation" : "<p>Sends a validation exception.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
-        "documentation" : "<p>Sends Internal Failure Exception.</p>",
+        "documentation" : "<p>Sends an Internal Failure exception.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>Sends Resource Not Found Exception.</p>",
+        "documentation" : "<p>Sends a Resource Not Found exception.</p>",
         "httpStatusCode" : 404
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -361,11 +361,11 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>Sends invalid request exception.</p>",
+        "documentation" : "<p>Sends a validation exception.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
-        "documentation" : "<p>Sends Internal Failure Exception.</p>",
+        "documentation" : "<p>Sends an Internal Failure exception.</p>",
         "httpStatusCode" : 500
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -395,18 +395,18 @@
       "asyncReturnType" : "ListSuiteRunsResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Lists the runs of the specified Device Advisor test suite. You can list all runs of the test suite, or the runs of a specific version of the test suite.</p> <p>Requires permission to access the <a href=\"https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions\">ListSuiteRuns</a> action.</p>",
+      "documentation" : "<p>Lists runs of the specified Device Advisor test suite. You can list all runs of the test suite, or the runs of a specific version of the test suite.</p> <p>Requires permission to access the <a href=\"https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions\">ListSuiteRuns</a> action.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>Sends invalid request exception.</p>",
+        "documentation" : "<p>Sends a validation exception.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
-        "documentation" : "<p>Sends Internal Failure Exception.</p>",
+        "documentation" : "<p>Sends an Internal Failure exception.</p>",
         "httpStatusCode" : 500
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -443,15 +443,15 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "InternalServerException",
-        "documentation" : "<p>Sends Internal Failure Exception.</p>",
+        "documentation" : "<p>Sends an Internal Failure exception.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>Sends invalid request exception.</p>",
+        "documentation" : "<p>Sends a validation exception.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>Sends Resource Not Found Exception.</p>",
+        "documentation" : "<p>Sends a Resource Not Found exception.</p>",
         "httpStatusCode" : 404
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -488,15 +488,15 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>Sends invalid request exception.</p>",
+        "documentation" : "<p>Sends a validation exception.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
-        "documentation" : "<p>Sends Internal Failure Exception.</p>",
+        "documentation" : "<p>Sends an Internal Failure exception.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ConflictException",
-        "documentation" : "<p>Sends Conflict Exception.</p>",
+        "documentation" : "<p>Sends a Conflict Exception.</p>",
         "httpStatusCode" : 400
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -533,15 +533,15 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>Sends invalid request exception.</p>",
+        "documentation" : "<p>Sends a validation exception.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>Sends Resource Not Found Exception.</p>",
+        "documentation" : "<p>Sends a Resource Not Found exception.</p>",
         "httpStatusCode" : 404
       }, {
         "exceptionName" : "InternalServerException",
-        "documentation" : "<p>Sends Internal Failure Exception.</p>",
+        "documentation" : "<p>Sends an Internal Failure exception.</p>",
         "httpStatusCode" : 500
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -578,15 +578,15 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "InternalServerException",
-        "documentation" : "<p>Sends Internal Failure Exception.</p>",
+        "documentation" : "<p>Sends an Internal Failure exception.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>Sends invalid request exception.</p>",
+        "documentation" : "<p>Sends a validation exception.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>Sends Resource Not Found Exception.</p>",
+        "documentation" : "<p>Sends a Resource Not Found exception.</p>",
         "httpStatusCode" : 404
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -623,15 +623,15 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "InternalServerException",
-        "documentation" : "<p>Sends Internal Failure Exception.</p>",
+        "documentation" : "<p>Sends an Internal Failure exception.</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>Sends invalid request exception.</p>",
+        "documentation" : "<p>Sends a validation exception.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>Sends Resource Not Found Exception.</p>",
+        "documentation" : "<p>Sends a Resource Not Found exception.</p>",
         "httpStatusCode" : 404
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -668,11 +668,11 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>Sends invalid request exception.</p>",
+        "documentation" : "<p>Sends a validation exception.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
-        "documentation" : "<p>Sends Internal Failure Exception.</p>",
+        "documentation" : "<p>Sends an Internal Failure exception.</p>",
         "httpStatusCode" : 500
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -706,7 +706,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>Sends Conflict Exception.</p>",
+      "documentation" : "<p>Sends a Conflict Exception.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : "ConflictException",
@@ -2075,7 +2075,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>Information of a test device. Required to provide either a thing ARN or a certificate ARN.</p>",
+      "documentation" : "<p>Information of a test device. A thing ARN or a certificate ARN is required.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -2420,12 +2420,12 @@
         "c2jName" : "thingArn",
         "c2jShape" : "AmazonResourceName",
         "deprecated" : false,
-        "documentation" : "",
+        "documentation" : "<p>The thing ARN of the device. This is an optional parameter.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**\n@param thingArn \n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>The thing ARN of the device. This is an optional parameter.</p>\n@param thingArn The thing ARN of the device. This is an optional parameter.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withThingArn",
-        "getterDocumentation" : "/**\n@return */",
+        "getterDocumentation" : "/**<p>The thing ARN of the device. This is an optional parameter.</p>\n@return The thing ARN of the device. This is an optional parameter.*/",
         "getterMethodName" : "getThingArn",
         "getterModel" : {
           "returnType" : "String",
@@ -2459,7 +2459,7 @@
         "marshallingType" : "STRING",
         "name" : "ThingArn",
         "sensitive" : false,
-        "setterDocumentation" : "/**\n@param thingArn */",
+        "setterDocumentation" : "/**<p>The thing ARN of the device. This is an optional parameter.</p>\n@param thingArn The thing ARN of the device. This is an optional parameter.*/",
         "setterMethodName" : "setThingArn",
         "setterModel" : {
           "timestampFormat" : null,
@@ -2474,13 +2474,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**\n@param thingArn \n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The thing ARN of the device. This is an optional parameter.</p>\n@param thingArn The thing ARN of the device. This is an optional parameter.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "thingArn",
           "variableType" : "String",
-          "documentation" : "",
+          "documentation" : "<p>The thing ARN of the device. This is an optional parameter.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -2489,12 +2489,12 @@
         "c2jName" : "certificateArn",
         "c2jShape" : "AmazonResourceName",
         "deprecated" : false,
-        "documentation" : "",
+        "documentation" : "<p>The certificate ARN of the device. This is an optional parameter.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**\n@param certificateArn \n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>The certificate ARN of the device. This is an optional parameter.</p>\n@param certificateArn The certificate ARN of the device. This is an optional parameter.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withCertificateArn",
-        "getterDocumentation" : "/**\n@return */",
+        "getterDocumentation" : "/**<p>The certificate ARN of the device. This is an optional parameter.</p>\n@return The certificate ARN of the device. This is an optional parameter.*/",
         "getterMethodName" : "getCertificateArn",
         "getterModel" : {
           "returnType" : "String",
@@ -2528,7 +2528,7 @@
         "marshallingType" : "STRING",
         "name" : "CertificateArn",
         "sensitive" : false,
-        "setterDocumentation" : "/**\n@param certificateArn */",
+        "setterDocumentation" : "/**<p>The certificate ARN of the device. This is an optional parameter.</p>\n@param certificateArn The certificate ARN of the device. This is an optional parameter.*/",
         "setterMethodName" : "setCertificateArn",
         "setterModel" : {
           "timestampFormat" : null,
@@ -2543,13 +2543,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**\n@param certificateArn \n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The certificate ARN of the device. This is an optional parameter.</p>\n@param certificateArn The certificate ARN of the device. This is an optional parameter.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "certificateArn",
           "variableType" : "String",
-          "documentation" : "",
+          "documentation" : "<p>The certificate ARN of the device. This is an optional parameter.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -2560,12 +2560,12 @@
           "c2jName" : "certificateArn",
           "c2jShape" : "AmazonResourceName",
           "deprecated" : false,
-          "documentation" : "",
+          "documentation" : "<p>The certificate ARN of the device. This is an optional parameter.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**\n@param certificateArn \n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>The certificate ARN of the device. This is an optional parameter.</p>\n@param certificateArn The certificate ARN of the device. This is an optional parameter.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withCertificateArn",
-          "getterDocumentation" : "/**\n@return */",
+          "getterDocumentation" : "/**<p>The certificate ARN of the device. This is an optional parameter.</p>\n@return The certificate ARN of the device. This is an optional parameter.*/",
           "getterMethodName" : "getCertificateArn",
           "getterModel" : {
             "returnType" : "String",
@@ -2599,7 +2599,7 @@
           "marshallingType" : "STRING",
           "name" : "CertificateArn",
           "sensitive" : false,
-          "setterDocumentation" : "/**\n@param certificateArn */",
+          "setterDocumentation" : "/**<p>The certificate ARN of the device. This is an optional parameter.</p>\n@param certificateArn The certificate ARN of the device. This is an optional parameter.*/",
           "setterMethodName" : "setCertificateArn",
           "setterModel" : {
             "timestampFormat" : null,
@@ -2614,13 +2614,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**\n@param certificateArn \n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>The certificate ARN of the device. This is an optional parameter.</p>\n@param certificateArn The certificate ARN of the device. This is an optional parameter.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "certificateArn",
             "variableType" : "String",
-            "documentation" : "",
+            "documentation" : "<p>The certificate ARN of the device. This is an optional parameter.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -2630,12 +2630,12 @@
           "c2jName" : "thingArn",
           "c2jShape" : "AmazonResourceName",
           "deprecated" : false,
-          "documentation" : "",
+          "documentation" : "<p>The thing ARN of the device. This is an optional parameter.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**\n@param thingArn \n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>The thing ARN of the device. This is an optional parameter.</p>\n@param thingArn The thing ARN of the device. This is an optional parameter.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withThingArn",
-          "getterDocumentation" : "/**\n@return */",
+          "getterDocumentation" : "/**<p>The thing ARN of the device. This is an optional parameter.</p>\n@return The thing ARN of the device. This is an optional parameter.*/",
           "getterMethodName" : "getThingArn",
           "getterModel" : {
             "returnType" : "String",
@@ -2669,7 +2669,7 @@
           "marshallingType" : "STRING",
           "name" : "ThingArn",
           "sensitive" : false,
-          "setterDocumentation" : "/**\n@param thingArn */",
+          "setterDocumentation" : "/**<p>The thing ARN of the device. This is an optional parameter.</p>\n@param thingArn The thing ARN of the device. This is an optional parameter.*/",
           "setterMethodName" : "setThingArn",
           "setterModel" : {
             "timestampFormat" : null,
@@ -2684,13 +2684,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**\n@param thingArn \n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>The thing ARN of the device. This is an optional parameter.</p>\n@param thingArn The thing ARN of the device. This is an optional parameter.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "thingArn",
             "variableType" : "String",
-            "documentation" : "",
+            "documentation" : "<p>The thing ARN of the device. This is an optional parameter.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -2740,12 +2740,12 @@
         "c2jName" : "endpoint",
         "c2jShape" : "Endpoint",
         "deprecated" : false,
-        "documentation" : "",
+        "documentation" : "<p>The response of an Device Advisor endpoint.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**\n@param endpoint \n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>The response of an Device Advisor endpoint.</p>\n@param endpoint The response of an Device Advisor endpoint.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withEndpoint",
-        "getterDocumentation" : "/**\n@return */",
+        "getterDocumentation" : "/**<p>The response of an Device Advisor endpoint.</p>\n@return The response of an Device Advisor endpoint.*/",
         "getterMethodName" : "getEndpoint",
         "getterModel" : {
           "returnType" : "String",
@@ -2779,7 +2779,7 @@
         "marshallingType" : "STRING",
         "name" : "Endpoint",
         "sensitive" : false,
-        "setterDocumentation" : "/**\n@param endpoint */",
+        "setterDocumentation" : "/**<p>The response of an Device Advisor endpoint.</p>\n@param endpoint The response of an Device Advisor endpoint.*/",
         "setterMethodName" : "setEndpoint",
         "setterModel" : {
           "timestampFormat" : null,
@@ -2794,13 +2794,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**\n@param endpoint \n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The response of an Device Advisor endpoint.</p>\n@param endpoint The response of an Device Advisor endpoint.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "endpoint",
           "variableType" : "String",
-          "documentation" : "",
+          "documentation" : "<p>The response of an Device Advisor endpoint.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -2811,12 +2811,12 @@
           "c2jName" : "endpoint",
           "c2jShape" : "Endpoint",
           "deprecated" : false,
-          "documentation" : "",
+          "documentation" : "<p>The response of an Device Advisor endpoint.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**\n@param endpoint \n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>The response of an Device Advisor endpoint.</p>\n@param endpoint The response of an Device Advisor endpoint.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withEndpoint",
-          "getterDocumentation" : "/**\n@return */",
+          "getterDocumentation" : "/**<p>The response of an Device Advisor endpoint.</p>\n@return The response of an Device Advisor endpoint.*/",
           "getterMethodName" : "getEndpoint",
           "getterModel" : {
             "returnType" : "String",
@@ -2850,7 +2850,7 @@
           "marshallingType" : "STRING",
           "name" : "Endpoint",
           "sensitive" : false,
-          "setterDocumentation" : "/**\n@param endpoint */",
+          "setterDocumentation" : "/**<p>The response of an Device Advisor endpoint.</p>\n@param endpoint The response of an Device Advisor endpoint.*/",
           "setterMethodName" : "setEndpoint",
           "setterModel" : {
             "timestampFormat" : null,
@@ -2865,13 +2865,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**\n@param endpoint \n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>The response of an Device Advisor endpoint.</p>\n@param endpoint The response of an Device Advisor endpoint.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "endpoint",
             "variableType" : "String",
-            "documentation" : "",
+            "documentation" : "<p>The response of an Device Advisor endpoint.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -5828,12 +5828,12 @@
         "c2jName" : "startTime",
         "c2jShape" : "Timestamp",
         "deprecated" : false,
-        "documentation" : "<p>Date (in Unix epoch time) when the test suite run was started.</p>",
+        "documentation" : "<p>Date (in Unix epoch time) when the test suite run started.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>Date (in Unix epoch time) when the test suite run was started.</p>\n@param startTime Date (in Unix epoch time) when the test suite run was started.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>Date (in Unix epoch time) when the test suite run started.</p>\n@param startTime Date (in Unix epoch time) when the test suite run started.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withStartTime",
-        "getterDocumentation" : "/**<p>Date (in Unix epoch time) when the test suite run was started.</p>\n@return Date (in Unix epoch time) when the test suite run was started.*/",
+        "getterDocumentation" : "/**<p>Date (in Unix epoch time) when the test suite run started.</p>\n@return Date (in Unix epoch time) when the test suite run started.*/",
         "getterMethodName" : "getStartTime",
         "getterModel" : {
           "returnType" : "java.util.Date",
@@ -5867,7 +5867,7 @@
         "marshallingType" : "DATE",
         "name" : "StartTime",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>Date (in Unix epoch time) when the test suite run was started.</p>\n@param startTime Date (in Unix epoch time) when the test suite run was started.*/",
+        "setterDocumentation" : "/**<p>Date (in Unix epoch time) when the test suite run started.</p>\n@param startTime Date (in Unix epoch time) when the test suite run started.*/",
         "setterMethodName" : "setStartTime",
         "setterModel" : {
           "timestampFormat" : null,
@@ -5882,13 +5882,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>Date (in Unix epoch time) when the test suite run was started.</p>\n@param startTime Date (in Unix epoch time) when the test suite run was started.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>Date (in Unix epoch time) when the test suite run started.</p>\n@param startTime Date (in Unix epoch time) when the test suite run started.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : "unixTimestamp",
           "variableDeclarationType" : "java.util.Date",
           "variableName" : "startTime",
           "variableType" : "java.util.Date",
-          "documentation" : "<p>Date (in Unix epoch time) when the test suite run was started.</p>",
+          "documentation" : "<p>Date (in Unix epoch time) when the test suite run started.</p>",
           "simpleType" : "Date",
           "variableSetterType" : "java.util.Date"
         },
@@ -6399,12 +6399,12 @@
           "c2jName" : "startTime",
           "c2jShape" : "Timestamp",
           "deprecated" : false,
-          "documentation" : "<p>Date (in Unix epoch time) when the test suite run was started.</p>",
+          "documentation" : "<p>Date (in Unix epoch time) when the test suite run started.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>Date (in Unix epoch time) when the test suite run was started.</p>\n@param startTime Date (in Unix epoch time) when the test suite run was started.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>Date (in Unix epoch time) when the test suite run started.</p>\n@param startTime Date (in Unix epoch time) when the test suite run started.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withStartTime",
-          "getterDocumentation" : "/**<p>Date (in Unix epoch time) when the test suite run was started.</p>\n@return Date (in Unix epoch time) when the test suite run was started.*/",
+          "getterDocumentation" : "/**<p>Date (in Unix epoch time) when the test suite run started.</p>\n@return Date (in Unix epoch time) when the test suite run started.*/",
           "getterMethodName" : "getStartTime",
           "getterModel" : {
             "returnType" : "java.util.Date",
@@ -6438,7 +6438,7 @@
           "marshallingType" : "DATE",
           "name" : "StartTime",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>Date (in Unix epoch time) when the test suite run was started.</p>\n@param startTime Date (in Unix epoch time) when the test suite run was started.*/",
+          "setterDocumentation" : "/**<p>Date (in Unix epoch time) when the test suite run started.</p>\n@param startTime Date (in Unix epoch time) when the test suite run started.*/",
           "setterMethodName" : "setStartTime",
           "setterModel" : {
             "timestampFormat" : null,
@@ -6453,13 +6453,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>Date (in Unix epoch time) when the test suite run was started.</p>\n@param startTime Date (in Unix epoch time) when the test suite run was started.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>Date (in Unix epoch time) when the test suite run started.</p>\n@param startTime Date (in Unix epoch time) when the test suite run started.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : "unixTimestamp",
             "variableDeclarationType" : "java.util.Date",
             "variableName" : "startTime",
             "variableType" : "java.util.Date",
-            "documentation" : "<p>Date (in Unix epoch time) when the test suite run was started.</p>",
+            "documentation" : "<p>Date (in Unix epoch time) when the test suite run started.</p>",
             "simpleType" : "Date",
             "variableSetterType" : "java.util.Date"
           },
@@ -7771,7 +7771,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>Sends Internal Failure Exception.</p>",
+      "documentation" : "<p>Sends an Internal Failure exception.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : "InternalServerException",
@@ -8721,12 +8721,12 @@
         "c2jName" : "suiteDefinitionVersion",
         "c2jShape" : "SuiteDefinitionVersion",
         "deprecated" : false,
-        "documentation" : "<p>Must be passed along with suiteDefinitionId. Lists the test suite runs of the specified test suite based on suite definition version.</p>",
+        "documentation" : "<p>Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test suite based on suite definition version.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>Must be passed along with suiteDefinitionId. Lists the test suite runs of the specified test suite based on suite definition version.</p>\n@param suiteDefinitionVersion Must be passed along with suiteDefinitionId. Lists the test suite runs of the specified test suite based on suite definition version.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test suite based on suite definition version.</p>\n@param suiteDefinitionVersion Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test suite based on suite definition version.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withSuiteDefinitionVersion",
-        "getterDocumentation" : "/**<p>Must be passed along with suiteDefinitionId. Lists the test suite runs of the specified test suite based on suite definition version.</p>\n@return Must be passed along with suiteDefinitionId. Lists the test suite runs of the specified test suite based on suite definition version.*/",
+        "getterDocumentation" : "/**<p>Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test suite based on suite definition version.</p>\n@return Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test suite based on suite definition version.*/",
         "getterMethodName" : "getSuiteDefinitionVersion",
         "getterModel" : {
           "returnType" : "String",
@@ -8760,7 +8760,7 @@
         "marshallingType" : "STRING",
         "name" : "SuiteDefinitionVersion",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>Must be passed along with suiteDefinitionId. Lists the test suite runs of the specified test suite based on suite definition version.</p>\n@param suiteDefinitionVersion Must be passed along with suiteDefinitionId. Lists the test suite runs of the specified test suite based on suite definition version.*/",
+        "setterDocumentation" : "/**<p>Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test suite based on suite definition version.</p>\n@param suiteDefinitionVersion Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test suite based on suite definition version.*/",
         "setterMethodName" : "setSuiteDefinitionVersion",
         "setterModel" : {
           "timestampFormat" : null,
@@ -8775,13 +8775,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>Must be passed along with suiteDefinitionId. Lists the test suite runs of the specified test suite based on suite definition version.</p>\n@param suiteDefinitionVersion Must be passed along with suiteDefinitionId. Lists the test suite runs of the specified test suite based on suite definition version.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test suite based on suite definition version.</p>\n@param suiteDefinitionVersion Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test suite based on suite definition version.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "suiteDefinitionVersion",
           "variableType" : "String",
-          "documentation" : "<p>Must be passed along with suiteDefinitionId. Lists the test suite runs of the specified test suite based on suite definition version.</p>",
+          "documentation" : "<p>Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test suite based on suite definition version.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -9140,12 +9140,12 @@
           "c2jName" : "suiteDefinitionVersion",
           "c2jShape" : "SuiteDefinitionVersion",
           "deprecated" : false,
-          "documentation" : "<p>Must be passed along with suiteDefinitionId. Lists the test suite runs of the specified test suite based on suite definition version.</p>",
+          "documentation" : "<p>Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test suite based on suite definition version.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>Must be passed along with suiteDefinitionId. Lists the test suite runs of the specified test suite based on suite definition version.</p>\n@param suiteDefinitionVersion Must be passed along with suiteDefinitionId. Lists the test suite runs of the specified test suite based on suite definition version.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test suite based on suite definition version.</p>\n@param suiteDefinitionVersion Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test suite based on suite definition version.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withSuiteDefinitionVersion",
-          "getterDocumentation" : "/**<p>Must be passed along with suiteDefinitionId. Lists the test suite runs of the specified test suite based on suite definition version.</p>\n@return Must be passed along with suiteDefinitionId. Lists the test suite runs of the specified test suite based on suite definition version.*/",
+          "getterDocumentation" : "/**<p>Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test suite based on suite definition version.</p>\n@return Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test suite based on suite definition version.*/",
           "getterMethodName" : "getSuiteDefinitionVersion",
           "getterModel" : {
             "returnType" : "String",
@@ -9179,7 +9179,7 @@
           "marshallingType" : "STRING",
           "name" : "SuiteDefinitionVersion",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>Must be passed along with suiteDefinitionId. Lists the test suite runs of the specified test suite based on suite definition version.</p>\n@param suiteDefinitionVersion Must be passed along with suiteDefinitionId. Lists the test suite runs of the specified test suite based on suite definition version.*/",
+          "setterDocumentation" : "/**<p>Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test suite based on suite definition version.</p>\n@param suiteDefinitionVersion Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test suite based on suite definition version.*/",
           "setterMethodName" : "setSuiteDefinitionVersion",
           "setterModel" : {
             "timestampFormat" : null,
@@ -9194,13 +9194,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>Must be passed along with suiteDefinitionId. Lists the test suite runs of the specified test suite based on suite definition version.</p>\n@param suiteDefinitionVersion Must be passed along with suiteDefinitionId. Lists the test suite runs of the specified test suite based on suite definition version.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test suite based on suite definition version.</p>\n@param suiteDefinitionVersion Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test suite based on suite definition version.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "suiteDefinitionVersion",
             "variableType" : "String",
-            "documentation" : "<p>Must be passed along with suiteDefinitionId. Lists the test suite runs of the specified test suite based on suite definition version.</p>",
+            "documentation" : "<p>Must be passed along with <code>suiteDefinitionId</code>. Lists the test suite runs of the specified test suite based on suite definition version.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -10266,7 +10266,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>Sends Resource Not Found Exception.</p>",
+      "documentation" : "<p>Sends a Resource Not Found exception.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : "ResourceNotFoundException",
@@ -12359,12 +12359,12 @@
         "c2jName" : "devicePermissionRoleArn",
         "c2jShape" : "AmazonResourceName",
         "deprecated" : false,
-        "documentation" : "<p>Gets device permission ARN.</p>",
+        "documentation" : "<p>Gets the device permission ARN.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>Gets device permission ARN.</p>\n@param devicePermissionRoleArn Gets device permission ARN.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>Gets the device permission ARN.</p>\n@param devicePermissionRoleArn Gets the device permission ARN.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withDevicePermissionRoleArn",
-        "getterDocumentation" : "/**<p>Gets device permission ARN.</p>\n@return Gets device permission ARN.*/",
+        "getterDocumentation" : "/**<p>Gets the device permission ARN.</p>\n@return Gets the device permission ARN.*/",
         "getterMethodName" : "getDevicePermissionRoleArn",
         "getterModel" : {
           "returnType" : "String",
@@ -12398,7 +12398,7 @@
         "marshallingType" : "STRING",
         "name" : "DevicePermissionRoleArn",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>Gets device permission ARN.</p>\n@param devicePermissionRoleArn Gets device permission ARN.*/",
+        "setterDocumentation" : "/**<p>Gets the device permission ARN.</p>\n@param devicePermissionRoleArn Gets the device permission ARN.*/",
         "setterMethodName" : "setDevicePermissionRoleArn",
         "setterModel" : {
           "timestampFormat" : null,
@@ -12413,13 +12413,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>Gets device permission ARN.</p>\n@param devicePermissionRoleArn Gets device permission ARN.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>Gets the device permission ARN.</p>\n@param devicePermissionRoleArn Gets the device permission ARN.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "devicePermissionRoleArn",
           "variableType" : "String",
-          "documentation" : "<p>Gets device permission ARN.</p>",
+          "documentation" : "<p>Gets the device permission ARN.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -12430,12 +12430,12 @@
           "c2jName" : "devicePermissionRoleArn",
           "c2jShape" : "AmazonResourceName",
           "deprecated" : false,
-          "documentation" : "<p>Gets device permission ARN.</p>",
+          "documentation" : "<p>Gets the device permission ARN.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>Gets device permission ARN.</p>\n@param devicePermissionRoleArn Gets device permission ARN.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>Gets the device permission ARN.</p>\n@param devicePermissionRoleArn Gets the device permission ARN.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withDevicePermissionRoleArn",
-          "getterDocumentation" : "/**<p>Gets device permission ARN.</p>\n@return Gets device permission ARN.*/",
+          "getterDocumentation" : "/**<p>Gets the device permission ARN.</p>\n@return Gets the device permission ARN.*/",
           "getterMethodName" : "getDevicePermissionRoleArn",
           "getterModel" : {
             "returnType" : "String",
@@ -12469,7 +12469,7 @@
           "marshallingType" : "STRING",
           "name" : "DevicePermissionRoleArn",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>Gets device permission ARN.</p>\n@param devicePermissionRoleArn Gets device permission ARN.*/",
+          "setterDocumentation" : "/**<p>Gets the device permission ARN.</p>\n@param devicePermissionRoleArn Gets the device permission ARN.*/",
           "setterMethodName" : "setDevicePermissionRoleArn",
           "setterModel" : {
             "timestampFormat" : null,
@@ -12484,13 +12484,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>Gets device permission ARN.</p>\n@param devicePermissionRoleArn Gets device permission ARN.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>Gets the device permission ARN.</p>\n@param devicePermissionRoleArn Gets the device permission ARN.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "devicePermissionRoleArn",
             "variableType" : "String",
-            "documentation" : "<p>Gets device permission ARN.</p>",
+            "documentation" : "<p>Gets the device permission ARN.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -13045,12 +13045,12 @@
         "c2jName" : "defaultDevices",
         "c2jShape" : "DeviceUnderTestList",
         "deprecated" : false,
-        "documentation" : "<p>Specifies the devices under test for the test suite.</p>",
+        "documentation" : "<p>Specifies the devices that are under test for the test suite.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>Specifies the devices under test for the test suite.</p>\n@param defaultDevices Specifies the devices under test for the test suite.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>Specifies the devices that are under test for the test suite.</p>\n@param defaultDevices Specifies the devices that are under test for the test suite.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withDefaultDevices",
-        "getterDocumentation" : "/**<p>Specifies the devices under test for the test suite.</p>\n@return Specifies the devices under test for the test suite.*/",
+        "getterDocumentation" : "/**<p>Specifies the devices that are under test for the test suite.</p>\n@return Specifies the devices that are under test for the test suite.*/",
         "getterMethodName" : "getDefaultDevices",
         "getterModel" : {
           "returnType" : "java.util.List<DeviceUnderTest>",
@@ -13168,7 +13168,7 @@
         "marshallingType" : "LIST",
         "name" : "DefaultDevices",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>Specifies the devices under test for the test suite.</p>\n@param defaultDevices Specifies the devices under test for the test suite.*/",
+        "setterDocumentation" : "/**<p>Specifies the devices that are under test for the test suite.</p>\n@param defaultDevices Specifies the devices that are under test for the test suite.*/",
         "setterMethodName" : "setDefaultDevices",
         "setterModel" : {
           "timestampFormat" : null,
@@ -13183,13 +13183,13 @@
         "shouldFullyQualify" : false,
         "simple" : false,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>Specifies the devices under test for the test suite.</p>\n<p><b>NOTE:</b> This method appends the values to the existing list (if any). Use {@link #setDefaultDevices(java.util.Collection)} or {@link #withDefaultDevices(java.util.Collection)} if you want to override the existing values.</p>\n@param defaultDevices Specifies the devices under test for the test suite.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>Specifies the devices that are under test for the test suite.</p>\n<p><b>NOTE:</b> This method appends the values to the existing list (if any). Use {@link #setDefaultDevices(java.util.Collection)} or {@link #withDefaultDevices(java.util.Collection)} if you want to override the existing values.</p>\n@param defaultDevices Specifies the devices that are under test for the test suite.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "java.util.List<DeviceUnderTest>",
           "variableName" : "defaultDevices",
           "variableType" : "java.util.List<DeviceUnderTest>",
-          "documentation" : "<p>Specifies the devices under test for the test suite.</p>",
+          "documentation" : "<p>Specifies the devices that are under test for the test suite.</p>",
           "simpleType" : "List<DeviceUnderTest>",
           "variableSetterType" : "java.util.Collection<DeviceUnderTest>"
         },
@@ -13408,12 +13408,12 @@
           "c2jName" : "defaultDevices",
           "c2jShape" : "DeviceUnderTestList",
           "deprecated" : false,
-          "documentation" : "<p>Specifies the devices under test for the test suite.</p>",
+          "documentation" : "<p>Specifies the devices that are under test for the test suite.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>Specifies the devices under test for the test suite.</p>\n@param defaultDevices Specifies the devices under test for the test suite.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>Specifies the devices that are under test for the test suite.</p>\n@param defaultDevices Specifies the devices that are under test for the test suite.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withDefaultDevices",
-          "getterDocumentation" : "/**<p>Specifies the devices under test for the test suite.</p>\n@return Specifies the devices under test for the test suite.*/",
+          "getterDocumentation" : "/**<p>Specifies the devices that are under test for the test suite.</p>\n@return Specifies the devices that are under test for the test suite.*/",
           "getterMethodName" : "getDefaultDevices",
           "getterModel" : {
             "returnType" : "java.util.List<DeviceUnderTest>",
@@ -13531,7 +13531,7 @@
           "marshallingType" : "LIST",
           "name" : "DefaultDevices",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>Specifies the devices under test for the test suite.</p>\n@param defaultDevices Specifies the devices under test for the test suite.*/",
+          "setterDocumentation" : "/**<p>Specifies the devices that are under test for the test suite.</p>\n@param defaultDevices Specifies the devices that are under test for the test suite.*/",
           "setterMethodName" : "setDefaultDevices",
           "setterModel" : {
             "timestampFormat" : null,
@@ -13546,13 +13546,13 @@
           "shouldFullyQualify" : false,
           "simple" : false,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>Specifies the devices under test for the test suite.</p>\n<p><b>NOTE:</b> This method appends the values to the existing list (if any). Use {@link #setDefaultDevices(java.util.Collection)} or {@link #withDefaultDevices(java.util.Collection)} if you want to override the existing values.</p>\n@param defaultDevices Specifies the devices under test for the test suite.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>Specifies the devices that are under test for the test suite.</p>\n<p><b>NOTE:</b> This method appends the values to the existing list (if any). Use {@link #setDefaultDevices(java.util.Collection)} or {@link #withDefaultDevices(java.util.Collection)} if you want to override the existing values.</p>\n@param defaultDevices Specifies the devices that are under test for the test suite.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "java.util.List<DeviceUnderTest>",
             "variableName" : "defaultDevices",
             "variableType" : "java.util.List<DeviceUnderTest>",
-            "documentation" : "<p>Specifies the devices under test for the test suite.</p>",
+            "documentation" : "<p>Specifies the devices that are under test for the test suite.</p>",
             "simpleType" : "List<DeviceUnderTest>",
             "variableSetterType" : "java.util.Collection<DeviceUnderTest>"
           },
@@ -14037,12 +14037,12 @@
         "c2jName" : "parallelRun",
         "c2jShape" : "ParallelRun",
         "deprecated" : false,
-        "documentation" : "",
+        "documentation" : "<p>TRUE if multiple test suites run in parallel.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**\n@param parallelRun \n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>TRUE if multiple test suites run in parallel.</p>\n@param parallelRun TRUE if multiple test suites run in parallel.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withParallelRun",
-        "getterDocumentation" : "/**\n@return */",
+        "getterDocumentation" : "/**<p>TRUE if multiple test suites run in parallel.</p>\n@return TRUE if multiple test suites run in parallel.*/",
         "getterMethodName" : "getParallelRun",
         "getterModel" : {
           "returnType" : "Boolean",
@@ -14076,7 +14076,7 @@
         "marshallingType" : "BOOLEAN",
         "name" : "ParallelRun",
         "sensitive" : false,
-        "setterDocumentation" : "/**\n@param parallelRun */",
+        "setterDocumentation" : "/**<p>TRUE if multiple test suites run in parallel.</p>\n@param parallelRun TRUE if multiple test suites run in parallel.*/",
         "setterMethodName" : "setParallelRun",
         "setterModel" : {
           "timestampFormat" : null,
@@ -14091,13 +14091,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**\n@param parallelRun \n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>TRUE if multiple test suites run in parallel.</p>\n@param parallelRun TRUE if multiple test suites run in parallel.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "Boolean",
           "variableName" : "parallelRun",
           "variableType" : "Boolean",
-          "documentation" : "",
+          "documentation" : "<p>TRUE if multiple test suites run in parallel.</p>",
           "simpleType" : "Boolean",
           "variableSetterType" : "Boolean"
         },
@@ -14108,12 +14108,12 @@
           "c2jName" : "parallelRun",
           "c2jShape" : "ParallelRun",
           "deprecated" : false,
-          "documentation" : "",
+          "documentation" : "<p>TRUE if multiple test suites run in parallel.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**\n@param parallelRun \n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>TRUE if multiple test suites run in parallel.</p>\n@param parallelRun TRUE if multiple test suites run in parallel.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withParallelRun",
-          "getterDocumentation" : "/**\n@return */",
+          "getterDocumentation" : "/**<p>TRUE if multiple test suites run in parallel.</p>\n@return TRUE if multiple test suites run in parallel.*/",
           "getterMethodName" : "getParallelRun",
           "getterModel" : {
             "returnType" : "Boolean",
@@ -14147,7 +14147,7 @@
           "marshallingType" : "BOOLEAN",
           "name" : "ParallelRun",
           "sensitive" : false,
-          "setterDocumentation" : "/**\n@param parallelRun */",
+          "setterDocumentation" : "/**<p>TRUE if multiple test suites run in parallel.</p>\n@param parallelRun TRUE if multiple test suites run in parallel.*/",
           "setterMethodName" : "setParallelRun",
           "setterModel" : {
             "timestampFormat" : null,
@@ -14162,13 +14162,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**\n@param parallelRun \n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>TRUE if multiple test suites run in parallel.</p>\n@param parallelRun TRUE if multiple test suites run in parallel.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "Boolean",
             "variableName" : "parallelRun",
             "variableType" : "Boolean",
-            "documentation" : "",
+            "documentation" : "<p>TRUE if multiple test suites run in parallel.</p>",
             "simpleType" : "Boolean",
             "variableSetterType" : "Boolean"
           },
@@ -16475,7 +16475,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>Provides test case run.</p>",
+      "documentation" : "<p>Provides the test case run.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -16490,12 +16490,12 @@
         "c2jName" : "testCaseRunId",
         "c2jShape" : "UUID",
         "deprecated" : false,
-        "documentation" : "<p>Provides test case run ID.</p>",
+        "documentation" : "<p>Provides the test case run ID.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>Provides test case run ID.</p>\n@param testCaseRunId Provides test case run ID.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>Provides the test case run ID.</p>\n@param testCaseRunId Provides the test case run ID.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withTestCaseRunId",
-        "getterDocumentation" : "/**<p>Provides test case run ID.</p>\n@return Provides test case run ID.*/",
+        "getterDocumentation" : "/**<p>Provides the test case run ID.</p>\n@return Provides the test case run ID.*/",
         "getterMethodName" : "getTestCaseRunId",
         "getterModel" : {
           "returnType" : "String",
@@ -16529,7 +16529,7 @@
         "marshallingType" : "STRING",
         "name" : "TestCaseRunId",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>Provides test case run ID.</p>\n@param testCaseRunId Provides test case run ID.*/",
+        "setterDocumentation" : "/**<p>Provides the test case run ID.</p>\n@param testCaseRunId Provides the test case run ID.*/",
         "setterMethodName" : "setTestCaseRunId",
         "setterModel" : {
           "timestampFormat" : null,
@@ -16544,13 +16544,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>Provides test case run ID.</p>\n@param testCaseRunId Provides test case run ID.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>Provides the test case run ID.</p>\n@param testCaseRunId Provides the test case run ID.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "testCaseRunId",
           "variableType" : "String",
-          "documentation" : "<p>Provides test case run ID.</p>",
+          "documentation" : "<p>Provides the test case run ID.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -16559,12 +16559,12 @@
         "c2jName" : "testCaseDefinitionId",
         "c2jShape" : "UUID",
         "deprecated" : false,
-        "documentation" : "<p>Provides test case run definition ID.</p>",
+        "documentation" : "<p>Provides the test case run definition ID.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>Provides test case run definition ID.</p>\n@param testCaseDefinitionId Provides test case run definition ID.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>Provides the test case run definition ID.</p>\n@param testCaseDefinitionId Provides the test case run definition ID.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withTestCaseDefinitionId",
-        "getterDocumentation" : "/**<p>Provides test case run definition ID.</p>\n@return Provides test case run definition ID.*/",
+        "getterDocumentation" : "/**<p>Provides the test case run definition ID.</p>\n@return Provides the test case run definition ID.*/",
         "getterMethodName" : "getTestCaseDefinitionId",
         "getterModel" : {
           "returnType" : "String",
@@ -16598,7 +16598,7 @@
         "marshallingType" : "STRING",
         "name" : "TestCaseDefinitionId",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>Provides test case run definition ID.</p>\n@param testCaseDefinitionId Provides test case run definition ID.*/",
+        "setterDocumentation" : "/**<p>Provides the test case run definition ID.</p>\n@param testCaseDefinitionId Provides the test case run definition ID.*/",
         "setterMethodName" : "setTestCaseDefinitionId",
         "setterModel" : {
           "timestampFormat" : null,
@@ -16613,13 +16613,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>Provides test case run definition ID.</p>\n@param testCaseDefinitionId Provides test case run definition ID.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>Provides the test case run definition ID.</p>\n@param testCaseDefinitionId Provides the test case run definition ID.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "testCaseDefinitionId",
           "variableType" : "String",
-          "documentation" : "<p>Provides test case run definition ID.</p>",
+          "documentation" : "<p>Provides the test case run definition ID.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -16628,12 +16628,12 @@
         "c2jName" : "testCaseDefinitionName",
         "c2jShape" : "TestCaseDefinitionName",
         "deprecated" : false,
-        "documentation" : "<p>Provides test case run definition Name.</p>",
+        "documentation" : "<p>Provides the test case run definition name.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>Provides test case run definition Name.</p>\n@param testCaseDefinitionName Provides test case run definition Name.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>Provides the test case run definition name.</p>\n@param testCaseDefinitionName Provides the test case run definition name.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withTestCaseDefinitionName",
-        "getterDocumentation" : "/**<p>Provides test case run definition Name.</p>\n@return Provides test case run definition Name.*/",
+        "getterDocumentation" : "/**<p>Provides the test case run definition name.</p>\n@return Provides the test case run definition name.*/",
         "getterMethodName" : "getTestCaseDefinitionName",
         "getterModel" : {
           "returnType" : "String",
@@ -16667,7 +16667,7 @@
         "marshallingType" : "STRING",
         "name" : "TestCaseDefinitionName",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>Provides test case run definition Name.</p>\n@param testCaseDefinitionName Provides test case run definition Name.*/",
+        "setterDocumentation" : "/**<p>Provides the test case run definition name.</p>\n@param testCaseDefinitionName Provides the test case run definition name.*/",
         "setterMethodName" : "setTestCaseDefinitionName",
         "setterModel" : {
           "timestampFormat" : null,
@@ -16682,13 +16682,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>Provides test case run definition Name.</p>\n@param testCaseDefinitionName Provides test case run definition Name.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>Provides the test case run definition name.</p>\n@param testCaseDefinitionName Provides the test case run definition name.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "testCaseDefinitionName",
           "variableType" : "String",
-          "documentation" : "<p>Provides test case run definition Name.</p>",
+          "documentation" : "<p>Provides the test case run definition name.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -16697,12 +16697,12 @@
         "c2jName" : "status",
         "c2jShape" : "Status",
         "deprecated" : false,
-        "documentation" : "<p>Provides test case run status.</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li> </ul>",
+        "documentation" : "<p>Provides the test case run status. Status is one of the following:</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running.</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li> </ul>",
         "endpointDiscoveryId" : false,
         "enumType" : "Status",
-        "fluentSetterDocumentation" : "/**<p>Provides test case run status.</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li> </ul>\n@param status Provides test case run status.</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li>\n@return Returns a reference to this object so that method calls can be chained together.\n@see Status*/",
+        "fluentSetterDocumentation" : "/**<p>Provides the test case run status. Status is one of the following:</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running.</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li> </ul>\n@param status Provides the test case run status. Status is one of the following:</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running.</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li>\n@return Returns a reference to this object so that method calls can be chained together.\n@see Status*/",
         "fluentSetterMethodName" : "withStatus",
-        "getterDocumentation" : "/**<p>Provides test case run status.</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li> </ul>\n@return Provides test case run status.</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li>\n@see Status*/",
+        "getterDocumentation" : "/**<p>Provides the test case run status. Status is one of the following:</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running.</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li> </ul>\n@return Provides the test case run status. Status is one of the following:</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running.</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li>\n@see Status*/",
         "getterMethodName" : "getStatus",
         "getterModel" : {
           "returnType" : "String",
@@ -16736,7 +16736,7 @@
         "marshallingType" : "STRING",
         "name" : "Status",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>Provides test case run status.</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li> </ul>\n@param status Provides test case run status.</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li>\n@see Status*/",
+        "setterDocumentation" : "/**<p>Provides the test case run status. Status is one of the following:</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running.</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li> </ul>\n@param status Provides the test case run status. Status is one of the following:</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running.</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li>\n@see Status*/",
         "setterMethodName" : "setStatus",
         "setterModel" : {
           "timestampFormat" : null,
@@ -16751,13 +16751,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>Provides test case run status.</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li> </ul>\n@param status Provides test case run status.</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li>\n@return Returns a reference to this object so that method calls can be chained together.\n@see Status*/",
+        "varargSetterDocumentation" : "/**<p>Provides the test case run status. Status is one of the following:</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running.</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li> </ul>\n@param status Provides the test case run status. Status is one of the following:</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running.</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li>\n@return Returns a reference to this object so that method calls can be chained together.\n@see Status*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "status",
           "variableType" : "String",
-          "documentation" : "<p>Provides test case run status.</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li> </ul>",
+          "documentation" : "<p>Provides the test case run status. Status is one of the following:</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running.</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li> </ul>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -16904,12 +16904,12 @@
         "c2jName" : "logUrl",
         "c2jShape" : "LogUrl",
         "deprecated" : false,
-        "documentation" : "<p>Provides test case run log Url.</p>",
+        "documentation" : "<p>Provides test case run log URL.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>Provides test case run log Url.</p>\n@param logUrl Provides test case run log Url.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>Provides test case run log URL.</p>\n@param logUrl Provides test case run log URL.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withLogUrl",
-        "getterDocumentation" : "/**<p>Provides test case run log Url.</p>\n@return Provides test case run log Url.*/",
+        "getterDocumentation" : "/**<p>Provides test case run log URL.</p>\n@return Provides test case run log URL.*/",
         "getterMethodName" : "getLogUrl",
         "getterModel" : {
           "returnType" : "String",
@@ -16943,7 +16943,7 @@
         "marshallingType" : "STRING",
         "name" : "LogUrl",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>Provides test case run log Url.</p>\n@param logUrl Provides test case run log Url.*/",
+        "setterDocumentation" : "/**<p>Provides test case run log URL.</p>\n@param logUrl Provides test case run log URL.*/",
         "setterMethodName" : "setLogUrl",
         "setterModel" : {
           "timestampFormat" : null,
@@ -16958,13 +16958,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>Provides test case run log Url.</p>\n@param logUrl Provides test case run log Url.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>Provides test case run log URL.</p>\n@param logUrl Provides test case run log URL.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "logUrl",
           "variableType" : "String",
-          "documentation" : "<p>Provides test case run log Url.</p>",
+          "documentation" : "<p>Provides test case run log URL.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -17253,12 +17253,12 @@
           "c2jName" : "logUrl",
           "c2jShape" : "LogUrl",
           "deprecated" : false,
-          "documentation" : "<p>Provides test case run log Url.</p>",
+          "documentation" : "<p>Provides test case run log URL.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>Provides test case run log Url.</p>\n@param logUrl Provides test case run log Url.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>Provides test case run log URL.</p>\n@param logUrl Provides test case run log URL.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withLogUrl",
-          "getterDocumentation" : "/**<p>Provides test case run log Url.</p>\n@return Provides test case run log Url.*/",
+          "getterDocumentation" : "/**<p>Provides test case run log URL.</p>\n@return Provides test case run log URL.*/",
           "getterMethodName" : "getLogUrl",
           "getterModel" : {
             "returnType" : "String",
@@ -17292,7 +17292,7 @@
           "marshallingType" : "STRING",
           "name" : "LogUrl",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>Provides test case run log Url.</p>\n@param logUrl Provides test case run log Url.*/",
+          "setterDocumentation" : "/**<p>Provides test case run log URL.</p>\n@param logUrl Provides test case run log URL.*/",
           "setterMethodName" : "setLogUrl",
           "setterModel" : {
             "timestampFormat" : null,
@@ -17307,13 +17307,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>Provides test case run log Url.</p>\n@param logUrl Provides test case run log Url.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>Provides test case run log URL.</p>\n@param logUrl Provides test case run log URL.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "logUrl",
             "variableType" : "String",
-            "documentation" : "<p>Provides test case run log Url.</p>",
+            "documentation" : "<p>Provides test case run log URL.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -17393,12 +17393,12 @@
           "c2jName" : "status",
           "c2jShape" : "Status",
           "deprecated" : false,
-          "documentation" : "<p>Provides test case run status.</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li> </ul>",
+          "documentation" : "<p>Provides the test case run status. Status is one of the following:</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running.</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li> </ul>",
           "endpointDiscoveryId" : false,
           "enumType" : "Status",
-          "fluentSetterDocumentation" : "/**<p>Provides test case run status.</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li> </ul>\n@param status Provides test case run status.</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li>\n@return Returns a reference to this object so that method calls can be chained together.\n@see Status*/",
+          "fluentSetterDocumentation" : "/**<p>Provides the test case run status. Status is one of the following:</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running.</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li> </ul>\n@param status Provides the test case run status. Status is one of the following:</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running.</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li>\n@return Returns a reference to this object so that method calls can be chained together.\n@see Status*/",
           "fluentSetterMethodName" : "withStatus",
-          "getterDocumentation" : "/**<p>Provides test case run status.</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li> </ul>\n@return Provides test case run status.</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li>\n@see Status*/",
+          "getterDocumentation" : "/**<p>Provides the test case run status. Status is one of the following:</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running.</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li> </ul>\n@return Provides the test case run status. Status is one of the following:</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running.</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li>\n@see Status*/",
           "getterMethodName" : "getStatus",
           "getterModel" : {
             "returnType" : "String",
@@ -17432,7 +17432,7 @@
           "marshallingType" : "STRING",
           "name" : "Status",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>Provides test case run status.</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li> </ul>\n@param status Provides test case run status.</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li>\n@see Status*/",
+          "setterDocumentation" : "/**<p>Provides the test case run status. Status is one of the following:</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running.</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li> </ul>\n@param status Provides the test case run status. Status is one of the following:</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running.</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li>\n@see Status*/",
           "setterMethodName" : "setStatus",
           "setterModel" : {
             "timestampFormat" : null,
@@ -17447,13 +17447,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>Provides test case run status.</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li> </ul>\n@param status Provides test case run status.</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li>\n@return Returns a reference to this object so that method calls can be chained together.\n@see Status*/",
+          "varargSetterDocumentation" : "/**<p>Provides the test case run status. Status is one of the following:</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running.</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li> </ul>\n@param status Provides the test case run status. Status is one of the following:</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running.</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li>\n@return Returns a reference to this object so that method calls can be chained together.\n@see Status*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "status",
             "variableType" : "String",
-            "documentation" : "<p>Provides test case run status.</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li> </ul>",
+            "documentation" : "<p>Provides the test case run status. Status is one of the following:</p> <ul> <li> <p> <code>PASS</code>: Test passed.</p> </li> <li> <p> <code>FAIL</code>: Test failed.</p> </li> <li> <p> <code>PENDING</code>: Test has not started running but is scheduled.</p> </li> <li> <p> <code>RUNNING</code>: Test is running.</p> </li> <li> <p> <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.</p> </li> <li> <p> <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.</p> </li> <li> <p> <code>ERORR</code>: Test faced an error when running due to an internal issue.</p> </li> </ul>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -17463,12 +17463,12 @@
           "c2jName" : "testCaseDefinitionId",
           "c2jShape" : "UUID",
           "deprecated" : false,
-          "documentation" : "<p>Provides test case run definition ID.</p>",
+          "documentation" : "<p>Provides the test case run definition ID.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>Provides test case run definition ID.</p>\n@param testCaseDefinitionId Provides test case run definition ID.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>Provides the test case run definition ID.</p>\n@param testCaseDefinitionId Provides the test case run definition ID.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withTestCaseDefinitionId",
-          "getterDocumentation" : "/**<p>Provides test case run definition ID.</p>\n@return Provides test case run definition ID.*/",
+          "getterDocumentation" : "/**<p>Provides the test case run definition ID.</p>\n@return Provides the test case run definition ID.*/",
           "getterMethodName" : "getTestCaseDefinitionId",
           "getterModel" : {
             "returnType" : "String",
@@ -17502,7 +17502,7 @@
           "marshallingType" : "STRING",
           "name" : "TestCaseDefinitionId",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>Provides test case run definition ID.</p>\n@param testCaseDefinitionId Provides test case run definition ID.*/",
+          "setterDocumentation" : "/**<p>Provides the test case run definition ID.</p>\n@param testCaseDefinitionId Provides the test case run definition ID.*/",
           "setterMethodName" : "setTestCaseDefinitionId",
           "setterModel" : {
             "timestampFormat" : null,
@@ -17517,13 +17517,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>Provides test case run definition ID.</p>\n@param testCaseDefinitionId Provides test case run definition ID.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>Provides the test case run definition ID.</p>\n@param testCaseDefinitionId Provides the test case run definition ID.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "testCaseDefinitionId",
             "variableType" : "String",
-            "documentation" : "<p>Provides test case run definition ID.</p>",
+            "documentation" : "<p>Provides the test case run definition ID.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -17533,12 +17533,12 @@
           "c2jName" : "testCaseDefinitionName",
           "c2jShape" : "TestCaseDefinitionName",
           "deprecated" : false,
-          "documentation" : "<p>Provides test case run definition Name.</p>",
+          "documentation" : "<p>Provides the test case run definition name.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>Provides test case run definition Name.</p>\n@param testCaseDefinitionName Provides test case run definition Name.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>Provides the test case run definition name.</p>\n@param testCaseDefinitionName Provides the test case run definition name.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withTestCaseDefinitionName",
-          "getterDocumentation" : "/**<p>Provides test case run definition Name.</p>\n@return Provides test case run definition Name.*/",
+          "getterDocumentation" : "/**<p>Provides the test case run definition name.</p>\n@return Provides the test case run definition name.*/",
           "getterMethodName" : "getTestCaseDefinitionName",
           "getterModel" : {
             "returnType" : "String",
@@ -17572,7 +17572,7 @@
           "marshallingType" : "STRING",
           "name" : "TestCaseDefinitionName",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>Provides test case run definition Name.</p>\n@param testCaseDefinitionName Provides test case run definition Name.*/",
+          "setterDocumentation" : "/**<p>Provides the test case run definition name.</p>\n@param testCaseDefinitionName Provides the test case run definition name.*/",
           "setterMethodName" : "setTestCaseDefinitionName",
           "setterModel" : {
             "timestampFormat" : null,
@@ -17587,13 +17587,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>Provides test case run definition Name.</p>\n@param testCaseDefinitionName Provides test case run definition Name.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>Provides the test case run definition name.</p>\n@param testCaseDefinitionName Provides the test case run definition name.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "testCaseDefinitionName",
             "variableType" : "String",
-            "documentation" : "<p>Provides test case run definition Name.</p>",
+            "documentation" : "<p>Provides the test case run definition name.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -17603,12 +17603,12 @@
           "c2jName" : "testCaseRunId",
           "c2jShape" : "UUID",
           "deprecated" : false,
-          "documentation" : "<p>Provides test case run ID.</p>",
+          "documentation" : "<p>Provides the test case run ID.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>Provides test case run ID.</p>\n@param testCaseRunId Provides test case run ID.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>Provides the test case run ID.</p>\n@param testCaseRunId Provides the test case run ID.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withTestCaseRunId",
-          "getterDocumentation" : "/**<p>Provides test case run ID.</p>\n@return Provides test case run ID.*/",
+          "getterDocumentation" : "/**<p>Provides the test case run ID.</p>\n@return Provides the test case run ID.*/",
           "getterMethodName" : "getTestCaseRunId",
           "getterModel" : {
             "returnType" : "String",
@@ -17642,7 +17642,7 @@
           "marshallingType" : "STRING",
           "name" : "TestCaseRunId",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>Provides test case run ID.</p>\n@param testCaseRunId Provides test case run ID.*/",
+          "setterDocumentation" : "/**<p>Provides the test case run ID.</p>\n@param testCaseRunId Provides the test case run ID.*/",
           "setterMethodName" : "setTestCaseRunId",
           "setterModel" : {
             "timestampFormat" : null,
@@ -17657,13 +17657,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>Provides test case run ID.</p>\n@param testCaseRunId Provides test case run ID.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>Provides the test case run ID.</p>\n@param testCaseRunId Provides the test case run ID.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "testCaseRunId",
             "variableType" : "String",
-            "documentation" : "<p>Provides test case run ID.</p>",
+            "documentation" : "<p>Provides the test case run ID.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -19868,7 +19868,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>Sends invalid request exception.</p>",
+      "documentation" : "<p>Sends a validation exception.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : "ValidationException",

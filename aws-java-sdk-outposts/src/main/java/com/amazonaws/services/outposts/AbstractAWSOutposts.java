@@ -28,12 +28,22 @@ public class AbstractAWSOutposts implements AWSOutposts {
     }
 
     @Override
+    public CancelOrderResult cancelOrder(CancelOrderRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateOrderResult createOrder(CreateOrderRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public CreateOutpostResult createOutpost(CreateOutpostRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateSiteResult createSite(CreateSiteRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -48,12 +58,42 @@ public class AbstractAWSOutposts implements AWSOutposts {
     }
 
     @Override
+    public GetCatalogItemResult getCatalogItem(GetCatalogItemRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetOrderResult getOrder(GetOrderRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetOutpostResult getOutpost(GetOutpostRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public GetOutpostInstanceTypesResult getOutpostInstanceTypes(GetOutpostInstanceTypesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetSiteResult getSite(GetSiteRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetSiteAddressResult getSiteAddress(GetSiteAddressRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListCatalogItemsResult listCatalogItems(ListCatalogItemsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListOrdersResult listOrders(ListOrdersRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -79,6 +119,21 @@ public class AbstractAWSOutposts implements AWSOutposts {
 
     @Override
     public UntagResourceResult untagResource(UntagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateSiteResult updateSite(UpdateSiteRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateSiteAddressResult updateSiteAddress(UpdateSiteAddressRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateSiteRackPhysicalPropertiesResult updateSiteRackPhysicalProperties(UpdateSiteRackPhysicalPropertiesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

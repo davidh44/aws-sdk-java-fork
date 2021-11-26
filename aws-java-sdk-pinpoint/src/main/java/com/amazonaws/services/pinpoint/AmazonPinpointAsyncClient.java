@@ -3230,6 +3230,39 @@ public class AmazonPinpointAsyncClient extends AmazonPinpointClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<SendOTPMessageResult> sendOTPMessageAsync(SendOTPMessageRequest request) {
+
+        return sendOTPMessageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SendOTPMessageResult> sendOTPMessageAsync(final SendOTPMessageRequest request,
+            final com.amazonaws.handlers.AsyncHandler<SendOTPMessageRequest, SendOTPMessageResult> asyncHandler) {
+        final SendOTPMessageRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<SendOTPMessageResult>() {
+            @Override
+            public SendOTPMessageResult call() throws Exception {
+                SendOTPMessageResult result = null;
+
+                try {
+                    result = executeSendOTPMessage(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<SendUsersMessagesResult> sendUsersMessagesAsync(SendUsersMessagesRequest request) {
 
         return sendUsersMessagesAsync(request, null);
@@ -4106,6 +4139,39 @@ public class AmazonPinpointAsyncClient extends AmazonPinpointClient implements A
 
                 try {
                     result = executeUpdateVoiceTemplate(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<VerifyOTPMessageResult> verifyOTPMessageAsync(VerifyOTPMessageRequest request) {
+
+        return verifyOTPMessageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<VerifyOTPMessageResult> verifyOTPMessageAsync(final VerifyOTPMessageRequest request,
+            final com.amazonaws.handlers.AsyncHandler<VerifyOTPMessageRequest, VerifyOTPMessageResult> asyncHandler) {
+        final VerifyOTPMessageRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<VerifyOTPMessageResult>() {
+            @Override
+            public VerifyOTPMessageResult call() throws Exception {
+                VerifyOTPMessageResult result = null;
+
+                try {
+                    result = executeVerifyOTPMessage(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

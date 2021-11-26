@@ -42,7 +42,7 @@ public class SuiteDefinitionInformation implements Serializable, Cloneable, Stru
     private String suiteDefinitionName;
     /**
      * <p>
-     * Specifies the devices under test for the test suite.
+     * Specifies the devices that are under test for the test suite.
      * </p>
      */
     private java.util.List<DeviceUnderTest> defaultDevices;
@@ -141,10 +141,10 @@ public class SuiteDefinitionInformation implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Specifies the devices under test for the test suite.
+     * Specifies the devices that are under test for the test suite.
      * </p>
      * 
-     * @return Specifies the devices under test for the test suite.
+     * @return Specifies the devices that are under test for the test suite.
      */
 
     public java.util.List<DeviceUnderTest> getDefaultDevices() {
@@ -153,11 +153,11 @@ public class SuiteDefinitionInformation implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Specifies the devices under test for the test suite.
+     * Specifies the devices that are under test for the test suite.
      * </p>
      * 
      * @param defaultDevices
-     *        Specifies the devices under test for the test suite.
+     *        Specifies the devices that are under test for the test suite.
      */
 
     public void setDefaultDevices(java.util.Collection<DeviceUnderTest> defaultDevices) {
@@ -171,7 +171,7 @@ public class SuiteDefinitionInformation implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Specifies the devices under test for the test suite.
+     * Specifies the devices that are under test for the test suite.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -180,7 +180,7 @@ public class SuiteDefinitionInformation implements Serializable, Cloneable, Stru
      * </p>
      * 
      * @param defaultDevices
-     *        Specifies the devices under test for the test suite.
+     *        Specifies the devices that are under test for the test suite.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -196,11 +196,11 @@ public class SuiteDefinitionInformation implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Specifies the devices under test for the test suite.
+     * Specifies the devices that are under test for the test suite.
      * </p>
      * 
      * @param defaultDevices
-     *        Specifies the devices under test for the test suite.
+     *        Specifies the devices that are under test for the test suite.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

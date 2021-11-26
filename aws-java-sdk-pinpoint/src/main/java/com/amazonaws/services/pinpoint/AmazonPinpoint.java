@@ -2851,6 +2851,33 @@ public interface AmazonPinpoint {
 
     /**
      * <p>
+     * Send an OTP message
+     * </p>
+     * 
+     * @param sendOTPMessageRequest
+     * @return Result of the SendOTPMessage operation returned by the service.
+     * @throws BadRequestException
+     *         400 response
+     * @throws InternalServerErrorException
+     *         500 response
+     * @throws PayloadTooLargeException
+     *         413 response
+     * @throws ForbiddenException
+     *         403 response
+     * @throws NotFoundException
+     *         404 response
+     * @throws MethodNotAllowedException
+     *         405 response
+     * @throws TooManyRequestsException
+     *         429 response
+     * @sample AmazonPinpoint.SendOTPMessage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/SendOTPMessage" target="_top">AWS API
+     *      Documentation</a>
+     */
+    SendOTPMessageResult sendOTPMessage(SendOTPMessageRequest sendOTPMessageRequest);
+
+    /**
+     * <p>
      * Creates and sends a message to a list of users.
      * </p>
      * 
@@ -3669,6 +3696,33 @@ public interface AmazonPinpoint {
      *      API Documentation</a>
      */
     UpdateVoiceTemplateResult updateVoiceTemplate(UpdateVoiceTemplateRequest updateVoiceTemplateRequest);
+
+    /**
+     * <p>
+     * Verify an OTP
+     * </p>
+     * 
+     * @param verifyOTPMessageRequest
+     * @return Result of the VerifyOTPMessage operation returned by the service.
+     * @throws BadRequestException
+     *         400 response
+     * @throws InternalServerErrorException
+     *         500 response
+     * @throws PayloadTooLargeException
+     *         413 response
+     * @throws ForbiddenException
+     *         403 response
+     * @throws NotFoundException
+     *         404 response
+     * @throws MethodNotAllowedException
+     *         405 response
+     * @throws TooManyRequestsException
+     *         429 response
+     * @sample AmazonPinpoint.VerifyOTPMessage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/VerifyOTPMessage" target="_top">AWS API
+     *      Documentation</a>
+     */
+    VerifyOTPMessageResult verifyOTPMessage(VerifyOTPMessageRequest verifyOTPMessageRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

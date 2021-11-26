@@ -43,6 +43,36 @@ public class Site implements Serializable, Cloneable, StructuredPojo {
     private java.util.Map<String, String> tags;
 
     private String siteArn;
+    /**
+     * <p>
+     * Notes about a site.
+     * </p>
+     */
+    private String notes;
+    /**
+     * <p>
+     * The ISO-3166 two-letter country code where the hardware is installed and powered on.
+     * </p>
+     */
+    private String operatingAddressCountryCode;
+    /**
+     * <p>
+     * State or region where the hardware is installed and powered on.
+     * </p>
+     */
+    private String operatingAddressStateOrRegion;
+    /**
+     * <p>
+     * City where the hardware is installed and powered on.
+     * </p>
+     */
+    private String operatingAddressCity;
+    /**
+     * <p>
+     * Information about the physical and logistical details for a rack at the site.
+     * </p>
+     */
+    private RackPhysicalProperties rackPhysicalProperties;
 
     /**
      * @param siteId
@@ -243,6 +273,206 @@ public class Site implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Notes about a site.
+     * </p>
+     * 
+     * @param notes
+     *        Notes about a site.
+     */
+
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
+
+    /**
+     * <p>
+     * Notes about a site.
+     * </p>
+     * 
+     * @return Notes about a site.
+     */
+
+    public String getNotes() {
+        return this.notes;
+    }
+
+    /**
+     * <p>
+     * Notes about a site.
+     * </p>
+     * 
+     * @param notes
+     *        Notes about a site.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Site withNotes(String notes) {
+        setNotes(notes);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ISO-3166 two-letter country code where the hardware is installed and powered on.
+     * </p>
+     * 
+     * @param operatingAddressCountryCode
+     *        The ISO-3166 two-letter country code where the hardware is installed and powered on.
+     */
+
+    public void setOperatingAddressCountryCode(String operatingAddressCountryCode) {
+        this.operatingAddressCountryCode = operatingAddressCountryCode;
+    }
+
+    /**
+     * <p>
+     * The ISO-3166 two-letter country code where the hardware is installed and powered on.
+     * </p>
+     * 
+     * @return The ISO-3166 two-letter country code where the hardware is installed and powered on.
+     */
+
+    public String getOperatingAddressCountryCode() {
+        return this.operatingAddressCountryCode;
+    }
+
+    /**
+     * <p>
+     * The ISO-3166 two-letter country code where the hardware is installed and powered on.
+     * </p>
+     * 
+     * @param operatingAddressCountryCode
+     *        The ISO-3166 two-letter country code where the hardware is installed and powered on.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Site withOperatingAddressCountryCode(String operatingAddressCountryCode) {
+        setOperatingAddressCountryCode(operatingAddressCountryCode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * State or region where the hardware is installed and powered on.
+     * </p>
+     * 
+     * @param operatingAddressStateOrRegion
+     *        State or region where the hardware is installed and powered on.
+     */
+
+    public void setOperatingAddressStateOrRegion(String operatingAddressStateOrRegion) {
+        this.operatingAddressStateOrRegion = operatingAddressStateOrRegion;
+    }
+
+    /**
+     * <p>
+     * State or region where the hardware is installed and powered on.
+     * </p>
+     * 
+     * @return State or region where the hardware is installed and powered on.
+     */
+
+    public String getOperatingAddressStateOrRegion() {
+        return this.operatingAddressStateOrRegion;
+    }
+
+    /**
+     * <p>
+     * State or region where the hardware is installed and powered on.
+     * </p>
+     * 
+     * @param operatingAddressStateOrRegion
+     *        State or region where the hardware is installed and powered on.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Site withOperatingAddressStateOrRegion(String operatingAddressStateOrRegion) {
+        setOperatingAddressStateOrRegion(operatingAddressStateOrRegion);
+        return this;
+    }
+
+    /**
+     * <p>
+     * City where the hardware is installed and powered on.
+     * </p>
+     * 
+     * @param operatingAddressCity
+     *        City where the hardware is installed and powered on.
+     */
+
+    public void setOperatingAddressCity(String operatingAddressCity) {
+        this.operatingAddressCity = operatingAddressCity;
+    }
+
+    /**
+     * <p>
+     * City where the hardware is installed and powered on.
+     * </p>
+     * 
+     * @return City where the hardware is installed and powered on.
+     */
+
+    public String getOperatingAddressCity() {
+        return this.operatingAddressCity;
+    }
+
+    /**
+     * <p>
+     * City where the hardware is installed and powered on.
+     * </p>
+     * 
+     * @param operatingAddressCity
+     *        City where the hardware is installed and powered on.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Site withOperatingAddressCity(String operatingAddressCity) {
+        setOperatingAddressCity(operatingAddressCity);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Information about the physical and logistical details for a rack at the site.
+     * </p>
+     * 
+     * @param rackPhysicalProperties
+     *        Information about the physical and logistical details for a rack at the site.
+     */
+
+    public void setRackPhysicalProperties(RackPhysicalProperties rackPhysicalProperties) {
+        this.rackPhysicalProperties = rackPhysicalProperties;
+    }
+
+    /**
+     * <p>
+     * Information about the physical and logistical details for a rack at the site.
+     * </p>
+     * 
+     * @return Information about the physical and logistical details for a rack at the site.
+     */
+
+    public RackPhysicalProperties getRackPhysicalProperties() {
+        return this.rackPhysicalProperties;
+    }
+
+    /**
+     * <p>
+     * Information about the physical and logistical details for a rack at the site.
+     * </p>
+     * 
+     * @param rackPhysicalProperties
+     *        Information about the physical and logistical details for a rack at the site.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Site withRackPhysicalProperties(RackPhysicalProperties rackPhysicalProperties) {
+        setRackPhysicalProperties(rackPhysicalProperties);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -265,7 +495,17 @@ public class Site implements Serializable, Cloneable, StructuredPojo {
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getSiteArn() != null)
-            sb.append("SiteArn: ").append(getSiteArn());
+            sb.append("SiteArn: ").append(getSiteArn()).append(",");
+        if (getNotes() != null)
+            sb.append("Notes: ").append(getNotes()).append(",");
+        if (getOperatingAddressCountryCode() != null)
+            sb.append("OperatingAddressCountryCode: ").append(getOperatingAddressCountryCode()).append(",");
+        if (getOperatingAddressStateOrRegion() != null)
+            sb.append("OperatingAddressStateOrRegion: ").append(getOperatingAddressStateOrRegion()).append(",");
+        if (getOperatingAddressCity() != null)
+            sb.append("OperatingAddressCity: ").append(getOperatingAddressCity()).append(",");
+        if (getRackPhysicalProperties() != null)
+            sb.append("RackPhysicalProperties: ").append(getRackPhysicalProperties());
         sb.append("}");
         return sb.toString();
     }
@@ -304,6 +544,27 @@ public class Site implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSiteArn() != null && other.getSiteArn().equals(this.getSiteArn()) == false)
             return false;
+        if (other.getNotes() == null ^ this.getNotes() == null)
+            return false;
+        if (other.getNotes() != null && other.getNotes().equals(this.getNotes()) == false)
+            return false;
+        if (other.getOperatingAddressCountryCode() == null ^ this.getOperatingAddressCountryCode() == null)
+            return false;
+        if (other.getOperatingAddressCountryCode() != null && other.getOperatingAddressCountryCode().equals(this.getOperatingAddressCountryCode()) == false)
+            return false;
+        if (other.getOperatingAddressStateOrRegion() == null ^ this.getOperatingAddressStateOrRegion() == null)
+            return false;
+        if (other.getOperatingAddressStateOrRegion() != null
+                && other.getOperatingAddressStateOrRegion().equals(this.getOperatingAddressStateOrRegion()) == false)
+            return false;
+        if (other.getOperatingAddressCity() == null ^ this.getOperatingAddressCity() == null)
+            return false;
+        if (other.getOperatingAddressCity() != null && other.getOperatingAddressCity().equals(this.getOperatingAddressCity()) == false)
+            return false;
+        if (other.getRackPhysicalProperties() == null ^ this.getRackPhysicalProperties() == null)
+            return false;
+        if (other.getRackPhysicalProperties() != null && other.getRackPhysicalProperties().equals(this.getRackPhysicalProperties()) == false)
+            return false;
         return true;
     }
 
@@ -318,6 +579,11 @@ public class Site implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getSiteArn() == null) ? 0 : getSiteArn().hashCode());
+        hashCode = prime * hashCode + ((getNotes() == null) ? 0 : getNotes().hashCode());
+        hashCode = prime * hashCode + ((getOperatingAddressCountryCode() == null) ? 0 : getOperatingAddressCountryCode().hashCode());
+        hashCode = prime * hashCode + ((getOperatingAddressStateOrRegion() == null) ? 0 : getOperatingAddressStateOrRegion().hashCode());
+        hashCode = prime * hashCode + ((getOperatingAddressCity() == null) ? 0 : getOperatingAddressCity().hashCode());
+        hashCode = prime * hashCode + ((getRackPhysicalProperties() == null) ? 0 : getRackPhysicalProperties().hashCode());
         return hashCode;
     }
 

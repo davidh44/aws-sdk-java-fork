@@ -28,8 +28,8 @@ import javax.annotation.Generated;
  * <p>
  * Add values for each required parameter from CloudWatch. You can use an existing metric, or a new metric that you
  * create. To use your own metric, you must first publish the metric to CloudWatch. For more information, see <a
- * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html">Publish Custom
- * Metrics</a> in the <i>Amazon CloudWatch User Guide</i>.
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html">Publish custom
+ * metrics</a> in the <i>Amazon CloudWatch User Guide</i>.
  * </p>
  * </li>
  * <li>
@@ -41,10 +41,18 @@ import javax.annotation.Generated;
  * </li>
  * </ul>
  * <p>
- * For more information about CloudWatch, see <a
+ * For more information about the CloudWatch terminology below, see <a
  * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html">Amazon CloudWatch
- * Concepts</a>.
+ * concepts</a>.
  * </p>
+ * <note>
+ * <p>
+ * Each individual service provides information about the metrics, namespace, and dimensions they use. For more
+ * information, see <a
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html">Amazon Web
+ * Services services that publish CloudWatch metrics</a> in the <i>Amazon CloudWatch User Guide</i>.
+ * </p>
+ * </note>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/CustomizedMetricSpecification"
  *      target="_top">AWS API Documentation</a>
@@ -54,7 +62,10 @@ public class CustomizedMetricSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name of the metric.
+     * The name of the metric. To get the exact metric name, namespace, and dimensions, inspect the <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html">Metric</a> object that is
+     * returned by a call to <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html">ListMetrics</a>.
      * </p>
      */
     private String metricName;
@@ -82,18 +93,27 @@ public class CustomizedMetricSpecification implements Serializable, Cloneable {
     private String statistic;
     /**
      * <p>
-     * The unit of the metric.
+     * The unit of the metric. For a complete list of the units that CloudWatch supports, see the <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html">MetricDatum</a> data
+     * type in the <i>Amazon CloudWatch API Reference</i>.
      * </p>
      */
     private String unit;
 
     /**
      * <p>
-     * The name of the metric.
+     * The name of the metric. To get the exact metric name, namespace, and dimensions, inspect the <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html">Metric</a> object that is
+     * returned by a call to <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html">ListMetrics</a>.
      * </p>
      * 
      * @param metricName
-     *        The name of the metric.
+     *        The name of the metric. To get the exact metric name, namespace, and dimensions, inspect the <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html">Metric</a> object
+     *        that is returned by a call to <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html"
+     *        >ListMetrics</a>.
      */
 
     public void setMetricName(String metricName) {
@@ -102,10 +122,17 @@ public class CustomizedMetricSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name of the metric.
+     * The name of the metric. To get the exact metric name, namespace, and dimensions, inspect the <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html">Metric</a> object that is
+     * returned by a call to <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html">ListMetrics</a>.
      * </p>
      * 
-     * @return The name of the metric.
+     * @return The name of the metric. To get the exact metric name, namespace, and dimensions, inspect the <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html">Metric</a> object
+     *         that is returned by a call to <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html"
+     *         >ListMetrics</a>.
      */
 
     public String getMetricName() {
@@ -114,11 +141,18 @@ public class CustomizedMetricSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name of the metric.
+     * The name of the metric. To get the exact metric name, namespace, and dimensions, inspect the <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html">Metric</a> object that is
+     * returned by a call to <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html">ListMetrics</a>.
      * </p>
      * 
      * @param metricName
-     *        The name of the metric.
+     *        The name of the metric. To get the exact metric name, namespace, and dimensions, inspect the <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html">Metric</a> object
+     *        that is returned by a call to <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html"
+     *        >ListMetrics</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -343,11 +377,15 @@ public class CustomizedMetricSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The unit of the metric.
+     * The unit of the metric. For a complete list of the units that CloudWatch supports, see the <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html">MetricDatum</a> data
+     * type in the <i>Amazon CloudWatch API Reference</i>.
      * </p>
      * 
      * @param unit
-     *        The unit of the metric.
+     *        The unit of the metric. For a complete list of the units that CloudWatch supports, see the <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html"
+     *        >MetricDatum</a> data type in the <i>Amazon CloudWatch API Reference</i>.
      */
 
     public void setUnit(String unit) {
@@ -356,10 +394,14 @@ public class CustomizedMetricSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The unit of the metric.
+     * The unit of the metric. For a complete list of the units that CloudWatch supports, see the <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html">MetricDatum</a> data
+     * type in the <i>Amazon CloudWatch API Reference</i>.
      * </p>
      * 
-     * @return The unit of the metric.
+     * @return The unit of the metric. For a complete list of the units that CloudWatch supports, see the <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html"
+     *         >MetricDatum</a> data type in the <i>Amazon CloudWatch API Reference</i>.
      */
 
     public String getUnit() {
@@ -368,11 +410,15 @@ public class CustomizedMetricSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The unit of the metric.
+     * The unit of the metric. For a complete list of the units that CloudWatch supports, see the <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html">MetricDatum</a> data
+     * type in the <i>Amazon CloudWatch API Reference</i>.
      * </p>
      * 
      * @param unit
-     *        The unit of the metric.
+     *        The unit of the metric. For a complete list of the units that CloudWatch supports, see the <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html"
+     *        >MetricDatum</a> data type in the <i>Amazon CloudWatch API Reference</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

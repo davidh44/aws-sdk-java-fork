@@ -39,12 +39,16 @@ public class SourceServerMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("launchedInstance").build();
     private static final MarshallingInfo<StructuredPojo> LIFECYCLE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lifeCycle").build();
+    private static final MarshallingInfo<String> REPLICATIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("replicationType").build();
     private static final MarshallingInfo<StructuredPojo> SOURCEPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sourceProperties").build();
     private static final MarshallingInfo<String> SOURCESERVERID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sourceServerID").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<String> VCENTERCLIENTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("vcenterClientID").build();
 
     private static final SourceServerMarshaller instance = new SourceServerMarshaller();
 
@@ -67,9 +71,11 @@ public class SourceServerMarshaller {
             protocolMarshaller.marshall(sourceServer.getIsArchived(), ISARCHIVED_BINDING);
             protocolMarshaller.marshall(sourceServer.getLaunchedInstance(), LAUNCHEDINSTANCE_BINDING);
             protocolMarshaller.marshall(sourceServer.getLifeCycle(), LIFECYCLE_BINDING);
+            protocolMarshaller.marshall(sourceServer.getReplicationType(), REPLICATIONTYPE_BINDING);
             protocolMarshaller.marshall(sourceServer.getSourceProperties(), SOURCEPROPERTIES_BINDING);
             protocolMarshaller.marshall(sourceServer.getSourceServerID(), SOURCESERVERID_BINDING);
             protocolMarshaller.marshall(sourceServer.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(sourceServer.getVcenterClientID(), VCENTERCLIENTID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

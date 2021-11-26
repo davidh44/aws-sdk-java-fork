@@ -66,10 +66,10 @@ import javax.annotation.Generated;
  * </li>
  * </ul>
  * <p>
- * For information about using customized metrics with predictive scaling, see <a href=
+ * For information about using custom metrics with predictive scaling, see <a href=
  * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/predictive-scaling-customized-metric-specification.html"
- * >Advanced predictive scaling policy configurations using customized metrics</a> in the <i>Amazon EC2 Auto Scaling
- * User Guide</i>.
+ * >Advanced predictive scaling policy configurations using custom metrics</a> in the <i>Amazon EC2 Auto Scaling User
+ * Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/PredictiveScalingMetricSpecification"

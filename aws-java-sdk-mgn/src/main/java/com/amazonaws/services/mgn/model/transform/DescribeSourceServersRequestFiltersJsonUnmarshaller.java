@@ -52,6 +52,18 @@ public class DescribeSourceServersRequestFiltersJsonUnmarshaller implements Unma
                     context.nextToken();
                     describeSourceServersRequestFilters.setIsArchived(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("lifeCycleStates", targetDepth)) {
+                    context.nextToken();
+                    describeSourceServersRequestFilters.setLifeCycleStates(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("replicationTypes", targetDepth)) {
+                    context.nextToken();
+                    describeSourceServersRequestFilters.setReplicationTypes(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("sourceServerIDs", targetDepth)) {
                     context.nextToken();
                     describeSourceServersRequestFilters.setSourceServerIDs(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))

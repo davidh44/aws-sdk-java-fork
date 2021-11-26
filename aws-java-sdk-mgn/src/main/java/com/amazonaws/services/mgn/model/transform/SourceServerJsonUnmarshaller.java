@@ -68,6 +68,10 @@ public class SourceServerJsonUnmarshaller implements Unmarshaller<SourceServer, 
                     context.nextToken();
                     sourceServer.setLifeCycle(LifeCycleJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("replicationType", targetDepth)) {
+                    context.nextToken();
+                    sourceServer.setReplicationType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("sourceProperties", targetDepth)) {
                     context.nextToken();
                     sourceServer.setSourceProperties(SourcePropertiesJsonUnmarshaller.getInstance().unmarshall(context));
@@ -80,6 +84,10 @@ public class SourceServerJsonUnmarshaller implements Unmarshaller<SourceServer, 
                     context.nextToken();
                     sourceServer.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
                             .unmarshall(context));
+                }
+                if (context.testExpression("vcenterClientID", targetDepth)) {
+                    context.nextToken();
+                    sourceServer.setVcenterClientID(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

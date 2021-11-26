@@ -60,6 +60,10 @@ public class IdentificationHintsJsonUnmarshaller implements Unmarshaller<Identif
                     context.nextToken();
                     identificationHints.setHostname(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("vmPath", targetDepth)) {
+                    context.nextToken();
+                    identificationHints.setVmPath(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("vmWareUuid", targetDepth)) {
                     context.nextToken();
                     identificationHints.setVmWareUuid(context.getUnmarshaller(String.class).unmarshall(context));

@@ -115,7 +115,7 @@ public class AutoScalingGroup implements Serializable, Cloneable {
     /**
      * <p>
      * The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2
-     * instance that has come into service.
+     * instance that has come into service and marking it unhealthy due to a failed health check.
      * </p>
      */
     private Integer healthCheckGracePeriod;
@@ -911,12 +911,12 @@ public class AutoScalingGroup implements Serializable, Cloneable {
     /**
      * <p>
      * The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2
-     * instance that has come into service.
+     * instance that has come into service and marking it unhealthy due to a failed health check.
      * </p>
      * 
      * @param healthCheckGracePeriod
      *        The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an
-     *        EC2 instance that has come into service.
+     *        EC2 instance that has come into service and marking it unhealthy due to a failed health check.
      */
 
     public void setHealthCheckGracePeriod(Integer healthCheckGracePeriod) {
@@ -926,11 +926,11 @@ public class AutoScalingGroup implements Serializable, Cloneable {
     /**
      * <p>
      * The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2
-     * instance that has come into service.
+     * instance that has come into service and marking it unhealthy due to a failed health check.
      * </p>
      * 
      * @return The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of
-     *         an EC2 instance that has come into service.
+     *         an EC2 instance that has come into service and marking it unhealthy due to a failed health check.
      */
 
     public Integer getHealthCheckGracePeriod() {
@@ -940,12 +940,12 @@ public class AutoScalingGroup implements Serializable, Cloneable {
     /**
      * <p>
      * The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2
-     * instance that has come into service.
+     * instance that has come into service and marking it unhealthy due to a failed health check.
      * </p>
      * 
      * @param healthCheckGracePeriod
      *        The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an
-     *        EC2 instance that has come into service.
+     *        EC2 instance that has come into service and marking it unhealthy due to a failed health check.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

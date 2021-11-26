@@ -122,6 +122,10 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
             com.amazonaws.handlers.AsyncHandler<DeleteSuiteDefinitionRequest, DeleteSuiteDefinitionResult> asyncHandler);
 
     /**
+     * <p>
+     * Gets information about an Device Advisor endpoint.
+     * </p>
+     * 
      * @param getEndpointRequest
      * @return A Java Future containing the result of the GetEndpoint operation returned by the service.
      * @sample AWSIoTDeviceAdvisorAsync.GetEndpoint
@@ -131,6 +135,10 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
     java.util.concurrent.Future<GetEndpointResult> getEndpointAsync(GetEndpointRequest getEndpointRequest);
 
     /**
+     * <p>
+     * Gets information about an Device Advisor endpoint.
+     * </p>
+     * 
      * @param getEndpointRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -310,8 +318,8 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
 
     /**
      * <p>
-     * Lists the runs of the specified Device Advisor test suite. You can list all runs of the test suite, or the runs
-     * of a specific version of the test suite.
+     * Lists runs of the specified Device Advisor test suite. You can list all runs of the test suite, or the runs of a
+     * specific version of the test suite.
      * </p>
      * <p>
      * Requires permission to access the <a href=
@@ -329,8 +337,8 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
 
     /**
      * <p>
-     * Lists the runs of the specified Device Advisor test suite. You can list all runs of the test suite, or the runs
-     * of a specific version of the test suite.
+     * Lists runs of the specified Device Advisor test suite. You can list all runs of the test suite, or the runs of a
+     * specific version of the test suite.
      * </p>
      * <p>
      * Requires permission to access the <a href=

@@ -144,6 +144,25 @@ public interface AWSmgn {
 
     /**
      * <p>
+     * Deletes a single vCenter client by ID.
+     * </p>
+     * 
+     * @param deleteVcenterClientRequest
+     * @return Result of the DeleteVcenterClient operation returned by the service.
+     * @throws UninitializedAccountException
+     *         Unitialized account exception.
+     * @throws ResourceNotFoundException
+     *         Resource not found exception.
+     * @throws ValidationException
+     *         Validate exception.
+     * @sample AWSmgn.DeleteVcenterClient
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/DeleteVcenterClient" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteVcenterClientResult deleteVcenterClient(DeleteVcenterClientRequest deleteVcenterClientRequest);
+
+    /**
+     * <p>
      * Retrieves detailed Job log with paging.
      * </p>
      * 
@@ -216,6 +235,25 @@ public interface AWSmgn {
      *      Documentation</a>
      */
     DescribeSourceServersResult describeSourceServers(DescribeSourceServersRequest describeSourceServersRequest);
+
+    /**
+     * <p>
+     * Lists all vCenter clients.
+     * </p>
+     * 
+     * @param describeVcenterClientsRequest
+     * @return Result of the DescribeVcenterClients operation returned by the service.
+     * @throws UninitializedAccountException
+     *         Unitialized account exception.
+     * @throws ResourceNotFoundException
+     *         Resource not found exception.
+     * @throws ValidationException
+     *         Validate exception.
+     * @sample AWSmgn.DescribeVcenterClients
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/DescribeVcenterClients" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeVcenterClientsResult describeVcenterClients(DescribeVcenterClientsRequest describeVcenterClientsRequest);
 
     /**
      * <p>
@@ -408,6 +446,29 @@ public interface AWSmgn {
 
     /**
      * <p>
+     * Starts replication on source server by ID.
+     * </p>
+     * 
+     * @param startReplicationRequest
+     * @return Result of the StartReplication operation returned by the service.
+     * @throws UninitializedAccountException
+     *         Unitialized account exception.
+     * @throws ResourceNotFoundException
+     *         Resource not found exception.
+     * @throws ValidationException
+     *         Validate exception.
+     * @throws ServiceQuotaExceededException
+     *         The request could not be completed because its exceeded the service quota.
+     * @throws ConflictException
+     *         The request could not be completed due to a conflict with the current state of the target resource.
+     * @sample AWSmgn.StartReplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/StartReplication" target="_top">AWS API
+     *      Documentation</a>
+     */
+    StartReplicationResult startReplication(StartReplicationRequest startReplicationRequest);
+
+    /**
+     * <p>
      * Lauches a Test Instance for specific Source Servers. This command starts a LAUNCH job whose initiatedBy property
      * is StartTest and changes the SourceServer.lifeCycle.state property to TESTING.
      * </p>
@@ -559,6 +620,27 @@ public interface AWSmgn {
      */
     UpdateReplicationConfigurationTemplateResult updateReplicationConfigurationTemplate(
             UpdateReplicationConfigurationTemplateRequest updateReplicationConfigurationTemplateRequest);
+
+    /**
+     * <p>
+     * Updates source server Replication Type by ID.
+     * </p>
+     * 
+     * @param updateSourceServerReplicationTypeRequest
+     * @return Result of the UpdateSourceServerReplicationType operation returned by the service.
+     * @throws UninitializedAccountException
+     *         Unitialized account exception.
+     * @throws ResourceNotFoundException
+     *         Resource not found exception.
+     * @throws ValidationException
+     *         Validate exception.
+     * @throws ConflictException
+     *         The request could not be completed due to a conflict with the current state of the target resource.
+     * @sample AWSmgn.UpdateSourceServerReplicationType
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/UpdateSourceServerReplicationType"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateSourceServerReplicationTypeResult updateSourceServerReplicationType(UpdateSourceServerReplicationTypeRequest updateSourceServerReplicationTypeRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

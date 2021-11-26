@@ -40,7 +40,7 @@ public class ListOutpostsRequest extends com.amazonaws.AmazonWebServiceRequest i
     private java.util.List<String> lifeCycleStatusFilter;
     /**
      * <p>
-     * A filter for the Availibility Zone (<code>us-east-1a</code>) of the Outpost.
+     * A filter for the Availability Zone (<code>us-east-1a</code>) of the Outpost.
      * </p>
      * <p>
      * Filter values are case sensitive. If you specify multiple values for a filter, the values are joined with an
@@ -211,14 +211,14 @@ public class ListOutpostsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A filter for the Availibility Zone (<code>us-east-1a</code>) of the Outpost.
+     * A filter for the Availability Zone (<code>us-east-1a</code>) of the Outpost.
      * </p>
      * <p>
      * Filter values are case sensitive. If you specify multiple values for a filter, the values are joined with an
      * <code>OR</code>, and the request returns all results that match any of the specified values.
      * </p>
      * 
-     * @return A filter for the Availibility Zone (<code>us-east-1a</code>) of the Outpost. </p>
+     * @return A filter for the Availability Zone (<code>us-east-1a</code>) of the Outpost. </p>
      *         <p>
      *         Filter values are case sensitive. If you specify multiple values for a filter, the values are joined with
      *         an <code>OR</code>, and the request returns all results that match any of the specified values.
@@ -230,7 +230,7 @@ public class ListOutpostsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A filter for the Availibility Zone (<code>us-east-1a</code>) of the Outpost.
+     * A filter for the Availability Zone (<code>us-east-1a</code>) of the Outpost.
      * </p>
      * <p>
      * Filter values are case sensitive. If you specify multiple values for a filter, the values are joined with an
@@ -238,7 +238,7 @@ public class ListOutpostsRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * 
      * @param availabilityZoneFilter
-     *        A filter for the Availibility Zone (<code>us-east-1a</code>) of the Outpost. </p>
+     *        A filter for the Availability Zone (<code>us-east-1a</code>) of the Outpost. </p>
      *        <p>
      *        Filter values are case sensitive. If you specify multiple values for a filter, the values are joined with
      *        an <code>OR</code>, and the request returns all results that match any of the specified values.
@@ -255,7 +255,7 @@ public class ListOutpostsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A filter for the Availibility Zone (<code>us-east-1a</code>) of the Outpost.
+     * A filter for the Availability Zone (<code>us-east-1a</code>) of the Outpost.
      * </p>
      * <p>
      * Filter values are case sensitive. If you specify multiple values for a filter, the values are joined with an
@@ -268,7 +268,7 @@ public class ListOutpostsRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * 
      * @param availabilityZoneFilter
-     *        A filter for the Availibility Zone (<code>us-east-1a</code>) of the Outpost. </p>
+     *        A filter for the Availability Zone (<code>us-east-1a</code>) of the Outpost. </p>
      *        <p>
      *        Filter values are case sensitive. If you specify multiple values for a filter, the values are joined with
      *        an <code>OR</code>, and the request returns all results that match any of the specified values.
@@ -287,7 +287,7 @@ public class ListOutpostsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A filter for the Availibility Zone (<code>us-east-1a</code>) of the Outpost.
+     * A filter for the Availability Zone (<code>us-east-1a</code>) of the Outpost.
      * </p>
      * <p>
      * Filter values are case sensitive. If you specify multiple values for a filter, the values are joined with an
@@ -295,7 +295,7 @@ public class ListOutpostsRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * 
      * @param availabilityZoneFilter
-     *        A filter for the Availibility Zone (<code>us-east-1a</code>) of the Outpost. </p>
+     *        A filter for the Availability Zone (<code>us-east-1a</code>) of the Outpost. </p>
      *        <p>
      *        Filter values are case sensitive. If you specify multiple values for a filter, the values are joined with
      *        an <code>OR</code>, and the request returns all results that match any of the specified values.

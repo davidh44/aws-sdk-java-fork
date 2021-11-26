@@ -115,7 +115,11 @@ public class CreateRouteRequest extends AmazonWebServiceRequest implements Seria
      * </p>
      */
     private String vpcPeeringConnectionId;
-
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the core network.
+     * </p>
+     */
     private String coreNetworkArn;
 
     /**
@@ -715,7 +719,12 @@ public class CreateRouteRequest extends AmazonWebServiceRequest implements Seria
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the core network.
+     * </p>
+     * 
      * @param coreNetworkArn
+     *        The Amazon Resource Name (ARN) of the core network.
      */
 
     public void setCoreNetworkArn(String coreNetworkArn) {
@@ -723,7 +732,11 @@ public class CreateRouteRequest extends AmazonWebServiceRequest implements Seria
     }
 
     /**
-     * @return
+     * <p>
+     * The Amazon Resource Name (ARN) of the core network.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the core network.
      */
 
     public String getCoreNetworkArn() {
@@ -731,7 +744,12 @@ public class CreateRouteRequest extends AmazonWebServiceRequest implements Seria
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the core network.
+     * </p>
+     * 
      * @param coreNetworkArn
+     *        The Amazon Resource Name (ARN) of the core network.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
