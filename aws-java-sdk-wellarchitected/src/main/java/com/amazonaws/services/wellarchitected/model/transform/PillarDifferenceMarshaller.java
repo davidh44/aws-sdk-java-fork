@@ -30,6 +30,8 @@ public class PillarDifferenceMarshaller {
 
     private static final MarshallingInfo<String> PILLARID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("PillarId").build();
+    private static final MarshallingInfo<String> PILLARNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PillarName").build();
     private static final MarshallingInfo<String> DIFFERENCESTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DifferenceStatus").build();
     private static final MarshallingInfo<List> QUESTIONDIFFERENCES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
@@ -52,6 +54,7 @@ public class PillarDifferenceMarshaller {
 
         try {
             protocolMarshaller.marshall(pillarDifference.getPillarId(), PILLARID_BINDING);
+            protocolMarshaller.marshall(pillarDifference.getPillarName(), PILLARNAME_BINDING);
             protocolMarshaller.marshall(pillarDifference.getDifferenceStatus(), DIFFERENCESTATUS_BINDING);
             protocolMarshaller.marshall(pillarDifference.getQuestionDifferences(), QUESTIONDIFFERENCES_BINDING);
         } catch (Exception e) {

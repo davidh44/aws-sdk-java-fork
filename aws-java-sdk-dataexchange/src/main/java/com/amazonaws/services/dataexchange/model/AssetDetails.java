@@ -40,6 +40,12 @@ public class AssetDetails implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private RedshiftDataShareAsset redshiftDataShareAsset;
+    /**
+     * <p>
+     * Information about the API Gateway API asset.
+     * </p>
+     */
+    private ApiGatewayApiAsset apiGatewayApiAsset;
 
     /**
      * <p>
@@ -122,6 +128,46 @@ public class AssetDetails implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Information about the API Gateway API asset.
+     * </p>
+     * 
+     * @param apiGatewayApiAsset
+     *        Information about the API Gateway API asset.
+     */
+
+    public void setApiGatewayApiAsset(ApiGatewayApiAsset apiGatewayApiAsset) {
+        this.apiGatewayApiAsset = apiGatewayApiAsset;
+    }
+
+    /**
+     * <p>
+     * Information about the API Gateway API asset.
+     * </p>
+     * 
+     * @return Information about the API Gateway API asset.
+     */
+
+    public ApiGatewayApiAsset getApiGatewayApiAsset() {
+        return this.apiGatewayApiAsset;
+    }
+
+    /**
+     * <p>
+     * Information about the API Gateway API asset.
+     * </p>
+     * 
+     * @param apiGatewayApiAsset
+     *        Information about the API Gateway API asset.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AssetDetails withApiGatewayApiAsset(ApiGatewayApiAsset apiGatewayApiAsset) {
+        setApiGatewayApiAsset(apiGatewayApiAsset);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -136,7 +182,9 @@ public class AssetDetails implements Serializable, Cloneable, StructuredPojo {
         if (getS3SnapshotAsset() != null)
             sb.append("S3SnapshotAsset: ").append(getS3SnapshotAsset()).append(",");
         if (getRedshiftDataShareAsset() != null)
-            sb.append("RedshiftDataShareAsset: ").append(getRedshiftDataShareAsset());
+            sb.append("RedshiftDataShareAsset: ").append(getRedshiftDataShareAsset()).append(",");
+        if (getApiGatewayApiAsset() != null)
+            sb.append("ApiGatewayApiAsset: ").append(getApiGatewayApiAsset());
         sb.append("}");
         return sb.toString();
     }
@@ -159,6 +207,10 @@ public class AssetDetails implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getRedshiftDataShareAsset() != null && other.getRedshiftDataShareAsset().equals(this.getRedshiftDataShareAsset()) == false)
             return false;
+        if (other.getApiGatewayApiAsset() == null ^ this.getApiGatewayApiAsset() == null)
+            return false;
+        if (other.getApiGatewayApiAsset() != null && other.getApiGatewayApiAsset().equals(this.getApiGatewayApiAsset()) == false)
+            return false;
         return true;
     }
 
@@ -169,6 +221,7 @@ public class AssetDetails implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getS3SnapshotAsset() == null) ? 0 : getS3SnapshotAsset().hashCode());
         hashCode = prime * hashCode + ((getRedshiftDataShareAsset() == null) ? 0 : getRedshiftDataShareAsset().hashCode());
+        hashCode = prime * hashCode + ((getApiGatewayApiAsset() == null) ? 0 : getApiGatewayApiAsset().hashCode());
         return hashCode;
     }
 

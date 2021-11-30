@@ -36,7 +36,7 @@ public class InventoryFilter implements Serializable, Cloneable, StructuredPojo 
     private String key;
     /**
      * <p>
-     * Inventory filter values. Example: inventory filter where instance IDs are specified as values
+     * Inventory filter values. Example: inventory filter where managed node IDs are specified as values
      * <code>Key=AWS:InstanceInformation.InstanceId,Values= i-a12b3c4d5e6g, i-1a2b3c4d5e6,Type=Equal</code>.
      * </p>
      */
@@ -97,11 +97,11 @@ public class InventoryFilter implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Inventory filter values. Example: inventory filter where instance IDs are specified as values
+     * Inventory filter values. Example: inventory filter where managed node IDs are specified as values
      * <code>Key=AWS:InstanceInformation.InstanceId,Values= i-a12b3c4d5e6g, i-1a2b3c4d5e6,Type=Equal</code>.
      * </p>
      * 
-     * @return Inventory filter values. Example: inventory filter where instance IDs are specified as values
+     * @return Inventory filter values. Example: inventory filter where managed node IDs are specified as values
      *         <code>Key=AWS:InstanceInformation.InstanceId,Values= i-a12b3c4d5e6g, i-1a2b3c4d5e6,Type=Equal</code>.
      */
 
@@ -114,12 +114,12 @@ public class InventoryFilter implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Inventory filter values. Example: inventory filter where instance IDs are specified as values
+     * Inventory filter values. Example: inventory filter where managed node IDs are specified as values
      * <code>Key=AWS:InstanceInformation.InstanceId,Values= i-a12b3c4d5e6g, i-1a2b3c4d5e6,Type=Equal</code>.
      * </p>
      * 
      * @param values
-     *        Inventory filter values. Example: inventory filter where instance IDs are specified as values
+     *        Inventory filter values. Example: inventory filter where managed node IDs are specified as values
      *        <code>Key=AWS:InstanceInformation.InstanceId,Values= i-a12b3c4d5e6g, i-1a2b3c4d5e6,Type=Equal</code>.
      */
 
@@ -134,7 +134,7 @@ public class InventoryFilter implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Inventory filter values. Example: inventory filter where instance IDs are specified as values
+     * Inventory filter values. Example: inventory filter where managed node IDs are specified as values
      * <code>Key=AWS:InstanceInformation.InstanceId,Values= i-a12b3c4d5e6g, i-1a2b3c4d5e6,Type=Equal</code>.
      * </p>
      * <p>
@@ -144,7 +144,7 @@ public class InventoryFilter implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param values
-     *        Inventory filter values. Example: inventory filter where instance IDs are specified as values
+     *        Inventory filter values. Example: inventory filter where managed node IDs are specified as values
      *        <code>Key=AWS:InstanceInformation.InstanceId,Values= i-a12b3c4d5e6g, i-1a2b3c4d5e6,Type=Equal</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -161,12 +161,12 @@ public class InventoryFilter implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Inventory filter values. Example: inventory filter where instance IDs are specified as values
+     * Inventory filter values. Example: inventory filter where managed node IDs are specified as values
      * <code>Key=AWS:InstanceInformation.InstanceId,Values= i-a12b3c4d5e6g, i-1a2b3c4d5e6,Type=Equal</code>.
      * </p>
      * 
      * @param values
-     *        Inventory filter values. Example: inventory filter where instance IDs are specified as values
+     *        Inventory filter values. Example: inventory filter where managed node IDs are specified as values
      *        <code>Key=AWS:InstanceInformation.InstanceId,Values= i-a12b3c4d5e6g, i-1a2b3c4d5e6,Type=Equal</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

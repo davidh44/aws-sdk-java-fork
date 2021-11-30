@@ -60,6 +60,10 @@ public class ListLensReviewImprovementsResultJsonUnmarshaller implements Unmarsh
                     context.nextToken();
                     listLensReviewImprovementsResult.setLensAlias(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("LensArn", targetDepth)) {
+                    context.nextToken();
+                    listLensReviewImprovementsResult.setLensArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("ImprovementSummaries", targetDepth)) {
                     context.nextToken();
                     listLensReviewImprovementsResult.setImprovementSummaries(new ListUnmarshaller<ImprovementSummary>(ImprovementSummaryJsonUnmarshaller

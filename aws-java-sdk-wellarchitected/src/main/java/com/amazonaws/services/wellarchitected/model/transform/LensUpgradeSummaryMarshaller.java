@@ -33,6 +33,8 @@ public class LensUpgradeSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WorkloadName").build();
     private static final MarshallingInfo<String> LENSALIAS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("LensAlias").build();
+    private static final MarshallingInfo<String> LENSARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("LensArn").build();
     private static final MarshallingInfo<String> CURRENTLENSVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CurrentLensVersion").build();
     private static final MarshallingInfo<String> LATESTLENSVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -57,6 +59,7 @@ public class LensUpgradeSummaryMarshaller {
             protocolMarshaller.marshall(lensUpgradeSummary.getWorkloadId(), WORKLOADID_BINDING);
             protocolMarshaller.marshall(lensUpgradeSummary.getWorkloadName(), WORKLOADNAME_BINDING);
             protocolMarshaller.marshall(lensUpgradeSummary.getLensAlias(), LENSALIAS_BINDING);
+            protocolMarshaller.marshall(lensUpgradeSummary.getLensArn(), LENSARN_BINDING);
             protocolMarshaller.marshall(lensUpgradeSummary.getCurrentLensVersion(), CURRENTLENSVERSION_BINDING);
             protocolMarshaller.marshall(lensUpgradeSummary.getLatestLensVersion(), LATESTLENSVERSION_BINDING);
         } catch (Exception e) {

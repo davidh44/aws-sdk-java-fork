@@ -56,16 +56,23 @@ public class ImageScanFindingsJsonUnmarshaller implements Unmarshaller<ImageScan
                     context.nextToken();
                     imageScanFindings.setVulnerabilitySourceUpdatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("findingSeverityCounts", targetDepth)) {
+                    context.nextToken();
+                    imageScanFindings.setFindingSeverityCounts(new MapUnmarshaller<String, Integer>(context.getUnmarshaller(String.class), context
+                            .getUnmarshaller(Integer.class)).unmarshall(context));
+                }
                 if (context.testExpression("findings", targetDepth)) {
                     context.nextToken();
                     imageScanFindings.setFindings(new ListUnmarshaller<ImageScanFinding>(ImageScanFindingJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
                 }
-                if (context.testExpression("findingSeverityCounts", targetDepth)) {
+                if (context.testExpression("enhancedFindings", targetDepth)) {
                     context.nextToken();
-                    imageScanFindings.setFindingSeverityCounts(new MapUnmarshaller<String, Integer>(context.getUnmarshaller(String.class), context
-                            .getUnmarshaller(Integer.class)).unmarshall(context));
+                    imageScanFindings
+                            .setEnhancedFindings(new ListUnmarshaller<EnhancedImageScanFinding>(EnhancedImageScanFindingJsonUnmarshaller.getInstance())
+
+                            .unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

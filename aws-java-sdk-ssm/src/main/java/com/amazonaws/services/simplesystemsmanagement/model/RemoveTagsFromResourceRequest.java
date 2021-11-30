@@ -31,8 +31,8 @@ public class RemoveTagsFromResourceRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <note>
      * <p>
-     * The <code>ManagedInstance</code> type for this API operation is only for on-premises managed instances. Specify
-     * the name of the managed instance in the following format: <code>mi-<i>ID_number</i> </code>. For example,
+     * The <code>ManagedInstance</code> type for this API operation is only for on-premises managed nodes. Specify the
+     * name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For example,
      * <code>mi-1a2b3c4d5e6f</code>.
      * </p>
      * </note>
@@ -64,8 +64,8 @@ public class RemoveTagsFromResourceRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <note>
      * <p>
-     * The ManagedInstance type for this API operation is only for on-premises managed instances. Specify the name of
-     * the managed instance in the following format: mi-ID_number. For example, mi-1a2b3c4d5e6f.
+     * The <code>ManagedInstance</code> type for this API operation is only for on-premises managed nodes. Specify the
+     * name of the managed node in the following format: mi-ID_number. For example, mi-1a2b3c4d5e6f.
      * </p>
      * </note>
      */
@@ -83,8 +83,8 @@ public class RemoveTagsFromResourceRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <note>
      * <p>
-     * The <code>ManagedInstance</code> type for this API operation is only for on-premises managed instances. Specify
-     * the name of the managed instance in the following format: <code>mi-<i>ID_number</i> </code>. For example,
+     * The <code>ManagedInstance</code> type for this API operation is only for on-premises managed nodes. Specify the
+     * name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For example,
      * <code>mi-1a2b3c4d5e6f</code>.
      * </p>
      * </note>
@@ -92,8 +92,8 @@ public class RemoveTagsFromResourceRequest extends com.amazonaws.AmazonWebServic
      * @param resourceType
      *        The type of resource from which you want to remove a tag.</p> <note>
      *        <p>
-     *        The <code>ManagedInstance</code> type for this API operation is only for on-premises managed instances.
-     *        Specify the name of the managed instance in the following format: <code>mi-<i>ID_number</i> </code>. For
+     *        The <code>ManagedInstance</code> type for this API operation is only for on-premises managed nodes.
+     *        Specify the name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For
      *        example, <code>mi-1a2b3c4d5e6f</code>.
      *        </p>
      * @see ResourceTypeForTagging
@@ -109,16 +109,16 @@ public class RemoveTagsFromResourceRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <note>
      * <p>
-     * The <code>ManagedInstance</code> type for this API operation is only for on-premises managed instances. Specify
-     * the name of the managed instance in the following format: <code>mi-<i>ID_number</i> </code>. For example,
+     * The <code>ManagedInstance</code> type for this API operation is only for on-premises managed nodes. Specify the
+     * name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For example,
      * <code>mi-1a2b3c4d5e6f</code>.
      * </p>
      * </note>
      * 
      * @return The type of resource from which you want to remove a tag.</p> <note>
      *         <p>
-     *         The <code>ManagedInstance</code> type for this API operation is only for on-premises managed instances.
-     *         Specify the name of the managed instance in the following format: <code>mi-<i>ID_number</i> </code>. For
+     *         The <code>ManagedInstance</code> type for this API operation is only for on-premises managed nodes.
+     *         Specify the name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For
      *         example, <code>mi-1a2b3c4d5e6f</code>.
      *         </p>
      * @see ResourceTypeForTagging
@@ -134,8 +134,8 @@ public class RemoveTagsFromResourceRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <note>
      * <p>
-     * The <code>ManagedInstance</code> type for this API operation is only for on-premises managed instances. Specify
-     * the name of the managed instance in the following format: <code>mi-<i>ID_number</i> </code>. For example,
+     * The <code>ManagedInstance</code> type for this API operation is only for on-premises managed nodes. Specify the
+     * name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For example,
      * <code>mi-1a2b3c4d5e6f</code>.
      * </p>
      * </note>
@@ -143,8 +143,8 @@ public class RemoveTagsFromResourceRequest extends com.amazonaws.AmazonWebServic
      * @param resourceType
      *        The type of resource from which you want to remove a tag.</p> <note>
      *        <p>
-     *        The <code>ManagedInstance</code> type for this API operation is only for on-premises managed instances.
-     *        Specify the name of the managed instance in the following format: <code>mi-<i>ID_number</i> </code>. For
+     *        The <code>ManagedInstance</code> type for this API operation is only for on-premises managed nodes.
+     *        Specify the name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For
      *        example, <code>mi-1a2b3c4d5e6f</code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -162,8 +162,8 @@ public class RemoveTagsFromResourceRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <note>
      * <p>
-     * The <code>ManagedInstance</code> type for this API operation is only for on-premises managed instances. Specify
-     * the name of the managed instance in the following format: <code>mi-<i>ID_number</i> </code>. For example,
+     * The <code>ManagedInstance</code> type for this API operation is only for on-premises managed nodes. Specify the
+     * name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For example,
      * <code>mi-1a2b3c4d5e6f</code>.
      * </p>
      * </note>
@@ -171,8 +171,8 @@ public class RemoveTagsFromResourceRequest extends com.amazonaws.AmazonWebServic
      * @param resourceType
      *        The type of resource from which you want to remove a tag.</p> <note>
      *        <p>
-     *        The <code>ManagedInstance</code> type for this API operation is only for on-premises managed instances.
-     *        Specify the name of the managed instance in the following format: <code>mi-<i>ID_number</i> </code>. For
+     *        The <code>ManagedInstance</code> type for this API operation is only for on-premises managed nodes.
+     *        Specify the name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For
      *        example, <code>mi-1a2b3c4d5e6f</code>.
      *        </p>
      * @see ResourceTypeForTagging
@@ -188,8 +188,8 @@ public class RemoveTagsFromResourceRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <note>
      * <p>
-     * The <code>ManagedInstance</code> type for this API operation is only for on-premises managed instances. Specify
-     * the name of the managed instance in the following format: <code>mi-<i>ID_number</i> </code>. For example,
+     * The <code>ManagedInstance</code> type for this API operation is only for on-premises managed nodes. Specify the
+     * name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For example,
      * <code>mi-1a2b3c4d5e6f</code>.
      * </p>
      * </note>
@@ -197,8 +197,8 @@ public class RemoveTagsFromResourceRequest extends com.amazonaws.AmazonWebServic
      * @param resourceType
      *        The type of resource from which you want to remove a tag.</p> <note>
      *        <p>
-     *        The <code>ManagedInstance</code> type for this API operation is only for on-premises managed instances.
-     *        Specify the name of the managed instance in the following format: <code>mi-<i>ID_number</i> </code>. For
+     *        The <code>ManagedInstance</code> type for this API operation is only for on-premises managed nodes.
+     *        Specify the name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For
      *        example, <code>mi-1a2b3c4d5e6f</code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -236,8 +236,8 @@ public class RemoveTagsFromResourceRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <note>
      * <p>
-     * The ManagedInstance type for this API operation is only for on-premises managed instances. Specify the name of
-     * the managed instance in the following format: mi-ID_number. For example, mi-1a2b3c4d5e6f.
+     * The <code>ManagedInstance</code> type for this API operation is only for on-premises managed nodes. Specify the
+     * name of the managed node in the following format: mi-ID_number. For example, mi-1a2b3c4d5e6f.
      * </p>
      * </note>
      * 
@@ -265,8 +265,8 @@ public class RemoveTagsFromResourceRequest extends com.amazonaws.AmazonWebServic
      *        </p>
      *        <note>
      *        <p>
-     *        The ManagedInstance type for this API operation is only for on-premises managed instances. Specify the
-     *        name of the managed instance in the following format: mi-ID_number. For example, mi-1a2b3c4d5e6f.
+     *        The <code>ManagedInstance</code> type for this API operation is only for on-premises managed nodes.
+     *        Specify the name of the managed node in the following format: mi-ID_number. For example, mi-1a2b3c4d5e6f.
      *        </p>
      */
 
@@ -300,8 +300,8 @@ public class RemoveTagsFromResourceRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <note>
      * <p>
-     * The ManagedInstance type for this API operation is only for on-premises managed instances. Specify the name of
-     * the managed instance in the following format: mi-ID_number. For example, mi-1a2b3c4d5e6f.
+     * The <code>ManagedInstance</code> type for this API operation is only for on-premises managed nodes. Specify the
+     * name of the managed node in the following format: mi-ID_number. For example, mi-1a2b3c4d5e6f.
      * </p>
      * </note>
      * 
@@ -328,8 +328,8 @@ public class RemoveTagsFromResourceRequest extends com.amazonaws.AmazonWebServic
      *         </p>
      *         <note>
      *         <p>
-     *         The ManagedInstance type for this API operation is only for on-premises managed instances. Specify the
-     *         name of the managed instance in the following format: mi-ID_number. For example, mi-1a2b3c4d5e6f.
+     *         The <code>ManagedInstance</code> type for this API operation is only for on-premises managed nodes.
+     *         Specify the name of the managed node in the following format: mi-ID_number. For example, mi-1a2b3c4d5e6f.
      *         </p>
      */
 
@@ -363,8 +363,8 @@ public class RemoveTagsFromResourceRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <note>
      * <p>
-     * The ManagedInstance type for this API operation is only for on-premises managed instances. Specify the name of
-     * the managed instance in the following format: mi-ID_number. For example, mi-1a2b3c4d5e6f.
+     * The <code>ManagedInstance</code> type for this API operation is only for on-premises managed nodes. Specify the
+     * name of the managed node in the following format: mi-ID_number. For example, mi-1a2b3c4d5e6f.
      * </p>
      * </note>
      * 
@@ -392,8 +392,8 @@ public class RemoveTagsFromResourceRequest extends com.amazonaws.AmazonWebServic
      *        </p>
      *        <note>
      *        <p>
-     *        The ManagedInstance type for this API operation is only for on-premises managed instances. Specify the
-     *        name of the managed instance in the following format: mi-ID_number. For example, mi-1a2b3c4d5e6f.
+     *        The <code>ManagedInstance</code> type for this API operation is only for on-premises managed nodes.
+     *        Specify the name of the managed node in the following format: mi-ID_number. For example, mi-1a2b3c4d5e6f.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

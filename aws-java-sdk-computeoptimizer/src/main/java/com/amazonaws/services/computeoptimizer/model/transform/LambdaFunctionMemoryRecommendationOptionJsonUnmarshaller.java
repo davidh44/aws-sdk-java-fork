@@ -64,6 +64,10 @@ public class LambdaFunctionMemoryRecommendationOptionJsonUnmarshaller implements
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("savingsOpportunity", targetDepth)) {
+                    context.nextToken();
+                    lambdaFunctionMemoryRecommendationOption.setSavingsOpportunity(SavingsOpportunityJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Status information about the instance association.
+ * Status information about the association.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/InstanceAssociationStatusInfo" target="_top">AWS
@@ -48,31 +48,31 @@ public class InstanceAssociationStatusInfo implements Serializable, Cloneable, S
     private String documentVersion;
     /**
      * <p>
-     * The version of the association applied to the instance.
+     * The version of the association applied to the managed node.
      * </p>
      */
     private String associationVersion;
     /**
      * <p>
-     * The instance ID where the association was created.
+     * The managed node ID where the association was created.
      * </p>
      */
     private String instanceId;
     /**
      * <p>
-     * The date the instance association ran.
+     * The date the association ran.
      * </p>
      */
     private java.util.Date executionDate;
     /**
      * <p>
-     * Status information about the instance association.
+     * Status information about the association.
      * </p>
      */
     private String status;
     /**
      * <p>
-     * Detailed status information about the instance association.
+     * Detailed status information about the association.
      * </p>
      */
     private String detailedStatus;
@@ -96,7 +96,7 @@ public class InstanceAssociationStatusInfo implements Serializable, Cloneable, S
     private InstanceAssociationOutputUrl outputUrl;
     /**
      * <p>
-     * The name of the association applied to the instance.
+     * The name of the association applied to the managed node.
      * </p>
      */
     private String associationName;
@@ -223,11 +223,11 @@ public class InstanceAssociationStatusInfo implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The version of the association applied to the instance.
+     * The version of the association applied to the managed node.
      * </p>
      * 
      * @param associationVersion
-     *        The version of the association applied to the instance.
+     *        The version of the association applied to the managed node.
      */
 
     public void setAssociationVersion(String associationVersion) {
@@ -236,10 +236,10 @@ public class InstanceAssociationStatusInfo implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The version of the association applied to the instance.
+     * The version of the association applied to the managed node.
      * </p>
      * 
-     * @return The version of the association applied to the instance.
+     * @return The version of the association applied to the managed node.
      */
 
     public String getAssociationVersion() {
@@ -248,11 +248,11 @@ public class InstanceAssociationStatusInfo implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The version of the association applied to the instance.
+     * The version of the association applied to the managed node.
      * </p>
      * 
      * @param associationVersion
-     *        The version of the association applied to the instance.
+     *        The version of the association applied to the managed node.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -263,11 +263,11 @@ public class InstanceAssociationStatusInfo implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The instance ID where the association was created.
+     * The managed node ID where the association was created.
      * </p>
      * 
      * @param instanceId
-     *        The instance ID where the association was created.
+     *        The managed node ID where the association was created.
      */
 
     public void setInstanceId(String instanceId) {
@@ -276,10 +276,10 @@ public class InstanceAssociationStatusInfo implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The instance ID where the association was created.
+     * The managed node ID where the association was created.
      * </p>
      * 
-     * @return The instance ID where the association was created.
+     * @return The managed node ID where the association was created.
      */
 
     public String getInstanceId() {
@@ -288,11 +288,11 @@ public class InstanceAssociationStatusInfo implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The instance ID where the association was created.
+     * The managed node ID where the association was created.
      * </p>
      * 
      * @param instanceId
-     *        The instance ID where the association was created.
+     *        The managed node ID where the association was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -303,11 +303,11 @@ public class InstanceAssociationStatusInfo implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The date the instance association ran.
+     * The date the association ran.
      * </p>
      * 
      * @param executionDate
-     *        The date the instance association ran.
+     *        The date the association ran.
      */
 
     public void setExecutionDate(java.util.Date executionDate) {
@@ -316,10 +316,10 @@ public class InstanceAssociationStatusInfo implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The date the instance association ran.
+     * The date the association ran.
      * </p>
      * 
-     * @return The date the instance association ran.
+     * @return The date the association ran.
      */
 
     public java.util.Date getExecutionDate() {
@@ -328,11 +328,11 @@ public class InstanceAssociationStatusInfo implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The date the instance association ran.
+     * The date the association ran.
      * </p>
      * 
      * @param executionDate
-     *        The date the instance association ran.
+     *        The date the association ran.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -343,11 +343,11 @@ public class InstanceAssociationStatusInfo implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Status information about the instance association.
+     * Status information about the association.
      * </p>
      * 
      * @param status
-     *        Status information about the instance association.
+     *        Status information about the association.
      */
 
     public void setStatus(String status) {
@@ -356,10 +356,10 @@ public class InstanceAssociationStatusInfo implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Status information about the instance association.
+     * Status information about the association.
      * </p>
      * 
-     * @return Status information about the instance association.
+     * @return Status information about the association.
      */
 
     public String getStatus() {
@@ -368,11 +368,11 @@ public class InstanceAssociationStatusInfo implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Status information about the instance association.
+     * Status information about the association.
      * </p>
      * 
      * @param status
-     *        Status information about the instance association.
+     *        Status information about the association.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -383,11 +383,11 @@ public class InstanceAssociationStatusInfo implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Detailed status information about the instance association.
+     * Detailed status information about the association.
      * </p>
      * 
      * @param detailedStatus
-     *        Detailed status information about the instance association.
+     *        Detailed status information about the association.
      */
 
     public void setDetailedStatus(String detailedStatus) {
@@ -396,10 +396,10 @@ public class InstanceAssociationStatusInfo implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Detailed status information about the instance association.
+     * Detailed status information about the association.
      * </p>
      * 
-     * @return Detailed status information about the instance association.
+     * @return Detailed status information about the association.
      */
 
     public String getDetailedStatus() {
@@ -408,11 +408,11 @@ public class InstanceAssociationStatusInfo implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Detailed status information about the instance association.
+     * Detailed status information about the association.
      * </p>
      * 
      * @param detailedStatus
-     *        Detailed status information about the instance association.
+     *        Detailed status information about the association.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -543,11 +543,11 @@ public class InstanceAssociationStatusInfo implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The name of the association applied to the instance.
+     * The name of the association applied to the managed node.
      * </p>
      * 
      * @param associationName
-     *        The name of the association applied to the instance.
+     *        The name of the association applied to the managed node.
      */
 
     public void setAssociationName(String associationName) {
@@ -556,10 +556,10 @@ public class InstanceAssociationStatusInfo implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The name of the association applied to the instance.
+     * The name of the association applied to the managed node.
      * </p>
      * 
-     * @return The name of the association applied to the instance.
+     * @return The name of the association applied to the managed node.
      */
 
     public String getAssociationName() {
@@ -568,11 +568,11 @@ public class InstanceAssociationStatusInfo implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The name of the association applied to the instance.
+     * The name of the association applied to the managed node.
      * </p>
      * 
      * @param associationName
-     *        The name of the association applied to the instance.
+     *        The name of the association applied to the managed node.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

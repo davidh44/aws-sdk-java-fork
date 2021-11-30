@@ -50,6 +50,8 @@ public class LambdaFunctionRecommendationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("findingReasonCodes").build();
     private static final MarshallingInfo<List> MEMORYSIZERECOMMENDATIONOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("memorySizeRecommendationOptions").build();
+    private static final MarshallingInfo<String> CURRENTPERFORMANCERISK_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("currentPerformanceRisk").build();
 
     private static final LambdaFunctionRecommendationMarshaller instance = new LambdaFunctionRecommendationMarshaller();
 
@@ -78,6 +80,7 @@ public class LambdaFunctionRecommendationMarshaller {
             protocolMarshaller.marshall(lambdaFunctionRecommendation.getFinding(), FINDING_BINDING);
             protocolMarshaller.marshall(lambdaFunctionRecommendation.getFindingReasonCodes(), FINDINGREASONCODES_BINDING);
             protocolMarshaller.marshall(lambdaFunctionRecommendation.getMemorySizeRecommendationOptions(), MEMORYSIZERECOMMENDATIONOPTIONS_BINDING);
+            protocolMarshaller.marshall(lambdaFunctionRecommendation.getCurrentPerformanceRisk(), CURRENTPERFORMANCERISK_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

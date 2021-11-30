@@ -65,6 +65,10 @@ public class InstanceInformationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastSuccessfulAssociationExecutionDate").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<StructuredPojo> ASSOCIATIONOVERVIEW_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AssociationOverview").build();
+    private static final MarshallingInfo<String> SOURCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("SourceId").build();
+    private static final MarshallingInfo<String> SOURCETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SourceType").build();
 
     private static final InstanceInformationMarshaller instance = new InstanceInformationMarshaller();
 
@@ -101,6 +105,8 @@ public class InstanceInformationMarshaller {
             protocolMarshaller.marshall(instanceInformation.getLastAssociationExecutionDate(), LASTASSOCIATIONEXECUTIONDATE_BINDING);
             protocolMarshaller.marshall(instanceInformation.getLastSuccessfulAssociationExecutionDate(), LASTSUCCESSFULASSOCIATIONEXECUTIONDATE_BINDING);
             protocolMarshaller.marshall(instanceInformation.getAssociationOverview(), ASSOCIATIONOVERVIEW_BINDING);
+            protocolMarshaller.marshall(instanceInformation.getSourceId(), SOURCEID_BINDING);
+            protocolMarshaller.marshall(instanceInformation.getSourceType(), SOURCETYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

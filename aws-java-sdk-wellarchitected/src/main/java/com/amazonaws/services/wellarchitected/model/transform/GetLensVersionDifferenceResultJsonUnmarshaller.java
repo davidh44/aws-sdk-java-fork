@@ -52,9 +52,17 @@ public class GetLensVersionDifferenceResultJsonUnmarshaller implements Unmarshal
                     context.nextToken();
                     getLensVersionDifferenceResult.setLensAlias(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("LensArn", targetDepth)) {
+                    context.nextToken();
+                    getLensVersionDifferenceResult.setLensArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("BaseLensVersion", targetDepth)) {
                     context.nextToken();
                     getLensVersionDifferenceResult.setBaseLensVersion(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("TargetLensVersion", targetDepth)) {
+                    context.nextToken();
+                    getLensVersionDifferenceResult.setTargetLensVersion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("LatestLensVersion", targetDepth)) {
                     context.nextToken();

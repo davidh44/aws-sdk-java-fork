@@ -21,7 +21,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * An activation registers one or more on-premises servers or virtual machines (VMs) with Amazon Web Services so that
  * you can configure those servers or VMs using Run Command. A server or VM that has been registered with Amazon Web
- * Services Systems Manager is called a managed instance.
+ * Services Systems Manager is called a managed node.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/Activation" target="_top">AWS API
@@ -44,31 +44,31 @@ public class Activation implements Serializable, Cloneable, StructuredPojo {
     private String description;
     /**
      * <p>
-     * A name for the managed instance when it is created.
+     * A name for the managed node when it is created.
      * </p>
      */
     private String defaultInstanceName;
     /**
      * <p>
-     * The Identity and Access Management (IAM) role to assign to the managed instance.
+     * The Identity and Access Management (IAM) role to assign to the managed node.
      * </p>
      */
     private String iamRole;
     /**
      * <p>
-     * The maximum number of managed instances that can be registered using this activation.
+     * The maximum number of managed nodes that can be registered using this activation.
      * </p>
      */
     private Integer registrationLimit;
     /**
      * <p>
-     * The number of managed instances already registered with this activation.
+     * The number of managed nodes already registered with this activation.
      * </p>
      */
     private Integer registrationsCount;
     /**
      * <p>
-     * The date when this activation can no longer be used to register managed instances.
+     * The date when this activation can no longer be used to register managed nodes.
      * </p>
      */
     private java.util.Date expirationDate;
@@ -173,11 +173,11 @@ public class Activation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A name for the managed instance when it is created.
+     * A name for the managed node when it is created.
      * </p>
      * 
      * @param defaultInstanceName
-     *        A name for the managed instance when it is created.
+     *        A name for the managed node when it is created.
      */
 
     public void setDefaultInstanceName(String defaultInstanceName) {
@@ -186,10 +186,10 @@ public class Activation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A name for the managed instance when it is created.
+     * A name for the managed node when it is created.
      * </p>
      * 
-     * @return A name for the managed instance when it is created.
+     * @return A name for the managed node when it is created.
      */
 
     public String getDefaultInstanceName() {
@@ -198,11 +198,11 @@ public class Activation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A name for the managed instance when it is created.
+     * A name for the managed node when it is created.
      * </p>
      * 
      * @param defaultInstanceName
-     *        A name for the managed instance when it is created.
+     *        A name for the managed node when it is created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -213,11 +213,11 @@ public class Activation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Identity and Access Management (IAM) role to assign to the managed instance.
+     * The Identity and Access Management (IAM) role to assign to the managed node.
      * </p>
      * 
      * @param iamRole
-     *        The Identity and Access Management (IAM) role to assign to the managed instance.
+     *        The Identity and Access Management (IAM) role to assign to the managed node.
      */
 
     public void setIamRole(String iamRole) {
@@ -226,10 +226,10 @@ public class Activation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Identity and Access Management (IAM) role to assign to the managed instance.
+     * The Identity and Access Management (IAM) role to assign to the managed node.
      * </p>
      * 
-     * @return The Identity and Access Management (IAM) role to assign to the managed instance.
+     * @return The Identity and Access Management (IAM) role to assign to the managed node.
      */
 
     public String getIamRole() {
@@ -238,11 +238,11 @@ public class Activation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Identity and Access Management (IAM) role to assign to the managed instance.
+     * The Identity and Access Management (IAM) role to assign to the managed node.
      * </p>
      * 
      * @param iamRole
-     *        The Identity and Access Management (IAM) role to assign to the managed instance.
+     *        The Identity and Access Management (IAM) role to assign to the managed node.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -253,11 +253,11 @@ public class Activation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The maximum number of managed instances that can be registered using this activation.
+     * The maximum number of managed nodes that can be registered using this activation.
      * </p>
      * 
      * @param registrationLimit
-     *        The maximum number of managed instances that can be registered using this activation.
+     *        The maximum number of managed nodes that can be registered using this activation.
      */
 
     public void setRegistrationLimit(Integer registrationLimit) {
@@ -266,10 +266,10 @@ public class Activation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The maximum number of managed instances that can be registered using this activation.
+     * The maximum number of managed nodes that can be registered using this activation.
      * </p>
      * 
-     * @return The maximum number of managed instances that can be registered using this activation.
+     * @return The maximum number of managed nodes that can be registered using this activation.
      */
 
     public Integer getRegistrationLimit() {
@@ -278,11 +278,11 @@ public class Activation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The maximum number of managed instances that can be registered using this activation.
+     * The maximum number of managed nodes that can be registered using this activation.
      * </p>
      * 
      * @param registrationLimit
-     *        The maximum number of managed instances that can be registered using this activation.
+     *        The maximum number of managed nodes that can be registered using this activation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -293,11 +293,11 @@ public class Activation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of managed instances already registered with this activation.
+     * The number of managed nodes already registered with this activation.
      * </p>
      * 
      * @param registrationsCount
-     *        The number of managed instances already registered with this activation.
+     *        The number of managed nodes already registered with this activation.
      */
 
     public void setRegistrationsCount(Integer registrationsCount) {
@@ -306,10 +306,10 @@ public class Activation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of managed instances already registered with this activation.
+     * The number of managed nodes already registered with this activation.
      * </p>
      * 
-     * @return The number of managed instances already registered with this activation.
+     * @return The number of managed nodes already registered with this activation.
      */
 
     public Integer getRegistrationsCount() {
@@ -318,11 +318,11 @@ public class Activation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of managed instances already registered with this activation.
+     * The number of managed nodes already registered with this activation.
      * </p>
      * 
      * @param registrationsCount
-     *        The number of managed instances already registered with this activation.
+     *        The number of managed nodes already registered with this activation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -333,11 +333,11 @@ public class Activation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date when this activation can no longer be used to register managed instances.
+     * The date when this activation can no longer be used to register managed nodes.
      * </p>
      * 
      * @param expirationDate
-     *        The date when this activation can no longer be used to register managed instances.
+     *        The date when this activation can no longer be used to register managed nodes.
      */
 
     public void setExpirationDate(java.util.Date expirationDate) {
@@ -346,10 +346,10 @@ public class Activation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date when this activation can no longer be used to register managed instances.
+     * The date when this activation can no longer be used to register managed nodes.
      * </p>
      * 
-     * @return The date when this activation can no longer be used to register managed instances.
+     * @return The date when this activation can no longer be used to register managed nodes.
      */
 
     public java.util.Date getExpirationDate() {
@@ -358,11 +358,11 @@ public class Activation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date when this activation can no longer be used to register managed instances.
+     * The date when this activation can no longer be used to register managed nodes.
      * </p>
      * 
      * @param expirationDate
-     *        The date when this activation can no longer be used to register managed instances.
+     *        The date when this activation can no longer be used to register managed nodes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

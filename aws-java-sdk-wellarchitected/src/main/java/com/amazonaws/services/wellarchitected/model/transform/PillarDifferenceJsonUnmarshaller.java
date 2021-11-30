@@ -52,6 +52,10 @@ public class PillarDifferenceJsonUnmarshaller implements Unmarshaller<PillarDiff
                     context.nextToken();
                     pillarDifference.setPillarId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("PillarName", targetDepth)) {
+                    context.nextToken();
+                    pillarDifference.setPillarName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("DifferenceStatus", targetDepth)) {
                     context.nextToken();
                     pillarDifference.setDifferenceStatus(context.getUnmarshaller(String.class).unmarshall(context));

@@ -31,6 +31,20 @@ public class ListLensesRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String nextToken;
 
     private Integer maxResults;
+    /**
+     * <p>
+     * The type of lenses to be returned.
+     * </p>
+     */
+    private String lensType;
+    /**
+     * <p>
+     * The status of lenses to be returned.
+     * </p>
+     */
+    private String lensStatus;
+
+    private String lensName;
 
     /**
      * @param nextToken
@@ -85,6 +99,150 @@ public class ListLensesRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
+     * <p>
+     * The type of lenses to be returned.
+     * </p>
+     * 
+     * @param lensType
+     *        The type of lenses to be returned.
+     * @see LensType
+     */
+
+    public void setLensType(String lensType) {
+        this.lensType = lensType;
+    }
+
+    /**
+     * <p>
+     * The type of lenses to be returned.
+     * </p>
+     * 
+     * @return The type of lenses to be returned.
+     * @see LensType
+     */
+
+    public String getLensType() {
+        return this.lensType;
+    }
+
+    /**
+     * <p>
+     * The type of lenses to be returned.
+     * </p>
+     * 
+     * @param lensType
+     *        The type of lenses to be returned.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LensType
+     */
+
+    public ListLensesRequest withLensType(String lensType) {
+        setLensType(lensType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of lenses to be returned.
+     * </p>
+     * 
+     * @param lensType
+     *        The type of lenses to be returned.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LensType
+     */
+
+    public ListLensesRequest withLensType(LensType lensType) {
+        this.lensType = lensType.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The status of lenses to be returned.
+     * </p>
+     * 
+     * @param lensStatus
+     *        The status of lenses to be returned.
+     * @see LensStatusType
+     */
+
+    public void setLensStatus(String lensStatus) {
+        this.lensStatus = lensStatus;
+    }
+
+    /**
+     * <p>
+     * The status of lenses to be returned.
+     * </p>
+     * 
+     * @return The status of lenses to be returned.
+     * @see LensStatusType
+     */
+
+    public String getLensStatus() {
+        return this.lensStatus;
+    }
+
+    /**
+     * <p>
+     * The status of lenses to be returned.
+     * </p>
+     * 
+     * @param lensStatus
+     *        The status of lenses to be returned.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LensStatusType
+     */
+
+    public ListLensesRequest withLensStatus(String lensStatus) {
+        setLensStatus(lensStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The status of lenses to be returned.
+     * </p>
+     * 
+     * @param lensStatus
+     *        The status of lenses to be returned.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LensStatusType
+     */
+
+    public ListLensesRequest withLensStatus(LensStatusType lensStatus) {
+        this.lensStatus = lensStatus.toString();
+        return this;
+    }
+
+    /**
+     * @param lensName
+     */
+
+    public void setLensName(String lensName) {
+        this.lensName = lensName;
+    }
+
+    /**
+     * @return
+     */
+
+    public String getLensName() {
+        return this.lensName;
+    }
+
+    /**
+     * @param lensName
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListLensesRequest withLensName(String lensName) {
+        setLensName(lensName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -99,7 +257,13 @@ public class ListLensesRequest extends com.amazonaws.AmazonWebServiceRequest imp
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults());
+            sb.append("MaxResults: ").append(getMaxResults()).append(",");
+        if (getLensType() != null)
+            sb.append("LensType: ").append(getLensType()).append(",");
+        if (getLensStatus() != null)
+            sb.append("LensStatus: ").append(getLensStatus()).append(",");
+        if (getLensName() != null)
+            sb.append("LensName: ").append(getLensName());
         sb.append("}");
         return sb.toString();
     }
@@ -122,6 +286,18 @@ public class ListLensesRequest extends com.amazonaws.AmazonWebServiceRequest imp
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
             return false;
+        if (other.getLensType() == null ^ this.getLensType() == null)
+            return false;
+        if (other.getLensType() != null && other.getLensType().equals(this.getLensType()) == false)
+            return false;
+        if (other.getLensStatus() == null ^ this.getLensStatus() == null)
+            return false;
+        if (other.getLensStatus() != null && other.getLensStatus().equals(this.getLensStatus()) == false)
+            return false;
+        if (other.getLensName() == null ^ this.getLensName() == null)
+            return false;
+        if (other.getLensName() != null && other.getLensName().equals(this.getLensName()) == false)
+            return false;
         return true;
     }
 
@@ -132,6 +308,9 @@ public class ListLensesRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
+        hashCode = prime * hashCode + ((getLensType() == null) ? 0 : getLensType().hashCode());
+        hashCode = prime * hashCode + ((getLensStatus() == null) ? 0 : getLensStatus().hashCode());
+        hashCode = prime * hashCode + ((getLensName() == null) ? 0 : getLensName().hashCode());
         return hashCode;
     }
 

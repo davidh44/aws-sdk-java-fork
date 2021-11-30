@@ -31,6 +31,8 @@ public class AssetDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("S3SnapshotAsset").build();
     private static final MarshallingInfo<StructuredPojo> REDSHIFTDATASHAREASSET_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RedshiftDataShareAsset").build();
+    private static final MarshallingInfo<StructuredPojo> APIGATEWAYAPIASSET_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ApiGatewayApiAsset").build();
 
     private static final AssetDetailsMarshaller instance = new AssetDetailsMarshaller();
 
@@ -50,6 +52,7 @@ public class AssetDetailsMarshaller {
         try {
             protocolMarshaller.marshall(assetDetails.getS3SnapshotAsset(), S3SNAPSHOTASSET_BINDING);
             protocolMarshaller.marshall(assetDetails.getRedshiftDataShareAsset(), REDSHIFTDATASHAREASSET_BINDING);
+            protocolMarshaller.marshall(assetDetails.getApiGatewayApiAsset(), APIGATEWAYAPIASSET_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -22,7 +22,9 @@ public enum LensStatus {
 
     CURRENT("CURRENT"),
     NOT_CURRENT("NOT_CURRENT"),
-    DEPRECATED("DEPRECATED");
+    DEPRECATED("DEPRECATED"),
+    DELETED("DELETED"),
+    UNSHARED("UNSHARED");
 
     private String value;
 

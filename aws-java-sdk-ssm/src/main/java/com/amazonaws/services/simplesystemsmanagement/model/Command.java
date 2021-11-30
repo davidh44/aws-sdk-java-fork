@@ -66,14 +66,14 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
     private java.util.Map<String, java.util.List<String>> parameters;
     /**
      * <p>
-     * The instance IDs against which this command was requested.
+     * The managed node IDs against which this command was requested.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> instanceIds;
     /**
      * <p>
-     * An array of search criteria that targets instances using a Key,Value combination that you specify. Targets is
-     * required if you don't provide one or more instance IDs in the call.
+     * An array of search criteria that targets managed nodes using a Key,Value combination that you specify. Targets is
+     * required if you don't provide one or more managed node IDs in the call.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Target> targets;
@@ -101,13 +101,13 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * Pending: The command hasn't been sent to any instances.
+     * Pending: The command hasn't been sent to any managed nodes.
      * </p>
      * </li>
      * <li>
      * <p>
-     * In Progress: The command has been sent to at least one instance but hasn't reached a final state on all
-     * instances.
+     * In Progress: The command has been sent to at least one managed node but hasn't reached a final state on all
+     * managed nodes.
      * </p>
      * </li>
      * <li>
@@ -134,7 +134,7 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Incomplete: The command was attempted on all instances and one or more invocations doesn't have a value of
+     * Incomplete: The command was attempted on all managed nodes and one or more invocations doesn't have a value of
      * Success but not enough invocations failed for the status to be Failed. This is a terminal state.
      * </p>
      * </li>
@@ -145,8 +145,8 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Rate Exceeded: The number of instances targeted by the command exceeded the account limit for pending
-     * invocations. The system has canceled the command before running it on any instance. This is a terminal state.
+     * Rate Exceeded: The number of managed nodes targeted by the command exceeded the account limit for pending
+     * invocations. The system has canceled the command before running it on any managed node. This is a terminal state.
      * </p>
      * </li>
      * </ul>
@@ -175,9 +175,9 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
     private String outputS3KeyPrefix;
     /**
      * <p>
-     * The maximum number of instances that are allowed to run the command at the same time. You can specify a number of
-     * instances, such as 10, or a percentage of instances, such as 10%. The default value is 50. For more information
-     * about how to use <code>MaxConcurrency</code>, see <a
+     * The maximum number of managed nodes that are allowed to run the command at the same time. You can specify a
+     * number of managed nodes, such as 10, or a percentage of nodes, such as 10%. The default value is 50. For more
+     * information about how to use <code>MaxConcurrency</code>, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/run-command.html">Running commands using
      * Systems Manager Run Command</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
@@ -520,10 +520,10 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The instance IDs against which this command was requested.
+     * The managed node IDs against which this command was requested.
      * </p>
      * 
-     * @return The instance IDs against which this command was requested.
+     * @return The managed node IDs against which this command was requested.
      */
 
     public java.util.List<String> getInstanceIds() {
@@ -535,11 +535,11 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The instance IDs against which this command was requested.
+     * The managed node IDs against which this command was requested.
      * </p>
      * 
      * @param instanceIds
-     *        The instance IDs against which this command was requested.
+     *        The managed node IDs against which this command was requested.
      */
 
     public void setInstanceIds(java.util.Collection<String> instanceIds) {
@@ -553,7 +553,7 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The instance IDs against which this command was requested.
+     * The managed node IDs against which this command was requested.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -562,7 +562,7 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param instanceIds
-     *        The instance IDs against which this command was requested.
+     *        The managed node IDs against which this command was requested.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -578,11 +578,11 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The instance IDs against which this command was requested.
+     * The managed node IDs against which this command was requested.
      * </p>
      * 
      * @param instanceIds
-     *        The instance IDs against which this command was requested.
+     *        The managed node IDs against which this command was requested.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -593,12 +593,12 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An array of search criteria that targets instances using a Key,Value combination that you specify. Targets is
-     * required if you don't provide one or more instance IDs in the call.
+     * An array of search criteria that targets managed nodes using a Key,Value combination that you specify. Targets is
+     * required if you don't provide one or more managed node IDs in the call.
      * </p>
      * 
-     * @return An array of search criteria that targets instances using a Key,Value combination that you specify.
-     *         Targets is required if you don't provide one or more instance IDs in the call.
+     * @return An array of search criteria that targets managed nodes using a Key,Value combination that you specify.
+     *         Targets is required if you don't provide one or more managed node IDs in the call.
      */
 
     public java.util.List<Target> getTargets() {
@@ -610,13 +610,13 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An array of search criteria that targets instances using a Key,Value combination that you specify. Targets is
-     * required if you don't provide one or more instance IDs in the call.
+     * An array of search criteria that targets managed nodes using a Key,Value combination that you specify. Targets is
+     * required if you don't provide one or more managed node IDs in the call.
      * </p>
      * 
      * @param targets
-     *        An array of search criteria that targets instances using a Key,Value combination that you specify. Targets
-     *        is required if you don't provide one or more instance IDs in the call.
+     *        An array of search criteria that targets managed nodes using a Key,Value combination that you specify.
+     *        Targets is required if you don't provide one or more managed node IDs in the call.
      */
 
     public void setTargets(java.util.Collection<Target> targets) {
@@ -630,8 +630,8 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An array of search criteria that targets instances using a Key,Value combination that you specify. Targets is
-     * required if you don't provide one or more instance IDs in the call.
+     * An array of search criteria that targets managed nodes using a Key,Value combination that you specify. Targets is
+     * required if you don't provide one or more managed node IDs in the call.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -640,8 +640,8 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param targets
-     *        An array of search criteria that targets instances using a Key,Value combination that you specify. Targets
-     *        is required if you don't provide one or more instance IDs in the call.
+     *        An array of search criteria that targets managed nodes using a Key,Value combination that you specify.
+     *        Targets is required if you don't provide one or more managed node IDs in the call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -657,13 +657,13 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An array of search criteria that targets instances using a Key,Value combination that you specify. Targets is
-     * required if you don't provide one or more instance IDs in the call.
+     * An array of search criteria that targets managed nodes using a Key,Value combination that you specify. Targets is
+     * required if you don't provide one or more managed node IDs in the call.
      * </p>
      * 
      * @param targets
-     *        An array of search criteria that targets instances using a Key,Value combination that you specify. Targets
-     *        is required if you don't provide one or more instance IDs in the call.
+     *        An array of search criteria that targets managed nodes using a Key,Value combination that you specify.
+     *        Targets is required if you don't provide one or more managed node IDs in the call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -797,13 +797,13 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * Pending: The command hasn't been sent to any instances.
+     * Pending: The command hasn't been sent to any managed nodes.
      * </p>
      * </li>
      * <li>
      * <p>
-     * In Progress: The command has been sent to at least one instance but hasn't reached a final state on all
-     * instances.
+     * In Progress: The command has been sent to at least one managed node but hasn't reached a final state on all
+     * managed nodes.
      * </p>
      * </li>
      * <li>
@@ -830,7 +830,7 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Incomplete: The command was attempted on all instances and one or more invocations doesn't have a value of
+     * Incomplete: The command was attempted on all managed nodes and one or more invocations doesn't have a value of
      * Success but not enough invocations failed for the status to be Failed. This is a terminal state.
      * </p>
      * </li>
@@ -841,8 +841,8 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Rate Exceeded: The number of instances targeted by the command exceeded the account limit for pending
-     * invocations. The system has canceled the command before running it on any instance. This is a terminal state.
+     * Rate Exceeded: The number of managed nodes targeted by the command exceeded the account limit for pending
+     * invocations. The system has canceled the command before running it on any managed node. This is a terminal state.
      * </p>
      * </li>
      * </ul>
@@ -858,13 +858,13 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        Pending: The command hasn't been sent to any instances.
+     *        Pending: The command hasn't been sent to any managed nodes.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        In Progress: The command has been sent to at least one instance but hasn't reached a final state on all
-     *        instances.
+     *        In Progress: The command has been sent to at least one managed node but hasn't reached a final state on
+     *        all managed nodes.
      *        </p>
      *        </li>
      *        <li>
@@ -892,8 +892,8 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        Incomplete: The command was attempted on all instances and one or more invocations doesn't have a value of
-     *        Success but not enough invocations failed for the status to be Failed. This is a terminal state.
+     *        Incomplete: The command was attempted on all managed nodes and one or more invocations doesn't have a
+     *        value of Success but not enough invocations failed for the status to be Failed. This is a terminal state.
      *        </p>
      *        </li>
      *        <li>
@@ -903,8 +903,8 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        Rate Exceeded: The number of instances targeted by the command exceeded the account limit for pending
-     *        invocations. The system has canceled the command before running it on any instance. This is a terminal
+     *        Rate Exceeded: The number of managed nodes targeted by the command exceeded the account limit for pending
+     *        invocations. The system has canceled the command before running it on any managed node. This is a terminal
      *        state.
      *        </p>
      *        </li>
@@ -926,13 +926,13 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * Pending: The command hasn't been sent to any instances.
+     * Pending: The command hasn't been sent to any managed nodes.
      * </p>
      * </li>
      * <li>
      * <p>
-     * In Progress: The command has been sent to at least one instance but hasn't reached a final state on all
-     * instances.
+     * In Progress: The command has been sent to at least one managed node but hasn't reached a final state on all
+     * managed nodes.
      * </p>
      * </li>
      * <li>
@@ -959,7 +959,7 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Incomplete: The command was attempted on all instances and one or more invocations doesn't have a value of
+     * Incomplete: The command was attempted on all managed nodes and one or more invocations doesn't have a value of
      * Success but not enough invocations failed for the status to be Failed. This is a terminal state.
      * </p>
      * </li>
@@ -970,8 +970,8 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Rate Exceeded: The number of instances targeted by the command exceeded the account limit for pending
-     * invocations. The system has canceled the command before running it on any instance. This is a terminal state.
+     * Rate Exceeded: The number of managed nodes targeted by the command exceeded the account limit for pending
+     * invocations. The system has canceled the command before running it on any managed node. This is a terminal state.
      * </p>
      * </li>
      * </ul>
@@ -986,13 +986,13 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         Pending: The command hasn't been sent to any instances.
+     *         Pending: The command hasn't been sent to any managed nodes.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         In Progress: The command has been sent to at least one instance but hasn't reached a final state on all
-     *         instances.
+     *         In Progress: The command has been sent to at least one managed node but hasn't reached a final state on
+     *         all managed nodes.
      *         </p>
      *         </li>
      *         <li>
@@ -1020,8 +1020,8 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         Incomplete: The command was attempted on all instances and one or more invocations doesn't have a value
-     *         of Success but not enough invocations failed for the status to be Failed. This is a terminal state.
+     *         Incomplete: The command was attempted on all managed nodes and one or more invocations doesn't have a
+     *         value of Success but not enough invocations failed for the status to be Failed. This is a terminal state.
      *         </p>
      *         </li>
      *         <li>
@@ -1031,9 +1031,9 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         Rate Exceeded: The number of instances targeted by the command exceeded the account limit for pending
-     *         invocations. The system has canceled the command before running it on any instance. This is a terminal
-     *         state.
+     *         Rate Exceeded: The number of managed nodes targeted by the command exceeded the account limit for pending
+     *         invocations. The system has canceled the command before running it on any managed node. This is a
+     *         terminal state.
      *         </p>
      *         </li>
      */
@@ -1054,13 +1054,13 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * Pending: The command hasn't been sent to any instances.
+     * Pending: The command hasn't been sent to any managed nodes.
      * </p>
      * </li>
      * <li>
      * <p>
-     * In Progress: The command has been sent to at least one instance but hasn't reached a final state on all
-     * instances.
+     * In Progress: The command has been sent to at least one managed node but hasn't reached a final state on all
+     * managed nodes.
      * </p>
      * </li>
      * <li>
@@ -1087,7 +1087,7 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Incomplete: The command was attempted on all instances and one or more invocations doesn't have a value of
+     * Incomplete: The command was attempted on all managed nodes and one or more invocations doesn't have a value of
      * Success but not enough invocations failed for the status to be Failed. This is a terminal state.
      * </p>
      * </li>
@@ -1098,8 +1098,8 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Rate Exceeded: The number of instances targeted by the command exceeded the account limit for pending
-     * invocations. The system has canceled the command before running it on any instance. This is a terminal state.
+     * Rate Exceeded: The number of managed nodes targeted by the command exceeded the account limit for pending
+     * invocations. The system has canceled the command before running it on any managed node. This is a terminal state.
      * </p>
      * </li>
      * </ul>
@@ -1115,13 +1115,13 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        Pending: The command hasn't been sent to any instances.
+     *        Pending: The command hasn't been sent to any managed nodes.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        In Progress: The command has been sent to at least one instance but hasn't reached a final state on all
-     *        instances.
+     *        In Progress: The command has been sent to at least one managed node but hasn't reached a final state on
+     *        all managed nodes.
      *        </p>
      *        </li>
      *        <li>
@@ -1149,8 +1149,8 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        Incomplete: The command was attempted on all instances and one or more invocations doesn't have a value of
-     *        Success but not enough invocations failed for the status to be Failed. This is a terminal state.
+     *        Incomplete: The command was attempted on all managed nodes and one or more invocations doesn't have a
+     *        value of Success but not enough invocations failed for the status to be Failed. This is a terminal state.
      *        </p>
      *        </li>
      *        <li>
@@ -1160,8 +1160,8 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        Rate Exceeded: The number of instances targeted by the command exceeded the account limit for pending
-     *        invocations. The system has canceled the command before running it on any instance. This is a terminal
+     *        Rate Exceeded: The number of managed nodes targeted by the command exceeded the account limit for pending
+     *        invocations. The system has canceled the command before running it on any managed node. This is a terminal
      *        state.
      *        </p>
      *        </li>
@@ -1313,16 +1313,16 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The maximum number of instances that are allowed to run the command at the same time. You can specify a number of
-     * instances, such as 10, or a percentage of instances, such as 10%. The default value is 50. For more information
-     * about how to use <code>MaxConcurrency</code>, see <a
+     * The maximum number of managed nodes that are allowed to run the command at the same time. You can specify a
+     * number of managed nodes, such as 10, or a percentage of nodes, such as 10%. The default value is 50. For more
+     * information about how to use <code>MaxConcurrency</code>, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/run-command.html">Running commands using
      * Systems Manager Run Command</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param maxConcurrency
-     *        The maximum number of instances that are allowed to run the command at the same time. You can specify a
-     *        number of instances, such as 10, or a percentage of instances, such as 10%. The default value is 50. For
+     *        The maximum number of managed nodes that are allowed to run the command at the same time. You can specify
+     *        a number of managed nodes, such as 10, or a percentage of nodes, such as 10%. The default value is 50. For
      *        more information about how to use <code>MaxConcurrency</code>, see <a
      *        href="https://docs.aws.amazon.com/systems-manager/latest/userguide/run-command.html">Running commands
      *        using Systems Manager Run Command</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
@@ -1334,16 +1334,16 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The maximum number of instances that are allowed to run the command at the same time. You can specify a number of
-     * instances, such as 10, or a percentage of instances, such as 10%. The default value is 50. For more information
-     * about how to use <code>MaxConcurrency</code>, see <a
+     * The maximum number of managed nodes that are allowed to run the command at the same time. You can specify a
+     * number of managed nodes, such as 10, or a percentage of nodes, such as 10%. The default value is 50. For more
+     * information about how to use <code>MaxConcurrency</code>, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/run-command.html">Running commands using
      * Systems Manager Run Command</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
-     * @return The maximum number of instances that are allowed to run the command at the same time. You can specify a
-     *         number of instances, such as 10, or a percentage of instances, such as 10%. The default value is 50. For
-     *         more information about how to use <code>MaxConcurrency</code>, see <a
+     * @return The maximum number of managed nodes that are allowed to run the command at the same time. You can specify
+     *         a number of managed nodes, such as 10, or a percentage of nodes, such as 10%. The default value is 50.
+     *         For more information about how to use <code>MaxConcurrency</code>, see <a
      *         href="https://docs.aws.amazon.com/systems-manager/latest/userguide/run-command.html">Running commands
      *         using Systems Manager Run Command</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      */
@@ -1354,16 +1354,16 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The maximum number of instances that are allowed to run the command at the same time. You can specify a number of
-     * instances, such as 10, or a percentage of instances, such as 10%. The default value is 50. For more information
-     * about how to use <code>MaxConcurrency</code>, see <a
+     * The maximum number of managed nodes that are allowed to run the command at the same time. You can specify a
+     * number of managed nodes, such as 10, or a percentage of nodes, such as 10%. The default value is 50. For more
+     * information about how to use <code>MaxConcurrency</code>, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/run-command.html">Running commands using
      * Systems Manager Run Command</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param maxConcurrency
-     *        The maximum number of instances that are allowed to run the command at the same time. You can specify a
-     *        number of instances, such as 10, or a percentage of instances, such as 10%. The default value is 50. For
+     *        The maximum number of managed nodes that are allowed to run the command at the same time. You can specify
+     *        a number of managed nodes, such as 10, or a percentage of nodes, such as 10%. The default value is 50. For
      *        more information about how to use <code>MaxConcurrency</code>, see <a
      *        href="https://docs.aws.amazon.com/systems-manager/latest/userguide/run-command.html">Running commands
      *        using Systems Manager Run Command</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.

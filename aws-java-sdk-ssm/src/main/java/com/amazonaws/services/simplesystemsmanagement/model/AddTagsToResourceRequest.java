@@ -31,8 +31,8 @@ public class AddTagsToResourceRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <note>
      * <p>
-     * The <code>ManagedInstance</code> type for this API operation is for on-premises managed instances. You must
-     * specify the name of the managed instance in the following format: <code>mi-<i>ID_number</i> </code>. For example,
+     * The <code>ManagedInstance</code> type for this API operation is for on-premises managed nodes. You must specify
+     * the name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For example,
      * <code>mi-1a2b3c4d5e6f</code>.
      * </p>
      * </note>
@@ -67,8 +67,8 @@ public class AddTagsToResourceRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <note>
      * <p>
-     * The <code>ManagedInstance</code> type for this API operation is only for on-premises managed instances. You must
-     * specify the name of the managed instance in the following format: <code>mi-<i>ID_number</i> </code>. For example,
+     * The <code>ManagedInstance</code> type for this API operation is only for on-premises managed nodes. You must
+     * specify the name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For example,
      * <code>mi-1a2b3c4d5e6f</code>.
      * </p>
      * </note>
@@ -92,8 +92,8 @@ public class AddTagsToResourceRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <note>
      * <p>
-     * The <code>ManagedInstance</code> type for this API operation is for on-premises managed instances. You must
-     * specify the name of the managed instance in the following format: <code>mi-<i>ID_number</i> </code>. For example,
+     * The <code>ManagedInstance</code> type for this API operation is for on-premises managed nodes. You must specify
+     * the name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For example,
      * <code>mi-1a2b3c4d5e6f</code>.
      * </p>
      * </note>
@@ -101,9 +101,9 @@ public class AddTagsToResourceRequest extends com.amazonaws.AmazonWebServiceRequ
      * @param resourceType
      *        Specifies the type of resource you are tagging.</p> <note>
      *        <p>
-     *        The <code>ManagedInstance</code> type for this API operation is for on-premises managed instances. You
-     *        must specify the name of the managed instance in the following format: <code>mi-<i>ID_number</i> </code>.
-     *        For example, <code>mi-1a2b3c4d5e6f</code>.
+     *        The <code>ManagedInstance</code> type for this API operation is for on-premises managed nodes. You must
+     *        specify the name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For
+     *        example, <code>mi-1a2b3c4d5e6f</code>.
      *        </p>
      * @see ResourceTypeForTagging
      */
@@ -118,17 +118,17 @@ public class AddTagsToResourceRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <note>
      * <p>
-     * The <code>ManagedInstance</code> type for this API operation is for on-premises managed instances. You must
-     * specify the name of the managed instance in the following format: <code>mi-<i>ID_number</i> </code>. For example,
+     * The <code>ManagedInstance</code> type for this API operation is for on-premises managed nodes. You must specify
+     * the name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For example,
      * <code>mi-1a2b3c4d5e6f</code>.
      * </p>
      * </note>
      * 
      * @return Specifies the type of resource you are tagging.</p> <note>
      *         <p>
-     *         The <code>ManagedInstance</code> type for this API operation is for on-premises managed instances. You
-     *         must specify the name of the managed instance in the following format: <code>mi-<i>ID_number</i> </code>.
-     *         For example, <code>mi-1a2b3c4d5e6f</code>.
+     *         The <code>ManagedInstance</code> type for this API operation is for on-premises managed nodes. You must
+     *         specify the name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For
+     *         example, <code>mi-1a2b3c4d5e6f</code>.
      *         </p>
      * @see ResourceTypeForTagging
      */
@@ -143,8 +143,8 @@ public class AddTagsToResourceRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <note>
      * <p>
-     * The <code>ManagedInstance</code> type for this API operation is for on-premises managed instances. You must
-     * specify the name of the managed instance in the following format: <code>mi-<i>ID_number</i> </code>. For example,
+     * The <code>ManagedInstance</code> type for this API operation is for on-premises managed nodes. You must specify
+     * the name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For example,
      * <code>mi-1a2b3c4d5e6f</code>.
      * </p>
      * </note>
@@ -152,9 +152,9 @@ public class AddTagsToResourceRequest extends com.amazonaws.AmazonWebServiceRequ
      * @param resourceType
      *        Specifies the type of resource you are tagging.</p> <note>
      *        <p>
-     *        The <code>ManagedInstance</code> type for this API operation is for on-premises managed instances. You
-     *        must specify the name of the managed instance in the following format: <code>mi-<i>ID_number</i> </code>.
-     *        For example, <code>mi-1a2b3c4d5e6f</code>.
+     *        The <code>ManagedInstance</code> type for this API operation is for on-premises managed nodes. You must
+     *        specify the name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For
+     *        example, <code>mi-1a2b3c4d5e6f</code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceTypeForTagging
@@ -171,8 +171,8 @@ public class AddTagsToResourceRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <note>
      * <p>
-     * The <code>ManagedInstance</code> type for this API operation is for on-premises managed instances. You must
-     * specify the name of the managed instance in the following format: <code>mi-<i>ID_number</i> </code>. For example,
+     * The <code>ManagedInstance</code> type for this API operation is for on-premises managed nodes. You must specify
+     * the name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For example,
      * <code>mi-1a2b3c4d5e6f</code>.
      * </p>
      * </note>
@@ -180,9 +180,9 @@ public class AddTagsToResourceRequest extends com.amazonaws.AmazonWebServiceRequ
      * @param resourceType
      *        Specifies the type of resource you are tagging.</p> <note>
      *        <p>
-     *        The <code>ManagedInstance</code> type for this API operation is for on-premises managed instances. You
-     *        must specify the name of the managed instance in the following format: <code>mi-<i>ID_number</i> </code>.
-     *        For example, <code>mi-1a2b3c4d5e6f</code>.
+     *        The <code>ManagedInstance</code> type for this API operation is for on-premises managed nodes. You must
+     *        specify the name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For
+     *        example, <code>mi-1a2b3c4d5e6f</code>.
      *        </p>
      * @see ResourceTypeForTagging
      */
@@ -197,8 +197,8 @@ public class AddTagsToResourceRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <note>
      * <p>
-     * The <code>ManagedInstance</code> type for this API operation is for on-premises managed instances. You must
-     * specify the name of the managed instance in the following format: <code>mi-<i>ID_number</i> </code>. For example,
+     * The <code>ManagedInstance</code> type for this API operation is for on-premises managed nodes. You must specify
+     * the name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For example,
      * <code>mi-1a2b3c4d5e6f</code>.
      * </p>
      * </note>
@@ -206,9 +206,9 @@ public class AddTagsToResourceRequest extends com.amazonaws.AmazonWebServiceRequ
      * @param resourceType
      *        Specifies the type of resource you are tagging.</p> <note>
      *        <p>
-     *        The <code>ManagedInstance</code> type for this API operation is for on-premises managed instances. You
-     *        must specify the name of the managed instance in the following format: <code>mi-<i>ID_number</i> </code>.
-     *        For example, <code>mi-1a2b3c4d5e6f</code>.
+     *        The <code>ManagedInstance</code> type for this API operation is for on-premises managed nodes. You must
+     *        specify the name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For
+     *        example, <code>mi-1a2b3c4d5e6f</code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceTypeForTagging
@@ -248,8 +248,8 @@ public class AddTagsToResourceRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <note>
      * <p>
-     * The <code>ManagedInstance</code> type for this API operation is only for on-premises managed instances. You must
-     * specify the name of the managed instance in the following format: <code>mi-<i>ID_number</i> </code>. For example,
+     * The <code>ManagedInstance</code> type for this API operation is only for on-premises managed nodes. You must
+     * specify the name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For example,
      * <code>mi-1a2b3c4d5e6f</code>.
      * </p>
      * </note>
@@ -281,9 +281,9 @@ public class AddTagsToResourceRequest extends com.amazonaws.AmazonWebServiceRequ
      *        </p>
      *        <note>
      *        <p>
-     *        The <code>ManagedInstance</code> type for this API operation is only for on-premises managed instances.
-     *        You must specify the name of the managed instance in the following format:
-     *        <code>mi-<i>ID_number</i> </code>. For example, <code>mi-1a2b3c4d5e6f</code>.
+     *        The <code>ManagedInstance</code> type for this API operation is only for on-premises managed nodes. You
+     *        must specify the name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For
+     *        example, <code>mi-1a2b3c4d5e6f</code>.
      *        </p>
      */
 
@@ -320,8 +320,8 @@ public class AddTagsToResourceRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <note>
      * <p>
-     * The <code>ManagedInstance</code> type for this API operation is only for on-premises managed instances. You must
-     * specify the name of the managed instance in the following format: <code>mi-<i>ID_number</i> </code>. For example,
+     * The <code>ManagedInstance</code> type for this API operation is only for on-premises managed nodes. You must
+     * specify the name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For example,
      * <code>mi-1a2b3c4d5e6f</code>.
      * </p>
      * </note>
@@ -352,9 +352,9 @@ public class AddTagsToResourceRequest extends com.amazonaws.AmazonWebServiceRequ
      *         </p>
      *         <note>
      *         <p>
-     *         The <code>ManagedInstance</code> type for this API operation is only for on-premises managed instances.
-     *         You must specify the name of the managed instance in the following format:
-     *         <code>mi-<i>ID_number</i> </code>. For example, <code>mi-1a2b3c4d5e6f</code>.
+     *         The <code>ManagedInstance</code> type for this API operation is only for on-premises managed nodes. You
+     *         must specify the name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For
+     *         example, <code>mi-1a2b3c4d5e6f</code>.
      *         </p>
      */
 
@@ -391,8 +391,8 @@ public class AddTagsToResourceRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <note>
      * <p>
-     * The <code>ManagedInstance</code> type for this API operation is only for on-premises managed instances. You must
-     * specify the name of the managed instance in the following format: <code>mi-<i>ID_number</i> </code>. For example,
+     * The <code>ManagedInstance</code> type for this API operation is only for on-premises managed nodes. You must
+     * specify the name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For example,
      * <code>mi-1a2b3c4d5e6f</code>.
      * </p>
      * </note>
@@ -424,9 +424,9 @@ public class AddTagsToResourceRequest extends com.amazonaws.AmazonWebServiceRequ
      *        </p>
      *        <note>
      *        <p>
-     *        The <code>ManagedInstance</code> type for this API operation is only for on-premises managed instances.
-     *        You must specify the name of the managed instance in the following format:
-     *        <code>mi-<i>ID_number</i> </code>. For example, <code>mi-1a2b3c4d5e6f</code>.
+     *        The <code>ManagedInstance</code> type for this API operation is only for on-premises managed nodes. You
+     *        must specify the name of the managed node in the following format: <code>mi-<i>ID_number</i> </code>. For
+     *        example, <code>mi-1a2b3c4d5e6f</code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

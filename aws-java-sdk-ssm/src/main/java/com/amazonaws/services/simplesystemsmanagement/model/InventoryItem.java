@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information collected from managed instances based on your inventory policy document
+ * Information collected from managed nodes based on your inventory policy document
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/InventoryItem" target="_top">AWS API

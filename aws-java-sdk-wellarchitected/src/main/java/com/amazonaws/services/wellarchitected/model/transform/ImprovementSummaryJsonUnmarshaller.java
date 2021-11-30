@@ -68,6 +68,12 @@ public class ImprovementSummaryJsonUnmarshaller implements Unmarshaller<Improvem
                     context.nextToken();
                     improvementSummary.setImprovementPlanUrl(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ImprovementPlans", targetDepth)) {
+                    context.nextToken();
+                    improvementSummary.setImprovementPlans(new ListUnmarshaller<ChoiceImprovementPlan>(ChoiceImprovementPlanJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

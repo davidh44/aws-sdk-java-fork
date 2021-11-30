@@ -52,9 +52,21 @@ public class ShareInvitationJsonUnmarshaller implements Unmarshaller<ShareInvita
                     context.nextToken();
                     shareInvitation.setShareInvitationId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ShareResourceType", targetDepth)) {
+                    context.nextToken();
+                    shareInvitation.setShareResourceType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("WorkloadId", targetDepth)) {
                     context.nextToken();
                     shareInvitation.setWorkloadId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("LensAlias", targetDepth)) {
+                    context.nextToken();
+                    shareInvitation.setLensAlias(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("LensArn", targetDepth)) {
+                    context.nextToken();
+                    shareInvitation.setLensArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

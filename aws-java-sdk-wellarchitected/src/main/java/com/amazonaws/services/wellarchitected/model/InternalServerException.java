@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * There is a problem with the AWS Well-Architected Tool API service.
+ * There is a problem with the Well-Architected Tool API service.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

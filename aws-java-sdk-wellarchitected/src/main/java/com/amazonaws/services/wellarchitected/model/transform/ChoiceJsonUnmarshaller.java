@@ -60,6 +60,14 @@ public class ChoiceJsonUnmarshaller implements Unmarshaller<Choice, JsonUnmarsha
                     context.nextToken();
                     choice.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("HelpfulResource", targetDepth)) {
+                    context.nextToken();
+                    choice.setHelpfulResource(ChoiceContentJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("ImprovementPlan", targetDepth)) {
+                    context.nextToken();
+                    choice.setImprovementPlan(ChoiceContentJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

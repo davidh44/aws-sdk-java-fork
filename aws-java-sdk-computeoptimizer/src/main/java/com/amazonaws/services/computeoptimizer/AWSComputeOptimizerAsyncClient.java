@@ -84,6 +84,41 @@ public class AWSComputeOptimizerAsyncClient extends AWSComputeOptimizerClient im
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteRecommendationPreferencesResult> deleteRecommendationPreferencesAsync(
+            DeleteRecommendationPreferencesRequest request) {
+
+        return deleteRecommendationPreferencesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteRecommendationPreferencesResult> deleteRecommendationPreferencesAsync(
+            final DeleteRecommendationPreferencesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteRecommendationPreferencesRequest, DeleteRecommendationPreferencesResult> asyncHandler) {
+        final DeleteRecommendationPreferencesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteRecommendationPreferencesResult>() {
+            @Override
+            public DeleteRecommendationPreferencesResult call() throws Exception {
+                DeleteRecommendationPreferencesResult result = null;
+
+                try {
+                    result = executeDeleteRecommendationPreferences(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeRecommendationExportJobsResult> describeRecommendationExportJobsAsync(
             DescribeRecommendationExportJobsRequest request) {
 
@@ -395,6 +430,41 @@ public class AWSComputeOptimizerAsyncClient extends AWSComputeOptimizerClient im
     }
 
     @Override
+    public java.util.concurrent.Future<GetEffectiveRecommendationPreferencesResult> getEffectiveRecommendationPreferencesAsync(
+            GetEffectiveRecommendationPreferencesRequest request) {
+
+        return getEffectiveRecommendationPreferencesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEffectiveRecommendationPreferencesResult> getEffectiveRecommendationPreferencesAsync(
+            final GetEffectiveRecommendationPreferencesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetEffectiveRecommendationPreferencesRequest, GetEffectiveRecommendationPreferencesResult> asyncHandler) {
+        final GetEffectiveRecommendationPreferencesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetEffectiveRecommendationPreferencesResult>() {
+            @Override
+            public GetEffectiveRecommendationPreferencesResult call() throws Exception {
+                GetEffectiveRecommendationPreferencesResult result = null;
+
+                try {
+                    result = executeGetEffectiveRecommendationPreferences(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetEnrollmentStatusResult> getEnrollmentStatusAsync(GetEnrollmentStatusRequest request) {
 
         return getEnrollmentStatusAsync(request, null);
@@ -498,6 +568,39 @@ public class AWSComputeOptimizerAsyncClient extends AWSComputeOptimizerClient im
     }
 
     @Override
+    public java.util.concurrent.Future<GetRecommendationPreferencesResult> getRecommendationPreferencesAsync(GetRecommendationPreferencesRequest request) {
+
+        return getRecommendationPreferencesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRecommendationPreferencesResult> getRecommendationPreferencesAsync(final GetRecommendationPreferencesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetRecommendationPreferencesRequest, GetRecommendationPreferencesResult> asyncHandler) {
+        final GetRecommendationPreferencesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetRecommendationPreferencesResult>() {
+            @Override
+            public GetRecommendationPreferencesResult call() throws Exception {
+                GetRecommendationPreferencesResult result = null;
+
+                try {
+                    result = executeGetRecommendationPreferences(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetRecommendationSummariesResult> getRecommendationSummariesAsync(GetRecommendationSummariesRequest request) {
 
         return getRecommendationSummariesAsync(request, null);
@@ -515,6 +618,39 @@ public class AWSComputeOptimizerAsyncClient extends AWSComputeOptimizerClient im
 
                 try {
                     result = executeGetRecommendationSummaries(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutRecommendationPreferencesResult> putRecommendationPreferencesAsync(PutRecommendationPreferencesRequest request) {
+
+        return putRecommendationPreferencesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutRecommendationPreferencesResult> putRecommendationPreferencesAsync(final PutRecommendationPreferencesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PutRecommendationPreferencesRequest, PutRecommendationPreferencesResult> asyncHandler) {
+        final PutRecommendationPreferencesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PutRecommendationPreferencesResult>() {
+            @Override
+            public PutRecommendationPreferencesResult call() throws Exception {
+                PutRecommendationPreferencesResult result = null;
+
+                try {
+                    result = executePutRecommendationPreferences(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

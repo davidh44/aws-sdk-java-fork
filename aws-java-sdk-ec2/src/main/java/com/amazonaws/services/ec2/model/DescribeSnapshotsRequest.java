@@ -76,6 +76,11 @@ public class DescribeSnapshotsRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
+     * <code>storage-tier</code> - The storage tier of the snapshot (<code>archive</code> | <code>standard</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>tag</code>:&lt;key&gt; - The key/value combination of a tag assigned to the resource. Use the tag key in
      * the filter name and the tag value as the filter value. For example, to find all resources that have a tag with
      * the key <code>Owner</code> and the value <code>TeamA</code>, specify <code>tag:Owner</code> for the filter name
@@ -196,6 +201,11 @@ public class DescribeSnapshotsRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
+     * <code>storage-tier</code> - The storage tier of the snapshot (<code>archive</code> | <code>standard</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>tag</code>:&lt;key&gt; - The key/value combination of a tag assigned to the resource. Use the tag key in
      * the filter name and the tag value as the filter value. For example, to find all resources that have a tag with
      * the key <code>Owner</code> and the value <code>TeamA</code>, specify <code>tag:Owner</code> for the filter name
@@ -265,6 +275,12 @@ public class DescribeSnapshotsRequest extends AmazonWebServiceRequest implements
      *         <p>
      *         <code>status</code> - The status of the snapshot (<code>pending</code> | <code>completed</code> |
      *         <code>error</code>).
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>storage-tier</code> - The storage tier of the snapshot (<code>archive</code> |
+     *         <code>standard</code>).
      *         </p>
      *         </li>
      *         <li>
@@ -351,6 +367,11 @@ public class DescribeSnapshotsRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
+     * <code>storage-tier</code> - The storage tier of the snapshot (<code>archive</code> | <code>standard</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>tag</code>:&lt;key&gt; - The key/value combination of a tag assigned to the resource. Use the tag key in
      * the filter name and the tag value as the filter value. For example, to find all resources that have a tag with
      * the key <code>Owner</code> and the value <code>TeamA</code>, specify <code>tag:Owner</code> for the filter name
@@ -421,6 +442,12 @@ public class DescribeSnapshotsRequest extends AmazonWebServiceRequest implements
      *        <p>
      *        <code>status</code> - The status of the snapshot (<code>pending</code> | <code>completed</code> |
      *        <code>error</code>).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>storage-tier</code> - The storage tier of the snapshot (<code>archive</code> | <code>standard</code>
+     *        ).
      *        </p>
      *        </li>
      *        <li>
@@ -509,6 +536,11 @@ public class DescribeSnapshotsRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
+     * <code>storage-tier</code> - The storage tier of the snapshot (<code>archive</code> | <code>standard</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>tag</code>:&lt;key&gt; - The key/value combination of a tag assigned to the resource. Use the tag key in
      * the filter name and the tag value as the filter value. For example, to find all resources that have a tag with
      * the key <code>Owner</code> and the value <code>TeamA</code>, specify <code>tag:Owner</code> for the filter name
@@ -584,6 +616,12 @@ public class DescribeSnapshotsRequest extends AmazonWebServiceRequest implements
      *        <p>
      *        <code>status</code> - The status of the snapshot (<code>pending</code> | <code>completed</code> |
      *        <code>error</code>).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>storage-tier</code> - The storage tier of the snapshot (<code>archive</code> | <code>standard</code>
+     *        ).
      *        </p>
      *        </li>
      *        <li>
@@ -674,6 +712,11 @@ public class DescribeSnapshotsRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
+     * <code>storage-tier</code> - The storage tier of the snapshot (<code>archive</code> | <code>standard</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>tag</code>:&lt;key&gt; - The key/value combination of a tag assigned to the resource. Use the tag key in
      * the filter name and the tag value as the filter value. For example, to find all resources that have a tag with
      * the key <code>Owner</code> and the value <code>TeamA</code>, specify <code>tag:Owner</code> for the filter name
@@ -744,6 +787,12 @@ public class DescribeSnapshotsRequest extends AmazonWebServiceRequest implements
      *        <p>
      *        <code>status</code> - The status of the snapshot (<code>pending</code> | <code>completed</code> |
      *        <code>error</code>).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>storage-tier</code> - The storage tier of the snapshot (<code>archive</code> | <code>standard</code>
+     *        ).
      *        </p>
      *        </li>
      *        <li>

@@ -31,6 +31,12 @@ public class LensReviewSummary implements Serializable, Cloneable, StructuredPoj
     private String lensAlias;
     /**
      * <p>
+     * The ARN for the lens.
+     * </p>
+     */
+    private String lensArn;
+    /**
+     * <p>
      * The version of the lens.
      * </p>
      */
@@ -71,6 +77,46 @@ public class LensReviewSummary implements Serializable, Cloneable, StructuredPoj
 
     public LensReviewSummary withLensAlias(String lensAlias) {
         setLensAlias(lensAlias);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ARN for the lens.
+     * </p>
+     * 
+     * @param lensArn
+     *        The ARN for the lens.
+     */
+
+    public void setLensArn(String lensArn) {
+        this.lensArn = lensArn;
+    }
+
+    /**
+     * <p>
+     * The ARN for the lens.
+     * </p>
+     * 
+     * @return The ARN for the lens.
+     */
+
+    public String getLensArn() {
+        return this.lensArn;
+    }
+
+    /**
+     * <p>
+     * The ARN for the lens.
+     * </p>
+     * 
+     * @param lensArn
+     *        The ARN for the lens.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LensReviewSummary withLensArn(String lensArn) {
+        setLensArn(lensArn);
         return this;
     }
 
@@ -293,6 +339,8 @@ public class LensReviewSummary implements Serializable, Cloneable, StructuredPoj
         sb.append("{");
         if (getLensAlias() != null)
             sb.append("LensAlias: ").append(getLensAlias()).append(",");
+        if (getLensArn() != null)
+            sb.append("LensArn: ").append(getLensArn()).append(",");
         if (getLensVersion() != null)
             sb.append("LensVersion: ").append(getLensVersion()).append(",");
         if (getLensName() != null)
@@ -320,6 +368,10 @@ public class LensReviewSummary implements Serializable, Cloneable, StructuredPoj
         if (other.getLensAlias() == null ^ this.getLensAlias() == null)
             return false;
         if (other.getLensAlias() != null && other.getLensAlias().equals(this.getLensAlias()) == false)
+            return false;
+        if (other.getLensArn() == null ^ this.getLensArn() == null)
+            return false;
+        if (other.getLensArn() != null && other.getLensArn().equals(this.getLensArn()) == false)
             return false;
         if (other.getLensVersion() == null ^ this.getLensVersion() == null)
             return false;
@@ -350,6 +402,7 @@ public class LensReviewSummary implements Serializable, Cloneable, StructuredPoj
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getLensAlias() == null) ? 0 : getLensAlias().hashCode());
+        hashCode = prime * hashCode + ((getLensArn() == null) ? 0 : getLensArn().hashCode());
         hashCode = prime * hashCode + ((getLensVersion() == null) ? 0 : getLensVersion().hashCode());
         hashCode = prime * hashCode + ((getLensName() == null) ? 0 : getLensName().hashCode());
         hashCode = prime * hashCode + ((getLensStatus() == null) ? 0 : getLensStatus().hashCode());

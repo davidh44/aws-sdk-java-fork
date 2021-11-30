@@ -48,10 +48,10 @@ public class MaintenanceWindowTarget implements Serializable, Cloneable, Structu
     private String resourceType;
     /**
      * <p>
-     * The targets, either instances or tags.
+     * The targets, either managed nodes or tags.
      * </p>
      * <p>
-     * Specify instances using the following format:
+     * Specify managed nodes using the following format:
      * </p>
      * <p>
      * <code>Key=instanceids,Values=&lt;instanceid1&gt;,&lt;instanceid2&gt;</code>
@@ -239,10 +239,10 @@ public class MaintenanceWindowTarget implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The targets, either instances or tags.
+     * The targets, either managed nodes or tags.
      * </p>
      * <p>
-     * Specify instances using the following format:
+     * Specify managed nodes using the following format:
      * </p>
      * <p>
      * <code>Key=instanceids,Values=&lt;instanceid1&gt;,&lt;instanceid2&gt;</code>
@@ -254,9 +254,9 @@ public class MaintenanceWindowTarget implements Serializable, Cloneable, Structu
      * <code>Key=&lt;tag name&gt;,Values=&lt;tag value&gt;</code>.
      * </p>
      * 
-     * @return The targets, either instances or tags.</p>
+     * @return The targets, either managed nodes or tags.</p>
      *         <p>
-     *         Specify instances using the following format:
+     *         Specify managed nodes using the following format:
      *         </p>
      *         <p>
      *         <code>Key=instanceids,Values=&lt;instanceid1&gt;,&lt;instanceid2&gt;</code>
@@ -277,10 +277,10 @@ public class MaintenanceWindowTarget implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The targets, either instances or tags.
+     * The targets, either managed nodes or tags.
      * </p>
      * <p>
-     * Specify instances using the following format:
+     * Specify managed nodes using the following format:
      * </p>
      * <p>
      * <code>Key=instanceids,Values=&lt;instanceid1&gt;,&lt;instanceid2&gt;</code>
@@ -293,9 +293,9 @@ public class MaintenanceWindowTarget implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param targets
-     *        The targets, either instances or tags.</p>
+     *        The targets, either managed nodes or tags.</p>
      *        <p>
-     *        Specify instances using the following format:
+     *        Specify managed nodes using the following format:
      *        </p>
      *        <p>
      *        <code>Key=instanceids,Values=&lt;instanceid1&gt;,&lt;instanceid2&gt;</code>
@@ -318,10 +318,10 @@ public class MaintenanceWindowTarget implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The targets, either instances or tags.
+     * The targets, either managed nodes or tags.
      * </p>
      * <p>
-     * Specify instances using the following format:
+     * Specify managed nodes using the following format:
      * </p>
      * <p>
      * <code>Key=instanceids,Values=&lt;instanceid1&gt;,&lt;instanceid2&gt;</code>
@@ -339,9 +339,9 @@ public class MaintenanceWindowTarget implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param targets
-     *        The targets, either instances or tags.</p>
+     *        The targets, either managed nodes or tags.</p>
      *        <p>
-     *        Specify instances using the following format:
+     *        Specify managed nodes using the following format:
      *        </p>
      *        <p>
      *        <code>Key=instanceids,Values=&lt;instanceid1&gt;,&lt;instanceid2&gt;</code>
@@ -366,10 +366,10 @@ public class MaintenanceWindowTarget implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The targets, either instances or tags.
+     * The targets, either managed nodes or tags.
      * </p>
      * <p>
-     * Specify instances using the following format:
+     * Specify managed nodes using the following format:
      * </p>
      * <p>
      * <code>Key=instanceids,Values=&lt;instanceid1&gt;,&lt;instanceid2&gt;</code>
@@ -382,9 +382,9 @@ public class MaintenanceWindowTarget implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param targets
-     *        The targets, either instances or tags.</p>
+     *        The targets, either managed nodes or tags.</p>
      *        <p>
-     *        Specify instances using the following format:
+     *        Specify managed nodes using the following format:
      *        </p>
      *        <p>
      *        <code>Key=instanceids,Values=&lt;instanceid1&gt;,&lt;instanceid2&gt;</code>

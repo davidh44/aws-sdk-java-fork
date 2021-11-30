@@ -26,7 +26,7 @@ public class GetDeployablePatchSnapshotForInstanceResult extends com.amazonaws.A
 
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      */
     private String instanceId;
@@ -44,19 +44,19 @@ public class GetDeployablePatchSnapshotForInstanceResult extends com.amazonaws.A
     private String snapshotDownloadUrl;
     /**
      * <p>
-     * Returns the specific operating system (for example Windows Server 2012 or Amazon Linux 2015.09) on the instance
-     * for the specified patch snapshot.
+     * Returns the specific operating system (for example Windows Server 2012 or Amazon Linux 2015.09) on the managed
+     * node for the specified patch snapshot.
      * </p>
      */
     private String product;
 
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      * 
      * @param instanceId
-     *        The instance ID.
+     *        The managed node ID.
      */
 
     public void setInstanceId(String instanceId) {
@@ -65,10 +65,10 @@ public class GetDeployablePatchSnapshotForInstanceResult extends com.amazonaws.A
 
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      * 
-     * @return The instance ID.
+     * @return The managed node ID.
      */
 
     public String getInstanceId() {
@@ -77,11 +77,11 @@ public class GetDeployablePatchSnapshotForInstanceResult extends com.amazonaws.A
 
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      * 
      * @param instanceId
-     *        The instance ID.
+     *        The managed node ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -175,13 +175,13 @@ public class GetDeployablePatchSnapshotForInstanceResult extends com.amazonaws.A
 
     /**
      * <p>
-     * Returns the specific operating system (for example Windows Server 2012 or Amazon Linux 2015.09) on the instance
-     * for the specified patch snapshot.
+     * Returns the specific operating system (for example Windows Server 2012 or Amazon Linux 2015.09) on the managed
+     * node for the specified patch snapshot.
      * </p>
      * 
      * @param product
      *        Returns the specific operating system (for example Windows Server 2012 or Amazon Linux 2015.09) on the
-     *        instance for the specified patch snapshot.
+     *        managed node for the specified patch snapshot.
      */
 
     public void setProduct(String product) {
@@ -190,12 +190,12 @@ public class GetDeployablePatchSnapshotForInstanceResult extends com.amazonaws.A
 
     /**
      * <p>
-     * Returns the specific operating system (for example Windows Server 2012 or Amazon Linux 2015.09) on the instance
-     * for the specified patch snapshot.
+     * Returns the specific operating system (for example Windows Server 2012 or Amazon Linux 2015.09) on the managed
+     * node for the specified patch snapshot.
      * </p>
      * 
      * @return Returns the specific operating system (for example Windows Server 2012 or Amazon Linux 2015.09) on the
-     *         instance for the specified patch snapshot.
+     *         managed node for the specified patch snapshot.
      */
 
     public String getProduct() {
@@ -204,13 +204,13 @@ public class GetDeployablePatchSnapshotForInstanceResult extends com.amazonaws.A
 
     /**
      * <p>
-     * Returns the specific operating system (for example Windows Server 2012 or Amazon Linux 2015.09) on the instance
-     * for the specified patch snapshot.
+     * Returns the specific operating system (for example Windows Server 2012 or Amazon Linux 2015.09) on the managed
+     * node for the specified patch snapshot.
      * </p>
      * 
      * @param product
      *        Returns the specific operating system (for example Windows Server 2012 or Amazon Linux 2015.09) on the
-     *        instance for the specified patch snapshot.
+     *        managed node for the specified patch snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

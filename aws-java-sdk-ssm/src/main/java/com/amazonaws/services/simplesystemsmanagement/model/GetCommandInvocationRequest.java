@@ -33,9 +33,9 @@ public class GetCommandInvocationRequest extends com.amazonaws.AmazonWebServiceR
     private String commandId;
     /**
      * <p>
-     * (Required) The ID of the managed instance targeted by the command. A managed instance can be an Amazon Elastic
-     * Compute Cloud (Amazon EC2) instance or an instance in your hybrid environment that is configured for Amazon Web
-     * Services Systems Manager.
+     * (Required) The ID of the managed node targeted by the command. A <i>managed node</i> can be an Amazon Elastic
+     * Compute Cloud (Amazon EC2) instance, edge device, and on-premises server or VM in your hybrid environment that is
+     * configured for Amazon Web Services Systems Manager.
      * </p>
      */
     private String instanceId;
@@ -100,15 +100,15 @@ public class GetCommandInvocationRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * (Required) The ID of the managed instance targeted by the command. A managed instance can be an Amazon Elastic
-     * Compute Cloud (Amazon EC2) instance or an instance in your hybrid environment that is configured for Amazon Web
-     * Services Systems Manager.
+     * (Required) The ID of the managed node targeted by the command. A <i>managed node</i> can be an Amazon Elastic
+     * Compute Cloud (Amazon EC2) instance, edge device, and on-premises server or VM in your hybrid environment that is
+     * configured for Amazon Web Services Systems Manager.
      * </p>
      * 
      * @param instanceId
-     *        (Required) The ID of the managed instance targeted by the command. A managed instance can be an Amazon
-     *        Elastic Compute Cloud (Amazon EC2) instance or an instance in your hybrid environment that is configured
-     *        for Amazon Web Services Systems Manager.
+     *        (Required) The ID of the managed node targeted by the command. A <i>managed node</i> can be an Amazon
+     *        Elastic Compute Cloud (Amazon EC2) instance, edge device, and on-premises server or VM in your hybrid
+     *        environment that is configured for Amazon Web Services Systems Manager.
      */
 
     public void setInstanceId(String instanceId) {
@@ -117,14 +117,14 @@ public class GetCommandInvocationRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * (Required) The ID of the managed instance targeted by the command. A managed instance can be an Amazon Elastic
-     * Compute Cloud (Amazon EC2) instance or an instance in your hybrid environment that is configured for Amazon Web
-     * Services Systems Manager.
+     * (Required) The ID of the managed node targeted by the command. A <i>managed node</i> can be an Amazon Elastic
+     * Compute Cloud (Amazon EC2) instance, edge device, and on-premises server or VM in your hybrid environment that is
+     * configured for Amazon Web Services Systems Manager.
      * </p>
      * 
-     * @return (Required) The ID of the managed instance targeted by the command. A managed instance can be an Amazon
-     *         Elastic Compute Cloud (Amazon EC2) instance or an instance in your hybrid environment that is configured
-     *         for Amazon Web Services Systems Manager.
+     * @return (Required) The ID of the managed node targeted by the command. A <i>managed node</i> can be an Amazon
+     *         Elastic Compute Cloud (Amazon EC2) instance, edge device, and on-premises server or VM in your hybrid
+     *         environment that is configured for Amazon Web Services Systems Manager.
      */
 
     public String getInstanceId() {
@@ -133,15 +133,15 @@ public class GetCommandInvocationRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * (Required) The ID of the managed instance targeted by the command. A managed instance can be an Amazon Elastic
-     * Compute Cloud (Amazon EC2) instance or an instance in your hybrid environment that is configured for Amazon Web
-     * Services Systems Manager.
+     * (Required) The ID of the managed node targeted by the command. A <i>managed node</i> can be an Amazon Elastic
+     * Compute Cloud (Amazon EC2) instance, edge device, and on-premises server or VM in your hybrid environment that is
+     * configured for Amazon Web Services Systems Manager.
      * </p>
      * 
      * @param instanceId
-     *        (Required) The ID of the managed instance targeted by the command. A managed instance can be an Amazon
-     *        Elastic Compute Cloud (Amazon EC2) instance or an instance in your hybrid environment that is configured
-     *        for Amazon Web Services Systems Manager.
+     *        (Required) The ID of the managed node targeted by the command. A <i>managed node</i> can be an Amazon
+     *        Elastic Compute Cloud (Amazon EC2) instance, edge device, and on-premises server or VM in your hybrid
+     *        environment that is configured for Amazon Web Services Systems Manager.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

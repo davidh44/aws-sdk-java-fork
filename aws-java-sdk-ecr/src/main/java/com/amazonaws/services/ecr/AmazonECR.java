@@ -189,6 +189,29 @@ public interface AmazonECR {
 
     /**
      * <p>
+     * Gets the scanning configuration for one or more repositories.
+     * </p>
+     * 
+     * @param batchGetRepositoryScanningConfigurationRequest
+     * @return Result of the BatchGetRepositoryScanningConfiguration operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @throws RepositoryNotFoundException
+     *         The specified repository could not be found. Check the spelling of the specified repository and ensure
+     *         that you are performing operations on the correct registry.
+     * @throws ValidationException
+     *         There was an exception validating this request.
+     * @sample AmazonECR.BatchGetRepositoryScanningConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/BatchGetRepositoryScanningConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    BatchGetRepositoryScanningConfigurationResult batchGetRepositoryScanningConfiguration(
+            BatchGetRepositoryScanningConfigurationRequest batchGetRepositoryScanningConfigurationRequest);
+
+    /**
+     * <p>
      * Informs Amazon ECR that the image layer upload has completed for a specified registry, repository name, and
      * upload ID. You can optionally provide a <code>sha256</code> digest of the image layer for data validation
      * purposes.
@@ -231,6 +254,35 @@ public interface AmazonECR {
      *      Documentation</a>
      */
     CompleteLayerUploadResult completeLayerUpload(CompleteLayerUploadRequest completeLayerUploadRequest);
+
+    /**
+     * <p>
+     * Creates a pull through cache rule. A pull through cache rule provides a way to cache images from an external
+     * public registry in your Amazon ECR private registry.
+     * </p>
+     * 
+     * @param createPullThroughCacheRuleRequest
+     * @return Result of the CreatePullThroughCacheRule operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @throws ValidationException
+     *         There was an exception validating this request.
+     * @throws PullThroughCacheRuleAlreadyExistsException
+     *         A pull through cache rule with these settings already exists for the private registry.
+     * @throws UnsupportedUpstreamRegistryException
+     *         The specified upstream registry isn't supported.
+     * @throws LimitExceededException
+     *         The operation did not succeed because it would have exceeded a service limit for your account. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/service-quotas.html">Amazon ECR service
+     *         quotas</a> in the Amazon Elastic Container Registry User Guide.
+     * @sample AmazonECR.CreatePullThroughCacheRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/CreatePullThroughCacheRule" target="_top">AWS
+     *      API Documentation</a>
+     */
+    CreatePullThroughCacheRuleResult createPullThroughCacheRule(CreatePullThroughCacheRuleRequest createPullThroughCacheRuleRequest);
 
     /**
      * <p>
@@ -287,6 +339,27 @@ public interface AmazonECR {
      *      Documentation</a>
      */
     DeleteLifecyclePolicyResult deleteLifecyclePolicy(DeleteLifecyclePolicyRequest deleteLifecyclePolicyRequest);
+
+    /**
+     * <p>
+     * Deletes a pull through cache rule.
+     * </p>
+     * 
+     * @param deletePullThroughCacheRuleRequest
+     * @return Result of the DeletePullThroughCacheRule operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @throws ValidationException
+     *         There was an exception validating this request.
+     * @throws PullThroughCacheRuleNotFoundException
+     *         The pull through cache rule was not found. Specify a valid pull through cache rule and try again.
+     * @sample AmazonECR.DeletePullThroughCacheRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/DeletePullThroughCacheRule" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeletePullThroughCacheRuleResult deletePullThroughCacheRule(DeletePullThroughCacheRuleRequest deletePullThroughCacheRuleRequest);
 
     /**
      * <p>
@@ -400,6 +473,8 @@ public interface AmazonECR {
      * @throws ScanNotFoundException
      *         The specified image scan could not be found. Ensure that image scanning is enabled on the repository and
      *         try again.
+     * @throws ValidationException
+     *         There was an exception validating this request.
      * @sample AmazonECR.DescribeImageScanFindings
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/DescribeImageScanFindings" target="_top">AWS
      *      API Documentation</a>
@@ -434,6 +509,27 @@ public interface AmazonECR {
      *      Documentation</a>
      */
     DescribeImagesResult describeImages(DescribeImagesRequest describeImagesRequest);
+
+    /**
+     * <p>
+     * Returns the pull through cache rules for a registry.
+     * </p>
+     * 
+     * @param describePullThroughCacheRulesRequest
+     * @return Result of the DescribePullThroughCacheRules operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @throws ValidationException
+     *         There was an exception validating this request.
+     * @throws PullThroughCacheRuleNotFoundException
+     *         The pull through cache rule was not found. Specify a valid pull through cache rule and try again.
+     * @sample AmazonECR.DescribePullThroughCacheRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/DescribePullThroughCacheRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribePullThroughCacheRulesResult describePullThroughCacheRules(DescribePullThroughCacheRulesRequest describePullThroughCacheRulesRequest);
 
     /**
      * <p>
@@ -604,6 +700,25 @@ public interface AmazonECR {
 
     /**
      * <p>
+     * Retrieves the scanning configuration for a registry.
+     * </p>
+     * 
+     * @param getRegistryScanningConfigurationRequest
+     * @return Result of the GetRegistryScanningConfiguration operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @throws ValidationException
+     *         There was an exception validating this request.
+     * @sample AmazonECR.GetRegistryScanningConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/GetRegistryScanningConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetRegistryScanningConfigurationResult getRegistryScanningConfiguration(GetRegistryScanningConfigurationRequest getRegistryScanningConfigurationRequest);
+
+    /**
+     * <p>
      * Retrieves the repository policy for the specified repository.
      * </p>
      * 
@@ -767,6 +882,8 @@ public interface AmazonECR {
      * @throws RepositoryNotFoundException
      *         The specified repository could not be found. Check the spelling of the specified repository and ensure
      *         that you are performing operations on the correct registry.
+     * @throws ValidationException
+     *         There was an exception validating this request.
      * @sample AmazonECR.PutImageScanningConfiguration
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/PutImageScanningConfiguration"
      *      target="_top">AWS API Documentation</a>
@@ -841,6 +958,25 @@ public interface AmazonECR {
      *      Documentation</a>
      */
     PutRegistryPolicyResult putRegistryPolicy(PutRegistryPolicyRequest putRegistryPolicyRequest);
+
+    /**
+     * <p>
+     * Creates or updates the scanning configuration for your private registry.
+     * </p>
+     * 
+     * @param putRegistryScanningConfigurationRequest
+     * @return Result of the PutRegistryScanningConfiguration operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @throws ValidationException
+     *         There was an exception validating this request.
+     * @sample AmazonECR.PutRegistryScanningConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/PutRegistryScanningConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    PutRegistryScanningConfigurationResult putRegistryScanningConfiguration(PutRegistryScanningConfigurationRequest putRegistryScanningConfigurationRequest);
 
     /**
      * <p>
@@ -921,6 +1057,8 @@ public interface AmazonECR {
      *         that you are performing operations on the correct registry.
      * @throws ImageNotFoundException
      *         The image requested does not exist in the specified repository.
+     * @throws ValidationException
+     *         There was an exception validating this request.
      * @sample AmazonECR.StartImageScan
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/StartImageScan" target="_top">AWS API
      *      Documentation</a>

@@ -43,7 +43,11 @@ public enum ExportableVolumeField {
     RecommendationOptionsConfigurationVolumeSize("RecommendationOptionsConfigurationVolumeSize"),
     RecommendationOptionsMonthlyPrice("RecommendationOptionsMonthlyPrice"),
     RecommendationOptionsPerformanceRisk("RecommendationOptionsPerformanceRisk"),
-    LastRefreshTimestamp("LastRefreshTimestamp");
+    LastRefreshTimestamp("LastRefreshTimestamp"),
+    CurrentPerformanceRisk("CurrentPerformanceRisk"),
+    RecommendationOptionsSavingsOpportunityPercentage("RecommendationOptionsSavingsOpportunityPercentage"),
+    RecommendationOptionsEstimatedMonthlySavingsCurrency("RecommendationOptionsEstimatedMonthlySavingsCurrency"),
+    RecommendationOptionsEstimatedMonthlySavingsValue("RecommendationOptionsEstimatedMonthlySavingsValue");
 
     private String value;
 

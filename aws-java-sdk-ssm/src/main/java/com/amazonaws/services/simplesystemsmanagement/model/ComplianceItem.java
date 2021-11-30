@@ -44,7 +44,7 @@ public class ComplianceItem implements Serializable, Cloneable, StructuredPojo {
     private String resourceType;
     /**
      * <p>
-     * An ID for the resource. For a managed instance, this is the instance ID.
+     * An ID for the resource. For a managed node, this is the node ID.
      * </p>
      */
     private String resourceId;
@@ -178,11 +178,11 @@ public class ComplianceItem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An ID for the resource. For a managed instance, this is the instance ID.
+     * An ID for the resource. For a managed node, this is the node ID.
      * </p>
      * 
      * @param resourceId
-     *        An ID for the resource. For a managed instance, this is the instance ID.
+     *        An ID for the resource. For a managed node, this is the node ID.
      */
 
     public void setResourceId(String resourceId) {
@@ -191,10 +191,10 @@ public class ComplianceItem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An ID for the resource. For a managed instance, this is the instance ID.
+     * An ID for the resource. For a managed node, this is the node ID.
      * </p>
      * 
-     * @return An ID for the resource. For a managed instance, this is the instance ID.
+     * @return An ID for the resource. For a managed node, this is the node ID.
      */
 
     public String getResourceId() {
@@ -203,11 +203,11 @@ public class ComplianceItem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An ID for the resource. For a managed instance, this is the instance ID.
+     * An ID for the resource. For a managed node, this is the node ID.
      * </p>
      * 
      * @param resourceId
-     *        An ID for the resource. For a managed instance, this is the instance ID.
+     *        An ID for the resource. For a managed node, this is the node ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

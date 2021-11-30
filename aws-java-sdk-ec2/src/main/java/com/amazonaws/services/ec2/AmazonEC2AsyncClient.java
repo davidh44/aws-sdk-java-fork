@@ -9783,6 +9783,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeSnapshotTierStatusResult> describeSnapshotTierStatusAsync(DescribeSnapshotTierStatusRequest request) {
+
+        return describeSnapshotTierStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeSnapshotTierStatusResult> describeSnapshotTierStatusAsync(final DescribeSnapshotTierStatusRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeSnapshotTierStatusRequest, DescribeSnapshotTierStatusResult> asyncHandler) {
+        final DescribeSnapshotTierStatusRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeSnapshotTierStatusResult>() {
+            @Override
+            public DescribeSnapshotTierStatusResult call() throws Exception {
+                DescribeSnapshotTierStatusResult result = null;
+
+                try {
+                    result = executeDescribeSnapshotTierStatus(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeSnapshotsResult> describeSnapshotsAsync(DescribeSnapshotsRequest request) {
 
         return describeSnapshotsAsync(request, null);
@@ -13943,6 +13976,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<ListSnapshotsInRecycleBinResult> listSnapshotsInRecycleBinAsync(ListSnapshotsInRecycleBinRequest request) {
+
+        return listSnapshotsInRecycleBinAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSnapshotsInRecycleBinResult> listSnapshotsInRecycleBinAsync(final ListSnapshotsInRecycleBinRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListSnapshotsInRecycleBinRequest, ListSnapshotsInRecycleBinResult> asyncHandler) {
+        final ListSnapshotsInRecycleBinRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListSnapshotsInRecycleBinResult>() {
+            @Override
+            public ListSnapshotsInRecycleBinResult call() throws Exception {
+                ListSnapshotsInRecycleBinResult result = null;
+
+                try {
+                    result = executeListSnapshotsInRecycleBin(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ModifyAddressAttributeResult> modifyAddressAttributeAsync(ModifyAddressAttributeRequest request) {
 
         return modifyAddressAttributeAsync(request, null);
@@ -14828,6 +14894,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
 
                 try {
                     result = executeModifySnapshotAttribute(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifySnapshotTierResult> modifySnapshotTierAsync(ModifySnapshotTierRequest request) {
+
+        return modifySnapshotTierAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifySnapshotTierResult> modifySnapshotTierAsync(final ModifySnapshotTierRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ModifySnapshotTierRequest, ModifySnapshotTierResult> asyncHandler) {
+        final ModifySnapshotTierRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ModifySnapshotTierResult>() {
+            @Override
+            public ModifySnapshotTierResult call() throws Exception {
+                ModifySnapshotTierResult result = null;
+
+                try {
+                    result = executeModifySnapshotTier(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -16743,6 +16842,73 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
 
                 try {
                     result = executeRestoreManagedPrefixListVersion(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<RestoreSnapshotFromRecycleBinResult> restoreSnapshotFromRecycleBinAsync(RestoreSnapshotFromRecycleBinRequest request) {
+
+        return restoreSnapshotFromRecycleBinAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RestoreSnapshotFromRecycleBinResult> restoreSnapshotFromRecycleBinAsync(
+            final RestoreSnapshotFromRecycleBinRequest request,
+            final com.amazonaws.handlers.AsyncHandler<RestoreSnapshotFromRecycleBinRequest, RestoreSnapshotFromRecycleBinResult> asyncHandler) {
+        final RestoreSnapshotFromRecycleBinRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<RestoreSnapshotFromRecycleBinResult>() {
+            @Override
+            public RestoreSnapshotFromRecycleBinResult call() throws Exception {
+                RestoreSnapshotFromRecycleBinResult result = null;
+
+                try {
+                    result = executeRestoreSnapshotFromRecycleBin(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<RestoreSnapshotTierResult> restoreSnapshotTierAsync(RestoreSnapshotTierRequest request) {
+
+        return restoreSnapshotTierAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RestoreSnapshotTierResult> restoreSnapshotTierAsync(final RestoreSnapshotTierRequest request,
+            final com.amazonaws.handlers.AsyncHandler<RestoreSnapshotTierRequest, RestoreSnapshotTierResult> asyncHandler) {
+        final RestoreSnapshotTierRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<RestoreSnapshotTierResult>() {
+            @Override
+            public RestoreSnapshotTierResult call() throws Exception {
+                RestoreSnapshotTierResult result = null;
+
+                try {
+                    result = executeRestoreSnapshotTier(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

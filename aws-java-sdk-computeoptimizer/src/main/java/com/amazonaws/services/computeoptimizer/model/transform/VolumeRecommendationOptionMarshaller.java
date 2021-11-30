@@ -33,6 +33,8 @@ public class VolumeRecommendationOptionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("performanceRisk").build();
     private static final MarshallingInfo<Integer> RANK_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("rank").build();
+    private static final MarshallingInfo<StructuredPojo> SAVINGSOPPORTUNITY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("savingsOpportunity").build();
 
     private static final VolumeRecommendationOptionMarshaller instance = new VolumeRecommendationOptionMarshaller();
 
@@ -53,6 +55,7 @@ public class VolumeRecommendationOptionMarshaller {
             protocolMarshaller.marshall(volumeRecommendationOption.getConfiguration(), CONFIGURATION_BINDING);
             protocolMarshaller.marshall(volumeRecommendationOption.getPerformanceRisk(), PERFORMANCERISK_BINDING);
             protocolMarshaller.marshall(volumeRecommendationOption.getRank(), RANK_BINDING);
+            protocolMarshaller.marshall(volumeRecommendationOption.getSavingsOpportunity(), SAVINGSOPPORTUNITY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

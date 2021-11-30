@@ -50,13 +50,13 @@ import com.amazonaws.services.wellarchitected.model.transform.*;
  * Client for accessing Well-Architected. All service calls made using this client are blocking, and will not return
  * until the service call completes.
  * <p>
- * <fullname>AWS Well-Architected Tool</fullname>
+ * <fullname>Well-Architected Tool</fullname>
  * <p>
- * This is the <i>AWS Well-Architected Tool API Reference</i>. The AWS Well-Architected Tool API provides programmatic
- * access to the <a href="http://aws.amazon.com/well-architected-tool">AWS Well-Architected Tool</a> in the <a
- * href="https://console.aws.amazon.com/wellarchitected">AWS Management Console</a>. For information about the AWS
- * Well-Architected Tool, see the <a href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/intro.html">AWS
- * Well-Architected Tool User Guide</a>.
+ * This is the <i>Well-Architected Tool API Reference</i>. The WA Tool API provides programmatic access to the <a
+ * href="http://aws.amazon.com/well-architected-tool">Well-Architected Tool</a> in the <a
+ * href="https://console.aws.amazon.com/wellarchitected">Amazon Web Services Management Console</a>. For information
+ * about the Well-Architected Tool, see the <a
+ * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/intro.html">Well-Architected Tool User Guide</a>.
  * </p>
  */
 @ThreadSafe
@@ -155,6 +155,20 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * <p>
      * Associate a lens to a workload.
      * </p>
+     * <p>
+     * Up to 10 lenses can be associated with a workload in a single API operation. A maximum of 20 lenses can be
+     * associated with a workload.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * By accessing and/or applying custom lenses created by another Amazon Web Services user or account, you
+     * acknowledge that custom lenses created by other users and shared with you are Third Party Content as defined in
+     * the Amazon Web Services Customer Agreement.
+     * </p>
+     * </note>
      * 
      * @param associateLensesRequest
      *        Input to associate lens reviews.
@@ -166,7 +180,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ConflictException
      *         The resource already exists.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -221,6 +235,167 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
+     * Create a lens share.
+     * </p>
+     * <p>
+     * The owner of a lens can share it with other Amazon Web Services accounts and IAM users in the same Amazon Web
+     * Services Region. Shared access to a lens is not removed until the lens invitation is deleted.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * By sharing your custom lenses with other Amazon Web Services accounts, you acknowledge that Amazon Web Services
+     * will make your custom lenses available to those other accounts. Those other accounts may continue to access and
+     * use your shared custom lenses even if you delete the custom lenses from your own Amazon Web Services account or
+     * terminate your Amazon Web Services account.
+     * </p>
+     * </note>
+     * 
+     * @param createLensShareRequest
+     * @return Result of the CreateLensShare operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ConflictException
+     *         The resource already exists.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ServiceQuotaExceededException
+     *         The user has reached their resource quota.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.CreateLensShare
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/CreateLensShare"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateLensShareResult createLensShare(CreateLensShareRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateLensShare(request);
+    }
+
+    @SdkInternalApi
+    final CreateLensShareResult executeCreateLensShare(CreateLensShareRequest createLensShareRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createLensShareRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateLensShareRequest> request = null;
+        Response<CreateLensShareResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateLensShareRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createLensShareRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateLensShare");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateLensShareResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateLensShareResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Create a new lens version.
+     * </p>
+     * <p>
+     * A lens can have up to 100 versions.
+     * </p>
+     * <p>
+     * After a lens has been imported, create a new lens version to publish it. The owner of a lens can share the lens
+     * with other Amazon Web Services accounts and IAM users in the same Amazon Web Services Region. Only the owner of a
+     * lens can delete it.
+     * </p>
+     * 
+     * @param createLensVersionRequest
+     * @return Result of the CreateLensVersion operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ServiceQuotaExceededException
+     *         The user has reached their resource quota.
+     * @throws ConflictException
+     *         The resource already exists.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.CreateLensVersion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/CreateLensVersion"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateLensVersionResult createLensVersion(CreateLensVersionRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateLensVersion(request);
+    }
+
+    @SdkInternalApi
+    final CreateLensVersionResult executeCreateLensVersion(CreateLensVersionRequest createLensVersionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createLensVersionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateLensVersionRequest> request = null;
+        Response<CreateLensVersionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateLensVersionRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createLensVersionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateLensVersion");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateLensVersionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateLensVersionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Create a milestone for an existing workload.
      * </p>
      * 
@@ -232,7 +407,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ConflictException
      *         The resource already exists.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws ServiceQuotaExceededException
@@ -294,13 +469,13 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * Create a new workload.
      * </p>
      * <p>
-     * The owner of a workload can share the workload with other AWS accounts and IAM users in the same AWS Region. Only
-     * the owner of a workload can delete it.
+     * The owner of a workload can share the workload with other Amazon Web Services accounts and IAM users in the same
+     * Amazon Web Services Region. Only the owner of a workload can delete it.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/define-workload.html">Defining a Workload</a>
-     * in the <i>AWS Well-Architected Tool User Guide</i>.
+     * in the <i>Well-Architected Tool User Guide</i>.
      * </p>
      * 
      * @param createWorkloadRequest
@@ -313,7 +488,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ServiceQuotaExceededException
      *         The user has reached their resource quota.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -371,13 +546,13 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * Create a workload share.
      * </p>
      * <p>
-     * The owner of a workload can share it with other AWS accounts and IAM users in the same AWS Region. Shared access
-     * to a workload is not removed until the workload invitation is deleted.
+     * The owner of a workload can share it with other Amazon Web Services accounts and IAM users in the same Amazon Web
+     * Services Region. Shared access to a workload is not removed until the workload invitation is deleted.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/workloads-sharing.html">Sharing a Workload</a>
-     * in the <i>AWS Well-Architected Tool User Guide</i>.
+     * in the <i>Well-Architected Tool User Guide</i>.
      * </p>
      * 
      * @param createWorkloadShareRequest
@@ -388,7 +563,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ConflictException
      *         The resource already exists.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws ServiceQuotaExceededException
@@ -447,6 +622,171 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
+     * Delete an existing lens.
+     * </p>
+     * <p>
+     * Only the owner of a lens can delete it. After the lens is deleted, Amazon Web Services accounts and IAM users
+     * that you shared the lens with can continue to use it, but they will no longer be able to apply it to new
+     * workloads.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * By sharing your custom lenses with other Amazon Web Services accounts, you acknowledge that Amazon Web Services
+     * will make your custom lenses available to those other accounts. Those other accounts may continue to access and
+     * use your shared custom lenses even if you delete the custom lenses from your own Amazon Web Services account or
+     * terminate your Amazon Web Services account.
+     * </p>
+     * </note>
+     * 
+     * @param deleteLensRequest
+     * @return Result of the DeleteLens operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ConflictException
+     *         The resource already exists.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.DeleteLens
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/DeleteLens" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteLensResult deleteLens(DeleteLensRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteLens(request);
+    }
+
+    @SdkInternalApi
+    final DeleteLensResult executeDeleteLens(DeleteLensRequest deleteLensRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteLensRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteLensRequest> request = null;
+        Response<DeleteLensResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteLensRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteLensRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteLens");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteLensResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteLensResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Delete a lens share.
+     * </p>
+     * <p>
+     * After the lens share is deleted, Amazon Web Services accounts and IAM users that you shared the lens with can
+     * continue to use it, but they will no longer be able to apply it to new workloads.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * By sharing your custom lenses with other Amazon Web Services accounts, you acknowledge that Amazon Web Services
+     * will make your custom lenses available to those other accounts. Those other accounts may continue to access and
+     * use your shared custom lenses even if you delete the custom lenses from your own Amazon Web Services account or
+     * terminate your Amazon Web Services account.
+     * </p>
+     * </note>
+     * 
+     * @param deleteLensShareRequest
+     * @return Result of the DeleteLensShare operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ConflictException
+     *         The resource already exists.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.DeleteLensShare
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/DeleteLensShare"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteLensShareResult deleteLensShare(DeleteLensShareRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteLensShare(request);
+    }
+
+    @SdkInternalApi
+    final DeleteLensShareResult executeDeleteLensShare(DeleteLensShareRequest deleteLensShareRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteLensShareRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteLensShareRequest> request = null;
+        Response<DeleteLensShareResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteLensShareRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteLensShareRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteLensShare");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteLensShareResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteLensShareResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Delete an existing workload.
      * </p>
      * 
@@ -460,7 +800,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ConflictException
      *         The resource already exists.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -524,7 +864,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ValidationException
      *         The user input is not valid.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws ConflictException
@@ -585,9 +925,13 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * <p>
      * Disassociate a lens from a workload.
      * </p>
+     * <p>
+     * Up to 10 lenses can be disassociated from a workload in a single API operation.
+     * </p>
      * <note>
      * <p>
-     * The AWS Well-Architected Framework lens (<code>wellarchitected</code>) cannot be removed from a workload.
+     * The Amazon Web Services Well-Architected Framework lens (<code>wellarchitected</code>) cannot be removed from a
+     * workload.
      * </p>
      * </note>
      * 
@@ -601,7 +945,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ConflictException
      *         The resource already exists.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -656,6 +1000,87 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
+     * Export an existing lens.
+     * </p>
+     * <p>
+     * Lenses are defined in JSON. For more information, see <a
+     * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/lenses-format-specification.html">JSON format
+     * specification</a> in the <i>Well-Architected Tool User Guide</i>. Only the owner of a lens can export it.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * Do not include or gather personal identifiable information (PII) of end users or other identifiable individuals
+     * in or via your custom lenses. If your custom lens or those shared with you and used in your account do include or
+     * collect PII you are responsible for: ensuring that the included PII is processed in accordance with applicable
+     * law, providing adequate privacy notices, and obtaining necessary consents for processing such data.
+     * </p>
+     * </note>
+     * 
+     * @param exportLensRequest
+     * @return Result of the ExportLens operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.ExportLens
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ExportLens" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ExportLensResult exportLens(ExportLensRequest request) {
+        request = beforeClientExecution(request);
+        return executeExportLens(request);
+    }
+
+    @SdkInternalApi
+    final ExportLensResult executeExportLens(ExportLensRequest exportLensRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(exportLensRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ExportLensRequest> request = null;
+        Response<ExportLensResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ExportLensRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(exportLensRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ExportLens");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ExportLensResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new ExportLensResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Get the answer to a specific question in a workload review.
      * </p>
      * 
@@ -667,7 +1092,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -722,6 +1147,71 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
+     * Get an existing lens.
+     * </p>
+     * 
+     * @param getLensRequest
+     * @return Result of the GetLens operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.GetLens
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/GetLens" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetLensResult getLens(GetLensRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetLens(request);
+    }
+
+    @SdkInternalApi
+    final GetLensResult executeGetLens(GetLensRequest getLensRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getLensRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetLensRequest> request = null;
+        Response<GetLensResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetLensRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getLensRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetLens");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetLensResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetLensResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Get lens review.
      * </p>
      * 
@@ -733,7 +1223,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -799,7 +1289,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -864,7 +1354,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -932,7 +1422,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -998,7 +1488,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -1053,6 +1543,98 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
+     * Import a new lens.
+     * </p>
+     * <p>
+     * The lens cannot be applied to workloads or shared with other Amazon Web Services accounts until it's published
+     * with <a>CreateLensVersion</a>
+     * </p>
+     * <p>
+     * Lenses are defined in JSON. For more information, see <a
+     * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/lenses-format-specification.html">JSON format
+     * specification</a> in the <i>Well-Architected Tool User Guide</i>.
+     * </p>
+     * <p>
+     * A custom lens cannot exceed 500 KB in size.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * Do not include or gather personal identifiable information (PII) of end users or other identifiable individuals
+     * in or via your custom lenses. If your custom lens or those shared with you and used in your account do include or
+     * collect PII you are responsible for: ensuring that the included PII is processed in accordance with applicable
+     * law, providing adequate privacy notices, and obtaining necessary consents for processing such data.
+     * </p>
+     * </note>
+     * 
+     * @param importLensRequest
+     * @return Result of the ImportLens operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ConflictException
+     *         The resource already exists.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ServiceQuotaExceededException
+     *         The user has reached their resource quota.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.ImportLens
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ImportLens" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ImportLensResult importLens(ImportLensRequest request) {
+        request = beforeClientExecution(request);
+        return executeImportLens(request);
+    }
+
+    @SdkInternalApi
+    final ImportLensResult executeImportLens(ImportLensRequest importLensRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(importLensRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ImportLensRequest> request = null;
+        Response<ImportLensResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ImportLensRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(importLensRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ImportLens");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ImportLensResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new ImportLensResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * List of answers.
      * </p>
      * 
@@ -1062,7 +1644,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ValidationException
      *         The user input is not valid.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws AccessDeniedException
@@ -1128,7 +1710,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ValidationException
      *         The user input is not valid.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws AccessDeniedException
@@ -1196,7 +1778,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ValidationException
      *         The user input is not valid.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws AccessDeniedException
@@ -1253,6 +1835,71 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
+     * List the lens shares associated with the lens.
+     * </p>
+     * 
+     * @param listLensSharesRequest
+     * @return Result of the ListLensShares operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.ListLensShares
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ListLensShares" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListLensSharesResult listLensShares(ListLensSharesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListLensShares(request);
+    }
+
+    @SdkInternalApi
+    final ListLensSharesResult executeListLensShares(ListLensSharesRequest listLensSharesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listLensSharesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListLensSharesRequest> request = null;
+        Response<ListLensSharesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListLensSharesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listLensSharesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListLensShares");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListLensSharesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListLensSharesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * List the available lenses.
      * </p>
      * 
@@ -1262,7 +1909,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ValidationException
      *         The user input is not valid.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -1326,7 +1973,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ValidationException
      *         The user input is not valid.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws AccessDeniedException
@@ -1391,7 +2038,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ValidationException
      *         The user input is not valid.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -1455,7 +2102,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ValidationException
      *         The user input is not valid.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -1516,7 +2163,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @param listTagsForResourceRequest
      * @return Result of the ListTagsForResource operation returned by the service.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @sample AWSWellArchitected.ListTagsForResource
@@ -1578,7 +2225,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ValidationException
      *         The user input is not valid.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws AccessDeniedException
@@ -1644,7 +2291,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ValidationException
      *         The user input is not valid.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -1705,7 +2352,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @param tagResourceRequest
      * @return Result of the TagResource operation returned by the service.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @sample AWSWellArchitected.TagResource
@@ -1770,7 +2417,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @param untagResourceRequest
      * @return Result of the UntagResource operation returned by the service.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @sample AWSWellArchitected.UntagResource
@@ -1836,7 +2483,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ConflictException
      *         The resource already exists.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -1904,7 +2551,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ConflictException
      *         The resource already exists.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -1968,7 +2615,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ValidationException
      *         The user input is not valid.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws ConflictException
@@ -2041,7 +2688,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ConflictException
      *         The resource already exists.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -2105,7 +2752,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ValidationException
      *         The user input is not valid.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws ConflictException
@@ -2176,7 +2823,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * @throws ConflictException
      *         The resource already exists.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException

@@ -27,7 +27,7 @@ public class StartSessionRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The instance to connect to for the session.
+     * The managed node to connect to for the session.
      * </p>
      */
     private String target;
@@ -35,7 +35,7 @@ public class StartSessionRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * The name of the SSM document to define the parameters and plugin settings for the session. For example,
      * <code>SSM-SessionManagerRunShell</code>. You can call the <a>GetDocument</a> API to verify the document exists
-     * before attempting to start a session. If no document name is provided, a shell to the instance is launched by
+     * before attempting to start a session. If no document name is provided, a shell to the managed node is launched by
      * default.
      * </p>
      */
@@ -56,11 +56,11 @@ public class StartSessionRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The instance to connect to for the session.
+     * The managed node to connect to for the session.
      * </p>
      * 
      * @param target
-     *        The instance to connect to for the session.
+     *        The managed node to connect to for the session.
      */
 
     public void setTarget(String target) {
@@ -69,10 +69,10 @@ public class StartSessionRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The instance to connect to for the session.
+     * The managed node to connect to for the session.
      * </p>
      * 
-     * @return The instance to connect to for the session.
+     * @return The managed node to connect to for the session.
      */
 
     public String getTarget() {
@@ -81,11 +81,11 @@ public class StartSessionRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The instance to connect to for the session.
+     * The managed node to connect to for the session.
      * </p>
      * 
      * @param target
-     *        The instance to connect to for the session.
+     *        The managed node to connect to for the session.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -98,15 +98,15 @@ public class StartSessionRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * The name of the SSM document to define the parameters and plugin settings for the session. For example,
      * <code>SSM-SessionManagerRunShell</code>. You can call the <a>GetDocument</a> API to verify the document exists
-     * before attempting to start a session. If no document name is provided, a shell to the instance is launched by
+     * before attempting to start a session. If no document name is provided, a shell to the managed node is launched by
      * default.
      * </p>
      * 
      * @param documentName
      *        The name of the SSM document to define the parameters and plugin settings for the session. For example,
      *        <code>SSM-SessionManagerRunShell</code>. You can call the <a>GetDocument</a> API to verify the document
-     *        exists before attempting to start a session. If no document name is provided, a shell to the instance is
-     *        launched by default.
+     *        exists before attempting to start a session. If no document name is provided, a shell to the managed node
+     *        is launched by default.
      */
 
     public void setDocumentName(String documentName) {
@@ -117,14 +117,14 @@ public class StartSessionRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * The name of the SSM document to define the parameters and plugin settings for the session. For example,
      * <code>SSM-SessionManagerRunShell</code>. You can call the <a>GetDocument</a> API to verify the document exists
-     * before attempting to start a session. If no document name is provided, a shell to the instance is launched by
+     * before attempting to start a session. If no document name is provided, a shell to the managed node is launched by
      * default.
      * </p>
      * 
      * @return The name of the SSM document to define the parameters and plugin settings for the session. For example,
      *         <code>SSM-SessionManagerRunShell</code>. You can call the <a>GetDocument</a> API to verify the document
-     *         exists before attempting to start a session. If no document name is provided, a shell to the instance is
-     *         launched by default.
+     *         exists before attempting to start a session. If no document name is provided, a shell to the managed node
+     *         is launched by default.
      */
 
     public String getDocumentName() {
@@ -135,15 +135,15 @@ public class StartSessionRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * The name of the SSM document to define the parameters and plugin settings for the session. For example,
      * <code>SSM-SessionManagerRunShell</code>. You can call the <a>GetDocument</a> API to verify the document exists
-     * before attempting to start a session. If no document name is provided, a shell to the instance is launched by
+     * before attempting to start a session. If no document name is provided, a shell to the managed node is launched by
      * default.
      * </p>
      * 
      * @param documentName
      *        The name of the SSM document to define the parameters and plugin settings for the session. For example,
      *        <code>SSM-SessionManagerRunShell</code>. You can call the <a>GetDocument</a> API to verify the document
-     *        exists before attempting to start a session. If no document name is provided, a shell to the instance is
-     *        launched by default.
+     *        exists before attempting to start a session. If no document name is provided, a shell to the managed node
+     *        is launched by default.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

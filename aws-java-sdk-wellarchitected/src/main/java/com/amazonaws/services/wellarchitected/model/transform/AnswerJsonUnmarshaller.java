@@ -72,6 +72,10 @@ public class AnswerJsonUnmarshaller implements Unmarshaller<Answer, JsonUnmarsha
                     context.nextToken();
                     answer.setHelpfulResourceUrl(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("HelpfulResourceDisplayText", targetDepth)) {
+                    context.nextToken();
+                    answer.setHelpfulResourceDisplayText(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("Choices", targetDepth)) {
                     context.nextToken();
                     answer.setChoices(new ListUnmarshaller<Choice>(ChoiceJsonUnmarshaller.getInstance())

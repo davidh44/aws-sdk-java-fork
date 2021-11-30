@@ -57,7 +57,7 @@ public class MaintenanceWindowTask implements Serializable, Cloneable, Structure
     private String type;
     /**
      * <p>
-     * The targets (either instances or tags). Instances are specified using
+     * The targets (either managed nodes or tags). Managed nodes are specified using
      * <code>Key=instanceids,Values=&lt;instanceid1&gt;,&lt;instanceid2&gt;</code>. Tags are specified using
      * <code>Key=&lt;tag name&gt;,Values=&lt;tag value&gt;</code>.
      * </p>
@@ -351,12 +351,12 @@ public class MaintenanceWindowTask implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The targets (either instances or tags). Instances are specified using
+     * The targets (either managed nodes or tags). Managed nodes are specified using
      * <code>Key=instanceids,Values=&lt;instanceid1&gt;,&lt;instanceid2&gt;</code>. Tags are specified using
      * <code>Key=&lt;tag name&gt;,Values=&lt;tag value&gt;</code>.
      * </p>
      * 
-     * @return The targets (either instances or tags). Instances are specified using
+     * @return The targets (either managed nodes or tags). Managed nodes are specified using
      *         <code>Key=instanceids,Values=&lt;instanceid1&gt;,&lt;instanceid2&gt;</code>. Tags are specified using
      *         <code>Key=&lt;tag name&gt;,Values=&lt;tag value&gt;</code>.
      */
@@ -370,13 +370,13 @@ public class MaintenanceWindowTask implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The targets (either instances or tags). Instances are specified using
+     * The targets (either managed nodes or tags). Managed nodes are specified using
      * <code>Key=instanceids,Values=&lt;instanceid1&gt;,&lt;instanceid2&gt;</code>. Tags are specified using
      * <code>Key=&lt;tag name&gt;,Values=&lt;tag value&gt;</code>.
      * </p>
      * 
      * @param targets
-     *        The targets (either instances or tags). Instances are specified using
+     *        The targets (either managed nodes or tags). Managed nodes are specified using
      *        <code>Key=instanceids,Values=&lt;instanceid1&gt;,&lt;instanceid2&gt;</code>. Tags are specified using
      *        <code>Key=&lt;tag name&gt;,Values=&lt;tag value&gt;</code>.
      */
@@ -392,7 +392,7 @@ public class MaintenanceWindowTask implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The targets (either instances or tags). Instances are specified using
+     * The targets (either managed nodes or tags). Managed nodes are specified using
      * <code>Key=instanceids,Values=&lt;instanceid1&gt;,&lt;instanceid2&gt;</code>. Tags are specified using
      * <code>Key=&lt;tag name&gt;,Values=&lt;tag value&gt;</code>.
      * </p>
@@ -403,7 +403,7 @@ public class MaintenanceWindowTask implements Serializable, Cloneable, Structure
      * </p>
      * 
      * @param targets
-     *        The targets (either instances or tags). Instances are specified using
+     *        The targets (either managed nodes or tags). Managed nodes are specified using
      *        <code>Key=instanceids,Values=&lt;instanceid1&gt;,&lt;instanceid2&gt;</code>. Tags are specified using
      *        <code>Key=&lt;tag name&gt;,Values=&lt;tag value&gt;</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -421,13 +421,13 @@ public class MaintenanceWindowTask implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The targets (either instances or tags). Instances are specified using
+     * The targets (either managed nodes or tags). Managed nodes are specified using
      * <code>Key=instanceids,Values=&lt;instanceid1&gt;,&lt;instanceid2&gt;</code>. Tags are specified using
      * <code>Key=&lt;tag name&gt;,Values=&lt;tag value&gt;</code>.
      * </p>
      * 
      * @param targets
-     *        The targets (either instances or tags). Instances are specified using
+     *        The targets (either managed nodes or tags). Managed nodes are specified using
      *        <code>Key=instanceids,Values=&lt;instanceid1&gt;,&lt;instanceid2&gt;</code>. Tags are specified using
      *        <code>Key=&lt;tag name&gt;,Values=&lt;tag value&gt;</code>.
      * @return Returns a reference to this object so that method calls can be chained together.

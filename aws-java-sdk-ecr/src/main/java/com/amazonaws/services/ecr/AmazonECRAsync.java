@@ -187,6 +187,41 @@ public interface AmazonECRAsync extends AmazonECR {
 
     /**
      * <p>
+     * Gets the scanning configuration for one or more repositories.
+     * </p>
+     * 
+     * @param batchGetRepositoryScanningConfigurationRequest
+     * @return A Java Future containing the result of the BatchGetRepositoryScanningConfiguration operation returned by
+     *         the service.
+     * @sample AmazonECRAsync.BatchGetRepositoryScanningConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/BatchGetRepositoryScanningConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetRepositoryScanningConfigurationResult> batchGetRepositoryScanningConfigurationAsync(
+            BatchGetRepositoryScanningConfigurationRequest batchGetRepositoryScanningConfigurationRequest);
+
+    /**
+     * <p>
+     * Gets the scanning configuration for one or more repositories.
+     * </p>
+     * 
+     * @param batchGetRepositoryScanningConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchGetRepositoryScanningConfiguration operation returned by
+     *         the service.
+     * @sample AmazonECRAsyncHandler.BatchGetRepositoryScanningConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/BatchGetRepositoryScanningConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetRepositoryScanningConfigurationResult> batchGetRepositoryScanningConfigurationAsync(
+            BatchGetRepositoryScanningConfigurationRequest batchGetRepositoryScanningConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchGetRepositoryScanningConfigurationRequest, BatchGetRepositoryScanningConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
      * Informs Amazon ECR that the image layer upload has completed for a specified registry, repository name, and
      * upload ID. You can optionally provide a <code>sha256</code> digest of the image layer for data validation
      * purposes.
@@ -239,6 +274,41 @@ public interface AmazonECRAsync extends AmazonECR {
      */
     java.util.concurrent.Future<CompleteLayerUploadResult> completeLayerUploadAsync(CompleteLayerUploadRequest completeLayerUploadRequest,
             com.amazonaws.handlers.AsyncHandler<CompleteLayerUploadRequest, CompleteLayerUploadResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a pull through cache rule. A pull through cache rule provides a way to cache images from an external
+     * public registry in your Amazon ECR private registry.
+     * </p>
+     * 
+     * @param createPullThroughCacheRuleRequest
+     * @return A Java Future containing the result of the CreatePullThroughCacheRule operation returned by the service.
+     * @sample AmazonECRAsync.CreatePullThroughCacheRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/CreatePullThroughCacheRule" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreatePullThroughCacheRuleResult> createPullThroughCacheRuleAsync(
+            CreatePullThroughCacheRuleRequest createPullThroughCacheRuleRequest);
+
+    /**
+     * <p>
+     * Creates a pull through cache rule. A pull through cache rule provides a way to cache images from an external
+     * public registry in your Amazon ECR private registry.
+     * </p>
+     * 
+     * @param createPullThroughCacheRuleRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreatePullThroughCacheRule operation returned by the service.
+     * @sample AmazonECRAsyncHandler.CreatePullThroughCacheRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/CreatePullThroughCacheRule" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreatePullThroughCacheRuleResult> createPullThroughCacheRuleAsync(
+            CreatePullThroughCacheRuleRequest createPullThroughCacheRuleRequest,
+            com.amazonaws.handlers.AsyncHandler<CreatePullThroughCacheRuleRequest, CreatePullThroughCacheRuleResult> asyncHandler);
 
     /**
      * <p>
@@ -305,6 +375,39 @@ public interface AmazonECRAsync extends AmazonECR {
      */
     java.util.concurrent.Future<DeleteLifecyclePolicyResult> deleteLifecyclePolicyAsync(DeleteLifecyclePolicyRequest deleteLifecyclePolicyRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteLifecyclePolicyRequest, DeleteLifecyclePolicyResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a pull through cache rule.
+     * </p>
+     * 
+     * @param deletePullThroughCacheRuleRequest
+     * @return A Java Future containing the result of the DeletePullThroughCacheRule operation returned by the service.
+     * @sample AmazonECRAsync.DeletePullThroughCacheRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/DeletePullThroughCacheRule" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeletePullThroughCacheRuleResult> deletePullThroughCacheRuleAsync(
+            DeletePullThroughCacheRuleRequest deletePullThroughCacheRuleRequest);
+
+    /**
+     * <p>
+     * Deletes a pull through cache rule.
+     * </p>
+     * 
+     * @param deletePullThroughCacheRuleRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeletePullThroughCacheRule operation returned by the service.
+     * @sample AmazonECRAsyncHandler.DeletePullThroughCacheRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/DeletePullThroughCacheRule" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeletePullThroughCacheRuleResult> deletePullThroughCacheRuleAsync(
+            DeletePullThroughCacheRuleRequest deletePullThroughCacheRuleRequest,
+            com.amazonaws.handlers.AsyncHandler<DeletePullThroughCacheRuleRequest, DeletePullThroughCacheRuleResult> asyncHandler);
 
     /**
      * <p>
@@ -513,6 +616,41 @@ public interface AmazonECRAsync extends AmazonECR {
      */
     java.util.concurrent.Future<DescribeImagesResult> describeImagesAsync(DescribeImagesRequest describeImagesRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeImagesRequest, DescribeImagesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns the pull through cache rules for a registry.
+     * </p>
+     * 
+     * @param describePullThroughCacheRulesRequest
+     * @return A Java Future containing the result of the DescribePullThroughCacheRules operation returned by the
+     *         service.
+     * @sample AmazonECRAsync.DescribePullThroughCacheRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/DescribePullThroughCacheRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribePullThroughCacheRulesResult> describePullThroughCacheRulesAsync(
+            DescribePullThroughCacheRulesRequest describePullThroughCacheRulesRequest);
+
+    /**
+     * <p>
+     * Returns the pull through cache rules for a registry.
+     * </p>
+     * 
+     * @param describePullThroughCacheRulesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribePullThroughCacheRules operation returned by the
+     *         service.
+     * @sample AmazonECRAsyncHandler.DescribePullThroughCacheRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/DescribePullThroughCacheRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribePullThroughCacheRulesResult> describePullThroughCacheRulesAsync(
+            DescribePullThroughCacheRulesRequest describePullThroughCacheRulesRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribePullThroughCacheRulesRequest, DescribePullThroughCacheRulesResult> asyncHandler);
 
     /**
      * <p>
@@ -774,6 +912,41 @@ public interface AmazonECRAsync extends AmazonECR {
      */
     java.util.concurrent.Future<GetRegistryPolicyResult> getRegistryPolicyAsync(GetRegistryPolicyRequest getRegistryPolicyRequest,
             com.amazonaws.handlers.AsyncHandler<GetRegistryPolicyRequest, GetRegistryPolicyResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves the scanning configuration for a registry.
+     * </p>
+     * 
+     * @param getRegistryScanningConfigurationRequest
+     * @return A Java Future containing the result of the GetRegistryScanningConfiguration operation returned by the
+     *         service.
+     * @sample AmazonECRAsync.GetRegistryScanningConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/GetRegistryScanningConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetRegistryScanningConfigurationResult> getRegistryScanningConfigurationAsync(
+            GetRegistryScanningConfigurationRequest getRegistryScanningConfigurationRequest);
+
+    /**
+     * <p>
+     * Retrieves the scanning configuration for a registry.
+     * </p>
+     * 
+     * @param getRegistryScanningConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetRegistryScanningConfiguration operation returned by the
+     *         service.
+     * @sample AmazonECRAsyncHandler.GetRegistryScanningConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/GetRegistryScanningConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetRegistryScanningConfigurationResult> getRegistryScanningConfigurationAsync(
+            GetRegistryScanningConfigurationRequest getRegistryScanningConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<GetRegistryScanningConfigurationRequest, GetRegistryScanningConfigurationResult> asyncHandler);
 
     /**
      * <p>
@@ -1133,6 +1306,41 @@ public interface AmazonECRAsync extends AmazonECR {
      */
     java.util.concurrent.Future<PutRegistryPolicyResult> putRegistryPolicyAsync(PutRegistryPolicyRequest putRegistryPolicyRequest,
             com.amazonaws.handlers.AsyncHandler<PutRegistryPolicyRequest, PutRegistryPolicyResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates or updates the scanning configuration for your private registry.
+     * </p>
+     * 
+     * @param putRegistryScanningConfigurationRequest
+     * @return A Java Future containing the result of the PutRegistryScanningConfiguration operation returned by the
+     *         service.
+     * @sample AmazonECRAsync.PutRegistryScanningConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/PutRegistryScanningConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutRegistryScanningConfigurationResult> putRegistryScanningConfigurationAsync(
+            PutRegistryScanningConfigurationRequest putRegistryScanningConfigurationRequest);
+
+    /**
+     * <p>
+     * Creates or updates the scanning configuration for your private registry.
+     * </p>
+     * 
+     * @param putRegistryScanningConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PutRegistryScanningConfiguration operation returned by the
+     *         service.
+     * @sample AmazonECRAsyncHandler.PutRegistryScanningConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/PutRegistryScanningConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutRegistryScanningConfigurationResult> putRegistryScanningConfigurationAsync(
+            PutRegistryScanningConfigurationRequest putRegistryScanningConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<PutRegistryScanningConfigurationRequest, PutRegistryScanningConfigurationResult> asyncHandler);
 
     /**
      * <p>

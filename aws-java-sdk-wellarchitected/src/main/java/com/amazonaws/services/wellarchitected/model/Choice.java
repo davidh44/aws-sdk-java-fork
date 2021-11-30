@@ -33,6 +33,18 @@ public class Choice implements Serializable, Cloneable, StructuredPojo {
     private String title;
 
     private String description;
+    /**
+     * <p>
+     * The choice level helpful resource.
+     * </p>
+     */
+    private ChoiceContent helpfulResource;
+    /**
+     * <p>
+     * The choice level improvement plan.
+     * </p>
+     */
+    private ChoiceContent improvementPlan;
 
     /**
      * @param choiceId
@@ -113,6 +125,86 @@ public class Choice implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The choice level helpful resource.
+     * </p>
+     * 
+     * @param helpfulResource
+     *        The choice level helpful resource.
+     */
+
+    public void setHelpfulResource(ChoiceContent helpfulResource) {
+        this.helpfulResource = helpfulResource;
+    }
+
+    /**
+     * <p>
+     * The choice level helpful resource.
+     * </p>
+     * 
+     * @return The choice level helpful resource.
+     */
+
+    public ChoiceContent getHelpfulResource() {
+        return this.helpfulResource;
+    }
+
+    /**
+     * <p>
+     * The choice level helpful resource.
+     * </p>
+     * 
+     * @param helpfulResource
+     *        The choice level helpful resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Choice withHelpfulResource(ChoiceContent helpfulResource) {
+        setHelpfulResource(helpfulResource);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The choice level improvement plan.
+     * </p>
+     * 
+     * @param improvementPlan
+     *        The choice level improvement plan.
+     */
+
+    public void setImprovementPlan(ChoiceContent improvementPlan) {
+        this.improvementPlan = improvementPlan;
+    }
+
+    /**
+     * <p>
+     * The choice level improvement plan.
+     * </p>
+     * 
+     * @return The choice level improvement plan.
+     */
+
+    public ChoiceContent getImprovementPlan() {
+        return this.improvementPlan;
+    }
+
+    /**
+     * <p>
+     * The choice level improvement plan.
+     * </p>
+     * 
+     * @param improvementPlan
+     *        The choice level improvement plan.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Choice withImprovementPlan(ChoiceContent improvementPlan) {
+        setImprovementPlan(improvementPlan);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -129,7 +221,11 @@ public class Choice implements Serializable, Cloneable, StructuredPojo {
         if (getTitle() != null)
             sb.append("Title: ").append(getTitle()).append(",");
         if (getDescription() != null)
-            sb.append("Description: ").append(getDescription());
+            sb.append("Description: ").append(getDescription()).append(",");
+        if (getHelpfulResource() != null)
+            sb.append("HelpfulResource: ").append(getHelpfulResource()).append(",");
+        if (getImprovementPlan() != null)
+            sb.append("ImprovementPlan: ").append(getImprovementPlan());
         sb.append("}");
         return sb.toString();
     }
@@ -156,6 +252,14 @@ public class Choice implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
+        if (other.getHelpfulResource() == null ^ this.getHelpfulResource() == null)
+            return false;
+        if (other.getHelpfulResource() != null && other.getHelpfulResource().equals(this.getHelpfulResource()) == false)
+            return false;
+        if (other.getImprovementPlan() == null ^ this.getImprovementPlan() == null)
+            return false;
+        if (other.getImprovementPlan() != null && other.getImprovementPlan().equals(this.getImprovementPlan()) == false)
+            return false;
         return true;
     }
 
@@ -167,6 +271,8 @@ public class Choice implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getChoiceId() == null) ? 0 : getChoiceId().hashCode());
         hashCode = prime * hashCode + ((getTitle() == null) ? 0 : getTitle().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getHelpfulResource() == null) ? 0 : getHelpfulResource().hashCode());
+        hashCode = prime * hashCode + ((getImprovementPlan() == null) ? 0 : getImprovementPlan().hashCode());
         return hashCode;
     }
 

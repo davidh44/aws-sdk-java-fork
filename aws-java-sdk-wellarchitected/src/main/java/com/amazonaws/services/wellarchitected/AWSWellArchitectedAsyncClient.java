@@ -25,13 +25,13 @@ import java.util.concurrent.ExecutorService;
  * representing the asynchronous operation; overloads which accept an {@code AsyncHandler} can be used to receive
  * notification when an asynchronous operation completes.
  * <p>
- * <fullname>AWS Well-Architected Tool</fullname>
+ * <fullname>Well-Architected Tool</fullname>
  * <p>
- * This is the <i>AWS Well-Architected Tool API Reference</i>. The AWS Well-Architected Tool API provides programmatic
- * access to the <a href="http://aws.amazon.com/well-architected-tool">AWS Well-Architected Tool</a> in the <a
- * href="https://console.aws.amazon.com/wellarchitected">AWS Management Console</a>. For information about the AWS
- * Well-Architected Tool, see the <a href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/intro.html">AWS
- * Well-Architected Tool User Guide</a>.
+ * This is the <i>Well-Architected Tool API Reference</i>. The WA Tool API provides programmatic access to the <a
+ * href="http://aws.amazon.com/well-architected-tool">Well-Architected Tool</a> in the <a
+ * href="https://console.aws.amazon.com/wellarchitected">Amazon Web Services Management Console</a>. For information
+ * about the Well-Architected Tool, see the <a
+ * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/intro.html">Well-Architected Tool User Guide</a>.
  * </p>
  */
 @ThreadSafe
@@ -98,6 +98,72 @@ public class AWSWellArchitectedAsyncClient extends AWSWellArchitectedClient impl
 
                 try {
                     result = executeAssociateLenses(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateLensShareResult> createLensShareAsync(CreateLensShareRequest request) {
+
+        return createLensShareAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateLensShareResult> createLensShareAsync(final CreateLensShareRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateLensShareRequest, CreateLensShareResult> asyncHandler) {
+        final CreateLensShareRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateLensShareResult>() {
+            @Override
+            public CreateLensShareResult call() throws Exception {
+                CreateLensShareResult result = null;
+
+                try {
+                    result = executeCreateLensShare(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateLensVersionResult> createLensVersionAsync(CreateLensVersionRequest request) {
+
+        return createLensVersionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateLensVersionResult> createLensVersionAsync(final CreateLensVersionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateLensVersionRequest, CreateLensVersionResult> asyncHandler) {
+        final CreateLensVersionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateLensVersionResult>() {
+            @Override
+            public CreateLensVersionResult call() throws Exception {
+                CreateLensVersionResult result = null;
+
+                try {
+                    result = executeCreateLensVersion(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -213,6 +279,72 @@ public class AWSWellArchitectedAsyncClient extends AWSWellArchitectedClient impl
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteLensResult> deleteLensAsync(DeleteLensRequest request) {
+
+        return deleteLensAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteLensResult> deleteLensAsync(final DeleteLensRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteLensRequest, DeleteLensResult> asyncHandler) {
+        final DeleteLensRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteLensResult>() {
+            @Override
+            public DeleteLensResult call() throws Exception {
+                DeleteLensResult result = null;
+
+                try {
+                    result = executeDeleteLens(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteLensShareResult> deleteLensShareAsync(DeleteLensShareRequest request) {
+
+        return deleteLensShareAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteLensShareResult> deleteLensShareAsync(final DeleteLensShareRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteLensShareRequest, DeleteLensShareResult> asyncHandler) {
+        final DeleteLensShareRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteLensShareResult>() {
+            @Override
+            public DeleteLensShareResult call() throws Exception {
+                DeleteLensShareResult result = null;
+
+                try {
+                    result = executeDeleteLensShare(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteWorkloadResult> deleteWorkloadAsync(DeleteWorkloadRequest request) {
 
         return deleteWorkloadAsync(request, null);
@@ -312,6 +444,39 @@ public class AWSWellArchitectedAsyncClient extends AWSWellArchitectedClient impl
     }
 
     @Override
+    public java.util.concurrent.Future<ExportLensResult> exportLensAsync(ExportLensRequest request) {
+
+        return exportLensAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ExportLensResult> exportLensAsync(final ExportLensRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ExportLensRequest, ExportLensResult> asyncHandler) {
+        final ExportLensRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ExportLensResult>() {
+            @Override
+            public ExportLensResult call() throws Exception {
+                ExportLensResult result = null;
+
+                try {
+                    result = executeExportLens(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetAnswerResult> getAnswerAsync(GetAnswerRequest request) {
 
         return getAnswerAsync(request, null);
@@ -329,6 +494,39 @@ public class AWSWellArchitectedAsyncClient extends AWSWellArchitectedClient impl
 
                 try {
                     result = executeGetAnswer(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetLensResult> getLensAsync(GetLensRequest request) {
+
+        return getLensAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetLensResult> getLensAsync(final GetLensRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetLensRequest, GetLensResult> asyncHandler) {
+        final GetLensRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetLensResult>() {
+            @Override
+            public GetLensResult call() throws Exception {
+                GetLensResult result = null;
+
+                try {
+                    result = executeGetLens(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -510,6 +708,39 @@ public class AWSWellArchitectedAsyncClient extends AWSWellArchitectedClient impl
     }
 
     @Override
+    public java.util.concurrent.Future<ImportLensResult> importLensAsync(ImportLensRequest request) {
+
+        return importLensAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ImportLensResult> importLensAsync(final ImportLensRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ImportLensRequest, ImportLensResult> asyncHandler) {
+        final ImportLensRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ImportLensResult>() {
+            @Override
+            public ImportLensResult call() throws Exception {
+                ImportLensResult result = null;
+
+                try {
+                    result = executeImportLens(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListAnswersResult> listAnswersAsync(ListAnswersRequest request) {
 
         return listAnswersAsync(request, null);
@@ -593,6 +824,39 @@ public class AWSWellArchitectedAsyncClient extends AWSWellArchitectedClient impl
 
                 try {
                     result = executeListLensReviews(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListLensSharesResult> listLensSharesAsync(ListLensSharesRequest request) {
+
+        return listLensSharesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListLensSharesResult> listLensSharesAsync(final ListLensSharesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListLensSharesRequest, ListLensSharesResult> asyncHandler) {
+        final ListLensSharesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListLensSharesResult>() {
+            @Override
+            public ListLensSharesResult call() throws Exception {
+                ListLensSharesResult result = null;
+
+                try {
+                    result = executeListLensShares(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -4344,6 +4344,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeSnapshotTierStatusResult> describeSnapshotTierStatusAsync(DescribeSnapshotTierStatusRequest request) {
+
+        return describeSnapshotTierStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeSnapshotTierStatusResult> describeSnapshotTierStatusAsync(DescribeSnapshotTierStatusRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeSnapshotTierStatusRequest, DescribeSnapshotTierStatusResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeSnapshotsResult> describeSnapshotsAsync(DescribeSnapshotsRequest request) {
 
         return describeSnapshotsAsync(request, null);
@@ -6275,6 +6288,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<ListSnapshotsInRecycleBinResult> listSnapshotsInRecycleBinAsync(ListSnapshotsInRecycleBinRequest request) {
+
+        return listSnapshotsInRecycleBinAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSnapshotsInRecycleBinResult> listSnapshotsInRecycleBinAsync(ListSnapshotsInRecycleBinRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListSnapshotsInRecycleBinRequest, ListSnapshotsInRecycleBinResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ModifyAddressAttributeResult> modifyAddressAttributeAsync(ModifyAddressAttributeRequest request) {
 
         return modifyAddressAttributeAsync(request, null);
@@ -6629,6 +6655,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<ModifySnapshotAttributeResult> modifySnapshotAttributeAsync(ModifySnapshotAttributeRequest request,
             com.amazonaws.handlers.AsyncHandler<ModifySnapshotAttributeRequest, ModifySnapshotAttributeResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifySnapshotTierResult> modifySnapshotTierAsync(ModifySnapshotTierRequest request) {
+
+        return modifySnapshotTierAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifySnapshotTierResult> modifySnapshotTierAsync(ModifySnapshotTierRequest request,
+            com.amazonaws.handlers.AsyncHandler<ModifySnapshotTierRequest, ModifySnapshotTierResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -7402,6 +7441,32 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     public java.util.concurrent.Future<RestoreManagedPrefixListVersionResult> restoreManagedPrefixListVersionAsync(
             RestoreManagedPrefixListVersionRequest request,
             com.amazonaws.handlers.AsyncHandler<RestoreManagedPrefixListVersionRequest, RestoreManagedPrefixListVersionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<RestoreSnapshotFromRecycleBinResult> restoreSnapshotFromRecycleBinAsync(RestoreSnapshotFromRecycleBinRequest request) {
+
+        return restoreSnapshotFromRecycleBinAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RestoreSnapshotFromRecycleBinResult> restoreSnapshotFromRecycleBinAsync(RestoreSnapshotFromRecycleBinRequest request,
+            com.amazonaws.handlers.AsyncHandler<RestoreSnapshotFromRecycleBinRequest, RestoreSnapshotFromRecycleBinResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<RestoreSnapshotTierResult> restoreSnapshotTierAsync(RestoreSnapshotTierRequest request) {
+
+        return restoreSnapshotTierAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RestoreSnapshotTierResult> restoreSnapshotTierAsync(RestoreSnapshotTierRequest request,
+            com.amazonaws.handlers.AsyncHandler<RestoreSnapshotTierRequest, RestoreSnapshotTierResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

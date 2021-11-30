@@ -28,8 +28,8 @@ public class DescribeInstanceInformationRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * This is a legacy method. We recommend that you don't use this method. Instead, use the <code>Filters</code> data
-     * type. <code>Filters</code> enables you to return instance information by filtering based on tags applied to
-     * managed instances.
+     * type. <code>Filters</code> enables you to return node information by filtering based on tags applied to managed
+     * nodes.
      * </p>
      * <note>
      * <p>
@@ -41,7 +41,7 @@ public class DescribeInstanceInformationRequest extends com.amazonaws.AmazonWebS
     private com.amazonaws.internal.SdkInternalList<InstanceInformationFilter> instanceInformationFilterList;
     /**
      * <p>
-     * One or more filters. Use a filter to return a more specific list of instances. You can filter based on tags
+     * One or more filters. Use a filter to return a more specific list of managed nodes. You can filter based on tags
      * applied to EC2 instances. Use this <code>Filters</code> data type instead of
      * <code>InstanceInformationFilterList</code>, which is deprecated.
      * </p>
@@ -64,8 +64,8 @@ public class DescribeInstanceInformationRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * This is a legacy method. We recommend that you don't use this method. Instead, use the <code>Filters</code> data
-     * type. <code>Filters</code> enables you to return instance information by filtering based on tags applied to
-     * managed instances.
+     * type. <code>Filters</code> enables you to return node information by filtering based on tags applied to managed
+     * nodes.
      * </p>
      * <note>
      * <p>
@@ -75,8 +75,8 @@ public class DescribeInstanceInformationRequest extends com.amazonaws.AmazonWebS
      * </note>
      * 
      * @return This is a legacy method. We recommend that you don't use this method. Instead, use the
-     *         <code>Filters</code> data type. <code>Filters</code> enables you to return instance information by
-     *         filtering based on tags applied to managed instances.</p> <note>
+     *         <code>Filters</code> data type. <code>Filters</code> enables you to return node information by filtering
+     *         based on tags applied to managed nodes.</p> <note>
      *         <p>
      *         Attempting to use <code>InstanceInformationFilterList</code> and <code>Filters</code> leads to an
      *         exception error.
@@ -93,8 +93,8 @@ public class DescribeInstanceInformationRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * This is a legacy method. We recommend that you don't use this method. Instead, use the <code>Filters</code> data
-     * type. <code>Filters</code> enables you to return instance information by filtering based on tags applied to
-     * managed instances.
+     * type. <code>Filters</code> enables you to return node information by filtering based on tags applied to managed
+     * nodes.
      * </p>
      * <note>
      * <p>
@@ -105,8 +105,8 @@ public class DescribeInstanceInformationRequest extends com.amazonaws.AmazonWebS
      * 
      * @param instanceInformationFilterList
      *        This is a legacy method. We recommend that you don't use this method. Instead, use the
-     *        <code>Filters</code> data type. <code>Filters</code> enables you to return instance information by
-     *        filtering based on tags applied to managed instances.</p> <note>
+     *        <code>Filters</code> data type. <code>Filters</code> enables you to return node information by filtering
+     *        based on tags applied to managed nodes.</p> <note>
      *        <p>
      *        Attempting to use <code>InstanceInformationFilterList</code> and <code>Filters</code> leads to an
      *        exception error.
@@ -125,8 +125,8 @@ public class DescribeInstanceInformationRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * This is a legacy method. We recommend that you don't use this method. Instead, use the <code>Filters</code> data
-     * type. <code>Filters</code> enables you to return instance information by filtering based on tags applied to
-     * managed instances.
+     * type. <code>Filters</code> enables you to return node information by filtering based on tags applied to managed
+     * nodes.
      * </p>
      * <note>
      * <p>
@@ -142,8 +142,8 @@ public class DescribeInstanceInformationRequest extends com.amazonaws.AmazonWebS
      * 
      * @param instanceInformationFilterList
      *        This is a legacy method. We recommend that you don't use this method. Instead, use the
-     *        <code>Filters</code> data type. <code>Filters</code> enables you to return instance information by
-     *        filtering based on tags applied to managed instances.</p> <note>
+     *        <code>Filters</code> data type. <code>Filters</code> enables you to return node information by filtering
+     *        based on tags applied to managed nodes.</p> <note>
      *        <p>
      *        Attempting to use <code>InstanceInformationFilterList</code> and <code>Filters</code> leads to an
      *        exception error.
@@ -164,8 +164,8 @@ public class DescribeInstanceInformationRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * This is a legacy method. We recommend that you don't use this method. Instead, use the <code>Filters</code> data
-     * type. <code>Filters</code> enables you to return instance information by filtering based on tags applied to
-     * managed instances.
+     * type. <code>Filters</code> enables you to return node information by filtering based on tags applied to managed
+     * nodes.
      * </p>
      * <note>
      * <p>
@@ -176,8 +176,8 @@ public class DescribeInstanceInformationRequest extends com.amazonaws.AmazonWebS
      * 
      * @param instanceInformationFilterList
      *        This is a legacy method. We recommend that you don't use this method. Instead, use the
-     *        <code>Filters</code> data type. <code>Filters</code> enables you to return instance information by
-     *        filtering based on tags applied to managed instances.</p> <note>
+     *        <code>Filters</code> data type. <code>Filters</code> enables you to return node information by filtering
+     *        based on tags applied to managed nodes.</p> <note>
      *        <p>
      *        Attempting to use <code>InstanceInformationFilterList</code> and <code>Filters</code> leads to an
      *        exception error.
@@ -192,13 +192,13 @@ public class DescribeInstanceInformationRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * One or more filters. Use a filter to return a more specific list of instances. You can filter based on tags
+     * One or more filters. Use a filter to return a more specific list of managed nodes. You can filter based on tags
      * applied to EC2 instances. Use this <code>Filters</code> data type instead of
      * <code>InstanceInformationFilterList</code>, which is deprecated.
      * </p>
      * 
-     * @return One or more filters. Use a filter to return a more specific list of instances. You can filter based on
-     *         tags applied to EC2 instances. Use this <code>Filters</code> data type instead of
+     * @return One or more filters. Use a filter to return a more specific list of managed nodes. You can filter based
+     *         on tags applied to EC2 instances. Use this <code>Filters</code> data type instead of
      *         <code>InstanceInformationFilterList</code>, which is deprecated.
      */
 
@@ -211,13 +211,13 @@ public class DescribeInstanceInformationRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * One or more filters. Use a filter to return a more specific list of instances. You can filter based on tags
+     * One or more filters. Use a filter to return a more specific list of managed nodes. You can filter based on tags
      * applied to EC2 instances. Use this <code>Filters</code> data type instead of
      * <code>InstanceInformationFilterList</code>, which is deprecated.
      * </p>
      * 
      * @param filters
-     *        One or more filters. Use a filter to return a more specific list of instances. You can filter based on
+     *        One or more filters. Use a filter to return a more specific list of managed nodes. You can filter based on
      *        tags applied to EC2 instances. Use this <code>Filters</code> data type instead of
      *        <code>InstanceInformationFilterList</code>, which is deprecated.
      */
@@ -233,7 +233,7 @@ public class DescribeInstanceInformationRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * One or more filters. Use a filter to return a more specific list of instances. You can filter based on tags
+     * One or more filters. Use a filter to return a more specific list of managed nodes. You can filter based on tags
      * applied to EC2 instances. Use this <code>Filters</code> data type instead of
      * <code>InstanceInformationFilterList</code>, which is deprecated.
      * </p>
@@ -244,7 +244,7 @@ public class DescribeInstanceInformationRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param filters
-     *        One or more filters. Use a filter to return a more specific list of instances. You can filter based on
+     *        One or more filters. Use a filter to return a more specific list of managed nodes. You can filter based on
      *        tags applied to EC2 instances. Use this <code>Filters</code> data type instead of
      *        <code>InstanceInformationFilterList</code>, which is deprecated.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -262,13 +262,13 @@ public class DescribeInstanceInformationRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * One or more filters. Use a filter to return a more specific list of instances. You can filter based on tags
+     * One or more filters. Use a filter to return a more specific list of managed nodes. You can filter based on tags
      * applied to EC2 instances. Use this <code>Filters</code> data type instead of
      * <code>InstanceInformationFilterList</code>, which is deprecated.
      * </p>
      * 
      * @param filters
-     *        One or more filters. Use a filter to return a more specific list of instances. You can filter based on
+     *        One or more filters. Use a filter to return a more specific list of managed nodes. You can filter based on
      *        tags applied to EC2 instances. Use this <code>Filters</code> data type instead of
      *        <code>InstanceInformationFilterList</code>, which is deprecated.
      * @return Returns a reference to this object so that method calls can be chained together.

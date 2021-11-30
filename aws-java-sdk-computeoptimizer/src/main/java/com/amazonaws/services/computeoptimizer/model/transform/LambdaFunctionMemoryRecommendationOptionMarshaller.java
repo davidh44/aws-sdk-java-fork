@@ -34,6 +34,8 @@ public class LambdaFunctionMemoryRecommendationOptionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("memorySize").build();
     private static final MarshallingInfo<List> PROJECTEDUTILIZATIONMETRICS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("projectedUtilizationMetrics").build();
+    private static final MarshallingInfo<StructuredPojo> SAVINGSOPPORTUNITY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("savingsOpportunity").build();
 
     private static final LambdaFunctionMemoryRecommendationOptionMarshaller instance = new LambdaFunctionMemoryRecommendationOptionMarshaller();
 
@@ -54,6 +56,7 @@ public class LambdaFunctionMemoryRecommendationOptionMarshaller {
             protocolMarshaller.marshall(lambdaFunctionMemoryRecommendationOption.getRank(), RANK_BINDING);
             protocolMarshaller.marshall(lambdaFunctionMemoryRecommendationOption.getMemorySize(), MEMORYSIZE_BINDING);
             protocolMarshaller.marshall(lambdaFunctionMemoryRecommendationOption.getProjectedUtilizationMetrics(), PROJECTEDUTILIZATIONMETRICS_BINDING);
+            protocolMarshaller.marshall(lambdaFunctionMemoryRecommendationOption.getSavingsOpportunity(), SAVINGSOPPORTUNITY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

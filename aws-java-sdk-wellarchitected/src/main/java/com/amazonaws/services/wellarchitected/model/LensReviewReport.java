@@ -29,6 +29,12 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 public class LensReviewReport implements Serializable, Cloneable, StructuredPojo {
 
     private String lensAlias;
+    /**
+     * <p>
+     * The ARN for the lens.
+     * </p>
+     */
+    private String lensArn;
 
     private String base64String;
 
@@ -55,6 +61,46 @@ public class LensReviewReport implements Serializable, Cloneable, StructuredPojo
 
     public LensReviewReport withLensAlias(String lensAlias) {
         setLensAlias(lensAlias);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ARN for the lens.
+     * </p>
+     * 
+     * @param lensArn
+     *        The ARN for the lens.
+     */
+
+    public void setLensArn(String lensArn) {
+        this.lensArn = lensArn;
+    }
+
+    /**
+     * <p>
+     * The ARN for the lens.
+     * </p>
+     * 
+     * @return The ARN for the lens.
+     */
+
+    public String getLensArn() {
+        return this.lensArn;
+    }
+
+    /**
+     * <p>
+     * The ARN for the lens.
+     * </p>
+     * 
+     * @param lensArn
+     *        The ARN for the lens.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LensReviewReport withLensArn(String lensArn) {
+        setLensArn(lensArn);
         return this;
     }
 
@@ -98,6 +144,8 @@ public class LensReviewReport implements Serializable, Cloneable, StructuredPojo
         sb.append("{");
         if (getLensAlias() != null)
             sb.append("LensAlias: ").append(getLensAlias()).append(",");
+        if (getLensArn() != null)
+            sb.append("LensArn: ").append(getLensArn()).append(",");
         if (getBase64String() != null)
             sb.append("Base64String: ").append(getBase64String());
         sb.append("}");
@@ -118,6 +166,10 @@ public class LensReviewReport implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getLensAlias() != null && other.getLensAlias().equals(this.getLensAlias()) == false)
             return false;
+        if (other.getLensArn() == null ^ this.getLensArn() == null)
+            return false;
+        if (other.getLensArn() != null && other.getLensArn().equals(this.getLensArn()) == false)
+            return false;
         if (other.getBase64String() == null ^ this.getBase64String() == null)
             return false;
         if (other.getBase64String() != null && other.getBase64String().equals(this.getBase64String()) == false)
@@ -131,6 +183,7 @@ public class LensReviewReport implements Serializable, Cloneable, StructuredPojo
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getLensAlias() == null) ? 0 : getLensAlias().hashCode());
+        hashCode = prime * hashCode + ((getLensArn() == null) ? 0 : getLensArn().hashCode());
         hashCode = prime * hashCode + ((getBase64String() == null) ? 0 : getBase64String().hashCode());
         return hashCode;
     }

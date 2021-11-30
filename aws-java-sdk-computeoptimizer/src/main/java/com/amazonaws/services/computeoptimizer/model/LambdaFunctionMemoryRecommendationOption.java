@@ -50,6 +50,13 @@ public class LambdaFunctionMemoryRecommendationOption implements Serializable, C
      * </p>
      */
     private java.util.List<LambdaFunctionMemoryProjectedMetric> projectedUtilizationMetrics;
+    /**
+     * <p>
+     * An object that describes the savings opportunity for the Lambda function recommendation option. Savings
+     * opportunity includes the estimated monthly savings amount and percentage.
+     * </p>
+     */
+    private SavingsOpportunity savingsOpportunity;
 
     /**
      * <p>
@@ -219,6 +226,52 @@ public class LambdaFunctionMemoryRecommendationOption implements Serializable, C
     }
 
     /**
+     * <p>
+     * An object that describes the savings opportunity for the Lambda function recommendation option. Savings
+     * opportunity includes the estimated monthly savings amount and percentage.
+     * </p>
+     * 
+     * @param savingsOpportunity
+     *        An object that describes the savings opportunity for the Lambda function recommendation option. Savings
+     *        opportunity includes the estimated monthly savings amount and percentage.
+     */
+
+    public void setSavingsOpportunity(SavingsOpportunity savingsOpportunity) {
+        this.savingsOpportunity = savingsOpportunity;
+    }
+
+    /**
+     * <p>
+     * An object that describes the savings opportunity for the Lambda function recommendation option. Savings
+     * opportunity includes the estimated monthly savings amount and percentage.
+     * </p>
+     * 
+     * @return An object that describes the savings opportunity for the Lambda function recommendation option. Savings
+     *         opportunity includes the estimated monthly savings amount and percentage.
+     */
+
+    public SavingsOpportunity getSavingsOpportunity() {
+        return this.savingsOpportunity;
+    }
+
+    /**
+     * <p>
+     * An object that describes the savings opportunity for the Lambda function recommendation option. Savings
+     * opportunity includes the estimated monthly savings amount and percentage.
+     * </p>
+     * 
+     * @param savingsOpportunity
+     *        An object that describes the savings opportunity for the Lambda function recommendation option. Savings
+     *        opportunity includes the estimated monthly savings amount and percentage.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LambdaFunctionMemoryRecommendationOption withSavingsOpportunity(SavingsOpportunity savingsOpportunity) {
+        setSavingsOpportunity(savingsOpportunity);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -235,7 +288,9 @@ public class LambdaFunctionMemoryRecommendationOption implements Serializable, C
         if (getMemorySize() != null)
             sb.append("MemorySize: ").append(getMemorySize()).append(",");
         if (getProjectedUtilizationMetrics() != null)
-            sb.append("ProjectedUtilizationMetrics: ").append(getProjectedUtilizationMetrics());
+            sb.append("ProjectedUtilizationMetrics: ").append(getProjectedUtilizationMetrics()).append(",");
+        if (getSavingsOpportunity() != null)
+            sb.append("SavingsOpportunity: ").append(getSavingsOpportunity());
         sb.append("}");
         return sb.toString();
     }
@@ -262,6 +317,10 @@ public class LambdaFunctionMemoryRecommendationOption implements Serializable, C
             return false;
         if (other.getProjectedUtilizationMetrics() != null && other.getProjectedUtilizationMetrics().equals(this.getProjectedUtilizationMetrics()) == false)
             return false;
+        if (other.getSavingsOpportunity() == null ^ this.getSavingsOpportunity() == null)
+            return false;
+        if (other.getSavingsOpportunity() != null && other.getSavingsOpportunity().equals(this.getSavingsOpportunity()) == false)
+            return false;
         return true;
     }
 
@@ -273,6 +332,7 @@ public class LambdaFunctionMemoryRecommendationOption implements Serializable, C
         hashCode = prime * hashCode + ((getRank() == null) ? 0 : getRank().hashCode());
         hashCode = prime * hashCode + ((getMemorySize() == null) ? 0 : getMemorySize().hashCode());
         hashCode = prime * hashCode + ((getProjectedUtilizationMetrics() == null) ? 0 : getProjectedUtilizationMetrics().hashCode());
+        hashCode = prime * hashCode + ((getSavingsOpportunity() == null) ? 0 : getSavingsOpportunity().hashCode());
         return hashCode;
     }
 

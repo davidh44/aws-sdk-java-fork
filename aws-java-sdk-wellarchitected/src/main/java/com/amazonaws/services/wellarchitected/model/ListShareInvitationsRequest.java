@@ -29,6 +29,18 @@ import com.amazonaws.AmazonWebServiceRequest;
 public class ListShareInvitationsRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
     private String workloadNamePrefix;
+    /**
+     * <p>
+     * An optional string added to the beginning of each lens name returned in the results.
+     * </p>
+     */
+    private String lensNamePrefix;
+    /**
+     * <p>
+     * The type of share invitations to be returned.
+     * </p>
+     */
+    private String shareResourceType;
 
     private String nextToken;
     /**
@@ -61,6 +73,105 @@ public class ListShareInvitationsRequest extends com.amazonaws.AmazonWebServiceR
 
     public ListShareInvitationsRequest withWorkloadNamePrefix(String workloadNamePrefix) {
         setWorkloadNamePrefix(workloadNamePrefix);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An optional string added to the beginning of each lens name returned in the results.
+     * </p>
+     * 
+     * @param lensNamePrefix
+     *        An optional string added to the beginning of each lens name returned in the results.
+     */
+
+    public void setLensNamePrefix(String lensNamePrefix) {
+        this.lensNamePrefix = lensNamePrefix;
+    }
+
+    /**
+     * <p>
+     * An optional string added to the beginning of each lens name returned in the results.
+     * </p>
+     * 
+     * @return An optional string added to the beginning of each lens name returned in the results.
+     */
+
+    public String getLensNamePrefix() {
+        return this.lensNamePrefix;
+    }
+
+    /**
+     * <p>
+     * An optional string added to the beginning of each lens name returned in the results.
+     * </p>
+     * 
+     * @param lensNamePrefix
+     *        An optional string added to the beginning of each lens name returned in the results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListShareInvitationsRequest withLensNamePrefix(String lensNamePrefix) {
+        setLensNamePrefix(lensNamePrefix);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of share invitations to be returned.
+     * </p>
+     * 
+     * @param shareResourceType
+     *        The type of share invitations to be returned.
+     * @see ShareResourceType
+     */
+
+    public void setShareResourceType(String shareResourceType) {
+        this.shareResourceType = shareResourceType;
+    }
+
+    /**
+     * <p>
+     * The type of share invitations to be returned.
+     * </p>
+     * 
+     * @return The type of share invitations to be returned.
+     * @see ShareResourceType
+     */
+
+    public String getShareResourceType() {
+        return this.shareResourceType;
+    }
+
+    /**
+     * <p>
+     * The type of share invitations to be returned.
+     * </p>
+     * 
+     * @param shareResourceType
+     *        The type of share invitations to be returned.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ShareResourceType
+     */
+
+    public ListShareInvitationsRequest withShareResourceType(String shareResourceType) {
+        setShareResourceType(shareResourceType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of share invitations to be returned.
+     * </p>
+     * 
+     * @param shareResourceType
+     *        The type of share invitations to be returned.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ShareResourceType
+     */
+
+    public ListShareInvitationsRequest withShareResourceType(ShareResourceType shareResourceType) {
+        this.shareResourceType = shareResourceType.toString();
         return this;
     }
 
@@ -144,6 +255,10 @@ public class ListShareInvitationsRequest extends com.amazonaws.AmazonWebServiceR
         sb.append("{");
         if (getWorkloadNamePrefix() != null)
             sb.append("WorkloadNamePrefix: ").append(getWorkloadNamePrefix()).append(",");
+        if (getLensNamePrefix() != null)
+            sb.append("LensNamePrefix: ").append(getLensNamePrefix()).append(",");
+        if (getShareResourceType() != null)
+            sb.append("ShareResourceType: ").append(getShareResourceType()).append(",");
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getMaxResults() != null)
@@ -166,6 +281,14 @@ public class ListShareInvitationsRequest extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getWorkloadNamePrefix() != null && other.getWorkloadNamePrefix().equals(this.getWorkloadNamePrefix()) == false)
             return false;
+        if (other.getLensNamePrefix() == null ^ this.getLensNamePrefix() == null)
+            return false;
+        if (other.getLensNamePrefix() != null && other.getLensNamePrefix().equals(this.getLensNamePrefix()) == false)
+            return false;
+        if (other.getShareResourceType() == null ^ this.getShareResourceType() == null)
+            return false;
+        if (other.getShareResourceType() != null && other.getShareResourceType().equals(this.getShareResourceType()) == false)
+            return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
@@ -183,6 +306,8 @@ public class ListShareInvitationsRequest extends com.amazonaws.AmazonWebServiceR
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getWorkloadNamePrefix() == null) ? 0 : getWorkloadNamePrefix().hashCode());
+        hashCode = prime * hashCode + ((getLensNamePrefix() == null) ? 0 : getLensNamePrefix().hashCode());
+        hashCode = prime * hashCode + ((getShareResourceType() == null) ? 0 : getShareResourceType().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         return hashCode;

@@ -60,6 +60,10 @@ public class LensUpgradeSummaryJsonUnmarshaller implements Unmarshaller<LensUpgr
                     context.nextToken();
                     lensUpgradeSummary.setLensAlias(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("LensArn", targetDepth)) {
+                    context.nextToken();
+                    lensUpgradeSummary.setLensArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("CurrentLensVersion", targetDepth)) {
                     context.nextToken();
                     lensUpgradeSummary.setCurrentLensVersion(context.getUnmarshaller(String.class).unmarshall(context));

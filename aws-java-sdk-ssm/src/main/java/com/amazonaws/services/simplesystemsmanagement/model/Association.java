@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes an association of a Amazon Web Services Systems Manager document (SSM document) and an instance.
+ * Describes an association of a Amazon Web Services Systems Manager document (SSM document) and a managed node.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/Association" target="_top">AWS API
@@ -36,7 +36,7 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
     private String name;
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      */
     private String instanceId;
@@ -61,8 +61,8 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
     private String documentVersion;
     /**
      * <p>
-     * The instances targeted by the request to create an association. You can target all instances in an Amazon Web
-     * Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>.
+     * The managed nodes targeted by the request to create an association. You can target all managed nodes in an Amazon
+     * Web Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Target> targets;
@@ -134,11 +134,11 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      * 
      * @param instanceId
-     *        The instance ID.
+     *        The managed node ID.
      */
 
     public void setInstanceId(String instanceId) {
@@ -147,10 +147,10 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      * 
-     * @return The instance ID.
+     * @return The managed node ID.
      */
 
     public String getInstanceId() {
@@ -159,11 +159,11 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      * 
      * @param instanceId
-     *        The instance ID.
+     *        The managed node ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -300,12 +300,13 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The instances targeted by the request to create an association. You can target all instances in an Amazon Web
-     * Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>.
+     * The managed nodes targeted by the request to create an association. You can target all managed nodes in an Amazon
+     * Web Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>.
      * </p>
      * 
-     * @return The instances targeted by the request to create an association. You can target all instances in an Amazon
-     *         Web Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>.
+     * @return The managed nodes targeted by the request to create an association. You can target all managed nodes in
+     *         an Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of
+     *         <code>*</code>.
      */
 
     public java.util.List<Target> getTargets() {
@@ -317,13 +318,13 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The instances targeted by the request to create an association. You can target all instances in an Amazon Web
-     * Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>.
+     * The managed nodes targeted by the request to create an association. You can target all managed nodes in an Amazon
+     * Web Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>.
      * </p>
      * 
      * @param targets
-     *        The instances targeted by the request to create an association. You can target all instances in an Amazon
-     *        Web Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>.
+     *        The managed nodes targeted by the request to create an association. You can target all managed nodes in an
+     *        Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>.
      */
 
     public void setTargets(java.util.Collection<Target> targets) {
@@ -337,8 +338,8 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The instances targeted by the request to create an association. You can target all instances in an Amazon Web
-     * Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>.
+     * The managed nodes targeted by the request to create an association. You can target all managed nodes in an Amazon
+     * Web Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -347,8 +348,8 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param targets
-     *        The instances targeted by the request to create an association. You can target all instances in an Amazon
-     *        Web Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>.
+     *        The managed nodes targeted by the request to create an association. You can target all managed nodes in an
+     *        Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -364,13 +365,13 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The instances targeted by the request to create an association. You can target all instances in an Amazon Web
-     * Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>.
+     * The managed nodes targeted by the request to create an association. You can target all managed nodes in an Amazon
+     * Web Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>.
      * </p>
      * 
      * @param targets
-     *        The instances targeted by the request to create an association. You can target all instances in an Amazon
-     *        Web Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>.
+     *        The managed nodes targeted by the request to create an association. You can target all managed nodes in an
+     *        Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -28,6 +28,11 @@ public class AbstractAWSComputeOptimizer implements AWSComputeOptimizer {
     }
 
     @Override
+    public DeleteRecommendationPreferencesResult deleteRecommendationPreferences(DeleteRecommendationPreferencesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeRecommendationExportJobsResult describeRecommendationExportJobs(DescribeRecommendationExportJobsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -73,6 +78,11 @@ public class AbstractAWSComputeOptimizer implements AWSComputeOptimizer {
     }
 
     @Override
+    public GetEffectiveRecommendationPreferencesResult getEffectiveRecommendationPreferences(GetEffectiveRecommendationPreferencesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetEnrollmentStatusResult getEnrollmentStatus(GetEnrollmentStatusRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -88,7 +98,17 @@ public class AbstractAWSComputeOptimizer implements AWSComputeOptimizer {
     }
 
     @Override
+    public GetRecommendationPreferencesResult getRecommendationPreferences(GetRecommendationPreferencesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetRecommendationSummariesResult getRecommendationSummaries(GetRecommendationSummariesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutRecommendationPreferencesResult putRecommendationPreferences(PutRecommendationPreferencesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

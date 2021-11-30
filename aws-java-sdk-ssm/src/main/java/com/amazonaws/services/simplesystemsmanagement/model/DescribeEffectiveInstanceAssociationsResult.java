@@ -26,7 +26,7 @@ public class DescribeEffectiveInstanceAssociationsResult extends com.amazonaws.A
 
     /**
      * <p>
-     * The associations for the requested instance.
+     * The associations for the requested managed node.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<InstanceAssociation> associations;
@@ -40,10 +40,10 @@ public class DescribeEffectiveInstanceAssociationsResult extends com.amazonaws.A
 
     /**
      * <p>
-     * The associations for the requested instance.
+     * The associations for the requested managed node.
      * </p>
      * 
-     * @return The associations for the requested instance.
+     * @return The associations for the requested managed node.
      */
 
     public java.util.List<InstanceAssociation> getAssociations() {
@@ -55,11 +55,11 @@ public class DescribeEffectiveInstanceAssociationsResult extends com.amazonaws.A
 
     /**
      * <p>
-     * The associations for the requested instance.
+     * The associations for the requested managed node.
      * </p>
      * 
      * @param associations
-     *        The associations for the requested instance.
+     *        The associations for the requested managed node.
      */
 
     public void setAssociations(java.util.Collection<InstanceAssociation> associations) {
@@ -73,7 +73,7 @@ public class DescribeEffectiveInstanceAssociationsResult extends com.amazonaws.A
 
     /**
      * <p>
-     * The associations for the requested instance.
+     * The associations for the requested managed node.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -82,7 +82,7 @@ public class DescribeEffectiveInstanceAssociationsResult extends com.amazonaws.A
      * </p>
      * 
      * @param associations
-     *        The associations for the requested instance.
+     *        The associations for the requested managed node.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -98,11 +98,11 @@ public class DescribeEffectiveInstanceAssociationsResult extends com.amazonaws.A
 
     /**
      * <p>
-     * The associations for the requested instance.
+     * The associations for the requested managed node.
      * </p>
      * 
      * @param associations
-     *        The associations for the requested instance.
+     *        The associations for the requested managed node.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

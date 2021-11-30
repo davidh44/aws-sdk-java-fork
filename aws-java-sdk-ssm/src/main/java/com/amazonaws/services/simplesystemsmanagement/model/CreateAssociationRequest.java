@@ -28,7 +28,7 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The name of the SSM Command document or Automation runbook that contains the configuration information for the
-     * instance.
+     * managed node.
      * </p>
      * <p>
      * You can specify Amazon Web Services-predefined documents, documents you created, or a document that is shared
@@ -61,11 +61,11 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
     private String documentVersion;
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      * <note>
      * <p>
-     * <code>InstanceId</code> has been deprecated. To specify an instance ID for an association, use the
+     * <code>InstanceId</code> has been deprecated. To specify a managed node ID for an association, use the
      * <code>Targets</code> parameter. Requests that include the parameter <code>InstanceID</code> with Systems Manager
      * documents (SSM documents) that use schema version 2.0 or later will fail. In addition, if you use the parameter
      * <code>InstanceId</code>, you can't use the parameters <code>AssociationName</code>, <code>DocumentVersion</code>,
@@ -83,10 +83,10 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
     private java.util.Map<String, java.util.List<String>> parameters;
     /**
      * <p>
-     * The targets for the association. You can target instances by using tags, Amazon Web Services resource groups, all
-     * instances in an Amazon Web Services account, or individual instance IDs. You can target all instances in an
-     * Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>. For
-     * more information about choosing targets for an association, see <a href=
+     * The targets for the association. You can target managed nodes by using tags, Amazon Web Services resource groups,
+     * all managed nodes in an Amazon Web Services account, or individual managed node IDs. You can target all managed
+     * nodes in an Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of
+     * <code>*</code>. For more information about choosing targets for an association, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
      * >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
      * Manager User Guide</i>.
@@ -125,8 +125,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * additional targets. You can specify either an absolute number of errors, for example 10, or a percentage of the
      * target set, for example 10%. If you specify 3, for example, the system stops sending requests when the fourth
      * error is received. If you specify 0, then the system stops sending requests after the first error is returned. If
-     * you run an association on 50 instances and set <code>MaxError</code> to 10%, then the system stops sending the
-     * request when the sixth error is received.
+     * you run an association on 50 managed nodes and set <code>MaxError</code> to 10%, then the system stops sending
+     * the request when the sixth error is received.
      * </p>
      * <p>
      * Executions that are already running an association when <code>MaxErrors</code> is reached are allowed to
@@ -142,9 +142,9 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * targets run the association at the same time.
      * </p>
      * <p>
-     * If a new instance starts and attempts to run an association while Systems Manager is running
+     * If a new managed node starts and attempts to run an association while Systems Manager is running
      * <code>MaxConcurrency</code> associations, the association is allowed to run. During the next association
-     * interval, the new instance will process its association within the limit specified for
+     * interval, the new managed node will process its association within the limit specified for
      * <code>MaxConcurrency</code>.
      * </p>
      */
@@ -200,7 +200,7 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The name of the SSM Command document or Automation runbook that contains the configuration information for the
-     * instance.
+     * managed node.
      * </p>
      * <p>
      * You can specify Amazon Web Services-predefined documents, documents you created, or a document that is shared
@@ -226,7 +226,7 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param name
      *        The name of the SSM Command document or Automation runbook that contains the configuration information for
-     *        the instance.</p>
+     *        the managed node.</p>
      *        <p>
      *        You can specify Amazon Web Services-predefined documents, documents you created, or a document that is
      *        shared with you from another account.
@@ -256,7 +256,7 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The name of the SSM Command document or Automation runbook that contains the configuration information for the
-     * instance.
+     * managed node.
      * </p>
      * <p>
      * You can specify Amazon Web Services-predefined documents, documents you created, or a document that is shared
@@ -281,7 +281,7 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * 
      * @return The name of the SSM Command document or Automation runbook that contains the configuration information
-     *         for the instance.</p>
+     *         for the managed node.</p>
      *         <p>
      *         You can specify Amazon Web Services-predefined documents, documents you created, or a document that is
      *         shared with you from another account.
@@ -312,7 +312,7 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The name of the SSM Command document or Automation runbook that contains the configuration information for the
-     * instance.
+     * managed node.
      * </p>
      * <p>
      * You can specify Amazon Web Services-predefined documents, documents you created, or a document that is shared
@@ -338,7 +338,7 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param name
      *        The name of the SSM Command document or Automation runbook that contains the configuration information for
-     *        the instance.</p>
+     *        the managed node.</p>
      *        <p>
      *        You can specify Amazon Web Services-predefined documents, documents you created, or a document that is
      *        shared with you from another account.
@@ -412,11 +412,11 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      * <note>
      * <p>
-     * <code>InstanceId</code> has been deprecated. To specify an instance ID for an association, use the
+     * <code>InstanceId</code> has been deprecated. To specify a managed node ID for an association, use the
      * <code>Targets</code> parameter. Requests that include the parameter <code>InstanceID</code> with Systems Manager
      * documents (SSM documents) that use schema version 2.0 or later will fail. In addition, if you use the parameter
      * <code>InstanceId</code>, you can't use the parameters <code>AssociationName</code>, <code>DocumentVersion</code>,
@@ -426,9 +426,9 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * </note>
      * 
      * @param instanceId
-     *        The instance ID.</p> <note>
+     *        The managed node ID.</p> <note>
      *        <p>
-     *        <code>InstanceId</code> has been deprecated. To specify an instance ID for an association, use the
+     *        <code>InstanceId</code> has been deprecated. To specify a managed node ID for an association, use the
      *        <code>Targets</code> parameter. Requests that include the parameter <code>InstanceID</code> with Systems
      *        Manager documents (SSM documents) that use schema version 2.0 or later will fail. In addition, if you use
      *        the parameter <code>InstanceId</code>, you can't use the parameters <code>AssociationName</code>,
@@ -444,11 +444,11 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      * <note>
      * <p>
-     * <code>InstanceId</code> has been deprecated. To specify an instance ID for an association, use the
+     * <code>InstanceId</code> has been deprecated. To specify a managed node ID for an association, use the
      * <code>Targets</code> parameter. Requests that include the parameter <code>InstanceID</code> with Systems Manager
      * documents (SSM documents) that use schema version 2.0 or later will fail. In addition, if you use the parameter
      * <code>InstanceId</code>, you can't use the parameters <code>AssociationName</code>, <code>DocumentVersion</code>,
@@ -457,9 +457,9 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * </note>
      * 
-     * @return The instance ID.</p> <note>
+     * @return The managed node ID.</p> <note>
      *         <p>
-     *         <code>InstanceId</code> has been deprecated. To specify an instance ID for an association, use the
+     *         <code>InstanceId</code> has been deprecated. To specify a managed node ID for an association, use the
      *         <code>Targets</code> parameter. Requests that include the parameter <code>InstanceID</code> with Systems
      *         Manager documents (SSM documents) that use schema version 2.0 or later will fail. In addition, if you use
      *         the parameter <code>InstanceId</code>, you can't use the parameters <code>AssociationName</code>,
@@ -475,11 +475,11 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      * <note>
      * <p>
-     * <code>InstanceId</code> has been deprecated. To specify an instance ID for an association, use the
+     * <code>InstanceId</code> has been deprecated. To specify a managed node ID for an association, use the
      * <code>Targets</code> parameter. Requests that include the parameter <code>InstanceID</code> with Systems Manager
      * documents (SSM documents) that use schema version 2.0 or later will fail. In addition, if you use the parameter
      * <code>InstanceId</code>, you can't use the parameters <code>AssociationName</code>, <code>DocumentVersion</code>,
@@ -489,9 +489,9 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * </note>
      * 
      * @param instanceId
-     *        The instance ID.</p> <note>
+     *        The managed node ID.</p> <note>
      *        <p>
-     *        <code>InstanceId</code> has been deprecated. To specify an instance ID for an association, use the
+     *        <code>InstanceId</code> has been deprecated. To specify a managed node ID for an association, use the
      *        <code>Targets</code> parameter. Requests that include the parameter <code>InstanceID</code> with Systems
      *        Manager documents (SSM documents) that use schema version 2.0 or later will fail. In addition, if you use
      *        the parameter <code>InstanceId</code>, you can't use the parameters <code>AssociationName</code>,
@@ -577,19 +577,20 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The targets for the association. You can target instances by using tags, Amazon Web Services resource groups, all
-     * instances in an Amazon Web Services account, or individual instance IDs. You can target all instances in an
-     * Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>. For
-     * more information about choosing targets for an association, see <a href=
+     * The targets for the association. You can target managed nodes by using tags, Amazon Web Services resource groups,
+     * all managed nodes in an Amazon Web Services account, or individual managed node IDs. You can target all managed
+     * nodes in an Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of
+     * <code>*</code>. For more information about choosing targets for an association, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
      * >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
      * Manager User Guide</i>.
      * </p>
      * 
-     * @return The targets for the association. You can target instances by using tags, Amazon Web Services resource
-     *         groups, all instances in an Amazon Web Services account, or individual instance IDs. You can target all
-     *         instances in an Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value
-     *         of <code>*</code>. For more information about choosing targets for an association, see <a href=
+     * @return The targets for the association. You can target managed nodes by using tags, Amazon Web Services resource
+     *         groups, all managed nodes in an Amazon Web Services account, or individual managed node IDs. You can
+     *         target all managed nodes in an Amazon Web Services account by specifying the <code>InstanceIds</code> key
+     *         with a value of <code>*</code>. For more information about choosing targets for an association, see <a
+     *         href=
      *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
      *         >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services
      *         Systems Manager User Guide</i>.
@@ -604,20 +605,21 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The targets for the association. You can target instances by using tags, Amazon Web Services resource groups, all
-     * instances in an Amazon Web Services account, or individual instance IDs. You can target all instances in an
-     * Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>. For
-     * more information about choosing targets for an association, see <a href=
+     * The targets for the association. You can target managed nodes by using tags, Amazon Web Services resource groups,
+     * all managed nodes in an Amazon Web Services account, or individual managed node IDs. You can target all managed
+     * nodes in an Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of
+     * <code>*</code>. For more information about choosing targets for an association, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
      * >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
      * Manager User Guide</i>.
      * </p>
      * 
      * @param targets
-     *        The targets for the association. You can target instances by using tags, Amazon Web Services resource
-     *        groups, all instances in an Amazon Web Services account, or individual instance IDs. You can target all
-     *        instances in an Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of
-     *        <code>*</code>. For more information about choosing targets for an association, see <a href=
+     *        The targets for the association. You can target managed nodes by using tags, Amazon Web Services resource
+     *        groups, all managed nodes in an Amazon Web Services account, or individual managed node IDs. You can
+     *        target all managed nodes in an Amazon Web Services account by specifying the <code>InstanceIds</code> key
+     *        with a value of <code>*</code>. For more information about choosing targets for an association, see <a
+     *        href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
      *        >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
      *        Manager User Guide</i>.
@@ -634,10 +636,10 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The targets for the association. You can target instances by using tags, Amazon Web Services resource groups, all
-     * instances in an Amazon Web Services account, or individual instance IDs. You can target all instances in an
-     * Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>. For
-     * more information about choosing targets for an association, see <a href=
+     * The targets for the association. You can target managed nodes by using tags, Amazon Web Services resource groups,
+     * all managed nodes in an Amazon Web Services account, or individual managed node IDs. You can target all managed
+     * nodes in an Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of
+     * <code>*</code>. For more information about choosing targets for an association, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
      * >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
      * Manager User Guide</i>.
@@ -649,10 +651,11 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * 
      * @param targets
-     *        The targets for the association. You can target instances by using tags, Amazon Web Services resource
-     *        groups, all instances in an Amazon Web Services account, or individual instance IDs. You can target all
-     *        instances in an Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of
-     *        <code>*</code>. For more information about choosing targets for an association, see <a href=
+     *        The targets for the association. You can target managed nodes by using tags, Amazon Web Services resource
+     *        groups, all managed nodes in an Amazon Web Services account, or individual managed node IDs. You can
+     *        target all managed nodes in an Amazon Web Services account by specifying the <code>InstanceIds</code> key
+     *        with a value of <code>*</code>. For more information about choosing targets for an association, see <a
+     *        href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
      *        >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
      *        Manager User Guide</i>.
@@ -671,20 +674,21 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The targets for the association. You can target instances by using tags, Amazon Web Services resource groups, all
-     * instances in an Amazon Web Services account, or individual instance IDs. You can target all instances in an
-     * Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of <code>*</code>. For
-     * more information about choosing targets for an association, see <a href=
+     * The targets for the association. You can target managed nodes by using tags, Amazon Web Services resource groups,
+     * all managed nodes in an Amazon Web Services account, or individual managed node IDs. You can target all managed
+     * nodes in an Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of
+     * <code>*</code>. For more information about choosing targets for an association, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
      * >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
      * Manager User Guide</i>.
      * </p>
      * 
      * @param targets
-     *        The targets for the association. You can target instances by using tags, Amazon Web Services resource
-     *        groups, all instances in an Amazon Web Services account, or individual instance IDs. You can target all
-     *        instances in an Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of
-     *        <code>*</code>. For more information about choosing targets for an association, see <a href=
+     *        The targets for the association. You can target managed nodes by using tags, Amazon Web Services resource
+     *        groups, all managed nodes in an Amazon Web Services account, or individual managed node IDs. You can
+     *        target all managed nodes in an Amazon Web Services account by specifying the <code>InstanceIds</code> key
+     *        with a value of <code>*</code>. For more information about choosing targets for an association, see <a
+     *        href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
      *        >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
      *        Manager User Guide</i>.
@@ -877,8 +881,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * additional targets. You can specify either an absolute number of errors, for example 10, or a percentage of the
      * target set, for example 10%. If you specify 3, for example, the system stops sending requests when the fourth
      * error is received. If you specify 0, then the system stops sending requests after the first error is returned. If
-     * you run an association on 50 instances and set <code>MaxError</code> to 10%, then the system stops sending the
-     * request when the sixth error is received.
+     * you run an association on 50 managed nodes and set <code>MaxError</code> to 10%, then the system stops sending
+     * the request when the sixth error is received.
      * </p>
      * <p>
      * Executions that are already running an association when <code>MaxErrors</code> is reached are allowed to
@@ -891,8 +895,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      *        additional targets. You can specify either an absolute number of errors, for example 10, or a percentage
      *        of the target set, for example 10%. If you specify 3, for example, the system stops sending requests when
      *        the fourth error is received. If you specify 0, then the system stops sending requests after the first
-     *        error is returned. If you run an association on 50 instances and set <code>MaxError</code> to 10%, then
-     *        the system stops sending the request when the sixth error is received.</p>
+     *        error is returned. If you run an association on 50 managed nodes and set <code>MaxError</code> to 10%,
+     *        then the system stops sending the request when the sixth error is received.</p>
      *        <p>
      *        Executions that are already running an association when <code>MaxErrors</code> is reached are allowed to
      *        complete, but some of these executions may fail as well. If you need to ensure that there won't be more
@@ -910,8 +914,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * additional targets. You can specify either an absolute number of errors, for example 10, or a percentage of the
      * target set, for example 10%. If you specify 3, for example, the system stops sending requests when the fourth
      * error is received. If you specify 0, then the system stops sending requests after the first error is returned. If
-     * you run an association on 50 instances and set <code>MaxError</code> to 10%, then the system stops sending the
-     * request when the sixth error is received.
+     * you run an association on 50 managed nodes and set <code>MaxError</code> to 10%, then the system stops sending
+     * the request when the sixth error is received.
      * </p>
      * <p>
      * Executions that are already running an association when <code>MaxErrors</code> is reached are allowed to
@@ -923,8 +927,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      *         additional targets. You can specify either an absolute number of errors, for example 10, or a percentage
      *         of the target set, for example 10%. If you specify 3, for example, the system stops sending requests when
      *         the fourth error is received. If you specify 0, then the system stops sending requests after the first
-     *         error is returned. If you run an association on 50 instances and set <code>MaxError</code> to 10%, then
-     *         the system stops sending the request when the sixth error is received.</p>
+     *         error is returned. If you run an association on 50 managed nodes and set <code>MaxError</code> to 10%,
+     *         then the system stops sending the request when the sixth error is received.</p>
      *         <p>
      *         Executions that are already running an association when <code>MaxErrors</code> is reached are allowed to
      *         complete, but some of these executions may fail as well. If you need to ensure that there won't be more
@@ -942,8 +946,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * additional targets. You can specify either an absolute number of errors, for example 10, or a percentage of the
      * target set, for example 10%. If you specify 3, for example, the system stops sending requests when the fourth
      * error is received. If you specify 0, then the system stops sending requests after the first error is returned. If
-     * you run an association on 50 instances and set <code>MaxError</code> to 10%, then the system stops sending the
-     * request when the sixth error is received.
+     * you run an association on 50 managed nodes and set <code>MaxError</code> to 10%, then the system stops sending
+     * the request when the sixth error is received.
      * </p>
      * <p>
      * Executions that are already running an association when <code>MaxErrors</code> is reached are allowed to
@@ -956,8 +960,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      *        additional targets. You can specify either an absolute number of errors, for example 10, or a percentage
      *        of the target set, for example 10%. If you specify 3, for example, the system stops sending requests when
      *        the fourth error is received. If you specify 0, then the system stops sending requests after the first
-     *        error is returned. If you run an association on 50 instances and set <code>MaxError</code> to 10%, then
-     *        the system stops sending the request when the sixth error is received.</p>
+     *        error is returned. If you run an association on 50 managed nodes and set <code>MaxError</code> to 10%,
+     *        then the system stops sending the request when the sixth error is received.</p>
      *        <p>
      *        Executions that are already running an association when <code>MaxErrors</code> is reached are allowed to
      *        complete, but some of these executions may fail as well. If you need to ensure that there won't be more
@@ -978,9 +982,9 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * targets run the association at the same time.
      * </p>
      * <p>
-     * If a new instance starts and attempts to run an association while Systems Manager is running
+     * If a new managed node starts and attempts to run an association while Systems Manager is running
      * <code>MaxConcurrency</code> associations, the association is allowed to run. During the next association
-     * interval, the new instance will process its association within the limit specified for
+     * interval, the new managed node will process its association within the limit specified for
      * <code>MaxConcurrency</code>.
      * </p>
      * 
@@ -989,9 +993,9 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      *        for example 10, or a percentage of the target set, for example 10%. The default value is 100%, which means
      *        all targets run the association at the same time.</p>
      *        <p>
-     *        If a new instance starts and attempts to run an association while Systems Manager is running
+     *        If a new managed node starts and attempts to run an association while Systems Manager is running
      *        <code>MaxConcurrency</code> associations, the association is allowed to run. During the next association
-     *        interval, the new instance will process its association within the limit specified for
+     *        interval, the new managed node will process its association within the limit specified for
      *        <code>MaxConcurrency</code>.
      */
 
@@ -1006,9 +1010,9 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * targets run the association at the same time.
      * </p>
      * <p>
-     * If a new instance starts and attempts to run an association while Systems Manager is running
+     * If a new managed node starts and attempts to run an association while Systems Manager is running
      * <code>MaxConcurrency</code> associations, the association is allowed to run. During the next association
-     * interval, the new instance will process its association within the limit specified for
+     * interval, the new managed node will process its association within the limit specified for
      * <code>MaxConcurrency</code>.
      * </p>
      * 
@@ -1016,9 +1020,9 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      *         for example 10, or a percentage of the target set, for example 10%. The default value is 100%, which
      *         means all targets run the association at the same time.</p>
      *         <p>
-     *         If a new instance starts and attempts to run an association while Systems Manager is running
+     *         If a new managed node starts and attempts to run an association while Systems Manager is running
      *         <code>MaxConcurrency</code> associations, the association is allowed to run. During the next association
-     *         interval, the new instance will process its association within the limit specified for
+     *         interval, the new managed node will process its association within the limit specified for
      *         <code>MaxConcurrency</code>.
      */
 
@@ -1033,9 +1037,9 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * targets run the association at the same time.
      * </p>
      * <p>
-     * If a new instance starts and attempts to run an association while Systems Manager is running
+     * If a new managed node starts and attempts to run an association while Systems Manager is running
      * <code>MaxConcurrency</code> associations, the association is allowed to run. During the next association
-     * interval, the new instance will process its association within the limit specified for
+     * interval, the new managed node will process its association within the limit specified for
      * <code>MaxConcurrency</code>.
      * </p>
      * 
@@ -1044,9 +1048,9 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      *        for example 10, or a percentage of the target set, for example 10%. The default value is 100%, which means
      *        all targets run the association at the same time.</p>
      *        <p>
-     *        If a new instance starts and attempts to run an association while Systems Manager is running
+     *        If a new managed node starts and attempts to run an association while Systems Manager is running
      *        <code>MaxConcurrency</code> associations, the association is allowed to run. During the next association
-     *        interval, the new instance will process its association within the limit specified for
+     *        interval, the new managed node will process its association within the limit specified for
      *        <code>MaxConcurrency</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

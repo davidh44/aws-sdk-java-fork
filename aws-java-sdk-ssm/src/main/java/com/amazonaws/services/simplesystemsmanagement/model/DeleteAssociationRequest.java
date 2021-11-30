@@ -33,11 +33,11 @@ public class DeleteAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
     private String name;
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      * <note>
      * <p>
-     * <code>InstanceId</code> has been deprecated. To specify an instance ID for an association, use the
+     * <code>InstanceId</code> has been deprecated. To specify a managed node ID for an association, use the
      * <code>Targets</code> parameter. Requests that include the parameter <code>InstanceID</code> with Systems Manager
      * documents (SSM documents) that use schema version 2.0 or later will fail. In addition, if you use the parameter
      * <code>InstanceId</code>, you can't use the parameters <code>AssociationName</code>, <code>DocumentVersion</code>,
@@ -96,11 +96,11 @@ public class DeleteAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      * <note>
      * <p>
-     * <code>InstanceId</code> has been deprecated. To specify an instance ID for an association, use the
+     * <code>InstanceId</code> has been deprecated. To specify a managed node ID for an association, use the
      * <code>Targets</code> parameter. Requests that include the parameter <code>InstanceID</code> with Systems Manager
      * documents (SSM documents) that use schema version 2.0 or later will fail. In addition, if you use the parameter
      * <code>InstanceId</code>, you can't use the parameters <code>AssociationName</code>, <code>DocumentVersion</code>,
@@ -110,9 +110,9 @@ public class DeleteAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * </note>
      * 
      * @param instanceId
-     *        The instance ID.</p> <note>
+     *        The managed node ID.</p> <note>
      *        <p>
-     *        <code>InstanceId</code> has been deprecated. To specify an instance ID for an association, use the
+     *        <code>InstanceId</code> has been deprecated. To specify a managed node ID for an association, use the
      *        <code>Targets</code> parameter. Requests that include the parameter <code>InstanceID</code> with Systems
      *        Manager documents (SSM documents) that use schema version 2.0 or later will fail. In addition, if you use
      *        the parameter <code>InstanceId</code>, you can't use the parameters <code>AssociationName</code>,
@@ -128,11 +128,11 @@ public class DeleteAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      * <note>
      * <p>
-     * <code>InstanceId</code> has been deprecated. To specify an instance ID for an association, use the
+     * <code>InstanceId</code> has been deprecated. To specify a managed node ID for an association, use the
      * <code>Targets</code> parameter. Requests that include the parameter <code>InstanceID</code> with Systems Manager
      * documents (SSM documents) that use schema version 2.0 or later will fail. In addition, if you use the parameter
      * <code>InstanceId</code>, you can't use the parameters <code>AssociationName</code>, <code>DocumentVersion</code>,
@@ -141,9 +141,9 @@ public class DeleteAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * </note>
      * 
-     * @return The instance ID.</p> <note>
+     * @return The managed node ID.</p> <note>
      *         <p>
-     *         <code>InstanceId</code> has been deprecated. To specify an instance ID for an association, use the
+     *         <code>InstanceId</code> has been deprecated. To specify a managed node ID for an association, use the
      *         <code>Targets</code> parameter. Requests that include the parameter <code>InstanceID</code> with Systems
      *         Manager documents (SSM documents) that use schema version 2.0 or later will fail. In addition, if you use
      *         the parameter <code>InstanceId</code>, you can't use the parameters <code>AssociationName</code>,
@@ -159,11 +159,11 @@ public class DeleteAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      * <note>
      * <p>
-     * <code>InstanceId</code> has been deprecated. To specify an instance ID for an association, use the
+     * <code>InstanceId</code> has been deprecated. To specify a managed node ID for an association, use the
      * <code>Targets</code> parameter. Requests that include the parameter <code>InstanceID</code> with Systems Manager
      * documents (SSM documents) that use schema version 2.0 or later will fail. In addition, if you use the parameter
      * <code>InstanceId</code>, you can't use the parameters <code>AssociationName</code>, <code>DocumentVersion</code>,
@@ -173,9 +173,9 @@ public class DeleteAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * </note>
      * 
      * @param instanceId
-     *        The instance ID.</p> <note>
+     *        The managed node ID.</p> <note>
      *        <p>
-     *        <code>InstanceId</code> has been deprecated. To specify an instance ID for an association, use the
+     *        <code>InstanceId</code> has been deprecated. To specify a managed node ID for an association, use the
      *        <code>Targets</code> parameter. Requests that include the parameter <code>InstanceID</code> with Systems
      *        Manager documents (SSM documents) that use schema version 2.0 or later will fail. In addition, if you use
      *        the parameter <code>InstanceId</code>, you can't use the parameters <code>AssociationName</code>,

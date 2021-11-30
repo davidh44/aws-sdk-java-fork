@@ -46,6 +46,10 @@ public class AutoScalingGroupRecommendationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recommendationOptions").build();
     private static final MarshallingInfo<java.util.Date> LASTREFRESHTIMESTAMP_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lastRefreshTimestamp").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<String> CURRENTPERFORMANCERISK_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("currentPerformanceRisk").build();
+    private static final MarshallingInfo<StructuredPojo> EFFECTIVERECOMMENDATIONPREFERENCES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("effectiveRecommendationPreferences").build();
 
     private static final AutoScalingGroupRecommendationMarshaller instance = new AutoScalingGroupRecommendationMarshaller();
 
@@ -72,6 +76,8 @@ public class AutoScalingGroupRecommendationMarshaller {
             protocolMarshaller.marshall(autoScalingGroupRecommendation.getCurrentConfiguration(), CURRENTCONFIGURATION_BINDING);
             protocolMarshaller.marshall(autoScalingGroupRecommendation.getRecommendationOptions(), RECOMMENDATIONOPTIONS_BINDING);
             protocolMarshaller.marshall(autoScalingGroupRecommendation.getLastRefreshTimestamp(), LASTREFRESHTIMESTAMP_BINDING);
+            protocolMarshaller.marshall(autoScalingGroupRecommendation.getCurrentPerformanceRisk(), CURRENTPERFORMANCERISK_BINDING);
+            protocolMarshaller.marshall(autoScalingGroupRecommendation.getEffectiveRecommendationPreferences(), EFFECTIVERECOMMENDATIONPREFERENCES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -56,7 +56,7 @@ public class NotificationConfig implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * <code>Invocation</code>: For commands sent to multiple instances, receive notification on a per-instance basis
+     * <code>Invocation</code>: For commands sent to multiple managed nodes, receive notification on a per-node basis
      * when the status of a command changes.
      * </p>
      * </li>
@@ -253,7 +253,7 @@ public class NotificationConfig implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * <code>Invocation</code>: For commands sent to multiple instances, receive notification on a per-instance basis
+     * <code>Invocation</code>: For commands sent to multiple managed nodes, receive notification on a per-node basis
      * when the status of a command changes.
      * </p>
      * </li>
@@ -269,7 +269,7 @@ public class NotificationConfig implements Serializable, Cloneable, StructuredPo
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Invocation</code>: For commands sent to multiple instances, receive notification on a per-instance
+     *        <code>Invocation</code>: For commands sent to multiple managed nodes, receive notification on a per-node
      *        basis when the status of a command changes.
      *        </p>
      *        </li>
@@ -292,7 +292,7 @@ public class NotificationConfig implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * <code>Invocation</code>: For commands sent to multiple instances, receive notification on a per-instance basis
+     * <code>Invocation</code>: For commands sent to multiple managed nodes, receive notification on a per-node basis
      * when the status of a command changes.
      * </p>
      * </li>
@@ -307,7 +307,7 @@ public class NotificationConfig implements Serializable, Cloneable, StructuredPo
      *         </li>
      *         <li>
      *         <p>
-     *         <code>Invocation</code>: For commands sent to multiple instances, receive notification on a per-instance
+     *         <code>Invocation</code>: For commands sent to multiple managed nodes, receive notification on a per-node
      *         basis when the status of a command changes.
      *         </p>
      *         </li>
@@ -330,7 +330,7 @@ public class NotificationConfig implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * <code>Invocation</code>: For commands sent to multiple instances, receive notification on a per-instance basis
+     * <code>Invocation</code>: For commands sent to multiple managed nodes, receive notification on a per-node basis
      * when the status of a command changes.
      * </p>
      * </li>
@@ -346,7 +346,7 @@ public class NotificationConfig implements Serializable, Cloneable, StructuredPo
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Invocation</code>: For commands sent to multiple instances, receive notification on a per-instance
+     *        <code>Invocation</code>: For commands sent to multiple managed nodes, receive notification on a per-node
      *        basis when the status of a command changes.
      *        </p>
      *        </li>
@@ -371,7 +371,7 @@ public class NotificationConfig implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * <code>Invocation</code>: For commands sent to multiple instances, receive notification on a per-instance basis
+     * <code>Invocation</code>: For commands sent to multiple managed nodes, receive notification on a per-node basis
      * when the status of a command changes.
      * </p>
      * </li>
@@ -387,7 +387,7 @@ public class NotificationConfig implements Serializable, Cloneable, StructuredPo
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Invocation</code>: For commands sent to multiple instances, receive notification on a per-instance
+     *        <code>Invocation</code>: For commands sent to multiple managed nodes, receive notification on a per-node
      *        basis when the status of a command changes.
      *        </p>
      *        </li>
@@ -410,7 +410,7 @@ public class NotificationConfig implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * <code>Invocation</code>: For commands sent to multiple instances, receive notification on a per-instance basis
+     * <code>Invocation</code>: For commands sent to multiple managed nodes, receive notification on a per-node basis
      * when the status of a command changes.
      * </p>
      * </li>
@@ -426,7 +426,7 @@ public class NotificationConfig implements Serializable, Cloneable, StructuredPo
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Invocation</code>: For commands sent to multiple instances, receive notification on a per-instance
+     *        <code>Invocation</code>: For commands sent to multiple managed nodes, receive notification on a per-node
      *        basis when the status of a command changes.
      *        </p>
      *        </li>

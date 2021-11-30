@@ -30,8 +30,8 @@ public class InventoryResultEntity implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * ID of the inventory result entity. For example, for managed instance inventory the result will be the managed
-     * instance ID. For EC2 instance inventory, the result will be the instance ID.
+     * ID of the inventory result entity. For example, for managed node inventory the result will be the managed node
+     * ID. For EC2 instance inventory, the result will be the instance ID.
      * </p>
      */
     private String id;
@@ -44,13 +44,13 @@ public class InventoryResultEntity implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * ID of the inventory result entity. For example, for managed instance inventory the result will be the managed
-     * instance ID. For EC2 instance inventory, the result will be the instance ID.
+     * ID of the inventory result entity. For example, for managed node inventory the result will be the managed node
+     * ID. For EC2 instance inventory, the result will be the instance ID.
      * </p>
      * 
      * @param id
-     *        ID of the inventory result entity. For example, for managed instance inventory the result will be the
-     *        managed instance ID. For EC2 instance inventory, the result will be the instance ID.
+     *        ID of the inventory result entity. For example, for managed node inventory the result will be the managed
+     *        node ID. For EC2 instance inventory, the result will be the instance ID.
      */
 
     public void setId(String id) {
@@ -59,12 +59,12 @@ public class InventoryResultEntity implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * ID of the inventory result entity. For example, for managed instance inventory the result will be the managed
-     * instance ID. For EC2 instance inventory, the result will be the instance ID.
+     * ID of the inventory result entity. For example, for managed node inventory the result will be the managed node
+     * ID. For EC2 instance inventory, the result will be the instance ID.
      * </p>
      * 
-     * @return ID of the inventory result entity. For example, for managed instance inventory the result will be the
-     *         managed instance ID. For EC2 instance inventory, the result will be the instance ID.
+     * @return ID of the inventory result entity. For example, for managed node inventory the result will be the managed
+     *         node ID. For EC2 instance inventory, the result will be the instance ID.
      */
 
     public String getId() {
@@ -73,13 +73,13 @@ public class InventoryResultEntity implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * ID of the inventory result entity. For example, for managed instance inventory the result will be the managed
-     * instance ID. For EC2 instance inventory, the result will be the instance ID.
+     * ID of the inventory result entity. For example, for managed node inventory the result will be the managed node
+     * ID. For EC2 instance inventory, the result will be the instance ID.
      * </p>
      * 
      * @param id
-     *        ID of the inventory result entity. For example, for managed instance inventory the result will be the
-     *        managed instance ID. For EC2 instance inventory, the result will be the instance ID.
+     *        ID of the inventory result entity. For example, for managed node inventory the result will be the managed
+     *        node ID. For EC2 instance inventory, the result will be the instance ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,7 +27,7 @@ public class DescribeInstancePatchStatesRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The ID of the instance for which patch state information should be retrieved.
+     * The ID of the managed node for which patch state information should be retrieved.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> instanceIds;
@@ -39,17 +39,17 @@ public class DescribeInstancePatchStatesRequest extends com.amazonaws.AmazonWebS
     private String nextToken;
     /**
      * <p>
-     * The maximum number of instances to return (per page).
+     * The maximum number of managed nodes to return (per page).
      * </p>
      */
     private Integer maxResults;
 
     /**
      * <p>
-     * The ID of the instance for which patch state information should be retrieved.
+     * The ID of the managed node for which patch state information should be retrieved.
      * </p>
      * 
-     * @return The ID of the instance for which patch state information should be retrieved.
+     * @return The ID of the managed node for which patch state information should be retrieved.
      */
 
     public java.util.List<String> getInstanceIds() {
@@ -61,11 +61,11 @@ public class DescribeInstancePatchStatesRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The ID of the instance for which patch state information should be retrieved.
+     * The ID of the managed node for which patch state information should be retrieved.
      * </p>
      * 
      * @param instanceIds
-     *        The ID of the instance for which patch state information should be retrieved.
+     *        The ID of the managed node for which patch state information should be retrieved.
      */
 
     public void setInstanceIds(java.util.Collection<String> instanceIds) {
@@ -79,7 +79,7 @@ public class DescribeInstancePatchStatesRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The ID of the instance for which patch state information should be retrieved.
+     * The ID of the managed node for which patch state information should be retrieved.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -88,7 +88,7 @@ public class DescribeInstancePatchStatesRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param instanceIds
-     *        The ID of the instance for which patch state information should be retrieved.
+     *        The ID of the managed node for which patch state information should be retrieved.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -104,11 +104,11 @@ public class DescribeInstancePatchStatesRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The ID of the instance for which patch state information should be retrieved.
+     * The ID of the managed node for which patch state information should be retrieved.
      * </p>
      * 
      * @param instanceIds
-     *        The ID of the instance for which patch state information should be retrieved.
+     *        The ID of the managed node for which patch state information should be retrieved.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -159,11 +159,11 @@ public class DescribeInstancePatchStatesRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The maximum number of instances to return (per page).
+     * The maximum number of managed nodes to return (per page).
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of instances to return (per page).
+     *        The maximum number of managed nodes to return (per page).
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -172,10 +172,10 @@ public class DescribeInstancePatchStatesRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The maximum number of instances to return (per page).
+     * The maximum number of managed nodes to return (per page).
      * </p>
      * 
-     * @return The maximum number of instances to return (per page).
+     * @return The maximum number of managed nodes to return (per page).
      */
 
     public Integer getMaxResults() {
@@ -184,11 +184,11 @@ public class DescribeInstancePatchStatesRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The maximum number of instances to return (per page).
+     * The maximum number of managed nodes to return (per page).
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of instances to return (per page).
+     *        The maximum number of managed nodes to return (per page).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

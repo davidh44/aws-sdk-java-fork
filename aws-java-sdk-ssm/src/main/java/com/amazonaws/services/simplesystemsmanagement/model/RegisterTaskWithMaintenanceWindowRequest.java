@@ -33,7 +33,7 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
     private String windowId;
     /**
      * <p>
-     * The targets (either instances or maintenance window targets).
+     * The targets (either managed nodes or maintenance window targets).
      * </p>
      * <note>
      * <p>
@@ -46,7 +46,7 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
      * </p>
      * </note>
      * <p>
-     * Specify instances using the following format:
+     * Specify managed nodes using the following format:
      * </p>
      * <p>
      * <code>Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;</code>
@@ -154,8 +154,8 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
     private String maxErrors;
     /**
      * <p>
-     * A structure containing information about an Amazon Simple Storage Service (Amazon S3) bucket to write
-     * instance-level logs to.
+     * A structure containing information about an Amazon Simple Storage Service (Amazon S3) bucket to write managed
+     * node-level logs to.
      * </p>
      * <note>
      * <p>
@@ -267,7 +267,7 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The targets (either instances or maintenance window targets).
+     * The targets (either managed nodes or maintenance window targets).
      * </p>
      * <note>
      * <p>
@@ -280,7 +280,7 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
      * </p>
      * </note>
      * <p>
-     * Specify instances using the following format:
+     * Specify managed nodes using the following format:
      * </p>
      * <p>
      * <code>Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;</code>
@@ -292,7 +292,7 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
      * <code>Key=WindowTargetIds,Values=&lt;window-target-id-1&gt;,&lt;window-target-id-2&gt;</code>
      * </p>
      * 
-     * @return The targets (either instances or maintenance window targets).</p> <note>
+     * @return The targets (either managed nodes or maintenance window targets).</p> <note>
      *         <p>
      *         One or more targets must be specified for maintenance window Run Command-type tasks. Depending on the
      *         task, targets are optional for other maintenance window task types (Automation, Lambda, and Step
@@ -303,7 +303,7 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
      *         </p>
      *         </note>
      *         <p>
-     *         Specify instances using the following format:
+     *         Specify managed nodes using the following format:
      *         </p>
      *         <p>
      *         <code>Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;</code>
@@ -324,7 +324,7 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The targets (either instances or maintenance window targets).
+     * The targets (either managed nodes or maintenance window targets).
      * </p>
      * <note>
      * <p>
@@ -337,7 +337,7 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
      * </p>
      * </note>
      * <p>
-     * Specify instances using the following format:
+     * Specify managed nodes using the following format:
      * </p>
      * <p>
      * <code>Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;</code>
@@ -350,7 +350,7 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
      * </p>
      * 
      * @param targets
-     *        The targets (either instances or maintenance window targets).</p> <note>
+     *        The targets (either managed nodes or maintenance window targets).</p> <note>
      *        <p>
      *        One or more targets must be specified for maintenance window Run Command-type tasks. Depending on the
      *        task, targets are optional for other maintenance window task types (Automation, Lambda, and Step
@@ -361,7 +361,7 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
      *        </p>
      *        </note>
      *        <p>
-     *        Specify instances using the following format:
+     *        Specify managed nodes using the following format:
      *        </p>
      *        <p>
      *        <code>Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;</code>
@@ -384,7 +384,7 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The targets (either instances or maintenance window targets).
+     * The targets (either managed nodes or maintenance window targets).
      * </p>
      * <note>
      * <p>
@@ -397,7 +397,7 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
      * </p>
      * </note>
      * <p>
-     * Specify instances using the following format:
+     * Specify managed nodes using the following format:
      * </p>
      * <p>
      * <code>Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;</code>
@@ -415,7 +415,7 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
      * </p>
      * 
      * @param targets
-     *        The targets (either instances or maintenance window targets).</p> <note>
+     *        The targets (either managed nodes or maintenance window targets).</p> <note>
      *        <p>
      *        One or more targets must be specified for maintenance window Run Command-type tasks. Depending on the
      *        task, targets are optional for other maintenance window task types (Automation, Lambda, and Step
@@ -426,7 +426,7 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
      *        </p>
      *        </note>
      *        <p>
-     *        Specify instances using the following format:
+     *        Specify managed nodes using the following format:
      *        </p>
      *        <p>
      *        <code>Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;</code>
@@ -451,7 +451,7 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The targets (either instances or maintenance window targets).
+     * The targets (either managed nodes or maintenance window targets).
      * </p>
      * <note>
      * <p>
@@ -464,7 +464,7 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
      * </p>
      * </note>
      * <p>
-     * Specify instances using the following format:
+     * Specify managed nodes using the following format:
      * </p>
      * <p>
      * <code>Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;</code>
@@ -477,7 +477,7 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
      * </p>
      * 
      * @param targets
-     *        The targets (either instances or maintenance window targets).</p> <note>
+     *        The targets (either managed nodes or maintenance window targets).</p> <note>
      *        <p>
      *        One or more targets must be specified for maintenance window Run Command-type tasks. Depending on the
      *        task, targets are optional for other maintenance window task types (Automation, Lambda, and Step
@@ -488,7 +488,7 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
      *        </p>
      *        </note>
      *        <p>
-     *        Specify instances using the following format:
+     *        Specify managed nodes using the following format:
      *        </p>
      *        <p>
      *        <code>Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;</code>
@@ -1147,8 +1147,8 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * A structure containing information about an Amazon Simple Storage Service (Amazon S3) bucket to write
-     * instance-level logs to.
+     * A structure containing information about an Amazon Simple Storage Service (Amazon S3) bucket to write managed
+     * node-level logs to.
      * </p>
      * <note>
      * <p>
@@ -1162,7 +1162,7 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
      * 
      * @param loggingInfo
      *        A structure containing information about an Amazon Simple Storage Service (Amazon S3) bucket to write
-     *        instance-level logs to. </p> <note>
+     *        managed node-level logs to. </p> <note>
      *        <p>
      *        <code>LoggingInfo</code> has been deprecated. To specify an Amazon Simple Storage Service (Amazon S3)
      *        bucket to contain logs, instead use the <code>OutputS3BucketName</code> and <code>OutputS3KeyPrefix</code>
@@ -1178,8 +1178,8 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * A structure containing information about an Amazon Simple Storage Service (Amazon S3) bucket to write
-     * instance-level logs to.
+     * A structure containing information about an Amazon Simple Storage Service (Amazon S3) bucket to write managed
+     * node-level logs to.
      * </p>
      * <note>
      * <p>
@@ -1192,7 +1192,7 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
      * </note>
      * 
      * @return A structure containing information about an Amazon Simple Storage Service (Amazon S3) bucket to write
-     *         instance-level logs to. </p> <note>
+     *         managed node-level logs to. </p> <note>
      *         <p>
      *         <code>LoggingInfo</code> has been deprecated. To specify an Amazon Simple Storage Service (Amazon S3)
      *         bucket to contain logs, instead use the <code>OutputS3BucketName</code> and
@@ -1208,8 +1208,8 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * A structure containing information about an Amazon Simple Storage Service (Amazon S3) bucket to write
-     * instance-level logs to.
+     * A structure containing information about an Amazon Simple Storage Service (Amazon S3) bucket to write managed
+     * node-level logs to.
      * </p>
      * <note>
      * <p>
@@ -1223,7 +1223,7 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
      * 
      * @param loggingInfo
      *        A structure containing information about an Amazon Simple Storage Service (Amazon S3) bucket to write
-     *        instance-level logs to. </p> <note>
+     *        managed node-level logs to. </p> <note>
      *        <p>
      *        <code>LoggingInfo</code> has been deprecated. To specify an Amazon Simple Storage Service (Amazon S3)
      *        bucket to contain logs, instead use the <code>OutputS3BucketName</code> and <code>OutputS3KeyPrefix</code>

@@ -29,6 +29,8 @@ public class LensReviewReportMarshaller {
 
     private static final MarshallingInfo<String> LENSALIAS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("LensAlias").build();
+    private static final MarshallingInfo<String> LENSARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("LensArn").build();
     private static final MarshallingInfo<String> BASE64STRING_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Base64String").build();
 
@@ -49,6 +51,7 @@ public class LensReviewReportMarshaller {
 
         try {
             protocolMarshaller.marshall(lensReviewReport.getLensAlias(), LENSALIAS_BINDING);
+            protocolMarshaller.marshall(lensReviewReport.getLensArn(), LENSARN_BINDING);
             protocolMarshaller.marshall(lensReviewReport.getBase64String(), BASE64STRING_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

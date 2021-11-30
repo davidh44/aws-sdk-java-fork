@@ -27,13 +27,13 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The IDs of the instances where the command should run. Specifying instance IDs is most useful when you are
-     * targeting a limited number of instances, though you can specify up to 50 IDs.
+     * The IDs of the managed nodes where the command should run. Specifying managed node IDs is most useful when you
+     * are targeting a limited number of managed nodes, though you can specify up to 50 IDs.
      * </p>
      * <p>
-     * To target a larger number of instances, or if you prefer not to list individual instance IDs, we recommend using
+     * To target a larger number of managed nodes, or if you prefer not to list individual node IDs, we recommend using
      * the <code>Targets</code> option instead. Using <code>Targets</code>, which accepts tag key-value pairs to
-     * identify the instances to send commands to, you can a send command to tens, hundreds, or thousands of instances
+     * identify the managed nodes to send commands to, you can a send command to tens, hundreds, or thousands of nodes
      * at once.
      * </p>
      * <p>
@@ -45,13 +45,13 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
     private com.amazonaws.internal.SdkInternalList<String> instanceIds;
     /**
      * <p>
-     * An array of search criteria that targets instances using a <code>Key,Value</code> combination that you specify.
-     * Specifying targets is most useful when you want to send a command to a large number of instances at once. Using
-     * <code>Targets</code>, which accepts tag key-value pairs to identify instances, you can send a command to tens,
-     * hundreds, or thousands of instances at once.
+     * An array of search criteria that targets managed nodes using a <code>Key,Value</code> combination that you
+     * specify. Specifying targets is most useful when you want to send a command to a large number of managed nodes at
+     * once. Using <code>Targets</code>, which accepts tag key-value pairs to identify managed nodes, you can send a
+     * command to tens, hundreds, or thousands of nodes at once.
      * </p>
      * <p>
-     * To send a command to a smaller number of instances, you can use the <code>InstanceIds</code> option instead.
+     * To send a command to a smaller number of managed nodes, you can use the <code>InstanceIds</code> option instead.
      * </p>
      * <p>
      * For more information about how to use targets, see <a
@@ -155,9 +155,9 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String outputS3KeyPrefix;
     /**
      * <p>
-     * (Optional) The maximum number of instances that are allowed to run the command at the same time. You can specify
-     * a number such as 10 or a percentage such as 10%. The default value is <code>50</code>. For more information about
-     * how to use <code>MaxConcurrency</code>, see <a href=
+     * (Optional) The maximum number of managed nodes that are allowed to run the command at the same time. You can
+     * specify a number such as 10 or a percentage such as 10%. The default value is <code>50</code>. For more
+     * information about how to use <code>MaxConcurrency</code>, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/send-commands-multiple.html#send-commands-velocity"
      * >Using concurrency controls</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
@@ -197,13 +197,13 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The IDs of the instances where the command should run. Specifying instance IDs is most useful when you are
-     * targeting a limited number of instances, though you can specify up to 50 IDs.
+     * The IDs of the managed nodes where the command should run. Specifying managed node IDs is most useful when you
+     * are targeting a limited number of managed nodes, though you can specify up to 50 IDs.
      * </p>
      * <p>
-     * To target a larger number of instances, or if you prefer not to list individual instance IDs, we recommend using
+     * To target a larger number of managed nodes, or if you prefer not to list individual node IDs, we recommend using
      * the <code>Targets</code> option instead. Using <code>Targets</code>, which accepts tag key-value pairs to
-     * identify the instances to send commands to, you can a send command to tens, hundreds, or thousands of instances
+     * identify the managed nodes to send commands to, you can a send command to tens, hundreds, or thousands of nodes
      * at once.
      * </p>
      * <p>
@@ -212,13 +212,13 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
      * rate controls to send commands to a fleet</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
-     * @return The IDs of the instances where the command should run. Specifying instance IDs is most useful when you
-     *         are targeting a limited number of instances, though you can specify up to 50 IDs.</p>
+     * @return The IDs of the managed nodes where the command should run. Specifying managed node IDs is most useful
+     *         when you are targeting a limited number of managed nodes, though you can specify up to 50 IDs.</p>
      *         <p>
-     *         To target a larger number of instances, or if you prefer not to list individual instance IDs, we
+     *         To target a larger number of managed nodes, or if you prefer not to list individual node IDs, we
      *         recommend using the <code>Targets</code> option instead. Using <code>Targets</code>, which accepts tag
-     *         key-value pairs to identify the instances to send commands to, you can a send command to tens, hundreds,
-     *         or thousands of instances at once.
+     *         key-value pairs to identify the managed nodes to send commands to, you can a send command to tens,
+     *         hundreds, or thousands of nodes at once.
      *         </p>
      *         <p>
      *         For more information about how to use targets, see <a
@@ -236,13 +236,13 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The IDs of the instances where the command should run. Specifying instance IDs is most useful when you are
-     * targeting a limited number of instances, though you can specify up to 50 IDs.
+     * The IDs of the managed nodes where the command should run. Specifying managed node IDs is most useful when you
+     * are targeting a limited number of managed nodes, though you can specify up to 50 IDs.
      * </p>
      * <p>
-     * To target a larger number of instances, or if you prefer not to list individual instance IDs, we recommend using
+     * To target a larger number of managed nodes, or if you prefer not to list individual node IDs, we recommend using
      * the <code>Targets</code> option instead. Using <code>Targets</code>, which accepts tag key-value pairs to
-     * identify the instances to send commands to, you can a send command to tens, hundreds, or thousands of instances
+     * identify the managed nodes to send commands to, you can a send command to tens, hundreds, or thousands of nodes
      * at once.
      * </p>
      * <p>
@@ -252,13 +252,13 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param instanceIds
-     *        The IDs of the instances where the command should run. Specifying instance IDs is most useful when you are
-     *        targeting a limited number of instances, though you can specify up to 50 IDs.</p>
+     *        The IDs of the managed nodes where the command should run. Specifying managed node IDs is most useful when
+     *        you are targeting a limited number of managed nodes, though you can specify up to 50 IDs.</p>
      *        <p>
-     *        To target a larger number of instances, or if you prefer not to list individual instance IDs, we recommend
+     *        To target a larger number of managed nodes, or if you prefer not to list individual node IDs, we recommend
      *        using the <code>Targets</code> option instead. Using <code>Targets</code>, which accepts tag key-value
-     *        pairs to identify the instances to send commands to, you can a send command to tens, hundreds, or
-     *        thousands of instances at once.
+     *        pairs to identify the managed nodes to send commands to, you can a send command to tens, hundreds, or
+     *        thousands of nodes at once.
      *        </p>
      *        <p>
      *        For more information about how to use targets, see <a
@@ -278,13 +278,13 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The IDs of the instances where the command should run. Specifying instance IDs is most useful when you are
-     * targeting a limited number of instances, though you can specify up to 50 IDs.
+     * The IDs of the managed nodes where the command should run. Specifying managed node IDs is most useful when you
+     * are targeting a limited number of managed nodes, though you can specify up to 50 IDs.
      * </p>
      * <p>
-     * To target a larger number of instances, or if you prefer not to list individual instance IDs, we recommend using
+     * To target a larger number of managed nodes, or if you prefer not to list individual node IDs, we recommend using
      * the <code>Targets</code> option instead. Using <code>Targets</code>, which accepts tag key-value pairs to
-     * identify the instances to send commands to, you can a send command to tens, hundreds, or thousands of instances
+     * identify the managed nodes to send commands to, you can a send command to tens, hundreds, or thousands of nodes
      * at once.
      * </p>
      * <p>
@@ -299,13 +299,13 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param instanceIds
-     *        The IDs of the instances where the command should run. Specifying instance IDs is most useful when you are
-     *        targeting a limited number of instances, though you can specify up to 50 IDs.</p>
+     *        The IDs of the managed nodes where the command should run. Specifying managed node IDs is most useful when
+     *        you are targeting a limited number of managed nodes, though you can specify up to 50 IDs.</p>
      *        <p>
-     *        To target a larger number of instances, or if you prefer not to list individual instance IDs, we recommend
+     *        To target a larger number of managed nodes, or if you prefer not to list individual node IDs, we recommend
      *        using the <code>Targets</code> option instead. Using <code>Targets</code>, which accepts tag key-value
-     *        pairs to identify the instances to send commands to, you can a send command to tens, hundreds, or
-     *        thousands of instances at once.
+     *        pairs to identify the managed nodes to send commands to, you can a send command to tens, hundreds, or
+     *        thousands of nodes at once.
      *        </p>
      *        <p>
      *        For more information about how to use targets, see <a
@@ -327,13 +327,13 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The IDs of the instances where the command should run. Specifying instance IDs is most useful when you are
-     * targeting a limited number of instances, though you can specify up to 50 IDs.
+     * The IDs of the managed nodes where the command should run. Specifying managed node IDs is most useful when you
+     * are targeting a limited number of managed nodes, though you can specify up to 50 IDs.
      * </p>
      * <p>
-     * To target a larger number of instances, or if you prefer not to list individual instance IDs, we recommend using
+     * To target a larger number of managed nodes, or if you prefer not to list individual node IDs, we recommend using
      * the <code>Targets</code> option instead. Using <code>Targets</code>, which accepts tag key-value pairs to
-     * identify the instances to send commands to, you can a send command to tens, hundreds, or thousands of instances
+     * identify the managed nodes to send commands to, you can a send command to tens, hundreds, or thousands of nodes
      * at once.
      * </p>
      * <p>
@@ -343,13 +343,13 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param instanceIds
-     *        The IDs of the instances where the command should run. Specifying instance IDs is most useful when you are
-     *        targeting a limited number of instances, though you can specify up to 50 IDs.</p>
+     *        The IDs of the managed nodes where the command should run. Specifying managed node IDs is most useful when
+     *        you are targeting a limited number of managed nodes, though you can specify up to 50 IDs.</p>
      *        <p>
-     *        To target a larger number of instances, or if you prefer not to list individual instance IDs, we recommend
+     *        To target a larger number of managed nodes, or if you prefer not to list individual node IDs, we recommend
      *        using the <code>Targets</code> option instead. Using <code>Targets</code>, which accepts tag key-value
-     *        pairs to identify the instances to send commands to, you can a send command to tens, hundreds, or
-     *        thousands of instances at once.
+     *        pairs to identify the managed nodes to send commands to, you can a send command to tens, hundreds, or
+     *        thousands of nodes at once.
      *        </p>
      *        <p>
      *        For more information about how to use targets, see <a
@@ -366,13 +366,13 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * An array of search criteria that targets instances using a <code>Key,Value</code> combination that you specify.
-     * Specifying targets is most useful when you want to send a command to a large number of instances at once. Using
-     * <code>Targets</code>, which accepts tag key-value pairs to identify instances, you can send a command to tens,
-     * hundreds, or thousands of instances at once.
+     * An array of search criteria that targets managed nodes using a <code>Key,Value</code> combination that you
+     * specify. Specifying targets is most useful when you want to send a command to a large number of managed nodes at
+     * once. Using <code>Targets</code>, which accepts tag key-value pairs to identify managed nodes, you can send a
+     * command to tens, hundreds, or thousands of nodes at once.
      * </p>
      * <p>
-     * To send a command to a smaller number of instances, you can use the <code>InstanceIds</code> option instead.
+     * To send a command to a smaller number of managed nodes, you can use the <code>InstanceIds</code> option instead.
      * </p>
      * <p>
      * For more information about how to use targets, see <a
@@ -380,12 +380,12 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
      * to a fleet</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
-     * @return An array of search criteria that targets instances using a <code>Key,Value</code> combination that you
-     *         specify. Specifying targets is most useful when you want to send a command to a large number of instances
-     *         at once. Using <code>Targets</code>, which accepts tag key-value pairs to identify instances, you can
-     *         send a command to tens, hundreds, or thousands of instances at once.</p>
+     * @return An array of search criteria that targets managed nodes using a <code>Key,Value</code> combination that
+     *         you specify. Specifying targets is most useful when you want to send a command to a large number of
+     *         managed nodes at once. Using <code>Targets</code>, which accepts tag key-value pairs to identify managed
+     *         nodes, you can send a command to tens, hundreds, or thousands of nodes at once.</p>
      *         <p>
-     *         To send a command to a smaller number of instances, you can use the <code>InstanceIds</code> option
+     *         To send a command to a smaller number of managed nodes, you can use the <code>InstanceIds</code> option
      *         instead.
      *         </p>
      *         <p>
@@ -403,13 +403,13 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * An array of search criteria that targets instances using a <code>Key,Value</code> combination that you specify.
-     * Specifying targets is most useful when you want to send a command to a large number of instances at once. Using
-     * <code>Targets</code>, which accepts tag key-value pairs to identify instances, you can send a command to tens,
-     * hundreds, or thousands of instances at once.
+     * An array of search criteria that targets managed nodes using a <code>Key,Value</code> combination that you
+     * specify. Specifying targets is most useful when you want to send a command to a large number of managed nodes at
+     * once. Using <code>Targets</code>, which accepts tag key-value pairs to identify managed nodes, you can send a
+     * command to tens, hundreds, or thousands of nodes at once.
      * </p>
      * <p>
-     * To send a command to a smaller number of instances, you can use the <code>InstanceIds</code> option instead.
+     * To send a command to a smaller number of managed nodes, you can use the <code>InstanceIds</code> option instead.
      * </p>
      * <p>
      * For more information about how to use targets, see <a
@@ -418,12 +418,12 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param targets
-     *        An array of search criteria that targets instances using a <code>Key,Value</code> combination that you
-     *        specify. Specifying targets is most useful when you want to send a command to a large number of instances
-     *        at once. Using <code>Targets</code>, which accepts tag key-value pairs to identify instances, you can send
-     *        a command to tens, hundreds, or thousands of instances at once.</p>
+     *        An array of search criteria that targets managed nodes using a <code>Key,Value</code> combination that you
+     *        specify. Specifying targets is most useful when you want to send a command to a large number of managed
+     *        nodes at once. Using <code>Targets</code>, which accepts tag key-value pairs to identify managed nodes,
+     *        you can send a command to tens, hundreds, or thousands of nodes at once.</p>
      *        <p>
-     *        To send a command to a smaller number of instances, you can use the <code>InstanceIds</code> option
+     *        To send a command to a smaller number of managed nodes, you can use the <code>InstanceIds</code> option
      *        instead.
      *        </p>
      *        <p>
@@ -443,13 +443,13 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * An array of search criteria that targets instances using a <code>Key,Value</code> combination that you specify.
-     * Specifying targets is most useful when you want to send a command to a large number of instances at once. Using
-     * <code>Targets</code>, which accepts tag key-value pairs to identify instances, you can send a command to tens,
-     * hundreds, or thousands of instances at once.
+     * An array of search criteria that targets managed nodes using a <code>Key,Value</code> combination that you
+     * specify. Specifying targets is most useful when you want to send a command to a large number of managed nodes at
+     * once. Using <code>Targets</code>, which accepts tag key-value pairs to identify managed nodes, you can send a
+     * command to tens, hundreds, or thousands of nodes at once.
      * </p>
      * <p>
-     * To send a command to a smaller number of instances, you can use the <code>InstanceIds</code> option instead.
+     * To send a command to a smaller number of managed nodes, you can use the <code>InstanceIds</code> option instead.
      * </p>
      * <p>
      * For more information about how to use targets, see <a
@@ -463,12 +463,12 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param targets
-     *        An array of search criteria that targets instances using a <code>Key,Value</code> combination that you
-     *        specify. Specifying targets is most useful when you want to send a command to a large number of instances
-     *        at once. Using <code>Targets</code>, which accepts tag key-value pairs to identify instances, you can send
-     *        a command to tens, hundreds, or thousands of instances at once.</p>
+     *        An array of search criteria that targets managed nodes using a <code>Key,Value</code> combination that you
+     *        specify. Specifying targets is most useful when you want to send a command to a large number of managed
+     *        nodes at once. Using <code>Targets</code>, which accepts tag key-value pairs to identify managed nodes,
+     *        you can send a command to tens, hundreds, or thousands of nodes at once.</p>
      *        <p>
-     *        To send a command to a smaller number of instances, you can use the <code>InstanceIds</code> option
+     *        To send a command to a smaller number of managed nodes, you can use the <code>InstanceIds</code> option
      *        instead.
      *        </p>
      *        <p>
@@ -490,13 +490,13 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * An array of search criteria that targets instances using a <code>Key,Value</code> combination that you specify.
-     * Specifying targets is most useful when you want to send a command to a large number of instances at once. Using
-     * <code>Targets</code>, which accepts tag key-value pairs to identify instances, you can send a command to tens,
-     * hundreds, or thousands of instances at once.
+     * An array of search criteria that targets managed nodes using a <code>Key,Value</code> combination that you
+     * specify. Specifying targets is most useful when you want to send a command to a large number of managed nodes at
+     * once. Using <code>Targets</code>, which accepts tag key-value pairs to identify managed nodes, you can send a
+     * command to tens, hundreds, or thousands of nodes at once.
      * </p>
      * <p>
-     * To send a command to a smaller number of instances, you can use the <code>InstanceIds</code> option instead.
+     * To send a command to a smaller number of managed nodes, you can use the <code>InstanceIds</code> option instead.
      * </p>
      * <p>
      * For more information about how to use targets, see <a
@@ -505,12 +505,12 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param targets
-     *        An array of search criteria that targets instances using a <code>Key,Value</code> combination that you
-     *        specify. Specifying targets is most useful when you want to send a command to a large number of instances
-     *        at once. Using <code>Targets</code>, which accepts tag key-value pairs to identify instances, you can send
-     *        a command to tens, hundreds, or thousands of instances at once.</p>
+     *        An array of search criteria that targets managed nodes using a <code>Key,Value</code> combination that you
+     *        specify. Specifying targets is most useful when you want to send a command to a large number of managed
+     *        nodes at once. Using <code>Targets</code>, which accepts tag key-value pairs to identify managed nodes,
+     *        you can send a command to tens, hundreds, or thousands of nodes at once.</p>
      *        <p>
-     *        To send a command to a smaller number of instances, you can use the <code>InstanceIds</code> option
+     *        To send a command to a smaller number of managed nodes, you can use the <code>InstanceIds</code> option
      *        instead.
      *        </p>
      *        <p>
@@ -1181,17 +1181,17 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * (Optional) The maximum number of instances that are allowed to run the command at the same time. You can specify
-     * a number such as 10 or a percentage such as 10%. The default value is <code>50</code>. For more information about
-     * how to use <code>MaxConcurrency</code>, see <a href=
+     * (Optional) The maximum number of managed nodes that are allowed to run the command at the same time. You can
+     * specify a number such as 10 or a percentage such as 10%. The default value is <code>50</code>. For more
+     * information about how to use <code>MaxConcurrency</code>, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/send-commands-multiple.html#send-commands-velocity"
      * >Using concurrency controls</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param maxConcurrency
-     *        (Optional) The maximum number of instances that are allowed to run the command at the same time. You can
-     *        specify a number such as 10 or a percentage such as 10%. The default value is <code>50</code>. For more
-     *        information about how to use <code>MaxConcurrency</code>, see <a href=
+     *        (Optional) The maximum number of managed nodes that are allowed to run the command at the same time. You
+     *        can specify a number such as 10 or a percentage such as 10%. The default value is <code>50</code>. For
+     *        more information about how to use <code>MaxConcurrency</code>, see <a href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/send-commands-multiple.html#send-commands-velocity"
      *        >Using concurrency controls</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      */
@@ -1202,16 +1202,16 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * (Optional) The maximum number of instances that are allowed to run the command at the same time. You can specify
-     * a number such as 10 or a percentage such as 10%. The default value is <code>50</code>. For more information about
-     * how to use <code>MaxConcurrency</code>, see <a href=
+     * (Optional) The maximum number of managed nodes that are allowed to run the command at the same time. You can
+     * specify a number such as 10 or a percentage such as 10%. The default value is <code>50</code>. For more
+     * information about how to use <code>MaxConcurrency</code>, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/send-commands-multiple.html#send-commands-velocity"
      * >Using concurrency controls</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
-     * @return (Optional) The maximum number of instances that are allowed to run the command at the same time. You can
-     *         specify a number such as 10 or a percentage such as 10%. The default value is <code>50</code>. For more
-     *         information about how to use <code>MaxConcurrency</code>, see <a href=
+     * @return (Optional) The maximum number of managed nodes that are allowed to run the command at the same time. You
+     *         can specify a number such as 10 or a percentage such as 10%. The default value is <code>50</code>. For
+     *         more information about how to use <code>MaxConcurrency</code>, see <a href=
      *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/send-commands-multiple.html#send-commands-velocity"
      *         >Using concurrency controls</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      */
@@ -1222,17 +1222,17 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * (Optional) The maximum number of instances that are allowed to run the command at the same time. You can specify
-     * a number such as 10 or a percentage such as 10%. The default value is <code>50</code>. For more information about
-     * how to use <code>MaxConcurrency</code>, see <a href=
+     * (Optional) The maximum number of managed nodes that are allowed to run the command at the same time. You can
+     * specify a number such as 10 or a percentage such as 10%. The default value is <code>50</code>. For more
+     * information about how to use <code>MaxConcurrency</code>, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/send-commands-multiple.html#send-commands-velocity"
      * >Using concurrency controls</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param maxConcurrency
-     *        (Optional) The maximum number of instances that are allowed to run the command at the same time. You can
-     *        specify a number such as 10 or a percentage such as 10%. The default value is <code>50</code>. For more
-     *        information about how to use <code>MaxConcurrency</code>, see <a href=
+     *        (Optional) The maximum number of managed nodes that are allowed to run the command at the same time. You
+     *        can specify a number such as 10 or a percentage such as 10%. The default value is <code>50</code>. For
+     *        more information about how to use <code>MaxConcurrency</code>, see <a href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/send-commands-multiple.html#send-commands-velocity"
      *        >Using concurrency controls</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.

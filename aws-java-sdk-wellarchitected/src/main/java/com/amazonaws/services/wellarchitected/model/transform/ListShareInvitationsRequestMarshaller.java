@@ -29,6 +29,10 @@ public class ListShareInvitationsRequestMarshaller {
 
     private static final MarshallingInfo<String> WORKLOADNAMEPREFIX_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("WorkloadNamePrefix").build();
+    private static final MarshallingInfo<String> LENSNAMEPREFIX_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("LensNamePrefix").build();
+    private static final MarshallingInfo<String> SHARERESOURCETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("ShareResourceType").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("NextToken").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
@@ -51,6 +55,8 @@ public class ListShareInvitationsRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(listShareInvitationsRequest.getWorkloadNamePrefix(), WORKLOADNAMEPREFIX_BINDING);
+            protocolMarshaller.marshall(listShareInvitationsRequest.getLensNamePrefix(), LENSNAMEPREFIX_BINDING);
+            protocolMarshaller.marshall(listShareInvitationsRequest.getShareResourceType(), SHARERESOURCETYPE_BINDING);
             protocolMarshaller.marshall(listShareInvitationsRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listShareInvitationsRequest.getMaxResults(), MAXRESULTS_BINDING);
         } catch (Exception e) {

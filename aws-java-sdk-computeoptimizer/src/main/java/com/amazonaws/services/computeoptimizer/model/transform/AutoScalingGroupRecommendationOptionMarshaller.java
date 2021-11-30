@@ -36,6 +36,8 @@ public class AutoScalingGroupRecommendationOptionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("performanceRisk").build();
     private static final MarshallingInfo<Integer> RANK_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("rank").build();
+    private static final MarshallingInfo<StructuredPojo> SAVINGSOPPORTUNITY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("savingsOpportunity").build();
 
     private static final AutoScalingGroupRecommendationOptionMarshaller instance = new AutoScalingGroupRecommendationOptionMarshaller();
 
@@ -57,6 +59,7 @@ public class AutoScalingGroupRecommendationOptionMarshaller {
             protocolMarshaller.marshall(autoScalingGroupRecommendationOption.getProjectedUtilizationMetrics(), PROJECTEDUTILIZATIONMETRICS_BINDING);
             protocolMarshaller.marshall(autoScalingGroupRecommendationOption.getPerformanceRisk(), PERFORMANCERISK_BINDING);
             protocolMarshaller.marshall(autoScalingGroupRecommendationOption.getRank(), RANK_BINDING);
+            protocolMarshaller.marshall(autoScalingGroupRecommendationOption.getSavingsOpportunity(), SAVINGSOPPORTUNITY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

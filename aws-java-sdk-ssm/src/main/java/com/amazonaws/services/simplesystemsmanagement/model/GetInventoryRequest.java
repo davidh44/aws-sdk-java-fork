@@ -35,7 +35,7 @@ public class GetInventoryRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * Returns counts of inventory types based on one or more expressions. For example, if you aggregate by using an
      * expression that uses the <code>AWS:InstanceInformation.PlatformType</code> type, you can see a count of how many
-     * Windows and Linux instances exist in your inventoried fleet.
+     * Windows and Linux managed nodes exist in your inventoried fleet.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<InventoryAggregator> aggregators;
@@ -136,12 +136,12 @@ public class GetInventoryRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * Returns counts of inventory types based on one or more expressions. For example, if you aggregate by using an
      * expression that uses the <code>AWS:InstanceInformation.PlatformType</code> type, you can see a count of how many
-     * Windows and Linux instances exist in your inventoried fleet.
+     * Windows and Linux managed nodes exist in your inventoried fleet.
      * </p>
      * 
      * @return Returns counts of inventory types based on one or more expressions. For example, if you aggregate by
      *         using an expression that uses the <code>AWS:InstanceInformation.PlatformType</code> type, you can see a
-     *         count of how many Windows and Linux instances exist in your inventoried fleet.
+     *         count of how many Windows and Linux managed nodes exist in your inventoried fleet.
      */
 
     public java.util.List<InventoryAggregator> getAggregators() {
@@ -155,13 +155,13 @@ public class GetInventoryRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * Returns counts of inventory types based on one or more expressions. For example, if you aggregate by using an
      * expression that uses the <code>AWS:InstanceInformation.PlatformType</code> type, you can see a count of how many
-     * Windows and Linux instances exist in your inventoried fleet.
+     * Windows and Linux managed nodes exist in your inventoried fleet.
      * </p>
      * 
      * @param aggregators
      *        Returns counts of inventory types based on one or more expressions. For example, if you aggregate by using
      *        an expression that uses the <code>AWS:InstanceInformation.PlatformType</code> type, you can see a count of
-     *        how many Windows and Linux instances exist in your inventoried fleet.
+     *        how many Windows and Linux managed nodes exist in your inventoried fleet.
      */
 
     public void setAggregators(java.util.Collection<InventoryAggregator> aggregators) {
@@ -177,7 +177,7 @@ public class GetInventoryRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * Returns counts of inventory types based on one or more expressions. For example, if you aggregate by using an
      * expression that uses the <code>AWS:InstanceInformation.PlatformType</code> type, you can see a count of how many
-     * Windows and Linux instances exist in your inventoried fleet.
+     * Windows and Linux managed nodes exist in your inventoried fleet.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -188,7 +188,7 @@ public class GetInventoryRequest extends com.amazonaws.AmazonWebServiceRequest i
      * @param aggregators
      *        Returns counts of inventory types based on one or more expressions. For example, if you aggregate by using
      *        an expression that uses the <code>AWS:InstanceInformation.PlatformType</code> type, you can see a count of
-     *        how many Windows and Linux instances exist in your inventoried fleet.
+     *        how many Windows and Linux managed nodes exist in your inventoried fleet.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -206,13 +206,13 @@ public class GetInventoryRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * Returns counts of inventory types based on one or more expressions. For example, if you aggregate by using an
      * expression that uses the <code>AWS:InstanceInformation.PlatformType</code> type, you can see a count of how many
-     * Windows and Linux instances exist in your inventoried fleet.
+     * Windows and Linux managed nodes exist in your inventoried fleet.
      * </p>
      * 
      * @param aggregators
      *        Returns counts of inventory types based on one or more expressions. For example, if you aggregate by using
      *        an expression that uses the <code>AWS:InstanceInformation.PlatformType</code> type, you can see a count of
-     *        how many Windows and Linux instances exist in your inventoried fleet.
+     *        how many Windows and Linux managed nodes exist in your inventoried fleet.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

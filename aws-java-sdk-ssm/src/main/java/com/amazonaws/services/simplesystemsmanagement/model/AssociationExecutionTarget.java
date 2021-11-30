@@ -48,13 +48,13 @@ public class AssociationExecutionTarget implements Serializable, Cloneable, Stru
     private String executionId;
     /**
      * <p>
-     * The resource ID, for example, the instance ID where the association ran.
+     * The resource ID, for example, the managed node ID where the association ran.
      * </p>
      */
     private String resourceId;
     /**
      * <p>
-     * The resource type, for example, instance.
+     * The resource type, for example, EC2.
      * </p>
      */
     private String resourceType;
@@ -205,11 +205,11 @@ public class AssociationExecutionTarget implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The resource ID, for example, the instance ID where the association ran.
+     * The resource ID, for example, the managed node ID where the association ran.
      * </p>
      * 
      * @param resourceId
-     *        The resource ID, for example, the instance ID where the association ran.
+     *        The resource ID, for example, the managed node ID where the association ran.
      */
 
     public void setResourceId(String resourceId) {
@@ -218,10 +218,10 @@ public class AssociationExecutionTarget implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The resource ID, for example, the instance ID where the association ran.
+     * The resource ID, for example, the managed node ID where the association ran.
      * </p>
      * 
-     * @return The resource ID, for example, the instance ID where the association ran.
+     * @return The resource ID, for example, the managed node ID where the association ran.
      */
 
     public String getResourceId() {
@@ -230,11 +230,11 @@ public class AssociationExecutionTarget implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The resource ID, for example, the instance ID where the association ran.
+     * The resource ID, for example, the managed node ID where the association ran.
      * </p>
      * 
      * @param resourceId
-     *        The resource ID, for example, the instance ID where the association ran.
+     *        The resource ID, for example, the managed node ID where the association ran.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -245,11 +245,11 @@ public class AssociationExecutionTarget implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The resource type, for example, instance.
+     * The resource type, for example, EC2.
      * </p>
      * 
      * @param resourceType
-     *        The resource type, for example, instance.
+     *        The resource type, for example, EC2.
      */
 
     public void setResourceType(String resourceType) {
@@ -258,10 +258,10 @@ public class AssociationExecutionTarget implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The resource type, for example, instance.
+     * The resource type, for example, EC2.
      * </p>
      * 
-     * @return The resource type, for example, instance.
+     * @return The resource type, for example, EC2.
      */
 
     public String getResourceType() {
@@ -270,11 +270,11 @@ public class AssociationExecutionTarget implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The resource type, for example, instance.
+     * The resource type, for example, EC2.
      * </p>
      * 
      * @param resourceType
-     *        The resource type, for example, instance.
+     *        The resource type, for example, EC2.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

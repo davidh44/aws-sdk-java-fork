@@ -32,8 +32,8 @@ public class ListAssociationsRequest extends com.amazonaws.AmazonWebServiceReque
      * <note>
      * <p>
      * Filtering associations using the <code>InstanceID</code> attribute only returns legacy associations created using
-     * the <code>InstanceID</code> attribute. Associations targeting the instance that are part of the Target Attributes
-     * <code>ResourceGroup</code> or <code>Tags</code> aren't returned.
+     * the <code>InstanceID</code> attribute. Associations targeting the managed node that are part of the Target
+     * Attributes <code>ResourceGroup</code> or <code>Tags</code> aren't returned.
      * </p>
      * </note>
      */
@@ -59,16 +59,16 @@ public class ListAssociationsRequest extends com.amazonaws.AmazonWebServiceReque
      * <note>
      * <p>
      * Filtering associations using the <code>InstanceID</code> attribute only returns legacy associations created using
-     * the <code>InstanceID</code> attribute. Associations targeting the instance that are part of the Target Attributes
-     * <code>ResourceGroup</code> or <code>Tags</code> aren't returned.
+     * the <code>InstanceID</code> attribute. Associations targeting the managed node that are part of the Target
+     * Attributes <code>ResourceGroup</code> or <code>Tags</code> aren't returned.
      * </p>
      * </note>
      * 
      * @return One or more filters. Use a filter to return a more specific list of results.</p> <note>
      *         <p>
      *         Filtering associations using the <code>InstanceID</code> attribute only returns legacy associations
-     *         created using the <code>InstanceID</code> attribute. Associations targeting the instance that are part of
-     *         the Target Attributes <code>ResourceGroup</code> or <code>Tags</code> aren't returned.
+     *         created using the <code>InstanceID</code> attribute. Associations targeting the managed node that are
+     *         part of the Target Attributes <code>ResourceGroup</code> or <code>Tags</code> aren't returned.
      *         </p>
      */
 
@@ -86,8 +86,8 @@ public class ListAssociationsRequest extends com.amazonaws.AmazonWebServiceReque
      * <note>
      * <p>
      * Filtering associations using the <code>InstanceID</code> attribute only returns legacy associations created using
-     * the <code>InstanceID</code> attribute. Associations targeting the instance that are part of the Target Attributes
-     * <code>ResourceGroup</code> or <code>Tags</code> aren't returned.
+     * the <code>InstanceID</code> attribute. Associations targeting the managed node that are part of the Target
+     * Attributes <code>ResourceGroup</code> or <code>Tags</code> aren't returned.
      * </p>
      * </note>
      * 
@@ -95,8 +95,8 @@ public class ListAssociationsRequest extends com.amazonaws.AmazonWebServiceReque
      *        One or more filters. Use a filter to return a more specific list of results.</p> <note>
      *        <p>
      *        Filtering associations using the <code>InstanceID</code> attribute only returns legacy associations
-     *        created using the <code>InstanceID</code> attribute. Associations targeting the instance that are part of
-     *        the Target Attributes <code>ResourceGroup</code> or <code>Tags</code> aren't returned.
+     *        created using the <code>InstanceID</code> attribute. Associations targeting the managed node that are part
+     *        of the Target Attributes <code>ResourceGroup</code> or <code>Tags</code> aren't returned.
      *        </p>
      */
 
@@ -116,8 +116,8 @@ public class ListAssociationsRequest extends com.amazonaws.AmazonWebServiceReque
      * <note>
      * <p>
      * Filtering associations using the <code>InstanceID</code> attribute only returns legacy associations created using
-     * the <code>InstanceID</code> attribute. Associations targeting the instance that are part of the Target Attributes
-     * <code>ResourceGroup</code> or <code>Tags</code> aren't returned.
+     * the <code>InstanceID</code> attribute. Associations targeting the managed node that are part of the Target
+     * Attributes <code>ResourceGroup</code> or <code>Tags</code> aren't returned.
      * </p>
      * </note>
      * <p>
@@ -130,8 +130,8 @@ public class ListAssociationsRequest extends com.amazonaws.AmazonWebServiceReque
      *        One or more filters. Use a filter to return a more specific list of results.</p> <note>
      *        <p>
      *        Filtering associations using the <code>InstanceID</code> attribute only returns legacy associations
-     *        created using the <code>InstanceID</code> attribute. Associations targeting the instance that are part of
-     *        the Target Attributes <code>ResourceGroup</code> or <code>Tags</code> aren't returned.
+     *        created using the <code>InstanceID</code> attribute. Associations targeting the managed node that are part
+     *        of the Target Attributes <code>ResourceGroup</code> or <code>Tags</code> aren't returned.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -153,8 +153,8 @@ public class ListAssociationsRequest extends com.amazonaws.AmazonWebServiceReque
      * <note>
      * <p>
      * Filtering associations using the <code>InstanceID</code> attribute only returns legacy associations created using
-     * the <code>InstanceID</code> attribute. Associations targeting the instance that are part of the Target Attributes
-     * <code>ResourceGroup</code> or <code>Tags</code> aren't returned.
+     * the <code>InstanceID</code> attribute. Associations targeting the managed node that are part of the Target
+     * Attributes <code>ResourceGroup</code> or <code>Tags</code> aren't returned.
      * </p>
      * </note>
      * 
@@ -162,8 +162,8 @@ public class ListAssociationsRequest extends com.amazonaws.AmazonWebServiceReque
      *        One or more filters. Use a filter to return a more specific list of results.</p> <note>
      *        <p>
      *        Filtering associations using the <code>InstanceID</code> attribute only returns legacy associations
-     *        created using the <code>InstanceID</code> attribute. Associations targeting the instance that are part of
-     *        the Target Attributes <code>ResourceGroup</code> or <code>Tags</code> aren't returned.
+     *        created using the <code>InstanceID</code> attribute. Associations targeting the managed node that are part
+     *        of the Target Attributes <code>ResourceGroup</code> or <code>Tags</code> aren't returned.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

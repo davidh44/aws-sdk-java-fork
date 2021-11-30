@@ -29,6 +29,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 public class PillarDifference implements Serializable, Cloneable, StructuredPojo {
 
     private String pillarId;
+
+    private String pillarName;
     /**
      * <p>
      * Indicates the type of change to the pillar.
@@ -65,6 +67,32 @@ public class PillarDifference implements Serializable, Cloneable, StructuredPojo
 
     public PillarDifference withPillarId(String pillarId) {
         setPillarId(pillarId);
+        return this;
+    }
+
+    /**
+     * @param pillarName
+     */
+
+    public void setPillarName(String pillarName) {
+        this.pillarName = pillarName;
+    }
+
+    /**
+     * @return
+     */
+
+    public String getPillarName() {
+        return this.pillarName;
+    }
+
+    /**
+     * @param pillarName
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PillarDifference withPillarName(String pillarName) {
+        setPillarName(pillarName);
         return this;
     }
 
@@ -211,6 +239,8 @@ public class PillarDifference implements Serializable, Cloneable, StructuredPojo
         sb.append("{");
         if (getPillarId() != null)
             sb.append("PillarId: ").append(getPillarId()).append(",");
+        if (getPillarName() != null)
+            sb.append("PillarName: ").append(getPillarName()).append(",");
         if (getDifferenceStatus() != null)
             sb.append("DifferenceStatus: ").append(getDifferenceStatus()).append(",");
         if (getQuestionDifferences() != null)
@@ -233,6 +263,10 @@ public class PillarDifference implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getPillarId() != null && other.getPillarId().equals(this.getPillarId()) == false)
             return false;
+        if (other.getPillarName() == null ^ this.getPillarName() == null)
+            return false;
+        if (other.getPillarName() != null && other.getPillarName().equals(this.getPillarName()) == false)
+            return false;
         if (other.getDifferenceStatus() == null ^ this.getDifferenceStatus() == null)
             return false;
         if (other.getDifferenceStatus() != null && other.getDifferenceStatus().equals(this.getDifferenceStatus()) == false)
@@ -250,6 +284,7 @@ public class PillarDifference implements Serializable, Cloneable, StructuredPojo
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getPillarId() == null) ? 0 : getPillarId().hashCode());
+        hashCode = prime * hashCode + ((getPillarName() == null) ? 0 : getPillarName().hashCode());
         hashCode = prime * hashCode + ((getDifferenceStatus() == null) ? 0 : getDifferenceStatus().hashCode());
         hashCode = prime * hashCode + ((getQuestionDifferences() == null) ? 0 : getQuestionDifferences().hashCode());
         return hashCode;

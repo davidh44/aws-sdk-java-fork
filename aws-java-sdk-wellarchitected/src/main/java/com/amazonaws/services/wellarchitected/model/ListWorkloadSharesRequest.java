@@ -31,7 +31,7 @@ public class ListWorkloadSharesRequest extends com.amazonaws.AmazonWebServiceReq
     private String workloadId;
     /**
      * <p>
-     * The AWS account ID or IAM role with which the workload is shared.
+     * The Amazon Web Services account ID or IAM role with which the workload is shared.
      * </p>
      */
     private String sharedWithPrefix;
@@ -72,11 +72,11 @@ public class ListWorkloadSharesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The AWS account ID or IAM role with which the workload is shared.
+     * The Amazon Web Services account ID or IAM role with which the workload is shared.
      * </p>
      * 
      * @param sharedWithPrefix
-     *        The AWS account ID or IAM role with which the workload is shared.
+     *        The Amazon Web Services account ID or IAM role with which the workload is shared.
      */
 
     public void setSharedWithPrefix(String sharedWithPrefix) {
@@ -85,10 +85,10 @@ public class ListWorkloadSharesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The AWS account ID or IAM role with which the workload is shared.
+     * The Amazon Web Services account ID or IAM role with which the workload is shared.
      * </p>
      * 
-     * @return The AWS account ID or IAM role with which the workload is shared.
+     * @return The Amazon Web Services account ID or IAM role with which the workload is shared.
      */
 
     public String getSharedWithPrefix() {
@@ -97,11 +97,11 @@ public class ListWorkloadSharesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The AWS account ID or IAM role with which the workload is shared.
+     * The Amazon Web Services account ID or IAM role with which the workload is shared.
      * </p>
      * 
      * @param sharedWithPrefix
-     *        The AWS account ID or IAM role with which the workload is shared.
+     *        The Amazon Web Services account ID or IAM role with which the workload is shared.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

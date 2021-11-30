@@ -27,7 +27,7 @@ public class PutComplianceItemsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Specify an ID for this resource. For a managed instance, this is the instance ID.
+     * Specify an ID for this resource. For a managed node, this is the node ID.
      * </p>
      */
     private String resourceId;
@@ -87,11 +87,11 @@ public class PutComplianceItemsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Specify an ID for this resource. For a managed instance, this is the instance ID.
+     * Specify an ID for this resource. For a managed node, this is the node ID.
      * </p>
      * 
      * @param resourceId
-     *        Specify an ID for this resource. For a managed instance, this is the instance ID.
+     *        Specify an ID for this resource. For a managed node, this is the node ID.
      */
 
     public void setResourceId(String resourceId) {
@@ -100,10 +100,10 @@ public class PutComplianceItemsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Specify an ID for this resource. For a managed instance, this is the instance ID.
+     * Specify an ID for this resource. For a managed node, this is the node ID.
      * </p>
      * 
-     * @return Specify an ID for this resource. For a managed instance, this is the instance ID.
+     * @return Specify an ID for this resource. For a managed node, this is the node ID.
      */
 
     public String getResourceId() {
@@ -112,11 +112,11 @@ public class PutComplianceItemsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Specify an ID for this resource. For a managed instance, this is the instance ID.
+     * Specify an ID for this resource. For a managed node, this is the node ID.
      * </p>
      * 
      * @param resourceId
-     *        Specify an ID for this resource. For a managed instance, this is the instance ID.
+     *        Specify an ID for this resource. For a managed node, this is the node ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

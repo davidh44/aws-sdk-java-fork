@@ -53,7 +53,7 @@ public class SessionFilter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Target: Specify an instance to which session connections have been made.
+     * Target: Specify a managed node to which session connections have been made.
      * </p>
      * </li>
      * <li>
@@ -186,7 +186,7 @@ public class SessionFilter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Target: Specify an instance to which session connections have been made.
+     * Target: Specify a managed node to which session connections have been made.
      * </p>
      * </li>
      * <li>
@@ -256,7 +256,7 @@ public class SessionFilter implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        Target: Specify an instance to which session connections have been made.
+     *        Target: Specify a managed node to which session connections have been made.
      *        </p>
      *        </li>
      *        <li>
@@ -332,7 +332,7 @@ public class SessionFilter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Target: Specify an instance to which session connections have been made.
+     * Target: Specify a managed node to which session connections have been made.
      * </p>
      * </li>
      * <li>
@@ -401,7 +401,7 @@ public class SessionFilter implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         Target: Specify an instance to which session connections have been made.
+     *         Target: Specify a managed node to which session connections have been made.
      *         </p>
      *         </li>
      *         <li>
@@ -477,7 +477,7 @@ public class SessionFilter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Target: Specify an instance to which session connections have been made.
+     * Target: Specify a managed node to which session connections have been made.
      * </p>
      * </li>
      * <li>
@@ -547,7 +547,7 @@ public class SessionFilter implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        Target: Specify an instance to which session connections have been made.
+     *        Target: Specify a managed node to which session connections have been made.
      *        </p>
      *        </li>
      *        <li>

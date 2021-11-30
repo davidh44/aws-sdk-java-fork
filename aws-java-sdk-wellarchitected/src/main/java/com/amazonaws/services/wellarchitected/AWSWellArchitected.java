@@ -26,13 +26,13 @@ import com.amazonaws.services.wellarchitected.model.*;
  * {@link com.amazonaws.services.wellarchitected.AbstractAWSWellArchitected} instead.
  * </p>
  * <p>
- * <fullname>AWS Well-Architected Tool</fullname>
+ * <fullname>Well-Architected Tool</fullname>
  * <p>
- * This is the <i>AWS Well-Architected Tool API Reference</i>. The AWS Well-Architected Tool API provides programmatic
- * access to the <a href="http://aws.amazon.com/well-architected-tool">AWS Well-Architected Tool</a> in the <a
- * href="https://console.aws.amazon.com/wellarchitected">AWS Management Console</a>. For information about the AWS
- * Well-Architected Tool, see the <a href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/intro.html">AWS
- * Well-Architected Tool User Guide</a>.
+ * This is the <i>Well-Architected Tool API Reference</i>. The WA Tool API provides programmatic access to the <a
+ * href="http://aws.amazon.com/well-architected-tool">Well-Architected Tool</a> in the <a
+ * href="https://console.aws.amazon.com/wellarchitected">Amazon Web Services Management Console</a>. For information
+ * about the Well-Architected Tool, see the <a
+ * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/intro.html">Well-Architected Tool User Guide</a>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -50,6 +50,20 @@ public interface AWSWellArchitected {
      * <p>
      * Associate a lens to a workload.
      * </p>
+     * <p>
+     * Up to 10 lenses can be associated with a workload in a single API operation. A maximum of 20 lenses can be
+     * associated with a workload.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * By accessing and/or applying custom lenses created by another Amazon Web Services user or account, you
+     * acknowledge that custom lenses created by other users and shared with you are Third Party Content as defined in
+     * the Amazon Web Services Customer Agreement.
+     * </p>
+     * </note>
      * 
      * @param associateLensesRequest
      *        Input to associate lens reviews.
@@ -61,7 +75,7 @@ public interface AWSWellArchitected {
      * @throws ConflictException
      *         The resource already exists.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -71,6 +85,83 @@ public interface AWSWellArchitected {
      *      target="_top">AWS API Documentation</a>
      */
     AssociateLensesResult associateLenses(AssociateLensesRequest associateLensesRequest);
+
+    /**
+     * <p>
+     * Create a lens share.
+     * </p>
+     * <p>
+     * The owner of a lens can share it with other Amazon Web Services accounts and IAM users in the same Amazon Web
+     * Services Region. Shared access to a lens is not removed until the lens invitation is deleted.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * By sharing your custom lenses with other Amazon Web Services accounts, you acknowledge that Amazon Web Services
+     * will make your custom lenses available to those other accounts. Those other accounts may continue to access and
+     * use your shared custom lenses even if you delete the custom lenses from your own Amazon Web Services account or
+     * terminate your Amazon Web Services account.
+     * </p>
+     * </note>
+     * 
+     * @param createLensShareRequest
+     * @return Result of the CreateLensShare operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ConflictException
+     *         The resource already exists.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ServiceQuotaExceededException
+     *         The user has reached their resource quota.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.CreateLensShare
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/CreateLensShare"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateLensShareResult createLensShare(CreateLensShareRequest createLensShareRequest);
+
+    /**
+     * <p>
+     * Create a new lens version.
+     * </p>
+     * <p>
+     * A lens can have up to 100 versions.
+     * </p>
+     * <p>
+     * After a lens has been imported, create a new lens version to publish it. The owner of a lens can share the lens
+     * with other Amazon Web Services accounts and IAM users in the same Amazon Web Services Region. Only the owner of a
+     * lens can delete it.
+     * </p>
+     * 
+     * @param createLensVersionRequest
+     * @return Result of the CreateLensVersion operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ServiceQuotaExceededException
+     *         The user has reached their resource quota.
+     * @throws ConflictException
+     *         The resource already exists.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.CreateLensVersion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/CreateLensVersion"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateLensVersionResult createLensVersion(CreateLensVersionRequest createLensVersionRequest);
 
     /**
      * <p>
@@ -85,7 +176,7 @@ public interface AWSWellArchitected {
      * @throws ConflictException
      *         The resource already exists.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws ServiceQuotaExceededException
@@ -105,13 +196,13 @@ public interface AWSWellArchitected {
      * Create a new workload.
      * </p>
      * <p>
-     * The owner of a workload can share the workload with other AWS accounts and IAM users in the same AWS Region. Only
-     * the owner of a workload can delete it.
+     * The owner of a workload can share the workload with other Amazon Web Services accounts and IAM users in the same
+     * Amazon Web Services Region. Only the owner of a workload can delete it.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/define-workload.html">Defining a Workload</a>
-     * in the <i>AWS Well-Architected Tool User Guide</i>.
+     * in the <i>Well-Architected Tool User Guide</i>.
      * </p>
      * 
      * @param createWorkloadRequest
@@ -124,7 +215,7 @@ public interface AWSWellArchitected {
      * @throws ServiceQuotaExceededException
      *         The user has reached their resource quota.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -140,13 +231,13 @@ public interface AWSWellArchitected {
      * Create a workload share.
      * </p>
      * <p>
-     * The owner of a workload can share it with other AWS accounts and IAM users in the same AWS Region. Shared access
-     * to a workload is not removed until the workload invitation is deleted.
+     * The owner of a workload can share it with other Amazon Web Services accounts and IAM users in the same Amazon Web
+     * Services Region. Shared access to a workload is not removed until the workload invitation is deleted.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/workloads-sharing.html">Sharing a Workload</a>
-     * in the <i>AWS Well-Architected Tool User Guide</i>.
+     * in the <i>Well-Architected Tool User Guide</i>.
      * </p>
      * 
      * @param createWorkloadShareRequest
@@ -157,7 +248,7 @@ public interface AWSWellArchitected {
      * @throws ConflictException
      *         The resource already exists.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws ServiceQuotaExceededException
@@ -174,6 +265,87 @@ public interface AWSWellArchitected {
 
     /**
      * <p>
+     * Delete an existing lens.
+     * </p>
+     * <p>
+     * Only the owner of a lens can delete it. After the lens is deleted, Amazon Web Services accounts and IAM users
+     * that you shared the lens with can continue to use it, but they will no longer be able to apply it to new
+     * workloads.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * By sharing your custom lenses with other Amazon Web Services accounts, you acknowledge that Amazon Web Services
+     * will make your custom lenses available to those other accounts. Those other accounts may continue to access and
+     * use your shared custom lenses even if you delete the custom lenses from your own Amazon Web Services account or
+     * terminate your Amazon Web Services account.
+     * </p>
+     * </note>
+     * 
+     * @param deleteLensRequest
+     * @return Result of the DeleteLens operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ConflictException
+     *         The resource already exists.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.DeleteLens
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/DeleteLens" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteLensResult deleteLens(DeleteLensRequest deleteLensRequest);
+
+    /**
+     * <p>
+     * Delete a lens share.
+     * </p>
+     * <p>
+     * After the lens share is deleted, Amazon Web Services accounts and IAM users that you shared the lens with can
+     * continue to use it, but they will no longer be able to apply it to new workloads.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * By sharing your custom lenses with other Amazon Web Services accounts, you acknowledge that Amazon Web Services
+     * will make your custom lenses available to those other accounts. Those other accounts may continue to access and
+     * use your shared custom lenses even if you delete the custom lenses from your own Amazon Web Services account or
+     * terminate your Amazon Web Services account.
+     * </p>
+     * </note>
+     * 
+     * @param deleteLensShareRequest
+     * @return Result of the DeleteLensShare operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ConflictException
+     *         The resource already exists.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.DeleteLensShare
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/DeleteLensShare"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteLensShareResult deleteLensShare(DeleteLensShareRequest deleteLensShareRequest);
+
+    /**
+     * <p>
      * Delete an existing workload.
      * </p>
      * 
@@ -187,7 +359,7 @@ public interface AWSWellArchitected {
      * @throws ConflictException
      *         The resource already exists.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -209,7 +381,7 @@ public interface AWSWellArchitected {
      * @throws ValidationException
      *         The user input is not valid.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws ConflictException
@@ -228,9 +400,13 @@ public interface AWSWellArchitected {
      * <p>
      * Disassociate a lens from a workload.
      * </p>
+     * <p>
+     * Up to 10 lenses can be disassociated from a workload in a single API operation.
+     * </p>
      * <note>
      * <p>
-     * The AWS Well-Architected Framework lens (<code>wellarchitected</code>) cannot be removed from a workload.
+     * The Amazon Web Services Well-Architected Framework lens (<code>wellarchitected</code>) cannot be removed from a
+     * workload.
      * </p>
      * </note>
      * 
@@ -244,7 +420,7 @@ public interface AWSWellArchitected {
      * @throws ConflictException
      *         The resource already exists.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -254,6 +430,45 @@ public interface AWSWellArchitected {
      *      target="_top">AWS API Documentation</a>
      */
     DisassociateLensesResult disassociateLenses(DisassociateLensesRequest disassociateLensesRequest);
+
+    /**
+     * <p>
+     * Export an existing lens.
+     * </p>
+     * <p>
+     * Lenses are defined in JSON. For more information, see <a
+     * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/lenses-format-specification.html">JSON format
+     * specification</a> in the <i>Well-Architected Tool User Guide</i>. Only the owner of a lens can export it.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * Do not include or gather personal identifiable information (PII) of end users or other identifiable individuals
+     * in or via your custom lenses. If your custom lens or those shared with you and used in your account do include or
+     * collect PII you are responsible for: ensuring that the included PII is processed in accordance with applicable
+     * law, providing adequate privacy notices, and obtaining necessary consents for processing such data.
+     * </p>
+     * </note>
+     * 
+     * @param exportLensRequest
+     * @return Result of the ExportLens operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.ExportLens
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ExportLens" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ExportLensResult exportLens(ExportLensRequest exportLensRequest);
 
     /**
      * <p>
@@ -268,7 +483,7 @@ public interface AWSWellArchitected {
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -278,6 +493,29 @@ public interface AWSWellArchitected {
      *      Documentation</a>
      */
     GetAnswerResult getAnswer(GetAnswerRequest getAnswerRequest);
+
+    /**
+     * <p>
+     * Get an existing lens.
+     * </p>
+     * 
+     * @param getLensRequest
+     * @return Result of the GetLens operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.GetLens
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/GetLens" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetLensResult getLens(GetLensRequest getLensRequest);
 
     /**
      * <p>
@@ -292,7 +530,7 @@ public interface AWSWellArchitected {
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -316,7 +554,7 @@ public interface AWSWellArchitected {
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -339,7 +577,7 @@ public interface AWSWellArchitected {
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -363,7 +601,7 @@ public interface AWSWellArchitected {
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -387,7 +625,7 @@ public interface AWSWellArchitected {
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -400,6 +638,56 @@ public interface AWSWellArchitected {
 
     /**
      * <p>
+     * Import a new lens.
+     * </p>
+     * <p>
+     * The lens cannot be applied to workloads or shared with other Amazon Web Services accounts until it's published
+     * with <a>CreateLensVersion</a>
+     * </p>
+     * <p>
+     * Lenses are defined in JSON. For more information, see <a
+     * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/lenses-format-specification.html">JSON format
+     * specification</a> in the <i>Well-Architected Tool User Guide</i>.
+     * </p>
+     * <p>
+     * A custom lens cannot exceed 500 KB in size.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * Do not include or gather personal identifiable information (PII) of end users or other identifiable individuals
+     * in or via your custom lenses. If your custom lens or those shared with you and used in your account do include or
+     * collect PII you are responsible for: ensuring that the included PII is processed in accordance with applicable
+     * law, providing adequate privacy notices, and obtaining necessary consents for processing such data.
+     * </p>
+     * </note>
+     * 
+     * @param importLensRequest
+     * @return Result of the ImportLens operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ConflictException
+     *         The resource already exists.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ServiceQuotaExceededException
+     *         The user has reached their resource quota.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.ImportLens
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ImportLens" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ImportLensResult importLens(ImportLensRequest importLensRequest);
+
+    /**
+     * <p>
      * List of answers.
      * </p>
      * 
@@ -409,7 +697,7 @@ public interface AWSWellArchitected {
      * @throws ValidationException
      *         The user input is not valid.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws AccessDeniedException
@@ -433,7 +721,7 @@ public interface AWSWellArchitected {
      * @throws ValidationException
      *         The user input is not valid.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws AccessDeniedException
@@ -457,7 +745,7 @@ public interface AWSWellArchitected {
      * @throws ValidationException
      *         The user input is not valid.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws AccessDeniedException
@@ -472,6 +760,29 @@ public interface AWSWellArchitected {
 
     /**
      * <p>
+     * List the lens shares associated with the lens.
+     * </p>
+     * 
+     * @param listLensSharesRequest
+     * @return Result of the ListLensShares operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.ListLensShares
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ListLensShares" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListLensSharesResult listLensShares(ListLensSharesRequest listLensSharesRequest);
+
+    /**
+     * <p>
      * List the available lenses.
      * </p>
      * 
@@ -481,7 +792,7 @@ public interface AWSWellArchitected {
      * @throws ValidationException
      *         The user input is not valid.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -503,7 +814,7 @@ public interface AWSWellArchitected {
      * @throws ValidationException
      *         The user input is not valid.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws AccessDeniedException
@@ -526,7 +837,7 @@ public interface AWSWellArchitected {
      * @throws ValidationException
      *         The user input is not valid.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -548,7 +859,7 @@ public interface AWSWellArchitected {
      * @throws ValidationException
      *         The user input is not valid.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -567,7 +878,7 @@ public interface AWSWellArchitected {
      * @param listTagsForResourceRequest
      * @return Result of the ListTagsForResource operation returned by the service.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @sample AWSWellArchitected.ListTagsForResource
@@ -587,7 +898,7 @@ public interface AWSWellArchitected {
      * @throws ValidationException
      *         The user input is not valid.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws AccessDeniedException
@@ -611,7 +922,7 @@ public interface AWSWellArchitected {
      * @throws ValidationException
      *         The user input is not valid.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -630,7 +941,7 @@ public interface AWSWellArchitected {
      * @param tagResourceRequest
      * @return Result of the TagResource operation returned by the service.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @sample AWSWellArchitected.TagResource
@@ -653,7 +964,7 @@ public interface AWSWellArchitected {
      * @param untagResourceRequest
      * @return Result of the UntagResource operation returned by the service.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @sample AWSWellArchitected.UntagResource
@@ -677,7 +988,7 @@ public interface AWSWellArchitected {
      * @throws ConflictException
      *         The resource already exists.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -703,7 +1014,7 @@ public interface AWSWellArchitected {
      * @throws ConflictException
      *         The resource already exists.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -725,7 +1036,7 @@ public interface AWSWellArchitected {
      * @throws ValidationException
      *         The user input is not valid.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws ConflictException
@@ -755,7 +1066,7 @@ public interface AWSWellArchitected {
      * @throws ConflictException
      *         The resource already exists.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -777,7 +1088,7 @@ public interface AWSWellArchitected {
      * @throws ValidationException
      *         The user input is not valid.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws ResourceNotFoundException
      *         The requested resource was not found.
      * @throws ConflictException
@@ -806,7 +1117,7 @@ public interface AWSWellArchitected {
      * @throws ConflictException
      *         The resource already exists.
      * @throws InternalServerException
-     *         There is a problem with the AWS Well-Architected Tool API service.
+     *         There is a problem with the Well-Architected Tool API service.
      * @throws AccessDeniedException
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException

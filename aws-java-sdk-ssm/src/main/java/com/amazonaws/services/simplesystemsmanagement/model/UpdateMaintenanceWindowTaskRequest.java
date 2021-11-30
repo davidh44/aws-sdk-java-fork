@@ -39,7 +39,7 @@ public class UpdateMaintenanceWindowTaskRequest extends com.amazonaws.AmazonWebS
     private String windowTaskId;
     /**
      * <p>
-     * The targets (either instances or tags) to modify. Instances are specified using the format
+     * The targets (either managed nodes or tags) to modify. Managed nodes are specified using the format
      * <code>Key=instanceids,Values=instanceID_1,instanceID_2</code>. Tags are specified using the format
      * <code> Key=tag_name,Values=tag_value</code>.
      * </p>
@@ -321,7 +321,7 @@ public class UpdateMaintenanceWindowTaskRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The targets (either instances or tags) to modify. Instances are specified using the format
+     * The targets (either managed nodes or tags) to modify. Managed nodes are specified using the format
      * <code>Key=instanceids,Values=instanceID_1,instanceID_2</code>. Tags are specified using the format
      * <code> Key=tag_name,Values=tag_value</code>.
      * </p>
@@ -336,7 +336,7 @@ public class UpdateMaintenanceWindowTaskRequest extends com.amazonaws.AmazonWebS
      * </p>
      * </note>
      * 
-     * @return The targets (either instances or tags) to modify. Instances are specified using the format
+     * @return The targets (either managed nodes or tags) to modify. Managed nodes are specified using the format
      *         <code>Key=instanceids,Values=instanceID_1,instanceID_2</code>. Tags are specified using the format
      *         <code> Key=tag_name,Values=tag_value</code>. </p> <note>
      *         <p>
@@ -358,7 +358,7 @@ public class UpdateMaintenanceWindowTaskRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The targets (either instances or tags) to modify. Instances are specified using the format
+     * The targets (either managed nodes or tags) to modify. Managed nodes are specified using the format
      * <code>Key=instanceids,Values=instanceID_1,instanceID_2</code>. Tags are specified using the format
      * <code> Key=tag_name,Values=tag_value</code>.
      * </p>
@@ -374,7 +374,7 @@ public class UpdateMaintenanceWindowTaskRequest extends com.amazonaws.AmazonWebS
      * </note>
      * 
      * @param targets
-     *        The targets (either instances or tags) to modify. Instances are specified using the format
+     *        The targets (either managed nodes or tags) to modify. Managed nodes are specified using the format
      *        <code>Key=instanceids,Values=instanceID_1,instanceID_2</code>. Tags are specified using the format
      *        <code> Key=tag_name,Values=tag_value</code>. </p> <note>
      *        <p>
@@ -398,7 +398,7 @@ public class UpdateMaintenanceWindowTaskRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The targets (either instances or tags) to modify. Instances are specified using the format
+     * The targets (either managed nodes or tags) to modify. Managed nodes are specified using the format
      * <code>Key=instanceids,Values=instanceID_1,instanceID_2</code>. Tags are specified using the format
      * <code> Key=tag_name,Values=tag_value</code>.
      * </p>
@@ -419,7 +419,7 @@ public class UpdateMaintenanceWindowTaskRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param targets
-     *        The targets (either instances or tags) to modify. Instances are specified using the format
+     *        The targets (either managed nodes or tags) to modify. Managed nodes are specified using the format
      *        <code>Key=instanceids,Values=instanceID_1,instanceID_2</code>. Tags are specified using the format
      *        <code> Key=tag_name,Values=tag_value</code>. </p> <note>
      *        <p>
@@ -445,7 +445,7 @@ public class UpdateMaintenanceWindowTaskRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The targets (either instances or tags) to modify. Instances are specified using the format
+     * The targets (either managed nodes or tags) to modify. Managed nodes are specified using the format
      * <code>Key=instanceids,Values=instanceID_1,instanceID_2</code>. Tags are specified using the format
      * <code> Key=tag_name,Values=tag_value</code>.
      * </p>
@@ -461,7 +461,7 @@ public class UpdateMaintenanceWindowTaskRequest extends com.amazonaws.AmazonWebS
      * </note>
      * 
      * @param targets
-     *        The targets (either instances or tags) to modify. Instances are specified using the format
+     *        The targets (either managed nodes or tags) to modify. Managed nodes are specified using the format
      *        <code>Key=instanceids,Values=instanceID_1,instanceID_2</code>. Tags are specified using the format
      *        <code> Key=tag_name,Values=tag_value</code>. </p> <note>
      *        <p>

@@ -27,7 +27,7 @@ public class DescribeInstancePatchesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The ID of the instance whose patch state information should be retrieved.
+     * The ID of the managed node whose patch state information should be retrieved.
      * </p>
      */
     private String instanceId;
@@ -89,11 +89,11 @@ public class DescribeInstancePatchesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The ID of the instance whose patch state information should be retrieved.
+     * The ID of the managed node whose patch state information should be retrieved.
      * </p>
      * 
      * @param instanceId
-     *        The ID of the instance whose patch state information should be retrieved.
+     *        The ID of the managed node whose patch state information should be retrieved.
      */
 
     public void setInstanceId(String instanceId) {
@@ -102,10 +102,10 @@ public class DescribeInstancePatchesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The ID of the instance whose patch state information should be retrieved.
+     * The ID of the managed node whose patch state information should be retrieved.
      * </p>
      * 
-     * @return The ID of the instance whose patch state information should be retrieved.
+     * @return The ID of the managed node whose patch state information should be retrieved.
      */
 
     public String getInstanceId() {
@@ -114,11 +114,11 @@ public class DescribeInstancePatchesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The ID of the instance whose patch state information should be retrieved.
+     * The ID of the managed node whose patch state information should be retrieved.
      * </p>
      * 
      * @param instanceId
-     *        The ID of the instance whose patch state information should be retrieved.
+     *        The ID of the managed node whose patch state information should be retrieved.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

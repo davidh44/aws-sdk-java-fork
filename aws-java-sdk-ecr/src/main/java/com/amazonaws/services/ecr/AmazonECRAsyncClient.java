@@ -365,6 +365,41 @@ public class AmazonECRAsyncClient extends AmazonECRClient implements AmazonECRAs
     }
 
     @Override
+    public java.util.concurrent.Future<BatchGetRepositoryScanningConfigurationResult> batchGetRepositoryScanningConfigurationAsync(
+            BatchGetRepositoryScanningConfigurationRequest request) {
+
+        return batchGetRepositoryScanningConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetRepositoryScanningConfigurationResult> batchGetRepositoryScanningConfigurationAsync(
+            final BatchGetRepositoryScanningConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchGetRepositoryScanningConfigurationRequest, BatchGetRepositoryScanningConfigurationResult> asyncHandler) {
+        final BatchGetRepositoryScanningConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchGetRepositoryScanningConfigurationResult>() {
+            @Override
+            public BatchGetRepositoryScanningConfigurationResult call() throws Exception {
+                BatchGetRepositoryScanningConfigurationResult result = null;
+
+                try {
+                    result = executeBatchGetRepositoryScanningConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CompleteLayerUploadResult> completeLayerUploadAsync(CompleteLayerUploadRequest request) {
 
         return completeLayerUploadAsync(request, null);
@@ -382,6 +417,39 @@ public class AmazonECRAsyncClient extends AmazonECRClient implements AmazonECRAs
 
                 try {
                     result = executeCompleteLayerUpload(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePullThroughCacheRuleResult> createPullThroughCacheRuleAsync(CreatePullThroughCacheRuleRequest request) {
+
+        return createPullThroughCacheRuleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePullThroughCacheRuleResult> createPullThroughCacheRuleAsync(final CreatePullThroughCacheRuleRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreatePullThroughCacheRuleRequest, CreatePullThroughCacheRuleResult> asyncHandler) {
+        final CreatePullThroughCacheRuleRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreatePullThroughCacheRuleResult>() {
+            @Override
+            public CreatePullThroughCacheRuleResult call() throws Exception {
+                CreatePullThroughCacheRuleResult result = null;
+
+                try {
+                    result = executeCreatePullThroughCacheRule(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -448,6 +516,39 @@ public class AmazonECRAsyncClient extends AmazonECRClient implements AmazonECRAs
 
                 try {
                     result = executeDeleteLifecyclePolicy(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePullThroughCacheRuleResult> deletePullThroughCacheRuleAsync(DeletePullThroughCacheRuleRequest request) {
+
+        return deletePullThroughCacheRuleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePullThroughCacheRuleResult> deletePullThroughCacheRuleAsync(final DeletePullThroughCacheRuleRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeletePullThroughCacheRuleRequest, DeletePullThroughCacheRuleResult> asyncHandler) {
+        final DeletePullThroughCacheRuleRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeletePullThroughCacheRuleResult>() {
+            @Override
+            public DeletePullThroughCacheRuleResult call() throws Exception {
+                DeletePullThroughCacheRuleResult result = null;
+
+                try {
+                    result = executeDeletePullThroughCacheRule(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -647,6 +748,40 @@ public class AmazonECRAsyncClient extends AmazonECRClient implements AmazonECRAs
 
                 try {
                     result = executeDescribeImages(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribePullThroughCacheRulesResult> describePullThroughCacheRulesAsync(DescribePullThroughCacheRulesRequest request) {
+
+        return describePullThroughCacheRulesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribePullThroughCacheRulesResult> describePullThroughCacheRulesAsync(
+            final DescribePullThroughCacheRulesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribePullThroughCacheRulesRequest, DescribePullThroughCacheRulesResult> asyncHandler) {
+        final DescribePullThroughCacheRulesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribePullThroughCacheRulesResult>() {
+            @Override
+            public DescribePullThroughCacheRulesResult call() throws Exception {
+                DescribePullThroughCacheRulesResult result = null;
+
+                try {
+                    result = executeDescribePullThroughCacheRules(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -878,6 +1013,41 @@ public class AmazonECRAsyncClient extends AmazonECRClient implements AmazonECRAs
 
                 try {
                     result = executeGetRegistryPolicy(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRegistryScanningConfigurationResult> getRegistryScanningConfigurationAsync(
+            GetRegistryScanningConfigurationRequest request) {
+
+        return getRegistryScanningConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRegistryScanningConfigurationResult> getRegistryScanningConfigurationAsync(
+            final GetRegistryScanningConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetRegistryScanningConfigurationRequest, GetRegistryScanningConfigurationResult> asyncHandler) {
+        final GetRegistryScanningConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetRegistryScanningConfigurationResult>() {
+            @Override
+            public GetRegistryScanningConfigurationResult call() throws Exception {
+                GetRegistryScanningConfigurationResult result = null;
+
+                try {
+                    result = executeGetRegistryScanningConfiguration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1176,6 +1346,41 @@ public class AmazonECRAsyncClient extends AmazonECRClient implements AmazonECRAs
 
                 try {
                     result = executePutRegistryPolicy(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutRegistryScanningConfigurationResult> putRegistryScanningConfigurationAsync(
+            PutRegistryScanningConfigurationRequest request) {
+
+        return putRegistryScanningConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutRegistryScanningConfigurationResult> putRegistryScanningConfigurationAsync(
+            final PutRegistryScanningConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PutRegistryScanningConfigurationRequest, PutRegistryScanningConfigurationResult> asyncHandler) {
+        final PutRegistryScanningConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PutRegistryScanningConfigurationResult>() {
+            @Override
+            public PutRegistryScanningConfigurationResult call() throws Exception {
+                PutRegistryScanningConfigurationResult result = null;
+
+                try {
+                    result = executePutRegistryScanningConfiguration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -44,6 +44,8 @@ public class VolumeRecommendationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("volumeRecommendationOptions").build();
     private static final MarshallingInfo<java.util.Date> LASTREFRESHTIMESTAMP_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lastRefreshTimestamp").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<String> CURRENTPERFORMANCERISK_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("currentPerformanceRisk").build();
 
     private static final VolumeRecommendationMarshaller instance = new VolumeRecommendationMarshaller();
 
@@ -69,6 +71,7 @@ public class VolumeRecommendationMarshaller {
             protocolMarshaller.marshall(volumeRecommendation.getLookBackPeriodInDays(), LOOKBACKPERIODINDAYS_BINDING);
             protocolMarshaller.marshall(volumeRecommendation.getVolumeRecommendationOptions(), VOLUMERECOMMENDATIONOPTIONS_BINDING);
             protocolMarshaller.marshall(volumeRecommendation.getLastRefreshTimestamp(), LASTREFRESHTIMESTAMP_BINDING);
+            protocolMarshaller.marshall(volumeRecommendation.getCurrentPerformanceRisk(), CURRENTPERFORMANCERISK_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

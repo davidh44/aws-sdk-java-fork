@@ -27,24 +27,24 @@ public class PutInventoryRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * An instance ID where you want to add or update inventory items.
+     * An managed node ID where you want to add or update inventory items.
      * </p>
      */
     private String instanceId;
     /**
      * <p>
-     * The inventory items that you want to add or update on instances.
+     * The inventory items that you want to add or update on managed nodes.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<InventoryItem> items;
 
     /**
      * <p>
-     * An instance ID where you want to add or update inventory items.
+     * An managed node ID where you want to add or update inventory items.
      * </p>
      * 
      * @param instanceId
-     *        An instance ID where you want to add or update inventory items.
+     *        An managed node ID where you want to add or update inventory items.
      */
 
     public void setInstanceId(String instanceId) {
@@ -53,10 +53,10 @@ public class PutInventoryRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * An instance ID where you want to add or update inventory items.
+     * An managed node ID where you want to add or update inventory items.
      * </p>
      * 
-     * @return An instance ID where you want to add or update inventory items.
+     * @return An managed node ID where you want to add or update inventory items.
      */
 
     public String getInstanceId() {
@@ -65,11 +65,11 @@ public class PutInventoryRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * An instance ID where you want to add or update inventory items.
+     * An managed node ID where you want to add or update inventory items.
      * </p>
      * 
      * @param instanceId
-     *        An instance ID where you want to add or update inventory items.
+     *        An managed node ID where you want to add or update inventory items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,10 +80,10 @@ public class PutInventoryRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The inventory items that you want to add or update on instances.
+     * The inventory items that you want to add or update on managed nodes.
      * </p>
      * 
-     * @return The inventory items that you want to add or update on instances.
+     * @return The inventory items that you want to add or update on managed nodes.
      */
 
     public java.util.List<InventoryItem> getItems() {
@@ -95,11 +95,11 @@ public class PutInventoryRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The inventory items that you want to add or update on instances.
+     * The inventory items that you want to add or update on managed nodes.
      * </p>
      * 
      * @param items
-     *        The inventory items that you want to add or update on instances.
+     *        The inventory items that you want to add or update on managed nodes.
      */
 
     public void setItems(java.util.Collection<InventoryItem> items) {
@@ -113,7 +113,7 @@ public class PutInventoryRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The inventory items that you want to add or update on instances.
+     * The inventory items that you want to add or update on managed nodes.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -122,7 +122,7 @@ public class PutInventoryRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * 
      * @param items
-     *        The inventory items that you want to add or update on instances.
+     *        The inventory items that you want to add or update on managed nodes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -138,11 +138,11 @@ public class PutInventoryRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The inventory items that you want to add or update on instances.
+     * The inventory items that you want to add or update on managed nodes.
      * </p>
      * 
      * @param items
-     *        The inventory items that you want to add or update on instances.
+     *        The inventory items that you want to add or update on managed nodes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The filters to describe or get information about your managed instances.
+ * The filters to describe or get information about your managed nodes.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/InstanceInformationStringFilter"
@@ -30,7 +30,7 @@ public class InstanceInformationStringFilter implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The filter key name to describe your instances. For example:
+     * The filter key name to describe your managed nodes. For example:
      * </p>
      * <p>
      * "InstanceIds"|"AgentVersion"|"PingStatus"|"PlatformTypes"|"ActivationIds"|"IamRole"|"ResourceType"|
@@ -54,7 +54,7 @@ public class InstanceInformationStringFilter implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The filter key name to describe your instances. For example:
+     * The filter key name to describe your managed nodes. For example:
      * </p>
      * <p>
      * "InstanceIds"|"AgentVersion"|"PingStatus"|"PlatformTypes"|"ActivationIds"|"IamRole"|"ResourceType"|
@@ -69,7 +69,7 @@ public class InstanceInformationStringFilter implements Serializable, Cloneable,
      * </important>
      * 
      * @param key
-     *        The filter key name to describe your instances. For example:</p>
+     *        The filter key name to describe your managed nodes. For example:</p>
      *        <p>
      *        "InstanceIds"|"AgentVersion"|"PingStatus"|"PlatformTypes"|"ActivationIds"|"IamRole"|"ResourceType"|
      *        "AssociationStatus"|"Tag Key"
@@ -88,7 +88,7 @@ public class InstanceInformationStringFilter implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The filter key name to describe your instances. For example:
+     * The filter key name to describe your managed nodes. For example:
      * </p>
      * <p>
      * "InstanceIds"|"AgentVersion"|"PingStatus"|"PlatformTypes"|"ActivationIds"|"IamRole"|"ResourceType"|
@@ -102,7 +102,7 @@ public class InstanceInformationStringFilter implements Serializable, Cloneable,
      * </p>
      * </important>
      * 
-     * @return The filter key name to describe your instances. For example:</p>
+     * @return The filter key name to describe your managed nodes. For example:</p>
      *         <p>
      *         "InstanceIds"|"AgentVersion"|"PingStatus"|"PlatformTypes"|"ActivationIds"|"IamRole"|"ResourceType"|
      *         "AssociationStatus"|"Tag Key"
@@ -121,7 +121,7 @@ public class InstanceInformationStringFilter implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The filter key name to describe your instances. For example:
+     * The filter key name to describe your managed nodes. For example:
      * </p>
      * <p>
      * "InstanceIds"|"AgentVersion"|"PingStatus"|"PlatformTypes"|"ActivationIds"|"IamRole"|"ResourceType"|
@@ -136,7 +136,7 @@ public class InstanceInformationStringFilter implements Serializable, Cloneable,
      * </important>
      * 
      * @param key
-     *        The filter key name to describe your instances. For example:</p>
+     *        The filter key name to describe your managed nodes. For example:</p>
      *        <p>
      *        "InstanceIds"|"AgentVersion"|"PingStatus"|"PlatformTypes"|"ActivationIds"|"IamRole"|"ResourceType"|
      *        "AssociationStatus"|"Tag Key"

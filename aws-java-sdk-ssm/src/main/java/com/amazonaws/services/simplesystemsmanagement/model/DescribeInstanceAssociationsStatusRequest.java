@@ -27,7 +27,7 @@ public class DescribeInstanceAssociationsStatusRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The instance IDs for which you want association status information.
+     * The managed node IDs for which you want association status information.
      * </p>
      */
     private String instanceId;
@@ -47,11 +47,11 @@ public class DescribeInstanceAssociationsStatusRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The instance IDs for which you want association status information.
+     * The managed node IDs for which you want association status information.
      * </p>
      * 
      * @param instanceId
-     *        The instance IDs for which you want association status information.
+     *        The managed node IDs for which you want association status information.
      */
 
     public void setInstanceId(String instanceId) {
@@ -60,10 +60,10 @@ public class DescribeInstanceAssociationsStatusRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The instance IDs for which you want association status information.
+     * The managed node IDs for which you want association status information.
      * </p>
      * 
-     * @return The instance IDs for which you want association status information.
+     * @return The managed node IDs for which you want association status information.
      */
 
     public String getInstanceId() {
@@ -72,11 +72,11 @@ public class DescribeInstanceAssociationsStatusRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The instance IDs for which you want association status information.
+     * The managed node IDs for which you want association status information.
      * </p>
      * 
      * @param instanceId
-     *        The instance IDs for which you want association status information.
+     *        The managed node IDs for which you want association status information.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

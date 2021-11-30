@@ -60,8 +60,9 @@ public class PatchRule implements Serializable, Cloneable, StructuredPojo {
     private String approveUntilDate;
     /**
      * <p>
-     * For instances identified by the approval rule filters, enables a patch baseline to apply non-security updates
-     * available in the specified repository. The default value is <code>false</code>. Applies to Linux instances only.
+     * For managed nodes identified by the approval rule filters, enables a patch baseline to apply non-security updates
+     * available in the specified repository. The default value is <code>false</code>. Applies to Linux managed nodes
+     * only.
      * </p>
      */
     private Boolean enableNonSecurity;
@@ -294,14 +295,15 @@ public class PatchRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * For instances identified by the approval rule filters, enables a patch baseline to apply non-security updates
-     * available in the specified repository. The default value is <code>false</code>. Applies to Linux instances only.
+     * For managed nodes identified by the approval rule filters, enables a patch baseline to apply non-security updates
+     * available in the specified repository. The default value is <code>false</code>. Applies to Linux managed nodes
+     * only.
      * </p>
      * 
      * @param enableNonSecurity
-     *        For instances identified by the approval rule filters, enables a patch baseline to apply non-security
+     *        For managed nodes identified by the approval rule filters, enables a patch baseline to apply non-security
      *        updates available in the specified repository. The default value is <code>false</code>. Applies to Linux
-     *        instances only.
+     *        managed nodes only.
      */
 
     public void setEnableNonSecurity(Boolean enableNonSecurity) {
@@ -310,13 +312,14 @@ public class PatchRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * For instances identified by the approval rule filters, enables a patch baseline to apply non-security updates
-     * available in the specified repository. The default value is <code>false</code>. Applies to Linux instances only.
+     * For managed nodes identified by the approval rule filters, enables a patch baseline to apply non-security updates
+     * available in the specified repository. The default value is <code>false</code>. Applies to Linux managed nodes
+     * only.
      * </p>
      * 
-     * @return For instances identified by the approval rule filters, enables a patch baseline to apply non-security
+     * @return For managed nodes identified by the approval rule filters, enables a patch baseline to apply non-security
      *         updates available in the specified repository. The default value is <code>false</code>. Applies to Linux
-     *         instances only.
+     *         managed nodes only.
      */
 
     public Boolean getEnableNonSecurity() {
@@ -325,14 +328,15 @@ public class PatchRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * For instances identified by the approval rule filters, enables a patch baseline to apply non-security updates
-     * available in the specified repository. The default value is <code>false</code>. Applies to Linux instances only.
+     * For managed nodes identified by the approval rule filters, enables a patch baseline to apply non-security updates
+     * available in the specified repository. The default value is <code>false</code>. Applies to Linux managed nodes
+     * only.
      * </p>
      * 
      * @param enableNonSecurity
-     *        For instances identified by the approval rule filters, enables a patch baseline to apply non-security
+     *        For managed nodes identified by the approval rule filters, enables a patch baseline to apply non-security
      *        updates available in the specified repository. The default value is <code>false</code>. Applies to Linux
-     *        instances only.
+     *        managed nodes only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -343,13 +347,14 @@ public class PatchRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * For instances identified by the approval rule filters, enables a patch baseline to apply non-security updates
-     * available in the specified repository. The default value is <code>false</code>. Applies to Linux instances only.
+     * For managed nodes identified by the approval rule filters, enables a patch baseline to apply non-security updates
+     * available in the specified repository. The default value is <code>false</code>. Applies to Linux managed nodes
+     * only.
      * </p>
      * 
-     * @return For instances identified by the approval rule filters, enables a patch baseline to apply non-security
+     * @return For managed nodes identified by the approval rule filters, enables a patch baseline to apply non-security
      *         updates available in the specified repository. The default value is <code>false</code>. Applies to Linux
-     *         instances only.
+     *         managed nodes only.
      */
 
     public Boolean isEnableNonSecurity() {

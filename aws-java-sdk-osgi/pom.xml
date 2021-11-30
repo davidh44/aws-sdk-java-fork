@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.amazonaws</groupId>
     <artifactId>aws-java-sdk-pom</artifactId>
-    <version>1.12.121-SNAPSHOT</version>
+    <version>1.12.121</version>
   </parent>
   <groupId>com.amazonaws</groupId>
   <artifactId>aws-java-sdk-osgi</artifactId>
@@ -15,6 +15,30 @@
 
   <!-- The dependencies section in pom.xml is auto generated. No manual changes are allowed -->
   <dependencies>
+    <dependency>
+        <artifactId>aws-java-sdk-recyclebin</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
+    <dependency>
+        <artifactId>aws-java-sdk-cloudwatchrum</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
+    <dependency>
+        <artifactId>aws-java-sdk-cloudwatchevidently</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
+    <dependency>
+        <artifactId>aws-java-sdk-inspector2</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
     <dependency>
         <artifactId>aws-java-sdk-migrationhubrefactorspaces</artifactId>
         <groupId>com.amazonaws</groupId>
@@ -1874,6 +1898,22 @@
                               </taglet>
                           </taglets>
                           <groups>
+                              <group>
+                                  <title>Amazon Recycle Bin</title>
+                                  <packages>com.amazonaws.services.recyclebin*</packages>
+                              </group>
+                              <group>
+                                  <title>CloudWatch RUM</title>
+                                  <packages>com.amazonaws.services.cloudwatchrum*</packages>
+                              </group>
+                              <group>
+                                  <title>Amazon CloudWatch Evidently</title>
+                                  <packages>com.amazonaws.services.cloudwatchevidently*</packages>
+                              </group>
+                              <group>
+                                  <title>Inspector2</title>
+                                  <packages>com.amazonaws.services.inspector2*</packages>
+                              </group>
                               <group>
                                   <title>AWS Migration Hub Refactor Spaces</title>
                                   <packages>com.amazonaws.services.migrationhubrefactorspaces*</packages>

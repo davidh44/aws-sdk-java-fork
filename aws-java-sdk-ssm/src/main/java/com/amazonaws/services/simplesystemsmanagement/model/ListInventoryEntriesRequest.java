@@ -27,7 +27,7 @@ public class ListInventoryEntriesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The instance ID for which you want inventory information.
+     * The managed node ID for which you want inventory information.
      * </p>
      */
     private String instanceId;
@@ -59,11 +59,11 @@ public class ListInventoryEntriesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The instance ID for which you want inventory information.
+     * The managed node ID for which you want inventory information.
      * </p>
      * 
      * @param instanceId
-     *        The instance ID for which you want inventory information.
+     *        The managed node ID for which you want inventory information.
      */
 
     public void setInstanceId(String instanceId) {
@@ -72,10 +72,10 @@ public class ListInventoryEntriesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The instance ID for which you want inventory information.
+     * The managed node ID for which you want inventory information.
      * </p>
      * 
-     * @return The instance ID for which you want inventory information.
+     * @return The managed node ID for which you want inventory information.
      */
 
     public String getInstanceId() {
@@ -84,11 +84,11 @@ public class ListInventoryEntriesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The instance ID for which you want inventory information.
+     * The managed node ID for which you want inventory information.
      * </p>
      * 
      * @param instanceId
-     *        The instance ID for which you want inventory information.
+     *        The managed node ID for which you want inventory information.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -72,7 +72,7 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
     private Double lookbackPeriodInDays;
     /**
      * <p>
-     * The timestamp of when the function recommendation was last refreshed.
+     * The timestamp of when the function recommendation was last generated.
      * </p>
      */
     private java.util.Date lastRefreshTimestamp;
@@ -169,6 +169,13 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
      * </p>
      */
     private java.util.List<LambdaFunctionMemoryRecommendationOption> memorySizeRecommendationOptions;
+    /**
+     * <p>
+     * The risk of the current Lambda function not meeting the performance needs of its workloads. The higher the risk,
+     * the more likely the current Lambda function configuration is underperforming in its workload.
+     * </p>
+     */
+    private String currentPerformanceRisk;
 
     /**
      * <p>
@@ -482,11 +489,11 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The timestamp of when the function recommendation was last refreshed.
+     * The timestamp of when the function recommendation was last generated.
      * </p>
      * 
      * @param lastRefreshTimestamp
-     *        The timestamp of when the function recommendation was last refreshed.
+     *        The timestamp of when the function recommendation was last generated.
      */
 
     public void setLastRefreshTimestamp(java.util.Date lastRefreshTimestamp) {
@@ -495,10 +502,10 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The timestamp of when the function recommendation was last refreshed.
+     * The timestamp of when the function recommendation was last generated.
      * </p>
      * 
-     * @return The timestamp of when the function recommendation was last refreshed.
+     * @return The timestamp of when the function recommendation was last generated.
      */
 
     public java.util.Date getLastRefreshTimestamp() {
@@ -507,11 +514,11 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The timestamp of when the function recommendation was last refreshed.
+     * The timestamp of when the function recommendation was last generated.
      * </p>
      * 
      * @param lastRefreshTimestamp
-     *        The timestamp of when the function recommendation was last refreshed.
+     *        The timestamp of when the function recommendation was last generated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1428,6 +1435,73 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * The risk of the current Lambda function not meeting the performance needs of its workloads. The higher the risk,
+     * the more likely the current Lambda function configuration is underperforming in its workload.
+     * </p>
+     * 
+     * @param currentPerformanceRisk
+     *        The risk of the current Lambda function not meeting the performance needs of its workloads. The higher the
+     *        risk, the more likely the current Lambda function configuration is underperforming in its workload.
+     * @see CurrentPerformanceRisk
+     */
+
+    public void setCurrentPerformanceRisk(String currentPerformanceRisk) {
+        this.currentPerformanceRisk = currentPerformanceRisk;
+    }
+
+    /**
+     * <p>
+     * The risk of the current Lambda function not meeting the performance needs of its workloads. The higher the risk,
+     * the more likely the current Lambda function configuration is underperforming in its workload.
+     * </p>
+     * 
+     * @return The risk of the current Lambda function not meeting the performance needs of its workloads. The higher
+     *         the risk, the more likely the current Lambda function configuration is underperforming in its workload.
+     * @see CurrentPerformanceRisk
+     */
+
+    public String getCurrentPerformanceRisk() {
+        return this.currentPerformanceRisk;
+    }
+
+    /**
+     * <p>
+     * The risk of the current Lambda function not meeting the performance needs of its workloads. The higher the risk,
+     * the more likely the current Lambda function configuration is underperforming in its workload.
+     * </p>
+     * 
+     * @param currentPerformanceRisk
+     *        The risk of the current Lambda function not meeting the performance needs of its workloads. The higher the
+     *        risk, the more likely the current Lambda function configuration is underperforming in its workload.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CurrentPerformanceRisk
+     */
+
+    public LambdaFunctionRecommendation withCurrentPerformanceRisk(String currentPerformanceRisk) {
+        setCurrentPerformanceRisk(currentPerformanceRisk);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The risk of the current Lambda function not meeting the performance needs of its workloads. The higher the risk,
+     * the more likely the current Lambda function configuration is underperforming in its workload.
+     * </p>
+     * 
+     * @param currentPerformanceRisk
+     *        The risk of the current Lambda function not meeting the performance needs of its workloads. The higher the
+     *        risk, the more likely the current Lambda function configuration is underperforming in its workload.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CurrentPerformanceRisk
+     */
+
+    public LambdaFunctionRecommendation withCurrentPerformanceRisk(CurrentPerformanceRisk currentPerformanceRisk) {
+        this.currentPerformanceRisk = currentPerformanceRisk.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1460,7 +1534,9 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
         if (getFindingReasonCodes() != null)
             sb.append("FindingReasonCodes: ").append(getFindingReasonCodes()).append(",");
         if (getMemorySizeRecommendationOptions() != null)
-            sb.append("MemorySizeRecommendationOptions: ").append(getMemorySizeRecommendationOptions());
+            sb.append("MemorySizeRecommendationOptions: ").append(getMemorySizeRecommendationOptions()).append(",");
+        if (getCurrentPerformanceRisk() != null)
+            sb.append("CurrentPerformanceRisk: ").append(getCurrentPerformanceRisk());
         sb.append("}");
         return sb.toString();
     }
@@ -1520,6 +1596,10 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
         if (other.getMemorySizeRecommendationOptions() != null
                 && other.getMemorySizeRecommendationOptions().equals(this.getMemorySizeRecommendationOptions()) == false)
             return false;
+        if (other.getCurrentPerformanceRisk() == null ^ this.getCurrentPerformanceRisk() == null)
+            return false;
+        if (other.getCurrentPerformanceRisk() != null && other.getCurrentPerformanceRisk().equals(this.getCurrentPerformanceRisk()) == false)
+            return false;
         return true;
     }
 
@@ -1539,6 +1619,7 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
         hashCode = prime * hashCode + ((getFinding() == null) ? 0 : getFinding().hashCode());
         hashCode = prime * hashCode + ((getFindingReasonCodes() == null) ? 0 : getFindingReasonCodes().hashCode());
         hashCode = prime * hashCode + ((getMemorySizeRecommendationOptions() == null) ? 0 : getMemorySizeRecommendationOptions().hashCode());
+        hashCode = prime * hashCode + ((getCurrentPerformanceRisk() == null) ? 0 : getCurrentPerformanceRisk().hashCode());
         return hashCode;
     }
 

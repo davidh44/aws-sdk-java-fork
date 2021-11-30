@@ -52,6 +52,10 @@ public class LensReviewJsonUnmarshaller implements Unmarshaller<LensReview, Json
                     context.nextToken();
                     lensReview.setLensAlias(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("LensArn", targetDepth)) {
+                    context.nextToken();
+                    lensReview.setLensArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("LensVersion", targetDepth)) {
                     context.nextToken();
                     lensReview.setLensVersion(context.getUnmarshaller(String.class).unmarshall(context));

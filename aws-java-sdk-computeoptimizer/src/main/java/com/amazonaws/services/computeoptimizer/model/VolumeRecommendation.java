@@ -90,10 +90,17 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
     private java.util.List<VolumeRecommendationOption> volumeRecommendationOptions;
     /**
      * <p>
-     * The timestamp of when the volume recommendation was last refreshed.
+     * The timestamp of when the volume recommendation was last generated.
      * </p>
      */
     private java.util.Date lastRefreshTimestamp;
+    /**
+     * <p>
+     * The risk of the current EBS volume not meeting the performance needs of its workloads. The higher the risk, the
+     * more likely the current EBS volume doesn't have sufficient capacity.
+     * </p>
+     */
+    private String currentPerformanceRisk;
 
     /**
      * <p>
@@ -596,11 +603,11 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The timestamp of when the volume recommendation was last refreshed.
+     * The timestamp of when the volume recommendation was last generated.
      * </p>
      * 
      * @param lastRefreshTimestamp
-     *        The timestamp of when the volume recommendation was last refreshed.
+     *        The timestamp of when the volume recommendation was last generated.
      */
 
     public void setLastRefreshTimestamp(java.util.Date lastRefreshTimestamp) {
@@ -609,10 +616,10 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The timestamp of when the volume recommendation was last refreshed.
+     * The timestamp of when the volume recommendation was last generated.
      * </p>
      * 
-     * @return The timestamp of when the volume recommendation was last refreshed.
+     * @return The timestamp of when the volume recommendation was last generated.
      */
 
     public java.util.Date getLastRefreshTimestamp() {
@@ -621,16 +628,83 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The timestamp of when the volume recommendation was last refreshed.
+     * The timestamp of when the volume recommendation was last generated.
      * </p>
      * 
      * @param lastRefreshTimestamp
-     *        The timestamp of when the volume recommendation was last refreshed.
+     *        The timestamp of when the volume recommendation was last generated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public VolumeRecommendation withLastRefreshTimestamp(java.util.Date lastRefreshTimestamp) {
         setLastRefreshTimestamp(lastRefreshTimestamp);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The risk of the current EBS volume not meeting the performance needs of its workloads. The higher the risk, the
+     * more likely the current EBS volume doesn't have sufficient capacity.
+     * </p>
+     * 
+     * @param currentPerformanceRisk
+     *        The risk of the current EBS volume not meeting the performance needs of its workloads. The higher the
+     *        risk, the more likely the current EBS volume doesn't have sufficient capacity.
+     * @see CurrentPerformanceRisk
+     */
+
+    public void setCurrentPerformanceRisk(String currentPerformanceRisk) {
+        this.currentPerformanceRisk = currentPerformanceRisk;
+    }
+
+    /**
+     * <p>
+     * The risk of the current EBS volume not meeting the performance needs of its workloads. The higher the risk, the
+     * more likely the current EBS volume doesn't have sufficient capacity.
+     * </p>
+     * 
+     * @return The risk of the current EBS volume not meeting the performance needs of its workloads. The higher the
+     *         risk, the more likely the current EBS volume doesn't have sufficient capacity.
+     * @see CurrentPerformanceRisk
+     */
+
+    public String getCurrentPerformanceRisk() {
+        return this.currentPerformanceRisk;
+    }
+
+    /**
+     * <p>
+     * The risk of the current EBS volume not meeting the performance needs of its workloads. The higher the risk, the
+     * more likely the current EBS volume doesn't have sufficient capacity.
+     * </p>
+     * 
+     * @param currentPerformanceRisk
+     *        The risk of the current EBS volume not meeting the performance needs of its workloads. The higher the
+     *        risk, the more likely the current EBS volume doesn't have sufficient capacity.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CurrentPerformanceRisk
+     */
+
+    public VolumeRecommendation withCurrentPerformanceRisk(String currentPerformanceRisk) {
+        setCurrentPerformanceRisk(currentPerformanceRisk);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The risk of the current EBS volume not meeting the performance needs of its workloads. The higher the risk, the
+     * more likely the current EBS volume doesn't have sufficient capacity.
+     * </p>
+     * 
+     * @param currentPerformanceRisk
+     *        The risk of the current EBS volume not meeting the performance needs of its workloads. The higher the
+     *        risk, the more likely the current EBS volume doesn't have sufficient capacity.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CurrentPerformanceRisk
+     */
+
+    public VolumeRecommendation withCurrentPerformanceRisk(CurrentPerformanceRisk currentPerformanceRisk) {
+        this.currentPerformanceRisk = currentPerformanceRisk.toString();
         return this;
     }
 
@@ -661,7 +735,9 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
         if (getVolumeRecommendationOptions() != null)
             sb.append("VolumeRecommendationOptions: ").append(getVolumeRecommendationOptions()).append(",");
         if (getLastRefreshTimestamp() != null)
-            sb.append("LastRefreshTimestamp: ").append(getLastRefreshTimestamp());
+            sb.append("LastRefreshTimestamp: ").append(getLastRefreshTimestamp()).append(",");
+        if (getCurrentPerformanceRisk() != null)
+            sb.append("CurrentPerformanceRisk: ").append(getCurrentPerformanceRisk());
         sb.append("}");
         return sb.toString();
     }
@@ -708,6 +784,10 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
             return false;
         if (other.getLastRefreshTimestamp() != null && other.getLastRefreshTimestamp().equals(this.getLastRefreshTimestamp()) == false)
             return false;
+        if (other.getCurrentPerformanceRisk() == null ^ this.getCurrentPerformanceRisk() == null)
+            return false;
+        if (other.getCurrentPerformanceRisk() != null && other.getCurrentPerformanceRisk().equals(this.getCurrentPerformanceRisk()) == false)
+            return false;
         return true;
     }
 
@@ -724,6 +804,7 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
         hashCode = prime * hashCode + ((getLookBackPeriodInDays() == null) ? 0 : getLookBackPeriodInDays().hashCode());
         hashCode = prime * hashCode + ((getVolumeRecommendationOptions() == null) ? 0 : getVolumeRecommendationOptions().hashCode());
         hashCode = prime * hashCode + ((getLastRefreshTimestamp() == null) ? 0 : getLastRefreshTimestamp().hashCode());
+        hashCode = prime * hashCode + ((getCurrentPerformanceRisk() == null) ? 0 : getCurrentPerformanceRisk().hashCode());
         return hashCode;
     }
 

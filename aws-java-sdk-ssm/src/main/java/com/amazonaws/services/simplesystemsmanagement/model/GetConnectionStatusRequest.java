@@ -27,18 +27,18 @@ public class GetConnectionStatusRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      */
     private String target;
 
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      * 
      * @param target
-     *        The instance ID.
+     *        The managed node ID.
      */
 
     public void setTarget(String target) {
@@ -47,10 +47,10 @@ public class GetConnectionStatusRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      * 
-     * @return The instance ID.
+     * @return The managed node ID.
      */
 
     public String getTarget() {
@@ -59,11 +59,11 @@ public class GetConnectionStatusRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      * 
      * @param target
-     *        The instance ID.
+     *        The managed node ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

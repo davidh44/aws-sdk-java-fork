@@ -25,13 +25,13 @@ import com.amazonaws.services.wellarchitected.model.*;
  * {@link com.amazonaws.services.wellarchitected.AbstractAWSWellArchitectedAsync} instead.
  * </p>
  * <p>
- * <fullname>AWS Well-Architected Tool</fullname>
+ * <fullname>Well-Architected Tool</fullname>
  * <p>
- * This is the <i>AWS Well-Architected Tool API Reference</i>. The AWS Well-Architected Tool API provides programmatic
- * access to the <a href="http://aws.amazon.com/well-architected-tool">AWS Well-Architected Tool</a> in the <a
- * href="https://console.aws.amazon.com/wellarchitected">AWS Management Console</a>. For information about the AWS
- * Well-Architected Tool, see the <a href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/intro.html">AWS
- * Well-Architected Tool User Guide</a>.
+ * This is the <i>Well-Architected Tool API Reference</i>. The WA Tool API provides programmatic access to the <a
+ * href="http://aws.amazon.com/well-architected-tool">Well-Architected Tool</a> in the <a
+ * href="https://console.aws.amazon.com/wellarchitected">Amazon Web Services Management Console</a>. For information
+ * about the Well-Architected Tool, see the <a
+ * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/intro.html">Well-Architected Tool User Guide</a>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -41,6 +41,20 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * <p>
      * Associate a lens to a workload.
      * </p>
+     * <p>
+     * Up to 10 lenses can be associated with a workload in a single API operation. A maximum of 20 lenses can be
+     * associated with a workload.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * By accessing and/or applying custom lenses created by another Amazon Web Services user or account, you
+     * acknowledge that custom lenses created by other users and shared with you are Third Party Content as defined in
+     * the Amazon Web Services Customer Agreement.
+     * </p>
+     * </note>
      * 
      * @param associateLensesRequest
      *        Input to associate lens reviews.
@@ -55,6 +69,20 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * <p>
      * Associate a lens to a workload.
      * </p>
+     * <p>
+     * Up to 10 lenses can be associated with a workload in a single API operation. A maximum of 20 lenses can be
+     * associated with a workload.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * By accessing and/or applying custom lenses created by another Amazon Web Services user or account, you
+     * acknowledge that custom lenses created by other users and shared with you are Third Party Content as defined in
+     * the Amazon Web Services Customer Agreement.
+     * </p>
+     * </note>
      * 
      * @param associateLensesRequest
      *        Input to associate lens reviews.
@@ -69,6 +97,114 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      */
     java.util.concurrent.Future<AssociateLensesResult> associateLensesAsync(AssociateLensesRequest associateLensesRequest,
             com.amazonaws.handlers.AsyncHandler<AssociateLensesRequest, AssociateLensesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Create a lens share.
+     * </p>
+     * <p>
+     * The owner of a lens can share it with other Amazon Web Services accounts and IAM users in the same Amazon Web
+     * Services Region. Shared access to a lens is not removed until the lens invitation is deleted.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * By sharing your custom lenses with other Amazon Web Services accounts, you acknowledge that Amazon Web Services
+     * will make your custom lenses available to those other accounts. Those other accounts may continue to access and
+     * use your shared custom lenses even if you delete the custom lenses from your own Amazon Web Services account or
+     * terminate your Amazon Web Services account.
+     * </p>
+     * </note>
+     * 
+     * @param createLensShareRequest
+     * @return A Java Future containing the result of the CreateLensShare operation returned by the service.
+     * @sample AWSWellArchitectedAsync.CreateLensShare
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/CreateLensShare"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateLensShareResult> createLensShareAsync(CreateLensShareRequest createLensShareRequest);
+
+    /**
+     * <p>
+     * Create a lens share.
+     * </p>
+     * <p>
+     * The owner of a lens can share it with other Amazon Web Services accounts and IAM users in the same Amazon Web
+     * Services Region. Shared access to a lens is not removed until the lens invitation is deleted.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * By sharing your custom lenses with other Amazon Web Services accounts, you acknowledge that Amazon Web Services
+     * will make your custom lenses available to those other accounts. Those other accounts may continue to access and
+     * use your shared custom lenses even if you delete the custom lenses from your own Amazon Web Services account or
+     * terminate your Amazon Web Services account.
+     * </p>
+     * </note>
+     * 
+     * @param createLensShareRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateLensShare operation returned by the service.
+     * @sample AWSWellArchitectedAsyncHandler.CreateLensShare
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/CreateLensShare"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateLensShareResult> createLensShareAsync(CreateLensShareRequest createLensShareRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateLensShareRequest, CreateLensShareResult> asyncHandler);
+
+    /**
+     * <p>
+     * Create a new lens version.
+     * </p>
+     * <p>
+     * A lens can have up to 100 versions.
+     * </p>
+     * <p>
+     * After a lens has been imported, create a new lens version to publish it. The owner of a lens can share the lens
+     * with other Amazon Web Services accounts and IAM users in the same Amazon Web Services Region. Only the owner of a
+     * lens can delete it.
+     * </p>
+     * 
+     * @param createLensVersionRequest
+     * @return A Java Future containing the result of the CreateLensVersion operation returned by the service.
+     * @sample AWSWellArchitectedAsync.CreateLensVersion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/CreateLensVersion"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateLensVersionResult> createLensVersionAsync(CreateLensVersionRequest createLensVersionRequest);
+
+    /**
+     * <p>
+     * Create a new lens version.
+     * </p>
+     * <p>
+     * A lens can have up to 100 versions.
+     * </p>
+     * <p>
+     * After a lens has been imported, create a new lens version to publish it. The owner of a lens can share the lens
+     * with other Amazon Web Services accounts and IAM users in the same Amazon Web Services Region. Only the owner of a
+     * lens can delete it.
+     * </p>
+     * 
+     * @param createLensVersionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateLensVersion operation returned by the service.
+     * @sample AWSWellArchitectedAsyncHandler.CreateLensVersion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/CreateLensVersion"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateLensVersionResult> createLensVersionAsync(CreateLensVersionRequest createLensVersionRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateLensVersionRequest, CreateLensVersionResult> asyncHandler);
 
     /**
      * <p>
@@ -108,13 +244,13 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * Create a new workload.
      * </p>
      * <p>
-     * The owner of a workload can share the workload with other AWS accounts and IAM users in the same AWS Region. Only
-     * the owner of a workload can delete it.
+     * The owner of a workload can share the workload with other Amazon Web Services accounts and IAM users in the same
+     * Amazon Web Services Region. Only the owner of a workload can delete it.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/define-workload.html">Defining a Workload</a>
-     * in the <i>AWS Well-Architected Tool User Guide</i>.
+     * in the <i>Well-Architected Tool User Guide</i>.
      * </p>
      * 
      * @param createWorkloadRequest
@@ -131,13 +267,13 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * Create a new workload.
      * </p>
      * <p>
-     * The owner of a workload can share the workload with other AWS accounts and IAM users in the same AWS Region. Only
-     * the owner of a workload can delete it.
+     * The owner of a workload can share the workload with other Amazon Web Services accounts and IAM users in the same
+     * Amazon Web Services Region. Only the owner of a workload can delete it.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/define-workload.html">Defining a Workload</a>
-     * in the <i>AWS Well-Architected Tool User Guide</i>.
+     * in the <i>Well-Architected Tool User Guide</i>.
      * </p>
      * 
      * @param createWorkloadRequest
@@ -159,13 +295,13 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * Create a workload share.
      * </p>
      * <p>
-     * The owner of a workload can share it with other AWS accounts and IAM users in the same AWS Region. Shared access
-     * to a workload is not removed until the workload invitation is deleted.
+     * The owner of a workload can share it with other Amazon Web Services accounts and IAM users in the same Amazon Web
+     * Services Region. Shared access to a workload is not removed until the workload invitation is deleted.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/workloads-sharing.html">Sharing a Workload</a>
-     * in the <i>AWS Well-Architected Tool User Guide</i>.
+     * in the <i>Well-Architected Tool User Guide</i>.
      * </p>
      * 
      * @param createWorkloadShareRequest
@@ -182,13 +318,13 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * Create a workload share.
      * </p>
      * <p>
-     * The owner of a workload can share it with other AWS accounts and IAM users in the same AWS Region. Shared access
-     * to a workload is not removed until the workload invitation is deleted.
+     * The owner of a workload can share it with other Amazon Web Services accounts and IAM users in the same Amazon Web
+     * Services Region. Shared access to a workload is not removed until the workload invitation is deleted.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/workloads-sharing.html">Sharing a Workload</a>
-     * in the <i>AWS Well-Architected Tool User Guide</i>.
+     * in the <i>Well-Architected Tool User Guide</i>.
      * </p>
      * 
      * @param createWorkloadShareRequest
@@ -204,6 +340,130 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      */
     java.util.concurrent.Future<CreateWorkloadShareResult> createWorkloadShareAsync(CreateWorkloadShareRequest createWorkloadShareRequest,
             com.amazonaws.handlers.AsyncHandler<CreateWorkloadShareRequest, CreateWorkloadShareResult> asyncHandler);
+
+    /**
+     * <p>
+     * Delete an existing lens.
+     * </p>
+     * <p>
+     * Only the owner of a lens can delete it. After the lens is deleted, Amazon Web Services accounts and IAM users
+     * that you shared the lens with can continue to use it, but they will no longer be able to apply it to new
+     * workloads.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * By sharing your custom lenses with other Amazon Web Services accounts, you acknowledge that Amazon Web Services
+     * will make your custom lenses available to those other accounts. Those other accounts may continue to access and
+     * use your shared custom lenses even if you delete the custom lenses from your own Amazon Web Services account or
+     * terminate your Amazon Web Services account.
+     * </p>
+     * </note>
+     * 
+     * @param deleteLensRequest
+     * @return A Java Future containing the result of the DeleteLens operation returned by the service.
+     * @sample AWSWellArchitectedAsync.DeleteLens
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/DeleteLens" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteLensResult> deleteLensAsync(DeleteLensRequest deleteLensRequest);
+
+    /**
+     * <p>
+     * Delete an existing lens.
+     * </p>
+     * <p>
+     * Only the owner of a lens can delete it. After the lens is deleted, Amazon Web Services accounts and IAM users
+     * that you shared the lens with can continue to use it, but they will no longer be able to apply it to new
+     * workloads.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * By sharing your custom lenses with other Amazon Web Services accounts, you acknowledge that Amazon Web Services
+     * will make your custom lenses available to those other accounts. Those other accounts may continue to access and
+     * use your shared custom lenses even if you delete the custom lenses from your own Amazon Web Services account or
+     * terminate your Amazon Web Services account.
+     * </p>
+     * </note>
+     * 
+     * @param deleteLensRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteLens operation returned by the service.
+     * @sample AWSWellArchitectedAsyncHandler.DeleteLens
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/DeleteLens" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteLensResult> deleteLensAsync(DeleteLensRequest deleteLensRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteLensRequest, DeleteLensResult> asyncHandler);
+
+    /**
+     * <p>
+     * Delete a lens share.
+     * </p>
+     * <p>
+     * After the lens share is deleted, Amazon Web Services accounts and IAM users that you shared the lens with can
+     * continue to use it, but they will no longer be able to apply it to new workloads.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * By sharing your custom lenses with other Amazon Web Services accounts, you acknowledge that Amazon Web Services
+     * will make your custom lenses available to those other accounts. Those other accounts may continue to access and
+     * use your shared custom lenses even if you delete the custom lenses from your own Amazon Web Services account or
+     * terminate your Amazon Web Services account.
+     * </p>
+     * </note>
+     * 
+     * @param deleteLensShareRequest
+     * @return A Java Future containing the result of the DeleteLensShare operation returned by the service.
+     * @sample AWSWellArchitectedAsync.DeleteLensShare
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/DeleteLensShare"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteLensShareResult> deleteLensShareAsync(DeleteLensShareRequest deleteLensShareRequest);
+
+    /**
+     * <p>
+     * Delete a lens share.
+     * </p>
+     * <p>
+     * After the lens share is deleted, Amazon Web Services accounts and IAM users that you shared the lens with can
+     * continue to use it, but they will no longer be able to apply it to new workloads.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * By sharing your custom lenses with other Amazon Web Services accounts, you acknowledge that Amazon Web Services
+     * will make your custom lenses available to those other accounts. Those other accounts may continue to access and
+     * use your shared custom lenses even if you delete the custom lenses from your own Amazon Web Services account or
+     * terminate your Amazon Web Services account.
+     * </p>
+     * </note>
+     * 
+     * @param deleteLensShareRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteLensShare operation returned by the service.
+     * @sample AWSWellArchitectedAsyncHandler.DeleteLensShare
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/DeleteLensShare"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteLensShareResult> deleteLensShareAsync(DeleteLensShareRequest deleteLensShareRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteLensShareRequest, DeleteLensShareResult> asyncHandler);
 
     /**
      * <p>
@@ -275,9 +535,13 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * <p>
      * Disassociate a lens from a workload.
      * </p>
+     * <p>
+     * Up to 10 lenses can be disassociated from a workload in a single API operation.
+     * </p>
      * <note>
      * <p>
-     * The AWS Well-Architected Framework lens (<code>wellarchitected</code>) cannot be removed from a workload.
+     * The Amazon Web Services Well-Architected Framework lens (<code>wellarchitected</code>) cannot be removed from a
+     * workload.
      * </p>
      * </note>
      * 
@@ -294,9 +558,13 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * <p>
      * Disassociate a lens from a workload.
      * </p>
+     * <p>
+     * Up to 10 lenses can be disassociated from a workload in a single API operation.
+     * </p>
      * <note>
      * <p>
-     * The AWS Well-Architected Framework lens (<code>wellarchitected</code>) cannot be removed from a workload.
+     * The Amazon Web Services Well-Architected Framework lens (<code>wellarchitected</code>) cannot be removed from a
+     * workload.
      * </p>
      * </note>
      * 
@@ -313,6 +581,69 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      */
     java.util.concurrent.Future<DisassociateLensesResult> disassociateLensesAsync(DisassociateLensesRequest disassociateLensesRequest,
             com.amazonaws.handlers.AsyncHandler<DisassociateLensesRequest, DisassociateLensesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Export an existing lens.
+     * </p>
+     * <p>
+     * Lenses are defined in JSON. For more information, see <a
+     * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/lenses-format-specification.html">JSON format
+     * specification</a> in the <i>Well-Architected Tool User Guide</i>. Only the owner of a lens can export it.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * Do not include or gather personal identifiable information (PII) of end users or other identifiable individuals
+     * in or via your custom lenses. If your custom lens or those shared with you and used in your account do include or
+     * collect PII you are responsible for: ensuring that the included PII is processed in accordance with applicable
+     * law, providing adequate privacy notices, and obtaining necessary consents for processing such data.
+     * </p>
+     * </note>
+     * 
+     * @param exportLensRequest
+     * @return A Java Future containing the result of the ExportLens operation returned by the service.
+     * @sample AWSWellArchitectedAsync.ExportLens
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ExportLens" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ExportLensResult> exportLensAsync(ExportLensRequest exportLensRequest);
+
+    /**
+     * <p>
+     * Export an existing lens.
+     * </p>
+     * <p>
+     * Lenses are defined in JSON. For more information, see <a
+     * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/lenses-format-specification.html">JSON format
+     * specification</a> in the <i>Well-Architected Tool User Guide</i>. Only the owner of a lens can export it.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * Do not include or gather personal identifiable information (PII) of end users or other identifiable individuals
+     * in or via your custom lenses. If your custom lens or those shared with you and used in your account do include or
+     * collect PII you are responsible for: ensuring that the included PII is processed in accordance with applicable
+     * law, providing adequate privacy notices, and obtaining necessary consents for processing such data.
+     * </p>
+     * </note>
+     * 
+     * @param exportLensRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ExportLens operation returned by the service.
+     * @sample AWSWellArchitectedAsyncHandler.ExportLens
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ExportLens" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ExportLensResult> exportLensAsync(ExportLensRequest exportLensRequest,
+            com.amazonaws.handlers.AsyncHandler<ExportLensRequest, ExportLensResult> asyncHandler);
 
     /**
      * <p>
@@ -346,6 +677,37 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      */
     java.util.concurrent.Future<GetAnswerResult> getAnswerAsync(GetAnswerRequest getAnswerRequest,
             com.amazonaws.handlers.AsyncHandler<GetAnswerRequest, GetAnswerResult> asyncHandler);
+
+    /**
+     * <p>
+     * Get an existing lens.
+     * </p>
+     * 
+     * @param getLensRequest
+     * @return A Java Future containing the result of the GetLens operation returned by the service.
+     * @sample AWSWellArchitectedAsync.GetLens
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/GetLens" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetLensResult> getLensAsync(GetLensRequest getLensRequest);
+
+    /**
+     * <p>
+     * Get an existing lens.
+     * </p>
+     * 
+     * @param getLensRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetLens operation returned by the service.
+     * @sample AWSWellArchitectedAsyncHandler.GetLens
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/GetLens" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetLensResult> getLensAsync(GetLensRequest getLensRequest,
+            com.amazonaws.handlers.AsyncHandler<GetLensRequest, GetLensResult> asyncHandler);
 
     /**
      * <p>
@@ -512,6 +874,83 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
 
     /**
      * <p>
+     * Import a new lens.
+     * </p>
+     * <p>
+     * The lens cannot be applied to workloads or shared with other Amazon Web Services accounts until it's published
+     * with <a>CreateLensVersion</a>
+     * </p>
+     * <p>
+     * Lenses are defined in JSON. For more information, see <a
+     * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/lenses-format-specification.html">JSON format
+     * specification</a> in the <i>Well-Architected Tool User Guide</i>.
+     * </p>
+     * <p>
+     * A custom lens cannot exceed 500 KB in size.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * Do not include or gather personal identifiable information (PII) of end users or other identifiable individuals
+     * in or via your custom lenses. If your custom lens or those shared with you and used in your account do include or
+     * collect PII you are responsible for: ensuring that the included PII is processed in accordance with applicable
+     * law, providing adequate privacy notices, and obtaining necessary consents for processing such data.
+     * </p>
+     * </note>
+     * 
+     * @param importLensRequest
+     * @return A Java Future containing the result of the ImportLens operation returned by the service.
+     * @sample AWSWellArchitectedAsync.ImportLens
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ImportLens" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ImportLensResult> importLensAsync(ImportLensRequest importLensRequest);
+
+    /**
+     * <p>
+     * Import a new lens.
+     * </p>
+     * <p>
+     * The lens cannot be applied to workloads or shared with other Amazon Web Services accounts until it's published
+     * with <a>CreateLensVersion</a>
+     * </p>
+     * <p>
+     * Lenses are defined in JSON. For more information, see <a
+     * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/lenses-format-specification.html">JSON format
+     * specification</a> in the <i>Well-Architected Tool User Guide</i>.
+     * </p>
+     * <p>
+     * A custom lens cannot exceed 500 KB in size.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * Do not include or gather personal identifiable information (PII) of end users or other identifiable individuals
+     * in or via your custom lenses. If your custom lens or those shared with you and used in your account do include or
+     * collect PII you are responsible for: ensuring that the included PII is processed in accordance with applicable
+     * law, providing adequate privacy notices, and obtaining necessary consents for processing such data.
+     * </p>
+     * </note>
+     * 
+     * @param importLensRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ImportLens operation returned by the service.
+     * @sample AWSWellArchitectedAsyncHandler.ImportLens
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ImportLens" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ImportLensResult> importLensAsync(ImportLensRequest importLensRequest,
+            com.amazonaws.handlers.AsyncHandler<ImportLensRequest, ImportLensResult> asyncHandler);
+
+    /**
+     * <p>
      * List of answers.
      * </p>
      * 
@@ -610,6 +1049,37 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      */
     java.util.concurrent.Future<ListLensReviewsResult> listLensReviewsAsync(ListLensReviewsRequest listLensReviewsRequest,
             com.amazonaws.handlers.AsyncHandler<ListLensReviewsRequest, ListLensReviewsResult> asyncHandler);
+
+    /**
+     * <p>
+     * List the lens shares associated with the lens.
+     * </p>
+     * 
+     * @param listLensSharesRequest
+     * @return A Java Future containing the result of the ListLensShares operation returned by the service.
+     * @sample AWSWellArchitectedAsync.ListLensShares
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ListLensShares" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListLensSharesResult> listLensSharesAsync(ListLensSharesRequest listLensSharesRequest);
+
+    /**
+     * <p>
+     * List the lens shares associated with the lens.
+     * </p>
+     * 
+     * @param listLensSharesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListLensShares operation returned by the service.
+     * @sample AWSWellArchitectedAsyncHandler.ListLensShares
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ListLensShares" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListLensSharesResult> listLensSharesAsync(ListLensSharesRequest listLensSharesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListLensSharesRequest, ListLensSharesResult> asyncHandler);
 
     /**
      * <p>

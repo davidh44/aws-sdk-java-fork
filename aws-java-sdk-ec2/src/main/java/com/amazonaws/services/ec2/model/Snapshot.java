@@ -126,6 +126,21 @@ public class Snapshot implements Serializable, Cloneable {
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
+    /**
+     * <p>
+     * The storage tier in which the snapshot is stored. <code>standard</code> indicates that the snapshot is stored in
+     * the standard snapshot storage tier and that it is ready for use. <code>archive</code> indicates that the snapshot
+     * is currently archived and that it must be restored before it can be used.
+     * </p>
+     */
+    private String storageTier;
+    /**
+     * <p>
+     * Only for archived snapshots that are temporarily restored. Indicates the date and time when a temporarily
+     * restored snapshot will be automatically re-archived.
+     * </p>
+     */
+    private java.util.Date restoreExpiryTime;
 
     /**
      * <p>
@@ -875,6 +890,145 @@ public class Snapshot implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The storage tier in which the snapshot is stored. <code>standard</code> indicates that the snapshot is stored in
+     * the standard snapshot storage tier and that it is ready for use. <code>archive</code> indicates that the snapshot
+     * is currently archived and that it must be restored before it can be used.
+     * </p>
+     * 
+     * @param storageTier
+     *        The storage tier in which the snapshot is stored. <code>standard</code> indicates that the snapshot is
+     *        stored in the standard snapshot storage tier and that it is ready for use. <code>archive</code> indicates
+     *        that the snapshot is currently archived and that it must be restored before it can be used.
+     * @see StorageTier
+     */
+
+    public void setStorageTier(String storageTier) {
+        this.storageTier = storageTier;
+    }
+
+    /**
+     * <p>
+     * The storage tier in which the snapshot is stored. <code>standard</code> indicates that the snapshot is stored in
+     * the standard snapshot storage tier and that it is ready for use. <code>archive</code> indicates that the snapshot
+     * is currently archived and that it must be restored before it can be used.
+     * </p>
+     * 
+     * @return The storage tier in which the snapshot is stored. <code>standard</code> indicates that the snapshot is
+     *         stored in the standard snapshot storage tier and that it is ready for use. <code>archive</code> indicates
+     *         that the snapshot is currently archived and that it must be restored before it can be used.
+     * @see StorageTier
+     */
+
+    public String getStorageTier() {
+        return this.storageTier;
+    }
+
+    /**
+     * <p>
+     * The storage tier in which the snapshot is stored. <code>standard</code> indicates that the snapshot is stored in
+     * the standard snapshot storage tier and that it is ready for use. <code>archive</code> indicates that the snapshot
+     * is currently archived and that it must be restored before it can be used.
+     * </p>
+     * 
+     * @param storageTier
+     *        The storage tier in which the snapshot is stored. <code>standard</code> indicates that the snapshot is
+     *        stored in the standard snapshot storage tier and that it is ready for use. <code>archive</code> indicates
+     *        that the snapshot is currently archived and that it must be restored before it can be used.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see StorageTier
+     */
+
+    public Snapshot withStorageTier(String storageTier) {
+        setStorageTier(storageTier);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The storage tier in which the snapshot is stored. <code>standard</code> indicates that the snapshot is stored in
+     * the standard snapshot storage tier and that it is ready for use. <code>archive</code> indicates that the snapshot
+     * is currently archived and that it must be restored before it can be used.
+     * </p>
+     * 
+     * @param storageTier
+     *        The storage tier in which the snapshot is stored. <code>standard</code> indicates that the snapshot is
+     *        stored in the standard snapshot storage tier and that it is ready for use. <code>archive</code> indicates
+     *        that the snapshot is currently archived and that it must be restored before it can be used.
+     * @see StorageTier
+     */
+
+    public void setStorageTier(StorageTier storageTier) {
+        withStorageTier(storageTier);
+    }
+
+    /**
+     * <p>
+     * The storage tier in which the snapshot is stored. <code>standard</code> indicates that the snapshot is stored in
+     * the standard snapshot storage tier and that it is ready for use. <code>archive</code> indicates that the snapshot
+     * is currently archived and that it must be restored before it can be used.
+     * </p>
+     * 
+     * @param storageTier
+     *        The storage tier in which the snapshot is stored. <code>standard</code> indicates that the snapshot is
+     *        stored in the standard snapshot storage tier and that it is ready for use. <code>archive</code> indicates
+     *        that the snapshot is currently archived and that it must be restored before it can be used.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see StorageTier
+     */
+
+    public Snapshot withStorageTier(StorageTier storageTier) {
+        this.storageTier = storageTier.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Only for archived snapshots that are temporarily restored. Indicates the date and time when a temporarily
+     * restored snapshot will be automatically re-archived.
+     * </p>
+     * 
+     * @param restoreExpiryTime
+     *        Only for archived snapshots that are temporarily restored. Indicates the date and time when a temporarily
+     *        restored snapshot will be automatically re-archived.
+     */
+
+    public void setRestoreExpiryTime(java.util.Date restoreExpiryTime) {
+        this.restoreExpiryTime = restoreExpiryTime;
+    }
+
+    /**
+     * <p>
+     * Only for archived snapshots that are temporarily restored. Indicates the date and time when a temporarily
+     * restored snapshot will be automatically re-archived.
+     * </p>
+     * 
+     * @return Only for archived snapshots that are temporarily restored. Indicates the date and time when a temporarily
+     *         restored snapshot will be automatically re-archived.
+     */
+
+    public java.util.Date getRestoreExpiryTime() {
+        return this.restoreExpiryTime;
+    }
+
+    /**
+     * <p>
+     * Only for archived snapshots that are temporarily restored. Indicates the date and time when a temporarily
+     * restored snapshot will be automatically re-archived.
+     * </p>
+     * 
+     * @param restoreExpiryTime
+     *        Only for archived snapshots that are temporarily restored. Indicates the date and time when a temporarily
+     *        restored snapshot will be automatically re-archived.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Snapshot withRestoreExpiryTime(java.util.Date restoreExpiryTime) {
+        setRestoreExpiryTime(restoreExpiryTime);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -915,7 +1069,11 @@ public class Snapshot implements Serializable, Cloneable {
         if (getOutpostArn() != null)
             sb.append("OutpostArn: ").append(getOutpostArn()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getStorageTier() != null)
+            sb.append("StorageTier: ").append(getStorageTier()).append(",");
+        if (getRestoreExpiryTime() != null)
+            sb.append("RestoreExpiryTime: ").append(getRestoreExpiryTime());
         sb.append("}");
         return sb.toString();
     }
@@ -990,6 +1148,14 @@ public class Snapshot implements Serializable, Cloneable {
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getStorageTier() == null ^ this.getStorageTier() == null)
+            return false;
+        if (other.getStorageTier() != null && other.getStorageTier().equals(this.getStorageTier()) == false)
+            return false;
+        if (other.getRestoreExpiryTime() == null ^ this.getRestoreExpiryTime() == null)
+            return false;
+        if (other.getRestoreExpiryTime() != null && other.getRestoreExpiryTime().equals(this.getRestoreExpiryTime()) == false)
+            return false;
         return true;
     }
 
@@ -1013,6 +1179,8 @@ public class Snapshot implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getOwnerAlias() == null) ? 0 : getOwnerAlias().hashCode());
         hashCode = prime * hashCode + ((getOutpostArn() == null) ? 0 : getOutpostArn().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getStorageTier() == null) ? 0 : getStorageTier().hashCode());
+        hashCode = prime * hashCode + ((getRestoreExpiryTime() == null) ? 0 : getRestoreExpiryTime().hashCode());
         return hashCode;
     }
 

@@ -92,7 +92,7 @@ public class CreatePortalRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <li>
      * <p>
      * <code>IAM</code> – The portal uses Identity and Access Management to authenticate users and manage user
-     * permissions. This option is only available in the China Regions.
+     * permissions.
      * </p>
      * </li>
      * </ul>
@@ -500,7 +500,7 @@ public class CreatePortalRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <li>
      * <p>
      * <code>IAM</code> – The portal uses Identity and Access Management to authenticate users and manage user
-     * permissions. This option is only available in the China Regions.
+     * permissions.
      * </p>
      * </li>
      * </ul>
@@ -527,7 +527,7 @@ public class CreatePortalRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <li>
      *        <p>
      *        <code>IAM</code> – The portal uses Identity and Access Management to authenticate users and manage user
-     *        permissions. This option is only available in the China Regions.
+     *        permissions.
      *        </p>
      *        </li>
      *        </ul>
@@ -561,7 +561,7 @@ public class CreatePortalRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <li>
      * <p>
      * <code>IAM</code> – The portal uses Identity and Access Management to authenticate users and manage user
-     * permissions. This option is only available in the China Regions.
+     * permissions.
      * </p>
      * </li>
      * </ul>
@@ -587,7 +587,7 @@ public class CreatePortalRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         <li>
      *         <p>
      *         <code>IAM</code> – The portal uses Identity and Access Management to authenticate users and manage user
-     *         permissions. This option is only available in the China Regions.
+     *         permissions.
      *         </p>
      *         </li>
      *         </ul>
@@ -621,7 +621,7 @@ public class CreatePortalRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <li>
      * <p>
      * <code>IAM</code> – The portal uses Identity and Access Management to authenticate users and manage user
-     * permissions. This option is only available in the China Regions.
+     * permissions.
      * </p>
      * </li>
      * </ul>
@@ -648,7 +648,7 @@ public class CreatePortalRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <li>
      *        <p>
      *        <code>IAM</code> – The portal uses Identity and Access Management to authenticate users and manage user
-     *        permissions. This option is only available in the China Regions.
+     *        permissions.
      *        </p>
      *        </li>
      *        </ul>
@@ -684,7 +684,7 @@ public class CreatePortalRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <li>
      * <p>
      * <code>IAM</code> – The portal uses Identity and Access Management to authenticate users and manage user
-     * permissions. This option is only available in the China Regions.
+     * permissions.
      * </p>
      * </li>
      * </ul>
@@ -711,7 +711,7 @@ public class CreatePortalRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <li>
      *        <p>
      *        <code>IAM</code> – The portal uses Identity and Access Management to authenticate users and manage user
-     *        permissions. This option is only available in the China Regions.
+     *        permissions.
      *        </p>
      *        </li>
      *        </ul>

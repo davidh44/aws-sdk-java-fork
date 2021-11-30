@@ -22,7 +22,9 @@ public enum SnapshotState {
 
     Pending("pending"),
     Completed("completed"),
-    Error("error");
+    Error("error"),
+    Recoverable("recoverable"),
+    Recovering("recovering");
 
     private String value;
 

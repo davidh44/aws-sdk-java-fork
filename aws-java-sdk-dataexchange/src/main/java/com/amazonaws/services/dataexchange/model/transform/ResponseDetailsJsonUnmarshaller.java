@@ -73,6 +73,11 @@ public class ResponseDetailsJsonUnmarshaller implements Unmarshaller<ResponseDet
                     responseDetails.setImportAssetsFromRedshiftDataShares(ImportAssetsFromRedshiftDataSharesResponseDetailsJsonUnmarshaller.getInstance()
                             .unmarshall(context));
                 }
+                if (context.testExpression("ImportAssetFromApiGatewayApi", targetDepth)) {
+                    context.nextToken();
+                    responseDetails.setImportAssetFromApiGatewayApi(ImportAssetFromApiGatewayApiResponseDetailsJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -38,7 +38,10 @@ public enum LimitName {
     AmazonRedshiftDatashareAssetsPerImportJobFromRedshift("Amazon Redshift datashare assets per import job from Redshift"),
     ConcurrentInProgressJobsToImportAssetsFromAmazonRedshiftDatashares("Concurrent in progress jobs to import assets from Amazon Redshift datashares"),
     RevisionsPerAmazonRedshiftDatashareDataSet("Revisions per Amazon Redshift datashare data set"),
-    AmazonRedshiftDatashareAssetsPerRevision("Amazon Redshift datashare assets per revision");
+    AmazonRedshiftDatashareAssetsPerRevision("Amazon Redshift datashare assets per revision"),
+    ConcurrentInProgressJobsToImportAssetsFromAnAPIGatewayAPI("Concurrent in progress jobs to import assets from an API Gateway API"),
+    AmazonAPIGatewayAPIAssetsPerRevision("Amazon API Gateway API assets per revision"),
+    RevisionsPerAmazonAPIGatewayAPIDataSet("Revisions per Amazon API Gateway API data set");
 
     private String value;
 

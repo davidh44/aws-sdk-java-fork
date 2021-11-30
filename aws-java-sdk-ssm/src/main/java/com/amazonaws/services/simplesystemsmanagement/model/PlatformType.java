@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum PlatformType {
 
     Windows("Windows"),
-    Linux("Linux");
+    Linux("Linux"),
+    MacOS("MacOS");
 
     private String value;
 

@@ -64,6 +64,12 @@ public class ResponseDetails implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private ImportAssetsFromRedshiftDataSharesResponseDetails importAssetsFromRedshiftDataShares;
+    /**
+     * <p>
+     * The response details.
+     * </p>
+     */
+    private ImportAssetFromApiGatewayApiResponseDetails importAssetFromApiGatewayApi;
 
     /**
      * <p>
@@ -306,6 +312,46 @@ public class ResponseDetails implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * The response details.
+     * </p>
+     * 
+     * @param importAssetFromApiGatewayApi
+     *        The response details.
+     */
+
+    public void setImportAssetFromApiGatewayApi(ImportAssetFromApiGatewayApiResponseDetails importAssetFromApiGatewayApi) {
+        this.importAssetFromApiGatewayApi = importAssetFromApiGatewayApi;
+    }
+
+    /**
+     * <p>
+     * The response details.
+     * </p>
+     * 
+     * @return The response details.
+     */
+
+    public ImportAssetFromApiGatewayApiResponseDetails getImportAssetFromApiGatewayApi() {
+        return this.importAssetFromApiGatewayApi;
+    }
+
+    /**
+     * <p>
+     * The response details.
+     * </p>
+     * 
+     * @param importAssetFromApiGatewayApi
+     *        The response details.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResponseDetails withImportAssetFromApiGatewayApi(ImportAssetFromApiGatewayApiResponseDetails importAssetFromApiGatewayApi) {
+        setImportAssetFromApiGatewayApi(importAssetFromApiGatewayApi);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -328,7 +374,9 @@ public class ResponseDetails implements Serializable, Cloneable, StructuredPojo 
         if (getImportAssetsFromS3() != null)
             sb.append("ImportAssetsFromS3: ").append(getImportAssetsFromS3()).append(",");
         if (getImportAssetsFromRedshiftDataShares() != null)
-            sb.append("ImportAssetsFromRedshiftDataShares: ").append(getImportAssetsFromRedshiftDataShares());
+            sb.append("ImportAssetsFromRedshiftDataShares: ").append(getImportAssetsFromRedshiftDataShares()).append(",");
+        if (getImportAssetFromApiGatewayApi() != null)
+            sb.append("ImportAssetFromApiGatewayApi: ").append(getImportAssetFromApiGatewayApi());
         sb.append("}");
         return sb.toString();
     }
@@ -368,6 +416,10 @@ public class ResponseDetails implements Serializable, Cloneable, StructuredPojo 
         if (other.getImportAssetsFromRedshiftDataShares() != null
                 && other.getImportAssetsFromRedshiftDataShares().equals(this.getImportAssetsFromRedshiftDataShares()) == false)
             return false;
+        if (other.getImportAssetFromApiGatewayApi() == null ^ this.getImportAssetFromApiGatewayApi() == null)
+            return false;
+        if (other.getImportAssetFromApiGatewayApi() != null && other.getImportAssetFromApiGatewayApi().equals(this.getImportAssetFromApiGatewayApi()) == false)
+            return false;
         return true;
     }
 
@@ -382,6 +434,7 @@ public class ResponseDetails implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getImportAssetFromSignedUrl() == null) ? 0 : getImportAssetFromSignedUrl().hashCode());
         hashCode = prime * hashCode + ((getImportAssetsFromS3() == null) ? 0 : getImportAssetsFromS3().hashCode());
         hashCode = prime * hashCode + ((getImportAssetsFromRedshiftDataShares() == null) ? 0 : getImportAssetsFromRedshiftDataShares().hashCode());
+        hashCode = prime * hashCode + ((getImportAssetFromApiGatewayApi() == null) ? 0 : getImportAssetFromApiGatewayApi().hashCode());
         return hashCode;
     }
 

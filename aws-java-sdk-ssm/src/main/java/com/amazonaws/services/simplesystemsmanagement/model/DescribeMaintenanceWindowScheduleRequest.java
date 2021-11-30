@@ -33,7 +33,7 @@ public class DescribeMaintenanceWindowScheduleRequest extends com.amazonaws.Amaz
     private String windowId;
     /**
      * <p>
-     * The instance ID or key-value pair to retrieve information about.
+     * The managed node ID or key-value pair to retrieve information about.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Target> targets;
@@ -106,10 +106,10 @@ public class DescribeMaintenanceWindowScheduleRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The instance ID or key-value pair to retrieve information about.
+     * The managed node ID or key-value pair to retrieve information about.
      * </p>
      * 
-     * @return The instance ID or key-value pair to retrieve information about.
+     * @return The managed node ID or key-value pair to retrieve information about.
      */
 
     public java.util.List<Target> getTargets() {
@@ -121,11 +121,11 @@ public class DescribeMaintenanceWindowScheduleRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The instance ID or key-value pair to retrieve information about.
+     * The managed node ID or key-value pair to retrieve information about.
      * </p>
      * 
      * @param targets
-     *        The instance ID or key-value pair to retrieve information about.
+     *        The managed node ID or key-value pair to retrieve information about.
      */
 
     public void setTargets(java.util.Collection<Target> targets) {
@@ -139,7 +139,7 @@ public class DescribeMaintenanceWindowScheduleRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The instance ID or key-value pair to retrieve information about.
+     * The managed node ID or key-value pair to retrieve information about.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -148,7 +148,7 @@ public class DescribeMaintenanceWindowScheduleRequest extends com.amazonaws.Amaz
      * </p>
      * 
      * @param targets
-     *        The instance ID or key-value pair to retrieve information about.
+     *        The managed node ID or key-value pair to retrieve information about.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -164,11 +164,11 @@ public class DescribeMaintenanceWindowScheduleRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The instance ID or key-value pair to retrieve information about.
+     * The managed node ID or key-value pair to retrieve information about.
      * </p>
      * 
      * @param targets
-     *        The instance ID or key-value pair to retrieve information about.
+     *        The managed node ID or key-value pair to retrieve information about.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

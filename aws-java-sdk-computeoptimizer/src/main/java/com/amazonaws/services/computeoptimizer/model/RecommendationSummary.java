@@ -36,7 +36,7 @@ public class RecommendationSummary implements Serializable, Cloneable, Structure
     private java.util.List<Summary> summaries;
     /**
      * <p>
-     * The resource type of the recommendation.
+     * The resource type that the recommendation summary applies to.
      * </p>
      */
     private String recommendationResourceType;
@@ -46,6 +46,19 @@ public class RecommendationSummary implements Serializable, Cloneable, Structure
      * </p>
      */
     private String accountId;
+    /**
+     * <p>
+     * An object that describes the savings opportunity for a given resource type. Savings opportunity includes the
+     * estimated monthly savings amount and percentage.
+     * </p>
+     */
+    private SavingsOpportunity savingsOpportunity;
+    /**
+     * <p>
+     * An object that describes the performance risk ratings for a given resource type.
+     * </p>
+     */
+    private CurrentPerformanceRiskRatings currentPerformanceRiskRatings;
 
     /**
      * <p>
@@ -119,11 +132,11 @@ public class RecommendationSummary implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The resource type of the recommendation.
+     * The resource type that the recommendation summary applies to.
      * </p>
      * 
      * @param recommendationResourceType
-     *        The resource type of the recommendation.
+     *        The resource type that the recommendation summary applies to.
      * @see RecommendationSourceType
      */
 
@@ -133,10 +146,10 @@ public class RecommendationSummary implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The resource type of the recommendation.
+     * The resource type that the recommendation summary applies to.
      * </p>
      * 
-     * @return The resource type of the recommendation.
+     * @return The resource type that the recommendation summary applies to.
      * @see RecommendationSourceType
      */
 
@@ -146,11 +159,11 @@ public class RecommendationSummary implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The resource type of the recommendation.
+     * The resource type that the recommendation summary applies to.
      * </p>
      * 
      * @param recommendationResourceType
-     *        The resource type of the recommendation.
+     *        The resource type that the recommendation summary applies to.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RecommendationSourceType
      */
@@ -162,11 +175,11 @@ public class RecommendationSummary implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The resource type of the recommendation.
+     * The resource type that the recommendation summary applies to.
      * </p>
      * 
      * @param recommendationResourceType
-     *        The resource type of the recommendation.
+     *        The resource type that the recommendation summary applies to.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RecommendationSourceType
      */
@@ -217,6 +230,92 @@ public class RecommendationSummary implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * An object that describes the savings opportunity for a given resource type. Savings opportunity includes the
+     * estimated monthly savings amount and percentage.
+     * </p>
+     * 
+     * @param savingsOpportunity
+     *        An object that describes the savings opportunity for a given resource type. Savings opportunity includes
+     *        the estimated monthly savings amount and percentage.
+     */
+
+    public void setSavingsOpportunity(SavingsOpportunity savingsOpportunity) {
+        this.savingsOpportunity = savingsOpportunity;
+    }
+
+    /**
+     * <p>
+     * An object that describes the savings opportunity for a given resource type. Savings opportunity includes the
+     * estimated monthly savings amount and percentage.
+     * </p>
+     * 
+     * @return An object that describes the savings opportunity for a given resource type. Savings opportunity includes
+     *         the estimated monthly savings amount and percentage.
+     */
+
+    public SavingsOpportunity getSavingsOpportunity() {
+        return this.savingsOpportunity;
+    }
+
+    /**
+     * <p>
+     * An object that describes the savings opportunity for a given resource type. Savings opportunity includes the
+     * estimated monthly savings amount and percentage.
+     * </p>
+     * 
+     * @param savingsOpportunity
+     *        An object that describes the savings opportunity for a given resource type. Savings opportunity includes
+     *        the estimated monthly savings amount and percentage.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RecommendationSummary withSavingsOpportunity(SavingsOpportunity savingsOpportunity) {
+        setSavingsOpportunity(savingsOpportunity);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An object that describes the performance risk ratings for a given resource type.
+     * </p>
+     * 
+     * @param currentPerformanceRiskRatings
+     *        An object that describes the performance risk ratings for a given resource type.
+     */
+
+    public void setCurrentPerformanceRiskRatings(CurrentPerformanceRiskRatings currentPerformanceRiskRatings) {
+        this.currentPerformanceRiskRatings = currentPerformanceRiskRatings;
+    }
+
+    /**
+     * <p>
+     * An object that describes the performance risk ratings for a given resource type.
+     * </p>
+     * 
+     * @return An object that describes the performance risk ratings for a given resource type.
+     */
+
+    public CurrentPerformanceRiskRatings getCurrentPerformanceRiskRatings() {
+        return this.currentPerformanceRiskRatings;
+    }
+
+    /**
+     * <p>
+     * An object that describes the performance risk ratings for a given resource type.
+     * </p>
+     * 
+     * @param currentPerformanceRiskRatings
+     *        An object that describes the performance risk ratings for a given resource type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RecommendationSummary withCurrentPerformanceRiskRatings(CurrentPerformanceRiskRatings currentPerformanceRiskRatings) {
+        setCurrentPerformanceRiskRatings(currentPerformanceRiskRatings);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -233,7 +332,11 @@ public class RecommendationSummary implements Serializable, Cloneable, Structure
         if (getRecommendationResourceType() != null)
             sb.append("RecommendationResourceType: ").append(getRecommendationResourceType()).append(",");
         if (getAccountId() != null)
-            sb.append("AccountId: ").append(getAccountId());
+            sb.append("AccountId: ").append(getAccountId()).append(",");
+        if (getSavingsOpportunity() != null)
+            sb.append("SavingsOpportunity: ").append(getSavingsOpportunity()).append(",");
+        if (getCurrentPerformanceRiskRatings() != null)
+            sb.append("CurrentPerformanceRiskRatings: ").append(getCurrentPerformanceRiskRatings());
         sb.append("}");
         return sb.toString();
     }
@@ -260,6 +363,15 @@ public class RecommendationSummary implements Serializable, Cloneable, Structure
             return false;
         if (other.getAccountId() != null && other.getAccountId().equals(this.getAccountId()) == false)
             return false;
+        if (other.getSavingsOpportunity() == null ^ this.getSavingsOpportunity() == null)
+            return false;
+        if (other.getSavingsOpportunity() != null && other.getSavingsOpportunity().equals(this.getSavingsOpportunity()) == false)
+            return false;
+        if (other.getCurrentPerformanceRiskRatings() == null ^ this.getCurrentPerformanceRiskRatings() == null)
+            return false;
+        if (other.getCurrentPerformanceRiskRatings() != null
+                && other.getCurrentPerformanceRiskRatings().equals(this.getCurrentPerformanceRiskRatings()) == false)
+            return false;
         return true;
     }
 
@@ -271,6 +383,8 @@ public class RecommendationSummary implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getSummaries() == null) ? 0 : getSummaries().hashCode());
         hashCode = prime * hashCode + ((getRecommendationResourceType() == null) ? 0 : getRecommendationResourceType().hashCode());
         hashCode = prime * hashCode + ((getAccountId() == null) ? 0 : getAccountId().hashCode());
+        hashCode = prime * hashCode + ((getSavingsOpportunity() == null) ? 0 : getSavingsOpportunity().hashCode());
+        hashCode = prime * hashCode + ((getCurrentPerformanceRiskRatings() == null) ? 0 : getCurrentPerformanceRiskRatings().hashCode());
         return hashCode;
     }
 

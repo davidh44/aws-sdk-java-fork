@@ -26,9 +26,9 @@ public class ListResourceComplianceSummariesResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A summary count for specified or targeted managed instances. Summary count includes information about compliant
-     * and non-compliant State Manager associations, patch status, or custom items according to the filter criteria that
-     * you specify.
+     * A summary count for specified or targeted managed nodes. Summary count includes information about compliant and
+     * non-compliant State Manager associations, patch status, or custom items according to the filter criteria that you
+     * specify.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<ResourceComplianceSummaryItem> resourceComplianceSummaryItems;
@@ -41,12 +41,12 @@ public class ListResourceComplianceSummariesResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A summary count for specified or targeted managed instances. Summary count includes information about compliant
-     * and non-compliant State Manager associations, patch status, or custom items according to the filter criteria that
-     * you specify.
+     * A summary count for specified or targeted managed nodes. Summary count includes information about compliant and
+     * non-compliant State Manager associations, patch status, or custom items according to the filter criteria that you
+     * specify.
      * </p>
      * 
-     * @return A summary count for specified or targeted managed instances. Summary count includes information about
+     * @return A summary count for specified or targeted managed nodes. Summary count includes information about
      *         compliant and non-compliant State Manager associations, patch status, or custom items according to the
      *         filter criteria that you specify.
      */
@@ -60,13 +60,13 @@ public class ListResourceComplianceSummariesResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A summary count for specified or targeted managed instances. Summary count includes information about compliant
-     * and non-compliant State Manager associations, patch status, or custom items according to the filter criteria that
-     * you specify.
+     * A summary count for specified or targeted managed nodes. Summary count includes information about compliant and
+     * non-compliant State Manager associations, patch status, or custom items according to the filter criteria that you
+     * specify.
      * </p>
      * 
      * @param resourceComplianceSummaryItems
-     *        A summary count for specified or targeted managed instances. Summary count includes information about
+     *        A summary count for specified or targeted managed nodes. Summary count includes information about
      *        compliant and non-compliant State Manager associations, patch status, or custom items according to the
      *        filter criteria that you specify.
      */
@@ -82,9 +82,9 @@ public class ListResourceComplianceSummariesResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A summary count for specified or targeted managed instances. Summary count includes information about compliant
-     * and non-compliant State Manager associations, patch status, or custom items according to the filter criteria that
-     * you specify.
+     * A summary count for specified or targeted managed nodes. Summary count includes information about compliant and
+     * non-compliant State Manager associations, patch status, or custom items according to the filter criteria that you
+     * specify.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -93,7 +93,7 @@ public class ListResourceComplianceSummariesResult extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param resourceComplianceSummaryItems
-     *        A summary count for specified or targeted managed instances. Summary count includes information about
+     *        A summary count for specified or targeted managed nodes. Summary count includes information about
      *        compliant and non-compliant State Manager associations, patch status, or custom items according to the
      *        filter criteria that you specify.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -111,13 +111,13 @@ public class ListResourceComplianceSummariesResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A summary count for specified or targeted managed instances. Summary count includes information about compliant
-     * and non-compliant State Manager associations, patch status, or custom items according to the filter criteria that
-     * you specify.
+     * A summary count for specified or targeted managed nodes. Summary count includes information about compliant and
+     * non-compliant State Manager associations, patch status, or custom items according to the filter criteria that you
+     * specify.
      * </p>
      * 
      * @param resourceComplianceSummaryItems
-     *        A summary count for specified or targeted managed instances. Summary count includes information about
+     *        A summary count for specified or targeted managed nodes. Summary count includes information about
      *        compliant and non-compliant State Manager associations, patch status, or custom items according to the
      *        filter criteria that you specify.
      * @return Returns a reference to this object so that method calls can be chained together.

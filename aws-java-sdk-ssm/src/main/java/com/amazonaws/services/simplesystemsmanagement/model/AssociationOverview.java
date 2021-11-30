@@ -43,7 +43,7 @@ public class AssociationOverview implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * Returns the number of targets for the association status. For example, if you created an association with two
-     * instances, and one of them was successful, this would return the count of instances by status.
+     * managed nodes, and one of them was successful, this would return the count of managed nodes by status.
      * </p>
      */
     private java.util.Map<String, Integer> associationStatusAggregatedCount;
@@ -131,11 +131,12 @@ public class AssociationOverview implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * Returns the number of targets for the association status. For example, if you created an association with two
-     * instances, and one of them was successful, this would return the count of instances by status.
+     * managed nodes, and one of them was successful, this would return the count of managed nodes by status.
      * </p>
      * 
      * @return Returns the number of targets for the association status. For example, if you created an association with
-     *         two instances, and one of them was successful, this would return the count of instances by status.
+     *         two managed nodes, and one of them was successful, this would return the count of managed nodes by
+     *         status.
      */
 
     public java.util.Map<String, Integer> getAssociationStatusAggregatedCount() {
@@ -145,12 +146,12 @@ public class AssociationOverview implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * Returns the number of targets for the association status. For example, if you created an association with two
-     * instances, and one of them was successful, this would return the count of instances by status.
+     * managed nodes, and one of them was successful, this would return the count of managed nodes by status.
      * </p>
      * 
      * @param associationStatusAggregatedCount
      *        Returns the number of targets for the association status. For example, if you created an association with
-     *        two instances, and one of them was successful, this would return the count of instances by status.
+     *        two managed nodes, and one of them was successful, this would return the count of managed nodes by status.
      */
 
     public void setAssociationStatusAggregatedCount(java.util.Map<String, Integer> associationStatusAggregatedCount) {
@@ -160,12 +161,12 @@ public class AssociationOverview implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * Returns the number of targets for the association status. For example, if you created an association with two
-     * instances, and one of them was successful, this would return the count of instances by status.
+     * managed nodes, and one of them was successful, this would return the count of managed nodes by status.
      * </p>
      * 
      * @param associationStatusAggregatedCount
      *        Returns the number of targets for the association status. For example, if you created an association with
-     *        two instances, and one of them was successful, this would return the count of instances by status.
+     *        two managed nodes, and one of them was successful, this would return the count of managed nodes by status.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

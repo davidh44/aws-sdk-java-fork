@@ -36,7 +36,7 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
     private String name;
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      */
     private String instanceId;
@@ -98,7 +98,7 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
     private String associationId;
     /**
      * <p>
-     * The instances targeted by the request.
+     * The managed nodes targeted by the request.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Target> targets;
@@ -138,8 +138,8 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
      * additional targets. You can specify either an absolute number of errors, for example 10, or a percentage of the
      * target set, for example 10%. If you specify 3, for example, the system stops sending requests when the fourth
      * error is received. If you specify 0, then the system stops sending requests after the first error is returned. If
-     * you run an association on 50 instances and set <code>MaxError</code> to 10%, then the system stops sending the
-     * request when the sixth error is received.
+     * you run an association on 50 managed nodes and set <code>MaxError</code> to 10%, then the system stops sending
+     * the request when the sixth error is received.
      * </p>
      * <p>
      * Executions that are already running an association when <code>MaxErrors</code> is reached are allowed to
@@ -155,9 +155,9 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
      * targets run the association at the same time.
      * </p>
      * <p>
-     * If a new instance starts and attempts to run an association while Systems Manager is running
+     * If a new managed node starts and attempts to run an association while Systems Manager is running
      * <code>MaxConcurrency</code> associations, the association is allowed to run. During the next association
-     * interval, the new instance will process its association within the limit specified for
+     * interval, the new managed node will process its association within the limit specified for
      * <code>MaxConcurrency</code>.
      * </p>
      */
@@ -253,11 +253,11 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      * 
      * @param instanceId
-     *        The instance ID.
+     *        The managed node ID.
      */
 
     public void setInstanceId(String instanceId) {
@@ -266,10 +266,10 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      * 
-     * @return The instance ID.
+     * @return The managed node ID.
      */
 
     public String getInstanceId() {
@@ -278,11 +278,11 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      * 
      * @param instanceId
-     *        The instance ID.
+     *        The managed node ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -693,10 +693,10 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The instances targeted by the request.
+     * The managed nodes targeted by the request.
      * </p>
      * 
-     * @return The instances targeted by the request.
+     * @return The managed nodes targeted by the request.
      */
 
     public java.util.List<Target> getTargets() {
@@ -708,11 +708,11 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The instances targeted by the request.
+     * The managed nodes targeted by the request.
      * </p>
      * 
      * @param targets
-     *        The instances targeted by the request.
+     *        The managed nodes targeted by the request.
      */
 
     public void setTargets(java.util.Collection<Target> targets) {
@@ -726,7 +726,7 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The instances targeted by the request.
+     * The managed nodes targeted by the request.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -735,7 +735,7 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
      * </p>
      * 
      * @param targets
-     *        The instances targeted by the request.
+     *        The managed nodes targeted by the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -751,11 +751,11 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The instances targeted by the request.
+     * The managed nodes targeted by the request.
      * </p>
      * 
      * @param targets
-     *        The instances targeted by the request.
+     *        The managed nodes targeted by the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -970,8 +970,8 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
      * additional targets. You can specify either an absolute number of errors, for example 10, or a percentage of the
      * target set, for example 10%. If you specify 3, for example, the system stops sending requests when the fourth
      * error is received. If you specify 0, then the system stops sending requests after the first error is returned. If
-     * you run an association on 50 instances and set <code>MaxError</code> to 10%, then the system stops sending the
-     * request when the sixth error is received.
+     * you run an association on 50 managed nodes and set <code>MaxError</code> to 10%, then the system stops sending
+     * the request when the sixth error is received.
      * </p>
      * <p>
      * Executions that are already running an association when <code>MaxErrors</code> is reached are allowed to
@@ -984,8 +984,8 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
      *        additional targets. You can specify either an absolute number of errors, for example 10, or a percentage
      *        of the target set, for example 10%. If you specify 3, for example, the system stops sending requests when
      *        the fourth error is received. If you specify 0, then the system stops sending requests after the first
-     *        error is returned. If you run an association on 50 instances and set <code>MaxError</code> to 10%, then
-     *        the system stops sending the request when the sixth error is received.</p>
+     *        error is returned. If you run an association on 50 managed nodes and set <code>MaxError</code> to 10%,
+     *        then the system stops sending the request when the sixth error is received.</p>
      *        <p>
      *        Executions that are already running an association when <code>MaxErrors</code> is reached are allowed to
      *        complete, but some of these executions may fail as well. If you need to ensure that there won't be more
@@ -1003,8 +1003,8 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
      * additional targets. You can specify either an absolute number of errors, for example 10, or a percentage of the
      * target set, for example 10%. If you specify 3, for example, the system stops sending requests when the fourth
      * error is received. If you specify 0, then the system stops sending requests after the first error is returned. If
-     * you run an association on 50 instances and set <code>MaxError</code> to 10%, then the system stops sending the
-     * request when the sixth error is received.
+     * you run an association on 50 managed nodes and set <code>MaxError</code> to 10%, then the system stops sending
+     * the request when the sixth error is received.
      * </p>
      * <p>
      * Executions that are already running an association when <code>MaxErrors</code> is reached are allowed to
@@ -1016,8 +1016,8 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
      *         additional targets. You can specify either an absolute number of errors, for example 10, or a percentage
      *         of the target set, for example 10%. If you specify 3, for example, the system stops sending requests when
      *         the fourth error is received. If you specify 0, then the system stops sending requests after the first
-     *         error is returned. If you run an association on 50 instances and set <code>MaxError</code> to 10%, then
-     *         the system stops sending the request when the sixth error is received.</p>
+     *         error is returned. If you run an association on 50 managed nodes and set <code>MaxError</code> to 10%,
+     *         then the system stops sending the request when the sixth error is received.</p>
      *         <p>
      *         Executions that are already running an association when <code>MaxErrors</code> is reached are allowed to
      *         complete, but some of these executions may fail as well. If you need to ensure that there won't be more
@@ -1035,8 +1035,8 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
      * additional targets. You can specify either an absolute number of errors, for example 10, or a percentage of the
      * target set, for example 10%. If you specify 3, for example, the system stops sending requests when the fourth
      * error is received. If you specify 0, then the system stops sending requests after the first error is returned. If
-     * you run an association on 50 instances and set <code>MaxError</code> to 10%, then the system stops sending the
-     * request when the sixth error is received.
+     * you run an association on 50 managed nodes and set <code>MaxError</code> to 10%, then the system stops sending
+     * the request when the sixth error is received.
      * </p>
      * <p>
      * Executions that are already running an association when <code>MaxErrors</code> is reached are allowed to
@@ -1049,8 +1049,8 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
      *        additional targets. You can specify either an absolute number of errors, for example 10, or a percentage
      *        of the target set, for example 10%. If you specify 3, for example, the system stops sending requests when
      *        the fourth error is received. If you specify 0, then the system stops sending requests after the first
-     *        error is returned. If you run an association on 50 instances and set <code>MaxError</code> to 10%, then
-     *        the system stops sending the request when the sixth error is received.</p>
+     *        error is returned. If you run an association on 50 managed nodes and set <code>MaxError</code> to 10%,
+     *        then the system stops sending the request when the sixth error is received.</p>
      *        <p>
      *        Executions that are already running an association when <code>MaxErrors</code> is reached are allowed to
      *        complete, but some of these executions may fail as well. If you need to ensure that there won't be more
@@ -1071,9 +1071,9 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
      * targets run the association at the same time.
      * </p>
      * <p>
-     * If a new instance starts and attempts to run an association while Systems Manager is running
+     * If a new managed node starts and attempts to run an association while Systems Manager is running
      * <code>MaxConcurrency</code> associations, the association is allowed to run. During the next association
-     * interval, the new instance will process its association within the limit specified for
+     * interval, the new managed node will process its association within the limit specified for
      * <code>MaxConcurrency</code>.
      * </p>
      * 
@@ -1082,9 +1082,9 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
      *        for example 10, or a percentage of the target set, for example 10%. The default value is 100%, which means
      *        all targets run the association at the same time.</p>
      *        <p>
-     *        If a new instance starts and attempts to run an association while Systems Manager is running
+     *        If a new managed node starts and attempts to run an association while Systems Manager is running
      *        <code>MaxConcurrency</code> associations, the association is allowed to run. During the next association
-     *        interval, the new instance will process its association within the limit specified for
+     *        interval, the new managed node will process its association within the limit specified for
      *        <code>MaxConcurrency</code>.
      */
 
@@ -1099,9 +1099,9 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
      * targets run the association at the same time.
      * </p>
      * <p>
-     * If a new instance starts and attempts to run an association while Systems Manager is running
+     * If a new managed node starts and attempts to run an association while Systems Manager is running
      * <code>MaxConcurrency</code> associations, the association is allowed to run. During the next association
-     * interval, the new instance will process its association within the limit specified for
+     * interval, the new managed node will process its association within the limit specified for
      * <code>MaxConcurrency</code>.
      * </p>
      * 
@@ -1109,9 +1109,9 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
      *         for example 10, or a percentage of the target set, for example 10%. The default value is 100%, which
      *         means all targets run the association at the same time.</p>
      *         <p>
-     *         If a new instance starts and attempts to run an association while Systems Manager is running
+     *         If a new managed node starts and attempts to run an association while Systems Manager is running
      *         <code>MaxConcurrency</code> associations, the association is allowed to run. During the next association
-     *         interval, the new instance will process its association within the limit specified for
+     *         interval, the new managed node will process its association within the limit specified for
      *         <code>MaxConcurrency</code>.
      */
 
@@ -1126,9 +1126,9 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
      * targets run the association at the same time.
      * </p>
      * <p>
-     * If a new instance starts and attempts to run an association while Systems Manager is running
+     * If a new managed node starts and attempts to run an association while Systems Manager is running
      * <code>MaxConcurrency</code> associations, the association is allowed to run. During the next association
-     * interval, the new instance will process its association within the limit specified for
+     * interval, the new managed node will process its association within the limit specified for
      * <code>MaxConcurrency</code>.
      * </p>
      * 
@@ -1137,9 +1137,9 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
      *        for example 10, or a percentage of the target set, for example 10%. The default value is 100%, which means
      *        all targets run the association at the same time.</p>
      *        <p>
-     *        If a new instance starts and attempts to run an association while Systems Manager is running
+     *        If a new managed node starts and attempts to run an association while Systems Manager is running
      *        <code>MaxConcurrency</code> associations, the association is allowed to run. During the next association
-     *        interval, the new instance will process its association within the limit specified for
+     *        interval, the new managed node will process its association within the limit specified for
      *        <code>MaxConcurrency</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -23,7 +23,8 @@ import javax.annotation.Generated;
 public enum AssetType {
 
     S3_SNAPSHOT("S3_SNAPSHOT"),
-    REDSHIFT_DATA_SHARE("REDSHIFT_DATA_SHARE");
+    REDSHIFT_DATA_SHARE("REDSHIFT_DATA_SHARE"),
+    API_GATEWAY_API("API_GATEWAY_API");
 
     private String value;
 

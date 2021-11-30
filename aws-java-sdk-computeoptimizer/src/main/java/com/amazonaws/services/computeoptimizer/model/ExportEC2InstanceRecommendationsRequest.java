@@ -69,9 +69,9 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      * <p>
      * You must create the destination Amazon S3 bucket for your recommendations export before you create the export
      * job. Compute Optimizer does not create the S3 bucket for you. After you create the S3 bucket, ensure that it has
-     * the required permissions policy policy to allow Compute Optimizer to write the export file to it. If you plan to
-     * specify an object prefix when you create the export job, you must include the object prefix in the that you add
-     * to the S3 bucket. For more information, see <a href=
+     * the required permissions policy to allow Compute Optimizer to write the export file to it. If you plan to specify
+     * an object prefix when you create the export job, you must include the object prefix in the policy that you add to
+     * the S3 bucket. For more information, see <a href=
      * "https://docs.aws.amazon.com/compute-optimizer/latest/ug/create-s3-bucket-policy-for-compute-optimizer.html"
      * >Amazon S3 Bucket Policy for Compute Optimizer</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
@@ -506,9 +506,9 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      * <p>
      * You must create the destination Amazon S3 bucket for your recommendations export before you create the export
      * job. Compute Optimizer does not create the S3 bucket for you. After you create the S3 bucket, ensure that it has
-     * the required permissions policy policy to allow Compute Optimizer to write the export file to it. If you plan to
-     * specify an object prefix when you create the export job, you must include the object prefix in the that you add
-     * to the S3 bucket. For more information, see <a href=
+     * the required permissions policy to allow Compute Optimizer to write the export file to it. If you plan to specify
+     * an object prefix when you create the export job, you must include the object prefix in the policy that you add to
+     * the S3 bucket. For more information, see <a href=
      * "https://docs.aws.amazon.com/compute-optimizer/latest/ug/create-s3-bucket-policy-for-compute-optimizer.html"
      * >Amazon S3 Bucket Policy for Compute Optimizer</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
@@ -519,9 +519,9 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      *        <p>
      *        You must create the destination Amazon S3 bucket for your recommendations export before you create the
      *        export job. Compute Optimizer does not create the S3 bucket for you. After you create the S3 bucket,
-     *        ensure that it has the required permissions policy policy to allow Compute Optimizer to write the export
-     *        file to it. If you plan to specify an object prefix when you create the export job, you must include the
-     *        object prefix in the that you add to the S3 bucket. For more information, see <a href=
+     *        ensure that it has the required permissions policy to allow Compute Optimizer to write the export file to
+     *        it. If you plan to specify an object prefix when you create the export job, you must include the object
+     *        prefix in the policy that you add to the S3 bucket. For more information, see <a href=
      *        "https://docs.aws.amazon.com/compute-optimizer/latest/ug/create-s3-bucket-policy-for-compute-optimizer.html"
      *        >Amazon S3 Bucket Policy for Compute Optimizer</a> in the <i>Compute Optimizer User Guide</i>.
      */
@@ -538,9 +538,9 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      * <p>
      * You must create the destination Amazon S3 bucket for your recommendations export before you create the export
      * job. Compute Optimizer does not create the S3 bucket for you. After you create the S3 bucket, ensure that it has
-     * the required permissions policy policy to allow Compute Optimizer to write the export file to it. If you plan to
-     * specify an object prefix when you create the export job, you must include the object prefix in the that you add
-     * to the S3 bucket. For more information, see <a href=
+     * the required permissions policy to allow Compute Optimizer to write the export file to it. If you plan to specify
+     * an object prefix when you create the export job, you must include the object prefix in the policy that you add to
+     * the S3 bucket. For more information, see <a href=
      * "https://docs.aws.amazon.com/compute-optimizer/latest/ug/create-s3-bucket-policy-for-compute-optimizer.html"
      * >Amazon S3 Bucket Policy for Compute Optimizer</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
@@ -550,9 +550,9 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      *         <p>
      *         You must create the destination Amazon S3 bucket for your recommendations export before you create the
      *         export job. Compute Optimizer does not create the S3 bucket for you. After you create the S3 bucket,
-     *         ensure that it has the required permissions policy policy to allow Compute Optimizer to write the export
-     *         file to it. If you plan to specify an object prefix when you create the export job, you must include the
-     *         object prefix in the that you add to the S3 bucket. For more information, see <a href=
+     *         ensure that it has the required permissions policy to allow Compute Optimizer to write the export file to
+     *         it. If you plan to specify an object prefix when you create the export job, you must include the object
+     *         prefix in the policy that you add to the S3 bucket. For more information, see <a href=
      *         "https://docs.aws.amazon.com/compute-optimizer/latest/ug/create-s3-bucket-policy-for-compute-optimizer.html"
      *         >Amazon S3 Bucket Policy for Compute Optimizer</a> in the <i>Compute Optimizer User Guide</i>.
      */
@@ -569,9 +569,9 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      * <p>
      * You must create the destination Amazon S3 bucket for your recommendations export before you create the export
      * job. Compute Optimizer does not create the S3 bucket for you. After you create the S3 bucket, ensure that it has
-     * the required permissions policy policy to allow Compute Optimizer to write the export file to it. If you plan to
-     * specify an object prefix when you create the export job, you must include the object prefix in the that you add
-     * to the S3 bucket. For more information, see <a href=
+     * the required permissions policy to allow Compute Optimizer to write the export file to it. If you plan to specify
+     * an object prefix when you create the export job, you must include the object prefix in the policy that you add to
+     * the S3 bucket. For more information, see <a href=
      * "https://docs.aws.amazon.com/compute-optimizer/latest/ug/create-s3-bucket-policy-for-compute-optimizer.html"
      * >Amazon S3 Bucket Policy for Compute Optimizer</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
@@ -582,9 +582,9 @@ public class ExportEC2InstanceRecommendationsRequest extends com.amazonaws.Amazo
      *        <p>
      *        You must create the destination Amazon S3 bucket for your recommendations export before you create the
      *        export job. Compute Optimizer does not create the S3 bucket for you. After you create the S3 bucket,
-     *        ensure that it has the required permissions policy policy to allow Compute Optimizer to write the export
-     *        file to it. If you plan to specify an object prefix when you create the export job, you must include the
-     *        object prefix in the that you add to the S3 bucket. For more information, see <a href=
+     *        ensure that it has the required permissions policy to allow Compute Optimizer to write the export file to
+     *        it. If you plan to specify an object prefix when you create the export job, you must include the object
+     *        prefix in the policy that you add to the S3 bucket. For more information, see <a href=
      *        "https://docs.aws.amazon.com/compute-optimizer/latest/ug/create-s3-bucket-policy-for-compute-optimizer.html"
      *        >Amazon S3 Bucket Policy for Compute Optimizer</a> in the <i>Compute Optimizer User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.

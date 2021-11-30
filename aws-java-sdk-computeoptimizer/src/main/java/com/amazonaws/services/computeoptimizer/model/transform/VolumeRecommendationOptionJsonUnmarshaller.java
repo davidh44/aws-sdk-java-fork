@@ -60,6 +60,10 @@ public class VolumeRecommendationOptionJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     volumeRecommendationOption.setRank(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("savingsOpportunity", targetDepth)) {
+                    context.nextToken();
+                    volumeRecommendationOption.setSavingsOpportunity(SavingsOpportunityJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

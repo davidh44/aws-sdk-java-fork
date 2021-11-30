@@ -79,6 +79,13 @@ public class AutoScalingGroupRecommendationOption implements Serializable, Clone
      * </p>
      */
     private Integer rank;
+    /**
+     * <p>
+     * An object that describes the savings opportunity for the Auto Scaling group recommendation option. Savings
+     * opportunity includes the estimated monthly savings amount and percentage.
+     * </p>
+     */
+    private SavingsOpportunity savingsOpportunity;
 
     /**
      * <p>
@@ -433,6 +440,52 @@ public class AutoScalingGroupRecommendationOption implements Serializable, Clone
     }
 
     /**
+     * <p>
+     * An object that describes the savings opportunity for the Auto Scaling group recommendation option. Savings
+     * opportunity includes the estimated monthly savings amount and percentage.
+     * </p>
+     * 
+     * @param savingsOpportunity
+     *        An object that describes the savings opportunity for the Auto Scaling group recommendation option. Savings
+     *        opportunity includes the estimated monthly savings amount and percentage.
+     */
+
+    public void setSavingsOpportunity(SavingsOpportunity savingsOpportunity) {
+        this.savingsOpportunity = savingsOpportunity;
+    }
+
+    /**
+     * <p>
+     * An object that describes the savings opportunity for the Auto Scaling group recommendation option. Savings
+     * opportunity includes the estimated monthly savings amount and percentage.
+     * </p>
+     * 
+     * @return An object that describes the savings opportunity for the Auto Scaling group recommendation option.
+     *         Savings opportunity includes the estimated monthly savings amount and percentage.
+     */
+
+    public SavingsOpportunity getSavingsOpportunity() {
+        return this.savingsOpportunity;
+    }
+
+    /**
+     * <p>
+     * An object that describes the savings opportunity for the Auto Scaling group recommendation option. Savings
+     * opportunity includes the estimated monthly savings amount and percentage.
+     * </p>
+     * 
+     * @param savingsOpportunity
+     *        An object that describes the savings opportunity for the Auto Scaling group recommendation option. Savings
+     *        opportunity includes the estimated monthly savings amount and percentage.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AutoScalingGroupRecommendationOption withSavingsOpportunity(SavingsOpportunity savingsOpportunity) {
+        setSavingsOpportunity(savingsOpportunity);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -451,7 +504,9 @@ public class AutoScalingGroupRecommendationOption implements Serializable, Clone
         if (getPerformanceRisk() != null)
             sb.append("PerformanceRisk: ").append(getPerformanceRisk()).append(",");
         if (getRank() != null)
-            sb.append("Rank: ").append(getRank());
+            sb.append("Rank: ").append(getRank()).append(",");
+        if (getSavingsOpportunity() != null)
+            sb.append("SavingsOpportunity: ").append(getSavingsOpportunity());
         sb.append("}");
         return sb.toString();
     }
@@ -482,6 +537,10 @@ public class AutoScalingGroupRecommendationOption implements Serializable, Clone
             return false;
         if (other.getRank() != null && other.getRank().equals(this.getRank()) == false)
             return false;
+        if (other.getSavingsOpportunity() == null ^ this.getSavingsOpportunity() == null)
+            return false;
+        if (other.getSavingsOpportunity() != null && other.getSavingsOpportunity().equals(this.getSavingsOpportunity()) == false)
+            return false;
         return true;
     }
 
@@ -494,6 +553,7 @@ public class AutoScalingGroupRecommendationOption implements Serializable, Clone
         hashCode = prime * hashCode + ((getProjectedUtilizationMetrics() == null) ? 0 : getProjectedUtilizationMetrics().hashCode());
         hashCode = prime * hashCode + ((getPerformanceRisk() == null) ? 0 : getPerformanceRisk().hashCode());
         hashCode = prime * hashCode + ((getRank() == null) ? 0 : getRank().hashCode());
+        hashCode = prime * hashCode + ((getSavingsOpportunity() == null) ? 0 : getSavingsOpportunity().hashCode());
         return hashCode;
     }
 

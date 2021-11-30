@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The number of managed instances found for each patch severity level defined in the request filter.
+ * The number of managed nodes found for each patch severity level defined in the request filter.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/SeveritySummary" target="_top">AWS API

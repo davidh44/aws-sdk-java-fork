@@ -268,10 +268,23 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
     private java.util.List<RecommendationSource> recommendationSources;
     /**
      * <p>
-     * The timestamp of when the instance recommendation was last refreshed.
+     * The timestamp of when the instance recommendation was last generated.
      * </p>
      */
     private java.util.Date lastRefreshTimestamp;
+    /**
+     * <p>
+     * The risk of the current instance not meeting the performance needs of its workloads. The higher the risk, the
+     * more likely the current Lambda function requires more memory.
+     * </p>
+     */
+    private String currentPerformanceRisk;
+    /**
+     * <p>
+     * An object that describes the effective recommendation preferences for the instance.
+     * </p>
+     */
+    private EffectiveRecommendationPreferences effectiveRecommendationPreferences;
 
     /**
      * <p>
@@ -2598,11 +2611,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The timestamp of when the instance recommendation was last refreshed.
+     * The timestamp of when the instance recommendation was last generated.
      * </p>
      * 
      * @param lastRefreshTimestamp
-     *        The timestamp of when the instance recommendation was last refreshed.
+     *        The timestamp of when the instance recommendation was last generated.
      */
 
     public void setLastRefreshTimestamp(java.util.Date lastRefreshTimestamp) {
@@ -2611,10 +2624,10 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The timestamp of when the instance recommendation was last refreshed.
+     * The timestamp of when the instance recommendation was last generated.
      * </p>
      * 
-     * @return The timestamp of when the instance recommendation was last refreshed.
+     * @return The timestamp of when the instance recommendation was last generated.
      */
 
     public java.util.Date getLastRefreshTimestamp() {
@@ -2623,16 +2636,123 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The timestamp of when the instance recommendation was last refreshed.
+     * The timestamp of when the instance recommendation was last generated.
      * </p>
      * 
      * @param lastRefreshTimestamp
-     *        The timestamp of when the instance recommendation was last refreshed.
+     *        The timestamp of when the instance recommendation was last generated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public InstanceRecommendation withLastRefreshTimestamp(java.util.Date lastRefreshTimestamp) {
         setLastRefreshTimestamp(lastRefreshTimestamp);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The risk of the current instance not meeting the performance needs of its workloads. The higher the risk, the
+     * more likely the current Lambda function requires more memory.
+     * </p>
+     * 
+     * @param currentPerformanceRisk
+     *        The risk of the current instance not meeting the performance needs of its workloads. The higher the risk,
+     *        the more likely the current Lambda function requires more memory.
+     * @see CurrentPerformanceRisk
+     */
+
+    public void setCurrentPerformanceRisk(String currentPerformanceRisk) {
+        this.currentPerformanceRisk = currentPerformanceRisk;
+    }
+
+    /**
+     * <p>
+     * The risk of the current instance not meeting the performance needs of its workloads. The higher the risk, the
+     * more likely the current Lambda function requires more memory.
+     * </p>
+     * 
+     * @return The risk of the current instance not meeting the performance needs of its workloads. The higher the risk,
+     *         the more likely the current Lambda function requires more memory.
+     * @see CurrentPerformanceRisk
+     */
+
+    public String getCurrentPerformanceRisk() {
+        return this.currentPerformanceRisk;
+    }
+
+    /**
+     * <p>
+     * The risk of the current instance not meeting the performance needs of its workloads. The higher the risk, the
+     * more likely the current Lambda function requires more memory.
+     * </p>
+     * 
+     * @param currentPerformanceRisk
+     *        The risk of the current instance not meeting the performance needs of its workloads. The higher the risk,
+     *        the more likely the current Lambda function requires more memory.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CurrentPerformanceRisk
+     */
+
+    public InstanceRecommendation withCurrentPerformanceRisk(String currentPerformanceRisk) {
+        setCurrentPerformanceRisk(currentPerformanceRisk);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The risk of the current instance not meeting the performance needs of its workloads. The higher the risk, the
+     * more likely the current Lambda function requires more memory.
+     * </p>
+     * 
+     * @param currentPerformanceRisk
+     *        The risk of the current instance not meeting the performance needs of its workloads. The higher the risk,
+     *        the more likely the current Lambda function requires more memory.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CurrentPerformanceRisk
+     */
+
+    public InstanceRecommendation withCurrentPerformanceRisk(CurrentPerformanceRisk currentPerformanceRisk) {
+        this.currentPerformanceRisk = currentPerformanceRisk.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * An object that describes the effective recommendation preferences for the instance.
+     * </p>
+     * 
+     * @param effectiveRecommendationPreferences
+     *        An object that describes the effective recommendation preferences for the instance.
+     */
+
+    public void setEffectiveRecommendationPreferences(EffectiveRecommendationPreferences effectiveRecommendationPreferences) {
+        this.effectiveRecommendationPreferences = effectiveRecommendationPreferences;
+    }
+
+    /**
+     * <p>
+     * An object that describes the effective recommendation preferences for the instance.
+     * </p>
+     * 
+     * @return An object that describes the effective recommendation preferences for the instance.
+     */
+
+    public EffectiveRecommendationPreferences getEffectiveRecommendationPreferences() {
+        return this.effectiveRecommendationPreferences;
+    }
+
+    /**
+     * <p>
+     * An object that describes the effective recommendation preferences for the instance.
+     * </p>
+     * 
+     * @param effectiveRecommendationPreferences
+     *        An object that describes the effective recommendation preferences for the instance.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public InstanceRecommendation withEffectiveRecommendationPreferences(EffectiveRecommendationPreferences effectiveRecommendationPreferences) {
+        setEffectiveRecommendationPreferences(effectiveRecommendationPreferences);
         return this;
     }
 
@@ -2669,7 +2789,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
         if (getRecommendationSources() != null)
             sb.append("RecommendationSources: ").append(getRecommendationSources()).append(",");
         if (getLastRefreshTimestamp() != null)
-            sb.append("LastRefreshTimestamp: ").append(getLastRefreshTimestamp());
+            sb.append("LastRefreshTimestamp: ").append(getLastRefreshTimestamp()).append(",");
+        if (getCurrentPerformanceRisk() != null)
+            sb.append("CurrentPerformanceRisk: ").append(getCurrentPerformanceRisk()).append(",");
+        if (getEffectiveRecommendationPreferences() != null)
+            sb.append("EffectiveRecommendationPreferences: ").append(getEffectiveRecommendationPreferences());
         sb.append("}");
         return sb.toString();
     }
@@ -2728,6 +2852,15 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
             return false;
         if (other.getLastRefreshTimestamp() != null && other.getLastRefreshTimestamp().equals(this.getLastRefreshTimestamp()) == false)
             return false;
+        if (other.getCurrentPerformanceRisk() == null ^ this.getCurrentPerformanceRisk() == null)
+            return false;
+        if (other.getCurrentPerformanceRisk() != null && other.getCurrentPerformanceRisk().equals(this.getCurrentPerformanceRisk()) == false)
+            return false;
+        if (other.getEffectiveRecommendationPreferences() == null ^ this.getEffectiveRecommendationPreferences() == null)
+            return false;
+        if (other.getEffectiveRecommendationPreferences() != null
+                && other.getEffectiveRecommendationPreferences().equals(this.getEffectiveRecommendationPreferences()) == false)
+            return false;
         return true;
     }
 
@@ -2747,6 +2880,8 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
         hashCode = prime * hashCode + ((getRecommendationOptions() == null) ? 0 : getRecommendationOptions().hashCode());
         hashCode = prime * hashCode + ((getRecommendationSources() == null) ? 0 : getRecommendationSources().hashCode());
         hashCode = prime * hashCode + ((getLastRefreshTimestamp() == null) ? 0 : getLastRefreshTimestamp().hashCode());
+        hashCode = prime * hashCode + ((getCurrentPerformanceRisk() == null) ? 0 : getCurrentPerformanceRisk().hashCode());
+        hashCode = prime * hashCode + ((getEffectiveRecommendationPreferences() == null) ? 0 : getEffectiveRecommendationPreferences().hashCode());
         return hashCode;
     }
 

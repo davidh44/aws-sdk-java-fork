@@ -33,7 +33,7 @@ public class ListCommandInvocationsRequest extends com.amazonaws.AmazonWebServic
     private String commandId;
     /**
      * <p>
-     * (Optional) The command execution details for a specific instance ID.
+     * (Optional) The command execution details for a specific managed node ID.
      * </p>
      */
     private String instanceId;
@@ -106,11 +106,11 @@ public class ListCommandInvocationsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * (Optional) The command execution details for a specific instance ID.
+     * (Optional) The command execution details for a specific managed node ID.
      * </p>
      * 
      * @param instanceId
-     *        (Optional) The command execution details for a specific instance ID.
+     *        (Optional) The command execution details for a specific managed node ID.
      */
 
     public void setInstanceId(String instanceId) {
@@ -119,10 +119,10 @@ public class ListCommandInvocationsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * (Optional) The command execution details for a specific instance ID.
+     * (Optional) The command execution details for a specific managed node ID.
      * </p>
      * 
-     * @return (Optional) The command execution details for a specific instance ID.
+     * @return (Optional) The command execution details for a specific managed node ID.
      */
 
     public String getInstanceId() {
@@ -131,11 +131,11 @@ public class ListCommandInvocationsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * (Optional) The command execution details for a specific instance ID.
+     * (Optional) The command execution details for a specific managed node ID.
      * </p>
      * 
      * @param instanceId
-     *        (Optional) The command execution details for a specific instance ID.
+     *        (Optional) The command execution details for a specific managed node ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -31,6 +31,8 @@ public class LensReviewSummaryMarshaller {
 
     private static final MarshallingInfo<String> LENSALIAS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("LensAlias").build();
+    private static final MarshallingInfo<String> LENSARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("LensArn").build();
     private static final MarshallingInfo<String> LENSVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LensVersion").build();
     private static final MarshallingInfo<String> LENSNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -59,6 +61,7 @@ public class LensReviewSummaryMarshaller {
 
         try {
             protocolMarshaller.marshall(lensReviewSummary.getLensAlias(), LENSALIAS_BINDING);
+            protocolMarshaller.marshall(lensReviewSummary.getLensArn(), LENSARN_BINDING);
             protocolMarshaller.marshall(lensReviewSummary.getLensVersion(), LENSVERSION_BINDING);
             protocolMarshaller.marshall(lensReviewSummary.getLensName(), LENSNAME_BINDING);
             protocolMarshaller.marshall(lensReviewSummary.getLensStatus(), LENSSTATUS_BINDING);

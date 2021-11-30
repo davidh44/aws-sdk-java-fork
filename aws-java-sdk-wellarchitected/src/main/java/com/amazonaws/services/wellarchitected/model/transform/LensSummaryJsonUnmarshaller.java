@@ -48,21 +48,45 @@ public class LensSummaryJsonUnmarshaller implements Unmarshaller<LensSummary, Js
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("LensArn", targetDepth)) {
+                    context.nextToken();
+                    lensSummary.setLensArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("LensAlias", targetDepth)) {
                     context.nextToken();
                     lensSummary.setLensAlias(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("LensVersion", targetDepth)) {
-                    context.nextToken();
-                    lensSummary.setLensVersion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("LensName", targetDepth)) {
                     context.nextToken();
                     lensSummary.setLensName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("LensType", targetDepth)) {
+                    context.nextToken();
+                    lensSummary.setLensType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("Description", targetDepth)) {
                     context.nextToken();
                     lensSummary.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("CreatedAt", targetDepth)) {
+                    context.nextToken();
+                    lensSummary.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("UpdatedAt", targetDepth)) {
+                    context.nextToken();
+                    lensSummary.setUpdatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("LensVersion", targetDepth)) {
+                    context.nextToken();
+                    lensSummary.setLensVersion(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Owner", targetDepth)) {
+                    context.nextToken();
+                    lensSummary.setOwner(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("LensStatus", targetDepth)) {
+                    context.nextToken();
+                    lensSummary.setLensStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

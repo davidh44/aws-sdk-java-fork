@@ -25,7 +25,7 @@ public class GetInventoryResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Collection of inventory entities such as a collection of instance inventory.
+     * Collection of inventory entities such as a collection of managed node inventory.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<InventoryResultEntity> entities;
@@ -39,10 +39,10 @@ public class GetInventoryResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Collection of inventory entities such as a collection of instance inventory.
+     * Collection of inventory entities such as a collection of managed node inventory.
      * </p>
      * 
-     * @return Collection of inventory entities such as a collection of instance inventory.
+     * @return Collection of inventory entities such as a collection of managed node inventory.
      */
 
     public java.util.List<InventoryResultEntity> getEntities() {
@@ -54,11 +54,11 @@ public class GetInventoryResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Collection of inventory entities such as a collection of instance inventory.
+     * Collection of inventory entities such as a collection of managed node inventory.
      * </p>
      * 
      * @param entities
-     *        Collection of inventory entities such as a collection of instance inventory.
+     *        Collection of inventory entities such as a collection of managed node inventory.
      */
 
     public void setEntities(java.util.Collection<InventoryResultEntity> entities) {
@@ -72,7 +72,7 @@ public class GetInventoryResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Collection of inventory entities such as a collection of instance inventory.
+     * Collection of inventory entities such as a collection of managed node inventory.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -81,7 +81,7 @@ public class GetInventoryResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * 
      * @param entities
-     *        Collection of inventory entities such as a collection of instance inventory.
+     *        Collection of inventory entities such as a collection of managed node inventory.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -97,11 +97,11 @@ public class GetInventoryResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Collection of inventory entities such as a collection of instance inventory.
+     * Collection of inventory entities such as a collection of managed node inventory.
      * </p>
      * 
      * @param entities
-     *        Collection of inventory entities such as a collection of instance inventory.
+     *        Collection of inventory entities such as a collection of managed node inventory.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

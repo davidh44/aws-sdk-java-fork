@@ -25,18 +25,20 @@ public class PutStorageConfigurationResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The type of storage that you specified for your data. The storage type can be one of the following values:
+     * The storage tier that you specified for your data. The <code>storageType</code> parameter can be one of the
+     * following values:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise replicates your data into a service managed database.
+     * <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise saves your data into the hot tier. The hot tier is a
+     * service-managed database.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise replicates your data into a service managed database and saves a
-     * copy of your raw data and metadata in an Amazon S3 object that you specified.
+     * <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the cold tier. The cold
+     * tier is a customer-managed Amazon S3 bucket.
      * </p>
      * </li>
      * </ul>
@@ -78,39 +80,44 @@ public class PutStorageConfigurationResult extends com.amazonaws.AmazonWebServic
      */
     private String disassociatedDataStorage;
 
+    private RetentionPeriod retentionPeriod;
+
     private ConfigurationStatus configurationStatus;
 
     /**
      * <p>
-     * The type of storage that you specified for your data. The storage type can be one of the following values:
+     * The storage tier that you specified for your data. The <code>storageType</code> parameter can be one of the
+     * following values:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise replicates your data into a service managed database.
+     * <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise saves your data into the hot tier. The hot tier is a
+     * service-managed database.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise replicates your data into a service managed database and saves a
-     * copy of your raw data and metadata in an Amazon S3 object that you specified.
+     * <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the cold tier. The cold
+     * tier is a customer-managed Amazon S3 bucket.
      * </p>
      * </li>
      * </ul>
      * 
      * @param storageType
-     *        The type of storage that you specified for your data. The storage type can be one of the following
-     *        values:</p>
+     *        The storage tier that you specified for your data. The <code>storageType</code> parameter can be one of
+     *        the following values:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise replicates your data into a service managed database.
+     *        <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise saves your data into the hot tier. The hot tier is a
+     *        service-managed database.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise replicates your data into a service managed database and
-     *        saves a copy of your raw data and metadata in an Amazon S3 object that you specified.
+     *        <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the cold tier.
+     *        The cold tier is a customer-managed Amazon S3 bucket.
      *        </p>
      *        </li>
      * @see StorageType
@@ -122,35 +129,37 @@ public class PutStorageConfigurationResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The type of storage that you specified for your data. The storage type can be one of the following values:
+     * The storage tier that you specified for your data. The <code>storageType</code> parameter can be one of the
+     * following values:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise replicates your data into a service managed database.
+     * <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise saves your data into the hot tier. The hot tier is a
+     * service-managed database.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise replicates your data into a service managed database and saves a
-     * copy of your raw data and metadata in an Amazon S3 object that you specified.
+     * <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the cold tier. The cold
+     * tier is a customer-managed Amazon S3 bucket.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return The type of storage that you specified for your data. The storage type can be one of the following
-     *         values:</p>
+     * @return The storage tier that you specified for your data. The <code>storageType</code> parameter can be one of
+     *         the following values:</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise replicates your data into a service managed
-     *         database.
+     *         <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise saves your data into the hot tier. The hot tier is a
+     *         service-managed database.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise replicates your data into a service managed database and
-     *         saves a copy of your raw data and metadata in an Amazon S3 object that you specified.
+     *         <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the cold tier.
+     *         The cold tier is a customer-managed Amazon S3 bucket.
      *         </p>
      *         </li>
      * @see StorageType
@@ -162,35 +171,38 @@ public class PutStorageConfigurationResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The type of storage that you specified for your data. The storage type can be one of the following values:
+     * The storage tier that you specified for your data. The <code>storageType</code> parameter can be one of the
+     * following values:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise replicates your data into a service managed database.
+     * <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise saves your data into the hot tier. The hot tier is a
+     * service-managed database.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise replicates your data into a service managed database and saves a
-     * copy of your raw data and metadata in an Amazon S3 object that you specified.
+     * <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the cold tier. The cold
+     * tier is a customer-managed Amazon S3 bucket.
      * </p>
      * </li>
      * </ul>
      * 
      * @param storageType
-     *        The type of storage that you specified for your data. The storage type can be one of the following
-     *        values:</p>
+     *        The storage tier that you specified for your data. The <code>storageType</code> parameter can be one of
+     *        the following values:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise replicates your data into a service managed database.
+     *        <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise saves your data into the hot tier. The hot tier is a
+     *        service-managed database.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise replicates your data into a service managed database and
-     *        saves a copy of your raw data and metadata in an Amazon S3 object that you specified.
+     *        <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the cold tier.
+     *        The cold tier is a customer-managed Amazon S3 bucket.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -204,35 +216,38 @@ public class PutStorageConfigurationResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The type of storage that you specified for your data. The storage type can be one of the following values:
+     * The storage tier that you specified for your data. The <code>storageType</code> parameter can be one of the
+     * following values:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise replicates your data into a service managed database.
+     * <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise saves your data into the hot tier. The hot tier is a
+     * service-managed database.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise replicates your data into a service managed database and saves a
-     * copy of your raw data and metadata in an Amazon S3 object that you specified.
+     * <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the cold tier. The cold
+     * tier is a customer-managed Amazon S3 bucket.
      * </p>
      * </li>
      * </ul>
      * 
      * @param storageType
-     *        The type of storage that you specified for your data. The storage type can be one of the following
-     *        values:</p>
+     *        The storage tier that you specified for your data. The <code>storageType</code> parameter can be one of
+     *        the following values:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise replicates your data into a service managed database.
+     *        <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise saves your data into the hot tier. The hot tier is a
+     *        service-managed database.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise replicates your data into a service managed database and
-     *        saves a copy of your raw data and metadata in an Amazon S3 object that you specified.
+     *        <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the cold tier.
+     *        The cold tier is a customer-managed Amazon S3 bucket.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -524,6 +539,32 @@ public class PutStorageConfigurationResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * @param retentionPeriod
+     */
+
+    public void setRetentionPeriod(RetentionPeriod retentionPeriod) {
+        this.retentionPeriod = retentionPeriod;
+    }
+
+    /**
+     * @return
+     */
+
+    public RetentionPeriod getRetentionPeriod() {
+        return this.retentionPeriod;
+    }
+
+    /**
+     * @param retentionPeriod
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PutStorageConfigurationResult withRetentionPeriod(RetentionPeriod retentionPeriod) {
+        setRetentionPeriod(retentionPeriod);
+        return this;
+    }
+
+    /**
      * @param configurationStatus
      */
 
@@ -567,6 +608,8 @@ public class PutStorageConfigurationResult extends com.amazonaws.AmazonWebServic
             sb.append("MultiLayerStorage: ").append(getMultiLayerStorage()).append(",");
         if (getDisassociatedDataStorage() != null)
             sb.append("DisassociatedDataStorage: ").append(getDisassociatedDataStorage()).append(",");
+        if (getRetentionPeriod() != null)
+            sb.append("RetentionPeriod: ").append(getRetentionPeriod()).append(",");
         if (getConfigurationStatus() != null)
             sb.append("ConfigurationStatus: ").append(getConfigurationStatus());
         sb.append("}");
@@ -595,6 +638,10 @@ public class PutStorageConfigurationResult extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getDisassociatedDataStorage() != null && other.getDisassociatedDataStorage().equals(this.getDisassociatedDataStorage()) == false)
             return false;
+        if (other.getRetentionPeriod() == null ^ this.getRetentionPeriod() == null)
+            return false;
+        if (other.getRetentionPeriod() != null && other.getRetentionPeriod().equals(this.getRetentionPeriod()) == false)
+            return false;
         if (other.getConfigurationStatus() == null ^ this.getConfigurationStatus() == null)
             return false;
         if (other.getConfigurationStatus() != null && other.getConfigurationStatus().equals(this.getConfigurationStatus()) == false)
@@ -610,6 +657,7 @@ public class PutStorageConfigurationResult extends com.amazonaws.AmazonWebServic
         hashCode = prime * hashCode + ((getStorageType() == null) ? 0 : getStorageType().hashCode());
         hashCode = prime * hashCode + ((getMultiLayerStorage() == null) ? 0 : getMultiLayerStorage().hashCode());
         hashCode = prime * hashCode + ((getDisassociatedDataStorage() == null) ? 0 : getDisassociatedDataStorage().hashCode());
+        hashCode = prime * hashCode + ((getRetentionPeriod() == null) ? 0 : getRetentionPeriod().hashCode());
         hashCode = prime * hashCode + ((getConfigurationStatus() == null) ? 0 : getConfigurationStatus().hashCode());
         return hashCode;
     }

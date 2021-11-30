@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about the patches to use to update the instances, including target operating systems and source
- * repository. Applies to Linux instances only.
+ * Information about the patches to use to update the managed nodes, including target operating systems and source
+ * repository. Applies to Linux managed nodes only.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/PatchSource" target="_top">AWS API

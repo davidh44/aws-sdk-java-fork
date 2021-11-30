@@ -36,7 +36,7 @@ public class ImageReplicationStatus implements Serializable, Cloneable, Structur
     private String region;
     /**
      * <p>
-     * The AWS account ID associated with the registry to which the image belongs.
+     * The Amazon Web Services account ID associated with the registry to which the image belongs.
      * </p>
      */
     private String registryId;
@@ -95,11 +95,11 @@ public class ImageReplicationStatus implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The AWS account ID associated with the registry to which the image belongs.
+     * The Amazon Web Services account ID associated with the registry to which the image belongs.
      * </p>
      * 
      * @param registryId
-     *        The AWS account ID associated with the registry to which the image belongs.
+     *        The Amazon Web Services account ID associated with the registry to which the image belongs.
      */
 
     public void setRegistryId(String registryId) {
@@ -108,10 +108,10 @@ public class ImageReplicationStatus implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The AWS account ID associated with the registry to which the image belongs.
+     * The Amazon Web Services account ID associated with the registry to which the image belongs.
      * </p>
      * 
-     * @return The AWS account ID associated with the registry to which the image belongs.
+     * @return The Amazon Web Services account ID associated with the registry to which the image belongs.
      */
 
     public String getRegistryId() {
@@ -120,11 +120,11 @@ public class ImageReplicationStatus implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The AWS account ID associated with the registry to which the image belongs.
+     * The Amazon Web Services account ID associated with the registry to which the image belongs.
      * </p>
      * 
      * @param registryId
-     *        The AWS account ID associated with the registry to which the image belongs.
+     *        The Amazon Web Services account ID associated with the registry to which the image belongs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

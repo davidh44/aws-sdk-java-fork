@@ -40,6 +40,8 @@ public class AnswerMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ImprovementPlanUrl").build();
     private static final MarshallingInfo<String> HELPFULRESOURCEURL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HelpfulResourceUrl").build();
+    private static final MarshallingInfo<String> HELPFULRESOURCEDISPLAYTEXT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HelpfulResourceDisplayText").build();
     private static final MarshallingInfo<List> CHOICES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Choices").build();
     private static final MarshallingInfo<List> SELECTEDCHOICES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
@@ -77,6 +79,7 @@ public class AnswerMarshaller {
             protocolMarshaller.marshall(answer.getQuestionDescription(), QUESTIONDESCRIPTION_BINDING);
             protocolMarshaller.marshall(answer.getImprovementPlanUrl(), IMPROVEMENTPLANURL_BINDING);
             protocolMarshaller.marshall(answer.getHelpfulResourceUrl(), HELPFULRESOURCEURL_BINDING);
+            protocolMarshaller.marshall(answer.getHelpfulResourceDisplayText(), HELPFULRESOURCEDISPLAYTEXT_BINDING);
             protocolMarshaller.marshall(answer.getChoices(), CHOICES_BINDING);
             protocolMarshaller.marshall(answer.getSelectedChoices(), SELECTEDCHOICES_BINDING);
             protocolMarshaller.marshall(answer.getChoiceAnswers(), CHOICEANSWERS_BINDING);

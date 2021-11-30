@@ -33,7 +33,7 @@ public class DescribeAvailablePatchesRequest extends com.amazonaws.AmazonWebServ
      * <b>Windows Server</b>
      * </p>
      * <p>
-     * Supported keys for Windows Server instance patches include the following:
+     * Supported keys for Windows Server managed node patches include the following:
      * </p>
      * <ul>
      * <li>
@@ -105,7 +105,7 @@ public class DescribeAvailablePatchesRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * </important>
      * <p>
-     * Supported keys for Linux instance patches include the following:
+     * Supported keys for Linux managed node patches include the following:
      * </p>
      * <ul>
      * <li>
@@ -220,7 +220,7 @@ public class DescribeAvailablePatchesRequest extends com.amazonaws.AmazonWebServ
      * <b>Windows Server</b>
      * </p>
      * <p>
-     * Supported keys for Windows Server instance patches include the following:
+     * Supported keys for Windows Server managed node patches include the following:
      * </p>
      * <ul>
      * <li>
@@ -292,7 +292,7 @@ public class DescribeAvailablePatchesRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * </important>
      * <p>
-     * Supported keys for Linux instance patches include the following:
+     * Supported keys for Linux managed node patches include the following:
      * </p>
      * <ul>
      * <li>
@@ -390,7 +390,7 @@ public class DescribeAvailablePatchesRequest extends com.amazonaws.AmazonWebServ
      *         <b>Windows Server</b>
      *         </p>
      *         <p>
-     *         Supported keys for Windows Server instance patches include the following:
+     *         Supported keys for Windows Server managed node patches include the following:
      *         </p>
      *         <ul>
      *         <li>
@@ -462,7 +462,7 @@ public class DescribeAvailablePatchesRequest extends com.amazonaws.AmazonWebServ
      *         </p>
      *         </important>
      *         <p>
-     *         Supported keys for Linux instance patches include the following:
+     *         Supported keys for Linux managed node patches include the following:
      *         </p>
      *         <ul>
      *         <li>
@@ -570,7 +570,7 @@ public class DescribeAvailablePatchesRequest extends com.amazonaws.AmazonWebServ
      * <b>Windows Server</b>
      * </p>
      * <p>
-     * Supported keys for Windows Server instance patches include the following:
+     * Supported keys for Windows Server managed node patches include the following:
      * </p>
      * <ul>
      * <li>
@@ -642,7 +642,7 @@ public class DescribeAvailablePatchesRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * </important>
      * <p>
-     * Supported keys for Linux instance patches include the following:
+     * Supported keys for Linux managed node patches include the following:
      * </p>
      * <ul>
      * <li>
@@ -741,7 +741,7 @@ public class DescribeAvailablePatchesRequest extends com.amazonaws.AmazonWebServ
      *        <b>Windows Server</b>
      *        </p>
      *        <p>
-     *        Supported keys for Windows Server instance patches include the following:
+     *        Supported keys for Windows Server managed node patches include the following:
      *        </p>
      *        <ul>
      *        <li>
@@ -813,7 +813,7 @@ public class DescribeAvailablePatchesRequest extends com.amazonaws.AmazonWebServ
      *        </p>
      *        </important>
      *        <p>
-     *        Supported keys for Linux instance patches include the following:
+     *        Supported keys for Linux managed node patches include the following:
      *        </p>
      *        <ul>
      *        <li>
@@ -923,7 +923,7 @@ public class DescribeAvailablePatchesRequest extends com.amazonaws.AmazonWebServ
      * <b>Windows Server</b>
      * </p>
      * <p>
-     * Supported keys for Windows Server instance patches include the following:
+     * Supported keys for Windows Server managed node patches include the following:
      * </p>
      * <ul>
      * <li>
@@ -995,7 +995,7 @@ public class DescribeAvailablePatchesRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * </important>
      * <p>
-     * Supported keys for Linux instance patches include the following:
+     * Supported keys for Linux managed node patches include the following:
      * </p>
      * <ul>
      * <li>
@@ -1099,7 +1099,7 @@ public class DescribeAvailablePatchesRequest extends com.amazonaws.AmazonWebServ
      *        <b>Windows Server</b>
      *        </p>
      *        <p>
-     *        Supported keys for Windows Server instance patches include the following:
+     *        Supported keys for Windows Server managed node patches include the following:
      *        </p>
      *        <ul>
      *        <li>
@@ -1171,7 +1171,7 @@ public class DescribeAvailablePatchesRequest extends com.amazonaws.AmazonWebServ
      *        </p>
      *        </important>
      *        <p>
-     *        Supported keys for Linux instance patches include the following:
+     *        Supported keys for Linux managed node patches include the following:
      *        </p>
      *        <ul>
      *        <li>
@@ -1283,7 +1283,7 @@ public class DescribeAvailablePatchesRequest extends com.amazonaws.AmazonWebServ
      * <b>Windows Server</b>
      * </p>
      * <p>
-     * Supported keys for Windows Server instance patches include the following:
+     * Supported keys for Windows Server managed node patches include the following:
      * </p>
      * <ul>
      * <li>
@@ -1355,7 +1355,7 @@ public class DescribeAvailablePatchesRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * </important>
      * <p>
-     * Supported keys for Linux instance patches include the following:
+     * Supported keys for Linux managed node patches include the following:
      * </p>
      * <ul>
      * <li>
@@ -1454,7 +1454,7 @@ public class DescribeAvailablePatchesRequest extends com.amazonaws.AmazonWebServ
      *        <b>Windows Server</b>
      *        </p>
      *        <p>
-     *        Supported keys for Windows Server instance patches include the following:
+     *        Supported keys for Windows Server managed node patches include the following:
      *        </p>
      *        <ul>
      *        <li>
@@ -1526,7 +1526,7 @@ public class DescribeAvailablePatchesRequest extends com.amazonaws.AmazonWebServ
      *        </p>
      *        </important>
      *        <p>
-     *        Supported keys for Linux instance patches include the following:
+     *        Supported keys for Linux managed node patches include the following:
      *        </p>
      *        <ul>
      *        <li>

@@ -42,16 +42,22 @@ public class ImageScanFindings implements Serializable, Cloneable, StructuredPoj
     private java.util.Date vulnerabilitySourceUpdatedAt;
     /**
      * <p>
+     * The image vulnerability counts, sorted by severity.
+     * </p>
+     */
+    private java.util.Map<String, Integer> findingSeverityCounts;
+    /**
+     * <p>
      * The findings from the image scan.
      * </p>
      */
     private java.util.List<ImageScanFinding> findings;
     /**
      * <p>
-     * The image vulnerability counts, sorted by severity.
+     * Details about the enhanced scan findings from Amazon Inspector.
      * </p>
      */
-    private java.util.Map<String, Integer> findingSeverityCounts;
+    private java.util.List<EnhancedImageScanFinding> enhancedFindings;
 
     /**
      * <p>
@@ -135,6 +141,74 @@ public class ImageScanFindings implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
+     * The image vulnerability counts, sorted by severity.
+     * </p>
+     * 
+     * @return The image vulnerability counts, sorted by severity.
+     */
+
+    public java.util.Map<String, Integer> getFindingSeverityCounts() {
+        return findingSeverityCounts;
+    }
+
+    /**
+     * <p>
+     * The image vulnerability counts, sorted by severity.
+     * </p>
+     * 
+     * @param findingSeverityCounts
+     *        The image vulnerability counts, sorted by severity.
+     */
+
+    public void setFindingSeverityCounts(java.util.Map<String, Integer> findingSeverityCounts) {
+        this.findingSeverityCounts = findingSeverityCounts;
+    }
+
+    /**
+     * <p>
+     * The image vulnerability counts, sorted by severity.
+     * </p>
+     * 
+     * @param findingSeverityCounts
+     *        The image vulnerability counts, sorted by severity.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImageScanFindings withFindingSeverityCounts(java.util.Map<String, Integer> findingSeverityCounts) {
+        setFindingSeverityCounts(findingSeverityCounts);
+        return this;
+    }
+
+    /**
+     * Add a single FindingSeverityCounts entry
+     *
+     * @see ImageScanFindings#withFindingSeverityCounts
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImageScanFindings addFindingSeverityCountsEntry(String key, Integer value) {
+        if (null == this.findingSeverityCounts) {
+            this.findingSeverityCounts = new java.util.HashMap<String, Integer>();
+        }
+        if (this.findingSeverityCounts.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.findingSeverityCounts.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into FindingSeverityCounts.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImageScanFindings clearFindingSeverityCountsEntries() {
+        this.findingSeverityCounts = null;
+        return this;
+    }
+
+    /**
+     * <p>
      * The findings from the image scan.
      * </p>
      * 
@@ -205,69 +279,71 @@ public class ImageScanFindings implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The image vulnerability counts, sorted by severity.
+     * Details about the enhanced scan findings from Amazon Inspector.
      * </p>
      * 
-     * @return The image vulnerability counts, sorted by severity.
+     * @return Details about the enhanced scan findings from Amazon Inspector.
      */
 
-    public java.util.Map<String, Integer> getFindingSeverityCounts() {
-        return findingSeverityCounts;
+    public java.util.List<EnhancedImageScanFinding> getEnhancedFindings() {
+        return enhancedFindings;
     }
 
     /**
      * <p>
-     * The image vulnerability counts, sorted by severity.
+     * Details about the enhanced scan findings from Amazon Inspector.
      * </p>
      * 
-     * @param findingSeverityCounts
-     *        The image vulnerability counts, sorted by severity.
+     * @param enhancedFindings
+     *        Details about the enhanced scan findings from Amazon Inspector.
      */
 
-    public void setFindingSeverityCounts(java.util.Map<String, Integer> findingSeverityCounts) {
-        this.findingSeverityCounts = findingSeverityCounts;
-    }
-
-    /**
-     * <p>
-     * The image vulnerability counts, sorted by severity.
-     * </p>
-     * 
-     * @param findingSeverityCounts
-     *        The image vulnerability counts, sorted by severity.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ImageScanFindings withFindingSeverityCounts(java.util.Map<String, Integer> findingSeverityCounts) {
-        setFindingSeverityCounts(findingSeverityCounts);
-        return this;
-    }
-
-    /**
-     * Add a single FindingSeverityCounts entry
-     *
-     * @see ImageScanFindings#withFindingSeverityCounts
-     * @returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ImageScanFindings addFindingSeverityCountsEntry(String key, Integer value) {
-        if (null == this.findingSeverityCounts) {
-            this.findingSeverityCounts = new java.util.HashMap<String, Integer>();
+    public void setEnhancedFindings(java.util.Collection<EnhancedImageScanFinding> enhancedFindings) {
+        if (enhancedFindings == null) {
+            this.enhancedFindings = null;
+            return;
         }
-        if (this.findingSeverityCounts.containsKey(key))
-            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
-        this.findingSeverityCounts.put(key, value);
+
+        this.enhancedFindings = new java.util.ArrayList<EnhancedImageScanFinding>(enhancedFindings);
+    }
+
+    /**
+     * <p>
+     * Details about the enhanced scan findings from Amazon Inspector.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setEnhancedFindings(java.util.Collection)} or {@link #withEnhancedFindings(java.util.Collection)} if you
+     * want to override the existing values.
+     * </p>
+     * 
+     * @param enhancedFindings
+     *        Details about the enhanced scan findings from Amazon Inspector.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImageScanFindings withEnhancedFindings(EnhancedImageScanFinding... enhancedFindings) {
+        if (this.enhancedFindings == null) {
+            setEnhancedFindings(new java.util.ArrayList<EnhancedImageScanFinding>(enhancedFindings.length));
+        }
+        for (EnhancedImageScanFinding ele : enhancedFindings) {
+            this.enhancedFindings.add(ele);
+        }
         return this;
     }
 
     /**
-     * Removes all the entries added into FindingSeverityCounts.
-     *
+     * <p>
+     * Details about the enhanced scan findings from Amazon Inspector.
+     * </p>
+     * 
+     * @param enhancedFindings
+     *        Details about the enhanced scan findings from Amazon Inspector.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ImageScanFindings clearFindingSeverityCountsEntries() {
-        this.findingSeverityCounts = null;
+    public ImageScanFindings withEnhancedFindings(java.util.Collection<EnhancedImageScanFinding> enhancedFindings) {
+        setEnhancedFindings(enhancedFindings);
         return this;
     }
 
@@ -287,10 +363,12 @@ public class ImageScanFindings implements Serializable, Cloneable, StructuredPoj
             sb.append("ImageScanCompletedAt: ").append(getImageScanCompletedAt()).append(",");
         if (getVulnerabilitySourceUpdatedAt() != null)
             sb.append("VulnerabilitySourceUpdatedAt: ").append(getVulnerabilitySourceUpdatedAt()).append(",");
+        if (getFindingSeverityCounts() != null)
+            sb.append("FindingSeverityCounts: ").append(getFindingSeverityCounts()).append(",");
         if (getFindings() != null)
             sb.append("Findings: ").append(getFindings()).append(",");
-        if (getFindingSeverityCounts() != null)
-            sb.append("FindingSeverityCounts: ").append(getFindingSeverityCounts());
+        if (getEnhancedFindings() != null)
+            sb.append("EnhancedFindings: ").append(getEnhancedFindings());
         sb.append("}");
         return sb.toString();
     }
@@ -313,13 +391,17 @@ public class ImageScanFindings implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getVulnerabilitySourceUpdatedAt() != null && other.getVulnerabilitySourceUpdatedAt().equals(this.getVulnerabilitySourceUpdatedAt()) == false)
             return false;
+        if (other.getFindingSeverityCounts() == null ^ this.getFindingSeverityCounts() == null)
+            return false;
+        if (other.getFindingSeverityCounts() != null && other.getFindingSeverityCounts().equals(this.getFindingSeverityCounts()) == false)
+            return false;
         if (other.getFindings() == null ^ this.getFindings() == null)
             return false;
         if (other.getFindings() != null && other.getFindings().equals(this.getFindings()) == false)
             return false;
-        if (other.getFindingSeverityCounts() == null ^ this.getFindingSeverityCounts() == null)
+        if (other.getEnhancedFindings() == null ^ this.getEnhancedFindings() == null)
             return false;
-        if (other.getFindingSeverityCounts() != null && other.getFindingSeverityCounts().equals(this.getFindingSeverityCounts()) == false)
+        if (other.getEnhancedFindings() != null && other.getEnhancedFindings().equals(this.getEnhancedFindings()) == false)
             return false;
         return true;
     }
@@ -331,8 +413,9 @@ public class ImageScanFindings implements Serializable, Cloneable, StructuredPoj
 
         hashCode = prime * hashCode + ((getImageScanCompletedAt() == null) ? 0 : getImageScanCompletedAt().hashCode());
         hashCode = prime * hashCode + ((getVulnerabilitySourceUpdatedAt() == null) ? 0 : getVulnerabilitySourceUpdatedAt().hashCode());
-        hashCode = prime * hashCode + ((getFindings() == null) ? 0 : getFindings().hashCode());
         hashCode = prime * hashCode + ((getFindingSeverityCounts() == null) ? 0 : getFindingSeverityCounts().hashCode());
+        hashCode = prime * hashCode + ((getFindings() == null) ? 0 : getFindings().hashCode());
+        hashCode = prime * hashCode + ((getEnhancedFindings() == null) ? 0 : getEnhancedFindings().hashCode());
         return hashCode;
     }
 

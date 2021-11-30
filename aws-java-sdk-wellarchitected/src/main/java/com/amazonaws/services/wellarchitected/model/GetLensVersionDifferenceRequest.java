@@ -32,6 +32,12 @@ public class GetLensVersionDifferenceRequest extends com.amazonaws.AmazonWebServ
      * </p>
      */
     private String baseLensVersion;
+    /**
+     * <p>
+     * The lens version to target a difference for.
+     * </p>
+     */
+    private String targetLensVersion;
 
     /**
      * @param lensAlias
@@ -100,6 +106,46 @@ public class GetLensVersionDifferenceRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The lens version to target a difference for.
+     * </p>
+     * 
+     * @param targetLensVersion
+     *        The lens version to target a difference for.
+     */
+
+    public void setTargetLensVersion(String targetLensVersion) {
+        this.targetLensVersion = targetLensVersion;
+    }
+
+    /**
+     * <p>
+     * The lens version to target a difference for.
+     * </p>
+     * 
+     * @return The lens version to target a difference for.
+     */
+
+    public String getTargetLensVersion() {
+        return this.targetLensVersion;
+    }
+
+    /**
+     * <p>
+     * The lens version to target a difference for.
+     * </p>
+     * 
+     * @param targetLensVersion
+     *        The lens version to target a difference for.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetLensVersionDifferenceRequest withTargetLensVersion(String targetLensVersion) {
+        setTargetLensVersion(targetLensVersion);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -114,7 +160,9 @@ public class GetLensVersionDifferenceRequest extends com.amazonaws.AmazonWebServ
         if (getLensAlias() != null)
             sb.append("LensAlias: ").append(getLensAlias()).append(",");
         if (getBaseLensVersion() != null)
-            sb.append("BaseLensVersion: ").append(getBaseLensVersion());
+            sb.append("BaseLensVersion: ").append(getBaseLensVersion()).append(",");
+        if (getTargetLensVersion() != null)
+            sb.append("TargetLensVersion: ").append(getTargetLensVersion());
         sb.append("}");
         return sb.toString();
     }
@@ -137,6 +185,10 @@ public class GetLensVersionDifferenceRequest extends com.amazonaws.AmazonWebServ
             return false;
         if (other.getBaseLensVersion() != null && other.getBaseLensVersion().equals(this.getBaseLensVersion()) == false)
             return false;
+        if (other.getTargetLensVersion() == null ^ this.getTargetLensVersion() == null)
+            return false;
+        if (other.getTargetLensVersion() != null && other.getTargetLensVersion().equals(this.getTargetLensVersion()) == false)
+            return false;
         return true;
     }
 
@@ -147,6 +199,7 @@ public class GetLensVersionDifferenceRequest extends com.amazonaws.AmazonWebServ
 
         hashCode = prime * hashCode + ((getLensAlias() == null) ? 0 : getLensAlias().hashCode());
         hashCode = prime * hashCode + ((getBaseLensVersion() == null) ? 0 : getBaseLensVersion().hashCode());
+        hashCode = prime * hashCode + ((getTargetLensVersion() == null) ? 0 : getTargetLensVersion().hashCode());
         return hashCode;
     }
 

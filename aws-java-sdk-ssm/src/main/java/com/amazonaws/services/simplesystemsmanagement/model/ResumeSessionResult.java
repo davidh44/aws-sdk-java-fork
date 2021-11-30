@@ -32,14 +32,14 @@ public class ResumeSessionResult extends com.amazonaws.AmazonWebServiceResult<co
     /**
      * <p>
      * An encrypted token value containing session and caller information. Used to authenticate the connection to the
-     * instance.
+     * managed node.
      * </p>
      */
     private String tokenValue;
     /**
      * <p>
-     * A URL back to SSM Agent on the instance that the Session Manager client uses to send commands and receive output
-     * from the instance. Format:
+     * A URL back to SSM Agent on the managed node that the Session Manager client uses to send commands and receive
+     * output from the managed node. Format:
      * <code>wss://ssmmessages.<b>region</b>.amazonaws.com/v1/data-channel/<b>session-id</b>?stream=(input|output)</code>
      * .
      * </p>
@@ -99,12 +99,12 @@ public class ResumeSessionResult extends com.amazonaws.AmazonWebServiceResult<co
     /**
      * <p>
      * An encrypted token value containing session and caller information. Used to authenticate the connection to the
-     * instance.
+     * managed node.
      * </p>
      * 
      * @param tokenValue
      *        An encrypted token value containing session and caller information. Used to authenticate the connection to
-     *        the instance.
+     *        the managed node.
      */
 
     public void setTokenValue(String tokenValue) {
@@ -114,11 +114,11 @@ public class ResumeSessionResult extends com.amazonaws.AmazonWebServiceResult<co
     /**
      * <p>
      * An encrypted token value containing session and caller information. Used to authenticate the connection to the
-     * instance.
+     * managed node.
      * </p>
      * 
      * @return An encrypted token value containing session and caller information. Used to authenticate the connection
-     *         to the instance.
+     *         to the managed node.
      */
 
     public String getTokenValue() {
@@ -128,12 +128,12 @@ public class ResumeSessionResult extends com.amazonaws.AmazonWebServiceResult<co
     /**
      * <p>
      * An encrypted token value containing session and caller information. Used to authenticate the connection to the
-     * instance.
+     * managed node.
      * </p>
      * 
      * @param tokenValue
      *        An encrypted token value containing session and caller information. Used to authenticate the connection to
-     *        the instance.
+     *        the managed node.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -144,8 +144,8 @@ public class ResumeSessionResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * A URL back to SSM Agent on the instance that the Session Manager client uses to send commands and receive output
-     * from the instance. Format:
+     * A URL back to SSM Agent on the managed node that the Session Manager client uses to send commands and receive
+     * output from the managed node. Format:
      * <code>wss://ssmmessages.<b>region</b>.amazonaws.com/v1/data-channel/<b>session-id</b>?stream=(input|output)</code>
      * .
      * </p>
@@ -161,8 +161,8 @@ public class ResumeSessionResult extends com.amazonaws.AmazonWebServiceResult<co
      * </p>
      * 
      * @param streamUrl
-     *        A URL back to SSM Agent on the instance that the Session Manager client uses to send commands and receive
-     *        output from the instance. Format:
+     *        A URL back to SSM Agent on the managed node that the Session Manager client uses to send commands and
+     *        receive output from the managed node. Format:
      *        <code>wss://ssmmessages.<b>region</b>.amazonaws.com/v1/data-channel/<b>session-id</b>?stream=(input|output)</code>
      *        .</p>
      *        <p>
@@ -182,8 +182,8 @@ public class ResumeSessionResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * A URL back to SSM Agent on the instance that the Session Manager client uses to send commands and receive output
-     * from the instance. Format:
+     * A URL back to SSM Agent on the managed node that the Session Manager client uses to send commands and receive
+     * output from the managed node. Format:
      * <code>wss://ssmmessages.<b>region</b>.amazonaws.com/v1/data-channel/<b>session-id</b>?stream=(input|output)</code>
      * .
      * </p>
@@ -198,8 +198,8 @@ public class ResumeSessionResult extends com.amazonaws.AmazonWebServiceResult<co
      * <b>session-id</b> represents the ID of a Session Manager session, such as <code>1a2b3c4dEXAMPLE</code>.
      * </p>
      * 
-     * @return A URL back to SSM Agent on the instance that the Session Manager client uses to send commands and receive
-     *         output from the instance. Format:
+     * @return A URL back to SSM Agent on the managed node that the Session Manager client uses to send commands and
+     *         receive output from the managed node. Format:
      *         <code>wss://ssmmessages.<b>region</b>.amazonaws.com/v1/data-channel/<b>session-id</b>?stream=(input|output)</code>
      *         .</p>
      *         <p>
@@ -219,8 +219,8 @@ public class ResumeSessionResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * A URL back to SSM Agent on the instance that the Session Manager client uses to send commands and receive output
-     * from the instance. Format:
+     * A URL back to SSM Agent on the managed node that the Session Manager client uses to send commands and receive
+     * output from the managed node. Format:
      * <code>wss://ssmmessages.<b>region</b>.amazonaws.com/v1/data-channel/<b>session-id</b>?stream=(input|output)</code>
      * .
      * </p>
@@ -236,8 +236,8 @@ public class ResumeSessionResult extends com.amazonaws.AmazonWebServiceResult<co
      * </p>
      * 
      * @param streamUrl
-     *        A URL back to SSM Agent on the instance that the Session Manager client uses to send commands and receive
-     *        output from the instance. Format:
+     *        A URL back to SSM Agent on the managed node that the Session Manager client uses to send commands and
+     *        receive output from the managed node. Format:
      *        <code>wss://ssmmessages.<b>region</b>.amazonaws.com/v1/data-channel/<b>session-id</b>?stream=(input|output)</code>
      *        .</p>
      *        <p>

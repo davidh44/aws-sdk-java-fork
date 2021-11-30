@@ -41,7 +41,11 @@ public enum ExportableLambdaFunctionField {
     RecommendationOptionsProjectedUtilizationMetricsDurationLowerBound("RecommendationOptionsProjectedUtilizationMetricsDurationLowerBound"),
     RecommendationOptionsProjectedUtilizationMetricsDurationUpperBound("RecommendationOptionsProjectedUtilizationMetricsDurationUpperBound"),
     RecommendationOptionsProjectedUtilizationMetricsDurationExpected("RecommendationOptionsProjectedUtilizationMetricsDurationExpected"),
-    LastRefreshTimestamp("LastRefreshTimestamp");
+    LastRefreshTimestamp("LastRefreshTimestamp"),
+    CurrentPerformanceRisk("CurrentPerformanceRisk"),
+    RecommendationOptionsSavingsOpportunityPercentage("RecommendationOptionsSavingsOpportunityPercentage"),
+    RecommendationOptionsEstimatedMonthlySavingsCurrency("RecommendationOptionsEstimatedMonthlySavingsCurrency"),
+    RecommendationOptionsEstimatedMonthlySavingsValue("RecommendationOptionsEstimatedMonthlySavingsValue");
 
     private String value;
 

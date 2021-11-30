@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * One or more association documents on the instance.
+ * One or more association documents on the managed node.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/InstanceAssociation" target="_top">AWS API
@@ -36,19 +36,19 @@ public class InstanceAssociation implements Serializable, Cloneable, StructuredP
     private String associationId;
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      */
     private String instanceId;
     /**
      * <p>
-     * The content of the association document for the instance(s).
+     * The content of the association document for the managed node(s).
      * </p>
      */
     private String content;
     /**
      * <p>
-     * Version information for the association on the instance.
+     * Version information for the association on the managed node.
      * </p>
      */
     private String associationVersion;
@@ -95,11 +95,11 @@ public class InstanceAssociation implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      * 
      * @param instanceId
-     *        The instance ID.
+     *        The managed node ID.
      */
 
     public void setInstanceId(String instanceId) {
@@ -108,10 +108,10 @@ public class InstanceAssociation implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      * 
-     * @return The instance ID.
+     * @return The managed node ID.
      */
 
     public String getInstanceId() {
@@ -120,11 +120,11 @@ public class InstanceAssociation implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The instance ID.
+     * The managed node ID.
      * </p>
      * 
      * @param instanceId
-     *        The instance ID.
+     *        The managed node ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -135,11 +135,11 @@ public class InstanceAssociation implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The content of the association document for the instance(s).
+     * The content of the association document for the managed node(s).
      * </p>
      * 
      * @param content
-     *        The content of the association document for the instance(s).
+     *        The content of the association document for the managed node(s).
      */
 
     public void setContent(String content) {
@@ -148,10 +148,10 @@ public class InstanceAssociation implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The content of the association document for the instance(s).
+     * The content of the association document for the managed node(s).
      * </p>
      * 
-     * @return The content of the association document for the instance(s).
+     * @return The content of the association document for the managed node(s).
      */
 
     public String getContent() {
@@ -160,11 +160,11 @@ public class InstanceAssociation implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The content of the association document for the instance(s).
+     * The content of the association document for the managed node(s).
      * </p>
      * 
      * @param content
-     *        The content of the association document for the instance(s).
+     *        The content of the association document for the managed node(s).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -175,11 +175,11 @@ public class InstanceAssociation implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Version information for the association on the instance.
+     * Version information for the association on the managed node.
      * </p>
      * 
      * @param associationVersion
-     *        Version information for the association on the instance.
+     *        Version information for the association on the managed node.
      */
 
     public void setAssociationVersion(String associationVersion) {
@@ -188,10 +188,10 @@ public class InstanceAssociation implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Version information for the association on the instance.
+     * Version information for the association on the managed node.
      * </p>
      * 
-     * @return Version information for the association on the instance.
+     * @return Version information for the association on the managed node.
      */
 
     public String getAssociationVersion() {
@@ -200,11 +200,11 @@ public class InstanceAssociation implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Version information for the association on the instance.
+     * Version information for the association on the managed node.
      * </p>
      * 
      * @param associationVersion
-     *        Version information for the association on the instance.
+     *        Version information for the association on the managed node.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

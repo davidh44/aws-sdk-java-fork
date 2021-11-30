@@ -33,6 +33,16 @@ public class AbstractAWSWellArchitected implements AWSWellArchitected {
     }
 
     @Override
+    public CreateLensShareResult createLensShare(CreateLensShareRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateLensVersionResult createLensVersion(CreateLensVersionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateMilestoneResult createMilestone(CreateMilestoneRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -44,6 +54,16 @@ public class AbstractAWSWellArchitected implements AWSWellArchitected {
 
     @Override
     public CreateWorkloadShareResult createWorkloadShare(CreateWorkloadShareRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteLensResult deleteLens(DeleteLensRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteLensShareResult deleteLensShare(DeleteLensShareRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -63,7 +83,17 @@ public class AbstractAWSWellArchitected implements AWSWellArchitected {
     }
 
     @Override
+    public ExportLensResult exportLens(ExportLensRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetAnswerResult getAnswer(GetAnswerRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetLensResult getLens(GetLensRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -93,6 +123,11 @@ public class AbstractAWSWellArchitected implements AWSWellArchitected {
     }
 
     @Override
+    public ImportLensResult importLens(ImportLensRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListAnswersResult listAnswers(ListAnswersRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -104,6 +139,11 @@ public class AbstractAWSWellArchitected implements AWSWellArchitected {
 
     @Override
     public ListLensReviewsResult listLensReviews(ListLensReviewsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListLensSharesResult listLensShares(ListLensSharesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

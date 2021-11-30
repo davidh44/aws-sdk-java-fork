@@ -56,6 +56,10 @@ public class UpdateAnswerResultJsonUnmarshaller implements Unmarshaller<UpdateAn
                     context.nextToken();
                     updateAnswerResult.setLensAlias(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("LensArn", targetDepth)) {
+                    context.nextToken();
+                    updateAnswerResult.setLensArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("Answer", targetDepth)) {
                     context.nextToken();
                     updateAnswerResult.setAnswer(AnswerJsonUnmarshaller.getInstance().unmarshall(context));

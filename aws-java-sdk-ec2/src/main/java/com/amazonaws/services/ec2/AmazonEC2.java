@@ -5618,6 +5618,19 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Describes the storage tier status of one or more Amazon EBS snapshots.
+     * </p>
+     * 
+     * @param describeSnapshotTierStatusRequest
+     * @return Result of the DescribeSnapshotTierStatus operation returned by the service.
+     * @sample AmazonEC2.DescribeSnapshotTierStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeSnapshotTierStatus" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DescribeSnapshotTierStatusResult describeSnapshotTierStatus(DescribeSnapshotTierStatusRequest describeSnapshotTierStatusRequest);
+
+    /**
+     * <p>
      * Describes the specified EBS snapshots available to you or all of the EBS snapshots available to you.
      * </p>
      * <p>
@@ -7808,6 +7821,19 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Lists one or more snapshots that are currently in the Recycle Bin.
+     * </p>
+     * 
+     * @param listSnapshotsInRecycleBinRequest
+     * @return Result of the ListSnapshotsInRecycleBin operation returned by the service.
+     * @sample AmazonEC2.ListSnapshotsInRecycleBin
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ListSnapshotsInRecycleBin" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListSnapshotsInRecycleBinResult listSnapshotsInRecycleBin(ListSnapshotsInRecycleBinRequest listSnapshotsInRecycleBinRequest);
+
+    /**
+     * <p>
      * Modifies an attribute of the specified Elastic IP address. For requirements, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#Using_Elastic_Addressing_Reverse_DNS"
      * >Using reverse DNS for email applications</a>.
@@ -8404,6 +8430,23 @@ public interface AmazonEC2 {
      *      API Documentation</a>
      */
     ModifySnapshotAttributeResult modifySnapshotAttribute(ModifySnapshotAttributeRequest modifySnapshotAttributeRequest);
+
+    /**
+     * <p>
+     * Archives an Amazon EBS snapshot. When you archive a snapshot, it is converted to a full snapshot that includes
+     * all of the blocks of data that were written to the volume at the time the snapshot was created, and moved from
+     * the standard tier to the archive tier. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-archive.html">Archive Amazon EBS snapshots</a>
+     * in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param modifySnapshotTierRequest
+     * @return Result of the ModifySnapshotTier operation returned by the service.
+     * @sample AmazonEC2.ModifySnapshotTier
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifySnapshotTier" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ModifySnapshotTierResult modifySnapshotTier(ModifySnapshotTierRequest modifySnapshotTierRequest);
 
     /**
      * <p>
@@ -9650,6 +9693,43 @@ public interface AmazonEC2 {
      *      target="_top">AWS API Documentation</a>
      */
     RestoreManagedPrefixListVersionResult restoreManagedPrefixListVersion(RestoreManagedPrefixListVersionRequest restoreManagedPrefixListVersionRequest);
+
+    /**
+     * <p>
+     * Restores a snapshot from the Recycle Bin. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin-working-with-snaps.html#recycle-bin-restore-snaps"
+     * >Restore snapshots from the Recycle Bin</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param restoreSnapshotFromRecycleBinRequest
+     * @return Result of the RestoreSnapshotFromRecycleBin operation returned by the service.
+     * @sample AmazonEC2.RestoreSnapshotFromRecycleBin
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RestoreSnapshotFromRecycleBin"
+     *      target="_top">AWS API Documentation</a>
+     */
+    RestoreSnapshotFromRecycleBinResult restoreSnapshotFromRecycleBin(RestoreSnapshotFromRecycleBinRequest restoreSnapshotFromRecycleBinRequest);
+
+    /**
+     * <p>
+     * Restores an archived Amazon EBS snapshot for use temporarily or permanently, or modifies the restore period or
+     * restore type for a snapshot that was previously temporarily restored.
+     * </p>
+     * <p>
+     * For more information see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/working-with-snapshot-archiving.html#restore-archived-snapshot"
+     * > Restore an archived snapshot</a> and <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/working-with-snapshot-archiving.html#modify-temp-restore-period"
+     * > modify the restore period or restore type for a temporarily restored snapshot</a> in the <i>Amazon Elastic
+     * Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param restoreSnapshotTierRequest
+     * @return Result of the RestoreSnapshotTier operation returned by the service.
+     * @sample AmazonEC2.RestoreSnapshotTier
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RestoreSnapshotTier" target="_top">AWS API
+     *      Documentation</a>
+     */
+    RestoreSnapshotTierResult restoreSnapshotTier(RestoreSnapshotTierRequest restoreSnapshotTierRequest);
 
     /**
      * <p>

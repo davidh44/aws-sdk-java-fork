@@ -19,9 +19,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An asset in AWS Data Exchange is a piece of data. The asset can be a structured data file, an image file, or some
- * other data file that can be stored as an S3 object, or an Amazon Redshift datashare (Preview). When you create an
- * import job for your files, you create an asset in AWS Data Exchange for each of those files.
+ * An asset in AWS Data Exchange is a piece of data (S3 object) or a means of fulfilling data (Amazon Redshift datashare
+ * or Amazon API Gateway API). The asset can be a structured data file, an image file, or some other data file that can
+ * be stored as an S3 object, an Amazon API Gateway API, or an Amazon Redshift datashare (Preview). When you create an
+ * import job for your files, API Gateway APIs, or Amazon Redshift datashares, you create an asset in AWS Data Exchange.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/AssetEntry" target="_top">AWS API
@@ -69,7 +70,9 @@ public class AssetEntry implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The name of the asset. When importing from Amazon S3, the S3 object key is used as the asset name. When exporting
-     * to Amazon S3, the asset name is used as default target S3 object key.
+     * to Amazon S3, the asset name is used as default target S3 object key. When importing from Amazon API Gateway API,
+     * the API name is used as the asset name. When importing from Amazon Redshift, the datashare name is used as the
+     * asset name.
      * </p>
      */
     private String name;
@@ -355,12 +358,16 @@ public class AssetEntry implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The name of the asset. When importing from Amazon S3, the S3 object key is used as the asset name. When exporting
-     * to Amazon S3, the asset name is used as default target S3 object key.
+     * to Amazon S3, the asset name is used as default target S3 object key. When importing from Amazon API Gateway API,
+     * the API name is used as the asset name. When importing from Amazon Redshift, the datashare name is used as the
+     * asset name.
      * </p>
      * 
      * @param name
      *        The name of the asset. When importing from Amazon S3, the S3 object key is used as the asset name. When
-     *        exporting to Amazon S3, the asset name is used as default target S3 object key.
+     *        exporting to Amazon S3, the asset name is used as default target S3 object key. When importing from Amazon
+     *        API Gateway API, the API name is used as the asset name. When importing from Amazon Redshift, the
+     *        datashare name is used as the asset name.
      */
 
     public void setName(String name) {
@@ -370,11 +377,15 @@ public class AssetEntry implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The name of the asset. When importing from Amazon S3, the S3 object key is used as the asset name. When exporting
-     * to Amazon S3, the asset name is used as default target S3 object key.
+     * to Amazon S3, the asset name is used as default target S3 object key. When importing from Amazon API Gateway API,
+     * the API name is used as the asset name. When importing from Amazon Redshift, the datashare name is used as the
+     * asset name.
      * </p>
      * 
      * @return The name of the asset. When importing from Amazon S3, the S3 object key is used as the asset name. When
-     *         exporting to Amazon S3, the asset name is used as default target S3 object key.
+     *         exporting to Amazon S3, the asset name is used as default target S3 object key. When importing from
+     *         Amazon API Gateway API, the API name is used as the asset name. When importing from Amazon Redshift, the
+     *         datashare name is used as the asset name.
      */
 
     public String getName() {
@@ -384,12 +395,16 @@ public class AssetEntry implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The name of the asset. When importing from Amazon S3, the S3 object key is used as the asset name. When exporting
-     * to Amazon S3, the asset name is used as default target S3 object key.
+     * to Amazon S3, the asset name is used as default target S3 object key. When importing from Amazon API Gateway API,
+     * the API name is used as the asset name. When importing from Amazon Redshift, the datashare name is used as the
+     * asset name.
      * </p>
      * 
      * @param name
      *        The name of the asset. When importing from Amazon S3, the S3 object key is used as the asset name. When
-     *        exporting to Amazon S3, the asset name is used as default target S3 object key.
+     *        exporting to Amazon S3, the asset name is used as default target S3 object key. When importing from Amazon
+     *        API Gateway API, the API name is used as the asset name. When importing from Amazon Redshift, the
+     *        datashare name is used as the asset name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

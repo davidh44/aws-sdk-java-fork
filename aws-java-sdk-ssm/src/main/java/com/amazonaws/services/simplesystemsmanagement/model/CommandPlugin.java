@@ -54,12 +54,12 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * Pending: The command hasn't been sent to the instance.
+     * Pending: The command hasn't been sent to the managed node.
      * </p>
      * </li>
      * <li>
      * <p>
-     * In Progress: The command has been sent to the instance but hasn't reached a terminal state.
+     * In Progress: The command has been sent to the managed node but hasn't reached a terminal state.
      * </p>
      * </li>
      * <li>
@@ -69,22 +69,22 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Delivery Timed Out: The command wasn't delivered to the instance before the delivery timeout expired. Delivery
-     * timeouts don't count against the parent command's <code>MaxErrors</code> limit, but they do contribute to whether
-     * the parent command status is Success or Incomplete. This is a terminal state.
+     * Delivery Timed Out: The command wasn't delivered to the managed node before the delivery timeout expired.
+     * Delivery timeouts don't count against the parent command's <code>MaxErrors</code> limit, but they do contribute
+     * to whether the parent command status is Success or Incomplete. This is a terminal state.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Execution Timed Out: Command execution started on the instance, but the execution wasn't complete before the
+     * Execution Timed Out: Command execution started on the managed node, but the execution wasn't complete before the
      * execution timeout expired. Execution timeouts count against the <code>MaxErrors</code> limit of the parent
      * command. This is a terminal state.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Failed: The command wasn't successful on the instance. For a plugin, this indicates that the result code wasn't
-     * zero. For a command invocation, this indicates that the result code for one or more plugins wasn't zero.
+     * Failed: The command wasn't successful on the managed node. For a plugin, this indicates that the result code
+     * wasn't zero. For a command invocation, this indicates that the result code for one or more plugins wasn't zero.
      * Invocation failures count against the MaxErrors limit of the parent command. This is a terminal state.
      * </p>
      * </li>
@@ -95,9 +95,9 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Undeliverable: The command can't be delivered to the instance. The instance might not exist, or it might not be
-     * responding. Undeliverable invocations don't count against the parent command's MaxErrors limit, and they don't
-     * contribute to whether the parent command status is Success or Incomplete. This is a terminal state.
+     * Undeliverable: The command can't be delivered to the managed node. The managed node might not exist, or it might
+     * not be responding. Undeliverable invocations don't count against the parent command's MaxErrors limit, and they
+     * don't contribute to whether the parent command status is Success or Incomplete. This is a terminal state.
      * </p>
      * </li>
      * <li>
@@ -169,7 +169,7 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      * <code>ab19cb99-a030-46dd-9dfc-8eSAMPLEPre-Fix</code> is the name of the S3 prefix;
      * </p>
      * <p>
-     * <code>i-02573cafcfEXAMPLE</code> is the instance ID;
+     * <code>i-02573cafcfEXAMPLE</code> is the managed node ID;
      * </p>
      * <p>
      * <code>awsrunShellScript</code> is the name of the plugin.
@@ -191,7 +191,7 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      * <code>ab19cb99-a030-46dd-9dfc-8eSAMPLEPre-Fix</code> is the name of the S3 prefix;
      * </p>
      * <p>
-     * <code>i-02573cafcfEXAMPLE</code> is the instance ID;
+     * <code>i-02573cafcfEXAMPLE</code> is the managed node ID;
      * </p>
      * <p>
      * <code>awsrunShellScript</code> is the name of the plugin.
@@ -339,12 +339,12 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * Pending: The command hasn't been sent to the instance.
+     * Pending: The command hasn't been sent to the managed node.
      * </p>
      * </li>
      * <li>
      * <p>
-     * In Progress: The command has been sent to the instance but hasn't reached a terminal state.
+     * In Progress: The command has been sent to the managed node but hasn't reached a terminal state.
      * </p>
      * </li>
      * <li>
@@ -354,22 +354,22 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Delivery Timed Out: The command wasn't delivered to the instance before the delivery timeout expired. Delivery
-     * timeouts don't count against the parent command's <code>MaxErrors</code> limit, but they do contribute to whether
-     * the parent command status is Success or Incomplete. This is a terminal state.
+     * Delivery Timed Out: The command wasn't delivered to the managed node before the delivery timeout expired.
+     * Delivery timeouts don't count against the parent command's <code>MaxErrors</code> limit, but they do contribute
+     * to whether the parent command status is Success or Incomplete. This is a terminal state.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Execution Timed Out: Command execution started on the instance, but the execution wasn't complete before the
+     * Execution Timed Out: Command execution started on the managed node, but the execution wasn't complete before the
      * execution timeout expired. Execution timeouts count against the <code>MaxErrors</code> limit of the parent
      * command. This is a terminal state.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Failed: The command wasn't successful on the instance. For a plugin, this indicates that the result code wasn't
-     * zero. For a command invocation, this indicates that the result code for one or more plugins wasn't zero.
+     * Failed: The command wasn't successful on the managed node. For a plugin, this indicates that the result code
+     * wasn't zero. For a command invocation, this indicates that the result code for one or more plugins wasn't zero.
      * Invocation failures count against the MaxErrors limit of the parent command. This is a terminal state.
      * </p>
      * </li>
@@ -380,9 +380,9 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Undeliverable: The command can't be delivered to the instance. The instance might not exist, or it might not be
-     * responding. Undeliverable invocations don't count against the parent command's MaxErrors limit, and they don't
-     * contribute to whether the parent command status is Success or Incomplete. This is a terminal state.
+     * Undeliverable: The command can't be delivered to the managed node. The managed node might not exist, or it might
+     * not be responding. Undeliverable invocations don't count against the parent command's MaxErrors limit, and they
+     * don't contribute to whether the parent command status is Success or Incomplete. This is a terminal state.
      * </p>
      * </li>
      * <li>
@@ -403,12 +403,12 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        Pending: The command hasn't been sent to the instance.
+     *        Pending: The command hasn't been sent to the managed node.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        In Progress: The command has been sent to the instance but hasn't reached a terminal state.
+     *        In Progress: The command has been sent to the managed node but hasn't reached a terminal state.
      *        </p>
      *        </li>
      *        <li>
@@ -418,24 +418,24 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        Delivery Timed Out: The command wasn't delivered to the instance before the delivery timeout expired.
+     *        Delivery Timed Out: The command wasn't delivered to the managed node before the delivery timeout expired.
      *        Delivery timeouts don't count against the parent command's <code>MaxErrors</code> limit, but they do
      *        contribute to whether the parent command status is Success or Incomplete. This is a terminal state.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Execution Timed Out: Command execution started on the instance, but the execution wasn't complete before
-     *        the execution timeout expired. Execution timeouts count against the <code>MaxErrors</code> limit of the
-     *        parent command. This is a terminal state.
+     *        Execution Timed Out: Command execution started on the managed node, but the execution wasn't complete
+     *        before the execution timeout expired. Execution timeouts count against the <code>MaxErrors</code> limit of
+     *        the parent command. This is a terminal state.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Failed: The command wasn't successful on the instance. For a plugin, this indicates that the result code
-     *        wasn't zero. For a command invocation, this indicates that the result code for one or more plugins wasn't
-     *        zero. Invocation failures count against the MaxErrors limit of the parent command. This is a terminal
-     *        state.
+     *        Failed: The command wasn't successful on the managed node. For a plugin, this indicates that the result
+     *        code wasn't zero. For a command invocation, this indicates that the result code for one or more plugins
+     *        wasn't zero. Invocation failures count against the MaxErrors limit of the parent command. This is a
+     *        terminal state.
      *        </p>
      *        </li>
      *        <li>
@@ -445,10 +445,10 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        Undeliverable: The command can't be delivered to the instance. The instance might not exist, or it might
-     *        not be responding. Undeliverable invocations don't count against the parent command's MaxErrors limit, and
-     *        they don't contribute to whether the parent command status is Success or Incomplete. This is a terminal
-     *        state.
+     *        Undeliverable: The command can't be delivered to the managed node. The managed node might not exist, or it
+     *        might not be responding. Undeliverable invocations don't count against the parent command's MaxErrors
+     *        limit, and they don't contribute to whether the parent command status is Success or Incomplete. This is a
+     *        terminal state.
      *        </p>
      *        </li>
      *        <li>
@@ -475,12 +475,12 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * Pending: The command hasn't been sent to the instance.
+     * Pending: The command hasn't been sent to the managed node.
      * </p>
      * </li>
      * <li>
      * <p>
-     * In Progress: The command has been sent to the instance but hasn't reached a terminal state.
+     * In Progress: The command has been sent to the managed node but hasn't reached a terminal state.
      * </p>
      * </li>
      * <li>
@@ -490,22 +490,22 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Delivery Timed Out: The command wasn't delivered to the instance before the delivery timeout expired. Delivery
-     * timeouts don't count against the parent command's <code>MaxErrors</code> limit, but they do contribute to whether
-     * the parent command status is Success or Incomplete. This is a terminal state.
+     * Delivery Timed Out: The command wasn't delivered to the managed node before the delivery timeout expired.
+     * Delivery timeouts don't count against the parent command's <code>MaxErrors</code> limit, but they do contribute
+     * to whether the parent command status is Success or Incomplete. This is a terminal state.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Execution Timed Out: Command execution started on the instance, but the execution wasn't complete before the
+     * Execution Timed Out: Command execution started on the managed node, but the execution wasn't complete before the
      * execution timeout expired. Execution timeouts count against the <code>MaxErrors</code> limit of the parent
      * command. This is a terminal state.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Failed: The command wasn't successful on the instance. For a plugin, this indicates that the result code wasn't
-     * zero. For a command invocation, this indicates that the result code for one or more plugins wasn't zero.
+     * Failed: The command wasn't successful on the managed node. For a plugin, this indicates that the result code
+     * wasn't zero. For a command invocation, this indicates that the result code for one or more plugins wasn't zero.
      * Invocation failures count against the MaxErrors limit of the parent command. This is a terminal state.
      * </p>
      * </li>
@@ -516,9 +516,9 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Undeliverable: The command can't be delivered to the instance. The instance might not exist, or it might not be
-     * responding. Undeliverable invocations don't count against the parent command's MaxErrors limit, and they don't
-     * contribute to whether the parent command status is Success or Incomplete. This is a terminal state.
+     * Undeliverable: The command can't be delivered to the managed node. The managed node might not exist, or it might
+     * not be responding. Undeliverable invocations don't count against the parent command's MaxErrors limit, and they
+     * don't contribute to whether the parent command status is Success or Incomplete. This is a terminal state.
      * </p>
      * </li>
      * <li>
@@ -538,12 +538,12 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         Pending: The command hasn't been sent to the instance.
+     *         Pending: The command hasn't been sent to the managed node.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         In Progress: The command has been sent to the instance but hasn't reached a terminal state.
+     *         In Progress: The command has been sent to the managed node but hasn't reached a terminal state.
      *         </p>
      *         </li>
      *         <li>
@@ -553,24 +553,24 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         Delivery Timed Out: The command wasn't delivered to the instance before the delivery timeout expired.
+     *         Delivery Timed Out: The command wasn't delivered to the managed node before the delivery timeout expired.
      *         Delivery timeouts don't count against the parent command's <code>MaxErrors</code> limit, but they do
      *         contribute to whether the parent command status is Success or Incomplete. This is a terminal state.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         Execution Timed Out: Command execution started on the instance, but the execution wasn't complete before
-     *         the execution timeout expired. Execution timeouts count against the <code>MaxErrors</code> limit of the
-     *         parent command. This is a terminal state.
+     *         Execution Timed Out: Command execution started on the managed node, but the execution wasn't complete
+     *         before the execution timeout expired. Execution timeouts count against the <code>MaxErrors</code> limit
+     *         of the parent command. This is a terminal state.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         Failed: The command wasn't successful on the instance. For a plugin, this indicates that the result code
-     *         wasn't zero. For a command invocation, this indicates that the result code for one or more plugins wasn't
-     *         zero. Invocation failures count against the MaxErrors limit of the parent command. This is a terminal
-     *         state.
+     *         Failed: The command wasn't successful on the managed node. For a plugin, this indicates that the result
+     *         code wasn't zero. For a command invocation, this indicates that the result code for one or more plugins
+     *         wasn't zero. Invocation failures count against the MaxErrors limit of the parent command. This is a
+     *         terminal state.
      *         </p>
      *         </li>
      *         <li>
@@ -580,9 +580,9 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         Undeliverable: The command can't be delivered to the instance. The instance might not exist, or it might
-     *         not be responding. Undeliverable invocations don't count against the parent command's MaxErrors limit,
-     *         and they don't contribute to whether the parent command status is Success or Incomplete. This is a
+     *         Undeliverable: The command can't be delivered to the managed node. The managed node might not exist, or
+     *         it might not be responding. Undeliverable invocations don't count against the parent command's MaxErrors
+     *         limit, and they don't contribute to whether the parent command status is Success or Incomplete. This is a
      *         terminal state.
      *         </p>
      *         </li>
@@ -610,12 +610,12 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * Pending: The command hasn't been sent to the instance.
+     * Pending: The command hasn't been sent to the managed node.
      * </p>
      * </li>
      * <li>
      * <p>
-     * In Progress: The command has been sent to the instance but hasn't reached a terminal state.
+     * In Progress: The command has been sent to the managed node but hasn't reached a terminal state.
      * </p>
      * </li>
      * <li>
@@ -625,22 +625,22 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Delivery Timed Out: The command wasn't delivered to the instance before the delivery timeout expired. Delivery
-     * timeouts don't count against the parent command's <code>MaxErrors</code> limit, but they do contribute to whether
-     * the parent command status is Success or Incomplete. This is a terminal state.
+     * Delivery Timed Out: The command wasn't delivered to the managed node before the delivery timeout expired.
+     * Delivery timeouts don't count against the parent command's <code>MaxErrors</code> limit, but they do contribute
+     * to whether the parent command status is Success or Incomplete. This is a terminal state.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Execution Timed Out: Command execution started on the instance, but the execution wasn't complete before the
+     * Execution Timed Out: Command execution started on the managed node, but the execution wasn't complete before the
      * execution timeout expired. Execution timeouts count against the <code>MaxErrors</code> limit of the parent
      * command. This is a terminal state.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Failed: The command wasn't successful on the instance. For a plugin, this indicates that the result code wasn't
-     * zero. For a command invocation, this indicates that the result code for one or more plugins wasn't zero.
+     * Failed: The command wasn't successful on the managed node. For a plugin, this indicates that the result code
+     * wasn't zero. For a command invocation, this indicates that the result code for one or more plugins wasn't zero.
      * Invocation failures count against the MaxErrors limit of the parent command. This is a terminal state.
      * </p>
      * </li>
@@ -651,9 +651,9 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Undeliverable: The command can't be delivered to the instance. The instance might not exist, or it might not be
-     * responding. Undeliverable invocations don't count against the parent command's MaxErrors limit, and they don't
-     * contribute to whether the parent command status is Success or Incomplete. This is a terminal state.
+     * Undeliverable: The command can't be delivered to the managed node. The managed node might not exist, or it might
+     * not be responding. Undeliverable invocations don't count against the parent command's MaxErrors limit, and they
+     * don't contribute to whether the parent command status is Success or Incomplete. This is a terminal state.
      * </p>
      * </li>
      * <li>
@@ -674,12 +674,12 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        Pending: The command hasn't been sent to the instance.
+     *        Pending: The command hasn't been sent to the managed node.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        In Progress: The command has been sent to the instance but hasn't reached a terminal state.
+     *        In Progress: The command has been sent to the managed node but hasn't reached a terminal state.
      *        </p>
      *        </li>
      *        <li>
@@ -689,24 +689,24 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        Delivery Timed Out: The command wasn't delivered to the instance before the delivery timeout expired.
+     *        Delivery Timed Out: The command wasn't delivered to the managed node before the delivery timeout expired.
      *        Delivery timeouts don't count against the parent command's <code>MaxErrors</code> limit, but they do
      *        contribute to whether the parent command status is Success or Incomplete. This is a terminal state.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Execution Timed Out: Command execution started on the instance, but the execution wasn't complete before
-     *        the execution timeout expired. Execution timeouts count against the <code>MaxErrors</code> limit of the
-     *        parent command. This is a terminal state.
+     *        Execution Timed Out: Command execution started on the managed node, but the execution wasn't complete
+     *        before the execution timeout expired. Execution timeouts count against the <code>MaxErrors</code> limit of
+     *        the parent command. This is a terminal state.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Failed: The command wasn't successful on the instance. For a plugin, this indicates that the result code
-     *        wasn't zero. For a command invocation, this indicates that the result code for one or more plugins wasn't
-     *        zero. Invocation failures count against the MaxErrors limit of the parent command. This is a terminal
-     *        state.
+     *        Failed: The command wasn't successful on the managed node. For a plugin, this indicates that the result
+     *        code wasn't zero. For a command invocation, this indicates that the result code for one or more plugins
+     *        wasn't zero. Invocation failures count against the MaxErrors limit of the parent command. This is a
+     *        terminal state.
      *        </p>
      *        </li>
      *        <li>
@@ -716,10 +716,10 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        Undeliverable: The command can't be delivered to the instance. The instance might not exist, or it might
-     *        not be responding. Undeliverable invocations don't count against the parent command's MaxErrors limit, and
-     *        they don't contribute to whether the parent command status is Success or Incomplete. This is a terminal
-     *        state.
+     *        Undeliverable: The command can't be delivered to the managed node. The managed node might not exist, or it
+     *        might not be responding. Undeliverable invocations don't count against the parent command's MaxErrors
+     *        limit, and they don't contribute to whether the parent command status is Success or Incomplete. This is a
+     *        terminal state.
      *        </p>
      *        </li>
      *        <li>
@@ -1049,7 +1049,7 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      * <code>ab19cb99-a030-46dd-9dfc-8eSAMPLEPre-Fix</code> is the name of the S3 prefix;
      * </p>
      * <p>
-     * <code>i-02573cafcfEXAMPLE</code> is the instance ID;
+     * <code>i-02573cafcfEXAMPLE</code> is the managed node ID;
      * </p>
      * <p>
      * <code>awsrunShellScript</code> is the name of the plugin.
@@ -1068,7 +1068,7 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      *        <code>ab19cb99-a030-46dd-9dfc-8eSAMPLEPre-Fix</code> is the name of the S3 prefix;
      *        </p>
      *        <p>
-     *        <code>i-02573cafcfEXAMPLE</code> is the instance ID;
+     *        <code>i-02573cafcfEXAMPLE</code> is the managed node ID;
      *        </p>
      *        <p>
      *        <code>awsrunShellScript</code> is the name of the plugin.
@@ -1093,7 +1093,7 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      * <code>ab19cb99-a030-46dd-9dfc-8eSAMPLEPre-Fix</code> is the name of the S3 prefix;
      * </p>
      * <p>
-     * <code>i-02573cafcfEXAMPLE</code> is the instance ID;
+     * <code>i-02573cafcfEXAMPLE</code> is the managed node ID;
      * </p>
      * <p>
      * <code>awsrunShellScript</code> is the name of the plugin.
@@ -1111,7 +1111,7 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      *         <code>ab19cb99-a030-46dd-9dfc-8eSAMPLEPre-Fix</code> is the name of the S3 prefix;
      *         </p>
      *         <p>
-     *         <code>i-02573cafcfEXAMPLE</code> is the instance ID;
+     *         <code>i-02573cafcfEXAMPLE</code> is the managed node ID;
      *         </p>
      *         <p>
      *         <code>awsrunShellScript</code> is the name of the plugin.
@@ -1136,7 +1136,7 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      * <code>ab19cb99-a030-46dd-9dfc-8eSAMPLEPre-Fix</code> is the name of the S3 prefix;
      * </p>
      * <p>
-     * <code>i-02573cafcfEXAMPLE</code> is the instance ID;
+     * <code>i-02573cafcfEXAMPLE</code> is the managed node ID;
      * </p>
      * <p>
      * <code>awsrunShellScript</code> is the name of the plugin.
@@ -1155,7 +1155,7 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      *        <code>ab19cb99-a030-46dd-9dfc-8eSAMPLEPre-Fix</code> is the name of the S3 prefix;
      *        </p>
      *        <p>
-     *        <code>i-02573cafcfEXAMPLE</code> is the instance ID;
+     *        <code>i-02573cafcfEXAMPLE</code> is the managed node ID;
      *        </p>
      *        <p>
      *        <code>awsrunShellScript</code> is the name of the plugin.
@@ -1182,7 +1182,7 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      * <code>ab19cb99-a030-46dd-9dfc-8eSAMPLEPre-Fix</code> is the name of the S3 prefix;
      * </p>
      * <p>
-     * <code>i-02573cafcfEXAMPLE</code> is the instance ID;
+     * <code>i-02573cafcfEXAMPLE</code> is the managed node ID;
      * </p>
      * <p>
      * <code>awsrunShellScript</code> is the name of the plugin.
@@ -1201,7 +1201,7 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      *        <code>ab19cb99-a030-46dd-9dfc-8eSAMPLEPre-Fix</code> is the name of the S3 prefix;
      *        </p>
      *        <p>
-     *        <code>i-02573cafcfEXAMPLE</code> is the instance ID;
+     *        <code>i-02573cafcfEXAMPLE</code> is the managed node ID;
      *        </p>
      *        <p>
      *        <code>awsrunShellScript</code> is the name of the plugin.
@@ -1226,7 +1226,7 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      * <code>ab19cb99-a030-46dd-9dfc-8eSAMPLEPre-Fix</code> is the name of the S3 prefix;
      * </p>
      * <p>
-     * <code>i-02573cafcfEXAMPLE</code> is the instance ID;
+     * <code>i-02573cafcfEXAMPLE</code> is the managed node ID;
      * </p>
      * <p>
      * <code>awsrunShellScript</code> is the name of the plugin.
@@ -1244,7 +1244,7 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      *         <code>ab19cb99-a030-46dd-9dfc-8eSAMPLEPre-Fix</code> is the name of the S3 prefix;
      *         </p>
      *         <p>
-     *         <code>i-02573cafcfEXAMPLE</code> is the instance ID;
+     *         <code>i-02573cafcfEXAMPLE</code> is the managed node ID;
      *         </p>
      *         <p>
      *         <code>awsrunShellScript</code> is the name of the plugin.
@@ -1269,7 +1269,7 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      * <code>ab19cb99-a030-46dd-9dfc-8eSAMPLEPre-Fix</code> is the name of the S3 prefix;
      * </p>
      * <p>
-     * <code>i-02573cafcfEXAMPLE</code> is the instance ID;
+     * <code>i-02573cafcfEXAMPLE</code> is the managed node ID;
      * </p>
      * <p>
      * <code>awsrunShellScript</code> is the name of the plugin.
@@ -1288,7 +1288,7 @@ public class CommandPlugin implements Serializable, Cloneable, StructuredPojo {
      *        <code>ab19cb99-a030-46dd-9dfc-8eSAMPLEPre-Fix</code> is the name of the S3 prefix;
      *        </p>
      *        <p>
-     *        <code>i-02573cafcfEXAMPLE</code> is the instance ID;
+     *        <code>i-02573cafcfEXAMPLE</code> is the managed node ID;
      *        </p>
      *        <p>
      *        <code>awsrunShellScript</code> is the name of the plugin.

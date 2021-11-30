@@ -60,6 +60,10 @@ public class DescribeStorageConfigurationResultJsonUnmarshaller implements Unmar
                     context.nextToken();
                     describeStorageConfigurationResult.setDisassociatedDataStorage(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("retentionPeriod", targetDepth)) {
+                    context.nextToken();
+                    describeStorageConfigurationResult.setRetentionPeriod(RetentionPeriodJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("configurationStatus", targetDepth)) {
                     context.nextToken();
                     describeStorageConfigurationResult.setConfigurationStatus(ConfigurationStatusJsonUnmarshaller.getInstance().unmarshall(context));

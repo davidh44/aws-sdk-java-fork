@@ -1522,6 +1522,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public DescribeSnapshotTierStatusResult describeSnapshotTierStatus(DescribeSnapshotTierStatusRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeSnapshotsResult describeSnapshots(DescribeSnapshotsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2170,6 +2175,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public ListSnapshotsInRecycleBinResult listSnapshotsInRecycleBin(ListSnapshotsInRecycleBinRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ModifyAddressAttributeResult modifyAddressAttribute(ModifyAddressAttributeRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2302,6 +2312,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public ModifySnapshotAttributeResult modifySnapshotAttribute(ModifySnapshotAttributeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ModifySnapshotTierResult modifySnapshotTier(ModifySnapshotTierRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -2591,6 +2606,16 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public RestoreManagedPrefixListVersionResult restoreManagedPrefixListVersion(RestoreManagedPrefixListVersionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public RestoreSnapshotFromRecycleBinResult restoreSnapshotFromRecycleBin(RestoreSnapshotFromRecycleBinRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public RestoreSnapshotTierResult restoreSnapshotTier(RestoreSnapshotTierRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

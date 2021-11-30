@@ -34,8 +34,22 @@ public class ShareInvitation implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private String shareInvitationId;
+    /**
+     * <p>
+     * The resource type of the share invitation.
+     * </p>
+     */
+    private String shareResourceType;
 
     private String workloadId;
+
+    private String lensAlias;
+    /**
+     * <p>
+     * The ARN for the lens.
+     * </p>
+     */
+    private String lensArn;
 
     /**
      * <p>
@@ -78,6 +92,65 @@ public class ShareInvitation implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * The resource type of the share invitation.
+     * </p>
+     * 
+     * @param shareResourceType
+     *        The resource type of the share invitation.
+     * @see ShareResourceType
+     */
+
+    public void setShareResourceType(String shareResourceType) {
+        this.shareResourceType = shareResourceType;
+    }
+
+    /**
+     * <p>
+     * The resource type of the share invitation.
+     * </p>
+     * 
+     * @return The resource type of the share invitation.
+     * @see ShareResourceType
+     */
+
+    public String getShareResourceType() {
+        return this.shareResourceType;
+    }
+
+    /**
+     * <p>
+     * The resource type of the share invitation.
+     * </p>
+     * 
+     * @param shareResourceType
+     *        The resource type of the share invitation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ShareResourceType
+     */
+
+    public ShareInvitation withShareResourceType(String shareResourceType) {
+        setShareResourceType(shareResourceType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The resource type of the share invitation.
+     * </p>
+     * 
+     * @param shareResourceType
+     *        The resource type of the share invitation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ShareResourceType
+     */
+
+    public ShareInvitation withShareResourceType(ShareResourceType shareResourceType) {
+        this.shareResourceType = shareResourceType.toString();
+        return this;
+    }
+
+    /**
      * @param workloadId
      */
 
@@ -104,6 +177,72 @@ public class ShareInvitation implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * @param lensAlias
+     */
+
+    public void setLensAlias(String lensAlias) {
+        this.lensAlias = lensAlias;
+    }
+
+    /**
+     * @return
+     */
+
+    public String getLensAlias() {
+        return this.lensAlias;
+    }
+
+    /**
+     * @param lensAlias
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ShareInvitation withLensAlias(String lensAlias) {
+        setLensAlias(lensAlias);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ARN for the lens.
+     * </p>
+     * 
+     * @param lensArn
+     *        The ARN for the lens.
+     */
+
+    public void setLensArn(String lensArn) {
+        this.lensArn = lensArn;
+    }
+
+    /**
+     * <p>
+     * The ARN for the lens.
+     * </p>
+     * 
+     * @return The ARN for the lens.
+     */
+
+    public String getLensArn() {
+        return this.lensArn;
+    }
+
+    /**
+     * <p>
+     * The ARN for the lens.
+     * </p>
+     * 
+     * @param lensArn
+     *        The ARN for the lens.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ShareInvitation withLensArn(String lensArn) {
+        setLensArn(lensArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -117,8 +256,14 @@ public class ShareInvitation implements Serializable, Cloneable, StructuredPojo 
         sb.append("{");
         if (getShareInvitationId() != null)
             sb.append("ShareInvitationId: ").append(getShareInvitationId()).append(",");
+        if (getShareResourceType() != null)
+            sb.append("ShareResourceType: ").append(getShareResourceType()).append(",");
         if (getWorkloadId() != null)
-            sb.append("WorkloadId: ").append(getWorkloadId());
+            sb.append("WorkloadId: ").append(getWorkloadId()).append(",");
+        if (getLensAlias() != null)
+            sb.append("LensAlias: ").append(getLensAlias()).append(",");
+        if (getLensArn() != null)
+            sb.append("LensArn: ").append(getLensArn());
         sb.append("}");
         return sb.toString();
     }
@@ -137,9 +282,21 @@ public class ShareInvitation implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getShareInvitationId() != null && other.getShareInvitationId().equals(this.getShareInvitationId()) == false)
             return false;
+        if (other.getShareResourceType() == null ^ this.getShareResourceType() == null)
+            return false;
+        if (other.getShareResourceType() != null && other.getShareResourceType().equals(this.getShareResourceType()) == false)
+            return false;
         if (other.getWorkloadId() == null ^ this.getWorkloadId() == null)
             return false;
         if (other.getWorkloadId() != null && other.getWorkloadId().equals(this.getWorkloadId()) == false)
+            return false;
+        if (other.getLensAlias() == null ^ this.getLensAlias() == null)
+            return false;
+        if (other.getLensAlias() != null && other.getLensAlias().equals(this.getLensAlias()) == false)
+            return false;
+        if (other.getLensArn() == null ^ this.getLensArn() == null)
+            return false;
+        if (other.getLensArn() != null && other.getLensArn().equals(this.getLensArn()) == false)
             return false;
         return true;
     }
@@ -150,7 +307,10 @@ public class ShareInvitation implements Serializable, Cloneable, StructuredPojo 
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getShareInvitationId() == null) ? 0 : getShareInvitationId().hashCode());
+        hashCode = prime * hashCode + ((getShareResourceType() == null) ? 0 : getShareResourceType().hashCode());
         hashCode = prime * hashCode + ((getWorkloadId() == null) ? 0 : getWorkloadId().hashCode());
+        hashCode = prime * hashCode + ((getLensAlias() == null) ? 0 : getLensAlias().hashCode());
+        hashCode = prime * hashCode + ((getLensArn() == null) ? 0 : getLensArn().hashCode());
         return hashCode;
     }
 

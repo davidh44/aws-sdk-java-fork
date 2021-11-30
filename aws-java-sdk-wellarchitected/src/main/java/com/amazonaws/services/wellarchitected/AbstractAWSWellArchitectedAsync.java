@@ -41,6 +41,32 @@ public class AbstractAWSWellArchitectedAsync extends AbstractAWSWellArchitected 
     }
 
     @Override
+    public java.util.concurrent.Future<CreateLensShareResult> createLensShareAsync(CreateLensShareRequest request) {
+
+        return createLensShareAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateLensShareResult> createLensShareAsync(CreateLensShareRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateLensShareRequest, CreateLensShareResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateLensVersionResult> createLensVersionAsync(CreateLensVersionRequest request) {
+
+        return createLensVersionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateLensVersionResult> createLensVersionAsync(CreateLensVersionRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateLensVersionRequest, CreateLensVersionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateMilestoneResult> createMilestoneAsync(CreateMilestoneRequest request) {
 
         return createMilestoneAsync(request, null);
@@ -75,6 +101,32 @@ public class AbstractAWSWellArchitectedAsync extends AbstractAWSWellArchitected 
     @Override
     public java.util.concurrent.Future<CreateWorkloadShareResult> createWorkloadShareAsync(CreateWorkloadShareRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateWorkloadShareRequest, CreateWorkloadShareResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteLensResult> deleteLensAsync(DeleteLensRequest request) {
+
+        return deleteLensAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteLensResult> deleteLensAsync(DeleteLensRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteLensRequest, DeleteLensResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteLensShareResult> deleteLensShareAsync(DeleteLensShareRequest request) {
+
+        return deleteLensShareAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteLensShareResult> deleteLensShareAsync(DeleteLensShareRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteLensShareRequest, DeleteLensShareResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -119,6 +171,19 @@ public class AbstractAWSWellArchitectedAsync extends AbstractAWSWellArchitected 
     }
 
     @Override
+    public java.util.concurrent.Future<ExportLensResult> exportLensAsync(ExportLensRequest request) {
+
+        return exportLensAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ExportLensResult> exportLensAsync(ExportLensRequest request,
+            com.amazonaws.handlers.AsyncHandler<ExportLensRequest, ExportLensResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetAnswerResult> getAnswerAsync(GetAnswerRequest request) {
 
         return getAnswerAsync(request, null);
@@ -127,6 +192,19 @@ public class AbstractAWSWellArchitectedAsync extends AbstractAWSWellArchitected 
     @Override
     public java.util.concurrent.Future<GetAnswerResult> getAnswerAsync(GetAnswerRequest request,
             com.amazonaws.handlers.AsyncHandler<GetAnswerRequest, GetAnswerResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetLensResult> getLensAsync(GetLensRequest request) {
+
+        return getLensAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetLensResult> getLensAsync(GetLensRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetLensRequest, GetLensResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -197,6 +275,19 @@ public class AbstractAWSWellArchitectedAsync extends AbstractAWSWellArchitected 
     }
 
     @Override
+    public java.util.concurrent.Future<ImportLensResult> importLensAsync(ImportLensRequest request) {
+
+        return importLensAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ImportLensResult> importLensAsync(ImportLensRequest request,
+            com.amazonaws.handlers.AsyncHandler<ImportLensRequest, ImportLensResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListAnswersResult> listAnswersAsync(ListAnswersRequest request) {
 
         return listAnswersAsync(request, null);
@@ -231,6 +322,19 @@ public class AbstractAWSWellArchitectedAsync extends AbstractAWSWellArchitected 
     @Override
     public java.util.concurrent.Future<ListLensReviewsResult> listLensReviewsAsync(ListLensReviewsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListLensReviewsRequest, ListLensReviewsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListLensSharesResult> listLensSharesAsync(ListLensSharesRequest request) {
+
+        return listLensSharesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListLensSharesResult> listLensSharesAsync(ListLensSharesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListLensSharesRequest, ListLensSharesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

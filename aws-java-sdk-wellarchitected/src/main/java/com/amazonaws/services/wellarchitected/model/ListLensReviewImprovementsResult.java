@@ -31,6 +31,12 @@ public class ListLensReviewImprovementsResult extends com.amazonaws.AmazonWebSer
     private Integer milestoneNumber;
 
     private String lensAlias;
+    /**
+     * <p>
+     * The ARN for the lens.
+     * </p>
+     */
+    private String lensArn;
 
     private java.util.List<ImprovementSummary> improvementSummaries;
 
@@ -111,6 +117,46 @@ public class ListLensReviewImprovementsResult extends com.amazonaws.AmazonWebSer
 
     public ListLensReviewImprovementsResult withLensAlias(String lensAlias) {
         setLensAlias(lensAlias);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ARN for the lens.
+     * </p>
+     * 
+     * @param lensArn
+     *        The ARN for the lens.
+     */
+
+    public void setLensArn(String lensArn) {
+        this.lensArn = lensArn;
+    }
+
+    /**
+     * <p>
+     * The ARN for the lens.
+     * </p>
+     * 
+     * @return The ARN for the lens.
+     */
+
+    public String getLensArn() {
+        return this.lensArn;
+    }
+
+    /**
+     * <p>
+     * The ARN for the lens.
+     * </p>
+     * 
+     * @param lensArn
+     *        The ARN for the lens.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListLensReviewImprovementsResult withLensArn(String lensArn) {
+        setLensArn(lensArn);
         return this;
     }
 
@@ -210,6 +256,8 @@ public class ListLensReviewImprovementsResult extends com.amazonaws.AmazonWebSer
             sb.append("MilestoneNumber: ").append(getMilestoneNumber()).append(",");
         if (getLensAlias() != null)
             sb.append("LensAlias: ").append(getLensAlias()).append(",");
+        if (getLensArn() != null)
+            sb.append("LensArn: ").append(getLensArn()).append(",");
         if (getImprovementSummaries() != null)
             sb.append("ImprovementSummaries: ").append(getImprovementSummaries()).append(",");
         if (getNextToken() != null)
@@ -240,6 +288,10 @@ public class ListLensReviewImprovementsResult extends com.amazonaws.AmazonWebSer
             return false;
         if (other.getLensAlias() != null && other.getLensAlias().equals(this.getLensAlias()) == false)
             return false;
+        if (other.getLensArn() == null ^ this.getLensArn() == null)
+            return false;
+        if (other.getLensArn() != null && other.getLensArn().equals(this.getLensArn()) == false)
+            return false;
         if (other.getImprovementSummaries() == null ^ this.getImprovementSummaries() == null)
             return false;
         if (other.getImprovementSummaries() != null && other.getImprovementSummaries().equals(this.getImprovementSummaries()) == false)
@@ -259,6 +311,7 @@ public class ListLensReviewImprovementsResult extends com.amazonaws.AmazonWebSer
         hashCode = prime * hashCode + ((getWorkloadId() == null) ? 0 : getWorkloadId().hashCode());
         hashCode = prime * hashCode + ((getMilestoneNumber() == null) ? 0 : getMilestoneNumber().hashCode());
         hashCode = prime * hashCode + ((getLensAlias() == null) ? 0 : getLensAlias().hashCode());
+        hashCode = prime * hashCode + ((getLensArn() == null) ? 0 : getLensArn().hashCode());
         hashCode = prime * hashCode + ((getImprovementSummaries() == null) ? 0 : getImprovementSummaries().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         return hashCode;

@@ -90,6 +90,15 @@ public class AutoScalingGroupRecommendationJsonUnmarshaller implements Unmarshal
                     context.nextToken();
                     autoScalingGroupRecommendation.setLastRefreshTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("currentPerformanceRisk", targetDepth)) {
+                    context.nextToken();
+                    autoScalingGroupRecommendation.setCurrentPerformanceRisk(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("effectiveRecommendationPreferences", targetDepth)) {
+                    context.nextToken();
+                    autoScalingGroupRecommendation.setEffectiveRecommendationPreferences(EffectiveRecommendationPreferencesJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

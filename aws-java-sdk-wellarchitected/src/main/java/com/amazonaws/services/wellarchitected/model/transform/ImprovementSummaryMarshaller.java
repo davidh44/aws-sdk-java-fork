@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.wellarchitected.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -37,6 +38,8 @@ public class ImprovementSummaryMarshaller {
             .marshallLocationName("Risk").build();
     private static final MarshallingInfo<String> IMPROVEMENTPLANURL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ImprovementPlanUrl").build();
+    private static final MarshallingInfo<List> IMPROVEMENTPLANS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ImprovementPlans").build();
 
     private static final ImprovementSummaryMarshaller instance = new ImprovementSummaryMarshaller();
 
@@ -59,6 +62,7 @@ public class ImprovementSummaryMarshaller {
             protocolMarshaller.marshall(improvementSummary.getQuestionTitle(), QUESTIONTITLE_BINDING);
             protocolMarshaller.marshall(improvementSummary.getRisk(), RISK_BINDING);
             protocolMarshaller.marshall(improvementSummary.getImprovementPlanUrl(), IMPROVEMENTPLANURL_BINDING);
+            protocolMarshaller.marshall(improvementSummary.getImprovementPlans(), IMPROVEMENTPLANS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

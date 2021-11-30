@@ -60,6 +60,10 @@ public class ListAnswersResultJsonUnmarshaller implements Unmarshaller<ListAnswe
                     context.nextToken();
                     listAnswersResult.setLensAlias(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("LensArn", targetDepth)) {
+                    context.nextToken();
+                    listAnswersResult.setLensArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("AnswerSummaries", targetDepth)) {
                     context.nextToken();
                     listAnswersResult.setAnswerSummaries(new ListUnmarshaller<AnswerSummary>(AnswerSummaryJsonUnmarshaller.getInstance())

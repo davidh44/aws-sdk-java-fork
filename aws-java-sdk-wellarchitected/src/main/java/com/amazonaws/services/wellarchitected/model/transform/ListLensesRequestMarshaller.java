@@ -31,6 +31,12 @@ public class ListLensesRequestMarshaller {
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("NextToken").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("MaxResults").build();
+    private static final MarshallingInfo<String> LENSTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("LensType").build();
+    private static final MarshallingInfo<String> LENSSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("LensStatus").build();
+    private static final MarshallingInfo<String> LENSNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("LensName").build();
 
     private static final ListLensesRequestMarshaller instance = new ListLensesRequestMarshaller();
 
@@ -50,6 +56,9 @@ public class ListLensesRequestMarshaller {
         try {
             protocolMarshaller.marshall(listLensesRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listLensesRequest.getMaxResults(), MAXRESULTS_BINDING);
+            protocolMarshaller.marshall(listLensesRequest.getLensType(), LENSTYPE_BINDING);
+            protocolMarshaller.marshall(listLensesRequest.getLensStatus(), LENSSTATUS_BINDING);
+            protocolMarshaller.marshall(listLensesRequest.getLensName(), LENSNAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

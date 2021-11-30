@@ -31,6 +31,8 @@ public class GetLensVersionDifferenceRequestMarshaller {
             .marshallLocationName("LensAlias").build();
     private static final MarshallingInfo<String> BASELENSVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("BaseLensVersion").build();
+    private static final MarshallingInfo<String> TARGETLENSVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("TargetLensVersion").build();
 
     private static final GetLensVersionDifferenceRequestMarshaller instance = new GetLensVersionDifferenceRequestMarshaller();
 
@@ -50,6 +52,7 @@ public class GetLensVersionDifferenceRequestMarshaller {
         try {
             protocolMarshaller.marshall(getLensVersionDifferenceRequest.getLensAlias(), LENSALIAS_BINDING);
             protocolMarshaller.marshall(getLensVersionDifferenceRequest.getBaseLensVersion(), BASELENSVERSION_BINDING);
+            protocolMarshaller.marshall(getLensVersionDifferenceRequest.getTargetLensVersion(), TARGETLENSVERSION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

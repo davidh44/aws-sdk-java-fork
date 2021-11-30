@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about the state of a patch on a particular instance as it relates to the patch baseline used to patch the
- * instance.
+ * Information about the state of a patch on a particular managed node as it relates to the patch baseline used to patch
+ * the node.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/PatchComplianceData" target="_top">AWS API
@@ -56,7 +56,7 @@ public class PatchComplianceData implements Serializable, Cloneable, StructuredP
     private String severity;
     /**
      * <p>
-     * The state of the patch on the instance, such as INSTALLED or FAILED.
+     * The state of the patch on the managed node, such as INSTALLED or FAILED.
      * </p>
      * <p>
      * For descriptions of each patch state, see <a href=
@@ -67,7 +67,7 @@ public class PatchComplianceData implements Serializable, Cloneable, StructuredP
     private String state;
     /**
      * <p>
-     * The date/time the patch was installed on the instance. Not all operating systems provide this level of
+     * The date/time the patch was installed on the managed node. Not all operating systems provide this level of
      * information.
      * </p>
      */
@@ -248,7 +248,7 @@ public class PatchComplianceData implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The state of the patch on the instance, such as INSTALLED or FAILED.
+     * The state of the patch on the managed node, such as INSTALLED or FAILED.
      * </p>
      * <p>
      * For descriptions of each patch state, see <a href=
@@ -257,7 +257,7 @@ public class PatchComplianceData implements Serializable, Cloneable, StructuredP
      * </p>
      * 
      * @param state
-     *        The state of the patch on the instance, such as INSTALLED or FAILED.</p>
+     *        The state of the patch on the managed node, such as INSTALLED or FAILED.</p>
      *        <p>
      *        For descriptions of each patch state, see <a href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-compliance-about.html#sysman-compliance-monitor-patch"
@@ -271,7 +271,7 @@ public class PatchComplianceData implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The state of the patch on the instance, such as INSTALLED or FAILED.
+     * The state of the patch on the managed node, such as INSTALLED or FAILED.
      * </p>
      * <p>
      * For descriptions of each patch state, see <a href=
@@ -279,7 +279,7 @@ public class PatchComplianceData implements Serializable, Cloneable, StructuredP
      * >About patch compliance</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
-     * @return The state of the patch on the instance, such as INSTALLED or FAILED.</p>
+     * @return The state of the patch on the managed node, such as INSTALLED or FAILED.</p>
      *         <p>
      *         For descriptions of each patch state, see <a href=
      *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-compliance-about.html#sysman-compliance-monitor-patch"
@@ -293,7 +293,7 @@ public class PatchComplianceData implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The state of the patch on the instance, such as INSTALLED or FAILED.
+     * The state of the patch on the managed node, such as INSTALLED or FAILED.
      * </p>
      * <p>
      * For descriptions of each patch state, see <a href=
@@ -302,7 +302,7 @@ public class PatchComplianceData implements Serializable, Cloneable, StructuredP
      * </p>
      * 
      * @param state
-     *        The state of the patch on the instance, such as INSTALLED or FAILED.</p>
+     *        The state of the patch on the managed node, such as INSTALLED or FAILED.</p>
      *        <p>
      *        For descriptions of each patch state, see <a href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-compliance-about.html#sysman-compliance-monitor-patch"
@@ -318,7 +318,7 @@ public class PatchComplianceData implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The state of the patch on the instance, such as INSTALLED or FAILED.
+     * The state of the patch on the managed node, such as INSTALLED or FAILED.
      * </p>
      * <p>
      * For descriptions of each patch state, see <a href=
@@ -327,7 +327,7 @@ public class PatchComplianceData implements Serializable, Cloneable, StructuredP
      * </p>
      * 
      * @param state
-     *        The state of the patch on the instance, such as INSTALLED or FAILED.</p>
+     *        The state of the patch on the managed node, such as INSTALLED or FAILED.</p>
      *        <p>
      *        For descriptions of each patch state, see <a href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-compliance-about.html#sysman-compliance-monitor-patch"
@@ -341,7 +341,7 @@ public class PatchComplianceData implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The state of the patch on the instance, such as INSTALLED or FAILED.
+     * The state of the patch on the managed node, such as INSTALLED or FAILED.
      * </p>
      * <p>
      * For descriptions of each patch state, see <a href=
@@ -350,7 +350,7 @@ public class PatchComplianceData implements Serializable, Cloneable, StructuredP
      * </p>
      * 
      * @param state
-     *        The state of the patch on the instance, such as INSTALLED or FAILED.</p>
+     *        The state of the patch on the managed node, such as INSTALLED or FAILED.</p>
      *        <p>
      *        For descriptions of each patch state, see <a href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-compliance-about.html#sysman-compliance-monitor-patch"
@@ -366,12 +366,12 @@ public class PatchComplianceData implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The date/time the patch was installed on the instance. Not all operating systems provide this level of
+     * The date/time the patch was installed on the managed node. Not all operating systems provide this level of
      * information.
      * </p>
      * 
      * @param installedTime
-     *        The date/time the patch was installed on the instance. Not all operating systems provide this level of
+     *        The date/time the patch was installed on the managed node. Not all operating systems provide this level of
      *        information.
      */
 
@@ -381,12 +381,12 @@ public class PatchComplianceData implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The date/time the patch was installed on the instance. Not all operating systems provide this level of
+     * The date/time the patch was installed on the managed node. Not all operating systems provide this level of
      * information.
      * </p>
      * 
-     * @return The date/time the patch was installed on the instance. Not all operating systems provide this level of
-     *         information.
+     * @return The date/time the patch was installed on the managed node. Not all operating systems provide this level
+     *         of information.
      */
 
     public java.util.Date getInstalledTime() {
@@ -395,12 +395,12 @@ public class PatchComplianceData implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The date/time the patch was installed on the instance. Not all operating systems provide this level of
+     * The date/time the patch was installed on the managed node. Not all operating systems provide this level of
      * information.
      * </p>
      * 
      * @param installedTime
-     *        The date/time the patch was installed on the instance. Not all operating systems provide this level of
+     *        The date/time the patch was installed on the managed node. Not all operating systems provide this level of
      *        information.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

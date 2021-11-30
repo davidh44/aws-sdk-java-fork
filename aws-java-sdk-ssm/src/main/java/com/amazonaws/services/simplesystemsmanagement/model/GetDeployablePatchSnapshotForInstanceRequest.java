@@ -27,7 +27,7 @@ public class GetDeployablePatchSnapshotForInstanceRequest extends com.amazonaws.
 
     /**
      * <p>
-     * The ID of the instance for which the appropriate patch snapshot should be retrieved.
+     * The ID of the managed node for which the appropriate patch snapshot should be retrieved.
      * </p>
      */
     private String instanceId;
@@ -46,11 +46,11 @@ public class GetDeployablePatchSnapshotForInstanceRequest extends com.amazonaws.
 
     /**
      * <p>
-     * The ID of the instance for which the appropriate patch snapshot should be retrieved.
+     * The ID of the managed node for which the appropriate patch snapshot should be retrieved.
      * </p>
      * 
      * @param instanceId
-     *        The ID of the instance for which the appropriate patch snapshot should be retrieved.
+     *        The ID of the managed node for which the appropriate patch snapshot should be retrieved.
      */
 
     public void setInstanceId(String instanceId) {
@@ -59,10 +59,10 @@ public class GetDeployablePatchSnapshotForInstanceRequest extends com.amazonaws.
 
     /**
      * <p>
-     * The ID of the instance for which the appropriate patch snapshot should be retrieved.
+     * The ID of the managed node for which the appropriate patch snapshot should be retrieved.
      * </p>
      * 
-     * @return The ID of the instance for which the appropriate patch snapshot should be retrieved.
+     * @return The ID of the managed node for which the appropriate patch snapshot should be retrieved.
      */
 
     public String getInstanceId() {
@@ -71,11 +71,11 @@ public class GetDeployablePatchSnapshotForInstanceRequest extends com.amazonaws.
 
     /**
      * <p>
-     * The ID of the instance for which the appropriate patch snapshot should be retrieved.
+     * The ID of the managed node for which the appropriate patch snapshot should be retrieved.
      * </p>
      * 
      * @param instanceId
-     *        The ID of the instance for which the appropriate patch snapshot should be retrieved.
+     *        The ID of the managed node for which the appropriate patch snapshot should be retrieved.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

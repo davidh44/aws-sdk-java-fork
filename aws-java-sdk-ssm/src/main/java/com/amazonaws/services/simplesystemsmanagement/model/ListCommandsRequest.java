@@ -33,12 +33,12 @@ public class ListCommandsRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String commandId;
     /**
      * <p>
-     * (Optional) Lists commands issued against this instance ID.
+     * (Optional) Lists commands issued against this managed node ID.
      * </p>
      * <note>
      * <p>
-     * You can't specify an instance ID in the same command that you specify <code>Status</code> = <code>Pending</code>.
-     * This is because the command hasn't reached the instance yet.
+     * You can't specify a managed node ID in the same command that you specify <code>Status</code> =
+     * <code>Pending</code>. This is because the command hasn't reached the managed node yet.
      * </p>
      * </note>
      */
@@ -105,20 +105,20 @@ public class ListCommandsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Lists commands issued against this instance ID.
+     * (Optional) Lists commands issued against this managed node ID.
      * </p>
      * <note>
      * <p>
-     * You can't specify an instance ID in the same command that you specify <code>Status</code> = <code>Pending</code>.
-     * This is because the command hasn't reached the instance yet.
+     * You can't specify a managed node ID in the same command that you specify <code>Status</code> =
+     * <code>Pending</code>. This is because the command hasn't reached the managed node yet.
      * </p>
      * </note>
      * 
      * @param instanceId
-     *        (Optional) Lists commands issued against this instance ID.</p> <note>
+     *        (Optional) Lists commands issued against this managed node ID.</p> <note>
      *        <p>
-     *        You can't specify an instance ID in the same command that you specify <code>Status</code> =
-     *        <code>Pending</code>. This is because the command hasn't reached the instance yet.
+     *        You can't specify a managed node ID in the same command that you specify <code>Status</code> =
+     *        <code>Pending</code>. This is because the command hasn't reached the managed node yet.
      *        </p>
      */
 
@@ -128,19 +128,19 @@ public class ListCommandsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Lists commands issued against this instance ID.
+     * (Optional) Lists commands issued against this managed node ID.
      * </p>
      * <note>
      * <p>
-     * You can't specify an instance ID in the same command that you specify <code>Status</code> = <code>Pending</code>.
-     * This is because the command hasn't reached the instance yet.
+     * You can't specify a managed node ID in the same command that you specify <code>Status</code> =
+     * <code>Pending</code>. This is because the command hasn't reached the managed node yet.
      * </p>
      * </note>
      * 
-     * @return (Optional) Lists commands issued against this instance ID.</p> <note>
+     * @return (Optional) Lists commands issued against this managed node ID.</p> <note>
      *         <p>
-     *         You can't specify an instance ID in the same command that you specify <code>Status</code> =
-     *         <code>Pending</code>. This is because the command hasn't reached the instance yet.
+     *         You can't specify a managed node ID in the same command that you specify <code>Status</code> =
+     *         <code>Pending</code>. This is because the command hasn't reached the managed node yet.
      *         </p>
      */
 
@@ -150,20 +150,20 @@ public class ListCommandsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Lists commands issued against this instance ID.
+     * (Optional) Lists commands issued against this managed node ID.
      * </p>
      * <note>
      * <p>
-     * You can't specify an instance ID in the same command that you specify <code>Status</code> = <code>Pending</code>.
-     * This is because the command hasn't reached the instance yet.
+     * You can't specify a managed node ID in the same command that you specify <code>Status</code> =
+     * <code>Pending</code>. This is because the command hasn't reached the managed node yet.
      * </p>
      * </note>
      * 
      * @param instanceId
-     *        (Optional) Lists commands issued against this instance ID.</p> <note>
+     *        (Optional) Lists commands issued against this managed node ID.</p> <note>
      *        <p>
-     *        You can't specify an instance ID in the same command that you specify <code>Status</code> =
-     *        <code>Pending</code>. This is because the command hasn't reached the instance yet.
+     *        You can't specify a managed node ID in the same command that you specify <code>Status</code> =
+     *        <code>Pending</code>. This is because the command hasn't reached the managed node yet.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

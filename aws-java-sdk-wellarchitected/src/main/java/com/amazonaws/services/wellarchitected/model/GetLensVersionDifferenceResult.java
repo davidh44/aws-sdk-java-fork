@@ -26,10 +26,22 @@ public class GetLensVersionDifferenceResult extends com.amazonaws.AmazonWebServi
     private String lensAlias;
     /**
      * <p>
+     * The ARN for the lens.
+     * </p>
+     */
+    private String lensArn;
+    /**
+     * <p>
      * The base version of the lens.
      * </p>
      */
     private String baseLensVersion;
+    /**
+     * <p>
+     * The target lens version for the lens.
+     * </p>
+     */
+    private String targetLensVersion;
     /**
      * <p>
      * The latest version of the lens.
@@ -62,6 +74,46 @@ public class GetLensVersionDifferenceResult extends com.amazonaws.AmazonWebServi
 
     public GetLensVersionDifferenceResult withLensAlias(String lensAlias) {
         setLensAlias(lensAlias);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ARN for the lens.
+     * </p>
+     * 
+     * @param lensArn
+     *        The ARN for the lens.
+     */
+
+    public void setLensArn(String lensArn) {
+        this.lensArn = lensArn;
+    }
+
+    /**
+     * <p>
+     * The ARN for the lens.
+     * </p>
+     * 
+     * @return The ARN for the lens.
+     */
+
+    public String getLensArn() {
+        return this.lensArn;
+    }
+
+    /**
+     * <p>
+     * The ARN for the lens.
+     * </p>
+     * 
+     * @param lensArn
+     *        The ARN for the lens.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetLensVersionDifferenceResult withLensArn(String lensArn) {
+        setLensArn(lensArn);
         return this;
     }
 
@@ -102,6 +154,46 @@ public class GetLensVersionDifferenceResult extends com.amazonaws.AmazonWebServi
 
     public GetLensVersionDifferenceResult withBaseLensVersion(String baseLensVersion) {
         setBaseLensVersion(baseLensVersion);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The target lens version for the lens.
+     * </p>
+     * 
+     * @param targetLensVersion
+     *        The target lens version for the lens.
+     */
+
+    public void setTargetLensVersion(String targetLensVersion) {
+        this.targetLensVersion = targetLensVersion;
+    }
+
+    /**
+     * <p>
+     * The target lens version for the lens.
+     * </p>
+     * 
+     * @return The target lens version for the lens.
+     */
+
+    public String getTargetLensVersion() {
+        return this.targetLensVersion;
+    }
+
+    /**
+     * <p>
+     * The target lens version for the lens.
+     * </p>
+     * 
+     * @param targetLensVersion
+     *        The target lens version for the lens.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetLensVersionDifferenceResult withTargetLensVersion(String targetLensVersion) {
+        setTargetLensVersion(targetLensVersion);
         return this;
     }
 
@@ -185,8 +277,12 @@ public class GetLensVersionDifferenceResult extends com.amazonaws.AmazonWebServi
         sb.append("{");
         if (getLensAlias() != null)
             sb.append("LensAlias: ").append(getLensAlias()).append(",");
+        if (getLensArn() != null)
+            sb.append("LensArn: ").append(getLensArn()).append(",");
         if (getBaseLensVersion() != null)
             sb.append("BaseLensVersion: ").append(getBaseLensVersion()).append(",");
+        if (getTargetLensVersion() != null)
+            sb.append("TargetLensVersion: ").append(getTargetLensVersion()).append(",");
         if (getLatestLensVersion() != null)
             sb.append("LatestLensVersion: ").append(getLatestLensVersion()).append(",");
         if (getVersionDifferences() != null)
@@ -209,9 +305,17 @@ public class GetLensVersionDifferenceResult extends com.amazonaws.AmazonWebServi
             return false;
         if (other.getLensAlias() != null && other.getLensAlias().equals(this.getLensAlias()) == false)
             return false;
+        if (other.getLensArn() == null ^ this.getLensArn() == null)
+            return false;
+        if (other.getLensArn() != null && other.getLensArn().equals(this.getLensArn()) == false)
+            return false;
         if (other.getBaseLensVersion() == null ^ this.getBaseLensVersion() == null)
             return false;
         if (other.getBaseLensVersion() != null && other.getBaseLensVersion().equals(this.getBaseLensVersion()) == false)
+            return false;
+        if (other.getTargetLensVersion() == null ^ this.getTargetLensVersion() == null)
+            return false;
+        if (other.getTargetLensVersion() != null && other.getTargetLensVersion().equals(this.getTargetLensVersion()) == false)
             return false;
         if (other.getLatestLensVersion() == null ^ this.getLatestLensVersion() == null)
             return false;
@@ -230,7 +334,9 @@ public class GetLensVersionDifferenceResult extends com.amazonaws.AmazonWebServi
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getLensAlias() == null) ? 0 : getLensAlias().hashCode());
+        hashCode = prime * hashCode + ((getLensArn() == null) ? 0 : getLensArn().hashCode());
         hashCode = prime * hashCode + ((getBaseLensVersion() == null) ? 0 : getBaseLensVersion().hashCode());
+        hashCode = prime * hashCode + ((getTargetLensVersion() == null) ? 0 : getTargetLensVersion().hashCode());
         hashCode = prime * hashCode + ((getLatestLensVersion() == null) ? 0 : getLatestLensVersion().hashCode());
         hashCode = prime * hashCode + ((getVersionDifferences() == null) ? 0 : getVersionDifferences().hashCode());
         return hashCode;

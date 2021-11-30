@@ -116,54 +116,55 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
     private String language;
     /**
      * <p>
-     * The Advisory ID of the patch. For example, <code>RHSA-2020:3779</code>. Applies to Linux-based instances only.
+     * The Advisory ID of the patch. For example, <code>RHSA-2020:3779</code>. Applies to Linux-based managed nodes
+     * only.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> advisoryIds;
     /**
      * <p>
-     * The Bugzilla ID of the patch. For example, <code>1600646</code>. Applies to Linux-based instances only.
+     * The Bugzilla ID of the patch. For example, <code>1600646</code>. Applies to Linux-based managed nodes only.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> bugzillaIds;
     /**
      * <p>
      * The Common Vulnerabilities and Exposures (CVE) ID of the patch. For example, <code>CVE-2011-3192</code>. Applies
-     * to Linux-based instances only.
+     * to Linux-based managed nodes only.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> cVEIds;
     /**
      * <p>
-     * The name of the patch. Applies to Linux-based instances only.
+     * The name of the patch. Applies to Linux-based managed nodes only.
      * </p>
      */
     private String name;
     /**
      * <p>
      * The epoch of the patch. For example in <code>pkg-example-EE-20180914-2.2.amzn1.noarch</code>, the epoch value is
-     * <code>20180914-2</code>. Applies to Linux-based instances only.
+     * <code>20180914-2</code>. Applies to Linux-based managed nodes only.
      * </p>
      */
     private Integer epoch;
     /**
      * <p>
      * The version number of the patch. For example, in <code>example-pkg-1.710.10-2.7.abcd.x86_64</code>, the version
-     * number is indicated by <code>-1</code>. Applies to Linux-based instances only.
+     * number is indicated by <code>-1</code>. Applies to Linux-based managed nodes only.
      * </p>
      */
     private String version;
     /**
      * <p>
      * The particular release of a patch. For example, in <code>pkg-example-EE-20180914-2.2.amzn1.noarch</code>, the
-     * release is <code>2.amaz1</code>. Applies to Linux-based instances only.
+     * release is <code>2.amaz1</code>. Applies to Linux-based managed nodes only.
      * </p>
      */
     private String release;
     /**
      * <p>
      * The architecture of the patch. For example, in <code>example-pkg-0.710.10-2.7.abcd.x86_64</code>, the
-     * architecture is indicated by <code>x86_64</code>. Applies to Linux-based instances only.
+     * architecture is indicated by <code>x86_64</code>. Applies to Linux-based managed nodes only.
      * </p>
      */
     private String arch;
@@ -176,8 +177,8 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The source patch repository for the operating system and version, such as <code>trusty-security</code> for Ubuntu
-     * Server 14.04 LTE and <code>focal-security</code> for Ubuntu Server 20.04 LTE. Applies to Linux-based instances
-     * only.
+     * Server 14.04 LTE and <code>focal-security</code> for Ubuntu Server 20.04 LTE. Applies to Linux-based managed
+     * nodes only.
      * </p>
      */
     private String repository;
@@ -755,11 +756,12 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Advisory ID of the patch. For example, <code>RHSA-2020:3779</code>. Applies to Linux-based instances only.
+     * The Advisory ID of the patch. For example, <code>RHSA-2020:3779</code>. Applies to Linux-based managed nodes
+     * only.
      * </p>
      * 
-     * @return The Advisory ID of the patch. For example, <code>RHSA-2020:3779</code>. Applies to Linux-based instances
-     *         only.
+     * @return The Advisory ID of the patch. For example, <code>RHSA-2020:3779</code>. Applies to Linux-based managed
+     *         nodes only.
      */
 
     public java.util.List<String> getAdvisoryIds() {
@@ -771,12 +773,13 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Advisory ID of the patch. For example, <code>RHSA-2020:3779</code>. Applies to Linux-based instances only.
+     * The Advisory ID of the patch. For example, <code>RHSA-2020:3779</code>. Applies to Linux-based managed nodes
+     * only.
      * </p>
      * 
      * @param advisoryIds
-     *        The Advisory ID of the patch. For example, <code>RHSA-2020:3779</code>. Applies to Linux-based instances
-     *        only.
+     *        The Advisory ID of the patch. For example, <code>RHSA-2020:3779</code>. Applies to Linux-based managed
+     *        nodes only.
      */
 
     public void setAdvisoryIds(java.util.Collection<String> advisoryIds) {
@@ -790,7 +793,8 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Advisory ID of the patch. For example, <code>RHSA-2020:3779</code>. Applies to Linux-based instances only.
+     * The Advisory ID of the patch. For example, <code>RHSA-2020:3779</code>. Applies to Linux-based managed nodes
+     * only.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -799,8 +803,8 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param advisoryIds
-     *        The Advisory ID of the patch. For example, <code>RHSA-2020:3779</code>. Applies to Linux-based instances
-     *        only.
+     *        The Advisory ID of the patch. For example, <code>RHSA-2020:3779</code>. Applies to Linux-based managed
+     *        nodes only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -816,12 +820,13 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Advisory ID of the patch. For example, <code>RHSA-2020:3779</code>. Applies to Linux-based instances only.
+     * The Advisory ID of the patch. For example, <code>RHSA-2020:3779</code>. Applies to Linux-based managed nodes
+     * only.
      * </p>
      * 
      * @param advisoryIds
-     *        The Advisory ID of the patch. For example, <code>RHSA-2020:3779</code>. Applies to Linux-based instances
-     *        only.
+     *        The Advisory ID of the patch. For example, <code>RHSA-2020:3779</code>. Applies to Linux-based managed
+     *        nodes only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -832,10 +837,11 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Bugzilla ID of the patch. For example, <code>1600646</code>. Applies to Linux-based instances only.
+     * The Bugzilla ID of the patch. For example, <code>1600646</code>. Applies to Linux-based managed nodes only.
      * </p>
      * 
-     * @return The Bugzilla ID of the patch. For example, <code>1600646</code>. Applies to Linux-based instances only.
+     * @return The Bugzilla ID of the patch. For example, <code>1600646</code>. Applies to Linux-based managed nodes
+     *         only.
      */
 
     public java.util.List<String> getBugzillaIds() {
@@ -847,11 +853,12 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Bugzilla ID of the patch. For example, <code>1600646</code>. Applies to Linux-based instances only.
+     * The Bugzilla ID of the patch. For example, <code>1600646</code>. Applies to Linux-based managed nodes only.
      * </p>
      * 
      * @param bugzillaIds
-     *        The Bugzilla ID of the patch. For example, <code>1600646</code>. Applies to Linux-based instances only.
+     *        The Bugzilla ID of the patch. For example, <code>1600646</code>. Applies to Linux-based managed nodes
+     *        only.
      */
 
     public void setBugzillaIds(java.util.Collection<String> bugzillaIds) {
@@ -865,7 +872,7 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Bugzilla ID of the patch. For example, <code>1600646</code>. Applies to Linux-based instances only.
+     * The Bugzilla ID of the patch. For example, <code>1600646</code>. Applies to Linux-based managed nodes only.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -874,7 +881,8 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param bugzillaIds
-     *        The Bugzilla ID of the patch. For example, <code>1600646</code>. Applies to Linux-based instances only.
+     *        The Bugzilla ID of the patch. For example, <code>1600646</code>. Applies to Linux-based managed nodes
+     *        only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -890,11 +898,12 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Bugzilla ID of the patch. For example, <code>1600646</code>. Applies to Linux-based instances only.
+     * The Bugzilla ID of the patch. For example, <code>1600646</code>. Applies to Linux-based managed nodes only.
      * </p>
      * 
      * @param bugzillaIds
-     *        The Bugzilla ID of the patch. For example, <code>1600646</code>. Applies to Linux-based instances only.
+     *        The Bugzilla ID of the patch. For example, <code>1600646</code>. Applies to Linux-based managed nodes
+     *        only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -906,11 +915,11 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Common Vulnerabilities and Exposures (CVE) ID of the patch. For example, <code>CVE-2011-3192</code>. Applies
-     * to Linux-based instances only.
+     * to Linux-based managed nodes only.
      * </p>
      * 
      * @return The Common Vulnerabilities and Exposures (CVE) ID of the patch. For example, <code>CVE-2011-3192</code>.
-     *         Applies to Linux-based instances only.
+     *         Applies to Linux-based managed nodes only.
      */
 
     public java.util.List<String> getCVEIds() {
@@ -923,12 +932,12 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Common Vulnerabilities and Exposures (CVE) ID of the patch. For example, <code>CVE-2011-3192</code>. Applies
-     * to Linux-based instances only.
+     * to Linux-based managed nodes only.
      * </p>
      * 
      * @param cVEIds
      *        The Common Vulnerabilities and Exposures (CVE) ID of the patch. For example, <code>CVE-2011-3192</code>.
-     *        Applies to Linux-based instances only.
+     *        Applies to Linux-based managed nodes only.
      */
 
     public void setCVEIds(java.util.Collection<String> cVEIds) {
@@ -943,7 +952,7 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Common Vulnerabilities and Exposures (CVE) ID of the patch. For example, <code>CVE-2011-3192</code>. Applies
-     * to Linux-based instances only.
+     * to Linux-based managed nodes only.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -953,7 +962,7 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param cVEIds
      *        The Common Vulnerabilities and Exposures (CVE) ID of the patch. For example, <code>CVE-2011-3192</code>.
-     *        Applies to Linux-based instances only.
+     *        Applies to Linux-based managed nodes only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -970,12 +979,12 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Common Vulnerabilities and Exposures (CVE) ID of the patch. For example, <code>CVE-2011-3192</code>. Applies
-     * to Linux-based instances only.
+     * to Linux-based managed nodes only.
      * </p>
      * 
      * @param cVEIds
      *        The Common Vulnerabilities and Exposures (CVE) ID of the patch. For example, <code>CVE-2011-3192</code>.
-     *        Applies to Linux-based instances only.
+     *        Applies to Linux-based managed nodes only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -986,11 +995,11 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the patch. Applies to Linux-based instances only.
+     * The name of the patch. Applies to Linux-based managed nodes only.
      * </p>
      * 
      * @param name
-     *        The name of the patch. Applies to Linux-based instances only.
+     *        The name of the patch. Applies to Linux-based managed nodes only.
      */
 
     public void setName(String name) {
@@ -999,10 +1008,10 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the patch. Applies to Linux-based instances only.
+     * The name of the patch. Applies to Linux-based managed nodes only.
      * </p>
      * 
-     * @return The name of the patch. Applies to Linux-based instances only.
+     * @return The name of the patch. Applies to Linux-based managed nodes only.
      */
 
     public String getName() {
@@ -1011,11 +1020,11 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the patch. Applies to Linux-based instances only.
+     * The name of the patch. Applies to Linux-based managed nodes only.
      * </p>
      * 
      * @param name
-     *        The name of the patch. Applies to Linux-based instances only.
+     *        The name of the patch. Applies to Linux-based managed nodes only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1027,12 +1036,12 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The epoch of the patch. For example in <code>pkg-example-EE-20180914-2.2.amzn1.noarch</code>, the epoch value is
-     * <code>20180914-2</code>. Applies to Linux-based instances only.
+     * <code>20180914-2</code>. Applies to Linux-based managed nodes only.
      * </p>
      * 
      * @param epoch
      *        The epoch of the patch. For example in <code>pkg-example-EE-20180914-2.2.amzn1.noarch</code>, the epoch
-     *        value is <code>20180914-2</code>. Applies to Linux-based instances only.
+     *        value is <code>20180914-2</code>. Applies to Linux-based managed nodes only.
      */
 
     public void setEpoch(Integer epoch) {
@@ -1042,11 +1051,11 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The epoch of the patch. For example in <code>pkg-example-EE-20180914-2.2.amzn1.noarch</code>, the epoch value is
-     * <code>20180914-2</code>. Applies to Linux-based instances only.
+     * <code>20180914-2</code>. Applies to Linux-based managed nodes only.
      * </p>
      * 
      * @return The epoch of the patch. For example in <code>pkg-example-EE-20180914-2.2.amzn1.noarch</code>, the epoch
-     *         value is <code>20180914-2</code>. Applies to Linux-based instances only.
+     *         value is <code>20180914-2</code>. Applies to Linux-based managed nodes only.
      */
 
     public Integer getEpoch() {
@@ -1056,12 +1065,12 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The epoch of the patch. For example in <code>pkg-example-EE-20180914-2.2.amzn1.noarch</code>, the epoch value is
-     * <code>20180914-2</code>. Applies to Linux-based instances only.
+     * <code>20180914-2</code>. Applies to Linux-based managed nodes only.
      * </p>
      * 
      * @param epoch
      *        The epoch of the patch. For example in <code>pkg-example-EE-20180914-2.2.amzn1.noarch</code>, the epoch
-     *        value is <code>20180914-2</code>. Applies to Linux-based instances only.
+     *        value is <code>20180914-2</code>. Applies to Linux-based managed nodes only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1073,12 +1082,12 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The version number of the patch. For example, in <code>example-pkg-1.710.10-2.7.abcd.x86_64</code>, the version
-     * number is indicated by <code>-1</code>. Applies to Linux-based instances only.
+     * number is indicated by <code>-1</code>. Applies to Linux-based managed nodes only.
      * </p>
      * 
      * @param version
      *        The version number of the patch. For example, in <code>example-pkg-1.710.10-2.7.abcd.x86_64</code>, the
-     *        version number is indicated by <code>-1</code>. Applies to Linux-based instances only.
+     *        version number is indicated by <code>-1</code>. Applies to Linux-based managed nodes only.
      */
 
     public void setVersion(String version) {
@@ -1088,11 +1097,11 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The version number of the patch. For example, in <code>example-pkg-1.710.10-2.7.abcd.x86_64</code>, the version
-     * number is indicated by <code>-1</code>. Applies to Linux-based instances only.
+     * number is indicated by <code>-1</code>. Applies to Linux-based managed nodes only.
      * </p>
      * 
      * @return The version number of the patch. For example, in <code>example-pkg-1.710.10-2.7.abcd.x86_64</code>, the
-     *         version number is indicated by <code>-1</code>. Applies to Linux-based instances only.
+     *         version number is indicated by <code>-1</code>. Applies to Linux-based managed nodes only.
      */
 
     public String getVersion() {
@@ -1102,12 +1111,12 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The version number of the patch. For example, in <code>example-pkg-1.710.10-2.7.abcd.x86_64</code>, the version
-     * number is indicated by <code>-1</code>. Applies to Linux-based instances only.
+     * number is indicated by <code>-1</code>. Applies to Linux-based managed nodes only.
      * </p>
      * 
      * @param version
      *        The version number of the patch. For example, in <code>example-pkg-1.710.10-2.7.abcd.x86_64</code>, the
-     *        version number is indicated by <code>-1</code>. Applies to Linux-based instances only.
+     *        version number is indicated by <code>-1</code>. Applies to Linux-based managed nodes only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1119,12 +1128,12 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The particular release of a patch. For example, in <code>pkg-example-EE-20180914-2.2.amzn1.noarch</code>, the
-     * release is <code>2.amaz1</code>. Applies to Linux-based instances only.
+     * release is <code>2.amaz1</code>. Applies to Linux-based managed nodes only.
      * </p>
      * 
      * @param release
      *        The particular release of a patch. For example, in <code>pkg-example-EE-20180914-2.2.amzn1.noarch</code>,
-     *        the release is <code>2.amaz1</code>. Applies to Linux-based instances only.
+     *        the release is <code>2.amaz1</code>. Applies to Linux-based managed nodes only.
      */
 
     public void setRelease(String release) {
@@ -1134,11 +1143,11 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The particular release of a patch. For example, in <code>pkg-example-EE-20180914-2.2.amzn1.noarch</code>, the
-     * release is <code>2.amaz1</code>. Applies to Linux-based instances only.
+     * release is <code>2.amaz1</code>. Applies to Linux-based managed nodes only.
      * </p>
      * 
      * @return The particular release of a patch. For example, in <code>pkg-example-EE-20180914-2.2.amzn1.noarch</code>,
-     *         the release is <code>2.amaz1</code>. Applies to Linux-based instances only.
+     *         the release is <code>2.amaz1</code>. Applies to Linux-based managed nodes only.
      */
 
     public String getRelease() {
@@ -1148,12 +1157,12 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The particular release of a patch. For example, in <code>pkg-example-EE-20180914-2.2.amzn1.noarch</code>, the
-     * release is <code>2.amaz1</code>. Applies to Linux-based instances only.
+     * release is <code>2.amaz1</code>. Applies to Linux-based managed nodes only.
      * </p>
      * 
      * @param release
      *        The particular release of a patch. For example, in <code>pkg-example-EE-20180914-2.2.amzn1.noarch</code>,
-     *        the release is <code>2.amaz1</code>. Applies to Linux-based instances only.
+     *        the release is <code>2.amaz1</code>. Applies to Linux-based managed nodes only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1165,12 +1174,12 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The architecture of the patch. For example, in <code>example-pkg-0.710.10-2.7.abcd.x86_64</code>, the
-     * architecture is indicated by <code>x86_64</code>. Applies to Linux-based instances only.
+     * architecture is indicated by <code>x86_64</code>. Applies to Linux-based managed nodes only.
      * </p>
      * 
      * @param arch
      *        The architecture of the patch. For example, in <code>example-pkg-0.710.10-2.7.abcd.x86_64</code>, the
-     *        architecture is indicated by <code>x86_64</code>. Applies to Linux-based instances only.
+     *        architecture is indicated by <code>x86_64</code>. Applies to Linux-based managed nodes only.
      */
 
     public void setArch(String arch) {
@@ -1180,11 +1189,11 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The architecture of the patch. For example, in <code>example-pkg-0.710.10-2.7.abcd.x86_64</code>, the
-     * architecture is indicated by <code>x86_64</code>. Applies to Linux-based instances only.
+     * architecture is indicated by <code>x86_64</code>. Applies to Linux-based managed nodes only.
      * </p>
      * 
      * @return The architecture of the patch. For example, in <code>example-pkg-0.710.10-2.7.abcd.x86_64</code>, the
-     *         architecture is indicated by <code>x86_64</code>. Applies to Linux-based instances only.
+     *         architecture is indicated by <code>x86_64</code>. Applies to Linux-based managed nodes only.
      */
 
     public String getArch() {
@@ -1194,12 +1203,12 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The architecture of the patch. For example, in <code>example-pkg-0.710.10-2.7.abcd.x86_64</code>, the
-     * architecture is indicated by <code>x86_64</code>. Applies to Linux-based instances only.
+     * architecture is indicated by <code>x86_64</code>. Applies to Linux-based managed nodes only.
      * </p>
      * 
      * @param arch
      *        The architecture of the patch. For example, in <code>example-pkg-0.710.10-2.7.abcd.x86_64</code>, the
-     *        architecture is indicated by <code>x86_64</code>. Applies to Linux-based instances only.
+     *        architecture is indicated by <code>x86_64</code>. Applies to Linux-based managed nodes only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1251,14 +1260,14 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The source patch repository for the operating system and version, such as <code>trusty-security</code> for Ubuntu
-     * Server 14.04 LTE and <code>focal-security</code> for Ubuntu Server 20.04 LTE. Applies to Linux-based instances
-     * only.
+     * Server 14.04 LTE and <code>focal-security</code> for Ubuntu Server 20.04 LTE. Applies to Linux-based managed
+     * nodes only.
      * </p>
      * 
      * @param repository
      *        The source patch repository for the operating system and version, such as <code>trusty-security</code> for
      *        Ubuntu Server 14.04 LTE and <code>focal-security</code> for Ubuntu Server 20.04 LTE. Applies to
-     *        Linux-based instances only.
+     *        Linux-based managed nodes only.
      */
 
     public void setRepository(String repository) {
@@ -1268,13 +1277,13 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The source patch repository for the operating system and version, such as <code>trusty-security</code> for Ubuntu
-     * Server 14.04 LTE and <code>focal-security</code> for Ubuntu Server 20.04 LTE. Applies to Linux-based instances
-     * only.
+     * Server 14.04 LTE and <code>focal-security</code> for Ubuntu Server 20.04 LTE. Applies to Linux-based managed
+     * nodes only.
      * </p>
      * 
      * @return The source patch repository for the operating system and version, such as <code>trusty-security</code>
      *         for Ubuntu Server 14.04 LTE and <code>focal-security</code> for Ubuntu Server 20.04 LTE. Applies to
-     *         Linux-based instances only.
+     *         Linux-based managed nodes only.
      */
 
     public String getRepository() {
@@ -1284,14 +1293,14 @@ public class Patch implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The source patch repository for the operating system and version, such as <code>trusty-security</code> for Ubuntu
-     * Server 14.04 LTE and <code>focal-security</code> for Ubuntu Server 20.04 LTE. Applies to Linux-based instances
-     * only.
+     * Server 14.04 LTE and <code>focal-security</code> for Ubuntu Server 20.04 LTE. Applies to Linux-based managed
+     * nodes only.
      * </p>
      * 
      * @param repository
      *        The source patch repository for the operating system and version, such as <code>trusty-security</code> for
      *        Ubuntu Server 14.04 LTE and <code>focal-security</code> for Ubuntu Server 20.04 LTE. Applies to
-     *        Linux-based instances only.
+     *        Linux-based managed nodes only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

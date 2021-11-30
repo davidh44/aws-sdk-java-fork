@@ -37,6 +37,12 @@ public class ImprovementSummary implements Serializable, Cloneable, StructuredPo
     private String risk;
 
     private String improvementPlanUrl;
+    /**
+     * <p>
+     * The improvement plan details.
+     * </p>
+     */
+    private java.util.List<ChoiceImprovementPlan> improvementPlans;
 
     /**
      * @param questionId
@@ -183,6 +189,76 @@ public class ImprovementSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The improvement plan details.
+     * </p>
+     * 
+     * @return The improvement plan details.
+     */
+
+    public java.util.List<ChoiceImprovementPlan> getImprovementPlans() {
+        return improvementPlans;
+    }
+
+    /**
+     * <p>
+     * The improvement plan details.
+     * </p>
+     * 
+     * @param improvementPlans
+     *        The improvement plan details.
+     */
+
+    public void setImprovementPlans(java.util.Collection<ChoiceImprovementPlan> improvementPlans) {
+        if (improvementPlans == null) {
+            this.improvementPlans = null;
+            return;
+        }
+
+        this.improvementPlans = new java.util.ArrayList<ChoiceImprovementPlan>(improvementPlans);
+    }
+
+    /**
+     * <p>
+     * The improvement plan details.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setImprovementPlans(java.util.Collection)} or {@link #withImprovementPlans(java.util.Collection)} if you
+     * want to override the existing values.
+     * </p>
+     * 
+     * @param improvementPlans
+     *        The improvement plan details.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImprovementSummary withImprovementPlans(ChoiceImprovementPlan... improvementPlans) {
+        if (this.improvementPlans == null) {
+            setImprovementPlans(new java.util.ArrayList<ChoiceImprovementPlan>(improvementPlans.length));
+        }
+        for (ChoiceImprovementPlan ele : improvementPlans) {
+            this.improvementPlans.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The improvement plan details.
+     * </p>
+     * 
+     * @param improvementPlans
+     *        The improvement plan details.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImprovementSummary withImprovementPlans(java.util.Collection<ChoiceImprovementPlan> improvementPlans) {
+        setImprovementPlans(improvementPlans);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -203,7 +279,9 @@ public class ImprovementSummary implements Serializable, Cloneable, StructuredPo
         if (getRisk() != null)
             sb.append("Risk: ").append(getRisk()).append(",");
         if (getImprovementPlanUrl() != null)
-            sb.append("ImprovementPlanUrl: ").append(getImprovementPlanUrl());
+            sb.append("ImprovementPlanUrl: ").append(getImprovementPlanUrl()).append(",");
+        if (getImprovementPlans() != null)
+            sb.append("ImprovementPlans: ").append(getImprovementPlans());
         sb.append("}");
         return sb.toString();
     }
@@ -238,6 +316,10 @@ public class ImprovementSummary implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getImprovementPlanUrl() != null && other.getImprovementPlanUrl().equals(this.getImprovementPlanUrl()) == false)
             return false;
+        if (other.getImprovementPlans() == null ^ this.getImprovementPlans() == null)
+            return false;
+        if (other.getImprovementPlans() != null && other.getImprovementPlans().equals(this.getImprovementPlans()) == false)
+            return false;
         return true;
     }
 
@@ -251,6 +333,7 @@ public class ImprovementSummary implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getQuestionTitle() == null) ? 0 : getQuestionTitle().hashCode());
         hashCode = prime * hashCode + ((getRisk() == null) ? 0 : getRisk().hashCode());
         hashCode = prime * hashCode + ((getImprovementPlanUrl() == null) ? 0 : getImprovementPlanUrl().hashCode());
+        hashCode = prime * hashCode + ((getImprovementPlans() == null) ? 0 : getImprovementPlans().hashCode());
         return hashCode;
     }
 

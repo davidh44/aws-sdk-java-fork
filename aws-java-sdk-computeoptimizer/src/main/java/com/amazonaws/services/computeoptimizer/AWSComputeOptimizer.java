@@ -51,6 +51,42 @@ public interface AWSComputeOptimizer {
 
     /**
      * <p>
+     * Deletes a recommendation preference, such as enhanced infrastructure metrics.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html">Activating
+     * enhanced infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
+     * </p>
+     * 
+     * @param deleteRecommendationPreferencesRequest
+     * @return Result of the DeleteRecommendationPreferences operation returned by the service.
+     * @throws OptInRequiredException
+     *         The account is not opted in to Compute Optimizer.
+     * @throws InternalServerException
+     *         An internal error has occurred. Try your call again.
+     * @throws ServiceUnavailableException
+     *         The request has failed due to a temporary failure of the server.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws InvalidParameterValueException
+     *         The value supplied for the input parameter is out of range or not valid.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws MissingAuthenticationTokenException
+     *         The request must contain either a valid (registered) Amazon Web Services access key ID or X.509
+     *         certificate.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @sample AWSComputeOptimizer.DeleteRecommendationPreferences
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/DeleteRecommendationPreferences"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteRecommendationPreferencesResult deleteRecommendationPreferences(DeleteRecommendationPreferencesRequest deleteRecommendationPreferencesRequest);
+
+    /**
+     * <p>
      * Describes recommendation export jobs created in the last seven days.
      * </p>
      * <p>
@@ -403,6 +439,45 @@ public interface AWSComputeOptimizer {
 
     /**
      * <p>
+     * Returns the recommendation preferences that are in effect for a given resource, such as enhanced infrastructure
+     * metrics. Considers all applicable preferences that you might have set at the resource, account, and organization
+     * level.
+     * </p>
+     * <p>
+     * When you create a recommendation preference, you can set its status to <code>Active</code> or
+     * <code>Inactive</code>. Use this action to view the recommendation preferences that are in effect, or
+     * <code>Active</code>.
+     * </p>
+     * 
+     * @param getEffectiveRecommendationPreferencesRequest
+     * @return Result of the GetEffectiveRecommendationPreferences operation returned by the service.
+     * @throws OptInRequiredException
+     *         The account is not opted in to Compute Optimizer.
+     * @throws InternalServerException
+     *         An internal error has occurred. Try your call again.
+     * @throws ServiceUnavailableException
+     *         The request has failed due to a temporary failure of the server.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws InvalidParameterValueException
+     *         The value supplied for the input parameter is out of range or not valid.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws MissingAuthenticationTokenException
+     *         The request must contain either a valid (registered) Amazon Web Services access key ID or X.509
+     *         certificate.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @sample AWSComputeOptimizer.GetEffectiveRecommendationPreferences
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/GetEffectiveRecommendationPreferences"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetEffectiveRecommendationPreferencesResult getEffectiveRecommendationPreferences(
+            GetEffectiveRecommendationPreferencesRequest getEffectiveRecommendationPreferencesRequest);
+
+    /**
+     * <p>
      * Returns the enrollment (opt in) status of an account to the Compute Optimizer service.
      * </p>
      * <p>
@@ -503,6 +578,46 @@ public interface AWSComputeOptimizer {
 
     /**
      * <p>
+     * Returns existing recommendation preferences, such as enhanced infrastructure metrics.
+     * </p>
+     * <p>
+     * Use the <code>scope</code> parameter to specify which preferences to return. You can specify to return
+     * preferences for an organization, a specific account ID, or a specific EC2 instance or Auto Scaling group Amazon
+     * Resource Name (ARN).
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html">Activating
+     * enhanced infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
+     * </p>
+     * 
+     * @param getRecommendationPreferencesRequest
+     * @return Result of the GetRecommendationPreferences operation returned by the service.
+     * @throws OptInRequiredException
+     *         The account is not opted in to Compute Optimizer.
+     * @throws InternalServerException
+     *         An internal error has occurred. Try your call again.
+     * @throws ServiceUnavailableException
+     *         The request has failed due to a temporary failure of the server.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws InvalidParameterValueException
+     *         The value supplied for the input parameter is out of range or not valid.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws MissingAuthenticationTokenException
+     *         The request must contain either a valid (registered) Amazon Web Services access key ID or X.509
+     *         certificate.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @sample AWSComputeOptimizer.GetRecommendationPreferences
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/GetRecommendationPreferences"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetRecommendationPreferencesResult getRecommendationPreferences(GetRecommendationPreferencesRequest getRecommendationPreferencesRequest);
+
+    /**
+     * <p>
      * Returns the optimization findings for an account.
      * </p>
      * <p>
@@ -554,6 +669,42 @@ public interface AWSComputeOptimizer {
      *      target="_top">AWS API Documentation</a>
      */
     GetRecommendationSummariesResult getRecommendationSummaries(GetRecommendationSummariesRequest getRecommendationSummariesRequest);
+
+    /**
+     * <p>
+     * Creates a new recommendation preference or updates an existing recommendation preference, such as enhanced
+     * infrastructure metrics.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html">Activating
+     * enhanced infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
+     * </p>
+     * 
+     * @param putRecommendationPreferencesRequest
+     * @return Result of the PutRecommendationPreferences operation returned by the service.
+     * @throws OptInRequiredException
+     *         The account is not opted in to Compute Optimizer.
+     * @throws InternalServerException
+     *         An internal error has occurred. Try your call again.
+     * @throws ServiceUnavailableException
+     *         The request has failed due to a temporary failure of the server.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws InvalidParameterValueException
+     *         The value supplied for the input parameter is out of range or not valid.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws MissingAuthenticationTokenException
+     *         The request must contain either a valid (registered) Amazon Web Services access key ID or X.509
+     *         certificate.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @sample AWSComputeOptimizer.PutRecommendationPreferences
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/PutRecommendationPreferences"
+     *      target="_top">AWS API Documentation</a>
+     */
+    PutRecommendationPreferencesResult putRecommendationPreferences(PutRecommendationPreferencesRequest putRecommendationPreferencesRequest);
 
     /**
      * <p>

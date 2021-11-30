@@ -102,6 +102,15 @@ public class InstanceRecommendationJsonUnmarshaller implements Unmarshaller<Inst
                     context.nextToken();
                     instanceRecommendation.setLastRefreshTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("currentPerformanceRisk", targetDepth)) {
+                    context.nextToken();
+                    instanceRecommendation.setCurrentPerformanceRisk(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("effectiveRecommendationPreferences", targetDepth)) {
+                    context.nextToken();
+                    instanceRecommendation.setEffectiveRecommendationPreferences(EffectiveRecommendationPreferencesJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

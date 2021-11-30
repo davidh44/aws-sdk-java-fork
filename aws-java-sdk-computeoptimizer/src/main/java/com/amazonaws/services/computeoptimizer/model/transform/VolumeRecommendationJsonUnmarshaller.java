@@ -85,6 +85,10 @@ public class VolumeRecommendationJsonUnmarshaller implements Unmarshaller<Volume
                     context.nextToken();
                     volumeRecommendation.setLastRefreshTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("currentPerformanceRisk", targetDepth)) {
+                    context.nextToken();
+                    volumeRecommendation.setCurrentPerformanceRisk(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

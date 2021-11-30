@@ -27,14 +27,26 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class LensSummaryMarshaller {
 
+    private static final MarshallingInfo<String> LENSARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("LensArn").build();
     private static final MarshallingInfo<String> LENSALIAS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("LensAlias").build();
-    private static final MarshallingInfo<String> LENSVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LensVersion").build();
     private static final MarshallingInfo<String> LENSNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("LensName").build();
+    private static final MarshallingInfo<String> LENSTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("LensType").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
+    private static final MarshallingInfo<java.util.Date> CREATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreatedAt").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UpdatedAt").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<String> LENSVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LensVersion").build();
+    private static final MarshallingInfo<String> OWNER_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Owner").build();
+    private static final MarshallingInfo<String> LENSSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LensStatus").build();
 
     private static final LensSummaryMarshaller instance = new LensSummaryMarshaller();
 
@@ -52,10 +64,16 @@ public class LensSummaryMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(lensSummary.getLensArn(), LENSARN_BINDING);
             protocolMarshaller.marshall(lensSummary.getLensAlias(), LENSALIAS_BINDING);
-            protocolMarshaller.marshall(lensSummary.getLensVersion(), LENSVERSION_BINDING);
             protocolMarshaller.marshall(lensSummary.getLensName(), LENSNAME_BINDING);
+            protocolMarshaller.marshall(lensSummary.getLensType(), LENSTYPE_BINDING);
             protocolMarshaller.marshall(lensSummary.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(lensSummary.getCreatedAt(), CREATEDAT_BINDING);
+            protocolMarshaller.marshall(lensSummary.getUpdatedAt(), UPDATEDAT_BINDING);
+            protocolMarshaller.marshall(lensSummary.getLensVersion(), LENSVERSION_BINDING);
+            protocolMarshaller.marshall(lensSummary.getOwner(), OWNER_BINDING);
+            protocolMarshaller.marshall(lensSummary.getLensStatus(), LENSSTATUS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

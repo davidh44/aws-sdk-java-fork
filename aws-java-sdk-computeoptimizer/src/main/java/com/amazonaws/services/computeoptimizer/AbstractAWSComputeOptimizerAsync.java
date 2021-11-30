@@ -28,6 +28,21 @@ public class AbstractAWSComputeOptimizerAsync extends AbstractAWSComputeOptimize
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteRecommendationPreferencesResult> deleteRecommendationPreferencesAsync(
+            DeleteRecommendationPreferencesRequest request) {
+
+        return deleteRecommendationPreferencesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteRecommendationPreferencesResult> deleteRecommendationPreferencesAsync(
+            DeleteRecommendationPreferencesRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteRecommendationPreferencesRequest, DeleteRecommendationPreferencesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeRecommendationExportJobsResult> describeRecommendationExportJobsAsync(
             DescribeRecommendationExportJobsRequest request) {
 
@@ -157,6 +172,21 @@ public class AbstractAWSComputeOptimizerAsync extends AbstractAWSComputeOptimize
     }
 
     @Override
+    public java.util.concurrent.Future<GetEffectiveRecommendationPreferencesResult> getEffectiveRecommendationPreferencesAsync(
+            GetEffectiveRecommendationPreferencesRequest request) {
+
+        return getEffectiveRecommendationPreferencesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEffectiveRecommendationPreferencesResult> getEffectiveRecommendationPreferencesAsync(
+            GetEffectiveRecommendationPreferencesRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetEffectiveRecommendationPreferencesRequest, GetEffectiveRecommendationPreferencesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetEnrollmentStatusResult> getEnrollmentStatusAsync(GetEnrollmentStatusRequest request) {
 
         return getEnrollmentStatusAsync(request, null);
@@ -200,6 +230,19 @@ public class AbstractAWSComputeOptimizerAsync extends AbstractAWSComputeOptimize
     }
 
     @Override
+    public java.util.concurrent.Future<GetRecommendationPreferencesResult> getRecommendationPreferencesAsync(GetRecommendationPreferencesRequest request) {
+
+        return getRecommendationPreferencesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRecommendationPreferencesResult> getRecommendationPreferencesAsync(GetRecommendationPreferencesRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetRecommendationPreferencesRequest, GetRecommendationPreferencesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetRecommendationSummariesResult> getRecommendationSummariesAsync(GetRecommendationSummariesRequest request) {
 
         return getRecommendationSummariesAsync(request, null);
@@ -208,6 +251,19 @@ public class AbstractAWSComputeOptimizerAsync extends AbstractAWSComputeOptimize
     @Override
     public java.util.concurrent.Future<GetRecommendationSummariesResult> getRecommendationSummariesAsync(GetRecommendationSummariesRequest request,
             com.amazonaws.handlers.AsyncHandler<GetRecommendationSummariesRequest, GetRecommendationSummariesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutRecommendationPreferencesResult> putRecommendationPreferencesAsync(PutRecommendationPreferencesRequest request) {
+
+        return putRecommendationPreferencesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutRecommendationPreferencesResult> putRecommendationPreferencesAsync(PutRecommendationPreferencesRequest request,
+            com.amazonaws.handlers.AsyncHandler<PutRecommendationPreferencesRequest, PutRecommendationPreferencesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

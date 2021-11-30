@@ -35,10 +35,16 @@ public class ShareInvitationSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SharedWith").build();
     private static final MarshallingInfo<String> PERMISSIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PermissionType").build();
+    private static final MarshallingInfo<String> SHARERESOURCETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ShareResourceType").build();
     private static final MarshallingInfo<String> WORKLOADNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WorkloadName").build();
     private static final MarshallingInfo<String> WORKLOADID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WorkloadId").build();
+    private static final MarshallingInfo<String> LENSNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("LensName").build();
+    private static final MarshallingInfo<String> LENSARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("LensArn").build();
 
     private static final ShareInvitationSummaryMarshaller instance = new ShareInvitationSummaryMarshaller();
 
@@ -60,8 +66,11 @@ public class ShareInvitationSummaryMarshaller {
             protocolMarshaller.marshall(shareInvitationSummary.getSharedBy(), SHAREDBY_BINDING);
             protocolMarshaller.marshall(shareInvitationSummary.getSharedWith(), SHAREDWITH_BINDING);
             protocolMarshaller.marshall(shareInvitationSummary.getPermissionType(), PERMISSIONTYPE_BINDING);
+            protocolMarshaller.marshall(shareInvitationSummary.getShareResourceType(), SHARERESOURCETYPE_BINDING);
             protocolMarshaller.marshall(shareInvitationSummary.getWorkloadName(), WORKLOADNAME_BINDING);
             protocolMarshaller.marshall(shareInvitationSummary.getWorkloadId(), WORKLOADID_BINDING);
+            protocolMarshaller.marshall(shareInvitationSummary.getLensName(), LENSNAME_BINDING);
+            protocolMarshaller.marshall(shareInvitationSummary.getLensArn(), LENSARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

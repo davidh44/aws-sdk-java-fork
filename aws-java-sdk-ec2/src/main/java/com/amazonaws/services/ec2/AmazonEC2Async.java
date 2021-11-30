@@ -12700,6 +12700,39 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Describes the storage tier status of one or more Amazon EBS snapshots.
+     * </p>
+     * 
+     * @param describeSnapshotTierStatusRequest
+     * @return A Java Future containing the result of the DescribeSnapshotTierStatus operation returned by the service.
+     * @sample AmazonEC2Async.DescribeSnapshotTierStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeSnapshotTierStatus" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeSnapshotTierStatusResult> describeSnapshotTierStatusAsync(
+            DescribeSnapshotTierStatusRequest describeSnapshotTierStatusRequest);
+
+    /**
+     * <p>
+     * Describes the storage tier status of one or more Amazon EBS snapshots.
+     * </p>
+     * 
+     * @param describeSnapshotTierStatusRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeSnapshotTierStatus operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.DescribeSnapshotTierStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeSnapshotTierStatus" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeSnapshotTierStatusResult> describeSnapshotTierStatusAsync(
+            DescribeSnapshotTierStatusRequest describeSnapshotTierStatusRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeSnapshotTierStatusRequest, DescribeSnapshotTierStatusResult> asyncHandler);
+
+    /**
+     * <p>
      * Describes the specified EBS snapshots available to you or all of the EBS snapshots available to you.
      * </p>
      * <p>
@@ -17844,6 +17877,39 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Lists one or more snapshots that are currently in the Recycle Bin.
+     * </p>
+     * 
+     * @param listSnapshotsInRecycleBinRequest
+     * @return A Java Future containing the result of the ListSnapshotsInRecycleBin operation returned by the service.
+     * @sample AmazonEC2Async.ListSnapshotsInRecycleBin
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ListSnapshotsInRecycleBin" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListSnapshotsInRecycleBinResult> listSnapshotsInRecycleBinAsync(
+            ListSnapshotsInRecycleBinRequest listSnapshotsInRecycleBinRequest);
+
+    /**
+     * <p>
+     * Lists one or more snapshots that are currently in the Recycle Bin.
+     * </p>
+     * 
+     * @param listSnapshotsInRecycleBinRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListSnapshotsInRecycleBin operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.ListSnapshotsInRecycleBin
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ListSnapshotsInRecycleBin" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListSnapshotsInRecycleBinResult> listSnapshotsInRecycleBinAsync(
+            ListSnapshotsInRecycleBinRequest listSnapshotsInRecycleBinRequest,
+            com.amazonaws.handlers.AsyncHandler<ListSnapshotsInRecycleBinRequest, ListSnapshotsInRecycleBinResult> asyncHandler);
+
+    /**
+     * <p>
      * Modifies an attribute of the specified Elastic IP address. For requirements, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#Using_Elastic_Addressing_Reverse_DNS"
      * >Using reverse DNS for email applications</a>.
@@ -19208,6 +19274,45 @@ public interface AmazonEC2Async extends AmazonEC2 {
      */
     java.util.concurrent.Future<ModifySnapshotAttributeResult> modifySnapshotAttributeAsync(ModifySnapshotAttributeRequest modifySnapshotAttributeRequest,
             com.amazonaws.handlers.AsyncHandler<ModifySnapshotAttributeRequest, ModifySnapshotAttributeResult> asyncHandler);
+
+    /**
+     * <p>
+     * Archives an Amazon EBS snapshot. When you archive a snapshot, it is converted to a full snapshot that includes
+     * all of the blocks of data that were written to the volume at the time the snapshot was created, and moved from
+     * the standard tier to the archive tier. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-archive.html">Archive Amazon EBS snapshots</a>
+     * in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param modifySnapshotTierRequest
+     * @return A Java Future containing the result of the ModifySnapshotTier operation returned by the service.
+     * @sample AmazonEC2Async.ModifySnapshotTier
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifySnapshotTier" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ModifySnapshotTierResult> modifySnapshotTierAsync(ModifySnapshotTierRequest modifySnapshotTierRequest);
+
+    /**
+     * <p>
+     * Archives an Amazon EBS snapshot. When you archive a snapshot, it is converted to a full snapshot that includes
+     * all of the blocks of data that were written to the volume at the time the snapshot was created, and moved from
+     * the standard tier to the archive tier. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-archive.html">Archive Amazon EBS snapshots</a>
+     * in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param modifySnapshotTierRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ModifySnapshotTier operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.ModifySnapshotTier
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifySnapshotTier" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ModifySnapshotTierResult> modifySnapshotTierAsync(ModifySnapshotTierRequest modifySnapshotTierRequest,
+            com.amazonaws.handlers.AsyncHandler<ModifySnapshotTierRequest, ModifySnapshotTierResult> asyncHandler);
 
     /**
      * <p>
@@ -22059,6 +22164,94 @@ public interface AmazonEC2Async extends AmazonEC2 {
     java.util.concurrent.Future<RestoreManagedPrefixListVersionResult> restoreManagedPrefixListVersionAsync(
             RestoreManagedPrefixListVersionRequest restoreManagedPrefixListVersionRequest,
             com.amazonaws.handlers.AsyncHandler<RestoreManagedPrefixListVersionRequest, RestoreManagedPrefixListVersionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Restores a snapshot from the Recycle Bin. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin-working-with-snaps.html#recycle-bin-restore-snaps"
+     * >Restore snapshots from the Recycle Bin</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param restoreSnapshotFromRecycleBinRequest
+     * @return A Java Future containing the result of the RestoreSnapshotFromRecycleBin operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.RestoreSnapshotFromRecycleBin
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RestoreSnapshotFromRecycleBin"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<RestoreSnapshotFromRecycleBinResult> restoreSnapshotFromRecycleBinAsync(
+            RestoreSnapshotFromRecycleBinRequest restoreSnapshotFromRecycleBinRequest);
+
+    /**
+     * <p>
+     * Restores a snapshot from the Recycle Bin. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin-working-with-snaps.html#recycle-bin-restore-snaps"
+     * >Restore snapshots from the Recycle Bin</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param restoreSnapshotFromRecycleBinRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the RestoreSnapshotFromRecycleBin operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.RestoreSnapshotFromRecycleBin
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RestoreSnapshotFromRecycleBin"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<RestoreSnapshotFromRecycleBinResult> restoreSnapshotFromRecycleBinAsync(
+            RestoreSnapshotFromRecycleBinRequest restoreSnapshotFromRecycleBinRequest,
+            com.amazonaws.handlers.AsyncHandler<RestoreSnapshotFromRecycleBinRequest, RestoreSnapshotFromRecycleBinResult> asyncHandler);
+
+    /**
+     * <p>
+     * Restores an archived Amazon EBS snapshot for use temporarily or permanently, or modifies the restore period or
+     * restore type for a snapshot that was previously temporarily restored.
+     * </p>
+     * <p>
+     * For more information see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/working-with-snapshot-archiving.html#restore-archived-snapshot"
+     * > Restore an archived snapshot</a> and <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/working-with-snapshot-archiving.html#modify-temp-restore-period"
+     * > modify the restore period or restore type for a temporarily restored snapshot</a> in the <i>Amazon Elastic
+     * Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param restoreSnapshotTierRequest
+     * @return A Java Future containing the result of the RestoreSnapshotTier operation returned by the service.
+     * @sample AmazonEC2Async.RestoreSnapshotTier
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RestoreSnapshotTier" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<RestoreSnapshotTierResult> restoreSnapshotTierAsync(RestoreSnapshotTierRequest restoreSnapshotTierRequest);
+
+    /**
+     * <p>
+     * Restores an archived Amazon EBS snapshot for use temporarily or permanently, or modifies the restore period or
+     * restore type for a snapshot that was previously temporarily restored.
+     * </p>
+     * <p>
+     * For more information see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/working-with-snapshot-archiving.html#restore-archived-snapshot"
+     * > Restore an archived snapshot</a> and <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/working-with-snapshot-archiving.html#modify-temp-restore-period"
+     * > modify the restore period or restore type for a temporarily restored snapshot</a> in the <i>Amazon Elastic
+     * Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param restoreSnapshotTierRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the RestoreSnapshotTier operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.RestoreSnapshotTier
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RestoreSnapshotTier" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<RestoreSnapshotTierResult> restoreSnapshotTierAsync(RestoreSnapshotTierRequest restoreSnapshotTierRequest,
+            com.amazonaws.handlers.AsyncHandler<RestoreSnapshotTierRequest, RestoreSnapshotTierResult> asyncHandler);
 
     /**
      * <p>

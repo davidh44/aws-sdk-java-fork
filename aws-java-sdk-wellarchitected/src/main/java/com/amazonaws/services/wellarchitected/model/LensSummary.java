@@ -28,7 +28,28 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class LensSummary implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The ARN of the lens.
+     * </p>
+     */
+    private String lensArn;
+
     private String lensAlias;
+
+    private String lensName;
+    /**
+     * <p>
+     * The type of the lens.
+     * </p>
+     */
+    private String lensType;
+
+    private String description;
+
+    private java.util.Date createdAt;
+
+    private java.util.Date updatedAt;
     /**
      * <p>
      * The version of the lens.
@@ -36,9 +57,53 @@ public class LensSummary implements Serializable, Cloneable, StructuredPojo {
      */
     private String lensVersion;
 
-    private String lensName;
+    private String owner;
+    /**
+     * <p>
+     * The status of the lens.
+     * </p>
+     */
+    private String lensStatus;
 
-    private String description;
+    /**
+     * <p>
+     * The ARN of the lens.
+     * </p>
+     * 
+     * @param lensArn
+     *        The ARN of the lens.
+     */
+
+    public void setLensArn(String lensArn) {
+        this.lensArn = lensArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the lens.
+     * </p>
+     * 
+     * @return The ARN of the lens.
+     */
+
+    public String getLensArn() {
+        return this.lensArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the lens.
+     * </p>
+     * 
+     * @param lensArn
+     *        The ARN of the lens.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LensSummary withLensArn(String lensArn) {
+        setLensArn(lensArn);
+        return this;
+    }
 
     /**
      * @param lensAlias
@@ -63,6 +128,169 @@ public class LensSummary implements Serializable, Cloneable, StructuredPojo {
 
     public LensSummary withLensAlias(String lensAlias) {
         setLensAlias(lensAlias);
+        return this;
+    }
+
+    /**
+     * @param lensName
+     */
+
+    public void setLensName(String lensName) {
+        this.lensName = lensName;
+    }
+
+    /**
+     * @return
+     */
+
+    public String getLensName() {
+        return this.lensName;
+    }
+
+    /**
+     * @param lensName
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LensSummary withLensName(String lensName) {
+        setLensName(lensName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of the lens.
+     * </p>
+     * 
+     * @param lensType
+     *        The type of the lens.
+     * @see LensType
+     */
+
+    public void setLensType(String lensType) {
+        this.lensType = lensType;
+    }
+
+    /**
+     * <p>
+     * The type of the lens.
+     * </p>
+     * 
+     * @return The type of the lens.
+     * @see LensType
+     */
+
+    public String getLensType() {
+        return this.lensType;
+    }
+
+    /**
+     * <p>
+     * The type of the lens.
+     * </p>
+     * 
+     * @param lensType
+     *        The type of the lens.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LensType
+     */
+
+    public LensSummary withLensType(String lensType) {
+        setLensType(lensType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of the lens.
+     * </p>
+     * 
+     * @param lensType
+     *        The type of the lens.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LensType
+     */
+
+    public LensSummary withLensType(LensType lensType) {
+        this.lensType = lensType.toString();
+        return this;
+    }
+
+    /**
+     * @param description
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * @return
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @param description
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LensSummary withDescription(String description) {
+        setDescription(description);
+        return this;
+    }
+
+    /**
+     * @param createdAt
+     */
+
+    public void setCreatedAt(java.util.Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    /**
+     * @return
+     */
+
+    public java.util.Date getCreatedAt() {
+        return this.createdAt;
+    }
+
+    /**
+     * @param createdAt
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LensSummary withCreatedAt(java.util.Date createdAt) {
+        setCreatedAt(createdAt);
+        return this;
+    }
+
+    /**
+     * @param updatedAt
+     */
+
+    public void setUpdatedAt(java.util.Date updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    /**
+     * @return
+     */
+
+    public java.util.Date getUpdatedAt() {
+        return this.updatedAt;
+    }
+
+    /**
+     * @param updatedAt
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LensSummary withUpdatedAt(java.util.Date updatedAt) {
+        setUpdatedAt(updatedAt);
         return this;
     }
 
@@ -107,54 +335,87 @@ public class LensSummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @param lensName
+     * @param owner
      */
 
-    public void setLensName(String lensName) {
-        this.lensName = lensName;
+    public void setOwner(String owner) {
+        this.owner = owner;
     }
 
     /**
      * @return
      */
 
-    public String getLensName() {
-        return this.lensName;
+    public String getOwner() {
+        return this.owner;
     }
 
     /**
-     * @param lensName
+     * @param owner
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public LensSummary withLensName(String lensName) {
-        setLensName(lensName);
+    public LensSummary withOwner(String owner) {
+        setOwner(owner);
         return this;
     }
 
     /**
-     * @param description
+     * <p>
+     * The status of the lens.
+     * </p>
+     * 
+     * @param lensStatus
+     *        The status of the lens.
+     * @see LensStatus
      */
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setLensStatus(String lensStatus) {
+        this.lensStatus = lensStatus;
     }
 
     /**
-     * @return
+     * <p>
+     * The status of the lens.
+     * </p>
+     * 
+     * @return The status of the lens.
+     * @see LensStatus
      */
 
-    public String getDescription() {
-        return this.description;
+    public String getLensStatus() {
+        return this.lensStatus;
     }
 
     /**
-     * @param description
+     * <p>
+     * The status of the lens.
+     * </p>
+     * 
+     * @param lensStatus
+     *        The status of the lens.
      * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LensStatus
      */
 
-    public LensSummary withDescription(String description) {
-        setDescription(description);
+    public LensSummary withLensStatus(String lensStatus) {
+        setLensStatus(lensStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The status of the lens.
+     * </p>
+     * 
+     * @param lensStatus
+     *        The status of the lens.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LensStatus
+     */
+
+    public LensSummary withLensStatus(LensStatus lensStatus) {
+        this.lensStatus = lensStatus.toString();
         return this;
     }
 
@@ -170,14 +431,26 @@ public class LensSummary implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getLensArn() != null)
+            sb.append("LensArn: ").append(getLensArn()).append(",");
         if (getLensAlias() != null)
             sb.append("LensAlias: ").append(getLensAlias()).append(",");
-        if (getLensVersion() != null)
-            sb.append("LensVersion: ").append(getLensVersion()).append(",");
         if (getLensName() != null)
             sb.append("LensName: ").append(getLensName()).append(",");
+        if (getLensType() != null)
+            sb.append("LensType: ").append(getLensType()).append(",");
         if (getDescription() != null)
-            sb.append("Description: ").append(getDescription());
+            sb.append("Description: ").append(getDescription()).append(",");
+        if (getCreatedAt() != null)
+            sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
+        if (getUpdatedAt() != null)
+            sb.append("UpdatedAt: ").append(getUpdatedAt()).append(",");
+        if (getLensVersion() != null)
+            sb.append("LensVersion: ").append(getLensVersion()).append(",");
+        if (getOwner() != null)
+            sb.append("Owner: ").append(getOwner()).append(",");
+        if (getLensStatus() != null)
+            sb.append("LensStatus: ").append(getLensStatus());
         sb.append("}");
         return sb.toString();
     }
@@ -192,21 +465,45 @@ public class LensSummary implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof LensSummary == false)
             return false;
         LensSummary other = (LensSummary) obj;
+        if (other.getLensArn() == null ^ this.getLensArn() == null)
+            return false;
+        if (other.getLensArn() != null && other.getLensArn().equals(this.getLensArn()) == false)
+            return false;
         if (other.getLensAlias() == null ^ this.getLensAlias() == null)
             return false;
         if (other.getLensAlias() != null && other.getLensAlias().equals(this.getLensAlias()) == false)
-            return false;
-        if (other.getLensVersion() == null ^ this.getLensVersion() == null)
-            return false;
-        if (other.getLensVersion() != null && other.getLensVersion().equals(this.getLensVersion()) == false)
             return false;
         if (other.getLensName() == null ^ this.getLensName() == null)
             return false;
         if (other.getLensName() != null && other.getLensName().equals(this.getLensName()) == false)
             return false;
+        if (other.getLensType() == null ^ this.getLensType() == null)
+            return false;
+        if (other.getLensType() != null && other.getLensType().equals(this.getLensType()) == false)
+            return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
+        if (other.getCreatedAt() == null ^ this.getCreatedAt() == null)
+            return false;
+        if (other.getCreatedAt() != null && other.getCreatedAt().equals(this.getCreatedAt()) == false)
+            return false;
+        if (other.getUpdatedAt() == null ^ this.getUpdatedAt() == null)
+            return false;
+        if (other.getUpdatedAt() != null && other.getUpdatedAt().equals(this.getUpdatedAt()) == false)
+            return false;
+        if (other.getLensVersion() == null ^ this.getLensVersion() == null)
+            return false;
+        if (other.getLensVersion() != null && other.getLensVersion().equals(this.getLensVersion()) == false)
+            return false;
+        if (other.getOwner() == null ^ this.getOwner() == null)
+            return false;
+        if (other.getOwner() != null && other.getOwner().equals(this.getOwner()) == false)
+            return false;
+        if (other.getLensStatus() == null ^ this.getLensStatus() == null)
+            return false;
+        if (other.getLensStatus() != null && other.getLensStatus().equals(this.getLensStatus()) == false)
             return false;
         return true;
     }
@@ -216,10 +513,16 @@ public class LensSummary implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getLensArn() == null) ? 0 : getLensArn().hashCode());
         hashCode = prime * hashCode + ((getLensAlias() == null) ? 0 : getLensAlias().hashCode());
-        hashCode = prime * hashCode + ((getLensVersion() == null) ? 0 : getLensVersion().hashCode());
         hashCode = prime * hashCode + ((getLensName() == null) ? 0 : getLensName().hashCode());
+        hashCode = prime * hashCode + ((getLensType() == null) ? 0 : getLensType().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
+        hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
+        hashCode = prime * hashCode + ((getLensVersion() == null) ? 0 : getLensVersion().hashCode());
+        hashCode = prime * hashCode + ((getOwner() == null) ? 0 : getOwner().hashCode());
+        hashCode = prime * hashCode + ((getLensStatus() == null) ? 0 : getLensStatus().hashCode());
         return hashCode;
     }
 

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about a Session Manager connection to an instance.
+ * Information about a Session Manager connection to a managed node.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/Session" target="_top">AWS API Documentation</a>
@@ -35,7 +35,7 @@ public class Session implements Serializable, Cloneable, StructuredPojo {
     private String sessionId;
     /**
      * <p>
-     * The instance that the Session Manager session connected to.
+     * The managed node that the Session Manager session connected to.
      * </p>
      */
     private String target;
@@ -137,11 +137,11 @@ public class Session implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The instance that the Session Manager session connected to.
+     * The managed node that the Session Manager session connected to.
      * </p>
      * 
      * @param target
-     *        The instance that the Session Manager session connected to.
+     *        The managed node that the Session Manager session connected to.
      */
 
     public void setTarget(String target) {
@@ -150,10 +150,10 @@ public class Session implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The instance that the Session Manager session connected to.
+     * The managed node that the Session Manager session connected to.
      * </p>
      * 
-     * @return The instance that the Session Manager session connected to.
+     * @return The managed node that the Session Manager session connected to.
      */
 
     public String getTarget() {
@@ -162,11 +162,11 @@ public class Session implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The instance that the Session Manager session connected to.
+     * The managed node that the Session Manager session connected to.
      * </p>
      * 
      * @param target
-     *        The instance that the Session Manager session connected to.
+     *        The managed node that the Session Manager session connected to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

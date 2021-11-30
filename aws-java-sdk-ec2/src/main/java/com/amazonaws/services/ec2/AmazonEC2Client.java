@@ -16863,6 +16863,62 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Describes the storage tier status of one or more Amazon EBS snapshots.
+     * </p>
+     * 
+     * @param describeSnapshotTierStatusRequest
+     * @return Result of the DescribeSnapshotTierStatus operation returned by the service.
+     * @sample AmazonEC2.DescribeSnapshotTierStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeSnapshotTierStatus" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DescribeSnapshotTierStatusResult describeSnapshotTierStatus(DescribeSnapshotTierStatusRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeSnapshotTierStatus(request);
+    }
+
+    @SdkInternalApi
+    final DescribeSnapshotTierStatusResult executeDescribeSnapshotTierStatus(DescribeSnapshotTierStatusRequest describeSnapshotTierStatusRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeSnapshotTierStatusRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeSnapshotTierStatusRequest> request = null;
+        Response<DescribeSnapshotTierStatusResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeSnapshotTierStatusRequestMarshaller().marshall(super.beforeMarshalling(describeSnapshotTierStatusRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeSnapshotTierStatus");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeSnapshotTierStatusResult> responseHandler = new StaxResponseHandler<DescribeSnapshotTierStatusResult>(
+                    new DescribeSnapshotTierStatusResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Describes the specified EBS snapshots available to you or all of the EBS snapshots available to you.
      * </p>
      * <p>
@@ -23822,6 +23878,62 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Lists one or more snapshots that are currently in the Recycle Bin.
+     * </p>
+     * 
+     * @param listSnapshotsInRecycleBinRequest
+     * @return Result of the ListSnapshotsInRecycleBin operation returned by the service.
+     * @sample AmazonEC2.ListSnapshotsInRecycleBin
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ListSnapshotsInRecycleBin" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListSnapshotsInRecycleBinResult listSnapshotsInRecycleBin(ListSnapshotsInRecycleBinRequest request) {
+        request = beforeClientExecution(request);
+        return executeListSnapshotsInRecycleBin(request);
+    }
+
+    @SdkInternalApi
+    final ListSnapshotsInRecycleBinResult executeListSnapshotsInRecycleBin(ListSnapshotsInRecycleBinRequest listSnapshotsInRecycleBinRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listSnapshotsInRecycleBinRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListSnapshotsInRecycleBinRequest> request = null;
+        Response<ListSnapshotsInRecycleBinResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListSnapshotsInRecycleBinRequestMarshaller().marshall(super.beforeMarshalling(listSnapshotsInRecycleBinRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListSnapshotsInRecycleBin");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<ListSnapshotsInRecycleBinResult> responseHandler = new StaxResponseHandler<ListSnapshotsInRecycleBinResult>(
+                    new ListSnapshotsInRecycleBinResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Modifies an attribute of the specified Elastic IP address. For requirements, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#Using_Elastic_Addressing_Reverse_DNS"
      * >Using reverse DNS for email applications</a>.
@@ -25572,6 +25684,66 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<ModifySnapshotAttributeResult> responseHandler = new StaxResponseHandler<ModifySnapshotAttributeResult>(
                     new ModifySnapshotAttributeResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Archives an Amazon EBS snapshot. When you archive a snapshot, it is converted to a full snapshot that includes
+     * all of the blocks of data that were written to the volume at the time the snapshot was created, and moved from
+     * the standard tier to the archive tier. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-archive.html">Archive Amazon EBS snapshots</a>
+     * in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param modifySnapshotTierRequest
+     * @return Result of the ModifySnapshotTier operation returned by the service.
+     * @sample AmazonEC2.ModifySnapshotTier
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifySnapshotTier" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ModifySnapshotTierResult modifySnapshotTier(ModifySnapshotTierRequest request) {
+        request = beforeClientExecution(request);
+        return executeModifySnapshotTier(request);
+    }
+
+    @SdkInternalApi
+    final ModifySnapshotTierResult executeModifySnapshotTier(ModifySnapshotTierRequest modifySnapshotTierRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(modifySnapshotTierRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ModifySnapshotTierRequest> request = null;
+        Response<ModifySnapshotTierResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ModifySnapshotTierRequestMarshaller().marshall(super.beforeMarshalling(modifySnapshotTierRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ModifySnapshotTier");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<ModifySnapshotTierResult> responseHandler = new StaxResponseHandler<ModifySnapshotTierResult>(
+                    new ModifySnapshotTierResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -29285,6 +29457,129 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<RestoreManagedPrefixListVersionResult> responseHandler = new StaxResponseHandler<RestoreManagedPrefixListVersionResult>(
                     new RestoreManagedPrefixListVersionResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Restores a snapshot from the Recycle Bin. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin-working-with-snaps.html#recycle-bin-restore-snaps"
+     * >Restore snapshots from the Recycle Bin</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param restoreSnapshotFromRecycleBinRequest
+     * @return Result of the RestoreSnapshotFromRecycleBin operation returned by the service.
+     * @sample AmazonEC2.RestoreSnapshotFromRecycleBin
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RestoreSnapshotFromRecycleBin"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public RestoreSnapshotFromRecycleBinResult restoreSnapshotFromRecycleBin(RestoreSnapshotFromRecycleBinRequest request) {
+        request = beforeClientExecution(request);
+        return executeRestoreSnapshotFromRecycleBin(request);
+    }
+
+    @SdkInternalApi
+    final RestoreSnapshotFromRecycleBinResult executeRestoreSnapshotFromRecycleBin(RestoreSnapshotFromRecycleBinRequest restoreSnapshotFromRecycleBinRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(restoreSnapshotFromRecycleBinRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<RestoreSnapshotFromRecycleBinRequest> request = null;
+        Response<RestoreSnapshotFromRecycleBinResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new RestoreSnapshotFromRecycleBinRequestMarshaller().marshall(super.beforeMarshalling(restoreSnapshotFromRecycleBinRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "RestoreSnapshotFromRecycleBin");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<RestoreSnapshotFromRecycleBinResult> responseHandler = new StaxResponseHandler<RestoreSnapshotFromRecycleBinResult>(
+                    new RestoreSnapshotFromRecycleBinResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Restores an archived Amazon EBS snapshot for use temporarily or permanently, or modifies the restore period or
+     * restore type for a snapshot that was previously temporarily restored.
+     * </p>
+     * <p>
+     * For more information see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/working-with-snapshot-archiving.html#restore-archived-snapshot"
+     * > Restore an archived snapshot</a> and <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/working-with-snapshot-archiving.html#modify-temp-restore-period"
+     * > modify the restore period or restore type for a temporarily restored snapshot</a> in the <i>Amazon Elastic
+     * Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param restoreSnapshotTierRequest
+     * @return Result of the RestoreSnapshotTier operation returned by the service.
+     * @sample AmazonEC2.RestoreSnapshotTier
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RestoreSnapshotTier" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public RestoreSnapshotTierResult restoreSnapshotTier(RestoreSnapshotTierRequest request) {
+        request = beforeClientExecution(request);
+        return executeRestoreSnapshotTier(request);
+    }
+
+    @SdkInternalApi
+    final RestoreSnapshotTierResult executeRestoreSnapshotTier(RestoreSnapshotTierRequest restoreSnapshotTierRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(restoreSnapshotTierRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<RestoreSnapshotTierRequest> request = null;
+        Response<RestoreSnapshotTierResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new RestoreSnapshotTierRequestMarshaller().marshall(super.beforeMarshalling(restoreSnapshotTierRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "RestoreSnapshotTier");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<RestoreSnapshotTierResult> responseHandler = new StaxResponseHandler<RestoreSnapshotTierResult>(
+                    new RestoreSnapshotTierResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 

@@ -68,7 +68,7 @@ public class GetPatchBaselineResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * Indicates whether the list of approved patches includes non-security updates that should be applied to the
-     * instances. The default value is <code>false</code>. Applies to Linux instances only.
+     * managed nodes. The default value is <code>false</code>. Applies to Linux managed nodes only.
      * </p>
      */
     private Boolean approvedPatchesEnableNonSecurity;
@@ -112,8 +112,8 @@ public class GetPatchBaselineResult extends com.amazonaws.AmazonWebServiceResult
     private String description;
     /**
      * <p>
-     * Information about the patches to use to update the instances, including target operating systems and source
-     * repositories. Applies to Linux instances only.
+     * Information about the patches to use to update the managed nodes, including target operating systems and source
+     * repositories. Applies to Linux managed nodes only.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<PatchSource> sources;
@@ -500,12 +500,12 @@ public class GetPatchBaselineResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * Indicates whether the list of approved patches includes non-security updates that should be applied to the
-     * instances. The default value is <code>false</code>. Applies to Linux instances only.
+     * managed nodes. The default value is <code>false</code>. Applies to Linux managed nodes only.
      * </p>
      * 
      * @param approvedPatchesEnableNonSecurity
      *        Indicates whether the list of approved patches includes non-security updates that should be applied to the
-     *        instances. The default value is <code>false</code>. Applies to Linux instances only.
+     *        managed nodes. The default value is <code>false</code>. Applies to Linux managed nodes only.
      */
 
     public void setApprovedPatchesEnableNonSecurity(Boolean approvedPatchesEnableNonSecurity) {
@@ -515,11 +515,11 @@ public class GetPatchBaselineResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * Indicates whether the list of approved patches includes non-security updates that should be applied to the
-     * instances. The default value is <code>false</code>. Applies to Linux instances only.
+     * managed nodes. The default value is <code>false</code>. Applies to Linux managed nodes only.
      * </p>
      * 
      * @return Indicates whether the list of approved patches includes non-security updates that should be applied to
-     *         the instances. The default value is <code>false</code>. Applies to Linux instances only.
+     *         the managed nodes. The default value is <code>false</code>. Applies to Linux managed nodes only.
      */
 
     public Boolean getApprovedPatchesEnableNonSecurity() {
@@ -529,12 +529,12 @@ public class GetPatchBaselineResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * Indicates whether the list of approved patches includes non-security updates that should be applied to the
-     * instances. The default value is <code>false</code>. Applies to Linux instances only.
+     * managed nodes. The default value is <code>false</code>. Applies to Linux managed nodes only.
      * </p>
      * 
      * @param approvedPatchesEnableNonSecurity
      *        Indicates whether the list of approved patches includes non-security updates that should be applied to the
-     *        instances. The default value is <code>false</code>. Applies to Linux instances only.
+     *        managed nodes. The default value is <code>false</code>. Applies to Linux managed nodes only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -546,11 +546,11 @@ public class GetPatchBaselineResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * Indicates whether the list of approved patches includes non-security updates that should be applied to the
-     * instances. The default value is <code>false</code>. Applies to Linux instances only.
+     * managed nodes. The default value is <code>false</code>. Applies to Linux managed nodes only.
      * </p>
      * 
      * @return Indicates whether the list of approved patches includes non-security updates that should be applied to
-     *         the instances. The default value is <code>false</code>. Applies to Linux instances only.
+     *         the managed nodes. The default value is <code>false</code>. Applies to Linux managed nodes only.
      */
 
     public Boolean isApprovedPatchesEnableNonSecurity() {
@@ -918,12 +918,12 @@ public class GetPatchBaselineResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Information about the patches to use to update the instances, including target operating systems and source
-     * repositories. Applies to Linux instances only.
+     * Information about the patches to use to update the managed nodes, including target operating systems and source
+     * repositories. Applies to Linux managed nodes only.
      * </p>
      * 
-     * @return Information about the patches to use to update the instances, including target operating systems and
-     *         source repositories. Applies to Linux instances only.
+     * @return Information about the patches to use to update the managed nodes, including target operating systems and
+     *         source repositories. Applies to Linux managed nodes only.
      */
 
     public java.util.List<PatchSource> getSources() {
@@ -935,13 +935,13 @@ public class GetPatchBaselineResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Information about the patches to use to update the instances, including target operating systems and source
-     * repositories. Applies to Linux instances only.
+     * Information about the patches to use to update the managed nodes, including target operating systems and source
+     * repositories. Applies to Linux managed nodes only.
      * </p>
      * 
      * @param sources
-     *        Information about the patches to use to update the instances, including target operating systems and
-     *        source repositories. Applies to Linux instances only.
+     *        Information about the patches to use to update the managed nodes, including target operating systems and
+     *        source repositories. Applies to Linux managed nodes only.
      */
 
     public void setSources(java.util.Collection<PatchSource> sources) {
@@ -955,8 +955,8 @@ public class GetPatchBaselineResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Information about the patches to use to update the instances, including target operating systems and source
-     * repositories. Applies to Linux instances only.
+     * Information about the patches to use to update the managed nodes, including target operating systems and source
+     * repositories. Applies to Linux managed nodes only.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -965,8 +965,8 @@ public class GetPatchBaselineResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      * 
      * @param sources
-     *        Information about the patches to use to update the instances, including target operating systems and
-     *        source repositories. Applies to Linux instances only.
+     *        Information about the patches to use to update the managed nodes, including target operating systems and
+     *        source repositories. Applies to Linux managed nodes only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -982,13 +982,13 @@ public class GetPatchBaselineResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Information about the patches to use to update the instances, including target operating systems and source
-     * repositories. Applies to Linux instances only.
+     * Information about the patches to use to update the managed nodes, including target operating systems and source
+     * repositories. Applies to Linux managed nodes only.
      * </p>
      * 
      * @param sources
-     *        Information about the patches to use to update the instances, including target operating systems and
-     *        source repositories. Applies to Linux instances only.
+     *        Information about the patches to use to update the managed nodes, including target operating systems and
+     *        source repositories. Applies to Linux managed nodes only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

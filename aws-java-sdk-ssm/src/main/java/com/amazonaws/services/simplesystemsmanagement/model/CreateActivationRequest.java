@@ -38,8 +38,8 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
     private String description;
     /**
      * <p>
-     * The name of the registered, managed instance as it will appear in the Amazon Web Services Systems Manager console
-     * or when you use the Amazon Web Services command line tools to list Systems Manager resources.
+     * The name of the registered, managed node as it will appear in the Amazon Web Services Systems Manager console or
+     * when you use the Amazon Web Services command line tools to list Systems Manager resources.
      * </p>
      * <important>
      * <p>
@@ -50,8 +50,8 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
     private String defaultInstanceName;
     /**
      * <p>
-     * The name of the Identity and Access Management (IAM) role that you want to assign to the managed instance. This
-     * IAM role must provide AssumeRole permissions for the Amazon Web Services Systems Manager service principal
+     * The name of the Identity and Access Management (IAM) role that you want to assign to the managed node. This IAM
+     * role must provide AssumeRole permissions for the Amazon Web Services Systems Manager service principal
      * <code>ssm.amazonaws.com</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-service-role.html">Create an IAM
      * service role for a hybrid environment</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
@@ -60,7 +60,7 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
     private String iamRole;
     /**
      * <p>
-     * Specify the maximum number of managed instances you want to register. The default value is <code>1</code>.
+     * Specify the maximum number of managed nodes you want to register. The default value is <code>1</code>.
      * </p>
      */
     private Integer registrationLimit;
@@ -99,11 +99,11 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * </important>
      * <p>
-     * You can't add tags to or delete tags from an existing activation. You can tag your on-premises servers and VMs
-     * after they connect to Systems Manager for the first time and are assigned a managed instance ID. This means they
-     * are listed in the Amazon Web Services Systems Manager console with an ID that is prefixed with "mi-". For
-     * information about how to add tags to your managed instances, see <a>AddTagsToResource</a>. For information about
-     * how to remove tags from your managed instances, see <a>RemoveTagsFromResource</a>.
+     * You can't add tags to or delete tags from an existing activation. You can tag your on-premises servers, edge
+     * devices, and VMs after they connect to Systems Manager for the first time and are assigned a managed node ID.
+     * This means they are listed in the Amazon Web Services Systems Manager console with an ID that is prefixed with
+     * "mi-". For information about how to add tags to your managed nodes, see <a>AddTagsToResource</a>. For information
+     * about how to remove tags from your managed nodes, see <a>RemoveTagsFromResource</a>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
@@ -183,8 +183,8 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the registered, managed instance as it will appear in the Amazon Web Services Systems Manager console
-     * or when you use the Amazon Web Services command line tools to list Systems Manager resources.
+     * The name of the registered, managed node as it will appear in the Amazon Web Services Systems Manager console or
+     * when you use the Amazon Web Services command line tools to list Systems Manager resources.
      * </p>
      * <important>
      * <p>
@@ -193,7 +193,7 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
      * </important>
      * 
      * @param defaultInstanceName
-     *        The name of the registered, managed instance as it will appear in the Amazon Web Services Systems Manager
+     *        The name of the registered, managed node as it will appear in the Amazon Web Services Systems Manager
      *        console or when you use the Amazon Web Services command line tools to list Systems Manager resources.</p>
      *        <important>
      *        <p>
@@ -207,8 +207,8 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the registered, managed instance as it will appear in the Amazon Web Services Systems Manager console
-     * or when you use the Amazon Web Services command line tools to list Systems Manager resources.
+     * The name of the registered, managed node as it will appear in the Amazon Web Services Systems Manager console or
+     * when you use the Amazon Web Services command line tools to list Systems Manager resources.
      * </p>
      * <important>
      * <p>
@@ -216,7 +216,7 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * </important>
      * 
-     * @return The name of the registered, managed instance as it will appear in the Amazon Web Services Systems Manager
+     * @return The name of the registered, managed node as it will appear in the Amazon Web Services Systems Manager
      *         console or when you use the Amazon Web Services command line tools to list Systems Manager resources.</p>
      *         <important>
      *         <p>
@@ -230,8 +230,8 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the registered, managed instance as it will appear in the Amazon Web Services Systems Manager console
-     * or when you use the Amazon Web Services command line tools to list Systems Manager resources.
+     * The name of the registered, managed node as it will appear in the Amazon Web Services Systems Manager console or
+     * when you use the Amazon Web Services command line tools to list Systems Manager resources.
      * </p>
      * <important>
      * <p>
@@ -240,7 +240,7 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
      * </important>
      * 
      * @param defaultInstanceName
-     *        The name of the registered, managed instance as it will appear in the Amazon Web Services Systems Manager
+     *        The name of the registered, managed node as it will appear in the Amazon Web Services Systems Manager
      *        console or when you use the Amazon Web Services command line tools to list Systems Manager resources.</p>
      *        <important>
      *        <p>
@@ -256,15 +256,15 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the Identity and Access Management (IAM) role that you want to assign to the managed instance. This
-     * IAM role must provide AssumeRole permissions for the Amazon Web Services Systems Manager service principal
+     * The name of the Identity and Access Management (IAM) role that you want to assign to the managed node. This IAM
+     * role must provide AssumeRole permissions for the Amazon Web Services Systems Manager service principal
      * <code>ssm.amazonaws.com</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-service-role.html">Create an IAM
      * service role for a hybrid environment</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param iamRole
-     *        The name of the Identity and Access Management (IAM) role that you want to assign to the managed instance.
+     *        The name of the Identity and Access Management (IAM) role that you want to assign to the managed node.
      *        This IAM role must provide AssumeRole permissions for the Amazon Web Services Systems Manager service
      *        principal <code>ssm.amazonaws.com</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-service-role.html">Create an IAM
@@ -277,16 +277,16 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the Identity and Access Management (IAM) role that you want to assign to the managed instance. This
-     * IAM role must provide AssumeRole permissions for the Amazon Web Services Systems Manager service principal
+     * The name of the Identity and Access Management (IAM) role that you want to assign to the managed node. This IAM
+     * role must provide AssumeRole permissions for the Amazon Web Services Systems Manager service principal
      * <code>ssm.amazonaws.com</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-service-role.html">Create an IAM
      * service role for a hybrid environment</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
-     * @return The name of the Identity and Access Management (IAM) role that you want to assign to the managed
-     *         instance. This IAM role must provide AssumeRole permissions for the Amazon Web Services Systems Manager
-     *         service principal <code>ssm.amazonaws.com</code>. For more information, see <a
+     * @return The name of the Identity and Access Management (IAM) role that you want to assign to the managed node.
+     *         This IAM role must provide AssumeRole permissions for the Amazon Web Services Systems Manager service
+     *         principal <code>ssm.amazonaws.com</code>. For more information, see <a
      *         href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-service-role.html">Create an
      *         IAM service role for a hybrid environment</a> in the <i>Amazon Web Services Systems Manager User
      *         Guide</i>.
@@ -298,15 +298,15 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the Identity and Access Management (IAM) role that you want to assign to the managed instance. This
-     * IAM role must provide AssumeRole permissions for the Amazon Web Services Systems Manager service principal
+     * The name of the Identity and Access Management (IAM) role that you want to assign to the managed node. This IAM
+     * role must provide AssumeRole permissions for the Amazon Web Services Systems Manager service principal
      * <code>ssm.amazonaws.com</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-service-role.html">Create an IAM
      * service role for a hybrid environment</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param iamRole
-     *        The name of the Identity and Access Management (IAM) role that you want to assign to the managed instance.
+     *        The name of the Identity and Access Management (IAM) role that you want to assign to the managed node.
      *        This IAM role must provide AssumeRole permissions for the Amazon Web Services Systems Manager service
      *        principal <code>ssm.amazonaws.com</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-service-role.html">Create an IAM
@@ -321,11 +321,11 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Specify the maximum number of managed instances you want to register. The default value is <code>1</code>.
+     * Specify the maximum number of managed nodes you want to register. The default value is <code>1</code>.
      * </p>
      * 
      * @param registrationLimit
-     *        Specify the maximum number of managed instances you want to register. The default value is <code>1</code>.
+     *        Specify the maximum number of managed nodes you want to register. The default value is <code>1</code>.
      */
 
     public void setRegistrationLimit(Integer registrationLimit) {
@@ -334,11 +334,10 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Specify the maximum number of managed instances you want to register. The default value is <code>1</code>.
+     * Specify the maximum number of managed nodes you want to register. The default value is <code>1</code>.
      * </p>
      * 
-     * @return Specify the maximum number of managed instances you want to register. The default value is <code>1</code>
-     *         .
+     * @return Specify the maximum number of managed nodes you want to register. The default value is <code>1</code>.
      */
 
     public Integer getRegistrationLimit() {
@@ -347,11 +346,11 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Specify the maximum number of managed instances you want to register. The default value is <code>1</code>.
+     * Specify the maximum number of managed nodes you want to register. The default value is <code>1</code>.
      * </p>
      * 
      * @param registrationLimit
-     *        Specify the maximum number of managed instances you want to register. The default value is <code>1</code>.
+     *        Specify the maximum number of managed nodes you want to register. The default value is <code>1</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -439,11 +438,11 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * </important>
      * <p>
-     * You can't add tags to or delete tags from an existing activation. You can tag your on-premises servers and VMs
-     * after they connect to Systems Manager for the first time and are assigned a managed instance ID. This means they
-     * are listed in the Amazon Web Services Systems Manager console with an ID that is prefixed with "mi-". For
-     * information about how to add tags to your managed instances, see <a>AddTagsToResource</a>. For information about
-     * how to remove tags from your managed instances, see <a>RemoveTagsFromResource</a>.
+     * You can't add tags to or delete tags from an existing activation. You can tag your on-premises servers, edge
+     * devices, and VMs after they connect to Systems Manager for the first time and are assigned a managed node ID.
+     * This means they are listed in the Amazon Web Services Systems Manager console with an ID that is prefixed with
+     * "mi-". For information about how to add tags to your managed nodes, see <a>AddTagsToResource</a>. For information
+     * about how to remove tags from your managed nodes, see <a>RemoveTagsFromResource</a>.
      * </p>
      * 
      * @return Optional metadata that you assign to a resource. Tags enable you to categorize a resource in different
@@ -470,11 +469,11 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
      *         </p>
      *         </important>
      *         <p>
-     *         You can't add tags to or delete tags from an existing activation. You can tag your on-premises servers
-     *         and VMs after they connect to Systems Manager for the first time and are assigned a managed instance ID.
-     *         This means they are listed in the Amazon Web Services Systems Manager console with an ID that is prefixed
-     *         with "mi-". For information about how to add tags to your managed instances, see
-     *         <a>AddTagsToResource</a>. For information about how to remove tags from your managed instances, see
+     *         You can't add tags to or delete tags from an existing activation. You can tag your on-premises servers,
+     *         edge devices, and VMs after they connect to Systems Manager for the first time and are assigned a managed
+     *         node ID. This means they are listed in the Amazon Web Services Systems Manager console with an ID that is
+     *         prefixed with "mi-". For information about how to add tags to your managed nodes, see
+     *         <a>AddTagsToResource</a>. For information about how to remove tags from your managed nodes, see
      *         <a>RemoveTagsFromResource</a>.
      */
 
@@ -512,11 +511,11 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * </important>
      * <p>
-     * You can't add tags to or delete tags from an existing activation. You can tag your on-premises servers and VMs
-     * after they connect to Systems Manager for the first time and are assigned a managed instance ID. This means they
-     * are listed in the Amazon Web Services Systems Manager console with an ID that is prefixed with "mi-". For
-     * information about how to add tags to your managed instances, see <a>AddTagsToResource</a>. For information about
-     * how to remove tags from your managed instances, see <a>RemoveTagsFromResource</a>.
+     * You can't add tags to or delete tags from an existing activation. You can tag your on-premises servers, edge
+     * devices, and VMs after they connect to Systems Manager for the first time and are assigned a managed node ID.
+     * This means they are listed in the Amazon Web Services Systems Manager console with an ID that is prefixed with
+     * "mi-". For information about how to add tags to your managed nodes, see <a>AddTagsToResource</a>. For information
+     * about how to remove tags from your managed nodes, see <a>RemoveTagsFromResource</a>.
      * </p>
      * 
      * @param tags
@@ -544,11 +543,12 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        </important>
      *        <p>
-     *        You can't add tags to or delete tags from an existing activation. You can tag your on-premises servers and
-     *        VMs after they connect to Systems Manager for the first time and are assigned a managed instance ID. This
-     *        means they are listed in the Amazon Web Services Systems Manager console with an ID that is prefixed with
-     *        "mi-". For information about how to add tags to your managed instances, see <a>AddTagsToResource</a>. For
-     *        information about how to remove tags from your managed instances, see <a>RemoveTagsFromResource</a>.
+     *        You can't add tags to or delete tags from an existing activation. You can tag your on-premises servers,
+     *        edge devices, and VMs after they connect to Systems Manager for the first time and are assigned a managed
+     *        node ID. This means they are listed in the Amazon Web Services Systems Manager console with an ID that is
+     *        prefixed with "mi-". For information about how to add tags to your managed nodes, see
+     *        <a>AddTagsToResource</a>. For information about how to remove tags from your managed nodes, see
+     *        <a>RemoveTagsFromResource</a>.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -587,11 +587,11 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * </important>
      * <p>
-     * You can't add tags to or delete tags from an existing activation. You can tag your on-premises servers and VMs
-     * after they connect to Systems Manager for the first time and are assigned a managed instance ID. This means they
-     * are listed in the Amazon Web Services Systems Manager console with an ID that is prefixed with "mi-". For
-     * information about how to add tags to your managed instances, see <a>AddTagsToResource</a>. For information about
-     * how to remove tags from your managed instances, see <a>RemoveTagsFromResource</a>.
+     * You can't add tags to or delete tags from an existing activation. You can tag your on-premises servers, edge
+     * devices, and VMs after they connect to Systems Manager for the first time and are assigned a managed node ID.
+     * This means they are listed in the Amazon Web Services Systems Manager console with an ID that is prefixed with
+     * "mi-". For information about how to add tags to your managed nodes, see <a>AddTagsToResource</a>. For information
+     * about how to remove tags from your managed nodes, see <a>RemoveTagsFromResource</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -624,11 +624,12 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        </important>
      *        <p>
-     *        You can't add tags to or delete tags from an existing activation. You can tag your on-premises servers and
-     *        VMs after they connect to Systems Manager for the first time and are assigned a managed instance ID. This
-     *        means they are listed in the Amazon Web Services Systems Manager console with an ID that is prefixed with
-     *        "mi-". For information about how to add tags to your managed instances, see <a>AddTagsToResource</a>. For
-     *        information about how to remove tags from your managed instances, see <a>RemoveTagsFromResource</a>.
+     *        You can't add tags to or delete tags from an existing activation. You can tag your on-premises servers,
+     *        edge devices, and VMs after they connect to Systems Manager for the first time and are assigned a managed
+     *        node ID. This means they are listed in the Amazon Web Services Systems Manager console with an ID that is
+     *        prefixed with "mi-". For information about how to add tags to your managed nodes, see
+     *        <a>AddTagsToResource</a>. For information about how to remove tags from your managed nodes, see
+     *        <a>RemoveTagsFromResource</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -669,11 +670,11 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * </important>
      * <p>
-     * You can't add tags to or delete tags from an existing activation. You can tag your on-premises servers and VMs
-     * after they connect to Systems Manager for the first time and are assigned a managed instance ID. This means they
-     * are listed in the Amazon Web Services Systems Manager console with an ID that is prefixed with "mi-". For
-     * information about how to add tags to your managed instances, see <a>AddTagsToResource</a>. For information about
-     * how to remove tags from your managed instances, see <a>RemoveTagsFromResource</a>.
+     * You can't add tags to or delete tags from an existing activation. You can tag your on-premises servers, edge
+     * devices, and VMs after they connect to Systems Manager for the first time and are assigned a managed node ID.
+     * This means they are listed in the Amazon Web Services Systems Manager console with an ID that is prefixed with
+     * "mi-". For information about how to add tags to your managed nodes, see <a>AddTagsToResource</a>. For information
+     * about how to remove tags from your managed nodes, see <a>RemoveTagsFromResource</a>.
      * </p>
      * 
      * @param tags
@@ -701,11 +702,12 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        </important>
      *        <p>
-     *        You can't add tags to or delete tags from an existing activation. You can tag your on-premises servers and
-     *        VMs after they connect to Systems Manager for the first time and are assigned a managed instance ID. This
-     *        means they are listed in the Amazon Web Services Systems Manager console with an ID that is prefixed with
-     *        "mi-". For information about how to add tags to your managed instances, see <a>AddTagsToResource</a>. For
-     *        information about how to remove tags from your managed instances, see <a>RemoveTagsFromResource</a>.
+     *        You can't add tags to or delete tags from an existing activation. You can tag your on-premises servers,
+     *        edge devices, and VMs after they connect to Systems Manager for the first time and are assigned a managed
+     *        node ID. This means they are listed in the Amazon Web Services Systems Manager console with an ID that is
+     *        prefixed with "mi-". For information about how to add tags to your managed nodes, see
+     *        <a>AddTagsToResource</a>. For information about how to remove tags from your managed nodes, see
+     *        <a>RemoveTagsFromResource</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -33,6 +33,8 @@ public class PutStorageConfigurationRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("multiLayerStorage").build();
     private static final MarshallingInfo<String> DISASSOCIATEDDATASTORAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("disassociatedDataStorage").build();
+    private static final MarshallingInfo<StructuredPojo> RETENTIONPERIOD_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("retentionPeriod").build();
 
     private static final PutStorageConfigurationRequestMarshaller instance = new PutStorageConfigurationRequestMarshaller();
 
@@ -53,6 +55,7 @@ public class PutStorageConfigurationRequestMarshaller {
             protocolMarshaller.marshall(putStorageConfigurationRequest.getStorageType(), STORAGETYPE_BINDING);
             protocolMarshaller.marshall(putStorageConfigurationRequest.getMultiLayerStorage(), MULTILAYERSTORAGE_BINDING);
             protocolMarshaller.marshall(putStorageConfigurationRequest.getDisassociatedDataStorage(), DISASSOCIATEDDATASTORAGE_BINDING);
+            protocolMarshaller.marshall(putStorageConfigurationRequest.getRetentionPeriod(), RETENTIONPERIOD_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

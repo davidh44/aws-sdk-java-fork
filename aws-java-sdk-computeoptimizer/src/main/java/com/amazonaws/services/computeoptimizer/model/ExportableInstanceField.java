@@ -62,7 +62,13 @@ public enum ExportableInstanceField {
     RecommendationOptionsStandardThreeYearNoUpfrontReservedPrice("RecommendationOptionsStandardThreeYearNoUpfrontReservedPrice"),
     RecommendationsSourcesRecommendationSourceArn("RecommendationsSourcesRecommendationSourceArn"),
     RecommendationsSourcesRecommendationSourceType("RecommendationsSourcesRecommendationSourceType"),
-    LastRefreshTimestamp("LastRefreshTimestamp");
+    LastRefreshTimestamp("LastRefreshTimestamp"),
+    CurrentPerformanceRisk("CurrentPerformanceRisk"),
+    RecommendationOptionsSavingsOpportunityPercentage("RecommendationOptionsSavingsOpportunityPercentage"),
+    RecommendationOptionsEstimatedMonthlySavingsCurrency("RecommendationOptionsEstimatedMonthlySavingsCurrency"),
+    RecommendationOptionsEstimatedMonthlySavingsValue("RecommendationOptionsEstimatedMonthlySavingsValue"),
+    EffectiveRecommendationPreferencesCpuVendorArchitectures("EffectiveRecommendationPreferencesCpuVendorArchitectures"),
+    EffectiveRecommendationPreferencesEnhancedInfrastructureMetrics("EffectiveRecommendationPreferencesEnhancedInfrastructureMetrics");
 
     private String value;
 

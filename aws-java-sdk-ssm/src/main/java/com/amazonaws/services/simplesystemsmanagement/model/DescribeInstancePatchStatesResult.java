@@ -25,7 +25,7 @@ public class DescribeInstancePatchStatesResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The high-level patch state for the requested instances.
+     * The high-level patch state for the requested managed nodes.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<InstancePatchState> instancePatchStates;
@@ -39,10 +39,10 @@ public class DescribeInstancePatchStatesResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The high-level patch state for the requested instances.
+     * The high-level patch state for the requested managed nodes.
      * </p>
      * 
-     * @return The high-level patch state for the requested instances.
+     * @return The high-level patch state for the requested managed nodes.
      */
 
     public java.util.List<InstancePatchState> getInstancePatchStates() {
@@ -54,11 +54,11 @@ public class DescribeInstancePatchStatesResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The high-level patch state for the requested instances.
+     * The high-level patch state for the requested managed nodes.
      * </p>
      * 
      * @param instancePatchStates
-     *        The high-level patch state for the requested instances.
+     *        The high-level patch state for the requested managed nodes.
      */
 
     public void setInstancePatchStates(java.util.Collection<InstancePatchState> instancePatchStates) {
@@ -72,7 +72,7 @@ public class DescribeInstancePatchStatesResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The high-level patch state for the requested instances.
+     * The high-level patch state for the requested managed nodes.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -81,7 +81,7 @@ public class DescribeInstancePatchStatesResult extends com.amazonaws.AmazonWebSe
      * </p>
      * 
      * @param instancePatchStates
-     *        The high-level patch state for the requested instances.
+     *        The high-level patch state for the requested managed nodes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -97,11 +97,11 @@ public class DescribeInstancePatchStatesResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The high-level patch state for the requested instances.
+     * The high-level patch state for the requested managed nodes.
      * </p>
      * 
      * @param instancePatchStates
-     *        The high-level patch state for the requested instances.
+     *        The high-level patch state for the requested managed nodes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

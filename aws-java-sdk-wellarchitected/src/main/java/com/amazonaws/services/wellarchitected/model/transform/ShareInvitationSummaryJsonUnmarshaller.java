@@ -64,6 +64,10 @@ public class ShareInvitationSummaryJsonUnmarshaller implements Unmarshaller<Shar
                     context.nextToken();
                     shareInvitationSummary.setPermissionType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ShareResourceType", targetDepth)) {
+                    context.nextToken();
+                    shareInvitationSummary.setShareResourceType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("WorkloadName", targetDepth)) {
                     context.nextToken();
                     shareInvitationSummary.setWorkloadName(context.getUnmarshaller(String.class).unmarshall(context));
@@ -71,6 +75,14 @@ public class ShareInvitationSummaryJsonUnmarshaller implements Unmarshaller<Shar
                 if (context.testExpression("WorkloadId", targetDepth)) {
                     context.nextToken();
                     shareInvitationSummary.setWorkloadId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("LensName", targetDepth)) {
+                    context.nextToken();
+                    shareInvitationSummary.setLensName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("LensArn", targetDepth)) {
+                    context.nextToken();
+                    shareInvitationSummary.setLensArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

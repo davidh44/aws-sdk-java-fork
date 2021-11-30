@@ -29,6 +29,12 @@ public class UpdateAnswerResult extends com.amazonaws.AmazonWebServiceResult<com
     private String workloadId;
 
     private String lensAlias;
+    /**
+     * <p>
+     * The ARN for the lens.
+     * </p>
+     */
+    private String lensArn;
 
     private Answer answer;
 
@@ -85,6 +91,46 @@ public class UpdateAnswerResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
+     * <p>
+     * The ARN for the lens.
+     * </p>
+     * 
+     * @param lensArn
+     *        The ARN for the lens.
+     */
+
+    public void setLensArn(String lensArn) {
+        this.lensArn = lensArn;
+    }
+
+    /**
+     * <p>
+     * The ARN for the lens.
+     * </p>
+     * 
+     * @return The ARN for the lens.
+     */
+
+    public String getLensArn() {
+        return this.lensArn;
+    }
+
+    /**
+     * <p>
+     * The ARN for the lens.
+     * </p>
+     * 
+     * @param lensArn
+     *        The ARN for the lens.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateAnswerResult withLensArn(String lensArn) {
+        setLensArn(lensArn);
+        return this;
+    }
+
+    /**
      * @param answer
      */
 
@@ -126,6 +172,8 @@ public class UpdateAnswerResult extends com.amazonaws.AmazonWebServiceResult<com
             sb.append("WorkloadId: ").append(getWorkloadId()).append(",");
         if (getLensAlias() != null)
             sb.append("LensAlias: ").append(getLensAlias()).append(",");
+        if (getLensArn() != null)
+            sb.append("LensArn: ").append(getLensArn()).append(",");
         if (getAnswer() != null)
             sb.append("Answer: ").append(getAnswer());
         sb.append("}");
@@ -150,6 +198,10 @@ public class UpdateAnswerResult extends com.amazonaws.AmazonWebServiceResult<com
             return false;
         if (other.getLensAlias() != null && other.getLensAlias().equals(this.getLensAlias()) == false)
             return false;
+        if (other.getLensArn() == null ^ this.getLensArn() == null)
+            return false;
+        if (other.getLensArn() != null && other.getLensArn().equals(this.getLensArn()) == false)
+            return false;
         if (other.getAnswer() == null ^ this.getAnswer() == null)
             return false;
         if (other.getAnswer() != null && other.getAnswer().equals(this.getAnswer()) == false)
@@ -164,6 +216,7 @@ public class UpdateAnswerResult extends com.amazonaws.AmazonWebServiceResult<com
 
         hashCode = prime * hashCode + ((getWorkloadId() == null) ? 0 : getWorkloadId().hashCode());
         hashCode = prime * hashCode + ((getLensAlias() == null) ? 0 : getLensAlias().hashCode());
+        hashCode = prime * hashCode + ((getLensArn() == null) ? 0 : getLensArn().hashCode());
         hashCode = prime * hashCode + ((getAnswer() == null) ? 0 : getAnswer().hashCode());
         return hashCode;
     }

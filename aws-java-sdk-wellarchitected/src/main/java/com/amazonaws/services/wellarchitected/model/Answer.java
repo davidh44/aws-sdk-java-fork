@@ -39,6 +39,12 @@ public class Answer implements Serializable, Cloneable, StructuredPojo {
     private String improvementPlanUrl;
 
     private String helpfulResourceUrl;
+    /**
+     * <p>
+     * The helpful resource text to be displayed.
+     * </p>
+     */
+    private String helpfulResourceDisplayText;
 
     private java.util.List<Choice> choices;
 
@@ -215,6 +221,46 @@ public class Answer implements Serializable, Cloneable, StructuredPojo {
 
     public Answer withHelpfulResourceUrl(String helpfulResourceUrl) {
         setHelpfulResourceUrl(helpfulResourceUrl);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The helpful resource text to be displayed.
+     * </p>
+     * 
+     * @param helpfulResourceDisplayText
+     *        The helpful resource text to be displayed.
+     */
+
+    public void setHelpfulResourceDisplayText(String helpfulResourceDisplayText) {
+        this.helpfulResourceDisplayText = helpfulResourceDisplayText;
+    }
+
+    /**
+     * <p>
+     * The helpful resource text to be displayed.
+     * </p>
+     * 
+     * @return The helpful resource text to be displayed.
+     */
+
+    public String getHelpfulResourceDisplayText() {
+        return this.helpfulResourceDisplayText;
+    }
+
+    /**
+     * <p>
+     * The helpful resource text to be displayed.
+     * </p>
+     * 
+     * @param helpfulResourceDisplayText
+     *        The helpful resource text to be displayed.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Answer withHelpfulResourceDisplayText(String helpfulResourceDisplayText) {
+        setHelpfulResourceDisplayText(helpfulResourceDisplayText);
         return this;
     }
 
@@ -575,6 +621,8 @@ public class Answer implements Serializable, Cloneable, StructuredPojo {
             sb.append("ImprovementPlanUrl: ").append(getImprovementPlanUrl()).append(",");
         if (getHelpfulResourceUrl() != null)
             sb.append("HelpfulResourceUrl: ").append(getHelpfulResourceUrl()).append(",");
+        if (getHelpfulResourceDisplayText() != null)
+            sb.append("HelpfulResourceDisplayText: ").append(getHelpfulResourceDisplayText()).append(",");
         if (getChoices() != null)
             sb.append("Choices: ").append(getChoices()).append(",");
         if (getSelectedChoices() != null)
@@ -627,6 +675,10 @@ public class Answer implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getHelpfulResourceUrl() != null && other.getHelpfulResourceUrl().equals(this.getHelpfulResourceUrl()) == false)
             return false;
+        if (other.getHelpfulResourceDisplayText() == null ^ this.getHelpfulResourceDisplayText() == null)
+            return false;
+        if (other.getHelpfulResourceDisplayText() != null && other.getHelpfulResourceDisplayText().equals(this.getHelpfulResourceDisplayText()) == false)
+            return false;
         if (other.getChoices() == null ^ this.getChoices() == null)
             return false;
         if (other.getChoices() != null && other.getChoices().equals(this.getChoices()) == false)
@@ -669,6 +721,7 @@ public class Answer implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getQuestionDescription() == null) ? 0 : getQuestionDescription().hashCode());
         hashCode = prime * hashCode + ((getImprovementPlanUrl() == null) ? 0 : getImprovementPlanUrl().hashCode());
         hashCode = prime * hashCode + ((getHelpfulResourceUrl() == null) ? 0 : getHelpfulResourceUrl().hashCode());
+        hashCode = prime * hashCode + ((getHelpfulResourceDisplayText() == null) ? 0 : getHelpfulResourceDisplayText().hashCode());
         hashCode = prime * hashCode + ((getChoices() == null) ? 0 : getChoices().hashCode());
         hashCode = prime * hashCode + ((getSelectedChoices() == null) ? 0 : getSelectedChoices().hashCode());
         hashCode = prime * hashCode + ((getChoiceAnswers() == null) ? 0 : getChoiceAnswers().hashCode());

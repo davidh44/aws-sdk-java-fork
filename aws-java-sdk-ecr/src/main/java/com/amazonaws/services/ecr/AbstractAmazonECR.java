@@ -54,7 +54,17 @@ public class AbstractAmazonECR implements AmazonECR {
     }
 
     @Override
+    public BatchGetRepositoryScanningConfigurationResult batchGetRepositoryScanningConfiguration(BatchGetRepositoryScanningConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CompleteLayerUploadResult completeLayerUpload(CompleteLayerUploadRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreatePullThroughCacheRuleResult createPullThroughCacheRule(CreatePullThroughCacheRuleRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -65,6 +75,11 @@ public class AbstractAmazonECR implements AmazonECR {
 
     @Override
     public DeleteLifecyclePolicyResult deleteLifecyclePolicy(DeleteLifecyclePolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeletePullThroughCacheRuleResult deletePullThroughCacheRule(DeletePullThroughCacheRuleRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -95,6 +110,11 @@ public class AbstractAmazonECR implements AmazonECR {
 
     @Override
     public DescribeImagesResult describeImages(DescribeImagesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribePullThroughCacheRulesResult describePullThroughCacheRules(DescribePullThroughCacheRulesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -130,6 +150,11 @@ public class AbstractAmazonECR implements AmazonECR {
 
     @Override
     public GetRegistryPolicyResult getRegistryPolicy(GetRegistryPolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetRegistryScanningConfigurationResult getRegistryScanningConfiguration(GetRegistryScanningConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -175,6 +200,11 @@ public class AbstractAmazonECR implements AmazonECR {
 
     @Override
     public PutRegistryPolicyResult putRegistryPolicy(PutRegistryPolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutRegistryScanningConfigurationResult putRegistryScanningConfiguration(PutRegistryScanningConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

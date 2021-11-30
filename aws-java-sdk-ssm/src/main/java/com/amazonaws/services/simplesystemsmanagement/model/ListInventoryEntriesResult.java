@@ -31,25 +31,25 @@ public class ListInventoryEntriesResult extends com.amazonaws.AmazonWebServiceRe
     private String typeName;
     /**
      * <p>
-     * The instance ID targeted by the request to query inventory information.
+     * The managed node ID targeted by the request to query inventory information.
      * </p>
      */
     private String instanceId;
     /**
      * <p>
-     * The inventory schema version used by the instance(s).
+     * The inventory schema version used by the managed node(s).
      * </p>
      */
     private String schemaVersion;
     /**
      * <p>
-     * The time that inventory information was collected for the instance(s).
+     * The time that inventory information was collected for the managed node(s).
      * </p>
      */
     private String captureTime;
     /**
      * <p>
-     * A list of inventory items on the instance(s).
+     * A list of inventory items on the managed node(s).
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<java.util.Map<String, String>> entries;
@@ -103,11 +103,11 @@ public class ListInventoryEntriesResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The instance ID targeted by the request to query inventory information.
+     * The managed node ID targeted by the request to query inventory information.
      * </p>
      * 
      * @param instanceId
-     *        The instance ID targeted by the request to query inventory information.
+     *        The managed node ID targeted by the request to query inventory information.
      */
 
     public void setInstanceId(String instanceId) {
@@ -116,10 +116,10 @@ public class ListInventoryEntriesResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The instance ID targeted by the request to query inventory information.
+     * The managed node ID targeted by the request to query inventory information.
      * </p>
      * 
-     * @return The instance ID targeted by the request to query inventory information.
+     * @return The managed node ID targeted by the request to query inventory information.
      */
 
     public String getInstanceId() {
@@ -128,11 +128,11 @@ public class ListInventoryEntriesResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The instance ID targeted by the request to query inventory information.
+     * The managed node ID targeted by the request to query inventory information.
      * </p>
      * 
      * @param instanceId
-     *        The instance ID targeted by the request to query inventory information.
+     *        The managed node ID targeted by the request to query inventory information.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -143,11 +143,11 @@ public class ListInventoryEntriesResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The inventory schema version used by the instance(s).
+     * The inventory schema version used by the managed node(s).
      * </p>
      * 
      * @param schemaVersion
-     *        The inventory schema version used by the instance(s).
+     *        The inventory schema version used by the managed node(s).
      */
 
     public void setSchemaVersion(String schemaVersion) {
@@ -156,10 +156,10 @@ public class ListInventoryEntriesResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The inventory schema version used by the instance(s).
+     * The inventory schema version used by the managed node(s).
      * </p>
      * 
-     * @return The inventory schema version used by the instance(s).
+     * @return The inventory schema version used by the managed node(s).
      */
 
     public String getSchemaVersion() {
@@ -168,11 +168,11 @@ public class ListInventoryEntriesResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The inventory schema version used by the instance(s).
+     * The inventory schema version used by the managed node(s).
      * </p>
      * 
      * @param schemaVersion
-     *        The inventory schema version used by the instance(s).
+     *        The inventory schema version used by the managed node(s).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -183,11 +183,11 @@ public class ListInventoryEntriesResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The time that inventory information was collected for the instance(s).
+     * The time that inventory information was collected for the managed node(s).
      * </p>
      * 
      * @param captureTime
-     *        The time that inventory information was collected for the instance(s).
+     *        The time that inventory information was collected for the managed node(s).
      */
 
     public void setCaptureTime(String captureTime) {
@@ -196,10 +196,10 @@ public class ListInventoryEntriesResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The time that inventory information was collected for the instance(s).
+     * The time that inventory information was collected for the managed node(s).
      * </p>
      * 
-     * @return The time that inventory information was collected for the instance(s).
+     * @return The time that inventory information was collected for the managed node(s).
      */
 
     public String getCaptureTime() {
@@ -208,11 +208,11 @@ public class ListInventoryEntriesResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The time that inventory information was collected for the instance(s).
+     * The time that inventory information was collected for the managed node(s).
      * </p>
      * 
      * @param captureTime
-     *        The time that inventory information was collected for the instance(s).
+     *        The time that inventory information was collected for the managed node(s).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -223,10 +223,10 @@ public class ListInventoryEntriesResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of inventory items on the instance(s).
+     * A list of inventory items on the managed node(s).
      * </p>
      * 
-     * @return A list of inventory items on the instance(s).
+     * @return A list of inventory items on the managed node(s).
      */
 
     public java.util.List<java.util.Map<String, String>> getEntries() {
@@ -238,11 +238,11 @@ public class ListInventoryEntriesResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of inventory items on the instance(s).
+     * A list of inventory items on the managed node(s).
      * </p>
      * 
      * @param entries
-     *        A list of inventory items on the instance(s).
+     *        A list of inventory items on the managed node(s).
      */
 
     public void setEntries(java.util.Collection<java.util.Map<String, String>> entries) {
@@ -256,7 +256,7 @@ public class ListInventoryEntriesResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of inventory items on the instance(s).
+     * A list of inventory items on the managed node(s).
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -265,7 +265,7 @@ public class ListInventoryEntriesResult extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param entries
-     *        A list of inventory items on the instance(s).
+     *        A list of inventory items on the managed node(s).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -281,11 +281,11 @@ public class ListInventoryEntriesResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of inventory items on the instance(s).
+     * A list of inventory items on the managed node(s).
      * </p>
      * 
      * @param entries
-     *        A list of inventory items on the instance(s).
+     *        A list of inventory items on the managed node(s).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

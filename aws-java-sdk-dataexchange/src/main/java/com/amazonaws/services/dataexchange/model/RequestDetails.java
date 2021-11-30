@@ -64,6 +64,12 @@ public class RequestDetails implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private ImportAssetsFromRedshiftDataSharesRequestDetails importAssetsFromRedshiftDataShares;
+    /**
+     * <p>
+     * Information about the import asset from API Gateway API request.
+     * </p>
+     */
+    private ImportAssetFromApiGatewayApiRequestDetails importAssetFromApiGatewayApi;
 
     /**
      * <p>
@@ -306,6 +312,46 @@ public class RequestDetails implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Information about the import asset from API Gateway API request.
+     * </p>
+     * 
+     * @param importAssetFromApiGatewayApi
+     *        Information about the import asset from API Gateway API request.
+     */
+
+    public void setImportAssetFromApiGatewayApi(ImportAssetFromApiGatewayApiRequestDetails importAssetFromApiGatewayApi) {
+        this.importAssetFromApiGatewayApi = importAssetFromApiGatewayApi;
+    }
+
+    /**
+     * <p>
+     * Information about the import asset from API Gateway API request.
+     * </p>
+     * 
+     * @return Information about the import asset from API Gateway API request.
+     */
+
+    public ImportAssetFromApiGatewayApiRequestDetails getImportAssetFromApiGatewayApi() {
+        return this.importAssetFromApiGatewayApi;
+    }
+
+    /**
+     * <p>
+     * Information about the import asset from API Gateway API request.
+     * </p>
+     * 
+     * @param importAssetFromApiGatewayApi
+     *        Information about the import asset from API Gateway API request.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RequestDetails withImportAssetFromApiGatewayApi(ImportAssetFromApiGatewayApiRequestDetails importAssetFromApiGatewayApi) {
+        setImportAssetFromApiGatewayApi(importAssetFromApiGatewayApi);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -328,7 +374,9 @@ public class RequestDetails implements Serializable, Cloneable, StructuredPojo {
         if (getImportAssetsFromS3() != null)
             sb.append("ImportAssetsFromS3: ").append(getImportAssetsFromS3()).append(",");
         if (getImportAssetsFromRedshiftDataShares() != null)
-            sb.append("ImportAssetsFromRedshiftDataShares: ").append(getImportAssetsFromRedshiftDataShares());
+            sb.append("ImportAssetsFromRedshiftDataShares: ").append(getImportAssetsFromRedshiftDataShares()).append(",");
+        if (getImportAssetFromApiGatewayApi() != null)
+            sb.append("ImportAssetFromApiGatewayApi: ").append(getImportAssetFromApiGatewayApi());
         sb.append("}");
         return sb.toString();
     }
@@ -368,6 +416,10 @@ public class RequestDetails implements Serializable, Cloneable, StructuredPojo {
         if (other.getImportAssetsFromRedshiftDataShares() != null
                 && other.getImportAssetsFromRedshiftDataShares().equals(this.getImportAssetsFromRedshiftDataShares()) == false)
             return false;
+        if (other.getImportAssetFromApiGatewayApi() == null ^ this.getImportAssetFromApiGatewayApi() == null)
+            return false;
+        if (other.getImportAssetFromApiGatewayApi() != null && other.getImportAssetFromApiGatewayApi().equals(this.getImportAssetFromApiGatewayApi()) == false)
+            return false;
         return true;
     }
 
@@ -382,6 +434,7 @@ public class RequestDetails implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getImportAssetFromSignedUrl() == null) ? 0 : getImportAssetFromSignedUrl().hashCode());
         hashCode = prime * hashCode + ((getImportAssetsFromS3() == null) ? 0 : getImportAssetsFromS3().hashCode());
         hashCode = prime * hashCode + ((getImportAssetsFromRedshiftDataShares() == null) ? 0 : getImportAssetsFromRedshiftDataShares().hashCode());
+        hashCode = prime * hashCode + ((getImportAssetFromApiGatewayApi() == null) ? 0 : getImportAssetFromApiGatewayApi().hashCode());
         return hashCode;
     }
 

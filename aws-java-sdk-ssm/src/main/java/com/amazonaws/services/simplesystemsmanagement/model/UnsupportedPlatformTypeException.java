@@ -16,8 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The document doesn't support the platform type of the given instance ID(s). For example, you sent an document for a
- * Windows instance to a Linux instance.
+ * The document doesn't support the platform type of the given managed node ID(s). For example, you sent an document for
+ * a Windows managed node to a Linux node.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

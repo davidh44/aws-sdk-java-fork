@@ -19,9 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Defines the high-level patch compliance state for a managed instance, providing information about the number of
+ * Defines the high-level patch compliance state for a managed node, providing information about the number of
  * installed, missing, not applicable, and failed patches along with metadata about the operation when this information
- * was gathered for the instance.
+ * was gathered for the managed node.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/InstancePatchState" target="_top">AWS API
@@ -32,19 +32,19 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The ID of the managed instance the high-level patch compliance information was collected for.
+     * The ID of the managed node the high-level patch compliance information was collected for.
      * </p>
      */
     private String instanceId;
     /**
      * <p>
-     * The name of the patch group the managed instance belongs to.
+     * The name of the patch group the managed node belongs to.
      * </p>
      */
     private String patchGroup;
     /**
      * <p>
-     * The ID of the patch baseline used to patch the instance.
+     * The ID of the patch baseline used to patch the managed node.
      * </p>
      */
     private String baselineId;
@@ -76,26 +76,26 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
     private String ownerInformation;
     /**
      * <p>
-     * The number of patches from the patch baseline that are installed on the instance.
+     * The number of patches from the patch baseline that are installed on the managed node.
      * </p>
      */
     private Integer installedCount;
     /**
      * <p>
-     * The number of patches not specified in the patch baseline that are installed on the instance.
+     * The number of patches not specified in the patch baseline that are installed on the managed node.
      * </p>
      */
     private Integer installedOtherCount;
     /**
      * <p>
-     * The number of patches installed by Patch Manager since the last time the instance was rebooted.
+     * The number of patches installed by Patch Manager since the last time the managed node was rebooted.
      * </p>
      */
     private Integer installedPendingRebootCount;
     /**
      * <p>
-     * The number of patches installed on an instance that are specified in a <code>RejectedPatches</code> list. Patches
-     * with a status of <code>InstalledRejected</code> were typically installed before they were added to a
+     * The number of patches installed on a managed node that are specified in a <code>RejectedPatches</code> list.
+     * Patches with a status of <code>InstalledRejected</code> were typically installed before they were added to a
      * <code>RejectedPatches</code> list.
      * </p>
      * <note>
@@ -108,7 +108,7 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
     private Integer installedRejectedCount;
     /**
      * <p>
-     * The number of patches from the patch baseline that are applicable for the instance but aren't currently
+     * The number of patches from the patch baseline that are applicable for the managed node but aren't currently
      * installed.
      * </p>
      */
@@ -129,21 +129,21 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
     private Integer unreportedNotApplicableCount;
     /**
      * <p>
-     * The number of patches from the patch baseline that aren't applicable for the instance and therefore aren't
-     * installed on the instance. This number may be truncated if the list of patch names is very large. The number of
+     * The number of patches from the patch baseline that aren't applicable for the managed node and therefore aren't
+     * installed on the node. This number may be truncated if the list of patch names is very large. The number of
      * patches beyond this limit are reported in <code>UnreportedNotApplicableCount</code>.
      * </p>
      */
     private Integer notApplicableCount;
     /**
      * <p>
-     * The time the most recent patching operation was started on the instance.
+     * The time the most recent patching operation was started on the managed node.
      * </p>
      */
     private java.util.Date operationStartTime;
     /**
      * <p>
-     * The time the most recent patching operation completed on the instance.
+     * The time the most recent patching operation completed on the managed node.
      * </p>
      */
     private java.util.Date operationEndTime;
@@ -167,7 +167,7 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
     private String operation;
     /**
      * <p>
-     * The time of the last attempt to patch the instance with <code>NoReboot</code> specified as the reboot option.
+     * The time of the last attempt to patch the managed node with <code>NoReboot</code> specified as the reboot option.
      * </p>
      */
     private java.util.Date lastNoRebootInstallOperationTime;
@@ -184,8 +184,8 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
      * <ul>
      * <li>
      * <p>
-     * <code>RebootIfNeeded</code>: Patch Manager tries to reboot the instance if it installed any patches, or if any
-     * patches are detected with a status of <code>InstalledPendingReboot</code>.
+     * <code>RebootIfNeeded</code>: Patch Manager tries to reboot the managed node if it installed any patches, or if
+     * any patches are detected with a status of <code>InstalledPendingReboot</code>.
      * </p>
      * </li>
      * <li>
@@ -200,24 +200,25 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
     private String rebootOption;
     /**
      * <p>
-     * The number of instances where patches that are specified as <code>Critical</code> for compliance reporting in the
-     * patch baseline aren't installed. These patches might be missing, have failed installation, were rejected, or were
-     * installed but awaiting a required instance reboot. The status of these instances is <code>NON_COMPLIANT</code>.
+     * The number of managed nodes where patches that are specified as <code>Critical</code> for compliance reporting in
+     * the patch baseline aren't installed. These patches might be missing, have failed installation, were rejected, or
+     * were installed but awaiting a required managed node reboot. The status of these managed nodes is
+     * <code>NON_COMPLIANT</code>.
      * </p>
      */
     private Integer criticalNonCompliantCount;
     /**
      * <p>
-     * The number of instances where patches that are specified as <code>Security</code> in a patch advisory aren't
+     * The number of managed nodes where patches that are specified as <code>Security</code> in a patch advisory aren't
      * installed. These patches might be missing, have failed installation, were rejected, or were installed but
-     * awaiting a required instance reboot. The status of these instances is <code>NON_COMPLIANT</code>.
+     * awaiting a required managed node reboot. The status of these managed nodes is <code>NON_COMPLIANT</code>.
      * </p>
      */
     private Integer securityNonCompliantCount;
     /**
      * <p>
-     * The number of instances with patches installed that are specified as other than <code>Critical</code> or
-     * <code>Security</code> but aren't compliant with the patch baseline. The status of these instances is
+     * The number of managed nodes with patches installed that are specified as other than <code>Critical</code> or
+     * <code>Security</code> but aren't compliant with the patch baseline. The status of these managed nodes is
      * <code>NON_COMPLIANT</code>.
      * </p>
      */
@@ -225,11 +226,11 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The ID of the managed instance the high-level patch compliance information was collected for.
+     * The ID of the managed node the high-level patch compliance information was collected for.
      * </p>
      * 
      * @param instanceId
-     *        The ID of the managed instance the high-level patch compliance information was collected for.
+     *        The ID of the managed node the high-level patch compliance information was collected for.
      */
 
     public void setInstanceId(String instanceId) {
@@ -238,10 +239,10 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The ID of the managed instance the high-level patch compliance information was collected for.
+     * The ID of the managed node the high-level patch compliance information was collected for.
      * </p>
      * 
-     * @return The ID of the managed instance the high-level patch compliance information was collected for.
+     * @return The ID of the managed node the high-level patch compliance information was collected for.
      */
 
     public String getInstanceId() {
@@ -250,11 +251,11 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The ID of the managed instance the high-level patch compliance information was collected for.
+     * The ID of the managed node the high-level patch compliance information was collected for.
      * </p>
      * 
      * @param instanceId
-     *        The ID of the managed instance the high-level patch compliance information was collected for.
+     *        The ID of the managed node the high-level patch compliance information was collected for.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -265,11 +266,11 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The name of the patch group the managed instance belongs to.
+     * The name of the patch group the managed node belongs to.
      * </p>
      * 
      * @param patchGroup
-     *        The name of the patch group the managed instance belongs to.
+     *        The name of the patch group the managed node belongs to.
      */
 
     public void setPatchGroup(String patchGroup) {
@@ -278,10 +279,10 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The name of the patch group the managed instance belongs to.
+     * The name of the patch group the managed node belongs to.
      * </p>
      * 
-     * @return The name of the patch group the managed instance belongs to.
+     * @return The name of the patch group the managed node belongs to.
      */
 
     public String getPatchGroup() {
@@ -290,11 +291,11 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The name of the patch group the managed instance belongs to.
+     * The name of the patch group the managed node belongs to.
      * </p>
      * 
      * @param patchGroup
-     *        The name of the patch group the managed instance belongs to.
+     *        The name of the patch group the managed node belongs to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -305,11 +306,11 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The ID of the patch baseline used to patch the instance.
+     * The ID of the patch baseline used to patch the managed node.
      * </p>
      * 
      * @param baselineId
-     *        The ID of the patch baseline used to patch the instance.
+     *        The ID of the patch baseline used to patch the managed node.
      */
 
     public void setBaselineId(String baselineId) {
@@ -318,10 +319,10 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The ID of the patch baseline used to patch the instance.
+     * The ID of the patch baseline used to patch the managed node.
      * </p>
      * 
-     * @return The ID of the patch baseline used to patch the instance.
+     * @return The ID of the patch baseline used to patch the managed node.
      */
 
     public String getBaselineId() {
@@ -330,11 +331,11 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The ID of the patch baseline used to patch the instance.
+     * The ID of the patch baseline used to patch the managed node.
      * </p>
      * 
      * @param baselineId
-     *        The ID of the patch baseline used to patch the instance.
+     *        The ID of the patch baseline used to patch the managed node.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -516,11 +517,11 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The number of patches from the patch baseline that are installed on the instance.
+     * The number of patches from the patch baseline that are installed on the managed node.
      * </p>
      * 
      * @param installedCount
-     *        The number of patches from the patch baseline that are installed on the instance.
+     *        The number of patches from the patch baseline that are installed on the managed node.
      */
 
     public void setInstalledCount(Integer installedCount) {
@@ -529,10 +530,10 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The number of patches from the patch baseline that are installed on the instance.
+     * The number of patches from the patch baseline that are installed on the managed node.
      * </p>
      * 
-     * @return The number of patches from the patch baseline that are installed on the instance.
+     * @return The number of patches from the patch baseline that are installed on the managed node.
      */
 
     public Integer getInstalledCount() {
@@ -541,11 +542,11 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The number of patches from the patch baseline that are installed on the instance.
+     * The number of patches from the patch baseline that are installed on the managed node.
      * </p>
      * 
      * @param installedCount
-     *        The number of patches from the patch baseline that are installed on the instance.
+     *        The number of patches from the patch baseline that are installed on the managed node.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -556,11 +557,11 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The number of patches not specified in the patch baseline that are installed on the instance.
+     * The number of patches not specified in the patch baseline that are installed on the managed node.
      * </p>
      * 
      * @param installedOtherCount
-     *        The number of patches not specified in the patch baseline that are installed on the instance.
+     *        The number of patches not specified in the patch baseline that are installed on the managed node.
      */
 
     public void setInstalledOtherCount(Integer installedOtherCount) {
@@ -569,10 +570,10 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The number of patches not specified in the patch baseline that are installed on the instance.
+     * The number of patches not specified in the patch baseline that are installed on the managed node.
      * </p>
      * 
-     * @return The number of patches not specified in the patch baseline that are installed on the instance.
+     * @return The number of patches not specified in the patch baseline that are installed on the managed node.
      */
 
     public Integer getInstalledOtherCount() {
@@ -581,11 +582,11 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The number of patches not specified in the patch baseline that are installed on the instance.
+     * The number of patches not specified in the patch baseline that are installed on the managed node.
      * </p>
      * 
      * @param installedOtherCount
-     *        The number of patches not specified in the patch baseline that are installed on the instance.
+     *        The number of patches not specified in the patch baseline that are installed on the managed node.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -596,11 +597,11 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The number of patches installed by Patch Manager since the last time the instance was rebooted.
+     * The number of patches installed by Patch Manager since the last time the managed node was rebooted.
      * </p>
      * 
      * @param installedPendingRebootCount
-     *        The number of patches installed by Patch Manager since the last time the instance was rebooted.
+     *        The number of patches installed by Patch Manager since the last time the managed node was rebooted.
      */
 
     public void setInstalledPendingRebootCount(Integer installedPendingRebootCount) {
@@ -609,10 +610,10 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The number of patches installed by Patch Manager since the last time the instance was rebooted.
+     * The number of patches installed by Patch Manager since the last time the managed node was rebooted.
      * </p>
      * 
-     * @return The number of patches installed by Patch Manager since the last time the instance was rebooted.
+     * @return The number of patches installed by Patch Manager since the last time the managed node was rebooted.
      */
 
     public Integer getInstalledPendingRebootCount() {
@@ -621,11 +622,11 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The number of patches installed by Patch Manager since the last time the instance was rebooted.
+     * The number of patches installed by Patch Manager since the last time the managed node was rebooted.
      * </p>
      * 
      * @param installedPendingRebootCount
-     *        The number of patches installed by Patch Manager since the last time the instance was rebooted.
+     *        The number of patches installed by Patch Manager since the last time the managed node was rebooted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -636,8 +637,8 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The number of patches installed on an instance that are specified in a <code>RejectedPatches</code> list. Patches
-     * with a status of <code>InstalledRejected</code> were typically installed before they were added to a
+     * The number of patches installed on a managed node that are specified in a <code>RejectedPatches</code> list.
+     * Patches with a status of <code>InstalledRejected</code> were typically installed before they were added to a
      * <code>RejectedPatches</code> list.
      * </p>
      * <note>
@@ -648,9 +649,9 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
      * </note>
      * 
      * @param installedRejectedCount
-     *        The number of patches installed on an instance that are specified in a <code>RejectedPatches</code> list.
-     *        Patches with a status of <code>InstalledRejected</code> were typically installed before they were added to
-     *        a <code>RejectedPatches</code> list.</p> <note>
+     *        The number of patches installed on a managed node that are specified in a <code>RejectedPatches</code>
+     *        list. Patches with a status of <code>InstalledRejected</code> were typically installed before they were
+     *        added to a <code>RejectedPatches</code> list.</p> <note>
      *        <p>
      *        If <code>ALLOW_AS_DEPENDENCY</code> is the specified option for <code>RejectedPatchesAction</code>, the
      *        value of <code>InstalledRejectedCount</code> will always be <code>0</code> (zero).
@@ -663,8 +664,8 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The number of patches installed on an instance that are specified in a <code>RejectedPatches</code> list. Patches
-     * with a status of <code>InstalledRejected</code> were typically installed before they were added to a
+     * The number of patches installed on a managed node that are specified in a <code>RejectedPatches</code> list.
+     * Patches with a status of <code>InstalledRejected</code> were typically installed before they were added to a
      * <code>RejectedPatches</code> list.
      * </p>
      * <note>
@@ -674,9 +675,9 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
      * </p>
      * </note>
      * 
-     * @return The number of patches installed on an instance that are specified in a <code>RejectedPatches</code> list.
-     *         Patches with a status of <code>InstalledRejected</code> were typically installed before they were added
-     *         to a <code>RejectedPatches</code> list.</p> <note>
+     * @return The number of patches installed on a managed node that are specified in a <code>RejectedPatches</code>
+     *         list. Patches with a status of <code>InstalledRejected</code> were typically installed before they were
+     *         added to a <code>RejectedPatches</code> list.</p> <note>
      *         <p>
      *         If <code>ALLOW_AS_DEPENDENCY</code> is the specified option for <code>RejectedPatchesAction</code>, the
      *         value of <code>InstalledRejectedCount</code> will always be <code>0</code> (zero).
@@ -689,8 +690,8 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The number of patches installed on an instance that are specified in a <code>RejectedPatches</code> list. Patches
-     * with a status of <code>InstalledRejected</code> were typically installed before they were added to a
+     * The number of patches installed on a managed node that are specified in a <code>RejectedPatches</code> list.
+     * Patches with a status of <code>InstalledRejected</code> were typically installed before they were added to a
      * <code>RejectedPatches</code> list.
      * </p>
      * <note>
@@ -701,9 +702,9 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
      * </note>
      * 
      * @param installedRejectedCount
-     *        The number of patches installed on an instance that are specified in a <code>RejectedPatches</code> list.
-     *        Patches with a status of <code>InstalledRejected</code> were typically installed before they were added to
-     *        a <code>RejectedPatches</code> list.</p> <note>
+     *        The number of patches installed on a managed node that are specified in a <code>RejectedPatches</code>
+     *        list. Patches with a status of <code>InstalledRejected</code> were typically installed before they were
+     *        added to a <code>RejectedPatches</code> list.</p> <note>
      *        <p>
      *        If <code>ALLOW_AS_DEPENDENCY</code> is the specified option for <code>RejectedPatchesAction</code>, the
      *        value of <code>InstalledRejectedCount</code> will always be <code>0</code> (zero).
@@ -718,13 +719,13 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The number of patches from the patch baseline that are applicable for the instance but aren't currently
+     * The number of patches from the patch baseline that are applicable for the managed node but aren't currently
      * installed.
      * </p>
      * 
      * @param missingCount
-     *        The number of patches from the patch baseline that are applicable for the instance but aren't currently
-     *        installed.
+     *        The number of patches from the patch baseline that are applicable for the managed node but aren't
+     *        currently installed.
      */
 
     public void setMissingCount(Integer missingCount) {
@@ -733,12 +734,12 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The number of patches from the patch baseline that are applicable for the instance but aren't currently
+     * The number of patches from the patch baseline that are applicable for the managed node but aren't currently
      * installed.
      * </p>
      * 
-     * @return The number of patches from the patch baseline that are applicable for the instance but aren't currently
-     *         installed.
+     * @return The number of patches from the patch baseline that are applicable for the managed node but aren't
+     *         currently installed.
      */
 
     public Integer getMissingCount() {
@@ -747,13 +748,13 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The number of patches from the patch baseline that are applicable for the instance but aren't currently
+     * The number of patches from the patch baseline that are applicable for the managed node but aren't currently
      * installed.
      * </p>
      * 
      * @param missingCount
-     *        The number of patches from the patch baseline that are applicable for the instance but aren't currently
-     *        installed.
+     *        The number of patches from the patch baseline that are applicable for the managed node but aren't
+     *        currently installed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -856,14 +857,14 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The number of patches from the patch baseline that aren't applicable for the instance and therefore aren't
-     * installed on the instance. This number may be truncated if the list of patch names is very large. The number of
+     * The number of patches from the patch baseline that aren't applicable for the managed node and therefore aren't
+     * installed on the node. This number may be truncated if the list of patch names is very large. The number of
      * patches beyond this limit are reported in <code>UnreportedNotApplicableCount</code>.
      * </p>
      * 
      * @param notApplicableCount
-     *        The number of patches from the patch baseline that aren't applicable for the instance and therefore aren't
-     *        installed on the instance. This number may be truncated if the list of patch names is very large. The
+     *        The number of patches from the patch baseline that aren't applicable for the managed node and therefore
+     *        aren't installed on the node. This number may be truncated if the list of patch names is very large. The
      *        number of patches beyond this limit are reported in <code>UnreportedNotApplicableCount</code>.
      */
 
@@ -873,14 +874,14 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The number of patches from the patch baseline that aren't applicable for the instance and therefore aren't
-     * installed on the instance. This number may be truncated if the list of patch names is very large. The number of
+     * The number of patches from the patch baseline that aren't applicable for the managed node and therefore aren't
+     * installed on the node. This number may be truncated if the list of patch names is very large. The number of
      * patches beyond this limit are reported in <code>UnreportedNotApplicableCount</code>.
      * </p>
      * 
-     * @return The number of patches from the patch baseline that aren't applicable for the instance and therefore
-     *         aren't installed on the instance. This number may be truncated if the list of patch names is very large.
-     *         The number of patches beyond this limit are reported in <code>UnreportedNotApplicableCount</code>.
+     * @return The number of patches from the patch baseline that aren't applicable for the managed node and therefore
+     *         aren't installed on the node. This number may be truncated if the list of patch names is very large. The
+     *         number of patches beyond this limit are reported in <code>UnreportedNotApplicableCount</code>.
      */
 
     public Integer getNotApplicableCount() {
@@ -889,14 +890,14 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The number of patches from the patch baseline that aren't applicable for the instance and therefore aren't
-     * installed on the instance. This number may be truncated if the list of patch names is very large. The number of
+     * The number of patches from the patch baseline that aren't applicable for the managed node and therefore aren't
+     * installed on the node. This number may be truncated if the list of patch names is very large. The number of
      * patches beyond this limit are reported in <code>UnreportedNotApplicableCount</code>.
      * </p>
      * 
      * @param notApplicableCount
-     *        The number of patches from the patch baseline that aren't applicable for the instance and therefore aren't
-     *        installed on the instance. This number may be truncated if the list of patch names is very large. The
+     *        The number of patches from the patch baseline that aren't applicable for the managed node and therefore
+     *        aren't installed on the node. This number may be truncated if the list of patch names is very large. The
      *        number of patches beyond this limit are reported in <code>UnreportedNotApplicableCount</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -908,11 +909,11 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The time the most recent patching operation was started on the instance.
+     * The time the most recent patching operation was started on the managed node.
      * </p>
      * 
      * @param operationStartTime
-     *        The time the most recent patching operation was started on the instance.
+     *        The time the most recent patching operation was started on the managed node.
      */
 
     public void setOperationStartTime(java.util.Date operationStartTime) {
@@ -921,10 +922,10 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The time the most recent patching operation was started on the instance.
+     * The time the most recent patching operation was started on the managed node.
      * </p>
      * 
-     * @return The time the most recent patching operation was started on the instance.
+     * @return The time the most recent patching operation was started on the managed node.
      */
 
     public java.util.Date getOperationStartTime() {
@@ -933,11 +934,11 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The time the most recent patching operation was started on the instance.
+     * The time the most recent patching operation was started on the managed node.
      * </p>
      * 
      * @param operationStartTime
-     *        The time the most recent patching operation was started on the instance.
+     *        The time the most recent patching operation was started on the managed node.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -948,11 +949,11 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The time the most recent patching operation completed on the instance.
+     * The time the most recent patching operation completed on the managed node.
      * </p>
      * 
      * @param operationEndTime
-     *        The time the most recent patching operation completed on the instance.
+     *        The time the most recent patching operation completed on the managed node.
      */
 
     public void setOperationEndTime(java.util.Date operationEndTime) {
@@ -961,10 +962,10 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The time the most recent patching operation completed on the instance.
+     * The time the most recent patching operation completed on the managed node.
      * </p>
      * 
-     * @return The time the most recent patching operation completed on the instance.
+     * @return The time the most recent patching operation completed on the managed node.
      */
 
     public java.util.Date getOperationEndTime() {
@@ -973,11 +974,11 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The time the most recent patching operation completed on the instance.
+     * The time the most recent patching operation completed on the managed node.
      * </p>
      * 
      * @param operationEndTime
-     *        The time the most recent patching operation completed on the instance.
+     *        The time the most recent patching operation completed on the managed node.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1176,11 +1177,11 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The time of the last attempt to patch the instance with <code>NoReboot</code> specified as the reboot option.
+     * The time of the last attempt to patch the managed node with <code>NoReboot</code> specified as the reboot option.
      * </p>
      * 
      * @param lastNoRebootInstallOperationTime
-     *        The time of the last attempt to patch the instance with <code>NoReboot</code> specified as the reboot
+     *        The time of the last attempt to patch the managed node with <code>NoReboot</code> specified as the reboot
      *        option.
      */
 
@@ -1190,10 +1191,10 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The time of the last attempt to patch the instance with <code>NoReboot</code> specified as the reboot option.
+     * The time of the last attempt to patch the managed node with <code>NoReboot</code> specified as the reboot option.
      * </p>
      * 
-     * @return The time of the last attempt to patch the instance with <code>NoReboot</code> specified as the reboot
+     * @return The time of the last attempt to patch the managed node with <code>NoReboot</code> specified as the reboot
      *         option.
      */
 
@@ -1203,11 +1204,11 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The time of the last attempt to patch the instance with <code>NoReboot</code> specified as the reboot option.
+     * The time of the last attempt to patch the managed node with <code>NoReboot</code> specified as the reboot option.
      * </p>
      * 
      * @param lastNoRebootInstallOperationTime
-     *        The time of the last attempt to patch the instance with <code>NoReboot</code> specified as the reboot
+     *        The time of the last attempt to patch the managed node with <code>NoReboot</code> specified as the reboot
      *        option.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1230,8 +1231,8 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
      * <ul>
      * <li>
      * <p>
-     * <code>RebootIfNeeded</code>: Patch Manager tries to reboot the instance if it installed any patches, or if any
-     * patches are detected with a status of <code>InstalledPendingReboot</code>.
+     * <code>RebootIfNeeded</code>: Patch Manager tries to reboot the managed node if it installed any patches, or if
+     * any patches are detected with a status of <code>InstalledPendingReboot</code>.
      * </p>
      * </li>
      * <li>
@@ -1253,8 +1254,8 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>RebootIfNeeded</code>: Patch Manager tries to reboot the instance if it installed any patches, or if
-     *        any patches are detected with a status of <code>InstalledPendingReboot</code>.
+     *        <code>RebootIfNeeded</code>: Patch Manager tries to reboot the managed node if it installed any patches,
+     *        or if any patches are detected with a status of <code>InstalledPendingReboot</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -1284,8 +1285,8 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
      * <ul>
      * <li>
      * <p>
-     * <code>RebootIfNeeded</code>: Patch Manager tries to reboot the instance if it installed any patches, or if any
-     * patches are detected with a status of <code>InstalledPendingReboot</code>.
+     * <code>RebootIfNeeded</code>: Patch Manager tries to reboot the managed node if it installed any patches, or if
+     * any patches are detected with a status of <code>InstalledPendingReboot</code>.
      * </p>
      * </li>
      * <li>
@@ -1306,8 +1307,8 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>RebootIfNeeded</code>: Patch Manager tries to reboot the instance if it installed any patches, or
-     *         if any patches are detected with a status of <code>InstalledPendingReboot</code>.
+     *         <code>RebootIfNeeded</code>: Patch Manager tries to reboot the managed node if it installed any patches,
+     *         or if any patches are detected with a status of <code>InstalledPendingReboot</code>.
      *         </p>
      *         </li>
      *         <li>
@@ -1337,8 +1338,8 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
      * <ul>
      * <li>
      * <p>
-     * <code>RebootIfNeeded</code>: Patch Manager tries to reboot the instance if it installed any patches, or if any
-     * patches are detected with a status of <code>InstalledPendingReboot</code>.
+     * <code>RebootIfNeeded</code>: Patch Manager tries to reboot the managed node if it installed any patches, or if
+     * any patches are detected with a status of <code>InstalledPendingReboot</code>.
      * </p>
      * </li>
      * <li>
@@ -1360,8 +1361,8 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>RebootIfNeeded</code>: Patch Manager tries to reboot the instance if it installed any patches, or if
-     *        any patches are detected with a status of <code>InstalledPendingReboot</code>.
+     *        <code>RebootIfNeeded</code>: Patch Manager tries to reboot the managed node if it installed any patches,
+     *        or if any patches are detected with a status of <code>InstalledPendingReboot</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -1393,8 +1394,8 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
      * <ul>
      * <li>
      * <p>
-     * <code>RebootIfNeeded</code>: Patch Manager tries to reboot the instance if it installed any patches, or if any
-     * patches are detected with a status of <code>InstalledPendingReboot</code>.
+     * <code>RebootIfNeeded</code>: Patch Manager tries to reboot the managed node if it installed any patches, or if
+     * any patches are detected with a status of <code>InstalledPendingReboot</code>.
      * </p>
      * </li>
      * <li>
@@ -1416,8 +1417,8 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>RebootIfNeeded</code>: Patch Manager tries to reboot the instance if it installed any patches, or if
-     *        any patches are detected with a status of <code>InstalledPendingReboot</code>.
+     *        <code>RebootIfNeeded</code>: Patch Manager tries to reboot the managed node if it installed any patches,
+     *        or if any patches are detected with a status of <code>InstalledPendingReboot</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -1447,8 +1448,8 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
      * <ul>
      * <li>
      * <p>
-     * <code>RebootIfNeeded</code>: Patch Manager tries to reboot the instance if it installed any patches, or if any
-     * patches are detected with a status of <code>InstalledPendingReboot</code>.
+     * <code>RebootIfNeeded</code>: Patch Manager tries to reboot the managed node if it installed any patches, or if
+     * any patches are detected with a status of <code>InstalledPendingReboot</code>.
      * </p>
      * </li>
      * <li>
@@ -1470,8 +1471,8 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>RebootIfNeeded</code>: Patch Manager tries to reboot the instance if it installed any patches, or if
-     *        any patches are detected with a status of <code>InstalledPendingReboot</code>.
+     *        <code>RebootIfNeeded</code>: Patch Manager tries to reboot the managed node if it installed any patches,
+     *        or if any patches are detected with a status of <code>InstalledPendingReboot</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -1492,16 +1493,17 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The number of instances where patches that are specified as <code>Critical</code> for compliance reporting in the
-     * patch baseline aren't installed. These patches might be missing, have failed installation, were rejected, or were
-     * installed but awaiting a required instance reboot. The status of these instances is <code>NON_COMPLIANT</code>.
+     * The number of managed nodes where patches that are specified as <code>Critical</code> for compliance reporting in
+     * the patch baseline aren't installed. These patches might be missing, have failed installation, were rejected, or
+     * were installed but awaiting a required managed node reboot. The status of these managed nodes is
+     * <code>NON_COMPLIANT</code>.
      * </p>
      * 
      * @param criticalNonCompliantCount
-     *        The number of instances where patches that are specified as <code>Critical</code> for compliance reporting
-     *        in the patch baseline aren't installed. These patches might be missing, have failed installation, were
-     *        rejected, or were installed but awaiting a required instance reboot. The status of these instances is
-     *        <code>NON_COMPLIANT</code>.
+     *        The number of managed nodes where patches that are specified as <code>Critical</code> for compliance
+     *        reporting in the patch baseline aren't installed. These patches might be missing, have failed
+     *        installation, were rejected, or were installed but awaiting a required managed node reboot. The status of
+     *        these managed nodes is <code>NON_COMPLIANT</code>.
      */
 
     public void setCriticalNonCompliantCount(Integer criticalNonCompliantCount) {
@@ -1510,15 +1512,16 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The number of instances where patches that are specified as <code>Critical</code> for compliance reporting in the
-     * patch baseline aren't installed. These patches might be missing, have failed installation, were rejected, or were
-     * installed but awaiting a required instance reboot. The status of these instances is <code>NON_COMPLIANT</code>.
+     * The number of managed nodes where patches that are specified as <code>Critical</code> for compliance reporting in
+     * the patch baseline aren't installed. These patches might be missing, have failed installation, were rejected, or
+     * were installed but awaiting a required managed node reboot. The status of these managed nodes is
+     * <code>NON_COMPLIANT</code>.
      * </p>
      * 
-     * @return The number of instances where patches that are specified as <code>Critical</code> for compliance
+     * @return The number of managed nodes where patches that are specified as <code>Critical</code> for compliance
      *         reporting in the patch baseline aren't installed. These patches might be missing, have failed
-     *         installation, were rejected, or were installed but awaiting a required instance reboot. The status of
-     *         these instances is <code>NON_COMPLIANT</code>.
+     *         installation, were rejected, or were installed but awaiting a required managed node reboot. The status of
+     *         these managed nodes is <code>NON_COMPLIANT</code>.
      */
 
     public Integer getCriticalNonCompliantCount() {
@@ -1527,16 +1530,17 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The number of instances where patches that are specified as <code>Critical</code> for compliance reporting in the
-     * patch baseline aren't installed. These patches might be missing, have failed installation, were rejected, or were
-     * installed but awaiting a required instance reboot. The status of these instances is <code>NON_COMPLIANT</code>.
+     * The number of managed nodes where patches that are specified as <code>Critical</code> for compliance reporting in
+     * the patch baseline aren't installed. These patches might be missing, have failed installation, were rejected, or
+     * were installed but awaiting a required managed node reboot. The status of these managed nodes is
+     * <code>NON_COMPLIANT</code>.
      * </p>
      * 
      * @param criticalNonCompliantCount
-     *        The number of instances where patches that are specified as <code>Critical</code> for compliance reporting
-     *        in the patch baseline aren't installed. These patches might be missing, have failed installation, were
-     *        rejected, or were installed but awaiting a required instance reboot. The status of these instances is
-     *        <code>NON_COMPLIANT</code>.
+     *        The number of managed nodes where patches that are specified as <code>Critical</code> for compliance
+     *        reporting in the patch baseline aren't installed. These patches might be missing, have failed
+     *        installation, were rejected, or were installed but awaiting a required managed node reboot. The status of
+     *        these managed nodes is <code>NON_COMPLIANT</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1547,15 +1551,15 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The number of instances where patches that are specified as <code>Security</code> in a patch advisory aren't
+     * The number of managed nodes where patches that are specified as <code>Security</code> in a patch advisory aren't
      * installed. These patches might be missing, have failed installation, were rejected, or were installed but
-     * awaiting a required instance reboot. The status of these instances is <code>NON_COMPLIANT</code>.
+     * awaiting a required managed node reboot. The status of these managed nodes is <code>NON_COMPLIANT</code>.
      * </p>
      * 
      * @param securityNonCompliantCount
-     *        The number of instances where patches that are specified as <code>Security</code> in a patch advisory
+     *        The number of managed nodes where patches that are specified as <code>Security</code> in a patch advisory
      *        aren't installed. These patches might be missing, have failed installation, were rejected, or were
-     *        installed but awaiting a required instance reboot. The status of these instances is
+     *        installed but awaiting a required managed node reboot. The status of these managed nodes is
      *        <code>NON_COMPLIANT</code>.
      */
 
@@ -1565,14 +1569,14 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The number of instances where patches that are specified as <code>Security</code> in a patch advisory aren't
+     * The number of managed nodes where patches that are specified as <code>Security</code> in a patch advisory aren't
      * installed. These patches might be missing, have failed installation, were rejected, or were installed but
-     * awaiting a required instance reboot. The status of these instances is <code>NON_COMPLIANT</code>.
+     * awaiting a required managed node reboot. The status of these managed nodes is <code>NON_COMPLIANT</code>.
      * </p>
      * 
-     * @return The number of instances where patches that are specified as <code>Security</code> in a patch advisory
+     * @return The number of managed nodes where patches that are specified as <code>Security</code> in a patch advisory
      *         aren't installed. These patches might be missing, have failed installation, were rejected, or were
-     *         installed but awaiting a required instance reboot. The status of these instances is
+     *         installed but awaiting a required managed node reboot. The status of these managed nodes is
      *         <code>NON_COMPLIANT</code>.
      */
 
@@ -1582,15 +1586,15 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The number of instances where patches that are specified as <code>Security</code> in a patch advisory aren't
+     * The number of managed nodes where patches that are specified as <code>Security</code> in a patch advisory aren't
      * installed. These patches might be missing, have failed installation, were rejected, or were installed but
-     * awaiting a required instance reboot. The status of these instances is <code>NON_COMPLIANT</code>.
+     * awaiting a required managed node reboot. The status of these managed nodes is <code>NON_COMPLIANT</code>.
      * </p>
      * 
      * @param securityNonCompliantCount
-     *        The number of instances where patches that are specified as <code>Security</code> in a patch advisory
+     *        The number of managed nodes where patches that are specified as <code>Security</code> in a patch advisory
      *        aren't installed. These patches might be missing, have failed installation, were rejected, or were
-     *        installed but awaiting a required instance reboot. The status of these instances is
+     *        installed but awaiting a required managed node reboot. The status of these managed nodes is
      *        <code>NON_COMPLIANT</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1602,15 +1606,15 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The number of instances with patches installed that are specified as other than <code>Critical</code> or
-     * <code>Security</code> but aren't compliant with the patch baseline. The status of these instances is
+     * The number of managed nodes with patches installed that are specified as other than <code>Critical</code> or
+     * <code>Security</code> but aren't compliant with the patch baseline. The status of these managed nodes is
      * <code>NON_COMPLIANT</code>.
      * </p>
      * 
      * @param otherNonCompliantCount
-     *        The number of instances with patches installed that are specified as other than <code>Critical</code> or
-     *        <code>Security</code> but aren't compliant with the patch baseline. The status of these instances is
-     *        <code>NON_COMPLIANT</code>.
+     *        The number of managed nodes with patches installed that are specified as other than <code>Critical</code>
+     *        or <code>Security</code> but aren't compliant with the patch baseline. The status of these managed nodes
+     *        is <code>NON_COMPLIANT</code>.
      */
 
     public void setOtherNonCompliantCount(Integer otherNonCompliantCount) {
@@ -1619,14 +1623,14 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The number of instances with patches installed that are specified as other than <code>Critical</code> or
-     * <code>Security</code> but aren't compliant with the patch baseline. The status of these instances is
+     * The number of managed nodes with patches installed that are specified as other than <code>Critical</code> or
+     * <code>Security</code> but aren't compliant with the patch baseline. The status of these managed nodes is
      * <code>NON_COMPLIANT</code>.
      * </p>
      * 
-     * @return The number of instances with patches installed that are specified as other than <code>Critical</code> or
-     *         <code>Security</code> but aren't compliant with the patch baseline. The status of these instances is
-     *         <code>NON_COMPLIANT</code>.
+     * @return The number of managed nodes with patches installed that are specified as other than <code>Critical</code>
+     *         or <code>Security</code> but aren't compliant with the patch baseline. The status of these managed nodes
+     *         is <code>NON_COMPLIANT</code>.
      */
 
     public Integer getOtherNonCompliantCount() {
@@ -1635,15 +1639,15 @@ public class InstancePatchState implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The number of instances with patches installed that are specified as other than <code>Critical</code> or
-     * <code>Security</code> but aren't compliant with the patch baseline. The status of these instances is
+     * The number of managed nodes with patches installed that are specified as other than <code>Critical</code> or
+     * <code>Security</code> but aren't compliant with the patch baseline. The status of these managed nodes is
      * <code>NON_COMPLIANT</code>.
      * </p>
      * 
      * @param otherNonCompliantCount
-     *        The number of instances with patches installed that are specified as other than <code>Critical</code> or
-     *        <code>Security</code> but aren't compliant with the patch baseline. The status of these instances is
-     *        <code>NON_COMPLIANT</code>.
+     *        The number of managed nodes with patches installed that are specified as other than <code>Critical</code>
+     *        or <code>Security</code> but aren't compliant with the patch baseline. The status of these managed nodes
+     *        is <code>NON_COMPLIANT</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

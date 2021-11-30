@@ -27,7 +27,7 @@ public class UpdateManagedInstanceRoleRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ID of the managed instance where you want to update the role.
+     * The ID of the managed node where you want to update the role.
      * </p>
      */
     private String instanceId;
@@ -40,11 +40,11 @@ public class UpdateManagedInstanceRoleRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ID of the managed instance where you want to update the role.
+     * The ID of the managed node where you want to update the role.
      * </p>
      * 
      * @param instanceId
-     *        The ID of the managed instance where you want to update the role.
+     *        The ID of the managed node where you want to update the role.
      */
 
     public void setInstanceId(String instanceId) {
@@ -53,10 +53,10 @@ public class UpdateManagedInstanceRoleRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ID of the managed instance where you want to update the role.
+     * The ID of the managed node where you want to update the role.
      * </p>
      * 
-     * @return The ID of the managed instance where you want to update the role.
+     * @return The ID of the managed node where you want to update the role.
      */
 
     public String getInstanceId() {
@@ -65,11 +65,11 @@ public class UpdateManagedInstanceRoleRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ID of the managed instance where you want to update the role.
+     * The ID of the managed node where you want to update the role.
      * </p>
      * 
      * @param instanceId
-     *        The ID of the managed instance where you want to update the role.
+     *        The ID of the managed node where you want to update the role.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

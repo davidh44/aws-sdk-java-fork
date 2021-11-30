@@ -33,6 +33,10 @@ public class ChoiceMarshaller {
             .marshallLocationName("Title").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
+    private static final MarshallingInfo<StructuredPojo> HELPFULRESOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HelpfulResource").build();
+    private static final MarshallingInfo<StructuredPojo> IMPROVEMENTPLAN_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ImprovementPlan").build();
 
     private static final ChoiceMarshaller instance = new ChoiceMarshaller();
 
@@ -53,6 +57,8 @@ public class ChoiceMarshaller {
             protocolMarshaller.marshall(choice.getChoiceId(), CHOICEID_BINDING);
             protocolMarshaller.marshall(choice.getTitle(), TITLE_BINDING);
             protocolMarshaller.marshall(choice.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(choice.getHelpfulResource(), HELPFULRESOURCE_BINDING);
+            protocolMarshaller.marshall(choice.getImprovementPlan(), IMPROVEMENTPLAN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

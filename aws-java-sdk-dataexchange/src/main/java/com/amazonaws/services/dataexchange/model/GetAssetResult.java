@@ -62,7 +62,9 @@ public class GetAssetResult extends com.amazonaws.AmazonWebServiceResult<com.ama
     /**
      * <p>
      * The name of the asset. When importing from Amazon S3, the S3 object key is used as the asset name. When exporting
-     * to Amazon S3, the asset name is used as default target S3 object key.
+     * to Amazon S3, the asset name is used as default target S3 object key. When importing from Amazon API Gateway API,
+     * the API name is used as the asset name. When importing from Amazon Redshift, the datashare name is used as the
+     * asset name.
      * </p>
      */
     private String name;
@@ -348,12 +350,16 @@ public class GetAssetResult extends com.amazonaws.AmazonWebServiceResult<com.ama
     /**
      * <p>
      * The name of the asset. When importing from Amazon S3, the S3 object key is used as the asset name. When exporting
-     * to Amazon S3, the asset name is used as default target S3 object key.
+     * to Amazon S3, the asset name is used as default target S3 object key. When importing from Amazon API Gateway API,
+     * the API name is used as the asset name. When importing from Amazon Redshift, the datashare name is used as the
+     * asset name.
      * </p>
      * 
      * @param name
      *        The name of the asset. When importing from Amazon S3, the S3 object key is used as the asset name. When
-     *        exporting to Amazon S3, the asset name is used as default target S3 object key.
+     *        exporting to Amazon S3, the asset name is used as default target S3 object key. When importing from Amazon
+     *        API Gateway API, the API name is used as the asset name. When importing from Amazon Redshift, the
+     *        datashare name is used as the asset name.
      */
 
     public void setName(String name) {
@@ -363,11 +369,15 @@ public class GetAssetResult extends com.amazonaws.AmazonWebServiceResult<com.ama
     /**
      * <p>
      * The name of the asset. When importing from Amazon S3, the S3 object key is used as the asset name. When exporting
-     * to Amazon S3, the asset name is used as default target S3 object key.
+     * to Amazon S3, the asset name is used as default target S3 object key. When importing from Amazon API Gateway API,
+     * the API name is used as the asset name. When importing from Amazon Redshift, the datashare name is used as the
+     * asset name.
      * </p>
      * 
      * @return The name of the asset. When importing from Amazon S3, the S3 object key is used as the asset name. When
-     *         exporting to Amazon S3, the asset name is used as default target S3 object key.
+     *         exporting to Amazon S3, the asset name is used as default target S3 object key. When importing from
+     *         Amazon API Gateway API, the API name is used as the asset name. When importing from Amazon Redshift, the
+     *         datashare name is used as the asset name.
      */
 
     public String getName() {
@@ -377,12 +387,16 @@ public class GetAssetResult extends com.amazonaws.AmazonWebServiceResult<com.ama
     /**
      * <p>
      * The name of the asset. When importing from Amazon S3, the S3 object key is used as the asset name. When exporting
-     * to Amazon S3, the asset name is used as default target S3 object key.
+     * to Amazon S3, the asset name is used as default target S3 object key. When importing from Amazon API Gateway API,
+     * the API name is used as the asset name. When importing from Amazon Redshift, the datashare name is used as the
+     * asset name.
      * </p>
      * 
      * @param name
      *        The name of the asset. When importing from Amazon S3, the S3 object key is used as the asset name. When
-     *        exporting to Amazon S3, the asset name is used as default target S3 object key.
+     *        exporting to Amazon S3, the asset name is used as default target S3 object key. When importing from Amazon
+     *        API Gateway API, the API name is used as the asset name. When importing from Amazon Redshift, the
+     *        datashare name is used as the asset name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

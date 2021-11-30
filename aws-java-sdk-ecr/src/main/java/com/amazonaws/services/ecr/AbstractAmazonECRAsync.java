@@ -66,6 +66,21 @@ public class AbstractAmazonECRAsync extends AbstractAmazonECR implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<BatchGetRepositoryScanningConfigurationResult> batchGetRepositoryScanningConfigurationAsync(
+            BatchGetRepositoryScanningConfigurationRequest request) {
+
+        return batchGetRepositoryScanningConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetRepositoryScanningConfigurationResult> batchGetRepositoryScanningConfigurationAsync(
+            BatchGetRepositoryScanningConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<BatchGetRepositoryScanningConfigurationRequest, BatchGetRepositoryScanningConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CompleteLayerUploadResult> completeLayerUploadAsync(CompleteLayerUploadRequest request) {
 
         return completeLayerUploadAsync(request, null);
@@ -74,6 +89,19 @@ public class AbstractAmazonECRAsync extends AbstractAmazonECR implements AmazonE
     @Override
     public java.util.concurrent.Future<CompleteLayerUploadResult> completeLayerUploadAsync(CompleteLayerUploadRequest request,
             com.amazonaws.handlers.AsyncHandler<CompleteLayerUploadRequest, CompleteLayerUploadResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePullThroughCacheRuleResult> createPullThroughCacheRuleAsync(CreatePullThroughCacheRuleRequest request) {
+
+        return createPullThroughCacheRuleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePullThroughCacheRuleResult> createPullThroughCacheRuleAsync(CreatePullThroughCacheRuleRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreatePullThroughCacheRuleRequest, CreatePullThroughCacheRuleResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -100,6 +128,19 @@ public class AbstractAmazonECRAsync extends AbstractAmazonECR implements AmazonE
     @Override
     public java.util.concurrent.Future<DeleteLifecyclePolicyResult> deleteLifecyclePolicyAsync(DeleteLifecyclePolicyRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteLifecyclePolicyRequest, DeleteLifecyclePolicyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePullThroughCacheRuleResult> deletePullThroughCacheRuleAsync(DeletePullThroughCacheRuleRequest request) {
+
+        return deletePullThroughCacheRuleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePullThroughCacheRuleResult> deletePullThroughCacheRuleAsync(DeletePullThroughCacheRuleRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeletePullThroughCacheRuleRequest, DeletePullThroughCacheRuleResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -178,6 +219,19 @@ public class AbstractAmazonECRAsync extends AbstractAmazonECR implements AmazonE
     @Override
     public java.util.concurrent.Future<DescribeImagesResult> describeImagesAsync(DescribeImagesRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeImagesRequest, DescribeImagesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribePullThroughCacheRulesResult> describePullThroughCacheRulesAsync(DescribePullThroughCacheRulesRequest request) {
+
+        return describePullThroughCacheRulesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribePullThroughCacheRulesResult> describePullThroughCacheRulesAsync(DescribePullThroughCacheRulesRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribePullThroughCacheRulesRequest, DescribePullThroughCacheRulesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -269,6 +323,21 @@ public class AbstractAmazonECRAsync extends AbstractAmazonECR implements AmazonE
     @Override
     public java.util.concurrent.Future<GetRegistryPolicyResult> getRegistryPolicyAsync(GetRegistryPolicyRequest request,
             com.amazonaws.handlers.AsyncHandler<GetRegistryPolicyRequest, GetRegistryPolicyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRegistryScanningConfigurationResult> getRegistryScanningConfigurationAsync(
+            GetRegistryScanningConfigurationRequest request) {
+
+        return getRegistryScanningConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRegistryScanningConfigurationResult> getRegistryScanningConfigurationAsync(
+            GetRegistryScanningConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetRegistryScanningConfigurationRequest, GetRegistryScanningConfigurationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -386,6 +455,21 @@ public class AbstractAmazonECRAsync extends AbstractAmazonECR implements AmazonE
     @Override
     public java.util.concurrent.Future<PutRegistryPolicyResult> putRegistryPolicyAsync(PutRegistryPolicyRequest request,
             com.amazonaws.handlers.AsyncHandler<PutRegistryPolicyRequest, PutRegistryPolicyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutRegistryScanningConfigurationResult> putRegistryScanningConfigurationAsync(
+            PutRegistryScanningConfigurationRequest request) {
+
+        return putRegistryScanningConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutRegistryScanningConfigurationResult> putRegistryScanningConfigurationAsync(
+            PutRegistryScanningConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<PutRegistryScanningConfigurationRequest, PutRegistryScanningConfigurationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

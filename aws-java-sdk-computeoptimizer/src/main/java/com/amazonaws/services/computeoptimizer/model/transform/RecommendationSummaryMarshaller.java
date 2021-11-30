@@ -34,6 +34,10 @@ public class RecommendationSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recommendationResourceType").build();
     private static final MarshallingInfo<String> ACCOUNTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("accountId").build();
+    private static final MarshallingInfo<StructuredPojo> SAVINGSOPPORTUNITY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("savingsOpportunity").build();
+    private static final MarshallingInfo<StructuredPojo> CURRENTPERFORMANCERISKRATINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("currentPerformanceRiskRatings").build();
 
     private static final RecommendationSummaryMarshaller instance = new RecommendationSummaryMarshaller();
 
@@ -54,6 +58,8 @@ public class RecommendationSummaryMarshaller {
             protocolMarshaller.marshall(recommendationSummary.getSummaries(), SUMMARIES_BINDING);
             protocolMarshaller.marshall(recommendationSummary.getRecommendationResourceType(), RECOMMENDATIONRESOURCETYPE_BINDING);
             protocolMarshaller.marshall(recommendationSummary.getAccountId(), ACCOUNTID_BINDING);
+            protocolMarshaller.marshall(recommendationSummary.getSavingsOpportunity(), SAVINGSOPPORTUNITY_BINDING);
+            protocolMarshaller.marshall(recommendationSummary.getCurrentPerformanceRiskRatings(), CURRENTPERFORMANCERISKRATINGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

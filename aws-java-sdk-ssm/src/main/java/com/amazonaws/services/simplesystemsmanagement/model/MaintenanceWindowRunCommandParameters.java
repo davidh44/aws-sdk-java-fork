@@ -91,7 +91,7 @@ public class MaintenanceWindowRunCommandParameters implements Serializable, Clon
     private String documentVersion;
     /**
      * <p>
-     * Configurations for sending notifications about command status changes on a per-instance basis.
+     * Configurations for sending notifications about command status changes on a per-managed node basis.
      * </p>
      */
     private NotificationConfig notificationConfig;
@@ -406,11 +406,11 @@ public class MaintenanceWindowRunCommandParameters implements Serializable, Clon
 
     /**
      * <p>
-     * Configurations for sending notifications about command status changes on a per-instance basis.
+     * Configurations for sending notifications about command status changes on a per-managed node basis.
      * </p>
      * 
      * @param notificationConfig
-     *        Configurations for sending notifications about command status changes on a per-instance basis.
+     *        Configurations for sending notifications about command status changes on a per-managed node basis.
      */
 
     public void setNotificationConfig(NotificationConfig notificationConfig) {
@@ -419,10 +419,10 @@ public class MaintenanceWindowRunCommandParameters implements Serializable, Clon
 
     /**
      * <p>
-     * Configurations for sending notifications about command status changes on a per-instance basis.
+     * Configurations for sending notifications about command status changes on a per-managed node basis.
      * </p>
      * 
-     * @return Configurations for sending notifications about command status changes on a per-instance basis.
+     * @return Configurations for sending notifications about command status changes on a per-managed node basis.
      */
 
     public NotificationConfig getNotificationConfig() {
@@ -431,11 +431,11 @@ public class MaintenanceWindowRunCommandParameters implements Serializable, Clon
 
     /**
      * <p>
-     * Configurations for sending notifications about command status changes on a per-instance basis.
+     * Configurations for sending notifications about command status changes on a per-managed node basis.
      * </p>
      * 
      * @param notificationConfig
-     *        Configurations for sending notifications about command status changes on a per-instance basis.
+     *        Configurations for sending notifications about command status changes on a per-managed node basis.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
