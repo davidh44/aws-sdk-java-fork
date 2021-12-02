@@ -84,6 +84,103 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
      * </p>
      */
     private LambdaStepMetadata lambda;
+    /**
+     * <p>
+     * The configurations and outcomes of the check step execution. This includes:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The type of the check conducted,
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon S3 URIs of baseline constraints and statistics files to be used for the drift check.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon S3 URIs of newly calculated baseline constraints and statistics.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The model package group name provided.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon S3 URI of the violation report if violations detected.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon Resource Name (ARN) of check processing job initiated by the step execution.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The boolean flags indicating if the drift check is skipped.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If step property <code>BaselineUsedForDriftCheck</code> is set the same as <code>CalculatedBaseline</code>.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private QualityCheckStepMetadata qualityCheck;
+    /**
+     * <p>
+     * Container for the metadata for a Clarify check step. The configurations and outcomes of the check step execution.
+     * This includes:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The type of the check conducted,
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon S3 URIs of baseline constraints and statistics files to be used for the drift check.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon S3 URIs of newly calculated baseline constraints and statistics.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The model package group name provided.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon S3 URI of the violation report if violations detected.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon Resource Name (ARN) of check processing job initiated by the step execution.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The boolean flags indicating if the drift check is skipped.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If step property <code>BaselineUsedForDriftCheck</code> is set the same as <code>CalculatedBaseline</code>.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private ClarifyCheckStepMetadata clarifyCheck;
 
     /**
      * <p>
@@ -458,6 +555,596 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
     }
 
     /**
+     * <p>
+     * The configurations and outcomes of the check step execution. This includes:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The type of the check conducted,
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon S3 URIs of baseline constraints and statistics files to be used for the drift check.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon S3 URIs of newly calculated baseline constraints and statistics.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The model package group name provided.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon S3 URI of the violation report if violations detected.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon Resource Name (ARN) of check processing job initiated by the step execution.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The boolean flags indicating if the drift check is skipped.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If step property <code>BaselineUsedForDriftCheck</code> is set the same as <code>CalculatedBaseline</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param qualityCheck
+     *        The configurations and outcomes of the check step execution. This includes: </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The type of the check conducted,
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The Amazon S3 URIs of baseline constraints and statistics files to be used for the drift check.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The Amazon S3 URIs of newly calculated baseline constraints and statistics.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The model package group name provided.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The Amazon S3 URI of the violation report if violations detected.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The Amazon Resource Name (ARN) of check processing job initiated by the step execution.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The boolean flags indicating if the drift check is skipped.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If step property <code>BaselineUsedForDriftCheck</code> is set the same as <code>CalculatedBaseline</code>
+     *        .
+     *        </p>
+     *        </li>
+     */
+
+    public void setQualityCheck(QualityCheckStepMetadata qualityCheck) {
+        this.qualityCheck = qualityCheck;
+    }
+
+    /**
+     * <p>
+     * The configurations and outcomes of the check step execution. This includes:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The type of the check conducted,
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon S3 URIs of baseline constraints and statistics files to be used for the drift check.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon S3 URIs of newly calculated baseline constraints and statistics.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The model package group name provided.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon S3 URI of the violation report if violations detected.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon Resource Name (ARN) of check processing job initiated by the step execution.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The boolean flags indicating if the drift check is skipped.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If step property <code>BaselineUsedForDriftCheck</code> is set the same as <code>CalculatedBaseline</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return The configurations and outcomes of the check step execution. This includes: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The type of the check conducted,
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The Amazon S3 URIs of baseline constraints and statistics files to be used for the drift check.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The Amazon S3 URIs of newly calculated baseline constraints and statistics.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The model package group name provided.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The Amazon S3 URI of the violation report if violations detected.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The Amazon Resource Name (ARN) of check processing job initiated by the step execution.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The boolean flags indicating if the drift check is skipped.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         If step property <code>BaselineUsedForDriftCheck</code> is set the same as
+     *         <code>CalculatedBaseline</code>.
+     *         </p>
+     *         </li>
+     */
+
+    public QualityCheckStepMetadata getQualityCheck() {
+        return this.qualityCheck;
+    }
+
+    /**
+     * <p>
+     * The configurations and outcomes of the check step execution. This includes:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The type of the check conducted,
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon S3 URIs of baseline constraints and statistics files to be used for the drift check.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon S3 URIs of newly calculated baseline constraints and statistics.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The model package group name provided.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon S3 URI of the violation report if violations detected.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon Resource Name (ARN) of check processing job initiated by the step execution.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The boolean flags indicating if the drift check is skipped.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If step property <code>BaselineUsedForDriftCheck</code> is set the same as <code>CalculatedBaseline</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param qualityCheck
+     *        The configurations and outcomes of the check step execution. This includes: </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The type of the check conducted,
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The Amazon S3 URIs of baseline constraints and statistics files to be used for the drift check.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The Amazon S3 URIs of newly calculated baseline constraints and statistics.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The model package group name provided.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The Amazon S3 URI of the violation report if violations detected.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The Amazon Resource Name (ARN) of check processing job initiated by the step execution.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The boolean flags indicating if the drift check is skipped.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If step property <code>BaselineUsedForDriftCheck</code> is set the same as <code>CalculatedBaseline</code>
+     *        .
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipelineExecutionStepMetadata withQualityCheck(QualityCheckStepMetadata qualityCheck) {
+        setQualityCheck(qualityCheck);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Container for the metadata for a Clarify check step. The configurations and outcomes of the check step execution.
+     * This includes:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The type of the check conducted,
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon S3 URIs of baseline constraints and statistics files to be used for the drift check.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon S3 URIs of newly calculated baseline constraints and statistics.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The model package group name provided.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon S3 URI of the violation report if violations detected.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon Resource Name (ARN) of check processing job initiated by the step execution.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The boolean flags indicating if the drift check is skipped.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If step property <code>BaselineUsedForDriftCheck</code> is set the same as <code>CalculatedBaseline</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param clarifyCheck
+     *        Container for the metadata for a Clarify check step. The configurations and outcomes of the check step
+     *        execution. This includes: </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The type of the check conducted,
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The Amazon S3 URIs of baseline constraints and statistics files to be used for the drift check.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The Amazon S3 URIs of newly calculated baseline constraints and statistics.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The model package group name provided.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The Amazon S3 URI of the violation report if violations detected.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The Amazon Resource Name (ARN) of check processing job initiated by the step execution.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The boolean flags indicating if the drift check is skipped.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If step property <code>BaselineUsedForDriftCheck</code> is set the same as <code>CalculatedBaseline</code>
+     *        .
+     *        </p>
+     *        </li>
+     */
+
+    public void setClarifyCheck(ClarifyCheckStepMetadata clarifyCheck) {
+        this.clarifyCheck = clarifyCheck;
+    }
+
+    /**
+     * <p>
+     * Container for the metadata for a Clarify check step. The configurations and outcomes of the check step execution.
+     * This includes:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The type of the check conducted,
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon S3 URIs of baseline constraints and statistics files to be used for the drift check.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon S3 URIs of newly calculated baseline constraints and statistics.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The model package group name provided.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon S3 URI of the violation report if violations detected.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon Resource Name (ARN) of check processing job initiated by the step execution.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The boolean flags indicating if the drift check is skipped.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If step property <code>BaselineUsedForDriftCheck</code> is set the same as <code>CalculatedBaseline</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return Container for the metadata for a Clarify check step. The configurations and outcomes of the check step
+     *         execution. This includes: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The type of the check conducted,
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The Amazon S3 URIs of baseline constraints and statistics files to be used for the drift check.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The Amazon S3 URIs of newly calculated baseline constraints and statistics.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The model package group name provided.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The Amazon S3 URI of the violation report if violations detected.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The Amazon Resource Name (ARN) of check processing job initiated by the step execution.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The boolean flags indicating if the drift check is skipped.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         If step property <code>BaselineUsedForDriftCheck</code> is set the same as
+     *         <code>CalculatedBaseline</code>.
+     *         </p>
+     *         </li>
+     */
+
+    public ClarifyCheckStepMetadata getClarifyCheck() {
+        return this.clarifyCheck;
+    }
+
+    /**
+     * <p>
+     * Container for the metadata for a Clarify check step. The configurations and outcomes of the check step execution.
+     * This includes:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The type of the check conducted,
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon S3 URIs of baseline constraints and statistics files to be used for the drift check.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon S3 URIs of newly calculated baseline constraints and statistics.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The model package group name provided.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon S3 URI of the violation report if violations detected.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The Amazon Resource Name (ARN) of check processing job initiated by the step execution.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The boolean flags indicating if the drift check is skipped.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If step property <code>BaselineUsedForDriftCheck</code> is set the same as <code>CalculatedBaseline</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param clarifyCheck
+     *        Container for the metadata for a Clarify check step. The configurations and outcomes of the check step
+     *        execution. This includes: </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The type of the check conducted,
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The Amazon S3 URIs of baseline constraints and statistics files to be used for the drift check.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The Amazon S3 URIs of newly calculated baseline constraints and statistics.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The model package group name provided.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The Amazon S3 URI of the violation report if violations detected.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The Amazon Resource Name (ARN) of check processing job initiated by the step execution.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The boolean flags indicating if the drift check is skipped.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If step property <code>BaselineUsedForDriftCheck</code> is set the same as <code>CalculatedBaseline</code>
+     *        .
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipelineExecutionStepMetadata withClarifyCheck(ClarifyCheckStepMetadata clarifyCheck) {
+        setClarifyCheck(clarifyCheck);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -486,7 +1173,11 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
         if (getCallback() != null)
             sb.append("Callback: ").append(getCallback()).append(",");
         if (getLambda() != null)
-            sb.append("Lambda: ").append(getLambda());
+            sb.append("Lambda: ").append(getLambda()).append(",");
+        if (getQualityCheck() != null)
+            sb.append("QualityCheck: ").append(getQualityCheck()).append(",");
+        if (getClarifyCheck() != null)
+            sb.append("ClarifyCheck: ").append(getClarifyCheck());
         sb.append("}");
         return sb.toString();
     }
@@ -537,6 +1228,14 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
             return false;
         if (other.getLambda() != null && other.getLambda().equals(this.getLambda()) == false)
             return false;
+        if (other.getQualityCheck() == null ^ this.getQualityCheck() == null)
+            return false;
+        if (other.getQualityCheck() != null && other.getQualityCheck().equals(this.getQualityCheck()) == false)
+            return false;
+        if (other.getClarifyCheck() == null ^ this.getClarifyCheck() == null)
+            return false;
+        if (other.getClarifyCheck() != null && other.getClarifyCheck().equals(this.getClarifyCheck()) == false)
+            return false;
         return true;
     }
 
@@ -554,6 +1253,8 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
         hashCode = prime * hashCode + ((getCondition() == null) ? 0 : getCondition().hashCode());
         hashCode = prime * hashCode + ((getCallback() == null) ? 0 : getCallback().hashCode());
         hashCode = prime * hashCode + ((getLambda() == null) ? 0 : getLambda().hashCode());
+        hashCode = prime * hashCode + ((getQualityCheck() == null) ? 0 : getQualityCheck().hashCode());
+        hashCode = prime * hashCode + ((getClarifyCheck() == null) ? 0 : getClarifyCheck().hashCode());
         return hashCode;
     }
 

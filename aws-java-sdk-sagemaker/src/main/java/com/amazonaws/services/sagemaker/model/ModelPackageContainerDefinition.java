@@ -78,6 +78,31 @@ public class ModelPackageContainerDefinition implements Serializable, Cloneable,
      * </p>
      */
     private java.util.Map<String, String> environment;
+    /**
+     * <p>
+     * A structure with Model Input details.
+     * </p>
+     */
+    private ModelInput modelInput;
+    /**
+     * <p>
+     * The machine learning framework of the model package container image.
+     * </p>
+     */
+    private String framework;
+    /**
+     * <p>
+     * The framework version of the Model Package Container Image.
+     * </p>
+     */
+    private String frameworkVersion;
+    /**
+     * <p>
+     * The name of a pre-trained machine learning benchmarked by Amazon SageMaker Inference Recommender model that
+     * matches your model. You can find a list of benchmarked models by calling <code>ListModelMetadata</code>.
+     * </p>
+     */
+    private String nearestModelName;
 
     /**
      * <p>
@@ -429,6 +454,175 @@ public class ModelPackageContainerDefinition implements Serializable, Cloneable,
     }
 
     /**
+     * <p>
+     * A structure with Model Input details.
+     * </p>
+     * 
+     * @param modelInput
+     *        A structure with Model Input details.
+     */
+
+    public void setModelInput(ModelInput modelInput) {
+        this.modelInput = modelInput;
+    }
+
+    /**
+     * <p>
+     * A structure with Model Input details.
+     * </p>
+     * 
+     * @return A structure with Model Input details.
+     */
+
+    public ModelInput getModelInput() {
+        return this.modelInput;
+    }
+
+    /**
+     * <p>
+     * A structure with Model Input details.
+     * </p>
+     * 
+     * @param modelInput
+     *        A structure with Model Input details.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModelPackageContainerDefinition withModelInput(ModelInput modelInput) {
+        setModelInput(modelInput);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The machine learning framework of the model package container image.
+     * </p>
+     * 
+     * @param framework
+     *        The machine learning framework of the model package container image.
+     */
+
+    public void setFramework(String framework) {
+        this.framework = framework;
+    }
+
+    /**
+     * <p>
+     * The machine learning framework of the model package container image.
+     * </p>
+     * 
+     * @return The machine learning framework of the model package container image.
+     */
+
+    public String getFramework() {
+        return this.framework;
+    }
+
+    /**
+     * <p>
+     * The machine learning framework of the model package container image.
+     * </p>
+     * 
+     * @param framework
+     *        The machine learning framework of the model package container image.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModelPackageContainerDefinition withFramework(String framework) {
+        setFramework(framework);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The framework version of the Model Package Container Image.
+     * </p>
+     * 
+     * @param frameworkVersion
+     *        The framework version of the Model Package Container Image.
+     */
+
+    public void setFrameworkVersion(String frameworkVersion) {
+        this.frameworkVersion = frameworkVersion;
+    }
+
+    /**
+     * <p>
+     * The framework version of the Model Package Container Image.
+     * </p>
+     * 
+     * @return The framework version of the Model Package Container Image.
+     */
+
+    public String getFrameworkVersion() {
+        return this.frameworkVersion;
+    }
+
+    /**
+     * <p>
+     * The framework version of the Model Package Container Image.
+     * </p>
+     * 
+     * @param frameworkVersion
+     *        The framework version of the Model Package Container Image.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModelPackageContainerDefinition withFrameworkVersion(String frameworkVersion) {
+        setFrameworkVersion(frameworkVersion);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of a pre-trained machine learning benchmarked by Amazon SageMaker Inference Recommender model that
+     * matches your model. You can find a list of benchmarked models by calling <code>ListModelMetadata</code>.
+     * </p>
+     * 
+     * @param nearestModelName
+     *        The name of a pre-trained machine learning benchmarked by Amazon SageMaker Inference Recommender model
+     *        that matches your model. You can find a list of benchmarked models by calling
+     *        <code>ListModelMetadata</code>.
+     */
+
+    public void setNearestModelName(String nearestModelName) {
+        this.nearestModelName = nearestModelName;
+    }
+
+    /**
+     * <p>
+     * The name of a pre-trained machine learning benchmarked by Amazon SageMaker Inference Recommender model that
+     * matches your model. You can find a list of benchmarked models by calling <code>ListModelMetadata</code>.
+     * </p>
+     * 
+     * @return The name of a pre-trained machine learning benchmarked by Amazon SageMaker Inference Recommender model
+     *         that matches your model. You can find a list of benchmarked models by calling
+     *         <code>ListModelMetadata</code>.
+     */
+
+    public String getNearestModelName() {
+        return this.nearestModelName;
+    }
+
+    /**
+     * <p>
+     * The name of a pre-trained machine learning benchmarked by Amazon SageMaker Inference Recommender model that
+     * matches your model. You can find a list of benchmarked models by calling <code>ListModelMetadata</code>.
+     * </p>
+     * 
+     * @param nearestModelName
+     *        The name of a pre-trained machine learning benchmarked by Amazon SageMaker Inference Recommender model
+     *        that matches your model. You can find a list of benchmarked models by calling
+     *        <code>ListModelMetadata</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModelPackageContainerDefinition withNearestModelName(String nearestModelName) {
+        setNearestModelName(nearestModelName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -451,7 +645,15 @@ public class ModelPackageContainerDefinition implements Serializable, Cloneable,
         if (getProductId() != null)
             sb.append("ProductId: ").append(getProductId()).append(",");
         if (getEnvironment() != null)
-            sb.append("Environment: ").append(getEnvironment());
+            sb.append("Environment: ").append(getEnvironment()).append(",");
+        if (getModelInput() != null)
+            sb.append("ModelInput: ").append(getModelInput()).append(",");
+        if (getFramework() != null)
+            sb.append("Framework: ").append(getFramework()).append(",");
+        if (getFrameworkVersion() != null)
+            sb.append("FrameworkVersion: ").append(getFrameworkVersion()).append(",");
+        if (getNearestModelName() != null)
+            sb.append("NearestModelName: ").append(getNearestModelName());
         sb.append("}");
         return sb.toString();
     }
@@ -490,6 +692,22 @@ public class ModelPackageContainerDefinition implements Serializable, Cloneable,
             return false;
         if (other.getEnvironment() != null && other.getEnvironment().equals(this.getEnvironment()) == false)
             return false;
+        if (other.getModelInput() == null ^ this.getModelInput() == null)
+            return false;
+        if (other.getModelInput() != null && other.getModelInput().equals(this.getModelInput()) == false)
+            return false;
+        if (other.getFramework() == null ^ this.getFramework() == null)
+            return false;
+        if (other.getFramework() != null && other.getFramework().equals(this.getFramework()) == false)
+            return false;
+        if (other.getFrameworkVersion() == null ^ this.getFrameworkVersion() == null)
+            return false;
+        if (other.getFrameworkVersion() != null && other.getFrameworkVersion().equals(this.getFrameworkVersion()) == false)
+            return false;
+        if (other.getNearestModelName() == null ^ this.getNearestModelName() == null)
+            return false;
+        if (other.getNearestModelName() != null && other.getNearestModelName().equals(this.getNearestModelName()) == false)
+            return false;
         return true;
     }
 
@@ -504,6 +722,10 @@ public class ModelPackageContainerDefinition implements Serializable, Cloneable,
         hashCode = prime * hashCode + ((getModelDataUrl() == null) ? 0 : getModelDataUrl().hashCode());
         hashCode = prime * hashCode + ((getProductId() == null) ? 0 : getProductId().hashCode());
         hashCode = prime * hashCode + ((getEnvironment() == null) ? 0 : getEnvironment().hashCode());
+        hashCode = prime * hashCode + ((getModelInput() == null) ? 0 : getModelInput().hashCode());
+        hashCode = prime * hashCode + ((getFramework() == null) ? 0 : getFramework().hashCode());
+        hashCode = prime * hashCode + ((getFrameworkVersion() == null) ? 0 : getFrameworkVersion().hashCode());
+        hashCode = prime * hashCode + ((getNearestModelName() == null) ? 0 : getNearestModelName().hashCode());
         return hashCode;
     }
 

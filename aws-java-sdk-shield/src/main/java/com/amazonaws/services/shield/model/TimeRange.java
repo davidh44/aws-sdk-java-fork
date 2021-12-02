@@ -30,28 +30,24 @@ public class TimeRange implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The start time, in Unix time in seconds. For more information see <a
-     * href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp</a>.
+     * The start time, in Unix time in seconds.
      * </p>
      */
     private java.util.Date fromInclusive;
     /**
      * <p>
-     * The end time, in Unix time in seconds. For more information see <a
-     * href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp</a>.
+     * The end time, in Unix time in seconds.
      * </p>
      */
     private java.util.Date toExclusive;
 
     /**
      * <p>
-     * The start time, in Unix time in seconds. For more information see <a
-     * href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp</a>.
+     * The start time, in Unix time in seconds.
      * </p>
      * 
      * @param fromInclusive
-     *        The start time, in Unix time in seconds. For more information see <a
-     *        href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp</a>.
+     *        The start time, in Unix time in seconds.
      */
 
     public void setFromInclusive(java.util.Date fromInclusive) {
@@ -60,13 +56,10 @@ public class TimeRange implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The start time, in Unix time in seconds. For more information see <a
-     * href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp</a>.
+     * The start time, in Unix time in seconds.
      * </p>
      * 
-     * @return The start time, in Unix time in seconds. For more information see <a
-     *         href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types"
-     *         >timestamp</a>.
+     * @return The start time, in Unix time in seconds.
      */
 
     public java.util.Date getFromInclusive() {
@@ -75,13 +68,11 @@ public class TimeRange implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The start time, in Unix time in seconds. For more information see <a
-     * href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp</a>.
+     * The start time, in Unix time in seconds.
      * </p>
      * 
      * @param fromInclusive
-     *        The start time, in Unix time in seconds. For more information see <a
-     *        href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp</a>.
+     *        The start time, in Unix time in seconds.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -92,13 +83,11 @@ public class TimeRange implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The end time, in Unix time in seconds. For more information see <a
-     * href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp</a>.
+     * The end time, in Unix time in seconds.
      * </p>
      * 
      * @param toExclusive
-     *        The end time, in Unix time in seconds. For more information see <a
-     *        href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp</a>.
+     *        The end time, in Unix time in seconds.
      */
 
     public void setToExclusive(java.util.Date toExclusive) {
@@ -107,13 +96,10 @@ public class TimeRange implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The end time, in Unix time in seconds. For more information see <a
-     * href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp</a>.
+     * The end time, in Unix time in seconds.
      * </p>
      * 
-     * @return The end time, in Unix time in seconds. For more information see <a
-     *         href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types"
-     *         >timestamp</a>.
+     * @return The end time, in Unix time in seconds.
      */
 
     public java.util.Date getToExclusive() {
@@ -122,13 +108,11 @@ public class TimeRange implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The end time, in Unix time in seconds. For more information see <a
-     * href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp</a>.
+     * The end time, in Unix time in seconds.
      * </p>
      * 
      * @param toExclusive
-     *        The end time, in Unix time in seconds. For more information see <a
-     *        href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp</a>.
+     *        The end time, in Unix time in seconds.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

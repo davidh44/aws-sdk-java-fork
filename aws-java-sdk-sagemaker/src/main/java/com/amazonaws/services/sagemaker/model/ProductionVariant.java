@@ -75,6 +75,19 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private ProductionVariantCoreDumpConfig coreDumpConfig;
+    /**
+     * <p>
+     * The serverless configuration for an endpoint. Specifies a serverless endpoint configuration instead of an
+     * instance-based endpoint configuration.
+     * </p>
+     * <note>
+     * <p>
+     * Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not recommend
+     * using this feature in production environments.
+     * </p>
+     * </note>
+     */
+    private ProductionVariantServerlessConfig serverlessConfig;
 
     /**
      * <p>
@@ -430,6 +443,82 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The serverless configuration for an endpoint. Specifies a serverless endpoint configuration instead of an
+     * instance-based endpoint configuration.
+     * </p>
+     * <note>
+     * <p>
+     * Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not recommend
+     * using this feature in production environments.
+     * </p>
+     * </note>
+     * 
+     * @param serverlessConfig
+     *        The serverless configuration for an endpoint. Specifies a serverless endpoint configuration instead of an
+     *        instance-based endpoint configuration.</p> <note>
+     *        <p>
+     *        Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not
+     *        recommend using this feature in production environments.
+     *        </p>
+     */
+
+    public void setServerlessConfig(ProductionVariantServerlessConfig serverlessConfig) {
+        this.serverlessConfig = serverlessConfig;
+    }
+
+    /**
+     * <p>
+     * The serverless configuration for an endpoint. Specifies a serverless endpoint configuration instead of an
+     * instance-based endpoint configuration.
+     * </p>
+     * <note>
+     * <p>
+     * Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not recommend
+     * using this feature in production environments.
+     * </p>
+     * </note>
+     * 
+     * @return The serverless configuration for an endpoint. Specifies a serverless endpoint configuration instead of an
+     *         instance-based endpoint configuration.</p> <note>
+     *         <p>
+     *         Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not
+     *         recommend using this feature in production environments.
+     *         </p>
+     */
+
+    public ProductionVariantServerlessConfig getServerlessConfig() {
+        return this.serverlessConfig;
+    }
+
+    /**
+     * <p>
+     * The serverless configuration for an endpoint. Specifies a serverless endpoint configuration instead of an
+     * instance-based endpoint configuration.
+     * </p>
+     * <note>
+     * <p>
+     * Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not recommend
+     * using this feature in production environments.
+     * </p>
+     * </note>
+     * 
+     * @param serverlessConfig
+     *        The serverless configuration for an endpoint. Specifies a serverless endpoint configuration instead of an
+     *        instance-based endpoint configuration.</p> <note>
+     *        <p>
+     *        Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not
+     *        recommend using this feature in production environments.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ProductionVariant withServerlessConfig(ProductionVariantServerlessConfig serverlessConfig) {
+        setServerlessConfig(serverlessConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -454,7 +543,9 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
         if (getAcceleratorType() != null)
             sb.append("AcceleratorType: ").append(getAcceleratorType()).append(",");
         if (getCoreDumpConfig() != null)
-            sb.append("CoreDumpConfig: ").append(getCoreDumpConfig());
+            sb.append("CoreDumpConfig: ").append(getCoreDumpConfig()).append(",");
+        if (getServerlessConfig() != null)
+            sb.append("ServerlessConfig: ").append(getServerlessConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -497,6 +588,10 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getCoreDumpConfig() != null && other.getCoreDumpConfig().equals(this.getCoreDumpConfig()) == false)
             return false;
+        if (other.getServerlessConfig() == null ^ this.getServerlessConfig() == null)
+            return false;
+        if (other.getServerlessConfig() != null && other.getServerlessConfig().equals(this.getServerlessConfig()) == false)
+            return false;
         return true;
     }
 
@@ -512,6 +607,7 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getInitialVariantWeight() == null) ? 0 : getInitialVariantWeight().hashCode());
         hashCode = prime * hashCode + ((getAcceleratorType() == null) ? 0 : getAcceleratorType().hashCode());
         hashCode = prime * hashCode + ((getCoreDumpConfig() == null) ? 0 : getCoreDumpConfig().hashCode());
+        hashCode = prime * hashCode + ((getServerlessConfig() == null) ? 0 : getServerlessConfig().hashCode());
         return hashCode;
     }
 

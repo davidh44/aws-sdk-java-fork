@@ -48,7 +48,7 @@ public class Protection implements Serializable, Cloneable, StructuredPojo {
     private String resourceArn;
     /**
      * <p>
-     * The unique identifier (ID) for the Route 53 health check that's associated with the protection.
+     * The unique identifier (ID) for the Route 53 health check that's associated with the protection.
      * </p>
      */
     private java.util.List<String> healthCheckIds;
@@ -58,6 +58,14 @@ public class Protection implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String protectionArn;
+    /**
+     * <p>
+     * The automatic application layer DDoS mitigation settings for the protection. This configuration determines
+     * whether Shield Advanced automatically manages rules in the web ACL in order to respond to application layer
+     * events that Shield Advanced determines to be DDoS attacks.
+     * </p>
+     */
+    private ApplicationLayerAutomaticResponseConfiguration applicationLayerAutomaticResponseConfiguration;
 
     /**
      * <p>
@@ -181,10 +189,10 @@ public class Protection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier (ID) for the Route 53 health check that's associated with the protection.
+     * The unique identifier (ID) for the Route 53 health check that's associated with the protection.
      * </p>
      * 
-     * @return The unique identifier (ID) for the Route 53 health check that's associated with the protection.
+     * @return The unique identifier (ID) for the Route 53 health check that's associated with the protection.
      */
 
     public java.util.List<String> getHealthCheckIds() {
@@ -193,11 +201,11 @@ public class Protection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier (ID) for the Route 53 health check that's associated with the protection.
+     * The unique identifier (ID) for the Route 53 health check that's associated with the protection.
      * </p>
      * 
      * @param healthCheckIds
-     *        The unique identifier (ID) for the Route 53 health check that's associated with the protection.
+     *        The unique identifier (ID) for the Route 53 health check that's associated with the protection.
      */
 
     public void setHealthCheckIds(java.util.Collection<String> healthCheckIds) {
@@ -211,7 +219,7 @@ public class Protection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier (ID) for the Route 53 health check that's associated with the protection.
+     * The unique identifier (ID) for the Route 53 health check that's associated with the protection.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -220,7 +228,7 @@ public class Protection implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param healthCheckIds
-     *        The unique identifier (ID) for the Route 53 health check that's associated with the protection.
+     *        The unique identifier (ID) for the Route 53 health check that's associated with the protection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -236,11 +244,11 @@ public class Protection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier (ID) for the Route 53 health check that's associated with the protection.
+     * The unique identifier (ID) for the Route 53 health check that's associated with the protection.
      * </p>
      * 
      * @param healthCheckIds
-     *        The unique identifier (ID) for the Route 53 health check that's associated with the protection.
+     *        The unique identifier (ID) for the Route 53 health check that's associated with the protection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -290,6 +298,59 @@ public class Protection implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The automatic application layer DDoS mitigation settings for the protection. This configuration determines
+     * whether Shield Advanced automatically manages rules in the web ACL in order to respond to application layer
+     * events that Shield Advanced determines to be DDoS attacks.
+     * </p>
+     * 
+     * @param applicationLayerAutomaticResponseConfiguration
+     *        The automatic application layer DDoS mitigation settings for the protection. This configuration determines
+     *        whether Shield Advanced automatically manages rules in the web ACL in order to respond to application
+     *        layer events that Shield Advanced determines to be DDoS attacks.
+     */
+
+    public void setApplicationLayerAutomaticResponseConfiguration(ApplicationLayerAutomaticResponseConfiguration applicationLayerAutomaticResponseConfiguration) {
+        this.applicationLayerAutomaticResponseConfiguration = applicationLayerAutomaticResponseConfiguration;
+    }
+
+    /**
+     * <p>
+     * The automatic application layer DDoS mitigation settings for the protection. This configuration determines
+     * whether Shield Advanced automatically manages rules in the web ACL in order to respond to application layer
+     * events that Shield Advanced determines to be DDoS attacks.
+     * </p>
+     * 
+     * @return The automatic application layer DDoS mitigation settings for the protection. This configuration
+     *         determines whether Shield Advanced automatically manages rules in the web ACL in order to respond to
+     *         application layer events that Shield Advanced determines to be DDoS attacks.
+     */
+
+    public ApplicationLayerAutomaticResponseConfiguration getApplicationLayerAutomaticResponseConfiguration() {
+        return this.applicationLayerAutomaticResponseConfiguration;
+    }
+
+    /**
+     * <p>
+     * The automatic application layer DDoS mitigation settings for the protection. This configuration determines
+     * whether Shield Advanced automatically manages rules in the web ACL in order to respond to application layer
+     * events that Shield Advanced determines to be DDoS attacks.
+     * </p>
+     * 
+     * @param applicationLayerAutomaticResponseConfiguration
+     *        The automatic application layer DDoS mitigation settings for the protection. This configuration determines
+     *        whether Shield Advanced automatically manages rules in the web ACL in order to respond to application
+     *        layer events that Shield Advanced determines to be DDoS attacks.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Protection withApplicationLayerAutomaticResponseConfiguration(
+            ApplicationLayerAutomaticResponseConfiguration applicationLayerAutomaticResponseConfiguration) {
+        setApplicationLayerAutomaticResponseConfiguration(applicationLayerAutomaticResponseConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -310,7 +371,9 @@ public class Protection implements Serializable, Cloneable, StructuredPojo {
         if (getHealthCheckIds() != null)
             sb.append("HealthCheckIds: ").append(getHealthCheckIds()).append(",");
         if (getProtectionArn() != null)
-            sb.append("ProtectionArn: ").append(getProtectionArn());
+            sb.append("ProtectionArn: ").append(getProtectionArn()).append(",");
+        if (getApplicationLayerAutomaticResponseConfiguration() != null)
+            sb.append("ApplicationLayerAutomaticResponseConfiguration: ").append(getApplicationLayerAutomaticResponseConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -345,6 +408,11 @@ public class Protection implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getProtectionArn() != null && other.getProtectionArn().equals(this.getProtectionArn()) == false)
             return false;
+        if (other.getApplicationLayerAutomaticResponseConfiguration() == null ^ this.getApplicationLayerAutomaticResponseConfiguration() == null)
+            return false;
+        if (other.getApplicationLayerAutomaticResponseConfiguration() != null
+                && other.getApplicationLayerAutomaticResponseConfiguration().equals(this.getApplicationLayerAutomaticResponseConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -358,6 +426,8 @@ public class Protection implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getResourceArn() == null) ? 0 : getResourceArn().hashCode());
         hashCode = prime * hashCode + ((getHealthCheckIds() == null) ? 0 : getHealthCheckIds().hashCode());
         hashCode = prime * hashCode + ((getProtectionArn() == null) ? 0 : getProtectionArn().hashCode());
+        hashCode = prime * hashCode
+                + ((getApplicationLayerAutomaticResponseConfiguration() == null) ? 0 : getApplicationLayerAutomaticResponseConfiguration().hashCode());
         return hashCode;
     }
 

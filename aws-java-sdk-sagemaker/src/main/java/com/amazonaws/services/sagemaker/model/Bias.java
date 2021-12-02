@@ -35,6 +35,10 @@ public class Bias implements Serializable, Cloneable, StructuredPojo {
      */
     private MetricsSource report;
 
+    private MetricsSource preTrainingReport;
+
+    private MetricsSource postTrainingReport;
+
     /**
      * <p>
      * The bias report for a model
@@ -76,6 +80,58 @@ public class Bias implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * @param preTrainingReport
+     */
+
+    public void setPreTrainingReport(MetricsSource preTrainingReport) {
+        this.preTrainingReport = preTrainingReport;
+    }
+
+    /**
+     * @return
+     */
+
+    public MetricsSource getPreTrainingReport() {
+        return this.preTrainingReport;
+    }
+
+    /**
+     * @param preTrainingReport
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Bias withPreTrainingReport(MetricsSource preTrainingReport) {
+        setPreTrainingReport(preTrainingReport);
+        return this;
+    }
+
+    /**
+     * @param postTrainingReport
+     */
+
+    public void setPostTrainingReport(MetricsSource postTrainingReport) {
+        this.postTrainingReport = postTrainingReport;
+    }
+
+    /**
+     * @return
+     */
+
+    public MetricsSource getPostTrainingReport() {
+        return this.postTrainingReport;
+    }
+
+    /**
+     * @param postTrainingReport
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Bias withPostTrainingReport(MetricsSource postTrainingReport) {
+        setPostTrainingReport(postTrainingReport);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -88,7 +144,11 @@ public class Bias implements Serializable, Cloneable, StructuredPojo {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getReport() != null)
-            sb.append("Report: ").append(getReport());
+            sb.append("Report: ").append(getReport()).append(",");
+        if (getPreTrainingReport() != null)
+            sb.append("PreTrainingReport: ").append(getPreTrainingReport()).append(",");
+        if (getPostTrainingReport() != null)
+            sb.append("PostTrainingReport: ").append(getPostTrainingReport());
         sb.append("}");
         return sb.toString();
     }
@@ -107,6 +167,14 @@ public class Bias implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getReport() != null && other.getReport().equals(this.getReport()) == false)
             return false;
+        if (other.getPreTrainingReport() == null ^ this.getPreTrainingReport() == null)
+            return false;
+        if (other.getPreTrainingReport() != null && other.getPreTrainingReport().equals(this.getPreTrainingReport()) == false)
+            return false;
+        if (other.getPostTrainingReport() == null ^ this.getPostTrainingReport() == null)
+            return false;
+        if (other.getPostTrainingReport() != null && other.getPostTrainingReport().equals(this.getPostTrainingReport()) == false)
+            return false;
         return true;
     }
 
@@ -116,6 +184,8 @@ public class Bias implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getReport() == null) ? 0 : getReport().hashCode());
+        hashCode = prime * hashCode + ((getPreTrainingReport() == null) ? 0 : getPreTrainingReport().hashCode());
+        hashCode = prime * hashCode + ((getPostTrainingReport() == null) ? 0 : getPostTrainingReport().hashCode());
         return hashCode;
     }
 

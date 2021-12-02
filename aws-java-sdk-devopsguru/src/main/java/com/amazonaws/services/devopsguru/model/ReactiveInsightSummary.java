@@ -42,7 +42,9 @@ public class ReactiveInsightSummary implements Serializable, Cloneable, Structur
     private String name;
     /**
      * <p>
-     * The severity of a reactive insight.
+     * The severity of the insight. For more information, see <a href=
+     * "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     * >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * </p>
      */
     private String severity;
@@ -62,6 +64,12 @@ public class ReactiveInsightSummary implements Serializable, Cloneable, Structur
      * </p>
      */
     private ServiceCollection serviceCollection;
+    /**
+     * <p>
+     * The Amazon Resource Names (ARNs) of the Amazon Web Services resources that generated this insight.
+     * </p>
+     */
+    private java.util.List<String> associatedResourceArns;
 
     /**
      * <p>
@@ -145,11 +153,15 @@ public class ReactiveInsightSummary implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The severity of a reactive insight.
+     * The severity of the insight. For more information, see <a href=
+     * "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     * >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * </p>
      * 
      * @param severity
-     *        The severity of a reactive insight.
+     *        The severity of the insight. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     *        >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * @see InsightSeverity
      */
 
@@ -159,10 +171,14 @@ public class ReactiveInsightSummary implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The severity of a reactive insight.
+     * The severity of the insight. For more information, see <a href=
+     * "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     * >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * </p>
      * 
-     * @return The severity of a reactive insight.
+     * @return The severity of the insight. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     *         >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * @see InsightSeverity
      */
 
@@ -172,11 +188,15 @@ public class ReactiveInsightSummary implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The severity of a reactive insight.
+     * The severity of the insight. For more information, see <a href=
+     * "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     * >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * </p>
      * 
      * @param severity
-     *        The severity of a reactive insight.
+     *        The severity of the insight. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     *        >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InsightSeverity
      */
@@ -188,11 +208,15 @@ public class ReactiveInsightSummary implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The severity of a reactive insight.
+     * The severity of the insight. For more information, see <a href=
+     * "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     * >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * </p>
      * 
      * @param severity
-     *        The severity of a reactive insight.
+     *        The severity of the insight. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     *        >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InsightSeverity
      */
@@ -354,6 +378,76 @@ public class ReactiveInsightSummary implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * The Amazon Resource Names (ARNs) of the Amazon Web Services resources that generated this insight.
+     * </p>
+     * 
+     * @return The Amazon Resource Names (ARNs) of the Amazon Web Services resources that generated this insight.
+     */
+
+    public java.util.List<String> getAssociatedResourceArns() {
+        return associatedResourceArns;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Names (ARNs) of the Amazon Web Services resources that generated this insight.
+     * </p>
+     * 
+     * @param associatedResourceArns
+     *        The Amazon Resource Names (ARNs) of the Amazon Web Services resources that generated this insight.
+     */
+
+    public void setAssociatedResourceArns(java.util.Collection<String> associatedResourceArns) {
+        if (associatedResourceArns == null) {
+            this.associatedResourceArns = null;
+            return;
+        }
+
+        this.associatedResourceArns = new java.util.ArrayList<String>(associatedResourceArns);
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Names (ARNs) of the Amazon Web Services resources that generated this insight.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAssociatedResourceArns(java.util.Collection)} or
+     * {@link #withAssociatedResourceArns(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param associatedResourceArns
+     *        The Amazon Resource Names (ARNs) of the Amazon Web Services resources that generated this insight.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReactiveInsightSummary withAssociatedResourceArns(String... associatedResourceArns) {
+        if (this.associatedResourceArns == null) {
+            setAssociatedResourceArns(new java.util.ArrayList<String>(associatedResourceArns.length));
+        }
+        for (String ele : associatedResourceArns) {
+            this.associatedResourceArns.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Names (ARNs) of the Amazon Web Services resources that generated this insight.
+     * </p>
+     * 
+     * @param associatedResourceArns
+     *        The Amazon Resource Names (ARNs) of the Amazon Web Services resources that generated this insight.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReactiveInsightSummary withAssociatedResourceArns(java.util.Collection<String> associatedResourceArns) {
+        setAssociatedResourceArns(associatedResourceArns);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -378,7 +472,9 @@ public class ReactiveInsightSummary implements Serializable, Cloneable, Structur
         if (getResourceCollection() != null)
             sb.append("ResourceCollection: ").append(getResourceCollection()).append(",");
         if (getServiceCollection() != null)
-            sb.append("ServiceCollection: ").append(getServiceCollection());
+            sb.append("ServiceCollection: ").append(getServiceCollection()).append(",");
+        if (getAssociatedResourceArns() != null)
+            sb.append("AssociatedResourceArns: ").append(getAssociatedResourceArns());
         sb.append("}");
         return sb.toString();
     }
@@ -421,6 +517,10 @@ public class ReactiveInsightSummary implements Serializable, Cloneable, Structur
             return false;
         if (other.getServiceCollection() != null && other.getServiceCollection().equals(this.getServiceCollection()) == false)
             return false;
+        if (other.getAssociatedResourceArns() == null ^ this.getAssociatedResourceArns() == null)
+            return false;
+        if (other.getAssociatedResourceArns() != null && other.getAssociatedResourceArns().equals(this.getAssociatedResourceArns()) == false)
+            return false;
         return true;
     }
 
@@ -436,6 +536,7 @@ public class ReactiveInsightSummary implements Serializable, Cloneable, Structur
         hashCode = prime * hashCode + ((getInsightTimeRange() == null) ? 0 : getInsightTimeRange().hashCode());
         hashCode = prime * hashCode + ((getResourceCollection() == null) ? 0 : getResourceCollection().hashCode());
         hashCode = prime * hashCode + ((getServiceCollection() == null) ? 0 : getServiceCollection().hashCode());
+        hashCode = prime * hashCode + ((getAssociatedResourceArns() == null) ? 0 : getAssociatedResourceArns().hashCode());
         return hashCode;
     }
 

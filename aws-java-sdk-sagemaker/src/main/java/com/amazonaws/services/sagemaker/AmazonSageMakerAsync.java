@@ -1531,6 +1531,41 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
+     * Starts a recommendation job. You can create either an instance recommendation or load test job.
+     * </p>
+     * 
+     * @param createInferenceRecommendationsJobRequest
+     * @return A Java Future containing the result of the CreateInferenceRecommendationsJob operation returned by the
+     *         service.
+     * @sample AmazonSageMakerAsync.CreateInferenceRecommendationsJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateInferenceRecommendationsJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateInferenceRecommendationsJobResult> createInferenceRecommendationsJobAsync(
+            CreateInferenceRecommendationsJobRequest createInferenceRecommendationsJobRequest);
+
+    /**
+     * <p>
+     * Starts a recommendation job. You can create either an instance recommendation or load test job.
+     * </p>
+     * 
+     * @param createInferenceRecommendationsJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateInferenceRecommendationsJob operation returned by the
+     *         service.
+     * @sample AmazonSageMakerAsyncHandler.CreateInferenceRecommendationsJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateInferenceRecommendationsJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateInferenceRecommendationsJobResult> createInferenceRecommendationsJobAsync(
+            CreateInferenceRecommendationsJobRequest createInferenceRecommendationsJobRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateInferenceRecommendationsJobRequest, CreateInferenceRecommendationsJobResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a job that uses workers to label the data objects in your input dataset. You can use the labeled data to
      * train machine learning models.
      * </p>
@@ -5178,6 +5213,41 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
+     * Provides the results of the Inference Recommender job. One or more recommendation jobs are returned.
+     * </p>
+     * 
+     * @param describeInferenceRecommendationsJobRequest
+     * @return A Java Future containing the result of the DescribeInferenceRecommendationsJob operation returned by the
+     *         service.
+     * @sample AmazonSageMakerAsync.DescribeInferenceRecommendationsJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeInferenceRecommendationsJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeInferenceRecommendationsJobResult> describeInferenceRecommendationsJobAsync(
+            DescribeInferenceRecommendationsJobRequest describeInferenceRecommendationsJobRequest);
+
+    /**
+     * <p>
+     * Provides the results of the Inference Recommender job. One or more recommendation jobs are returned.
+     * </p>
+     * 
+     * @param describeInferenceRecommendationsJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeInferenceRecommendationsJob operation returned by the
+     *         service.
+     * @sample AmazonSageMakerAsyncHandler.DescribeInferenceRecommendationsJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeInferenceRecommendationsJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeInferenceRecommendationsJobResult> describeInferenceRecommendationsJobAsync(
+            DescribeInferenceRecommendationsJobRequest describeInferenceRecommendationsJobRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeInferenceRecommendationsJobRequest, DescribeInferenceRecommendationsJobResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets information about a labeling job.
      * </p>
      * 
@@ -5206,6 +5276,41 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      */
     java.util.concurrent.Future<DescribeLabelingJobResult> describeLabelingJobAsync(DescribeLabelingJobRequest describeLabelingJobRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeLabelingJobRequest, DescribeLabelingJobResult> asyncHandler);
+
+    /**
+     * <p>
+     * Provides a list of properties for the requested lineage group. For more information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/xaccount-lineage-tracking.html"> Cross-Account Lineage
+     * Tracking </a> in the <i>Amazon SageMaker Developer Guide</i>.
+     * </p>
+     * 
+     * @param describeLineageGroupRequest
+     * @return A Java Future containing the result of the DescribeLineageGroup operation returned by the service.
+     * @sample AmazonSageMakerAsync.DescribeLineageGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeLineageGroup" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeLineageGroupResult> describeLineageGroupAsync(DescribeLineageGroupRequest describeLineageGroupRequest);
+
+    /**
+     * <p>
+     * Provides a list of properties for the requested lineage group. For more information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/xaccount-lineage-tracking.html"> Cross-Account Lineage
+     * Tracking </a> in the <i>Amazon SageMaker Developer Guide</i>.
+     * </p>
+     * 
+     * @param describeLineageGroupRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeLineageGroup operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.DescribeLineageGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeLineageGroup" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeLineageGroupResult> describeLineageGroupAsync(DescribeLineageGroupRequest describeLineageGroupRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeLineageGroupRequest, DescribeLineageGroupResult> asyncHandler);
 
     /**
      * <p>
@@ -6158,6 +6263,37 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
+     * The resource policy for the lineage group.
+     * </p>
+     * 
+     * @param getLineageGroupPolicyRequest
+     * @return A Java Future containing the result of the GetLineageGroupPolicy operation returned by the service.
+     * @sample AmazonSageMakerAsync.GetLineageGroupPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/GetLineageGroupPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetLineageGroupPolicyResult> getLineageGroupPolicyAsync(GetLineageGroupPolicyRequest getLineageGroupPolicyRequest);
+
+    /**
+     * <p>
+     * The resource policy for the lineage group.
+     * </p>
+     * 
+     * @param getLineageGroupPolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetLineageGroupPolicy operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.GetLineageGroupPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/GetLineageGroupPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetLineageGroupPolicyResult> getLineageGroupPolicyAsync(GetLineageGroupPolicyRequest getLineageGroupPolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<GetLineageGroupPolicyRequest, GetLineageGroupPolicyResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets a resource policy that manages access for a model group. For information about resource policies, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_identity-vs-resource.html">Identity-based
      * policies and resource-based policies</a> in the <i>Amazon Web Services Identity and Access Management User
@@ -7072,6 +7208,41 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
+     * Lists recommendation jobs that satisfy various filters.
+     * </p>
+     * 
+     * @param listInferenceRecommendationsJobsRequest
+     * @return A Java Future containing the result of the ListInferenceRecommendationsJobs operation returned by the
+     *         service.
+     * @sample AmazonSageMakerAsync.ListInferenceRecommendationsJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListInferenceRecommendationsJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListInferenceRecommendationsJobsResult> listInferenceRecommendationsJobsAsync(
+            ListInferenceRecommendationsJobsRequest listInferenceRecommendationsJobsRequest);
+
+    /**
+     * <p>
+     * Lists recommendation jobs that satisfy various filters.
+     * </p>
+     * 
+     * @param listInferenceRecommendationsJobsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListInferenceRecommendationsJobs operation returned by the
+     *         service.
+     * @sample AmazonSageMakerAsyncHandler.ListInferenceRecommendationsJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListInferenceRecommendationsJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListInferenceRecommendationsJobsResult> listInferenceRecommendationsJobsAsync(
+            ListInferenceRecommendationsJobsRequest listInferenceRecommendationsJobsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListInferenceRecommendationsJobsRequest, ListInferenceRecommendationsJobsResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets a list of labeling jobs.
      * </p>
      * 
@@ -7133,6 +7304,41 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
     java.util.concurrent.Future<ListLabelingJobsForWorkteamResult> listLabelingJobsForWorkteamAsync(
             ListLabelingJobsForWorkteamRequest listLabelingJobsForWorkteamRequest,
             com.amazonaws.handlers.AsyncHandler<ListLabelingJobsForWorkteamRequest, ListLabelingJobsForWorkteamResult> asyncHandler);
+
+    /**
+     * <p>
+     * A list of lineage groups shared with your Amazon Web Services account. For more information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/xaccount-lineage-tracking.html"> Cross-Account Lineage
+     * Tracking </a> in the <i>Amazon SageMaker Developer Guide</i>.
+     * </p>
+     * 
+     * @param listLineageGroupsRequest
+     * @return A Java Future containing the result of the ListLineageGroups operation returned by the service.
+     * @sample AmazonSageMakerAsync.ListLineageGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListLineageGroups" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListLineageGroupsResult> listLineageGroupsAsync(ListLineageGroupsRequest listLineageGroupsRequest);
+
+    /**
+     * <p>
+     * A list of lineage groups shared with your Amazon Web Services account. For more information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/xaccount-lineage-tracking.html"> Cross-Account Lineage
+     * Tracking </a> in the <i>Amazon SageMaker Developer Guide</i>.
+     * </p>
+     * 
+     * @param listLineageGroupsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListLineageGroups operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.ListLineageGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListLineageGroups" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListLineageGroupsResult> listLineageGroupsAsync(ListLineageGroupsRequest listLineageGroupsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListLineageGroupsRequest, ListLineageGroupsResult> asyncHandler);
 
     /**
      * <p>
@@ -7201,6 +7407,37 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
     java.util.concurrent.Future<ListModelExplainabilityJobDefinitionsResult> listModelExplainabilityJobDefinitionsAsync(
             ListModelExplainabilityJobDefinitionsRequest listModelExplainabilityJobDefinitionsRequest,
             com.amazonaws.handlers.AsyncHandler<ListModelExplainabilityJobDefinitionsRequest, ListModelExplainabilityJobDefinitionsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists the domain, framework, task, and model name of standard machine learning models found in common model zoos.
+     * </p>
+     * 
+     * @param listModelMetadataRequest
+     * @return A Java Future containing the result of the ListModelMetadata operation returned by the service.
+     * @sample AmazonSageMakerAsync.ListModelMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListModelMetadata" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListModelMetadataResult> listModelMetadataAsync(ListModelMetadataRequest listModelMetadataRequest);
+
+    /**
+     * <p>
+     * Lists the domain, framework, task, and model name of standard machine learning models found in common model zoos.
+     * </p>
+     * 
+     * @param listModelMetadataRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListModelMetadata operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.ListModelMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListModelMetadata" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListModelMetadataResult> listModelMetadataAsync(ListModelMetadataRequest listModelMetadataRequest,
+            com.amazonaws.handlers.AsyncHandler<ListModelMetadataRequest, ListModelMetadataResult> asyncHandler);
 
     /**
      * <p>
@@ -8144,6 +8381,41 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
+     * Use this action to inspect your lineage and discover relationships between entities. For more information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/querying-lineage-entities.html"> Querying Lineage
+     * Entities</a> in the <i>Amazon SageMaker Developer Guide</i>.
+     * </p>
+     * 
+     * @param queryLineageRequest
+     * @return A Java Future containing the result of the QueryLineage operation returned by the service.
+     * @sample AmazonSageMakerAsync.QueryLineage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/QueryLineage" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<QueryLineageResult> queryLineageAsync(QueryLineageRequest queryLineageRequest);
+
+    /**
+     * <p>
+     * Use this action to inspect your lineage and discover relationships between entities. For more information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/querying-lineage-entities.html"> Querying Lineage
+     * Entities</a> in the <i>Amazon SageMaker Developer Guide</i>.
+     * </p>
+     * 
+     * @param queryLineageRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the QueryLineage operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.QueryLineage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/QueryLineage" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<QueryLineageResult> queryLineageAsync(QueryLineageRequest queryLineageRequest,
+            com.amazonaws.handlers.AsyncHandler<QueryLineageRequest, QueryLineageResult> asyncHandler);
+
+    /**
+     * <p>
      * Register devices.
      * </p>
      * 
@@ -8618,6 +8890,41 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
     java.util.concurrent.Future<StopHyperParameterTuningJobResult> stopHyperParameterTuningJobAsync(
             StopHyperParameterTuningJobRequest stopHyperParameterTuningJobRequest,
             com.amazonaws.handlers.AsyncHandler<StopHyperParameterTuningJobRequest, StopHyperParameterTuningJobResult> asyncHandler);
+
+    /**
+     * <p>
+     * Stops an Inference Recommender job.
+     * </p>
+     * 
+     * @param stopInferenceRecommendationsJobRequest
+     * @return A Java Future containing the result of the StopInferenceRecommendationsJob operation returned by the
+     *         service.
+     * @sample AmazonSageMakerAsync.StopInferenceRecommendationsJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopInferenceRecommendationsJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StopInferenceRecommendationsJobResult> stopInferenceRecommendationsJobAsync(
+            StopInferenceRecommendationsJobRequest stopInferenceRecommendationsJobRequest);
+
+    /**
+     * <p>
+     * Stops an Inference Recommender job.
+     * </p>
+     * 
+     * @param stopInferenceRecommendationsJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StopInferenceRecommendationsJob operation returned by the
+     *         service.
+     * @sample AmazonSageMakerAsyncHandler.StopInferenceRecommendationsJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopInferenceRecommendationsJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StopInferenceRecommendationsJobResult> stopInferenceRecommendationsJobAsync(
+            StopInferenceRecommendationsJobRequest stopInferenceRecommendationsJobRequest,
+            com.amazonaws.handlers.AsyncHandler<StopInferenceRecommendationsJobRequest, StopInferenceRecommendationsJobResult> asyncHandler);
 
     /**
      * <p>

@@ -84,6 +84,14 @@ public class PipelineExecutionStepMetadataJsonUnmarshaller implements Unmarshall
                     context.nextToken();
                     pipelineExecutionStepMetadata.setLambda(LambdaStepMetadataJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("QualityCheck", targetDepth)) {
+                    context.nextToken();
+                    pipelineExecutionStepMetadata.setQualityCheck(QualityCheckStepMetadataJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("ClarifyCheck", targetDepth)) {
+                    context.nextToken();
+                    pipelineExecutionStepMetadata.setClarifyCheck(ClarifyCheckStepMetadataJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

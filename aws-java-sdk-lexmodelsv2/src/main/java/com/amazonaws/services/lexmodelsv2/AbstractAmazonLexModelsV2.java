@@ -164,6 +164,11 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
     }
 
     @Override
+    public DescribeBotRecommendationResult describeBotRecommendation(DescribeBotRecommendationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeBotVersionResult describeBotVersion(DescribeBotVersionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -214,6 +219,11 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
     }
 
     @Override
+    public ListBotRecommendationsResult listBotRecommendations(ListBotRecommendationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListBotVersionsResult listBotVersions(ListBotVersionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -249,6 +259,11 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
     }
 
     @Override
+    public ListRecommendedIntentsResult listRecommendedIntents(ListRecommendedIntentsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListSlotTypesResult listSlotTypes(ListSlotTypesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -260,6 +275,16 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
 
     @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public SearchAssociatedTranscriptsResult searchAssociatedTranscripts(SearchAssociatedTranscriptsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartBotRecommendationResult startBotRecommendation(StartBotRecommendationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -290,6 +315,11 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
 
     @Override
     public UpdateBotLocaleResult updateBotLocale(UpdateBotLocaleRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateBotRecommendationResult updateBotRecommendation(UpdateBotRecommendationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

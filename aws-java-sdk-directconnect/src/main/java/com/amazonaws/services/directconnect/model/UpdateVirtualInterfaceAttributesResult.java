@@ -239,6 +239,12 @@ public class UpdateVirtualInterfaceAttributesResult extends com.amazonaws.Amazon
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
+    /**
+     * <p>
+     * Indicates whether SiteLink is enabled.
+     * </p>
+     */
+    private Boolean siteLinkEnabled;
 
     /**
      * <p>
@@ -2007,6 +2013,58 @@ public class UpdateVirtualInterfaceAttributesResult extends com.amazonaws.Amazon
     }
 
     /**
+     * <p>
+     * Indicates whether SiteLink is enabled.
+     * </p>
+     * 
+     * @param siteLinkEnabled
+     *        Indicates whether SiteLink is enabled.
+     */
+
+    public void setSiteLinkEnabled(Boolean siteLinkEnabled) {
+        this.siteLinkEnabled = siteLinkEnabled;
+    }
+
+    /**
+     * <p>
+     * Indicates whether SiteLink is enabled.
+     * </p>
+     * 
+     * @return Indicates whether SiteLink is enabled.
+     */
+
+    public Boolean getSiteLinkEnabled() {
+        return this.siteLinkEnabled;
+    }
+
+    /**
+     * <p>
+     * Indicates whether SiteLink is enabled.
+     * </p>
+     * 
+     * @param siteLinkEnabled
+     *        Indicates whether SiteLink is enabled.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateVirtualInterfaceAttributesResult withSiteLinkEnabled(Boolean siteLinkEnabled) {
+        setSiteLinkEnabled(siteLinkEnabled);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether SiteLink is enabled.
+     * </p>
+     * 
+     * @return Indicates whether SiteLink is enabled.
+     */
+
+    public Boolean isSiteLinkEnabled() {
+        return this.siteLinkEnabled;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2067,7 +2125,9 @@ public class UpdateVirtualInterfaceAttributesResult extends com.amazonaws.Amazon
         if (getAwsLogicalDeviceId() != null)
             sb.append("AwsLogicalDeviceId: ").append(getAwsLogicalDeviceId()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getSiteLinkEnabled() != null)
+            sb.append("SiteLinkEnabled: ").append(getSiteLinkEnabled());
         sb.append("}");
         return sb.toString();
     }
@@ -2182,6 +2242,10 @@ public class UpdateVirtualInterfaceAttributesResult extends com.amazonaws.Amazon
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getSiteLinkEnabled() == null ^ this.getSiteLinkEnabled() == null)
+            return false;
+        if (other.getSiteLinkEnabled() != null && other.getSiteLinkEnabled().equals(this.getSiteLinkEnabled()) == false)
+            return false;
         return true;
     }
 
@@ -2215,6 +2279,7 @@ public class UpdateVirtualInterfaceAttributesResult extends com.amazonaws.Amazon
         hashCode = prime * hashCode + ((getAwsDeviceV2() == null) ? 0 : getAwsDeviceV2().hashCode());
         hashCode = prime * hashCode + ((getAwsLogicalDeviceId() == null) ? 0 : getAwsLogicalDeviceId().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getSiteLinkEnabled() == null) ? 0 : getSiteLinkEnabled().hashCode());
         return hashCode;
     }
 

@@ -38,6 +38,9 @@ public class ProtectionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HealthCheckIds").build();
     private static final MarshallingInfo<String> PROTECTIONARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ProtectionArn").build();
+    private static final MarshallingInfo<StructuredPojo> APPLICATIONLAYERAUTOMATICRESPONSECONFIGURATION_BINDING = MarshallingInfo
+            .builder(MarshallingType.STRUCTURED).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("ApplicationLayerAutomaticResponseConfiguration").build();
 
     private static final ProtectionMarshaller instance = new ProtectionMarshaller();
 
@@ -60,6 +63,7 @@ public class ProtectionMarshaller {
             protocolMarshaller.marshall(protection.getResourceArn(), RESOURCEARN_BINDING);
             protocolMarshaller.marshall(protection.getHealthCheckIds(), HEALTHCHECKIDS_BINDING);
             protocolMarshaller.marshall(protection.getProtectionArn(), PROTECTIONARN_BINDING);
+            protocolMarshaller.marshall(protection.getApplicationLayerAutomaticResponseConfiguration(), APPLICATIONLAYERAUTOMATICRESPONSECONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

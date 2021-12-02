@@ -43,6 +43,8 @@ public class ContainerDefinitionMarshaller {
             .marshallLocationName("Environment").build();
     private static final MarshallingInfo<String> MODELPACKAGENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModelPackageName").build();
+    private static final MarshallingInfo<String> INFERENCESPECIFICATIONNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InferenceSpecificationName").build();
     private static final MarshallingInfo<StructuredPojo> MULTIMODELCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MultiModelConfig").build();
 
@@ -69,6 +71,7 @@ public class ContainerDefinitionMarshaller {
             protocolMarshaller.marshall(containerDefinition.getModelDataUrl(), MODELDATAURL_BINDING);
             protocolMarshaller.marshall(containerDefinition.getEnvironment(), ENVIRONMENT_BINDING);
             protocolMarshaller.marshall(containerDefinition.getModelPackageName(), MODELPACKAGENAME_BINDING);
+            protocolMarshaller.marshall(containerDefinition.getInferenceSpecificationName(), INFERENCESPECIFICATIONNAME_BINDING);
             protocolMarshaller.marshall(containerDefinition.getMultiModelConfig(), MULTIMODELCONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

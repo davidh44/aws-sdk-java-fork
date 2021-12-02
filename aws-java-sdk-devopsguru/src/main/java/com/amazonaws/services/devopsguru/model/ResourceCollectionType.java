@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum ResourceCollectionType {
 
     AWS_CLOUD_FORMATION("AWS_CLOUD_FORMATION"),
-    AWS_SERVICE("AWS_SERVICE");
+    AWS_SERVICE("AWS_SERVICE"),
+    AWS_TAGS("AWS_TAGS");
 
     private String value;
 

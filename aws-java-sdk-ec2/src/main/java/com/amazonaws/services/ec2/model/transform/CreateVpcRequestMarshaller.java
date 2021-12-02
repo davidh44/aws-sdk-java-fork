@@ -56,6 +56,22 @@ public class CreateVpcRequestMarshaller implements Marshaller<Request<CreateVpcR
             request.addParameter("Ipv6CidrBlock", StringUtils.fromString(createVpcRequest.getIpv6CidrBlock()));
         }
 
+        if (createVpcRequest.getIpv4IpamPoolId() != null) {
+            request.addParameter("Ipv4IpamPoolId", StringUtils.fromString(createVpcRequest.getIpv4IpamPoolId()));
+        }
+
+        if (createVpcRequest.getIpv4NetmaskLength() != null) {
+            request.addParameter("Ipv4NetmaskLength", StringUtils.fromInteger(createVpcRequest.getIpv4NetmaskLength()));
+        }
+
+        if (createVpcRequest.getIpv6IpamPoolId() != null) {
+            request.addParameter("Ipv6IpamPoolId", StringUtils.fromString(createVpcRequest.getIpv6IpamPoolId()));
+        }
+
+        if (createVpcRequest.getIpv6NetmaskLength() != null) {
+            request.addParameter("Ipv6NetmaskLength", StringUtils.fromInteger(createVpcRequest.getIpv6NetmaskLength()));
+        }
+
         if (createVpcRequest.getInstanceTenancy() != null) {
             request.addParameter("InstanceTenancy", StringUtils.fromString(createVpcRequest.getInstanceTenancy()));
         }

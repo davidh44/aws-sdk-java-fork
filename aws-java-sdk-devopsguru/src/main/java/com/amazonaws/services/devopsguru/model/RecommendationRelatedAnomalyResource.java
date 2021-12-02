@@ -36,7 +36,12 @@ public class RecommendationRelatedAnomalyResource implements Serializable, Clone
     private String name;
     /**
      * <p>
-     * The type of the resource.
+     * The type of the resource. Resource types take the same form that is used by Amazon Web Services CloudFormation
+     * resource type identifiers, <code>service-provider::service-name::data-type-name</code>. For example,
+     * <code>AWS::RDS::DBCluster</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html">Amazon
+     * Web Services resource and property types reference</a> in the <i>Amazon Web Services CloudFormation User
+     * Guide</i>.
      * </p>
      */
     private String type;
@@ -83,11 +88,21 @@ public class RecommendationRelatedAnomalyResource implements Serializable, Clone
 
     /**
      * <p>
-     * The type of the resource.
+     * The type of the resource. Resource types take the same form that is used by Amazon Web Services CloudFormation
+     * resource type identifiers, <code>service-provider::service-name::data-type-name</code>. For example,
+     * <code>AWS::RDS::DBCluster</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html">Amazon
+     * Web Services resource and property types reference</a> in the <i>Amazon Web Services CloudFormation User
+     * Guide</i>.
      * </p>
      * 
      * @param type
-     *        The type of the resource.
+     *        The type of the resource. Resource types take the same form that is used by Amazon Web Services
+     *        CloudFormation resource type identifiers, <code>service-provider::service-name::data-type-name</code>. For
+     *        example, <code>AWS::RDS::DBCluster</code>. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
+     *        >Amazon Web Services resource and property types reference</a> in the <i>Amazon Web Services
+     *        CloudFormation User Guide</i>.
      */
 
     public void setType(String type) {
@@ -96,10 +111,20 @@ public class RecommendationRelatedAnomalyResource implements Serializable, Clone
 
     /**
      * <p>
-     * The type of the resource.
+     * The type of the resource. Resource types take the same form that is used by Amazon Web Services CloudFormation
+     * resource type identifiers, <code>service-provider::service-name::data-type-name</code>. For example,
+     * <code>AWS::RDS::DBCluster</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html">Amazon
+     * Web Services resource and property types reference</a> in the <i>Amazon Web Services CloudFormation User
+     * Guide</i>.
      * </p>
      * 
-     * @return The type of the resource.
+     * @return The type of the resource. Resource types take the same form that is used by Amazon Web Services
+     *         CloudFormation resource type identifiers, <code>service-provider::service-name::data-type-name</code>.
+     *         For example, <code>AWS::RDS::DBCluster</code>. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
+     *         >Amazon Web Services resource and property types reference</a> in the <i>Amazon Web Services
+     *         CloudFormation User Guide</i>.
      */
 
     public String getType() {
@@ -108,11 +133,21 @@ public class RecommendationRelatedAnomalyResource implements Serializable, Clone
 
     /**
      * <p>
-     * The type of the resource.
+     * The type of the resource. Resource types take the same form that is used by Amazon Web Services CloudFormation
+     * resource type identifiers, <code>service-provider::service-name::data-type-name</code>. For example,
+     * <code>AWS::RDS::DBCluster</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html">Amazon
+     * Web Services resource and property types reference</a> in the <i>Amazon Web Services CloudFormation User
+     * Guide</i>.
      * </p>
      * 
      * @param type
-     *        The type of the resource.
+     *        The type of the resource. Resource types take the same form that is used by Amazon Web Services
+     *        CloudFormation resource type identifiers, <code>service-provider::service-name::data-type-name</code>. For
+     *        example, <code>AWS::RDS::DBCluster</code>. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
+     *        >Amazon Web Services resource and property types reference</a> in the <i>Amazon Web Services
+     *        CloudFormation User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

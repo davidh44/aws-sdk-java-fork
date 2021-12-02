@@ -27,18 +27,18 @@ public class DescribeAttackRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The unique identifier (ID) for the attack that to be described.
+     * The unique identifier (ID) for the attack.
      * </p>
      */
     private String attackId;
 
     /**
      * <p>
-     * The unique identifier (ID) for the attack that to be described.
+     * The unique identifier (ID) for the attack.
      * </p>
      * 
      * @param attackId
-     *        The unique identifier (ID) for the attack that to be described.
+     *        The unique identifier (ID) for the attack.
      */
 
     public void setAttackId(String attackId) {
@@ -47,10 +47,10 @@ public class DescribeAttackRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The unique identifier (ID) for the attack that to be described.
+     * The unique identifier (ID) for the attack.
      * </p>
      * 
-     * @return The unique identifier (ID) for the attack that to be described.
+     * @return The unique identifier (ID) for the attack.
      */
 
     public String getAttackId() {
@@ -59,11 +59,11 @@ public class DescribeAttackRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The unique identifier (ID) for the attack that to be described.
+     * The unique identifier (ID) for the attack.
      * </p>
      * 
      * @param attackId
-     *        The unique identifier (ID) for the attack that to be described.
+     *        The unique identifier (ID) for the attack.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

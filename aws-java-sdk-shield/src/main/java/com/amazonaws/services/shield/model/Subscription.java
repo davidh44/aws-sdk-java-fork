@@ -30,8 +30,7 @@ public class Subscription implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The start time of the subscription, in Unix time in seconds. For more information see <a
-     * href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp</a>.
+     * The start time of the subscription, in Unix time in seconds.
      * </p>
      */
     private java.util.Date startTime;
@@ -96,13 +95,11 @@ public class Subscription implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The start time of the subscription, in Unix time in seconds. For more information see <a
-     * href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp</a>.
+     * The start time of the subscription, in Unix time in seconds.
      * </p>
      * 
      * @param startTime
-     *        The start time of the subscription, in Unix time in seconds. For more information see <a
-     *        href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp</a>.
+     *        The start time of the subscription, in Unix time in seconds.
      */
 
     public void setStartTime(java.util.Date startTime) {
@@ -111,13 +108,10 @@ public class Subscription implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The start time of the subscription, in Unix time in seconds. For more information see <a
-     * href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp</a>.
+     * The start time of the subscription, in Unix time in seconds.
      * </p>
      * 
-     * @return The start time of the subscription, in Unix time in seconds. For more information see <a
-     *         href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types"
-     *         >timestamp</a>.
+     * @return The start time of the subscription, in Unix time in seconds.
      */
 
     public java.util.Date getStartTime() {
@@ -126,13 +120,11 @@ public class Subscription implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The start time of the subscription, in Unix time in seconds. For more information see <a
-     * href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp</a>.
+     * The start time of the subscription, in Unix time in seconds.
      * </p>
      * 
      * @param startTime
-     *        The start time of the subscription, in Unix time in seconds. For more information see <a
-     *        href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp</a>.
+     *        The start time of the subscription, in Unix time in seconds.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

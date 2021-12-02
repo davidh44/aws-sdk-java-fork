@@ -55,6 +55,15 @@ public class UpdateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      */
     private java.util.List<String> customerMetadataPropertiesToRemove;
+    /**
+     * <p>
+     * An array of additional Inference Specification objects to be added to the existing array additional Inference
+     * Specification. Total number of additional Inference Specifications can not exceed 15. Each additional Inference
+     * Specification specifies artifacts based on this model package that can be used on inference endpoints. Generally
+     * used with SageMaker Neo to store the compiled artifacts.
+     * </p>
+     */
+    private java.util.List<AdditionalInferenceSpecificationDefinition> additionalInferenceSpecificationsToAdd;
 
     /**
      * <p>
@@ -335,6 +344,106 @@ public class UpdateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
+     * <p>
+     * An array of additional Inference Specification objects to be added to the existing array additional Inference
+     * Specification. Total number of additional Inference Specifications can not exceed 15. Each additional Inference
+     * Specification specifies artifacts based on this model package that can be used on inference endpoints. Generally
+     * used with SageMaker Neo to store the compiled artifacts.
+     * </p>
+     * 
+     * @return An array of additional Inference Specification objects to be added to the existing array additional
+     *         Inference Specification. Total number of additional Inference Specifications can not exceed 15. Each
+     *         additional Inference Specification specifies artifacts based on this model package that can be used on
+     *         inference endpoints. Generally used with SageMaker Neo to store the compiled artifacts.
+     */
+
+    public java.util.List<AdditionalInferenceSpecificationDefinition> getAdditionalInferenceSpecificationsToAdd() {
+        return additionalInferenceSpecificationsToAdd;
+    }
+
+    /**
+     * <p>
+     * An array of additional Inference Specification objects to be added to the existing array additional Inference
+     * Specification. Total number of additional Inference Specifications can not exceed 15. Each additional Inference
+     * Specification specifies artifacts based on this model package that can be used on inference endpoints. Generally
+     * used with SageMaker Neo to store the compiled artifacts.
+     * </p>
+     * 
+     * @param additionalInferenceSpecificationsToAdd
+     *        An array of additional Inference Specification objects to be added to the existing array additional
+     *        Inference Specification. Total number of additional Inference Specifications can not exceed 15. Each
+     *        additional Inference Specification specifies artifacts based on this model package that can be used on
+     *        inference endpoints. Generally used with SageMaker Neo to store the compiled artifacts.
+     */
+
+    public void setAdditionalInferenceSpecificationsToAdd(
+            java.util.Collection<AdditionalInferenceSpecificationDefinition> additionalInferenceSpecificationsToAdd) {
+        if (additionalInferenceSpecificationsToAdd == null) {
+            this.additionalInferenceSpecificationsToAdd = null;
+            return;
+        }
+
+        this.additionalInferenceSpecificationsToAdd = new java.util.ArrayList<AdditionalInferenceSpecificationDefinition>(
+                additionalInferenceSpecificationsToAdd);
+    }
+
+    /**
+     * <p>
+     * An array of additional Inference Specification objects to be added to the existing array additional Inference
+     * Specification. Total number of additional Inference Specifications can not exceed 15. Each additional Inference
+     * Specification specifies artifacts based on this model package that can be used on inference endpoints. Generally
+     * used with SageMaker Neo to store the compiled artifacts.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAdditionalInferenceSpecificationsToAdd(java.util.Collection)} or
+     * {@link #withAdditionalInferenceSpecificationsToAdd(java.util.Collection)} if you want to override the existing
+     * values.
+     * </p>
+     * 
+     * @param additionalInferenceSpecificationsToAdd
+     *        An array of additional Inference Specification objects to be added to the existing array additional
+     *        Inference Specification. Total number of additional Inference Specifications can not exceed 15. Each
+     *        additional Inference Specification specifies artifacts based on this model package that can be used on
+     *        inference endpoints. Generally used with SageMaker Neo to store the compiled artifacts.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateModelPackageRequest withAdditionalInferenceSpecificationsToAdd(
+            AdditionalInferenceSpecificationDefinition... additionalInferenceSpecificationsToAdd) {
+        if (this.additionalInferenceSpecificationsToAdd == null) {
+            setAdditionalInferenceSpecificationsToAdd(new java.util.ArrayList<AdditionalInferenceSpecificationDefinition>(
+                    additionalInferenceSpecificationsToAdd.length));
+        }
+        for (AdditionalInferenceSpecificationDefinition ele : additionalInferenceSpecificationsToAdd) {
+            this.additionalInferenceSpecificationsToAdd.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * An array of additional Inference Specification objects to be added to the existing array additional Inference
+     * Specification. Total number of additional Inference Specifications can not exceed 15. Each additional Inference
+     * Specification specifies artifacts based on this model package that can be used on inference endpoints. Generally
+     * used with SageMaker Neo to store the compiled artifacts.
+     * </p>
+     * 
+     * @param additionalInferenceSpecificationsToAdd
+     *        An array of additional Inference Specification objects to be added to the existing array additional
+     *        Inference Specification. Total number of additional Inference Specifications can not exceed 15. Each
+     *        additional Inference Specification specifies artifacts based on this model package that can be used on
+     *        inference endpoints. Generally used with SageMaker Neo to store the compiled artifacts.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateModelPackageRequest withAdditionalInferenceSpecificationsToAdd(
+            java.util.Collection<AdditionalInferenceSpecificationDefinition> additionalInferenceSpecificationsToAdd) {
+        setAdditionalInferenceSpecificationsToAdd(additionalInferenceSpecificationsToAdd);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -355,7 +464,9 @@ public class UpdateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
         if (getCustomerMetadataProperties() != null)
             sb.append("CustomerMetadataProperties: ").append(getCustomerMetadataProperties()).append(",");
         if (getCustomerMetadataPropertiesToRemove() != null)
-            sb.append("CustomerMetadataPropertiesToRemove: ").append(getCustomerMetadataPropertiesToRemove());
+            sb.append("CustomerMetadataPropertiesToRemove: ").append(getCustomerMetadataPropertiesToRemove()).append(",");
+        if (getAdditionalInferenceSpecificationsToAdd() != null)
+            sb.append("AdditionalInferenceSpecificationsToAdd: ").append(getAdditionalInferenceSpecificationsToAdd());
         sb.append("}");
         return sb.toString();
     }
@@ -391,6 +502,11 @@ public class UpdateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
         if (other.getCustomerMetadataPropertiesToRemove() != null
                 && other.getCustomerMetadataPropertiesToRemove().equals(this.getCustomerMetadataPropertiesToRemove()) == false)
             return false;
+        if (other.getAdditionalInferenceSpecificationsToAdd() == null ^ this.getAdditionalInferenceSpecificationsToAdd() == null)
+            return false;
+        if (other.getAdditionalInferenceSpecificationsToAdd() != null
+                && other.getAdditionalInferenceSpecificationsToAdd().equals(this.getAdditionalInferenceSpecificationsToAdd()) == false)
+            return false;
         return true;
     }
 
@@ -404,6 +520,7 @@ public class UpdateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
         hashCode = prime * hashCode + ((getApprovalDescription() == null) ? 0 : getApprovalDescription().hashCode());
         hashCode = prime * hashCode + ((getCustomerMetadataProperties() == null) ? 0 : getCustomerMetadataProperties().hashCode());
         hashCode = prime * hashCode + ((getCustomerMetadataPropertiesToRemove() == null) ? 0 : getCustomerMetadataPropertiesToRemove().hashCode());
+        hashCode = prime * hashCode + ((getAdditionalInferenceSpecificationsToAdd() == null) ? 0 : getAdditionalInferenceSpecificationsToAdd().hashCode());
         return hashCode;
     }
 

@@ -32,6 +32,8 @@ public class CreateCompilationJobRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CompilationJobName").build();
     private static final MarshallingInfo<String> ROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("RoleArn").build();
+    private static final MarshallingInfo<String> MODELPACKAGEVERSIONARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModelPackageVersionArn").build();
     private static final MarshallingInfo<StructuredPojo> INPUTCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InputConfig").build();
     private static final MarshallingInfo<StructuredPojo> OUTPUTCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -61,6 +63,7 @@ public class CreateCompilationJobRequestMarshaller {
         try {
             protocolMarshaller.marshall(createCompilationJobRequest.getCompilationJobName(), COMPILATIONJOBNAME_BINDING);
             protocolMarshaller.marshall(createCompilationJobRequest.getRoleArn(), ROLEARN_BINDING);
+            protocolMarshaller.marshall(createCompilationJobRequest.getModelPackageVersionArn(), MODELPACKAGEVERSIONARN_BINDING);
             protocolMarshaller.marshall(createCompilationJobRequest.getInputConfig(), INPUTCONFIG_BINDING);
             protocolMarshaller.marshall(createCompilationJobRequest.getOutputConfig(), OUTPUTCONFIG_BINDING);
             protocolMarshaller.marshall(createCompilationJobRequest.getVpcConfig(), VPCCONFIG_BINDING);

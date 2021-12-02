@@ -25,68 +25,28 @@ public class DescribeAnomalyResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * A <code>ReactiveAnomaly</code> object that represents the requested anomaly.
+     * A <code>ProactiveAnomaly</code> object that represents the requested anomaly.
      * </p>
      */
     private ProactiveAnomaly proactiveAnomaly;
     /**
      * <p>
-     * A <code>ProactiveAnomaly</code> object that represents the requested anomaly.
+     * A <code>ReactiveAnomaly</code> object that represents the requested anomaly.
      * </p>
      */
     private ReactiveAnomaly reactiveAnomaly;
 
     /**
      * <p>
-     * A <code>ReactiveAnomaly</code> object that represents the requested anomaly.
+     * A <code>ProactiveAnomaly</code> object that represents the requested anomaly.
      * </p>
      * 
      * @param proactiveAnomaly
-     *        A <code>ReactiveAnomaly</code> object that represents the requested anomaly.
+     *        A <code>ProactiveAnomaly</code> object that represents the requested anomaly.
      */
 
     public void setProactiveAnomaly(ProactiveAnomaly proactiveAnomaly) {
         this.proactiveAnomaly = proactiveAnomaly;
-    }
-
-    /**
-     * <p>
-     * A <code>ReactiveAnomaly</code> object that represents the requested anomaly.
-     * </p>
-     * 
-     * @return A <code>ReactiveAnomaly</code> object that represents the requested anomaly.
-     */
-
-    public ProactiveAnomaly getProactiveAnomaly() {
-        return this.proactiveAnomaly;
-    }
-
-    /**
-     * <p>
-     * A <code>ReactiveAnomaly</code> object that represents the requested anomaly.
-     * </p>
-     * 
-     * @param proactiveAnomaly
-     *        A <code>ReactiveAnomaly</code> object that represents the requested anomaly.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DescribeAnomalyResult withProactiveAnomaly(ProactiveAnomaly proactiveAnomaly) {
-        setProactiveAnomaly(proactiveAnomaly);
-        return this;
-    }
-
-    /**
-     * <p>
-     * A <code>ProactiveAnomaly</code> object that represents the requested anomaly.
-     * </p>
-     * 
-     * @param reactiveAnomaly
-     *        A <code>ProactiveAnomaly</code> object that represents the requested anomaly.
-     */
-
-    public void setReactiveAnomaly(ReactiveAnomaly reactiveAnomaly) {
-        this.reactiveAnomaly = reactiveAnomaly;
     }
 
     /**
@@ -97,8 +57,8 @@ public class DescribeAnomalyResult extends com.amazonaws.AmazonWebServiceResult<
      * @return A <code>ProactiveAnomaly</code> object that represents the requested anomaly.
      */
 
-    public ReactiveAnomaly getReactiveAnomaly() {
-        return this.reactiveAnomaly;
+    public ProactiveAnomaly getProactiveAnomaly() {
+        return this.proactiveAnomaly;
     }
 
     /**
@@ -106,8 +66,48 @@ public class DescribeAnomalyResult extends com.amazonaws.AmazonWebServiceResult<
      * A <code>ProactiveAnomaly</code> object that represents the requested anomaly.
      * </p>
      * 
-     * @param reactiveAnomaly
+     * @param proactiveAnomaly
      *        A <code>ProactiveAnomaly</code> object that represents the requested anomaly.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeAnomalyResult withProactiveAnomaly(ProactiveAnomaly proactiveAnomaly) {
+        setProactiveAnomaly(proactiveAnomaly);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A <code>ReactiveAnomaly</code> object that represents the requested anomaly.
+     * </p>
+     * 
+     * @param reactiveAnomaly
+     *        A <code>ReactiveAnomaly</code> object that represents the requested anomaly.
+     */
+
+    public void setReactiveAnomaly(ReactiveAnomaly reactiveAnomaly) {
+        this.reactiveAnomaly = reactiveAnomaly;
+    }
+
+    /**
+     * <p>
+     * A <code>ReactiveAnomaly</code> object that represents the requested anomaly.
+     * </p>
+     * 
+     * @return A <code>ReactiveAnomaly</code> object that represents the requested anomaly.
+     */
+
+    public ReactiveAnomaly getReactiveAnomaly() {
+        return this.reactiveAnomaly;
+    }
+
+    /**
+     * <p>
+     * A <code>ReactiveAnomaly</code> object that represents the requested anomaly.
+     * </p>
+     * 
+     * @param reactiveAnomaly
+     *        A <code>ReactiveAnomaly</code> object that represents the requested anomaly.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

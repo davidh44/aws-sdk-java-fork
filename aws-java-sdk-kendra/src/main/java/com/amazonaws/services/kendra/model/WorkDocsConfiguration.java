@@ -36,10 +36,10 @@ public class WorkDocsConfiguration implements Serializable, Cloneable, Structure
      * The identifier of the directory corresponding to your Amazon WorkDocs site repository.
      * </p>
      * <p>
-     * You can find the organization ID in the <a href="https://console.aws.amazon.com/directoryservicev2/">AWS
-     * Directory Service</a> by going to <b>Active Directory</b>, then <b>Directories</b>. Your Amazon WorkDocs site
-     * directory has an ID, which is the organization ID. You can also set up a new Amazon WorkDocs directory in the AWS
-     * Directory Service console and enable a Amazon WorkDocs site for the directory in the Amazon WorkDocs console.
+     * You can find the organization ID in the <a href="https://console.aws.amazon.com/directoryservicev2/">Directory
+     * Service</a> by going to <b>Active Directory</b>, then <b>Directories</b>. Your Amazon WorkDocs site directory has
+     * an ID, which is the organization ID. You can also set up a new Amazon WorkDocs directory in the Directory Service
+     * console and enable a Amazon WorkDocs site for the directory in the Amazon WorkDocs console.
      * </p>
      */
     private String organizationId;
@@ -101,20 +101,20 @@ public class WorkDocsConfiguration implements Serializable, Cloneable, Structure
      * The identifier of the directory corresponding to your Amazon WorkDocs site repository.
      * </p>
      * <p>
-     * You can find the organization ID in the <a href="https://console.aws.amazon.com/directoryservicev2/">AWS
-     * Directory Service</a> by going to <b>Active Directory</b>, then <b>Directories</b>. Your Amazon WorkDocs site
-     * directory has an ID, which is the organization ID. You can also set up a new Amazon WorkDocs directory in the AWS
-     * Directory Service console and enable a Amazon WorkDocs site for the directory in the Amazon WorkDocs console.
+     * You can find the organization ID in the <a href="https://console.aws.amazon.com/directoryservicev2/">Directory
+     * Service</a> by going to <b>Active Directory</b>, then <b>Directories</b>. Your Amazon WorkDocs site directory has
+     * an ID, which is the organization ID. You can also set up a new Amazon WorkDocs directory in the Directory Service
+     * console and enable a Amazon WorkDocs site for the directory in the Amazon WorkDocs console.
      * </p>
      * 
      * @param organizationId
      *        The identifier of the directory corresponding to your Amazon WorkDocs site repository.</p>
      *        <p>
-     *        You can find the organization ID in the <a href="https://console.aws.amazon.com/directoryservicev2/">AWS
-     *        Directory Service</a> by going to <b>Active Directory</b>, then <b>Directories</b>. Your Amazon WorkDocs
-     *        site directory has an ID, which is the organization ID. You can also set up a new Amazon WorkDocs
-     *        directory in the AWS Directory Service console and enable a Amazon WorkDocs site for the directory in the
-     *        Amazon WorkDocs console.
+     *        You can find the organization ID in the <a
+     *        href="https://console.aws.amazon.com/directoryservicev2/">Directory Service</a> by going to <b>Active
+     *        Directory</b>, then <b>Directories</b>. Your Amazon WorkDocs site directory has an ID, which is the
+     *        organization ID. You can also set up a new Amazon WorkDocs directory in the Directory Service console and
+     *        enable a Amazon WorkDocs site for the directory in the Amazon WorkDocs console.
      */
 
     public void setOrganizationId(String organizationId) {
@@ -126,19 +126,19 @@ public class WorkDocsConfiguration implements Serializable, Cloneable, Structure
      * The identifier of the directory corresponding to your Amazon WorkDocs site repository.
      * </p>
      * <p>
-     * You can find the organization ID in the <a href="https://console.aws.amazon.com/directoryservicev2/">AWS
-     * Directory Service</a> by going to <b>Active Directory</b>, then <b>Directories</b>. Your Amazon WorkDocs site
-     * directory has an ID, which is the organization ID. You can also set up a new Amazon WorkDocs directory in the AWS
-     * Directory Service console and enable a Amazon WorkDocs site for the directory in the Amazon WorkDocs console.
+     * You can find the organization ID in the <a href="https://console.aws.amazon.com/directoryservicev2/">Directory
+     * Service</a> by going to <b>Active Directory</b>, then <b>Directories</b>. Your Amazon WorkDocs site directory has
+     * an ID, which is the organization ID. You can also set up a new Amazon WorkDocs directory in the Directory Service
+     * console and enable a Amazon WorkDocs site for the directory in the Amazon WorkDocs console.
      * </p>
      * 
      * @return The identifier of the directory corresponding to your Amazon WorkDocs site repository.</p>
      *         <p>
-     *         You can find the organization ID in the <a href="https://console.aws.amazon.com/directoryservicev2/">AWS
-     *         Directory Service</a> by going to <b>Active Directory</b>, then <b>Directories</b>. Your Amazon WorkDocs
-     *         site directory has an ID, which is the organization ID. You can also set up a new Amazon WorkDocs
-     *         directory in the AWS Directory Service console and enable a Amazon WorkDocs site for the directory in the
-     *         Amazon WorkDocs console.
+     *         You can find the organization ID in the <a
+     *         href="https://console.aws.amazon.com/directoryservicev2/">Directory Service</a> by going to <b>Active
+     *         Directory</b>, then <b>Directories</b>. Your Amazon WorkDocs site directory has an ID, which is the
+     *         organization ID. You can also set up a new Amazon WorkDocs directory in the Directory Service console and
+     *         enable a Amazon WorkDocs site for the directory in the Amazon WorkDocs console.
      */
 
     public String getOrganizationId() {
@@ -150,20 +150,20 @@ public class WorkDocsConfiguration implements Serializable, Cloneable, Structure
      * The identifier of the directory corresponding to your Amazon WorkDocs site repository.
      * </p>
      * <p>
-     * You can find the organization ID in the <a href="https://console.aws.amazon.com/directoryservicev2/">AWS
-     * Directory Service</a> by going to <b>Active Directory</b>, then <b>Directories</b>. Your Amazon WorkDocs site
-     * directory has an ID, which is the organization ID. You can also set up a new Amazon WorkDocs directory in the AWS
-     * Directory Service console and enable a Amazon WorkDocs site for the directory in the Amazon WorkDocs console.
+     * You can find the organization ID in the <a href="https://console.aws.amazon.com/directoryservicev2/">Directory
+     * Service</a> by going to <b>Active Directory</b>, then <b>Directories</b>. Your Amazon WorkDocs site directory has
+     * an ID, which is the organization ID. You can also set up a new Amazon WorkDocs directory in the Directory Service
+     * console and enable a Amazon WorkDocs site for the directory in the Amazon WorkDocs console.
      * </p>
      * 
      * @param organizationId
      *        The identifier of the directory corresponding to your Amazon WorkDocs site repository.</p>
      *        <p>
-     *        You can find the organization ID in the <a href="https://console.aws.amazon.com/directoryservicev2/">AWS
-     *        Directory Service</a> by going to <b>Active Directory</b>, then <b>Directories</b>. Your Amazon WorkDocs
-     *        site directory has an ID, which is the organization ID. You can also set up a new Amazon WorkDocs
-     *        directory in the AWS Directory Service console and enable a Amazon WorkDocs site for the directory in the
-     *        Amazon WorkDocs console.
+     *        You can find the organization ID in the <a
+     *        href="https://console.aws.amazon.com/directoryservicev2/">Directory Service</a> by going to <b>Active
+     *        Directory</b>, then <b>Directories</b>. Your Amazon WorkDocs site directory has an ID, which is the
+     *        organization ID. You can also set up a new Amazon WorkDocs directory in the Directory Service console and
+     *        enable a Amazon WorkDocs site for the directory in the Amazon WorkDocs console.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

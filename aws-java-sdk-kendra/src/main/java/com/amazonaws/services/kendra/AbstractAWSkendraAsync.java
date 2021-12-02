@@ -27,6 +27,32 @@ public class AbstractAWSkendraAsync extends AbstractAWSkendra implements AWSkend
     }
 
     @Override
+    public java.util.concurrent.Future<AssociateEntitiesToExperienceResult> associateEntitiesToExperienceAsync(AssociateEntitiesToExperienceRequest request) {
+
+        return associateEntitiesToExperienceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateEntitiesToExperienceResult> associateEntitiesToExperienceAsync(AssociateEntitiesToExperienceRequest request,
+            com.amazonaws.handlers.AsyncHandler<AssociateEntitiesToExperienceRequest, AssociateEntitiesToExperienceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociatePersonasToEntitiesResult> associatePersonasToEntitiesAsync(AssociatePersonasToEntitiesRequest request) {
+
+        return associatePersonasToEntitiesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociatePersonasToEntitiesResult> associatePersonasToEntitiesAsync(AssociatePersonasToEntitiesRequest request,
+            com.amazonaws.handlers.AsyncHandler<AssociatePersonasToEntitiesRequest, AssociatePersonasToEntitiesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<BatchDeleteDocumentResult> batchDeleteDocumentAsync(BatchDeleteDocumentRequest request) {
 
         return batchDeleteDocumentAsync(request, null);
@@ -87,6 +113,19 @@ public class AbstractAWSkendraAsync extends AbstractAWSkendra implements AWSkend
     @Override
     public java.util.concurrent.Future<CreateDataSourceResult> createDataSourceAsync(CreateDataSourceRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateDataSourceRequest, CreateDataSourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateExperienceResult> createExperienceAsync(CreateExperienceRequest request) {
+
+        return createExperienceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateExperienceResult> createExperienceAsync(CreateExperienceRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateExperienceRequest, CreateExperienceResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -154,6 +193,19 @@ public class AbstractAWSkendraAsync extends AbstractAWSkendra implements AWSkend
     @Override
     public java.util.concurrent.Future<DeleteDataSourceResult> deleteDataSourceAsync(DeleteDataSourceRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteDataSourceRequest, DeleteDataSourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteExperienceResult> deleteExperienceAsync(DeleteExperienceRequest request) {
+
+        return deleteExperienceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteExperienceResult> deleteExperienceAsync(DeleteExperienceRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteExperienceRequest, DeleteExperienceResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -239,6 +291,19 @@ public class AbstractAWSkendraAsync extends AbstractAWSkendra implements AWSkend
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeExperienceResult> describeExperienceAsync(DescribeExperienceRequest request) {
+
+        return describeExperienceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeExperienceResult> describeExperienceAsync(DescribeExperienceRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeExperienceRequest, DescribeExperienceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeFaqResult> describeFaqAsync(DescribeFaqRequest request) {
 
         return describeFaqAsync(request, null);
@@ -319,6 +384,36 @@ public class AbstractAWSkendraAsync extends AbstractAWSkendra implements AWSkend
     }
 
     @Override
+    public java.util.concurrent.Future<DisassociateEntitiesFromExperienceResult> disassociateEntitiesFromExperienceAsync(
+            DisassociateEntitiesFromExperienceRequest request) {
+
+        return disassociateEntitiesFromExperienceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateEntitiesFromExperienceResult> disassociateEntitiesFromExperienceAsync(
+            DisassociateEntitiesFromExperienceRequest request,
+            com.amazonaws.handlers.AsyncHandler<DisassociateEntitiesFromExperienceRequest, DisassociateEntitiesFromExperienceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociatePersonasFromEntitiesResult> disassociatePersonasFromEntitiesAsync(
+            DisassociatePersonasFromEntitiesRequest request) {
+
+        return disassociatePersonasFromEntitiesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociatePersonasFromEntitiesResult> disassociatePersonasFromEntitiesAsync(
+            DisassociatePersonasFromEntitiesRequest request,
+            com.amazonaws.handlers.AsyncHandler<DisassociatePersonasFromEntitiesRequest, DisassociatePersonasFromEntitiesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetQuerySuggestionsResult> getQuerySuggestionsAsync(GetQuerySuggestionsRequest request) {
 
         return getQuerySuggestionsAsync(request, null);
@@ -327,6 +422,19 @@ public class AbstractAWSkendraAsync extends AbstractAWSkendra implements AWSkend
     @Override
     public java.util.concurrent.Future<GetQuerySuggestionsResult> getQuerySuggestionsAsync(GetQuerySuggestionsRequest request,
             com.amazonaws.handlers.AsyncHandler<GetQuerySuggestionsRequest, GetQuerySuggestionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSnapshotsResult> getSnapshotsAsync(GetSnapshotsRequest request) {
+
+        return getSnapshotsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSnapshotsResult> getSnapshotsAsync(GetSnapshotsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetSnapshotsRequest, GetSnapshotsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -353,6 +461,45 @@ public class AbstractAWSkendraAsync extends AbstractAWSkendra implements AWSkend
     @Override
     public java.util.concurrent.Future<ListDataSourcesResult> listDataSourcesAsync(ListDataSourcesRequest request,
             com.amazonaws.handlers.AsyncHandler<ListDataSourcesRequest, ListDataSourcesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEntityPersonasResult> listEntityPersonasAsync(ListEntityPersonasRequest request) {
+
+        return listEntityPersonasAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEntityPersonasResult> listEntityPersonasAsync(ListEntityPersonasRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListEntityPersonasRequest, ListEntityPersonasResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListExperienceEntitiesResult> listExperienceEntitiesAsync(ListExperienceEntitiesRequest request) {
+
+        return listExperienceEntitiesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListExperienceEntitiesResult> listExperienceEntitiesAsync(ListExperienceEntitiesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListExperienceEntitiesRequest, ListExperienceEntitiesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListExperiencesResult> listExperiencesAsync(ListExperiencesRequest request) {
+
+        return listExperiencesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListExperiencesResult> listExperiencesAsync(ListExperiencesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListExperiencesRequest, ListExperiencesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -534,6 +681,19 @@ public class AbstractAWSkendraAsync extends AbstractAWSkendra implements AWSkend
     @Override
     public java.util.concurrent.Future<UpdateDataSourceResult> updateDataSourceAsync(UpdateDataSourceRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateDataSourceRequest, UpdateDataSourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateExperienceResult> updateExperienceAsync(UpdateExperienceRequest request) {
+
+        return updateExperienceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateExperienceResult> updateExperienceAsync(UpdateExperienceRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateExperienceRequest, UpdateExperienceResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

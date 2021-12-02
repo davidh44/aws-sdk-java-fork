@@ -122,6 +122,8 @@ public class ReplicaDescription implements Serializable, Cloneable, StructuredPo
      */
     private java.util.Date replicaInaccessibleDateTime;
 
+    private TableClassSummary replicaTableClassSummary;
+
     /**
      * <p>
      * The name of the Region.
@@ -849,6 +851,32 @@ public class ReplicaDescription implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * @param replicaTableClassSummary
+     */
+
+    public void setReplicaTableClassSummary(TableClassSummary replicaTableClassSummary) {
+        this.replicaTableClassSummary = replicaTableClassSummary;
+    }
+
+    /**
+     * @return
+     */
+
+    public TableClassSummary getReplicaTableClassSummary() {
+        return this.replicaTableClassSummary;
+    }
+
+    /**
+     * @param replicaTableClassSummary
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReplicaDescription withReplicaTableClassSummary(TableClassSummary replicaTableClassSummary) {
+        setReplicaTableClassSummary(replicaTableClassSummary);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -875,7 +903,9 @@ public class ReplicaDescription implements Serializable, Cloneable, StructuredPo
         if (getGlobalSecondaryIndexes() != null)
             sb.append("GlobalSecondaryIndexes: ").append(getGlobalSecondaryIndexes()).append(",");
         if (getReplicaInaccessibleDateTime() != null)
-            sb.append("ReplicaInaccessibleDateTime: ").append(getReplicaInaccessibleDateTime());
+            sb.append("ReplicaInaccessibleDateTime: ").append(getReplicaInaccessibleDateTime()).append(",");
+        if (getReplicaTableClassSummary() != null)
+            sb.append("ReplicaTableClassSummary: ").append(getReplicaTableClassSummary());
         sb.append("}");
         return sb.toString();
     }
@@ -923,6 +953,10 @@ public class ReplicaDescription implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getReplicaInaccessibleDateTime() != null && other.getReplicaInaccessibleDateTime().equals(this.getReplicaInaccessibleDateTime()) == false)
             return false;
+        if (other.getReplicaTableClassSummary() == null ^ this.getReplicaTableClassSummary() == null)
+            return false;
+        if (other.getReplicaTableClassSummary() != null && other.getReplicaTableClassSummary().equals(this.getReplicaTableClassSummary()) == false)
+            return false;
         return true;
     }
 
@@ -939,6 +973,7 @@ public class ReplicaDescription implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getProvisionedThroughputOverride() == null) ? 0 : getProvisionedThroughputOverride().hashCode());
         hashCode = prime * hashCode + ((getGlobalSecondaryIndexes() == null) ? 0 : getGlobalSecondaryIndexes().hashCode());
         hashCode = prime * hashCode + ((getReplicaInaccessibleDateTime() == null) ? 0 : getReplicaInaccessibleDateTime().hashCode());
+        hashCode = prime * hashCode + ((getReplicaTableClassSummary() == null) ? 0 : getReplicaTableClassSummary().hashCode());
         return hashCode;
     }
 

@@ -89,6 +89,16 @@ public class PendingProductionVariantSummaryJsonUnmarshaller implements Unmarsha
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("CurrentServerlessConfig", targetDepth)) {
+                    context.nextToken();
+                    pendingProductionVariantSummary.setCurrentServerlessConfig(ProductionVariantServerlessConfigJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
+                if (context.testExpression("DesiredServerlessConfig", targetDepth)) {
+                    context.nextToken();
+                    pendingProductionVariantSummary.setDesiredServerlessConfig(ProductionVariantServerlessConfigJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

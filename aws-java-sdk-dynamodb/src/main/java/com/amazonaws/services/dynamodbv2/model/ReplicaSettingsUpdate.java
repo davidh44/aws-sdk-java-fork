@@ -55,6 +55,12 @@ public class ReplicaSettingsUpdate implements Serializable, Cloneable, Structure
      * </p>
      */
     private java.util.List<ReplicaGlobalSecondaryIndexSettingsUpdate> replicaGlobalSecondaryIndexSettingsUpdate;
+    /**
+     * <p>
+     * Replica-specific table class. If not specified, uses the source table's table class.
+     * </p>
+     */
+    private String replicaTableClass;
 
     /**
      * <p>
@@ -272,6 +278,65 @@ public class ReplicaSettingsUpdate implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * Replica-specific table class. If not specified, uses the source table's table class.
+     * </p>
+     * 
+     * @param replicaTableClass
+     *        Replica-specific table class. If not specified, uses the source table's table class.
+     * @see TableClass
+     */
+
+    public void setReplicaTableClass(String replicaTableClass) {
+        this.replicaTableClass = replicaTableClass;
+    }
+
+    /**
+     * <p>
+     * Replica-specific table class. If not specified, uses the source table's table class.
+     * </p>
+     * 
+     * @return Replica-specific table class. If not specified, uses the source table's table class.
+     * @see TableClass
+     */
+
+    public String getReplicaTableClass() {
+        return this.replicaTableClass;
+    }
+
+    /**
+     * <p>
+     * Replica-specific table class. If not specified, uses the source table's table class.
+     * </p>
+     * 
+     * @param replicaTableClass
+     *        Replica-specific table class. If not specified, uses the source table's table class.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TableClass
+     */
+
+    public ReplicaSettingsUpdate withReplicaTableClass(String replicaTableClass) {
+        setReplicaTableClass(replicaTableClass);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Replica-specific table class. If not specified, uses the source table's table class.
+     * </p>
+     * 
+     * @param replicaTableClass
+     *        Replica-specific table class. If not specified, uses the source table's table class.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TableClass
+     */
+
+    public ReplicaSettingsUpdate withReplicaTableClass(TableClass replicaTableClass) {
+        this.replicaTableClass = replicaTableClass.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -291,7 +356,9 @@ public class ReplicaSettingsUpdate implements Serializable, Cloneable, Structure
             sb.append("ReplicaProvisionedReadCapacityAutoScalingSettingsUpdate: ").append(getReplicaProvisionedReadCapacityAutoScalingSettingsUpdate())
                     .append(",");
         if (getReplicaGlobalSecondaryIndexSettingsUpdate() != null)
-            sb.append("ReplicaGlobalSecondaryIndexSettingsUpdate: ").append(getReplicaGlobalSecondaryIndexSettingsUpdate());
+            sb.append("ReplicaGlobalSecondaryIndexSettingsUpdate: ").append(getReplicaGlobalSecondaryIndexSettingsUpdate()).append(",");
+        if (getReplicaTableClass() != null)
+            sb.append("ReplicaTableClass: ").append(getReplicaTableClass());
         sb.append("}");
         return sb.toString();
     }
@@ -326,6 +393,10 @@ public class ReplicaSettingsUpdate implements Serializable, Cloneable, Structure
         if (other.getReplicaGlobalSecondaryIndexSettingsUpdate() != null
                 && other.getReplicaGlobalSecondaryIndexSettingsUpdate().equals(this.getReplicaGlobalSecondaryIndexSettingsUpdate()) == false)
             return false;
+        if (other.getReplicaTableClass() == null ^ this.getReplicaTableClass() == null)
+            return false;
+        if (other.getReplicaTableClass() != null && other.getReplicaTableClass().equals(this.getReplicaTableClass()) == false)
+            return false;
         return true;
     }
 
@@ -342,6 +413,7 @@ public class ReplicaSettingsUpdate implements Serializable, Cloneable, Structure
                         .hashCode());
         hashCode = prime * hashCode
                 + ((getReplicaGlobalSecondaryIndexSettingsUpdate() == null) ? 0 : getReplicaGlobalSecondaryIndexSettingsUpdate().hashCode());
+        hashCode = prime * hashCode + ((getReplicaTableClass() == null) ? 0 : getReplicaTableClass().hashCode());
         return hashCode;
     }
 

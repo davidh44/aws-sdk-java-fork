@@ -121,6 +121,10 @@ public class TrialComponentJsonUnmarshaller implements Unmarshaller<TrialCompone
                     context.nextToken();
                     trialComponent.setSourceDetail(TrialComponentSourceDetailJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("LineageGroupArn", targetDepth)) {
+                    context.nextToken();
+                    trialComponent.setLineageGroupArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("Tags", targetDepth)) {
                     context.nextToken();
                     trialComponent.setTags(new ListUnmarshaller<Tag>(TagJsonUnmarshaller.getInstance())

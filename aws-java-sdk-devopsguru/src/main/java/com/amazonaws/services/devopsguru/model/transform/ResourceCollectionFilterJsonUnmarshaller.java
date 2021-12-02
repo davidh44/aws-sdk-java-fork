@@ -52,6 +52,12 @@ public class ResourceCollectionFilterJsonUnmarshaller implements Unmarshaller<Re
                     context.nextToken();
                     resourceCollectionFilter.setCloudFormation(CloudFormationCollectionFilterJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("Tags", targetDepth)) {
+                    context.nextToken();
+                    resourceCollectionFilter.setTags(new ListUnmarshaller<TagCollectionFilter>(TagCollectionFilterJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

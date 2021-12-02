@@ -159,6 +159,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
     }
 
     @Override
+    public CreateInferenceRecommendationsJobResult createInferenceRecommendationsJob(CreateInferenceRecommendationsJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateLabelingJobResult createLabelingJob(CreateLabelingJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -584,7 +589,17 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
     }
 
     @Override
+    public DescribeInferenceRecommendationsJobResult describeInferenceRecommendationsJob(DescribeInferenceRecommendationsJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeLabelingJobResult describeLabelingJob(DescribeLabelingJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeLineageGroupResult describeLineageGroup(DescribeLineageGroupRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -720,6 +735,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
 
     @Override
     public GetDeviceFleetReportResult getDeviceFleetReport(GetDeviceFleetReportRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetLineageGroupPolicyResult getLineageGroupPolicy(GetLineageGroupPolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -864,6 +884,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
     }
 
     @Override
+    public ListInferenceRecommendationsJobsResult listInferenceRecommendationsJobs(ListInferenceRecommendationsJobsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListLabelingJobsResult listLabelingJobs(ListLabelingJobsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -874,12 +899,22 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
     }
 
     @Override
+    public ListLineageGroupsResult listLineageGroups(ListLineageGroupsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListModelBiasJobDefinitionsResult listModelBiasJobDefinitions(ListModelBiasJobDefinitionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public ListModelExplainabilityJobDefinitionsResult listModelExplainabilityJobDefinitions(ListModelExplainabilityJobDefinitionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListModelMetadataResult listModelMetadata(ListModelMetadataRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -1014,6 +1049,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
     }
 
     @Override
+    public QueryLineageResult queryLineage(QueryLineageRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public RegisterDevicesResult registerDevices(RegisterDevicesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1075,6 +1115,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
 
     @Override
     public StopHyperParameterTuningJobResult stopHyperParameterTuningJob(StopHyperParameterTuningJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StopInferenceRecommendationsJobResult stopInferenceRecommendationsJob(StopInferenceRecommendationsJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -30,6 +30,8 @@ public class AnomalySourceDetailsMarshaller {
 
     private static final MarshallingInfo<List> CLOUDWATCHMETRICS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CloudWatchMetrics").build();
+    private static final MarshallingInfo<List> PERFORMANCEINSIGHTSMETRICS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PerformanceInsightsMetrics").build();
 
     private static final AnomalySourceDetailsMarshaller instance = new AnomalySourceDetailsMarshaller();
 
@@ -48,6 +50,7 @@ public class AnomalySourceDetailsMarshaller {
 
         try {
             protocolMarshaller.marshall(anomalySourceDetails.getCloudWatchMetrics(), CLOUDWATCHMETRICS_BINDING);
+            protocolMarshaller.marshall(anomalySourceDetails.getPerformanceInsightsMetrics(), PERFORMANCEINSIGHTSMETRICS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

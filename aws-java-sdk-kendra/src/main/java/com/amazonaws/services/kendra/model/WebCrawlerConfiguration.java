@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides the configuration information required for Amazon Kendra web crawler.
+ * Provides the configuration information required for Amazon Kendra Web Crawler.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/WebCrawlerConfiguration" target="_top">AWS API
@@ -41,8 +41,8 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * </p>
      * <p>
      * <i>When selecting websites to index, you must adhere to the <a href="https://aws.amazon.com/aup/">Amazon
-     * Acceptable Use Policy</a> and all other Amazon terms. Remember that you must only use the Amazon Kendra web
-     * crawler to index your own webpages, or webpages that you have authorization to index.</i>
+     * Acceptable Use Policy</a> and all other Amazon terms. Remember that you must only use Amazon Kendra Web Crawler
+     * to index your own webpages, or webpages that you have authorization to index.</i>
      * </p>
      */
     private Urls urls;
@@ -128,7 +128,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * Web proxy credentials are optional and you can use them to connect to a web proxy server that requires basic
      * authentication. To store web proxy credentials, you use a secret in <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets Manager</a>.
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets Manager</a>.
      * </p>
      */
     private ProxyConfiguration proxyConfiguration;
@@ -142,8 +142,8 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * You must provide the website host name and port number. For example, the host name of
      * https://a.example.com/page1.html is "a.example.com" and the port is 443, the standard port for HTTPS. You use a
-     * secret in <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets
-     * Manager</a> to store your authentication credentials.
+     * secret in <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets Manager</a> to
+     * store your authentication credentials.
      * </p>
      */
     private AuthenticationConfiguration authenticationConfiguration;
@@ -161,8 +161,8 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * </p>
      * <p>
      * <i>When selecting websites to index, you must adhere to the <a href="https://aws.amazon.com/aup/">Amazon
-     * Acceptable Use Policy</a> and all other Amazon terms. Remember that you must only use the Amazon Kendra web
-     * crawler to index your own webpages, or webpages that you have authorization to index.</i>
+     * Acceptable Use Policy</a> and all other Amazon terms. Remember that you must only use Amazon Kendra Web Crawler
+     * to index your own webpages, or webpages that you have authorization to index.</i>
      * </p>
      * 
      * @param urls
@@ -178,8 +178,8 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      *        </p>
      *        <p>
      *        <i>When selecting websites to index, you must adhere to the <a href="https://aws.amazon.com/aup/">Amazon
-     *        Acceptable Use Policy</a> and all other Amazon terms. Remember that you must only use the Amazon Kendra
-     *        web crawler to index your own webpages, or webpages that you have authorization to index.</i>
+     *        Acceptable Use Policy</a> and all other Amazon terms. Remember that you must only use Amazon Kendra Web
+     *        Crawler to index your own webpages, or webpages that you have authorization to index.</i>
      */
 
     public void setUrls(Urls urls) {
@@ -199,8 +199,8 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * </p>
      * <p>
      * <i>When selecting websites to index, you must adhere to the <a href="https://aws.amazon.com/aup/">Amazon
-     * Acceptable Use Policy</a> and all other Amazon terms. Remember that you must only use the Amazon Kendra web
-     * crawler to index your own webpages, or webpages that you have authorization to index.</i>
+     * Acceptable Use Policy</a> and all other Amazon terms. Remember that you must only use Amazon Kendra Web Crawler
+     * to index your own webpages, or webpages that you have authorization to index.</i>
      * </p>
      * 
      * @return Specifies the seed or starting point URLs of the websites or the sitemap URLs of the websites you want to
@@ -215,8 +215,8 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      *         </p>
      *         <p>
      *         <i>When selecting websites to index, you must adhere to the <a href="https://aws.amazon.com/aup/">Amazon
-     *         Acceptable Use Policy</a> and all other Amazon terms. Remember that you must only use the Amazon Kendra
-     *         web crawler to index your own webpages, or webpages that you have authorization to index.</i>
+     *         Acceptable Use Policy</a> and all other Amazon terms. Remember that you must only use Amazon Kendra Web
+     *         Crawler to index your own webpages, or webpages that you have authorization to index.</i>
      */
 
     public Urls getUrls() {
@@ -236,8 +236,8 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * </p>
      * <p>
      * <i>When selecting websites to index, you must adhere to the <a href="https://aws.amazon.com/aup/">Amazon
-     * Acceptable Use Policy</a> and all other Amazon terms. Remember that you must only use the Amazon Kendra web
-     * crawler to index your own webpages, or webpages that you have authorization to index.</i>
+     * Acceptable Use Policy</a> and all other Amazon terms. Remember that you must only use Amazon Kendra Web Crawler
+     * to index your own webpages, or webpages that you have authorization to index.</i>
      * </p>
      * 
      * @param urls
@@ -253,8 +253,8 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      *        </p>
      *        <p>
      *        <i>When selecting websites to index, you must adhere to the <a href="https://aws.amazon.com/aup/">Amazon
-     *        Acceptable Use Policy</a> and all other Amazon terms. Remember that you must only use the Amazon Kendra
-     *        web crawler to index your own webpages, or webpages that you have authorization to index.</i>
+     *        Acceptable Use Policy</a> and all other Amazon terms. Remember that you must only use Amazon Kendra Web
+     *        Crawler to index your own webpages, or webpages that you have authorization to index.</i>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -786,7 +786,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * Web proxy credentials are optional and you can use them to connect to a web proxy server that requires basic
      * authentication. To store web proxy credentials, you use a secret in <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets Manager</a>.
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets Manager</a>.
      * </p>
      * 
      * @param proxyConfiguration
@@ -798,7 +798,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      *        <p>
      *        Web proxy credentials are optional and you can use them to connect to a web proxy server that requires
      *        basic authentication. To store web proxy credentials, you use a secret in <a
-     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets Manager</a>.
+     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets Manager</a>.
      */
 
     public void setProxyConfiguration(ProxyConfiguration proxyConfiguration) {
@@ -816,7 +816,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * Web proxy credentials are optional and you can use them to connect to a web proxy server that requires basic
      * authentication. To store web proxy credentials, you use a secret in <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets Manager</a>.
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets Manager</a>.
      * </p>
      * 
      * @return Provides configuration information required to connect to your internal websites via a web proxy.</p>
@@ -827,7 +827,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      *         <p>
      *         Web proxy credentials are optional and you can use them to connect to a web proxy server that requires
      *         basic authentication. To store web proxy credentials, you use a secret in <a
-     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets Manager</a>.
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets Manager</a>.
      */
 
     public ProxyConfiguration getProxyConfiguration() {
@@ -845,7 +845,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * Web proxy credentials are optional and you can use them to connect to a web proxy server that requires basic
      * authentication. To store web proxy credentials, you use a secret in <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets Manager</a>.
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets Manager</a>.
      * </p>
      * 
      * @param proxyConfiguration
@@ -857,7 +857,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      *        <p>
      *        Web proxy credentials are optional and you can use them to connect to a web proxy server that requires
      *        basic authentication. To store web proxy credentials, you use a secret in <a
-     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets Manager</a>.
+     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets Manager</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -876,8 +876,8 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * You must provide the website host name and port number. For example, the host name of
      * https://a.example.com/page1.html is "a.example.com" and the port is 443, the standard port for HTTPS. You use a
-     * secret in <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets
-     * Manager</a> to store your authentication credentials.
+     * secret in <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets Manager</a> to
+     * store your authentication credentials.
      * </p>
      * 
      * @param authenticationConfiguration
@@ -888,8 +888,8 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      *        <p>
      *        You must provide the website host name and port number. For example, the host name of
      *        https://a.example.com/page1.html is "a.example.com" and the port is 443, the standard port for HTTPS. You
-     *        use a secret in <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS
-     *        Secrets Manager</a> to store your authentication credentials.
+     *        use a secret in <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets
+     *        Manager</a> to store your authentication credentials.
      */
 
     public void setAuthenticationConfiguration(AuthenticationConfiguration authenticationConfiguration) {
@@ -906,8 +906,8 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * You must provide the website host name and port number. For example, the host name of
      * https://a.example.com/page1.html is "a.example.com" and the port is 443, the standard port for HTTPS. You use a
-     * secret in <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets
-     * Manager</a> to store your authentication credentials.
+     * secret in <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets Manager</a> to
+     * store your authentication credentials.
      * </p>
      * 
      * @return Provides configuration information required to connect to websites using authentication.</p>
@@ -917,8 +917,8 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      *         <p>
      *         You must provide the website host name and port number. For example, the host name of
      *         https://a.example.com/page1.html is "a.example.com" and the port is 443, the standard port for HTTPS. You
-     *         use a secret in <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS
-     *         Secrets Manager</a> to store your authentication credentials.
+     *         use a secret in <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets
+     *         Manager</a> to store your authentication credentials.
      */
 
     public AuthenticationConfiguration getAuthenticationConfiguration() {
@@ -935,8 +935,8 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * You must provide the website host name and port number. For example, the host name of
      * https://a.example.com/page1.html is "a.example.com" and the port is 443, the standard port for HTTPS. You use a
-     * secret in <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets
-     * Manager</a> to store your authentication credentials.
+     * secret in <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets Manager</a> to
+     * store your authentication credentials.
      * </p>
      * 
      * @param authenticationConfiguration
@@ -947,8 +947,8 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      *        <p>
      *        You must provide the website host name and port number. For example, the host name of
      *        https://a.example.com/page1.html is "a.example.com" and the port is 443, the standard port for HTTPS. You
-     *        use a secret in <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS
-     *        Secrets Manager</a> to store your authentication credentials.
+     *        use a secret in <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets
+     *        Manager</a> to store your authentication credentials.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

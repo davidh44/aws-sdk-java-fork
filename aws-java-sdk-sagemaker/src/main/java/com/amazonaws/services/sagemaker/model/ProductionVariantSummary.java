@@ -73,6 +73,30 @@ public class ProductionVariantSummary implements Serializable, Cloneable, Struct
      * </p>
      */
     private java.util.List<ProductionVariantStatus> variantStatus;
+    /**
+     * <p>
+     * The serverless configuration for the endpoint.
+     * </p>
+     * <note>
+     * <p>
+     * Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not recommend
+     * using this feature in production environments.
+     * </p>
+     * </note>
+     */
+    private ProductionVariantServerlessConfig currentServerlessConfig;
+    /**
+     * <p>
+     * The serverless configuration requested for the endpoint update.
+     * </p>
+     * <note>
+     * <p>
+     * Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not recommend
+     * using this feature in production environments.
+     * </p>
+     * </note>
+     */
+    private ProductionVariantServerlessConfig desiredServerlessConfig;
 
     /**
      * <p>
@@ -423,6 +447,146 @@ public class ProductionVariantSummary implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * The serverless configuration for the endpoint.
+     * </p>
+     * <note>
+     * <p>
+     * Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not recommend
+     * using this feature in production environments.
+     * </p>
+     * </note>
+     * 
+     * @param currentServerlessConfig
+     *        The serverless configuration for the endpoint.</p> <note>
+     *        <p>
+     *        Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not
+     *        recommend using this feature in production environments.
+     *        </p>
+     */
+
+    public void setCurrentServerlessConfig(ProductionVariantServerlessConfig currentServerlessConfig) {
+        this.currentServerlessConfig = currentServerlessConfig;
+    }
+
+    /**
+     * <p>
+     * The serverless configuration for the endpoint.
+     * </p>
+     * <note>
+     * <p>
+     * Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not recommend
+     * using this feature in production environments.
+     * </p>
+     * </note>
+     * 
+     * @return The serverless configuration for the endpoint.</p> <note>
+     *         <p>
+     *         Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not
+     *         recommend using this feature in production environments.
+     *         </p>
+     */
+
+    public ProductionVariantServerlessConfig getCurrentServerlessConfig() {
+        return this.currentServerlessConfig;
+    }
+
+    /**
+     * <p>
+     * The serverless configuration for the endpoint.
+     * </p>
+     * <note>
+     * <p>
+     * Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not recommend
+     * using this feature in production environments.
+     * </p>
+     * </note>
+     * 
+     * @param currentServerlessConfig
+     *        The serverless configuration for the endpoint.</p> <note>
+     *        <p>
+     *        Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not
+     *        recommend using this feature in production environments.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ProductionVariantSummary withCurrentServerlessConfig(ProductionVariantServerlessConfig currentServerlessConfig) {
+        setCurrentServerlessConfig(currentServerlessConfig);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The serverless configuration requested for the endpoint update.
+     * </p>
+     * <note>
+     * <p>
+     * Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not recommend
+     * using this feature in production environments.
+     * </p>
+     * </note>
+     * 
+     * @param desiredServerlessConfig
+     *        The serverless configuration requested for the endpoint update.</p> <note>
+     *        <p>
+     *        Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not
+     *        recommend using this feature in production environments.
+     *        </p>
+     */
+
+    public void setDesiredServerlessConfig(ProductionVariantServerlessConfig desiredServerlessConfig) {
+        this.desiredServerlessConfig = desiredServerlessConfig;
+    }
+
+    /**
+     * <p>
+     * The serverless configuration requested for the endpoint update.
+     * </p>
+     * <note>
+     * <p>
+     * Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not recommend
+     * using this feature in production environments.
+     * </p>
+     * </note>
+     * 
+     * @return The serverless configuration requested for the endpoint update.</p> <note>
+     *         <p>
+     *         Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not
+     *         recommend using this feature in production environments.
+     *         </p>
+     */
+
+    public ProductionVariantServerlessConfig getDesiredServerlessConfig() {
+        return this.desiredServerlessConfig;
+    }
+
+    /**
+     * <p>
+     * The serverless configuration requested for the endpoint update.
+     * </p>
+     * <note>
+     * <p>
+     * Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not recommend
+     * using this feature in production environments.
+     * </p>
+     * </note>
+     * 
+     * @param desiredServerlessConfig
+     *        The serverless configuration requested for the endpoint update.</p> <note>
+     *        <p>
+     *        Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not
+     *        recommend using this feature in production environments.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ProductionVariantSummary withDesiredServerlessConfig(ProductionVariantServerlessConfig desiredServerlessConfig) {
+        setDesiredServerlessConfig(desiredServerlessConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -447,7 +611,11 @@ public class ProductionVariantSummary implements Serializable, Cloneable, Struct
         if (getDesiredInstanceCount() != null)
             sb.append("DesiredInstanceCount: ").append(getDesiredInstanceCount()).append(",");
         if (getVariantStatus() != null)
-            sb.append("VariantStatus: ").append(getVariantStatus());
+            sb.append("VariantStatus: ").append(getVariantStatus()).append(",");
+        if (getCurrentServerlessConfig() != null)
+            sb.append("CurrentServerlessConfig: ").append(getCurrentServerlessConfig()).append(",");
+        if (getDesiredServerlessConfig() != null)
+            sb.append("DesiredServerlessConfig: ").append(getDesiredServerlessConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -490,6 +658,14 @@ public class ProductionVariantSummary implements Serializable, Cloneable, Struct
             return false;
         if (other.getVariantStatus() != null && other.getVariantStatus().equals(this.getVariantStatus()) == false)
             return false;
+        if (other.getCurrentServerlessConfig() == null ^ this.getCurrentServerlessConfig() == null)
+            return false;
+        if (other.getCurrentServerlessConfig() != null && other.getCurrentServerlessConfig().equals(this.getCurrentServerlessConfig()) == false)
+            return false;
+        if (other.getDesiredServerlessConfig() == null ^ this.getDesiredServerlessConfig() == null)
+            return false;
+        if (other.getDesiredServerlessConfig() != null && other.getDesiredServerlessConfig().equals(this.getDesiredServerlessConfig()) == false)
+            return false;
         return true;
     }
 
@@ -505,6 +681,8 @@ public class ProductionVariantSummary implements Serializable, Cloneable, Struct
         hashCode = prime * hashCode + ((getCurrentInstanceCount() == null) ? 0 : getCurrentInstanceCount().hashCode());
         hashCode = prime * hashCode + ((getDesiredInstanceCount() == null) ? 0 : getDesiredInstanceCount().hashCode());
         hashCode = prime * hashCode + ((getVariantStatus() == null) ? 0 : getVariantStatus().hashCode());
+        hashCode = prime * hashCode + ((getCurrentServerlessConfig() == null) ? 0 : getCurrentServerlessConfig().hashCode());
+        hashCode = prime * hashCode + ((getDesiredServerlessConfig() == null) ? 0 : getDesiredServerlessConfig().hashCode());
         return hashCode;
     }
 

@@ -84,8 +84,14 @@ public class AmazonSageMakerRuntimeClient extends AmazonWebServiceClient impleme
                             new JsonErrorShapeMetadata().withErrorCode("ModelError").withExceptionUnmarshaller(
                                     com.amazonaws.services.sagemakerruntime.model.transform.ModelErrorExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InternalDependencyException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.sagemakerruntime.model.transform.InternalDependencyExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ValidationError").withExceptionUnmarshaller(
                                     com.amazonaws.services.sagemakerruntime.model.transform.ValidationErrorExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ModelNotReadyException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.sagemakerruntime.model.transform.ModelNotReadyExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServiceUnavailable").withExceptionUnmarshaller(
                                     com.amazonaws.services.sagemakerruntime.model.transform.ServiceUnavailableExceptionUnmarshaller.getInstance()))
@@ -151,9 +157,10 @@ public class AmazonSageMakerRuntimeClient extends AmazonWebServiceClient impleme
      * headers. You should not rely on the behavior of headers outside those enumerated in the request syntax.
      * </p>
      * <p>
-     * Calls to <code>InvokeEndpoint</code> are authenticated by using AWS Signature Version 4. For information, see <a
+     * Calls to <code>InvokeEndpoint</code> are authenticated by using Amazon Web Services Signature Version 4. For
+     * information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html">Authenticating
-     * Requests (AWS Signature Version 4)</a> in the <i>Amazon S3 API Reference</i>.
+     * Requests (Amazon Web Services Signature Version 4)</a> in the <i>Amazon S3 API Reference</i>.
      * </p>
      * <p>
      * A customer's model containers must respond to requests within 60 seconds. The model itself can have a maximum
@@ -177,6 +184,11 @@ public class AmazonSageMakerRuntimeClient extends AmazonWebServiceClient impleme
      *         Inspect your request and try again.
      * @throws ModelErrorException
      *         Model (owned by the customer in the container) returned 4xx or 5xx error code.
+     * @throws InternalDependencyException
+     *         Your request caused an exception with an internal dependency. Contact customer support.
+     * @throws ModelNotReadyException
+     *         Either a serverless endpoint variant's resources are still being provisioned, or a multi-model endpoint
+     *         is still downloading or loading the target model. Wait and try your request again.
      * @sample AmazonSageMakerRuntime.InvokeEndpoint
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/runtime.sagemaker-2017-05-13/InvokeEndpoint"
      *      target="_top">AWS API Documentation</a>
@@ -241,9 +253,10 @@ public class AmazonSageMakerRuntimeClient extends AmazonWebServiceClient impleme
      * syntax.
      * </p>
      * <p>
-     * Calls to <code>InvokeEndpointAsync</code> are authenticated by using AWS Signature Version 4. For information,
-     * see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html">Authenticating
-     * Requests (AWS Signature Version 4)</a> in the <i>Amazon S3 API Reference</i>.
+     * Calls to <code>InvokeEndpointAsync</code> are authenticated by using Amazon Web Services Signature Version 4. For
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html"
+     * >Authenticating Requests (Amazon Web Services Signature Version 4)</a> in the <i>Amazon S3 API Reference</i>.
      * </p>
      * 
      * @param invokeEndpointAsyncRequest

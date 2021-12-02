@@ -44,6 +44,8 @@ public class UpdateTableRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SSESpecification").build();
     private static final MarshallingInfo<List> REPLICAUPDATES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ReplicaUpdates").build();
+    private static final MarshallingInfo<String> TABLECLASS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TableClass").build();
 
     private static final UpdateTableRequestMarshaller instance = new UpdateTableRequestMarshaller();
 
@@ -69,6 +71,7 @@ public class UpdateTableRequestMarshaller {
             protocolMarshaller.marshall(updateTableRequest.getStreamSpecification(), STREAMSPECIFICATION_BINDING);
             protocolMarshaller.marshall(updateTableRequest.getSSESpecification(), SSESPECIFICATION_BINDING);
             protocolMarshaller.marshall(updateTableRequest.getReplicaUpdates(), REPLICAUPDATES_BINDING);
+            protocolMarshaller.marshall(updateTableRequest.getTableClass(), TABLECLASS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

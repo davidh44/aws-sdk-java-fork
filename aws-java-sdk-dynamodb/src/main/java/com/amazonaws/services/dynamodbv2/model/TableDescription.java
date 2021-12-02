@@ -463,6 +463,12 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private ArchivalSummary archivalSummary;
+    /**
+     * <p>
+     * Contains details of the table class.
+     * </p>
+     */
+    private TableClassSummary tableClassSummary;
 
     /**
      * <p>
@@ -3976,6 +3982,46 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * Contains details of the table class.
+     * </p>
+     * 
+     * @param tableClassSummary
+     *        Contains details of the table class.
+     */
+
+    public void setTableClassSummary(TableClassSummary tableClassSummary) {
+        this.tableClassSummary = tableClassSummary;
+    }
+
+    /**
+     * <p>
+     * Contains details of the table class.
+     * </p>
+     * 
+     * @return Contains details of the table class.
+     */
+
+    public TableClassSummary getTableClassSummary() {
+        return this.tableClassSummary;
+    }
+
+    /**
+     * <p>
+     * Contains details of the table class.
+     * </p>
+     * 
+     * @param tableClassSummary
+     *        Contains details of the table class.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TableDescription withTableClassSummary(TableClassSummary tableClassSummary) {
+        setTableClassSummary(tableClassSummary);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -4028,7 +4074,9 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
         if (getSSEDescription() != null)
             sb.append("SSEDescription: ").append(getSSEDescription()).append(",");
         if (getArchivalSummary() != null)
-            sb.append("ArchivalSummary: ").append(getArchivalSummary());
+            sb.append("ArchivalSummary: ").append(getArchivalSummary()).append(",");
+        if (getTableClassSummary() != null)
+            sb.append("TableClassSummary: ").append(getTableClassSummary());
         sb.append("}");
         return sb.toString();
     }
@@ -4127,6 +4175,10 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getArchivalSummary() != null && other.getArchivalSummary().equals(this.getArchivalSummary()) == false)
             return false;
+        if (other.getTableClassSummary() == null ^ this.getTableClassSummary() == null)
+            return false;
+        if (other.getTableClassSummary() != null && other.getTableClassSummary().equals(this.getTableClassSummary()) == false)
+            return false;
         return true;
     }
 
@@ -4156,6 +4208,7 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getRestoreSummary() == null) ? 0 : getRestoreSummary().hashCode());
         hashCode = prime * hashCode + ((getSSEDescription() == null) ? 0 : getSSEDescription().hashCode());
         hashCode = prime * hashCode + ((getArchivalSummary() == null) ? 0 : getArchivalSummary().hashCode());
+        hashCode = prime * hashCode + ((getTableClassSummary() == null) ? 0 : getTableClassSummary().hashCode());
         return hashCode;
     }
 

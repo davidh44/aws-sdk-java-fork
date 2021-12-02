@@ -44,6 +44,8 @@ public class ReplicaDescriptionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("GlobalSecondaryIndexes").build();
     private static final MarshallingInfo<java.util.Date> REPLICAINACCESSIBLEDATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ReplicaInaccessibleDateTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<StructuredPojo> REPLICATABLECLASSSUMMARY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ReplicaTableClassSummary").build();
 
     private static final ReplicaDescriptionMarshaller instance = new ReplicaDescriptionMarshaller();
 
@@ -69,6 +71,7 @@ public class ReplicaDescriptionMarshaller {
             protocolMarshaller.marshall(replicaDescription.getProvisionedThroughputOverride(), PROVISIONEDTHROUGHPUTOVERRIDE_BINDING);
             protocolMarshaller.marshall(replicaDescription.getGlobalSecondaryIndexes(), GLOBALSECONDARYINDEXES_BINDING);
             protocolMarshaller.marshall(replicaDescription.getReplicaInaccessibleDateTime(), REPLICAINACCESSIBLEDATETIME_BINDING);
+            protocolMarshaller.marshall(replicaDescription.getReplicaTableClassSummary(), REPLICATABLECLASSSUMMARY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -53,6 +53,11 @@ public class PathComponentStaxUnmarshaller implements Unmarshaller<PathComponent
                     continue;
                 }
 
+                if (context.testExpression("attachedTo", targetDepth)) {
+                    pathComponent.setAttachedTo(AnalysisComponentStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("component", targetDepth)) {
                     pathComponent.setComponent(AnalysisComponentStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

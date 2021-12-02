@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum MergeStrategy {
 
     Overwrite("Overwrite"),
-    FailOnConflict("FailOnConflict");
+    FailOnConflict("FailOnConflict"),
+    Append("Append");
 
     private String value;
 

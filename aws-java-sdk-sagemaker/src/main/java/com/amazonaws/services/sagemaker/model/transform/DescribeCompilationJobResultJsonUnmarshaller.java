@@ -76,6 +76,10 @@ public class DescribeCompilationJobResultJsonUnmarshaller implements Unmarshalle
                     context.nextToken();
                     describeCompilationJobResult.setInferenceImage(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ModelPackageVersionArn", targetDepth)) {
+                    context.nextToken();
+                    describeCompilationJobResult.setModelPackageVersionArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("CreationTime", targetDepth)) {
                     context.nextToken();
                     describeCompilationJobResult.setCreationTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

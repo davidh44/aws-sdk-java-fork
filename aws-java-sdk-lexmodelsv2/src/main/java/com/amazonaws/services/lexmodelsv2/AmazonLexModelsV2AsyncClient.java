@@ -965,6 +965,39 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeBotRecommendationResult> describeBotRecommendationAsync(DescribeBotRecommendationRequest request) {
+
+        return describeBotRecommendationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeBotRecommendationResult> describeBotRecommendationAsync(final DescribeBotRecommendationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeBotRecommendationRequest, DescribeBotRecommendationResult> asyncHandler) {
+        final DescribeBotRecommendationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeBotRecommendationResult>() {
+            @Override
+            public DescribeBotRecommendationResult call() throws Exception {
+                DescribeBotRecommendationResult result = null;
+
+                try {
+                    result = executeDescribeBotRecommendation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeBotVersionResult> describeBotVersionAsync(DescribeBotVersionRequest request) {
 
         return describeBotVersionAsync(request, null);
@@ -1295,6 +1328,39 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
     }
 
     @Override
+    public java.util.concurrent.Future<ListBotRecommendationsResult> listBotRecommendationsAsync(ListBotRecommendationsRequest request) {
+
+        return listBotRecommendationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListBotRecommendationsResult> listBotRecommendationsAsync(final ListBotRecommendationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListBotRecommendationsRequest, ListBotRecommendationsResult> asyncHandler) {
+        final ListBotRecommendationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListBotRecommendationsResult>() {
+            @Override
+            public ListBotRecommendationsResult call() throws Exception {
+                ListBotRecommendationsResult result = null;
+
+                try {
+                    result = executeListBotRecommendations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListBotVersionsResult> listBotVersionsAsync(ListBotVersionsRequest request) {
 
         return listBotVersionsAsync(request, null);
@@ -1526,6 +1592,39 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
     }
 
     @Override
+    public java.util.concurrent.Future<ListRecommendedIntentsResult> listRecommendedIntentsAsync(ListRecommendedIntentsRequest request) {
+
+        return listRecommendedIntentsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRecommendedIntentsResult> listRecommendedIntentsAsync(final ListRecommendedIntentsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListRecommendedIntentsRequest, ListRecommendedIntentsResult> asyncHandler) {
+        final ListRecommendedIntentsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListRecommendedIntentsResult>() {
+            @Override
+            public ListRecommendedIntentsResult call() throws Exception {
+                ListRecommendedIntentsResult result = null;
+
+                try {
+                    result = executeListRecommendedIntents(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListSlotTypesResult> listSlotTypesAsync(ListSlotTypesRequest request) {
 
         return listSlotTypesAsync(request, null);
@@ -1609,6 +1708,72 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
 
                 try {
                     result = executeListTagsForResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchAssociatedTranscriptsResult> searchAssociatedTranscriptsAsync(SearchAssociatedTranscriptsRequest request) {
+
+        return searchAssociatedTranscriptsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchAssociatedTranscriptsResult> searchAssociatedTranscriptsAsync(final SearchAssociatedTranscriptsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<SearchAssociatedTranscriptsRequest, SearchAssociatedTranscriptsResult> asyncHandler) {
+        final SearchAssociatedTranscriptsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<SearchAssociatedTranscriptsResult>() {
+            @Override
+            public SearchAssociatedTranscriptsResult call() throws Exception {
+                SearchAssociatedTranscriptsResult result = null;
+
+                try {
+                    result = executeSearchAssociatedTranscripts(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartBotRecommendationResult> startBotRecommendationAsync(StartBotRecommendationRequest request) {
+
+        return startBotRecommendationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartBotRecommendationResult> startBotRecommendationAsync(final StartBotRecommendationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartBotRecommendationRequest, StartBotRecommendationResult> asyncHandler) {
+        final StartBotRecommendationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartBotRecommendationResult>() {
+            @Override
+            public StartBotRecommendationResult call() throws Exception {
+                StartBotRecommendationResult result = null;
+
+                try {
+                    result = executeStartBotRecommendation(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1807,6 +1972,39 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
 
                 try {
                     result = executeUpdateBotLocale(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateBotRecommendationResult> updateBotRecommendationAsync(UpdateBotRecommendationRequest request) {
+
+        return updateBotRecommendationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateBotRecommendationResult> updateBotRecommendationAsync(final UpdateBotRecommendationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateBotRecommendationRequest, UpdateBotRecommendationResult> asyncHandler) {
+        final UpdateBotRecommendationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateBotRecommendationResult>() {
+            @Override
+            public UpdateBotRecommendationResult call() throws Exception {
+                UpdateBotRecommendationResult result = null;
+
+                try {
+                    result = executeUpdateBotRecommendation(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -130,6 +130,29 @@ public class DescribeModelPackageResultJsonUnmarshaller implements Unmarshaller<
                     describeModelPackageResult.setCustomerMetadataProperties(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
                             .getUnmarshaller(String.class)).unmarshall(context));
                 }
+                if (context.testExpression("DriftCheckBaselines", targetDepth)) {
+                    context.nextToken();
+                    describeModelPackageResult.setDriftCheckBaselines(DriftCheckBaselinesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("Domain", targetDepth)) {
+                    context.nextToken();
+                    describeModelPackageResult.setDomain(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Task", targetDepth)) {
+                    context.nextToken();
+                    describeModelPackageResult.setTask(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("SamplePayloadUrl", targetDepth)) {
+                    context.nextToken();
+                    describeModelPackageResult.setSamplePayloadUrl(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("AdditionalInferenceSpecifications", targetDepth)) {
+                    context.nextToken();
+                    describeModelPackageResult.setAdditionalInferenceSpecifications(new ListUnmarshaller<AdditionalInferenceSpecificationDefinition>(
+                            AdditionalInferenceSpecificationDefinitionJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

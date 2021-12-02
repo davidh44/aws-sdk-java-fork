@@ -38,6 +38,12 @@ public class AnalysisComponent implements Serializable, Cloneable {
      * </p>
      */
     private String arn;
+    /**
+     * <p>
+     * The name of the analysis component.
+     * </p>
+     */
+    private String name;
 
     /**
      * <p>
@@ -120,6 +126,46 @@ public class AnalysisComponent implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The name of the analysis component.
+     * </p>
+     * 
+     * @param name
+     *        The name of the analysis component.
+     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * <p>
+     * The name of the analysis component.
+     * </p>
+     * 
+     * @return The name of the analysis component.
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <p>
+     * The name of the analysis component.
+     * </p>
+     * 
+     * @param name
+     *        The name of the analysis component.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AnalysisComponent withName(String name) {
+        setName(name);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -134,7 +180,9 @@ public class AnalysisComponent implements Serializable, Cloneable {
         if (getId() != null)
             sb.append("Id: ").append(getId()).append(",");
         if (getArn() != null)
-            sb.append("Arn: ").append(getArn());
+            sb.append("Arn: ").append(getArn()).append(",");
+        if (getName() != null)
+            sb.append("Name: ").append(getName());
         sb.append("}");
         return sb.toString();
     }
@@ -157,6 +205,10 @@ public class AnalysisComponent implements Serializable, Cloneable {
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
             return false;
+        if (other.getName() == null ^ this.getName() == null)
+            return false;
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
         return true;
     }
 
@@ -167,6 +219,7 @@ public class AnalysisComponent implements Serializable, Cloneable {
 
         hashCode = prime * hashCode + ((getId() == null) ? 0 : getId().hashCode());
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
+        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         return hashCode;
     }
 

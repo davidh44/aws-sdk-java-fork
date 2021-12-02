@@ -826,6 +826,24 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
+     * Starts a recommendation job. You can create either an instance recommendation or load test job.
+     * </p>
+     * 
+     * @param createInferenceRecommendationsJobRequest
+     * @return Result of the CreateInferenceRecommendationsJob operation returned by the service.
+     * @throws ResourceInUseException
+     *         Resource being accessed is in use.
+     * @throws ResourceLimitExceededException
+     *         You have exceeded an Amazon SageMaker resource limit. For example, you might have too many training jobs
+     *         created.
+     * @sample AmazonSageMaker.CreateInferenceRecommendationsJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateInferenceRecommendationsJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateInferenceRecommendationsJobResult createInferenceRecommendationsJob(CreateInferenceRecommendationsJobRequest createInferenceRecommendationsJobRequest);
+
+    /**
+     * <p>
      * Creates a job that uses workers to label the data objects in your input dataset. You can use the labeled data to
      * train machine learning models.
      * </p>
@@ -2620,6 +2638,22 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
+     * Provides the results of the Inference Recommender job. One or more recommendation jobs are returned.
+     * </p>
+     * 
+     * @param describeInferenceRecommendationsJobRequest
+     * @return Result of the DescribeInferenceRecommendationsJob operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.DescribeInferenceRecommendationsJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeInferenceRecommendationsJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeInferenceRecommendationsJobResult describeInferenceRecommendationsJob(
+            DescribeInferenceRecommendationsJobRequest describeInferenceRecommendationsJobRequest);
+
+    /**
+     * <p>
      * Gets information about a labeling job.
      * </p>
      * 
@@ -2632,6 +2666,23 @@ public interface AmazonSageMaker {
      *      API Documentation</a>
      */
     DescribeLabelingJobResult describeLabelingJob(DescribeLabelingJobRequest describeLabelingJobRequest);
+
+    /**
+     * <p>
+     * Provides a list of properties for the requested lineage group. For more information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/xaccount-lineage-tracking.html"> Cross-Account Lineage
+     * Tracking </a> in the <i>Amazon SageMaker Developer Guide</i>.
+     * </p>
+     * 
+     * @param describeLineageGroupRequest
+     * @return Result of the DescribeLineageGroup operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.DescribeLineageGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeLineageGroup" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DescribeLineageGroupResult describeLineageGroup(DescribeLineageGroupRequest describeLineageGroupRequest);
 
     /**
      * <p>
@@ -3056,6 +3107,21 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
+     * The resource policy for the lineage group.
+     * </p>
+     * 
+     * @param getLineageGroupPolicyRequest
+     * @return Result of the GetLineageGroupPolicy operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.GetLineageGroupPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/GetLineageGroupPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetLineageGroupPolicyResult getLineageGroupPolicy(GetLineageGroupPolicyRequest getLineageGroupPolicyRequest);
+
+    /**
+     * <p>
      * Gets a resource policy that manages access for a model group. For information about resource policies, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_identity-vs-resource.html">Identity-based
      * policies and resource-based policies</a> in the <i>Amazon Web Services Identity and Access Management User
@@ -3448,6 +3514,19 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
+     * Lists recommendation jobs that satisfy various filters.
+     * </p>
+     * 
+     * @param listInferenceRecommendationsJobsRequest
+     * @return Result of the ListInferenceRecommendationsJobs operation returned by the service.
+     * @sample AmazonSageMaker.ListInferenceRecommendationsJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListInferenceRecommendationsJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListInferenceRecommendationsJobsResult listInferenceRecommendationsJobs(ListInferenceRecommendationsJobsRequest listInferenceRecommendationsJobsRequest);
+
+    /**
+     * <p>
      * Gets a list of labeling jobs.
      * </p>
      * 
@@ -3476,6 +3555,21 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
+     * A list of lineage groups shared with your Amazon Web Services account. For more information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/xaccount-lineage-tracking.html"> Cross-Account Lineage
+     * Tracking </a> in the <i>Amazon SageMaker Developer Guide</i>.
+     * </p>
+     * 
+     * @param listLineageGroupsRequest
+     * @return Result of the ListLineageGroups operation returned by the service.
+     * @sample AmazonSageMaker.ListLineageGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListLineageGroups" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListLineageGroupsResult listLineageGroups(ListLineageGroupsRequest listLineageGroupsRequest);
+
+    /**
+     * <p>
      * Lists model bias jobs definitions that satisfy various filters.
      * </p>
      * 
@@ -3500,6 +3594,19 @@ public interface AmazonSageMaker {
      */
     ListModelExplainabilityJobDefinitionsResult listModelExplainabilityJobDefinitions(
             ListModelExplainabilityJobDefinitionsRequest listModelExplainabilityJobDefinitionsRequest);
+
+    /**
+     * <p>
+     * Lists the domain, framework, task, and model name of standard machine learning models found in common model zoos.
+     * </p>
+     * 
+     * @param listModelMetadataRequest
+     * @return Result of the ListModelMetadata operation returned by the service.
+     * @sample AmazonSageMaker.ListModelMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListModelMetadata" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListModelMetadataResult listModelMetadata(ListModelMetadataRequest listModelMetadataRequest);
 
     /**
      * <p>
@@ -3914,6 +4021,23 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
+     * Use this action to inspect your lineage and discover relationships between entities. For more information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/querying-lineage-entities.html"> Querying Lineage
+     * Entities</a> in the <i>Amazon SageMaker Developer Guide</i>.
+     * </p>
+     * 
+     * @param queryLineageRequest
+     * @return Result of the QueryLineage operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.QueryLineage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/QueryLineage" target="_top">AWS API
+     *      Documentation</a>
+     */
+    QueryLineageResult queryLineage(QueryLineageRequest queryLineageRequest);
+
+    /**
+     * <p>
      * Register devices.
      * </p>
      * 
@@ -4151,6 +4275,21 @@ public interface AmazonSageMaker {
      *      target="_top">AWS API Documentation</a>
      */
     StopHyperParameterTuningJobResult stopHyperParameterTuningJob(StopHyperParameterTuningJobRequest stopHyperParameterTuningJobRequest);
+
+    /**
+     * <p>
+     * Stops an Inference Recommender job.
+     * </p>
+     * 
+     * @param stopInferenceRecommendationsJobRequest
+     * @return Result of the StopInferenceRecommendationsJob operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.StopInferenceRecommendationsJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopInferenceRecommendationsJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StopInferenceRecommendationsJobResult stopInferenceRecommendationsJob(StopInferenceRecommendationsJobRequest stopInferenceRecommendationsJobRequest);
 
     /**
      * <p>

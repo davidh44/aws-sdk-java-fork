@@ -54,7 +54,9 @@ public class ReactiveOrganizationInsightSummary implements Serializable, Cloneab
     private String name;
     /**
      * <p>
-     * An array of severity values used to search for insights.
+     * An array of severity values used to search for insights. For more information, see <a href=
+     * "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     * >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * </p>
      */
     private String severity;
@@ -233,11 +235,15 @@ public class ReactiveOrganizationInsightSummary implements Serializable, Cloneab
 
     /**
      * <p>
-     * An array of severity values used to search for insights.
+     * An array of severity values used to search for insights. For more information, see <a href=
+     * "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     * >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * </p>
      * 
      * @param severity
-     *        An array of severity values used to search for insights.
+     *        An array of severity values used to search for insights. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     *        >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * @see InsightSeverity
      */
 
@@ -247,10 +253,14 @@ public class ReactiveOrganizationInsightSummary implements Serializable, Cloneab
 
     /**
      * <p>
-     * An array of severity values used to search for insights.
+     * An array of severity values used to search for insights. For more information, see <a href=
+     * "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     * >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * </p>
      * 
-     * @return An array of severity values used to search for insights.
+     * @return An array of severity values used to search for insights. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     *         >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * @see InsightSeverity
      */
 
@@ -260,11 +270,15 @@ public class ReactiveOrganizationInsightSummary implements Serializable, Cloneab
 
     /**
      * <p>
-     * An array of severity values used to search for insights.
+     * An array of severity values used to search for insights. For more information, see <a href=
+     * "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     * >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * </p>
      * 
      * @param severity
-     *        An array of severity values used to search for insights.
+     *        An array of severity values used to search for insights. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     *        >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InsightSeverity
      */
@@ -276,11 +290,15 @@ public class ReactiveOrganizationInsightSummary implements Serializable, Cloneab
 
     /**
      * <p>
-     * An array of severity values used to search for insights.
+     * An array of severity values used to search for insights. For more information, see <a href=
+     * "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     * >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * </p>
      * 
      * @param severity
-     *        An array of severity values used to search for insights.
+     *        An array of severity values used to search for insights. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     *        >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InsightSeverity
      */

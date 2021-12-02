@@ -41,6 +41,8 @@ public class ProductionVariantMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AcceleratorType").build();
     private static final MarshallingInfo<StructuredPojo> COREDUMPCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CoreDumpConfig").build();
+    private static final MarshallingInfo<StructuredPojo> SERVERLESSCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ServerlessConfig").build();
 
     private static final ProductionVariantMarshaller instance = new ProductionVariantMarshaller();
 
@@ -65,6 +67,7 @@ public class ProductionVariantMarshaller {
             protocolMarshaller.marshall(productionVariant.getInitialVariantWeight(), INITIALVARIANTWEIGHT_BINDING);
             protocolMarshaller.marshall(productionVariant.getAcceleratorType(), ACCELERATORTYPE_BINDING);
             protocolMarshaller.marshall(productionVariant.getCoreDumpConfig(), COREDUMPCONFIG_BINDING);
+            protocolMarshaller.marshall(productionVariant.getServerlessConfig(), SERVERLESSCONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

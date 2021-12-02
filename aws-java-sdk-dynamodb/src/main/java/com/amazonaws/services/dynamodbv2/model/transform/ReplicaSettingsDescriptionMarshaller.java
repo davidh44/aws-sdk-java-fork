@@ -46,6 +46,8 @@ public class ReplicaSettingsDescriptionMarshaller {
             .marshallLocationName("ReplicaProvisionedWriteCapacityAutoScalingSettings").build();
     private static final MarshallingInfo<List> REPLICAGLOBALSECONDARYINDEXSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ReplicaGlobalSecondaryIndexSettings").build();
+    private static final MarshallingInfo<StructuredPojo> REPLICATABLECLASSSUMMARY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ReplicaTableClassSummary").build();
 
     private static final ReplicaSettingsDescriptionMarshaller instance = new ReplicaSettingsDescriptionMarshaller();
 
@@ -73,6 +75,7 @@ public class ReplicaSettingsDescriptionMarshaller {
             protocolMarshaller.marshall(replicaSettingsDescription.getReplicaProvisionedWriteCapacityAutoScalingSettings(),
                     REPLICAPROVISIONEDWRITECAPACITYAUTOSCALINGSETTINGS_BINDING);
             protocolMarshaller.marshall(replicaSettingsDescription.getReplicaGlobalSecondaryIndexSettings(), REPLICAGLOBALSECONDARYINDEXSETTINGS_BINDING);
+            protocolMarshaller.marshall(replicaSettingsDescription.getReplicaTableClassSummary(), REPLICATABLECLASSSUMMARY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

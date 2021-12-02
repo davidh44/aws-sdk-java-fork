@@ -73,6 +73,22 @@ public class ModelPackageContainerDefinitionJsonUnmarshaller implements Unmarsha
                     modelPackageContainerDefinition.setEnvironment(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
                             .getUnmarshaller(String.class)).unmarshall(context));
                 }
+                if (context.testExpression("ModelInput", targetDepth)) {
+                    context.nextToken();
+                    modelPackageContainerDefinition.setModelInput(ModelInputJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("Framework", targetDepth)) {
+                    context.nextToken();
+                    modelPackageContainerDefinition.setFramework(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("FrameworkVersion", targetDepth)) {
+                    context.nextToken();
+                    modelPackageContainerDefinition.setFrameworkVersion(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("NearestModelName", targetDepth)) {
+                    context.nextToken();
+                    modelPackageContainerDefinition.setNearestModelName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

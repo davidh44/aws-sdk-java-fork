@@ -55,6 +55,13 @@ public class AnomalySourceDetailsJsonUnmarshaller implements Unmarshaller<Anomal
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("PerformanceInsightsMetrics", targetDepth)) {
+                    context.nextToken();
+                    anomalySourceDetails.setPerformanceInsightsMetrics(new ListUnmarshaller<PerformanceInsightsMetricsDetail>(
+                            PerformanceInsightsMetricsDetailJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -124,6 +124,25 @@ public class ModelPackageJsonUnmarshaller implements Unmarshaller<ModelPackage, 
                     context.nextToken();
                     modelPackage.setApprovalDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Domain", targetDepth)) {
+                    context.nextToken();
+                    modelPackage.setDomain(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Task", targetDepth)) {
+                    context.nextToken();
+                    modelPackage.setTask(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("SamplePayloadUrl", targetDepth)) {
+                    context.nextToken();
+                    modelPackage.setSamplePayloadUrl(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("AdditionalInferenceSpecifications", targetDepth)) {
+                    context.nextToken();
+                    modelPackage.setAdditionalInferenceSpecifications(new ListUnmarshaller<AdditionalInferenceSpecificationDefinition>(
+                            AdditionalInferenceSpecificationDefinitionJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("Tags", targetDepth)) {
                     context.nextToken();
                     modelPackage.setTags(new ListUnmarshaller<Tag>(TagJsonUnmarshaller.getInstance())
@@ -134,6 +153,10 @@ public class ModelPackageJsonUnmarshaller implements Unmarshaller<ModelPackage, 
                     context.nextToken();
                     modelPackage.setCustomerMetadataProperties(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
                             .getUnmarshaller(String.class)).unmarshall(context));
+                }
+                if (context.testExpression("DriftCheckBaselines", targetDepth)) {
+                    context.nextToken();
+                    modelPackage.setDriftCheckBaselines(DriftCheckBaselinesJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

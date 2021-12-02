@@ -68,6 +68,10 @@ public class ReplicaSettingsUpdateJsonUnmarshaller implements Unmarshaller<Repli
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("ReplicaTableClass", targetDepth)) {
+                    context.nextToken();
+                    replicaSettingsUpdate.setReplicaTableClass(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -27,58 +27,70 @@ public class ListAttacksRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The ARN (Amazon Resource Name) of the resource that was attacked. If this is left blank, all applicable resources
-     * for this account will be included.
+     * The ARNs (Amazon Resource Names) of the resources that were attacked. If you leave this blank, all applicable
+     * resources for this account will be included.
      * </p>
      */
     private java.util.List<String> resourceArns;
     /**
      * <p>
-     * The start of the time period for the attacks. This is a <code>timestamp</code> type. The sample request above
-     * indicates a <code>number</code> type because the default used by WAF is Unix time in seconds. However any valid
-     * <a href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp
-     * format</a> is allowed.
+     * The start of the time period for the attacks. This is a <code>timestamp</code> type. The request syntax listing
+     * for this call indicates a <code>number</code> type, but you can provide the time in any valid <a href=
+     * "https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters-types.html#parameter-type-timestamp"
+     * >timestamp format</a> setting.
      * </p>
      */
     private TimeRange startTime;
     /**
      * <p>
-     * The end of the time period for the attacks. This is a <code>timestamp</code> type. The sample request above
-     * indicates a <code>number</code> type because the default used by WAF is Unix time in seconds. However any valid
-     * <a href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp
-     * format</a> is allowed.
+     * The end of the time period for the attacks. This is a <code>timestamp</code> type. The request syntax listing for
+     * this call indicates a <code>number</code> type, but you can provide the time in any valid <a href=
+     * "https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters-types.html#parameter-type-timestamp"
+     * >timestamp format</a> setting.
      * </p>
      */
     private TimeRange endTime;
     /**
      * <p>
-     * The <code>ListAttacksRequest.NextMarker</code> value from a previous call to <code>ListAttacksRequest</code>.
-     * Pass null if this is the first call.
+     * When you request a list of objects from Shield Advanced, if the response does not include all of the remaining
+     * available objects, Shield Advanced includes a <code>NextToken</code> value in the response. You can retrieve the
+     * next batch of objects by requesting the list again and providing the token that was returned by the prior call in
+     * your request.
+     * </p>
+     * <p>
+     * You can indicate the maximum number of objects that you want Shield Advanced to return for a single call with the
+     * <code>MaxResults</code> setting. Shield Advanced will not return more than <code>MaxResults</code> objects, but
+     * may return fewer, even if more objects are still available.
+     * </p>
+     * <p>
+     * Whenever more objects remain that Shield Advanced has not yet returned to you, the response will include a
+     * <code>NextToken</code> value.
+     * </p>
+     * <p>
+     * On your first call to a list operation, leave this setting empty.
      * </p>
      */
     private String nextToken;
     /**
      * <p>
-     * The maximum number of <a>AttackSummary</a> objects to return. If you leave this blank, Shield Advanced returns
-     * the first 20 results.
+     * The greatest number of objects that you want Shield Advanced to return to the list request. Shield Advanced might
+     * return fewer objects than you indicate in this setting, even if more objects are available. If there are more
+     * objects remaining, Shield Advanced will always also return a <code>NextToken</code> value in the response.
      * </p>
      * <p>
-     * This is a maximum value. Shield Advanced might return the results in smaller batches. That is, the number of
-     * objects returned could be less than <code>MaxResults</code>, even if there are still more objects yet to return.
-     * If there are more objects to return, Shield Advanced returns a value in <code>NextToken</code> that you can use
-     * in your next request, to get the next batch of objects.
+     * The default setting is 20.
      * </p>
      */
     private Integer maxResults;
 
     /**
      * <p>
-     * The ARN (Amazon Resource Name) of the resource that was attacked. If this is left blank, all applicable resources
-     * for this account will be included.
+     * The ARNs (Amazon Resource Names) of the resources that were attacked. If you leave this blank, all applicable
+     * resources for this account will be included.
      * </p>
      * 
-     * @return The ARN (Amazon Resource Name) of the resource that was attacked. If this is left blank, all applicable
-     *         resources for this account will be included.
+     * @return The ARNs (Amazon Resource Names) of the resources that were attacked. If you leave this blank, all
+     *         applicable resources for this account will be included.
      */
 
     public java.util.List<String> getResourceArns() {
@@ -87,13 +99,13 @@ public class ListAttacksRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The ARN (Amazon Resource Name) of the resource that was attacked. If this is left blank, all applicable resources
-     * for this account will be included.
+     * The ARNs (Amazon Resource Names) of the resources that were attacked. If you leave this blank, all applicable
+     * resources for this account will be included.
      * </p>
      * 
      * @param resourceArns
-     *        The ARN (Amazon Resource Name) of the resource that was attacked. If this is left blank, all applicable
-     *        resources for this account will be included.
+     *        The ARNs (Amazon Resource Names) of the resources that were attacked. If you leave this blank, all
+     *        applicable resources for this account will be included.
      */
 
     public void setResourceArns(java.util.Collection<String> resourceArns) {
@@ -107,8 +119,8 @@ public class ListAttacksRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The ARN (Amazon Resource Name) of the resource that was attacked. If this is left blank, all applicable resources
-     * for this account will be included.
+     * The ARNs (Amazon Resource Names) of the resources that were attacked. If you leave this blank, all applicable
+     * resources for this account will be included.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -117,8 +129,8 @@ public class ListAttacksRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param resourceArns
-     *        The ARN (Amazon Resource Name) of the resource that was attacked. If this is left blank, all applicable
-     *        resources for this account will be included.
+     *        The ARNs (Amazon Resource Names) of the resources that were attacked. If you leave this blank, all
+     *        applicable resources for this account will be included.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -134,13 +146,13 @@ public class ListAttacksRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The ARN (Amazon Resource Name) of the resource that was attacked. If this is left blank, all applicable resources
-     * for this account will be included.
+     * The ARNs (Amazon Resource Names) of the resources that were attacked. If you leave this blank, all applicable
+     * resources for this account will be included.
      * </p>
      * 
      * @param resourceArns
-     *        The ARN (Amazon Resource Name) of the resource that was attacked. If this is left blank, all applicable
-     *        resources for this account will be included.
+     *        The ARNs (Amazon Resource Names) of the resources that were attacked. If you leave this blank, all
+     *        applicable resources for this account will be included.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -151,18 +163,18 @@ public class ListAttacksRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The start of the time period for the attacks. This is a <code>timestamp</code> type. The sample request above
-     * indicates a <code>number</code> type because the default used by WAF is Unix time in seconds. However any valid
-     * <a href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp
-     * format</a> is allowed.
+     * The start of the time period for the attacks. This is a <code>timestamp</code> type. The request syntax listing
+     * for this call indicates a <code>number</code> type, but you can provide the time in any valid <a href=
+     * "https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters-types.html#parameter-type-timestamp"
+     * >timestamp format</a> setting.
      * </p>
      * 
      * @param startTime
-     *        The start of the time period for the attacks. This is a <code>timestamp</code> type. The sample request
-     *        above indicates a <code>number</code> type because the default used by WAF is Unix time in seconds.
-     *        However any valid <a
-     *        href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp
-     *        format</a> is allowed.
+     *        The start of the time period for the attacks. This is a <code>timestamp</code> type. The request syntax
+     *        listing for this call indicates a <code>number</code> type, but you can provide the time in any valid <a
+     *        href=
+     *        "https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters-types.html#parameter-type-timestamp"
+     *        >timestamp format</a> setting.
      */
 
     public void setStartTime(TimeRange startTime) {
@@ -171,17 +183,17 @@ public class ListAttacksRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The start of the time period for the attacks. This is a <code>timestamp</code> type. The sample request above
-     * indicates a <code>number</code> type because the default used by WAF is Unix time in seconds. However any valid
-     * <a href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp
-     * format</a> is allowed.
+     * The start of the time period for the attacks. This is a <code>timestamp</code> type. The request syntax listing
+     * for this call indicates a <code>number</code> type, but you can provide the time in any valid <a href=
+     * "https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters-types.html#parameter-type-timestamp"
+     * >timestamp format</a> setting.
      * </p>
      * 
-     * @return The start of the time period for the attacks. This is a <code>timestamp</code> type. The sample request
-     *         above indicates a <code>number</code> type because the default used by WAF is Unix time in seconds.
-     *         However any valid <a
-     *         href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp
-     *         format</a> is allowed.
+     * @return The start of the time period for the attacks. This is a <code>timestamp</code> type. The request syntax
+     *         listing for this call indicates a <code>number</code> type, but you can provide the time in any valid <a
+     *         href=
+     *         "https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters-types.html#parameter-type-timestamp"
+     *         >timestamp format</a> setting.
      */
 
     public TimeRange getStartTime() {
@@ -190,18 +202,18 @@ public class ListAttacksRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The start of the time period for the attacks. This is a <code>timestamp</code> type. The sample request above
-     * indicates a <code>number</code> type because the default used by WAF is Unix time in seconds. However any valid
-     * <a href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp
-     * format</a> is allowed.
+     * The start of the time period for the attacks. This is a <code>timestamp</code> type. The request syntax listing
+     * for this call indicates a <code>number</code> type, but you can provide the time in any valid <a href=
+     * "https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters-types.html#parameter-type-timestamp"
+     * >timestamp format</a> setting.
      * </p>
      * 
      * @param startTime
-     *        The start of the time period for the attacks. This is a <code>timestamp</code> type. The sample request
-     *        above indicates a <code>number</code> type because the default used by WAF is Unix time in seconds.
-     *        However any valid <a
-     *        href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp
-     *        format</a> is allowed.
+     *        The start of the time period for the attacks. This is a <code>timestamp</code> type. The request syntax
+     *        listing for this call indicates a <code>number</code> type, but you can provide the time in any valid <a
+     *        href=
+     *        "https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters-types.html#parameter-type-timestamp"
+     *        >timestamp format</a> setting.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -212,18 +224,18 @@ public class ListAttacksRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The end of the time period for the attacks. This is a <code>timestamp</code> type. The sample request above
-     * indicates a <code>number</code> type because the default used by WAF is Unix time in seconds. However any valid
-     * <a href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp
-     * format</a> is allowed.
+     * The end of the time period for the attacks. This is a <code>timestamp</code> type. The request syntax listing for
+     * this call indicates a <code>number</code> type, but you can provide the time in any valid <a href=
+     * "https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters-types.html#parameter-type-timestamp"
+     * >timestamp format</a> setting.
      * </p>
      * 
      * @param endTime
-     *        The end of the time period for the attacks. This is a <code>timestamp</code> type. The sample request
-     *        above indicates a <code>number</code> type because the default used by WAF is Unix time in seconds.
-     *        However any valid <a
-     *        href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp
-     *        format</a> is allowed.
+     *        The end of the time period for the attacks. This is a <code>timestamp</code> type. The request syntax
+     *        listing for this call indicates a <code>number</code> type, but you can provide the time in any valid <a
+     *        href=
+     *        "https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters-types.html#parameter-type-timestamp"
+     *        >timestamp format</a> setting.
      */
 
     public void setEndTime(TimeRange endTime) {
@@ -232,17 +244,17 @@ public class ListAttacksRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The end of the time period for the attacks. This is a <code>timestamp</code> type. The sample request above
-     * indicates a <code>number</code> type because the default used by WAF is Unix time in seconds. However any valid
-     * <a href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp
-     * format</a> is allowed.
+     * The end of the time period for the attacks. This is a <code>timestamp</code> type. The request syntax listing for
+     * this call indicates a <code>number</code> type, but you can provide the time in any valid <a href=
+     * "https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters-types.html#parameter-type-timestamp"
+     * >timestamp format</a> setting.
      * </p>
      * 
-     * @return The end of the time period for the attacks. This is a <code>timestamp</code> type. The sample request
-     *         above indicates a <code>number</code> type because the default used by WAF is Unix time in seconds.
-     *         However any valid <a
-     *         href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp
-     *         format</a> is allowed.
+     * @return The end of the time period for the attacks. This is a <code>timestamp</code> type. The request syntax
+     *         listing for this call indicates a <code>number</code> type, but you can provide the time in any valid <a
+     *         href=
+     *         "https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters-types.html#parameter-type-timestamp"
+     *         >timestamp format</a> setting.
      */
 
     public TimeRange getEndTime() {
@@ -251,18 +263,18 @@ public class ListAttacksRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The end of the time period for the attacks. This is a <code>timestamp</code> type. The sample request above
-     * indicates a <code>number</code> type because the default used by WAF is Unix time in seconds. However any valid
-     * <a href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp
-     * format</a> is allowed.
+     * The end of the time period for the attacks. This is a <code>timestamp</code> type. The request syntax listing for
+     * this call indicates a <code>number</code> type, but you can provide the time in any valid <a href=
+     * "https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters-types.html#parameter-type-timestamp"
+     * >timestamp format</a> setting.
      * </p>
      * 
      * @param endTime
-     *        The end of the time period for the attacks. This is a <code>timestamp</code> type. The sample request
-     *        above indicates a <code>number</code> type because the default used by WAF is Unix time in seconds.
-     *        However any valid <a
-     *        href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp
-     *        format</a> is allowed.
+     *        The end of the time period for the attacks. This is a <code>timestamp</code> type. The request syntax
+     *        listing for this call indicates a <code>number</code> type, but you can provide the time in any valid <a
+     *        href=
+     *        "https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters-types.html#parameter-type-timestamp"
+     *        >timestamp format</a> setting.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -273,13 +285,40 @@ public class ListAttacksRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The <code>ListAttacksRequest.NextMarker</code> value from a previous call to <code>ListAttacksRequest</code>.
-     * Pass null if this is the first call.
+     * When you request a list of objects from Shield Advanced, if the response does not include all of the remaining
+     * available objects, Shield Advanced includes a <code>NextToken</code> value in the response. You can retrieve the
+     * next batch of objects by requesting the list again and providing the token that was returned by the prior call in
+     * your request.
+     * </p>
+     * <p>
+     * You can indicate the maximum number of objects that you want Shield Advanced to return for a single call with the
+     * <code>MaxResults</code> setting. Shield Advanced will not return more than <code>MaxResults</code> objects, but
+     * may return fewer, even if more objects are still available.
+     * </p>
+     * <p>
+     * Whenever more objects remain that Shield Advanced has not yet returned to you, the response will include a
+     * <code>NextToken</code> value.
+     * </p>
+     * <p>
+     * On your first call to a list operation, leave this setting empty.
      * </p>
      * 
      * @param nextToken
-     *        The <code>ListAttacksRequest.NextMarker</code> value from a previous call to
-     *        <code>ListAttacksRequest</code>. Pass null if this is the first call.
+     *        When you request a list of objects from Shield Advanced, if the response does not include all of the
+     *        remaining available objects, Shield Advanced includes a <code>NextToken</code> value in the response. You
+     *        can retrieve the next batch of objects by requesting the list again and providing the token that was
+     *        returned by the prior call in your request. </p>
+     *        <p>
+     *        You can indicate the maximum number of objects that you want Shield Advanced to return for a single call
+     *        with the <code>MaxResults</code> setting. Shield Advanced will not return more than
+     *        <code>MaxResults</code> objects, but may return fewer, even if more objects are still available.
+     *        </p>
+     *        <p>
+     *        Whenever more objects remain that Shield Advanced has not yet returned to you, the response will include a
+     *        <code>NextToken</code> value.
+     *        </p>
+     *        <p>
+     *        On your first call to a list operation, leave this setting empty.
      */
 
     public void setNextToken(String nextToken) {
@@ -288,12 +327,39 @@ public class ListAttacksRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The <code>ListAttacksRequest.NextMarker</code> value from a previous call to <code>ListAttacksRequest</code>.
-     * Pass null if this is the first call.
+     * When you request a list of objects from Shield Advanced, if the response does not include all of the remaining
+     * available objects, Shield Advanced includes a <code>NextToken</code> value in the response. You can retrieve the
+     * next batch of objects by requesting the list again and providing the token that was returned by the prior call in
+     * your request.
+     * </p>
+     * <p>
+     * You can indicate the maximum number of objects that you want Shield Advanced to return for a single call with the
+     * <code>MaxResults</code> setting. Shield Advanced will not return more than <code>MaxResults</code> objects, but
+     * may return fewer, even if more objects are still available.
+     * </p>
+     * <p>
+     * Whenever more objects remain that Shield Advanced has not yet returned to you, the response will include a
+     * <code>NextToken</code> value.
+     * </p>
+     * <p>
+     * On your first call to a list operation, leave this setting empty.
      * </p>
      * 
-     * @return The <code>ListAttacksRequest.NextMarker</code> value from a previous call to
-     *         <code>ListAttacksRequest</code>. Pass null if this is the first call.
+     * @return When you request a list of objects from Shield Advanced, if the response does not include all of the
+     *         remaining available objects, Shield Advanced includes a <code>NextToken</code> value in the response. You
+     *         can retrieve the next batch of objects by requesting the list again and providing the token that was
+     *         returned by the prior call in your request. </p>
+     *         <p>
+     *         You can indicate the maximum number of objects that you want Shield Advanced to return for a single call
+     *         with the <code>MaxResults</code> setting. Shield Advanced will not return more than
+     *         <code>MaxResults</code> objects, but may return fewer, even if more objects are still available.
+     *         </p>
+     *         <p>
+     *         Whenever more objects remain that Shield Advanced has not yet returned to you, the response will include
+     *         a <code>NextToken</code> value.
+     *         </p>
+     *         <p>
+     *         On your first call to a list operation, leave this setting empty.
      */
 
     public String getNextToken() {
@@ -302,13 +368,40 @@ public class ListAttacksRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The <code>ListAttacksRequest.NextMarker</code> value from a previous call to <code>ListAttacksRequest</code>.
-     * Pass null if this is the first call.
+     * When you request a list of objects from Shield Advanced, if the response does not include all of the remaining
+     * available objects, Shield Advanced includes a <code>NextToken</code> value in the response. You can retrieve the
+     * next batch of objects by requesting the list again and providing the token that was returned by the prior call in
+     * your request.
+     * </p>
+     * <p>
+     * You can indicate the maximum number of objects that you want Shield Advanced to return for a single call with the
+     * <code>MaxResults</code> setting. Shield Advanced will not return more than <code>MaxResults</code> objects, but
+     * may return fewer, even if more objects are still available.
+     * </p>
+     * <p>
+     * Whenever more objects remain that Shield Advanced has not yet returned to you, the response will include a
+     * <code>NextToken</code> value.
+     * </p>
+     * <p>
+     * On your first call to a list operation, leave this setting empty.
      * </p>
      * 
      * @param nextToken
-     *        The <code>ListAttacksRequest.NextMarker</code> value from a previous call to
-     *        <code>ListAttacksRequest</code>. Pass null if this is the first call.
+     *        When you request a list of objects from Shield Advanced, if the response does not include all of the
+     *        remaining available objects, Shield Advanced includes a <code>NextToken</code> value in the response. You
+     *        can retrieve the next batch of objects by requesting the list again and providing the token that was
+     *        returned by the prior call in your request. </p>
+     *        <p>
+     *        You can indicate the maximum number of objects that you want Shield Advanced to return for a single call
+     *        with the <code>MaxResults</code> setting. Shield Advanced will not return more than
+     *        <code>MaxResults</code> objects, but may return fewer, even if more objects are still available.
+     *        </p>
+     *        <p>
+     *        Whenever more objects remain that Shield Advanced has not yet returned to you, the response will include a
+     *        <code>NextToken</code> value.
+     *        </p>
+     *        <p>
+     *        On your first call to a list operation, leave this setting empty.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -319,24 +412,21 @@ public class ListAttacksRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The maximum number of <a>AttackSummary</a> objects to return. If you leave this blank, Shield Advanced returns
-     * the first 20 results.
+     * The greatest number of objects that you want Shield Advanced to return to the list request. Shield Advanced might
+     * return fewer objects than you indicate in this setting, even if more objects are available. If there are more
+     * objects remaining, Shield Advanced will always also return a <code>NextToken</code> value in the response.
      * </p>
      * <p>
-     * This is a maximum value. Shield Advanced might return the results in smaller batches. That is, the number of
-     * objects returned could be less than <code>MaxResults</code>, even if there are still more objects yet to return.
-     * If there are more objects to return, Shield Advanced returns a value in <code>NextToken</code> that you can use
-     * in your next request, to get the next batch of objects.
+     * The default setting is 20.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of <a>AttackSummary</a> objects to return. If you leave this blank, Shield Advanced
-     *        returns the first 20 results.</p>
+     *        The greatest number of objects that you want Shield Advanced to return to the list request. Shield
+     *        Advanced might return fewer objects than you indicate in this setting, even if more objects are available.
+     *        If there are more objects remaining, Shield Advanced will always also return a <code>NextToken</code>
+     *        value in the response.</p>
      *        <p>
-     *        This is a maximum value. Shield Advanced might return the results in smaller batches. That is, the number
-     *        of objects returned could be less than <code>MaxResults</code>, even if there are still more objects yet
-     *        to return. If there are more objects to return, Shield Advanced returns a value in <code>NextToken</code>
-     *        that you can use in your next request, to get the next batch of objects.
+     *        The default setting is 20.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -345,23 +435,20 @@ public class ListAttacksRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The maximum number of <a>AttackSummary</a> objects to return. If you leave this blank, Shield Advanced returns
-     * the first 20 results.
+     * The greatest number of objects that you want Shield Advanced to return to the list request. Shield Advanced might
+     * return fewer objects than you indicate in this setting, even if more objects are available. If there are more
+     * objects remaining, Shield Advanced will always also return a <code>NextToken</code> value in the response.
      * </p>
      * <p>
-     * This is a maximum value. Shield Advanced might return the results in smaller batches. That is, the number of
-     * objects returned could be less than <code>MaxResults</code>, even if there are still more objects yet to return.
-     * If there are more objects to return, Shield Advanced returns a value in <code>NextToken</code> that you can use
-     * in your next request, to get the next batch of objects.
+     * The default setting is 20.
      * </p>
      * 
-     * @return The maximum number of <a>AttackSummary</a> objects to return. If you leave this blank, Shield Advanced
-     *         returns the first 20 results.</p>
+     * @return The greatest number of objects that you want Shield Advanced to return to the list request. Shield
+     *         Advanced might return fewer objects than you indicate in this setting, even if more objects are
+     *         available. If there are more objects remaining, Shield Advanced will always also return a
+     *         <code>NextToken</code> value in the response.</p>
      *         <p>
-     *         This is a maximum value. Shield Advanced might return the results in smaller batches. That is, the number
-     *         of objects returned could be less than <code>MaxResults</code>, even if there are still more objects yet
-     *         to return. If there are more objects to return, Shield Advanced returns a value in <code>NextToken</code>
-     *         that you can use in your next request, to get the next batch of objects.
+     *         The default setting is 20.
      */
 
     public Integer getMaxResults() {
@@ -370,24 +457,21 @@ public class ListAttacksRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The maximum number of <a>AttackSummary</a> objects to return. If you leave this blank, Shield Advanced returns
-     * the first 20 results.
+     * The greatest number of objects that you want Shield Advanced to return to the list request. Shield Advanced might
+     * return fewer objects than you indicate in this setting, even if more objects are available. If there are more
+     * objects remaining, Shield Advanced will always also return a <code>NextToken</code> value in the response.
      * </p>
      * <p>
-     * This is a maximum value. Shield Advanced might return the results in smaller batches. That is, the number of
-     * objects returned could be less than <code>MaxResults</code>, even if there are still more objects yet to return.
-     * If there are more objects to return, Shield Advanced returns a value in <code>NextToken</code> that you can use
-     * in your next request, to get the next batch of objects.
+     * The default setting is 20.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of <a>AttackSummary</a> objects to return. If you leave this blank, Shield Advanced
-     *        returns the first 20 results.</p>
+     *        The greatest number of objects that you want Shield Advanced to return to the list request. Shield
+     *        Advanced might return fewer objects than you indicate in this setting, even if more objects are available.
+     *        If there are more objects remaining, Shield Advanced will always also return a <code>NextToken</code>
+     *        value in the response.</p>
      *        <p>
-     *        This is a maximum value. Shield Advanced might return the results in smaller batches. That is, the number
-     *        of objects returned could be less than <code>MaxResults</code>, even if there are still more objects yet
-     *        to return. If there are more objects to return, Shield Advanced returns a value in <code>NextToken</code>
-     *        that you can use in your next request, to get the next batch of objects.
+     *        The default setting is 20.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

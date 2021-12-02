@@ -43,7 +43,7 @@ public class DescribeRouterConfigurationResult extends com.amazonaws.AmazonWebSe
     private String virtualInterfaceId;
     /**
      * <p>
-     * The name of the virtual interface assigned by the customer network.
+     * Provides the details about a virtual interface's router.
      * </p>
      */
     private String virtualInterfaceName;
@@ -170,11 +170,11 @@ public class DescribeRouterConfigurationResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The name of the virtual interface assigned by the customer network.
+     * Provides the details about a virtual interface's router.
      * </p>
      * 
      * @param virtualInterfaceName
-     *        The name of the virtual interface assigned by the customer network.
+     *        Provides the details about a virtual interface's router.
      */
 
     public void setVirtualInterfaceName(String virtualInterfaceName) {
@@ -183,10 +183,10 @@ public class DescribeRouterConfigurationResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The name of the virtual interface assigned by the customer network.
+     * Provides the details about a virtual interface's router.
      * </p>
      * 
-     * @return The name of the virtual interface assigned by the customer network.
+     * @return Provides the details about a virtual interface's router.
      */
 
     public String getVirtualInterfaceName() {
@@ -195,11 +195,11 @@ public class DescribeRouterConfigurationResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The name of the virtual interface assigned by the customer network.
+     * Provides the details about a virtual interface's router.
      * </p>
      * 
      * @param virtualInterfaceName
-     *        The name of the virtual interface assigned by the customer network.
+     *        Provides the details about a virtual interface's router.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

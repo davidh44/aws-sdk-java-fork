@@ -55,6 +55,12 @@ public class UpdateReplicationGroupMemberAction implements Serializable, Cloneab
      * </p>
      */
     private java.util.List<ReplicaGlobalSecondaryIndex> globalSecondaryIndexes;
+    /**
+     * <p>
+     * Replica-specific table class. If not specified, uses the source table's table class.
+     * </p>
+     */
+    private String tableClassOverride;
 
     /**
      * <p>
@@ -265,6 +271,65 @@ public class UpdateReplicationGroupMemberAction implements Serializable, Cloneab
     }
 
     /**
+     * <p>
+     * Replica-specific table class. If not specified, uses the source table's table class.
+     * </p>
+     * 
+     * @param tableClassOverride
+     *        Replica-specific table class. If not specified, uses the source table's table class.
+     * @see TableClass
+     */
+
+    public void setTableClassOverride(String tableClassOverride) {
+        this.tableClassOverride = tableClassOverride;
+    }
+
+    /**
+     * <p>
+     * Replica-specific table class. If not specified, uses the source table's table class.
+     * </p>
+     * 
+     * @return Replica-specific table class. If not specified, uses the source table's table class.
+     * @see TableClass
+     */
+
+    public String getTableClassOverride() {
+        return this.tableClassOverride;
+    }
+
+    /**
+     * <p>
+     * Replica-specific table class. If not specified, uses the source table's table class.
+     * </p>
+     * 
+     * @param tableClassOverride
+     *        Replica-specific table class. If not specified, uses the source table's table class.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TableClass
+     */
+
+    public UpdateReplicationGroupMemberAction withTableClassOverride(String tableClassOverride) {
+        setTableClassOverride(tableClassOverride);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Replica-specific table class. If not specified, uses the source table's table class.
+     * </p>
+     * 
+     * @param tableClassOverride
+     *        Replica-specific table class. If not specified, uses the source table's table class.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TableClass
+     */
+
+    public UpdateReplicationGroupMemberAction withTableClassOverride(TableClass tableClassOverride) {
+        this.tableClassOverride = tableClassOverride.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -283,7 +348,9 @@ public class UpdateReplicationGroupMemberAction implements Serializable, Cloneab
         if (getProvisionedThroughputOverride() != null)
             sb.append("ProvisionedThroughputOverride: ").append(getProvisionedThroughputOverride()).append(",");
         if (getGlobalSecondaryIndexes() != null)
-            sb.append("GlobalSecondaryIndexes: ").append(getGlobalSecondaryIndexes());
+            sb.append("GlobalSecondaryIndexes: ").append(getGlobalSecondaryIndexes()).append(",");
+        if (getTableClassOverride() != null)
+            sb.append("TableClassOverride: ").append(getTableClassOverride());
         sb.append("}");
         return sb.toString();
     }
@@ -315,6 +382,10 @@ public class UpdateReplicationGroupMemberAction implements Serializable, Cloneab
             return false;
         if (other.getGlobalSecondaryIndexes() != null && other.getGlobalSecondaryIndexes().equals(this.getGlobalSecondaryIndexes()) == false)
             return false;
+        if (other.getTableClassOverride() == null ^ this.getTableClassOverride() == null)
+            return false;
+        if (other.getTableClassOverride() != null && other.getTableClassOverride().equals(this.getTableClassOverride()) == false)
+            return false;
         return true;
     }
 
@@ -327,6 +398,7 @@ public class UpdateReplicationGroupMemberAction implements Serializable, Cloneab
         hashCode = prime * hashCode + ((getKMSMasterKeyId() == null) ? 0 : getKMSMasterKeyId().hashCode());
         hashCode = prime * hashCode + ((getProvisionedThroughputOverride() == null) ? 0 : getProvisionedThroughputOverride().hashCode());
         hashCode = prime * hashCode + ((getGlobalSecondaryIndexes() == null) ? 0 : getGlobalSecondaryIndexes().hashCode());
+        hashCode = prime * hashCode + ((getTableClassOverride() == null) ? 0 : getTableClassOverride().hashCode());
         return hashCode;
     }
 

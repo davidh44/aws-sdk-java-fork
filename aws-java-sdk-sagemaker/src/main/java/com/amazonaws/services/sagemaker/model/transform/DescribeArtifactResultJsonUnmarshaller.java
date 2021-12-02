@@ -89,6 +89,10 @@ public class DescribeArtifactResultJsonUnmarshaller implements Unmarshaller<Desc
                     context.nextToken();
                     describeArtifactResult.setMetadataProperties(MetadataPropertiesJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("LineageGroupArn", targetDepth)) {
+                    context.nextToken();
+                    describeArtifactResult.setLineageGroupArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

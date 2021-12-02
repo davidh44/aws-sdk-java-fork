@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.devopsguru.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -29,6 +30,8 @@ public class CostEstimationResourceCollectionFilterMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> CLOUDFORMATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CloudFormation").build();
+    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Tags").build();
 
     private static final CostEstimationResourceCollectionFilterMarshaller instance = new CostEstimationResourceCollectionFilterMarshaller();
 
@@ -47,6 +50,7 @@ public class CostEstimationResourceCollectionFilterMarshaller {
 
         try {
             protocolMarshaller.marshall(costEstimationResourceCollectionFilter.getCloudFormation(), CLOUDFORMATION_BINDING);
+            protocolMarshaller.marshall(costEstimationResourceCollectionFilter.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

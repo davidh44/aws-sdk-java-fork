@@ -254,6 +254,21 @@ public class AbstractAWSShieldAsync extends AbstractAWSShield implements AWSShie
     }
 
     @Override
+    public java.util.concurrent.Future<DisableApplicationLayerAutomaticResponseResult> disableApplicationLayerAutomaticResponseAsync(
+            DisableApplicationLayerAutomaticResponseRequest request) {
+
+        return disableApplicationLayerAutomaticResponseAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisableApplicationLayerAutomaticResponseResult> disableApplicationLayerAutomaticResponseAsync(
+            DisableApplicationLayerAutomaticResponseRequest request,
+            com.amazonaws.handlers.AsyncHandler<DisableApplicationLayerAutomaticResponseRequest, DisableApplicationLayerAutomaticResponseResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DisableProactiveEngagementResult> disableProactiveEngagementAsync(DisableProactiveEngagementRequest request) {
 
         return disableProactiveEngagementAsync(request, null);
@@ -301,6 +316,21 @@ public class AbstractAWSShieldAsync extends AbstractAWSShield implements AWSShie
     @Override
     public java.util.concurrent.Future<DisassociateHealthCheckResult> disassociateHealthCheckAsync(DisassociateHealthCheckRequest request,
             com.amazonaws.handlers.AsyncHandler<DisassociateHealthCheckRequest, DisassociateHealthCheckResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableApplicationLayerAutomaticResponseResult> enableApplicationLayerAutomaticResponseAsync(
+            EnableApplicationLayerAutomaticResponseRequest request) {
+
+        return enableApplicationLayerAutomaticResponseAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableApplicationLayerAutomaticResponseResult> enableApplicationLayerAutomaticResponseAsync(
+            EnableApplicationLayerAutomaticResponseRequest request,
+            com.amazonaws.handlers.AsyncHandler<EnableApplicationLayerAutomaticResponseRequest, EnableApplicationLayerAutomaticResponseResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -418,6 +448,21 @@ public class AbstractAWSShieldAsync extends AbstractAWSShield implements AWSShie
     @Override
     public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateApplicationLayerAutomaticResponseResult> updateApplicationLayerAutomaticResponseAsync(
+            UpdateApplicationLayerAutomaticResponseRequest request) {
+
+        return updateApplicationLayerAutomaticResponseAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateApplicationLayerAutomaticResponseResult> updateApplicationLayerAutomaticResponseAsync(
+            UpdateApplicationLayerAutomaticResponseRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateApplicationLayerAutomaticResponseRequest, UpdateApplicationLayerAutomaticResponseResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

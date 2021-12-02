@@ -95,6 +95,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public AllocateIpamPoolCidrResult allocateIpamPoolCidr(AllocateIpamPoolCidrRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ApplySecurityGroupsToClientVpnTargetNetworkResult applySecurityGroupsToClientVpnTargetNetwork(
             ApplySecurityGroupsToClientVpnTargetNetworkRequest request) {
         throw new java.lang.UnsupportedOperationException();
@@ -376,6 +381,21 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public CreateIpamResult createIpam(CreateIpamRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateIpamPoolResult createIpamPool(CreateIpamPoolRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateIpamScopeResult createIpamScope(CreateIpamScopeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateKeyPairResult createKeyPair(CreateKeyPairRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -421,6 +441,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public CreateNetworkInsightsAccessScopeResult createNetworkInsightsAccessScope(CreateNetworkInsightsAccessScopeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateNetworkInsightsPathResult createNetworkInsightsPath(CreateNetworkInsightsPathRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -437,6 +462,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public CreatePlacementGroupResult createPlacementGroup(CreatePlacementGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreatePublicIpv4PoolResult createPublicIpv4Pool(CreatePublicIpv4PoolRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -676,6 +706,21 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public DeleteIpamResult deleteIpam(DeleteIpamRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteIpamPoolResult deleteIpamPool(DeleteIpamPoolRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteIpamScopeResult deleteIpamScope(DeleteIpamScopeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteKeyPairResult deleteKeyPair(DeleteKeyPairRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -721,6 +766,16 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public DeleteNetworkInsightsAccessScopeResult deleteNetworkInsightsAccessScope(DeleteNetworkInsightsAccessScopeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteNetworkInsightsAccessScopeAnalysisResult deleteNetworkInsightsAccessScopeAnalysis(DeleteNetworkInsightsAccessScopeAnalysisRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteNetworkInsightsAnalysisResult deleteNetworkInsightsAnalysis(DeleteNetworkInsightsAnalysisRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -742,6 +797,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public DeletePlacementGroupResult deletePlacementGroup(DeletePlacementGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeletePublicIpv4PoolResult deletePublicIpv4Pool(DeletePublicIpv4PoolRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -907,6 +967,16 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public DeprovisionByoipCidrResult deprovisionByoipCidr(DeprovisionByoipCidrRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeprovisionIpamPoolCidrResult deprovisionIpamPoolCidr(DeprovisionIpamPoolCidrRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeprovisionPublicIpv4PoolCidrResult deprovisionPublicIpv4PoolCidr(DeprovisionPublicIpv4PoolCidrRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -1275,6 +1345,21 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public DescribeIpamPoolsResult describeIpamPools(DescribeIpamPoolsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeIpamScopesResult describeIpamScopes(DescribeIpamScopesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeIpamsResult describeIpams(DescribeIpamsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeIpv6PoolsResult describeIpv6Pools(DescribeIpv6PoolsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1359,6 +1444,16 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     @Override
     public DescribeNetworkAclsResult describeNetworkAcls() {
         return describeNetworkAcls(new DescribeNetworkAclsRequest());
+    }
+
+    @Override
+    public DescribeNetworkInsightsAccessScopeAnalysesResult describeNetworkInsightsAccessScopeAnalyses(DescribeNetworkInsightsAccessScopeAnalysesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeNetworkInsightsAccessScopesResult describeNetworkInsightsAccessScopes(DescribeNetworkInsightsAccessScopesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
@@ -1847,6 +1942,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public DisableIpamOrganizationAdminAccountResult disableIpamOrganizationAdminAccount(DisableIpamOrganizationAdminAccountRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DisableSerialConsoleAccessResult disableSerialConsoleAccess(DisableSerialConsoleAccessRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1938,6 +2038,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public EnableImageDeprecationResult enableImageDeprecation(EnableImageDeprecationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public EnableIpamOrganizationAdminAccountResult enableIpamOrganizationAdminAccount(EnableIpamOrganizationAdminAccountRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -2058,6 +2163,26 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public GetIpamAddressHistoryResult getIpamAddressHistory(GetIpamAddressHistoryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetIpamPoolAllocationsResult getIpamPoolAllocations(GetIpamPoolAllocationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetIpamPoolCidrsResult getIpamPoolCidrs(GetIpamPoolCidrsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetIpamResourceCidrsResult getIpamResourceCidrs(GetIpamResourceCidrsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetLaunchTemplateDataResult getLaunchTemplateData(GetLaunchTemplateDataRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2069,6 +2194,17 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public GetManagedPrefixListEntriesResult getManagedPrefixListEntries(GetManagedPrefixListEntriesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetNetworkInsightsAccessScopeAnalysisFindingsResult getNetworkInsightsAccessScopeAnalysisFindings(
+            GetNetworkInsightsAccessScopeAnalysisFindingsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetNetworkInsightsAccessScopeContentResult getNetworkInsightsAccessScopeContent(GetNetworkInsightsAccessScopeContentRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -2281,6 +2417,26 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public ModifyIpamResult modifyIpam(ModifyIpamRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ModifyIpamPoolResult modifyIpamPool(ModifyIpamPoolRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ModifyIpamResourceCidrResult modifyIpamResourceCidr(ModifyIpamResourceCidrRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ModifyIpamScopeResult modifyIpamScope(ModifyIpamScopeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ModifyLaunchTemplateResult modifyLaunchTemplate(ModifyLaunchTemplateRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2436,7 +2592,22 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public MoveByoipCidrToIpamResult moveByoipCidrToIpam(MoveByoipCidrToIpamRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ProvisionByoipCidrResult provisionByoipCidr(ProvisionByoipCidrRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ProvisionIpamPoolCidrResult provisionIpamPoolCidr(ProvisionIpamPoolCidrRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ProvisionPublicIpv4PoolCidrResult provisionPublicIpv4PoolCidr(ProvisionPublicIpv4PoolCidrRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -2516,6 +2687,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public ReleaseHostsResult releaseHosts(ReleaseHostsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ReleaseIpamPoolAllocationResult releaseIpamPoolAllocation(ReleaseIpamPoolAllocationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -2672,6 +2848,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public StartInstancesResult startInstances(StartInstancesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartNetworkInsightsAccessScopeAnalysisResult startNetworkInsightsAccessScopeAnalysis(StartNetworkInsightsAccessScopeAnalysisRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

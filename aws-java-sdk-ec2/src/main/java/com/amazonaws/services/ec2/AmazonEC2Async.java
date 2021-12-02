@@ -524,6 +524,41 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Allocate a CIDR from an IPAM pool. In IPAM, an allocation is a CIDR assignment from an IPAM pool to another
+     * resource or IPAM pool. For more information, see <a href="/vpc/latest/ipam/allocate-cidrs-ipam.html">Allocate
+     * CIDRs</a> in the <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param allocateIpamPoolCidrRequest
+     * @return A Java Future containing the result of the AllocateIpamPoolCidr operation returned by the service.
+     * @sample AmazonEC2Async.AllocateIpamPoolCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AllocateIpamPoolCidr" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<AllocateIpamPoolCidrResult> allocateIpamPoolCidrAsync(AllocateIpamPoolCidrRequest allocateIpamPoolCidrRequest);
+
+    /**
+     * <p>
+     * Allocate a CIDR from an IPAM pool. In IPAM, an allocation is a CIDR assignment from an IPAM pool to another
+     * resource or IPAM pool. For more information, see <a href="/vpc/latest/ipam/allocate-cidrs-ipam.html">Allocate
+     * CIDRs</a> in the <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param allocateIpamPoolCidrRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AllocateIpamPoolCidr operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.AllocateIpamPoolCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AllocateIpamPoolCidr" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<AllocateIpamPoolCidrResult> allocateIpamPoolCidrAsync(AllocateIpamPoolCidrRequest allocateIpamPoolCidrRequest,
+            com.amazonaws.handlers.AsyncHandler<AllocateIpamPoolCidrRequest, AllocateIpamPoolCidrResult> asyncHandler);
+
+    /**
+     * <p>
      * Applies a security group to the association between the target network and the Client VPN endpoint. This action
      * replaces the existing security groups with the specified security groups.
      * </p>
@@ -3506,6 +3541,139 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Create an IPAM. Amazon VCP IP Address Manager (IPAM) is a VPC feature that you can use to automate your IP
+     * address management workflows including assigning, tracking, troubleshooting, and auditing IP addresses across
+     * Amazon Web Services Regions and accounts throughout your Amazon Web Services Organization.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/create-ipam.html">Create an IPAM</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param createIpamRequest
+     * @return A Java Future containing the result of the CreateIpam operation returned by the service.
+     * @sample AmazonEC2Async.CreateIpam
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateIpam" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateIpamResult> createIpamAsync(CreateIpamRequest createIpamRequest);
+
+    /**
+     * <p>
+     * Create an IPAM. Amazon VCP IP Address Manager (IPAM) is a VPC feature that you can use to automate your IP
+     * address management workflows including assigning, tracking, troubleshooting, and auditing IP addresses across
+     * Amazon Web Services Regions and accounts throughout your Amazon Web Services Organization.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/create-ipam.html">Create an IPAM</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param createIpamRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateIpam operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.CreateIpam
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateIpam" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateIpamResult> createIpamAsync(CreateIpamRequest createIpamRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateIpamRequest, CreateIpamResult> asyncHandler);
+
+    /**
+     * <p>
+     * Create an IP address pool for Amazon VPC IP Address Manager (IPAM). In IPAM, a pool is a collection of contiguous
+     * IP addresses CIDRs. Pools enable you to organize your IP addresses according to your routing and security needs.
+     * For example, if you have separate routing and security needs for development and production applications, you can
+     * create a pool for each.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/create-top-ipam.html">Create a top-level pool</a> in the
+     * <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param createIpamPoolRequest
+     * @return A Java Future containing the result of the CreateIpamPool operation returned by the service.
+     * @sample AmazonEC2Async.CreateIpamPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateIpamPool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateIpamPoolResult> createIpamPoolAsync(CreateIpamPoolRequest createIpamPoolRequest);
+
+    /**
+     * <p>
+     * Create an IP address pool for Amazon VPC IP Address Manager (IPAM). In IPAM, a pool is a collection of contiguous
+     * IP addresses CIDRs. Pools enable you to organize your IP addresses according to your routing and security needs.
+     * For example, if you have separate routing and security needs for development and production applications, you can
+     * create a pool for each.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/create-top-ipam.html">Create a top-level pool</a> in the
+     * <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param createIpamPoolRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateIpamPool operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.CreateIpamPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateIpamPool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateIpamPoolResult> createIpamPoolAsync(CreateIpamPoolRequest createIpamPoolRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateIpamPoolRequest, CreateIpamPoolResult> asyncHandler);
+
+    /**
+     * <p>
+     * Create an IPAM scope. In IPAM, a scope is the highest-level container within IPAM. An IPAM contains two default
+     * scopes. Each scope represents the IP space for a single network. The private scope is intended for all private IP
+     * address space. The public scope is intended for all public IP address space. Scopes enable you to reuse IP
+     * addresses across multiple unconnected networks without causing IP address overlap or conflict.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/add-scope-ipam.html">Add a scope</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param createIpamScopeRequest
+     * @return A Java Future containing the result of the CreateIpamScope operation returned by the service.
+     * @sample AmazonEC2Async.CreateIpamScope
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateIpamScope" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateIpamScopeResult> createIpamScopeAsync(CreateIpamScopeRequest createIpamScopeRequest);
+
+    /**
+     * <p>
+     * Create an IPAM scope. In IPAM, a scope is the highest-level container within IPAM. An IPAM contains two default
+     * scopes. Each scope represents the IP space for a single network. The private scope is intended for all private IP
+     * address space. The public scope is intended for all public IP address space. Scopes enable you to reuse IP
+     * addresses across multiple unconnected networks without causing IP address overlap or conflict.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/add-scope-ipam.html">Add a scope</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param createIpamScopeRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateIpamScope operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.CreateIpamScope
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateIpamScope" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateIpamScopeResult> createIpamScopeAsync(CreateIpamScopeRequest createIpamScopeRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateIpamScopeRequest, CreateIpamScopeResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates an ED25519 or 2048-bit RSA key pair with the specified name. Amazon EC2 stores the public key and
      * displays the private key for you to save to a file. The private key is returned as an unencrypted PEM encoded
      * PKCS#1 private key. If a key with the specified name already exists, Amazon EC2 returns an error.
@@ -3923,6 +4091,53 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Creates a Network Access Scope.
+     * </p>
+     * <p>
+     * Amazon Web Services Network Access Analyzer enables cloud networking and cloud operations teams to verify that
+     * their networks on Amazon Web Services conform to their network security and governance objectives. For more
+     * information, see the <a href="https://docs.aws.amazon.com/vpc/latest/network-access-analyzer/">Amazon Web
+     * Services Network Access Analyzer Guide</a>.
+     * </p>
+     * 
+     * @param createNetworkInsightsAccessScopeRequest
+     * @return A Java Future containing the result of the CreateNetworkInsightsAccessScope operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.CreateNetworkInsightsAccessScope
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateNetworkInsightsAccessScope"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateNetworkInsightsAccessScopeResult> createNetworkInsightsAccessScopeAsync(
+            CreateNetworkInsightsAccessScopeRequest createNetworkInsightsAccessScopeRequest);
+
+    /**
+     * <p>
+     * Creates a Network Access Scope.
+     * </p>
+     * <p>
+     * Amazon Web Services Network Access Analyzer enables cloud networking and cloud operations teams to verify that
+     * their networks on Amazon Web Services conform to their network security and governance objectives. For more
+     * information, see the <a href="https://docs.aws.amazon.com/vpc/latest/network-access-analyzer/">Amazon Web
+     * Services Network Access Analyzer Guide</a>.
+     * </p>
+     * 
+     * @param createNetworkInsightsAccessScopeRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateNetworkInsightsAccessScope operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.CreateNetworkInsightsAccessScope
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateNetworkInsightsAccessScope"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateNetworkInsightsAccessScopeResult> createNetworkInsightsAccessScopeAsync(
+            CreateNetworkInsightsAccessScopeRequest createNetworkInsightsAccessScopeRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateNetworkInsightsAccessScopeRequest, CreateNetworkInsightsAccessScopeResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a path to analyze for reachability.
      * </p>
      * <p>
@@ -4106,6 +4321,45 @@ public interface AmazonEC2Async extends AmazonEC2 {
      */
     java.util.concurrent.Future<CreatePlacementGroupResult> createPlacementGroupAsync(CreatePlacementGroupRequest createPlacementGroupRequest,
             com.amazonaws.handlers.AsyncHandler<CreatePlacementGroupRequest, CreatePlacementGroupResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a public IPv4 address pool. A public IPv4 pool is an EC2 IP address pool required for the public IPv4
+     * CIDRs that you own and bring to Amazon Web Services to manage with IPAM. IPv6 addresses you bring to Amazon Web
+     * Services, however, use IPAM pools only. To monitor the status of pool creation, use <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribePublicIpv4Pools.html"
+     * >DescribePublicIpv4Pools</a>.
+     * </p>
+     * 
+     * @param createPublicIpv4PoolRequest
+     * @return A Java Future containing the result of the CreatePublicIpv4Pool operation returned by the service.
+     * @sample AmazonEC2Async.CreatePublicIpv4Pool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreatePublicIpv4Pool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreatePublicIpv4PoolResult> createPublicIpv4PoolAsync(CreatePublicIpv4PoolRequest createPublicIpv4PoolRequest);
+
+    /**
+     * <p>
+     * Creates a public IPv4 address pool. A public IPv4 pool is an EC2 IP address pool required for the public IPv4
+     * CIDRs that you own and bring to Amazon Web Services to manage with IPAM. IPv6 addresses you bring to Amazon Web
+     * Services, however, use IPAM pools only. To monitor the status of pool creation, use <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribePublicIpv4Pools.html"
+     * >DescribePublicIpv4Pools</a>.
+     * </p>
+     * 
+     * @param createPublicIpv4PoolRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreatePublicIpv4Pool operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.CreatePublicIpv4Pool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreatePublicIpv4Pool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreatePublicIpv4PoolResult> createPublicIpv4PoolAsync(CreatePublicIpv4PoolRequest createPublicIpv4PoolRequest,
+            com.amazonaws.handlers.AsyncHandler<CreatePublicIpv4PoolRequest, CreatePublicIpv4PoolResult> asyncHandler);
 
     /**
      * <p>
@@ -6628,6 +6882,163 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Delete an IPAM. Deleting an IPAM removes all monitored data associated with the IPAM including the historical
+     * data for CIDRs.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot delete an IPAM if there are CIDRs provisioned to pools or if there are allocations in the pools within
+     * the IPAM. To deprovision pool CIDRs, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeprovisionIpamPoolCidr.html"
+     * >DeprovisionIpamPoolCidr</a>. To release allocations, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ReleaseIpamPoolAllocation.html"
+     * >ReleaseIpamPoolAllocation</a>.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/delete-ipam.html">Delete an IPAM</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param deleteIpamRequest
+     * @return A Java Future containing the result of the DeleteIpam operation returned by the service.
+     * @sample AmazonEC2Async.DeleteIpam
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteIpam" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteIpamResult> deleteIpamAsync(DeleteIpamRequest deleteIpamRequest);
+
+    /**
+     * <p>
+     * Delete an IPAM. Deleting an IPAM removes all monitored data associated with the IPAM including the historical
+     * data for CIDRs.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot delete an IPAM if there are CIDRs provisioned to pools or if there are allocations in the pools within
+     * the IPAM. To deprovision pool CIDRs, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeprovisionIpamPoolCidr.html"
+     * >DeprovisionIpamPoolCidr</a>. To release allocations, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ReleaseIpamPoolAllocation.html"
+     * >ReleaseIpamPoolAllocation</a>.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/delete-ipam.html">Delete an IPAM</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param deleteIpamRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteIpam operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.DeleteIpam
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteIpam" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteIpamResult> deleteIpamAsync(DeleteIpamRequest deleteIpamRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteIpamRequest, DeleteIpamResult> asyncHandler);
+
+    /**
+     * <p>
+     * Delete an IPAM pool.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot delete an IPAM pool if there are allocations in it or CIDRs provisioned to it. To release allocations,
+     * see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ReleaseIpamPoolAllocation.html">
+     * ReleaseIpamPoolAllocation</a>. To deprovision pool CIDRs, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeprovisionIpamPoolCidr.html"
+     * >DeprovisionIpamPoolCidr</a>.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/delete-pool-ipam.html">Delete a pool</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param deleteIpamPoolRequest
+     * @return A Java Future containing the result of the DeleteIpamPool operation returned by the service.
+     * @sample AmazonEC2Async.DeleteIpamPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteIpamPool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteIpamPoolResult> deleteIpamPoolAsync(DeleteIpamPoolRequest deleteIpamPoolRequest);
+
+    /**
+     * <p>
+     * Delete an IPAM pool.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot delete an IPAM pool if there are allocations in it or CIDRs provisioned to it. To release allocations,
+     * see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ReleaseIpamPoolAllocation.html">
+     * ReleaseIpamPoolAllocation</a>. To deprovision pool CIDRs, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeprovisionIpamPoolCidr.html"
+     * >DeprovisionIpamPoolCidr</a>.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/delete-pool-ipam.html">Delete a pool</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param deleteIpamPoolRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteIpamPool operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.DeleteIpamPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteIpamPool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteIpamPoolResult> deleteIpamPoolAsync(DeleteIpamPoolRequest deleteIpamPoolRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteIpamPoolRequest, DeleteIpamPoolResult> asyncHandler);
+
+    /**
+     * <p>
+     * Delete the scope for an IPAM. You cannot delete the default scopes.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/delete-scope-ipam.html">Delete a scope</a> in the <i>Amazon
+     * VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param deleteIpamScopeRequest
+     * @return A Java Future containing the result of the DeleteIpamScope operation returned by the service.
+     * @sample AmazonEC2Async.DeleteIpamScope
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteIpamScope" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteIpamScopeResult> deleteIpamScopeAsync(DeleteIpamScopeRequest deleteIpamScopeRequest);
+
+    /**
+     * <p>
+     * Delete the scope for an IPAM. You cannot delete the default scopes.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/delete-scope-ipam.html">Delete a scope</a> in the <i>Amazon
+     * VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param deleteIpamScopeRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteIpamScope operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.DeleteIpamScope
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteIpamScope" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteIpamScopeResult> deleteIpamScopeAsync(DeleteIpamScopeRequest deleteIpamScopeRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteIpamScopeRequest, DeleteIpamScopeResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes the specified key pair, by removing the public key from Amazon EC2.
      * </p>
      * 
@@ -6927,6 +7338,76 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Deletes the specified Network Access Scope.
+     * </p>
+     * 
+     * @param deleteNetworkInsightsAccessScopeRequest
+     * @return A Java Future containing the result of the DeleteNetworkInsightsAccessScope operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.DeleteNetworkInsightsAccessScope
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteNetworkInsightsAccessScope"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteNetworkInsightsAccessScopeResult> deleteNetworkInsightsAccessScopeAsync(
+            DeleteNetworkInsightsAccessScopeRequest deleteNetworkInsightsAccessScopeRequest);
+
+    /**
+     * <p>
+     * Deletes the specified Network Access Scope.
+     * </p>
+     * 
+     * @param deleteNetworkInsightsAccessScopeRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteNetworkInsightsAccessScope operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.DeleteNetworkInsightsAccessScope
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteNetworkInsightsAccessScope"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteNetworkInsightsAccessScopeResult> deleteNetworkInsightsAccessScopeAsync(
+            DeleteNetworkInsightsAccessScopeRequest deleteNetworkInsightsAccessScopeRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteNetworkInsightsAccessScopeRequest, DeleteNetworkInsightsAccessScopeResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes the specified Network Access Scope analysis.
+     * </p>
+     * 
+     * @param deleteNetworkInsightsAccessScopeAnalysisRequest
+     * @return A Java Future containing the result of the DeleteNetworkInsightsAccessScopeAnalysis operation returned by
+     *         the service.
+     * @sample AmazonEC2Async.DeleteNetworkInsightsAccessScopeAnalysis
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteNetworkInsightsAccessScopeAnalysis"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteNetworkInsightsAccessScopeAnalysisResult> deleteNetworkInsightsAccessScopeAnalysisAsync(
+            DeleteNetworkInsightsAccessScopeAnalysisRequest deleteNetworkInsightsAccessScopeAnalysisRequest);
+
+    /**
+     * <p>
+     * Deletes the specified Network Access Scope analysis.
+     * </p>
+     * 
+     * @param deleteNetworkInsightsAccessScopeAnalysisRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteNetworkInsightsAccessScopeAnalysis operation returned by
+     *         the service.
+     * @sample AmazonEC2AsyncHandler.DeleteNetworkInsightsAccessScopeAnalysis
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteNetworkInsightsAccessScopeAnalysis"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteNetworkInsightsAccessScopeAnalysisResult> deleteNetworkInsightsAccessScopeAnalysisAsync(
+            DeleteNetworkInsightsAccessScopeAnalysisRequest deleteNetworkInsightsAccessScopeAnalysisRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteNetworkInsightsAccessScopeAnalysisRequest, DeleteNetworkInsightsAccessScopeAnalysisResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes the specified network insights analysis.
      * </p>
      * 
@@ -7103,6 +7584,41 @@ public interface AmazonEC2Async extends AmazonEC2 {
      */
     java.util.concurrent.Future<DeletePlacementGroupResult> deletePlacementGroupAsync(DeletePlacementGroupRequest deletePlacementGroupRequest,
             com.amazonaws.handlers.AsyncHandler<DeletePlacementGroupRequest, DeletePlacementGroupResult> asyncHandler);
+
+    /**
+     * <p>
+     * Delete a public IPv4 pool. A public IPv4 pool is an EC2 IP address pool required for the public IPv4 CIDRs that
+     * you own and bring to Amazon Web Services to manage with IPAM. IPv6 addresses you bring to Amazon Web Services,
+     * however, use IPAM pools only.
+     * </p>
+     * 
+     * @param deletePublicIpv4PoolRequest
+     * @return A Java Future containing the result of the DeletePublicIpv4Pool operation returned by the service.
+     * @sample AmazonEC2Async.DeletePublicIpv4Pool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeletePublicIpv4Pool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeletePublicIpv4PoolResult> deletePublicIpv4PoolAsync(DeletePublicIpv4PoolRequest deletePublicIpv4PoolRequest);
+
+    /**
+     * <p>
+     * Delete a public IPv4 pool. A public IPv4 pool is an EC2 IP address pool required for the public IPv4 CIDRs that
+     * you own and bring to Amazon Web Services to manage with IPAM. IPv6 addresses you bring to Amazon Web Services,
+     * however, use IPAM pools only.
+     * </p>
+     * 
+     * @param deletePublicIpv4PoolRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeletePublicIpv4Pool operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.DeletePublicIpv4Pool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeletePublicIpv4Pool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeletePublicIpv4PoolResult> deletePublicIpv4PoolAsync(DeletePublicIpv4PoolRequest deletePublicIpv4PoolRequest,
+            com.amazonaws.handlers.AsyncHandler<DeletePublicIpv4PoolRequest, DeletePublicIpv4PoolResult> asyncHandler);
 
     /**
      * <p>
@@ -8407,6 +8923,78 @@ public interface AmazonEC2Async extends AmazonEC2 {
      */
     java.util.concurrent.Future<DeprovisionByoipCidrResult> deprovisionByoipCidrAsync(DeprovisionByoipCidrRequest deprovisionByoipCidrRequest,
             com.amazonaws.handlers.AsyncHandler<DeprovisionByoipCidrRequest, DeprovisionByoipCidrResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deprovision a CIDR provisioned from an IPAM pool. If you deprovision a CIDR from a pool that has a source pool,
+     * the CIDR is recycled back into the source pool. For more information, see <a
+     * href="/vpc/latest/ipam/depro-pool-cidr-ipam.html">Deprovision pool CIDRs</a> in the <i>Amazon VPC IPAM User
+     * Guide</i>.
+     * </p>
+     * 
+     * @param deprovisionIpamPoolCidrRequest
+     * @return A Java Future containing the result of the DeprovisionIpamPoolCidr operation returned by the service.
+     * @sample AmazonEC2Async.DeprovisionIpamPoolCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeprovisionIpamPoolCidr" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeprovisionIpamPoolCidrResult> deprovisionIpamPoolCidrAsync(DeprovisionIpamPoolCidrRequest deprovisionIpamPoolCidrRequest);
+
+    /**
+     * <p>
+     * Deprovision a CIDR provisioned from an IPAM pool. If you deprovision a CIDR from a pool that has a source pool,
+     * the CIDR is recycled back into the source pool. For more information, see <a
+     * href="/vpc/latest/ipam/depro-pool-cidr-ipam.html">Deprovision pool CIDRs</a> in the <i>Amazon VPC IPAM User
+     * Guide</i>.
+     * </p>
+     * 
+     * @param deprovisionIpamPoolCidrRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeprovisionIpamPoolCidr operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.DeprovisionIpamPoolCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeprovisionIpamPoolCidr" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeprovisionIpamPoolCidrResult> deprovisionIpamPoolCidrAsync(DeprovisionIpamPoolCidrRequest deprovisionIpamPoolCidrRequest,
+            com.amazonaws.handlers.AsyncHandler<DeprovisionIpamPoolCidrRequest, DeprovisionIpamPoolCidrResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deprovision a CIDR from a public IPv4 pool.
+     * </p>
+     * 
+     * @param deprovisionPublicIpv4PoolCidrRequest
+     * @return A Java Future containing the result of the DeprovisionPublicIpv4PoolCidr operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.DeprovisionPublicIpv4PoolCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeprovisionPublicIpv4PoolCidr"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeprovisionPublicIpv4PoolCidrResult> deprovisionPublicIpv4PoolCidrAsync(
+            DeprovisionPublicIpv4PoolCidrRequest deprovisionPublicIpv4PoolCidrRequest);
+
+    /**
+     * <p>
+     * Deprovision a CIDR from a public IPv4 pool.
+     * </p>
+     * 
+     * @param deprovisionPublicIpv4PoolCidrRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeprovisionPublicIpv4PoolCidr operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.DeprovisionPublicIpv4PoolCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeprovisionPublicIpv4PoolCidr"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeprovisionPublicIpv4PoolCidrResult> deprovisionPublicIpv4PoolCidrAsync(
+            DeprovisionPublicIpv4PoolCidrRequest deprovisionPublicIpv4PoolCidrRequest,
+            com.amazonaws.handlers.AsyncHandler<DeprovisionPublicIpv4PoolCidrRequest, DeprovisionPublicIpv4PoolCidrResult> asyncHandler);
 
     /**
      * <p>
@@ -11028,6 +11616,107 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Get information about your IPAM pools.
+     * </p>
+     * 
+     * @param describeIpamPoolsRequest
+     * @return A Java Future containing the result of the DescribeIpamPools operation returned by the service.
+     * @sample AmazonEC2Async.DescribeIpamPools
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIpamPools" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeIpamPoolsResult> describeIpamPoolsAsync(DescribeIpamPoolsRequest describeIpamPoolsRequest);
+
+    /**
+     * <p>
+     * Get information about your IPAM pools.
+     * </p>
+     * 
+     * @param describeIpamPoolsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeIpamPools operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.DescribeIpamPools
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIpamPools" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeIpamPoolsResult> describeIpamPoolsAsync(DescribeIpamPoolsRequest describeIpamPoolsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeIpamPoolsRequest, DescribeIpamPoolsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Get information about your IPAM scopes.
+     * </p>
+     * 
+     * @param describeIpamScopesRequest
+     * @return A Java Future containing the result of the DescribeIpamScopes operation returned by the service.
+     * @sample AmazonEC2Async.DescribeIpamScopes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIpamScopes" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeIpamScopesResult> describeIpamScopesAsync(DescribeIpamScopesRequest describeIpamScopesRequest);
+
+    /**
+     * <p>
+     * Get information about your IPAM scopes.
+     * </p>
+     * 
+     * @param describeIpamScopesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeIpamScopes operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.DescribeIpamScopes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIpamScopes" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeIpamScopesResult> describeIpamScopesAsync(DescribeIpamScopesRequest describeIpamScopesRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeIpamScopesRequest, DescribeIpamScopesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Get information about your IPAM pools.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param describeIpamsRequest
+     * @return A Java Future containing the result of the DescribeIpams operation returned by the service.
+     * @sample AmazonEC2Async.DescribeIpams
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIpams" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeIpamsResult> describeIpamsAsync(DescribeIpamsRequest describeIpamsRequest);
+
+    /**
+     * <p>
+     * Get information about your IPAM pools.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param describeIpamsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeIpams operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.DescribeIpams
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIpams" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeIpamsResult> describeIpamsAsync(DescribeIpamsRequest describeIpamsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeIpamsRequest, DescribeIpamsResult> asyncHandler);
+
+    /**
+     * <p>
      * Describes your IPv6 address pools.
      * </p>
      * 
@@ -11570,6 +12259,76 @@ public interface AmazonEC2Async extends AmazonEC2 {
      */
     java.util.concurrent.Future<DescribeNetworkAclsResult> describeNetworkAclsAsync(
             com.amazonaws.handlers.AsyncHandler<DescribeNetworkAclsRequest, DescribeNetworkAclsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Describes the specified Network Access Scope analyses.
+     * </p>
+     * 
+     * @param describeNetworkInsightsAccessScopeAnalysesRequest
+     * @return A Java Future containing the result of the DescribeNetworkInsightsAccessScopeAnalyses operation returned
+     *         by the service.
+     * @sample AmazonEC2Async.DescribeNetworkInsightsAccessScopeAnalyses
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeNetworkInsightsAccessScopeAnalyses"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeNetworkInsightsAccessScopeAnalysesResult> describeNetworkInsightsAccessScopeAnalysesAsync(
+            DescribeNetworkInsightsAccessScopeAnalysesRequest describeNetworkInsightsAccessScopeAnalysesRequest);
+
+    /**
+     * <p>
+     * Describes the specified Network Access Scope analyses.
+     * </p>
+     * 
+     * @param describeNetworkInsightsAccessScopeAnalysesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeNetworkInsightsAccessScopeAnalyses operation returned
+     *         by the service.
+     * @sample AmazonEC2AsyncHandler.DescribeNetworkInsightsAccessScopeAnalyses
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeNetworkInsightsAccessScopeAnalyses"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeNetworkInsightsAccessScopeAnalysesResult> describeNetworkInsightsAccessScopeAnalysesAsync(
+            DescribeNetworkInsightsAccessScopeAnalysesRequest describeNetworkInsightsAccessScopeAnalysesRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeNetworkInsightsAccessScopeAnalysesRequest, DescribeNetworkInsightsAccessScopeAnalysesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Describes the specified Network Access Scopes.
+     * </p>
+     * 
+     * @param describeNetworkInsightsAccessScopesRequest
+     * @return A Java Future containing the result of the DescribeNetworkInsightsAccessScopes operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.DescribeNetworkInsightsAccessScopes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeNetworkInsightsAccessScopes"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeNetworkInsightsAccessScopesResult> describeNetworkInsightsAccessScopesAsync(
+            DescribeNetworkInsightsAccessScopesRequest describeNetworkInsightsAccessScopesRequest);
+
+    /**
+     * <p>
+     * Describes the specified Network Access Scopes.
+     * </p>
+     * 
+     * @param describeNetworkInsightsAccessScopesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeNetworkInsightsAccessScopes operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.DescribeNetworkInsightsAccessScopes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeNetworkInsightsAccessScopes"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeNetworkInsightsAccessScopesResult> describeNetworkInsightsAccessScopesAsync(
+            DescribeNetworkInsightsAccessScopesRequest describeNetworkInsightsAccessScopesRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeNetworkInsightsAccessScopesRequest, DescribeNetworkInsightsAccessScopesResult> asyncHandler);
 
     /**
      * <p>
@@ -15111,6 +15870,43 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Disable the IPAM account. For more information, see <a href="/vpc/latest/ipam/enable-integ-ipam.html">Enable
+     * integration with Organizations</a> in the <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param disableIpamOrganizationAdminAccountRequest
+     * @return A Java Future containing the result of the DisableIpamOrganizationAdminAccount operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.DisableIpamOrganizationAdminAccount
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisableIpamOrganizationAdminAccount"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisableIpamOrganizationAdminAccountResult> disableIpamOrganizationAdminAccountAsync(
+            DisableIpamOrganizationAdminAccountRequest disableIpamOrganizationAdminAccountRequest);
+
+    /**
+     * <p>
+     * Disable the IPAM account. For more information, see <a href="/vpc/latest/ipam/enable-integ-ipam.html">Enable
+     * integration with Organizations</a> in the <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param disableIpamOrganizationAdminAccountRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisableIpamOrganizationAdminAccount operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.DisableIpamOrganizationAdminAccount
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisableIpamOrganizationAdminAccount"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisableIpamOrganizationAdminAccountResult> disableIpamOrganizationAdminAccountAsync(
+            DisableIpamOrganizationAdminAccountRequest disableIpamOrganizationAdminAccountRequest,
+            com.amazonaws.handlers.AsyncHandler<DisableIpamOrganizationAdminAccountRequest, DisableIpamOrganizationAdminAccountResult> asyncHandler);
+
+    /**
+     * <p>
      * Disables access to the EC2 serial console of all instances for your account. By default, access to the EC2 serial
      * console is disabled for your account. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configure-access-to-serial-console.html#serial-console-account-access"
@@ -15955,6 +16751,47 @@ public interface AmazonEC2Async extends AmazonEC2 {
      */
     java.util.concurrent.Future<EnableImageDeprecationResult> enableImageDeprecationAsync(EnableImageDeprecationRequest enableImageDeprecationRequest,
             com.amazonaws.handlers.AsyncHandler<EnableImageDeprecationRequest, EnableImageDeprecationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Enable an Organizations member account as the IPAM admin account. You cannot select the Organizations management
+     * account as the IPAM admin account. For more information, see <a
+     * href="/vpc/latest/ipam/enable-integ-ipam.html">Enable integration with Organizations</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param enableIpamOrganizationAdminAccountRequest
+     * @return A Java Future containing the result of the EnableIpamOrganizationAdminAccount operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.EnableIpamOrganizationAdminAccount
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/EnableIpamOrganizationAdminAccount"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<EnableIpamOrganizationAdminAccountResult> enableIpamOrganizationAdminAccountAsync(
+            EnableIpamOrganizationAdminAccountRequest enableIpamOrganizationAdminAccountRequest);
+
+    /**
+     * <p>
+     * Enable an Organizations member account as the IPAM admin account. You cannot select the Organizations management
+     * account as the IPAM admin account. For more information, see <a
+     * href="/vpc/latest/ipam/enable-integ-ipam.html">Enable integration with Organizations</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param enableIpamOrganizationAdminAccountRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the EnableIpamOrganizationAdminAccount operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.EnableIpamOrganizationAdminAccount
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/EnableIpamOrganizationAdminAccount"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<EnableIpamOrganizationAdminAccountResult> enableIpamOrganizationAdminAccountAsync(
+            EnableIpamOrganizationAdminAccountRequest enableIpamOrganizationAdminAccountRequest,
+            com.amazonaws.handlers.AsyncHandler<EnableIpamOrganizationAdminAccountRequest, EnableIpamOrganizationAdminAccountResult> asyncHandler);
 
     /**
      * <p>
@@ -16955,6 +17792,134 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Retrieve historical information about a CIDR within an IPAM scope. For more information, see <a
+     * href="/vpc/latest/ipam/view-history-cidr-ipam.html">View the history of IP addresses</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param getIpamAddressHistoryRequest
+     * @return A Java Future containing the result of the GetIpamAddressHistory operation returned by the service.
+     * @sample AmazonEC2Async.GetIpamAddressHistory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetIpamAddressHistory" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetIpamAddressHistoryResult> getIpamAddressHistoryAsync(GetIpamAddressHistoryRequest getIpamAddressHistoryRequest);
+
+    /**
+     * <p>
+     * Retrieve historical information about a CIDR within an IPAM scope. For more information, see <a
+     * href="/vpc/latest/ipam/view-history-cidr-ipam.html">View the history of IP addresses</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param getIpamAddressHistoryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetIpamAddressHistory operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.GetIpamAddressHistory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetIpamAddressHistory" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetIpamAddressHistoryResult> getIpamAddressHistoryAsync(GetIpamAddressHistoryRequest getIpamAddressHistoryRequest,
+            com.amazonaws.handlers.AsyncHandler<GetIpamAddressHistoryRequest, GetIpamAddressHistoryResult> asyncHandler);
+
+    /**
+     * <p>
+     * Get a list of all the CIDR allocations in an IPAM pool.
+     * </p>
+     * 
+     * @param getIpamPoolAllocationsRequest
+     * @return A Java Future containing the result of the GetIpamPoolAllocations operation returned by the service.
+     * @sample AmazonEC2Async.GetIpamPoolAllocations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetIpamPoolAllocations" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetIpamPoolAllocationsResult> getIpamPoolAllocationsAsync(GetIpamPoolAllocationsRequest getIpamPoolAllocationsRequest);
+
+    /**
+     * <p>
+     * Get a list of all the CIDR allocations in an IPAM pool.
+     * </p>
+     * 
+     * @param getIpamPoolAllocationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetIpamPoolAllocations operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.GetIpamPoolAllocations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetIpamPoolAllocations" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetIpamPoolAllocationsResult> getIpamPoolAllocationsAsync(GetIpamPoolAllocationsRequest getIpamPoolAllocationsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetIpamPoolAllocationsRequest, GetIpamPoolAllocationsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Get the CIDRs provisioned to an IPAM pool.
+     * </p>
+     * 
+     * @param getIpamPoolCidrsRequest
+     * @return A Java Future containing the result of the GetIpamPoolCidrs operation returned by the service.
+     * @sample AmazonEC2Async.GetIpamPoolCidrs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetIpamPoolCidrs" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetIpamPoolCidrsResult> getIpamPoolCidrsAsync(GetIpamPoolCidrsRequest getIpamPoolCidrsRequest);
+
+    /**
+     * <p>
+     * Get the CIDRs provisioned to an IPAM pool.
+     * </p>
+     * 
+     * @param getIpamPoolCidrsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetIpamPoolCidrs operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.GetIpamPoolCidrs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetIpamPoolCidrs" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetIpamPoolCidrsResult> getIpamPoolCidrsAsync(GetIpamPoolCidrsRequest getIpamPoolCidrsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetIpamPoolCidrsRequest, GetIpamPoolCidrsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Get information about the resources in a scope.
+     * </p>
+     * 
+     * @param getIpamResourceCidrsRequest
+     * @return A Java Future containing the result of the GetIpamResourceCidrs operation returned by the service.
+     * @sample AmazonEC2Async.GetIpamResourceCidrs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetIpamResourceCidrs" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetIpamResourceCidrsResult> getIpamResourceCidrsAsync(GetIpamResourceCidrsRequest getIpamResourceCidrsRequest);
+
+    /**
+     * <p>
+     * Get information about the resources in a scope.
+     * </p>
+     * 
+     * @param getIpamResourceCidrsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetIpamResourceCidrs operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.GetIpamResourceCidrs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetIpamResourceCidrs" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetIpamResourceCidrsResult> getIpamResourceCidrsAsync(GetIpamResourceCidrsRequest getIpamResourceCidrsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetIpamResourceCidrsRequest, GetIpamResourceCidrsResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves the configuration data of the specified instance. You can use this data to create a launch template.
      * </p>
      * <p>
@@ -17063,6 +18028,78 @@ public interface AmazonEC2Async extends AmazonEC2 {
     java.util.concurrent.Future<GetManagedPrefixListEntriesResult> getManagedPrefixListEntriesAsync(
             GetManagedPrefixListEntriesRequest getManagedPrefixListEntriesRequest,
             com.amazonaws.handlers.AsyncHandler<GetManagedPrefixListEntriesRequest, GetManagedPrefixListEntriesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets the findings for the specified Network Access Scope analysis.
+     * </p>
+     * 
+     * @param getNetworkInsightsAccessScopeAnalysisFindingsRequest
+     * @return A Java Future containing the result of the GetNetworkInsightsAccessScopeAnalysisFindings operation
+     *         returned by the service.
+     * @sample AmazonEC2Async.GetNetworkInsightsAccessScopeAnalysisFindings
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetNetworkInsightsAccessScopeAnalysisFindings"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetNetworkInsightsAccessScopeAnalysisFindingsResult> getNetworkInsightsAccessScopeAnalysisFindingsAsync(
+            GetNetworkInsightsAccessScopeAnalysisFindingsRequest getNetworkInsightsAccessScopeAnalysisFindingsRequest);
+
+    /**
+     * <p>
+     * Gets the findings for the specified Network Access Scope analysis.
+     * </p>
+     * 
+     * @param getNetworkInsightsAccessScopeAnalysisFindingsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetNetworkInsightsAccessScopeAnalysisFindings operation
+     *         returned by the service.
+     * @sample AmazonEC2AsyncHandler.GetNetworkInsightsAccessScopeAnalysisFindings
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetNetworkInsightsAccessScopeAnalysisFindings"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetNetworkInsightsAccessScopeAnalysisFindingsResult> getNetworkInsightsAccessScopeAnalysisFindingsAsync(
+            GetNetworkInsightsAccessScopeAnalysisFindingsRequest getNetworkInsightsAccessScopeAnalysisFindingsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetNetworkInsightsAccessScopeAnalysisFindingsRequest, GetNetworkInsightsAccessScopeAnalysisFindingsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets the content for the specified Network Access Scope.
+     * </p>
+     * 
+     * @param getNetworkInsightsAccessScopeContentRequest
+     * @return A Java Future containing the result of the GetNetworkInsightsAccessScopeContent operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.GetNetworkInsightsAccessScopeContent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetNetworkInsightsAccessScopeContent"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetNetworkInsightsAccessScopeContentResult> getNetworkInsightsAccessScopeContentAsync(
+            GetNetworkInsightsAccessScopeContentRequest getNetworkInsightsAccessScopeContentRequest);
+
+    /**
+     * <p>
+     * Gets the content for the specified Network Access Scope.
+     * </p>
+     * 
+     * @param getNetworkInsightsAccessScopeContentRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetNetworkInsightsAccessScopeContent operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.GetNetworkInsightsAccessScopeContent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetNetworkInsightsAccessScopeContent"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetNetworkInsightsAccessScopeContentResult> getNetworkInsightsAccessScopeContentAsync(
+            GetNetworkInsightsAccessScopeContentRequest getNetworkInsightsAccessScopeContentRequest,
+            com.amazonaws.handlers.AsyncHandler<GetNetworkInsightsAccessScopeContentRequest, GetNetworkInsightsAccessScopeContentResult> asyncHandler);
 
     /**
      * <p>
@@ -18994,6 +20031,152 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Modify the configurations of an IPAM.
+     * </p>
+     * 
+     * @param modifyIpamRequest
+     * @return A Java Future containing the result of the ModifyIpam operation returned by the service.
+     * @sample AmazonEC2Async.ModifyIpam
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyIpam" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyIpamResult> modifyIpamAsync(ModifyIpamRequest modifyIpamRequest);
+
+    /**
+     * <p>
+     * Modify the configurations of an IPAM.
+     * </p>
+     * 
+     * @param modifyIpamRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ModifyIpam operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.ModifyIpam
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyIpam" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyIpamResult> modifyIpamAsync(ModifyIpamRequest modifyIpamRequest,
+            com.amazonaws.handlers.AsyncHandler<ModifyIpamRequest, ModifyIpamResult> asyncHandler);
+
+    /**
+     * <p>
+     * Modify the configurations of an IPAM pool.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/mod-pool-ipam.html">Modify a pool</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param modifyIpamPoolRequest
+     * @return A Java Future containing the result of the ModifyIpamPool operation returned by the service.
+     * @sample AmazonEC2Async.ModifyIpamPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyIpamPool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyIpamPoolResult> modifyIpamPoolAsync(ModifyIpamPoolRequest modifyIpamPoolRequest);
+
+    /**
+     * <p>
+     * Modify the configurations of an IPAM pool.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/mod-pool-ipam.html">Modify a pool</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param modifyIpamPoolRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ModifyIpamPool operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.ModifyIpamPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyIpamPool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyIpamPoolResult> modifyIpamPoolAsync(ModifyIpamPoolRequest modifyIpamPoolRequest,
+            com.amazonaws.handlers.AsyncHandler<ModifyIpamPoolRequest, ModifyIpamPoolResult> asyncHandler);
+
+    /**
+     * <p>
+     * Modify a resource CIDR. You can use this action to transfer resource CIDRs between scopes and ignore resource
+     * CIDRs that you do not want to manage. If set to false, the resource will not be tracked for overlap, it cannot be
+     * auto-imported into a pool, and it will be removed from any pool it has an allocation in.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/move-resource-ipam.html">Move resource CIDRs between
+     * scopes</a> and <a href="/vpc/latest/ipam/change-monitoring-state-ipam.html">Change the monitoring state of
+     * resource CIDRs</a> in the <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param modifyIpamResourceCidrRequest
+     * @return A Java Future containing the result of the ModifyIpamResourceCidr operation returned by the service.
+     * @sample AmazonEC2Async.ModifyIpamResourceCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyIpamResourceCidr" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyIpamResourceCidrResult> modifyIpamResourceCidrAsync(ModifyIpamResourceCidrRequest modifyIpamResourceCidrRequest);
+
+    /**
+     * <p>
+     * Modify a resource CIDR. You can use this action to transfer resource CIDRs between scopes and ignore resource
+     * CIDRs that you do not want to manage. If set to false, the resource will not be tracked for overlap, it cannot be
+     * auto-imported into a pool, and it will be removed from any pool it has an allocation in.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/move-resource-ipam.html">Move resource CIDRs between
+     * scopes</a> and <a href="/vpc/latest/ipam/change-monitoring-state-ipam.html">Change the monitoring state of
+     * resource CIDRs</a> in the <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param modifyIpamResourceCidrRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ModifyIpamResourceCidr operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.ModifyIpamResourceCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyIpamResourceCidr" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyIpamResourceCidrResult> modifyIpamResourceCidrAsync(ModifyIpamResourceCidrRequest modifyIpamResourceCidrRequest,
+            com.amazonaws.handlers.AsyncHandler<ModifyIpamResourceCidrRequest, ModifyIpamResourceCidrResult> asyncHandler);
+
+    /**
+     * <p>
+     * Modify an IPAM scope.
+     * </p>
+     * 
+     * @param modifyIpamScopeRequest
+     * @return A Java Future containing the result of the ModifyIpamScope operation returned by the service.
+     * @sample AmazonEC2Async.ModifyIpamScope
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyIpamScope" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyIpamScopeResult> modifyIpamScopeAsync(ModifyIpamScopeRequest modifyIpamScopeRequest);
+
+    /**
+     * <p>
+     * Modify an IPAM scope.
+     * </p>
+     * 
+     * @param modifyIpamScopeRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ModifyIpamScope operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.ModifyIpamScope
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyIpamScope" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyIpamScopeResult> modifyIpamScopeAsync(ModifyIpamScopeRequest modifyIpamScopeRequest,
+            com.amazonaws.handlers.AsyncHandler<ModifyIpamScopeRequest, ModifyIpamScopeResult> asyncHandler);
+
+    /**
+     * <p>
      * Modifies a launch template. You can specify which version of the launch template to set as the default version.
      * When launching an instance, the default version applies when a launch template version is not specified.
      * </p>
@@ -20561,6 +21744,37 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Move an BYOIP IPv4 CIDR to IPAM from a public IPv4 pool.
+     * </p>
+     * 
+     * @param moveByoipCidrToIpamRequest
+     * @return A Java Future containing the result of the MoveByoipCidrToIpam operation returned by the service.
+     * @sample AmazonEC2Async.MoveByoipCidrToIpam
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/MoveByoipCidrToIpam" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<MoveByoipCidrToIpamResult> moveByoipCidrToIpamAsync(MoveByoipCidrToIpamRequest moveByoipCidrToIpamRequest);
+
+    /**
+     * <p>
+     * Move an BYOIP IPv4 CIDR to IPAM from a public IPv4 pool.
+     * </p>
+     * 
+     * @param moveByoipCidrToIpamRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the MoveByoipCidrToIpam operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.MoveByoipCidrToIpam
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/MoveByoipCidrToIpam" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<MoveByoipCidrToIpamResult> moveByoipCidrToIpamAsync(MoveByoipCidrToIpamRequest moveByoipCidrToIpamRequest,
+            com.amazonaws.handlers.AsyncHandler<MoveByoipCidrToIpamRequest, MoveByoipCidrToIpamResult> asyncHandler);
+
+    /**
+     * <p>
      * Provisions an IPv4 or IPv6 address range for use with your Amazon Web Services resources through bring your own
      * IP addresses (BYOIP) and creates a corresponding address pool. After the address range is provisioned, it is
      * ready to be advertised using <a>AdvertiseByoipCidr</a>.
@@ -20621,6 +21835,88 @@ public interface AmazonEC2Async extends AmazonEC2 {
      */
     java.util.concurrent.Future<ProvisionByoipCidrResult> provisionByoipCidrAsync(ProvisionByoipCidrRequest provisionByoipCidrRequest,
             com.amazonaws.handlers.AsyncHandler<ProvisionByoipCidrRequest, ProvisionByoipCidrResult> asyncHandler);
+
+    /**
+     * <p>
+     * Provision a CIDR to an IPAM pool. You can use thsi action to provision new CIDRs to a top-level pool or to
+     * transfer a CIDR from a top-level pool to a pool within it.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/prov-cidr-ipam.html">Provision CIDRs to pools</a> in the
+     * <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param provisionIpamPoolCidrRequest
+     * @return A Java Future containing the result of the ProvisionIpamPoolCidr operation returned by the service.
+     * @sample AmazonEC2Async.ProvisionIpamPoolCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ProvisionIpamPoolCidr" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ProvisionIpamPoolCidrResult> provisionIpamPoolCidrAsync(ProvisionIpamPoolCidrRequest provisionIpamPoolCidrRequest);
+
+    /**
+     * <p>
+     * Provision a CIDR to an IPAM pool. You can use thsi action to provision new CIDRs to a top-level pool or to
+     * transfer a CIDR from a top-level pool to a pool within it.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/prov-cidr-ipam.html">Provision CIDRs to pools</a> in the
+     * <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param provisionIpamPoolCidrRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ProvisionIpamPoolCidr operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.ProvisionIpamPoolCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ProvisionIpamPoolCidr" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ProvisionIpamPoolCidrResult> provisionIpamPoolCidrAsync(ProvisionIpamPoolCidrRequest provisionIpamPoolCidrRequest,
+            com.amazonaws.handlers.AsyncHandler<ProvisionIpamPoolCidrRequest, ProvisionIpamPoolCidrResult> asyncHandler);
+
+    /**
+     * <p>
+     * Provision a CIDR to a public IPv4 pool.
+     * </p>
+     * <p>
+     * For more information about IPAM, see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in the
+     * <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param provisionPublicIpv4PoolCidrRequest
+     * @return A Java Future containing the result of the ProvisionPublicIpv4PoolCidr operation returned by the service.
+     * @sample AmazonEC2Async.ProvisionPublicIpv4PoolCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ProvisionPublicIpv4PoolCidr"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ProvisionPublicIpv4PoolCidrResult> provisionPublicIpv4PoolCidrAsync(
+            ProvisionPublicIpv4PoolCidrRequest provisionPublicIpv4PoolCidrRequest);
+
+    /**
+     * <p>
+     * Provision a CIDR to a public IPv4 pool.
+     * </p>
+     * <p>
+     * For more information about IPAM, see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in the
+     * <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param provisionPublicIpv4PoolCidrRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ProvisionPublicIpv4PoolCidr operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.ProvisionPublicIpv4PoolCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ProvisionPublicIpv4PoolCidr"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ProvisionPublicIpv4PoolCidrResult> provisionPublicIpv4PoolCidrAsync(
+            ProvisionPublicIpv4PoolCidrRequest provisionPublicIpv4PoolCidrRequest,
+            com.amazonaws.handlers.AsyncHandler<ProvisionPublicIpv4PoolCidrRequest, ProvisionPublicIpv4PoolCidrResult> asyncHandler);
 
     /**
      * <p>
@@ -21458,6 +22754,49 @@ public interface AmazonEC2Async extends AmazonEC2 {
      */
     java.util.concurrent.Future<ReleaseHostsResult> releaseHostsAsync(ReleaseHostsRequest releaseHostsRequest,
             com.amazonaws.handlers.AsyncHandler<ReleaseHostsRequest, ReleaseHostsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Release an allocation within an IPAM pool. You can only use this action to release manual allocations. To remove
+     * an allocation for a resource without deleting the resource, set its monitored state to false using <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyIpamResourceCidr.html"
+     * >ModifyIpamResourceCidr</a>. For more information, see <a
+     * href="/vpc/latest/ipam/release-pool-alloc-ipam.html">Release an allocation</a> in the <i>Amazon VPC IPAM User
+     * Guide</i>.
+     * </p>
+     * 
+     * @param releaseIpamPoolAllocationRequest
+     * @return A Java Future containing the result of the ReleaseIpamPoolAllocation operation returned by the service.
+     * @sample AmazonEC2Async.ReleaseIpamPoolAllocation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ReleaseIpamPoolAllocation" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ReleaseIpamPoolAllocationResult> releaseIpamPoolAllocationAsync(
+            ReleaseIpamPoolAllocationRequest releaseIpamPoolAllocationRequest);
+
+    /**
+     * <p>
+     * Release an allocation within an IPAM pool. You can only use this action to release manual allocations. To remove
+     * an allocation for a resource without deleting the resource, set its monitored state to false using <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyIpamResourceCidr.html"
+     * >ModifyIpamResourceCidr</a>. For more information, see <a
+     * href="/vpc/latest/ipam/release-pool-alloc-ipam.html">Release an allocation</a> in the <i>Amazon VPC IPAM User
+     * Guide</i>.
+     * </p>
+     * 
+     * @param releaseIpamPoolAllocationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ReleaseIpamPoolAllocation operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.ReleaseIpamPoolAllocation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ReleaseIpamPoolAllocation" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ReleaseIpamPoolAllocationResult> releaseIpamPoolAllocationAsync(
+            ReleaseIpamPoolAllocationRequest releaseIpamPoolAllocationRequest,
+            com.amazonaws.handlers.AsyncHandler<ReleaseIpamPoolAllocationRequest, ReleaseIpamPoolAllocationResult> asyncHandler);
 
     /**
      * <p>
@@ -22989,6 +24328,41 @@ public interface AmazonEC2Async extends AmazonEC2 {
      */
     java.util.concurrent.Future<StartInstancesResult> startInstancesAsync(StartInstancesRequest startInstancesRequest,
             com.amazonaws.handlers.AsyncHandler<StartInstancesRequest, StartInstancesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Starts analyzing the specified Network Access Scope.
+     * </p>
+     * 
+     * @param startNetworkInsightsAccessScopeAnalysisRequest
+     * @return A Java Future containing the result of the StartNetworkInsightsAccessScopeAnalysis operation returned by
+     *         the service.
+     * @sample AmazonEC2Async.StartNetworkInsightsAccessScopeAnalysis
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/StartNetworkInsightsAccessScopeAnalysis"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartNetworkInsightsAccessScopeAnalysisResult> startNetworkInsightsAccessScopeAnalysisAsync(
+            StartNetworkInsightsAccessScopeAnalysisRequest startNetworkInsightsAccessScopeAnalysisRequest);
+
+    /**
+     * <p>
+     * Starts analyzing the specified Network Access Scope.
+     * </p>
+     * 
+     * @param startNetworkInsightsAccessScopeAnalysisRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartNetworkInsightsAccessScopeAnalysis operation returned by
+     *         the service.
+     * @sample AmazonEC2AsyncHandler.StartNetworkInsightsAccessScopeAnalysis
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/StartNetworkInsightsAccessScopeAnalysis"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartNetworkInsightsAccessScopeAnalysisResult> startNetworkInsightsAccessScopeAnalysisAsync(
+            StartNetworkInsightsAccessScopeAnalysisRequest startNetworkInsightsAccessScopeAnalysisRequest,
+            com.amazonaws.handlers.AsyncHandler<StartNetworkInsightsAccessScopeAnalysisRequest, StartNetworkInsightsAccessScopeAnalysisResult> asyncHandler);
 
     /**
      * <p>

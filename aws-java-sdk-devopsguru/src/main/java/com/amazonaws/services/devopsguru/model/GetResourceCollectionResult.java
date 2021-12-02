@@ -25,10 +25,11 @@ public class GetResourceCollectionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The requested list of Amazon Web Services resource collections. The one type of Amazon Web Services resource
-     * collection supported is Amazon Web Services CloudFormation stacks. DevOps Guru can be configured to analyze only
-     * the Amazon Web Services resources that are defined in the stacks. You can specify up to 500 Amazon Web Services
-     * CloudFormation stacks.
+     * The requested list of Amazon Web Services resource collections. The two types of Amazon Web Services resource
+     * collections supported are Amazon Web Services CloudFormation stacks and Amazon Web Services resources that
+     * contain the same Amazon Web Services tag. DevOps Guru can be configured to analyze the Amazon Web Services
+     * resources that are defined in the stacks or that are tagged using the same tag <i>key</i>. You can specify up to
+     * 500 Amazon Web Services CloudFormation stacks.
      * </p>
      */
     private ResourceCollectionFilter resourceCollection;
@@ -42,17 +43,19 @@ public class GetResourceCollectionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The requested list of Amazon Web Services resource collections. The one type of Amazon Web Services resource
-     * collection supported is Amazon Web Services CloudFormation stacks. DevOps Guru can be configured to analyze only
-     * the Amazon Web Services resources that are defined in the stacks. You can specify up to 500 Amazon Web Services
-     * CloudFormation stacks.
+     * The requested list of Amazon Web Services resource collections. The two types of Amazon Web Services resource
+     * collections supported are Amazon Web Services CloudFormation stacks and Amazon Web Services resources that
+     * contain the same Amazon Web Services tag. DevOps Guru can be configured to analyze the Amazon Web Services
+     * resources that are defined in the stacks or that are tagged using the same tag <i>key</i>. You can specify up to
+     * 500 Amazon Web Services CloudFormation stacks.
      * </p>
      * 
      * @param resourceCollection
-     *        The requested list of Amazon Web Services resource collections. The one type of Amazon Web Services
-     *        resource collection supported is Amazon Web Services CloudFormation stacks. DevOps Guru can be configured
-     *        to analyze only the Amazon Web Services resources that are defined in the stacks. You can specify up to
-     *        500 Amazon Web Services CloudFormation stacks.
+     *        The requested list of Amazon Web Services resource collections. The two types of Amazon Web Services
+     *        resource collections supported are Amazon Web Services CloudFormation stacks and Amazon Web Services
+     *        resources that contain the same Amazon Web Services tag. DevOps Guru can be configured to analyze the
+     *        Amazon Web Services resources that are defined in the stacks or that are tagged using the same tag
+     *        <i>key</i>. You can specify up to 500 Amazon Web Services CloudFormation stacks.
      */
 
     public void setResourceCollection(ResourceCollectionFilter resourceCollection) {
@@ -61,16 +64,18 @@ public class GetResourceCollectionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The requested list of Amazon Web Services resource collections. The one type of Amazon Web Services resource
-     * collection supported is Amazon Web Services CloudFormation stacks. DevOps Guru can be configured to analyze only
-     * the Amazon Web Services resources that are defined in the stacks. You can specify up to 500 Amazon Web Services
-     * CloudFormation stacks.
+     * The requested list of Amazon Web Services resource collections. The two types of Amazon Web Services resource
+     * collections supported are Amazon Web Services CloudFormation stacks and Amazon Web Services resources that
+     * contain the same Amazon Web Services tag. DevOps Guru can be configured to analyze the Amazon Web Services
+     * resources that are defined in the stacks or that are tagged using the same tag <i>key</i>. You can specify up to
+     * 500 Amazon Web Services CloudFormation stacks.
      * </p>
      * 
-     * @return The requested list of Amazon Web Services resource collections. The one type of Amazon Web Services
-     *         resource collection supported is Amazon Web Services CloudFormation stacks. DevOps Guru can be configured
-     *         to analyze only the Amazon Web Services resources that are defined in the stacks. You can specify up to
-     *         500 Amazon Web Services CloudFormation stacks.
+     * @return The requested list of Amazon Web Services resource collections. The two types of Amazon Web Services
+     *         resource collections supported are Amazon Web Services CloudFormation stacks and Amazon Web Services
+     *         resources that contain the same Amazon Web Services tag. DevOps Guru can be configured to analyze the
+     *         Amazon Web Services resources that are defined in the stacks or that are tagged using the same tag
+     *         <i>key</i>. You can specify up to 500 Amazon Web Services CloudFormation stacks.
      */
 
     public ResourceCollectionFilter getResourceCollection() {
@@ -79,17 +84,19 @@ public class GetResourceCollectionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The requested list of Amazon Web Services resource collections. The one type of Amazon Web Services resource
-     * collection supported is Amazon Web Services CloudFormation stacks. DevOps Guru can be configured to analyze only
-     * the Amazon Web Services resources that are defined in the stacks. You can specify up to 500 Amazon Web Services
-     * CloudFormation stacks.
+     * The requested list of Amazon Web Services resource collections. The two types of Amazon Web Services resource
+     * collections supported are Amazon Web Services CloudFormation stacks and Amazon Web Services resources that
+     * contain the same Amazon Web Services tag. DevOps Guru can be configured to analyze the Amazon Web Services
+     * resources that are defined in the stacks or that are tagged using the same tag <i>key</i>. You can specify up to
+     * 500 Amazon Web Services CloudFormation stacks.
      * </p>
      * 
      * @param resourceCollection
-     *        The requested list of Amazon Web Services resource collections. The one type of Amazon Web Services
-     *        resource collection supported is Amazon Web Services CloudFormation stacks. DevOps Guru can be configured
-     *        to analyze only the Amazon Web Services resources that are defined in the stacks. You can specify up to
-     *        500 Amazon Web Services CloudFormation stacks.
+     *        The requested list of Amazon Web Services resource collections. The two types of Amazon Web Services
+     *        resource collections supported are Amazon Web Services CloudFormation stacks and Amazon Web Services
+     *        resources that contain the same Amazon Web Services tag. DevOps Guru can be configured to analyze the
+     *        Amazon Web Services resources that are defined in the stacks or that are tagged using the same tag
+     *        <i>key</i>. You can specify up to 500 Amazon Web Services CloudFormation stacks.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

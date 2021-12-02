@@ -42,6 +42,12 @@ public class RecommendationRelatedAnomaly implements Serializable, Cloneable, St
      * </p>
      */
     private java.util.List<RecommendationRelatedAnomalySourceDetail> sourceDetails;
+    /**
+     * <p>
+     * The ID of an anomaly that generated the insight with this recommendation.
+     * </p>
+     */
+    private String anomalyId;
 
     /**
      * <p>
@@ -200,6 +206,46 @@ public class RecommendationRelatedAnomaly implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * The ID of an anomaly that generated the insight with this recommendation.
+     * </p>
+     * 
+     * @param anomalyId
+     *        The ID of an anomaly that generated the insight with this recommendation.
+     */
+
+    public void setAnomalyId(String anomalyId) {
+        this.anomalyId = anomalyId;
+    }
+
+    /**
+     * <p>
+     * The ID of an anomaly that generated the insight with this recommendation.
+     * </p>
+     * 
+     * @return The ID of an anomaly that generated the insight with this recommendation.
+     */
+
+    public String getAnomalyId() {
+        return this.anomalyId;
+    }
+
+    /**
+     * <p>
+     * The ID of an anomaly that generated the insight with this recommendation.
+     * </p>
+     * 
+     * @param anomalyId
+     *        The ID of an anomaly that generated the insight with this recommendation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RecommendationRelatedAnomaly withAnomalyId(String anomalyId) {
+        setAnomalyId(anomalyId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -214,7 +260,9 @@ public class RecommendationRelatedAnomaly implements Serializable, Cloneable, St
         if (getResources() != null)
             sb.append("Resources: ").append(getResources()).append(",");
         if (getSourceDetails() != null)
-            sb.append("SourceDetails: ").append(getSourceDetails());
+            sb.append("SourceDetails: ").append(getSourceDetails()).append(",");
+        if (getAnomalyId() != null)
+            sb.append("AnomalyId: ").append(getAnomalyId());
         sb.append("}");
         return sb.toString();
     }
@@ -237,6 +285,10 @@ public class RecommendationRelatedAnomaly implements Serializable, Cloneable, St
             return false;
         if (other.getSourceDetails() != null && other.getSourceDetails().equals(this.getSourceDetails()) == false)
             return false;
+        if (other.getAnomalyId() == null ^ this.getAnomalyId() == null)
+            return false;
+        if (other.getAnomalyId() != null && other.getAnomalyId().equals(this.getAnomalyId()) == false)
+            return false;
         return true;
     }
 
@@ -247,6 +299,7 @@ public class RecommendationRelatedAnomaly implements Serializable, Cloneable, St
 
         hashCode = prime * hashCode + ((getResources() == null) ? 0 : getResources().hashCode());
         hashCode = prime * hashCode + ((getSourceDetails() == null) ? 0 : getSourceDetails().hashCode());
+        hashCode = prime * hashCode + ((getAnomalyId() == null) ? 0 : getAnomalyId().hashCode());
         return hashCode;
     }
 

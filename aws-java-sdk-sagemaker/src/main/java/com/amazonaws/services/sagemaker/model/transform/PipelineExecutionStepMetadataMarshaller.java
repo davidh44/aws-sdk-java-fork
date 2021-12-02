@@ -45,6 +45,10 @@ public class PipelineExecutionStepMetadataMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Callback").build();
     private static final MarshallingInfo<StructuredPojo> LAMBDA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Lambda").build();
+    private static final MarshallingInfo<StructuredPojo> QUALITYCHECK_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("QualityCheck").build();
+    private static final MarshallingInfo<StructuredPojo> CLARIFYCHECK_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ClarifyCheck").build();
 
     private static final PipelineExecutionStepMetadataMarshaller instance = new PipelineExecutionStepMetadataMarshaller();
 
@@ -71,6 +75,8 @@ public class PipelineExecutionStepMetadataMarshaller {
             protocolMarshaller.marshall(pipelineExecutionStepMetadata.getCondition(), CONDITION_BINDING);
             protocolMarshaller.marshall(pipelineExecutionStepMetadata.getCallback(), CALLBACK_BINDING);
             protocolMarshaller.marshall(pipelineExecutionStepMetadata.getLambda(), LAMBDA_BINDING);
+            protocolMarshaller.marshall(pipelineExecutionStepMetadata.getQualityCheck(), QUALITYCHECK_BINDING);
+            protocolMarshaller.marshall(pipelineExecutionStepMetadata.getClarifyCheck(), CLARIFYCHECK_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

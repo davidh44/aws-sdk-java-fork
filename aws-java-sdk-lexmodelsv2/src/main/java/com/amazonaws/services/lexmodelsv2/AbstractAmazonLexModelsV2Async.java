@@ -379,6 +379,19 @@ public class AbstractAmazonLexModelsV2Async extends AbstractAmazonLexModelsV2 im
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeBotRecommendationResult> describeBotRecommendationAsync(DescribeBotRecommendationRequest request) {
+
+        return describeBotRecommendationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeBotRecommendationResult> describeBotRecommendationAsync(DescribeBotRecommendationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeBotRecommendationRequest, DescribeBotRecommendationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeBotVersionResult> describeBotVersionAsync(DescribeBotVersionRequest request) {
 
         return describeBotVersionAsync(request, null);
@@ -509,6 +522,19 @@ public class AbstractAmazonLexModelsV2Async extends AbstractAmazonLexModelsV2 im
     }
 
     @Override
+    public java.util.concurrent.Future<ListBotRecommendationsResult> listBotRecommendationsAsync(ListBotRecommendationsRequest request) {
+
+        return listBotRecommendationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListBotRecommendationsResult> listBotRecommendationsAsync(ListBotRecommendationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListBotRecommendationsRequest, ListBotRecommendationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListBotVersionsResult> listBotVersionsAsync(ListBotVersionsRequest request) {
 
         return listBotVersionsAsync(request, null);
@@ -600,6 +626,19 @@ public class AbstractAmazonLexModelsV2Async extends AbstractAmazonLexModelsV2 im
     }
 
     @Override
+    public java.util.concurrent.Future<ListRecommendedIntentsResult> listRecommendedIntentsAsync(ListRecommendedIntentsRequest request) {
+
+        return listRecommendedIntentsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRecommendedIntentsResult> listRecommendedIntentsAsync(ListRecommendedIntentsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListRecommendedIntentsRequest, ListRecommendedIntentsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListSlotTypesResult> listSlotTypesAsync(ListSlotTypesRequest request) {
 
         return listSlotTypesAsync(request, null);
@@ -634,6 +673,32 @@ public class AbstractAmazonLexModelsV2Async extends AbstractAmazonLexModelsV2 im
     @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchAssociatedTranscriptsResult> searchAssociatedTranscriptsAsync(SearchAssociatedTranscriptsRequest request) {
+
+        return searchAssociatedTranscriptsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchAssociatedTranscriptsResult> searchAssociatedTranscriptsAsync(SearchAssociatedTranscriptsRequest request,
+            com.amazonaws.handlers.AsyncHandler<SearchAssociatedTranscriptsRequest, SearchAssociatedTranscriptsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartBotRecommendationResult> startBotRecommendationAsync(StartBotRecommendationRequest request) {
+
+        return startBotRecommendationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartBotRecommendationResult> startBotRecommendationAsync(StartBotRecommendationRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartBotRecommendationRequest, StartBotRecommendationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -712,6 +777,19 @@ public class AbstractAmazonLexModelsV2Async extends AbstractAmazonLexModelsV2 im
     @Override
     public java.util.concurrent.Future<UpdateBotLocaleResult> updateBotLocaleAsync(UpdateBotLocaleRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateBotLocaleRequest, UpdateBotLocaleResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateBotRecommendationResult> updateBotRecommendationAsync(UpdateBotRecommendationRequest request) {
+
+        return updateBotRecommendationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateBotRecommendationResult> updateBotRecommendationAsync(UpdateBotRecommendationRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateBotRecommendationRequest, UpdateBotRecommendationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

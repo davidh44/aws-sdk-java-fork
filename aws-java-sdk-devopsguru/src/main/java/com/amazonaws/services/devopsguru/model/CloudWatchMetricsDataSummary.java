@@ -30,24 +30,24 @@ public class CloudWatchMetricsDataSummary implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * This is a list of cloudwatch metric values at given timestamp.
+     * This is a list of Amazon CloudWatch metric values at given timestamp.
      * </p>
      */
     private java.util.List<TimestampMetricValuePair> timestampMetricValuePairList;
     /**
      * <p>
-     * This is enum of the status showing whether the metric value pair list has Partial or Complete data or there was
-     * an error.
+     * This is an enum of the status showing whether the metric value pair list has partial or complete data, or if
+     * there was an error.
      * </p>
      */
     private String statusCode;
 
     /**
      * <p>
-     * This is a list of cloudwatch metric values at given timestamp.
+     * This is a list of Amazon CloudWatch metric values at given timestamp.
      * </p>
      * 
-     * @return This is a list of cloudwatch metric values at given timestamp.
+     * @return This is a list of Amazon CloudWatch metric values at given timestamp.
      */
 
     public java.util.List<TimestampMetricValuePair> getTimestampMetricValuePairList() {
@@ -56,11 +56,11 @@ public class CloudWatchMetricsDataSummary implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * This is a list of cloudwatch metric values at given timestamp.
+     * This is a list of Amazon CloudWatch metric values at given timestamp.
      * </p>
      * 
      * @param timestampMetricValuePairList
-     *        This is a list of cloudwatch metric values at given timestamp.
+     *        This is a list of Amazon CloudWatch metric values at given timestamp.
      */
 
     public void setTimestampMetricValuePairList(java.util.Collection<TimestampMetricValuePair> timestampMetricValuePairList) {
@@ -74,7 +74,7 @@ public class CloudWatchMetricsDataSummary implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * This is a list of cloudwatch metric values at given timestamp.
+     * This is a list of Amazon CloudWatch metric values at given timestamp.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -83,7 +83,7 @@ public class CloudWatchMetricsDataSummary implements Serializable, Cloneable, St
      * </p>
      * 
      * @param timestampMetricValuePairList
-     *        This is a list of cloudwatch metric values at given timestamp.
+     *        This is a list of Amazon CloudWatch metric values at given timestamp.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -99,11 +99,11 @@ public class CloudWatchMetricsDataSummary implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * This is a list of cloudwatch metric values at given timestamp.
+     * This is a list of Amazon CloudWatch metric values at given timestamp.
      * </p>
      * 
      * @param timestampMetricValuePairList
-     *        This is a list of cloudwatch metric values at given timestamp.
+     *        This is a list of Amazon CloudWatch metric values at given timestamp.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -114,13 +114,13 @@ public class CloudWatchMetricsDataSummary implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * This is enum of the status showing whether the metric value pair list has Partial or Complete data or there was
-     * an error.
+     * This is an enum of the status showing whether the metric value pair list has partial or complete data, or if
+     * there was an error.
      * </p>
      * 
      * @param statusCode
-     *        This is enum of the status showing whether the metric value pair list has Partial or Complete data or
-     *        there was an error.
+     *        This is an enum of the status showing whether the metric value pair list has partial or complete data, or
+     *        if there was an error.
      * @see CloudWatchMetricDataStatusCode
      */
 
@@ -130,12 +130,12 @@ public class CloudWatchMetricsDataSummary implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * This is enum of the status showing whether the metric value pair list has Partial or Complete data or there was
-     * an error.
+     * This is an enum of the status showing whether the metric value pair list has partial or complete data, or if
+     * there was an error.
      * </p>
      * 
-     * @return This is enum of the status showing whether the metric value pair list has Partial or Complete data or
-     *         there was an error.
+     * @return This is an enum of the status showing whether the metric value pair list has partial or complete data, or
+     *         if there was an error.
      * @see CloudWatchMetricDataStatusCode
      */
 
@@ -145,13 +145,13 @@ public class CloudWatchMetricsDataSummary implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * This is enum of the status showing whether the metric value pair list has Partial or Complete data or there was
-     * an error.
+     * This is an enum of the status showing whether the metric value pair list has partial or complete data, or if
+     * there was an error.
      * </p>
      * 
      * @param statusCode
-     *        This is enum of the status showing whether the metric value pair list has Partial or Complete data or
-     *        there was an error.
+     *        This is an enum of the status showing whether the metric value pair list has partial or complete data, or
+     *        if there was an error.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CloudWatchMetricDataStatusCode
      */
@@ -163,13 +163,13 @@ public class CloudWatchMetricsDataSummary implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * This is enum of the status showing whether the metric value pair list has Partial or Complete data or there was
-     * an error.
+     * This is an enum of the status showing whether the metric value pair list has partial or complete data, or if
+     * there was an error.
      * </p>
      * 
      * @param statusCode
-     *        This is enum of the status showing whether the metric value pair list has Partial or Complete data or
-     *        there was an error.
+     *        This is an enum of the status showing whether the metric value pair list has partial or complete data, or
+     *        if there was an error.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CloudWatchMetricDataStatusCode
      */

@@ -64,6 +64,22 @@ public class AssociateVpcCidrBlockRequestMarshaller implements Marshaller<Reques
             request.addParameter("Ipv6CidrBlock", StringUtils.fromString(associateVpcCidrBlockRequest.getIpv6CidrBlock()));
         }
 
+        if (associateVpcCidrBlockRequest.getIpv4IpamPoolId() != null) {
+            request.addParameter("Ipv4IpamPoolId", StringUtils.fromString(associateVpcCidrBlockRequest.getIpv4IpamPoolId()));
+        }
+
+        if (associateVpcCidrBlockRequest.getIpv4NetmaskLength() != null) {
+            request.addParameter("Ipv4NetmaskLength", StringUtils.fromInteger(associateVpcCidrBlockRequest.getIpv4NetmaskLength()));
+        }
+
+        if (associateVpcCidrBlockRequest.getIpv6IpamPoolId() != null) {
+            request.addParameter("Ipv6IpamPoolId", StringUtils.fromString(associateVpcCidrBlockRequest.getIpv6IpamPoolId()));
+        }
+
+        if (associateVpcCidrBlockRequest.getIpv6NetmaskLength() != null) {
+            request.addParameter("Ipv6NetmaskLength", StringUtils.fromInteger(associateVpcCidrBlockRequest.getIpv6NetmaskLength()));
+        }
+
         return request;
     }
 

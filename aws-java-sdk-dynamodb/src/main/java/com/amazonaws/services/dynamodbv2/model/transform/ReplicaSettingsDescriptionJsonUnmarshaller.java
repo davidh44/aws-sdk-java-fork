@@ -85,6 +85,10 @@ public class ReplicaSettingsDescriptionJsonUnmarshaller implements Unmarshaller<
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("ReplicaTableClassSummary", targetDepth)) {
+                    context.nextToken();
+                    replicaSettingsDescription.setReplicaTableClassSummary(TableClassSummaryJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

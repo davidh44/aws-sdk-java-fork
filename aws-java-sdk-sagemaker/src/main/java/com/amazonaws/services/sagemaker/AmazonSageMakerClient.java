@@ -2024,6 +2024,69 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
+     * Starts a recommendation job. You can create either an instance recommendation or load test job.
+     * </p>
+     * 
+     * @param createInferenceRecommendationsJobRequest
+     * @return Result of the CreateInferenceRecommendationsJob operation returned by the service.
+     * @throws ResourceInUseException
+     *         Resource being accessed is in use.
+     * @throws ResourceLimitExceededException
+     *         You have exceeded an Amazon SageMaker resource limit. For example, you might have too many training jobs
+     *         created.
+     * @sample AmazonSageMaker.CreateInferenceRecommendationsJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateInferenceRecommendationsJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateInferenceRecommendationsJobResult createInferenceRecommendationsJob(CreateInferenceRecommendationsJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateInferenceRecommendationsJob(request);
+    }
+
+    @SdkInternalApi
+    final CreateInferenceRecommendationsJobResult executeCreateInferenceRecommendationsJob(
+            CreateInferenceRecommendationsJobRequest createInferenceRecommendationsJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createInferenceRecommendationsJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateInferenceRecommendationsJobRequest> request = null;
+        Response<CreateInferenceRecommendationsJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateInferenceRecommendationsJobRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createInferenceRecommendationsJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateInferenceRecommendationsJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateInferenceRecommendationsJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateInferenceRecommendationsJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a job that uses workers to label the data objects in your input dataset. You can use the labeled data to
      * train machine learning models.
      * </p>
@@ -7441,6 +7504,66 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
+     * Provides the results of the Inference Recommender job. One or more recommendation jobs are returned.
+     * </p>
+     * 
+     * @param describeInferenceRecommendationsJobRequest
+     * @return Result of the DescribeInferenceRecommendationsJob operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.DescribeInferenceRecommendationsJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeInferenceRecommendationsJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeInferenceRecommendationsJobResult describeInferenceRecommendationsJob(DescribeInferenceRecommendationsJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeInferenceRecommendationsJob(request);
+    }
+
+    @SdkInternalApi
+    final DescribeInferenceRecommendationsJobResult executeDescribeInferenceRecommendationsJob(
+            DescribeInferenceRecommendationsJobRequest describeInferenceRecommendationsJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeInferenceRecommendationsJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeInferenceRecommendationsJobRequest> request = null;
+        Response<DescribeInferenceRecommendationsJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeInferenceRecommendationsJobRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeInferenceRecommendationsJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeInferenceRecommendationsJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeInferenceRecommendationsJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeInferenceRecommendationsJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets information about a labeling job.
      * </p>
      * 
@@ -7486,6 +7609,65 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
             HttpResponseHandler<AmazonWebServiceResponse<DescribeLabelingJobResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeLabelingJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Provides a list of properties for the requested lineage group. For more information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/xaccount-lineage-tracking.html"> Cross-Account Lineage
+     * Tracking </a> in the <i>Amazon SageMaker Developer Guide</i>.
+     * </p>
+     * 
+     * @param describeLineageGroupRequest
+     * @return Result of the DescribeLineageGroup operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.DescribeLineageGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeLineageGroup" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DescribeLineageGroupResult describeLineageGroup(DescribeLineageGroupRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeLineageGroup(request);
+    }
+
+    @SdkInternalApi
+    final DescribeLineageGroupResult executeDescribeLineageGroup(DescribeLineageGroupRequest describeLineageGroupRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeLineageGroupRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeLineageGroupRequest> request = null;
+        Response<DescribeLineageGroupResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeLineageGroupRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describeLineageGroupRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeLineageGroup");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeLineageGroupResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeLineageGroupResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -9084,6 +9266,64 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
+     * The resource policy for the lineage group.
+     * </p>
+     * 
+     * @param getLineageGroupPolicyRequest
+     * @return Result of the GetLineageGroupPolicy operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.GetLineageGroupPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/GetLineageGroupPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetLineageGroupPolicyResult getLineageGroupPolicy(GetLineageGroupPolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetLineageGroupPolicy(request);
+    }
+
+    @SdkInternalApi
+    final GetLineageGroupPolicyResult executeGetLineageGroupPolicy(GetLineageGroupPolicyRequest getLineageGroupPolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getLineageGroupPolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetLineageGroupPolicyRequest> request = null;
+        Response<GetLineageGroupPolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetLineageGroupPolicyRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getLineageGroupPolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetLineageGroupPolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetLineageGroupPolicyResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new GetLineageGroupPolicyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets a resource policy that manages access for a model group. For information about resource policies, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_identity-vs-resource.html">Identity-based
      * policies and resource-based policies</a> in the <i>Amazon Web Services Identity and Access Management User
@@ -10663,6 +10903,64 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
+     * Lists recommendation jobs that satisfy various filters.
+     * </p>
+     * 
+     * @param listInferenceRecommendationsJobsRequest
+     * @return Result of the ListInferenceRecommendationsJobs operation returned by the service.
+     * @sample AmazonSageMaker.ListInferenceRecommendationsJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListInferenceRecommendationsJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListInferenceRecommendationsJobsResult listInferenceRecommendationsJobs(ListInferenceRecommendationsJobsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListInferenceRecommendationsJobs(request);
+    }
+
+    @SdkInternalApi
+    final ListInferenceRecommendationsJobsResult executeListInferenceRecommendationsJobs(
+            ListInferenceRecommendationsJobsRequest listInferenceRecommendationsJobsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listInferenceRecommendationsJobsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListInferenceRecommendationsJobsRequest> request = null;
+        Response<ListInferenceRecommendationsJobsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListInferenceRecommendationsJobsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listInferenceRecommendationsJobsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListInferenceRecommendationsJobs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListInferenceRecommendationsJobsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListInferenceRecommendationsJobsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets a list of labeling jobs.
      * </p>
      * 
@@ -10765,6 +11063,63 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
             HttpResponseHandler<AmazonWebServiceResponse<ListLabelingJobsForWorkteamResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new ListLabelingJobsForWorkteamResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * A list of lineage groups shared with your Amazon Web Services account. For more information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/xaccount-lineage-tracking.html"> Cross-Account Lineage
+     * Tracking </a> in the <i>Amazon SageMaker Developer Guide</i>.
+     * </p>
+     * 
+     * @param listLineageGroupsRequest
+     * @return Result of the ListLineageGroups operation returned by the service.
+     * @sample AmazonSageMaker.ListLineageGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListLineageGroups" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListLineageGroupsResult listLineageGroups(ListLineageGroupsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListLineageGroups(request);
+    }
+
+    @SdkInternalApi
+    final ListLineageGroupsResult executeListLineageGroups(ListLineageGroupsRequest listLineageGroupsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listLineageGroupsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListLineageGroupsRequest> request = null;
+        Response<ListLineageGroupsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListLineageGroupsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listLineageGroupsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListLineageGroups");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListLineageGroupsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListLineageGroupsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -10880,6 +11235,61 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
             HttpResponseHandler<AmazonWebServiceResponse<ListModelExplainabilityJobDefinitionsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new ListModelExplainabilityJobDefinitionsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists the domain, framework, task, and model name of standard machine learning models found in common model zoos.
+     * </p>
+     * 
+     * @param listModelMetadataRequest
+     * @return Result of the ListModelMetadata operation returned by the service.
+     * @sample AmazonSageMaker.ListModelMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListModelMetadata" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListModelMetadataResult listModelMetadata(ListModelMetadataRequest request) {
+        request = beforeClientExecution(request);
+        return executeListModelMetadata(request);
+    }
+
+    @SdkInternalApi
+    final ListModelMetadataResult executeListModelMetadata(ListModelMetadataRequest listModelMetadataRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listModelMetadataRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListModelMetadataRequest> request = null;
+        Response<ListModelMetadataResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListModelMetadataRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listModelMetadataRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListModelMetadata");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListModelMetadataResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListModelMetadataResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -12418,6 +12828,65 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
+     * Use this action to inspect your lineage and discover relationships between entities. For more information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/querying-lineage-entities.html"> Querying Lineage
+     * Entities</a> in the <i>Amazon SageMaker Developer Guide</i>.
+     * </p>
+     * 
+     * @param queryLineageRequest
+     * @return Result of the QueryLineage operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.QueryLineage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/QueryLineage" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public QueryLineageResult queryLineage(QueryLineageRequest request) {
+        request = beforeClientExecution(request);
+        return executeQueryLineage(request);
+    }
+
+    @SdkInternalApi
+    final QueryLineageResult executeQueryLineage(QueryLineageRequest queryLineageRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(queryLineageRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<QueryLineageRequest> request = null;
+        Response<QueryLineageResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new QueryLineageRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(queryLineageRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "QueryLineage");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<QueryLineageResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new QueryLineageResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Register devices.
      * </p>
      * 
@@ -13205,6 +13674,66 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
             HttpResponseHandler<AmazonWebServiceResponse<StopHyperParameterTuningJobResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new StopHyperParameterTuningJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Stops an Inference Recommender job.
+     * </p>
+     * 
+     * @param stopInferenceRecommendationsJobRequest
+     * @return Result of the StopInferenceRecommendationsJob operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.StopInferenceRecommendationsJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopInferenceRecommendationsJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StopInferenceRecommendationsJobResult stopInferenceRecommendationsJob(StopInferenceRecommendationsJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeStopInferenceRecommendationsJob(request);
+    }
+
+    @SdkInternalApi
+    final StopInferenceRecommendationsJobResult executeStopInferenceRecommendationsJob(
+            StopInferenceRecommendationsJobRequest stopInferenceRecommendationsJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(stopInferenceRecommendationsJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StopInferenceRecommendationsJobRequest> request = null;
+        Response<StopInferenceRecommendationsJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StopInferenceRecommendationsJobRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(stopInferenceRecommendationsJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StopInferenceRecommendationsJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StopInferenceRecommendationsJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new StopInferenceRecommendationsJobResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

@@ -112,6 +112,19 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private String languageCode;
+    /**
+     * <p>
+     * Configuration information for altering document metadata and content during the document ingestion process when
+     * you create a data source.
+     * </p>
+     * <p>
+     * For more information on how to create, modify and delete document metadata, or make other content alterations
+     * when you ingest documents into Amazon Kendra, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/custom-document-enrichment.html">Customizing document metadata
+     * during the ingestion process</a>.
+     * </p>
+     */
+    private CustomDocumentEnrichmentConfiguration customDocumentEnrichmentConfiguration;
 
     /**
      * <p>
@@ -721,6 +734,85 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Configuration information for altering document metadata and content during the document ingestion process when
+     * you create a data source.
+     * </p>
+     * <p>
+     * For more information on how to create, modify and delete document metadata, or make other content alterations
+     * when you ingest documents into Amazon Kendra, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/custom-document-enrichment.html">Customizing document metadata
+     * during the ingestion process</a>.
+     * </p>
+     * 
+     * @param customDocumentEnrichmentConfiguration
+     *        Configuration information for altering document metadata and content during the document ingestion process
+     *        when you create a data source.</p>
+     *        <p>
+     *        For more information on how to create, modify and delete document metadata, or make other content
+     *        alterations when you ingest documents into Amazon Kendra, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/custom-document-enrichment.html">Customizing document
+     *        metadata during the ingestion process</a>.
+     */
+
+    public void setCustomDocumentEnrichmentConfiguration(CustomDocumentEnrichmentConfiguration customDocumentEnrichmentConfiguration) {
+        this.customDocumentEnrichmentConfiguration = customDocumentEnrichmentConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration information for altering document metadata and content during the document ingestion process when
+     * you create a data source.
+     * </p>
+     * <p>
+     * For more information on how to create, modify and delete document metadata, or make other content alterations
+     * when you ingest documents into Amazon Kendra, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/custom-document-enrichment.html">Customizing document metadata
+     * during the ingestion process</a>.
+     * </p>
+     * 
+     * @return Configuration information for altering document metadata and content during the document ingestion
+     *         process when you create a data source.</p>
+     *         <p>
+     *         For more information on how to create, modify and delete document metadata, or make other content
+     *         alterations when you ingest documents into Amazon Kendra, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/custom-document-enrichment.html">Customizing document
+     *         metadata during the ingestion process</a>.
+     */
+
+    public CustomDocumentEnrichmentConfiguration getCustomDocumentEnrichmentConfiguration() {
+        return this.customDocumentEnrichmentConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration information for altering document metadata and content during the document ingestion process when
+     * you create a data source.
+     * </p>
+     * <p>
+     * For more information on how to create, modify and delete document metadata, or make other content alterations
+     * when you ingest documents into Amazon Kendra, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/custom-document-enrichment.html">Customizing document metadata
+     * during the ingestion process</a>.
+     * </p>
+     * 
+     * @param customDocumentEnrichmentConfiguration
+     *        Configuration information for altering document metadata and content during the document ingestion process
+     *        when you create a data source.</p>
+     *        <p>
+     *        For more information on how to create, modify and delete document metadata, or make other content
+     *        alterations when you ingest documents into Amazon Kendra, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/custom-document-enrichment.html">Customizing document
+     *        metadata during the ingestion process</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDataSourceRequest withCustomDocumentEnrichmentConfiguration(CustomDocumentEnrichmentConfiguration customDocumentEnrichmentConfiguration) {
+        setCustomDocumentEnrichmentConfiguration(customDocumentEnrichmentConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -751,7 +843,9 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
         if (getClientToken() != null)
             sb.append("ClientToken: ").append(getClientToken()).append(",");
         if (getLanguageCode() != null)
-            sb.append("LanguageCode: ").append(getLanguageCode());
+            sb.append("LanguageCode: ").append(getLanguageCode()).append(",");
+        if (getCustomDocumentEnrichmentConfiguration() != null)
+            sb.append("CustomDocumentEnrichmentConfiguration: ").append(getCustomDocumentEnrichmentConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -806,6 +900,11 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getLanguageCode() != null && other.getLanguageCode().equals(this.getLanguageCode()) == false)
             return false;
+        if (other.getCustomDocumentEnrichmentConfiguration() == null ^ this.getCustomDocumentEnrichmentConfiguration() == null)
+            return false;
+        if (other.getCustomDocumentEnrichmentConfiguration() != null
+                && other.getCustomDocumentEnrichmentConfiguration().equals(this.getCustomDocumentEnrichmentConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -824,6 +923,7 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getLanguageCode() == null) ? 0 : getLanguageCode().hashCode());
+        hashCode = prime * hashCode + ((getCustomDocumentEnrichmentConfiguration() == null) ? 0 : getCustomDocumentEnrichmentConfiguration().hashCode());
         return hashCode;
     }
 

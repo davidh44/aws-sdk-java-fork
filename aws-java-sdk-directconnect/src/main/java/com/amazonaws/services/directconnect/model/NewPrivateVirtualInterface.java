@@ -99,6 +99,12 @@ public class NewPrivateVirtualInterface implements Serializable, Cloneable, Stru
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
+    /**
+     * <p>
+     * Indicates whether to enable or disable SiteLink.
+     * </p>
+     */
+    private Boolean enableSiteLink;
 
     /**
      * <p>
@@ -637,6 +643,58 @@ public class NewPrivateVirtualInterface implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * Indicates whether to enable or disable SiteLink.
+     * </p>
+     * 
+     * @param enableSiteLink
+     *        Indicates whether to enable or disable SiteLink.
+     */
+
+    public void setEnableSiteLink(Boolean enableSiteLink) {
+        this.enableSiteLink = enableSiteLink;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to enable or disable SiteLink.
+     * </p>
+     * 
+     * @return Indicates whether to enable or disable SiteLink.
+     */
+
+    public Boolean getEnableSiteLink() {
+        return this.enableSiteLink;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to enable or disable SiteLink.
+     * </p>
+     * 
+     * @param enableSiteLink
+     *        Indicates whether to enable or disable SiteLink.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public NewPrivateVirtualInterface withEnableSiteLink(Boolean enableSiteLink) {
+        setEnableSiteLink(enableSiteLink);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to enable or disable SiteLink.
+     * </p>
+     * 
+     * @return Indicates whether to enable or disable SiteLink.
+     */
+
+    public Boolean isEnableSiteLink() {
+        return this.enableSiteLink;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -669,7 +727,9 @@ public class NewPrivateVirtualInterface implements Serializable, Cloneable, Stru
         if (getDirectConnectGatewayId() != null)
             sb.append("DirectConnectGatewayId: ").append(getDirectConnectGatewayId()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getEnableSiteLink() != null)
+            sb.append("EnableSiteLink: ").append(getEnableSiteLink());
         sb.append("}");
         return sb.toString();
     }
@@ -728,6 +788,10 @@ public class NewPrivateVirtualInterface implements Serializable, Cloneable, Stru
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getEnableSiteLink() == null ^ this.getEnableSiteLink() == null)
+            return false;
+        if (other.getEnableSiteLink() != null && other.getEnableSiteLink().equals(this.getEnableSiteLink()) == false)
+            return false;
         return true;
     }
 
@@ -747,6 +811,7 @@ public class NewPrivateVirtualInterface implements Serializable, Cloneable, Stru
         hashCode = prime * hashCode + ((getVirtualGatewayId() == null) ? 0 : getVirtualGatewayId().hashCode());
         hashCode = prime * hashCode + ((getDirectConnectGatewayId() == null) ? 0 : getDirectConnectGatewayId().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getEnableSiteLink() == null) ? 0 : getEnableSiteLink().hashCode());
         return hashCode;
     }
 

@@ -89,6 +89,31 @@ public class PendingProductionVariantSummary implements Serializable, Cloneable,
      * </p>
      */
     private java.util.List<ProductionVariantStatus> variantStatus;
+    /**
+     * <p>
+     * The serverless configuration for the endpoint.
+     * </p>
+     * <note>
+     * <p>
+     * Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not recommend
+     * using this feature in production environments.
+     * </p>
+     * </note>
+     */
+    private ProductionVariantServerlessConfig currentServerlessConfig;
+    /**
+     * <p>
+     * The serverless configuration requested for this deployment, as specified in the endpoint configuration for the
+     * endpoint.
+     * </p>
+     * <note>
+     * <p>
+     * Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not recommend
+     * using this feature in production environments.
+     * </p>
+     * </note>
+     */
+    private ProductionVariantServerlessConfig desiredServerlessConfig;
 
     /**
      * <p>
@@ -593,6 +618,152 @@ public class PendingProductionVariantSummary implements Serializable, Cloneable,
     }
 
     /**
+     * <p>
+     * The serverless configuration for the endpoint.
+     * </p>
+     * <note>
+     * <p>
+     * Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not recommend
+     * using this feature in production environments.
+     * </p>
+     * </note>
+     * 
+     * @param currentServerlessConfig
+     *        The serverless configuration for the endpoint.</p> <note>
+     *        <p>
+     *        Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not
+     *        recommend using this feature in production environments.
+     *        </p>
+     */
+
+    public void setCurrentServerlessConfig(ProductionVariantServerlessConfig currentServerlessConfig) {
+        this.currentServerlessConfig = currentServerlessConfig;
+    }
+
+    /**
+     * <p>
+     * The serverless configuration for the endpoint.
+     * </p>
+     * <note>
+     * <p>
+     * Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not recommend
+     * using this feature in production environments.
+     * </p>
+     * </note>
+     * 
+     * @return The serverless configuration for the endpoint.</p> <note>
+     *         <p>
+     *         Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not
+     *         recommend using this feature in production environments.
+     *         </p>
+     */
+
+    public ProductionVariantServerlessConfig getCurrentServerlessConfig() {
+        return this.currentServerlessConfig;
+    }
+
+    /**
+     * <p>
+     * The serverless configuration for the endpoint.
+     * </p>
+     * <note>
+     * <p>
+     * Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not recommend
+     * using this feature in production environments.
+     * </p>
+     * </note>
+     * 
+     * @param currentServerlessConfig
+     *        The serverless configuration for the endpoint.</p> <note>
+     *        <p>
+     *        Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not
+     *        recommend using this feature in production environments.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PendingProductionVariantSummary withCurrentServerlessConfig(ProductionVariantServerlessConfig currentServerlessConfig) {
+        setCurrentServerlessConfig(currentServerlessConfig);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The serverless configuration requested for this deployment, as specified in the endpoint configuration for the
+     * endpoint.
+     * </p>
+     * <note>
+     * <p>
+     * Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not recommend
+     * using this feature in production environments.
+     * </p>
+     * </note>
+     * 
+     * @param desiredServerlessConfig
+     *        The serverless configuration requested for this deployment, as specified in the endpoint configuration for
+     *        the endpoint.</p> <note>
+     *        <p>
+     *        Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not
+     *        recommend using this feature in production environments.
+     *        </p>
+     */
+
+    public void setDesiredServerlessConfig(ProductionVariantServerlessConfig desiredServerlessConfig) {
+        this.desiredServerlessConfig = desiredServerlessConfig;
+    }
+
+    /**
+     * <p>
+     * The serverless configuration requested for this deployment, as specified in the endpoint configuration for the
+     * endpoint.
+     * </p>
+     * <note>
+     * <p>
+     * Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not recommend
+     * using this feature in production environments.
+     * </p>
+     * </note>
+     * 
+     * @return The serverless configuration requested for this deployment, as specified in the endpoint configuration
+     *         for the endpoint.</p> <note>
+     *         <p>
+     *         Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not
+     *         recommend using this feature in production environments.
+     *         </p>
+     */
+
+    public ProductionVariantServerlessConfig getDesiredServerlessConfig() {
+        return this.desiredServerlessConfig;
+    }
+
+    /**
+     * <p>
+     * The serverless configuration requested for this deployment, as specified in the endpoint configuration for the
+     * endpoint.
+     * </p>
+     * <note>
+     * <p>
+     * Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not recommend
+     * using this feature in production environments.
+     * </p>
+     * </note>
+     * 
+     * @param desiredServerlessConfig
+     *        The serverless configuration requested for this deployment, as specified in the endpoint configuration for
+     *        the endpoint.</p> <note>
+     *        <p>
+     *        Serverless Inference is in preview release for Amazon SageMaker and is subject to change. We do not
+     *        recommend using this feature in production environments.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PendingProductionVariantSummary withDesiredServerlessConfig(ProductionVariantServerlessConfig desiredServerlessConfig) {
+        setDesiredServerlessConfig(desiredServerlessConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -621,7 +792,11 @@ public class PendingProductionVariantSummary implements Serializable, Cloneable,
         if (getAcceleratorType() != null)
             sb.append("AcceleratorType: ").append(getAcceleratorType()).append(",");
         if (getVariantStatus() != null)
-            sb.append("VariantStatus: ").append(getVariantStatus());
+            sb.append("VariantStatus: ").append(getVariantStatus()).append(",");
+        if (getCurrentServerlessConfig() != null)
+            sb.append("CurrentServerlessConfig: ").append(getCurrentServerlessConfig()).append(",");
+        if (getDesiredServerlessConfig() != null)
+            sb.append("DesiredServerlessConfig: ").append(getDesiredServerlessConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -672,6 +847,14 @@ public class PendingProductionVariantSummary implements Serializable, Cloneable,
             return false;
         if (other.getVariantStatus() != null && other.getVariantStatus().equals(this.getVariantStatus()) == false)
             return false;
+        if (other.getCurrentServerlessConfig() == null ^ this.getCurrentServerlessConfig() == null)
+            return false;
+        if (other.getCurrentServerlessConfig() != null && other.getCurrentServerlessConfig().equals(this.getCurrentServerlessConfig()) == false)
+            return false;
+        if (other.getDesiredServerlessConfig() == null ^ this.getDesiredServerlessConfig() == null)
+            return false;
+        if (other.getDesiredServerlessConfig() != null && other.getDesiredServerlessConfig().equals(this.getDesiredServerlessConfig()) == false)
+            return false;
         return true;
     }
 
@@ -689,6 +872,8 @@ public class PendingProductionVariantSummary implements Serializable, Cloneable,
         hashCode = prime * hashCode + ((getInstanceType() == null) ? 0 : getInstanceType().hashCode());
         hashCode = prime * hashCode + ((getAcceleratorType() == null) ? 0 : getAcceleratorType().hashCode());
         hashCode = prime * hashCode + ((getVariantStatus() == null) ? 0 : getVariantStatus().hashCode());
+        hashCode = prime * hashCode + ((getCurrentServerlessConfig() == null) ? 0 : getCurrentServerlessConfig().hashCode());
+        hashCode = prime * hashCode + ((getDesiredServerlessConfig() == null) ? 0 : getDesiredServerlessConfig().hashCode());
         return hashCode;
     }
 

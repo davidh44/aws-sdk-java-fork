@@ -327,8 +327,8 @@ public class AWSShieldClient extends AmazonWebServiceClient implements AWSShield
      * </p>
      * <p>
      * To use the services of the SRT and make an <code>AssociateDRTLogBucket</code> request, you must be subscribed to
-     * the <a href="https://aws.amazon.com/premiumsupport/business-support/">Business Support plan</a> or the <a
-     * href="https://aws.amazon.com/premiumsupport/enterprise-support/">Enterprise Support plan</a>.
+     * the <a href="https://docs.aws.amazon.com/premiumsupport/business-support/">Business Support plan</a> or the <a
+     * href="https://docs.aws.amazon.com/premiumsupport/enterprise-support/">Enterprise Support plan</a>.
      * </p>
      * 
      * @param associateDRTLogBucketRequest
@@ -418,15 +418,16 @@ public class AWSShieldClient extends AmazonWebServiceClient implements AWSShield
      * <code>RoleArn</code> will replace the existing <code>RoleArn</code>.
      * </p>
      * <p>
-     * Prior to making the <code>AssociateDRTRole</code> request, you must attach the <a href=
+     * Prior to making the <code>AssociateDRTRole</code> request, you must attach the
+     * <code>AWSShieldDRTAccessPolicy</code> managed policy to the role that you'll specify in the request. You can
+     * access this policy in the IAM console at <a href=
      * "https://console.aws.amazon.com/iam/home?#/policies/arn:aws:iam::aws:policy/service-role/AWSShieldDRTAccessPolicy"
-     * >AWSShieldDRTAccessPolicy</a> managed policy to the role you will specify in the request. For more information
-     * see <a
-     * href=" https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html">Attaching and
-     * Detaching IAM Policies</a>. The role must also trust the service principal <code> drt.shield.amazonaws.com</code>
-     * . For more information, see <a
+     * >AWSShieldDRTAccessPolicy</a>. For more information see <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html">Adding and
+     * removing IAM identity permissions</a>. The role must also trust the service principal
+     * <code>drt.shield.amazonaws.com</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html">IAM JSON
-     * Policy Elements: Principal</a>.
+     * policy elements: Principal</a>.
      * </p>
      * <p>
      * The SRT will have access only to your WAF and Shield resources. By submitting this request, you authorize the SRT
@@ -436,12 +437,12 @@ public class AWSShieldClient extends AmazonWebServiceClient implements AWSShield
      * <p>
      * You must have the <code>iam:PassRole</code> permission to make an <code>AssociateDRTRole</code> request. For more
      * information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_passrole.html">Granting a
-     * User Permissions to Pass a Role to an Amazon Web Services Service</a>.
+     * user permissions to pass a role to an Amazon Web Services service</a>.
      * </p>
      * <p>
      * To use the services of the SRT and make an <code>AssociateDRTRole</code> request, you must be subscribed to the
-     * <a href="https://aws.amazon.com/premiumsupport/business-support/">Business Support plan</a> or the <a
-     * href="https://aws.amazon.com/premiumsupport/enterprise-support/">Enterprise Support plan</a>.
+     * <a href="https://docs.aws.amazon.com/premiumsupport/business-support/">Business Support plan</a> or the <a
+     * href="https://docs.aws.amazon.com/premiumsupport/enterprise-support/">Enterprise Support plan</a>.
      * </p>
      * 
      * @param associateDRTRoleRequest
@@ -518,10 +519,10 @@ public class AWSShieldClient extends AmazonWebServiceClient implements AWSShield
      * <p>
      * Adds health-based detection to the Shield Advanced protection for a resource. Shield Advanced health-based
      * detection uses the health of your Amazon Web Services resource to improve responsiveness and accuracy in attack
-     * detection and mitigation.
+     * detection and response.
      * </p>
      * <p>
-     * You define the health check in Route 53 and then associate it with your Shield Advanced protection. For more
+     * You define the health check in Route 53 and then associate it with your Shield Advanced protection. For more
      * information, see <a href=
      * "https://docs.aws.amazon.com/waf/latest/developerguide/ddos-overview.html#ddos-advanced-health-check-option"
      * >Shield Advanced Health-Based Detection</a> in the <i>WAF Developer Guide</i>.
@@ -543,6 +544,9 @@ public class AWSShieldClient extends AmazonWebServiceClient implements AWSShield
      * @throws OptimisticLockException
      *         Exception that indicates that the resource state has been modified by another client. Retrieve the
      *         resource and then retry your request.
+     * @throws InvalidResourceException
+     *         Exception that indicates that the resource is invalid. You might not have access to the resource, or the
+     *         resource might not exist.
      * @sample AWSShield.AssociateHealthCheck
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/AssociateHealthCheck" target="_top">AWS
      *      API Documentation</a>
@@ -683,16 +687,17 @@ public class AWSShieldClient extends AmazonWebServiceClient implements AWSShield
      * <p>
      * Enables Shield Advanced for a specific Amazon Web Services resource. The resource can be an Amazon CloudFront
      * distribution, Elastic Load Balancing load balancer, Global Accelerator accelerator, Elastic IP Address, or an
-     * Amazon Route 53 hosted zone.
+     * Amazon Route 53 hosted zone.
      * </p>
      * <p>
-     * You can add protection to only a single resource with each CreateProtection request. If you want to add
-     * protection to multiple resources at once, use the <a href="https://console.aws.amazon.com/waf/">WAF console</a>.
-     * For more information see <a
+     * You can add protection to only a single resource with each <code>CreateProtection</code> request. You can add
+     * protection to multiple resources at once through the Shield Advanced console at <a
+     * href="https://console.aws.amazon.com/wafv2/shieldv2#/">https://console.aws.amazon.com/wafv2/shieldv2#/</a>. For
+     * more information see <a
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/getting-started-ddos.html">Getting Started with
      * Shield Advanced</a> and <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/configure-new-protection.html">Add Shield Advanced
-     * Protection to more Amazon Web Services Resources</a>.
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/configure-new-protection.html">Adding Shield Advanced
+     * protection to Amazon Web Services resources</a>.
      * </p>
      * 
      * @param createProtectionRequest
@@ -1551,6 +1556,79 @@ public class AWSShieldClient extends AmazonWebServiceClient implements AWSShield
 
     /**
      * <p>
+     * Disable the Shield Advanced automatic application layer DDoS mitigation feature for the resource. This stops
+     * Shield Advanced from creating, verifying, and applying WAF rules for attacks that it detects for the resource.
+     * </p>
+     * 
+     * @param disableApplicationLayerAutomaticResponseRequest
+     * @return Result of the DisableApplicationLayerAutomaticResponse operation returned by the service.
+     * @throws InternalErrorException
+     *         Exception that indicates that a problem occurred with the service infrastructure. You can retry the
+     *         request.
+     * @throws InvalidParameterException
+     *         Exception that indicates that the parameters passed to the API are invalid. If available, this exception
+     *         includes details in additional properties.
+     * @throws ResourceNotFoundException
+     *         Exception indicating the specified resource does not exist. If available, this exception includes details
+     *         in additional properties.
+     * @throws OptimisticLockException
+     *         Exception that indicates that the resource state has been modified by another client. Retrieve the
+     *         resource and then retry your request.
+     * @throws InvalidOperationException
+     *         Exception that indicates that the operation would not cause any change to occur.
+     * @sample AWSShield.DisableApplicationLayerAutomaticResponse
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DisableApplicationLayerAutomaticResponse"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DisableApplicationLayerAutomaticResponseResult disableApplicationLayerAutomaticResponse(DisableApplicationLayerAutomaticResponseRequest request) {
+        request = beforeClientExecution(request);
+        return executeDisableApplicationLayerAutomaticResponse(request);
+    }
+
+    @SdkInternalApi
+    final DisableApplicationLayerAutomaticResponseResult executeDisableApplicationLayerAutomaticResponse(
+            DisableApplicationLayerAutomaticResponseRequest disableApplicationLayerAutomaticResponseRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(disableApplicationLayerAutomaticResponseRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DisableApplicationLayerAutomaticResponseRequest> request = null;
+        Response<DisableApplicationLayerAutomaticResponseResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DisableApplicationLayerAutomaticResponseRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(disableApplicationLayerAutomaticResponseRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Shield");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DisableApplicationLayerAutomaticResponse");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DisableApplicationLayerAutomaticResponseResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new DisableApplicationLayerAutomaticResponseResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Removes authorization from the Shield Response Team (SRT) to notify contacts about escalations to the SRT and to
      * initiate proactive customer support.
      * </p>
@@ -1625,13 +1703,6 @@ public class AWSShieldClient extends AmazonWebServiceClient implements AWSShield
      * <p>
      * Removes the Shield Response Team's (SRT) access to the specified Amazon S3 bucket containing the logs that you
      * shared previously.
-     * </p>
-     * <p>
-     * To make a <code>DisassociateDRTLogBucket</code> request, you must be subscribed to the <a
-     * href="https://aws.amazon.com/premiumsupport/business-support/">Business Support plan</a> or the <a
-     * href="https://aws.amazon.com/premiumsupport/enterprise-support/">Enterprise Support plan</a>. However, if you are
-     * not subscribed to one of these support plans, but had been previously and had granted the SRT access to your
-     * account, you can submit a <code>DisassociateDRTLogBucket</code> request to remove this access.
      * </p>
      * 
      * @param disassociateDRTLogBucketRequest
@@ -1709,13 +1780,6 @@ public class AWSShieldClient extends AmazonWebServiceClient implements AWSShield
      * <p>
      * Removes the Shield Response Team's (SRT) access to your Amazon Web Services account.
      * </p>
-     * <p>
-     * To make a <code>DisassociateDRTRole</code> request, you must be subscribed to the <a
-     * href="https://aws.amazon.com/premiumsupport/business-support/">Business Support plan</a> or the <a
-     * href="https://aws.amazon.com/premiumsupport/enterprise-support/">Enterprise Support plan</a>. However, if you are
-     * not subscribed to one of these support plans, but had been previously and had granted the SRT access to your
-     * account, you can submit a <code>DisassociateDRTRole</code> request to remove this access.
-     * </p>
      * 
      * @param disassociateDRTRoleRequest
      * @return Result of the DisassociateDRTRole operation returned by the service.
@@ -1782,10 +1846,10 @@ public class AWSShieldClient extends AmazonWebServiceClient implements AWSShield
      * <p>
      * Removes health-based detection from the Shield Advanced protection for a resource. Shield Advanced health-based
      * detection uses the health of your Amazon Web Services resource to improve responsiveness and accuracy in attack
-     * detection and mitigation.
+     * detection and response.
      * </p>
      * <p>
-     * You define the health check in Route 53 and then associate or disassociate it with your Shield Advanced
+     * You define the health check in Route 53 and then associate or disassociate it with your Shield Advanced
      * protection. For more information, see <a href=
      * "https://docs.aws.amazon.com/waf/latest/developerguide/ddos-overview.html#ddos-advanced-health-check-option"
      * >Shield Advanced Health-Based Detection</a> in the <i>WAF Developer Guide</i>.
@@ -1805,6 +1869,9 @@ public class AWSShieldClient extends AmazonWebServiceClient implements AWSShield
      * @throws OptimisticLockException
      *         Exception that indicates that the resource state has been modified by another client. Retrieve the
      *         resource and then retry your request.
+     * @throws InvalidResourceException
+     *         Exception that indicates that the resource is invalid. You might not have access to the resource, or the
+     *         resource might not exist.
      * @sample AWSShield.DisassociateHealthCheck
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DisassociateHealthCheck" target="_top">AWS
      *      API Documentation</a>
@@ -1845,6 +1912,110 @@ public class AWSShieldClient extends AmazonWebServiceClient implements AWSShield
             HttpResponseHandler<AmazonWebServiceResponse<DisassociateHealthCheckResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new DisassociateHealthCheckResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Enable the Shield Advanced automatic application layer DDoS mitigation for the resource.
+     * </p>
+     * <note>
+     * <p>
+     * This feature is available for Amazon CloudFront distributions only.
+     * </p>
+     * </note>
+     * <p>
+     * This causes Shield Advanced to create, verify, and apply WAF rules for DDoS attacks that it detects for the
+     * resource. Shield Advanced applies the rules in a Shield rule group inside the web ACL that you've associated with
+     * the resource. For information about how automatic mitigation works and the requirements for using it, see <a
+     * href=
+     * "https://docs.aws.amazon.com/waf/latest/developerguide/ddos-advanced-automatic-app-layer-response.html">Shield
+     * Advanced automatic application layer DDoS mitigation</a>.
+     * </p>
+     * <p>
+     * Don't use this action to make changes to automatic mitigation settings when it's already enabled for a resource.
+     * Instead, use <a>UpdateApplicationLayerAutomaticResponse</a>.
+     * </p>
+     * <p>
+     * To use this feature, you must associate a web ACL with the protected resource. The web ACL must be created using
+     * the latest version of WAF (v2). You can associate the web ACL through the Shield Advanced console at <a
+     * href="https://console.aws.amazon.com/wafv2/shieldv2#/">https://console.aws.amazon.com/wafv2/shieldv2#/</a>. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/getting-started-ddos.html">Getting Started with
+     * Shield Advanced</a>.
+     * </p>
+     * <p>
+     * You can also do this through the WAF console or the WAF API, but you must manage Shield Advanced automatic
+     * mitigation through Shield Advanced. For information about WAF, see <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/">WAF Developer Guide</a>.
+     * </p>
+     * 
+     * @param enableApplicationLayerAutomaticResponseRequest
+     * @return Result of the EnableApplicationLayerAutomaticResponse operation returned by the service.
+     * @throws LimitsExceededException
+     *         Exception that indicates that the operation would exceed a limit.
+     * @throws InternalErrorException
+     *         Exception that indicates that a problem occurred with the service infrastructure. You can retry the
+     *         request.
+     * @throws ResourceNotFoundException
+     *         Exception indicating the specified resource does not exist. If available, this exception includes details
+     *         in additional properties.
+     * @throws InvalidParameterException
+     *         Exception that indicates that the parameters passed to the API are invalid. If available, this exception
+     *         includes details in additional properties.
+     * @throws OptimisticLockException
+     *         Exception that indicates that the resource state has been modified by another client. Retrieve the
+     *         resource and then retry your request.
+     * @throws InvalidOperationException
+     *         Exception that indicates that the operation would not cause any change to occur.
+     * @sample AWSShield.EnableApplicationLayerAutomaticResponse
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/EnableApplicationLayerAutomaticResponse"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public EnableApplicationLayerAutomaticResponseResult enableApplicationLayerAutomaticResponse(EnableApplicationLayerAutomaticResponseRequest request) {
+        request = beforeClientExecution(request);
+        return executeEnableApplicationLayerAutomaticResponse(request);
+    }
+
+    @SdkInternalApi
+    final EnableApplicationLayerAutomaticResponseResult executeEnableApplicationLayerAutomaticResponse(
+            EnableApplicationLayerAutomaticResponseRequest enableApplicationLayerAutomaticResponseRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(enableApplicationLayerAutomaticResponseRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<EnableApplicationLayerAutomaticResponseRequest> request = null;
+        Response<EnableApplicationLayerAutomaticResponseResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new EnableApplicationLayerAutomaticResponseRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(enableApplicationLayerAutomaticResponseRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Shield");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "EnableApplicationLayerAutomaticResponse");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<EnableApplicationLayerAutomaticResponseResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new EnableApplicationLayerAutomaticResponseResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2062,8 +2233,8 @@ public class AWSShieldClient extends AmazonWebServiceClient implements AWSShield
      *         Exception indicating the specified resource does not exist. If available, this exception includes details
      *         in additional properties.
      * @throws InvalidPaginationTokenException
-     *         Exception that indicates that the NextToken specified in the request is invalid. Submit the request using
-     *         the NextToken value that was returned in the response.
+     *         Exception that indicates that the <code>NextToken</code> specified in the request is invalid. Submit the
+     *         request using the <code>NextToken</code> value that was returned in the prior response.
      * @sample AWSShield.ListProtectionGroups
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/ListProtectionGroups" target="_top">AWS
      *      API Documentation</a>
@@ -2126,8 +2297,8 @@ public class AWSShieldClient extends AmazonWebServiceClient implements AWSShield
      *         Exception indicating the specified resource does not exist. If available, this exception includes details
      *         in additional properties.
      * @throws InvalidPaginationTokenException
-     *         Exception that indicates that the NextToken specified in the request is invalid. Submit the request using
-     *         the NextToken value that was returned in the response.
+     *         Exception that indicates that the <code>NextToken</code> specified in the request is invalid. Submit the
+     *         request using the <code>NextToken</code> value that was returned in the prior response.
      * @sample AWSShield.ListProtections
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/ListProtections" target="_top">AWS API
      *      Documentation</a>
@@ -2190,8 +2361,8 @@ public class AWSShieldClient extends AmazonWebServiceClient implements AWSShield
      *         Exception indicating the specified resource does not exist. If available, this exception includes details
      *         in additional properties.
      * @throws InvalidPaginationTokenException
-     *         Exception that indicates that the NextToken specified in the request is invalid. Submit the request using
-     *         the NextToken value that was returned in the response.
+     *         Exception that indicates that the <code>NextToken</code> specified in the request is invalid. Submit the
+     *         request using the <code>NextToken</code> value that was returned in the prior response.
      * @sample AWSShield.ListResourcesInProtectionGroup
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/ListResourcesInProtectionGroup"
      *      target="_top">AWS API Documentation</a>
@@ -2430,6 +2601,79 @@ public class AWSShieldClient extends AmazonWebServiceClient implements AWSShield
 
             HttpResponseHandler<AmazonWebServiceResponse<UntagResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UntagResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates an existing Shield Advanced automatic application layer DDoS mitigation configuration for the specified
+     * resource.
+     * </p>
+     * 
+     * @param updateApplicationLayerAutomaticResponseRequest
+     * @return Result of the UpdateApplicationLayerAutomaticResponse operation returned by the service.
+     * @throws InternalErrorException
+     *         Exception that indicates that a problem occurred with the service infrastructure. You can retry the
+     *         request.
+     * @throws ResourceNotFoundException
+     *         Exception indicating the specified resource does not exist. If available, this exception includes details
+     *         in additional properties.
+     * @throws InvalidParameterException
+     *         Exception that indicates that the parameters passed to the API are invalid. If available, this exception
+     *         includes details in additional properties.
+     * @throws OptimisticLockException
+     *         Exception that indicates that the resource state has been modified by another client. Retrieve the
+     *         resource and then retry your request.
+     * @throws InvalidOperationException
+     *         Exception that indicates that the operation would not cause any change to occur.
+     * @sample AWSShield.UpdateApplicationLayerAutomaticResponse
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/UpdateApplicationLayerAutomaticResponse"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateApplicationLayerAutomaticResponseResult updateApplicationLayerAutomaticResponse(UpdateApplicationLayerAutomaticResponseRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateApplicationLayerAutomaticResponse(request);
+    }
+
+    @SdkInternalApi
+    final UpdateApplicationLayerAutomaticResponseResult executeUpdateApplicationLayerAutomaticResponse(
+            UpdateApplicationLayerAutomaticResponseRequest updateApplicationLayerAutomaticResponseRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateApplicationLayerAutomaticResponseRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateApplicationLayerAutomaticResponseRequest> request = null;
+        Response<UpdateApplicationLayerAutomaticResponseResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateApplicationLayerAutomaticResponseRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateApplicationLayerAutomaticResponseRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Shield");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateApplicationLayerAutomaticResponse");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateApplicationLayerAutomaticResponseResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new UpdateApplicationLayerAutomaticResponseResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

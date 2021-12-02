@@ -28,6 +28,16 @@ public class AbstractAWSkendra implements AWSkendra {
     }
 
     @Override
+    public AssociateEntitiesToExperienceResult associateEntitiesToExperience(AssociateEntitiesToExperienceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public AssociatePersonasToEntitiesResult associatePersonasToEntities(AssociatePersonasToEntitiesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public BatchDeleteDocumentResult batchDeleteDocument(BatchDeleteDocumentRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -53,6 +63,11 @@ public class AbstractAWSkendra implements AWSkendra {
     }
 
     @Override
+    public CreateExperienceResult createExperience(CreateExperienceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateFaqResult createFaq(CreateFaqRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -74,6 +89,11 @@ public class AbstractAWSkendra implements AWSkendra {
 
     @Override
     public DeleteDataSourceResult deleteDataSource(DeleteDataSourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteExperienceResult deleteExperience(DeleteExperienceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -108,6 +128,11 @@ public class AbstractAWSkendra implements AWSkendra {
     }
 
     @Override
+    public DescribeExperienceResult describeExperience(DescribeExperienceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeFaqResult describeFaq(DescribeFaqRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -138,7 +163,22 @@ public class AbstractAWSkendra implements AWSkendra {
     }
 
     @Override
+    public DisassociateEntitiesFromExperienceResult disassociateEntitiesFromExperience(DisassociateEntitiesFromExperienceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DisassociatePersonasFromEntitiesResult disassociatePersonasFromEntities(DisassociatePersonasFromEntitiesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetQuerySuggestionsResult getQuerySuggestions(GetQuerySuggestionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetSnapshotsResult getSnapshots(GetSnapshotsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -149,6 +189,21 @@ public class AbstractAWSkendra implements AWSkendra {
 
     @Override
     public ListDataSourcesResult listDataSources(ListDataSourcesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListEntityPersonasResult listEntityPersonas(ListEntityPersonasRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListExperienceEntitiesResult listExperienceEntities(ListExperienceEntitiesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListExperiencesResult listExperiences(ListExperiencesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -219,6 +274,11 @@ public class AbstractAWSkendra implements AWSkendra {
 
     @Override
     public UpdateDataSourceResult updateDataSource(UpdateDataSourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateExperienceResult updateExperience(UpdateExperienceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

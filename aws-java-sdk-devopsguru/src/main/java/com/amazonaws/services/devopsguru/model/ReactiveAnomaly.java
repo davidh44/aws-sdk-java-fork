@@ -36,7 +36,10 @@ public class ReactiveAnomaly implements Serializable, Cloneable, StructuredPojo 
     private String id;
     /**
      * <p>
-     * The severity of the anomaly.
+     * The severity of the anomaly. The severity of anomalies that generate an insight determine that insight's
+     * severity. For more information, see <a href=
+     * "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     * >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * </p>
      */
     private String severity;
@@ -50,7 +53,7 @@ public class ReactiveAnomaly implements Serializable, Cloneable, StructuredPojo 
     private AnomalyTimeRange anomalyTimeRange;
     /**
      * <p>
-     * A <code>AnomalyReportedTimeRange</code> object that specifies the time range between when the anomaly is opened
+     * An <code>AnomalyReportedTimeRange</code> object that specifies the time range between when the anomaly is opened
      * and the time when it is closed.
      * </p>
      */
@@ -70,6 +73,49 @@ public class ReactiveAnomaly implements Serializable, Cloneable, StructuredPojo 
     private String associatedInsightId;
 
     private ResourceCollection resourceCollection;
+    /**
+     * <p>
+     * The type of the reactive anomaly. It can be one of the following types.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>CAUSAL</code> - the anomaly can cause a new insight.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CONTEXTUAL</code> - the anomaly contains additional information about an insight or its causal anomaly.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private String type;
+    /**
+     * <p>
+     * The name of the reactive anomaly.
+     * </p>
+     */
+    private String name;
+    /**
+     * <p>
+     * A description of the reactive anomaly.
+     * </p>
+     */
+    private String description;
+    /**
+     * <p>
+     * The ID of the causal anomaly that is associated with this reactive anomaly. The ID of a `CAUSAL` anomaly is
+     * always `NULL`.
+     * </p>
+     */
+    private String causalAnomalyId;
+    /**
+     * <p>
+     * The Amazon Web Services resources in which anomalous behavior was detected by DevOps Guru.
+     * </p>
+     */
+    private java.util.List<AnomalyResource> anomalyResources;
 
     /**
      * <p>
@@ -113,11 +159,17 @@ public class ReactiveAnomaly implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The severity of the anomaly.
+     * The severity of the anomaly. The severity of anomalies that generate an insight determine that insight's
+     * severity. For more information, see <a href=
+     * "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     * >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * </p>
      * 
      * @param severity
-     *        The severity of the anomaly.
+     *        The severity of the anomaly. The severity of anomalies that generate an insight determine that insight's
+     *        severity. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     *        >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * @see AnomalySeverity
      */
 
@@ -127,10 +179,16 @@ public class ReactiveAnomaly implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The severity of the anomaly.
+     * The severity of the anomaly. The severity of anomalies that generate an insight determine that insight's
+     * severity. For more information, see <a href=
+     * "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     * >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * </p>
      * 
-     * @return The severity of the anomaly.
+     * @return The severity of the anomaly. The severity of anomalies that generate an insight determine that insight's
+     *         severity. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     *         >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * @see AnomalySeverity
      */
 
@@ -140,11 +198,17 @@ public class ReactiveAnomaly implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The severity of the anomaly.
+     * The severity of the anomaly. The severity of anomalies that generate an insight determine that insight's
+     * severity. For more information, see <a href=
+     * "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     * >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * </p>
      * 
      * @param severity
-     *        The severity of the anomaly.
+     *        The severity of the anomaly. The severity of anomalies that generate an insight determine that insight's
+     *        severity. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     *        >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AnomalySeverity
      */
@@ -156,11 +220,17 @@ public class ReactiveAnomaly implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The severity of the anomaly.
+     * The severity of the anomaly. The severity of anomalies that generate an insight determine that insight's
+     * severity. For more information, see <a href=
+     * "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     * >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * </p>
      * 
      * @param severity
-     *        The severity of the anomaly.
+     *        The severity of the anomaly. The severity of anomalies that generate an insight determine that insight's
+     *        severity. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     *        >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AnomalySeverity
      */
@@ -257,12 +327,12 @@ public class ReactiveAnomaly implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A <code>AnomalyReportedTimeRange</code> object that specifies the time range between when the anomaly is opened
+     * An <code>AnomalyReportedTimeRange</code> object that specifies the time range between when the anomaly is opened
      * and the time when it is closed.
      * </p>
      * 
      * @param anomalyReportedTimeRange
-     *        A <code>AnomalyReportedTimeRange</code> object that specifies the time range between when the anomaly is
+     *        An <code>AnomalyReportedTimeRange</code> object that specifies the time range between when the anomaly is
      *        opened and the time when it is closed.
      */
 
@@ -272,11 +342,11 @@ public class ReactiveAnomaly implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A <code>AnomalyReportedTimeRange</code> object that specifies the time range between when the anomaly is opened
+     * An <code>AnomalyReportedTimeRange</code> object that specifies the time range between when the anomaly is opened
      * and the time when it is closed.
      * </p>
      * 
-     * @return A <code>AnomalyReportedTimeRange</code> object that specifies the time range between when the anomaly is
+     * @return An <code>AnomalyReportedTimeRange</code> object that specifies the time range between when the anomaly is
      *         opened and the time when it is closed.
      */
 
@@ -286,12 +356,12 @@ public class ReactiveAnomaly implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A <code>AnomalyReportedTimeRange</code> object that specifies the time range between when the anomaly is opened
+     * An <code>AnomalyReportedTimeRange</code> object that specifies the time range between when the anomaly is opened
      * and the time when it is closed.
      * </p>
      * 
      * @param anomalyReportedTimeRange
-     *        A <code>AnomalyReportedTimeRange</code> object that specifies the time range between when the anomaly is
+     *        An <code>AnomalyReportedTimeRange</code> object that specifies the time range between when the anomaly is
      *        opened and the time when it is closed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -414,6 +484,357 @@ public class ReactiveAnomaly implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * The type of the reactive anomaly. It can be one of the following types.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>CAUSAL</code> - the anomaly can cause a new insight.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CONTEXTUAL</code> - the anomaly contains additional information about an insight or its causal anomaly.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param type
+     *        The type of the reactive anomaly. It can be one of the following types.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>CAUSAL</code> - the anomaly can cause a new insight.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CONTEXTUAL</code> - the anomaly contains additional information about an insight or its causal
+     *        anomaly.
+     *        </p>
+     *        </li>
+     * @see AnomalyType
+     */
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    /**
+     * <p>
+     * The type of the reactive anomaly. It can be one of the following types.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>CAUSAL</code> - the anomaly can cause a new insight.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CONTEXTUAL</code> - the anomaly contains additional information about an insight or its causal anomaly.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return The type of the reactive anomaly. It can be one of the following types.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>CAUSAL</code> - the anomaly can cause a new insight.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>CONTEXTUAL</code> - the anomaly contains additional information about an insight or its causal
+     *         anomaly.
+     *         </p>
+     *         </li>
+     * @see AnomalyType
+     */
+
+    public String getType() {
+        return this.type;
+    }
+
+    /**
+     * <p>
+     * The type of the reactive anomaly. It can be one of the following types.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>CAUSAL</code> - the anomaly can cause a new insight.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CONTEXTUAL</code> - the anomaly contains additional information about an insight or its causal anomaly.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param type
+     *        The type of the reactive anomaly. It can be one of the following types.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>CAUSAL</code> - the anomaly can cause a new insight.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CONTEXTUAL</code> - the anomaly contains additional information about an insight or its causal
+     *        anomaly.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AnomalyType
+     */
+
+    public ReactiveAnomaly withType(String type) {
+        setType(type);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of the reactive anomaly. It can be one of the following types.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>CAUSAL</code> - the anomaly can cause a new insight.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CONTEXTUAL</code> - the anomaly contains additional information about an insight or its causal anomaly.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param type
+     *        The type of the reactive anomaly. It can be one of the following types.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>CAUSAL</code> - the anomaly can cause a new insight.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CONTEXTUAL</code> - the anomaly contains additional information about an insight or its causal
+     *        anomaly.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AnomalyType
+     */
+
+    public ReactiveAnomaly withType(AnomalyType type) {
+        this.type = type.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the reactive anomaly.
+     * </p>
+     * 
+     * @param name
+     *        The name of the reactive anomaly.
+     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * <p>
+     * The name of the reactive anomaly.
+     * </p>
+     * 
+     * @return The name of the reactive anomaly.
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <p>
+     * The name of the reactive anomaly.
+     * </p>
+     * 
+     * @param name
+     *        The name of the reactive anomaly.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReactiveAnomaly withName(String name) {
+        setName(name);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A description of the reactive anomaly.
+     * </p>
+     * 
+     * @param description
+     *        A description of the reactive anomaly.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * A description of the reactive anomaly.
+     * </p>
+     * 
+     * @return A description of the reactive anomaly.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * A description of the reactive anomaly.
+     * </p>
+     * 
+     * @param description
+     *        A description of the reactive anomaly.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReactiveAnomaly withDescription(String description) {
+        setDescription(description);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ID of the causal anomaly that is associated with this reactive anomaly. The ID of a `CAUSAL` anomaly is
+     * always `NULL`.
+     * </p>
+     * 
+     * @param causalAnomalyId
+     *        The ID of the causal anomaly that is associated with this reactive anomaly. The ID of a `CAUSAL` anomaly
+     *        is always `NULL`.
+     */
+
+    public void setCausalAnomalyId(String causalAnomalyId) {
+        this.causalAnomalyId = causalAnomalyId;
+    }
+
+    /**
+     * <p>
+     * The ID of the causal anomaly that is associated with this reactive anomaly. The ID of a `CAUSAL` anomaly is
+     * always `NULL`.
+     * </p>
+     * 
+     * @return The ID of the causal anomaly that is associated with this reactive anomaly. The ID of a `CAUSAL` anomaly
+     *         is always `NULL`.
+     */
+
+    public String getCausalAnomalyId() {
+        return this.causalAnomalyId;
+    }
+
+    /**
+     * <p>
+     * The ID of the causal anomaly that is associated with this reactive anomaly. The ID of a `CAUSAL` anomaly is
+     * always `NULL`.
+     * </p>
+     * 
+     * @param causalAnomalyId
+     *        The ID of the causal anomaly that is associated with this reactive anomaly. The ID of a `CAUSAL` anomaly
+     *        is always `NULL`.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReactiveAnomaly withCausalAnomalyId(String causalAnomalyId) {
+        setCausalAnomalyId(causalAnomalyId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Web Services resources in which anomalous behavior was detected by DevOps Guru.
+     * </p>
+     * 
+     * @return The Amazon Web Services resources in which anomalous behavior was detected by DevOps Guru.
+     */
+
+    public java.util.List<AnomalyResource> getAnomalyResources() {
+        return anomalyResources;
+    }
+
+    /**
+     * <p>
+     * The Amazon Web Services resources in which anomalous behavior was detected by DevOps Guru.
+     * </p>
+     * 
+     * @param anomalyResources
+     *        The Amazon Web Services resources in which anomalous behavior was detected by DevOps Guru.
+     */
+
+    public void setAnomalyResources(java.util.Collection<AnomalyResource> anomalyResources) {
+        if (anomalyResources == null) {
+            this.anomalyResources = null;
+            return;
+        }
+
+        this.anomalyResources = new java.util.ArrayList<AnomalyResource>(anomalyResources);
+    }
+
+    /**
+     * <p>
+     * The Amazon Web Services resources in which anomalous behavior was detected by DevOps Guru.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAnomalyResources(java.util.Collection)} or {@link #withAnomalyResources(java.util.Collection)} if you
+     * want to override the existing values.
+     * </p>
+     * 
+     * @param anomalyResources
+     *        The Amazon Web Services resources in which anomalous behavior was detected by DevOps Guru.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReactiveAnomaly withAnomalyResources(AnomalyResource... anomalyResources) {
+        if (this.anomalyResources == null) {
+            setAnomalyResources(new java.util.ArrayList<AnomalyResource>(anomalyResources.length));
+        }
+        for (AnomalyResource ele : anomalyResources) {
+            this.anomalyResources.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Web Services resources in which anomalous behavior was detected by DevOps Guru.
+     * </p>
+     * 
+     * @param anomalyResources
+     *        The Amazon Web Services resources in which anomalous behavior was detected by DevOps Guru.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReactiveAnomaly withAnomalyResources(java.util.Collection<AnomalyResource> anomalyResources) {
+        setAnomalyResources(anomalyResources);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -440,7 +861,17 @@ public class ReactiveAnomaly implements Serializable, Cloneable, StructuredPojo 
         if (getAssociatedInsightId() != null)
             sb.append("AssociatedInsightId: ").append(getAssociatedInsightId()).append(",");
         if (getResourceCollection() != null)
-            sb.append("ResourceCollection: ").append(getResourceCollection());
+            sb.append("ResourceCollection: ").append(getResourceCollection()).append(",");
+        if (getType() != null)
+            sb.append("Type: ").append(getType()).append(",");
+        if (getName() != null)
+            sb.append("Name: ").append(getName()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
+        if (getCausalAnomalyId() != null)
+            sb.append("CausalAnomalyId: ").append(getCausalAnomalyId()).append(",");
+        if (getAnomalyResources() != null)
+            sb.append("AnomalyResources: ").append(getAnomalyResources());
         sb.append("}");
         return sb.toString();
     }
@@ -487,6 +918,26 @@ public class ReactiveAnomaly implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getResourceCollection() != null && other.getResourceCollection().equals(this.getResourceCollection()) == false)
             return false;
+        if (other.getType() == null ^ this.getType() == null)
+            return false;
+        if (other.getType() != null && other.getType().equals(this.getType()) == false)
+            return false;
+        if (other.getName() == null ^ this.getName() == null)
+            return false;
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
+        if (other.getCausalAnomalyId() == null ^ this.getCausalAnomalyId() == null)
+            return false;
+        if (other.getCausalAnomalyId() != null && other.getCausalAnomalyId().equals(this.getCausalAnomalyId()) == false)
+            return false;
+        if (other.getAnomalyResources() == null ^ this.getAnomalyResources() == null)
+            return false;
+        if (other.getAnomalyResources() != null && other.getAnomalyResources().equals(this.getAnomalyResources()) == false)
+            return false;
         return true;
     }
 
@@ -503,6 +954,11 @@ public class ReactiveAnomaly implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getSourceDetails() == null) ? 0 : getSourceDetails().hashCode());
         hashCode = prime * hashCode + ((getAssociatedInsightId() == null) ? 0 : getAssociatedInsightId().hashCode());
         hashCode = prime * hashCode + ((getResourceCollection() == null) ? 0 : getResourceCollection().hashCode());
+        hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
+        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getCausalAnomalyId() == null) ? 0 : getCausalAnomalyId().hashCode());
+        hashCode = prime * hashCode + ((getAnomalyResources() == null) ? 0 : getAnomalyResources().hashCode());
         return hashCode;
     }
 

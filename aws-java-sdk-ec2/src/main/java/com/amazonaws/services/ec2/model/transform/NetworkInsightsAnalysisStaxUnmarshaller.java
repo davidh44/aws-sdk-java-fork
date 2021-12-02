@@ -85,6 +85,11 @@ public class NetworkInsightsAnalysisStaxUnmarshaller implements Unmarshaller<Net
                     continue;
                 }
 
+                if (context.testExpression("warningMessage", targetDepth)) {
+                    networkInsightsAnalysis.setWarningMessage(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("networkPathFound", targetDepth)) {
                     networkInsightsAnalysis.setNetworkPathFound(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

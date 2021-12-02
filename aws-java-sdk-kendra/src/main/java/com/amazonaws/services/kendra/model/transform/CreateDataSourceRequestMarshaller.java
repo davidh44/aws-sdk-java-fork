@@ -51,6 +51,8 @@ public class CreateDataSourceRequestMarshaller {
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
     private static final MarshallingInfo<String> LANGUAGECODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LanguageCode").build();
+    private static final MarshallingInfo<StructuredPojo> CUSTOMDOCUMENTENRICHMENTCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomDocumentEnrichmentConfiguration").build();
 
     private static final CreateDataSourceRequestMarshaller instance = new CreateDataSourceRequestMarshaller();
 
@@ -78,6 +80,7 @@ public class CreateDataSourceRequestMarshaller {
             protocolMarshaller.marshall(createDataSourceRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createDataSourceRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(createDataSourceRequest.getLanguageCode(), LANGUAGECODE_BINDING);
+            protocolMarshaller.marshall(createDataSourceRequest.getCustomDocumentEnrichmentConfiguration(), CUSTOMDOCUMENTENRICHMENTCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

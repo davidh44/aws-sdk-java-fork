@@ -328,6 +328,21 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Allocate a CIDR from an IPAM pool. In IPAM, an allocation is a CIDR assignment from an IPAM pool to another
+     * resource or IPAM pool. For more information, see <a href="/vpc/latest/ipam/allocate-cidrs-ipam.html">Allocate
+     * CIDRs</a> in the <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param allocateIpamPoolCidrRequest
+     * @return Result of the AllocateIpamPoolCidr operation returned by the service.
+     * @sample AmazonEC2.AllocateIpamPoolCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AllocateIpamPoolCidr" target="_top">AWS API
+     *      Documentation</a>
+     */
+    AllocateIpamPoolCidrResult allocateIpamPoolCidr(AllocateIpamPoolCidrRequest allocateIpamPoolCidrRequest);
+
+    /**
+     * <p>
      * Applies a security group to the association between the target network and the Client VPN endpoint. This action
      * replaces the existing security groups with the specified security groups.
      * </p>
@@ -1656,6 +1671,65 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Create an IPAM. Amazon VCP IP Address Manager (IPAM) is a VPC feature that you can use to automate your IP
+     * address management workflows including assigning, tracking, troubleshooting, and auditing IP addresses across
+     * Amazon Web Services Regions and accounts throughout your Amazon Web Services Organization.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/create-ipam.html">Create an IPAM</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param createIpamRequest
+     * @return Result of the CreateIpam operation returned by the service.
+     * @sample AmazonEC2.CreateIpam
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateIpam" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateIpamResult createIpam(CreateIpamRequest createIpamRequest);
+
+    /**
+     * <p>
+     * Create an IP address pool for Amazon VPC IP Address Manager (IPAM). In IPAM, a pool is a collection of contiguous
+     * IP addresses CIDRs. Pools enable you to organize your IP addresses according to your routing and security needs.
+     * For example, if you have separate routing and security needs for development and production applications, you can
+     * create a pool for each.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/create-top-ipam.html">Create a top-level pool</a> in the
+     * <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param createIpamPoolRequest
+     * @return Result of the CreateIpamPool operation returned by the service.
+     * @sample AmazonEC2.CreateIpamPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateIpamPool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateIpamPoolResult createIpamPool(CreateIpamPoolRequest createIpamPoolRequest);
+
+    /**
+     * <p>
+     * Create an IPAM scope. In IPAM, a scope is the highest-level container within IPAM. An IPAM contains two default
+     * scopes. Each scope represents the IP space for a single network. The private scope is intended for all private IP
+     * address space. The public scope is intended for all public IP address space. Scopes enable you to reuse IP
+     * addresses across multiple unconnected networks without causing IP address overlap or conflict.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/add-scope-ipam.html">Add a scope</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param createIpamScopeRequest
+     * @return Result of the CreateIpamScope operation returned by the service.
+     * @sample AmazonEC2.CreateIpamScope
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateIpamScope" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateIpamScopeResult createIpamScope(CreateIpamScopeRequest createIpamScopeRequest);
+
+    /**
+     * <p>
      * Creates an ED25519 or 2048-bit RSA key pair with the specified name. Amazon EC2 stores the public key and
      * displays the private key for you to save to a file. The private key is returned as an unencrypted PEM encoded
      * PKCS#1 private key. If a key with the specified name already exists, Amazon EC2 returns an error.
@@ -1840,6 +1914,25 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Creates a Network Access Scope.
+     * </p>
+     * <p>
+     * Amazon Web Services Network Access Analyzer enables cloud networking and cloud operations teams to verify that
+     * their networks on Amazon Web Services conform to their network security and governance objectives. For more
+     * information, see the <a href="https://docs.aws.amazon.com/vpc/latest/network-access-analyzer/">Amazon Web
+     * Services Network Access Analyzer Guide</a>.
+     * </p>
+     * 
+     * @param createNetworkInsightsAccessScopeRequest
+     * @return Result of the CreateNetworkInsightsAccessScope operation returned by the service.
+     * @sample AmazonEC2.CreateNetworkInsightsAccessScope
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateNetworkInsightsAccessScope"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateNetworkInsightsAccessScopeResult createNetworkInsightsAccessScope(CreateNetworkInsightsAccessScopeRequest createNetworkInsightsAccessScopeRequest);
+
+    /**
+     * <p>
      * Creates a path to analyze for reachability.
      * </p>
      * <p>
@@ -1917,6 +2010,23 @@ public interface AmazonEC2 {
      *      Documentation</a>
      */
     CreatePlacementGroupResult createPlacementGroup(CreatePlacementGroupRequest createPlacementGroupRequest);
+
+    /**
+     * <p>
+     * Creates a public IPv4 address pool. A public IPv4 pool is an EC2 IP address pool required for the public IPv4
+     * CIDRs that you own and bring to Amazon Web Services to manage with IPAM. IPv6 addresses you bring to Amazon Web
+     * Services, however, use IPAM pools only. To monitor the status of pool creation, use <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribePublicIpv4Pools.html"
+     * >DescribePublicIpv4Pools</a>.
+     * </p>
+     * 
+     * @param createPublicIpv4PoolRequest
+     * @return Result of the CreatePublicIpv4Pool operation returned by the service.
+     * @sample AmazonEC2.CreatePublicIpv4Pool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreatePublicIpv4Pool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreatePublicIpv4PoolResult createPublicIpv4Pool(CreatePublicIpv4PoolRequest createPublicIpv4PoolRequest);
 
     /**
      * <p>
@@ -3036,6 +3146,77 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Delete an IPAM. Deleting an IPAM removes all monitored data associated with the IPAM including the historical
+     * data for CIDRs.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot delete an IPAM if there are CIDRs provisioned to pools or if there are allocations in the pools within
+     * the IPAM. To deprovision pool CIDRs, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeprovisionIpamPoolCidr.html"
+     * >DeprovisionIpamPoolCidr</a>. To release allocations, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ReleaseIpamPoolAllocation.html"
+     * >ReleaseIpamPoolAllocation</a>.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/delete-ipam.html">Delete an IPAM</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param deleteIpamRequest
+     * @return Result of the DeleteIpam operation returned by the service.
+     * @sample AmazonEC2.DeleteIpam
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteIpam" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteIpamResult deleteIpam(DeleteIpamRequest deleteIpamRequest);
+
+    /**
+     * <p>
+     * Delete an IPAM pool.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot delete an IPAM pool if there are allocations in it or CIDRs provisioned to it. To release allocations,
+     * see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ReleaseIpamPoolAllocation.html">
+     * ReleaseIpamPoolAllocation</a>. To deprovision pool CIDRs, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeprovisionIpamPoolCidr.html"
+     * >DeprovisionIpamPoolCidr</a>.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/delete-pool-ipam.html">Delete a pool</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param deleteIpamPoolRequest
+     * @return Result of the DeleteIpamPool operation returned by the service.
+     * @sample AmazonEC2.DeleteIpamPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteIpamPool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteIpamPoolResult deleteIpamPool(DeleteIpamPoolRequest deleteIpamPoolRequest);
+
+    /**
+     * <p>
+     * Delete the scope for an IPAM. You cannot delete the default scopes.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/delete-scope-ipam.html">Delete a scope</a> in the <i>Amazon
+     * VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param deleteIpamScopeRequest
+     * @return Result of the DeleteIpamScope operation returned by the service.
+     * @sample AmazonEC2.DeleteIpamScope
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteIpamScope" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteIpamScopeResult deleteIpamScope(DeleteIpamScopeRequest deleteIpamScopeRequest);
+
+    /**
+     * <p>
      * Deletes the specified key pair, by removing the public key from Amazon EC2.
      * </p>
      * 
@@ -3160,6 +3341,33 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Deletes the specified Network Access Scope.
+     * </p>
+     * 
+     * @param deleteNetworkInsightsAccessScopeRequest
+     * @return Result of the DeleteNetworkInsightsAccessScope operation returned by the service.
+     * @sample AmazonEC2.DeleteNetworkInsightsAccessScope
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteNetworkInsightsAccessScope"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteNetworkInsightsAccessScopeResult deleteNetworkInsightsAccessScope(DeleteNetworkInsightsAccessScopeRequest deleteNetworkInsightsAccessScopeRequest);
+
+    /**
+     * <p>
+     * Deletes the specified Network Access Scope analysis.
+     * </p>
+     * 
+     * @param deleteNetworkInsightsAccessScopeAnalysisRequest
+     * @return Result of the DeleteNetworkInsightsAccessScopeAnalysis operation returned by the service.
+     * @sample AmazonEC2.DeleteNetworkInsightsAccessScopeAnalysis
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteNetworkInsightsAccessScopeAnalysis"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteNetworkInsightsAccessScopeAnalysisResult deleteNetworkInsightsAccessScopeAnalysis(
+            DeleteNetworkInsightsAccessScopeAnalysisRequest deleteNetworkInsightsAccessScopeAnalysisRequest);
+
+    /**
+     * <p>
      * Deletes the specified network insights analysis.
      * </p>
      * 
@@ -3229,6 +3437,21 @@ public interface AmazonEC2 {
      *      Documentation</a>
      */
     DeletePlacementGroupResult deletePlacementGroup(DeletePlacementGroupRequest deletePlacementGroupRequest);
+
+    /**
+     * <p>
+     * Delete a public IPv4 pool. A public IPv4 pool is an EC2 IP address pool required for the public IPv4 CIDRs that
+     * you own and bring to Amazon Web Services to manage with IPAM. IPv6 addresses you bring to Amazon Web Services,
+     * however, use IPAM pools only.
+     * </p>
+     * 
+     * @param deletePublicIpv4PoolRequest
+     * @return Result of the DeletePublicIpv4Pool operation returned by the service.
+     * @sample AmazonEC2.DeletePublicIpv4Pool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeletePublicIpv4Pool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeletePublicIpv4PoolResult deletePublicIpv4Pool(DeletePublicIpv4PoolRequest deletePublicIpv4PoolRequest);
 
     /**
      * <p>
@@ -3776,6 +3999,35 @@ public interface AmazonEC2 {
      *      Documentation</a>
      */
     DeprovisionByoipCidrResult deprovisionByoipCidr(DeprovisionByoipCidrRequest deprovisionByoipCidrRequest);
+
+    /**
+     * <p>
+     * Deprovision a CIDR provisioned from an IPAM pool. If you deprovision a CIDR from a pool that has a source pool,
+     * the CIDR is recycled back into the source pool. For more information, see <a
+     * href="/vpc/latest/ipam/depro-pool-cidr-ipam.html">Deprovision pool CIDRs</a> in the <i>Amazon VPC IPAM User
+     * Guide</i>.
+     * </p>
+     * 
+     * @param deprovisionIpamPoolCidrRequest
+     * @return Result of the DeprovisionIpamPoolCidr operation returned by the service.
+     * @sample AmazonEC2.DeprovisionIpamPoolCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeprovisionIpamPoolCidr" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeprovisionIpamPoolCidrResult deprovisionIpamPoolCidr(DeprovisionIpamPoolCidrRequest deprovisionIpamPoolCidrRequest);
+
+    /**
+     * <p>
+     * Deprovision a CIDR from a public IPv4 pool.
+     * </p>
+     * 
+     * @param deprovisionPublicIpv4PoolCidrRequest
+     * @return Result of the DeprovisionPublicIpv4PoolCidr operation returned by the service.
+     * @sample AmazonEC2.DeprovisionPublicIpv4PoolCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeprovisionPublicIpv4PoolCidr"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeprovisionPublicIpv4PoolCidrResult deprovisionPublicIpv4PoolCidr(DeprovisionPublicIpv4PoolCidrRequest deprovisionPublicIpv4PoolCidrRequest);
 
     /**
      * <p>
@@ -4910,6 +5162,49 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Get information about your IPAM pools.
+     * </p>
+     * 
+     * @param describeIpamPoolsRequest
+     * @return Result of the DescribeIpamPools operation returned by the service.
+     * @sample AmazonEC2.DescribeIpamPools
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIpamPools" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeIpamPoolsResult describeIpamPools(DescribeIpamPoolsRequest describeIpamPoolsRequest);
+
+    /**
+     * <p>
+     * Get information about your IPAM scopes.
+     * </p>
+     * 
+     * @param describeIpamScopesRequest
+     * @return Result of the DescribeIpamScopes operation returned by the service.
+     * @sample AmazonEC2.DescribeIpamScopes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIpamScopes" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeIpamScopesResult describeIpamScopes(DescribeIpamScopesRequest describeIpamScopesRequest);
+
+    /**
+     * <p>
+     * Get information about your IPAM pools.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param describeIpamsRequest
+     * @return Result of the DescribeIpams operation returned by the service.
+     * @sample AmazonEC2.DescribeIpams
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIpams" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeIpamsResult describeIpams(DescribeIpamsRequest describeIpamsRequest);
+
+    /**
+     * <p>
      * Describes your IPv6 address pools.
      * </p>
      * 
@@ -5135,6 +5430,34 @@ public interface AmazonEC2 {
      * @see #describeNetworkAcls(DescribeNetworkAclsRequest)
      */
     DescribeNetworkAclsResult describeNetworkAcls();
+
+    /**
+     * <p>
+     * Describes the specified Network Access Scope analyses.
+     * </p>
+     * 
+     * @param describeNetworkInsightsAccessScopeAnalysesRequest
+     * @return Result of the DescribeNetworkInsightsAccessScopeAnalyses operation returned by the service.
+     * @sample AmazonEC2.DescribeNetworkInsightsAccessScopeAnalyses
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeNetworkInsightsAccessScopeAnalyses"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeNetworkInsightsAccessScopeAnalysesResult describeNetworkInsightsAccessScopeAnalyses(
+            DescribeNetworkInsightsAccessScopeAnalysesRequest describeNetworkInsightsAccessScopeAnalysesRequest);
+
+    /**
+     * <p>
+     * Describes the specified Network Access Scopes.
+     * </p>
+     * 
+     * @param describeNetworkInsightsAccessScopesRequest
+     * @return Result of the DescribeNetworkInsightsAccessScopes operation returned by the service.
+     * @sample AmazonEC2.DescribeNetworkInsightsAccessScopes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeNetworkInsightsAccessScopes"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeNetworkInsightsAccessScopesResult describeNetworkInsightsAccessScopes(
+            DescribeNetworkInsightsAccessScopesRequest describeNetworkInsightsAccessScopesRequest);
 
     /**
      * <p>
@@ -6651,6 +6974,21 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Disable the IPAM account. For more information, see <a href="/vpc/latest/ipam/enable-integ-ipam.html">Enable
+     * integration with Organizations</a> in the <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param disableIpamOrganizationAdminAccountRequest
+     * @return Result of the DisableIpamOrganizationAdminAccount operation returned by the service.
+     * @sample AmazonEC2.DisableIpamOrganizationAdminAccount
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisableIpamOrganizationAdminAccount"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DisableIpamOrganizationAdminAccountResult disableIpamOrganizationAdminAccount(
+            DisableIpamOrganizationAdminAccountRequest disableIpamOrganizationAdminAccountRequest);
+
+    /**
+     * <p>
      * Disables access to the EC2 serial console of all instances for your account. By default, access to the EC2 serial
      * console is disabled for your account. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configure-access-to-serial-console.html#serial-console-account-access"
@@ -7006,6 +7344,23 @@ public interface AmazonEC2 {
      *      Documentation</a>
      */
     EnableImageDeprecationResult enableImageDeprecation(EnableImageDeprecationRequest enableImageDeprecationRequest);
+
+    /**
+     * <p>
+     * Enable an Organizations member account as the IPAM admin account. You cannot select the Organizations management
+     * account as the IPAM admin account. For more information, see <a
+     * href="/vpc/latest/ipam/enable-integ-ipam.html">Enable integration with Organizations</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param enableIpamOrganizationAdminAccountRequest
+     * @return Result of the EnableIpamOrganizationAdminAccount operation returned by the service.
+     * @sample AmazonEC2.EnableIpamOrganizationAdminAccount
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/EnableIpamOrganizationAdminAccount"
+     *      target="_top">AWS API Documentation</a>
+     */
+    EnableIpamOrganizationAdminAccountResult enableIpamOrganizationAdminAccount(
+            EnableIpamOrganizationAdminAccountRequest enableIpamOrganizationAdminAccountRequest);
 
     /**
      * <p>
@@ -7429,6 +7784,60 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Retrieve historical information about a CIDR within an IPAM scope. For more information, see <a
+     * href="/vpc/latest/ipam/view-history-cidr-ipam.html">View the history of IP addresses</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param getIpamAddressHistoryRequest
+     * @return Result of the GetIpamAddressHistory operation returned by the service.
+     * @sample AmazonEC2.GetIpamAddressHistory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetIpamAddressHistory" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetIpamAddressHistoryResult getIpamAddressHistory(GetIpamAddressHistoryRequest getIpamAddressHistoryRequest);
+
+    /**
+     * <p>
+     * Get a list of all the CIDR allocations in an IPAM pool.
+     * </p>
+     * 
+     * @param getIpamPoolAllocationsRequest
+     * @return Result of the GetIpamPoolAllocations operation returned by the service.
+     * @sample AmazonEC2.GetIpamPoolAllocations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetIpamPoolAllocations" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetIpamPoolAllocationsResult getIpamPoolAllocations(GetIpamPoolAllocationsRequest getIpamPoolAllocationsRequest);
+
+    /**
+     * <p>
+     * Get the CIDRs provisioned to an IPAM pool.
+     * </p>
+     * 
+     * @param getIpamPoolCidrsRequest
+     * @return Result of the GetIpamPoolCidrs operation returned by the service.
+     * @sample AmazonEC2.GetIpamPoolCidrs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetIpamPoolCidrs" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetIpamPoolCidrsResult getIpamPoolCidrs(GetIpamPoolCidrsRequest getIpamPoolCidrsRequest);
+
+    /**
+     * <p>
+     * Get information about the resources in a scope.
+     * </p>
+     * 
+     * @param getIpamResourceCidrsRequest
+     * @return Result of the GetIpamResourceCidrs operation returned by the service.
+     * @sample AmazonEC2.GetIpamResourceCidrs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetIpamResourceCidrs" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetIpamResourceCidrsResult getIpamResourceCidrs(GetIpamResourceCidrsRequest getIpamResourceCidrsRequest);
+
+    /**
+     * <p>
      * Retrieves the configuration data of the specified instance. You can use this data to create a launch template.
      * </p>
      * <p>
@@ -7471,6 +7880,35 @@ public interface AmazonEC2 {
      *      target="_top">AWS API Documentation</a>
      */
     GetManagedPrefixListEntriesResult getManagedPrefixListEntries(GetManagedPrefixListEntriesRequest getManagedPrefixListEntriesRequest);
+
+    /**
+     * <p>
+     * Gets the findings for the specified Network Access Scope analysis.
+     * </p>
+     * 
+     * @param getNetworkInsightsAccessScopeAnalysisFindingsRequest
+     * @return Result of the GetNetworkInsightsAccessScopeAnalysisFindings operation returned by the service.
+     * @sample AmazonEC2.GetNetworkInsightsAccessScopeAnalysisFindings
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetNetworkInsightsAccessScopeAnalysisFindings"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetNetworkInsightsAccessScopeAnalysisFindingsResult getNetworkInsightsAccessScopeAnalysisFindings(
+            GetNetworkInsightsAccessScopeAnalysisFindingsRequest getNetworkInsightsAccessScopeAnalysisFindingsRequest);
+
+    /**
+     * <p>
+     * Gets the content for the specified Network Access Scope.
+     * </p>
+     * 
+     * @param getNetworkInsightsAccessScopeContentRequest
+     * @return Result of the GetNetworkInsightsAccessScopeContent operation returned by the service.
+     * @sample AmazonEC2.GetNetworkInsightsAccessScopeContent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetNetworkInsightsAccessScopeContent"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetNetworkInsightsAccessScopeContentResult getNetworkInsightsAccessScopeContent(
+            GetNetworkInsightsAccessScopeContentRequest getNetworkInsightsAccessScopeContentRequest);
 
     /**
      * <p>
@@ -8312,6 +8750,69 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Modify the configurations of an IPAM.
+     * </p>
+     * 
+     * @param modifyIpamRequest
+     * @return Result of the ModifyIpam operation returned by the service.
+     * @sample AmazonEC2.ModifyIpam
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyIpam" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ModifyIpamResult modifyIpam(ModifyIpamRequest modifyIpamRequest);
+
+    /**
+     * <p>
+     * Modify the configurations of an IPAM pool.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/mod-pool-ipam.html">Modify a pool</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param modifyIpamPoolRequest
+     * @return Result of the ModifyIpamPool operation returned by the service.
+     * @sample AmazonEC2.ModifyIpamPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyIpamPool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ModifyIpamPoolResult modifyIpamPool(ModifyIpamPoolRequest modifyIpamPoolRequest);
+
+    /**
+     * <p>
+     * Modify a resource CIDR. You can use this action to transfer resource CIDRs between scopes and ignore resource
+     * CIDRs that you do not want to manage. If set to false, the resource will not be tracked for overlap, it cannot be
+     * auto-imported into a pool, and it will be removed from any pool it has an allocation in.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/move-resource-ipam.html">Move resource CIDRs between
+     * scopes</a> and <a href="/vpc/latest/ipam/change-monitoring-state-ipam.html">Change the monitoring state of
+     * resource CIDRs</a> in the <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param modifyIpamResourceCidrRequest
+     * @return Result of the ModifyIpamResourceCidr operation returned by the service.
+     * @sample AmazonEC2.ModifyIpamResourceCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyIpamResourceCidr" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ModifyIpamResourceCidrResult modifyIpamResourceCidr(ModifyIpamResourceCidrRequest modifyIpamResourceCidrRequest);
+
+    /**
+     * <p>
+     * Modify an IPAM scope.
+     * </p>
+     * 
+     * @param modifyIpamScopeRequest
+     * @return Result of the ModifyIpamScope operation returned by the service.
+     * @sample AmazonEC2.ModifyIpamScope
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyIpamScope" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ModifyIpamScopeResult modifyIpamScope(ModifyIpamScopeRequest modifyIpamScopeRequest);
+
+    /**
+     * <p>
      * Modifies a launch template. You can specify which version of the launch template to set as the default version.
      * When launching an instance, the default version applies when a launch template version is not specified.
      * </p>
@@ -9001,6 +9502,19 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Move an BYOIP IPv4 CIDR to IPAM from a public IPv4 pool.
+     * </p>
+     * 
+     * @param moveByoipCidrToIpamRequest
+     * @return Result of the MoveByoipCidrToIpam operation returned by the service.
+     * @sample AmazonEC2.MoveByoipCidrToIpam
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/MoveByoipCidrToIpam" target="_top">AWS API
+     *      Documentation</a>
+     */
+    MoveByoipCidrToIpamResult moveByoipCidrToIpam(MoveByoipCidrToIpamRequest moveByoipCidrToIpamRequest);
+
+    /**
+     * <p>
      * Provisions an IPv4 or IPv6 address range for use with your Amazon Web Services resources through bring your own
      * IP addresses (BYOIP) and creates a corresponding address pool. After the address range is provisioned, it is
      * ready to be advertised using <a>AdvertiseByoipCidr</a>.
@@ -9027,6 +9541,41 @@ public interface AmazonEC2 {
      *      Documentation</a>
      */
     ProvisionByoipCidrResult provisionByoipCidr(ProvisionByoipCidrRequest provisionByoipCidrRequest);
+
+    /**
+     * <p>
+     * Provision a CIDR to an IPAM pool. You can use thsi action to provision new CIDRs to a top-level pool or to
+     * transfer a CIDR from a top-level pool to a pool within it.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/prov-cidr-ipam.html">Provision CIDRs to pools</a> in the
+     * <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param provisionIpamPoolCidrRequest
+     * @return Result of the ProvisionIpamPoolCidr operation returned by the service.
+     * @sample AmazonEC2.ProvisionIpamPoolCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ProvisionIpamPoolCidr" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ProvisionIpamPoolCidrResult provisionIpamPoolCidr(ProvisionIpamPoolCidrRequest provisionIpamPoolCidrRequest);
+
+    /**
+     * <p>
+     * Provision a CIDR to a public IPv4 pool.
+     * </p>
+     * <p>
+     * For more information about IPAM, see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in the
+     * <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param provisionPublicIpv4PoolCidrRequest
+     * @return Result of the ProvisionPublicIpv4PoolCidr operation returned by the service.
+     * @sample AmazonEC2.ProvisionPublicIpv4PoolCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ProvisionPublicIpv4PoolCidr"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ProvisionPublicIpv4PoolCidrResult provisionPublicIpv4PoolCidr(ProvisionPublicIpv4PoolCidrRequest provisionPublicIpv4PoolCidrRequest);
 
     /**
      * <p>
@@ -9395,6 +9944,24 @@ public interface AmazonEC2 {
      *      Documentation</a>
      */
     ReleaseHostsResult releaseHosts(ReleaseHostsRequest releaseHostsRequest);
+
+    /**
+     * <p>
+     * Release an allocation within an IPAM pool. You can only use this action to release manual allocations. To remove
+     * an allocation for a resource without deleting the resource, set its monitored state to false using <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyIpamResourceCidr.html"
+     * >ModifyIpamResourceCidr</a>. For more information, see <a
+     * href="/vpc/latest/ipam/release-pool-alloc-ipam.html">Release an allocation</a> in the <i>Amazon VPC IPAM User
+     * Guide</i>.
+     * </p>
+     * 
+     * @param releaseIpamPoolAllocationRequest
+     * @return Result of the ReleaseIpamPoolAllocation operation returned by the service.
+     * @sample AmazonEC2.ReleaseIpamPoolAllocation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ReleaseIpamPoolAllocation" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ReleaseIpamPoolAllocationResult releaseIpamPoolAllocation(ReleaseIpamPoolAllocationRequest releaseIpamPoolAllocationRequest);
 
     /**
      * <p>
@@ -10069,6 +10636,20 @@ public interface AmazonEC2 {
      *      Documentation</a>
      */
     StartInstancesResult startInstances(StartInstancesRequest startInstancesRequest);
+
+    /**
+     * <p>
+     * Starts analyzing the specified Network Access Scope.
+     * </p>
+     * 
+     * @param startNetworkInsightsAccessScopeAnalysisRequest
+     * @return Result of the StartNetworkInsightsAccessScopeAnalysis operation returned by the service.
+     * @sample AmazonEC2.StartNetworkInsightsAccessScopeAnalysis
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/StartNetworkInsightsAccessScopeAnalysis"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartNetworkInsightsAccessScopeAnalysisResult startNetworkInsightsAccessScopeAnalysis(
+            StartNetworkInsightsAccessScopeAnalysisRequest startNetworkInsightsAccessScopeAnalysisRequest);
 
     /**
      * <p>

@@ -27,7 +27,8 @@ public enum BotLocaleStatus {
     Failed("Failed"),
     Deleting("Deleting"),
     NotBuilt("NotBuilt"),
-    Importing("Importing");
+    Importing("Importing"),
+    Processing("Processing");
 
     private String value;
 

@@ -144,6 +144,10 @@ public class TableDescriptionJsonUnmarshaller implements Unmarshaller<TableDescr
                     context.nextToken();
                     tableDescription.setArchivalSummary(ArchivalSummaryJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("TableClassSummary", targetDepth)) {
+                    context.nextToken();
+                    tableDescription.setTableClassSummary(TableClassSummaryJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

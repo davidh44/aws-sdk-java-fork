@@ -131,6 +131,45 @@ public class DescribeModelPackageResult extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private java.util.Map<String, String> customerMetadataProperties;
+    /**
+     * <p>
+     * Represents the drift check baselines that can be used when the model monitor is set using the model package. For
+     * more information, see the topic on <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines-quality-clarify-baseline-lifecycle.html#pipelines-quality-clarify-baseline-drift-detection"
+     * >Drift Detection against Previous Baselines in SageMaker Pipelines</a> in the <i>Amazon SageMaker Developer
+     * Guide</i>.
+     * </p>
+     */
+    private DriftCheckBaselines driftCheckBaselines;
+    /**
+     * <p>
+     * The machine learning domain of the model package you specified. Common machine learning domains include computer
+     * vision and natural language processing.
+     * </p>
+     */
+    private String domain;
+    /**
+     * <p>
+     * The machine learning task you specified that your model package accomplishes. Common machine learning tasks
+     * include object detection and image classification.
+     * </p>
+     */
+    private String task;
+    /**
+     * <p>
+     * The Amazon Simple Storage Service (Amazon S3) path where the sample payload are stored. This path points to a
+     * single gzip compressed tar archive (.tar.gz suffix).
+     * </p>
+     */
+    private String samplePayloadUrl;
+    /**
+     * <p>
+     * An array of additional Inference Specification objects. Each additional Inference Specification specifies
+     * artifacts based on this model package that can be used on inference endpoints. Generally used with SageMaker Neo
+     * to store the compiled artifacts.
+     * </p>
+     */
+    private java.util.List<AdditionalInferenceSpecificationDefinition> additionalInferenceSpecifications;
 
     /**
      * <p>
@@ -969,6 +1008,295 @@ public class DescribeModelPackageResult extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * Represents the drift check baselines that can be used when the model monitor is set using the model package. For
+     * more information, see the topic on <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines-quality-clarify-baseline-lifecycle.html#pipelines-quality-clarify-baseline-drift-detection"
+     * >Drift Detection against Previous Baselines in SageMaker Pipelines</a> in the <i>Amazon SageMaker Developer
+     * Guide</i>.
+     * </p>
+     * 
+     * @param driftCheckBaselines
+     *        Represents the drift check baselines that can be used when the model monitor is set using the model
+     *        package. For more information, see the topic on <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines-quality-clarify-baseline-lifecycle.html#pipelines-quality-clarify-baseline-drift-detection"
+     *        >Drift Detection against Previous Baselines in SageMaker Pipelines</a> in the <i>Amazon SageMaker
+     *        Developer Guide</i>.
+     */
+
+    public void setDriftCheckBaselines(DriftCheckBaselines driftCheckBaselines) {
+        this.driftCheckBaselines = driftCheckBaselines;
+    }
+
+    /**
+     * <p>
+     * Represents the drift check baselines that can be used when the model monitor is set using the model package. For
+     * more information, see the topic on <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines-quality-clarify-baseline-lifecycle.html#pipelines-quality-clarify-baseline-drift-detection"
+     * >Drift Detection against Previous Baselines in SageMaker Pipelines</a> in the <i>Amazon SageMaker Developer
+     * Guide</i>.
+     * </p>
+     * 
+     * @return Represents the drift check baselines that can be used when the model monitor is set using the model
+     *         package. For more information, see the topic on <a href=
+     *         "https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines-quality-clarify-baseline-lifecycle.html#pipelines-quality-clarify-baseline-drift-detection"
+     *         >Drift Detection against Previous Baselines in SageMaker Pipelines</a> in the <i>Amazon SageMaker
+     *         Developer Guide</i>.
+     */
+
+    public DriftCheckBaselines getDriftCheckBaselines() {
+        return this.driftCheckBaselines;
+    }
+
+    /**
+     * <p>
+     * Represents the drift check baselines that can be used when the model monitor is set using the model package. For
+     * more information, see the topic on <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines-quality-clarify-baseline-lifecycle.html#pipelines-quality-clarify-baseline-drift-detection"
+     * >Drift Detection against Previous Baselines in SageMaker Pipelines</a> in the <i>Amazon SageMaker Developer
+     * Guide</i>.
+     * </p>
+     * 
+     * @param driftCheckBaselines
+     *        Represents the drift check baselines that can be used when the model monitor is set using the model
+     *        package. For more information, see the topic on <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines-quality-clarify-baseline-lifecycle.html#pipelines-quality-clarify-baseline-drift-detection"
+     *        >Drift Detection against Previous Baselines in SageMaker Pipelines</a> in the <i>Amazon SageMaker
+     *        Developer Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeModelPackageResult withDriftCheckBaselines(DriftCheckBaselines driftCheckBaselines) {
+        setDriftCheckBaselines(driftCheckBaselines);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The machine learning domain of the model package you specified. Common machine learning domains include computer
+     * vision and natural language processing.
+     * </p>
+     * 
+     * @param domain
+     *        The machine learning domain of the model package you specified. Common machine learning domains include
+     *        computer vision and natural language processing.
+     */
+
+    public void setDomain(String domain) {
+        this.domain = domain;
+    }
+
+    /**
+     * <p>
+     * The machine learning domain of the model package you specified. Common machine learning domains include computer
+     * vision and natural language processing.
+     * </p>
+     * 
+     * @return The machine learning domain of the model package you specified. Common machine learning domains include
+     *         computer vision and natural language processing.
+     */
+
+    public String getDomain() {
+        return this.domain;
+    }
+
+    /**
+     * <p>
+     * The machine learning domain of the model package you specified. Common machine learning domains include computer
+     * vision and natural language processing.
+     * </p>
+     * 
+     * @param domain
+     *        The machine learning domain of the model package you specified. Common machine learning domains include
+     *        computer vision and natural language processing.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeModelPackageResult withDomain(String domain) {
+        setDomain(domain);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The machine learning task you specified that your model package accomplishes. Common machine learning tasks
+     * include object detection and image classification.
+     * </p>
+     * 
+     * @param task
+     *        The machine learning task you specified that your model package accomplishes. Common machine learning
+     *        tasks include object detection and image classification.
+     */
+
+    public void setTask(String task) {
+        this.task = task;
+    }
+
+    /**
+     * <p>
+     * The machine learning task you specified that your model package accomplishes. Common machine learning tasks
+     * include object detection and image classification.
+     * </p>
+     * 
+     * @return The machine learning task you specified that your model package accomplishes. Common machine learning
+     *         tasks include object detection and image classification.
+     */
+
+    public String getTask() {
+        return this.task;
+    }
+
+    /**
+     * <p>
+     * The machine learning task you specified that your model package accomplishes. Common machine learning tasks
+     * include object detection and image classification.
+     * </p>
+     * 
+     * @param task
+     *        The machine learning task you specified that your model package accomplishes. Common machine learning
+     *        tasks include object detection and image classification.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeModelPackageResult withTask(String task) {
+        setTask(task);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Simple Storage Service (Amazon S3) path where the sample payload are stored. This path points to a
+     * single gzip compressed tar archive (.tar.gz suffix).
+     * </p>
+     * 
+     * @param samplePayloadUrl
+     *        The Amazon Simple Storage Service (Amazon S3) path where the sample payload are stored. This path points
+     *        to a single gzip compressed tar archive (.tar.gz suffix).
+     */
+
+    public void setSamplePayloadUrl(String samplePayloadUrl) {
+        this.samplePayloadUrl = samplePayloadUrl;
+    }
+
+    /**
+     * <p>
+     * The Amazon Simple Storage Service (Amazon S3) path where the sample payload are stored. This path points to a
+     * single gzip compressed tar archive (.tar.gz suffix).
+     * </p>
+     * 
+     * @return The Amazon Simple Storage Service (Amazon S3) path where the sample payload are stored. This path points
+     *         to a single gzip compressed tar archive (.tar.gz suffix).
+     */
+
+    public String getSamplePayloadUrl() {
+        return this.samplePayloadUrl;
+    }
+
+    /**
+     * <p>
+     * The Amazon Simple Storage Service (Amazon S3) path where the sample payload are stored. This path points to a
+     * single gzip compressed tar archive (.tar.gz suffix).
+     * </p>
+     * 
+     * @param samplePayloadUrl
+     *        The Amazon Simple Storage Service (Amazon S3) path where the sample payload are stored. This path points
+     *        to a single gzip compressed tar archive (.tar.gz suffix).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeModelPackageResult withSamplePayloadUrl(String samplePayloadUrl) {
+        setSamplePayloadUrl(samplePayloadUrl);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An array of additional Inference Specification objects. Each additional Inference Specification specifies
+     * artifacts based on this model package that can be used on inference endpoints. Generally used with SageMaker Neo
+     * to store the compiled artifacts.
+     * </p>
+     * 
+     * @return An array of additional Inference Specification objects. Each additional Inference Specification specifies
+     *         artifacts based on this model package that can be used on inference endpoints. Generally used with
+     *         SageMaker Neo to store the compiled artifacts.
+     */
+
+    public java.util.List<AdditionalInferenceSpecificationDefinition> getAdditionalInferenceSpecifications() {
+        return additionalInferenceSpecifications;
+    }
+
+    /**
+     * <p>
+     * An array of additional Inference Specification objects. Each additional Inference Specification specifies
+     * artifacts based on this model package that can be used on inference endpoints. Generally used with SageMaker Neo
+     * to store the compiled artifacts.
+     * </p>
+     * 
+     * @param additionalInferenceSpecifications
+     *        An array of additional Inference Specification objects. Each additional Inference Specification specifies
+     *        artifacts based on this model package that can be used on inference endpoints. Generally used with
+     *        SageMaker Neo to store the compiled artifacts.
+     */
+
+    public void setAdditionalInferenceSpecifications(java.util.Collection<AdditionalInferenceSpecificationDefinition> additionalInferenceSpecifications) {
+        if (additionalInferenceSpecifications == null) {
+            this.additionalInferenceSpecifications = null;
+            return;
+        }
+
+        this.additionalInferenceSpecifications = new java.util.ArrayList<AdditionalInferenceSpecificationDefinition>(additionalInferenceSpecifications);
+    }
+
+    /**
+     * <p>
+     * An array of additional Inference Specification objects. Each additional Inference Specification specifies
+     * artifacts based on this model package that can be used on inference endpoints. Generally used with SageMaker Neo
+     * to store the compiled artifacts.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAdditionalInferenceSpecifications(java.util.Collection)} or
+     * {@link #withAdditionalInferenceSpecifications(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param additionalInferenceSpecifications
+     *        An array of additional Inference Specification objects. Each additional Inference Specification specifies
+     *        artifacts based on this model package that can be used on inference endpoints. Generally used with
+     *        SageMaker Neo to store the compiled artifacts.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeModelPackageResult withAdditionalInferenceSpecifications(AdditionalInferenceSpecificationDefinition... additionalInferenceSpecifications) {
+        if (this.additionalInferenceSpecifications == null) {
+            setAdditionalInferenceSpecifications(new java.util.ArrayList<AdditionalInferenceSpecificationDefinition>(additionalInferenceSpecifications.length));
+        }
+        for (AdditionalInferenceSpecificationDefinition ele : additionalInferenceSpecifications) {
+            this.additionalInferenceSpecifications.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * An array of additional Inference Specification objects. Each additional Inference Specification specifies
+     * artifacts based on this model package that can be used on inference endpoints. Generally used with SageMaker Neo
+     * to store the compiled artifacts.
+     * </p>
+     * 
+     * @param additionalInferenceSpecifications
+     *        An array of additional Inference Specification objects. Each additional Inference Specification specifies
+     *        artifacts based on this model package that can be used on inference endpoints. Generally used with
+     *        SageMaker Neo to store the compiled artifacts.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeModelPackageResult withAdditionalInferenceSpecifications(
+            java.util.Collection<AdditionalInferenceSpecificationDefinition> additionalInferenceSpecifications) {
+        setAdditionalInferenceSpecifications(additionalInferenceSpecifications);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1019,7 +1347,17 @@ public class DescribeModelPackageResult extends com.amazonaws.AmazonWebServiceRe
         if (getApprovalDescription() != null)
             sb.append("ApprovalDescription: ").append(getApprovalDescription()).append(",");
         if (getCustomerMetadataProperties() != null)
-            sb.append("CustomerMetadataProperties: ").append(getCustomerMetadataProperties());
+            sb.append("CustomerMetadataProperties: ").append(getCustomerMetadataProperties()).append(",");
+        if (getDriftCheckBaselines() != null)
+            sb.append("DriftCheckBaselines: ").append(getDriftCheckBaselines()).append(",");
+        if (getDomain() != null)
+            sb.append("Domain: ").append(getDomain()).append(",");
+        if (getTask() != null)
+            sb.append("Task: ").append(getTask()).append(",");
+        if (getSamplePayloadUrl() != null)
+            sb.append("SamplePayloadUrl: ").append(getSamplePayloadUrl()).append(",");
+        if (getAdditionalInferenceSpecifications() != null)
+            sb.append("AdditionalInferenceSpecifications: ").append(getAdditionalInferenceSpecifications());
         sb.append("}");
         return sb.toString();
     }
@@ -1114,6 +1452,27 @@ public class DescribeModelPackageResult extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getCustomerMetadataProperties() != null && other.getCustomerMetadataProperties().equals(this.getCustomerMetadataProperties()) == false)
             return false;
+        if (other.getDriftCheckBaselines() == null ^ this.getDriftCheckBaselines() == null)
+            return false;
+        if (other.getDriftCheckBaselines() != null && other.getDriftCheckBaselines().equals(this.getDriftCheckBaselines()) == false)
+            return false;
+        if (other.getDomain() == null ^ this.getDomain() == null)
+            return false;
+        if (other.getDomain() != null && other.getDomain().equals(this.getDomain()) == false)
+            return false;
+        if (other.getTask() == null ^ this.getTask() == null)
+            return false;
+        if (other.getTask() != null && other.getTask().equals(this.getTask()) == false)
+            return false;
+        if (other.getSamplePayloadUrl() == null ^ this.getSamplePayloadUrl() == null)
+            return false;
+        if (other.getSamplePayloadUrl() != null && other.getSamplePayloadUrl().equals(this.getSamplePayloadUrl()) == false)
+            return false;
+        if (other.getAdditionalInferenceSpecifications() == null ^ this.getAdditionalInferenceSpecifications() == null)
+            return false;
+        if (other.getAdditionalInferenceSpecifications() != null
+                && other.getAdditionalInferenceSpecifications().equals(this.getAdditionalInferenceSpecifications()) == false)
+            return false;
         return true;
     }
 
@@ -1142,6 +1501,11 @@ public class DescribeModelPackageResult extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getLastModifiedBy() == null) ? 0 : getLastModifiedBy().hashCode());
         hashCode = prime * hashCode + ((getApprovalDescription() == null) ? 0 : getApprovalDescription().hashCode());
         hashCode = prime * hashCode + ((getCustomerMetadataProperties() == null) ? 0 : getCustomerMetadataProperties().hashCode());
+        hashCode = prime * hashCode + ((getDriftCheckBaselines() == null) ? 0 : getDriftCheckBaselines().hashCode());
+        hashCode = prime * hashCode + ((getDomain() == null) ? 0 : getDomain().hashCode());
+        hashCode = prime * hashCode + ((getTask() == null) ? 0 : getTask().hashCode());
+        hashCode = prime * hashCode + ((getSamplePayloadUrl() == null) ? 0 : getSamplePayloadUrl().hashCode());
+        hashCode = prime * hashCode + ((getAdditionalInferenceSpecifications() == null) ? 0 : getAdditionalInferenceSpecifications().hashCode());
         return hashCode;
     }
 

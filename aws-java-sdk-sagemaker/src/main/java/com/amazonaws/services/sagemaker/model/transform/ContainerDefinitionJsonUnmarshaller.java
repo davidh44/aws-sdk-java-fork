@@ -77,6 +77,10 @@ public class ContainerDefinitionJsonUnmarshaller implements Unmarshaller<Contain
                     context.nextToken();
                     containerDefinition.setModelPackageName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("InferenceSpecificationName", targetDepth)) {
+                    context.nextToken();
+                    containerDefinition.setInferenceSpecificationName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("MultiModelConfig", targetDepth)) {
                     context.nextToken();
                     containerDefinition.setMultiModelConfig(MultiModelConfigJsonUnmarshaller.getInstance().unmarshall(context));

@@ -366,6 +366,21 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     }
 
     @Override
+    public java.util.concurrent.Future<CreateInferenceRecommendationsJobResult> createInferenceRecommendationsJobAsync(
+            CreateInferenceRecommendationsJobRequest request) {
+
+        return createInferenceRecommendationsJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateInferenceRecommendationsJobResult> createInferenceRecommendationsJobAsync(
+            CreateInferenceRecommendationsJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateInferenceRecommendationsJobRequest, CreateInferenceRecommendationsJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateLabelingJobResult> createLabelingJobAsync(CreateLabelingJobRequest request) {
 
         return createLabelingJobAsync(request, null);
@@ -1489,6 +1504,21 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeInferenceRecommendationsJobResult> describeInferenceRecommendationsJobAsync(
+            DescribeInferenceRecommendationsJobRequest request) {
+
+        return describeInferenceRecommendationsJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeInferenceRecommendationsJobResult> describeInferenceRecommendationsJobAsync(
+            DescribeInferenceRecommendationsJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeInferenceRecommendationsJobRequest, DescribeInferenceRecommendationsJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeLabelingJobResult> describeLabelingJobAsync(DescribeLabelingJobRequest request) {
 
         return describeLabelingJobAsync(request, null);
@@ -1497,6 +1527,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     @Override
     public java.util.concurrent.Future<DescribeLabelingJobResult> describeLabelingJobAsync(DescribeLabelingJobRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeLabelingJobRequest, DescribeLabelingJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeLineageGroupResult> describeLineageGroupAsync(DescribeLineageGroupRequest request) {
+
+        return describeLineageGroupAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeLineageGroupResult> describeLineageGroupAsync(DescribeLineageGroupRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeLineageGroupRequest, DescribeLineageGroupResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1860,6 +1903,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     @Override
     public java.util.concurrent.Future<GetDeviceFleetReportResult> getDeviceFleetReportAsync(GetDeviceFleetReportRequest request,
             com.amazonaws.handlers.AsyncHandler<GetDeviceFleetReportRequest, GetDeviceFleetReportResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetLineageGroupPolicyResult> getLineageGroupPolicyAsync(GetLineageGroupPolicyRequest request) {
+
+        return getLineageGroupPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetLineageGroupPolicyResult> getLineageGroupPolicyAsync(GetLineageGroupPolicyRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetLineageGroupPolicyRequest, GetLineageGroupPolicyResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2231,6 +2287,21 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     }
 
     @Override
+    public java.util.concurrent.Future<ListInferenceRecommendationsJobsResult> listInferenceRecommendationsJobsAsync(
+            ListInferenceRecommendationsJobsRequest request) {
+
+        return listInferenceRecommendationsJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListInferenceRecommendationsJobsResult> listInferenceRecommendationsJobsAsync(
+            ListInferenceRecommendationsJobsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListInferenceRecommendationsJobsRequest, ListInferenceRecommendationsJobsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListLabelingJobsResult> listLabelingJobsAsync(ListLabelingJobsRequest request) {
 
         return listLabelingJobsAsync(request, null);
@@ -2252,6 +2323,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     @Override
     public java.util.concurrent.Future<ListLabelingJobsForWorkteamResult> listLabelingJobsForWorkteamAsync(ListLabelingJobsForWorkteamRequest request,
             com.amazonaws.handlers.AsyncHandler<ListLabelingJobsForWorkteamRequest, ListLabelingJobsForWorkteamResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListLineageGroupsResult> listLineageGroupsAsync(ListLineageGroupsRequest request) {
+
+        return listLineageGroupsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListLineageGroupsResult> listLineageGroupsAsync(ListLineageGroupsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListLineageGroupsRequest, ListLineageGroupsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2280,6 +2364,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     public java.util.concurrent.Future<ListModelExplainabilityJobDefinitionsResult> listModelExplainabilityJobDefinitionsAsync(
             ListModelExplainabilityJobDefinitionsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListModelExplainabilityJobDefinitionsRequest, ListModelExplainabilityJobDefinitionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListModelMetadataResult> listModelMetadataAsync(ListModelMetadataRequest request) {
+
+        return listModelMetadataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListModelMetadataResult> listModelMetadataAsync(ListModelMetadataRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListModelMetadataRequest, ListModelMetadataResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2629,6 +2726,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     }
 
     @Override
+    public java.util.concurrent.Future<QueryLineageResult> queryLineageAsync(QueryLineageRequest request) {
+
+        return queryLineageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<QueryLineageResult> queryLineageAsync(QueryLineageRequest request,
+            com.amazonaws.handlers.AsyncHandler<QueryLineageRequest, QueryLineageResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<RegisterDevicesResult> registerDevicesAsync(RegisterDevicesRequest request) {
 
         return registerDevicesAsync(request, null);
@@ -2797,6 +2907,21 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     @Override
     public java.util.concurrent.Future<StopHyperParameterTuningJobResult> stopHyperParameterTuningJobAsync(StopHyperParameterTuningJobRequest request,
             com.amazonaws.handlers.AsyncHandler<StopHyperParameterTuningJobRequest, StopHyperParameterTuningJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopInferenceRecommendationsJobResult> stopInferenceRecommendationsJobAsync(
+            StopInferenceRecommendationsJobRequest request) {
+
+        return stopInferenceRecommendationsJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopInferenceRecommendationsJobResult> stopInferenceRecommendationsJobAsync(
+            StopInferenceRecommendationsJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<StopInferenceRecommendationsJobRequest, StopInferenceRecommendationsJobResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

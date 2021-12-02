@@ -42,7 +42,9 @@ public class ProactiveInsight implements Serializable, Cloneable, StructuredPojo
     private String name;
     /**
      * <p>
-     * The severity of the proactive insight.
+     * The severity of the insight. For more information, see <a href=
+     * "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     * >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * </p>
      */
     private String severity;
@@ -148,11 +150,15 @@ public class ProactiveInsight implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The severity of the proactive insight.
+     * The severity of the insight. For more information, see <a href=
+     * "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     * >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * </p>
      * 
      * @param severity
-     *        The severity of the proactive insight.
+     *        The severity of the insight. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     *        >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * @see InsightSeverity
      */
 
@@ -162,10 +168,14 @@ public class ProactiveInsight implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The severity of the proactive insight.
+     * The severity of the insight. For more information, see <a href=
+     * "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     * >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * </p>
      * 
-     * @return The severity of the proactive insight.
+     * @return The severity of the insight. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     *         >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * @see InsightSeverity
      */
 
@@ -175,11 +185,15 @@ public class ProactiveInsight implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The severity of the proactive insight.
+     * The severity of the insight. For more information, see <a href=
+     * "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     * >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * </p>
      * 
      * @param severity
-     *        The severity of the proactive insight.
+     *        The severity of the insight. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     *        >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InsightSeverity
      */
@@ -191,11 +205,15 @@ public class ProactiveInsight implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The severity of the proactive insight.
+     * The severity of the insight. For more information, see <a href=
+     * "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     * >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * </p>
      * 
      * @param severity
-     *        The severity of the proactive insight.
+     *        The severity of the insight. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities"
+     *        >Understanding insight severities</a> in the <i>Amazon DevOps Guru User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InsightSeverity
      */

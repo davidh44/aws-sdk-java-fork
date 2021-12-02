@@ -63,6 +63,8 @@ public class TrialComponentMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MetadataProperties").build();
     private static final MarshallingInfo<StructuredPojo> SOURCEDETAIL_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SourceDetail").build();
+    private static final MarshallingInfo<String> LINEAGEGROUPARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LineageGroupArn").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
     private static final MarshallingInfo<List> PARENTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
@@ -101,6 +103,7 @@ public class TrialComponentMarshaller {
             protocolMarshaller.marshall(trialComponent.getMetrics(), METRICS_BINDING);
             protocolMarshaller.marshall(trialComponent.getMetadataProperties(), METADATAPROPERTIES_BINDING);
             protocolMarshaller.marshall(trialComponent.getSourceDetail(), SOURCEDETAIL_BINDING);
+            protocolMarshaller.marshall(trialComponent.getLineageGroupArn(), LINEAGEGROUPARN_BINDING);
             protocolMarshaller.marshall(trialComponent.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(trialComponent.getParents(), PARENTS_BINDING);
         } catch (Exception e) {

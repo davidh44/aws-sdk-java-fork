@@ -53,6 +53,13 @@ public class CostEstimationResourceCollectionFilterJsonUnmarshaller implements U
                     costEstimationResourceCollectionFilter.setCloudFormation(CloudFormationCostEstimationResourceCollectionFilterJsonUnmarshaller.getInstance()
                             .unmarshall(context));
                 }
+                if (context.testExpression("Tags", targetDepth)) {
+                    context.nextToken();
+                    costEstimationResourceCollectionFilter.setTags(new ListUnmarshaller<TagCostEstimationResourceCollectionFilter>(
+                            TagCostEstimationResourceCollectionFilterJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

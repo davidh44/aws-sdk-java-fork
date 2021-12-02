@@ -124,6 +124,11 @@ public class AbstractAWSShield implements AWSShield {
     }
 
     @Override
+    public DisableApplicationLayerAutomaticResponseResult disableApplicationLayerAutomaticResponse(DisableApplicationLayerAutomaticResponseRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DisableProactiveEngagementResult disableProactiveEngagement(DisableProactiveEngagementRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -140,6 +145,11 @@ public class AbstractAWSShield implements AWSShield {
 
     @Override
     public DisassociateHealthCheckResult disassociateHealthCheck(DisassociateHealthCheckRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public EnableApplicationLayerAutomaticResponseResult enableApplicationLayerAutomaticResponse(EnableApplicationLayerAutomaticResponseRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -185,6 +195,11 @@ public class AbstractAWSShield implements AWSShield {
 
     @Override
     public UntagResourceResult untagResource(UntagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateApplicationLayerAutomaticResponseResult updateApplicationLayerAutomaticResponse(UpdateApplicationLayerAutomaticResponseRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

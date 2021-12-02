@@ -80,6 +80,28 @@ public class ReactiveAnomalyJsonUnmarshaller implements Unmarshaller<ReactiveAno
                     context.nextToken();
                     reactiveAnomaly.setResourceCollection(ResourceCollectionJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("Type", targetDepth)) {
+                    context.nextToken();
+                    reactiveAnomaly.setType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Name", targetDepth)) {
+                    context.nextToken();
+                    reactiveAnomaly.setName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Description", targetDepth)) {
+                    context.nextToken();
+                    reactiveAnomaly.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("CausalAnomalyId", targetDepth)) {
+                    context.nextToken();
+                    reactiveAnomaly.setCausalAnomalyId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("AnomalyResources", targetDepth)) {
+                    context.nextToken();
+                    reactiveAnomaly.setAnomalyResources(new ListUnmarshaller<AnomalyResource>(AnomalyResourceJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

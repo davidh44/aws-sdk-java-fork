@@ -36,6 +36,8 @@ public class UpdateReplicationGroupMemberActionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ProvisionedThroughputOverride").build();
     private static final MarshallingInfo<List> GLOBALSECONDARYINDEXES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("GlobalSecondaryIndexes").build();
+    private static final MarshallingInfo<String> TABLECLASSOVERRIDE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TableClassOverride").build();
 
     private static final UpdateReplicationGroupMemberActionMarshaller instance = new UpdateReplicationGroupMemberActionMarshaller();
 
@@ -57,6 +59,7 @@ public class UpdateReplicationGroupMemberActionMarshaller {
             protocolMarshaller.marshall(updateReplicationGroupMemberAction.getKMSMasterKeyId(), KMSMASTERKEYID_BINDING);
             protocolMarshaller.marshall(updateReplicationGroupMemberAction.getProvisionedThroughputOverride(), PROVISIONEDTHROUGHPUTOVERRIDE_BINDING);
             protocolMarshaller.marshall(updateReplicationGroupMemberAction.getGlobalSecondaryIndexes(), GLOBALSECONDARYINDEXES_BINDING);
+            protocolMarshaller.marshall(updateReplicationGroupMemberAction.getTableClassOverride(), TABLECLASSOVERRIDE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

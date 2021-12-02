@@ -19,18 +19,19 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides the configuration information to fetch access levels of groups and users from an AWS Single Sign-On identity
- * source. This is useful for setting up user context filtering, where Amazon Kendra filters search results for
- * different users based on their group's access to documents. You can also map your users to their groups for user
- * context filtering using the <a
- * href="https://docs.aws.amazon.com/latest/dg/API_PutPrincipalMapping.html">PutPrincipalMapping operation</a>.
+ * Provides the configuration information to fetch access levels of groups and users from an Amazon Web Services Single
+ * Sign On identity source. This is useful for setting up user context filtering, where Amazon Kendra filters search
+ * results for different users based on their group's access to documents. You can also map your users to their groups
+ * for user context filtering using the <a
+ * href="https://docs.aws.amazon.com/kendra/latest/dg/API_PutPrincipalMapping.html">PutPrincipalMapping operation</a>.
  * </p>
  * <p>
- * To set up an AWS SSO identity source in the console to use with Amazon Kendra, see <a
- * href="https://docs.aws.amazon.com/kendra/latest/dg/getting-started-aws-sso.html">Getting started with an AWS SSO
- * identity source</a>. You must also grant the required permissions to use AWS SSO with Amazon Kendra. For more
- * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html#iam-roles-aws-sso">IAM roles
- * for AWS Single Sign-On</a>.
+ * To set up an Amazon Web Services SSO identity source in the console to use with Amazon Kendra, see <a
+ * href="https://docs.aws.amazon.com/kendra/latest/dg/getting-started-aws-sso.html">Getting started with an Amazon Web
+ * Services SSO identity source</a>. You must also grant the required permissions to use Amazon Web Services SSO with
+ * Amazon Kendra. For more information, see <a
+ * href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html#iam-roles-aws-sso">IAM roles for Amazon Web
+ * Services SSO</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/UserGroupResolutionConfiguration"
@@ -41,24 +42,24 @@ public class UserGroupResolutionConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * The identity store provider (mode) you want to use to fetch access levels of groups and users. AWS Single Sign-On
-     * is currently the only available mode. Your users and groups must exist in an AWS SSO identity source in order to
-     * use this mode.
+     * The identity store provider (mode) you want to use to fetch access levels of groups and users. Amazon Web
+     * Services Single Sign On is currently the only available mode. Your users and groups must exist in an Amazon Web
+     * Services SSO identity source in order to use this mode.
      * </p>
      */
     private String userGroupResolutionMode;
 
     /**
      * <p>
-     * The identity store provider (mode) you want to use to fetch access levels of groups and users. AWS Single Sign-On
-     * is currently the only available mode. Your users and groups must exist in an AWS SSO identity source in order to
-     * use this mode.
+     * The identity store provider (mode) you want to use to fetch access levels of groups and users. Amazon Web
+     * Services Single Sign On is currently the only available mode. Your users and groups must exist in an Amazon Web
+     * Services SSO identity source in order to use this mode.
      * </p>
      * 
      * @param userGroupResolutionMode
-     *        The identity store provider (mode) you want to use to fetch access levels of groups and users. AWS Single
-     *        Sign-On is currently the only available mode. Your users and groups must exist in an AWS SSO identity
-     *        source in order to use this mode.
+     *        The identity store provider (mode) you want to use to fetch access levels of groups and users. Amazon Web
+     *        Services Single Sign On is currently the only available mode. Your users and groups must exist in an
+     *        Amazon Web Services SSO identity source in order to use this mode.
      * @see UserGroupResolutionMode
      */
 
@@ -68,14 +69,14 @@ public class UserGroupResolutionConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * The identity store provider (mode) you want to use to fetch access levels of groups and users. AWS Single Sign-On
-     * is currently the only available mode. Your users and groups must exist in an AWS SSO identity source in order to
-     * use this mode.
+     * The identity store provider (mode) you want to use to fetch access levels of groups and users. Amazon Web
+     * Services Single Sign On is currently the only available mode. Your users and groups must exist in an Amazon Web
+     * Services SSO identity source in order to use this mode.
      * </p>
      * 
-     * @return The identity store provider (mode) you want to use to fetch access levels of groups and users. AWS Single
-     *         Sign-On is currently the only available mode. Your users and groups must exist in an AWS SSO identity
-     *         source in order to use this mode.
+     * @return The identity store provider (mode) you want to use to fetch access levels of groups and users. Amazon Web
+     *         Services Single Sign On is currently the only available mode. Your users and groups must exist in an
+     *         Amazon Web Services SSO identity source in order to use this mode.
      * @see UserGroupResolutionMode
      */
 
@@ -85,15 +86,15 @@ public class UserGroupResolutionConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * The identity store provider (mode) you want to use to fetch access levels of groups and users. AWS Single Sign-On
-     * is currently the only available mode. Your users and groups must exist in an AWS SSO identity source in order to
-     * use this mode.
+     * The identity store provider (mode) you want to use to fetch access levels of groups and users. Amazon Web
+     * Services Single Sign On is currently the only available mode. Your users and groups must exist in an Amazon Web
+     * Services SSO identity source in order to use this mode.
      * </p>
      * 
      * @param userGroupResolutionMode
-     *        The identity store provider (mode) you want to use to fetch access levels of groups and users. AWS Single
-     *        Sign-On is currently the only available mode. Your users and groups must exist in an AWS SSO identity
-     *        source in order to use this mode.
+     *        The identity store provider (mode) you want to use to fetch access levels of groups and users. Amazon Web
+     *        Services Single Sign On is currently the only available mode. Your users and groups must exist in an
+     *        Amazon Web Services SSO identity source in order to use this mode.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see UserGroupResolutionMode
      */
@@ -105,15 +106,15 @@ public class UserGroupResolutionConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * The identity store provider (mode) you want to use to fetch access levels of groups and users. AWS Single Sign-On
-     * is currently the only available mode. Your users and groups must exist in an AWS SSO identity source in order to
-     * use this mode.
+     * The identity store provider (mode) you want to use to fetch access levels of groups and users. Amazon Web
+     * Services Single Sign On is currently the only available mode. Your users and groups must exist in an Amazon Web
+     * Services SSO identity source in order to use this mode.
      * </p>
      * 
      * @param userGroupResolutionMode
-     *        The identity store provider (mode) you want to use to fetch access levels of groups and users. AWS Single
-     *        Sign-On is currently the only available mode. Your users and groups must exist in an AWS SSO identity
-     *        source in order to use this mode.
+     *        The identity store provider (mode) you want to use to fetch access levels of groups and users. Amazon Web
+     *        Services Single Sign On is currently the only available mode. Your users and groups must exist in an
+     *        Amazon Web Services SSO identity source in order to use this mode.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see UserGroupResolutionMode
      */

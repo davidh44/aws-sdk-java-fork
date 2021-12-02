@@ -31,6 +31,10 @@ public class UpdateVirtualInterfaceAttributesRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("virtualInterfaceId").build();
     private static final MarshallingInfo<Integer> MTU_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("mtu").build();
+    private static final MarshallingInfo<Boolean> ENABLESITELINK_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("enableSiteLink").build();
+    private static final MarshallingInfo<String> VIRTUALINTERFACENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("virtualInterfaceName").build();
 
     private static final UpdateVirtualInterfaceAttributesRequestMarshaller instance = new UpdateVirtualInterfaceAttributesRequestMarshaller();
 
@@ -50,6 +54,8 @@ public class UpdateVirtualInterfaceAttributesRequestMarshaller {
         try {
             protocolMarshaller.marshall(updateVirtualInterfaceAttributesRequest.getVirtualInterfaceId(), VIRTUALINTERFACEID_BINDING);
             protocolMarshaller.marshall(updateVirtualInterfaceAttributesRequest.getMtu(), MTU_BINDING);
+            protocolMarshaller.marshall(updateVirtualInterfaceAttributesRequest.getEnableSiteLink(), ENABLESITELINK_BINDING);
+            protocolMarshaller.marshall(updateVirtualInterfaceAttributesRequest.getVirtualInterfaceName(), VIRTUALINTERFACENAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -34,6 +34,8 @@ public class BatchPutDocumentRequestMarshaller {
             .marshallLocationName("RoleArn").build();
     private static final MarshallingInfo<List> DOCUMENTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Documents").build();
+    private static final MarshallingInfo<StructuredPojo> CUSTOMDOCUMENTENRICHMENTCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomDocumentEnrichmentConfiguration").build();
 
     private static final BatchPutDocumentRequestMarshaller instance = new BatchPutDocumentRequestMarshaller();
 
@@ -54,6 +56,7 @@ public class BatchPutDocumentRequestMarshaller {
             protocolMarshaller.marshall(batchPutDocumentRequest.getIndexId(), INDEXID_BINDING);
             protocolMarshaller.marshall(batchPutDocumentRequest.getRoleArn(), ROLEARN_BINDING);
             protocolMarshaller.marshall(batchPutDocumentRequest.getDocuments(), DOCUMENTS_BINDING);
+            protocolMarshaller.marshall(batchPutDocumentRequest.getCustomDocumentEnrichmentConfiguration(), CUSTOMDOCUMENTENRICHMENTCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

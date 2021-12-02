@@ -34,8 +34,8 @@ public class DescribeOrganizationResourceCollectionHealthRequestProtocolMarshall
         Marshaller<Request<DescribeOrganizationResourceCollectionHealthRequest>, DescribeOrganizationResourceCollectionHealthRequest> {
 
     private static final OperationInfo SDK_OPERATION_BINDING = OperationInfo.builder().protocol(Protocol.REST_JSON)
-            .requestUri("/organization/health/resource-collection/").httpMethodName(HttpMethodName.POST).hasExplicitPayloadMember(false)
-            .hasPayloadMembers(true).serviceName("AmazonDevOpsGuru").build();
+            .requestUri("/organization/health/resource-collection").httpMethodName(HttpMethodName.POST).hasExplicitPayloadMember(false).hasPayloadMembers(true)
+            .serviceName("AmazonDevOpsGuru").build();
 
     private final com.amazonaws.protocol.json.SdkJsonProtocolFactory protocolFactory;
 

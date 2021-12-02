@@ -105,6 +105,8 @@ public class ReplicaSettingsDescription implements Serializable, Cloneable, Stru
      */
     private java.util.List<ReplicaGlobalSecondaryIndexSettingsDescription> replicaGlobalSecondaryIndexSettings;
 
+    private TableClassSummary replicaTableClassSummary;
+
     /**
      * <p>
      * The Region name of the replica.
@@ -689,6 +691,32 @@ public class ReplicaSettingsDescription implements Serializable, Cloneable, Stru
     }
 
     /**
+     * @param replicaTableClassSummary
+     */
+
+    public void setReplicaTableClassSummary(TableClassSummary replicaTableClassSummary) {
+        this.replicaTableClassSummary = replicaTableClassSummary;
+    }
+
+    /**
+     * @return
+     */
+
+    public TableClassSummary getReplicaTableClassSummary() {
+        return this.replicaTableClassSummary;
+    }
+
+    /**
+     * @param replicaTableClassSummary
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReplicaSettingsDescription withReplicaTableClassSummary(TableClassSummary replicaTableClassSummary) {
+        setReplicaTableClassSummary(replicaTableClassSummary);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -715,7 +743,9 @@ public class ReplicaSettingsDescription implements Serializable, Cloneable, Stru
         if (getReplicaProvisionedWriteCapacityAutoScalingSettings() != null)
             sb.append("ReplicaProvisionedWriteCapacityAutoScalingSettings: ").append(getReplicaProvisionedWriteCapacityAutoScalingSettings()).append(",");
         if (getReplicaGlobalSecondaryIndexSettings() != null)
-            sb.append("ReplicaGlobalSecondaryIndexSettings: ").append(getReplicaGlobalSecondaryIndexSettings());
+            sb.append("ReplicaGlobalSecondaryIndexSettings: ").append(getReplicaGlobalSecondaryIndexSettings()).append(",");
+        if (getReplicaTableClassSummary() != null)
+            sb.append("ReplicaTableClassSummary: ").append(getReplicaTableClassSummary());
         sb.append("}");
         return sb.toString();
     }
@@ -767,6 +797,10 @@ public class ReplicaSettingsDescription implements Serializable, Cloneable, Stru
         if (other.getReplicaGlobalSecondaryIndexSettings() != null
                 && other.getReplicaGlobalSecondaryIndexSettings().equals(this.getReplicaGlobalSecondaryIndexSettings()) == false)
             return false;
+        if (other.getReplicaTableClassSummary() == null ^ this.getReplicaTableClassSummary() == null)
+            return false;
+        if (other.getReplicaTableClassSummary() != null && other.getReplicaTableClassSummary().equals(this.getReplicaTableClassSummary()) == false)
+            return false;
         return true;
     }
 
@@ -785,6 +819,7 @@ public class ReplicaSettingsDescription implements Serializable, Cloneable, Stru
         hashCode = prime * hashCode
                 + ((getReplicaProvisionedWriteCapacityAutoScalingSettings() == null) ? 0 : getReplicaProvisionedWriteCapacityAutoScalingSettings().hashCode());
         hashCode = prime * hashCode + ((getReplicaGlobalSecondaryIndexSettings() == null) ? 0 : getReplicaGlobalSecondaryIndexSettings().hashCode());
+        hashCode = prime * hashCode + ((getReplicaTableClassSummary() == null) ? 0 : getReplicaTableClassSummary().hashCode());
         return hashCode;
     }
 

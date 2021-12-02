@@ -198,6 +198,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<AllocateIpamPoolCidrResult> allocateIpamPoolCidrAsync(AllocateIpamPoolCidrRequest request) {
+
+        return allocateIpamPoolCidrAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AllocateIpamPoolCidrResult> allocateIpamPoolCidrAsync(AllocateIpamPoolCidrRequest request,
+            com.amazonaws.handlers.AsyncHandler<AllocateIpamPoolCidrRequest, AllocateIpamPoolCidrResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ApplySecurityGroupsToClientVpnTargetNetworkResult> applySecurityGroupsToClientVpnTargetNetworkAsync(
             ApplySecurityGroupsToClientVpnTargetNetworkRequest request) {
 
@@ -960,6 +973,45 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<CreateIpamResult> createIpamAsync(CreateIpamRequest request) {
+
+        return createIpamAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateIpamResult> createIpamAsync(CreateIpamRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateIpamRequest, CreateIpamResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateIpamPoolResult> createIpamPoolAsync(CreateIpamPoolRequest request) {
+
+        return createIpamPoolAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateIpamPoolResult> createIpamPoolAsync(CreateIpamPoolRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateIpamPoolRequest, CreateIpamPoolResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateIpamScopeResult> createIpamScopeAsync(CreateIpamScopeRequest request) {
+
+        return createIpamScopeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateIpamScopeResult> createIpamScopeAsync(CreateIpamScopeRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateIpamScopeRequest, CreateIpamScopeResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateKeyPairResult> createKeyPairAsync(CreateKeyPairRequest request) {
 
         return createKeyPairAsync(request, null);
@@ -1079,6 +1131,21 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<CreateNetworkInsightsAccessScopeResult> createNetworkInsightsAccessScopeAsync(
+            CreateNetworkInsightsAccessScopeRequest request) {
+
+        return createNetworkInsightsAccessScopeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateNetworkInsightsAccessScopeResult> createNetworkInsightsAccessScopeAsync(
+            CreateNetworkInsightsAccessScopeRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateNetworkInsightsAccessScopeRequest, CreateNetworkInsightsAccessScopeResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateNetworkInsightsPathResult> createNetworkInsightsPathAsync(CreateNetworkInsightsPathRequest request) {
 
         return createNetworkInsightsPathAsync(request, null);
@@ -1128,6 +1195,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<CreatePlacementGroupResult> createPlacementGroupAsync(CreatePlacementGroupRequest request,
             com.amazonaws.handlers.AsyncHandler<CreatePlacementGroupRequest, CreatePlacementGroupResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePublicIpv4PoolResult> createPublicIpv4PoolAsync(CreatePublicIpv4PoolRequest request) {
+
+        return createPublicIpv4PoolAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePublicIpv4PoolResult> createPublicIpv4PoolAsync(CreatePublicIpv4PoolRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreatePublicIpv4PoolRequest, CreatePublicIpv4PoolResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1770,6 +1850,45 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteIpamResult> deleteIpamAsync(DeleteIpamRequest request) {
+
+        return deleteIpamAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteIpamResult> deleteIpamAsync(DeleteIpamRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteIpamRequest, DeleteIpamResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteIpamPoolResult> deleteIpamPoolAsync(DeleteIpamPoolRequest request) {
+
+        return deleteIpamPoolAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteIpamPoolResult> deleteIpamPoolAsync(DeleteIpamPoolRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteIpamPoolRequest, DeleteIpamPoolResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteIpamScopeResult> deleteIpamScopeAsync(DeleteIpamScopeRequest request) {
+
+        return deleteIpamScopeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteIpamScopeResult> deleteIpamScopeAsync(DeleteIpamScopeRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteIpamScopeRequest, DeleteIpamScopeResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteKeyPairResult> deleteKeyPairAsync(DeleteKeyPairRequest request) {
 
         return deleteKeyPairAsync(request, null);
@@ -1889,6 +2008,36 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteNetworkInsightsAccessScopeResult> deleteNetworkInsightsAccessScopeAsync(
+            DeleteNetworkInsightsAccessScopeRequest request) {
+
+        return deleteNetworkInsightsAccessScopeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteNetworkInsightsAccessScopeResult> deleteNetworkInsightsAccessScopeAsync(
+            DeleteNetworkInsightsAccessScopeRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteNetworkInsightsAccessScopeRequest, DeleteNetworkInsightsAccessScopeResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteNetworkInsightsAccessScopeAnalysisResult> deleteNetworkInsightsAccessScopeAnalysisAsync(
+            DeleteNetworkInsightsAccessScopeAnalysisRequest request) {
+
+        return deleteNetworkInsightsAccessScopeAnalysisAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteNetworkInsightsAccessScopeAnalysisResult> deleteNetworkInsightsAccessScopeAnalysisAsync(
+            DeleteNetworkInsightsAccessScopeAnalysisRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteNetworkInsightsAccessScopeAnalysisRequest, DeleteNetworkInsightsAccessScopeAnalysisResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteNetworkInsightsAnalysisResult> deleteNetworkInsightsAnalysisAsync(DeleteNetworkInsightsAnalysisRequest request) {
 
         return deleteNetworkInsightsAnalysisAsync(request, null);
@@ -1951,6 +2100,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<DeletePlacementGroupResult> deletePlacementGroupAsync(DeletePlacementGroupRequest request,
             com.amazonaws.handlers.AsyncHandler<DeletePlacementGroupRequest, DeletePlacementGroupResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePublicIpv4PoolResult> deletePublicIpv4PoolAsync(DeletePublicIpv4PoolRequest request) {
+
+        return deletePublicIpv4PoolAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePublicIpv4PoolResult> deletePublicIpv4PoolAsync(DeletePublicIpv4PoolRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeletePublicIpv4PoolRequest, DeletePublicIpv4PoolResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2405,6 +2567,32 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<DeprovisionByoipCidrResult> deprovisionByoipCidrAsync(DeprovisionByoipCidrRequest request,
             com.amazonaws.handlers.AsyncHandler<DeprovisionByoipCidrRequest, DeprovisionByoipCidrResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeprovisionIpamPoolCidrResult> deprovisionIpamPoolCidrAsync(DeprovisionIpamPoolCidrRequest request) {
+
+        return deprovisionIpamPoolCidrAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeprovisionIpamPoolCidrResult> deprovisionIpamPoolCidrAsync(DeprovisionIpamPoolCidrRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeprovisionIpamPoolCidrRequest, DeprovisionIpamPoolCidrResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeprovisionPublicIpv4PoolCidrResult> deprovisionPublicIpv4PoolCidrAsync(DeprovisionPublicIpv4PoolCidrRequest request) {
+
+        return deprovisionPublicIpv4PoolCidrAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeprovisionPublicIpv4PoolCidrResult> deprovisionPublicIpv4PoolCidrAsync(DeprovisionPublicIpv4PoolCidrRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeprovisionPublicIpv4PoolCidrRequest, DeprovisionPublicIpv4PoolCidrResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -3548,6 +3736,45 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeIpamPoolsResult> describeIpamPoolsAsync(DescribeIpamPoolsRequest request) {
+
+        return describeIpamPoolsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeIpamPoolsResult> describeIpamPoolsAsync(DescribeIpamPoolsRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeIpamPoolsRequest, DescribeIpamPoolsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeIpamScopesResult> describeIpamScopesAsync(DescribeIpamScopesRequest request) {
+
+        return describeIpamScopesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeIpamScopesResult> describeIpamScopesAsync(DescribeIpamScopesRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeIpamScopesRequest, DescribeIpamScopesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeIpamsResult> describeIpamsAsync(DescribeIpamsRequest request) {
+
+        return describeIpamsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeIpamsResult> describeIpamsAsync(DescribeIpamsRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeIpamsRequest, DescribeIpamsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeIpv6PoolsResult> describeIpv6PoolsAsync(DescribeIpv6PoolsRequest request) {
 
         return describeIpv6PoolsAsync(request, null);
@@ -3806,6 +4033,36 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
             com.amazonaws.handlers.AsyncHandler<DescribeNetworkAclsRequest, DescribeNetworkAclsResult> asyncHandler) {
 
         return describeNetworkAclsAsync(new DescribeNetworkAclsRequest(), asyncHandler);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeNetworkInsightsAccessScopeAnalysesResult> describeNetworkInsightsAccessScopeAnalysesAsync(
+            DescribeNetworkInsightsAccessScopeAnalysesRequest request) {
+
+        return describeNetworkInsightsAccessScopeAnalysesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeNetworkInsightsAccessScopeAnalysesResult> describeNetworkInsightsAccessScopeAnalysesAsync(
+            DescribeNetworkInsightsAccessScopeAnalysesRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeNetworkInsightsAccessScopeAnalysesRequest, DescribeNetworkInsightsAccessScopeAnalysesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeNetworkInsightsAccessScopesResult> describeNetworkInsightsAccessScopesAsync(
+            DescribeNetworkInsightsAccessScopesRequest request) {
+
+        return describeNetworkInsightsAccessScopesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeNetworkInsightsAccessScopesResult> describeNetworkInsightsAccessScopesAsync(
+            DescribeNetworkInsightsAccessScopesRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeNetworkInsightsAccessScopesRequest, DescribeNetworkInsightsAccessScopesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
@@ -5377,6 +5634,21 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<DisableIpamOrganizationAdminAccountResult> disableIpamOrganizationAdminAccountAsync(
+            DisableIpamOrganizationAdminAccountRequest request) {
+
+        return disableIpamOrganizationAdminAccountAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisableIpamOrganizationAdminAccountResult> disableIpamOrganizationAdminAccountAsync(
+            DisableIpamOrganizationAdminAccountRequest request,
+            com.amazonaws.handlers.AsyncHandler<DisableIpamOrganizationAdminAccountRequest, DisableIpamOrganizationAdminAccountResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DisableSerialConsoleAccessResult> disableSerialConsoleAccessAsync(DisableSerialConsoleAccessRequest request) {
 
         return disableSerialConsoleAccessAsync(request, null);
@@ -5633,6 +5905,21 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<EnableImageDeprecationResult> enableImageDeprecationAsync(EnableImageDeprecationRequest request,
             com.amazonaws.handlers.AsyncHandler<EnableImageDeprecationRequest, EnableImageDeprecationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableIpamOrganizationAdminAccountResult> enableIpamOrganizationAdminAccountAsync(
+            EnableIpamOrganizationAdminAccountRequest request) {
+
+        return enableIpamOrganizationAdminAccountAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableIpamOrganizationAdminAccountResult> enableIpamOrganizationAdminAccountAsync(
+            EnableIpamOrganizationAdminAccountRequest request,
+            com.amazonaws.handlers.AsyncHandler<EnableIpamOrganizationAdminAccountRequest, EnableIpamOrganizationAdminAccountResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -5951,6 +6238,58 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<GetIpamAddressHistoryResult> getIpamAddressHistoryAsync(GetIpamAddressHistoryRequest request) {
+
+        return getIpamAddressHistoryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetIpamAddressHistoryResult> getIpamAddressHistoryAsync(GetIpamAddressHistoryRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetIpamAddressHistoryRequest, GetIpamAddressHistoryResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetIpamPoolAllocationsResult> getIpamPoolAllocationsAsync(GetIpamPoolAllocationsRequest request) {
+
+        return getIpamPoolAllocationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetIpamPoolAllocationsResult> getIpamPoolAllocationsAsync(GetIpamPoolAllocationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetIpamPoolAllocationsRequest, GetIpamPoolAllocationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetIpamPoolCidrsResult> getIpamPoolCidrsAsync(GetIpamPoolCidrsRequest request) {
+
+        return getIpamPoolCidrsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetIpamPoolCidrsResult> getIpamPoolCidrsAsync(GetIpamPoolCidrsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetIpamPoolCidrsRequest, GetIpamPoolCidrsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetIpamResourceCidrsResult> getIpamResourceCidrsAsync(GetIpamResourceCidrsRequest request) {
+
+        return getIpamResourceCidrsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetIpamResourceCidrsResult> getIpamResourceCidrsAsync(GetIpamResourceCidrsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetIpamResourceCidrsRequest, GetIpamResourceCidrsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetLaunchTemplateDataResult> getLaunchTemplateDataAsync(GetLaunchTemplateDataRequest request) {
 
         return getLaunchTemplateDataAsync(request, null);
@@ -5987,6 +6326,36 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<GetManagedPrefixListEntriesResult> getManagedPrefixListEntriesAsync(GetManagedPrefixListEntriesRequest request,
             com.amazonaws.handlers.AsyncHandler<GetManagedPrefixListEntriesRequest, GetManagedPrefixListEntriesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetNetworkInsightsAccessScopeAnalysisFindingsResult> getNetworkInsightsAccessScopeAnalysisFindingsAsync(
+            GetNetworkInsightsAccessScopeAnalysisFindingsRequest request) {
+
+        return getNetworkInsightsAccessScopeAnalysisFindingsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetNetworkInsightsAccessScopeAnalysisFindingsResult> getNetworkInsightsAccessScopeAnalysisFindingsAsync(
+            GetNetworkInsightsAccessScopeAnalysisFindingsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetNetworkInsightsAccessScopeAnalysisFindingsRequest, GetNetworkInsightsAccessScopeAnalysisFindingsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetNetworkInsightsAccessScopeContentResult> getNetworkInsightsAccessScopeContentAsync(
+            GetNetworkInsightsAccessScopeContentRequest request) {
+
+        return getNetworkInsightsAccessScopeContentAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetNetworkInsightsAccessScopeContentResult> getNetworkInsightsAccessScopeContentAsync(
+            GetNetworkInsightsAccessScopeContentRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetNetworkInsightsAccessScopeContentRequest, GetNetworkInsightsAccessScopeContentResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -6567,6 +6936,58 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<ModifyIpamResult> modifyIpamAsync(ModifyIpamRequest request) {
+
+        return modifyIpamAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyIpamResult> modifyIpamAsync(ModifyIpamRequest request,
+            com.amazonaws.handlers.AsyncHandler<ModifyIpamRequest, ModifyIpamResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyIpamPoolResult> modifyIpamPoolAsync(ModifyIpamPoolRequest request) {
+
+        return modifyIpamPoolAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyIpamPoolResult> modifyIpamPoolAsync(ModifyIpamPoolRequest request,
+            com.amazonaws.handlers.AsyncHandler<ModifyIpamPoolRequest, ModifyIpamPoolResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyIpamResourceCidrResult> modifyIpamResourceCidrAsync(ModifyIpamResourceCidrRequest request) {
+
+        return modifyIpamResourceCidrAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyIpamResourceCidrResult> modifyIpamResourceCidrAsync(ModifyIpamResourceCidrRequest request,
+            com.amazonaws.handlers.AsyncHandler<ModifyIpamResourceCidrRequest, ModifyIpamResourceCidrResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyIpamScopeResult> modifyIpamScopeAsync(ModifyIpamScopeRequest request) {
+
+        return modifyIpamScopeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyIpamScopeResult> modifyIpamScopeAsync(ModifyIpamScopeRequest request,
+            com.amazonaws.handlers.AsyncHandler<ModifyIpamScopeRequest, ModifyIpamScopeResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ModifyLaunchTemplateResult> modifyLaunchTemplateAsync(ModifyLaunchTemplateRequest request) {
 
         return modifyLaunchTemplateAsync(request, null);
@@ -6986,6 +7407,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<MoveByoipCidrToIpamResult> moveByoipCidrToIpamAsync(MoveByoipCidrToIpamRequest request) {
+
+        return moveByoipCidrToIpamAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<MoveByoipCidrToIpamResult> moveByoipCidrToIpamAsync(MoveByoipCidrToIpamRequest request,
+            com.amazonaws.handlers.AsyncHandler<MoveByoipCidrToIpamRequest, MoveByoipCidrToIpamResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ProvisionByoipCidrResult> provisionByoipCidrAsync(ProvisionByoipCidrRequest request) {
 
         return provisionByoipCidrAsync(request, null);
@@ -6994,6 +7428,32 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<ProvisionByoipCidrResult> provisionByoipCidrAsync(ProvisionByoipCidrRequest request,
             com.amazonaws.handlers.AsyncHandler<ProvisionByoipCidrRequest, ProvisionByoipCidrResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ProvisionIpamPoolCidrResult> provisionIpamPoolCidrAsync(ProvisionIpamPoolCidrRequest request) {
+
+        return provisionIpamPoolCidrAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ProvisionIpamPoolCidrResult> provisionIpamPoolCidrAsync(ProvisionIpamPoolCidrRequest request,
+            com.amazonaws.handlers.AsyncHandler<ProvisionIpamPoolCidrRequest, ProvisionIpamPoolCidrResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ProvisionPublicIpv4PoolCidrResult> provisionPublicIpv4PoolCidrAsync(ProvisionPublicIpv4PoolCidrRequest request) {
+
+        return provisionPublicIpv4PoolCidrAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ProvisionPublicIpv4PoolCidrResult> provisionPublicIpv4PoolCidrAsync(ProvisionPublicIpv4PoolCidrRequest request,
+            com.amazonaws.handlers.AsyncHandler<ProvisionPublicIpv4PoolCidrRequest, ProvisionPublicIpv4PoolCidrResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -7203,6 +7663,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<ReleaseHostsResult> releaseHostsAsync(ReleaseHostsRequest request,
             com.amazonaws.handlers.AsyncHandler<ReleaseHostsRequest, ReleaseHostsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ReleaseIpamPoolAllocationResult> releaseIpamPoolAllocationAsync(ReleaseIpamPoolAllocationRequest request) {
+
+        return releaseIpamPoolAllocationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ReleaseIpamPoolAllocationResult> releaseIpamPoolAllocationAsync(ReleaseIpamPoolAllocationRequest request,
+            com.amazonaws.handlers.AsyncHandler<ReleaseIpamPoolAllocationRequest, ReleaseIpamPoolAllocationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -7624,6 +8097,21 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<StartInstancesResult> startInstancesAsync(StartInstancesRequest request,
             com.amazonaws.handlers.AsyncHandler<StartInstancesRequest, StartInstancesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartNetworkInsightsAccessScopeAnalysisResult> startNetworkInsightsAccessScopeAnalysisAsync(
+            StartNetworkInsightsAccessScopeAnalysisRequest request) {
+
+        return startNetworkInsightsAccessScopeAnalysisAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartNetworkInsightsAccessScopeAnalysisResult> startNetworkInsightsAccessScopeAnalysisAsync(
+            StartNetworkInsightsAccessScopeAnalysisRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartNetworkInsightsAccessScopeAnalysisRequest, StartNetworkInsightsAccessScopeAnalysisResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

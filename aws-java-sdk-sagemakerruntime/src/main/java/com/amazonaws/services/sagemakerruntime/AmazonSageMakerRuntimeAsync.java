@@ -46,9 +46,10 @@ public interface AmazonSageMakerRuntimeAsync extends AmazonSageMakerRuntime {
      * headers. You should not rely on the behavior of headers outside those enumerated in the request syntax.
      * </p>
      * <p>
-     * Calls to <code>InvokeEndpoint</code> are authenticated by using AWS Signature Version 4. For information, see <a
+     * Calls to <code>InvokeEndpoint</code> are authenticated by using Amazon Web Services Signature Version 4. For
+     * information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html">Authenticating
-     * Requests (AWS Signature Version 4)</a> in the <i>Amazon S3 API Reference</i>.
+     * Requests (Amazon Web Services Signature Version 4)</a> in the <i>Amazon S3 API Reference</i>.
      * </p>
      * <p>
      * A customer's model containers must respond to requests within 60 seconds. The model itself can have a maximum
@@ -84,9 +85,10 @@ public interface AmazonSageMakerRuntimeAsync extends AmazonSageMakerRuntime {
      * headers. You should not rely on the behavior of headers outside those enumerated in the request syntax.
      * </p>
      * <p>
-     * Calls to <code>InvokeEndpoint</code> are authenticated by using AWS Signature Version 4. For information, see <a
+     * Calls to <code>InvokeEndpoint</code> are authenticated by using Amazon Web Services Signature Version 4. For
+     * information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html">Authenticating
-     * Requests (AWS Signature Version 4)</a> in the <i>Amazon S3 API Reference</i>.
+     * Requests (Amazon Web Services Signature Version 4)</a> in the <i>Amazon S3 API Reference</i>.
      * </p>
      * <p>
      * A customer's model containers must respond to requests within 60 seconds. The model itself can have a maximum
@@ -129,9 +131,10 @@ public interface AmazonSageMakerRuntimeAsync extends AmazonSageMakerRuntime {
      * syntax.
      * </p>
      * <p>
-     * Calls to <code>InvokeEndpointAsync</code> are authenticated by using AWS Signature Version 4. For information,
-     * see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html">Authenticating
-     * Requests (AWS Signature Version 4)</a> in the <i>Amazon S3 API Reference</i>.
+     * Calls to <code>InvokeEndpointAsync</code> are authenticated by using Amazon Web Services Signature Version 4. For
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html"
+     * >Authenticating Requests (Amazon Web Services Signature Version 4)</a> in the <i>Amazon S3 API Reference</i>.
      * </p>
      * 
      * @param invokeEndpointAsyncRequest
@@ -158,9 +161,10 @@ public interface AmazonSageMakerRuntimeAsync extends AmazonSageMakerRuntime {
      * syntax.
      * </p>
      * <p>
-     * Calls to <code>InvokeEndpointAsync</code> are authenticated by using AWS Signature Version 4. For information,
-     * see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html">Authenticating
-     * Requests (AWS Signature Version 4)</a> in the <i>Amazon S3 API Reference</i>.
+     * Calls to <code>InvokeEndpointAsync</code> are authenticated by using Amazon Web Services Signature Version 4. For
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html"
+     * >Authenticating Requests (Amazon Web Services Signature Version 4)</a> in the <i>Amazon S3 API Reference</i>.
      * </p>
      * 
      * @param invokeEndpointAsyncRequest

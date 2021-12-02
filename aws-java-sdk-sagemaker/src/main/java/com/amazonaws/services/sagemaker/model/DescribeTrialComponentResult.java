@@ -133,6 +133,12 @@ public class DescribeTrialComponentResult extends com.amazonaws.AmazonWebService
      * </p>
      */
     private java.util.List<TrialComponentMetricSummary> metrics;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the lineage group.
+     * </p>
+     */
+    private String lineageGroupArn;
 
     /**
      * <p>
@@ -980,6 +986,46 @@ public class DescribeTrialComponentResult extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the lineage group.
+     * </p>
+     * 
+     * @param lineageGroupArn
+     *        The Amazon Resource Name (ARN) of the lineage group.
+     */
+
+    public void setLineageGroupArn(String lineageGroupArn) {
+        this.lineageGroupArn = lineageGroupArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the lineage group.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the lineage group.
+     */
+
+    public String getLineageGroupArn() {
+        return this.lineageGroupArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the lineage group.
+     * </p>
+     * 
+     * @param lineageGroupArn
+     *        The Amazon Resource Name (ARN) of the lineage group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeTrialComponentResult withLineageGroupArn(String lineageGroupArn) {
+        setLineageGroupArn(lineageGroupArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1022,7 +1068,9 @@ public class DescribeTrialComponentResult extends com.amazonaws.AmazonWebService
         if (getMetadataProperties() != null)
             sb.append("MetadataProperties: ").append(getMetadataProperties()).append(",");
         if (getMetrics() != null)
-            sb.append("Metrics: ").append(getMetrics());
+            sb.append("Metrics: ").append(getMetrics()).append(",");
+        if (getLineageGroupArn() != null)
+            sb.append("LineageGroupArn: ").append(getLineageGroupArn());
         sb.append("}");
         return sb.toString();
     }
@@ -1101,6 +1149,10 @@ public class DescribeTrialComponentResult extends com.amazonaws.AmazonWebService
             return false;
         if (other.getMetrics() != null && other.getMetrics().equals(this.getMetrics()) == false)
             return false;
+        if (other.getLineageGroupArn() == null ^ this.getLineageGroupArn() == null)
+            return false;
+        if (other.getLineageGroupArn() != null && other.getLineageGroupArn().equals(this.getLineageGroupArn()) == false)
+            return false;
         return true;
     }
 
@@ -1125,6 +1177,7 @@ public class DescribeTrialComponentResult extends com.amazonaws.AmazonWebService
         hashCode = prime * hashCode + ((getOutputArtifacts() == null) ? 0 : getOutputArtifacts().hashCode());
         hashCode = prime * hashCode + ((getMetadataProperties() == null) ? 0 : getMetadataProperties().hashCode());
         hashCode = prime * hashCode + ((getMetrics() == null) ? 0 : getMetrics().hashCode());
+        hashCode = prime * hashCode + ((getLineageGroupArn() == null) ? 0 : getLineageGroupArn().hashCode());
         return hashCode;
     }
 

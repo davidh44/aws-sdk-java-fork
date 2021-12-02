@@ -121,6 +121,12 @@ public class TrialComponent implements Serializable, Cloneable, StructuredPojo {
     private TrialComponentSourceDetail sourceDetail;
     /**
      * <p>
+     * The Amazon Resource Name (ARN) of the lineage group resource.
+     * </p>
+     */
+    private String lineageGroupArn;
+    /**
+     * <p>
      * The list of tags that are associated with the component. You can use <a>Search</a> API to search on the tags.
      * </p>
      */
@@ -893,6 +899,46 @@ public class TrialComponent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The Amazon Resource Name (ARN) of the lineage group resource.
+     * </p>
+     * 
+     * @param lineageGroupArn
+     *        The Amazon Resource Name (ARN) of the lineage group resource.
+     */
+
+    public void setLineageGroupArn(String lineageGroupArn) {
+        this.lineageGroupArn = lineageGroupArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the lineage group resource.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the lineage group resource.
+     */
+
+    public String getLineageGroupArn() {
+        return this.lineageGroupArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the lineage group resource.
+     * </p>
+     * 
+     * @param lineageGroupArn
+     *        The Amazon Resource Name (ARN) of the lineage group resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TrialComponent withLineageGroupArn(String lineageGroupArn) {
+        setLineageGroupArn(lineageGroupArn);
+        return this;
+    }
+
+    /**
+     * <p>
      * The list of tags that are associated with the component. You can use <a>Search</a> API to search on the tags.
      * </p>
      * 
@@ -1089,6 +1135,8 @@ public class TrialComponent implements Serializable, Cloneable, StructuredPojo {
             sb.append("MetadataProperties: ").append(getMetadataProperties()).append(",");
         if (getSourceDetail() != null)
             sb.append("SourceDetail: ").append(getSourceDetail()).append(",");
+        if (getLineageGroupArn() != null)
+            sb.append("LineageGroupArn: ").append(getLineageGroupArn()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getParents() != null)
@@ -1175,6 +1223,10 @@ public class TrialComponent implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSourceDetail() != null && other.getSourceDetail().equals(this.getSourceDetail()) == false)
             return false;
+        if (other.getLineageGroupArn() == null ^ this.getLineageGroupArn() == null)
+            return false;
+        if (other.getLineageGroupArn() != null && other.getLineageGroupArn().equals(this.getLineageGroupArn()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -1208,6 +1260,7 @@ public class TrialComponent implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getMetrics() == null) ? 0 : getMetrics().hashCode());
         hashCode = prime * hashCode + ((getMetadataProperties() == null) ? 0 : getMetadataProperties().hashCode());
         hashCode = prime * hashCode + ((getSourceDetail() == null) ? 0 : getSourceDetail().hashCode());
+        hashCode = prime * hashCode + ((getLineageGroupArn() == null) ? 0 : getLineageGroupArn().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getParents() == null) ? 0 : getParents().hashCode());
         return hashCode;

@@ -70,6 +70,14 @@ public class CreateCompilationJobRequest extends com.amazonaws.AmazonWebServiceR
     private String roleArn;
     /**
      * <p>
+     * The Amazon Resource Name (ARN) of a versioned model package. Provide either a <code>ModelPackageVersionArn</code>
+     * or an <code>InputConfig</code> object in the request syntax. The presence of both objects in the
+     * <code>CreateCompilationJob</code> request will return an exception.
+     * </p>
+     */
+    private String modelPackageVersionArn;
+    /**
+     * <p>
      * Provides information about the location of input model artifacts, the name and shape of the expected data inputs,
      * and the framework in which the model was trained.
      * </p>
@@ -374,6 +382,58 @@ public class CreateCompilationJobRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
+     * The Amazon Resource Name (ARN) of a versioned model package. Provide either a <code>ModelPackageVersionArn</code>
+     * or an <code>InputConfig</code> object in the request syntax. The presence of both objects in the
+     * <code>CreateCompilationJob</code> request will return an exception.
+     * </p>
+     * 
+     * @param modelPackageVersionArn
+     *        The Amazon Resource Name (ARN) of a versioned model package. Provide either a
+     *        <code>ModelPackageVersionArn</code> or an <code>InputConfig</code> object in the request syntax. The
+     *        presence of both objects in the <code>CreateCompilationJob</code> request will return an exception.
+     */
+
+    public void setModelPackageVersionArn(String modelPackageVersionArn) {
+        this.modelPackageVersionArn = modelPackageVersionArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of a versioned model package. Provide either a <code>ModelPackageVersionArn</code>
+     * or an <code>InputConfig</code> object in the request syntax. The presence of both objects in the
+     * <code>CreateCompilationJob</code> request will return an exception.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of a versioned model package. Provide either a
+     *         <code>ModelPackageVersionArn</code> or an <code>InputConfig</code> object in the request syntax. The
+     *         presence of both objects in the <code>CreateCompilationJob</code> request will return an exception.
+     */
+
+    public String getModelPackageVersionArn() {
+        return this.modelPackageVersionArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of a versioned model package. Provide either a <code>ModelPackageVersionArn</code>
+     * or an <code>InputConfig</code> object in the request syntax. The presence of both objects in the
+     * <code>CreateCompilationJob</code> request will return an exception.
+     * </p>
+     * 
+     * @param modelPackageVersionArn
+     *        The Amazon Resource Name (ARN) of a versioned model package. Provide either a
+     *        <code>ModelPackageVersionArn</code> or an <code>InputConfig</code> object in the request syntax. The
+     *        presence of both objects in the <code>CreateCompilationJob</code> request will return an exception.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateCompilationJobRequest withModelPackageVersionArn(String modelPackageVersionArn) {
+        setModelPackageVersionArn(modelPackageVersionArn);
+        return this;
+    }
+
+    /**
+     * <p>
      * Provides information about the location of input model artifacts, the name and shape of the expected data inputs,
      * and the framework in which the model was trained.
      * </p>
@@ -671,6 +731,8 @@ public class CreateCompilationJobRequest extends com.amazonaws.AmazonWebServiceR
             sb.append("CompilationJobName: ").append(getCompilationJobName()).append(",");
         if (getRoleArn() != null)
             sb.append("RoleArn: ").append(getRoleArn()).append(",");
+        if (getModelPackageVersionArn() != null)
+            sb.append("ModelPackageVersionArn: ").append(getModelPackageVersionArn()).append(",");
         if (getInputConfig() != null)
             sb.append("InputConfig: ").append(getInputConfig()).append(",");
         if (getOutputConfig() != null)
@@ -703,6 +765,10 @@ public class CreateCompilationJobRequest extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
             return false;
+        if (other.getModelPackageVersionArn() == null ^ this.getModelPackageVersionArn() == null)
+            return false;
+        if (other.getModelPackageVersionArn() != null && other.getModelPackageVersionArn().equals(this.getModelPackageVersionArn()) == false)
+            return false;
         if (other.getInputConfig() == null ^ this.getInputConfig() == null)
             return false;
         if (other.getInputConfig() != null && other.getInputConfig().equals(this.getInputConfig()) == false)
@@ -733,6 +799,7 @@ public class CreateCompilationJobRequest extends com.amazonaws.AmazonWebServiceR
 
         hashCode = prime * hashCode + ((getCompilationJobName() == null) ? 0 : getCompilationJobName().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
+        hashCode = prime * hashCode + ((getModelPackageVersionArn() == null) ? 0 : getModelPackageVersionArn().hashCode());
         hashCode = prime * hashCode + ((getInputConfig() == null) ? 0 : getInputConfig().hashCode());
         hashCode = prime * hashCode + ((getOutputConfig() == null) ? 0 : getOutputConfig().hashCode());
         hashCode = prime * hashCode + ((getVpcConfig() == null) ? 0 : getVpcConfig().hashCode());

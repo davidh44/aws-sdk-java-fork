@@ -46,7 +46,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      * user/password pair. If you use SharePoint Server, you also need to provide the sever domain name as part of the
      * credentials. For more information, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a Microsoft SharePoint Data
-     * Source</a>. For more information about Secrets Manager, see <a
+     * Source</a>. For more information about Secrets Manager see <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is Secrets Manager</a> in the
      * <i>Secrets Manager </i> user guide.
      * </p>
@@ -251,7 +251,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      * user/password pair. If you use SharePoint Server, you also need to provide the sever domain name as part of the
      * credentials. For more information, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a Microsoft SharePoint Data
-     * Source</a>. For more information about Secrets Manager, see <a
+     * Source</a>. For more information about Secrets Manager see <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is Secrets Manager</a> in the
      * <i>Secrets Manager </i> user guide.
      * </p>
@@ -261,7 +261,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      *        user/password pair. If you use SharePoint Server, you also need to provide the sever domain name as part
      *        of the credentials. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a Microsoft
-     *        SharePoint Data Source</a>. For more information about Secrets Manager, see <a
+     *        SharePoint Data Source</a>. For more information about Secrets Manager see <a
      *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is Secrets Manager</a>
      *        in the <i>Secrets Manager </i> user guide.
      */
@@ -276,7 +276,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      * user/password pair. If you use SharePoint Server, you also need to provide the sever domain name as part of the
      * credentials. For more information, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a Microsoft SharePoint Data
-     * Source</a>. For more information about Secrets Manager, see <a
+     * Source</a>. For more information about Secrets Manager see <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is Secrets Manager</a> in the
      * <i>Secrets Manager </i> user guide.
      * </p>
@@ -285,7 +285,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      *         user/password pair. If you use SharePoint Server, you also need to provide the sever domain name as part
      *         of the credentials. For more information, see <a
      *         href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a Microsoft
-     *         SharePoint Data Source</a>. For more information about Secrets Manager, see <a
+     *         SharePoint Data Source</a>. For more information about Secrets Manager see <a
      *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is Secrets
      *         Manager</a> in the <i>Secrets Manager </i> user guide.
      */
@@ -300,7 +300,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      * user/password pair. If you use SharePoint Server, you also need to provide the sever domain name as part of the
      * credentials. For more information, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a Microsoft SharePoint Data
-     * Source</a>. For more information about Secrets Manager, see <a
+     * Source</a>. For more information about Secrets Manager see <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is Secrets Manager</a> in the
      * <i>Secrets Manager </i> user guide.
      * </p>
@@ -310,7 +310,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      *        user/password pair. If you use SharePoint Server, you also need to provide the sever domain name as part
      *        of the credentials. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a Microsoft
-     *        SharePoint Data Source</a>. For more information about Secrets Manager, see <a
+     *        SharePoint Data Source</a>. For more information about Secrets Manager see <a
      *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is Secrets Manager</a>
      *        in the <i>Secrets Manager </i> user guide.
      * @return Returns a reference to this object so that method calls can be chained together.

@@ -117,6 +117,12 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
     private String modelPackageName;
     /**
      * <p>
+     * The inference specification name in the model package version.
+     * </p>
+     */
+    private String inferenceSpecificationName;
+    /**
+     * <p>
      * Specifies additional configuration for multi-model endpoints.
      * </p>
      */
@@ -727,6 +733,46 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
+     * The inference specification name in the model package version.
+     * </p>
+     * 
+     * @param inferenceSpecificationName
+     *        The inference specification name in the model package version.
+     */
+
+    public void setInferenceSpecificationName(String inferenceSpecificationName) {
+        this.inferenceSpecificationName = inferenceSpecificationName;
+    }
+
+    /**
+     * <p>
+     * The inference specification name in the model package version.
+     * </p>
+     * 
+     * @return The inference specification name in the model package version.
+     */
+
+    public String getInferenceSpecificationName() {
+        return this.inferenceSpecificationName;
+    }
+
+    /**
+     * <p>
+     * The inference specification name in the model package version.
+     * </p>
+     * 
+     * @param inferenceSpecificationName
+     *        The inference specification name in the model package version.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ContainerDefinition withInferenceSpecificationName(String inferenceSpecificationName) {
+        setInferenceSpecificationName(inferenceSpecificationName);
+        return this;
+    }
+
+    /**
+     * <p>
      * Specifies additional configuration for multi-model endpoints.
      * </p>
      * 
@@ -791,6 +837,8 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
             sb.append("Environment: ").append(getEnvironment()).append(",");
         if (getModelPackageName() != null)
             sb.append("ModelPackageName: ").append(getModelPackageName()).append(",");
+        if (getInferenceSpecificationName() != null)
+            sb.append("InferenceSpecificationName: ").append(getInferenceSpecificationName()).append(",");
         if (getMultiModelConfig() != null)
             sb.append("MultiModelConfig: ").append(getMultiModelConfig());
         sb.append("}");
@@ -835,6 +883,10 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getModelPackageName() != null && other.getModelPackageName().equals(this.getModelPackageName()) == false)
             return false;
+        if (other.getInferenceSpecificationName() == null ^ this.getInferenceSpecificationName() == null)
+            return false;
+        if (other.getInferenceSpecificationName() != null && other.getInferenceSpecificationName().equals(this.getInferenceSpecificationName()) == false)
+            return false;
         if (other.getMultiModelConfig() == null ^ this.getMultiModelConfig() == null)
             return false;
         if (other.getMultiModelConfig() != null && other.getMultiModelConfig().equals(this.getMultiModelConfig()) == false)
@@ -854,6 +906,7 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getModelDataUrl() == null) ? 0 : getModelDataUrl().hashCode());
         hashCode = prime * hashCode + ((getEnvironment() == null) ? 0 : getEnvironment().hashCode());
         hashCode = prime * hashCode + ((getModelPackageName() == null) ? 0 : getModelPackageName().hashCode());
+        hashCode = prime * hashCode + ((getInferenceSpecificationName() == null) ? 0 : getInferenceSpecificationName().hashCode());
         hashCode = prime * hashCode + ((getMultiModelConfig() == null) ? 0 : getMultiModelConfig().hashCode());
         return hashCode;
     }

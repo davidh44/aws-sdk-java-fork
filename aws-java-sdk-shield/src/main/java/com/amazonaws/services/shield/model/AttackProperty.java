@@ -34,8 +34,8 @@ public class AttackProperty implements Serializable, Cloneable, StructuredPojo {
      * <code>APPLICATION</code> indicates layer 7 events.
      * </p>
      * <p>
-     * For infrastructure layer events (L3 and L4 events) after January 25, 2021, you can view metrics for top
-     * contributors in Amazon CloudWatch metrics. For more information, see <a
+     * For infrastructure layer events (L3 and L4 events), you can view metrics for top contributors in Amazon
+     * CloudWatch metrics. For more information, see <a
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#set-ddos-alarms">Shield
      * metrics and alarms</a> in the <i>WAF Developer Guide</i>.
      * </p>
@@ -50,7 +50,8 @@ public class AttackProperty implements Serializable, Cloneable, StructuredPojo {
     private String attackPropertyIdentifier;
     /**
      * <p>
-     * Contributor objects for the top five contributors to a Shield event.
+     * Contributor objects for the top five contributors to a Shield event. A contributor is a source of traffic that
+     * Shield Advanced identifies as responsible for some or all of an event.
      * </p>
      */
     private java.util.List<Contributor> topContributors;
@@ -73,8 +74,8 @@ public class AttackProperty implements Serializable, Cloneable, StructuredPojo {
      * <code>APPLICATION</code> indicates layer 7 events.
      * </p>
      * <p>
-     * For infrastructure layer events (L3 and L4 events) after January 25, 2021, you can view metrics for top
-     * contributors in Amazon CloudWatch metrics. For more information, see <a
+     * For infrastructure layer events (L3 and L4 events), you can view metrics for top contributors in Amazon
+     * CloudWatch metrics. For more information, see <a
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#set-ddos-alarms">Shield
      * metrics and alarms</a> in the <i>WAF Developer Guide</i>.
      * </p>
@@ -83,8 +84,8 @@ public class AttackProperty implements Serializable, Cloneable, StructuredPojo {
      *        The type of Shield event that was observed. <code>NETWORK</code> indicates layer 3 and layer 4 events and
      *        <code>APPLICATION</code> indicates layer 7 events.</p>
      *        <p>
-     *        For infrastructure layer events (L3 and L4 events) after January 25, 2021, you can view metrics for top
-     *        contributors in Amazon CloudWatch metrics. For more information, see <a
+     *        For infrastructure layer events (L3 and L4 events), you can view metrics for top contributors in Amazon
+     *        CloudWatch metrics. For more information, see <a
      *        href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#set-ddos-alarms"
      *        >Shield metrics and alarms</a> in the <i>WAF Developer Guide</i>.
      * @see AttackLayer
@@ -100,8 +101,8 @@ public class AttackProperty implements Serializable, Cloneable, StructuredPojo {
      * <code>APPLICATION</code> indicates layer 7 events.
      * </p>
      * <p>
-     * For infrastructure layer events (L3 and L4 events) after January 25, 2021, you can view metrics for top
-     * contributors in Amazon CloudWatch metrics. For more information, see <a
+     * For infrastructure layer events (L3 and L4 events), you can view metrics for top contributors in Amazon
+     * CloudWatch metrics. For more information, see <a
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#set-ddos-alarms">Shield
      * metrics and alarms</a> in the <i>WAF Developer Guide</i>.
      * </p>
@@ -109,8 +110,8 @@ public class AttackProperty implements Serializable, Cloneable, StructuredPojo {
      * @return The type of Shield event that was observed. <code>NETWORK</code> indicates layer 3 and layer 4 events and
      *         <code>APPLICATION</code> indicates layer 7 events.</p>
      *         <p>
-     *         For infrastructure layer events (L3 and L4 events) after January 25, 2021, you can view metrics for top
-     *         contributors in Amazon CloudWatch metrics. For more information, see <a
+     *         For infrastructure layer events (L3 and L4 events), you can view metrics for top contributors in Amazon
+     *         CloudWatch metrics. For more information, see <a
      *         href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#set-ddos-alarms"
      *         >Shield metrics and alarms</a> in the <i>WAF Developer Guide</i>.
      * @see AttackLayer
@@ -126,8 +127,8 @@ public class AttackProperty implements Serializable, Cloneable, StructuredPojo {
      * <code>APPLICATION</code> indicates layer 7 events.
      * </p>
      * <p>
-     * For infrastructure layer events (L3 and L4 events) after January 25, 2021, you can view metrics for top
-     * contributors in Amazon CloudWatch metrics. For more information, see <a
+     * For infrastructure layer events (L3 and L4 events), you can view metrics for top contributors in Amazon
+     * CloudWatch metrics. For more information, see <a
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#set-ddos-alarms">Shield
      * metrics and alarms</a> in the <i>WAF Developer Guide</i>.
      * </p>
@@ -136,8 +137,8 @@ public class AttackProperty implements Serializable, Cloneable, StructuredPojo {
      *        The type of Shield event that was observed. <code>NETWORK</code> indicates layer 3 and layer 4 events and
      *        <code>APPLICATION</code> indicates layer 7 events.</p>
      *        <p>
-     *        For infrastructure layer events (L3 and L4 events) after January 25, 2021, you can view metrics for top
-     *        contributors in Amazon CloudWatch metrics. For more information, see <a
+     *        For infrastructure layer events (L3 and L4 events), you can view metrics for top contributors in Amazon
+     *        CloudWatch metrics. For more information, see <a
      *        href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#set-ddos-alarms"
      *        >Shield metrics and alarms</a> in the <i>WAF Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -155,8 +156,8 @@ public class AttackProperty implements Serializable, Cloneable, StructuredPojo {
      * <code>APPLICATION</code> indicates layer 7 events.
      * </p>
      * <p>
-     * For infrastructure layer events (L3 and L4 events) after January 25, 2021, you can view metrics for top
-     * contributors in Amazon CloudWatch metrics. For more information, see <a
+     * For infrastructure layer events (L3 and L4 events), you can view metrics for top contributors in Amazon
+     * CloudWatch metrics. For more information, see <a
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#set-ddos-alarms">Shield
      * metrics and alarms</a> in the <i>WAF Developer Guide</i>.
      * </p>
@@ -165,8 +166,8 @@ public class AttackProperty implements Serializable, Cloneable, StructuredPojo {
      *        The type of Shield event that was observed. <code>NETWORK</code> indicates layer 3 and layer 4 events and
      *        <code>APPLICATION</code> indicates layer 7 events.</p>
      *        <p>
-     *        For infrastructure layer events (L3 and L4 events) after January 25, 2021, you can view metrics for top
-     *        contributors in Amazon CloudWatch metrics. For more information, see <a
+     *        For infrastructure layer events (L3 and L4 events), you can view metrics for top contributors in Amazon
+     *        CloudWatch metrics. For more information, see <a
      *        href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#set-ddos-alarms"
      *        >Shield metrics and alarms</a> in the <i>WAF Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -251,10 +252,12 @@ public class AttackProperty implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contributor objects for the top five contributors to a Shield event.
+     * Contributor objects for the top five contributors to a Shield event. A contributor is a source of traffic that
+     * Shield Advanced identifies as responsible for some or all of an event.
      * </p>
      * 
-     * @return Contributor objects for the top five contributors to a Shield event.
+     * @return Contributor objects for the top five contributors to a Shield event. A contributor is a source of traffic
+     *         that Shield Advanced identifies as responsible for some or all of an event.
      */
 
     public java.util.List<Contributor> getTopContributors() {
@@ -263,11 +266,13 @@ public class AttackProperty implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contributor objects for the top five contributors to a Shield event.
+     * Contributor objects for the top five contributors to a Shield event. A contributor is a source of traffic that
+     * Shield Advanced identifies as responsible for some or all of an event.
      * </p>
      * 
      * @param topContributors
-     *        Contributor objects for the top five contributors to a Shield event.
+     *        Contributor objects for the top five contributors to a Shield event. A contributor is a source of traffic
+     *        that Shield Advanced identifies as responsible for some or all of an event.
      */
 
     public void setTopContributors(java.util.Collection<Contributor> topContributors) {
@@ -281,7 +286,8 @@ public class AttackProperty implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contributor objects for the top five contributors to a Shield event.
+     * Contributor objects for the top five contributors to a Shield event. A contributor is a source of traffic that
+     * Shield Advanced identifies as responsible for some or all of an event.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -290,7 +296,8 @@ public class AttackProperty implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param topContributors
-     *        Contributor objects for the top five contributors to a Shield event.
+     *        Contributor objects for the top five contributors to a Shield event. A contributor is a source of traffic
+     *        that Shield Advanced identifies as responsible for some or all of an event.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -306,11 +313,13 @@ public class AttackProperty implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contributor objects for the top five contributors to a Shield event.
+     * Contributor objects for the top five contributors to a Shield event. A contributor is a source of traffic that
+     * Shield Advanced identifies as responsible for some or all of an event.
      * </p>
      * 
      * @param topContributors
-     *        Contributor objects for the top five contributors to a Shield event.
+     *        Contributor objects for the top five contributors to a Shield event. A contributor is a source of traffic
+     *        that Shield Advanced identifies as responsible for some or all of an event.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

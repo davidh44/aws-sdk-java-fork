@@ -71,6 +71,12 @@ public class DescribeArtifactResult extends com.amazonaws.AmazonWebServiceResult
     private UserContext lastModifiedBy;
 
     private MetadataProperties metadataProperties;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the lineage group.
+     * </p>
+     */
+    private String lineageGroupArn;
 
     /**
      * <p>
@@ -459,6 +465,46 @@ public class DescribeArtifactResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the lineage group.
+     * </p>
+     * 
+     * @param lineageGroupArn
+     *        The Amazon Resource Name (ARN) of the lineage group.
+     */
+
+    public void setLineageGroupArn(String lineageGroupArn) {
+        this.lineageGroupArn = lineageGroupArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the lineage group.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the lineage group.
+     */
+
+    public String getLineageGroupArn() {
+        return this.lineageGroupArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the lineage group.
+     * </p>
+     * 
+     * @param lineageGroupArn
+     *        The Amazon Resource Name (ARN) of the lineage group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeArtifactResult withLineageGroupArn(String lineageGroupArn) {
+        setLineageGroupArn(lineageGroupArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -489,7 +535,9 @@ public class DescribeArtifactResult extends com.amazonaws.AmazonWebServiceResult
         if (getLastModifiedBy() != null)
             sb.append("LastModifiedBy: ").append(getLastModifiedBy()).append(",");
         if (getMetadataProperties() != null)
-            sb.append("MetadataProperties: ").append(getMetadataProperties());
+            sb.append("MetadataProperties: ").append(getMetadataProperties()).append(",");
+        if (getLineageGroupArn() != null)
+            sb.append("LineageGroupArn: ").append(getLineageGroupArn());
         sb.append("}");
         return sb.toString();
     }
@@ -544,6 +592,10 @@ public class DescribeArtifactResult extends com.amazonaws.AmazonWebServiceResult
             return false;
         if (other.getMetadataProperties() != null && other.getMetadataProperties().equals(this.getMetadataProperties()) == false)
             return false;
+        if (other.getLineageGroupArn() == null ^ this.getLineageGroupArn() == null)
+            return false;
+        if (other.getLineageGroupArn() != null && other.getLineageGroupArn().equals(this.getLineageGroupArn()) == false)
+            return false;
         return true;
     }
 
@@ -562,6 +614,7 @@ public class DescribeArtifactResult extends com.amazonaws.AmazonWebServiceResult
         hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
         hashCode = prime * hashCode + ((getLastModifiedBy() == null) ? 0 : getLastModifiedBy().hashCode());
         hashCode = prime * hashCode + ((getMetadataProperties() == null) ? 0 : getMetadataProperties().hashCode());
+        hashCode = prime * hashCode + ((getLineageGroupArn() == null) ? 0 : getLineageGroupArn().hashCode());
         return hashCode;
     }
 

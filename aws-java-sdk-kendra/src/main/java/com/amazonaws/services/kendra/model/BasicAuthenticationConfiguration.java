@@ -49,7 +49,7 @@ public class BasicAuthenticationConfiguration implements Serializable, Cloneable
     /**
      * <p>
      * Your secret ARN, which you can create in <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets Manager</a>
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets Manager</a>
      * </p>
      * <p>
      * You use a secret if basic authentication credentials are required to connect to a website. The secret stores your
@@ -171,7 +171,7 @@ public class BasicAuthenticationConfiguration implements Serializable, Cloneable
     /**
      * <p>
      * Your secret ARN, which you can create in <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets Manager</a>
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets Manager</a>
      * </p>
      * <p>
      * You use a secret if basic authentication credentials are required to connect to a website. The secret stores your
@@ -180,7 +180,7 @@ public class BasicAuthenticationConfiguration implements Serializable, Cloneable
      * 
      * @param credentials
      *        Your secret ARN, which you can create in <a
-     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets Manager</a> </p>
+     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets Manager</a> </p>
      *        <p>
      *        You use a secret if basic authentication credentials are required to connect to a website. The secret
      *        stores your credentials of user name and password.
@@ -193,7 +193,7 @@ public class BasicAuthenticationConfiguration implements Serializable, Cloneable
     /**
      * <p>
      * Your secret ARN, which you can create in <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets Manager</a>
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets Manager</a>
      * </p>
      * <p>
      * You use a secret if basic authentication credentials are required to connect to a website. The secret stores your
@@ -201,8 +201,7 @@ public class BasicAuthenticationConfiguration implements Serializable, Cloneable
      * </p>
      * 
      * @return Your secret ARN, which you can create in <a
-     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets Manager</a>
-     *         </p>
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets Manager</a> </p>
      *         <p>
      *         You use a secret if basic authentication credentials are required to connect to a website. The secret
      *         stores your credentials of user name and password.
@@ -215,7 +214,7 @@ public class BasicAuthenticationConfiguration implements Serializable, Cloneable
     /**
      * <p>
      * Your secret ARN, which you can create in <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets Manager</a>
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets Manager</a>
      * </p>
      * <p>
      * You use a secret if basic authentication credentials are required to connect to a website. The secret stores your
@@ -224,7 +223,7 @@ public class BasicAuthenticationConfiguration implements Serializable, Cloneable
      * 
      * @param credentials
      *        Your secret ARN, which you can create in <a
-     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets Manager</a> </p>
+     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets Manager</a> </p>
      *        <p>
      *        You use a secret if basic authentication credentials are required to connect to a website. The secret
      *        stores your credentials of user name and password.

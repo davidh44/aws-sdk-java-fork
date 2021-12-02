@@ -80,8 +80,7 @@ public class DescribeThesaurusResult extends com.amazonaws.AmazonWebServiceResul
     private java.util.Date updatedAt;
     /**
      * <p>
-     * An AWS Identity and Access Management (IAM) role that gives Amazon Kendra permissions to access thesaurus file
-     * specified in <code>SourceS3Path</code>.
+     * An IAM role that gives Amazon Kendra permissions to access thesaurus file specified in <code>SourceS3Path</code>.
      * </p>
      */
     private String roleArn;
@@ -498,13 +497,12 @@ public class DescribeThesaurusResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * An AWS Identity and Access Management (IAM) role that gives Amazon Kendra permissions to access thesaurus file
-     * specified in <code>SourceS3Path</code>.
+     * An IAM role that gives Amazon Kendra permissions to access thesaurus file specified in <code>SourceS3Path</code>.
      * </p>
      * 
      * @param roleArn
-     *        An AWS Identity and Access Management (IAM) role that gives Amazon Kendra permissions to access thesaurus
-     *        file specified in <code>SourceS3Path</code>.
+     *        An IAM role that gives Amazon Kendra permissions to access thesaurus file specified in
+     *        <code>SourceS3Path</code>.
      */
 
     public void setRoleArn(String roleArn) {
@@ -513,12 +511,11 @@ public class DescribeThesaurusResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * An AWS Identity and Access Management (IAM) role that gives Amazon Kendra permissions to access thesaurus file
-     * specified in <code>SourceS3Path</code>.
+     * An IAM role that gives Amazon Kendra permissions to access thesaurus file specified in <code>SourceS3Path</code>.
      * </p>
      * 
-     * @return An AWS Identity and Access Management (IAM) role that gives Amazon Kendra permissions to access thesaurus
-     *         file specified in <code>SourceS3Path</code>.
+     * @return An IAM role that gives Amazon Kendra permissions to access thesaurus file specified in
+     *         <code>SourceS3Path</code>.
      */
 
     public String getRoleArn() {
@@ -527,13 +524,12 @@ public class DescribeThesaurusResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * An AWS Identity and Access Management (IAM) role that gives Amazon Kendra permissions to access thesaurus file
-     * specified in <code>SourceS3Path</code>.
+     * An IAM role that gives Amazon Kendra permissions to access thesaurus file specified in <code>SourceS3Path</code>.
      * </p>
      * 
      * @param roleArn
-     *        An AWS Identity and Access Management (IAM) role that gives Amazon Kendra permissions to access thesaurus
-     *        file specified in <code>SourceS3Path</code>.
+     *        An IAM role that gives Amazon Kendra permissions to access thesaurus file specified in
+     *        <code>SourceS3Path</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

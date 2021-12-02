@@ -29,6 +29,10 @@ public class BiasMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> REPORT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Report").build();
+    private static final MarshallingInfo<StructuredPojo> PRETRAININGREPORT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PreTrainingReport").build();
+    private static final MarshallingInfo<StructuredPojo> POSTTRAININGREPORT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PostTrainingReport").build();
 
     private static final BiasMarshaller instance = new BiasMarshaller();
 
@@ -47,6 +51,8 @@ public class BiasMarshaller {
 
         try {
             protocolMarshaller.marshall(bias.getReport(), REPORT_BINDING);
+            protocolMarshaller.marshall(bias.getPreTrainingReport(), PRETRAININGREPORT_BINDING);
+            protocolMarshaller.marshall(bias.getPostTrainingReport(), POSTTRAININGREPORT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

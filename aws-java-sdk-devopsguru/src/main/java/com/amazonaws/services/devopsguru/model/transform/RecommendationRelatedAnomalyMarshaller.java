@@ -32,6 +32,8 @@ public class RecommendationRelatedAnomalyMarshaller {
             .marshallLocationName("Resources").build();
     private static final MarshallingInfo<List> SOURCEDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("SourceDetails").build();
+    private static final MarshallingInfo<String> ANOMALYID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("AnomalyId").build();
 
     private static final RecommendationRelatedAnomalyMarshaller instance = new RecommendationRelatedAnomalyMarshaller();
 
@@ -51,6 +53,7 @@ public class RecommendationRelatedAnomalyMarshaller {
         try {
             protocolMarshaller.marshall(recommendationRelatedAnomaly.getResources(), RESOURCES_BINDING);
             protocolMarshaller.marshall(recommendationRelatedAnomaly.getSourceDetails(), SOURCEDETAILS_BINDING);
+            protocolMarshaller.marshall(recommendationRelatedAnomaly.getAnomalyId(), ANOMALYID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

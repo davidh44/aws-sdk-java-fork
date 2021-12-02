@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.devopsguru.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -43,6 +44,16 @@ public class ReactiveAnomalySummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AssociatedInsightId").build();
     private static final MarshallingInfo<StructuredPojo> RESOURCECOLLECTION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceCollection").build();
+    private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Type").build();
+    private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Name").build();
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
+    private static final MarshallingInfo<String> CAUSALANOMALYID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CausalAnomalyId").build();
+    private static final MarshallingInfo<List> ANOMALYRESOURCES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AnomalyResources").build();
 
     private static final ReactiveAnomalySummaryMarshaller instance = new ReactiveAnomalySummaryMarshaller();
 
@@ -68,6 +79,11 @@ public class ReactiveAnomalySummaryMarshaller {
             protocolMarshaller.marshall(reactiveAnomalySummary.getSourceDetails(), SOURCEDETAILS_BINDING);
             protocolMarshaller.marshall(reactiveAnomalySummary.getAssociatedInsightId(), ASSOCIATEDINSIGHTID_BINDING);
             protocolMarshaller.marshall(reactiveAnomalySummary.getResourceCollection(), RESOURCECOLLECTION_BINDING);
+            protocolMarshaller.marshall(reactiveAnomalySummary.getType(), TYPE_BINDING);
+            protocolMarshaller.marshall(reactiveAnomalySummary.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(reactiveAnomalySummary.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(reactiveAnomalySummary.getCausalAnomalyId(), CAUSALANOMALYID_BINDING);
+            protocolMarshaller.marshall(reactiveAnomalySummary.getAnomalyResources(), ANOMALYRESOURCES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

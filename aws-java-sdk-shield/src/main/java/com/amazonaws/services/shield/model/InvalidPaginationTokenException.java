@@ -16,8 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Exception that indicates that the NextToken specified in the request is invalid. Submit the request using the
- * NextToken value that was returned in the response.
+ * Exception that indicates that the <code>NextToken</code> specified in the request is invalid. Submit the request
+ * using the <code>NextToken</code> value that was returned in the prior response.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

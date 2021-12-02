@@ -37,6 +37,18 @@ public class UpdateVirtualInterfaceAttributesRequest extends com.amazonaws.Amazo
      * </p>
      */
     private Integer mtu;
+    /**
+     * <p>
+     * Indicates whether to enable or disable SiteLink.
+     * </p>
+     */
+    private Boolean enableSiteLink;
+    /**
+     * <p>
+     * The name of the virtual private interface.
+     * </p>
+     */
+    private String virtualInterfaceName;
 
     /**
      * <p>
@@ -122,6 +134,98 @@ public class UpdateVirtualInterfaceAttributesRequest extends com.amazonaws.Amazo
     }
 
     /**
+     * <p>
+     * Indicates whether to enable or disable SiteLink.
+     * </p>
+     * 
+     * @param enableSiteLink
+     *        Indicates whether to enable or disable SiteLink.
+     */
+
+    public void setEnableSiteLink(Boolean enableSiteLink) {
+        this.enableSiteLink = enableSiteLink;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to enable or disable SiteLink.
+     * </p>
+     * 
+     * @return Indicates whether to enable or disable SiteLink.
+     */
+
+    public Boolean getEnableSiteLink() {
+        return this.enableSiteLink;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to enable or disable SiteLink.
+     * </p>
+     * 
+     * @param enableSiteLink
+     *        Indicates whether to enable or disable SiteLink.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateVirtualInterfaceAttributesRequest withEnableSiteLink(Boolean enableSiteLink) {
+        setEnableSiteLink(enableSiteLink);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to enable or disable SiteLink.
+     * </p>
+     * 
+     * @return Indicates whether to enable or disable SiteLink.
+     */
+
+    public Boolean isEnableSiteLink() {
+        return this.enableSiteLink;
+    }
+
+    /**
+     * <p>
+     * The name of the virtual private interface.
+     * </p>
+     * 
+     * @param virtualInterfaceName
+     *        The name of the virtual private interface.
+     */
+
+    public void setVirtualInterfaceName(String virtualInterfaceName) {
+        this.virtualInterfaceName = virtualInterfaceName;
+    }
+
+    /**
+     * <p>
+     * The name of the virtual private interface.
+     * </p>
+     * 
+     * @return The name of the virtual private interface.
+     */
+
+    public String getVirtualInterfaceName() {
+        return this.virtualInterfaceName;
+    }
+
+    /**
+     * <p>
+     * The name of the virtual private interface.
+     * </p>
+     * 
+     * @param virtualInterfaceName
+     *        The name of the virtual private interface.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateVirtualInterfaceAttributesRequest withVirtualInterfaceName(String virtualInterfaceName) {
+        setVirtualInterfaceName(virtualInterfaceName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -136,7 +240,11 @@ public class UpdateVirtualInterfaceAttributesRequest extends com.amazonaws.Amazo
         if (getVirtualInterfaceId() != null)
             sb.append("VirtualInterfaceId: ").append(getVirtualInterfaceId()).append(",");
         if (getMtu() != null)
-            sb.append("Mtu: ").append(getMtu());
+            sb.append("Mtu: ").append(getMtu()).append(",");
+        if (getEnableSiteLink() != null)
+            sb.append("EnableSiteLink: ").append(getEnableSiteLink()).append(",");
+        if (getVirtualInterfaceName() != null)
+            sb.append("VirtualInterfaceName: ").append(getVirtualInterfaceName());
         sb.append("}");
         return sb.toString();
     }
@@ -159,6 +267,14 @@ public class UpdateVirtualInterfaceAttributesRequest extends com.amazonaws.Amazo
             return false;
         if (other.getMtu() != null && other.getMtu().equals(this.getMtu()) == false)
             return false;
+        if (other.getEnableSiteLink() == null ^ this.getEnableSiteLink() == null)
+            return false;
+        if (other.getEnableSiteLink() != null && other.getEnableSiteLink().equals(this.getEnableSiteLink()) == false)
+            return false;
+        if (other.getVirtualInterfaceName() == null ^ this.getVirtualInterfaceName() == null)
+            return false;
+        if (other.getVirtualInterfaceName() != null && other.getVirtualInterfaceName().equals(this.getVirtualInterfaceName()) == false)
+            return false;
         return true;
     }
 
@@ -169,6 +285,8 @@ public class UpdateVirtualInterfaceAttributesRequest extends com.amazonaws.Amazo
 
         hashCode = prime * hashCode + ((getVirtualInterfaceId() == null) ? 0 : getVirtualInterfaceId().hashCode());
         hashCode = prime * hashCode + ((getMtu() == null) ? 0 : getMtu().hashCode());
+        hashCode = prime * hashCode + ((getEnableSiteLink() == null) ? 0 : getEnableSiteLink().hashCode());
+        hashCode = prime * hashCode + ((getVirtualInterfaceName() == null) ? 0 : getVirtualInterfaceName().hashCode());
         return hashCode;
     }
 

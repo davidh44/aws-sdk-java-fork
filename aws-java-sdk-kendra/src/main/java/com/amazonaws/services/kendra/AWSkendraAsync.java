@@ -34,6 +34,90 @@ public interface AWSkendraAsync extends AWSkendra {
 
     /**
      * <p>
+     * Grants users or groups in your Amazon Web Services SSO identity source access to your Amazon Kendra experience.
+     * You can create an Amazon Kendra experience such as a search application. For more information on creating a
+     * search application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param associateEntitiesToExperienceRequest
+     * @return A Java Future containing the result of the AssociateEntitiesToExperience operation returned by the
+     *         service.
+     * @sample AWSkendraAsync.AssociateEntitiesToExperience
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/AssociateEntitiesToExperience"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateEntitiesToExperienceResult> associateEntitiesToExperienceAsync(
+            AssociateEntitiesToExperienceRequest associateEntitiesToExperienceRequest);
+
+    /**
+     * <p>
+     * Grants users or groups in your Amazon Web Services SSO identity source access to your Amazon Kendra experience.
+     * You can create an Amazon Kendra experience such as a search application. For more information on creating a
+     * search application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param associateEntitiesToExperienceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AssociateEntitiesToExperience operation returned by the
+     *         service.
+     * @sample AWSkendraAsyncHandler.AssociateEntitiesToExperience
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/AssociateEntitiesToExperience"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateEntitiesToExperienceResult> associateEntitiesToExperienceAsync(
+            AssociateEntitiesToExperienceRequest associateEntitiesToExperienceRequest,
+            com.amazonaws.handlers.AsyncHandler<AssociateEntitiesToExperienceRequest, AssociateEntitiesToExperienceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Defines the specific permissions of users or groups in your Amazon Web Services SSO identity source with access
+     * to your Amazon Kendra experience. You can create an Amazon Kendra experience such as a search application. For
+     * more information on creating a search application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param associatePersonasToEntitiesRequest
+     * @return A Java Future containing the result of the AssociatePersonasToEntities operation returned by the service.
+     * @sample AWSkendraAsync.AssociatePersonasToEntities
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/AssociatePersonasToEntities"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociatePersonasToEntitiesResult> associatePersonasToEntitiesAsync(
+            AssociatePersonasToEntitiesRequest associatePersonasToEntitiesRequest);
+
+    /**
+     * <p>
+     * Defines the specific permissions of users or groups in your Amazon Web Services SSO identity source with access
+     * to your Amazon Kendra experience. You can create an Amazon Kendra experience such as a search application. For
+     * more information on creating a search application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param associatePersonasToEntitiesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AssociatePersonasToEntities operation returned by the service.
+     * @sample AWSkendraAsyncHandler.AssociatePersonasToEntities
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/AssociatePersonasToEntities"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociatePersonasToEntitiesResult> associatePersonasToEntitiesAsync(
+            AssociatePersonasToEntitiesRequest associatePersonasToEntitiesRequest,
+            com.amazonaws.handlers.AsyncHandler<AssociatePersonasToEntitiesRequest, AssociatePersonasToEntitiesResult> asyncHandler);
+
+    /**
+     * <p>
      * Removes one or more documents from an index. The documents must have been added with the
      * <code>BatchPutDocument</code> operation.
      * </p>
@@ -187,6 +271,10 @@ public interface AWSkendraAsync extends AWSkendra {
      * If you do not see any new suggestions, then please allow Amazon Kendra to collect enough queries to learn new
      * suggestions.
      * </p>
+     * <p>
+     * <code>ClearQuerySuggestions</code> is currently not supported in the Amazon Web Services GovCloud (US-West)
+     * region.
+     * </p>
      * 
      * @param clearQuerySuggestionsRequest
      * @return A Java Future containing the result of the ClearQuerySuggestions operation returned by the service.
@@ -205,6 +293,10 @@ public interface AWSkendraAsync extends AWSkendra {
      * Kendra learns new suggestions based on new queries added to the query log from the time you cleared suggestions.
      * If you do not see any new suggestions, then please allow Amazon Kendra to collect enough queries to learn new
      * suggestions.
+     * </p>
+     * <p>
+     * <code>ClearQuerySuggestions</code> is currently not supported in the Amazon Web Services GovCloud (US-West)
+     * region.
      * </p>
      * 
      * @param clearQuerySuggestionsRequest
@@ -232,6 +324,10 @@ public interface AWSkendraAsync extends AWSkendra {
      * <code>CreateDataSource</code> is a synchronous operation. The operation returns 200 if the data source was
      * successfully created. Otherwise, an exception is raised.
      * </p>
+     * <p>
+     * Amazon S3 and <a href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-custom.html">custom</a> data
+     * sources are the only supported data sources in the Amazon Web Services GovCloud (US-West) region.
+     * </p>
      * 
      * @param createDataSourceRequest
      * @return A Java Future containing the result of the CreateDataSource operation returned by the service.
@@ -253,6 +349,10 @@ public interface AWSkendraAsync extends AWSkendra {
      * <code>CreateDataSource</code> is a synchronous operation. The operation returns 200 if the data source was
      * successfully created. Otherwise, an exception is raised.
      * </p>
+     * <p>
+     * Amazon S3 and <a href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-custom.html">custom</a> data
+     * sources are the only supported data sources in the Amazon Web Services GovCloud (US-West) region.
+     * </p>
      * 
      * @param createDataSourceRequest
      * @param asyncHandler
@@ -266,6 +366,43 @@ public interface AWSkendraAsync extends AWSkendra {
      */
     java.util.concurrent.Future<CreateDataSourceResult> createDataSourceAsync(CreateDataSourceRequest createDataSourceRequest,
             com.amazonaws.handlers.AsyncHandler<CreateDataSourceRequest, CreateDataSourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates an Amazon Kendra experience such as a search application. For more information on creating a search
+     * application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param createExperienceRequest
+     * @return A Java Future containing the result of the CreateExperience operation returned by the service.
+     * @sample AWSkendraAsync.CreateExperience
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/CreateExperience" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateExperienceResult> createExperienceAsync(CreateExperienceRequest createExperienceRequest);
+
+    /**
+     * <p>
+     * Creates an Amazon Kendra experience such as a search application. For more information on creating a search
+     * application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param createExperienceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateExperience operation returned by the service.
+     * @sample AWSkendraAsyncHandler.CreateExperience
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/CreateExperience" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateExperienceResult> createExperienceAsync(CreateExperienceRequest createExperienceRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateExperienceRequest, CreateExperienceResult> asyncHandler);
 
     /**
      * <p>
@@ -357,6 +494,10 @@ public interface AWSkendraAsync extends AWSkendra {
      * For information on the current quota limits for block lists, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/quotas.html">Quotas for Amazon Kendra</a>.
      * </p>
+     * <p>
+     * <code>CreateQuerySuggestionsBlockList</code> is currently not supported in the Amazon Web Services GovCloud
+     * (US-West) region.
+     * </p>
      * 
      * @param createQuerySuggestionsBlockListRequest
      * @return A Java Future containing the result of the CreateQuerySuggestionsBlockList operation returned by the
@@ -383,6 +524,10 @@ public interface AWSkendraAsync extends AWSkendra {
      * <p>
      * For information on the current quota limits for block lists, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/quotas.html">Quotas for Amazon Kendra</a>.
+     * </p>
+     * <p>
+     * <code>CreateQuerySuggestionsBlockList</code> is currently not supported in the Amazon Web Services GovCloud
+     * (US-West) region.
      * </p>
      * 
      * @param createQuerySuggestionsBlockListRequest
@@ -470,6 +615,43 @@ public interface AWSkendraAsync extends AWSkendra {
 
     /**
      * <p>
+     * Deletes your Amazon Kendra experience such as a search application. For more information on creating a search
+     * application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param deleteExperienceRequest
+     * @return A Java Future containing the result of the DeleteExperience operation returned by the service.
+     * @sample AWSkendraAsync.DeleteExperience
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DeleteExperience" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteExperienceResult> deleteExperienceAsync(DeleteExperienceRequest deleteExperienceRequest);
+
+    /**
+     * <p>
+     * Deletes your Amazon Kendra experience such as a search application. For more information on creating a search
+     * application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param deleteExperienceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteExperience operation returned by the service.
+     * @sample AWSkendraAsyncHandler.DeleteExperience
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DeleteExperience" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteExperienceResult> deleteExperienceAsync(DeleteExperienceRequest deleteExperienceRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteExperienceRequest, DeleteExperienceResult> asyncHandler);
+
+    /**
+     * <p>
      * Removes an FAQ from an index.
      * </p>
      * 
@@ -550,6 +732,10 @@ public interface AWSkendraAsync extends AWSkendra {
      * belong to the "Engineering" group when calling <code>PutPrincipalMapping</code>. You can update your internal
      * list of users or sub groups and input this list when calling <code>PutPrincipalMapping</code>.
      * </p>
+     * <p>
+     * <code>DeletePrincipalMapping</code> is currently not supported in the Amazon Web Services GovCloud (US-West)
+     * region.
+     * </p>
      * 
      * @param deletePrincipalMappingRequest
      * @return A Java Future containing the result of the DeletePrincipalMapping operation returned by the service.
@@ -575,6 +761,10 @@ public interface AWSkendraAsync extends AWSkendra {
      * belong to the "Engineering" group when calling <code>PutPrincipalMapping</code>. You can update your internal
      * list of users or sub groups and input this list when calling <code>PutPrincipalMapping</code>.
      * </p>
+     * <p>
+     * <code>DeletePrincipalMapping</code> is currently not supported in the Amazon Web Services GovCloud (US-West)
+     * region.
+     * </p>
      * 
      * @param deletePrincipalMappingRequest
      * @param asyncHandler
@@ -597,6 +787,10 @@ public interface AWSkendraAsync extends AWSkendra {
      * A deleted block list might not take effect right away. Amazon Kendra needs to refresh the entire suggestions list
      * to add back the queries that were previously blocked.
      * </p>
+     * <p>
+     * <code>DeleteQuerySuggestionsBlockList</code> is currently not supported in the Amazon Web Services GovCloud
+     * (US-West) region.
+     * </p>
      * 
      * @param deleteQuerySuggestionsBlockListRequest
      * @return A Java Future containing the result of the DeleteQuerySuggestionsBlockList operation returned by the
@@ -615,6 +809,10 @@ public interface AWSkendraAsync extends AWSkendra {
      * <p>
      * A deleted block list might not take effect right away. Amazon Kendra needs to refresh the entire suggestions list
      * to add back the queries that were previously blocked.
+     * </p>
+     * <p>
+     * <code>DeleteQuerySuggestionsBlockList</code> is currently not supported in the Amazon Web Services GovCloud
+     * (US-West) region.
      * </p>
      * 
      * @param deleteQuerySuggestionsBlockListRequest
@@ -696,6 +894,43 @@ public interface AWSkendraAsync extends AWSkendra {
 
     /**
      * <p>
+     * Gets information about your Amazon Kendra experience such as a search application. For more information on
+     * creating a search application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param describeExperienceRequest
+     * @return A Java Future containing the result of the DescribeExperience operation returned by the service.
+     * @sample AWSkendraAsync.DescribeExperience
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DescribeExperience" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeExperienceResult> describeExperienceAsync(DescribeExperienceRequest describeExperienceRequest);
+
+    /**
+     * <p>
+     * Gets information about your Amazon Kendra experience such as a search application. For more information on
+     * creating a search application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param describeExperienceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeExperience operation returned by the service.
+     * @sample AWSkendraAsyncHandler.DescribeExperience
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DescribeExperience" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeExperienceResult> describeExperienceAsync(DescribeExperienceRequest describeExperienceRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeExperienceRequest, DescribeExperienceResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets information about an FAQ list.
      * </p>
      * 
@@ -763,6 +998,10 @@ public interface AWSkendraAsync extends AWSkendra {
      * last updated, when actions were received by Amazon Kendra, the latest action that should process and apply after
      * other actions, and useful error messages if an action could not be processed.
      * </p>
+     * <p>
+     * <code>DescribePrincipalMapping</code> is currently not supported in the Amazon Web Services GovCloud (US-West)
+     * region.
+     * </p>
      * 
      * @param describePrincipalMappingRequest
      * @return A Java Future containing the result of the DescribePrincipalMapping operation returned by the service.
@@ -778,6 +1017,10 @@ public interface AWSkendraAsync extends AWSkendra {
      * This includes information on the status of actions currently processing or yet to be processed, when actions were
      * last updated, when actions were received by Amazon Kendra, the latest action that should process and apply after
      * other actions, and useful error messages if an action could not be processed.
+     * </p>
+     * <p>
+     * <code>DescribePrincipalMapping</code> is currently not supported in the Amazon Web Services GovCloud (US-West)
+     * region.
      * </p>
      * 
      * @param describePrincipalMappingRequest
@@ -800,6 +1043,10 @@ public interface AWSkendraAsync extends AWSkendra {
      * <p>
      * This is used to check the current settings that are applied to a block list.
      * </p>
+     * <p>
+     * <code>DescribeQuerySuggestionsBlockList</code> is currently not supported in the Amazon Web Services GovCloud
+     * (US-West) region.
+     * </p>
      * 
      * @param describeQuerySuggestionsBlockListRequest
      * @return A Java Future containing the result of the DescribeQuerySuggestionsBlockList operation returned by the
@@ -817,6 +1064,10 @@ public interface AWSkendraAsync extends AWSkendra {
      * </p>
      * <p>
      * This is used to check the current settings that are applied to a block list.
+     * </p>
+     * <p>
+     * <code>DescribeQuerySuggestionsBlockList</code> is currently not supported in the Amazon Web Services GovCloud
+     * (US-West) region.
      * </p>
      * 
      * @param describeQuerySuggestionsBlockListRequest
@@ -841,6 +1092,10 @@ public interface AWSkendraAsync extends AWSkendra {
      * <p>
      * This is used to check the current settings applied to query suggestions.
      * </p>
+     * <p>
+     * <code>DescribeQuerySuggestionsConfig</code> is currently not supported in the Amazon Web Services GovCloud
+     * (US-West) region.
+     * </p>
      * 
      * @param describeQuerySuggestionsConfigRequest
      * @return A Java Future containing the result of the DescribeQuerySuggestionsConfig operation returned by the
@@ -858,6 +1113,10 @@ public interface AWSkendraAsync extends AWSkendra {
      * </p>
      * <p>
      * This is used to check the current settings applied to query suggestions.
+     * </p>
+     * <p>
+     * <code>DescribeQuerySuggestionsConfig</code> is currently not supported in the Amazon Web Services GovCloud
+     * (US-West) region.
      * </p>
      * 
      * @param describeQuerySuggestionsConfigRequest
@@ -908,7 +1167,96 @@ public interface AWSkendraAsync extends AWSkendra {
 
     /**
      * <p>
+     * Prevents users or groups in your Amazon Web Services SSO identity source from accessing your Amazon Kendra
+     * experience. You can create an Amazon Kendra experience such as a search application. For more information on
+     * creating a search application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param disassociateEntitiesFromExperienceRequest
+     * @return A Java Future containing the result of the DisassociateEntitiesFromExperience operation returned by the
+     *         service.
+     * @sample AWSkendraAsync.DisassociateEntitiesFromExperience
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DisassociateEntitiesFromExperience"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateEntitiesFromExperienceResult> disassociateEntitiesFromExperienceAsync(
+            DisassociateEntitiesFromExperienceRequest disassociateEntitiesFromExperienceRequest);
+
+    /**
+     * <p>
+     * Prevents users or groups in your Amazon Web Services SSO identity source from accessing your Amazon Kendra
+     * experience. You can create an Amazon Kendra experience such as a search application. For more information on
+     * creating a search application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param disassociateEntitiesFromExperienceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisassociateEntitiesFromExperience operation returned by the
+     *         service.
+     * @sample AWSkendraAsyncHandler.DisassociateEntitiesFromExperience
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DisassociateEntitiesFromExperience"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateEntitiesFromExperienceResult> disassociateEntitiesFromExperienceAsync(
+            DisassociateEntitiesFromExperienceRequest disassociateEntitiesFromExperienceRequest,
+            com.amazonaws.handlers.AsyncHandler<DisassociateEntitiesFromExperienceRequest, DisassociateEntitiesFromExperienceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Removes the specific permissions of users or groups in your Amazon Web Services SSO identity source with access
+     * to your Amazon Kendra experience. You can create an Amazon Kendra experience such as a search application. For
+     * more information on creating a search application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param disassociatePersonasFromEntitiesRequest
+     * @return A Java Future containing the result of the DisassociatePersonasFromEntities operation returned by the
+     *         service.
+     * @sample AWSkendraAsync.DisassociatePersonasFromEntities
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DisassociatePersonasFromEntities"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociatePersonasFromEntitiesResult> disassociatePersonasFromEntitiesAsync(
+            DisassociatePersonasFromEntitiesRequest disassociatePersonasFromEntitiesRequest);
+
+    /**
+     * <p>
+     * Removes the specific permissions of users or groups in your Amazon Web Services SSO identity source with access
+     * to your Amazon Kendra experience. You can create an Amazon Kendra experience such as a search application. For
+     * more information on creating a search application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param disassociatePersonasFromEntitiesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisassociatePersonasFromEntities operation returned by the
+     *         service.
+     * @sample AWSkendraAsyncHandler.DisassociatePersonasFromEntities
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DisassociatePersonasFromEntities"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociatePersonasFromEntitiesResult> disassociatePersonasFromEntitiesAsync(
+            DisassociatePersonasFromEntitiesRequest disassociatePersonasFromEntitiesRequest,
+            com.amazonaws.handlers.AsyncHandler<DisassociatePersonasFromEntitiesRequest, DisassociatePersonasFromEntitiesResult> asyncHandler);
+
+    /**
+     * <p>
      * Fetches the queries that are suggested to your users.
+     * </p>
+     * <p>
+     * <code>GetQuerySuggestions</code> is currently not supported in the Amazon Web Services GovCloud (US-West) region.
      * </p>
      * 
      * @param getQuerySuggestionsRequest
@@ -923,6 +1271,9 @@ public interface AWSkendraAsync extends AWSkendra {
      * <p>
      * Fetches the queries that are suggested to your users.
      * </p>
+     * <p>
+     * <code>GetQuerySuggestions</code> is currently not supported in the Amazon Web Services GovCloud (US-West) region.
+     * </p>
      * 
      * @param getQuerySuggestionsRequest
      * @param asyncHandler
@@ -936,6 +1287,39 @@ public interface AWSkendraAsync extends AWSkendra {
      */
     java.util.concurrent.Future<GetQuerySuggestionsResult> getQuerySuggestionsAsync(GetQuerySuggestionsRequest getQuerySuggestionsRequest,
             com.amazonaws.handlers.AsyncHandler<GetQuerySuggestionsRequest, GetQuerySuggestionsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves search metrics data. The data provides a snapshot of how your users interact with your search
+     * application and how effective the application is.
+     * </p>
+     * 
+     * @param getSnapshotsRequest
+     * @return A Java Future containing the result of the GetSnapshots operation returned by the service.
+     * @sample AWSkendraAsync.GetSnapshots
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/GetSnapshots" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetSnapshotsResult> getSnapshotsAsync(GetSnapshotsRequest getSnapshotsRequest);
+
+    /**
+     * <p>
+     * Retrieves search metrics data. The data provides a snapshot of how your users interact with your search
+     * application and how effective the application is.
+     * </p>
+     * 
+     * @param getSnapshotsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetSnapshots operation returned by the service.
+     * @sample AWSkendraAsyncHandler.GetSnapshots
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/GetSnapshots" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetSnapshotsResult> getSnapshotsAsync(GetSnapshotsRequest getSnapshotsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetSnapshotsRequest, GetSnapshotsResult> asyncHandler);
 
     /**
      * <p>
@@ -1001,6 +1385,113 @@ public interface AWSkendraAsync extends AWSkendra {
 
     /**
      * <p>
+     * Lists specific permissions of users and groups with access to your Amazon Kendra experience.
+     * </p>
+     * 
+     * @param listEntityPersonasRequest
+     * @return A Java Future containing the result of the ListEntityPersonas operation returned by the service.
+     * @sample AWSkendraAsync.ListEntityPersonas
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListEntityPersonas" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListEntityPersonasResult> listEntityPersonasAsync(ListEntityPersonasRequest listEntityPersonasRequest);
+
+    /**
+     * <p>
+     * Lists specific permissions of users and groups with access to your Amazon Kendra experience.
+     * </p>
+     * 
+     * @param listEntityPersonasRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListEntityPersonas operation returned by the service.
+     * @sample AWSkendraAsyncHandler.ListEntityPersonas
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListEntityPersonas" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListEntityPersonasResult> listEntityPersonasAsync(ListEntityPersonasRequest listEntityPersonasRequest,
+            com.amazonaws.handlers.AsyncHandler<ListEntityPersonasRequest, ListEntityPersonasResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists users or groups in your Amazon Web Services SSO identity source that are granted access to your Amazon
+     * Kendra experience. You can create an Amazon Kendra experience such as a search application. For more information
+     * on creating a search application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param listExperienceEntitiesRequest
+     * @return A Java Future containing the result of the ListExperienceEntities operation returned by the service.
+     * @sample AWSkendraAsync.ListExperienceEntities
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListExperienceEntities" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListExperienceEntitiesResult> listExperienceEntitiesAsync(ListExperienceEntitiesRequest listExperienceEntitiesRequest);
+
+    /**
+     * <p>
+     * Lists users or groups in your Amazon Web Services SSO identity source that are granted access to your Amazon
+     * Kendra experience. You can create an Amazon Kendra experience such as a search application. For more information
+     * on creating a search application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param listExperienceEntitiesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListExperienceEntities operation returned by the service.
+     * @sample AWSkendraAsyncHandler.ListExperienceEntities
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListExperienceEntities" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListExperienceEntitiesResult> listExperienceEntitiesAsync(ListExperienceEntitiesRequest listExperienceEntitiesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListExperienceEntitiesRequest, ListExperienceEntitiesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists one or more Amazon Kendra experiences. You can create an Amazon Kendra experience such as a search
+     * application. For more information on creating a search application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param listExperiencesRequest
+     * @return A Java Future containing the result of the ListExperiences operation returned by the service.
+     * @sample AWSkendraAsync.ListExperiences
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListExperiences" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListExperiencesResult> listExperiencesAsync(ListExperiencesRequest listExperiencesRequest);
+
+    /**
+     * <p>
+     * Lists one or more Amazon Kendra experiences. You can create an Amazon Kendra experience such as a search
+     * application. For more information on creating a search application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param listExperiencesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListExperiences operation returned by the service.
+     * @sample AWSkendraAsyncHandler.ListExperiences
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListExperiences" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListExperiencesResult> listExperiencesAsync(ListExperiencesRequest listExperiencesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListExperiencesRequest, ListExperiencesResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets a list of FAQ lists associated with an index.
      * </p>
      * 
@@ -1034,6 +1525,10 @@ public interface AWSkendraAsync extends AWSkendra {
      * <p>
      * Provides a list of groups that are mapped to users before a given ordering or timestamp identifier.
      * </p>
+     * <p>
+     * <code>ListGroupsOlderThanOrderingId</code> is currently not supported in the Amazon Web Services GovCloud
+     * (US-West) region.
+     * </p>
      * 
      * @param listGroupsOlderThanOrderingIdRequest
      * @return A Java Future containing the result of the ListGroupsOlderThanOrderingId operation returned by the
@@ -1048,6 +1543,10 @@ public interface AWSkendraAsync extends AWSkendra {
     /**
      * <p>
      * Provides a list of groups that are mapped to users before a given ordering or timestamp identifier.
+     * </p>
+     * <p>
+     * <code>ListGroupsOlderThanOrderingId</code> is currently not supported in the Amazon Web Services GovCloud
+     * (US-West) region.
      * </p>
      * 
      * @param listGroupsOlderThanOrderingIdRequest
@@ -1104,6 +1603,10 @@ public interface AWSkendraAsync extends AWSkendra {
      * For information on the current quota limits for block lists, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/quotas.html">Quotas for Amazon Kendra</a>.
      * </p>
+     * <p>
+     * <code>ListQuerySuggestionsBlockLists</code> is currently not supported in the Amazon Web Services GovCloud
+     * (US-West) region.
+     * </p>
      * 
      * @param listQuerySuggestionsBlockListsRequest
      * @return A Java Future containing the result of the ListQuerySuggestionsBlockLists operation returned by the
@@ -1122,6 +1625,10 @@ public interface AWSkendraAsync extends AWSkendra {
      * <p>
      * For information on the current quota limits for block lists, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/quotas.html">Quotas for Amazon Kendra</a>.
+     * </p>
+     * <p>
+     * <code>ListQuerySuggestionsBlockLists</code> is currently not supported in the Amazon Web Services GovCloud
+     * (US-West) region.
      * </p>
      * 
      * @param listQuerySuggestionsBlockListsRequest
@@ -1222,6 +1729,9 @@ public interface AWSkendraAsync extends AWSkendra {
      * If more than five <code>PUT</code> actions for a group are currently processing, a validation exception is
      * thrown.
      * </p>
+     * <p>
+     * <code>PutPrincipalMapping</code> is currently not supported in the Amazon Web Services GovCloud (US-West) region.
+     * </p>
      * 
      * @param putPrincipalMappingRequest
      * @return A Java Future containing the result of the PutPrincipalMapping operation returned by the service.
@@ -1249,6 +1759,9 @@ public interface AWSkendraAsync extends AWSkendra {
      * <p>
      * If more than five <code>PUT</code> actions for a group are currently processing, a validation exception is
      * thrown.
+     * </p>
+     * <p>
+     * <code>PutPrincipalMapping</code> is currently not supported in the Amazon Web Services GovCloud (US-West) region.
      * </p>
      * 
      * @param putPrincipalMappingRequest
@@ -1428,6 +1941,9 @@ public interface AWSkendraAsync extends AWSkendra {
      * <p>
      * Enables you to provide feedback to Amazon Kendra to improve the performance of your index.
      * </p>
+     * <p>
+     * <code>SubmitFeedback</code> is currently not supported in the Amazon Web Services GovCloud (US-West) region.
+     * </p>
      * 
      * @param submitFeedbackRequest
      * @return A Java Future containing the result of the SubmitFeedback operation returned by the service.
@@ -1440,6 +1956,9 @@ public interface AWSkendraAsync extends AWSkendra {
     /**
      * <p>
      * Enables you to provide feedback to Amazon Kendra to improve the performance of your index.
+     * </p>
+     * <p>
+     * <code>SubmitFeedback</code> is currently not supported in the Amazon Web Services GovCloud (US-West) region.
      * </p>
      * 
      * @param submitFeedbackRequest
@@ -1552,6 +2071,43 @@ public interface AWSkendraAsync extends AWSkendra {
 
     /**
      * <p>
+     * Updates your Amazon Kendra experience such as a search application. For more information on creating a search
+     * application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param updateExperienceRequest
+     * @return A Java Future containing the result of the UpdateExperience operation returned by the service.
+     * @sample AWSkendraAsync.UpdateExperience
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/UpdateExperience" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateExperienceResult> updateExperienceAsync(UpdateExperienceRequest updateExperienceRequest);
+
+    /**
+     * <p>
+     * Updates your Amazon Kendra experience such as a search application. For more information on creating a search
+     * application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param updateExperienceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateExperience operation returned by the service.
+     * @sample AWSkendraAsyncHandler.UpdateExperience
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/UpdateExperience" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateExperienceResult> updateExperienceAsync(UpdateExperienceRequest updateExperienceRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateExperienceRequest, UpdateExperienceResult> asyncHandler);
+
+    /**
+     * <p>
      * Updates an existing Amazon Kendra index.
      * </p>
      * 
@@ -1596,6 +2152,10 @@ public interface AWSkendraAsync extends AWSkendra {
      * <p>
      * Amazon Kendra supports partial updates, so you only need to provide the fields you want to update.
      * </p>
+     * <p>
+     * <code>UpdateQuerySuggestionsBlockList</code> is currently not supported in the Amazon Web Services GovCloud
+     * (US-West) region.
+     * </p>
      * 
      * @param updateQuerySuggestionsBlockListRequest
      * @return A Java Future containing the result of the UpdateQuerySuggestionsBlockList operation returned by the
@@ -1621,6 +2181,10 @@ public interface AWSkendraAsync extends AWSkendra {
      * </p>
      * <p>
      * Amazon Kendra supports partial updates, so you only need to provide the fields you want to update.
+     * </p>
+     * <p>
+     * <code>UpdateQuerySuggestionsBlockList</code> is currently not supported in the Amazon Web Services GovCloud
+     * (US-West) region.
      * </p>
      * 
      * @param updateQuerySuggestionsBlockListRequest
@@ -1656,6 +2220,10 @@ public interface AWSkendraAsync extends AWSkendra {
      * <p>
      * You can still enable/disable query suggestions at any time.
      * </p>
+     * <p>
+     * <code>UpdateQuerySuggestionsConfig</code> is currently not supported in the Amazon Web Services GovCloud
+     * (US-West) region.
+     * </p>
      * 
      * @param updateQuerySuggestionsConfigRequest
      * @return A Java Future containing the result of the UpdateQuerySuggestionsConfig operation returned by the
@@ -1684,6 +2252,10 @@ public interface AWSkendraAsync extends AWSkendra {
      * </p>
      * <p>
      * You can still enable/disable query suggestions at any time.
+     * </p>
+     * <p>
+     * <code>UpdateQuerySuggestionsConfig</code> is currently not supported in the Amazon Web Services GovCloud
+     * (US-West) region.
      * </p>
      * 
      * @param updateQuerySuggestionsConfigRequest

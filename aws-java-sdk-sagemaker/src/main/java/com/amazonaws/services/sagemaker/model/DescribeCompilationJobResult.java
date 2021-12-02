@@ -77,6 +77,13 @@ public class DescribeCompilationJobResult extends com.amazonaws.AmazonWebService
     private String inferenceImage;
     /**
      * <p>
+     * The Amazon Resource Name (ARN) of the versioned model package that was provided to SageMaker Neo when you
+     * initiated a compilation job.
+     * </p>
+     */
+    private String modelPackageVersionArn;
+    /**
+     * <p>
      * The time that the model compilation job was created.
      * </p>
      */
@@ -488,6 +495,52 @@ public class DescribeCompilationJobResult extends com.amazonaws.AmazonWebService
 
     public DescribeCompilationJobResult withInferenceImage(String inferenceImage) {
         setInferenceImage(inferenceImage);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the versioned model package that was provided to SageMaker Neo when you
+     * initiated a compilation job.
+     * </p>
+     * 
+     * @param modelPackageVersionArn
+     *        The Amazon Resource Name (ARN) of the versioned model package that was provided to SageMaker Neo when you
+     *        initiated a compilation job.
+     */
+
+    public void setModelPackageVersionArn(String modelPackageVersionArn) {
+        this.modelPackageVersionArn = modelPackageVersionArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the versioned model package that was provided to SageMaker Neo when you
+     * initiated a compilation job.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the versioned model package that was provided to SageMaker Neo when you
+     *         initiated a compilation job.
+     */
+
+    public String getModelPackageVersionArn() {
+        return this.modelPackageVersionArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the versioned model package that was provided to SageMaker Neo when you
+     * initiated a compilation job.
+     * </p>
+     * 
+     * @param modelPackageVersionArn
+     *        The Amazon Resource Name (ARN) of the versioned model package that was provided to SageMaker Neo when you
+     *        initiated a compilation job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeCompilationJobResult withModelPackageVersionArn(String modelPackageVersionArn) {
+        setModelPackageVersionArn(modelPackageVersionArn);
         return this;
     }
 
@@ -911,6 +964,8 @@ public class DescribeCompilationJobResult extends com.amazonaws.AmazonWebService
             sb.append("StoppingCondition: ").append(getStoppingCondition()).append(",");
         if (getInferenceImage() != null)
             sb.append("InferenceImage: ").append(getInferenceImage()).append(",");
+        if (getModelPackageVersionArn() != null)
+            sb.append("ModelPackageVersionArn: ").append(getModelPackageVersionArn()).append(",");
         if (getCreationTime() != null)
             sb.append("CreationTime: ").append(getCreationTime()).append(",");
         if (getLastModifiedTime() != null)
@@ -971,6 +1026,10 @@ public class DescribeCompilationJobResult extends com.amazonaws.AmazonWebService
             return false;
         if (other.getInferenceImage() != null && other.getInferenceImage().equals(this.getInferenceImage()) == false)
             return false;
+        if (other.getModelPackageVersionArn() == null ^ this.getModelPackageVersionArn() == null)
+            return false;
+        if (other.getModelPackageVersionArn() != null && other.getModelPackageVersionArn().equals(this.getModelPackageVersionArn()) == false)
+            return false;
         if (other.getCreationTime() == null ^ this.getCreationTime() == null)
             return false;
         if (other.getCreationTime() != null && other.getCreationTime().equals(this.getCreationTime()) == false)
@@ -1022,6 +1081,7 @@ public class DescribeCompilationJobResult extends com.amazonaws.AmazonWebService
         hashCode = prime * hashCode + ((getCompilationEndTime() == null) ? 0 : getCompilationEndTime().hashCode());
         hashCode = prime * hashCode + ((getStoppingCondition() == null) ? 0 : getStoppingCondition().hashCode());
         hashCode = prime * hashCode + ((getInferenceImage() == null) ? 0 : getInferenceImage().hashCode());
+        hashCode = prime * hashCode + ((getModelPackageVersionArn() == null) ? 0 : getModelPackageVersionArn().hashCode());
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
         hashCode = prime * hashCode + ((getFailureReason() == null) ? 0 : getFailureReason().hashCode());

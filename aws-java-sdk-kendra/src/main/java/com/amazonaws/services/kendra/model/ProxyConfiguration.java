@@ -49,7 +49,7 @@ public class ProxyConfiguration implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * Your secret ARN, which you can create in <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets Manager</a>
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets Manager</a>
      * </p>
      * <p>
      * The credentials are optional. You use a secret if web proxy credentials are required to connect to a website
@@ -172,7 +172,7 @@ public class ProxyConfiguration implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * Your secret ARN, which you can create in <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets Manager</a>
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets Manager</a>
      * </p>
      * <p>
      * The credentials are optional. You use a secret if web proxy credentials are required to connect to a website
@@ -182,7 +182,7 @@ public class ProxyConfiguration implements Serializable, Cloneable, StructuredPo
      * 
      * @param credentials
      *        Your secret ARN, which you can create in <a
-     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets Manager</a> </p>
+     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets Manager</a> </p>
      *        <p>
      *        The credentials are optional. You use a secret if web proxy credentials are required to connect to a
      *        website host. Amazon Kendra currently support basic authentication to connect to a web proxy server. The
@@ -196,7 +196,7 @@ public class ProxyConfiguration implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * Your secret ARN, which you can create in <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets Manager</a>
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets Manager</a>
      * </p>
      * <p>
      * The credentials are optional. You use a secret if web proxy credentials are required to connect to a website
@@ -205,8 +205,7 @@ public class ProxyConfiguration implements Serializable, Cloneable, StructuredPo
      * </p>
      * 
      * @return Your secret ARN, which you can create in <a
-     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets Manager</a>
-     *         </p>
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets Manager</a> </p>
      *         <p>
      *         The credentials are optional. You use a secret if web proxy credentials are required to connect to a
      *         website host. Amazon Kendra currently support basic authentication to connect to a web proxy server. The
@@ -220,7 +219,7 @@ public class ProxyConfiguration implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * Your secret ARN, which you can create in <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets Manager</a>
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets Manager</a>
      * </p>
      * <p>
      * The credentials are optional. You use a secret if web proxy credentials are required to connect to a website
@@ -230,7 +229,7 @@ public class ProxyConfiguration implements Serializable, Cloneable, StructuredPo
      * 
      * @param credentials
      *        Your secret ARN, which you can create in <a
-     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets Manager</a> </p>
+     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets Manager</a> </p>
      *        <p>
      *        The credentials are optional. You use a secret if web proxy credentials are required to connect to a
      *        website host. Amazon Kendra currently support basic authentication to connect to a web proxy server. The

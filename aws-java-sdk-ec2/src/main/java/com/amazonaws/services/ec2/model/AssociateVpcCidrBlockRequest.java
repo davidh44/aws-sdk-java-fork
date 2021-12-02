@@ -73,6 +73,38 @@ public class AssociateVpcCidrBlockRequest extends AmazonWebServiceRequest implem
      * </p>
      */
     private String ipv6CidrBlock;
+    /**
+     * <p>
+     * Associate a CIDR allocated from an IPv4 IPAM pool to a VPC. For more information about Amazon VPC IP Address
+     * Manager (IPAM), see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in the <i>Amazon VPC IPAM
+     * User Guide</i>.
+     * </p>
+     */
+    private String ipv4IpamPoolId;
+    /**
+     * <p>
+     * The netmask length of the IPv4 CIDR you would like to associate from an Amazon VPC IP Address Manager (IPAM)
+     * pool. For more information about IPAM, see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in
+     * the <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     */
+    private Integer ipv4NetmaskLength;
+    /**
+     * <p>
+     * Associates a CIDR allocated from an IPv6 IPAM pool to a VPC. For more information about Amazon VPC IP Address
+     * Manager (IPAM), see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in the <i>Amazon VPC IPAM
+     * User Guide</i>.
+     * </p>
+     */
+    private String ipv6IpamPoolId;
+    /**
+     * <p>
+     * The netmask length of the IPv6 CIDR you would like to associate from an Amazon VPC IP Address Manager (IPAM)
+     * pool. For more information about IPAM, see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in
+     * the <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     */
+    private Integer ipv6NetmaskLength;
 
     /**
      * <p>
@@ -392,6 +424,214 @@ public class AssociateVpcCidrBlockRequest extends AmazonWebServiceRequest implem
     }
 
     /**
+     * <p>
+     * Associate a CIDR allocated from an IPv4 IPAM pool to a VPC. For more information about Amazon VPC IP Address
+     * Manager (IPAM), see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in the <i>Amazon VPC IPAM
+     * User Guide</i>.
+     * </p>
+     * 
+     * @param ipv4IpamPoolId
+     *        Associate a CIDR allocated from an IPv4 IPAM pool to a VPC. For more information about Amazon VPC IP
+     *        Address Manager (IPAM), see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in the
+     *        <i>Amazon VPC IPAM User Guide</i>.
+     */
+
+    public void setIpv4IpamPoolId(String ipv4IpamPoolId) {
+        this.ipv4IpamPoolId = ipv4IpamPoolId;
+    }
+
+    /**
+     * <p>
+     * Associate a CIDR allocated from an IPv4 IPAM pool to a VPC. For more information about Amazon VPC IP Address
+     * Manager (IPAM), see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in the <i>Amazon VPC IPAM
+     * User Guide</i>.
+     * </p>
+     * 
+     * @return Associate a CIDR allocated from an IPv4 IPAM pool to a VPC. For more information about Amazon VPC IP
+     *         Address Manager (IPAM), see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in the
+     *         <i>Amazon VPC IPAM User Guide</i>.
+     */
+
+    public String getIpv4IpamPoolId() {
+        return this.ipv4IpamPoolId;
+    }
+
+    /**
+     * <p>
+     * Associate a CIDR allocated from an IPv4 IPAM pool to a VPC. For more information about Amazon VPC IP Address
+     * Manager (IPAM), see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in the <i>Amazon VPC IPAM
+     * User Guide</i>.
+     * </p>
+     * 
+     * @param ipv4IpamPoolId
+     *        Associate a CIDR allocated from an IPv4 IPAM pool to a VPC. For more information about Amazon VPC IP
+     *        Address Manager (IPAM), see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in the
+     *        <i>Amazon VPC IPAM User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AssociateVpcCidrBlockRequest withIpv4IpamPoolId(String ipv4IpamPoolId) {
+        setIpv4IpamPoolId(ipv4IpamPoolId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The netmask length of the IPv4 CIDR you would like to associate from an Amazon VPC IP Address Manager (IPAM)
+     * pool. For more information about IPAM, see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in
+     * the <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param ipv4NetmaskLength
+     *        The netmask length of the IPv4 CIDR you would like to associate from an Amazon VPC IP Address Manager
+     *        (IPAM) pool. For more information about IPAM, see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is
+     *        IPAM?</a> in the <i>Amazon VPC IPAM User Guide</i>.
+     */
+
+    public void setIpv4NetmaskLength(Integer ipv4NetmaskLength) {
+        this.ipv4NetmaskLength = ipv4NetmaskLength;
+    }
+
+    /**
+     * <p>
+     * The netmask length of the IPv4 CIDR you would like to associate from an Amazon VPC IP Address Manager (IPAM)
+     * pool. For more information about IPAM, see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in
+     * the <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @return The netmask length of the IPv4 CIDR you would like to associate from an Amazon VPC IP Address Manager
+     *         (IPAM) pool. For more information about IPAM, see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is
+     *         IPAM?</a> in the <i>Amazon VPC IPAM User Guide</i>.
+     */
+
+    public Integer getIpv4NetmaskLength() {
+        return this.ipv4NetmaskLength;
+    }
+
+    /**
+     * <p>
+     * The netmask length of the IPv4 CIDR you would like to associate from an Amazon VPC IP Address Manager (IPAM)
+     * pool. For more information about IPAM, see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in
+     * the <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param ipv4NetmaskLength
+     *        The netmask length of the IPv4 CIDR you would like to associate from an Amazon VPC IP Address Manager
+     *        (IPAM) pool. For more information about IPAM, see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is
+     *        IPAM?</a> in the <i>Amazon VPC IPAM User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AssociateVpcCidrBlockRequest withIpv4NetmaskLength(Integer ipv4NetmaskLength) {
+        setIpv4NetmaskLength(ipv4NetmaskLength);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Associates a CIDR allocated from an IPv6 IPAM pool to a VPC. For more information about Amazon VPC IP Address
+     * Manager (IPAM), see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in the <i>Amazon VPC IPAM
+     * User Guide</i>.
+     * </p>
+     * 
+     * @param ipv6IpamPoolId
+     *        Associates a CIDR allocated from an IPv6 IPAM pool to a VPC. For more information about Amazon VPC IP
+     *        Address Manager (IPAM), see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in the
+     *        <i>Amazon VPC IPAM User Guide</i>.
+     */
+
+    public void setIpv6IpamPoolId(String ipv6IpamPoolId) {
+        this.ipv6IpamPoolId = ipv6IpamPoolId;
+    }
+
+    /**
+     * <p>
+     * Associates a CIDR allocated from an IPv6 IPAM pool to a VPC. For more information about Amazon VPC IP Address
+     * Manager (IPAM), see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in the <i>Amazon VPC IPAM
+     * User Guide</i>.
+     * </p>
+     * 
+     * @return Associates a CIDR allocated from an IPv6 IPAM pool to a VPC. For more information about Amazon VPC IP
+     *         Address Manager (IPAM), see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in the
+     *         <i>Amazon VPC IPAM User Guide</i>.
+     */
+
+    public String getIpv6IpamPoolId() {
+        return this.ipv6IpamPoolId;
+    }
+
+    /**
+     * <p>
+     * Associates a CIDR allocated from an IPv6 IPAM pool to a VPC. For more information about Amazon VPC IP Address
+     * Manager (IPAM), see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in the <i>Amazon VPC IPAM
+     * User Guide</i>.
+     * </p>
+     * 
+     * @param ipv6IpamPoolId
+     *        Associates a CIDR allocated from an IPv6 IPAM pool to a VPC. For more information about Amazon VPC IP
+     *        Address Manager (IPAM), see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in the
+     *        <i>Amazon VPC IPAM User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AssociateVpcCidrBlockRequest withIpv6IpamPoolId(String ipv6IpamPoolId) {
+        setIpv6IpamPoolId(ipv6IpamPoolId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The netmask length of the IPv6 CIDR you would like to associate from an Amazon VPC IP Address Manager (IPAM)
+     * pool. For more information about IPAM, see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in
+     * the <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param ipv6NetmaskLength
+     *        The netmask length of the IPv6 CIDR you would like to associate from an Amazon VPC IP Address Manager
+     *        (IPAM) pool. For more information about IPAM, see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is
+     *        IPAM?</a> in the <i>Amazon VPC IPAM User Guide</i>.
+     */
+
+    public void setIpv6NetmaskLength(Integer ipv6NetmaskLength) {
+        this.ipv6NetmaskLength = ipv6NetmaskLength;
+    }
+
+    /**
+     * <p>
+     * The netmask length of the IPv6 CIDR you would like to associate from an Amazon VPC IP Address Manager (IPAM)
+     * pool. For more information about IPAM, see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in
+     * the <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @return The netmask length of the IPv6 CIDR you would like to associate from an Amazon VPC IP Address Manager
+     *         (IPAM) pool. For more information about IPAM, see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is
+     *         IPAM?</a> in the <i>Amazon VPC IPAM User Guide</i>.
+     */
+
+    public Integer getIpv6NetmaskLength() {
+        return this.ipv6NetmaskLength;
+    }
+
+    /**
+     * <p>
+     * The netmask length of the IPv6 CIDR you would like to associate from an Amazon VPC IP Address Manager (IPAM)
+     * pool. For more information about IPAM, see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in
+     * the <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param ipv6NetmaskLength
+     *        The netmask length of the IPv6 CIDR you would like to associate from an Amazon VPC IP Address Manager
+     *        (IPAM) pool. For more information about IPAM, see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is
+     *        IPAM?</a> in the <i>Amazon VPC IPAM User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AssociateVpcCidrBlockRequest withIpv6NetmaskLength(Integer ipv6NetmaskLength) {
+        setIpv6NetmaskLength(ipv6NetmaskLength);
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -425,7 +665,15 @@ public class AssociateVpcCidrBlockRequest extends AmazonWebServiceRequest implem
         if (getIpv6Pool() != null)
             sb.append("Ipv6Pool: ").append(getIpv6Pool()).append(",");
         if (getIpv6CidrBlock() != null)
-            sb.append("Ipv6CidrBlock: ").append(getIpv6CidrBlock());
+            sb.append("Ipv6CidrBlock: ").append(getIpv6CidrBlock()).append(",");
+        if (getIpv4IpamPoolId() != null)
+            sb.append("Ipv4IpamPoolId: ").append(getIpv4IpamPoolId()).append(",");
+        if (getIpv4NetmaskLength() != null)
+            sb.append("Ipv4NetmaskLength: ").append(getIpv4NetmaskLength()).append(",");
+        if (getIpv6IpamPoolId() != null)
+            sb.append("Ipv6IpamPoolId: ").append(getIpv6IpamPoolId()).append(",");
+        if (getIpv6NetmaskLength() != null)
+            sb.append("Ipv6NetmaskLength: ").append(getIpv6NetmaskLength());
         sb.append("}");
         return sb.toString();
     }
@@ -465,6 +713,22 @@ public class AssociateVpcCidrBlockRequest extends AmazonWebServiceRequest implem
             return false;
         if (other.getIpv6CidrBlock() != null && other.getIpv6CidrBlock().equals(this.getIpv6CidrBlock()) == false)
             return false;
+        if (other.getIpv4IpamPoolId() == null ^ this.getIpv4IpamPoolId() == null)
+            return false;
+        if (other.getIpv4IpamPoolId() != null && other.getIpv4IpamPoolId().equals(this.getIpv4IpamPoolId()) == false)
+            return false;
+        if (other.getIpv4NetmaskLength() == null ^ this.getIpv4NetmaskLength() == null)
+            return false;
+        if (other.getIpv4NetmaskLength() != null && other.getIpv4NetmaskLength().equals(this.getIpv4NetmaskLength()) == false)
+            return false;
+        if (other.getIpv6IpamPoolId() == null ^ this.getIpv6IpamPoolId() == null)
+            return false;
+        if (other.getIpv6IpamPoolId() != null && other.getIpv6IpamPoolId().equals(this.getIpv6IpamPoolId()) == false)
+            return false;
+        if (other.getIpv6NetmaskLength() == null ^ this.getIpv6NetmaskLength() == null)
+            return false;
+        if (other.getIpv6NetmaskLength() != null && other.getIpv6NetmaskLength().equals(this.getIpv6NetmaskLength()) == false)
+            return false;
         return true;
     }
 
@@ -479,6 +743,10 @@ public class AssociateVpcCidrBlockRequest extends AmazonWebServiceRequest implem
         hashCode = prime * hashCode + ((getIpv6CidrBlockNetworkBorderGroup() == null) ? 0 : getIpv6CidrBlockNetworkBorderGroup().hashCode());
         hashCode = prime * hashCode + ((getIpv6Pool() == null) ? 0 : getIpv6Pool().hashCode());
         hashCode = prime * hashCode + ((getIpv6CidrBlock() == null) ? 0 : getIpv6CidrBlock().hashCode());
+        hashCode = prime * hashCode + ((getIpv4IpamPoolId() == null) ? 0 : getIpv4IpamPoolId().hashCode());
+        hashCode = prime * hashCode + ((getIpv4NetmaskLength() == null) ? 0 : getIpv4NetmaskLength().hashCode());
+        hashCode = prime * hashCode + ((getIpv6IpamPoolId() == null) ? 0 : getIpv6IpamPoolId().hashCode());
+        hashCode = prime * hashCode + ((getIpv6NetmaskLength() == null) ? 0 : getIpv6NetmaskLength().hashCode());
         return hashCode;
     }
 

@@ -827,6 +827,41 @@ public class AWSShieldAsyncClient extends AWSShieldClient implements AWSShieldAs
     }
 
     @Override
+    public java.util.concurrent.Future<DisableApplicationLayerAutomaticResponseResult> disableApplicationLayerAutomaticResponseAsync(
+            DisableApplicationLayerAutomaticResponseRequest request) {
+
+        return disableApplicationLayerAutomaticResponseAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisableApplicationLayerAutomaticResponseResult> disableApplicationLayerAutomaticResponseAsync(
+            final DisableApplicationLayerAutomaticResponseRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DisableApplicationLayerAutomaticResponseRequest, DisableApplicationLayerAutomaticResponseResult> asyncHandler) {
+        final DisableApplicationLayerAutomaticResponseRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DisableApplicationLayerAutomaticResponseResult>() {
+            @Override
+            public DisableApplicationLayerAutomaticResponseResult call() throws Exception {
+                DisableApplicationLayerAutomaticResponseResult result = null;
+
+                try {
+                    result = executeDisableApplicationLayerAutomaticResponse(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DisableProactiveEngagementResult> disableProactiveEngagementAsync(DisableProactiveEngagementRequest request) {
 
         return disableProactiveEngagementAsync(request, null);
@@ -943,6 +978,41 @@ public class AWSShieldAsyncClient extends AWSShieldClient implements AWSShieldAs
 
                 try {
                     result = executeDisassociateHealthCheck(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableApplicationLayerAutomaticResponseResult> enableApplicationLayerAutomaticResponseAsync(
+            EnableApplicationLayerAutomaticResponseRequest request) {
+
+        return enableApplicationLayerAutomaticResponseAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableApplicationLayerAutomaticResponseResult> enableApplicationLayerAutomaticResponseAsync(
+            final EnableApplicationLayerAutomaticResponseRequest request,
+            final com.amazonaws.handlers.AsyncHandler<EnableApplicationLayerAutomaticResponseRequest, EnableApplicationLayerAutomaticResponseResult> asyncHandler) {
+        final EnableApplicationLayerAutomaticResponseRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<EnableApplicationLayerAutomaticResponseResult>() {
+            @Override
+            public EnableApplicationLayerAutomaticResponseResult call() throws Exception {
+                EnableApplicationLayerAutomaticResponseResult result = null;
+
+                try {
+                    result = executeEnableApplicationLayerAutomaticResponse(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1241,6 +1311,41 @@ public class AWSShieldAsyncClient extends AWSShieldClient implements AWSShieldAs
 
                 try {
                     result = executeUntagResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateApplicationLayerAutomaticResponseResult> updateApplicationLayerAutomaticResponseAsync(
+            UpdateApplicationLayerAutomaticResponseRequest request) {
+
+        return updateApplicationLayerAutomaticResponseAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateApplicationLayerAutomaticResponseResult> updateApplicationLayerAutomaticResponseAsync(
+            final UpdateApplicationLayerAutomaticResponseRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateApplicationLayerAutomaticResponseRequest, UpdateApplicationLayerAutomaticResponseResult> asyncHandler) {
+        final UpdateApplicationLayerAutomaticResponseRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateApplicationLayerAutomaticResponseResult>() {
+            @Override
+            public UpdateApplicationLayerAutomaticResponseResult call() throws Exception {
+                UpdateApplicationLayerAutomaticResponseResult result = null;
+
+                try {
+                    result = executeUpdateApplicationLayerAutomaticResponse(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

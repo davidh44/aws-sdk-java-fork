@@ -19,8 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Details about the source of the anomalous operational data that triggered the anomaly. The one supported source is
- * Amazon CloudWatch metrics.
+ * Details about the source of the anomalous operational data that triggered the anomaly.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/AnomalySourceDetails" target="_top">AWS
@@ -31,20 +30,27 @@ public class AnomalySourceDetails implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * An array of <code>CloudWatchMetricsDetail</code> object that contains information about the analyzed metrics that
-     * displayed anomalous behavior.
+     * An array of <code>CloudWatchMetricsDetail</code> objects that contain information about analyzed CloudWatch
+     * metrics that show anomalous behavior.
      * </p>
      */
     private java.util.List<CloudWatchMetricsDetail> cloudWatchMetrics;
+    /**
+     * <p>
+     * An array of <code>PerformanceInsightsMetricsDetail</code> objects that contain information about analyzed
+     * Performance Insights metrics that show anomalous behavior.
+     * </p>
+     */
+    private java.util.List<PerformanceInsightsMetricsDetail> performanceInsightsMetrics;
 
     /**
      * <p>
-     * An array of <code>CloudWatchMetricsDetail</code> object that contains information about the analyzed metrics that
-     * displayed anomalous behavior.
+     * An array of <code>CloudWatchMetricsDetail</code> objects that contain information about analyzed CloudWatch
+     * metrics that show anomalous behavior.
      * </p>
      * 
-     * @return An array of <code>CloudWatchMetricsDetail</code> object that contains information about the analyzed
-     *         metrics that displayed anomalous behavior.
+     * @return An array of <code>CloudWatchMetricsDetail</code> objects that contain information about analyzed
+     *         CloudWatch metrics that show anomalous behavior.
      */
 
     public java.util.List<CloudWatchMetricsDetail> getCloudWatchMetrics() {
@@ -53,13 +59,13 @@ public class AnomalySourceDetails implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * An array of <code>CloudWatchMetricsDetail</code> object that contains information about the analyzed metrics that
-     * displayed anomalous behavior.
+     * An array of <code>CloudWatchMetricsDetail</code> objects that contain information about analyzed CloudWatch
+     * metrics that show anomalous behavior.
      * </p>
      * 
      * @param cloudWatchMetrics
-     *        An array of <code>CloudWatchMetricsDetail</code> object that contains information about the analyzed
-     *        metrics that displayed anomalous behavior.
+     *        An array of <code>CloudWatchMetricsDetail</code> objects that contain information about analyzed
+     *        CloudWatch metrics that show anomalous behavior.
      */
 
     public void setCloudWatchMetrics(java.util.Collection<CloudWatchMetricsDetail> cloudWatchMetrics) {
@@ -73,8 +79,8 @@ public class AnomalySourceDetails implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * An array of <code>CloudWatchMetricsDetail</code> object that contains information about the analyzed metrics that
-     * displayed anomalous behavior.
+     * An array of <code>CloudWatchMetricsDetail</code> objects that contain information about analyzed CloudWatch
+     * metrics that show anomalous behavior.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -83,8 +89,8 @@ public class AnomalySourceDetails implements Serializable, Cloneable, Structured
      * </p>
      * 
      * @param cloudWatchMetrics
-     *        An array of <code>CloudWatchMetricsDetail</code> object that contains information about the analyzed
-     *        metrics that displayed anomalous behavior.
+     *        An array of <code>CloudWatchMetricsDetail</code> objects that contain information about analyzed
+     *        CloudWatch metrics that show anomalous behavior.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -100,18 +106,96 @@ public class AnomalySourceDetails implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * An array of <code>CloudWatchMetricsDetail</code> object that contains information about the analyzed metrics that
-     * displayed anomalous behavior.
+     * An array of <code>CloudWatchMetricsDetail</code> objects that contain information about analyzed CloudWatch
+     * metrics that show anomalous behavior.
      * </p>
      * 
      * @param cloudWatchMetrics
-     *        An array of <code>CloudWatchMetricsDetail</code> object that contains information about the analyzed
-     *        metrics that displayed anomalous behavior.
+     *        An array of <code>CloudWatchMetricsDetail</code> objects that contain information about analyzed
+     *        CloudWatch metrics that show anomalous behavior.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public AnomalySourceDetails withCloudWatchMetrics(java.util.Collection<CloudWatchMetricsDetail> cloudWatchMetrics) {
         setCloudWatchMetrics(cloudWatchMetrics);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An array of <code>PerformanceInsightsMetricsDetail</code> objects that contain information about analyzed
+     * Performance Insights metrics that show anomalous behavior.
+     * </p>
+     * 
+     * @return An array of <code>PerformanceInsightsMetricsDetail</code> objects that contain information about analyzed
+     *         Performance Insights metrics that show anomalous behavior.
+     */
+
+    public java.util.List<PerformanceInsightsMetricsDetail> getPerformanceInsightsMetrics() {
+        return performanceInsightsMetrics;
+    }
+
+    /**
+     * <p>
+     * An array of <code>PerformanceInsightsMetricsDetail</code> objects that contain information about analyzed
+     * Performance Insights metrics that show anomalous behavior.
+     * </p>
+     * 
+     * @param performanceInsightsMetrics
+     *        An array of <code>PerformanceInsightsMetricsDetail</code> objects that contain information about analyzed
+     *        Performance Insights metrics that show anomalous behavior.
+     */
+
+    public void setPerformanceInsightsMetrics(java.util.Collection<PerformanceInsightsMetricsDetail> performanceInsightsMetrics) {
+        if (performanceInsightsMetrics == null) {
+            this.performanceInsightsMetrics = null;
+            return;
+        }
+
+        this.performanceInsightsMetrics = new java.util.ArrayList<PerformanceInsightsMetricsDetail>(performanceInsightsMetrics);
+    }
+
+    /**
+     * <p>
+     * An array of <code>PerformanceInsightsMetricsDetail</code> objects that contain information about analyzed
+     * Performance Insights metrics that show anomalous behavior.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setPerformanceInsightsMetrics(java.util.Collection)} or
+     * {@link #withPerformanceInsightsMetrics(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param performanceInsightsMetrics
+     *        An array of <code>PerformanceInsightsMetricsDetail</code> objects that contain information about analyzed
+     *        Performance Insights metrics that show anomalous behavior.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AnomalySourceDetails withPerformanceInsightsMetrics(PerformanceInsightsMetricsDetail... performanceInsightsMetrics) {
+        if (this.performanceInsightsMetrics == null) {
+            setPerformanceInsightsMetrics(new java.util.ArrayList<PerformanceInsightsMetricsDetail>(performanceInsightsMetrics.length));
+        }
+        for (PerformanceInsightsMetricsDetail ele : performanceInsightsMetrics) {
+            this.performanceInsightsMetrics.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * An array of <code>PerformanceInsightsMetricsDetail</code> objects that contain information about analyzed
+     * Performance Insights metrics that show anomalous behavior.
+     * </p>
+     * 
+     * @param performanceInsightsMetrics
+     *        An array of <code>PerformanceInsightsMetricsDetail</code> objects that contain information about analyzed
+     *        Performance Insights metrics that show anomalous behavior.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AnomalySourceDetails withPerformanceInsightsMetrics(java.util.Collection<PerformanceInsightsMetricsDetail> performanceInsightsMetrics) {
+        setPerformanceInsightsMetrics(performanceInsightsMetrics);
         return this;
     }
 
@@ -128,7 +212,9 @@ public class AnomalySourceDetails implements Serializable, Cloneable, Structured
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getCloudWatchMetrics() != null)
-            sb.append("CloudWatchMetrics: ").append(getCloudWatchMetrics());
+            sb.append("CloudWatchMetrics: ").append(getCloudWatchMetrics()).append(",");
+        if (getPerformanceInsightsMetrics() != null)
+            sb.append("PerformanceInsightsMetrics: ").append(getPerformanceInsightsMetrics());
         sb.append("}");
         return sb.toString();
     }
@@ -147,6 +233,10 @@ public class AnomalySourceDetails implements Serializable, Cloneable, Structured
             return false;
         if (other.getCloudWatchMetrics() != null && other.getCloudWatchMetrics().equals(this.getCloudWatchMetrics()) == false)
             return false;
+        if (other.getPerformanceInsightsMetrics() == null ^ this.getPerformanceInsightsMetrics() == null)
+            return false;
+        if (other.getPerformanceInsightsMetrics() != null && other.getPerformanceInsightsMetrics().equals(this.getPerformanceInsightsMetrics()) == false)
+            return false;
         return true;
     }
 
@@ -156,6 +246,7 @@ public class AnomalySourceDetails implements Serializable, Cloneable, Structured
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getCloudWatchMetrics() == null) ? 0 : getCloudWatchMetrics().hashCode());
+        hashCode = prime * hashCode + ((getPerformanceInsightsMetrics() == null) ? 0 : getPerformanceInsightsMetrics().hashCode());
         return hashCode;
     }
 

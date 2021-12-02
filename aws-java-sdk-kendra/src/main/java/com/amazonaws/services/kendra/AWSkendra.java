@@ -43,6 +43,52 @@ public interface AWSkendra {
 
     /**
      * <p>
+     * Grants users or groups in your Amazon Web Services SSO identity source access to your Amazon Kendra experience.
+     * You can create an Amazon Kendra experience such as a search application. For more information on creating a
+     * search application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param associateEntitiesToExperienceRequest
+     * @return Result of the AssociateEntitiesToExperience operation returned by the service.
+     * @throws ValidationException
+     * @throws ResourceNotFoundException
+     * @throws ResourceAlreadyExistException
+     * @throws ThrottlingException
+     * @throws AccessDeniedException
+     * @throws InternalServerException
+     * @sample AWSkendra.AssociateEntitiesToExperience
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/AssociateEntitiesToExperience"
+     *      target="_top">AWS API Documentation</a>
+     */
+    AssociateEntitiesToExperienceResult associateEntitiesToExperience(AssociateEntitiesToExperienceRequest associateEntitiesToExperienceRequest);
+
+    /**
+     * <p>
+     * Defines the specific permissions of users or groups in your Amazon Web Services SSO identity source with access
+     * to your Amazon Kendra experience. You can create an Amazon Kendra experience such as a search application. For
+     * more information on creating a search application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param associatePersonasToEntitiesRequest
+     * @return Result of the AssociatePersonasToEntities operation returned by the service.
+     * @throws ValidationException
+     * @throws ResourceNotFoundException
+     * @throws ResourceAlreadyExistException
+     * @throws ThrottlingException
+     * @throws AccessDeniedException
+     * @throws InternalServerException
+     * @sample AWSkendra.AssociatePersonasToEntities
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/AssociatePersonasToEntities"
+     *      target="_top">AWS API Documentation</a>
+     */
+    AssociatePersonasToEntitiesResult associatePersonasToEntities(AssociatePersonasToEntitiesRequest associatePersonasToEntitiesRequest);
+
+    /**
+     * <p>
      * Removes one or more documents from an index. The documents must have been added with the
      * <code>BatchPutDocument</code> operation.
      * </p>
@@ -135,6 +181,10 @@ public interface AWSkendra {
      * If you do not see any new suggestions, then please allow Amazon Kendra to collect enough queries to learn new
      * suggestions.
      * </p>
+     * <p>
+     * <code>ClearQuerySuggestions</code> is currently not supported in the Amazon Web Services GovCloud (US-West)
+     * region.
+     * </p>
      * 
      * @param clearQuerySuggestionsRequest
      * @return Result of the ClearQuerySuggestions operation returned by the service.
@@ -162,6 +212,10 @@ public interface AWSkendra {
      * <code>CreateDataSource</code> is a synchronous operation. The operation returns 200 if the data source was
      * successfully created. Otherwise, an exception is raised.
      * </p>
+     * <p>
+     * Amazon S3 and <a href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-custom.html">custom</a> data
+     * sources are the only supported data sources in the Amazon Web Services GovCloud (US-West) region.
+     * </p>
      * 
      * @param createDataSourceRequest
      * @return Result of the CreateDataSource operation returned by the service.
@@ -178,6 +232,29 @@ public interface AWSkendra {
      *      Documentation</a>
      */
     CreateDataSourceResult createDataSource(CreateDataSourceRequest createDataSourceRequest);
+
+    /**
+     * <p>
+     * Creates an Amazon Kendra experience such as a search application. For more information on creating a search
+     * application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param createExperienceRequest
+     * @return Result of the CreateExperience operation returned by the service.
+     * @throws ValidationException
+     * @throws ConflictException
+     * @throws ResourceNotFoundException
+     * @throws ServiceQuotaExceededException
+     * @throws ThrottlingException
+     * @throws AccessDeniedException
+     * @throws InternalServerException
+     * @sample AWSkendra.CreateExperience
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/CreateExperience" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateExperienceResult createExperience(CreateExperienceRequest createExperienceRequest);
 
     /**
      * <p>
@@ -241,6 +318,10 @@ public interface AWSkendra {
      * For information on the current quota limits for block lists, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/quotas.html">Quotas for Amazon Kendra</a>.
      * </p>
+     * <p>
+     * <code>CreateQuerySuggestionsBlockList</code> is currently not supported in the Amazon Web Services GovCloud
+     * (US-West) region.
+     * </p>
      * 
      * @param createQuerySuggestionsBlockListRequest
      * @return Result of the CreateQuerySuggestionsBlockList operation returned by the service.
@@ -301,6 +382,28 @@ public interface AWSkendra {
 
     /**
      * <p>
+     * Deletes your Amazon Kendra experience such as a search application. For more information on creating a search
+     * application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param deleteExperienceRequest
+     * @return Result of the DeleteExperience operation returned by the service.
+     * @throws AccessDeniedException
+     * @throws ValidationException
+     * @throws ConflictException
+     * @throws ResourceNotFoundException
+     * @throws ThrottlingException
+     * @throws InternalServerException
+     * @sample AWSkendra.DeleteExperience
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DeleteExperience" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteExperienceResult deleteExperience(DeleteExperienceRequest deleteExperienceRequest);
+
+    /**
+     * <p>
      * Removes an FAQ from an index.
      * </p>
      * 
@@ -355,6 +458,10 @@ public interface AWSkendra {
      * belong to the "Engineering" group when calling <code>PutPrincipalMapping</code>. You can update your internal
      * list of users or sub groups and input this list when calling <code>PutPrincipalMapping</code>.
      * </p>
+     * <p>
+     * <code>DeletePrincipalMapping</code> is currently not supported in the Amazon Web Services GovCloud (US-West)
+     * region.
+     * </p>
      * 
      * @param deletePrincipalMappingRequest
      * @return Result of the DeletePrincipalMapping operation returned by the service.
@@ -377,6 +484,10 @@ public interface AWSkendra {
      * <p>
      * A deleted block list might not take effect right away. Amazon Kendra needs to refresh the entire suggestions list
      * to add back the queries that were previously blocked.
+     * </p>
+     * <p>
+     * <code>DeleteQuerySuggestionsBlockList</code> is currently not supported in the Amazon Web Services GovCloud
+     * (US-West) region.
      * </p>
      * 
      * @param deleteQuerySuggestionsBlockListRequest
@@ -432,6 +543,27 @@ public interface AWSkendra {
 
     /**
      * <p>
+     * Gets information about your Amazon Kendra experience such as a search application. For more information on
+     * creating a search application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param describeExperienceRequest
+     * @return Result of the DescribeExperience operation returned by the service.
+     * @throws ValidationException
+     * @throws ResourceNotFoundException
+     * @throws ThrottlingException
+     * @throws AccessDeniedException
+     * @throws InternalServerException
+     * @sample AWSkendra.DescribeExperience
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DescribeExperience" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeExperienceResult describeExperience(DescribeExperienceRequest describeExperienceRequest);
+
+    /**
+     * <p>
      * Gets information about an FAQ list.
      * </p>
      * 
@@ -473,6 +605,10 @@ public interface AWSkendra {
      * last updated, when actions were received by Amazon Kendra, the latest action that should process and apply after
      * other actions, and useful error messages if an action could not be processed.
      * </p>
+     * <p>
+     * <code>DescribePrincipalMapping</code> is currently not supported in the Amazon Web Services GovCloud (US-West)
+     * region.
+     * </p>
      * 
      * @param describePrincipalMappingRequest
      * @return Result of the DescribePrincipalMapping operation returned by the service.
@@ -494,6 +630,10 @@ public interface AWSkendra {
      * <p>
      * This is used to check the current settings that are applied to a block list.
      * </p>
+     * <p>
+     * <code>DescribeQuerySuggestionsBlockList</code> is currently not supported in the Amazon Web Services GovCloud
+     * (US-West) region.
+     * </p>
      * 
      * @param describeQuerySuggestionsBlockListRequest
      * @return Result of the DescribeQuerySuggestionsBlockList operation returned by the service.
@@ -514,6 +654,10 @@ public interface AWSkendra {
      * </p>
      * <p>
      * This is used to check the current settings applied to query suggestions.
+     * </p>
+     * <p>
+     * <code>DescribeQuerySuggestionsConfig</code> is currently not supported in the Amazon Web Services GovCloud
+     * (US-West) region.
      * </p>
      * 
      * @param describeQuerySuggestionsConfigRequest
@@ -549,7 +693,55 @@ public interface AWSkendra {
 
     /**
      * <p>
+     * Prevents users or groups in your Amazon Web Services SSO identity source from accessing your Amazon Kendra
+     * experience. You can create an Amazon Kendra experience such as a search application. For more information on
+     * creating a search application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param disassociateEntitiesFromExperienceRequest
+     * @return Result of the DisassociateEntitiesFromExperience operation returned by the service.
+     * @throws ValidationException
+     * @throws ResourceNotFoundException
+     * @throws ThrottlingException
+     * @throws AccessDeniedException
+     * @throws InternalServerException
+     * @sample AWSkendra.DisassociateEntitiesFromExperience
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DisassociateEntitiesFromExperience"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DisassociateEntitiesFromExperienceResult disassociateEntitiesFromExperience(
+            DisassociateEntitiesFromExperienceRequest disassociateEntitiesFromExperienceRequest);
+
+    /**
+     * <p>
+     * Removes the specific permissions of users or groups in your Amazon Web Services SSO identity source with access
+     * to your Amazon Kendra experience. You can create an Amazon Kendra experience such as a search application. For
+     * more information on creating a search application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param disassociatePersonasFromEntitiesRequest
+     * @return Result of the DisassociatePersonasFromEntities operation returned by the service.
+     * @throws ValidationException
+     * @throws ResourceNotFoundException
+     * @throws ThrottlingException
+     * @throws AccessDeniedException
+     * @throws InternalServerException
+     * @sample AWSkendra.DisassociatePersonasFromEntities
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DisassociatePersonasFromEntities"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DisassociatePersonasFromEntitiesResult disassociatePersonasFromEntities(DisassociatePersonasFromEntitiesRequest disassociatePersonasFromEntitiesRequest);
+
+    /**
+     * <p>
      * Fetches the queries that are suggested to your users.
+     * </p>
+     * <p>
+     * <code>GetQuerySuggestions</code> is currently not supported in the Amazon Web Services GovCloud (US-West) region.
      * </p>
      * 
      * @param getQuerySuggestionsRequest
@@ -566,6 +758,25 @@ public interface AWSkendra {
      *      Documentation</a>
      */
     GetQuerySuggestionsResult getQuerySuggestions(GetQuerySuggestionsRequest getQuerySuggestionsRequest);
+
+    /**
+     * <p>
+     * Retrieves search metrics data. The data provides a snapshot of how your users interact with your search
+     * application and how effective the application is.
+     * </p>
+     * 
+     * @param getSnapshotsRequest
+     * @return Result of the GetSnapshots operation returned by the service.
+     * @throws InvalidRequestException
+     *         The input to the request is not valid.
+     * @throws ResourceNotFoundException
+     * @throws AccessDeniedException
+     * @throws InternalServerException
+     * @sample AWSkendra.GetSnapshots
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/GetSnapshots" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetSnapshotsResult getSnapshots(GetSnapshotsRequest getSnapshotsRequest);
 
     /**
      * <p>
@@ -606,6 +817,67 @@ public interface AWSkendra {
 
     /**
      * <p>
+     * Lists specific permissions of users and groups with access to your Amazon Kendra experience.
+     * </p>
+     * 
+     * @param listEntityPersonasRequest
+     * @return Result of the ListEntityPersonas operation returned by the service.
+     * @throws ValidationException
+     * @throws ResourceNotFoundException
+     * @throws AccessDeniedException
+     * @throws ThrottlingException
+     * @throws InternalServerException
+     * @sample AWSkendra.ListEntityPersonas
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListEntityPersonas" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListEntityPersonasResult listEntityPersonas(ListEntityPersonasRequest listEntityPersonasRequest);
+
+    /**
+     * <p>
+     * Lists users or groups in your Amazon Web Services SSO identity source that are granted access to your Amazon
+     * Kendra experience. You can create an Amazon Kendra experience such as a search application. For more information
+     * on creating a search application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param listExperienceEntitiesRequest
+     * @return Result of the ListExperienceEntities operation returned by the service.
+     * @throws ValidationException
+     * @throws ResourceNotFoundException
+     * @throws AccessDeniedException
+     * @throws ThrottlingException
+     * @throws InternalServerException
+     * @sample AWSkendra.ListExperienceEntities
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListExperienceEntities" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListExperienceEntitiesResult listExperienceEntities(ListExperienceEntitiesRequest listExperienceEntitiesRequest);
+
+    /**
+     * <p>
+     * Lists one or more Amazon Kendra experiences. You can create an Amazon Kendra experience such as a search
+     * application. For more information on creating a search application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param listExperiencesRequest
+     * @return Result of the ListExperiences operation returned by the service.
+     * @throws ValidationException
+     * @throws ResourceNotFoundException
+     * @throws AccessDeniedException
+     * @throws ThrottlingException
+     * @throws InternalServerException
+     * @sample AWSkendra.ListExperiences
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListExperiences" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListExperiencesResult listExperiences(ListExperiencesRequest listExperiencesRequest);
+
+    /**
+     * <p>
      * Gets a list of FAQ lists associated with an index.
      * </p>
      * 
@@ -625,6 +897,10 @@ public interface AWSkendra {
     /**
      * <p>
      * Provides a list of groups that are mapped to users before a given ordering or timestamp identifier.
+     * </p>
+     * <p>
+     * <code>ListGroupsOlderThanOrderingId</code> is currently not supported in the Amazon Web Services GovCloud
+     * (US-West) region.
      * </p>
      * 
      * @param listGroupsOlderThanOrderingIdRequest
@@ -665,6 +941,10 @@ public interface AWSkendra {
      * <p>
      * For information on the current quota limits for block lists, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/quotas.html">Quotas for Amazon Kendra</a>.
+     * </p>
+     * <p>
+     * <code>ListQuerySuggestionsBlockLists</code> is currently not supported in the Amazon Web Services GovCloud
+     * (US-West) region.
      * </p>
      * 
      * @param listQuerySuggestionsBlockListsRequest
@@ -735,6 +1015,9 @@ public interface AWSkendra {
      * <p>
      * If more than five <code>PUT</code> actions for a group are currently processing, a validation exception is
      * thrown.
+     * </p>
+     * <p>
+     * <code>PutPrincipalMapping</code> is currently not supported in the Amazon Web Services GovCloud (US-West) region.
      * </p>
      * 
      * @param putPrincipalMappingRequest
@@ -848,6 +1131,9 @@ public interface AWSkendra {
      * <p>
      * Enables you to provide feedback to Amazon Kendra to improve the performance of your index.
      * </p>
+     * <p>
+     * <code>SubmitFeedback</code> is currently not supported in the Amazon Web Services GovCloud (US-West) region.
+     * </p>
      * 
      * @param submitFeedbackRequest
      * @return Result of the SubmitFeedback operation returned by the service.
@@ -921,6 +1207,28 @@ public interface AWSkendra {
 
     /**
      * <p>
+     * Updates your Amazon Kendra experience such as a search application. For more information on creating a search
+     * application experience, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
+     * experience with no code</a>.
+     * </p>
+     * 
+     * @param updateExperienceRequest
+     * @return Result of the UpdateExperience operation returned by the service.
+     * @throws ValidationException
+     * @throws ConflictException
+     * @throws ResourceNotFoundException
+     * @throws ThrottlingException
+     * @throws AccessDeniedException
+     * @throws InternalServerException
+     * @sample AWSkendra.UpdateExperience
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/UpdateExperience" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateExperienceResult updateExperience(UpdateExperienceRequest updateExperienceRequest);
+
+    /**
+     * <p>
      * Updates an existing Amazon Kendra index.
      * </p>
      * 
@@ -954,6 +1262,10 @@ public interface AWSkendra {
      * <p>
      * Amazon Kendra supports partial updates, so you only need to provide the fields you want to update.
      * </p>
+     * <p>
+     * <code>UpdateQuerySuggestionsBlockList</code> is currently not supported in the Amazon Web Services GovCloud
+     * (US-West) region.
+     * </p>
      * 
      * @param updateQuerySuggestionsBlockListRequest
      * @return Result of the UpdateQuerySuggestionsBlockList operation returned by the service.
@@ -986,6 +1298,10 @@ public interface AWSkendra {
      * </p>
      * <p>
      * You can still enable/disable query suggestions at any time.
+     * </p>
+     * <p>
+     * <code>UpdateQuerySuggestionsConfig</code> is currently not supported in the Amazon Web Services GovCloud
+     * (US-West) region.
      * </p>
      * 
      * @param updateQuerySuggestionsConfigRequest

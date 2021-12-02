@@ -71,7 +71,7 @@ public class InvokeEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
      * post-processing function.
      * </p>
      * <p>
-     * This feature is currently supported in the AWS SDKs but not in the Amazon SageMaker Python SDK.
+     * This feature is currently supported in the Amazon Web Services SDKs but not in the Amazon SageMaker Python SDK.
      * </p>
      */
     private String customAttributes;
@@ -348,7 +348,7 @@ public class InvokeEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
      * post-processing function.
      * </p>
      * <p>
-     * This feature is currently supported in the AWS SDKs but not in the Amazon SageMaker Python SDK.
+     * This feature is currently supported in the Amazon Web Services SDKs but not in the Amazon SageMaker Python SDK.
      * </p>
      * 
      * @param customAttributes
@@ -365,7 +365,8 @@ public class InvokeEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
      *        in your post-processing function.
      *        </p>
      *        <p>
-     *        This feature is currently supported in the AWS SDKs but not in the Amazon SageMaker Python SDK.
+     *        This feature is currently supported in the Amazon Web Services SDKs but not in the Amazon SageMaker Python
+     *        SDK.
      */
 
     public void setCustomAttributes(String customAttributes) {
@@ -388,7 +389,7 @@ public class InvokeEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
      * post-processing function.
      * </p>
      * <p>
-     * This feature is currently supported in the AWS SDKs but not in the Amazon SageMaker Python SDK.
+     * This feature is currently supported in the Amazon Web Services SDKs but not in the Amazon SageMaker Python SDK.
      * </p>
      * 
      * @return Provides additional information about a request for an inference submitted to a model hosted at an Amazon
@@ -404,7 +405,8 @@ public class InvokeEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
      *         <code>Trace ID:</code> in your post-processing function.
      *         </p>
      *         <p>
-     *         This feature is currently supported in the AWS SDKs but not in the Amazon SageMaker Python SDK.
+     *         This feature is currently supported in the Amazon Web Services SDKs but not in the Amazon SageMaker
+     *         Python SDK.
      */
 
     public String getCustomAttributes() {
@@ -427,7 +429,7 @@ public class InvokeEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
      * post-processing function.
      * </p>
      * <p>
-     * This feature is currently supported in the AWS SDKs but not in the Amazon SageMaker Python SDK.
+     * This feature is currently supported in the Amazon Web Services SDKs but not in the Amazon SageMaker Python SDK.
      * </p>
      * 
      * @param customAttributes
@@ -444,7 +446,8 @@ public class InvokeEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
      *        in your post-processing function.
      *        </p>
      *        <p>
-     *        This feature is currently supported in the AWS SDKs but not in the Amazon SageMaker Python SDK.
+     *        This feature is currently supported in the Amazon Web Services SDKs but not in the Amazon SageMaker Python
+     *        SDK.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

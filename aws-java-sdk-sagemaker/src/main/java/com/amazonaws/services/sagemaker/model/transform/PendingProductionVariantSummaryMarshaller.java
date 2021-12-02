@@ -46,6 +46,10 @@ public class PendingProductionVariantSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AcceleratorType").build();
     private static final MarshallingInfo<List> VARIANTSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("VariantStatus").build();
+    private static final MarshallingInfo<StructuredPojo> CURRENTSERVERLESSCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CurrentServerlessConfig").build();
+    private static final MarshallingInfo<StructuredPojo> DESIREDSERVERLESSCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DesiredServerlessConfig").build();
 
     private static final PendingProductionVariantSummaryMarshaller instance = new PendingProductionVariantSummaryMarshaller();
 
@@ -72,6 +76,8 @@ public class PendingProductionVariantSummaryMarshaller {
             protocolMarshaller.marshall(pendingProductionVariantSummary.getInstanceType(), INSTANCETYPE_BINDING);
             protocolMarshaller.marshall(pendingProductionVariantSummary.getAcceleratorType(), ACCELERATORTYPE_BINDING);
             protocolMarshaller.marshall(pendingProductionVariantSummary.getVariantStatus(), VARIANTSTATUS_BINDING);
+            protocolMarshaller.marshall(pendingProductionVariantSummary.getCurrentServerlessConfig(), CURRENTSERVERLESSCONFIG_BINDING);
+            protocolMarshaller.marshall(pendingProductionVariantSummary.getDesiredServerlessConfig(), DESIREDSERVERLESSCONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

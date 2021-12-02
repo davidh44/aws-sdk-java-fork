@@ -41,6 +41,14 @@ public class ModelPackageContainerDefinitionMarshaller {
             .marshallLocationName("ProductId").build();
     private static final MarshallingInfo<Map> ENVIRONMENT_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Environment").build();
+    private static final MarshallingInfo<StructuredPojo> MODELINPUT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModelInput").build();
+    private static final MarshallingInfo<String> FRAMEWORK_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Framework").build();
+    private static final MarshallingInfo<String> FRAMEWORKVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FrameworkVersion").build();
+    private static final MarshallingInfo<String> NEARESTMODELNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NearestModelName").build();
 
     private static final ModelPackageContainerDefinitionMarshaller instance = new ModelPackageContainerDefinitionMarshaller();
 
@@ -64,6 +72,10 @@ public class ModelPackageContainerDefinitionMarshaller {
             protocolMarshaller.marshall(modelPackageContainerDefinition.getModelDataUrl(), MODELDATAURL_BINDING);
             protocolMarshaller.marshall(modelPackageContainerDefinition.getProductId(), PRODUCTID_BINDING);
             protocolMarshaller.marshall(modelPackageContainerDefinition.getEnvironment(), ENVIRONMENT_BINDING);
+            protocolMarshaller.marshall(modelPackageContainerDefinition.getModelInput(), MODELINPUT_BINDING);
+            protocolMarshaller.marshall(modelPackageContainerDefinition.getFramework(), FRAMEWORK_BINDING);
+            protocolMarshaller.marshall(modelPackageContainerDefinition.getFrameworkVersion(), FRAMEWORKVERSION_BINDING);
+            protocolMarshaller.marshall(modelPackageContainerDefinition.getNearestModelName(), NEARESTMODELNAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

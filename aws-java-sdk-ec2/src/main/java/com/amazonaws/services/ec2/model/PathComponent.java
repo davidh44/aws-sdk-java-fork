@@ -40,6 +40,12 @@ public class PathComponent implements Serializable, Cloneable {
     private AnalysisAclRule aclRule;
     /**
      * <p>
+     * The resource to which the path component is attached.
+     * </p>
+     */
+    private AnalysisComponent attachedTo;
+    /**
+     * <p>
      * The component.
      * </p>
      */
@@ -170,6 +176,46 @@ public class PathComponent implements Serializable, Cloneable {
 
     public PathComponent withAclRule(AnalysisAclRule aclRule) {
         setAclRule(aclRule);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The resource to which the path component is attached.
+     * </p>
+     * 
+     * @param attachedTo
+     *        The resource to which the path component is attached.
+     */
+
+    public void setAttachedTo(AnalysisComponent attachedTo) {
+        this.attachedTo = attachedTo;
+    }
+
+    /**
+     * <p>
+     * The resource to which the path component is attached.
+     * </p>
+     * 
+     * @return The resource to which the path component is attached.
+     */
+
+    public AnalysisComponent getAttachedTo() {
+        return this.attachedTo;
+    }
+
+    /**
+     * <p>
+     * The resource to which the path component is attached.
+     * </p>
+     * 
+     * @param attachedTo
+     *        The resource to which the path component is attached.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PathComponent withAttachedTo(AnalysisComponent attachedTo) {
+        setAttachedTo(attachedTo);
         return this;
     }
 
@@ -549,6 +595,8 @@ public class PathComponent implements Serializable, Cloneable {
             sb.append("SequenceNumber: ").append(getSequenceNumber()).append(",");
         if (getAclRule() != null)
             sb.append("AclRule: ").append(getAclRule()).append(",");
+        if (getAttachedTo() != null)
+            sb.append("AttachedTo: ").append(getAttachedTo()).append(",");
         if (getComponent() != null)
             sb.append("Component: ").append(getComponent()).append(",");
         if (getDestinationVpc() != null)
@@ -588,6 +636,10 @@ public class PathComponent implements Serializable, Cloneable {
         if (other.getAclRule() == null ^ this.getAclRule() == null)
             return false;
         if (other.getAclRule() != null && other.getAclRule().equals(this.getAclRule()) == false)
+            return false;
+        if (other.getAttachedTo() == null ^ this.getAttachedTo() == null)
+            return false;
+        if (other.getAttachedTo() != null && other.getAttachedTo().equals(this.getAttachedTo()) == false)
             return false;
         if (other.getComponent() == null ^ this.getComponent() == null)
             return false;
@@ -635,6 +687,7 @@ public class PathComponent implements Serializable, Cloneable {
 
         hashCode = prime * hashCode + ((getSequenceNumber() == null) ? 0 : getSequenceNumber().hashCode());
         hashCode = prime * hashCode + ((getAclRule() == null) ? 0 : getAclRule().hashCode());
+        hashCode = prime * hashCode + ((getAttachedTo() == null) ? 0 : getAttachedTo().hashCode());
         hashCode = prime * hashCode + ((getComponent() == null) ? 0 : getComponent().hashCode());
         hashCode = prime * hashCode + ((getDestinationVpc() == null) ? 0 : getDestinationVpc().hashCode());
         hashCode = prime * hashCode + ((getOutboundHeader() == null) ? 0 : getOutboundHeader().hashCode());

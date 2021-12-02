@@ -65,6 +65,12 @@ public class DescribeResourceCollectionHealthResultJsonUnmarshaller implements U
                     context.nextToken();
                     describeResourceCollectionHealthResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Tags", targetDepth)) {
+                    context.nextToken();
+                    describeResourceCollectionHealthResult.setTags(new ListUnmarshaller<TagHealth>(TagHealthJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

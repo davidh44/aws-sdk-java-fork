@@ -137,6 +137,13 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </note>
      */
     private java.util.List<ReplicationGroupUpdate> replicaUpdates;
+    /**
+     * <p>
+     * The table class of the table to be updated. Valid values are <code>STANDARD</code> and
+     * <code>STANDARD_INFREQUENT_ACCESS</code>.
+     * </p>
+     */
+    private String tableClass;
 
     /**
      * Default constructor for UpdateTableRequest object. Callers should use the setter or fluent setter (with...)
@@ -1047,6 +1054,73 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * The table class of the table to be updated. Valid values are <code>STANDARD</code> and
+     * <code>STANDARD_INFREQUENT_ACCESS</code>.
+     * </p>
+     * 
+     * @param tableClass
+     *        The table class of the table to be updated. Valid values are <code>STANDARD</code> and
+     *        <code>STANDARD_INFREQUENT_ACCESS</code>.
+     * @see TableClass
+     */
+
+    public void setTableClass(String tableClass) {
+        this.tableClass = tableClass;
+    }
+
+    /**
+     * <p>
+     * The table class of the table to be updated. Valid values are <code>STANDARD</code> and
+     * <code>STANDARD_INFREQUENT_ACCESS</code>.
+     * </p>
+     * 
+     * @return The table class of the table to be updated. Valid values are <code>STANDARD</code> and
+     *         <code>STANDARD_INFREQUENT_ACCESS</code>.
+     * @see TableClass
+     */
+
+    public String getTableClass() {
+        return this.tableClass;
+    }
+
+    /**
+     * <p>
+     * The table class of the table to be updated. Valid values are <code>STANDARD</code> and
+     * <code>STANDARD_INFREQUENT_ACCESS</code>.
+     * </p>
+     * 
+     * @param tableClass
+     *        The table class of the table to be updated. Valid values are <code>STANDARD</code> and
+     *        <code>STANDARD_INFREQUENT_ACCESS</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TableClass
+     */
+
+    public UpdateTableRequest withTableClass(String tableClass) {
+        setTableClass(tableClass);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The table class of the table to be updated. Valid values are <code>STANDARD</code> and
+     * <code>STANDARD_INFREQUENT_ACCESS</code>.
+     * </p>
+     * 
+     * @param tableClass
+     *        The table class of the table to be updated. Valid values are <code>STANDARD</code> and
+     *        <code>STANDARD_INFREQUENT_ACCESS</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TableClass
+     */
+
+    public UpdateTableRequest withTableClass(TableClass tableClass) {
+        this.tableClass = tableClass.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1073,7 +1147,9 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getSSESpecification() != null)
             sb.append("SSESpecification: ").append(getSSESpecification()).append(",");
         if (getReplicaUpdates() != null)
-            sb.append("ReplicaUpdates: ").append(getReplicaUpdates());
+            sb.append("ReplicaUpdates: ").append(getReplicaUpdates()).append(",");
+        if (getTableClass() != null)
+            sb.append("TableClass: ").append(getTableClass());
         sb.append("}");
         return sb.toString();
     }
@@ -1120,6 +1196,10 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getReplicaUpdates() != null && other.getReplicaUpdates().equals(this.getReplicaUpdates()) == false)
             return false;
+        if (other.getTableClass() == null ^ this.getTableClass() == null)
+            return false;
+        if (other.getTableClass() != null && other.getTableClass().equals(this.getTableClass()) == false)
+            return false;
         return true;
     }
 
@@ -1136,6 +1216,7 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getStreamSpecification() == null) ? 0 : getStreamSpecification().hashCode());
         hashCode = prime * hashCode + ((getSSESpecification() == null) ? 0 : getSSESpecification().hashCode());
         hashCode = prime * hashCode + ((getReplicaUpdates() == null) ? 0 : getReplicaUpdates().hashCode());
+        hashCode = prime * hashCode + ((getTableClass() == null) ? 0 : getTableClass().hashCode());
         return hashCode;
     }
 

@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.devopsguru.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -43,6 +44,8 @@ public class ProactiveInsightSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceCollection").build();
     private static final MarshallingInfo<StructuredPojo> SERVICECOLLECTION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ServiceCollection").build();
+    private static final MarshallingInfo<List> ASSOCIATEDRESOURCEARNS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AssociatedResourceArns").build();
 
     private static final ProactiveInsightSummaryMarshaller instance = new ProactiveInsightSummaryMarshaller();
 
@@ -68,6 +71,7 @@ public class ProactiveInsightSummaryMarshaller {
             protocolMarshaller.marshall(proactiveInsightSummary.getPredictionTimeRange(), PREDICTIONTIMERANGE_BINDING);
             protocolMarshaller.marshall(proactiveInsightSummary.getResourceCollection(), RESOURCECOLLECTION_BINDING);
             protocolMarshaller.marshall(proactiveInsightSummary.getServiceCollection(), SERVICECOLLECTION_BINDING);
+            protocolMarshaller.marshall(proactiveInsightSummary.getAssociatedResourceArns(), ASSOCIATEDRESOURCEARNS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -70,6 +70,12 @@ public class NetworkInsightsAnalysis implements Serializable, Cloneable {
     private String statusMessage;
     /**
      * <p>
+     * The warning message.
+     * </p>
+     */
+    private String warningMessage;
+    /**
+     * <p>
      * Indicates whether the destination is reachable from the source.
      * </p>
      */
@@ -436,6 +442,46 @@ public class NetworkInsightsAnalysis implements Serializable, Cloneable {
 
     public NetworkInsightsAnalysis withStatusMessage(String statusMessage) {
         setStatusMessage(statusMessage);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The warning message.
+     * </p>
+     * 
+     * @param warningMessage
+     *        The warning message.
+     */
+
+    public void setWarningMessage(String warningMessage) {
+        this.warningMessage = warningMessage;
+    }
+
+    /**
+     * <p>
+     * The warning message.
+     * </p>
+     * 
+     * @return The warning message.
+     */
+
+    public String getWarningMessage() {
+        return this.warningMessage;
+    }
+
+    /**
+     * <p>
+     * The warning message.
+     * </p>
+     * 
+     * @param warningMessage
+     *        The warning message.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public NetworkInsightsAnalysis withWarningMessage(String warningMessage) {
+        setWarningMessage(warningMessage);
         return this;
     }
 
@@ -898,6 +944,8 @@ public class NetworkInsightsAnalysis implements Serializable, Cloneable {
             sb.append("Status: ").append(getStatus()).append(",");
         if (getStatusMessage() != null)
             sb.append("StatusMessage: ").append(getStatusMessage()).append(",");
+        if (getWarningMessage() != null)
+            sb.append("WarningMessage: ").append(getWarningMessage()).append(",");
         if (getNetworkPathFound() != null)
             sb.append("NetworkPathFound: ").append(getNetworkPathFound()).append(",");
         if (getForwardPathComponents() != null)
@@ -952,6 +1000,10 @@ public class NetworkInsightsAnalysis implements Serializable, Cloneable {
             return false;
         if (other.getStatusMessage() != null && other.getStatusMessage().equals(this.getStatusMessage()) == false)
             return false;
+        if (other.getWarningMessage() == null ^ this.getWarningMessage() == null)
+            return false;
+        if (other.getWarningMessage() != null && other.getWarningMessage().equals(this.getWarningMessage()) == false)
+            return false;
         if (other.getNetworkPathFound() == null ^ this.getNetworkPathFound() == null)
             return false;
         if (other.getNetworkPathFound() != null && other.getNetworkPathFound().equals(this.getNetworkPathFound()) == false)
@@ -991,6 +1043,7 @@ public class NetworkInsightsAnalysis implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getStartDate() == null) ? 0 : getStartDate().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getStatusMessage() == null) ? 0 : getStatusMessage().hashCode());
+        hashCode = prime * hashCode + ((getWarningMessage() == null) ? 0 : getWarningMessage().hashCode());
         hashCode = prime * hashCode + ((getNetworkPathFound() == null) ? 0 : getNetworkPathFound().hashCode());
         hashCode = prime * hashCode + ((getForwardPathComponents() == null) ? 0 : getForwardPathComponents().hashCode());
         hashCode = prime * hashCode + ((getReturnPathComponents() == null) ? 0 : getReturnPathComponents().hashCode());

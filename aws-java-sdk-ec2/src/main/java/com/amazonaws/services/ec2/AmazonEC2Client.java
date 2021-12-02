@@ -899,6 +899,64 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Allocate a CIDR from an IPAM pool. In IPAM, an allocation is a CIDR assignment from an IPAM pool to another
+     * resource or IPAM pool. For more information, see <a href="/vpc/latest/ipam/allocate-cidrs-ipam.html">Allocate
+     * CIDRs</a> in the <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param allocateIpamPoolCidrRequest
+     * @return Result of the AllocateIpamPoolCidr operation returned by the service.
+     * @sample AmazonEC2.AllocateIpamPoolCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AllocateIpamPoolCidr" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public AllocateIpamPoolCidrResult allocateIpamPoolCidr(AllocateIpamPoolCidrRequest request) {
+        request = beforeClientExecution(request);
+        return executeAllocateIpamPoolCidr(request);
+    }
+
+    @SdkInternalApi
+    final AllocateIpamPoolCidrResult executeAllocateIpamPoolCidr(AllocateIpamPoolCidrRequest allocateIpamPoolCidrRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(allocateIpamPoolCidrRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<AllocateIpamPoolCidrRequest> request = null;
+        Response<AllocateIpamPoolCidrResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new AllocateIpamPoolCidrRequestMarshaller().marshall(super.beforeMarshalling(allocateIpamPoolCidrRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "AllocateIpamPoolCidr");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<AllocateIpamPoolCidrResult> responseHandler = new StaxResponseHandler<AllocateIpamPoolCidrResult>(
+                    new AllocateIpamPoolCidrResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Applies a security group to the association between the target network and the Client VPN endpoint. This action
      * replaces the existing security groups with the specified security groups.
      * </p>
@@ -4547,6 +4605,193 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Create an IPAM. Amazon VCP IP Address Manager (IPAM) is a VPC feature that you can use to automate your IP
+     * address management workflows including assigning, tracking, troubleshooting, and auditing IP addresses across
+     * Amazon Web Services Regions and accounts throughout your Amazon Web Services Organization.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/create-ipam.html">Create an IPAM</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param createIpamRequest
+     * @return Result of the CreateIpam operation returned by the service.
+     * @sample AmazonEC2.CreateIpam
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateIpam" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CreateIpamResult createIpam(CreateIpamRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateIpam(request);
+    }
+
+    @SdkInternalApi
+    final CreateIpamResult executeCreateIpam(CreateIpamRequest createIpamRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createIpamRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateIpamRequest> request = null;
+        Response<CreateIpamResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateIpamRequestMarshaller().marshall(super.beforeMarshalling(createIpamRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateIpam");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<CreateIpamResult> responseHandler = new StaxResponseHandler<CreateIpamResult>(new CreateIpamResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Create an IP address pool for Amazon VPC IP Address Manager (IPAM). In IPAM, a pool is a collection of contiguous
+     * IP addresses CIDRs. Pools enable you to organize your IP addresses according to your routing and security needs.
+     * For example, if you have separate routing and security needs for development and production applications, you can
+     * create a pool for each.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/create-top-ipam.html">Create a top-level pool</a> in the
+     * <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param createIpamPoolRequest
+     * @return Result of the CreateIpamPool operation returned by the service.
+     * @sample AmazonEC2.CreateIpamPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateIpamPool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CreateIpamPoolResult createIpamPool(CreateIpamPoolRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateIpamPool(request);
+    }
+
+    @SdkInternalApi
+    final CreateIpamPoolResult executeCreateIpamPool(CreateIpamPoolRequest createIpamPoolRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createIpamPoolRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateIpamPoolRequest> request = null;
+        Response<CreateIpamPoolResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateIpamPoolRequestMarshaller().marshall(super.beforeMarshalling(createIpamPoolRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateIpamPool");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<CreateIpamPoolResult> responseHandler = new StaxResponseHandler<CreateIpamPoolResult>(
+                    new CreateIpamPoolResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Create an IPAM scope. In IPAM, a scope is the highest-level container within IPAM. An IPAM contains two default
+     * scopes. Each scope represents the IP space for a single network. The private scope is intended for all private IP
+     * address space. The public scope is intended for all public IP address space. Scopes enable you to reuse IP
+     * addresses across multiple unconnected networks without causing IP address overlap or conflict.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/add-scope-ipam.html">Add a scope</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param createIpamScopeRequest
+     * @return Result of the CreateIpamScope operation returned by the service.
+     * @sample AmazonEC2.CreateIpamScope
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateIpamScope" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CreateIpamScopeResult createIpamScope(CreateIpamScopeRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateIpamScope(request);
+    }
+
+    @SdkInternalApi
+    final CreateIpamScopeResult executeCreateIpamScope(CreateIpamScopeRequest createIpamScopeRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createIpamScopeRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateIpamScopeRequest> request = null;
+        Response<CreateIpamScopeResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateIpamScopeRequestMarshaller().marshall(super.beforeMarshalling(createIpamScopeRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateIpamScope");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<CreateIpamScopeResult> responseHandler = new StaxResponseHandler<CreateIpamScopeResult>(
+                    new CreateIpamScopeResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates an ED25519 or 2048-bit RSA key pair with the specified name. Amazon EC2 stores the public key and
      * displays the private key for you to save to a file. The private key is returned as an unencrypted PEM encoded
      * PKCS#1 private key. If a key with the specified name already exists, Amazon EC2 returns an error.
@@ -5118,6 +5363,69 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Creates a Network Access Scope.
+     * </p>
+     * <p>
+     * Amazon Web Services Network Access Analyzer enables cloud networking and cloud operations teams to verify that
+     * their networks on Amazon Web Services conform to their network security and governance objectives. For more
+     * information, see the <a href="https://docs.aws.amazon.com/vpc/latest/network-access-analyzer/">Amazon Web
+     * Services Network Access Analyzer Guide</a>.
+     * </p>
+     * 
+     * @param createNetworkInsightsAccessScopeRequest
+     * @return Result of the CreateNetworkInsightsAccessScope operation returned by the service.
+     * @sample AmazonEC2.CreateNetworkInsightsAccessScope
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateNetworkInsightsAccessScope"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateNetworkInsightsAccessScopeResult createNetworkInsightsAccessScope(CreateNetworkInsightsAccessScopeRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateNetworkInsightsAccessScope(request);
+    }
+
+    @SdkInternalApi
+    final CreateNetworkInsightsAccessScopeResult executeCreateNetworkInsightsAccessScope(
+            CreateNetworkInsightsAccessScopeRequest createNetworkInsightsAccessScopeRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createNetworkInsightsAccessScopeRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateNetworkInsightsAccessScopeRequest> request = null;
+        Response<CreateNetworkInsightsAccessScopeResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateNetworkInsightsAccessScopeRequestMarshaller().marshall(super.beforeMarshalling(createNetworkInsightsAccessScopeRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateNetworkInsightsAccessScope");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<CreateNetworkInsightsAccessScopeResult> responseHandler = new StaxResponseHandler<CreateNetworkInsightsAccessScopeResult>(
+                    new CreateNetworkInsightsAccessScopeResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a path to analyze for reachability.
      * </p>
      * <p>
@@ -5358,6 +5666,66 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<CreatePlacementGroupResult> responseHandler = new StaxResponseHandler<CreatePlacementGroupResult>(
                     new CreatePlacementGroupResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a public IPv4 address pool. A public IPv4 pool is an EC2 IP address pool required for the public IPv4
+     * CIDRs that you own and bring to Amazon Web Services to manage with IPAM. IPv6 addresses you bring to Amazon Web
+     * Services, however, use IPAM pools only. To monitor the status of pool creation, use <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribePublicIpv4Pools.html"
+     * >DescribePublicIpv4Pools</a>.
+     * </p>
+     * 
+     * @param createPublicIpv4PoolRequest
+     * @return Result of the CreatePublicIpv4Pool operation returned by the service.
+     * @sample AmazonEC2.CreatePublicIpv4Pool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreatePublicIpv4Pool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CreatePublicIpv4PoolResult createPublicIpv4Pool(CreatePublicIpv4PoolRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreatePublicIpv4Pool(request);
+    }
+
+    @SdkInternalApi
+    final CreatePublicIpv4PoolResult executeCreatePublicIpv4Pool(CreatePublicIpv4PoolRequest createPublicIpv4PoolRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createPublicIpv4PoolRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreatePublicIpv4PoolRequest> request = null;
+        Response<CreatePublicIpv4PoolResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreatePublicIpv4PoolRequestMarshaller().marshall(super.beforeMarshalling(createPublicIpv4PoolRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreatePublicIpv4Pool");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<CreatePublicIpv4PoolResult> responseHandler = new StaxResponseHandler<CreatePublicIpv4PoolResult>(
+                    new CreatePublicIpv4PoolResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -8465,6 +8833,205 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Delete an IPAM. Deleting an IPAM removes all monitored data associated with the IPAM including the historical
+     * data for CIDRs.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot delete an IPAM if there are CIDRs provisioned to pools or if there are allocations in the pools within
+     * the IPAM. To deprovision pool CIDRs, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeprovisionIpamPoolCidr.html"
+     * >DeprovisionIpamPoolCidr</a>. To release allocations, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ReleaseIpamPoolAllocation.html"
+     * >ReleaseIpamPoolAllocation</a>.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/delete-ipam.html">Delete an IPAM</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param deleteIpamRequest
+     * @return Result of the DeleteIpam operation returned by the service.
+     * @sample AmazonEC2.DeleteIpam
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteIpam" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteIpamResult deleteIpam(DeleteIpamRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteIpam(request);
+    }
+
+    @SdkInternalApi
+    final DeleteIpamResult executeDeleteIpam(DeleteIpamRequest deleteIpamRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteIpamRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteIpamRequest> request = null;
+        Response<DeleteIpamResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteIpamRequestMarshaller().marshall(super.beforeMarshalling(deleteIpamRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteIpam");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DeleteIpamResult> responseHandler = new StaxResponseHandler<DeleteIpamResult>(new DeleteIpamResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Delete an IPAM pool.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot delete an IPAM pool if there are allocations in it or CIDRs provisioned to it. To release allocations,
+     * see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ReleaseIpamPoolAllocation.html">
+     * ReleaseIpamPoolAllocation</a>. To deprovision pool CIDRs, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeprovisionIpamPoolCidr.html"
+     * >DeprovisionIpamPoolCidr</a>.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/delete-pool-ipam.html">Delete a pool</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param deleteIpamPoolRequest
+     * @return Result of the DeleteIpamPool operation returned by the service.
+     * @sample AmazonEC2.DeleteIpamPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteIpamPool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteIpamPoolResult deleteIpamPool(DeleteIpamPoolRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteIpamPool(request);
+    }
+
+    @SdkInternalApi
+    final DeleteIpamPoolResult executeDeleteIpamPool(DeleteIpamPoolRequest deleteIpamPoolRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteIpamPoolRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteIpamPoolRequest> request = null;
+        Response<DeleteIpamPoolResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteIpamPoolRequestMarshaller().marshall(super.beforeMarshalling(deleteIpamPoolRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteIpamPool");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DeleteIpamPoolResult> responseHandler = new StaxResponseHandler<DeleteIpamPoolResult>(
+                    new DeleteIpamPoolResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Delete the scope for an IPAM. You cannot delete the default scopes.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/delete-scope-ipam.html">Delete a scope</a> in the <i>Amazon
+     * VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param deleteIpamScopeRequest
+     * @return Result of the DeleteIpamScope operation returned by the service.
+     * @sample AmazonEC2.DeleteIpamScope
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteIpamScope" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteIpamScopeResult deleteIpamScope(DeleteIpamScopeRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteIpamScope(request);
+    }
+
+    @SdkInternalApi
+    final DeleteIpamScopeResult executeDeleteIpamScope(DeleteIpamScopeRequest deleteIpamScopeRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteIpamScopeRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteIpamScopeRequest> request = null;
+        Response<DeleteIpamScopeResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteIpamScopeRequestMarshaller().marshall(super.beforeMarshalling(deleteIpamScopeRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteIpamScope");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DeleteIpamScopeResult> responseHandler = new StaxResponseHandler<DeleteIpamScopeResult>(
+                    new DeleteIpamScopeResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes the specified key pair, by removing the public key from Amazon EC2.
      * </p>
      * 
@@ -8976,6 +9543,121 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Deletes the specified Network Access Scope.
+     * </p>
+     * 
+     * @param deleteNetworkInsightsAccessScopeRequest
+     * @return Result of the DeleteNetworkInsightsAccessScope operation returned by the service.
+     * @sample AmazonEC2.DeleteNetworkInsightsAccessScope
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteNetworkInsightsAccessScope"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteNetworkInsightsAccessScopeResult deleteNetworkInsightsAccessScope(DeleteNetworkInsightsAccessScopeRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteNetworkInsightsAccessScope(request);
+    }
+
+    @SdkInternalApi
+    final DeleteNetworkInsightsAccessScopeResult executeDeleteNetworkInsightsAccessScope(
+            DeleteNetworkInsightsAccessScopeRequest deleteNetworkInsightsAccessScopeRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteNetworkInsightsAccessScopeRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteNetworkInsightsAccessScopeRequest> request = null;
+        Response<DeleteNetworkInsightsAccessScopeResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteNetworkInsightsAccessScopeRequestMarshaller().marshall(super.beforeMarshalling(deleteNetworkInsightsAccessScopeRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteNetworkInsightsAccessScope");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DeleteNetworkInsightsAccessScopeResult> responseHandler = new StaxResponseHandler<DeleteNetworkInsightsAccessScopeResult>(
+                    new DeleteNetworkInsightsAccessScopeResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes the specified Network Access Scope analysis.
+     * </p>
+     * 
+     * @param deleteNetworkInsightsAccessScopeAnalysisRequest
+     * @return Result of the DeleteNetworkInsightsAccessScopeAnalysis operation returned by the service.
+     * @sample AmazonEC2.DeleteNetworkInsightsAccessScopeAnalysis
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteNetworkInsightsAccessScopeAnalysis"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteNetworkInsightsAccessScopeAnalysisResult deleteNetworkInsightsAccessScopeAnalysis(DeleteNetworkInsightsAccessScopeAnalysisRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteNetworkInsightsAccessScopeAnalysis(request);
+    }
+
+    @SdkInternalApi
+    final DeleteNetworkInsightsAccessScopeAnalysisResult executeDeleteNetworkInsightsAccessScopeAnalysis(
+            DeleteNetworkInsightsAccessScopeAnalysisRequest deleteNetworkInsightsAccessScopeAnalysisRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteNetworkInsightsAccessScopeAnalysisRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteNetworkInsightsAccessScopeAnalysisRequest> request = null;
+        Response<DeleteNetworkInsightsAccessScopeAnalysisResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteNetworkInsightsAccessScopeAnalysisRequestMarshaller().marshall(super
+                        .beforeMarshalling(deleteNetworkInsightsAccessScopeAnalysisRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteNetworkInsightsAccessScopeAnalysis");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DeleteNetworkInsightsAccessScopeAnalysisResult> responseHandler = new StaxResponseHandler<DeleteNetworkInsightsAccessScopeAnalysisResult>(
+                    new DeleteNetworkInsightsAccessScopeAnalysisResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes the specified network insights analysis.
      * </p>
      * 
@@ -9251,6 +9933,64 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<DeletePlacementGroupResult> responseHandler = new StaxResponseHandler<DeletePlacementGroupResult>(
                     new DeletePlacementGroupResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Delete a public IPv4 pool. A public IPv4 pool is an EC2 IP address pool required for the public IPv4 CIDRs that
+     * you own and bring to Amazon Web Services to manage with IPAM. IPv6 addresses you bring to Amazon Web Services,
+     * however, use IPAM pools only.
+     * </p>
+     * 
+     * @param deletePublicIpv4PoolRequest
+     * @return Result of the DeletePublicIpv4Pool operation returned by the service.
+     * @sample AmazonEC2.DeletePublicIpv4Pool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeletePublicIpv4Pool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeletePublicIpv4PoolResult deletePublicIpv4Pool(DeletePublicIpv4PoolRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeletePublicIpv4Pool(request);
+    }
+
+    @SdkInternalApi
+    final DeletePublicIpv4PoolResult executeDeletePublicIpv4Pool(DeletePublicIpv4PoolRequest deletePublicIpv4PoolRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deletePublicIpv4PoolRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeletePublicIpv4PoolRequest> request = null;
+        Response<DeletePublicIpv4PoolResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeletePublicIpv4PoolRequestMarshaller().marshall(super.beforeMarshalling(deletePublicIpv4PoolRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeletePublicIpv4Pool");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DeletePublicIpv4PoolResult> responseHandler = new StaxResponseHandler<DeletePublicIpv4PoolResult>(
+                    new DeletePublicIpv4PoolResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -11174,6 +11914,121 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<DeprovisionByoipCidrResult> responseHandler = new StaxResponseHandler<DeprovisionByoipCidrResult>(
                     new DeprovisionByoipCidrResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deprovision a CIDR provisioned from an IPAM pool. If you deprovision a CIDR from a pool that has a source pool,
+     * the CIDR is recycled back into the source pool. For more information, see <a
+     * href="/vpc/latest/ipam/depro-pool-cidr-ipam.html">Deprovision pool CIDRs</a> in the <i>Amazon VPC IPAM User
+     * Guide</i>.
+     * </p>
+     * 
+     * @param deprovisionIpamPoolCidrRequest
+     * @return Result of the DeprovisionIpamPoolCidr operation returned by the service.
+     * @sample AmazonEC2.DeprovisionIpamPoolCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeprovisionIpamPoolCidr" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DeprovisionIpamPoolCidrResult deprovisionIpamPoolCidr(DeprovisionIpamPoolCidrRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeprovisionIpamPoolCidr(request);
+    }
+
+    @SdkInternalApi
+    final DeprovisionIpamPoolCidrResult executeDeprovisionIpamPoolCidr(DeprovisionIpamPoolCidrRequest deprovisionIpamPoolCidrRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deprovisionIpamPoolCidrRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeprovisionIpamPoolCidrRequest> request = null;
+        Response<DeprovisionIpamPoolCidrResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeprovisionIpamPoolCidrRequestMarshaller().marshall(super.beforeMarshalling(deprovisionIpamPoolCidrRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeprovisionIpamPoolCidr");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DeprovisionIpamPoolCidrResult> responseHandler = new StaxResponseHandler<DeprovisionIpamPoolCidrResult>(
+                    new DeprovisionIpamPoolCidrResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deprovision a CIDR from a public IPv4 pool.
+     * </p>
+     * 
+     * @param deprovisionPublicIpv4PoolCidrRequest
+     * @return Result of the DeprovisionPublicIpv4PoolCidr operation returned by the service.
+     * @sample AmazonEC2.DeprovisionPublicIpv4PoolCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeprovisionPublicIpv4PoolCidr"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeprovisionPublicIpv4PoolCidrResult deprovisionPublicIpv4PoolCidr(DeprovisionPublicIpv4PoolCidrRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeprovisionPublicIpv4PoolCidr(request);
+    }
+
+    @SdkInternalApi
+    final DeprovisionPublicIpv4PoolCidrResult executeDeprovisionPublicIpv4PoolCidr(DeprovisionPublicIpv4PoolCidrRequest deprovisionPublicIpv4PoolCidrRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deprovisionPublicIpv4PoolCidrRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeprovisionPublicIpv4PoolCidrRequest> request = null;
+        Response<DeprovisionPublicIpv4PoolCidrResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeprovisionPublicIpv4PoolCidrRequestMarshaller().marshall(super.beforeMarshalling(deprovisionPublicIpv4PoolCidrRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeprovisionPublicIpv4PoolCidr");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DeprovisionPublicIpv4PoolCidrResult> responseHandler = new StaxResponseHandler<DeprovisionPublicIpv4PoolCidrResult>(
+                    new DeprovisionPublicIpv4PoolCidrResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -14618,6 +15473,177 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Get information about your IPAM pools.
+     * </p>
+     * 
+     * @param describeIpamPoolsRequest
+     * @return Result of the DescribeIpamPools operation returned by the service.
+     * @sample AmazonEC2.DescribeIpamPools
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIpamPools" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DescribeIpamPoolsResult describeIpamPools(DescribeIpamPoolsRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeIpamPools(request);
+    }
+
+    @SdkInternalApi
+    final DescribeIpamPoolsResult executeDescribeIpamPools(DescribeIpamPoolsRequest describeIpamPoolsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeIpamPoolsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeIpamPoolsRequest> request = null;
+        Response<DescribeIpamPoolsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeIpamPoolsRequestMarshaller().marshall(super.beforeMarshalling(describeIpamPoolsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeIpamPools");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeIpamPoolsResult> responseHandler = new StaxResponseHandler<DescribeIpamPoolsResult>(
+                    new DescribeIpamPoolsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Get information about your IPAM scopes.
+     * </p>
+     * 
+     * @param describeIpamScopesRequest
+     * @return Result of the DescribeIpamScopes operation returned by the service.
+     * @sample AmazonEC2.DescribeIpamScopes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIpamScopes" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DescribeIpamScopesResult describeIpamScopes(DescribeIpamScopesRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeIpamScopes(request);
+    }
+
+    @SdkInternalApi
+    final DescribeIpamScopesResult executeDescribeIpamScopes(DescribeIpamScopesRequest describeIpamScopesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeIpamScopesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeIpamScopesRequest> request = null;
+        Response<DescribeIpamScopesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeIpamScopesRequestMarshaller().marshall(super.beforeMarshalling(describeIpamScopesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeIpamScopes");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeIpamScopesResult> responseHandler = new StaxResponseHandler<DescribeIpamScopesResult>(
+                    new DescribeIpamScopesResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Get information about your IPAM pools.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param describeIpamsRequest
+     * @return Result of the DescribeIpams operation returned by the service.
+     * @sample AmazonEC2.DescribeIpams
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIpams" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DescribeIpamsResult describeIpams(DescribeIpamsRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeIpams(request);
+    }
+
+    @SdkInternalApi
+    final DescribeIpamsResult executeDescribeIpams(DescribeIpamsRequest describeIpamsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeIpamsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeIpamsRequest> request = null;
+        Response<DescribeIpamsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeIpamsRequestMarshaller().marshall(super.beforeMarshalling(describeIpamsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeIpams");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeIpamsResult> responseHandler = new StaxResponseHandler<DescribeIpamsResult>(new DescribeIpamsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Describes your IPv6 address pools.
      * </p>
      * 
@@ -15445,6 +16471,122 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
     @Override
     public DescribeNetworkAclsResult describeNetworkAcls() {
         return describeNetworkAcls(new DescribeNetworkAclsRequest());
+    }
+
+    /**
+     * <p>
+     * Describes the specified Network Access Scope analyses.
+     * </p>
+     * 
+     * @param describeNetworkInsightsAccessScopeAnalysesRequest
+     * @return Result of the DescribeNetworkInsightsAccessScopeAnalyses operation returned by the service.
+     * @sample AmazonEC2.DescribeNetworkInsightsAccessScopeAnalyses
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeNetworkInsightsAccessScopeAnalyses"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeNetworkInsightsAccessScopeAnalysesResult describeNetworkInsightsAccessScopeAnalyses(DescribeNetworkInsightsAccessScopeAnalysesRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeNetworkInsightsAccessScopeAnalyses(request);
+    }
+
+    @SdkInternalApi
+    final DescribeNetworkInsightsAccessScopeAnalysesResult executeDescribeNetworkInsightsAccessScopeAnalyses(
+            DescribeNetworkInsightsAccessScopeAnalysesRequest describeNetworkInsightsAccessScopeAnalysesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeNetworkInsightsAccessScopeAnalysesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeNetworkInsightsAccessScopeAnalysesRequest> request = null;
+        Response<DescribeNetworkInsightsAccessScopeAnalysesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeNetworkInsightsAccessScopeAnalysesRequestMarshaller().marshall(super
+                        .beforeMarshalling(describeNetworkInsightsAccessScopeAnalysesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeNetworkInsightsAccessScopeAnalyses");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeNetworkInsightsAccessScopeAnalysesResult> responseHandler = new StaxResponseHandler<DescribeNetworkInsightsAccessScopeAnalysesResult>(
+                    new DescribeNetworkInsightsAccessScopeAnalysesResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Describes the specified Network Access Scopes.
+     * </p>
+     * 
+     * @param describeNetworkInsightsAccessScopesRequest
+     * @return Result of the DescribeNetworkInsightsAccessScopes operation returned by the service.
+     * @sample AmazonEC2.DescribeNetworkInsightsAccessScopes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeNetworkInsightsAccessScopes"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeNetworkInsightsAccessScopesResult describeNetworkInsightsAccessScopes(DescribeNetworkInsightsAccessScopesRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeNetworkInsightsAccessScopes(request);
+    }
+
+    @SdkInternalApi
+    final DescribeNetworkInsightsAccessScopesResult executeDescribeNetworkInsightsAccessScopes(
+            DescribeNetworkInsightsAccessScopesRequest describeNetworkInsightsAccessScopesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeNetworkInsightsAccessScopesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeNetworkInsightsAccessScopesRequest> request = null;
+        Response<DescribeNetworkInsightsAccessScopesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeNetworkInsightsAccessScopesRequestMarshaller().marshall(super
+                        .beforeMarshalling(describeNetworkInsightsAccessScopesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeNetworkInsightsAccessScopes");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeNetworkInsightsAccessScopesResult> responseHandler = new StaxResponseHandler<DescribeNetworkInsightsAccessScopesResult>(
+                    new DescribeNetworkInsightsAccessScopesResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
 
     /**
@@ -19981,6 +21123,65 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Disable the IPAM account. For more information, see <a href="/vpc/latest/ipam/enable-integ-ipam.html">Enable
+     * integration with Organizations</a> in the <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param disableIpamOrganizationAdminAccountRequest
+     * @return Result of the DisableIpamOrganizationAdminAccount operation returned by the service.
+     * @sample AmazonEC2.DisableIpamOrganizationAdminAccount
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisableIpamOrganizationAdminAccount"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DisableIpamOrganizationAdminAccountResult disableIpamOrganizationAdminAccount(DisableIpamOrganizationAdminAccountRequest request) {
+        request = beforeClientExecution(request);
+        return executeDisableIpamOrganizationAdminAccount(request);
+    }
+
+    @SdkInternalApi
+    final DisableIpamOrganizationAdminAccountResult executeDisableIpamOrganizationAdminAccount(
+            DisableIpamOrganizationAdminAccountRequest disableIpamOrganizationAdminAccountRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(disableIpamOrganizationAdminAccountRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DisableIpamOrganizationAdminAccountRequest> request = null;
+        Response<DisableIpamOrganizationAdminAccountResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DisableIpamOrganizationAdminAccountRequestMarshaller().marshall(super
+                        .beforeMarshalling(disableIpamOrganizationAdminAccountRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DisableIpamOrganizationAdminAccount");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DisableIpamOrganizationAdminAccountResult> responseHandler = new StaxResponseHandler<DisableIpamOrganizationAdminAccountResult>(
+                    new DisableIpamOrganizationAdminAccountResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Disables access to the EC2 serial console of all instances for your account. By default, access to the EC2 serial
      * console is disabled for your account. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configure-access-to-serial-console.html#serial-console-account-access"
@@ -21150,6 +22351,67 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<EnableImageDeprecationResult> responseHandler = new StaxResponseHandler<EnableImageDeprecationResult>(
                     new EnableImageDeprecationResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Enable an Organizations member account as the IPAM admin account. You cannot select the Organizations management
+     * account as the IPAM admin account. For more information, see <a
+     * href="/vpc/latest/ipam/enable-integ-ipam.html">Enable integration with Organizations</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param enableIpamOrganizationAdminAccountRequest
+     * @return Result of the EnableIpamOrganizationAdminAccount operation returned by the service.
+     * @sample AmazonEC2.EnableIpamOrganizationAdminAccount
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/EnableIpamOrganizationAdminAccount"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public EnableIpamOrganizationAdminAccountResult enableIpamOrganizationAdminAccount(EnableIpamOrganizationAdminAccountRequest request) {
+        request = beforeClientExecution(request);
+        return executeEnableIpamOrganizationAdminAccount(request);
+    }
+
+    @SdkInternalApi
+    final EnableIpamOrganizationAdminAccountResult executeEnableIpamOrganizationAdminAccount(
+            EnableIpamOrganizationAdminAccountRequest enableIpamOrganizationAdminAccountRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(enableIpamOrganizationAdminAccountRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<EnableIpamOrganizationAdminAccountRequest> request = null;
+        Response<EnableIpamOrganizationAdminAccountResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new EnableIpamOrganizationAdminAccountRequestMarshaller()
+                        .marshall(super.beforeMarshalling(enableIpamOrganizationAdminAccountRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "EnableIpamOrganizationAdminAccount");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<EnableIpamOrganizationAdminAccountResult> responseHandler = new StaxResponseHandler<EnableIpamOrganizationAdminAccountResult>(
+                    new EnableIpamOrganizationAdminAccountResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -22579,6 +23841,232 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Retrieve historical information about a CIDR within an IPAM scope. For more information, see <a
+     * href="/vpc/latest/ipam/view-history-cidr-ipam.html">View the history of IP addresses</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param getIpamAddressHistoryRequest
+     * @return Result of the GetIpamAddressHistory operation returned by the service.
+     * @sample AmazonEC2.GetIpamAddressHistory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetIpamAddressHistory" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetIpamAddressHistoryResult getIpamAddressHistory(GetIpamAddressHistoryRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetIpamAddressHistory(request);
+    }
+
+    @SdkInternalApi
+    final GetIpamAddressHistoryResult executeGetIpamAddressHistory(GetIpamAddressHistoryRequest getIpamAddressHistoryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getIpamAddressHistoryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetIpamAddressHistoryRequest> request = null;
+        Response<GetIpamAddressHistoryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetIpamAddressHistoryRequestMarshaller().marshall(super.beforeMarshalling(getIpamAddressHistoryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetIpamAddressHistory");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<GetIpamAddressHistoryResult> responseHandler = new StaxResponseHandler<GetIpamAddressHistoryResult>(
+                    new GetIpamAddressHistoryResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Get a list of all the CIDR allocations in an IPAM pool.
+     * </p>
+     * 
+     * @param getIpamPoolAllocationsRequest
+     * @return Result of the GetIpamPoolAllocations operation returned by the service.
+     * @sample AmazonEC2.GetIpamPoolAllocations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetIpamPoolAllocations" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetIpamPoolAllocationsResult getIpamPoolAllocations(GetIpamPoolAllocationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetIpamPoolAllocations(request);
+    }
+
+    @SdkInternalApi
+    final GetIpamPoolAllocationsResult executeGetIpamPoolAllocations(GetIpamPoolAllocationsRequest getIpamPoolAllocationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getIpamPoolAllocationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetIpamPoolAllocationsRequest> request = null;
+        Response<GetIpamPoolAllocationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetIpamPoolAllocationsRequestMarshaller().marshall(super.beforeMarshalling(getIpamPoolAllocationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetIpamPoolAllocations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<GetIpamPoolAllocationsResult> responseHandler = new StaxResponseHandler<GetIpamPoolAllocationsResult>(
+                    new GetIpamPoolAllocationsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Get the CIDRs provisioned to an IPAM pool.
+     * </p>
+     * 
+     * @param getIpamPoolCidrsRequest
+     * @return Result of the GetIpamPoolCidrs operation returned by the service.
+     * @sample AmazonEC2.GetIpamPoolCidrs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetIpamPoolCidrs" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetIpamPoolCidrsResult getIpamPoolCidrs(GetIpamPoolCidrsRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetIpamPoolCidrs(request);
+    }
+
+    @SdkInternalApi
+    final GetIpamPoolCidrsResult executeGetIpamPoolCidrs(GetIpamPoolCidrsRequest getIpamPoolCidrsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getIpamPoolCidrsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetIpamPoolCidrsRequest> request = null;
+        Response<GetIpamPoolCidrsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetIpamPoolCidrsRequestMarshaller().marshall(super.beforeMarshalling(getIpamPoolCidrsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetIpamPoolCidrs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<GetIpamPoolCidrsResult> responseHandler = new StaxResponseHandler<GetIpamPoolCidrsResult>(
+                    new GetIpamPoolCidrsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Get information about the resources in a scope.
+     * </p>
+     * 
+     * @param getIpamResourceCidrsRequest
+     * @return Result of the GetIpamResourceCidrs operation returned by the service.
+     * @sample AmazonEC2.GetIpamResourceCidrs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetIpamResourceCidrs" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetIpamResourceCidrsResult getIpamResourceCidrs(GetIpamResourceCidrsRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetIpamResourceCidrs(request);
+    }
+
+    @SdkInternalApi
+    final GetIpamResourceCidrsResult executeGetIpamResourceCidrs(GetIpamResourceCidrsRequest getIpamResourceCidrsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getIpamResourceCidrsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetIpamResourceCidrsRequest> request = null;
+        Response<GetIpamResourceCidrsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetIpamResourceCidrsRequestMarshaller().marshall(super.beforeMarshalling(getIpamResourceCidrsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetIpamResourceCidrs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<GetIpamResourceCidrsResult> responseHandler = new StaxResponseHandler<GetIpamResourceCidrsResult>(
+                    new GetIpamResourceCidrsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Retrieves the configuration data of the specified instance. You can use this data to create a launch template.
      * </p>
      * <p>
@@ -22741,6 +24229,124 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<GetManagedPrefixListEntriesResult> responseHandler = new StaxResponseHandler<GetManagedPrefixListEntriesResult>(
                     new GetManagedPrefixListEntriesResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets the findings for the specified Network Access Scope analysis.
+     * </p>
+     * 
+     * @param getNetworkInsightsAccessScopeAnalysisFindingsRequest
+     * @return Result of the GetNetworkInsightsAccessScopeAnalysisFindings operation returned by the service.
+     * @sample AmazonEC2.GetNetworkInsightsAccessScopeAnalysisFindings
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetNetworkInsightsAccessScopeAnalysisFindings"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetNetworkInsightsAccessScopeAnalysisFindingsResult getNetworkInsightsAccessScopeAnalysisFindings(
+            GetNetworkInsightsAccessScopeAnalysisFindingsRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetNetworkInsightsAccessScopeAnalysisFindings(request);
+    }
+
+    @SdkInternalApi
+    final GetNetworkInsightsAccessScopeAnalysisFindingsResult executeGetNetworkInsightsAccessScopeAnalysisFindings(
+            GetNetworkInsightsAccessScopeAnalysisFindingsRequest getNetworkInsightsAccessScopeAnalysisFindingsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getNetworkInsightsAccessScopeAnalysisFindingsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetNetworkInsightsAccessScopeAnalysisFindingsRequest> request = null;
+        Response<GetNetworkInsightsAccessScopeAnalysisFindingsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetNetworkInsightsAccessScopeAnalysisFindingsRequestMarshaller().marshall(super
+                        .beforeMarshalling(getNetworkInsightsAccessScopeAnalysisFindingsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetNetworkInsightsAccessScopeAnalysisFindings");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<GetNetworkInsightsAccessScopeAnalysisFindingsResult> responseHandler = new StaxResponseHandler<GetNetworkInsightsAccessScopeAnalysisFindingsResult>(
+                    new GetNetworkInsightsAccessScopeAnalysisFindingsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets the content for the specified Network Access Scope.
+     * </p>
+     * 
+     * @param getNetworkInsightsAccessScopeContentRequest
+     * @return Result of the GetNetworkInsightsAccessScopeContent operation returned by the service.
+     * @sample AmazonEC2.GetNetworkInsightsAccessScopeContent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetNetworkInsightsAccessScopeContent"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetNetworkInsightsAccessScopeContentResult getNetworkInsightsAccessScopeContent(GetNetworkInsightsAccessScopeContentRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetNetworkInsightsAccessScopeContent(request);
+    }
+
+    @SdkInternalApi
+    final GetNetworkInsightsAccessScopeContentResult executeGetNetworkInsightsAccessScopeContent(
+            GetNetworkInsightsAccessScopeContentRequest getNetworkInsightsAccessScopeContentRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getNetworkInsightsAccessScopeContentRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetNetworkInsightsAccessScopeContentRequest> request = null;
+        Response<GetNetworkInsightsAccessScopeContentResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetNetworkInsightsAccessScopeContentRequestMarshaller().marshall(super
+                        .beforeMarshalling(getNetworkInsightsAccessScopeContentRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetNetworkInsightsAccessScopeContent");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<GetNetworkInsightsAccessScopeContentResult> responseHandler = new StaxResponseHandler<GetNetworkInsightsAccessScopeContentResult>(
+                    new GetNetworkInsightsAccessScopeContentResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -25274,6 +26880,240 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Modify the configurations of an IPAM.
+     * </p>
+     * 
+     * @param modifyIpamRequest
+     * @return Result of the ModifyIpam operation returned by the service.
+     * @sample AmazonEC2.ModifyIpam
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyIpam" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ModifyIpamResult modifyIpam(ModifyIpamRequest request) {
+        request = beforeClientExecution(request);
+        return executeModifyIpam(request);
+    }
+
+    @SdkInternalApi
+    final ModifyIpamResult executeModifyIpam(ModifyIpamRequest modifyIpamRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(modifyIpamRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ModifyIpamRequest> request = null;
+        Response<ModifyIpamResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ModifyIpamRequestMarshaller().marshall(super.beforeMarshalling(modifyIpamRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ModifyIpam");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<ModifyIpamResult> responseHandler = new StaxResponseHandler<ModifyIpamResult>(new ModifyIpamResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Modify the configurations of an IPAM pool.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/mod-pool-ipam.html">Modify a pool</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param modifyIpamPoolRequest
+     * @return Result of the ModifyIpamPool operation returned by the service.
+     * @sample AmazonEC2.ModifyIpamPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyIpamPool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ModifyIpamPoolResult modifyIpamPool(ModifyIpamPoolRequest request) {
+        request = beforeClientExecution(request);
+        return executeModifyIpamPool(request);
+    }
+
+    @SdkInternalApi
+    final ModifyIpamPoolResult executeModifyIpamPool(ModifyIpamPoolRequest modifyIpamPoolRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(modifyIpamPoolRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ModifyIpamPoolRequest> request = null;
+        Response<ModifyIpamPoolResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ModifyIpamPoolRequestMarshaller().marshall(super.beforeMarshalling(modifyIpamPoolRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ModifyIpamPool");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<ModifyIpamPoolResult> responseHandler = new StaxResponseHandler<ModifyIpamPoolResult>(
+                    new ModifyIpamPoolResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Modify a resource CIDR. You can use this action to transfer resource CIDRs between scopes and ignore resource
+     * CIDRs that you do not want to manage. If set to false, the resource will not be tracked for overlap, it cannot be
+     * auto-imported into a pool, and it will be removed from any pool it has an allocation in.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/move-resource-ipam.html">Move resource CIDRs between
+     * scopes</a> and <a href="/vpc/latest/ipam/change-monitoring-state-ipam.html">Change the monitoring state of
+     * resource CIDRs</a> in the <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param modifyIpamResourceCidrRequest
+     * @return Result of the ModifyIpamResourceCidr operation returned by the service.
+     * @sample AmazonEC2.ModifyIpamResourceCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyIpamResourceCidr" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ModifyIpamResourceCidrResult modifyIpamResourceCidr(ModifyIpamResourceCidrRequest request) {
+        request = beforeClientExecution(request);
+        return executeModifyIpamResourceCidr(request);
+    }
+
+    @SdkInternalApi
+    final ModifyIpamResourceCidrResult executeModifyIpamResourceCidr(ModifyIpamResourceCidrRequest modifyIpamResourceCidrRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(modifyIpamResourceCidrRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ModifyIpamResourceCidrRequest> request = null;
+        Response<ModifyIpamResourceCidrResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ModifyIpamResourceCidrRequestMarshaller().marshall(super.beforeMarshalling(modifyIpamResourceCidrRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ModifyIpamResourceCidr");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<ModifyIpamResourceCidrResult> responseHandler = new StaxResponseHandler<ModifyIpamResourceCidrResult>(
+                    new ModifyIpamResourceCidrResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Modify an IPAM scope.
+     * </p>
+     * 
+     * @param modifyIpamScopeRequest
+     * @return Result of the ModifyIpamScope operation returned by the service.
+     * @sample AmazonEC2.ModifyIpamScope
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyIpamScope" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ModifyIpamScopeResult modifyIpamScope(ModifyIpamScopeRequest request) {
+        request = beforeClientExecution(request);
+        return executeModifyIpamScope(request);
+    }
+
+    @SdkInternalApi
+    final ModifyIpamScopeResult executeModifyIpamScope(ModifyIpamScopeRequest modifyIpamScopeRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(modifyIpamScopeRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ModifyIpamScopeRequest> request = null;
+        Response<ModifyIpamScopeResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ModifyIpamScopeRequestMarshaller().marshall(super.beforeMarshalling(modifyIpamScopeRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ModifyIpamScope");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<ModifyIpamScopeResult> responseHandler = new StaxResponseHandler<ModifyIpamScopeResult>(
+                    new ModifyIpamScopeResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Modifies a launch template. You can specify which version of the launch template to set as the default version.
      * When launching an instance, the default version applies when a launch template version is not specified.
      * </p>
@@ -27303,6 +29143,62 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Move an BYOIP IPv4 CIDR to IPAM from a public IPv4 pool.
+     * </p>
+     * 
+     * @param moveByoipCidrToIpamRequest
+     * @return Result of the MoveByoipCidrToIpam operation returned by the service.
+     * @sample AmazonEC2.MoveByoipCidrToIpam
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/MoveByoipCidrToIpam" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public MoveByoipCidrToIpamResult moveByoipCidrToIpam(MoveByoipCidrToIpamRequest request) {
+        request = beforeClientExecution(request);
+        return executeMoveByoipCidrToIpam(request);
+    }
+
+    @SdkInternalApi
+    final MoveByoipCidrToIpamResult executeMoveByoipCidrToIpam(MoveByoipCidrToIpamRequest moveByoipCidrToIpamRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(moveByoipCidrToIpamRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<MoveByoipCidrToIpamRequest> request = null;
+        Response<MoveByoipCidrToIpamResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new MoveByoipCidrToIpamRequestMarshaller().marshall(super.beforeMarshalling(moveByoipCidrToIpamRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "MoveByoipCidrToIpam");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<MoveByoipCidrToIpamResult> responseHandler = new StaxResponseHandler<MoveByoipCidrToIpamResult>(
+                    new MoveByoipCidrToIpamResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Provisions an IPv4 or IPv6 address range for use with your Amazon Web Services resources through bring your own
      * IP addresses (BYOIP) and creates a corresponding address pool. After the address range is provisioned, it is
      * ready to be advertised using <a>AdvertiseByoipCidr</a>.
@@ -27362,6 +29258,127 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<ProvisionByoipCidrResult> responseHandler = new StaxResponseHandler<ProvisionByoipCidrResult>(
                     new ProvisionByoipCidrResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Provision a CIDR to an IPAM pool. You can use thsi action to provision new CIDRs to a top-level pool or to
+     * transfer a CIDR from a top-level pool to a pool within it.
+     * </p>
+     * <p>
+     * For more information, see <a href="/vpc/latest/ipam/prov-cidr-ipam.html">Provision CIDRs to pools</a> in the
+     * <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param provisionIpamPoolCidrRequest
+     * @return Result of the ProvisionIpamPoolCidr operation returned by the service.
+     * @sample AmazonEC2.ProvisionIpamPoolCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ProvisionIpamPoolCidr" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ProvisionIpamPoolCidrResult provisionIpamPoolCidr(ProvisionIpamPoolCidrRequest request) {
+        request = beforeClientExecution(request);
+        return executeProvisionIpamPoolCidr(request);
+    }
+
+    @SdkInternalApi
+    final ProvisionIpamPoolCidrResult executeProvisionIpamPoolCidr(ProvisionIpamPoolCidrRequest provisionIpamPoolCidrRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(provisionIpamPoolCidrRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ProvisionIpamPoolCidrRequest> request = null;
+        Response<ProvisionIpamPoolCidrResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ProvisionIpamPoolCidrRequestMarshaller().marshall(super.beforeMarshalling(provisionIpamPoolCidrRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ProvisionIpamPoolCidr");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<ProvisionIpamPoolCidrResult> responseHandler = new StaxResponseHandler<ProvisionIpamPoolCidrResult>(
+                    new ProvisionIpamPoolCidrResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Provision a CIDR to a public IPv4 pool.
+     * </p>
+     * <p>
+     * For more information about IPAM, see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in the
+     * <i>Amazon VPC IPAM User Guide</i>.
+     * </p>
+     * 
+     * @param provisionPublicIpv4PoolCidrRequest
+     * @return Result of the ProvisionPublicIpv4PoolCidr operation returned by the service.
+     * @sample AmazonEC2.ProvisionPublicIpv4PoolCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ProvisionPublicIpv4PoolCidr"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ProvisionPublicIpv4PoolCidrResult provisionPublicIpv4PoolCidr(ProvisionPublicIpv4PoolCidrRequest request) {
+        request = beforeClientExecution(request);
+        return executeProvisionPublicIpv4PoolCidr(request);
+    }
+
+    @SdkInternalApi
+    final ProvisionPublicIpv4PoolCidrResult executeProvisionPublicIpv4PoolCidr(ProvisionPublicIpv4PoolCidrRequest provisionPublicIpv4PoolCidrRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(provisionPublicIpv4PoolCidrRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ProvisionPublicIpv4PoolCidrRequest> request = null;
+        Response<ProvisionPublicIpv4PoolCidrResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ProvisionPublicIpv4PoolCidrRequestMarshaller().marshall(super.beforeMarshalling(provisionPublicIpv4PoolCidrRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ProvisionPublicIpv4PoolCidr");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<ProvisionPublicIpv4PoolCidrResult> responseHandler = new StaxResponseHandler<ProvisionPublicIpv4PoolCidrResult>(
+                    new ProvisionPublicIpv4PoolCidrResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -28384,6 +30401,67 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
             }
 
             StaxResponseHandler<ReleaseHostsResult> responseHandler = new StaxResponseHandler<ReleaseHostsResult>(new ReleaseHostsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Release an allocation within an IPAM pool. You can only use this action to release manual allocations. To remove
+     * an allocation for a resource without deleting the resource, set its monitored state to false using <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyIpamResourceCidr.html"
+     * >ModifyIpamResourceCidr</a>. For more information, see <a
+     * href="/vpc/latest/ipam/release-pool-alloc-ipam.html">Release an allocation</a> in the <i>Amazon VPC IPAM User
+     * Guide</i>.
+     * </p>
+     * 
+     * @param releaseIpamPoolAllocationRequest
+     * @return Result of the ReleaseIpamPoolAllocation operation returned by the service.
+     * @sample AmazonEC2.ReleaseIpamPoolAllocation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ReleaseIpamPoolAllocation" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ReleaseIpamPoolAllocationResult releaseIpamPoolAllocation(ReleaseIpamPoolAllocationRequest request) {
+        request = beforeClientExecution(request);
+        return executeReleaseIpamPoolAllocation(request);
+    }
+
+    @SdkInternalApi
+    final ReleaseIpamPoolAllocationResult executeReleaseIpamPoolAllocation(ReleaseIpamPoolAllocationRequest releaseIpamPoolAllocationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(releaseIpamPoolAllocationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ReleaseIpamPoolAllocationRequest> request = null;
+        Response<ReleaseIpamPoolAllocationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ReleaseIpamPoolAllocationRequestMarshaller().marshall(super.beforeMarshalling(releaseIpamPoolAllocationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ReleaseIpamPoolAllocation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<ReleaseIpamPoolAllocationResult> responseHandler = new StaxResponseHandler<ReleaseIpamPoolAllocationResult>(
+                    new ReleaseIpamPoolAllocationResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -30347,6 +32425,64 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<StartInstancesResult> responseHandler = new StaxResponseHandler<StartInstancesResult>(
                     new StartInstancesResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Starts analyzing the specified Network Access Scope.
+     * </p>
+     * 
+     * @param startNetworkInsightsAccessScopeAnalysisRequest
+     * @return Result of the StartNetworkInsightsAccessScopeAnalysis operation returned by the service.
+     * @sample AmazonEC2.StartNetworkInsightsAccessScopeAnalysis
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/StartNetworkInsightsAccessScopeAnalysis"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StartNetworkInsightsAccessScopeAnalysisResult startNetworkInsightsAccessScopeAnalysis(StartNetworkInsightsAccessScopeAnalysisRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartNetworkInsightsAccessScopeAnalysis(request);
+    }
+
+    @SdkInternalApi
+    final StartNetworkInsightsAccessScopeAnalysisResult executeStartNetworkInsightsAccessScopeAnalysis(
+            StartNetworkInsightsAccessScopeAnalysisRequest startNetworkInsightsAccessScopeAnalysisRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startNetworkInsightsAccessScopeAnalysisRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartNetworkInsightsAccessScopeAnalysisRequest> request = null;
+        Response<StartNetworkInsightsAccessScopeAnalysisResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartNetworkInsightsAccessScopeAnalysisRequestMarshaller().marshall(super
+                        .beforeMarshalling(startNetworkInsightsAccessScopeAnalysisRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartNetworkInsightsAccessScopeAnalysis");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<StartNetworkInsightsAccessScopeAnalysisResult> responseHandler = new StaxResponseHandler<StartNetworkInsightsAccessScopeAnalysisResult>(
+                    new StartNetworkInsightsAccessScopeAnalysisResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 

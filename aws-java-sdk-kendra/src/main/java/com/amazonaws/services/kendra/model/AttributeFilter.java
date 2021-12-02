@@ -36,7 +36,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </li>
  * <li>
  * <p>
- * <code> &lt;EqualTo&gt;</code>
+ * <code> &lt;EqualsTo&gt;</code>
  * </p>
  * </li>
  * </ol>

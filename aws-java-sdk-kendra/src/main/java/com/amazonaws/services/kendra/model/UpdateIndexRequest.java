@@ -80,9 +80,10 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String userContextPolicy;
     /**
      * <p>
-     * Enables fetching access levels of groups and users from an AWS Single Sign-On identity source. To configure this,
-     * see <a href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html">
-     * UserGroupResolutionConfiguration</a>.
+     * Enables fetching access levels of groups and users from an Amazon Web Services Single Sign On identity source. To
+     * configure this, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html"
+     * >UserGroupResolutionConfiguration</a>.
      * </p>
      */
     private UserGroupResolutionConfiguration userGroupResolutionConfiguration;
@@ -516,14 +517,15 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Enables fetching access levels of groups and users from an AWS Single Sign-On identity source. To configure this,
-     * see <a href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html">
-     * UserGroupResolutionConfiguration</a>.
+     * Enables fetching access levels of groups and users from an Amazon Web Services Single Sign On identity source. To
+     * configure this, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html"
+     * >UserGroupResolutionConfiguration</a>.
      * </p>
      * 
      * @param userGroupResolutionConfiguration
-     *        Enables fetching access levels of groups and users from an AWS Single Sign-On identity source. To
-     *        configure this, see <a
+     *        Enables fetching access levels of groups and users from an Amazon Web Services Single Sign On identity
+     *        source. To configure this, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html"
      *        >UserGroupResolutionConfiguration</a>.
      */
@@ -534,13 +536,14 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Enables fetching access levels of groups and users from an AWS Single Sign-On identity source. To configure this,
-     * see <a href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html">
-     * UserGroupResolutionConfiguration</a>.
+     * Enables fetching access levels of groups and users from an Amazon Web Services Single Sign On identity source. To
+     * configure this, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html"
+     * >UserGroupResolutionConfiguration</a>.
      * </p>
      * 
-     * @return Enables fetching access levels of groups and users from an AWS Single Sign-On identity source. To
-     *         configure this, see <a
+     * @return Enables fetching access levels of groups and users from an Amazon Web Services Single Sign On identity
+     *         source. To configure this, see <a
      *         href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html"
      *         >UserGroupResolutionConfiguration</a>.
      */
@@ -551,14 +554,15 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Enables fetching access levels of groups and users from an AWS Single Sign-On identity source. To configure this,
-     * see <a href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html">
-     * UserGroupResolutionConfiguration</a>.
+     * Enables fetching access levels of groups and users from an Amazon Web Services Single Sign On identity source. To
+     * configure this, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html"
+     * >UserGroupResolutionConfiguration</a>.
      * </p>
      * 
      * @param userGroupResolutionConfiguration
-     *        Enables fetching access levels of groups and users from an AWS Single Sign-On identity source. To
-     *        configure this, see <a
+     *        Enables fetching access levels of groups and users from an Amazon Web Services Single Sign On identity
+     *        source. To configure this, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html"
      *        >UserGroupResolutionConfiguration</a>.
      * @return Returns a reference to this object so that method calls can be chained together.

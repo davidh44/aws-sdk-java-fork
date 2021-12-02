@@ -163,6 +163,33 @@ public class ModelPackage implements Serializable, Cloneable, StructuredPojo {
     private String approvalDescription;
     /**
      * <p>
+     * The machine learning domain of your model package and its components. Common machine learning domains include
+     * computer vision and natural language processing.
+     * </p>
+     */
+    private String domain;
+    /**
+     * <p>
+     * The machine learning task your model package accomplishes. Common machine learning tasks include object detection
+     * and image classification.
+     * </p>
+     */
+    private String task;
+    /**
+     * <p>
+     * The Amazon Simple Storage Service path where the sample payload are stored. This path must point to a single gzip
+     * compressed tar archive (.tar.gz suffix).
+     * </p>
+     */
+    private String samplePayloadUrl;
+    /**
+     * <p>
+     * An array of additional Inference Specification objects.
+     * </p>
+     */
+    private java.util.List<AdditionalInferenceSpecificationDefinition> additionalInferenceSpecifications;
+    /**
+     * <p>
      * A list of the tags associated with the model package. For more information, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>
      * in the <i>Amazon Web Services General Reference Guide</i>.
@@ -175,6 +202,12 @@ public class ModelPackage implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Map<String, String> customerMetadataProperties;
+    /**
+     * <p>
+     * Represents the drift check baselines that can be used when the model monitor is set using the model package.
+     * </p>
+     */
+    private DriftCheckBaselines driftCheckBaselines;
 
     /**
      * <p>
@@ -1258,6 +1291,214 @@ public class ModelPackage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The machine learning domain of your model package and its components. Common machine learning domains include
+     * computer vision and natural language processing.
+     * </p>
+     * 
+     * @param domain
+     *        The machine learning domain of your model package and its components. Common machine learning domains
+     *        include computer vision and natural language processing.
+     */
+
+    public void setDomain(String domain) {
+        this.domain = domain;
+    }
+
+    /**
+     * <p>
+     * The machine learning domain of your model package and its components. Common machine learning domains include
+     * computer vision and natural language processing.
+     * </p>
+     * 
+     * @return The machine learning domain of your model package and its components. Common machine learning domains
+     *         include computer vision and natural language processing.
+     */
+
+    public String getDomain() {
+        return this.domain;
+    }
+
+    /**
+     * <p>
+     * The machine learning domain of your model package and its components. Common machine learning domains include
+     * computer vision and natural language processing.
+     * </p>
+     * 
+     * @param domain
+     *        The machine learning domain of your model package and its components. Common machine learning domains
+     *        include computer vision and natural language processing.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModelPackage withDomain(String domain) {
+        setDomain(domain);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The machine learning task your model package accomplishes. Common machine learning tasks include object detection
+     * and image classification.
+     * </p>
+     * 
+     * @param task
+     *        The machine learning task your model package accomplishes. Common machine learning tasks include object
+     *        detection and image classification.
+     */
+
+    public void setTask(String task) {
+        this.task = task;
+    }
+
+    /**
+     * <p>
+     * The machine learning task your model package accomplishes. Common machine learning tasks include object detection
+     * and image classification.
+     * </p>
+     * 
+     * @return The machine learning task your model package accomplishes. Common machine learning tasks include object
+     *         detection and image classification.
+     */
+
+    public String getTask() {
+        return this.task;
+    }
+
+    /**
+     * <p>
+     * The machine learning task your model package accomplishes. Common machine learning tasks include object detection
+     * and image classification.
+     * </p>
+     * 
+     * @param task
+     *        The machine learning task your model package accomplishes. Common machine learning tasks include object
+     *        detection and image classification.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModelPackage withTask(String task) {
+        setTask(task);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Simple Storage Service path where the sample payload are stored. This path must point to a single gzip
+     * compressed tar archive (.tar.gz suffix).
+     * </p>
+     * 
+     * @param samplePayloadUrl
+     *        The Amazon Simple Storage Service path where the sample payload are stored. This path must point to a
+     *        single gzip compressed tar archive (.tar.gz suffix).
+     */
+
+    public void setSamplePayloadUrl(String samplePayloadUrl) {
+        this.samplePayloadUrl = samplePayloadUrl;
+    }
+
+    /**
+     * <p>
+     * The Amazon Simple Storage Service path where the sample payload are stored. This path must point to a single gzip
+     * compressed tar archive (.tar.gz suffix).
+     * </p>
+     * 
+     * @return The Amazon Simple Storage Service path where the sample payload are stored. This path must point to a
+     *         single gzip compressed tar archive (.tar.gz suffix).
+     */
+
+    public String getSamplePayloadUrl() {
+        return this.samplePayloadUrl;
+    }
+
+    /**
+     * <p>
+     * The Amazon Simple Storage Service path where the sample payload are stored. This path must point to a single gzip
+     * compressed tar archive (.tar.gz suffix).
+     * </p>
+     * 
+     * @param samplePayloadUrl
+     *        The Amazon Simple Storage Service path where the sample payload are stored. This path must point to a
+     *        single gzip compressed tar archive (.tar.gz suffix).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModelPackage withSamplePayloadUrl(String samplePayloadUrl) {
+        setSamplePayloadUrl(samplePayloadUrl);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An array of additional Inference Specification objects.
+     * </p>
+     * 
+     * @return An array of additional Inference Specification objects.
+     */
+
+    public java.util.List<AdditionalInferenceSpecificationDefinition> getAdditionalInferenceSpecifications() {
+        return additionalInferenceSpecifications;
+    }
+
+    /**
+     * <p>
+     * An array of additional Inference Specification objects.
+     * </p>
+     * 
+     * @param additionalInferenceSpecifications
+     *        An array of additional Inference Specification objects.
+     */
+
+    public void setAdditionalInferenceSpecifications(java.util.Collection<AdditionalInferenceSpecificationDefinition> additionalInferenceSpecifications) {
+        if (additionalInferenceSpecifications == null) {
+            this.additionalInferenceSpecifications = null;
+            return;
+        }
+
+        this.additionalInferenceSpecifications = new java.util.ArrayList<AdditionalInferenceSpecificationDefinition>(additionalInferenceSpecifications);
+    }
+
+    /**
+     * <p>
+     * An array of additional Inference Specification objects.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAdditionalInferenceSpecifications(java.util.Collection)} or
+     * {@link #withAdditionalInferenceSpecifications(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param additionalInferenceSpecifications
+     *        An array of additional Inference Specification objects.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModelPackage withAdditionalInferenceSpecifications(AdditionalInferenceSpecificationDefinition... additionalInferenceSpecifications) {
+        if (this.additionalInferenceSpecifications == null) {
+            setAdditionalInferenceSpecifications(new java.util.ArrayList<AdditionalInferenceSpecificationDefinition>(additionalInferenceSpecifications.length));
+        }
+        for (AdditionalInferenceSpecificationDefinition ele : additionalInferenceSpecifications) {
+            this.additionalInferenceSpecifications.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * An array of additional Inference Specification objects.
+     * </p>
+     * 
+     * @param additionalInferenceSpecifications
+     *        An array of additional Inference Specification objects.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModelPackage withAdditionalInferenceSpecifications(java.util.Collection<AdditionalInferenceSpecificationDefinition> additionalInferenceSpecifications) {
+        setAdditionalInferenceSpecifications(additionalInferenceSpecifications);
+        return this;
+    }
+
+    /**
+     * <p>
      * A list of the tags associated with the model package. For more information, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>
      * in the <i>Amazon Web Services General Reference Guide</i>.
@@ -1411,6 +1652,49 @@ public class ModelPackage implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Represents the drift check baselines that can be used when the model monitor is set using the model package.
+     * </p>
+     * 
+     * @param driftCheckBaselines
+     *        Represents the drift check baselines that can be used when the model monitor is set using the model
+     *        package.
+     */
+
+    public void setDriftCheckBaselines(DriftCheckBaselines driftCheckBaselines) {
+        this.driftCheckBaselines = driftCheckBaselines;
+    }
+
+    /**
+     * <p>
+     * Represents the drift check baselines that can be used when the model monitor is set using the model package.
+     * </p>
+     * 
+     * @return Represents the drift check baselines that can be used when the model monitor is set using the model
+     *         package.
+     */
+
+    public DriftCheckBaselines getDriftCheckBaselines() {
+        return this.driftCheckBaselines;
+    }
+
+    /**
+     * <p>
+     * Represents the drift check baselines that can be used when the model monitor is set using the model package.
+     * </p>
+     * 
+     * @param driftCheckBaselines
+     *        Represents the drift check baselines that can be used when the model monitor is set using the model
+     *        package.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModelPackage withDriftCheckBaselines(DriftCheckBaselines driftCheckBaselines) {
+        setDriftCheckBaselines(driftCheckBaselines);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1460,10 +1744,20 @@ public class ModelPackage implements Serializable, Cloneable, StructuredPojo {
             sb.append("LastModifiedBy: ").append(getLastModifiedBy()).append(",");
         if (getApprovalDescription() != null)
             sb.append("ApprovalDescription: ").append(getApprovalDescription()).append(",");
+        if (getDomain() != null)
+            sb.append("Domain: ").append(getDomain()).append(",");
+        if (getTask() != null)
+            sb.append("Task: ").append(getTask()).append(",");
+        if (getSamplePayloadUrl() != null)
+            sb.append("SamplePayloadUrl: ").append(getSamplePayloadUrl()).append(",");
+        if (getAdditionalInferenceSpecifications() != null)
+            sb.append("AdditionalInferenceSpecifications: ").append(getAdditionalInferenceSpecifications()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getCustomerMetadataProperties() != null)
-            sb.append("CustomerMetadataProperties: ").append(getCustomerMetadataProperties());
+            sb.append("CustomerMetadataProperties: ").append(getCustomerMetadataProperties()).append(",");
+        if (getDriftCheckBaselines() != null)
+            sb.append("DriftCheckBaselines: ").append(getDriftCheckBaselines());
         sb.append("}");
         return sb.toString();
     }
@@ -1554,6 +1848,23 @@ public class ModelPackage implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getApprovalDescription() != null && other.getApprovalDescription().equals(this.getApprovalDescription()) == false)
             return false;
+        if (other.getDomain() == null ^ this.getDomain() == null)
+            return false;
+        if (other.getDomain() != null && other.getDomain().equals(this.getDomain()) == false)
+            return false;
+        if (other.getTask() == null ^ this.getTask() == null)
+            return false;
+        if (other.getTask() != null && other.getTask().equals(this.getTask()) == false)
+            return false;
+        if (other.getSamplePayloadUrl() == null ^ this.getSamplePayloadUrl() == null)
+            return false;
+        if (other.getSamplePayloadUrl() != null && other.getSamplePayloadUrl().equals(this.getSamplePayloadUrl()) == false)
+            return false;
+        if (other.getAdditionalInferenceSpecifications() == null ^ this.getAdditionalInferenceSpecifications() == null)
+            return false;
+        if (other.getAdditionalInferenceSpecifications() != null
+                && other.getAdditionalInferenceSpecifications().equals(this.getAdditionalInferenceSpecifications()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -1561,6 +1872,10 @@ public class ModelPackage implements Serializable, Cloneable, StructuredPojo {
         if (other.getCustomerMetadataProperties() == null ^ this.getCustomerMetadataProperties() == null)
             return false;
         if (other.getCustomerMetadataProperties() != null && other.getCustomerMetadataProperties().equals(this.getCustomerMetadataProperties()) == false)
+            return false;
+        if (other.getDriftCheckBaselines() == null ^ this.getDriftCheckBaselines() == null)
+            return false;
+        if (other.getDriftCheckBaselines() != null && other.getDriftCheckBaselines().equals(this.getDriftCheckBaselines()) == false)
             return false;
         return true;
     }
@@ -1589,8 +1904,13 @@ public class ModelPackage implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
         hashCode = prime * hashCode + ((getLastModifiedBy() == null) ? 0 : getLastModifiedBy().hashCode());
         hashCode = prime * hashCode + ((getApprovalDescription() == null) ? 0 : getApprovalDescription().hashCode());
+        hashCode = prime * hashCode + ((getDomain() == null) ? 0 : getDomain().hashCode());
+        hashCode = prime * hashCode + ((getTask() == null) ? 0 : getTask().hashCode());
+        hashCode = prime * hashCode + ((getSamplePayloadUrl() == null) ? 0 : getSamplePayloadUrl().hashCode());
+        hashCode = prime * hashCode + ((getAdditionalInferenceSpecifications() == null) ? 0 : getAdditionalInferenceSpecifications().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getCustomerMetadataProperties() == null) ? 0 : getCustomerMetadataProperties().hashCode());
+        hashCode = prime * hashCode + ((getDriftCheckBaselines() == null) ? 0 : getDriftCheckBaselines().hashCode());
         return hashCode;
     }
 

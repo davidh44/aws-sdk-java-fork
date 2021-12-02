@@ -74,6 +74,73 @@ public class AWSkendraAsyncClient extends AWSkendraClient implements AWSkendraAs
     }
 
     @Override
+    public java.util.concurrent.Future<AssociateEntitiesToExperienceResult> associateEntitiesToExperienceAsync(AssociateEntitiesToExperienceRequest request) {
+
+        return associateEntitiesToExperienceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateEntitiesToExperienceResult> associateEntitiesToExperienceAsync(
+            final AssociateEntitiesToExperienceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<AssociateEntitiesToExperienceRequest, AssociateEntitiesToExperienceResult> asyncHandler) {
+        final AssociateEntitiesToExperienceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<AssociateEntitiesToExperienceResult>() {
+            @Override
+            public AssociateEntitiesToExperienceResult call() throws Exception {
+                AssociateEntitiesToExperienceResult result = null;
+
+                try {
+                    result = executeAssociateEntitiesToExperience(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociatePersonasToEntitiesResult> associatePersonasToEntitiesAsync(AssociatePersonasToEntitiesRequest request) {
+
+        return associatePersonasToEntitiesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociatePersonasToEntitiesResult> associatePersonasToEntitiesAsync(final AssociatePersonasToEntitiesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<AssociatePersonasToEntitiesRequest, AssociatePersonasToEntitiesResult> asyncHandler) {
+        final AssociatePersonasToEntitiesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<AssociatePersonasToEntitiesResult>() {
+            @Override
+            public AssociatePersonasToEntitiesResult call() throws Exception {
+                AssociatePersonasToEntitiesResult result = null;
+
+                try {
+                    result = executeAssociatePersonasToEntities(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<BatchDeleteDocumentResult> batchDeleteDocumentAsync(BatchDeleteDocumentRequest request) {
 
         return batchDeleteDocumentAsync(request, null);
@@ -223,6 +290,39 @@ public class AWSkendraAsyncClient extends AWSkendraClient implements AWSkendraAs
 
                 try {
                     result = executeCreateDataSource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateExperienceResult> createExperienceAsync(CreateExperienceRequest request) {
+
+        return createExperienceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateExperienceResult> createExperienceAsync(final CreateExperienceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateExperienceRequest, CreateExperienceResult> asyncHandler) {
+        final CreateExperienceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateExperienceResult>() {
+            @Override
+            public CreateExperienceResult call() throws Exception {
+                CreateExperienceResult result = null;
+
+                try {
+                    result = executeCreateExperience(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -390,6 +490,39 @@ public class AWSkendraAsyncClient extends AWSkendraClient implements AWSkendraAs
 
                 try {
                     result = executeDeleteDataSource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteExperienceResult> deleteExperienceAsync(DeleteExperienceRequest request) {
+
+        return deleteExperienceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteExperienceResult> deleteExperienceAsync(final DeleteExperienceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteExperienceRequest, DeleteExperienceResult> asyncHandler) {
+        final DeleteExperienceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteExperienceResult>() {
+            @Override
+            public DeleteExperienceResult call() throws Exception {
+                DeleteExperienceResult result = null;
+
+                try {
+                    result = executeDeleteExperience(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -590,6 +723,39 @@ public class AWSkendraAsyncClient extends AWSkendraClient implements AWSkendraAs
 
                 try {
                     result = executeDescribeDataSource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeExperienceResult> describeExperienceAsync(DescribeExperienceRequest request) {
+
+        return describeExperienceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeExperienceResult> describeExperienceAsync(final DescribeExperienceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeExperienceRequest, DescribeExperienceResult> asyncHandler) {
+        final DescribeExperienceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeExperienceResult>() {
+            @Override
+            public DescribeExperienceResult call() throws Exception {
+                DescribeExperienceResult result = null;
+
+                try {
+                    result = executeDescribeExperience(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -807,6 +973,76 @@ public class AWSkendraAsyncClient extends AWSkendraClient implements AWSkendraAs
     }
 
     @Override
+    public java.util.concurrent.Future<DisassociateEntitiesFromExperienceResult> disassociateEntitiesFromExperienceAsync(
+            DisassociateEntitiesFromExperienceRequest request) {
+
+        return disassociateEntitiesFromExperienceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateEntitiesFromExperienceResult> disassociateEntitiesFromExperienceAsync(
+            final DisassociateEntitiesFromExperienceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DisassociateEntitiesFromExperienceRequest, DisassociateEntitiesFromExperienceResult> asyncHandler) {
+        final DisassociateEntitiesFromExperienceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DisassociateEntitiesFromExperienceResult>() {
+            @Override
+            public DisassociateEntitiesFromExperienceResult call() throws Exception {
+                DisassociateEntitiesFromExperienceResult result = null;
+
+                try {
+                    result = executeDisassociateEntitiesFromExperience(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociatePersonasFromEntitiesResult> disassociatePersonasFromEntitiesAsync(
+            DisassociatePersonasFromEntitiesRequest request) {
+
+        return disassociatePersonasFromEntitiesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociatePersonasFromEntitiesResult> disassociatePersonasFromEntitiesAsync(
+            final DisassociatePersonasFromEntitiesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DisassociatePersonasFromEntitiesRequest, DisassociatePersonasFromEntitiesResult> asyncHandler) {
+        final DisassociatePersonasFromEntitiesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DisassociatePersonasFromEntitiesResult>() {
+            @Override
+            public DisassociatePersonasFromEntitiesResult call() throws Exception {
+                DisassociatePersonasFromEntitiesResult result = null;
+
+                try {
+                    result = executeDisassociatePersonasFromEntities(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetQuerySuggestionsResult> getQuerySuggestionsAsync(GetQuerySuggestionsRequest request) {
 
         return getQuerySuggestionsAsync(request, null);
@@ -824,6 +1060,39 @@ public class AWSkendraAsyncClient extends AWSkendraClient implements AWSkendraAs
 
                 try {
                     result = executeGetQuerySuggestions(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSnapshotsResult> getSnapshotsAsync(GetSnapshotsRequest request) {
+
+        return getSnapshotsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSnapshotsResult> getSnapshotsAsync(final GetSnapshotsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetSnapshotsRequest, GetSnapshotsResult> asyncHandler) {
+        final GetSnapshotsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetSnapshotsResult>() {
+            @Override
+            public GetSnapshotsResult call() throws Exception {
+                GetSnapshotsResult result = null;
+
+                try {
+                    result = executeGetSnapshots(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -890,6 +1159,105 @@ public class AWSkendraAsyncClient extends AWSkendraClient implements AWSkendraAs
 
                 try {
                     result = executeListDataSources(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEntityPersonasResult> listEntityPersonasAsync(ListEntityPersonasRequest request) {
+
+        return listEntityPersonasAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEntityPersonasResult> listEntityPersonasAsync(final ListEntityPersonasRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListEntityPersonasRequest, ListEntityPersonasResult> asyncHandler) {
+        final ListEntityPersonasRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListEntityPersonasResult>() {
+            @Override
+            public ListEntityPersonasResult call() throws Exception {
+                ListEntityPersonasResult result = null;
+
+                try {
+                    result = executeListEntityPersonas(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListExperienceEntitiesResult> listExperienceEntitiesAsync(ListExperienceEntitiesRequest request) {
+
+        return listExperienceEntitiesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListExperienceEntitiesResult> listExperienceEntitiesAsync(final ListExperienceEntitiesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListExperienceEntitiesRequest, ListExperienceEntitiesResult> asyncHandler) {
+        final ListExperienceEntitiesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListExperienceEntitiesResult>() {
+            @Override
+            public ListExperienceEntitiesResult call() throws Exception {
+                ListExperienceEntitiesResult result = null;
+
+                try {
+                    result = executeListExperienceEntities(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListExperiencesResult> listExperiencesAsync(ListExperiencesRequest request) {
+
+        return listExperiencesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListExperiencesResult> listExperiencesAsync(final ListExperiencesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListExperiencesRequest, ListExperiencesResult> asyncHandler) {
+        final ListExperiencesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListExperiencesResult>() {
+            @Override
+            public ListExperiencesResult call() throws Exception {
+                ListExperiencesResult result = null;
+
+                try {
+                    result = executeListExperiences(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1354,6 +1722,39 @@ public class AWSkendraAsyncClient extends AWSkendraClient implements AWSkendraAs
 
                 try {
                     result = executeUpdateDataSource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateExperienceResult> updateExperienceAsync(UpdateExperienceRequest request) {
+
+        return updateExperienceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateExperienceResult> updateExperienceAsync(final UpdateExperienceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateExperienceRequest, UpdateExperienceResult> asyncHandler) {
+        final UpdateExperienceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateExperienceResult>() {
+            @Override
+            public UpdateExperienceResult call() throws Exception {
+                UpdateExperienceResult result = null;
+
+                try {
+                    result = executeUpdateExperience(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

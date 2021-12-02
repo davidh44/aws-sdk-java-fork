@@ -70,6 +70,8 @@ public class TableDescriptionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SSEDescription").build();
     private static final MarshallingInfo<StructuredPojo> ARCHIVALSUMMARY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ArchivalSummary").build();
+    private static final MarshallingInfo<StructuredPojo> TABLECLASSSUMMARY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TableClassSummary").build();
 
     private static final TableDescriptionMarshaller instance = new TableDescriptionMarshaller();
 
@@ -108,6 +110,7 @@ public class TableDescriptionMarshaller {
             protocolMarshaller.marshall(tableDescription.getRestoreSummary(), RESTORESUMMARY_BINDING);
             protocolMarshaller.marshall(tableDescription.getSSEDescription(), SSEDESCRIPTION_BINDING);
             protocolMarshaller.marshall(tableDescription.getArchivalSummary(), ARCHIVALSUMMARY_BINDING);
+            protocolMarshaller.marshall(tableDescription.getTableClassSummary(), TABLECLASSSUMMARY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
