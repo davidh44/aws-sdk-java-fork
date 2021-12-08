@@ -26,7 +26,7 @@ import java.util.concurrent.ExecutorService;
  * notification when an asynchronous operation completes.
  * <p>
  * <p>
- * Amazon Comprehend Medical extracts structured information from unstructured clinical text. Use these actions to gain
+ * Comprehend Medical; extracts structured information from unstructured clinical text. Use these actions to gain
  * insight in your documents.
  * </p>
  */
@@ -210,6 +210,39 @@ public class AWSComprehendMedicalAsyncClient extends AWSComprehendMedicalClient 
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeSNOMEDCTInferenceJobResult> describeSNOMEDCTInferenceJobAsync(DescribeSNOMEDCTInferenceJobRequest request) {
+
+        return describeSNOMEDCTInferenceJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeSNOMEDCTInferenceJobResult> describeSNOMEDCTInferenceJobAsync(final DescribeSNOMEDCTInferenceJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeSNOMEDCTInferenceJobRequest, DescribeSNOMEDCTInferenceJobResult> asyncHandler) {
+        final DescribeSNOMEDCTInferenceJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeSNOMEDCTInferenceJobResult>() {
+            @Override
+            public DescribeSNOMEDCTInferenceJobResult call() throws Exception {
+                DescribeSNOMEDCTInferenceJobResult result = null;
+
+                try {
+                    result = executeDescribeSNOMEDCTInferenceJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     @Deprecated
     public java.util.concurrent.Future<DetectEntitiesResult> detectEntitiesAsync(DetectEntitiesRequest request) {
 
@@ -377,6 +410,39 @@ public class AWSComprehendMedicalAsyncClient extends AWSComprehendMedicalClient 
     }
 
     @Override
+    public java.util.concurrent.Future<InferSNOMEDCTResult> inferSNOMEDCTAsync(InferSNOMEDCTRequest request) {
+
+        return inferSNOMEDCTAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<InferSNOMEDCTResult> inferSNOMEDCTAsync(final InferSNOMEDCTRequest request,
+            final com.amazonaws.handlers.AsyncHandler<InferSNOMEDCTRequest, InferSNOMEDCTResult> asyncHandler) {
+        final InferSNOMEDCTRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<InferSNOMEDCTResult>() {
+            @Override
+            public InferSNOMEDCTResult call() throws Exception {
+                InferSNOMEDCTResult result = null;
+
+                try {
+                    result = executeInferSNOMEDCT(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListEntitiesDetectionV2JobsResult> listEntitiesDetectionV2JobsAsync(ListEntitiesDetectionV2JobsRequest request) {
 
         return listEntitiesDetectionV2JobsAsync(request, null);
@@ -493,6 +559,39 @@ public class AWSComprehendMedicalAsyncClient extends AWSComprehendMedicalClient 
 
                 try {
                     result = executeListRxNormInferenceJobs(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSNOMEDCTInferenceJobsResult> listSNOMEDCTInferenceJobsAsync(ListSNOMEDCTInferenceJobsRequest request) {
+
+        return listSNOMEDCTInferenceJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSNOMEDCTInferenceJobsResult> listSNOMEDCTInferenceJobsAsync(final ListSNOMEDCTInferenceJobsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListSNOMEDCTInferenceJobsRequest, ListSNOMEDCTInferenceJobsResult> asyncHandler) {
+        final ListSNOMEDCTInferenceJobsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListSNOMEDCTInferenceJobsResult>() {
+            @Override
+            public ListSNOMEDCTInferenceJobsResult call() throws Exception {
+                ListSNOMEDCTInferenceJobsResult result = null;
+
+                try {
+                    result = executeListSNOMEDCTInferenceJobs(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -641,6 +740,39 @@ public class AWSComprehendMedicalAsyncClient extends AWSComprehendMedicalClient 
     }
 
     @Override
+    public java.util.concurrent.Future<StartSNOMEDCTInferenceJobResult> startSNOMEDCTInferenceJobAsync(StartSNOMEDCTInferenceJobRequest request) {
+
+        return startSNOMEDCTInferenceJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartSNOMEDCTInferenceJobResult> startSNOMEDCTInferenceJobAsync(final StartSNOMEDCTInferenceJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartSNOMEDCTInferenceJobRequest, StartSNOMEDCTInferenceJobResult> asyncHandler) {
+        final StartSNOMEDCTInferenceJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartSNOMEDCTInferenceJobResult>() {
+            @Override
+            public StartSNOMEDCTInferenceJobResult call() throws Exception {
+                StartSNOMEDCTInferenceJobResult result = null;
+
+                try {
+                    result = executeStartSNOMEDCTInferenceJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<StopEntitiesDetectionV2JobResult> stopEntitiesDetectionV2JobAsync(StopEntitiesDetectionV2JobRequest request) {
 
         return stopEntitiesDetectionV2JobAsync(request, null);
@@ -757,6 +889,39 @@ public class AWSComprehendMedicalAsyncClient extends AWSComprehendMedicalClient 
 
                 try {
                     result = executeStopRxNormInferenceJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopSNOMEDCTInferenceJobResult> stopSNOMEDCTInferenceJobAsync(StopSNOMEDCTInferenceJobRequest request) {
+
+        return stopSNOMEDCTInferenceJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopSNOMEDCTInferenceJobResult> stopSNOMEDCTInferenceJobAsync(final StopSNOMEDCTInferenceJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StopSNOMEDCTInferenceJobRequest, StopSNOMEDCTInferenceJobResult> asyncHandler) {
+        final StopSNOMEDCTInferenceJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StopSNOMEDCTInferenceJobResult>() {
+            @Override
+            public StopSNOMEDCTInferenceJobResult call() throws Exception {
+                StopSNOMEDCTInferenceJobResult result = null;
+
+                try {
+                    result = executeStopSNOMEDCTInferenceJob(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

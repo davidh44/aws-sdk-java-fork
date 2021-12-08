@@ -37,6 +37,8 @@ public class PipelineExecutionStepMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StepStatus").build();
     private static final MarshallingInfo<StructuredPojo> CACHEHITRESULT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CacheHitResult").build();
+    private static final MarshallingInfo<Integer> ATTEMPTCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AttemptCount").build();
     private static final MarshallingInfo<String> FAILUREREASON_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FailureReason").build();
     private static final MarshallingInfo<StructuredPojo> METADATA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -63,6 +65,7 @@ public class PipelineExecutionStepMarshaller {
             protocolMarshaller.marshall(pipelineExecutionStep.getEndTime(), ENDTIME_BINDING);
             protocolMarshaller.marshall(pipelineExecutionStep.getStepStatus(), STEPSTATUS_BINDING);
             protocolMarshaller.marshall(pipelineExecutionStep.getCacheHitResult(), CACHEHITRESULT_BINDING);
+            protocolMarshaller.marshall(pipelineExecutionStep.getAttemptCount(), ATTEMPTCOUNT_BINDING);
             protocolMarshaller.marshall(pipelineExecutionStep.getFailureReason(), FAILUREREASON_BINDING);
             protocolMarshaller.marshall(pipelineExecutionStep.getMetadata(), METADATA_BINDING);
         } catch (Exception e) {

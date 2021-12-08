@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The list of AWS services returned by the <a>DescribeServices</a> operation.
+ * The list of Amazon Web Services services returned by the <a>DescribeServices</a> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/support-2013-04-15/DescribeServices" target="_top">AWS API
@@ -28,17 +28,17 @@ public class DescribeServicesResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A JSON-formatted list of AWS services.
+     * A JSON-formatted list of Amazon Web Services services.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Service> services;
 
     /**
      * <p>
-     * A JSON-formatted list of AWS services.
+     * A JSON-formatted list of Amazon Web Services services.
      * </p>
      * 
-     * @return A JSON-formatted list of AWS services.
+     * @return A JSON-formatted list of Amazon Web Services services.
      */
 
     public java.util.List<Service> getServices() {
@@ -50,11 +50,11 @@ public class DescribeServicesResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A JSON-formatted list of AWS services.
+     * A JSON-formatted list of Amazon Web Services services.
      * </p>
      * 
      * @param services
-     *        A JSON-formatted list of AWS services.
+     *        A JSON-formatted list of Amazon Web Services services.
      */
 
     public void setServices(java.util.Collection<Service> services) {
@@ -68,7 +68,7 @@ public class DescribeServicesResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A JSON-formatted list of AWS services.
+     * A JSON-formatted list of Amazon Web Services services.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +77,7 @@ public class DescribeServicesResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      * 
      * @param services
-     *        A JSON-formatted list of AWS services.
+     *        A JSON-formatted list of Amazon Web Services services.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class DescribeServicesResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A JSON-formatted list of AWS services.
+     * A JSON-formatted list of Amazon Web Services services.
      * </p>
      * 
      * @param services
-     *        A JSON-formatted list of AWS services.
+     *        A JSON-formatted list of Amazon Web Services services.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

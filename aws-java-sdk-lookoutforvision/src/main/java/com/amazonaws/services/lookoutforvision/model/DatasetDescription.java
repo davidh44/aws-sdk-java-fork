@@ -65,7 +65,11 @@ public class DatasetDescription implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private String statusMessage;
-    /** <p/> */
+    /**
+     * <p>
+     * Statistics about the images in a dataset.
+     * </p>
+     */
     private DatasetImageStats imageStats;
 
     /**
@@ -334,9 +338,12 @@ public class DatasetDescription implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p/>
+     * <p>
+     * Statistics about the images in a dataset.
+     * </p>
      * 
      * @param imageStats
+     *        Statistics about the images in a dataset.
      */
 
     public void setImageStats(DatasetImageStats imageStats) {
@@ -344,9 +351,11 @@ public class DatasetDescription implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p/>
+     * <p>
+     * Statistics about the images in a dataset.
+     * </p>
      * 
-     * @return
+     * @return Statistics about the images in a dataset.
      */
 
     public DatasetImageStats getImageStats() {
@@ -354,9 +363,12 @@ public class DatasetDescription implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p/>
+     * <p>
+     * Statistics about the images in a dataset.
+     * </p>
      * 
      * @param imageStats
+     *        Statistics about the images in a dataset.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

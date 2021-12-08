@@ -132,6 +132,19 @@ public class AbstractAmazonLookoutforVisionAsync extends AbstractAmazonLookoutfo
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeModelPackagingJobResult> describeModelPackagingJobAsync(DescribeModelPackagingJobRequest request) {
+
+        return describeModelPackagingJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeModelPackagingJobResult> describeModelPackagingJobAsync(DescribeModelPackagingJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeModelPackagingJobRequest, DescribeModelPackagingJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeProjectResult> describeProjectAsync(DescribeProjectRequest request) {
 
         return describeProjectAsync(request, null);
@@ -166,6 +179,19 @@ public class AbstractAmazonLookoutforVisionAsync extends AbstractAmazonLookoutfo
     @Override
     public java.util.concurrent.Future<ListDatasetEntriesResult> listDatasetEntriesAsync(ListDatasetEntriesRequest request,
             com.amazonaws.handlers.AsyncHandler<ListDatasetEntriesRequest, ListDatasetEntriesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListModelPackagingJobsResult> listModelPackagingJobsAsync(ListModelPackagingJobsRequest request) {
+
+        return listModelPackagingJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListModelPackagingJobsResult> listModelPackagingJobsAsync(ListModelPackagingJobsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListModelPackagingJobsRequest, ListModelPackagingJobsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -218,6 +244,19 @@ public class AbstractAmazonLookoutforVisionAsync extends AbstractAmazonLookoutfo
     @Override
     public java.util.concurrent.Future<StartModelResult> startModelAsync(StartModelRequest request,
             com.amazonaws.handlers.AsyncHandler<StartModelRequest, StartModelResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartModelPackagingJobResult> startModelPackagingJobAsync(StartModelPackagingJobRequest request) {
+
+        return startModelPackagingJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartModelPackagingJobResult> startModelPackagingJobAsync(StartModelPackagingJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartModelPackagingJobRequest, StartModelPackagingJobResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

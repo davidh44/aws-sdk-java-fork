@@ -40,11 +40,19 @@ public class CreateModelRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * ClientToken is an idempotency token that ensures a call to <code>CreateModel</code> completes only once. You
-     * choose the value to pass. For example, An issue, such as an network outage, might prevent you from getting a
-     * response from <code>CreateModel</code>. In this case, safely retry your call to <code>CreateModel</code> by using
-     * the same <code>ClientToken</code> parameter value. An error occurs if the other input parameters are not the same
-     * as in the first request. Using a different value for <code>ClientToken</code> is considered a new call to
-     * <code>CreateModel</code>. An idempotency token is active for 8 hours.
+     * choose the value to pass. For example, An issue might prevent you from getting a response from
+     * <code>CreateModel</code>. In this case, safely retry your call to <code>CreateModel</code> by using the same
+     * <code>ClientToken</code> parameter value.
+     * </p>
+     * <p>
+     * If you don't supply a value for <code>ClientToken</code>, the AWS SDK you are using inserts a value for you. This
+     * prevents retries after a network error from starting multiple training jobs. You'll need to provide your own
+     * value for other use cases.
+     * </p>
+     * <p>
+     * An error occurs if the other input parameters are not the same as in the first request. Using a different value
+     * for <code>ClientToken</code> is considered a new call to <code>CreateModel</code>. An idempotency token is active
+     * for 8 hours.
      * </p>
      */
     private String clientToken;
@@ -56,9 +64,9 @@ public class CreateModelRequest extends com.amazonaws.AmazonWebServiceRequest im
     private OutputConfig outputConfig;
     /**
      * <p>
-     * The identifier for your AWS Key Management Service (AWS KMS) customer master key (CMK). The key is used to
-     * encrypt training and test images copied into the service for model training. Your source images are unaffected.
-     * If this parameter is not specified, the copied images are encrypted by a key that AWS owns and manages.
+     * The identifier for your AWS KMS key. The key is used to encrypt training and test images copied into the service
+     * for model training. Your source images are unaffected. If this parameter is not specified, the copied images are
+     * encrypted by a key that AWS owns and manages.
      * </p>
      */
     private String kmsKeyId;
@@ -152,21 +160,35 @@ public class CreateModelRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * ClientToken is an idempotency token that ensures a call to <code>CreateModel</code> completes only once. You
-     * choose the value to pass. For example, An issue, such as an network outage, might prevent you from getting a
-     * response from <code>CreateModel</code>. In this case, safely retry your call to <code>CreateModel</code> by using
-     * the same <code>ClientToken</code> parameter value. An error occurs if the other input parameters are not the same
-     * as in the first request. Using a different value for <code>ClientToken</code> is considered a new call to
-     * <code>CreateModel</code>. An idempotency token is active for 8 hours.
+     * choose the value to pass. For example, An issue might prevent you from getting a response from
+     * <code>CreateModel</code>. In this case, safely retry your call to <code>CreateModel</code> by using the same
+     * <code>ClientToken</code> parameter value.
+     * </p>
+     * <p>
+     * If you don't supply a value for <code>ClientToken</code>, the AWS SDK you are using inserts a value for you. This
+     * prevents retries after a network error from starting multiple training jobs. You'll need to provide your own
+     * value for other use cases.
+     * </p>
+     * <p>
+     * An error occurs if the other input parameters are not the same as in the first request. Using a different value
+     * for <code>ClientToken</code> is considered a new call to <code>CreateModel</code>. An idempotency token is active
+     * for 8 hours.
      * </p>
      * 
      * @param clientToken
      *        ClientToken is an idempotency token that ensures a call to <code>CreateModel</code> completes only once.
-     *        You choose the value to pass. For example, An issue, such as an network outage, might prevent you from
-     *        getting a response from <code>CreateModel</code>. In this case, safely retry your call to
-     *        <code>CreateModel</code> by using the same <code>ClientToken</code> parameter value. An error occurs if
-     *        the other input parameters are not the same as in the first request. Using a different value for
-     *        <code>ClientToken</code> is considered a new call to <code>CreateModel</code>. An idempotency token is
-     *        active for 8 hours.
+     *        You choose the value to pass. For example, An issue might prevent you from getting a response from
+     *        <code>CreateModel</code>. In this case, safely retry your call to <code>CreateModel</code> by using the
+     *        same <code>ClientToken</code> parameter value. </p>
+     *        <p>
+     *        If you don't supply a value for <code>ClientToken</code>, the AWS SDK you are using inserts a value for
+     *        you. This prevents retries after a network error from starting multiple training jobs. You'll need to
+     *        provide your own value for other use cases.
+     *        </p>
+     *        <p>
+     *        An error occurs if the other input parameters are not the same as in the first request. Using a different
+     *        value for <code>ClientToken</code> is considered a new call to <code>CreateModel</code>. An idempotency
+     *        token is active for 8 hours.
      */
 
     public void setClientToken(String clientToken) {
@@ -176,20 +198,34 @@ public class CreateModelRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * ClientToken is an idempotency token that ensures a call to <code>CreateModel</code> completes only once. You
-     * choose the value to pass. For example, An issue, such as an network outage, might prevent you from getting a
-     * response from <code>CreateModel</code>. In this case, safely retry your call to <code>CreateModel</code> by using
-     * the same <code>ClientToken</code> parameter value. An error occurs if the other input parameters are not the same
-     * as in the first request. Using a different value for <code>ClientToken</code> is considered a new call to
-     * <code>CreateModel</code>. An idempotency token is active for 8 hours.
+     * choose the value to pass. For example, An issue might prevent you from getting a response from
+     * <code>CreateModel</code>. In this case, safely retry your call to <code>CreateModel</code> by using the same
+     * <code>ClientToken</code> parameter value.
+     * </p>
+     * <p>
+     * If you don't supply a value for <code>ClientToken</code>, the AWS SDK you are using inserts a value for you. This
+     * prevents retries after a network error from starting multiple training jobs. You'll need to provide your own
+     * value for other use cases.
+     * </p>
+     * <p>
+     * An error occurs if the other input parameters are not the same as in the first request. Using a different value
+     * for <code>ClientToken</code> is considered a new call to <code>CreateModel</code>. An idempotency token is active
+     * for 8 hours.
      * </p>
      * 
      * @return ClientToken is an idempotency token that ensures a call to <code>CreateModel</code> completes only once.
-     *         You choose the value to pass. For example, An issue, such as an network outage, might prevent you from
-     *         getting a response from <code>CreateModel</code>. In this case, safely retry your call to
-     *         <code>CreateModel</code> by using the same <code>ClientToken</code> parameter value. An error occurs if
-     *         the other input parameters are not the same as in the first request. Using a different value for
-     *         <code>ClientToken</code> is considered a new call to <code>CreateModel</code>. An idempotency token is
-     *         active for 8 hours.
+     *         You choose the value to pass. For example, An issue might prevent you from getting a response from
+     *         <code>CreateModel</code>. In this case, safely retry your call to <code>CreateModel</code> by using the
+     *         same <code>ClientToken</code> parameter value. </p>
+     *         <p>
+     *         If you don't supply a value for <code>ClientToken</code>, the AWS SDK you are using inserts a value for
+     *         you. This prevents retries after a network error from starting multiple training jobs. You'll need to
+     *         provide your own value for other use cases.
+     *         </p>
+     *         <p>
+     *         An error occurs if the other input parameters are not the same as in the first request. Using a different
+     *         value for <code>ClientToken</code> is considered a new call to <code>CreateModel</code>. An idempotency
+     *         token is active for 8 hours.
      */
 
     public String getClientToken() {
@@ -199,21 +235,35 @@ public class CreateModelRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * ClientToken is an idempotency token that ensures a call to <code>CreateModel</code> completes only once. You
-     * choose the value to pass. For example, An issue, such as an network outage, might prevent you from getting a
-     * response from <code>CreateModel</code>. In this case, safely retry your call to <code>CreateModel</code> by using
-     * the same <code>ClientToken</code> parameter value. An error occurs if the other input parameters are not the same
-     * as in the first request. Using a different value for <code>ClientToken</code> is considered a new call to
-     * <code>CreateModel</code>. An idempotency token is active for 8 hours.
+     * choose the value to pass. For example, An issue might prevent you from getting a response from
+     * <code>CreateModel</code>. In this case, safely retry your call to <code>CreateModel</code> by using the same
+     * <code>ClientToken</code> parameter value.
+     * </p>
+     * <p>
+     * If you don't supply a value for <code>ClientToken</code>, the AWS SDK you are using inserts a value for you. This
+     * prevents retries after a network error from starting multiple training jobs. You'll need to provide your own
+     * value for other use cases.
+     * </p>
+     * <p>
+     * An error occurs if the other input parameters are not the same as in the first request. Using a different value
+     * for <code>ClientToken</code> is considered a new call to <code>CreateModel</code>. An idempotency token is active
+     * for 8 hours.
      * </p>
      * 
      * @param clientToken
      *        ClientToken is an idempotency token that ensures a call to <code>CreateModel</code> completes only once.
-     *        You choose the value to pass. For example, An issue, such as an network outage, might prevent you from
-     *        getting a response from <code>CreateModel</code>. In this case, safely retry your call to
-     *        <code>CreateModel</code> by using the same <code>ClientToken</code> parameter value. An error occurs if
-     *        the other input parameters are not the same as in the first request. Using a different value for
-     *        <code>ClientToken</code> is considered a new call to <code>CreateModel</code>. An idempotency token is
-     *        active for 8 hours.
+     *        You choose the value to pass. For example, An issue might prevent you from getting a response from
+     *        <code>CreateModel</code>. In this case, safely retry your call to <code>CreateModel</code> by using the
+     *        same <code>ClientToken</code> parameter value. </p>
+     *        <p>
+     *        If you don't supply a value for <code>ClientToken</code>, the AWS SDK you are using inserts a value for
+     *        you. This prevents retries after a network error from starting multiple training jobs. You'll need to
+     *        provide your own value for other use cases.
+     *        </p>
+     *        <p>
+     *        An error occurs if the other input parameters are not the same as in the first request. Using a different
+     *        value for <code>ClientToken</code> is considered a new call to <code>CreateModel</code>. An idempotency
+     *        token is active for 8 hours.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -264,16 +314,15 @@ public class CreateModelRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier for your AWS Key Management Service (AWS KMS) customer master key (CMK). The key is used to
-     * encrypt training and test images copied into the service for model training. Your source images are unaffected.
-     * If this parameter is not specified, the copied images are encrypted by a key that AWS owns and manages.
+     * The identifier for your AWS KMS key. The key is used to encrypt training and test images copied into the service
+     * for model training. Your source images are unaffected. If this parameter is not specified, the copied images are
+     * encrypted by a key that AWS owns and manages.
      * </p>
      * 
      * @param kmsKeyId
-     *        The identifier for your AWS Key Management Service (AWS KMS) customer master key (CMK). The key is used to
-     *        encrypt training and test images copied into the service for model training. Your source images are
-     *        unaffected. If this parameter is not specified, the copied images are encrypted by a key that AWS owns and
-     *        manages.
+     *        The identifier for your AWS KMS key. The key is used to encrypt training and test images copied into the
+     *        service for model training. Your source images are unaffected. If this parameter is not specified, the
+     *        copied images are encrypted by a key that AWS owns and manages.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -282,15 +331,14 @@ public class CreateModelRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier for your AWS Key Management Service (AWS KMS) customer master key (CMK). The key is used to
-     * encrypt training and test images copied into the service for model training. Your source images are unaffected.
-     * If this parameter is not specified, the copied images are encrypted by a key that AWS owns and manages.
+     * The identifier for your AWS KMS key. The key is used to encrypt training and test images copied into the service
+     * for model training. Your source images are unaffected. If this parameter is not specified, the copied images are
+     * encrypted by a key that AWS owns and manages.
      * </p>
      * 
-     * @return The identifier for your AWS Key Management Service (AWS KMS) customer master key (CMK). The key is used
-     *         to encrypt training and test images copied into the service for model training. Your source images are
-     *         unaffected. If this parameter is not specified, the copied images are encrypted by a key that AWS owns
-     *         and manages.
+     * @return The identifier for your AWS KMS key. The key is used to encrypt training and test images copied into the
+     *         service for model training. Your source images are unaffected. If this parameter is not specified, the
+     *         copied images are encrypted by a key that AWS owns and manages.
      */
 
     public String getKmsKeyId() {
@@ -299,16 +347,15 @@ public class CreateModelRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier for your AWS Key Management Service (AWS KMS) customer master key (CMK). The key is used to
-     * encrypt training and test images copied into the service for model training. Your source images are unaffected.
-     * If this parameter is not specified, the copied images are encrypted by a key that AWS owns and manages.
+     * The identifier for your AWS KMS key. The key is used to encrypt training and test images copied into the service
+     * for model training. Your source images are unaffected. If this parameter is not specified, the copied images are
+     * encrypted by a key that AWS owns and manages.
      * </p>
      * 
      * @param kmsKeyId
-     *        The identifier for your AWS Key Management Service (AWS KMS) customer master key (CMK). The key is used to
-     *        encrypt training and test images copied into the service for model training. Your source images are
-     *        unaffected. If this parameter is not specified, the copied images are encrypted by a key that AWS owns and
-     *        manages.
+     *        The identifier for your AWS KMS key. The key is used to encrypt training and test images copied into the
+     *        service for model training. Your source images are unaffected. If this parameter is not specified, the
+     *        copied images are encrypted by a key that AWS owns and manages.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

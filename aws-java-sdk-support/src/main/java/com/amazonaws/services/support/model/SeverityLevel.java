@@ -22,7 +22,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * A code and name pair that represents the severity level of a support case. The available values depend on the support
  * plan for the account. For more information, see <a
  * href="https://docs.aws.amazon.com/awssupport/latest/user/case-management.html#choosing-severity">Choosing a
- * severity</a> in the <i>AWS Support User Guide</i>.
+ * severity</a> in the <i>Amazon Web Services Support User Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/support-2013-04-15/SeverityLevel" target="_top">AWS API
@@ -47,8 +47,9 @@ public class SeverityLevel implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * The values returned by the API are different from the values that appear in the AWS Support Center. For example,
-     * the API uses the code <code>low</code>, but the name appears as General guidance in Support Center.
+     * The values returned by the API are different from the values that appear in the Amazon Web Services Support
+     * Center. For example, the API uses the code <code>low</code>, but the name appears as General guidance in Support
+     * Center.
      * </p>
      * <p>
      * The following are the API code names and how they appear in the console:
@@ -84,7 +85,7 @@ public class SeverityLevel implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/awssupport/latest/user/case-management.html#choosing-severity">Choosing a
-     * severity</a> in the <i>AWS Support User Guide</i>.
+     * severity</a> in the <i>Amazon Web Services Support User Guide</i>.
      * </p>
      */
     private String name;
@@ -156,8 +157,9 @@ public class SeverityLevel implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * The values returned by the API are different from the values that appear in the AWS Support Center. For example,
-     * the API uses the code <code>low</code>, but the name appears as General guidance in Support Center.
+     * The values returned by the API are different from the values that appear in the Amazon Web Services Support
+     * Center. For example, the API uses the code <code>low</code>, but the name appears as General guidance in Support
+     * Center.
      * </p>
      * <p>
      * The following are the API code names and how they appear in the console:
@@ -193,15 +195,15 @@ public class SeverityLevel implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/awssupport/latest/user/case-management.html#choosing-severity">Choosing a
-     * severity</a> in the <i>AWS Support User Guide</i>.
+     * severity</a> in the <i>Amazon Web Services Support User Guide</i>.
      * </p>
      * 
      * @param name
      *        The name of the severity level that corresponds to the severity level code.</p> <note>
      *        <p>
-     *        The values returned by the API are different from the values that appear in the AWS Support Center. For
-     *        example, the API uses the code <code>low</code>, but the name appears as General guidance in Support
-     *        Center.
+     *        The values returned by the API are different from the values that appear in the Amazon Web Services
+     *        Support Center. For example, the API uses the code <code>low</code>, but the name appears as General
+     *        guidance in Support Center.
      *        </p>
      *        <p>
      *        The following are the API code names and how they appear in the console:
@@ -237,7 +239,7 @@ public class SeverityLevel implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/awssupport/latest/user/case-management.html#choosing-severity">Choosing
-     *        a severity</a> in the <i>AWS Support User Guide</i>.
+     *        a severity</a> in the <i>Amazon Web Services Support User Guide</i>.
      */
 
     public void setName(String name) {
@@ -250,8 +252,9 @@ public class SeverityLevel implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * The values returned by the API are different from the values that appear in the AWS Support Center. For example,
-     * the API uses the code <code>low</code>, but the name appears as General guidance in Support Center.
+     * The values returned by the API are different from the values that appear in the Amazon Web Services Support
+     * Center. For example, the API uses the code <code>low</code>, but the name appears as General guidance in Support
+     * Center.
      * </p>
      * <p>
      * The following are the API code names and how they appear in the console:
@@ -287,14 +290,14 @@ public class SeverityLevel implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/awssupport/latest/user/case-management.html#choosing-severity">Choosing a
-     * severity</a> in the <i>AWS Support User Guide</i>.
+     * severity</a> in the <i>Amazon Web Services Support User Guide</i>.
      * </p>
      * 
      * @return The name of the severity level that corresponds to the severity level code.</p> <note>
      *         <p>
-     *         The values returned by the API are different from the values that appear in the AWS Support Center. For
-     *         example, the API uses the code <code>low</code>, but the name appears as General guidance in Support
-     *         Center.
+     *         The values returned by the API are different from the values that appear in the Amazon Web Services
+     *         Support Center. For example, the API uses the code <code>low</code>, but the name appears as General
+     *         guidance in Support Center.
      *         </p>
      *         <p>
      *         The following are the API code names and how they appear in the console:
@@ -330,7 +333,7 @@ public class SeverityLevel implements Serializable, Cloneable, StructuredPojo {
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/awssupport/latest/user/case-management.html#choosing-severity">Choosing
-     *         a severity</a> in the <i>AWS Support User Guide</i>.
+     *         a severity</a> in the <i>Amazon Web Services Support User Guide</i>.
      */
 
     public String getName() {
@@ -343,8 +346,9 @@ public class SeverityLevel implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * The values returned by the API are different from the values that appear in the AWS Support Center. For example,
-     * the API uses the code <code>low</code>, but the name appears as General guidance in Support Center.
+     * The values returned by the API are different from the values that appear in the Amazon Web Services Support
+     * Center. For example, the API uses the code <code>low</code>, but the name appears as General guidance in Support
+     * Center.
      * </p>
      * <p>
      * The following are the API code names and how they appear in the console:
@@ -380,15 +384,15 @@ public class SeverityLevel implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/awssupport/latest/user/case-management.html#choosing-severity">Choosing a
-     * severity</a> in the <i>AWS Support User Guide</i>.
+     * severity</a> in the <i>Amazon Web Services Support User Guide</i>.
      * </p>
      * 
      * @param name
      *        The name of the severity level that corresponds to the severity level code.</p> <note>
      *        <p>
-     *        The values returned by the API are different from the values that appear in the AWS Support Center. For
-     *        example, the API uses the code <code>low</code>, but the name appears as General guidance in Support
-     *        Center.
+     *        The values returned by the API are different from the values that appear in the Amazon Web Services
+     *        Support Center. For example, the API uses the code <code>low</code>, but the name appears as General
+     *        guidance in Support Center.
      *        </p>
      *        <p>
      *        The following are the API code names and how they appear in the console:
@@ -424,7 +428,7 @@ public class SeverityLevel implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/awssupport/latest/user/case-management.html#choosing-severity">Choosing
-     *        a severity</a> in the <i>AWS Support User Guide</i>.
+     *        a severity</a> in the <i>Amazon Web Services Support User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

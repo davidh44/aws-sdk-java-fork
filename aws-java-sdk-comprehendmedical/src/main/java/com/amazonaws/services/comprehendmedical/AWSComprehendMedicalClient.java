@@ -51,7 +51,7 @@ import com.amazonaws.services.comprehendmedical.model.transform.*;
  * until the service call completes.
  * <p>
  * <p>
- * Amazon Comprehend Medical extracts structured information from unstructured clinical text. Use these actions to gain
+ * Comprehend Medical; extracts structured information from unstructured clinical text. Use these actions to gain
  * insight in your documents.
  * </p>
  */
@@ -81,6 +81,12 @@ public class AWSComprehendMedicalClient extends AmazonWebServiceClient implement
                             new JsonErrorShapeMetadata().withErrorCode("InvalidRequestException").withExceptionUnmarshaller(
                                     com.amazonaws.services.comprehendmedical.model.transform.InvalidRequestExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("TextSizeLimitExceededException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.comprehendmedical.model.transform.TextSizeLimitExceededExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.comprehendmedical.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.comprehendmedical.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -92,12 +98,6 @@ public class AWSComprehendMedicalClient extends AmazonWebServiceClient implement
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServiceUnavailableException").withExceptionUnmarshaller(
                                     com.amazonaws.services.comprehendmedical.model.transform.ServiceUnavailableExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("TextSizeLimitExceededException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.comprehendmedical.model.transform.TextSizeLimitExceededExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.comprehendmedical.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("TooManyRequestsException").withExceptionUnmarshaller(
                                     com.amazonaws.services.comprehendmedical.model.transform.TooManyRequestsExceptionUnmarshaller.getInstance()))
@@ -426,6 +426,75 @@ public class AWSComprehendMedicalClient extends AmazonWebServiceClient implement
 
     /**
      * <p>
+     * Gets the properties associated with an InferSNOMEDCT job. Use this operation to get the status of an inference
+     * job.
+     * </p>
+     * 
+     * @param describeSNOMEDCTInferenceJobRequest
+     * @return Result of the DescribeSNOMEDCTInferenceJob operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request that you made is invalid. Check your request to determine why it's invalid and then retry the
+     *         request.
+     * @throws TooManyRequestsException
+     *         You have made too many requests within a short period of time. Wait for a short time and then try your
+     *         request again. Contact customer support for more information about a service limit increase.
+     * @throws ResourceNotFoundException
+     *         The resource identified by the specified Amazon Resource Name (ARN) was not found. Check the ARN and try
+     *         your request again.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @sample AWSComprehendMedical.DescribeSNOMEDCTInferenceJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/DescribeSNOMEDCTInferenceJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeSNOMEDCTInferenceJobResult describeSNOMEDCTInferenceJob(DescribeSNOMEDCTInferenceJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeSNOMEDCTInferenceJob(request);
+    }
+
+    @SdkInternalApi
+    final DescribeSNOMEDCTInferenceJobResult executeDescribeSNOMEDCTInferenceJob(DescribeSNOMEDCTInferenceJobRequest describeSNOMEDCTInferenceJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeSNOMEDCTInferenceJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeSNOMEDCTInferenceJobRequest> request = null;
+        Response<DescribeSNOMEDCTInferenceJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeSNOMEDCTInferenceJobRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeSNOMEDCTInferenceJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "ComprehendMedical");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeSNOMEDCTInferenceJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeSNOMEDCTInferenceJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeSNOMEDCTInferenceJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * The <code>DetectEntities</code> operation is deprecated. You should use the <a>DetectEntitiesV2</a> operation
      * instead.
      * </p>
@@ -439,8 +508,7 @@ public class AWSComprehendMedicalClient extends AmazonWebServiceClient implement
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ServiceUnavailableException
-     *         The Amazon Comprehend Medical service is temporarily unavailable. Please wait and then retry your
-     *         request.
+     *         The Comprehend Medical; service is temporarily unavailable. Please wait and then retry your request.
      * @throws TooManyRequestsException
      *         You have made too many requests within a short period of time. Wait for a short time and then try your
      *         request again. Contact customer support for more information about a service limit increase.
@@ -522,8 +590,7 @@ public class AWSComprehendMedicalClient extends AmazonWebServiceClient implement
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ServiceUnavailableException
-     *         The Amazon Comprehend Medical service is temporarily unavailable. Please wait and then retry your
-     *         request.
+     *         The Comprehend Medical; service is temporarily unavailable. Please wait and then retry your request.
      * @throws TooManyRequestsException
      *         You have made too many requests within a short period of time. Wait for a short time and then try your
      *         request again. Contact customer support for more information about a service limit increase.
@@ -595,8 +662,7 @@ public class AWSComprehendMedicalClient extends AmazonWebServiceClient implement
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ServiceUnavailableException
-     *         The Amazon Comprehend Medical service is temporarily unavailable. Please wait and then retry your
-     *         request.
+     *         The Comprehend Medical; service is temporarily unavailable. Please wait and then retry your request.
      * @throws TooManyRequestsException
      *         You have made too many requests within a short period of time. Wait for a short time and then try your
      *         request again. Contact customer support for more information about a service limit increase.
@@ -668,8 +734,7 @@ public class AWSComprehendMedicalClient extends AmazonWebServiceClient implement
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ServiceUnavailableException
-     *         The Amazon Comprehend Medical service is temporarily unavailable. Please wait and then retry your
-     *         request.
+     *         The Comprehend Medical; service is temporarily unavailable. Please wait and then retry your request.
      * @throws TooManyRequestsException
      *         You have made too many requests within a short period of time. Wait for a short time and then try your
      *         request again. Contact customer support for more information about a service limit increase.
@@ -741,8 +806,7 @@ public class AWSComprehendMedicalClient extends AmazonWebServiceClient implement
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ServiceUnavailableException
-     *         The Amazon Comprehend Medical service is temporarily unavailable. Please wait and then retry your
-     *         request.
+     *         The Comprehend Medical; service is temporarily unavailable. Please wait and then retry your request.
      * @throws TooManyRequestsException
      *         You have made too many requests within a short period of time. Wait for a short time and then try your
      *         request again. Contact customer support for more information about a service limit increase.
@@ -792,6 +856,77 @@ public class AWSComprehendMedicalClient extends AmazonWebServiceClient implement
 
             HttpResponseHandler<AmazonWebServiceResponse<InferRxNormResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new InferRxNormResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * InferSNOMEDCT detects possible medical concepts as entities and links them to codes from the Systematized
+     * Nomenclature of Medicine, Clinical Terms (SNOMED-CT) ontology
+     * </p>
+     * 
+     * @param inferSNOMEDCTRequest
+     * @return Result of the InferSNOMEDCT operation returned by the service.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ServiceUnavailableException
+     *         The Comprehend Medical; service is temporarily unavailable. Please wait and then retry your request.
+     * @throws TooManyRequestsException
+     *         You have made too many requests within a short period of time. Wait for a short time and then try your
+     *         request again. Contact customer support for more information about a service limit increase.
+     * @throws InvalidRequestException
+     *         The request that you made is invalid. Check your request to determine why it's invalid and then retry the
+     *         request.
+     * @throws InvalidEncodingException
+     *         The input text was not in valid UTF-8 character encoding. Check your text then retry your request.
+     * @throws TextSizeLimitExceededException
+     *         The size of the text you submitted exceeds the size limit. Reduce the size of the text or use a smaller
+     *         document and then retry your request.
+     * @sample AWSComprehendMedical.InferSNOMEDCT
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/InferSNOMEDCT"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public InferSNOMEDCTResult inferSNOMEDCT(InferSNOMEDCTRequest request) {
+        request = beforeClientExecution(request);
+        return executeInferSNOMEDCT(request);
+    }
+
+    @SdkInternalApi
+    final InferSNOMEDCTResult executeInferSNOMEDCT(InferSNOMEDCTRequest inferSNOMEDCTRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(inferSNOMEDCTRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<InferSNOMEDCTRequest> request = null;
+        Response<InferSNOMEDCTResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new InferSNOMEDCTRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(inferSNOMEDCTRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "ComprehendMedical");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "InferSNOMEDCT");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<InferSNOMEDCTResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new InferSNOMEDCTResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1062,6 +1197,74 @@ public class AWSComprehendMedicalClient extends AmazonWebServiceClient implement
             HttpResponseHandler<AmazonWebServiceResponse<ListRxNormInferenceJobsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new ListRxNormInferenceJobsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets a list of InferSNOMEDCT jobs a user has submitted.
+     * </p>
+     * 
+     * @param listSNOMEDCTInferenceJobsRequest
+     * @return Result of the ListSNOMEDCTInferenceJobs operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request that you made is invalid. Check your request to determine why it's invalid and then retry the
+     *         request.
+     * @throws ValidationException
+     *         The filter that you specified for the operation is invalid. Check the filter values that you entered and
+     *         try your request again.
+     * @throws TooManyRequestsException
+     *         You have made too many requests within a short period of time. Wait for a short time and then try your
+     *         request again. Contact customer support for more information about a service limit increase.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @sample AWSComprehendMedical.ListSNOMEDCTInferenceJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/ListSNOMEDCTInferenceJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListSNOMEDCTInferenceJobsResult listSNOMEDCTInferenceJobs(ListSNOMEDCTInferenceJobsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListSNOMEDCTInferenceJobs(request);
+    }
+
+    @SdkInternalApi
+    final ListSNOMEDCTInferenceJobsResult executeListSNOMEDCTInferenceJobs(ListSNOMEDCTInferenceJobsRequest listSNOMEDCTInferenceJobsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listSNOMEDCTInferenceJobsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListSNOMEDCTInferenceJobsRequest> request = null;
+        Response<ListSNOMEDCTInferenceJobsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListSNOMEDCTInferenceJobsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listSNOMEDCTInferenceJobsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "ComprehendMedical");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListSNOMEDCTInferenceJobs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListSNOMEDCTInferenceJobsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListSNOMEDCTInferenceJobsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1348,6 +1551,75 @@ public class AWSComprehendMedicalClient extends AmazonWebServiceClient implement
 
     /**
      * <p>
+     * Starts an asynchronous job to detect medical concepts and link them to the SNOMED-CT ontology. Use the
+     * DescribeSNOMEDCTInferenceJob operation to track the status of a job.
+     * </p>
+     * 
+     * @param startSNOMEDCTInferenceJobRequest
+     * @return Result of the StartSNOMEDCTInferenceJob operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request that you made is invalid. Check your request to determine why it's invalid and then retry the
+     *         request.
+     * @throws TooManyRequestsException
+     *         You have made too many requests within a short period of time. Wait for a short time and then try your
+     *         request again. Contact customer support for more information about a service limit increase.
+     * @throws ResourceNotFoundException
+     *         The resource identified by the specified Amazon Resource Name (ARN) was not found. Check the ARN and try
+     *         your request again.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @sample AWSComprehendMedical.StartSNOMEDCTInferenceJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/StartSNOMEDCTInferenceJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StartSNOMEDCTInferenceJobResult startSNOMEDCTInferenceJob(StartSNOMEDCTInferenceJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartSNOMEDCTInferenceJob(request);
+    }
+
+    @SdkInternalApi
+    final StartSNOMEDCTInferenceJobResult executeStartSNOMEDCTInferenceJob(StartSNOMEDCTInferenceJobRequest startSNOMEDCTInferenceJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startSNOMEDCTInferenceJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartSNOMEDCTInferenceJobRequest> request = null;
+        Response<StartSNOMEDCTInferenceJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartSNOMEDCTInferenceJobRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(startSNOMEDCTInferenceJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "ComprehendMedical");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartSNOMEDCTInferenceJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartSNOMEDCTInferenceJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new StartSNOMEDCTInferenceJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Stops a medical entities detection job in progress.
      * </p>
      * 
@@ -1593,6 +1865,74 @@ public class AWSComprehendMedicalClient extends AmazonWebServiceClient implement
             HttpResponseHandler<AmazonWebServiceResponse<StopRxNormInferenceJobResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new StopRxNormInferenceJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Stops an InferSNOMEDCT inference job in progress.
+     * </p>
+     * 
+     * @param stopSNOMEDCTInferenceJobRequest
+     * @return Result of the StopSNOMEDCTInferenceJob operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request that you made is invalid. Check your request to determine why it's invalid and then retry the
+     *         request.
+     * @throws ResourceNotFoundException
+     *         The resource identified by the specified Amazon Resource Name (ARN) was not found. Check the ARN and try
+     *         your request again.
+     * @throws TooManyRequestsException
+     *         You have made too many requests within a short period of time. Wait for a short time and then try your
+     *         request again. Contact customer support for more information about a service limit increase.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @sample AWSComprehendMedical.StopSNOMEDCTInferenceJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/StopSNOMEDCTInferenceJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StopSNOMEDCTInferenceJobResult stopSNOMEDCTInferenceJob(StopSNOMEDCTInferenceJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeStopSNOMEDCTInferenceJob(request);
+    }
+
+    @SdkInternalApi
+    final StopSNOMEDCTInferenceJobResult executeStopSNOMEDCTInferenceJob(StopSNOMEDCTInferenceJobRequest stopSNOMEDCTInferenceJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(stopSNOMEDCTInferenceJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StopSNOMEDCTInferenceJobRequest> request = null;
+        Response<StopSNOMEDCTInferenceJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StopSNOMEDCTInferenceJobRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(stopSNOMEDCTInferenceJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "ComprehendMedical");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StopSNOMEDCTInferenceJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StopSNOMEDCTInferenceJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new StopSNOMEDCTInferenceJobResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

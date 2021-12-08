@@ -347,6 +347,39 @@ public class AmazonLookoutforVisionAsyncClient extends AmazonLookoutforVisionCli
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeModelPackagingJobResult> describeModelPackagingJobAsync(DescribeModelPackagingJobRequest request) {
+
+        return describeModelPackagingJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeModelPackagingJobResult> describeModelPackagingJobAsync(final DescribeModelPackagingJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeModelPackagingJobRequest, DescribeModelPackagingJobResult> asyncHandler) {
+        final DescribeModelPackagingJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeModelPackagingJobResult>() {
+            @Override
+            public DescribeModelPackagingJobResult call() throws Exception {
+                DescribeModelPackagingJobResult result = null;
+
+                try {
+                    result = executeDescribeModelPackagingJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeProjectResult> describeProjectAsync(DescribeProjectRequest request) {
 
         return describeProjectAsync(request, null);
@@ -430,6 +463,39 @@ public class AmazonLookoutforVisionAsyncClient extends AmazonLookoutforVisionCli
 
                 try {
                     result = executeListDatasetEntries(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListModelPackagingJobsResult> listModelPackagingJobsAsync(ListModelPackagingJobsRequest request) {
+
+        return listModelPackagingJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListModelPackagingJobsResult> listModelPackagingJobsAsync(final ListModelPackagingJobsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListModelPackagingJobsRequest, ListModelPackagingJobsResult> asyncHandler) {
+        final ListModelPackagingJobsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListModelPackagingJobsResult>() {
+            @Override
+            public ListModelPackagingJobsResult call() throws Exception {
+                ListModelPackagingJobsResult result = null;
+
+                try {
+                    result = executeListModelPackagingJobs(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -562,6 +628,39 @@ public class AmazonLookoutforVisionAsyncClient extends AmazonLookoutforVisionCli
 
                 try {
                     result = executeStartModel(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartModelPackagingJobResult> startModelPackagingJobAsync(StartModelPackagingJobRequest request) {
+
+        return startModelPackagingJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartModelPackagingJobResult> startModelPackagingJobAsync(final StartModelPackagingJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartModelPackagingJobRequest, StartModelPackagingJobResult> asyncHandler) {
+        final StartModelPackagingJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartModelPackagingJobResult>() {
+            @Override
+            public StartModelPackagingJobResult call() throws Exception {
+                StartModelPackagingJobResult result = null;
+
+                try {
+                    result = executeStartModelPackagingJob(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

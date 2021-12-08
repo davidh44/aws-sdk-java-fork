@@ -25,6 +25,11 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdateSiteRackPhysicalPropertiesRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The ID or the Amazon Resource Name (ARN) of the site.
+     * </p>
+     */
     private String siteId;
     /**
      * <p>
@@ -222,7 +227,12 @@ public class UpdateSiteRackPhysicalPropertiesRequest extends com.amazonaws.Amazo
     private String maximumSupportedWeightLbs;
 
     /**
+     * <p>
+     * The ID or the Amazon Resource Name (ARN) of the site.
+     * </p>
+     * 
      * @param siteId
+     *        The ID or the Amazon Resource Name (ARN) of the site.
      */
 
     public void setSiteId(String siteId) {
@@ -230,7 +240,11 @@ public class UpdateSiteRackPhysicalPropertiesRequest extends com.amazonaws.Amazo
     }
 
     /**
-     * @return
+     * <p>
+     * The ID or the Amazon Resource Name (ARN) of the site.
+     * </p>
+     * 
+     * @return The ID or the Amazon Resource Name (ARN) of the site.
      */
 
     public String getSiteId() {
@@ -238,7 +252,12 @@ public class UpdateSiteRackPhysicalPropertiesRequest extends com.amazonaws.Amazo
     }
 
     /**
+     * <p>
+     * The ID or the Amazon Resource Name (ARN) of the site.
+     * </p>
+     * 
      * @param siteId
+     *        The ID or the Amazon Resource Name (ARN) of the site.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

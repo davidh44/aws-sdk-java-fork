@@ -31,6 +31,8 @@ public class PutDestinationPolicyRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("destinationName").build();
     private static final MarshallingInfo<String> ACCESSPOLICY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("accessPolicy").build();
+    private static final MarshallingInfo<Boolean> FORCEUPDATE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("forceUpdate").build();
 
     private static final PutDestinationPolicyRequestMarshaller instance = new PutDestinationPolicyRequestMarshaller();
 
@@ -50,6 +52,7 @@ public class PutDestinationPolicyRequestMarshaller {
         try {
             protocolMarshaller.marshall(putDestinationPolicyRequest.getDestinationName(), DESTINATIONNAME_BINDING);
             protocolMarshaller.marshall(putDestinationPolicyRequest.getAccessPolicy(), ACCESSPOLICY_BINDING);
+            protocolMarshaller.marshall(putDestinationPolicyRequest.getForceUpdate(), FORCEUPDATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

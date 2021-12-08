@@ -657,6 +657,37 @@ public interface AWSOutpostsAsync extends AWSOutposts {
 
     /**
      * <p>
+     * Updates an Outpost.
+     * </p>
+     * 
+     * @param updateOutpostRequest
+     * @return A Java Future containing the result of the UpdateOutpost operation returned by the service.
+     * @sample AWSOutpostsAsync.UpdateOutpost
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/UpdateOutpost" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateOutpostResult> updateOutpostAsync(UpdateOutpostRequest updateOutpostRequest);
+
+    /**
+     * <p>
+     * Updates an Outpost.
+     * </p>
+     * 
+     * @param updateOutpostRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateOutpost operation returned by the service.
+     * @sample AWSOutpostsAsyncHandler.UpdateOutpost
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/UpdateOutpost" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateOutpostResult> updateOutpostAsync(UpdateOutpostRequest updateOutpostRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateOutpostRequest, UpdateOutpostResult> asyncHandler);
+
+    /**
+     * <p>
      * Updates the site.
      * </p>
      * 

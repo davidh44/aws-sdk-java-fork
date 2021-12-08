@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Sumary information for an Amazon Lookout for Vision dataset.
+ * Summary information for an Amazon Lookout for Vision dataset. For more information, see <a>DescribeDataset</a> and
+ * <a>ProjectDescription</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DatasetMetadata" target="_top">AWS API

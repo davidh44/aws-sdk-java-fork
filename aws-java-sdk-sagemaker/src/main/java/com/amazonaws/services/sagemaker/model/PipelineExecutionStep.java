@@ -58,6 +58,8 @@ public class PipelineExecutionStep implements Serializable, Cloneable, Structure
      * </p>
      */
     private CacheHitResult cacheHitResult;
+
+    private Integer attemptCount;
     /**
      * <p>
      * The reason why the step failed execution. This is only returned if the step failed its execution.
@@ -291,6 +293,32 @@ public class PipelineExecutionStep implements Serializable, Cloneable, Structure
     }
 
     /**
+     * @param attemptCount
+     */
+
+    public void setAttemptCount(Integer attemptCount) {
+        this.attemptCount = attemptCount;
+    }
+
+    /**
+     * @return
+     */
+
+    public Integer getAttemptCount() {
+        return this.attemptCount;
+    }
+
+    /**
+     * @param attemptCount
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipelineExecutionStep withAttemptCount(Integer attemptCount) {
+        setAttemptCount(attemptCount);
+        return this;
+    }
+
+    /**
      * <p>
      * The reason why the step failed execution. This is only returned if the step failed its execution.
      * </p>
@@ -392,6 +420,8 @@ public class PipelineExecutionStep implements Serializable, Cloneable, Structure
             sb.append("StepStatus: ").append(getStepStatus()).append(",");
         if (getCacheHitResult() != null)
             sb.append("CacheHitResult: ").append(getCacheHitResult()).append(",");
+        if (getAttemptCount() != null)
+            sb.append("AttemptCount: ").append(getAttemptCount()).append(",");
         if (getFailureReason() != null)
             sb.append("FailureReason: ").append(getFailureReason()).append(",");
         if (getMetadata() != null)
@@ -430,6 +460,10 @@ public class PipelineExecutionStep implements Serializable, Cloneable, Structure
             return false;
         if (other.getCacheHitResult() != null && other.getCacheHitResult().equals(this.getCacheHitResult()) == false)
             return false;
+        if (other.getAttemptCount() == null ^ this.getAttemptCount() == null)
+            return false;
+        if (other.getAttemptCount() != null && other.getAttemptCount().equals(this.getAttemptCount()) == false)
+            return false;
         if (other.getFailureReason() == null ^ this.getFailureReason() == null)
             return false;
         if (other.getFailureReason() != null && other.getFailureReason().equals(this.getFailureReason()) == false)
@@ -451,6 +485,7 @@ public class PipelineExecutionStep implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getEndTime() == null) ? 0 : getEndTime().hashCode());
         hashCode = prime * hashCode + ((getStepStatus() == null) ? 0 : getStepStatus().hashCode());
         hashCode = prime * hashCode + ((getCacheHitResult() == null) ? 0 : getCacheHitResult().hashCode());
+        hashCode = prime * hashCode + ((getAttemptCount() == null) ? 0 : getAttemptCount().hashCode());
         hashCode = prime * hashCode + ((getFailureReason() == null) ? 0 : getFailureReason().hashCode());
         hashCode = prime * hashCode + ((getMetadata() == null) ? 0 : getMetadata().hashCode());
         return hashCode;

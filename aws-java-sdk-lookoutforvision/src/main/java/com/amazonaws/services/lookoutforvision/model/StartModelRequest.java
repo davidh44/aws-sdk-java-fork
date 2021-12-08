@@ -39,20 +39,28 @@ public class StartModelRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String modelVersion;
     /**
      * <p>
-     * The minimum number of inference units to use. A single inference unit represents 1 hour of processing and can
-     * support up to 5 Transaction Pers Second (TPS). Use a higher number to increase the TPS throughput of your model.
-     * You are charged for the number of inference units that you use.
+     * The minimum number of inference units to use. A single inference unit represents 1 hour of processing. Use a
+     * higher number to increase the TPS throughput of your model. You are charged for the number of inference units
+     * that you use.
      * </p>
      */
     private Integer minInferenceUnits;
     /**
      * <p>
      * ClientToken is an idempotency token that ensures a call to <code>StartModel</code> completes only once. You
-     * choose the value to pass. For example, An issue, such as an network outage, might prevent you from getting a
-     * response from <code>StartModel</code>. In this case, safely retry your call to <code>StartModel</code> by using
-     * the same <code>ClientToken</code> parameter value. An error occurs if the other input parameters are not the same
-     * as in the first request. Using a different value for <code>ClientToken</code> is considered a new call to
-     * <code>StartModel</code>. An idempotency token is active for 8 hours.
+     * choose the value to pass. For example, An issue might prevent you from getting a response from
+     * <code>StartModel</code>. In this case, safely retry your call to <code>StartModel</code> by using the same
+     * <code>ClientToken</code> parameter value.
+     * </p>
+     * <p>
+     * If you don't supply a value for <code>ClientToken</code>, the AWS SDK you are using inserts a value for you. This
+     * prevents retries after a network error from making multiple start requests. You'll need to provide your own value
+     * for other use cases.
+     * </p>
+     * <p>
+     * An error occurs if the other input parameters are not the same as in the first request. Using a different value
+     * for <code>ClientToken</code> is considered a new call to <code>StartModel</code>. An idempotency token is active
+     * for 8 hours.
      * </p>
      */
     private String clientToken;
@@ -139,15 +147,15 @@ public class StartModelRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The minimum number of inference units to use. A single inference unit represents 1 hour of processing and can
-     * support up to 5 Transaction Pers Second (TPS). Use a higher number to increase the TPS throughput of your model.
-     * You are charged for the number of inference units that you use.
+     * The minimum number of inference units to use. A single inference unit represents 1 hour of processing. Use a
+     * higher number to increase the TPS throughput of your model. You are charged for the number of inference units
+     * that you use.
      * </p>
      * 
      * @param minInferenceUnits
-     *        The minimum number of inference units to use. A single inference unit represents 1 hour of processing and
-     *        can support up to 5 Transaction Pers Second (TPS). Use a higher number to increase the TPS throughput of
-     *        your model. You are charged for the number of inference units that you use.
+     *        The minimum number of inference units to use. A single inference unit represents 1 hour of processing. Use
+     *        a higher number to increase the TPS throughput of your model. You are charged for the number of inference
+     *        units that you use.
      */
 
     public void setMinInferenceUnits(Integer minInferenceUnits) {
@@ -156,14 +164,14 @@ public class StartModelRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The minimum number of inference units to use. A single inference unit represents 1 hour of processing and can
-     * support up to 5 Transaction Pers Second (TPS). Use a higher number to increase the TPS throughput of your model.
-     * You are charged for the number of inference units that you use.
+     * The minimum number of inference units to use. A single inference unit represents 1 hour of processing. Use a
+     * higher number to increase the TPS throughput of your model. You are charged for the number of inference units
+     * that you use.
      * </p>
      * 
-     * @return The minimum number of inference units to use. A single inference unit represents 1 hour of processing and
-     *         can support up to 5 Transaction Pers Second (TPS). Use a higher number to increase the TPS throughput of
-     *         your model. You are charged for the number of inference units that you use.
+     * @return The minimum number of inference units to use. A single inference unit represents 1 hour of processing.
+     *         Use a higher number to increase the TPS throughput of your model. You are charged for the number of
+     *         inference units that you use.
      */
 
     public Integer getMinInferenceUnits() {
@@ -172,15 +180,15 @@ public class StartModelRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The minimum number of inference units to use. A single inference unit represents 1 hour of processing and can
-     * support up to 5 Transaction Pers Second (TPS). Use a higher number to increase the TPS throughput of your model.
-     * You are charged for the number of inference units that you use.
+     * The minimum number of inference units to use. A single inference unit represents 1 hour of processing. Use a
+     * higher number to increase the TPS throughput of your model. You are charged for the number of inference units
+     * that you use.
      * </p>
      * 
      * @param minInferenceUnits
-     *        The minimum number of inference units to use. A single inference unit represents 1 hour of processing and
-     *        can support up to 5 Transaction Pers Second (TPS). Use a higher number to increase the TPS throughput of
-     *        your model. You are charged for the number of inference units that you use.
+     *        The minimum number of inference units to use. A single inference unit represents 1 hour of processing. Use
+     *        a higher number to increase the TPS throughput of your model. You are charged for the number of inference
+     *        units that you use.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -192,21 +200,35 @@ public class StartModelRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * ClientToken is an idempotency token that ensures a call to <code>StartModel</code> completes only once. You
-     * choose the value to pass. For example, An issue, such as an network outage, might prevent you from getting a
-     * response from <code>StartModel</code>. In this case, safely retry your call to <code>StartModel</code> by using
-     * the same <code>ClientToken</code> parameter value. An error occurs if the other input parameters are not the same
-     * as in the first request. Using a different value for <code>ClientToken</code> is considered a new call to
-     * <code>StartModel</code>. An idempotency token is active for 8 hours.
+     * choose the value to pass. For example, An issue might prevent you from getting a response from
+     * <code>StartModel</code>. In this case, safely retry your call to <code>StartModel</code> by using the same
+     * <code>ClientToken</code> parameter value.
+     * </p>
+     * <p>
+     * If you don't supply a value for <code>ClientToken</code>, the AWS SDK you are using inserts a value for you. This
+     * prevents retries after a network error from making multiple start requests. You'll need to provide your own value
+     * for other use cases.
+     * </p>
+     * <p>
+     * An error occurs if the other input parameters are not the same as in the first request. Using a different value
+     * for <code>ClientToken</code> is considered a new call to <code>StartModel</code>. An idempotency token is active
+     * for 8 hours.
      * </p>
      * 
      * @param clientToken
      *        ClientToken is an idempotency token that ensures a call to <code>StartModel</code> completes only once.
-     *        You choose the value to pass. For example, An issue, such as an network outage, might prevent you from
-     *        getting a response from <code>StartModel</code>. In this case, safely retry your call to
-     *        <code>StartModel</code> by using the same <code>ClientToken</code> parameter value. An error occurs if the
-     *        other input parameters are not the same as in the first request. Using a different value for
-     *        <code>ClientToken</code> is considered a new call to <code>StartModel</code>. An idempotency token is
-     *        active for 8 hours.
+     *        You choose the value to pass. For example, An issue might prevent you from getting a response from
+     *        <code>StartModel</code>. In this case, safely retry your call to <code>StartModel</code> by using the same
+     *        <code>ClientToken</code> parameter value. </p>
+     *        <p>
+     *        If you don't supply a value for <code>ClientToken</code>, the AWS SDK you are using inserts a value for
+     *        you. This prevents retries after a network error from making multiple start requests. You'll need to
+     *        provide your own value for other use cases.
+     *        </p>
+     *        <p>
+     *        An error occurs if the other input parameters are not the same as in the first request. Using a different
+     *        value for <code>ClientToken</code> is considered a new call to <code>StartModel</code>. An idempotency
+     *        token is active for 8 hours.
      */
 
     public void setClientToken(String clientToken) {
@@ -216,20 +238,34 @@ public class StartModelRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * ClientToken is an idempotency token that ensures a call to <code>StartModel</code> completes only once. You
-     * choose the value to pass. For example, An issue, such as an network outage, might prevent you from getting a
-     * response from <code>StartModel</code>. In this case, safely retry your call to <code>StartModel</code> by using
-     * the same <code>ClientToken</code> parameter value. An error occurs if the other input parameters are not the same
-     * as in the first request. Using a different value for <code>ClientToken</code> is considered a new call to
-     * <code>StartModel</code>. An idempotency token is active for 8 hours.
+     * choose the value to pass. For example, An issue might prevent you from getting a response from
+     * <code>StartModel</code>. In this case, safely retry your call to <code>StartModel</code> by using the same
+     * <code>ClientToken</code> parameter value.
+     * </p>
+     * <p>
+     * If you don't supply a value for <code>ClientToken</code>, the AWS SDK you are using inserts a value for you. This
+     * prevents retries after a network error from making multiple start requests. You'll need to provide your own value
+     * for other use cases.
+     * </p>
+     * <p>
+     * An error occurs if the other input parameters are not the same as in the first request. Using a different value
+     * for <code>ClientToken</code> is considered a new call to <code>StartModel</code>. An idempotency token is active
+     * for 8 hours.
      * </p>
      * 
      * @return ClientToken is an idempotency token that ensures a call to <code>StartModel</code> completes only once.
-     *         You choose the value to pass. For example, An issue, such as an network outage, might prevent you from
-     *         getting a response from <code>StartModel</code>. In this case, safely retry your call to
-     *         <code>StartModel</code> by using the same <code>ClientToken</code> parameter value. An error occurs if
-     *         the other input parameters are not the same as in the first request. Using a different value for
-     *         <code>ClientToken</code> is considered a new call to <code>StartModel</code>. An idempotency token is
-     *         active for 8 hours.
+     *         You choose the value to pass. For example, An issue might prevent you from getting a response from
+     *         <code>StartModel</code>. In this case, safely retry your call to <code>StartModel</code> by using the
+     *         same <code>ClientToken</code> parameter value. </p>
+     *         <p>
+     *         If you don't supply a value for <code>ClientToken</code>, the AWS SDK you are using inserts a value for
+     *         you. This prevents retries after a network error from making multiple start requests. You'll need to
+     *         provide your own value for other use cases.
+     *         </p>
+     *         <p>
+     *         An error occurs if the other input parameters are not the same as in the first request. Using a different
+     *         value for <code>ClientToken</code> is considered a new call to <code>StartModel</code>. An idempotency
+     *         token is active for 8 hours.
      */
 
     public String getClientToken() {
@@ -239,21 +275,35 @@ public class StartModelRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * ClientToken is an idempotency token that ensures a call to <code>StartModel</code> completes only once. You
-     * choose the value to pass. For example, An issue, such as an network outage, might prevent you from getting a
-     * response from <code>StartModel</code>. In this case, safely retry your call to <code>StartModel</code> by using
-     * the same <code>ClientToken</code> parameter value. An error occurs if the other input parameters are not the same
-     * as in the first request. Using a different value for <code>ClientToken</code> is considered a new call to
-     * <code>StartModel</code>. An idempotency token is active for 8 hours.
+     * choose the value to pass. For example, An issue might prevent you from getting a response from
+     * <code>StartModel</code>. In this case, safely retry your call to <code>StartModel</code> by using the same
+     * <code>ClientToken</code> parameter value.
+     * </p>
+     * <p>
+     * If you don't supply a value for <code>ClientToken</code>, the AWS SDK you are using inserts a value for you. This
+     * prevents retries after a network error from making multiple start requests. You'll need to provide your own value
+     * for other use cases.
+     * </p>
+     * <p>
+     * An error occurs if the other input parameters are not the same as in the first request. Using a different value
+     * for <code>ClientToken</code> is considered a new call to <code>StartModel</code>. An idempotency token is active
+     * for 8 hours.
      * </p>
      * 
      * @param clientToken
      *        ClientToken is an idempotency token that ensures a call to <code>StartModel</code> completes only once.
-     *        You choose the value to pass. For example, An issue, such as an network outage, might prevent you from
-     *        getting a response from <code>StartModel</code>. In this case, safely retry your call to
-     *        <code>StartModel</code> by using the same <code>ClientToken</code> parameter value. An error occurs if the
-     *        other input parameters are not the same as in the first request. Using a different value for
-     *        <code>ClientToken</code> is considered a new call to <code>StartModel</code>. An idempotency token is
-     *        active for 8 hours.
+     *        You choose the value to pass. For example, An issue might prevent you from getting a response from
+     *        <code>StartModel</code>. In this case, safely retry your call to <code>StartModel</code> by using the same
+     *        <code>ClientToken</code> parameter value. </p>
+     *        <p>
+     *        If you don't supply a value for <code>ClientToken</code>, the AWS SDK you are using inserts a value for
+     *        you. This prevents retries after a network error from making multiple start requests. You'll need to
+     *        provide your own value for other use cases.
+     *        </p>
+     *        <p>
+     *        An error occurs if the other input parameters are not the same as in the first request. Using a different
+     *        value for <code>ClientToken</code> is considered a new call to <code>StartModel</code>. An idempotency
+     *        token is active for 8 hours.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

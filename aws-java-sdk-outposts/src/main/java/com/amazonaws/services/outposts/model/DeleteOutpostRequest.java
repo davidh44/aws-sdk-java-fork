@@ -27,18 +27,18 @@ public class DeleteOutpostRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The ID of the Outpost.
+     * The ID or the Amazon Resource Name (ARN) of the Outpost.
      * </p>
      */
     private String outpostId;
 
     /**
      * <p>
-     * The ID of the Outpost.
+     * The ID or the Amazon Resource Name (ARN) of the Outpost.
      * </p>
      * 
      * @param outpostId
-     *        The ID of the Outpost.
+     *        The ID or the Amazon Resource Name (ARN) of the Outpost.
      */
 
     public void setOutpostId(String outpostId) {
@@ -47,10 +47,10 @@ public class DeleteOutpostRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The ID of the Outpost.
+     * The ID or the Amazon Resource Name (ARN) of the Outpost.
      * </p>
      * 
-     * @return The ID of the Outpost.
+     * @return The ID or the Amazon Resource Name (ARN) of the Outpost.
      */
 
     public String getOutpostId() {
@@ -59,11 +59,11 @@ public class DeleteOutpostRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The ID of the Outpost.
+     * The ID or the Amazon Resource Name (ARN) of the Outpost.
      * </p>
      * 
      * @param outpostId
-     *        The ID of the Outpost.
+     *        The ID or the Amazon Resource Name (ARN) of the Outpost.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

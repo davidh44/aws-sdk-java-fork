@@ -281,9 +281,10 @@ public interface AmazonLookoutforVisionAsync extends AmazonLookoutforVision {
      * <a>StopModel</a> operation.
      * </p>
      * <p>
-     * It might take a few seconds to delete a model. To determine if a model has been deleted, call <a>ListProjects</a>
+     * It might take a few seconds to delete a model. To determine if a model has been deleted, call <a>ListModels</a>
      * and check if the version of the model (<code>ModelVersion</code>) is in the <code>Models</code> array.
      * </p>
+     * <p/>
      * <p>
      * This operation requires permissions to perform the <code>lookoutvision:DeleteModel</code> operation.
      * </p>
@@ -302,9 +303,10 @@ public interface AmazonLookoutforVisionAsync extends AmazonLookoutforVision {
      * <a>StopModel</a> operation.
      * </p>
      * <p>
-     * It might take a few seconds to delete a model. To determine if a model has been deleted, call <a>ListProjects</a>
+     * It might take a few seconds to delete a model. To determine if a model has been deleted, call <a>ListModels</a>
      * and check if the version of the model (<code>ModelVersion</code>) is in the <code>Models</code> array.
      * </p>
+     * <p/>
      * <p>
      * This operation requires permissions to perform the <code>lookoutvision:DeleteModel</code> operation.
      * </p>
@@ -451,6 +453,55 @@ public interface AmazonLookoutforVisionAsync extends AmazonLookoutforVision {
 
     /**
      * <p>
+     * Describes an Amazon Lookout for Vision model packaging job.
+     * </p>
+     * <p>
+     * This operation requires permissions to perform the <code>lookoutvision:DescribeModelPackagingJob</code>
+     * operation.
+     * </p>
+     * <p>
+     * For more information, see <i>Using your Amazon Lookout for Vision model on an edge device</i> in the Amazon
+     * Lookout for Vision Developer Guide.
+     * </p>
+     * 
+     * @param describeModelPackagingJobRequest
+     * @return A Java Future containing the result of the DescribeModelPackagingJob operation returned by the service.
+     * @sample AmazonLookoutforVisionAsync.DescribeModelPackagingJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DescribeModelPackagingJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeModelPackagingJobResult> describeModelPackagingJobAsync(
+            DescribeModelPackagingJobRequest describeModelPackagingJobRequest);
+
+    /**
+     * <p>
+     * Describes an Amazon Lookout for Vision model packaging job.
+     * </p>
+     * <p>
+     * This operation requires permissions to perform the <code>lookoutvision:DescribeModelPackagingJob</code>
+     * operation.
+     * </p>
+     * <p>
+     * For more information, see <i>Using your Amazon Lookout for Vision model on an edge device</i> in the Amazon
+     * Lookout for Vision Developer Guide.
+     * </p>
+     * 
+     * @param describeModelPackagingJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeModelPackagingJob operation returned by the service.
+     * @sample AmazonLookoutforVisionAsyncHandler.DescribeModelPackagingJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DescribeModelPackagingJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeModelPackagingJobResult> describeModelPackagingJobAsync(
+            DescribeModelPackagingJobRequest describeModelPackagingJobRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeModelPackagingJobRequest, DescribeModelPackagingJobResult> asyncHandler);
+
+    /**
+     * <p>
      * Describes an Amazon Lookout for Vision project.
      * </p>
      * <p>
@@ -588,7 +639,56 @@ public interface AmazonLookoutforVisionAsync extends AmazonLookoutforVision {
 
     /**
      * <p>
+     * Lists the model packaging jobs created for an Amazon Lookout for Vision project.
+     * </p>
+     * <p>
+     * This operation requires permissions to perform the <code>lookoutvision:ListModelPackagingJobs</code> operation.
+     * </p>
+     * <p>
+     * For more information, see <i>Using your Amazon Lookout for Vision model on an edge device</i> in the Amazon
+     * Lookout for Vision Developer Guide.
+     * </p>
+     * 
+     * @param listModelPackagingJobsRequest
+     * @return A Java Future containing the result of the ListModelPackagingJobs operation returned by the service.
+     * @sample AmazonLookoutforVisionAsync.ListModelPackagingJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/ListModelPackagingJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListModelPackagingJobsResult> listModelPackagingJobsAsync(ListModelPackagingJobsRequest listModelPackagingJobsRequest);
+
+    /**
+     * <p>
+     * Lists the model packaging jobs created for an Amazon Lookout for Vision project.
+     * </p>
+     * <p>
+     * This operation requires permissions to perform the <code>lookoutvision:ListModelPackagingJobs</code> operation.
+     * </p>
+     * <p>
+     * For more information, see <i>Using your Amazon Lookout for Vision model on an edge device</i> in the Amazon
+     * Lookout for Vision Developer Guide.
+     * </p>
+     * 
+     * @param listModelPackagingJobsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListModelPackagingJobs operation returned by the service.
+     * @sample AmazonLookoutforVisionAsyncHandler.ListModelPackagingJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/ListModelPackagingJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListModelPackagingJobsResult> listModelPackagingJobsAsync(ListModelPackagingJobsRequest listModelPackagingJobsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListModelPackagingJobsRequest, ListModelPackagingJobsResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists the versions of a model in an Amazon Lookout for Vision project.
+     * </p>
+     * <p>
+     * The <code>ListModels</code> operation is eventually consistent. Recent calls to <code>CreateModel</code> might
+     * take a while to appear in the response from <code>ListProjects</code>.
      * </p>
      * <p>
      * This operation requires permissions to perform the <code>lookoutvision:ListModels</code> operation.
@@ -605,6 +705,10 @@ public interface AmazonLookoutforVisionAsync extends AmazonLookoutforVision {
     /**
      * <p>
      * Lists the versions of a model in an Amazon Lookout for Vision project.
+     * </p>
+     * <p>
+     * The <code>ListModels</code> operation is eventually consistent. Recent calls to <code>CreateModel</code> might
+     * take a while to appear in the response from <code>ListProjects</code>.
      * </p>
      * <p>
      * This operation requires permissions to perform the <code>lookoutvision:ListModels</code> operation.
@@ -628,6 +732,10 @@ public interface AmazonLookoutforVisionAsync extends AmazonLookoutforVision {
      * Lists the Amazon Lookout for Vision projects in your AWS account.
      * </p>
      * <p>
+     * The <code>ListProjects</code> operation is eventually consistent. Recent calls to <code>CreateProject</code> and
+     * <code>DeleteProject</code> might take a while to appear in the response from <code>ListProjects</code>.
+     * </p>
+     * <p>
      * This operation requires permissions to perform the <code>lookoutvision:ListProjects</code> operation.
      * </p>
      * 
@@ -642,6 +750,10 @@ public interface AmazonLookoutforVisionAsync extends AmazonLookoutforVision {
     /**
      * <p>
      * Lists the Amazon Lookout for Vision projects in your AWS account.
+     * </p>
+     * <p>
+     * The <code>ListProjects</code> operation is eventually consistent. Recent calls to <code>CreateProject</code> and
+     * <code>DeleteProject</code> might take a while to appear in the response from <code>ListProjects</code>.
      * </p>
      * <p>
      * This operation requires permissions to perform the <code>lookoutvision:ListProjects</code> operation.
@@ -757,6 +869,137 @@ public interface AmazonLookoutforVisionAsync extends AmazonLookoutforVision {
      */
     java.util.concurrent.Future<StartModelResult> startModelAsync(StartModelRequest startModelRequest,
             com.amazonaws.handlers.AsyncHandler<StartModelRequest, StartModelResult> asyncHandler);
+
+    /**
+     * <p>
+     * Starts an Amazon Lookout for Vision model packaging job. A model packaging job creates an AWS IoT Greengrass
+     * component for a Lookout for Vision model. You can use the component to deploy your model to an edge device
+     * managed by Greengrass.
+     * </p>
+     * <p>
+     * Use the <a>DescribeModelPackagingJob</a> API to determine the current status of the job. The model packaging job
+     * is complete if the value of <code>Status</code> is <code>SUCCEEDED</code>.
+     * </p>
+     * <p>
+     * To deploy the component to the target device, use the component name and component version with the AWS IoT
+     * Greengrass <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/APIReference/API_CreateDeployment.html">CreateDeployment</a> API.
+     * </p>
+     * <p>
+     * This operation requires the following permissions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>lookoutvision:StartModelPackagingJobs</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>s3:PutObject</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>s3:GetBucketLocation</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>greengrass:CreateComponentVersion</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>greengrass:DescribeComponent</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * (Optional) <code>greengrass:TagResource</code>. Only required if you want to tag the component.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <i>Using your Amazon Lookout for Vision model on an edge device</i> in the Amazon
+     * Lookout for Vision Developer Guide.
+     * </p>
+     * 
+     * @param startModelPackagingJobRequest
+     * @return A Java Future containing the result of the StartModelPackagingJob operation returned by the service.
+     * @sample AmazonLookoutforVisionAsync.StartModelPackagingJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/StartModelPackagingJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartModelPackagingJobResult> startModelPackagingJobAsync(StartModelPackagingJobRequest startModelPackagingJobRequest);
+
+    /**
+     * <p>
+     * Starts an Amazon Lookout for Vision model packaging job. A model packaging job creates an AWS IoT Greengrass
+     * component for a Lookout for Vision model. You can use the component to deploy your model to an edge device
+     * managed by Greengrass.
+     * </p>
+     * <p>
+     * Use the <a>DescribeModelPackagingJob</a> API to determine the current status of the job. The model packaging job
+     * is complete if the value of <code>Status</code> is <code>SUCCEEDED</code>.
+     * </p>
+     * <p>
+     * To deploy the component to the target device, use the component name and component version with the AWS IoT
+     * Greengrass <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/APIReference/API_CreateDeployment.html">CreateDeployment</a> API.
+     * </p>
+     * <p>
+     * This operation requires the following permissions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>lookoutvision:StartModelPackagingJobs</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>s3:PutObject</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>s3:GetBucketLocation</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>greengrass:CreateComponentVersion</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>greengrass:DescribeComponent</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * (Optional) <code>greengrass:TagResource</code>. Only required if you want to tag the component.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <i>Using your Amazon Lookout for Vision model on an edge device</i> in the Amazon
+     * Lookout for Vision Developer Guide.
+     * </p>
+     * 
+     * @param startModelPackagingJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartModelPackagingJob operation returned by the service.
+     * @sample AmazonLookoutforVisionAsyncHandler.StartModelPackagingJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/StartModelPackagingJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartModelPackagingJobResult> startModelPackagingJobAsync(StartModelPackagingJobRequest startModelPackagingJobRequest,
+            com.amazonaws.handlers.AsyncHandler<StartModelPackagingJobRequest, StartModelPackagingJobResult> asyncHandler);
 
     /**
      * <p>
@@ -883,9 +1126,24 @@ public interface AmazonLookoutforVisionAsync extends AmazonLookoutforVision {
 
     /**
      * <p>
-     * Adds one or more JSON Line entries to a dataset. A JSON Line includes information about an image used for
-     * training or testing an Amazon Lookout for Vision model. The following is an example JSON Line.
+     * Adds or updates one or more JSON Line entries in a dataset. A JSON Line includes information about an image used
+     * for training or testing an Amazon Lookout for Vision model.
      * </p>
+     * <p>
+     * To update an existing JSON Line, use the <code>source-ref</code> field to identify the JSON Line. The JSON line
+     * that you supply replaces the existing JSON line. Any existing annotations that are not in the new JSON line are
+     * removed from the dataset.
+     * </p>
+     * <p>
+     * For more information, see <i>Defining JSON lines for anomaly classification</i> in the Amazon Lookout for Vision
+     * Developer Guide.
+     * </p>
+     * <note>
+     * <p>
+     * The images you reference in the <code>source-ref</code> field of a JSON line, must be in the same S3 bucket as
+     * the existing images in the dataset.
+     * </p>
+     * </note>
      * <p>
      * Updating a dataset might take a while to complete. To check the current status, call <a>DescribeDataset</a> and
      * check the <code>Status</code> field in the response.
@@ -904,9 +1162,24 @@ public interface AmazonLookoutforVisionAsync extends AmazonLookoutforVision {
 
     /**
      * <p>
-     * Adds one or more JSON Line entries to a dataset. A JSON Line includes information about an image used for
-     * training or testing an Amazon Lookout for Vision model. The following is an example JSON Line.
+     * Adds or updates one or more JSON Line entries in a dataset. A JSON Line includes information about an image used
+     * for training or testing an Amazon Lookout for Vision model.
      * </p>
+     * <p>
+     * To update an existing JSON Line, use the <code>source-ref</code> field to identify the JSON Line. The JSON line
+     * that you supply replaces the existing JSON line. Any existing annotations that are not in the new JSON line are
+     * removed from the dataset.
+     * </p>
+     * <p>
+     * For more information, see <i>Defining JSON lines for anomaly classification</i> in the Amazon Lookout for Vision
+     * Developer Guide.
+     * </p>
+     * <note>
+     * <p>
+     * The images you reference in the <code>source-ref</code> field of a JSON line, must be in the same S3 bucket as
+     * the existing images in the dataset.
+     * </p>
+     * </note>
      * <p>
      * Updating a dataset might take a while to complete. To check the current status, call <a>DescribeDataset</a> and
      * check the <code>Status</code> field in the response.

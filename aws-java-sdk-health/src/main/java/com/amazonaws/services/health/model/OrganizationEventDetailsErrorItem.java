@@ -82,7 +82,7 @@ public class OrganizationEventDetailsErrorItem implements Serializable, Cloneabl
      * <li>
      * <p>
      * Your Amazon Web Services account doesn't include the Amazon Web Services Support plan required to use the Health
-     * API. You must have either a Business or Enterprise Support plan.
+     * API. You must have either a Business, Enterprise On-Ramp, or Enterprise Support plan.
      * </p>
      * </li>
      * </ul>
@@ -290,7 +290,7 @@ public class OrganizationEventDetailsErrorItem implements Serializable, Cloneabl
      * <li>
      * <p>
      * Your Amazon Web Services account doesn't include the Amazon Web Services Support plan required to use the Health
-     * API. You must have either a Business or Enterprise Support plan.
+     * API. You must have either a Business, Enterprise On-Ramp, or Enterprise Support plan.
      * </p>
      * </li>
      * </ul>
@@ -317,7 +317,7 @@ public class OrganizationEventDetailsErrorItem implements Serializable, Cloneabl
      *        <li>
      *        <p>
      *        Your Amazon Web Services account doesn't include the Amazon Web Services Support plan required to use the
-     *        Health API. You must have either a Business or Enterprise Support plan.
+     *        Health API. You must have either a Business, Enterprise On-Ramp, or Enterprise Support plan.
      *        </p>
      *        </li>
      */
@@ -350,7 +350,7 @@ public class OrganizationEventDetailsErrorItem implements Serializable, Cloneabl
      * <li>
      * <p>
      * Your Amazon Web Services account doesn't include the Amazon Web Services Support plan required to use the Health
-     * API. You must have either a Business or Enterprise Support plan.
+     * API. You must have either a Business, Enterprise On-Ramp, or Enterprise Support plan.
      * </p>
      * </li>
      * </ul>
@@ -376,7 +376,7 @@ public class OrganizationEventDetailsErrorItem implements Serializable, Cloneabl
      *         <li>
      *         <p>
      *         Your Amazon Web Services account doesn't include the Amazon Web Services Support plan required to use the
-     *         Health API. You must have either a Business or Enterprise Support plan.
+     *         Health API. You must have either a Business, Enterprise On-Ramp, or Enterprise Support plan.
      *         </p>
      *         </li>
      */
@@ -409,7 +409,7 @@ public class OrganizationEventDetailsErrorItem implements Serializable, Cloneabl
      * <li>
      * <p>
      * Your Amazon Web Services account doesn't include the Amazon Web Services Support plan required to use the Health
-     * API. You must have either a Business or Enterprise Support plan.
+     * API. You must have either a Business, Enterprise On-Ramp, or Enterprise Support plan.
      * </p>
      * </li>
      * </ul>
@@ -436,7 +436,7 @@ public class OrganizationEventDetailsErrorItem implements Serializable, Cloneabl
      *        <li>
      *        <p>
      *        Your Amazon Web Services account doesn't include the Amazon Web Services Support plan required to use the
-     *        Health API. You must have either a Business or Enterprise Support plan.
+     *        Health API. You must have either a Business, Enterprise On-Ramp, or Enterprise Support plan.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about the location training output.
+ * Information about the location of training output or the output of a model packaging job.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/S3Location" target="_top">AWS API
@@ -30,24 +30,30 @@ public class S3Location implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The S3 bucket that contains the training output.
+     * The S3 bucket that contains the training or model packaging job output. If you are training a model, the bucket
+     * must in your AWS account. If you use an S3 bucket for a model packaging job, the S3 bucket must be in the same
+     * AWS Region and AWS account in which you use AWS IoT Greengrass.
      * </p>
      */
     private String bucket;
     /**
      * <p>
-     * The path of the folder, within the S3 bucket, that contains the training output.
+     * The path of the folder, within the S3 bucket, that contains the output.
      * </p>
      */
     private String prefix;
 
     /**
      * <p>
-     * The S3 bucket that contains the training output.
+     * The S3 bucket that contains the training or model packaging job output. If you are training a model, the bucket
+     * must in your AWS account. If you use an S3 bucket for a model packaging job, the S3 bucket must be in the same
+     * AWS Region and AWS account in which you use AWS IoT Greengrass.
      * </p>
      * 
      * @param bucket
-     *        The S3 bucket that contains the training output.
+     *        The S3 bucket that contains the training or model packaging job output. If you are training a model, the
+     *        bucket must in your AWS account. If you use an S3 bucket for a model packaging job, the S3 bucket must be
+     *        in the same AWS Region and AWS account in which you use AWS IoT Greengrass.
      */
 
     public void setBucket(String bucket) {
@@ -56,10 +62,14 @@ public class S3Location implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The S3 bucket that contains the training output.
+     * The S3 bucket that contains the training or model packaging job output. If you are training a model, the bucket
+     * must in your AWS account. If you use an S3 bucket for a model packaging job, the S3 bucket must be in the same
+     * AWS Region and AWS account in which you use AWS IoT Greengrass.
      * </p>
      * 
-     * @return The S3 bucket that contains the training output.
+     * @return The S3 bucket that contains the training or model packaging job output. If you are training a model, the
+     *         bucket must in your AWS account. If you use an S3 bucket for a model packaging job, the S3 bucket must be
+     *         in the same AWS Region and AWS account in which you use AWS IoT Greengrass.
      */
 
     public String getBucket() {
@@ -68,11 +78,15 @@ public class S3Location implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The S3 bucket that contains the training output.
+     * The S3 bucket that contains the training or model packaging job output. If you are training a model, the bucket
+     * must in your AWS account. If you use an S3 bucket for a model packaging job, the S3 bucket must be in the same
+     * AWS Region and AWS account in which you use AWS IoT Greengrass.
      * </p>
      * 
      * @param bucket
-     *        The S3 bucket that contains the training output.
+     *        The S3 bucket that contains the training or model packaging job output. If you are training a model, the
+     *        bucket must in your AWS account. If you use an S3 bucket for a model packaging job, the S3 bucket must be
+     *        in the same AWS Region and AWS account in which you use AWS IoT Greengrass.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,11 +97,11 @@ public class S3Location implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The path of the folder, within the S3 bucket, that contains the training output.
+     * The path of the folder, within the S3 bucket, that contains the output.
      * </p>
      * 
      * @param prefix
-     *        The path of the folder, within the S3 bucket, that contains the training output.
+     *        The path of the folder, within the S3 bucket, that contains the output.
      */
 
     public void setPrefix(String prefix) {
@@ -96,10 +110,10 @@ public class S3Location implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The path of the folder, within the S3 bucket, that contains the training output.
+     * The path of the folder, within the S3 bucket, that contains the output.
      * </p>
      * 
-     * @return The path of the folder, within the S3 bucket, that contains the training output.
+     * @return The path of the folder, within the S3 bucket, that contains the output.
      */
 
     public String getPrefix() {
@@ -108,11 +122,11 @@ public class S3Location implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The path of the folder, within the S3 bucket, that contains the training output.
+     * The path of the folder, within the S3 bucket, that contains the output.
      * </p>
      * 
      * @param prefix
-     *        The path of the folder, within the S3 bucket, that contains the training output.
+     *        The path of the folder, within the S3 bucket, that contains the output.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

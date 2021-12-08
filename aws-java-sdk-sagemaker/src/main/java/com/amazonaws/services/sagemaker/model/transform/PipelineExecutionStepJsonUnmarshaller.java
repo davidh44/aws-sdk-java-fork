@@ -68,6 +68,10 @@ public class PipelineExecutionStepJsonUnmarshaller implements Unmarshaller<Pipel
                     context.nextToken();
                     pipelineExecutionStep.setCacheHitResult(CacheHitResultJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("AttemptCount", targetDepth)) {
+                    context.nextToken();
+                    pipelineExecutionStep.setAttemptCount(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("FailureReason", targetDepth)) {
                     context.nextToken();
                     pipelineExecutionStep.setFailureReason(context.getUnmarshaller(String.class).unmarshall(context));

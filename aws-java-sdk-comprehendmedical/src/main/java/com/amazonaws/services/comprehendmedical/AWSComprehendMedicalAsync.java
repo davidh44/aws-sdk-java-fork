@@ -26,7 +26,7 @@ import com.amazonaws.services.comprehendmedical.model.*;
  * </p>
  * <p>
  * <p>
- * Amazon Comprehend Medical extracts structured information from unstructured clinical text. Use these actions to gain
+ * Comprehend Medical; extracts structured information from unstructured clinical text. Use these actions to gain
  * insight in your documents.
  * </p>
  */
@@ -170,6 +170,43 @@ public interface AWSComprehendMedicalAsync extends AWSComprehendMedical {
     java.util.concurrent.Future<DescribeRxNormInferenceJobResult> describeRxNormInferenceJobAsync(
             DescribeRxNormInferenceJobRequest describeRxNormInferenceJobRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeRxNormInferenceJobRequest, DescribeRxNormInferenceJobResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets the properties associated with an InferSNOMEDCT job. Use this operation to get the status of an inference
+     * job.
+     * </p>
+     * 
+     * @param describeSNOMEDCTInferenceJobRequest
+     * @return A Java Future containing the result of the DescribeSNOMEDCTInferenceJob operation returned by the
+     *         service.
+     * @sample AWSComprehendMedicalAsync.DescribeSNOMEDCTInferenceJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/DescribeSNOMEDCTInferenceJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeSNOMEDCTInferenceJobResult> describeSNOMEDCTInferenceJobAsync(
+            DescribeSNOMEDCTInferenceJobRequest describeSNOMEDCTInferenceJobRequest);
+
+    /**
+     * <p>
+     * Gets the properties associated with an InferSNOMEDCT job. Use this operation to get the status of an inference
+     * job.
+     * </p>
+     * 
+     * @param describeSNOMEDCTInferenceJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeSNOMEDCTInferenceJob operation returned by the
+     *         service.
+     * @sample AWSComprehendMedicalAsyncHandler.DescribeSNOMEDCTInferenceJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/DescribeSNOMEDCTInferenceJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeSNOMEDCTInferenceJobResult> describeSNOMEDCTInferenceJobAsync(
+            DescribeSNOMEDCTInferenceJobRequest describeSNOMEDCTInferenceJobRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeSNOMEDCTInferenceJobRequest, DescribeSNOMEDCTInferenceJobResult> asyncHandler);
 
     /**
      * <p>
@@ -374,6 +411,39 @@ public interface AWSComprehendMedicalAsync extends AWSComprehendMedical {
 
     /**
      * <p>
+     * InferSNOMEDCT detects possible medical concepts as entities and links them to codes from the Systematized
+     * Nomenclature of Medicine, Clinical Terms (SNOMED-CT) ontology
+     * </p>
+     * 
+     * @param inferSNOMEDCTRequest
+     * @return A Java Future containing the result of the InferSNOMEDCT operation returned by the service.
+     * @sample AWSComprehendMedicalAsync.InferSNOMEDCT
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/InferSNOMEDCT"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<InferSNOMEDCTResult> inferSNOMEDCTAsync(InferSNOMEDCTRequest inferSNOMEDCTRequest);
+
+    /**
+     * <p>
+     * InferSNOMEDCT detects possible medical concepts as entities and links them to codes from the Systematized
+     * Nomenclature of Medicine, Clinical Terms (SNOMED-CT) ontology
+     * </p>
+     * 
+     * @param inferSNOMEDCTRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the InferSNOMEDCT operation returned by the service.
+     * @sample AWSComprehendMedicalAsyncHandler.InferSNOMEDCT
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/InferSNOMEDCT"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<InferSNOMEDCTResult> inferSNOMEDCTAsync(InferSNOMEDCTRequest inferSNOMEDCTRequest,
+            com.amazonaws.handlers.AsyncHandler<InferSNOMEDCTRequest, InferSNOMEDCTResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets a list of medical entity detection jobs that you have submitted.
      * </p>
      * 
@@ -497,6 +567,39 @@ public interface AWSComprehendMedicalAsync extends AWSComprehendMedical {
      */
     java.util.concurrent.Future<ListRxNormInferenceJobsResult> listRxNormInferenceJobsAsync(ListRxNormInferenceJobsRequest listRxNormInferenceJobsRequest,
             com.amazonaws.handlers.AsyncHandler<ListRxNormInferenceJobsRequest, ListRxNormInferenceJobsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets a list of InferSNOMEDCT jobs a user has submitted.
+     * </p>
+     * 
+     * @param listSNOMEDCTInferenceJobsRequest
+     * @return A Java Future containing the result of the ListSNOMEDCTInferenceJobs operation returned by the service.
+     * @sample AWSComprehendMedicalAsync.ListSNOMEDCTInferenceJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/ListSNOMEDCTInferenceJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListSNOMEDCTInferenceJobsResult> listSNOMEDCTInferenceJobsAsync(
+            ListSNOMEDCTInferenceJobsRequest listSNOMEDCTInferenceJobsRequest);
+
+    /**
+     * <p>
+     * Gets a list of InferSNOMEDCT jobs a user has submitted.
+     * </p>
+     * 
+     * @param listSNOMEDCTInferenceJobsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListSNOMEDCTInferenceJobs operation returned by the service.
+     * @sample AWSComprehendMedicalAsyncHandler.ListSNOMEDCTInferenceJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/ListSNOMEDCTInferenceJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListSNOMEDCTInferenceJobsResult> listSNOMEDCTInferenceJobsAsync(
+            ListSNOMEDCTInferenceJobsRequest listSNOMEDCTInferenceJobsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListSNOMEDCTInferenceJobsRequest, ListSNOMEDCTInferenceJobsResult> asyncHandler);
 
     /**
      * <p>
@@ -634,6 +737,41 @@ public interface AWSComprehendMedicalAsync extends AWSComprehendMedical {
 
     /**
      * <p>
+     * Starts an asynchronous job to detect medical concepts and link them to the SNOMED-CT ontology. Use the
+     * DescribeSNOMEDCTInferenceJob operation to track the status of a job.
+     * </p>
+     * 
+     * @param startSNOMEDCTInferenceJobRequest
+     * @return A Java Future containing the result of the StartSNOMEDCTInferenceJob operation returned by the service.
+     * @sample AWSComprehendMedicalAsync.StartSNOMEDCTInferenceJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/StartSNOMEDCTInferenceJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartSNOMEDCTInferenceJobResult> startSNOMEDCTInferenceJobAsync(
+            StartSNOMEDCTInferenceJobRequest startSNOMEDCTInferenceJobRequest);
+
+    /**
+     * <p>
+     * Starts an asynchronous job to detect medical concepts and link them to the SNOMED-CT ontology. Use the
+     * DescribeSNOMEDCTInferenceJob operation to track the status of a job.
+     * </p>
+     * 
+     * @param startSNOMEDCTInferenceJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartSNOMEDCTInferenceJob operation returned by the service.
+     * @sample AWSComprehendMedicalAsyncHandler.StartSNOMEDCTInferenceJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/StartSNOMEDCTInferenceJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartSNOMEDCTInferenceJobResult> startSNOMEDCTInferenceJobAsync(
+            StartSNOMEDCTInferenceJobRequest startSNOMEDCTInferenceJobRequest,
+            com.amazonaws.handlers.AsyncHandler<StartSNOMEDCTInferenceJobRequest, StartSNOMEDCTInferenceJobResult> asyncHandler);
+
+    /**
+     * <p>
      * Stops a medical entities detection job in progress.
      * </p>
      * 
@@ -757,5 +895,36 @@ public interface AWSComprehendMedicalAsync extends AWSComprehendMedical {
      */
     java.util.concurrent.Future<StopRxNormInferenceJobResult> stopRxNormInferenceJobAsync(StopRxNormInferenceJobRequest stopRxNormInferenceJobRequest,
             com.amazonaws.handlers.AsyncHandler<StopRxNormInferenceJobRequest, StopRxNormInferenceJobResult> asyncHandler);
+
+    /**
+     * <p>
+     * Stops an InferSNOMEDCT inference job in progress.
+     * </p>
+     * 
+     * @param stopSNOMEDCTInferenceJobRequest
+     * @return A Java Future containing the result of the StopSNOMEDCTInferenceJob operation returned by the service.
+     * @sample AWSComprehendMedicalAsync.StopSNOMEDCTInferenceJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/StopSNOMEDCTInferenceJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StopSNOMEDCTInferenceJobResult> stopSNOMEDCTInferenceJobAsync(StopSNOMEDCTInferenceJobRequest stopSNOMEDCTInferenceJobRequest);
+
+    /**
+     * <p>
+     * Stops an InferSNOMEDCT inference job in progress.
+     * </p>
+     * 
+     * @param stopSNOMEDCTInferenceJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StopSNOMEDCTInferenceJob operation returned by the service.
+     * @sample AWSComprehendMedicalAsyncHandler.StopSNOMEDCTInferenceJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/StopSNOMEDCTInferenceJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StopSNOMEDCTInferenceJobResult> stopSNOMEDCTInferenceJobAsync(StopSNOMEDCTInferenceJobRequest stopSNOMEDCTInferenceJobRequest,
+            com.amazonaws.handlers.AsyncHandler<StopSNOMEDCTInferenceJobRequest, StopSNOMEDCTInferenceJobResult> asyncHandler);
 
 }

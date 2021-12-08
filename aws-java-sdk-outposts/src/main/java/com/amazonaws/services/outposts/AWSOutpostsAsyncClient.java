@@ -705,6 +705,39 @@ public class AWSOutpostsAsyncClient extends AWSOutpostsClient implements AWSOutp
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateOutpostResult> updateOutpostAsync(UpdateOutpostRequest request) {
+
+        return updateOutpostAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateOutpostResult> updateOutpostAsync(final UpdateOutpostRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateOutpostRequest, UpdateOutpostResult> asyncHandler) {
+        final UpdateOutpostRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateOutpostResult>() {
+            @Override
+            public UpdateOutpostResult call() throws Exception {
+                UpdateOutpostResult result = null;
+
+                try {
+                    result = executeUpdateOutpost(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateSiteResult> updateSiteAsync(UpdateSiteRequest request) {
 
         return updateSiteAsync(request, null);

@@ -50,7 +50,7 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <p>
      * In the example resource policy, you would replace the value of <code>SourceArn</code> with the resource making
-     * the call from Route 53 to CloudWatch Logs and replace the value of <code>SourceAccount</code> with the Amazon Web
+     * the call from Route 53 to CloudWatch Logs and replace the value of <code>SourceAccount</code> with the Amazon Web
      * Services account ID making that call.
      * </p>
      * <p/>
@@ -119,7 +119,7 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <p>
      * In the example resource policy, you would replace the value of <code>SourceArn</code> with the resource making
-     * the call from Route 53 to CloudWatch Logs and replace the value of <code>SourceAccount</code> with the Amazon Web
+     * the call from Route 53 to CloudWatch Logs and replace the value of <code>SourceAccount</code> with the Amazon Web
      * Services account ID making that call.
      * </p>
      * <p/>
@@ -144,7 +144,7 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
      *        </p>
      *        <p>
      *        In the example resource policy, you would replace the value of <code>SourceArn</code> with the resource
-     *        making the call from Route 53 to CloudWatch Logs and replace the value of <code>SourceAccount</code> with
+     *        making the call from Route 53 to CloudWatch Logs and replace the value of <code>SourceAccount</code> with
      *        the Amazon Web Services account ID making that call.
      *        </p>
      *        <p/>
@@ -175,7 +175,7 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <p>
      * In the example resource policy, you would replace the value of <code>SourceArn</code> with the resource making
-     * the call from Route 53 to CloudWatch Logs and replace the value of <code>SourceAccount</code> with the Amazon Web
+     * the call from Route 53 to CloudWatch Logs and replace the value of <code>SourceAccount</code> with the Amazon Web
      * Services account ID making that call.
      * </p>
      * <p/>
@@ -199,7 +199,7 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
      *         </p>
      *         <p>
      *         In the example resource policy, you would replace the value of <code>SourceArn</code> with the resource
-     *         making the call from Route 53 to CloudWatch Logs and replace the value of <code>SourceAccount</code> with
+     *         making the call from Route 53 to CloudWatch Logs and replace the value of <code>SourceAccount</code> with
      *         the Amazon Web Services account ID making that call.
      *         </p>
      *         <p/>
@@ -230,7 +230,7 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <p>
      * In the example resource policy, you would replace the value of <code>SourceArn</code> with the resource making
-     * the call from Route 53 to CloudWatch Logs and replace the value of <code>SourceAccount</code> with the Amazon Web
+     * the call from Route 53 to CloudWatch Logs and replace the value of <code>SourceAccount</code> with the Amazon Web
      * Services account ID making that call.
      * </p>
      * <p/>
@@ -255,7 +255,7 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
      *        </p>
      *        <p>
      *        In the example resource policy, you would replace the value of <code>SourceArn</code> with the resource
-     *        making the call from Route 53 to CloudWatch Logs and replace the value of <code>SourceAccount</code> with
+     *        making the call from Route 53 to CloudWatch Logs and replace the value of <code>SourceAccount</code> with
      *        the Amazon Web Services account ID making that call.
      *        </p>
      *        <p/>

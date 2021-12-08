@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Details about AWS resources that were analyzed in a call to Trusted Advisor
+ * Details about Amazon Web Services resources that were analyzed in a call to Trusted Advisor
  * <a>DescribeTrustedAdvisorCheckSummaries</a>.
  * </p>
  * 
@@ -31,36 +31,37 @@ public class TrustedAdvisorResourcesSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The number of AWS resources that were analyzed by the Trusted Advisor check.
+     * The number of Amazon Web Services resources that were analyzed by the Trusted Advisor check.
      * </p>
      */
     private Long resourcesProcessed;
     /**
      * <p>
-     * The number of AWS resources that were flagged (listed) by the Trusted Advisor check.
+     * The number of Amazon Web Services resources that were flagged (listed) by the Trusted Advisor check.
      * </p>
      */
     private Long resourcesFlagged;
     /**
      * <p>
-     * The number of AWS resources ignored by Trusted Advisor because information was unavailable.
+     * The number of Amazon Web Services resources ignored by Trusted Advisor because information was unavailable.
      * </p>
      */
     private Long resourcesIgnored;
     /**
      * <p>
-     * The number of AWS resources ignored by Trusted Advisor because they were marked as suppressed by the user.
+     * The number of Amazon Web Services resources ignored by Trusted Advisor because they were marked as suppressed by
+     * the user.
      * </p>
      */
     private Long resourcesSuppressed;
 
     /**
      * <p>
-     * The number of AWS resources that were analyzed by the Trusted Advisor check.
+     * The number of Amazon Web Services resources that were analyzed by the Trusted Advisor check.
      * </p>
      * 
      * @param resourcesProcessed
-     *        The number of AWS resources that were analyzed by the Trusted Advisor check.
+     *        The number of Amazon Web Services resources that were analyzed by the Trusted Advisor check.
      */
 
     public void setResourcesProcessed(Long resourcesProcessed) {
@@ -69,10 +70,10 @@ public class TrustedAdvisorResourcesSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The number of AWS resources that were analyzed by the Trusted Advisor check.
+     * The number of Amazon Web Services resources that were analyzed by the Trusted Advisor check.
      * </p>
      * 
-     * @return The number of AWS resources that were analyzed by the Trusted Advisor check.
+     * @return The number of Amazon Web Services resources that were analyzed by the Trusted Advisor check.
      */
 
     public Long getResourcesProcessed() {
@@ -81,11 +82,11 @@ public class TrustedAdvisorResourcesSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The number of AWS resources that were analyzed by the Trusted Advisor check.
+     * The number of Amazon Web Services resources that were analyzed by the Trusted Advisor check.
      * </p>
      * 
      * @param resourcesProcessed
-     *        The number of AWS resources that were analyzed by the Trusted Advisor check.
+     *        The number of Amazon Web Services resources that were analyzed by the Trusted Advisor check.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -96,11 +97,11 @@ public class TrustedAdvisorResourcesSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The number of AWS resources that were flagged (listed) by the Trusted Advisor check.
+     * The number of Amazon Web Services resources that were flagged (listed) by the Trusted Advisor check.
      * </p>
      * 
      * @param resourcesFlagged
-     *        The number of AWS resources that were flagged (listed) by the Trusted Advisor check.
+     *        The number of Amazon Web Services resources that were flagged (listed) by the Trusted Advisor check.
      */
 
     public void setResourcesFlagged(Long resourcesFlagged) {
@@ -109,10 +110,10 @@ public class TrustedAdvisorResourcesSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The number of AWS resources that were flagged (listed) by the Trusted Advisor check.
+     * The number of Amazon Web Services resources that were flagged (listed) by the Trusted Advisor check.
      * </p>
      * 
-     * @return The number of AWS resources that were flagged (listed) by the Trusted Advisor check.
+     * @return The number of Amazon Web Services resources that were flagged (listed) by the Trusted Advisor check.
      */
 
     public Long getResourcesFlagged() {
@@ -121,11 +122,11 @@ public class TrustedAdvisorResourcesSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The number of AWS resources that were flagged (listed) by the Trusted Advisor check.
+     * The number of Amazon Web Services resources that were flagged (listed) by the Trusted Advisor check.
      * </p>
      * 
      * @param resourcesFlagged
-     *        The number of AWS resources that were flagged (listed) by the Trusted Advisor check.
+     *        The number of Amazon Web Services resources that were flagged (listed) by the Trusted Advisor check.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -136,11 +137,12 @@ public class TrustedAdvisorResourcesSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The number of AWS resources ignored by Trusted Advisor because information was unavailable.
+     * The number of Amazon Web Services resources ignored by Trusted Advisor because information was unavailable.
      * </p>
      * 
      * @param resourcesIgnored
-     *        The number of AWS resources ignored by Trusted Advisor because information was unavailable.
+     *        The number of Amazon Web Services resources ignored by Trusted Advisor because information was
+     *        unavailable.
      */
 
     public void setResourcesIgnored(Long resourcesIgnored) {
@@ -149,10 +151,11 @@ public class TrustedAdvisorResourcesSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The number of AWS resources ignored by Trusted Advisor because information was unavailable.
+     * The number of Amazon Web Services resources ignored by Trusted Advisor because information was unavailable.
      * </p>
      * 
-     * @return The number of AWS resources ignored by Trusted Advisor because information was unavailable.
+     * @return The number of Amazon Web Services resources ignored by Trusted Advisor because information was
+     *         unavailable.
      */
 
     public Long getResourcesIgnored() {
@@ -161,11 +164,12 @@ public class TrustedAdvisorResourcesSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The number of AWS resources ignored by Trusted Advisor because information was unavailable.
+     * The number of Amazon Web Services resources ignored by Trusted Advisor because information was unavailable.
      * </p>
      * 
      * @param resourcesIgnored
-     *        The number of AWS resources ignored by Trusted Advisor because information was unavailable.
+     *        The number of Amazon Web Services resources ignored by Trusted Advisor because information was
+     *        unavailable.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -176,11 +180,13 @@ public class TrustedAdvisorResourcesSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The number of AWS resources ignored by Trusted Advisor because they were marked as suppressed by the user.
+     * The number of Amazon Web Services resources ignored by Trusted Advisor because they were marked as suppressed by
+     * the user.
      * </p>
      * 
      * @param resourcesSuppressed
-     *        The number of AWS resources ignored by Trusted Advisor because they were marked as suppressed by the user.
+     *        The number of Amazon Web Services resources ignored by Trusted Advisor because they were marked as
+     *        suppressed by the user.
      */
 
     public void setResourcesSuppressed(Long resourcesSuppressed) {
@@ -189,11 +195,12 @@ public class TrustedAdvisorResourcesSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The number of AWS resources ignored by Trusted Advisor because they were marked as suppressed by the user.
+     * The number of Amazon Web Services resources ignored by Trusted Advisor because they were marked as suppressed by
+     * the user.
      * </p>
      * 
-     * @return The number of AWS resources ignored by Trusted Advisor because they were marked as suppressed by the
-     *         user.
+     * @return The number of Amazon Web Services resources ignored by Trusted Advisor because they were marked as
+     *         suppressed by the user.
      */
 
     public Long getResourcesSuppressed() {
@@ -202,11 +209,13 @@ public class TrustedAdvisorResourcesSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The number of AWS resources ignored by Trusted Advisor because they were marked as suppressed by the user.
+     * The number of Amazon Web Services resources ignored by Trusted Advisor because they were marked as suppressed by
+     * the user.
      * </p>
      * 
      * @param resourcesSuppressed
-     *        The number of AWS resources ignored by Trusted Advisor because they were marked as suppressed by the user.
+     *        The number of Amazon Web Services resources ignored by Trusted Advisor because they were marked as
+     *        suppressed by the user.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

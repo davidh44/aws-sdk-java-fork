@@ -28,7 +28,11 @@ public class CreateOutpostRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String name;
 
     private String description;
-
+    /**
+     * <p>
+     * The ID or the Amazon Resource Name (ARN) of the site.
+     * </p>
+     */
     private String siteId;
 
     private String availabilityZone;
@@ -100,7 +104,12 @@ public class CreateOutpostRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The ID or the Amazon Resource Name (ARN) of the site.
+     * </p>
+     * 
      * @param siteId
+     *        The ID or the Amazon Resource Name (ARN) of the site.
      */
 
     public void setSiteId(String siteId) {
@@ -108,7 +117,11 @@ public class CreateOutpostRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * @return
+     * <p>
+     * The ID or the Amazon Resource Name (ARN) of the site.
+     * </p>
+     * 
+     * @return The ID or the Amazon Resource Name (ARN) of the site.
      */
 
     public String getSiteId() {
@@ -116,7 +129,12 @@ public class CreateOutpostRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The ID or the Amazon Resource Name (ARN) of the site.
+     * </p>
+     * 
      * @param siteId
+     *        The ID or the Amazon Resource Name (ARN) of the site.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

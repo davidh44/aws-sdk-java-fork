@@ -27,20 +27,20 @@ public class StartEntitiesDetectionV2JobRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Specifies the format and location of the input data for the job.
+     * The input configuration that specifies the format and location of the input data for the job.
      * </p>
      */
     private InputDataConfig inputDataConfig;
     /**
      * <p>
-     * Specifies where to send the output files.
+     * The output configuration that specifies where to send the output files.
      * </p>
      */
     private OutputDataConfig outputDataConfig;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * Medical read access to your input data. For more information, see <a href=
+     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Comprehend
+     * Medical; read access to your input data. For more information, see <a href=
      * "https://docs.aws.amazon.com/comprehend/latest/dg/access-control-managing-permissions-med.html#auth-role-permissions-med"
      * > Role-Based Permissions Required for Asynchronous Operations</a>.
      * </p>
@@ -54,8 +54,8 @@ public class StartEntitiesDetectionV2JobRequest extends com.amazonaws.AmazonWebS
     private String jobName;
     /**
      * <p>
-     * A unique identifier for the request. If you don't set the client request token, Amazon Comprehend Medical
-     * generates one.
+     * A unique identifier for the request. If you don't set the client request token, Comprehend Medical; generates one
+     * for you.
      * </p>
      */
     private String clientRequestToken;
@@ -68,18 +68,19 @@ public class StartEntitiesDetectionV2JobRequest extends com.amazonaws.AmazonWebS
     private String kMSKey;
     /**
      * <p>
-     * The language of the input documents. All documents must be in the same language.
+     * The language of the input documents. All documents must be in the same language. Comprehend Medical; processes
+     * files in US English (en).
      * </p>
      */
     private String languageCode;
 
     /**
      * <p>
-     * Specifies the format and location of the input data for the job.
+     * The input configuration that specifies the format and location of the input data for the job.
      * </p>
      * 
      * @param inputDataConfig
-     *        Specifies the format and location of the input data for the job.
+     *        The input configuration that specifies the format and location of the input data for the job.
      */
 
     public void setInputDataConfig(InputDataConfig inputDataConfig) {
@@ -88,10 +89,10 @@ public class StartEntitiesDetectionV2JobRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Specifies the format and location of the input data for the job.
+     * The input configuration that specifies the format and location of the input data for the job.
      * </p>
      * 
-     * @return Specifies the format and location of the input data for the job.
+     * @return The input configuration that specifies the format and location of the input data for the job.
      */
 
     public InputDataConfig getInputDataConfig() {
@@ -100,11 +101,11 @@ public class StartEntitiesDetectionV2JobRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Specifies the format and location of the input data for the job.
+     * The input configuration that specifies the format and location of the input data for the job.
      * </p>
      * 
      * @param inputDataConfig
-     *        Specifies the format and location of the input data for the job.
+     *        The input configuration that specifies the format and location of the input data for the job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -115,11 +116,11 @@ public class StartEntitiesDetectionV2JobRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Specifies where to send the output files.
+     * The output configuration that specifies where to send the output files.
      * </p>
      * 
      * @param outputDataConfig
-     *        Specifies where to send the output files.
+     *        The output configuration that specifies where to send the output files.
      */
 
     public void setOutputDataConfig(OutputDataConfig outputDataConfig) {
@@ -128,10 +129,10 @@ public class StartEntitiesDetectionV2JobRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Specifies where to send the output files.
+     * The output configuration that specifies where to send the output files.
      * </p>
      * 
-     * @return Specifies where to send the output files.
+     * @return The output configuration that specifies where to send the output files.
      */
 
     public OutputDataConfig getOutputDataConfig() {
@@ -140,11 +141,11 @@ public class StartEntitiesDetectionV2JobRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Specifies where to send the output files.
+     * The output configuration that specifies where to send the output files.
      * </p>
      * 
      * @param outputDataConfig
-     *        Specifies where to send the output files.
+     *        The output configuration that specifies where to send the output files.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -155,15 +156,15 @@ public class StartEntitiesDetectionV2JobRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * Medical read access to your input data. For more information, see <a href=
+     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Comprehend
+     * Medical; read access to your input data. For more information, see <a href=
      * "https://docs.aws.amazon.com/comprehend/latest/dg/access-control-managing-permissions-med.html#auth-role-permissions-med"
      * > Role-Based Permissions Required for Asynchronous Operations</a>.
      * </p>
      * 
      * @param dataAccessRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon
-     *        Comprehend Medical read access to your input data. For more information, see <a href=
+     *        The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Comprehend
+     *        Medical; read access to your input data. For more information, see <a href=
      *        "https://docs.aws.amazon.com/comprehend/latest/dg/access-control-managing-permissions-med.html#auth-role-permissions-med"
      *        > Role-Based Permissions Required for Asynchronous Operations</a>.
      */
@@ -174,14 +175,14 @@ public class StartEntitiesDetectionV2JobRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * Medical read access to your input data. For more information, see <a href=
+     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Comprehend
+     * Medical; read access to your input data. For more information, see <a href=
      * "https://docs.aws.amazon.com/comprehend/latest/dg/access-control-managing-permissions-med.html#auth-role-permissions-med"
      * > Role-Based Permissions Required for Asynchronous Operations</a>.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon
-     *         Comprehend Medical read access to your input data. For more information, see <a href=
+     * @return The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants
+     *         Comprehend Medical; read access to your input data. For more information, see <a href=
      *         "https://docs.aws.amazon.com/comprehend/latest/dg/access-control-managing-permissions-med.html#auth-role-permissions-med"
      *         > Role-Based Permissions Required for Asynchronous Operations</a>.
      */
@@ -192,15 +193,15 @@ public class StartEntitiesDetectionV2JobRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * Medical read access to your input data. For more information, see <a href=
+     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Comprehend
+     * Medical; read access to your input data. For more information, see <a href=
      * "https://docs.aws.amazon.com/comprehend/latest/dg/access-control-managing-permissions-med.html#auth-role-permissions-med"
      * > Role-Based Permissions Required for Asynchronous Operations</a>.
      * </p>
      * 
      * @param dataAccessRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon
-     *        Comprehend Medical read access to your input data. For more information, see <a href=
+     *        The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Comprehend
+     *        Medical; read access to your input data. For more information, see <a href=
      *        "https://docs.aws.amazon.com/comprehend/latest/dg/access-control-managing-permissions-med.html#auth-role-permissions-med"
      *        > Role-Based Permissions Required for Asynchronous Operations</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -253,13 +254,13 @@ public class StartEntitiesDetectionV2JobRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * A unique identifier for the request. If you don't set the client request token, Amazon Comprehend Medical
-     * generates one.
+     * A unique identifier for the request. If you don't set the client request token, Comprehend Medical; generates one
+     * for you.
      * </p>
      * 
      * @param clientRequestToken
-     *        A unique identifier for the request. If you don't set the client request token, Amazon Comprehend Medical
-     *        generates one.
+     *        A unique identifier for the request. If you don't set the client request token, Comprehend Medical;
+     *        generates one for you.
      */
 
     public void setClientRequestToken(String clientRequestToken) {
@@ -268,12 +269,12 @@ public class StartEntitiesDetectionV2JobRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * A unique identifier for the request. If you don't set the client request token, Amazon Comprehend Medical
-     * generates one.
+     * A unique identifier for the request. If you don't set the client request token, Comprehend Medical; generates one
+     * for you.
      * </p>
      * 
-     * @return A unique identifier for the request. If you don't set the client request token, Amazon Comprehend Medical
-     *         generates one.
+     * @return A unique identifier for the request. If you don't set the client request token, Comprehend Medical;
+     *         generates one for you.
      */
 
     public String getClientRequestToken() {
@@ -282,13 +283,13 @@ public class StartEntitiesDetectionV2JobRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * A unique identifier for the request. If you don't set the client request token, Amazon Comprehend Medical
-     * generates one.
+     * A unique identifier for the request. If you don't set the client request token, Comprehend Medical; generates one
+     * for you.
      * </p>
      * 
      * @param clientRequestToken
-     *        A unique identifier for the request. If you don't set the client request token, Amazon Comprehend Medical
-     *        generates one.
+     *        A unique identifier for the request. If you don't set the client request token, Comprehend Medical;
+     *        generates one for you.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -345,11 +346,13 @@ public class StartEntitiesDetectionV2JobRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The language of the input documents. All documents must be in the same language.
+     * The language of the input documents. All documents must be in the same language. Comprehend Medical; processes
+     * files in US English (en).
      * </p>
      * 
      * @param languageCode
-     *        The language of the input documents. All documents must be in the same language.
+     *        The language of the input documents. All documents must be in the same language. Comprehend Medical;
+     *        processes files in US English (en).
      * @see LanguageCode
      */
 
@@ -359,10 +362,12 @@ public class StartEntitiesDetectionV2JobRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The language of the input documents. All documents must be in the same language.
+     * The language of the input documents. All documents must be in the same language. Comprehend Medical; processes
+     * files in US English (en).
      * </p>
      * 
-     * @return The language of the input documents. All documents must be in the same language.
+     * @return The language of the input documents. All documents must be in the same language. Comprehend Medical;
+     *         processes files in US English (en).
      * @see LanguageCode
      */
 
@@ -372,11 +377,13 @@ public class StartEntitiesDetectionV2JobRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The language of the input documents. All documents must be in the same language.
+     * The language of the input documents. All documents must be in the same language. Comprehend Medical; processes
+     * files in US English (en).
      * </p>
      * 
      * @param languageCode
-     *        The language of the input documents. All documents must be in the same language.
+     *        The language of the input documents. All documents must be in the same language. Comprehend Medical;
+     *        processes files in US English (en).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
@@ -388,11 +395,13 @@ public class StartEntitiesDetectionV2JobRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The language of the input documents. All documents must be in the same language.
+     * The language of the input documents. All documents must be in the same language. Comprehend Medical; processes
+     * files in US English (en).
      * </p>
      * 
      * @param languageCode
-     *        The language of the input documents. All documents must be in the same language.
+     *        The language of the input documents. All documents must be in the same language. Comprehend Medical;
+     *        processes files in US English (en).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */

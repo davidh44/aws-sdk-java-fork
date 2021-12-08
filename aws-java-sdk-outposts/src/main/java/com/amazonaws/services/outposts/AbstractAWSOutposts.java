@@ -123,6 +123,11 @@ public class AbstractAWSOutposts implements AWSOutposts {
     }
 
     @Override
+    public UpdateOutpostResult updateOutpost(UpdateOutpostRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateSiteResult updateSite(UpdateSiteRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

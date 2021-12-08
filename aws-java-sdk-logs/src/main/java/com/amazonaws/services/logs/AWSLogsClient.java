@@ -2744,6 +2744,8 @@ public class AWSLogsClient extends AmazonWebServiceClient implements AWSLogs {
      * @return Result of the PutQueryDefinition operation returned by the service.
      * @throws InvalidParameterException
      *         A parameter is specified incorrectly.
+     * @throws LimitExceededException
+     *         You have reached the maximum number of resources that can be created.
      * @throws ResourceNotFoundException
      *         The specified resource does not exist.
      * @throws ServiceUnavailableException

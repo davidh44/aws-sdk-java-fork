@@ -80,6 +80,19 @@ public class AbstractAWSComprehendMedicalAsync extends AbstractAWSComprehendMedi
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeSNOMEDCTInferenceJobResult> describeSNOMEDCTInferenceJobAsync(DescribeSNOMEDCTInferenceJobRequest request) {
+
+        return describeSNOMEDCTInferenceJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeSNOMEDCTInferenceJobResult> describeSNOMEDCTInferenceJobAsync(DescribeSNOMEDCTInferenceJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeSNOMEDCTInferenceJobRequest, DescribeSNOMEDCTInferenceJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     @Deprecated
     public java.util.concurrent.Future<DetectEntitiesResult> detectEntitiesAsync(DetectEntitiesRequest request) {
 
@@ -147,6 +160,19 @@ public class AbstractAWSComprehendMedicalAsync extends AbstractAWSComprehendMedi
     }
 
     @Override
+    public java.util.concurrent.Future<InferSNOMEDCTResult> inferSNOMEDCTAsync(InferSNOMEDCTRequest request) {
+
+        return inferSNOMEDCTAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<InferSNOMEDCTResult> inferSNOMEDCTAsync(InferSNOMEDCTRequest request,
+            com.amazonaws.handlers.AsyncHandler<InferSNOMEDCTRequest, InferSNOMEDCTResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListEntitiesDetectionV2JobsResult> listEntitiesDetectionV2JobsAsync(ListEntitiesDetectionV2JobsRequest request) {
 
         return listEntitiesDetectionV2JobsAsync(request, null);
@@ -194,6 +220,19 @@ public class AbstractAWSComprehendMedicalAsync extends AbstractAWSComprehendMedi
     @Override
     public java.util.concurrent.Future<ListRxNormInferenceJobsResult> listRxNormInferenceJobsAsync(ListRxNormInferenceJobsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListRxNormInferenceJobsRequest, ListRxNormInferenceJobsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSNOMEDCTInferenceJobsResult> listSNOMEDCTInferenceJobsAsync(ListSNOMEDCTInferenceJobsRequest request) {
+
+        return listSNOMEDCTInferenceJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSNOMEDCTInferenceJobsResult> listSNOMEDCTInferenceJobsAsync(ListSNOMEDCTInferenceJobsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListSNOMEDCTInferenceJobsRequest, ListSNOMEDCTInferenceJobsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -251,6 +290,19 @@ public class AbstractAWSComprehendMedicalAsync extends AbstractAWSComprehendMedi
     }
 
     @Override
+    public java.util.concurrent.Future<StartSNOMEDCTInferenceJobResult> startSNOMEDCTInferenceJobAsync(StartSNOMEDCTInferenceJobRequest request) {
+
+        return startSNOMEDCTInferenceJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartSNOMEDCTInferenceJobResult> startSNOMEDCTInferenceJobAsync(StartSNOMEDCTInferenceJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartSNOMEDCTInferenceJobRequest, StartSNOMEDCTInferenceJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<StopEntitiesDetectionV2JobResult> stopEntitiesDetectionV2JobAsync(StopEntitiesDetectionV2JobRequest request) {
 
         return stopEntitiesDetectionV2JobAsync(request, null);
@@ -298,6 +350,19 @@ public class AbstractAWSComprehendMedicalAsync extends AbstractAWSComprehendMedi
     @Override
     public java.util.concurrent.Future<StopRxNormInferenceJobResult> stopRxNormInferenceJobAsync(StopRxNormInferenceJobRequest request,
             com.amazonaws.handlers.AsyncHandler<StopRxNormInferenceJobRequest, StopRxNormInferenceJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopSNOMEDCTInferenceJobResult> stopSNOMEDCTInferenceJobAsync(StopSNOMEDCTInferenceJobRequest request) {
+
+        return stopSNOMEDCTInferenceJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopSNOMEDCTInferenceJobResult> stopSNOMEDCTInferenceJobAsync(StopSNOMEDCTInferenceJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<StopSNOMEDCTInferenceJobRequest, StopSNOMEDCTInferenceJobResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

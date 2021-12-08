@@ -461,6 +461,29 @@ public interface AWSOutposts {
 
     /**
      * <p>
+     * Updates an Outpost.
+     * </p>
+     * 
+     * @param updateOutpostRequest
+     * @return Result of the UpdateOutpost operation returned by the service.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws ConflictException
+     *         Updating or deleting this resource can cause an inconsistent state.
+     * @throws NotFoundException
+     *         The specified request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have permission to perform this operation.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSOutposts.UpdateOutpost
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/UpdateOutpost" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateOutpostResult updateOutpost(UpdateOutpostRequest updateOutpostRequest);
+
+    /**
+     * <p>
      * Updates the site.
      * </p>
      * 

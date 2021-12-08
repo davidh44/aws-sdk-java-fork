@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An attribute that we extracted, but were unable to relate to an entity.
+ * An attribute that was extracted, but Comprehend Medical; was unable to relate to an entity.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/UnmappedAttribute"
@@ -30,8 +30,8 @@ public class UnmappedAttribute implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The type of the attribute, could be one of the following values: "MEDICATION", "MEDICAL_CONDITION", "ANATOMY",
-     * "TEST_AND_TREATMENT_PROCEDURE" or "PROTECTED_HEALTH_INFORMATION".
+     * The type of the unmapped attribute, could be one of the following values: "MEDICATION", "MEDICAL_CONDITION",
+     * "ANATOMY", "TEST_AND_TREATMENT_PROCEDURE" or "PROTECTED_HEALTH_INFORMATION".
      * </p>
      */
     private String type;
@@ -44,13 +44,13 @@ public class UnmappedAttribute implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The type of the attribute, could be one of the following values: "MEDICATION", "MEDICAL_CONDITION", "ANATOMY",
-     * "TEST_AND_TREATMENT_PROCEDURE" or "PROTECTED_HEALTH_INFORMATION".
+     * The type of the unmapped attribute, could be one of the following values: "MEDICATION", "MEDICAL_CONDITION",
+     * "ANATOMY", "TEST_AND_TREATMENT_PROCEDURE" or "PROTECTED_HEALTH_INFORMATION".
      * </p>
      * 
      * @param type
-     *        The type of the attribute, could be one of the following values: "MEDICATION", "MEDICAL_CONDITION",
-     *        "ANATOMY", "TEST_AND_TREATMENT_PROCEDURE" or "PROTECTED_HEALTH_INFORMATION".
+     *        The type of the unmapped attribute, could be one of the following values: "MEDICATION",
+     *        "MEDICAL_CONDITION", "ANATOMY", "TEST_AND_TREATMENT_PROCEDURE" or "PROTECTED_HEALTH_INFORMATION".
      * @see EntityType
      */
 
@@ -60,12 +60,12 @@ public class UnmappedAttribute implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The type of the attribute, could be one of the following values: "MEDICATION", "MEDICAL_CONDITION", "ANATOMY",
-     * "TEST_AND_TREATMENT_PROCEDURE" or "PROTECTED_HEALTH_INFORMATION".
+     * The type of the unmapped attribute, could be one of the following values: "MEDICATION", "MEDICAL_CONDITION",
+     * "ANATOMY", "TEST_AND_TREATMENT_PROCEDURE" or "PROTECTED_HEALTH_INFORMATION".
      * </p>
      * 
-     * @return The type of the attribute, could be one of the following values: "MEDICATION", "MEDICAL_CONDITION",
-     *         "ANATOMY", "TEST_AND_TREATMENT_PROCEDURE" or "PROTECTED_HEALTH_INFORMATION".
+     * @return The type of the unmapped attribute, could be one of the following values: "MEDICATION",
+     *         "MEDICAL_CONDITION", "ANATOMY", "TEST_AND_TREATMENT_PROCEDURE" or "PROTECTED_HEALTH_INFORMATION".
      * @see EntityType
      */
 
@@ -75,13 +75,13 @@ public class UnmappedAttribute implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The type of the attribute, could be one of the following values: "MEDICATION", "MEDICAL_CONDITION", "ANATOMY",
-     * "TEST_AND_TREATMENT_PROCEDURE" or "PROTECTED_HEALTH_INFORMATION".
+     * The type of the unmapped attribute, could be one of the following values: "MEDICATION", "MEDICAL_CONDITION",
+     * "ANATOMY", "TEST_AND_TREATMENT_PROCEDURE" or "PROTECTED_HEALTH_INFORMATION".
      * </p>
      * 
      * @param type
-     *        The type of the attribute, could be one of the following values: "MEDICATION", "MEDICAL_CONDITION",
-     *        "ANATOMY", "TEST_AND_TREATMENT_PROCEDURE" or "PROTECTED_HEALTH_INFORMATION".
+     *        The type of the unmapped attribute, could be one of the following values: "MEDICATION",
+     *        "MEDICAL_CONDITION", "ANATOMY", "TEST_AND_TREATMENT_PROCEDURE" or "PROTECTED_HEALTH_INFORMATION".
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EntityType
      */
@@ -93,13 +93,13 @@ public class UnmappedAttribute implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The type of the attribute, could be one of the following values: "MEDICATION", "MEDICAL_CONDITION", "ANATOMY",
-     * "TEST_AND_TREATMENT_PROCEDURE" or "PROTECTED_HEALTH_INFORMATION".
+     * The type of the unmapped attribute, could be one of the following values: "MEDICATION", "MEDICAL_CONDITION",
+     * "ANATOMY", "TEST_AND_TREATMENT_PROCEDURE" or "PROTECTED_HEALTH_INFORMATION".
      * </p>
      * 
      * @param type
-     *        The type of the attribute, could be one of the following values: "MEDICATION", "MEDICAL_CONDITION",
-     *        "ANATOMY", "TEST_AND_TREATMENT_PROCEDURE" or "PROTECTED_HEALTH_INFORMATION".
+     *        The type of the unmapped attribute, could be one of the following values: "MEDICATION",
+     *        "MEDICAL_CONDITION", "ANATOMY", "TEST_AND_TREATMENT_PROCEDURE" or "PROTECTED_HEALTH_INFORMATION".
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EntityType
      */

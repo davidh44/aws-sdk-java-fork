@@ -37,13 +37,14 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </li>
  * <li>
  * <p>
- * <b>displayId</b> - The identifier for the case on pages in the AWS Support Center.
+ * <b>displayId</b> - The identifier for the case on pages in the Amazon Web Services Support Center.
  * </p>
  * </li>
  * <li>
  * <p>
- * <b>language</b> - The ISO 639-1 code for the language in which AWS provides support. AWS Support currently supports
- * English ("en") and Japanese ("ja"). Language parameters must be passed explicitly for operations that take them.
+ * <b>language</b> - The ISO 639-1 code for the language in which Amazon Web Services provides support. Amazon Web
+ * Services Support currently supports English ("en") and Japanese ("ja"). Language parameters must be passed explicitly
+ * for operations that take them.
  * </p>
  * </li>
  * <li>
@@ -60,8 +61,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </li>
  * <li>
  * <p>
- * <b>serviceCode</b> - The identifier for the AWS service that corresponds to the service code defined in the call to
- * <a>DescribeServices</a>.
+ * <b>serviceCode</b> - The identifier for the Amazon Web Services service that corresponds to the service code defined
+ * in the call to <a>DescribeServices</a>.
  * </p>
  * </li>
  * <li>
@@ -73,7 +74,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </li>
  * <li>
  * <p>
- * <b>status</b> - The status of the case in the AWS Support Center. Valid values:
+ * <b>status</b> - The status of the case in the Amazon Web Services Support Center. Valid values:
  * </p>
  * <ul>
  * <li>
@@ -140,13 +141,13 @@ public class CaseDetails implements Serializable, Cloneable, StructuredPojo {
     private String caseId;
     /**
      * <p>
-     * The ID displayed for the case in the AWS Support Center. This is a numeric string.
+     * The ID displayed for the case in the Amazon Web Services Support Center. This is a numeric string.
      * </p>
      */
     private String displayId;
     /**
      * <p>
-     * The subject line for the case in the AWS Support Center.
+     * The subject line for the case in the Amazon Web Services Support Center.
      * </p>
      */
     private String subject;
@@ -193,8 +194,8 @@ public class CaseDetails implements Serializable, Cloneable, StructuredPojo {
     private String status;
     /**
      * <p>
-     * The code for the AWS service. You can get a list of codes and the corresponding service names by calling
-     * <a>DescribeServices</a>.
+     * The code for the Amazon Web Services service. You can get a list of codes and the corresponding service names by
+     * calling <a>DescribeServices</a>.
      * </p>
      */
     private String serviceCode;
@@ -218,14 +219,15 @@ public class CaseDetails implements Serializable, Cloneable, StructuredPojo {
     private String submittedBy;
     /**
      * <p>
-     * The time that the case was created in the AWS Support Center.
+     * The time that the case was created in the Amazon Web Services Support Center.
      * </p>
      */
     private String timeCreated;
     /**
      * <p>
-     * The five most recent communications between you and AWS Support Center, including the IDs of any attachments to
-     * the communications. Also includes a <code>nextToken</code> that you can use to retrieve earlier communications.
+     * The five most recent communications between you and Amazon Web Services Support Center, including the IDs of any
+     * attachments to the communications. Also includes a <code>nextToken</code> that you can use to retrieve earlier
+     * communications.
      * </p>
      */
     private RecentCaseCommunications recentCommunications;
@@ -237,8 +239,9 @@ public class CaseDetails implements Serializable, Cloneable, StructuredPojo {
     private com.amazonaws.internal.SdkInternalList<String> ccEmailAddresses;
     /**
      * <p>
-     * The ISO 639-1 code for the language in which AWS provides support. AWS Support currently supports English ("en")
-     * and Japanese ("ja"). Language parameters must be passed explicitly for operations that take them.
+     * The ISO 639-1 code for the language in which Amazon Web Services provides support. Amazon Web Services Support
+     * currently supports English ("en") and Japanese ("ja"). Language parameters must be passed explicitly for
+     * operations that take them.
      * </p>
      */
     private String language;
@@ -291,11 +294,11 @@ public class CaseDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID displayed for the case in the AWS Support Center. This is a numeric string.
+     * The ID displayed for the case in the Amazon Web Services Support Center. This is a numeric string.
      * </p>
      * 
      * @param displayId
-     *        The ID displayed for the case in the AWS Support Center. This is a numeric string.
+     *        The ID displayed for the case in the Amazon Web Services Support Center. This is a numeric string.
      */
 
     public void setDisplayId(String displayId) {
@@ -304,10 +307,10 @@ public class CaseDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID displayed for the case in the AWS Support Center. This is a numeric string.
+     * The ID displayed for the case in the Amazon Web Services Support Center. This is a numeric string.
      * </p>
      * 
-     * @return The ID displayed for the case in the AWS Support Center. This is a numeric string.
+     * @return The ID displayed for the case in the Amazon Web Services Support Center. This is a numeric string.
      */
 
     public String getDisplayId() {
@@ -316,11 +319,11 @@ public class CaseDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID displayed for the case in the AWS Support Center. This is a numeric string.
+     * The ID displayed for the case in the Amazon Web Services Support Center. This is a numeric string.
      * </p>
      * 
      * @param displayId
-     *        The ID displayed for the case in the AWS Support Center. This is a numeric string.
+     *        The ID displayed for the case in the Amazon Web Services Support Center. This is a numeric string.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -331,11 +334,11 @@ public class CaseDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The subject line for the case in the AWS Support Center.
+     * The subject line for the case in the Amazon Web Services Support Center.
      * </p>
      * 
      * @param subject
-     *        The subject line for the case in the AWS Support Center.
+     *        The subject line for the case in the Amazon Web Services Support Center.
      */
 
     public void setSubject(String subject) {
@@ -344,10 +347,10 @@ public class CaseDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The subject line for the case in the AWS Support Center.
+     * The subject line for the case in the Amazon Web Services Support Center.
      * </p>
      * 
-     * @return The subject line for the case in the AWS Support Center.
+     * @return The subject line for the case in the Amazon Web Services Support Center.
      */
 
     public String getSubject() {
@@ -356,11 +359,11 @@ public class CaseDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The subject line for the case in the AWS Support Center.
+     * The subject line for the case in the Amazon Web Services Support Center.
      * </p>
      * 
      * @param subject
-     *        The subject line for the case in the AWS Support Center.
+     *        The subject line for the case in the Amazon Web Services Support Center.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -618,13 +621,13 @@ public class CaseDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The code for the AWS service. You can get a list of codes and the corresponding service names by calling
-     * <a>DescribeServices</a>.
+     * The code for the Amazon Web Services service. You can get a list of codes and the corresponding service names by
+     * calling <a>DescribeServices</a>.
      * </p>
      * 
      * @param serviceCode
-     *        The code for the AWS service. You can get a list of codes and the corresponding service names by calling
-     *        <a>DescribeServices</a>.
+     *        The code for the Amazon Web Services service. You can get a list of codes and the corresponding service
+     *        names by calling <a>DescribeServices</a>.
      */
 
     public void setServiceCode(String serviceCode) {
@@ -633,12 +636,12 @@ public class CaseDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The code for the AWS service. You can get a list of codes and the corresponding service names by calling
-     * <a>DescribeServices</a>.
+     * The code for the Amazon Web Services service. You can get a list of codes and the corresponding service names by
+     * calling <a>DescribeServices</a>.
      * </p>
      * 
-     * @return The code for the AWS service. You can get a list of codes and the corresponding service names by calling
-     *         <a>DescribeServices</a>.
+     * @return The code for the Amazon Web Services service. You can get a list of codes and the corresponding service
+     *         names by calling <a>DescribeServices</a>.
      */
 
     public String getServiceCode() {
@@ -647,13 +650,13 @@ public class CaseDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The code for the AWS service. You can get a list of codes and the corresponding service names by calling
-     * <a>DescribeServices</a>.
+     * The code for the Amazon Web Services service. You can get a list of codes and the corresponding service names by
+     * calling <a>DescribeServices</a>.
      * </p>
      * 
      * @param serviceCode
-     *        The code for the AWS service. You can get a list of codes and the corresponding service names by calling
-     *        <a>DescribeServices</a>.
+     *        The code for the Amazon Web Services service. You can get a list of codes and the corresponding service
+     *        names by calling <a>DescribeServices</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -784,11 +787,11 @@ public class CaseDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time that the case was created in the AWS Support Center.
+     * The time that the case was created in the Amazon Web Services Support Center.
      * </p>
      * 
      * @param timeCreated
-     *        The time that the case was created in the AWS Support Center.
+     *        The time that the case was created in the Amazon Web Services Support Center.
      */
 
     public void setTimeCreated(String timeCreated) {
@@ -797,10 +800,10 @@ public class CaseDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time that the case was created in the AWS Support Center.
+     * The time that the case was created in the Amazon Web Services Support Center.
      * </p>
      * 
-     * @return The time that the case was created in the AWS Support Center.
+     * @return The time that the case was created in the Amazon Web Services Support Center.
      */
 
     public String getTimeCreated() {
@@ -809,11 +812,11 @@ public class CaseDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time that the case was created in the AWS Support Center.
+     * The time that the case was created in the Amazon Web Services Support Center.
      * </p>
      * 
      * @param timeCreated
-     *        The time that the case was created in the AWS Support Center.
+     *        The time that the case was created in the Amazon Web Services Support Center.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -824,14 +827,15 @@ public class CaseDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The five most recent communications between you and AWS Support Center, including the IDs of any attachments to
-     * the communications. Also includes a <code>nextToken</code> that you can use to retrieve earlier communications.
+     * The five most recent communications between you and Amazon Web Services Support Center, including the IDs of any
+     * attachments to the communications. Also includes a <code>nextToken</code> that you can use to retrieve earlier
+     * communications.
      * </p>
      * 
      * @param recentCommunications
-     *        The five most recent communications between you and AWS Support Center, including the IDs of any
-     *        attachments to the communications. Also includes a <code>nextToken</code> that you can use to retrieve
-     *        earlier communications.
+     *        The five most recent communications between you and Amazon Web Services Support Center, including the IDs
+     *        of any attachments to the communications. Also includes a <code>nextToken</code> that you can use to
+     *        retrieve earlier communications.
      */
 
     public void setRecentCommunications(RecentCaseCommunications recentCommunications) {
@@ -840,13 +844,14 @@ public class CaseDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The five most recent communications between you and AWS Support Center, including the IDs of any attachments to
-     * the communications. Also includes a <code>nextToken</code> that you can use to retrieve earlier communications.
+     * The five most recent communications between you and Amazon Web Services Support Center, including the IDs of any
+     * attachments to the communications. Also includes a <code>nextToken</code> that you can use to retrieve earlier
+     * communications.
      * </p>
      * 
-     * @return The five most recent communications between you and AWS Support Center, including the IDs of any
-     *         attachments to the communications. Also includes a <code>nextToken</code> that you can use to retrieve
-     *         earlier communications.
+     * @return The five most recent communications between you and Amazon Web Services Support Center, including the IDs
+     *         of any attachments to the communications. Also includes a <code>nextToken</code> that you can use to
+     *         retrieve earlier communications.
      */
 
     public RecentCaseCommunications getRecentCommunications() {
@@ -855,14 +860,15 @@ public class CaseDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The five most recent communications between you and AWS Support Center, including the IDs of any attachments to
-     * the communications. Also includes a <code>nextToken</code> that you can use to retrieve earlier communications.
+     * The five most recent communications between you and Amazon Web Services Support Center, including the IDs of any
+     * attachments to the communications. Also includes a <code>nextToken</code> that you can use to retrieve earlier
+     * communications.
      * </p>
      * 
      * @param recentCommunications
-     *        The five most recent communications between you and AWS Support Center, including the IDs of any
-     *        attachments to the communications. Also includes a <code>nextToken</code> that you can use to retrieve
-     *        earlier communications.
+     *        The five most recent communications between you and Amazon Web Services Support Center, including the IDs
+     *        of any attachments to the communications. Also includes a <code>nextToken</code> that you can use to
+     *        retrieve earlier communications.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -946,13 +952,15 @@ public class CaseDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ISO 639-1 code for the language in which AWS provides support. AWS Support currently supports English ("en")
-     * and Japanese ("ja"). Language parameters must be passed explicitly for operations that take them.
+     * The ISO 639-1 code for the language in which Amazon Web Services provides support. Amazon Web Services Support
+     * currently supports English ("en") and Japanese ("ja"). Language parameters must be passed explicitly for
+     * operations that take them.
      * </p>
      * 
      * @param language
-     *        The ISO 639-1 code for the language in which AWS provides support. AWS Support currently supports English
-     *        ("en") and Japanese ("ja"). Language parameters must be passed explicitly for operations that take them.
+     *        The ISO 639-1 code for the language in which Amazon Web Services provides support. Amazon Web Services
+     *        Support currently supports English ("en") and Japanese ("ja"). Language parameters must be passed
+     *        explicitly for operations that take them.
      */
 
     public void setLanguage(String language) {
@@ -961,12 +969,14 @@ public class CaseDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ISO 639-1 code for the language in which AWS provides support. AWS Support currently supports English ("en")
-     * and Japanese ("ja"). Language parameters must be passed explicitly for operations that take them.
+     * The ISO 639-1 code for the language in which Amazon Web Services provides support. Amazon Web Services Support
+     * currently supports English ("en") and Japanese ("ja"). Language parameters must be passed explicitly for
+     * operations that take them.
      * </p>
      * 
-     * @return The ISO 639-1 code for the language in which AWS provides support. AWS Support currently supports English
-     *         ("en") and Japanese ("ja"). Language parameters must be passed explicitly for operations that take them.
+     * @return The ISO 639-1 code for the language in which Amazon Web Services provides support. Amazon Web Services
+     *         Support currently supports English ("en") and Japanese ("ja"). Language parameters must be passed
+     *         explicitly for operations that take them.
      */
 
     public String getLanguage() {
@@ -975,13 +985,15 @@ public class CaseDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ISO 639-1 code for the language in which AWS provides support. AWS Support currently supports English ("en")
-     * and Japanese ("ja"). Language parameters must be passed explicitly for operations that take them.
+     * The ISO 639-1 code for the language in which Amazon Web Services provides support. Amazon Web Services Support
+     * currently supports English ("en") and Japanese ("ja"). Language parameters must be passed explicitly for
+     * operations that take them.
      * </p>
      * 
      * @param language
-     *        The ISO 639-1 code for the language in which AWS provides support. AWS Support currently supports English
-     *        ("en") and Japanese ("ja"). Language parameters must be passed explicitly for operations that take them.
+     *        The ISO 639-1 code for the language in which Amazon Web Services provides support. Amazon Web Services
+     *        Support currently supports English ("en") and Japanese ("ja"). Language parameters must be passed
+     *        explicitly for operations that take them.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

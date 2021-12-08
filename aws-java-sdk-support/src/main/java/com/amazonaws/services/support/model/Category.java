@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * A JSON-formatted name/value pair that represents the category name and category code of the problem, selected from
- * the <a>DescribeServices</a> response for each AWS service.
+ * the <a>DescribeServices</a> response for each Amazon Web Services service.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/support-2013-04-15/Category" target="_top">AWS API

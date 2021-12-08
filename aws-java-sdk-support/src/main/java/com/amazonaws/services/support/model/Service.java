@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about an AWS service returned by the <a>DescribeServices</a> operation.
+ * Information about an Amazon Web Services service returned by the <a>DescribeServices</a> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/support-2013-04-15/Service" target="_top">AWS API
@@ -30,34 +30,36 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The code for an AWS service returned by the <a>DescribeServices</a> response. The <code>name</code> element
-     * contains the corresponding friendly name.
+     * The code for an Amazon Web Services service returned by the <a>DescribeServices</a> response. The
+     * <code>name</code> element contains the corresponding friendly name.
      * </p>
      */
     private String code;
     /**
      * <p>
-     * The friendly name for an AWS service. The <code>code</code> element contains the corresponding code.
+     * The friendly name for an Amazon Web Services service. The <code>code</code> element contains the corresponding
+     * code.
      * </p>
      */
     private String name;
     /**
      * <p>
      * A list of categories that describe the type of support issue a case describes. Categories consist of a category
-     * name and a category code. Category names and codes are passed to AWS Support when you call <a>CreateCase</a>.
+     * name and a category code. Category names and codes are passed to Amazon Web Services Support when you call
+     * <a>CreateCase</a>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Category> categories;
 
     /**
      * <p>
-     * The code for an AWS service returned by the <a>DescribeServices</a> response. The <code>name</code> element
-     * contains the corresponding friendly name.
+     * The code for an Amazon Web Services service returned by the <a>DescribeServices</a> response. The
+     * <code>name</code> element contains the corresponding friendly name.
      * </p>
      * 
      * @param code
-     *        The code for an AWS service returned by the <a>DescribeServices</a> response. The <code>name</code>
-     *        element contains the corresponding friendly name.
+     *        The code for an Amazon Web Services service returned by the <a>DescribeServices</a> response. The
+     *        <code>name</code> element contains the corresponding friendly name.
      */
 
     public void setCode(String code) {
@@ -66,12 +68,12 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The code for an AWS service returned by the <a>DescribeServices</a> response. The <code>name</code> element
-     * contains the corresponding friendly name.
+     * The code for an Amazon Web Services service returned by the <a>DescribeServices</a> response. The
+     * <code>name</code> element contains the corresponding friendly name.
      * </p>
      * 
-     * @return The code for an AWS service returned by the <a>DescribeServices</a> response. The <code>name</code>
-     *         element contains the corresponding friendly name.
+     * @return The code for an Amazon Web Services service returned by the <a>DescribeServices</a> response. The
+     *         <code>name</code> element contains the corresponding friendly name.
      */
 
     public String getCode() {
@@ -80,13 +82,13 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The code for an AWS service returned by the <a>DescribeServices</a> response. The <code>name</code> element
-     * contains the corresponding friendly name.
+     * The code for an Amazon Web Services service returned by the <a>DescribeServices</a> response. The
+     * <code>name</code> element contains the corresponding friendly name.
      * </p>
      * 
      * @param code
-     *        The code for an AWS service returned by the <a>DescribeServices</a> response. The <code>name</code>
-     *        element contains the corresponding friendly name.
+     *        The code for an Amazon Web Services service returned by the <a>DescribeServices</a> response. The
+     *        <code>name</code> element contains the corresponding friendly name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -97,11 +99,13 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The friendly name for an AWS service. The <code>code</code> element contains the corresponding code.
+     * The friendly name for an Amazon Web Services service. The <code>code</code> element contains the corresponding
+     * code.
      * </p>
      * 
      * @param name
-     *        The friendly name for an AWS service. The <code>code</code> element contains the corresponding code.
+     *        The friendly name for an Amazon Web Services service. The <code>code</code> element contains the
+     *        corresponding code.
      */
 
     public void setName(String name) {
@@ -110,10 +114,12 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The friendly name for an AWS service. The <code>code</code> element contains the corresponding code.
+     * The friendly name for an Amazon Web Services service. The <code>code</code> element contains the corresponding
+     * code.
      * </p>
      * 
-     * @return The friendly name for an AWS service. The <code>code</code> element contains the corresponding code.
+     * @return The friendly name for an Amazon Web Services service. The <code>code</code> element contains the
+     *         corresponding code.
      */
 
     public String getName() {
@@ -122,11 +128,13 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The friendly name for an AWS service. The <code>code</code> element contains the corresponding code.
+     * The friendly name for an Amazon Web Services service. The <code>code</code> element contains the corresponding
+     * code.
      * </p>
      * 
      * @param name
-     *        The friendly name for an AWS service. The <code>code</code> element contains the corresponding code.
+     *        The friendly name for an Amazon Web Services service. The <code>code</code> element contains the
+     *        corresponding code.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -138,12 +146,13 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A list of categories that describe the type of support issue a case describes. Categories consist of a category
-     * name and a category code. Category names and codes are passed to AWS Support when you call <a>CreateCase</a>.
+     * name and a category code. Category names and codes are passed to Amazon Web Services Support when you call
+     * <a>CreateCase</a>.
      * </p>
      * 
      * @return A list of categories that describe the type of support issue a case describes. Categories consist of a
-     *         category name and a category code. Category names and codes are passed to AWS Support when you call
-     *         <a>CreateCase</a>.
+     *         category name and a category code. Category names and codes are passed to Amazon Web Services Support
+     *         when you call <a>CreateCase</a>.
      */
 
     public java.util.List<Category> getCategories() {
@@ -156,13 +165,14 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A list of categories that describe the type of support issue a case describes. Categories consist of a category
-     * name and a category code. Category names and codes are passed to AWS Support when you call <a>CreateCase</a>.
+     * name and a category code. Category names and codes are passed to Amazon Web Services Support when you call
+     * <a>CreateCase</a>.
      * </p>
      * 
      * @param categories
      *        A list of categories that describe the type of support issue a case describes. Categories consist of a
-     *        category name and a category code. Category names and codes are passed to AWS Support when you call
-     *        <a>CreateCase</a>.
+     *        category name and a category code. Category names and codes are passed to Amazon Web Services Support when
+     *        you call <a>CreateCase</a>.
      */
 
     public void setCategories(java.util.Collection<Category> categories) {
@@ -177,7 +187,8 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A list of categories that describe the type of support issue a case describes. Categories consist of a category
-     * name and a category code. Category names and codes are passed to AWS Support when you call <a>CreateCase</a>.
+     * name and a category code. Category names and codes are passed to Amazon Web Services Support when you call
+     * <a>CreateCase</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -187,8 +198,8 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param categories
      *        A list of categories that describe the type of support issue a case describes. Categories consist of a
-     *        category name and a category code. Category names and codes are passed to AWS Support when you call
-     *        <a>CreateCase</a>.
+     *        category name and a category code. Category names and codes are passed to Amazon Web Services Support when
+     *        you call <a>CreateCase</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -205,13 +216,14 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A list of categories that describe the type of support issue a case describes. Categories consist of a category
-     * name and a category code. Category names and codes are passed to AWS Support when you call <a>CreateCase</a>.
+     * name and a category code. Category names and codes are passed to Amazon Web Services Support when you call
+     * <a>CreateCase</a>.
      * </p>
      * 
      * @param categories
      *        A list of categories that describe the type of support issue a case describes. Categories consist of a
-     *        category name and a category code. Category names and codes are passed to AWS Support when you call
-     *        <a>CreateCase</a>.
+     *        category name and a category code. Category names and codes are passed to Amazon Web Services Support when
+     *        you call <a>CreateCase</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

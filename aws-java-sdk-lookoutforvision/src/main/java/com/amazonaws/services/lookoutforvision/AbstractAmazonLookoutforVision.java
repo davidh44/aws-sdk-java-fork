@@ -68,6 +68,11 @@ public class AbstractAmazonLookoutforVision implements AmazonLookoutforVision {
     }
 
     @Override
+    public DescribeModelPackagingJobResult describeModelPackagingJob(DescribeModelPackagingJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeProjectResult describeProject(DescribeProjectRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -79,6 +84,11 @@ public class AbstractAmazonLookoutforVision implements AmazonLookoutforVision {
 
     @Override
     public ListDatasetEntriesResult listDatasetEntries(ListDatasetEntriesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListModelPackagingJobsResult listModelPackagingJobs(ListModelPackagingJobsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -99,6 +109,11 @@ public class AbstractAmazonLookoutforVision implements AmazonLookoutforVision {
 
     @Override
     public StartModelResult startModel(StartModelRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartModelPackagingJobResult startModelPackagingJob(StartModelPackagingJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

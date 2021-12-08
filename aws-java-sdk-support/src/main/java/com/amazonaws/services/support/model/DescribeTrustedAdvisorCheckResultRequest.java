@@ -34,8 +34,9 @@ public class DescribeTrustedAdvisorCheckResultRequest extends com.amazonaws.Amaz
     private String checkId;
     /**
      * <p>
-     * The ISO 639-1 code for the language in which AWS provides support. AWS Support currently supports English ("en")
-     * and Japanese ("ja"). Language parameters must be passed explicitly for operations that take them.
+     * The ISO 639-1 code for the language in which Amazon Web Services provides support. Amazon Web Services Support
+     * currently supports English ("en") and Japanese ("ja"). Language parameters must be passed explicitly for
+     * operations that take them.
      * </p>
      */
     private String language;
@@ -82,13 +83,15 @@ public class DescribeTrustedAdvisorCheckResultRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The ISO 639-1 code for the language in which AWS provides support. AWS Support currently supports English ("en")
-     * and Japanese ("ja"). Language parameters must be passed explicitly for operations that take them.
+     * The ISO 639-1 code for the language in which Amazon Web Services provides support. Amazon Web Services Support
+     * currently supports English ("en") and Japanese ("ja"). Language parameters must be passed explicitly for
+     * operations that take them.
      * </p>
      * 
      * @param language
-     *        The ISO 639-1 code for the language in which AWS provides support. AWS Support currently supports English
-     *        ("en") and Japanese ("ja"). Language parameters must be passed explicitly for operations that take them.
+     *        The ISO 639-1 code for the language in which Amazon Web Services provides support. Amazon Web Services
+     *        Support currently supports English ("en") and Japanese ("ja"). Language parameters must be passed
+     *        explicitly for operations that take them.
      */
 
     public void setLanguage(String language) {
@@ -97,12 +100,14 @@ public class DescribeTrustedAdvisorCheckResultRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The ISO 639-1 code for the language in which AWS provides support. AWS Support currently supports English ("en")
-     * and Japanese ("ja"). Language parameters must be passed explicitly for operations that take them.
+     * The ISO 639-1 code for the language in which Amazon Web Services provides support. Amazon Web Services Support
+     * currently supports English ("en") and Japanese ("ja"). Language parameters must be passed explicitly for
+     * operations that take them.
      * </p>
      * 
-     * @return The ISO 639-1 code for the language in which AWS provides support. AWS Support currently supports English
-     *         ("en") and Japanese ("ja"). Language parameters must be passed explicitly for operations that take them.
+     * @return The ISO 639-1 code for the language in which Amazon Web Services provides support. Amazon Web Services
+     *         Support currently supports English ("en") and Japanese ("ja"). Language parameters must be passed
+     *         explicitly for operations that take them.
      */
 
     public String getLanguage() {
@@ -111,13 +116,15 @@ public class DescribeTrustedAdvisorCheckResultRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The ISO 639-1 code for the language in which AWS provides support. AWS Support currently supports English ("en")
-     * and Japanese ("ja"). Language parameters must be passed explicitly for operations that take them.
+     * The ISO 639-1 code for the language in which Amazon Web Services provides support. Amazon Web Services Support
+     * currently supports English ("en") and Japanese ("ja"). Language parameters must be passed explicitly for
+     * operations that take them.
      * </p>
      * 
      * @param language
-     *        The ISO 639-1 code for the language in which AWS provides support. AWS Support currently supports English
-     *        ("en") and Japanese ("ja"). Language parameters must be passed explicitly for operations that take them.
+     *        The ISO 639-1 code for the language in which Amazon Web Services provides support. Amazon Web Services
+     *        Support currently supports English ("en") and Japanese ("ja"). Language parameters must be passed
+     *        explicitly for operations that take them.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

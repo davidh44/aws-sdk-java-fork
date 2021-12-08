@@ -27,7 +27,7 @@ import com.amazonaws.services.comprehendmedical.model.*;
  * </p>
  * <p>
  * <p>
- * Amazon Comprehend Medical extracts structured information from unstructured clinical text. Use these actions to gain
+ * Comprehend Medical; extracts structured information from unstructured clinical text. Use these actions to gain
  * insight in your documents.
  * </p>
  */
@@ -143,6 +143,31 @@ public interface AWSComprehendMedical {
 
     /**
      * <p>
+     * Gets the properties associated with an InferSNOMEDCT job. Use this operation to get the status of an inference
+     * job.
+     * </p>
+     * 
+     * @param describeSNOMEDCTInferenceJobRequest
+     * @return Result of the DescribeSNOMEDCTInferenceJob operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request that you made is invalid. Check your request to determine why it's invalid and then retry the
+     *         request.
+     * @throws TooManyRequestsException
+     *         You have made too many requests within a short period of time. Wait for a short time and then try your
+     *         request again. Contact customer support for more information about a service limit increase.
+     * @throws ResourceNotFoundException
+     *         The resource identified by the specified Amazon Resource Name (ARN) was not found. Check the ARN and try
+     *         your request again.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @sample AWSComprehendMedical.DescribeSNOMEDCTInferenceJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/DescribeSNOMEDCTInferenceJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeSNOMEDCTInferenceJobResult describeSNOMEDCTInferenceJob(DescribeSNOMEDCTInferenceJobRequest describeSNOMEDCTInferenceJobRequest);
+
+    /**
+     * <p>
      * The <code>DetectEntities</code> operation is deprecated. You should use the <a>DetectEntitiesV2</a> operation
      * instead.
      * </p>
@@ -156,8 +181,7 @@ public interface AWSComprehendMedical {
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ServiceUnavailableException
-     *         The Amazon Comprehend Medical service is temporarily unavailable. Please wait and then retry your
-     *         request.
+     *         The Comprehend Medical; service is temporarily unavailable. Please wait and then retry your request.
      * @throws TooManyRequestsException
      *         You have made too many requests within a short period of time. Wait for a short time and then try your
      *         request again. Contact customer support for more information about a service limit increase.
@@ -197,8 +221,7 @@ public interface AWSComprehendMedical {
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ServiceUnavailableException
-     *         The Amazon Comprehend Medical service is temporarily unavailable. Please wait and then retry your
-     *         request.
+     *         The Comprehend Medical; service is temporarily unavailable. Please wait and then retry your request.
      * @throws TooManyRequestsException
      *         You have made too many requests within a short period of time. Wait for a short time and then try your
      *         request again. Contact customer support for more information about a service limit increase.
@@ -228,8 +251,7 @@ public interface AWSComprehendMedical {
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ServiceUnavailableException
-     *         The Amazon Comprehend Medical service is temporarily unavailable. Please wait and then retry your
-     *         request.
+     *         The Comprehend Medical; service is temporarily unavailable. Please wait and then retry your request.
      * @throws TooManyRequestsException
      *         You have made too many requests within a short period of time. Wait for a short time and then try your
      *         request again. Contact customer support for more information about a service limit increase.
@@ -259,8 +281,7 @@ public interface AWSComprehendMedical {
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ServiceUnavailableException
-     *         The Amazon Comprehend Medical service is temporarily unavailable. Please wait and then retry your
-     *         request.
+     *         The Comprehend Medical; service is temporarily unavailable. Please wait and then retry your request.
      * @throws TooManyRequestsException
      *         You have made too many requests within a short period of time. Wait for a short time and then try your
      *         request again. Contact customer support for more information about a service limit increase.
@@ -290,8 +311,7 @@ public interface AWSComprehendMedical {
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ServiceUnavailableException
-     *         The Amazon Comprehend Medical service is temporarily unavailable. Please wait and then retry your
-     *         request.
+     *         The Comprehend Medical; service is temporarily unavailable. Please wait and then retry your request.
      * @throws TooManyRequestsException
      *         You have made too many requests within a short period of time. Wait for a short time and then try your
      *         request again. Contact customer support for more information about a service limit increase.
@@ -308,6 +328,35 @@ public interface AWSComprehendMedical {
      *      API Documentation</a>
      */
     InferRxNormResult inferRxNorm(InferRxNormRequest inferRxNormRequest);
+
+    /**
+     * <p>
+     * InferSNOMEDCT detects possible medical concepts as entities and links them to codes from the Systematized
+     * Nomenclature of Medicine, Clinical Terms (SNOMED-CT) ontology
+     * </p>
+     * 
+     * @param inferSNOMEDCTRequest
+     * @return Result of the InferSNOMEDCT operation returned by the service.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ServiceUnavailableException
+     *         The Comprehend Medical; service is temporarily unavailable. Please wait and then retry your request.
+     * @throws TooManyRequestsException
+     *         You have made too many requests within a short period of time. Wait for a short time and then try your
+     *         request again. Contact customer support for more information about a service limit increase.
+     * @throws InvalidRequestException
+     *         The request that you made is invalid. Check your request to determine why it's invalid and then retry the
+     *         request.
+     * @throws InvalidEncodingException
+     *         The input text was not in valid UTF-8 character encoding. Check your text then retry your request.
+     * @throws TextSizeLimitExceededException
+     *         The size of the text you submitted exceeds the size limit. Reduce the size of the text or use a smaller
+     *         document and then retry your request.
+     * @sample AWSComprehendMedical.InferSNOMEDCT
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/InferSNOMEDCT"
+     *      target="_top">AWS API Documentation</a>
+     */
+    InferSNOMEDCTResult inferSNOMEDCT(InferSNOMEDCTRequest inferSNOMEDCTRequest);
 
     /**
      * <p>
@@ -404,6 +453,30 @@ public interface AWSComprehendMedical {
      *      target="_top">AWS API Documentation</a>
      */
     ListRxNormInferenceJobsResult listRxNormInferenceJobs(ListRxNormInferenceJobsRequest listRxNormInferenceJobsRequest);
+
+    /**
+     * <p>
+     * Gets a list of InferSNOMEDCT jobs a user has submitted.
+     * </p>
+     * 
+     * @param listSNOMEDCTInferenceJobsRequest
+     * @return Result of the ListSNOMEDCTInferenceJobs operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request that you made is invalid. Check your request to determine why it's invalid and then retry the
+     *         request.
+     * @throws ValidationException
+     *         The filter that you specified for the operation is invalid. Check the filter values that you entered and
+     *         try your request again.
+     * @throws TooManyRequestsException
+     *         You have made too many requests within a short period of time. Wait for a short time and then try your
+     *         request again. Contact customer support for more information about a service limit increase.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @sample AWSComprehendMedical.ListSNOMEDCTInferenceJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/ListSNOMEDCTInferenceJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListSNOMEDCTInferenceJobsResult listSNOMEDCTInferenceJobs(ListSNOMEDCTInferenceJobsRequest listSNOMEDCTInferenceJobsRequest);
 
     /**
      * <p>
@@ -507,6 +580,31 @@ public interface AWSComprehendMedical {
 
     /**
      * <p>
+     * Starts an asynchronous job to detect medical concepts and link them to the SNOMED-CT ontology. Use the
+     * DescribeSNOMEDCTInferenceJob operation to track the status of a job.
+     * </p>
+     * 
+     * @param startSNOMEDCTInferenceJobRequest
+     * @return Result of the StartSNOMEDCTInferenceJob operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request that you made is invalid. Check your request to determine why it's invalid and then retry the
+     *         request.
+     * @throws TooManyRequestsException
+     *         You have made too many requests within a short period of time. Wait for a short time and then try your
+     *         request again. Contact customer support for more information about a service limit increase.
+     * @throws ResourceNotFoundException
+     *         The resource identified by the specified Amazon Resource Name (ARN) was not found. Check the ARN and try
+     *         your request again.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @sample AWSComprehendMedical.StartSNOMEDCTInferenceJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/StartSNOMEDCTInferenceJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartSNOMEDCTInferenceJobResult startSNOMEDCTInferenceJob(StartSNOMEDCTInferenceJobRequest startSNOMEDCTInferenceJobRequest);
+
+    /**
+     * <p>
      * Stops a medical entities detection job in progress.
      * </p>
      * 
@@ -588,6 +686,30 @@ public interface AWSComprehendMedical {
      *      target="_top">AWS API Documentation</a>
      */
     StopRxNormInferenceJobResult stopRxNormInferenceJob(StopRxNormInferenceJobRequest stopRxNormInferenceJobRequest);
+
+    /**
+     * <p>
+     * Stops an InferSNOMEDCT inference job in progress.
+     * </p>
+     * 
+     * @param stopSNOMEDCTInferenceJobRequest
+     * @return Result of the StopSNOMEDCTInferenceJob operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request that you made is invalid. Check your request to determine why it's invalid and then retry the
+     *         request.
+     * @throws ResourceNotFoundException
+     *         The resource identified by the specified Amazon Resource Name (ARN) was not found. Check the ARN and try
+     *         your request again.
+     * @throws TooManyRequestsException
+     *         You have made too many requests within a short period of time. Wait for a short time and then try your
+     *         request again. Contact customer support for more information about a service limit increase.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @sample AWSComprehendMedical.StopSNOMEDCTInferenceJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/StopSNOMEDCTInferenceJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StopSNOMEDCTInferenceJobResult stopSNOMEDCTInferenceJob(StopSNOMEDCTInferenceJobRequest stopSNOMEDCTInferenceJobRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

@@ -25,6 +25,11 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdateSiteAddressRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The ID or the Amazon Resource Name (ARN) of the site.
+     * </p>
+     */
     private String siteId;
     /**
      * <p>
@@ -40,7 +45,12 @@ public class UpdateSiteAddressRequest extends com.amazonaws.AmazonWebServiceRequ
     private Address address;
 
     /**
+     * <p>
+     * The ID or the Amazon Resource Name (ARN) of the site.
+     * </p>
+     * 
      * @param siteId
+     *        The ID or the Amazon Resource Name (ARN) of the site.
      */
 
     public void setSiteId(String siteId) {
@@ -48,7 +58,11 @@ public class UpdateSiteAddressRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * @return
+     * <p>
+     * The ID or the Amazon Resource Name (ARN) of the site.
+     * </p>
+     * 
+     * @return The ID or the Amazon Resource Name (ARN) of the site.
      */
 
     public String getSiteId() {
@@ -56,7 +70,12 @@ public class UpdateSiteAddressRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * The ID or the Amazon Resource Name (ARN) of the site.
+     * </p>
+     * 
      * @param siteId
+     *        The ID or the Amazon Resource Name (ARN) of the site.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

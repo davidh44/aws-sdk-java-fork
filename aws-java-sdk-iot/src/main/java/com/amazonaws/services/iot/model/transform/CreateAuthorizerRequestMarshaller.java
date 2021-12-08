@@ -43,6 +43,8 @@ public class CreateAuthorizerRequestMarshaller {
             .marshallLocationName("tags").build();
     private static final MarshallingInfo<Boolean> SIGNINGDISABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("signingDisabled").build();
+    private static final MarshallingInfo<Boolean> ENABLECACHINGFORHTTP_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("enableCachingForHttp").build();
 
     private static final CreateAuthorizerRequestMarshaller instance = new CreateAuthorizerRequestMarshaller();
 
@@ -67,6 +69,7 @@ public class CreateAuthorizerRequestMarshaller {
             protocolMarshaller.marshall(createAuthorizerRequest.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(createAuthorizerRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createAuthorizerRequest.getSigningDisabled(), SIGNINGDISABLED_BINDING);
+            protocolMarshaller.marshall(createAuthorizerRequest.getEnableCachingForHttp(), ENABLECACHINGFORHTTP_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

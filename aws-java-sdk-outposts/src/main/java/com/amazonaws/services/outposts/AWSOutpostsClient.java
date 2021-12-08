@@ -1363,6 +1363,71 @@ public class AWSOutpostsClient extends AmazonWebServiceClient implements AWSOutp
 
     /**
      * <p>
+     * Updates an Outpost.
+     * </p>
+     * 
+     * @param updateOutpostRequest
+     * @return Result of the UpdateOutpost operation returned by the service.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws ConflictException
+     *         Updating or deleting this resource can cause an inconsistent state.
+     * @throws NotFoundException
+     *         The specified request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have permission to perform this operation.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSOutposts.UpdateOutpost
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/UpdateOutpost" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public UpdateOutpostResult updateOutpost(UpdateOutpostRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateOutpost(request);
+    }
+
+    @SdkInternalApi
+    final UpdateOutpostResult executeUpdateOutpost(UpdateOutpostRequest updateOutpostRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateOutpostRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateOutpostRequest> request = null;
+        Response<UpdateOutpostResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateOutpostRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateOutpostRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Outposts");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateOutpost");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateOutpostResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateOutpostResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Updates the site.
      * </p>
      * 

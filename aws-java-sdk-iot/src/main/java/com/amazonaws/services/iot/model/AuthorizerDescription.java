@@ -79,6 +79,13 @@ public class AuthorizerDescription implements Serializable, Cloneable, Structure
      * </p>
      */
     private Boolean signingDisabled;
+    /**
+     * <p>
+     * When <code>true</code>, the result from the authorizer’s Lambda function is cached for the time specified in
+     * <code>refreshAfterInSeconds</code>. The cached result is used while the device reuses the same HTTP connection.
+     * </p>
+     */
+    private Boolean enableCachingForHttp;
 
     /**
      * <p>
@@ -500,6 +507,70 @@ public class AuthorizerDescription implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * When <code>true</code>, the result from the authorizer’s Lambda function is cached for the time specified in
+     * <code>refreshAfterInSeconds</code>. The cached result is used while the device reuses the same HTTP connection.
+     * </p>
+     * 
+     * @param enableCachingForHttp
+     *        When <code>true</code>, the result from the authorizer’s Lambda function is cached for the time specified
+     *        in <code>refreshAfterInSeconds</code>. The cached result is used while the device reuses the same HTTP
+     *        connection.
+     */
+
+    public void setEnableCachingForHttp(Boolean enableCachingForHttp) {
+        this.enableCachingForHttp = enableCachingForHttp;
+    }
+
+    /**
+     * <p>
+     * When <code>true</code>, the result from the authorizer’s Lambda function is cached for the time specified in
+     * <code>refreshAfterInSeconds</code>. The cached result is used while the device reuses the same HTTP connection.
+     * </p>
+     * 
+     * @return When <code>true</code>, the result from the authorizer’s Lambda function is cached for the time specified
+     *         in <code>refreshAfterInSeconds</code>. The cached result is used while the device reuses the same HTTP
+     *         connection.
+     */
+
+    public Boolean getEnableCachingForHttp() {
+        return this.enableCachingForHttp;
+    }
+
+    /**
+     * <p>
+     * When <code>true</code>, the result from the authorizer’s Lambda function is cached for the time specified in
+     * <code>refreshAfterInSeconds</code>. The cached result is used while the device reuses the same HTTP connection.
+     * </p>
+     * 
+     * @param enableCachingForHttp
+     *        When <code>true</code>, the result from the authorizer’s Lambda function is cached for the time specified
+     *        in <code>refreshAfterInSeconds</code>. The cached result is used while the device reuses the same HTTP
+     *        connection.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AuthorizerDescription withEnableCachingForHttp(Boolean enableCachingForHttp) {
+        setEnableCachingForHttp(enableCachingForHttp);
+        return this;
+    }
+
+    /**
+     * <p>
+     * When <code>true</code>, the result from the authorizer’s Lambda function is cached for the time specified in
+     * <code>refreshAfterInSeconds</code>. The cached result is used while the device reuses the same HTTP connection.
+     * </p>
+     * 
+     * @return When <code>true</code>, the result from the authorizer’s Lambda function is cached for the time specified
+     *         in <code>refreshAfterInSeconds</code>. The cached result is used while the device reuses the same HTTP
+     *         connection.
+     */
+
+    public Boolean isEnableCachingForHttp() {
+        return this.enableCachingForHttp;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -528,7 +599,9 @@ public class AuthorizerDescription implements Serializable, Cloneable, Structure
         if (getLastModifiedDate() != null)
             sb.append("LastModifiedDate: ").append(getLastModifiedDate()).append(",");
         if (getSigningDisabled() != null)
-            sb.append("SigningDisabled: ").append(getSigningDisabled());
+            sb.append("SigningDisabled: ").append(getSigningDisabled()).append(",");
+        if (getEnableCachingForHttp() != null)
+            sb.append("EnableCachingForHttp: ").append(getEnableCachingForHttp());
         sb.append("}");
         return sb.toString();
     }
@@ -579,6 +652,10 @@ public class AuthorizerDescription implements Serializable, Cloneable, Structure
             return false;
         if (other.getSigningDisabled() != null && other.getSigningDisabled().equals(this.getSigningDisabled()) == false)
             return false;
+        if (other.getEnableCachingForHttp() == null ^ this.getEnableCachingForHttp() == null)
+            return false;
+        if (other.getEnableCachingForHttp() != null && other.getEnableCachingForHttp().equals(this.getEnableCachingForHttp()) == false)
+            return false;
         return true;
     }
 
@@ -596,6 +673,7 @@ public class AuthorizerDescription implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getCreationDate() == null) ? 0 : getCreationDate().hashCode());
         hashCode = prime * hashCode + ((getLastModifiedDate() == null) ? 0 : getLastModifiedDate().hashCode());
         hashCode = prime * hashCode + ((getSigningDisabled() == null) ? 0 : getSigningDisabled().hashCode());
+        hashCode = prime * hashCode + ((getEnableCachingForHttp() == null) ? 0 : getEnableCachingForHttp().hashCode());
         return hashCode;
     }
 

@@ -48,6 +48,11 @@ public class AbstractAWSComprehendMedical implements AWSComprehendMedical {
     }
 
     @Override
+    public DescribeSNOMEDCTInferenceJobResult describeSNOMEDCTInferenceJob(DescribeSNOMEDCTInferenceJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     @Deprecated
     public DetectEntitiesResult detectEntities(DetectEntitiesRequest request) {
         throw new java.lang.UnsupportedOperationException();
@@ -74,6 +79,11 @@ public class AbstractAWSComprehendMedical implements AWSComprehendMedical {
     }
 
     @Override
+    public InferSNOMEDCTResult inferSNOMEDCT(InferSNOMEDCTRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListEntitiesDetectionV2JobsResult listEntitiesDetectionV2Jobs(ListEntitiesDetectionV2JobsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -90,6 +100,11 @@ public class AbstractAWSComprehendMedical implements AWSComprehendMedical {
 
     @Override
     public ListRxNormInferenceJobsResult listRxNormInferenceJobs(ListRxNormInferenceJobsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListSNOMEDCTInferenceJobsResult listSNOMEDCTInferenceJobs(ListSNOMEDCTInferenceJobsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -114,6 +129,11 @@ public class AbstractAWSComprehendMedical implements AWSComprehendMedical {
     }
 
     @Override
+    public StartSNOMEDCTInferenceJobResult startSNOMEDCTInferenceJob(StartSNOMEDCTInferenceJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public StopEntitiesDetectionV2JobResult stopEntitiesDetectionV2Job(StopEntitiesDetectionV2JobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -130,6 +150,11 @@ public class AbstractAWSComprehendMedical implements AWSComprehendMedical {
 
     @Override
     public StopRxNormInferenceJobResult stopRxNormInferenceJob(StopRxNormInferenceJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StopSNOMEDCTInferenceJobResult stopSNOMEDCTInferenceJob(StopSNOMEDCTInferenceJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

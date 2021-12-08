@@ -23,7 +23,8 @@ public enum ResourceType {
     PROJECT("PROJECT"),
     DATASET("DATASET"),
     MODEL("MODEL"),
-    TRIAL("TRIAL");
+    TRIAL("TRIAL"),
+    MODEL_PACKAGE_JOB("MODEL_PACKAGE_JOB");
 
     private String value;
 

@@ -39,6 +39,8 @@ public class UpdateAuthorizerRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("tokenSigningPublicKeys").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("status").build();
+    private static final MarshallingInfo<Boolean> ENABLECACHINGFORHTTP_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("enableCachingForHttp").build();
 
     private static final UpdateAuthorizerRequestMarshaller instance = new UpdateAuthorizerRequestMarshaller();
 
@@ -61,6 +63,7 @@ public class UpdateAuthorizerRequestMarshaller {
             protocolMarshaller.marshall(updateAuthorizerRequest.getTokenKeyName(), TOKENKEYNAME_BINDING);
             protocolMarshaller.marshall(updateAuthorizerRequest.getTokenSigningPublicKeys(), TOKENSIGNINGPUBLICKEYS_BINDING);
             protocolMarshaller.marshall(updateAuthorizerRequest.getStatus(), STATUS_BINDING);
+            protocolMarshaller.marshall(updateAuthorizerRequest.getEnableCachingForHttp(), ENABLECACHINGFORHTTP_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
