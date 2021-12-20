@@ -412,6 +412,24 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private AwsEksClusterDetails awsEksCluster;
+    /**
+     * <p>
+     * Details about an Network Firewall firewall policy.
+     * </p>
+     */
+    private AwsNetworkFirewallFirewallPolicyDetails awsNetworkFirewallFirewallPolicy;
+    /**
+     * <p>
+     * Details about an Network Firewall firewall.
+     * </p>
+     */
+    private AwsNetworkFirewallFirewallDetails awsNetworkFirewallFirewall;
+    /**
+     * <p>
+     * Details about an Network Firewall rule group.
+     * </p>
+     */
+    private AwsNetworkFirewallRuleGroupDetails awsNetworkFirewallRuleGroup;
 
     /**
      * <p>
@@ -2907,6 +2925,126 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * Details about an Network Firewall firewall policy.
+     * </p>
+     * 
+     * @param awsNetworkFirewallFirewallPolicy
+     *        Details about an Network Firewall firewall policy.
+     */
+
+    public void setAwsNetworkFirewallFirewallPolicy(AwsNetworkFirewallFirewallPolicyDetails awsNetworkFirewallFirewallPolicy) {
+        this.awsNetworkFirewallFirewallPolicy = awsNetworkFirewallFirewallPolicy;
+    }
+
+    /**
+     * <p>
+     * Details about an Network Firewall firewall policy.
+     * </p>
+     * 
+     * @return Details about an Network Firewall firewall policy.
+     */
+
+    public AwsNetworkFirewallFirewallPolicyDetails getAwsNetworkFirewallFirewallPolicy() {
+        return this.awsNetworkFirewallFirewallPolicy;
+    }
+
+    /**
+     * <p>
+     * Details about an Network Firewall firewall policy.
+     * </p>
+     * 
+     * @param awsNetworkFirewallFirewallPolicy
+     *        Details about an Network Firewall firewall policy.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsNetworkFirewallFirewallPolicy(AwsNetworkFirewallFirewallPolicyDetails awsNetworkFirewallFirewallPolicy) {
+        setAwsNetworkFirewallFirewallPolicy(awsNetworkFirewallFirewallPolicy);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Details about an Network Firewall firewall.
+     * </p>
+     * 
+     * @param awsNetworkFirewallFirewall
+     *        Details about an Network Firewall firewall.
+     */
+
+    public void setAwsNetworkFirewallFirewall(AwsNetworkFirewallFirewallDetails awsNetworkFirewallFirewall) {
+        this.awsNetworkFirewallFirewall = awsNetworkFirewallFirewall;
+    }
+
+    /**
+     * <p>
+     * Details about an Network Firewall firewall.
+     * </p>
+     * 
+     * @return Details about an Network Firewall firewall.
+     */
+
+    public AwsNetworkFirewallFirewallDetails getAwsNetworkFirewallFirewall() {
+        return this.awsNetworkFirewallFirewall;
+    }
+
+    /**
+     * <p>
+     * Details about an Network Firewall firewall.
+     * </p>
+     * 
+     * @param awsNetworkFirewallFirewall
+     *        Details about an Network Firewall firewall.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsNetworkFirewallFirewall(AwsNetworkFirewallFirewallDetails awsNetworkFirewallFirewall) {
+        setAwsNetworkFirewallFirewall(awsNetworkFirewallFirewall);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Details about an Network Firewall rule group.
+     * </p>
+     * 
+     * @param awsNetworkFirewallRuleGroup
+     *        Details about an Network Firewall rule group.
+     */
+
+    public void setAwsNetworkFirewallRuleGroup(AwsNetworkFirewallRuleGroupDetails awsNetworkFirewallRuleGroup) {
+        this.awsNetworkFirewallRuleGroup = awsNetworkFirewallRuleGroup;
+    }
+
+    /**
+     * <p>
+     * Details about an Network Firewall rule group.
+     * </p>
+     * 
+     * @return Details about an Network Firewall rule group.
+     */
+
+    public AwsNetworkFirewallRuleGroupDetails getAwsNetworkFirewallRuleGroup() {
+        return this.awsNetworkFirewallRuleGroup;
+    }
+
+    /**
+     * <p>
+     * Details about an Network Firewall rule group.
+     * </p>
+     * 
+     * @param awsNetworkFirewallRuleGroup
+     *        Details about an Network Firewall rule group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsNetworkFirewallRuleGroup(AwsNetworkFirewallRuleGroupDetails awsNetworkFirewallRuleGroup) {
+        setAwsNetworkFirewallRuleGroup(awsNetworkFirewallRuleGroup);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3035,7 +3173,13 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
         if (getAwsEcrRepository() != null)
             sb.append("AwsEcrRepository: ").append(getAwsEcrRepository()).append(",");
         if (getAwsEksCluster() != null)
-            sb.append("AwsEksCluster: ").append(getAwsEksCluster());
+            sb.append("AwsEksCluster: ").append(getAwsEksCluster()).append(",");
+        if (getAwsNetworkFirewallFirewallPolicy() != null)
+            sb.append("AwsNetworkFirewallFirewallPolicy: ").append(getAwsNetworkFirewallFirewallPolicy()).append(",");
+        if (getAwsNetworkFirewallFirewall() != null)
+            sb.append("AwsNetworkFirewallFirewall: ").append(getAwsNetworkFirewallFirewall()).append(",");
+        if (getAwsNetworkFirewallRuleGroup() != null)
+            sb.append("AwsNetworkFirewallRuleGroup: ").append(getAwsNetworkFirewallRuleGroup());
         sb.append("}");
         return sb.toString();
     }
@@ -3291,6 +3435,19 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getAwsEksCluster() != null && other.getAwsEksCluster().equals(this.getAwsEksCluster()) == false)
             return false;
+        if (other.getAwsNetworkFirewallFirewallPolicy() == null ^ this.getAwsNetworkFirewallFirewallPolicy() == null)
+            return false;
+        if (other.getAwsNetworkFirewallFirewallPolicy() != null
+                && other.getAwsNetworkFirewallFirewallPolicy().equals(this.getAwsNetworkFirewallFirewallPolicy()) == false)
+            return false;
+        if (other.getAwsNetworkFirewallFirewall() == null ^ this.getAwsNetworkFirewallFirewall() == null)
+            return false;
+        if (other.getAwsNetworkFirewallFirewall() != null && other.getAwsNetworkFirewallFirewall().equals(this.getAwsNetworkFirewallFirewall()) == false)
+            return false;
+        if (other.getAwsNetworkFirewallRuleGroup() == null ^ this.getAwsNetworkFirewallRuleGroup() == null)
+            return false;
+        if (other.getAwsNetworkFirewallRuleGroup() != null && other.getAwsNetworkFirewallRuleGroup().equals(this.getAwsNetworkFirewallRuleGroup()) == false)
+            return false;
         return true;
     }
 
@@ -3358,6 +3515,9 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getAwsWafRegionalRateBasedRule() == null) ? 0 : getAwsWafRegionalRateBasedRule().hashCode());
         hashCode = prime * hashCode + ((getAwsEcrRepository() == null) ? 0 : getAwsEcrRepository().hashCode());
         hashCode = prime * hashCode + ((getAwsEksCluster() == null) ? 0 : getAwsEksCluster().hashCode());
+        hashCode = prime * hashCode + ((getAwsNetworkFirewallFirewallPolicy() == null) ? 0 : getAwsNetworkFirewallFirewallPolicy().hashCode());
+        hashCode = prime * hashCode + ((getAwsNetworkFirewallFirewall() == null) ? 0 : getAwsNetworkFirewallFirewall().hashCode());
+        hashCode = prime * hashCode + ((getAwsNetworkFirewallRuleGroup() == null) ? 0 : getAwsNetworkFirewallRuleGroup().hashCode());
         return hashCode;
     }
 

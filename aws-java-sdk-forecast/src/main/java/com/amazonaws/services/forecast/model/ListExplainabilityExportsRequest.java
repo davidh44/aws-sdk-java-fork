@@ -55,7 +55,7 @@ public class ListExplainabilityExportsRequest extends com.amazonaws.AmazonWebSer
      * </li>
      * <li>
      * <p>
-     * <code>Key</code> - The name of the parameter to filter on. Valid values are <code>PredictorArn</code> and
+     * <code>Key</code> - The name of the parameter to filter on. Valid values are <code>ResourceArn</code> and
      * <code>Status</code>.
      * </p>
      * </li>
@@ -171,7 +171,7 @@ public class ListExplainabilityExportsRequest extends com.amazonaws.AmazonWebSer
      * </li>
      * <li>
      * <p>
-     * <code>Key</code> - The name of the parameter to filter on. Valid values are <code>PredictorArn</code> and
+     * <code>Key</code> - The name of the parameter to filter on. Valid values are <code>ResourceArn</code> and
      * <code>Status</code>.
      * </p>
      * </li>
@@ -197,7 +197,7 @@ public class ListExplainabilityExportsRequest extends com.amazonaws.AmazonWebSer
      *         </li>
      *         <li>
      *         <p>
-     *         <code>Key</code> - The name of the parameter to filter on. Valid values are <code>PredictorArn</code> and
+     *         <code>Key</code> - The name of the parameter to filter on. Valid values are <code>ResourceArn</code> and
      *         <code>Status</code>.
      *         </p>
      *         </li>
@@ -229,7 +229,7 @@ public class ListExplainabilityExportsRequest extends com.amazonaws.AmazonWebSer
      * </li>
      * <li>
      * <p>
-     * <code>Key</code> - The name of the parameter to filter on. Valid values are <code>PredictorArn</code> and
+     * <code>Key</code> - The name of the parameter to filter on. Valid values are <code>ResourceArn</code> and
      * <code>Status</code>.
      * </p>
      * </li>
@@ -255,7 +255,7 @@ public class ListExplainabilityExportsRequest extends com.amazonaws.AmazonWebSer
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Key</code> - The name of the parameter to filter on. Valid values are <code>PredictorArn</code> and
+     *        <code>Key</code> - The name of the parameter to filter on. Valid values are <code>ResourceArn</code> and
      *        <code>Status</code>.
      *        </p>
      *        </li>
@@ -292,7 +292,7 @@ public class ListExplainabilityExportsRequest extends com.amazonaws.AmazonWebSer
      * </li>
      * <li>
      * <p>
-     * <code>Key</code> - The name of the parameter to filter on. Valid values are <code>PredictorArn</code> and
+     * <code>Key</code> - The name of the parameter to filter on. Valid values are <code>ResourceArn</code> and
      * <code>Status</code>.
      * </p>
      * </li>
@@ -323,7 +323,7 @@ public class ListExplainabilityExportsRequest extends com.amazonaws.AmazonWebSer
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Key</code> - The name of the parameter to filter on. Valid values are <code>PredictorArn</code> and
+     *        <code>Key</code> - The name of the parameter to filter on. Valid values are <code>ResourceArn</code> and
      *        <code>Status</code>.
      *        </p>
      *        </li>
@@ -362,7 +362,7 @@ public class ListExplainabilityExportsRequest extends com.amazonaws.AmazonWebSer
      * </li>
      * <li>
      * <p>
-     * <code>Key</code> - The name of the parameter to filter on. Valid values are <code>PredictorArn</code> and
+     * <code>Key</code> - The name of the parameter to filter on. Valid values are <code>ResourceArn</code> and
      * <code>Status</code>.
      * </p>
      * </li>
@@ -388,7 +388,7 @@ public class ListExplainabilityExportsRequest extends com.amazonaws.AmazonWebSer
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Key</code> - The name of the parameter to filter on. Valid values are <code>PredictorArn</code> and
+     *        <code>Key</code> - The name of the parameter to filter on. Valid values are <code>ResourceArn</code> and
      *        <code>Status</code>.
      *        </p>
      *        </li>

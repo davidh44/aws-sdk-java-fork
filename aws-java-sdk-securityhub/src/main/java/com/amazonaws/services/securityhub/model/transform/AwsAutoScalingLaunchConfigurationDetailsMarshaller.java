@@ -64,6 +64,8 @@ public class AwsAutoScalingLaunchConfigurationDetailsMarshaller {
             .marshallLocationName("SpotPrice").build();
     private static final MarshallingInfo<String> USERDATA_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("UserData").build();
+    private static final MarshallingInfo<StructuredPojo> METADATAOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MetadataOptions").build();
 
     private static final AwsAutoScalingLaunchConfigurationDetailsMarshaller instance = new AwsAutoScalingLaunchConfigurationDetailsMarshaller();
 
@@ -99,6 +101,7 @@ public class AwsAutoScalingLaunchConfigurationDetailsMarshaller {
             protocolMarshaller.marshall(awsAutoScalingLaunchConfigurationDetails.getSecurityGroups(), SECURITYGROUPS_BINDING);
             protocolMarshaller.marshall(awsAutoScalingLaunchConfigurationDetails.getSpotPrice(), SPOTPRICE_BINDING);
             protocolMarshaller.marshall(awsAutoScalingLaunchConfigurationDetails.getUserData(), USERDATA_BINDING);
+            protocolMarshaller.marshall(awsAutoScalingLaunchConfigurationDetails.getMetadataOptions(), METADATAOPTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

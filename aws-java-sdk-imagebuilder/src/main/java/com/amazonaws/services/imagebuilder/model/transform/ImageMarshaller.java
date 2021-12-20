@@ -65,6 +65,8 @@ public class ImageMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("outputResources").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<String> BUILDTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("buildType").build();
 
     private static final ImageMarshaller instance = new ImageMarshaller();
 
@@ -100,6 +102,7 @@ public class ImageMarshaller {
             protocolMarshaller.marshall(image.getDateCreated(), DATECREATED_BINDING);
             protocolMarshaller.marshall(image.getOutputResources(), OUTPUTRESOURCES_BINDING);
             protocolMarshaller.marshall(image.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(image.getBuildType(), BUILDTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

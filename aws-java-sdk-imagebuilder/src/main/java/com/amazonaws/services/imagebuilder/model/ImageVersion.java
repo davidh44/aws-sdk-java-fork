@@ -122,6 +122,30 @@ public class ImageVersion implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String dateCreated;
+    /**
+     * <p>
+     * Indicates the type of build that created this image. The build can be initiated in the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>USER_INITIATED</b> – A manual pipeline build request.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>SCHEDULED</b> – A pipeline build initiated by a cron expression in the Image Builder pipeline, or from
+     * EventBridge.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>IMPORT</b> – A VM import created the image to use as the base image for the recipe.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private String buildType;
 
     /**
      * <p>
@@ -750,6 +774,206 @@ public class ImageVersion implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Indicates the type of build that created this image. The build can be initiated in the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>USER_INITIATED</b> – A manual pipeline build request.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>SCHEDULED</b> – A pipeline build initiated by a cron expression in the Image Builder pipeline, or from
+     * EventBridge.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>IMPORT</b> – A VM import created the image to use as the base image for the recipe.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param buildType
+     *        Indicates the type of build that created this image. The build can be initiated in the following ways:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <b>USER_INITIATED</b> – A manual pipeline build request.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>SCHEDULED</b> – A pipeline build initiated by a cron expression in the Image Builder pipeline, or from
+     *        EventBridge.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>IMPORT</b> – A VM import created the image to use as the base image for the recipe.
+     *        </p>
+     *        </li>
+     * @see BuildType
+     */
+
+    public void setBuildType(String buildType) {
+        this.buildType = buildType;
+    }
+
+    /**
+     * <p>
+     * Indicates the type of build that created this image. The build can be initiated in the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>USER_INITIATED</b> – A manual pipeline build request.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>SCHEDULED</b> – A pipeline build initiated by a cron expression in the Image Builder pipeline, or from
+     * EventBridge.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>IMPORT</b> – A VM import created the image to use as the base image for the recipe.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return Indicates the type of build that created this image. The build can be initiated in the following
+     *         ways:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <b>USER_INITIATED</b> – A manual pipeline build request.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>SCHEDULED</b> – A pipeline build initiated by a cron expression in the Image Builder pipeline, or from
+     *         EventBridge.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>IMPORT</b> – A VM import created the image to use as the base image for the recipe.
+     *         </p>
+     *         </li>
+     * @see BuildType
+     */
+
+    public String getBuildType() {
+        return this.buildType;
+    }
+
+    /**
+     * <p>
+     * Indicates the type of build that created this image. The build can be initiated in the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>USER_INITIATED</b> – A manual pipeline build request.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>SCHEDULED</b> – A pipeline build initiated by a cron expression in the Image Builder pipeline, or from
+     * EventBridge.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>IMPORT</b> – A VM import created the image to use as the base image for the recipe.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param buildType
+     *        Indicates the type of build that created this image. The build can be initiated in the following ways:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <b>USER_INITIATED</b> – A manual pipeline build request.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>SCHEDULED</b> – A pipeline build initiated by a cron expression in the Image Builder pipeline, or from
+     *        EventBridge.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>IMPORT</b> – A VM import created the image to use as the base image for the recipe.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see BuildType
+     */
+
+    public ImageVersion withBuildType(String buildType) {
+        setBuildType(buildType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates the type of build that created this image. The build can be initiated in the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>USER_INITIATED</b> – A manual pipeline build request.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>SCHEDULED</b> – A pipeline build initiated by a cron expression in the Image Builder pipeline, or from
+     * EventBridge.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>IMPORT</b> – A VM import created the image to use as the base image for the recipe.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param buildType
+     *        Indicates the type of build that created this image. The build can be initiated in the following ways:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <b>USER_INITIATED</b> – A manual pipeline build request.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>SCHEDULED</b> – A pipeline build initiated by a cron expression in the Image Builder pipeline, or from
+     *        EventBridge.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>IMPORT</b> – A VM import created the image to use as the base image for the recipe.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see BuildType
+     */
+
+    public ImageVersion withBuildType(BuildType buildType) {
+        this.buildType = buildType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -776,7 +1000,9 @@ public class ImageVersion implements Serializable, Cloneable, StructuredPojo {
         if (getOwner() != null)
             sb.append("Owner: ").append(getOwner()).append(",");
         if (getDateCreated() != null)
-            sb.append("DateCreated: ").append(getDateCreated());
+            sb.append("DateCreated: ").append(getDateCreated()).append(",");
+        if (getBuildType() != null)
+            sb.append("BuildType: ").append(getBuildType());
         sb.append("}");
         return sb.toString();
     }
@@ -823,6 +1049,10 @@ public class ImageVersion implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getDateCreated() != null && other.getDateCreated().equals(this.getDateCreated()) == false)
             return false;
+        if (other.getBuildType() == null ^ this.getBuildType() == null)
+            return false;
+        if (other.getBuildType() != null && other.getBuildType().equals(this.getBuildType()) == false)
+            return false;
         return true;
     }
 
@@ -839,6 +1069,7 @@ public class ImageVersion implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getOsVersion() == null) ? 0 : getOsVersion().hashCode());
         hashCode = prime * hashCode + ((getOwner() == null) ? 0 : getOwner().hashCode());
         hashCode = prime * hashCode + ((getDateCreated() == null) ? 0 : getDateCreated().hashCode());
+        hashCode = prime * hashCode + ((getBuildType() == null) ? 0 : getBuildType().hashCode());
         return hashCode;
     }
 

@@ -27,9 +27,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) that identifies the resource for which to list the tags. Currently, the supported
-     * resources are Forecast dataset groups, datasets, dataset import jobs, predictors, forecasts, and forecast
-     * exports.
+     * The Amazon Resource Name (ARN) that identifies the resource for which to list the tags.
      * </p>
      */
     private String resourceArn;
@@ -42,15 +40,11 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) that identifies the resource for which to list the tags. Currently, the supported
-     * resources are Forecast dataset groups, datasets, dataset import jobs, predictors, forecasts, and forecast
-     * exports.
+     * The Amazon Resource Name (ARN) that identifies the resource for which to list the tags.
      * </p>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) that identifies the resource for which to list the tags. Currently, the
-     *        supported resources are Forecast dataset groups, datasets, dataset import jobs, predictors, forecasts, and
-     *        forecast exports.
+     *        The Amazon Resource Name (ARN) that identifies the resource for which to list the tags.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -59,14 +53,10 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) that identifies the resource for which to list the tags. Currently, the supported
-     * resources are Forecast dataset groups, datasets, dataset import jobs, predictors, forecasts, and forecast
-     * exports.
+     * The Amazon Resource Name (ARN) that identifies the resource for which to list the tags.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) that identifies the resource for which to list the tags. Currently, the
-     *         supported resources are Forecast dataset groups, datasets, dataset import jobs, predictors, forecasts,
-     *         and forecast exports.
+     * @return The Amazon Resource Name (ARN) that identifies the resource for which to list the tags.
      */
 
     public String getResourceArn() {
@@ -75,15 +65,11 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) that identifies the resource for which to list the tags. Currently, the supported
-     * resources are Forecast dataset groups, datasets, dataset import jobs, predictors, forecasts, and forecast
-     * exports.
+     * The Amazon Resource Name (ARN) that identifies the resource for which to list the tags.
      * </p>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) that identifies the resource for which to list the tags. Currently, the
-     *        supported resources are Forecast dataset groups, datasets, dataset import jobs, predictors, forecasts, and
-     *        forecast exports.
+     *        The Amazon Resource Name (ARN) that identifies the resource for which to list the tags.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

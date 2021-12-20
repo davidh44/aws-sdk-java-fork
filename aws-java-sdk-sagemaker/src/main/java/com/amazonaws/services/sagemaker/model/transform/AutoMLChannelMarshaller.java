@@ -33,6 +33,8 @@ public class AutoMLChannelMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CompressionType").build();
     private static final MarshallingInfo<String> TARGETATTRIBUTENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TargetAttributeName").build();
+    private static final MarshallingInfo<String> CONTENTTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ContentType").build();
 
     private static final AutoMLChannelMarshaller instance = new AutoMLChannelMarshaller();
 
@@ -53,6 +55,7 @@ public class AutoMLChannelMarshaller {
             protocolMarshaller.marshall(autoMLChannel.getDataSource(), DATASOURCE_BINDING);
             protocolMarshaller.marshall(autoMLChannel.getCompressionType(), COMPRESSIONTYPE_BINDING);
             protocolMarshaller.marshall(autoMLChannel.getTargetAttributeName(), TARGETATTRIBUTENAME_BINDING);
+            protocolMarshaller.marshall(autoMLChannel.getContentType(), CONTENTTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -18,6 +18,12 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <note>
+ * <p>
+ * This object belongs to the <a>CreatePredictor</a> operation. If you created your predictor with
+ * <a>CreateAutoPredictor</a>, see <a>AdditionalDataset</a>.
+ * </p>
+ * </note>
  * <p>
  * Describes a supplementary feature of a dataset group. This object is part of the <a>InputDataConfig</a> object.
  * Forecast supports the Weather Index and Holidays built-in featurizations.

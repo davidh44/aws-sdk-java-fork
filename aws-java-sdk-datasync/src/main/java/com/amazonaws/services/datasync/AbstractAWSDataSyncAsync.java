@@ -67,6 +67,19 @@ public class AbstractAWSDataSyncAsync extends AbstractAWSDataSync implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<CreateLocationFsxLustreResult> createLocationFsxLustreAsync(CreateLocationFsxLustreRequest request) {
+
+        return createLocationFsxLustreAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateLocationFsxLustreResult> createLocationFsxLustreAsync(CreateLocationFsxLustreRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateLocationFsxLustreRequest, CreateLocationFsxLustreResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateLocationFsxWindowsResult> createLocationFsxWindowsAsync(CreateLocationFsxWindowsRequest request) {
 
         return createLocationFsxWindowsAsync(request, null);
@@ -218,6 +231,19 @@ public class AbstractAWSDataSyncAsync extends AbstractAWSDataSync implements AWS
     @Override
     public java.util.concurrent.Future<DescribeLocationEfsResult> describeLocationEfsAsync(DescribeLocationEfsRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeLocationEfsRequest, DescribeLocationEfsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeLocationFsxLustreResult> describeLocationFsxLustreAsync(DescribeLocationFsxLustreRequest request) {
+
+        return describeLocationFsxLustreAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeLocationFsxLustreResult> describeLocationFsxLustreAsync(DescribeLocationFsxLustreRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeLocationFsxLustreRequest, DescribeLocationFsxLustreResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

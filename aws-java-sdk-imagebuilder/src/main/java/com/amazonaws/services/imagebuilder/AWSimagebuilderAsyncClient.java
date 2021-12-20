@@ -976,6 +976,39 @@ public class AWSimagebuilderAsyncClient extends AWSimagebuilderClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<ImportVmImageResult> importVmImageAsync(ImportVmImageRequest request) {
+
+        return importVmImageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ImportVmImageResult> importVmImageAsync(final ImportVmImageRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ImportVmImageRequest, ImportVmImageResult> asyncHandler) {
+        final ImportVmImageRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ImportVmImageResult>() {
+            @Override
+            public ImportVmImageResult call() throws Exception {
+                ImportVmImageResult result = null;
+
+                try {
+                    result = executeImportVmImage(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListComponentBuildVersionsResult> listComponentBuildVersionsAsync(ListComponentBuildVersionsRequest request) {
 
         return listComponentBuildVersionsAsync(request, null);

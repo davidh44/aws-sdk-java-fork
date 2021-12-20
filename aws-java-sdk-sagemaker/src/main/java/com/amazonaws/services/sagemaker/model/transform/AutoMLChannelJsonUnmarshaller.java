@@ -60,6 +60,10 @@ public class AutoMLChannelJsonUnmarshaller implements Unmarshaller<AutoMLChannel
                     context.nextToken();
                     autoMLChannel.setTargetAttributeName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ContentType", targetDepth)) {
+                    context.nextToken();
+                    autoMLChannel.setContentType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

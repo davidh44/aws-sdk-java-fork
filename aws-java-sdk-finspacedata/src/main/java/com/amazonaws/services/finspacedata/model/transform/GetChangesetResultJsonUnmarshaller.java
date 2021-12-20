@@ -90,6 +90,10 @@ public class GetChangesetResultJsonUnmarshaller implements Unmarshaller<GetChang
                     context.nextToken();
                     getChangesetResult.setActiveUntilTimestamp(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
+                if (context.testExpression("activeFromTimestamp", targetDepth)) {
+                    context.nextToken();
+                    getChangesetResult.setActiveFromTimestamp(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
                 if (context.testExpression("updatesChangesetId", targetDepth)) {
                     context.nextToken();
                     getChangesetResult.setUpdatesChangesetId(context.getUnmarshaller(String.class).unmarshall(context));

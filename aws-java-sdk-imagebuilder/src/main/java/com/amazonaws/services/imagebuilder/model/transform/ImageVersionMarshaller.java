@@ -43,6 +43,8 @@ public class ImageVersionMarshaller {
             .marshallLocationName("owner").build();
     private static final MarshallingInfo<String> DATECREATED_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dateCreated").build();
+    private static final MarshallingInfo<String> BUILDTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("buildType").build();
 
     private static final ImageVersionMarshaller instance = new ImageVersionMarshaller();
 
@@ -68,6 +70,7 @@ public class ImageVersionMarshaller {
             protocolMarshaller.marshall(imageVersion.getOsVersion(), OSVERSION_BINDING);
             protocolMarshaller.marshall(imageVersion.getOwner(), OWNER_BINDING);
             protocolMarshaller.marshall(imageVersion.getDateCreated(), DATECREATED_BINDING);
+            protocolMarshaller.marshall(imageVersion.getBuildType(), BUILDTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

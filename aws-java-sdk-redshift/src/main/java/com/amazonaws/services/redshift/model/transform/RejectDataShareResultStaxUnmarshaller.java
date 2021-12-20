@@ -70,6 +70,10 @@ public class RejectDataShareResultStaxUnmarshaller implements Unmarshaller<Rejec
                     continue;
                 }
 
+                if (context.testExpression("ManagedBy", targetDepth)) {
+                    rejectDataShareResult.setManagedBy(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return rejectDataShareResult;

@@ -43,6 +43,11 @@ public class AbstractAWSDataSync implements AWSDataSync {
     }
 
     @Override
+    public CreateLocationFsxLustreResult createLocationFsxLustre(CreateLocationFsxLustreRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateLocationFsxWindowsResult createLocationFsxWindows(CreateLocationFsxWindowsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -99,6 +104,11 @@ public class AbstractAWSDataSync implements AWSDataSync {
 
     @Override
     public DescribeLocationEfsResult describeLocationEfs(DescribeLocationEfsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeLocationFsxLustreResult describeLocationFsxLustre(DescribeLocationFsxLustreRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

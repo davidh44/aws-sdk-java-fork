@@ -58,6 +58,13 @@ public class Distribution implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<LaunchTemplateConfiguration> launchTemplateConfigurations;
+    /**
+     * <p>
+     * Configure export settings to deliver disk images created from your image build, using a file format that is
+     * compatible with your VMs in that Region.
+     * </p>
+     */
+    private S3ExportConfiguration s3ExportConfiguration;
 
     /**
      * <p>
@@ -320,6 +327,52 @@ public class Distribution implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Configure export settings to deliver disk images created from your image build, using a file format that is
+     * compatible with your VMs in that Region.
+     * </p>
+     * 
+     * @param s3ExportConfiguration
+     *        Configure export settings to deliver disk images created from your image build, using a file format that
+     *        is compatible with your VMs in that Region.
+     */
+
+    public void setS3ExportConfiguration(S3ExportConfiguration s3ExportConfiguration) {
+        this.s3ExportConfiguration = s3ExportConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configure export settings to deliver disk images created from your image build, using a file format that is
+     * compatible with your VMs in that Region.
+     * </p>
+     * 
+     * @return Configure export settings to deliver disk images created from your image build, using a file format that
+     *         is compatible with your VMs in that Region.
+     */
+
+    public S3ExportConfiguration getS3ExportConfiguration() {
+        return this.s3ExportConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configure export settings to deliver disk images created from your image build, using a file format that is
+     * compatible with your VMs in that Region.
+     * </p>
+     * 
+     * @param s3ExportConfiguration
+     *        Configure export settings to deliver disk images created from your image build, using a file format that
+     *        is compatible with your VMs in that Region.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Distribution withS3ExportConfiguration(S3ExportConfiguration s3ExportConfiguration) {
+        setS3ExportConfiguration(s3ExportConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -340,7 +393,9 @@ public class Distribution implements Serializable, Cloneable, StructuredPojo {
         if (getLicenseConfigurationArns() != null)
             sb.append("LicenseConfigurationArns: ").append(getLicenseConfigurationArns()).append(",");
         if (getLaunchTemplateConfigurations() != null)
-            sb.append("LaunchTemplateConfigurations: ").append(getLaunchTemplateConfigurations());
+            sb.append("LaunchTemplateConfigurations: ").append(getLaunchTemplateConfigurations()).append(",");
+        if (getS3ExportConfiguration() != null)
+            sb.append("S3ExportConfiguration: ").append(getS3ExportConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -376,6 +431,10 @@ public class Distribution implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getLaunchTemplateConfigurations() != null && other.getLaunchTemplateConfigurations().equals(this.getLaunchTemplateConfigurations()) == false)
             return false;
+        if (other.getS3ExportConfiguration() == null ^ this.getS3ExportConfiguration() == null)
+            return false;
+        if (other.getS3ExportConfiguration() != null && other.getS3ExportConfiguration().equals(this.getS3ExportConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -389,6 +448,7 @@ public class Distribution implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getContainerDistributionConfiguration() == null) ? 0 : getContainerDistributionConfiguration().hashCode());
         hashCode = prime * hashCode + ((getLicenseConfigurationArns() == null) ? 0 : getLicenseConfigurationArns().hashCode());
         hashCode = prime * hashCode + ((getLaunchTemplateConfigurations() == null) ? 0 : getLaunchTemplateConfigurations().hashCode());
+        hashCode = prime * hashCode + ((getS3ExportConfiguration() == null) ? 0 : getS3ExportConfiguration().hashCode());
         return hashCode;
     }
 

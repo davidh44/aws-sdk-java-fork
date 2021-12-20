@@ -82,6 +82,12 @@ public class StandardsSubscription implements Serializable, Cloneable, Structure
      * </ul>
      */
     private String standardsStatus;
+    /**
+     * <p>
+     * The reason for the current status.
+     * </p>
+     */
+    private StandardsStatusReason standardsStatusReason;
 
     /**
      * <p>
@@ -527,6 +533,46 @@ public class StandardsSubscription implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The reason for the current status.
+     * </p>
+     * 
+     * @param standardsStatusReason
+     *        The reason for the current status.
+     */
+
+    public void setStandardsStatusReason(StandardsStatusReason standardsStatusReason) {
+        this.standardsStatusReason = standardsStatusReason;
+    }
+
+    /**
+     * <p>
+     * The reason for the current status.
+     * </p>
+     * 
+     * @return The reason for the current status.
+     */
+
+    public StandardsStatusReason getStandardsStatusReason() {
+        return this.standardsStatusReason;
+    }
+
+    /**
+     * <p>
+     * The reason for the current status.
+     * </p>
+     * 
+     * @param standardsStatusReason
+     *        The reason for the current status.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StandardsSubscription withStandardsStatusReason(StandardsStatusReason standardsStatusReason) {
+        setStandardsStatusReason(standardsStatusReason);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -545,7 +591,9 @@ public class StandardsSubscription implements Serializable, Cloneable, Structure
         if (getStandardsInput() != null)
             sb.append("StandardsInput: ").append(getStandardsInput()).append(",");
         if (getStandardsStatus() != null)
-            sb.append("StandardsStatus: ").append(getStandardsStatus());
+            sb.append("StandardsStatus: ").append(getStandardsStatus()).append(",");
+        if (getStandardsStatusReason() != null)
+            sb.append("StandardsStatusReason: ").append(getStandardsStatusReason());
         sb.append("}");
         return sb.toString();
     }
@@ -576,6 +624,10 @@ public class StandardsSubscription implements Serializable, Cloneable, Structure
             return false;
         if (other.getStandardsStatus() != null && other.getStandardsStatus().equals(this.getStandardsStatus()) == false)
             return false;
+        if (other.getStandardsStatusReason() == null ^ this.getStandardsStatusReason() == null)
+            return false;
+        if (other.getStandardsStatusReason() != null && other.getStandardsStatusReason().equals(this.getStandardsStatusReason()) == false)
+            return false;
         return true;
     }
 
@@ -588,6 +640,7 @@ public class StandardsSubscription implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getStandardsArn() == null) ? 0 : getStandardsArn().hashCode());
         hashCode = prime * hashCode + ((getStandardsInput() == null) ? 0 : getStandardsInput().hashCode());
         hashCode = prime * hashCode + ((getStandardsStatus() == null) ? 0 : getStandardsStatus().hashCode());
+        hashCode = prime * hashCode + ((getStandardsStatusReason() == null) ? 0 : getStandardsStatusReason().hashCode());
         return hashCode;
     }
 

@@ -49,6 +49,12 @@ public class RejectDataShareResult extends com.amazonaws.AmazonWebServiceResult<
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<DataShareAssociation> dataShareAssociations;
+    /**
+     * <p>
+     * The identifier of a datashare to show its managing entity.
+     * </p>
+     */
+    private String managedBy;
 
     /**
      * <p>
@@ -268,6 +274,46 @@ public class RejectDataShareResult extends com.amazonaws.AmazonWebServiceResult<
     }
 
     /**
+     * <p>
+     * The identifier of a datashare to show its managing entity.
+     * </p>
+     * 
+     * @param managedBy
+     *        The identifier of a datashare to show its managing entity.
+     */
+
+    public void setManagedBy(String managedBy) {
+        this.managedBy = managedBy;
+    }
+
+    /**
+     * <p>
+     * The identifier of a datashare to show its managing entity.
+     * </p>
+     * 
+     * @return The identifier of a datashare to show its managing entity.
+     */
+
+    public String getManagedBy() {
+        return this.managedBy;
+    }
+
+    /**
+     * <p>
+     * The identifier of a datashare to show its managing entity.
+     * </p>
+     * 
+     * @param managedBy
+     *        The identifier of a datashare to show its managing entity.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RejectDataShareResult withManagedBy(String managedBy) {
+        setManagedBy(managedBy);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -286,7 +332,9 @@ public class RejectDataShareResult extends com.amazonaws.AmazonWebServiceResult<
         if (getAllowPubliclyAccessibleConsumers() != null)
             sb.append("AllowPubliclyAccessibleConsumers: ").append(getAllowPubliclyAccessibleConsumers()).append(",");
         if (getDataShareAssociations() != null)
-            sb.append("DataShareAssociations: ").append(getDataShareAssociations());
+            sb.append("DataShareAssociations: ").append(getDataShareAssociations()).append(",");
+        if (getManagedBy() != null)
+            sb.append("ManagedBy: ").append(getManagedBy());
         sb.append("}");
         return sb.toString();
     }
@@ -318,6 +366,10 @@ public class RejectDataShareResult extends com.amazonaws.AmazonWebServiceResult<
             return false;
         if (other.getDataShareAssociations() != null && other.getDataShareAssociations().equals(this.getDataShareAssociations()) == false)
             return false;
+        if (other.getManagedBy() == null ^ this.getManagedBy() == null)
+            return false;
+        if (other.getManagedBy() != null && other.getManagedBy().equals(this.getManagedBy()) == false)
+            return false;
         return true;
     }
 
@@ -330,6 +382,7 @@ public class RejectDataShareResult extends com.amazonaws.AmazonWebServiceResult<
         hashCode = prime * hashCode + ((getProducerArn() == null) ? 0 : getProducerArn().hashCode());
         hashCode = prime * hashCode + ((getAllowPubliclyAccessibleConsumers() == null) ? 0 : getAllowPubliclyAccessibleConsumers().hashCode());
         hashCode = prime * hashCode + ((getDataShareAssociations() == null) ? 0 : getDataShareAssociations().hashCode());
+        hashCode = prime * hashCode + ((getManagedBy() == null) ? 0 : getManagedBy().hashCode());
         return hashCode;
     }
 

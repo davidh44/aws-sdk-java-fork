@@ -18,6 +18,12 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <note>
+ * <p>
+ * This object belongs to the <a>CreatePredictor</a> operation. If you created your predictor with
+ * <a>CreateAutoPredictor</a>, see <a>AttributeConfig</a>.
+ * </p>
+ * </note>
  * <p>
  * In a <a>CreatePredictor</a> operation, the specified algorithm trains a model using the specified dataset group. You
  * can optionally tell the operation to modify data fields prior to training a model. These modifications are referred

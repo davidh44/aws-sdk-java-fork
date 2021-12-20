@@ -73,6 +73,10 @@ public class DistributionJsonUnmarshaller implements Unmarshaller<Distribution, 
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("s3ExportConfiguration", targetDepth)) {
+                    context.nextToken();
+                    distribution.setS3ExportConfiguration(S3ExportConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

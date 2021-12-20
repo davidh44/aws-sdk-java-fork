@@ -144,6 +144,12 @@ public class AwsAutoScalingLaunchConfigurationDetails implements Serializable, C
      * </p>
      */
     private String userData;
+    /**
+     * <p>
+     * The metadata options for the instances.
+     * </p>
+     */
+    private AwsAutoScalingLaunchConfigurationMetadataOptions metadataOptions;
 
     /**
      * <p>
@@ -1032,6 +1038,46 @@ public class AwsAutoScalingLaunchConfigurationDetails implements Serializable, C
     }
 
     /**
+     * <p>
+     * The metadata options for the instances.
+     * </p>
+     * 
+     * @param metadataOptions
+     *        The metadata options for the instances.
+     */
+
+    public void setMetadataOptions(AwsAutoScalingLaunchConfigurationMetadataOptions metadataOptions) {
+        this.metadataOptions = metadataOptions;
+    }
+
+    /**
+     * <p>
+     * The metadata options for the instances.
+     * </p>
+     * 
+     * @return The metadata options for the instances.
+     */
+
+    public AwsAutoScalingLaunchConfigurationMetadataOptions getMetadataOptions() {
+        return this.metadataOptions;
+    }
+
+    /**
+     * <p>
+     * The metadata options for the instances.
+     * </p>
+     * 
+     * @param metadataOptions
+     *        The metadata options for the instances.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsAutoScalingLaunchConfigurationDetails withMetadataOptions(AwsAutoScalingLaunchConfigurationMetadataOptions metadataOptions) {
+        setMetadataOptions(metadataOptions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1078,7 +1124,9 @@ public class AwsAutoScalingLaunchConfigurationDetails implements Serializable, C
         if (getSpotPrice() != null)
             sb.append("SpotPrice: ").append(getSpotPrice()).append(",");
         if (getUserData() != null)
-            sb.append("UserData: ").append(getUserData());
+            sb.append("UserData: ").append(getUserData()).append(",");
+        if (getMetadataOptions() != null)
+            sb.append("MetadataOptions: ").append(getMetadataOptions());
         sb.append("}");
         return sb.toString();
     }
@@ -1165,6 +1213,10 @@ public class AwsAutoScalingLaunchConfigurationDetails implements Serializable, C
             return false;
         if (other.getUserData() != null && other.getUserData().equals(this.getUserData()) == false)
             return false;
+        if (other.getMetadataOptions() == null ^ this.getMetadataOptions() == null)
+            return false;
+        if (other.getMetadataOptions() != null && other.getMetadataOptions().equals(this.getMetadataOptions()) == false)
+            return false;
         return true;
     }
 
@@ -1191,6 +1243,7 @@ public class AwsAutoScalingLaunchConfigurationDetails implements Serializable, C
         hashCode = prime * hashCode + ((getSecurityGroups() == null) ? 0 : getSecurityGroups().hashCode());
         hashCode = prime * hashCode + ((getSpotPrice() == null) ? 0 : getSpotPrice().hashCode());
         hashCode = prime * hashCode + ((getUserData() == null) ? 0 : getUserData().hashCode());
+        hashCode = prime * hashCode + ((getMetadataOptions() == null) ? 0 : getMetadataOptions().hashCode());
         return hashCode;
     }
 

@@ -66,7 +66,7 @@ public class CreateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
     private String kmsKeyId;
     /**
      * <p>
-     * Specifies the pricing plan for the geofence collection.
+     * Optionally specifies the pricing plan for the geofence collection. Defaults to <code>RequestBasedUsage</code>.
      * </p>
      * <p>
      * For additional details and restrictions on each pricing plan option, see the <a
@@ -396,7 +396,7 @@ public class CreateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Specifies the pricing plan for the geofence collection.
+     * Optionally specifies the pricing plan for the geofence collection. Defaults to <code>RequestBasedUsage</code>.
      * </p>
      * <p>
      * For additional details and restrictions on each pricing plan option, see the <a
@@ -404,7 +404,8 @@ public class CreateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @param pricingPlan
-     *        Specifies the pricing plan for the geofence collection.</p>
+     *        Optionally specifies the pricing plan for the geofence collection. Defaults to
+     *        <code>RequestBasedUsage</code>.</p>
      *        <p>
      *        For additional details and restrictions on each pricing plan option, see the <a
      *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing page</a>.
@@ -417,14 +418,15 @@ public class CreateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Specifies the pricing plan for the geofence collection.
+     * Optionally specifies the pricing plan for the geofence collection. Defaults to <code>RequestBasedUsage</code>.
      * </p>
      * <p>
      * For additional details and restrictions on each pricing plan option, see the <a
      * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing page</a>.
      * </p>
      * 
-     * @return Specifies the pricing plan for the geofence collection.</p>
+     * @return Optionally specifies the pricing plan for the geofence collection. Defaults to
+     *         <code>RequestBasedUsage</code>.</p>
      *         <p>
      *         For additional details and restrictions on each pricing plan option, see the <a
      *         href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing page</a>.
@@ -437,7 +439,7 @@ public class CreateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Specifies the pricing plan for the geofence collection.
+     * Optionally specifies the pricing plan for the geofence collection. Defaults to <code>RequestBasedUsage</code>.
      * </p>
      * <p>
      * For additional details and restrictions on each pricing plan option, see the <a
@@ -445,7 +447,8 @@ public class CreateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @param pricingPlan
-     *        Specifies the pricing plan for the geofence collection.</p>
+     *        Optionally specifies the pricing plan for the geofence collection. Defaults to
+     *        <code>RequestBasedUsage</code>.</p>
      *        <p>
      *        For additional details and restrictions on each pricing plan option, see the <a
      *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing page</a>.
@@ -460,7 +463,7 @@ public class CreateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Specifies the pricing plan for the geofence collection.
+     * Optionally specifies the pricing plan for the geofence collection. Defaults to <code>RequestBasedUsage</code>.
      * </p>
      * <p>
      * For additional details and restrictions on each pricing plan option, see the <a
@@ -468,7 +471,8 @@ public class CreateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @param pricingPlan
-     *        Specifies the pricing plan for the geofence collection.</p>
+     *        Optionally specifies the pricing plan for the geofence collection. Defaults to
+     *        <code>RequestBasedUsage</code>.</p>
      *        <p>
      *        For additional details and restrictions on each pricing plan option, see the <a
      *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing page</a>.

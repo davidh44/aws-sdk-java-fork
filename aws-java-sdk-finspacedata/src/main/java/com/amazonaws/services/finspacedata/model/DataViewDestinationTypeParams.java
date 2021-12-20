@@ -42,6 +42,10 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
      */
     private String destinationType;
 
+    private String s3DestinationExportFileFormat;
+
+    private java.util.Map<String, String> s3DestinationExportFileFormatOptions;
+
     /**
      * <p>
      * Destination type for a Dataview.
@@ -122,6 +126,100 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
     }
 
     /**
+     * @param s3DestinationExportFileFormat
+     * @see ExportFileFormat
+     */
+
+    public void setS3DestinationExportFileFormat(String s3DestinationExportFileFormat) {
+        this.s3DestinationExportFileFormat = s3DestinationExportFileFormat;
+    }
+
+    /**
+     * @return
+     * @see ExportFileFormat
+     */
+
+    public String getS3DestinationExportFileFormat() {
+        return this.s3DestinationExportFileFormat;
+    }
+
+    /**
+     * @param s3DestinationExportFileFormat
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ExportFileFormat
+     */
+
+    public DataViewDestinationTypeParams withS3DestinationExportFileFormat(String s3DestinationExportFileFormat) {
+        setS3DestinationExportFileFormat(s3DestinationExportFileFormat);
+        return this;
+    }
+
+    /**
+     * @param s3DestinationExportFileFormat
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ExportFileFormat
+     */
+
+    public DataViewDestinationTypeParams withS3DestinationExportFileFormat(ExportFileFormat s3DestinationExportFileFormat) {
+        this.s3DestinationExportFileFormat = s3DestinationExportFileFormat.toString();
+        return this;
+    }
+
+    /**
+     * @return
+     */
+
+    public java.util.Map<String, String> getS3DestinationExportFileFormatOptions() {
+        return s3DestinationExportFileFormatOptions;
+    }
+
+    /**
+     * @param s3DestinationExportFileFormatOptions
+     */
+
+    public void setS3DestinationExportFileFormatOptions(java.util.Map<String, String> s3DestinationExportFileFormatOptions) {
+        this.s3DestinationExportFileFormatOptions = s3DestinationExportFileFormatOptions;
+    }
+
+    /**
+     * @param s3DestinationExportFileFormatOptions
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataViewDestinationTypeParams withS3DestinationExportFileFormatOptions(java.util.Map<String, String> s3DestinationExportFileFormatOptions) {
+        setS3DestinationExportFileFormatOptions(s3DestinationExportFileFormatOptions);
+        return this;
+    }
+
+    /**
+     * Add a single S3DestinationExportFileFormatOptions entry
+     *
+     * @see DataViewDestinationTypeParams#withS3DestinationExportFileFormatOptions
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataViewDestinationTypeParams addS3DestinationExportFileFormatOptionsEntry(String key, String value) {
+        if (null == this.s3DestinationExportFileFormatOptions) {
+            this.s3DestinationExportFileFormatOptions = new java.util.HashMap<String, String>();
+        }
+        if (this.s3DestinationExportFileFormatOptions.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.s3DestinationExportFileFormatOptions.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into S3DestinationExportFileFormatOptions.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataViewDestinationTypeParams clearS3DestinationExportFileFormatOptionsEntries() {
+        this.s3DestinationExportFileFormatOptions = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -134,7 +232,11 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getDestinationType() != null)
-            sb.append("DestinationType: ").append(getDestinationType());
+            sb.append("DestinationType: ").append(getDestinationType()).append(",");
+        if (getS3DestinationExportFileFormat() != null)
+            sb.append("S3DestinationExportFileFormat: ").append(getS3DestinationExportFileFormat()).append(",");
+        if (getS3DestinationExportFileFormatOptions() != null)
+            sb.append("S3DestinationExportFileFormatOptions: ").append(getS3DestinationExportFileFormatOptions());
         sb.append("}");
         return sb.toString();
     }
@@ -153,6 +255,16 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
             return false;
         if (other.getDestinationType() != null && other.getDestinationType().equals(this.getDestinationType()) == false)
             return false;
+        if (other.getS3DestinationExportFileFormat() == null ^ this.getS3DestinationExportFileFormat() == null)
+            return false;
+        if (other.getS3DestinationExportFileFormat() != null
+                && other.getS3DestinationExportFileFormat().equals(this.getS3DestinationExportFileFormat()) == false)
+            return false;
+        if (other.getS3DestinationExportFileFormatOptions() == null ^ this.getS3DestinationExportFileFormatOptions() == null)
+            return false;
+        if (other.getS3DestinationExportFileFormatOptions() != null
+                && other.getS3DestinationExportFileFormatOptions().equals(this.getS3DestinationExportFileFormatOptions()) == false)
+            return false;
         return true;
     }
 
@@ -162,6 +274,8 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getDestinationType() == null) ? 0 : getDestinationType().hashCode());
+        hashCode = prime * hashCode + ((getS3DestinationExportFileFormat() == null) ? 0 : getS3DestinationExportFileFormat().hashCode());
+        hashCode = prime * hashCode + ((getS3DestinationExportFileFormatOptions() == null) ? 0 : getS3DestinationExportFileFormatOptions().hashCode());
         return hashCode;
     }
 

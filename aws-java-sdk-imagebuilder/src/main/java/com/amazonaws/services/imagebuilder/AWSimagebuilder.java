@@ -924,6 +924,35 @@ public interface AWSimagebuilder {
 
     /**
      * <p>
+     * When you export your virtual machine (VM) from its virtualization environment, that process creates a set of one
+     * or more disk container files that act as snapshots of your VM’s environment, settings, and data. The Amazon EC2
+     * API <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportImage.html">ImportImage</a> action
+     * uses those files to import your VM and create an AMI. To import using the CLI command, see <a
+     * href="https://docs.aws.amazon.com/cli/latest/reference/ec2/import-image.html">import-image</a>
+     * </p>
+     * <p>
+     * You can reference the task ID from the VM import to pull in the AMI that the import created as the base image for
+     * your Image Builder recipe.
+     * </p>
+     * 
+     * @param importVmImageRequest
+     * @return Result of the ImportVmImage operation returned by the service.
+     * @throws ServiceException
+     *         This exception is thrown when the service encounters an unrecoverable exception.
+     * @throws ClientException
+     *         These errors are usually caused by a client action, such as using an action or resource on behalf of a
+     *         user that doesn't have permissions to use the action or resource, or specifying an invalid resource
+     *         identifier.
+     * @throws ServiceUnavailableException
+     *         The service is unable to process your request at this time.
+     * @sample AWSimagebuilder.ImportVmImage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/ImportVmImage" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ImportVmImageResult importVmImage(ImportVmImageRequest importVmImageRequest);
+
+    /**
+     * <p>
      * Returns the list of component build versions for the specified semantic version.
      * </p>
      * <note>

@@ -100,7 +100,8 @@ public class CreateRouteCalculatorRequest extends com.amazonaws.AmazonWebService
     private String description;
     /**
      * <p>
-     * Specifies the pricing plan for your route calculator resource.
+     * Optionally specifies the pricing plan for the route calculator resource. Defaults to
+     * <code>RequestBasedUsage</code>.
      * </p>
      * <p>
      * For additional details and restrictions on each pricing plan option, see <a
@@ -610,7 +611,8 @@ public class CreateRouteCalculatorRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Specifies the pricing plan for your route calculator resource.
+     * Optionally specifies the pricing plan for the route calculator resource. Defaults to
+     * <code>RequestBasedUsage</code>.
      * </p>
      * <p>
      * For additional details and restrictions on each pricing plan option, see <a
@@ -618,7 +620,8 @@ public class CreateRouteCalculatorRequest extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param pricingPlan
-     *        Specifies the pricing plan for your route calculator resource.</p>
+     *        Optionally specifies the pricing plan for the route calculator resource. Defaults to
+     *        <code>RequestBasedUsage</code>.</p>
      *        <p>
      *        For additional details and restrictions on each pricing plan option, see <a
      *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
@@ -631,14 +634,16 @@ public class CreateRouteCalculatorRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Specifies the pricing plan for your route calculator resource.
+     * Optionally specifies the pricing plan for the route calculator resource. Defaults to
+     * <code>RequestBasedUsage</code>.
      * </p>
      * <p>
      * For additional details and restrictions on each pricing plan option, see <a
      * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
      * </p>
      * 
-     * @return Specifies the pricing plan for your route calculator resource.</p>
+     * @return Optionally specifies the pricing plan for the route calculator resource. Defaults to
+     *         <code>RequestBasedUsage</code>.</p>
      *         <p>
      *         For additional details and restrictions on each pricing plan option, see <a
      *         href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
@@ -651,7 +656,8 @@ public class CreateRouteCalculatorRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Specifies the pricing plan for your route calculator resource.
+     * Optionally specifies the pricing plan for the route calculator resource. Defaults to
+     * <code>RequestBasedUsage</code>.
      * </p>
      * <p>
      * For additional details and restrictions on each pricing plan option, see <a
@@ -659,7 +665,8 @@ public class CreateRouteCalculatorRequest extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param pricingPlan
-     *        Specifies the pricing plan for your route calculator resource.</p>
+     *        Optionally specifies the pricing plan for the route calculator resource. Defaults to
+     *        <code>RequestBasedUsage</code>.</p>
      *        <p>
      *        For additional details and restrictions on each pricing plan option, see <a
      *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
@@ -674,7 +681,8 @@ public class CreateRouteCalculatorRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Specifies the pricing plan for your route calculator resource.
+     * Optionally specifies the pricing plan for the route calculator resource. Defaults to
+     * <code>RequestBasedUsage</code>.
      * </p>
      * <p>
      * For additional details and restrictions on each pricing plan option, see <a
@@ -682,7 +690,8 @@ public class CreateRouteCalculatorRequest extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param pricingPlan
-     *        Specifies the pricing plan for your route calculator resource.</p>
+     *        Optionally specifies the pricing plan for the route calculator resource. Defaults to
+     *        <code>RequestBasedUsage</code>.</p>
      *        <p>
      *        For additional details and restrictions on each pricing plan option, see <a
      *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.

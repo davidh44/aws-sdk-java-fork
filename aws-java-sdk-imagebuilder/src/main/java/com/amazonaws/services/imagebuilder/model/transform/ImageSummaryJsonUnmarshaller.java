@@ -93,6 +93,10 @@ public class ImageSummaryJsonUnmarshaller implements Unmarshaller<ImageSummary, 
                     imageSummary.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
                             .unmarshall(context));
                 }
+                if (context.testExpression("buildType", targetDepth)) {
+                    context.nextToken();
+                    imageSummary.setBuildType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

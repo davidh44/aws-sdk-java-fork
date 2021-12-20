@@ -147,6 +147,12 @@ public class ResourceDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsEcrRepository").build();
     private static final MarshallingInfo<StructuredPojo> AWSEKSCLUSTER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsEksCluster").build();
+    private static final MarshallingInfo<StructuredPojo> AWSNETWORKFIREWALLFIREWALLPOLICY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsNetworkFirewallFirewallPolicy").build();
+    private static final MarshallingInfo<StructuredPojo> AWSNETWORKFIREWALLFIREWALL_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsNetworkFirewallFirewall").build();
+    private static final MarshallingInfo<StructuredPojo> AWSNETWORKFIREWALLRULEGROUP_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsNetworkFirewallRuleGroup").build();
 
     private static final ResourceDetailsMarshaller instance = new ResourceDetailsMarshaller();
 
@@ -223,6 +229,9 @@ public class ResourceDetailsMarshaller {
             protocolMarshaller.marshall(resourceDetails.getAwsWafRegionalRateBasedRule(), AWSWAFREGIONALRATEBASEDRULE_BINDING);
             protocolMarshaller.marshall(resourceDetails.getAwsEcrRepository(), AWSECRREPOSITORY_BINDING);
             protocolMarshaller.marshall(resourceDetails.getAwsEksCluster(), AWSEKSCLUSTER_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsNetworkFirewallFirewallPolicy(), AWSNETWORKFIREWALLFIREWALLPOLICY_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsNetworkFirewallFirewall(), AWSNETWORKFIREWALLFIREWALL_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsNetworkFirewallRuleGroup(), AWSNETWORKFIREWALLRULEGROUP_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

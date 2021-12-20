@@ -287,6 +287,19 @@ public class ResourceDetailsJsonUnmarshaller implements Unmarshaller<ResourceDet
                     context.nextToken();
                     resourceDetails.setAwsEksCluster(AwsEksClusterDetailsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("AwsNetworkFirewallFirewallPolicy", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsNetworkFirewallFirewallPolicy(AwsNetworkFirewallFirewallPolicyDetailsJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
+                if (context.testExpression("AwsNetworkFirewallFirewall", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsNetworkFirewallFirewall(AwsNetworkFirewallFirewallDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("AwsNetworkFirewallRuleGroup", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsNetworkFirewallRuleGroup(AwsNetworkFirewallRuleGroupDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

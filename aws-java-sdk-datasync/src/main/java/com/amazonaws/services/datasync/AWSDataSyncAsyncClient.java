@@ -179,6 +179,39 @@ public class AWSDataSyncAsyncClient extends AWSDataSyncClient implements AWSData
     }
 
     @Override
+    public java.util.concurrent.Future<CreateLocationFsxLustreResult> createLocationFsxLustreAsync(CreateLocationFsxLustreRequest request) {
+
+        return createLocationFsxLustreAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateLocationFsxLustreResult> createLocationFsxLustreAsync(final CreateLocationFsxLustreRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateLocationFsxLustreRequest, CreateLocationFsxLustreResult> asyncHandler) {
+        final CreateLocationFsxLustreRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateLocationFsxLustreResult>() {
+            @Override
+            public CreateLocationFsxLustreResult call() throws Exception {
+                CreateLocationFsxLustreResult result = null;
+
+                try {
+                    result = executeCreateLocationFsxLustre(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateLocationFsxWindowsResult> createLocationFsxWindowsAsync(CreateLocationFsxWindowsRequest request) {
 
         return createLocationFsxWindowsAsync(request, null);
@@ -559,6 +592,39 @@ public class AWSDataSyncAsyncClient extends AWSDataSyncClient implements AWSData
 
                 try {
                     result = executeDescribeLocationEfs(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeLocationFsxLustreResult> describeLocationFsxLustreAsync(DescribeLocationFsxLustreRequest request) {
+
+        return describeLocationFsxLustreAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeLocationFsxLustreResult> describeLocationFsxLustreAsync(final DescribeLocationFsxLustreRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeLocationFsxLustreRequest, DescribeLocationFsxLustreResult> asyncHandler) {
+        final DescribeLocationFsxLustreRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeLocationFsxLustreResult>() {
+            @Override
+            public DescribeLocationFsxLustreResult call() throws Exception {
+                DescribeLocationFsxLustreResult result = null;
+
+                try {
+                    result = executeDescribeLocationFsxLustre(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

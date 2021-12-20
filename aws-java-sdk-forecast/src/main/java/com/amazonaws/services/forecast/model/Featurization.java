@@ -18,6 +18,12 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <note>
+ * <p>
+ * This object belongs to the <a>CreatePredictor</a> operation. If you created your predictor with
+ * <a>CreateAutoPredictor</a>, see <a>AttributeConfig</a>.
+ * </p>
+ * </note>
  * <p>
  * Provides featurization (transformation) information for a dataset field. This object is part of the
  * <a>FeaturizationConfig</a> object.

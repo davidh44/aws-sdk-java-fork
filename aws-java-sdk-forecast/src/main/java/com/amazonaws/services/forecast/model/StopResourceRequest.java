@@ -29,7 +29,8 @@ public class StopResourceRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * The Amazon Resource Name (ARN) that identifies the resource to stop. The supported ARNs are
      * <code>DatasetImportJobArn</code>, <code>PredictorArn</code>, <code>PredictorBacktestExportJobArn</code>,
-     * <code>ForecastArn</code>, and <code>ForecastExportJobArn</code>.
+     * <code>ForecastArn</code>, <code>ForecastExportJobArn</code>, <code>ExplainabilityArn</code>, and
+     * <code>ExplainabilityExportArn</code>.
      * </p>
      */
     private String resourceArn;
@@ -38,13 +39,15 @@ public class StopResourceRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * The Amazon Resource Name (ARN) that identifies the resource to stop. The supported ARNs are
      * <code>DatasetImportJobArn</code>, <code>PredictorArn</code>, <code>PredictorBacktestExportJobArn</code>,
-     * <code>ForecastArn</code>, and <code>ForecastExportJobArn</code>.
+     * <code>ForecastArn</code>, <code>ForecastExportJobArn</code>, <code>ExplainabilityArn</code>, and
+     * <code>ExplainabilityExportArn</code>.
      * </p>
      * 
      * @param resourceArn
      *        The Amazon Resource Name (ARN) that identifies the resource to stop. The supported ARNs are
      *        <code>DatasetImportJobArn</code>, <code>PredictorArn</code>, <code>PredictorBacktestExportJobArn</code>,
-     *        <code>ForecastArn</code>, and <code>ForecastExportJobArn</code>.
+     *        <code>ForecastArn</code>, <code>ForecastExportJobArn</code>, <code>ExplainabilityArn</code>, and
+     *        <code>ExplainabilityExportArn</code>.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -55,12 +58,14 @@ public class StopResourceRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * The Amazon Resource Name (ARN) that identifies the resource to stop. The supported ARNs are
      * <code>DatasetImportJobArn</code>, <code>PredictorArn</code>, <code>PredictorBacktestExportJobArn</code>,
-     * <code>ForecastArn</code>, and <code>ForecastExportJobArn</code>.
+     * <code>ForecastArn</code>, <code>ForecastExportJobArn</code>, <code>ExplainabilityArn</code>, and
+     * <code>ExplainabilityExportArn</code>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) that identifies the resource to stop. The supported ARNs are
      *         <code>DatasetImportJobArn</code>, <code>PredictorArn</code>, <code>PredictorBacktestExportJobArn</code>,
-     *         <code>ForecastArn</code>, and <code>ForecastExportJobArn</code>.
+     *         <code>ForecastArn</code>, <code>ForecastExportJobArn</code>, <code>ExplainabilityArn</code>, and
+     *         <code>ExplainabilityExportArn</code>.
      */
 
     public String getResourceArn() {
@@ -71,13 +76,15 @@ public class StopResourceRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * The Amazon Resource Name (ARN) that identifies the resource to stop. The supported ARNs are
      * <code>DatasetImportJobArn</code>, <code>PredictorArn</code>, <code>PredictorBacktestExportJobArn</code>,
-     * <code>ForecastArn</code>, and <code>ForecastExportJobArn</code>.
+     * <code>ForecastArn</code>, <code>ForecastExportJobArn</code>, <code>ExplainabilityArn</code>, and
+     * <code>ExplainabilityExportArn</code>.
      * </p>
      * 
      * @param resourceArn
      *        The Amazon Resource Name (ARN) that identifies the resource to stop. The supported ARNs are
      *        <code>DatasetImportJobArn</code>, <code>PredictorArn</code>, <code>PredictorBacktestExportJobArn</code>,
-     *        <code>ForecastArn</code>, and <code>ForecastExportJobArn</code>.
+     *        <code>ForecastArn</code>, <code>ForecastExportJobArn</code>, <code>ExplainabilityArn</code>, and
+     *        <code>ExplainabilityExportArn</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

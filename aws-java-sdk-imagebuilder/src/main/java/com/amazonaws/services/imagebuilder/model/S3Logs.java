@@ -30,24 +30,24 @@ public class S3Logs implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon S3 bucket in which to store the logs.
+     * The S3 bucket in which to store the logs.
      * </p>
      */
     private String s3BucketName;
     /**
      * <p>
-     * The Amazon S3 path in which to store the logs.
+     * The Amazon S3 path to the bucket where the logs are stored.
      * </p>
      */
     private String s3KeyPrefix;
 
     /**
      * <p>
-     * The Amazon S3 bucket in which to store the logs.
+     * The S3 bucket in which to store the logs.
      * </p>
      * 
      * @param s3BucketName
-     *        The Amazon S3 bucket in which to store the logs.
+     *        The S3 bucket in which to store the logs.
      */
 
     public void setS3BucketName(String s3BucketName) {
@@ -56,10 +56,10 @@ public class S3Logs implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon S3 bucket in which to store the logs.
+     * The S3 bucket in which to store the logs.
      * </p>
      * 
-     * @return The Amazon S3 bucket in which to store the logs.
+     * @return The S3 bucket in which to store the logs.
      */
 
     public String getS3BucketName() {
@@ -68,11 +68,11 @@ public class S3Logs implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon S3 bucket in which to store the logs.
+     * The S3 bucket in which to store the logs.
      * </p>
      * 
      * @param s3BucketName
-     *        The Amazon S3 bucket in which to store the logs.
+     *        The S3 bucket in which to store the logs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,11 +83,11 @@ public class S3Logs implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon S3 path in which to store the logs.
+     * The Amazon S3 path to the bucket where the logs are stored.
      * </p>
      * 
      * @param s3KeyPrefix
-     *        The Amazon S3 path in which to store the logs.
+     *        The Amazon S3 path to the bucket where the logs are stored.
      */
 
     public void setS3KeyPrefix(String s3KeyPrefix) {
@@ -96,10 +96,10 @@ public class S3Logs implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon S3 path in which to store the logs.
+     * The Amazon S3 path to the bucket where the logs are stored.
      * </p>
      * 
-     * @return The Amazon S3 path in which to store the logs.
+     * @return The Amazon S3 path to the bucket where the logs are stored.
      */
 
     public String getS3KeyPrefix() {
@@ -108,11 +108,11 @@ public class S3Logs implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon S3 path in which to store the logs.
+     * The Amazon S3 path to the bucket where the logs are stored.
      * </p>
      * 
      * @param s3KeyPrefix
-     *        The Amazon S3 path in which to store the logs.
+     *        The Amazon S3 path to the bucket where the logs are stored.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

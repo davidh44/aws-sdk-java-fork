@@ -343,6 +343,67 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
+     * Creates an endpoint for an Amazon FSx for Lustre file system.
+     * </p>
+     * 
+     * @param createLocationFsxLustreRequest
+     * @return Result of the CreateLocationFsxLustre operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.CreateLocationFsxLustre
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationFsxLustre"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateLocationFsxLustreResult createLocationFsxLustre(CreateLocationFsxLustreRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateLocationFsxLustre(request);
+    }
+
+    @SdkInternalApi
+    final CreateLocationFsxLustreResult executeCreateLocationFsxLustre(CreateLocationFsxLustreRequest createLocationFsxLustreRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createLocationFsxLustreRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateLocationFsxLustreRequest> request = null;
+        Response<CreateLocationFsxLustreResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateLocationFsxLustreRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createLocationFsxLustreRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateLocationFsxLustre");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateLocationFsxLustreResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateLocationFsxLustreResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates an endpoint for an Amazon FSx for Windows File Server file system.
      * </p>
      * 
@@ -1087,6 +1148,67 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
             HttpResponseHandler<AmazonWebServiceResponse<DescribeLocationEfsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeLocationEfsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns metadata, such as the path information about an Amazon FSx for Lustre location.
+     * </p>
+     * 
+     * @param describeLocationFsxLustreRequest
+     * @return Result of the DescribeLocationFsxLustre operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.DescribeLocationFsxLustre
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationFsxLustre"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeLocationFsxLustreResult describeLocationFsxLustre(DescribeLocationFsxLustreRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeLocationFsxLustre(request);
+    }
+
+    @SdkInternalApi
+    final DescribeLocationFsxLustreResult executeDescribeLocationFsxLustre(DescribeLocationFsxLustreRequest describeLocationFsxLustreRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeLocationFsxLustreRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeLocationFsxLustreRequest> request = null;
+        Response<DescribeLocationFsxLustreResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeLocationFsxLustreRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeLocationFsxLustreRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeLocationFsxLustre");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeLocationFsxLustreResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeLocationFsxLustreResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

@@ -27,7 +27,7 @@ public class QuotaSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The maximum number of requests that can be made in a given time period.
+     * The target maximum number of requests that can be made in a given time period.
      * </p>
      */
     private Integer limit;
@@ -47,11 +47,11 @@ public class QuotaSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The maximum number of requests that can be made in a given time period.
+     * The target maximum number of requests that can be made in a given time period.
      * </p>
      * 
      * @param limit
-     *        The maximum number of requests that can be made in a given time period.
+     *        The target maximum number of requests that can be made in a given time period.
      */
 
     public void setLimit(Integer limit) {
@@ -60,10 +60,10 @@ public class QuotaSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The maximum number of requests that can be made in a given time period.
+     * The target maximum number of requests that can be made in a given time period.
      * </p>
      * 
-     * @return The maximum number of requests that can be made in a given time period.
+     * @return The target maximum number of requests that can be made in a given time period.
      */
 
     public Integer getLimit() {
@@ -72,11 +72,11 @@ public class QuotaSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The maximum number of requests that can be made in a given time period.
+     * The target maximum number of requests that can be made in a given time period.
      * </p>
      * 
      * @param limit
-     *        The maximum number of requests that can be made in a given time period.
+     *        The target maximum number of requests that can be made in a given time period.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

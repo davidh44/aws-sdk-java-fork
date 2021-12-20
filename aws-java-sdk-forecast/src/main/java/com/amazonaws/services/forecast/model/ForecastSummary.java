@@ -48,7 +48,11 @@ public class ForecastSummary implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private String predictorArn;
-
+    /**
+     * <p>
+     * Whether the Forecast was created from an AutoPredictor.
+     * </p>
+     */
     private Boolean createdUsingAutoPredictor;
     /**
      * <p>
@@ -256,7 +260,12 @@ public class ForecastSummary implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * Whether the Forecast was created from an AutoPredictor.
+     * </p>
+     * 
      * @param createdUsingAutoPredictor
+     *        Whether the Forecast was created from an AutoPredictor.
      */
 
     public void setCreatedUsingAutoPredictor(Boolean createdUsingAutoPredictor) {
@@ -264,7 +273,11 @@ public class ForecastSummary implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * @return
+     * <p>
+     * Whether the Forecast was created from an AutoPredictor.
+     * </p>
+     * 
+     * @return Whether the Forecast was created from an AutoPredictor.
      */
 
     public Boolean getCreatedUsingAutoPredictor() {
@@ -272,7 +285,12 @@ public class ForecastSummary implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * Whether the Forecast was created from an AutoPredictor.
+     * </p>
+     * 
      * @param createdUsingAutoPredictor
+     *        Whether the Forecast was created from an AutoPredictor.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -282,7 +300,11 @@ public class ForecastSummary implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * @return
+     * <p>
+     * Whether the Forecast was created from an AutoPredictor.
+     * </p>
+     * 
+     * @return Whether the Forecast was created from an AutoPredictor.
      */
 
     public Boolean isCreatedUsingAutoPredictor() {

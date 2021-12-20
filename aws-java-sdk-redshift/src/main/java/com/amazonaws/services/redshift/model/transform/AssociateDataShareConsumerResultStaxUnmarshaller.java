@@ -70,6 +70,10 @@ public class AssociateDataShareConsumerResultStaxUnmarshaller implements Unmarsh
                     continue;
                 }
 
+                if (context.testExpression("ManagedBy", targetDepth)) {
+                    associateDataShareConsumerResult.setManagedBy(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return associateDataShareConsumerResult;

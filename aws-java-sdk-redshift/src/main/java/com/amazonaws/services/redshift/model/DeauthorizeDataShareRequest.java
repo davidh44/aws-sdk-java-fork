@@ -34,7 +34,7 @@ public class DeauthorizeDataShareRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * The identifier of the data consumer that is to have authorization removed from the datashare. This identifier is
-     * an Amazon Web Services account ID.
+     * an Amazon Web Services account ID or a keyword, such as ADX.
      * </p>
      */
     private String consumerIdentifier;
@@ -82,12 +82,12 @@ public class DeauthorizeDataShareRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * The identifier of the data consumer that is to have authorization removed from the datashare. This identifier is
-     * an Amazon Web Services account ID.
+     * an Amazon Web Services account ID or a keyword, such as ADX.
      * </p>
      * 
      * @param consumerIdentifier
      *        The identifier of the data consumer that is to have authorization removed from the datashare. This
-     *        identifier is an Amazon Web Services account ID.
+     *        identifier is an Amazon Web Services account ID or a keyword, such as ADX.
      */
 
     public void setConsumerIdentifier(String consumerIdentifier) {
@@ -97,11 +97,11 @@ public class DeauthorizeDataShareRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * The identifier of the data consumer that is to have authorization removed from the datashare. This identifier is
-     * an Amazon Web Services account ID.
+     * an Amazon Web Services account ID or a keyword, such as ADX.
      * </p>
      * 
      * @return The identifier of the data consumer that is to have authorization removed from the datashare. This
-     *         identifier is an Amazon Web Services account ID.
+     *         identifier is an Amazon Web Services account ID or a keyword, such as ADX.
      */
 
     public String getConsumerIdentifier() {
@@ -111,12 +111,12 @@ public class DeauthorizeDataShareRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * The identifier of the data consumer that is to have authorization removed from the datashare. This identifier is
-     * an Amazon Web Services account ID.
+     * an Amazon Web Services account ID or a keyword, such as ADX.
      * </p>
      * 
      * @param consumerIdentifier
      *        The identifier of the data consumer that is to have authorization removed from the datashare. This
-     *        identifier is an Amazon Web Services account ID.
+     *        identifier is an Amazon Web Services account ID or a keyword, such as ADX.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

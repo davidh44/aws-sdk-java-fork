@@ -544,9 +544,6 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
 
     /**
      * <p>
-     * This API is in preview release for Amazon Connect and subject to change.
-     * </p>
-     * <p>
      * Before calling this API, use <a
      * href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_CreateDomain.html">CreateDomain</a> or
      * <a href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_UpdateDomain.html">UpdateDomain</a>
@@ -636,9 +633,6 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
     java.util.concurrent.Future<GetMatchesResult> getMatchesAsync(GetMatchesRequest getMatchesRequest);
 
     /**
-     * <p>
-     * This API is in preview release for Amazon Connect and subject to change.
-     * </p>
      * <p>
      * Before calling this API, use <a
      * href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_CreateDomain.html">CreateDomain</a> or
@@ -1069,9 +1063,6 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
 
     /**
      * <p>
-     * This API is in preview release for Amazon Connect and subject to change.
-     * </p>
-     * <p>
      * Runs an AWS Lambda job that does the following:
      * </p>
      * <ol>
@@ -1142,9 +1133,6 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
     java.util.concurrent.Future<MergeProfilesResult> mergeProfilesAsync(MergeProfilesRequest mergeProfilesRequest);
 
     /**
-     * <p>
-     * This API is in preview release for Amazon Connect and subject to change.
-     * </p>
      * <p>
      * Runs an AWS Lambda job that does the following:
      * </p>

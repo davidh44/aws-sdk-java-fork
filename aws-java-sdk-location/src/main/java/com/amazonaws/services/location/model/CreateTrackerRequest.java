@@ -79,7 +79,7 @@ public class CreateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String positionFiltering;
     /**
      * <p>
-     * Specifies the pricing plan for the tracker resource.
+     * Optionally specifies the pricing plan for the tracker resource. Defaults to <code>RequestBasedUsage</code>.
      * </p>
      * <p>
      * For additional details and restrictions on each pricing plan option, see <a
@@ -601,7 +601,7 @@ public class CreateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Specifies the pricing plan for the tracker resource.
+     * Optionally specifies the pricing plan for the tracker resource. Defaults to <code>RequestBasedUsage</code>.
      * </p>
      * <p>
      * For additional details and restrictions on each pricing plan option, see <a
@@ -609,7 +609,8 @@ public class CreateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param pricingPlan
-     *        Specifies the pricing plan for the tracker resource.</p>
+     *        Optionally specifies the pricing plan for the tracker resource. Defaults to <code>RequestBasedUsage</code>
+     *        .</p>
      *        <p>
      *        For additional details and restrictions on each pricing plan option, see <a
      *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
@@ -622,14 +623,15 @@ public class CreateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Specifies the pricing plan for the tracker resource.
+     * Optionally specifies the pricing plan for the tracker resource. Defaults to <code>RequestBasedUsage</code>.
      * </p>
      * <p>
      * For additional details and restrictions on each pricing plan option, see <a
      * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
      * </p>
      * 
-     * @return Specifies the pricing plan for the tracker resource.</p>
+     * @return Optionally specifies the pricing plan for the tracker resource. Defaults to
+     *         <code>RequestBasedUsage</code>.</p>
      *         <p>
      *         For additional details and restrictions on each pricing plan option, see <a
      *         href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
@@ -642,7 +644,7 @@ public class CreateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Specifies the pricing plan for the tracker resource.
+     * Optionally specifies the pricing plan for the tracker resource. Defaults to <code>RequestBasedUsage</code>.
      * </p>
      * <p>
      * For additional details and restrictions on each pricing plan option, see <a
@@ -650,7 +652,8 @@ public class CreateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param pricingPlan
-     *        Specifies the pricing plan for the tracker resource.</p>
+     *        Optionally specifies the pricing plan for the tracker resource. Defaults to <code>RequestBasedUsage</code>
+     *        .</p>
      *        <p>
      *        For additional details and restrictions on each pricing plan option, see <a
      *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
@@ -665,7 +668,7 @@ public class CreateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Specifies the pricing plan for the tracker resource.
+     * Optionally specifies the pricing plan for the tracker resource. Defaults to <code>RequestBasedUsage</code>.
      * </p>
      * <p>
      * For additional details and restrictions on each pricing plan option, see <a
@@ -673,7 +676,8 @@ public class CreateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param pricingPlan
-     *        Specifies the pricing plan for the tracker resource.</p>
+     *        Optionally specifies the pricing plan for the tracker resource. Defaults to <code>RequestBasedUsage</code>
+     *        .</p>
      *        <p>
      *        For additional details and restrictions on each pricing plan option, see <a
      *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.

@@ -26,7 +26,8 @@ public enum StandardIdentifier {
     UNIQUE("UNIQUE"),
     SECONDARY("SECONDARY"),
     LOOKUP_ONLY("LOOKUP_ONLY"),
-    NEW_ONLY("NEW_ONLY");
+    NEW_ONLY("NEW_ONLY"),
+    ORDER("ORDER");
 
     private String value;
 

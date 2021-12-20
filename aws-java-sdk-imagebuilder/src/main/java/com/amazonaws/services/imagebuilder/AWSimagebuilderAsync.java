@@ -959,6 +959,53 @@ public interface AWSimagebuilderAsync extends AWSimagebuilder {
 
     /**
      * <p>
+     * When you export your virtual machine (VM) from its virtualization environment, that process creates a set of one
+     * or more disk container files that act as snapshots of your VM’s environment, settings, and data. The Amazon EC2
+     * API <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportImage.html">ImportImage</a> action
+     * uses those files to import your VM and create an AMI. To import using the CLI command, see <a
+     * href="https://docs.aws.amazon.com/cli/latest/reference/ec2/import-image.html">import-image</a>
+     * </p>
+     * <p>
+     * You can reference the task ID from the VM import to pull in the AMI that the import created as the base image for
+     * your Image Builder recipe.
+     * </p>
+     * 
+     * @param importVmImageRequest
+     * @return A Java Future containing the result of the ImportVmImage operation returned by the service.
+     * @sample AWSimagebuilderAsync.ImportVmImage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/ImportVmImage" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ImportVmImageResult> importVmImageAsync(ImportVmImageRequest importVmImageRequest);
+
+    /**
+     * <p>
+     * When you export your virtual machine (VM) from its virtualization environment, that process creates a set of one
+     * or more disk container files that act as snapshots of your VM’s environment, settings, and data. The Amazon EC2
+     * API <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportImage.html">ImportImage</a> action
+     * uses those files to import your VM and create an AMI. To import using the CLI command, see <a
+     * href="https://docs.aws.amazon.com/cli/latest/reference/ec2/import-image.html">import-image</a>
+     * </p>
+     * <p>
+     * You can reference the task ID from the VM import to pull in the AMI that the import created as the base image for
+     * your Image Builder recipe.
+     * </p>
+     * 
+     * @param importVmImageRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ImportVmImage operation returned by the service.
+     * @sample AWSimagebuilderAsyncHandler.ImportVmImage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/ImportVmImage" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ImportVmImageResult> importVmImageAsync(ImportVmImageRequest importVmImageRequest,
+            com.amazonaws.handlers.AsyncHandler<ImportVmImageRequest, ImportVmImageResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns the list of component build versions for the specified semantic version.
      * </p>
      * <note>

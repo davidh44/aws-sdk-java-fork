@@ -65,7 +65,7 @@ public class CreateMapRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private String mapName;
     /**
      * <p>
-     * Specifies the pricing plan for your map resource.
+     * Optionally specifies the pricing plan for the map resource. Defaults to <code>RequestBasedUsage</code>.
      * </p>
      * <p>
      * For additional details and restrictions on each pricing plan option, see <a
@@ -358,7 +358,7 @@ public class CreateMapRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Specifies the pricing plan for your map resource.
+     * Optionally specifies the pricing plan for the map resource. Defaults to <code>RequestBasedUsage</code>.
      * </p>
      * <p>
      * For additional details and restrictions on each pricing plan option, see <a
@@ -366,7 +366,8 @@ public class CreateMapRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      * 
      * @param pricingPlan
-     *        Specifies the pricing plan for your map resource.</p>
+     *        Optionally specifies the pricing plan for the map resource. Defaults to <code>RequestBasedUsage</code>
+     *        .</p>
      *        <p>
      *        For additional details and restrictions on each pricing plan option, see <a
      *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
@@ -379,14 +380,15 @@ public class CreateMapRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Specifies the pricing plan for your map resource.
+     * Optionally specifies the pricing plan for the map resource. Defaults to <code>RequestBasedUsage</code>.
      * </p>
      * <p>
      * For additional details and restrictions on each pricing plan option, see <a
      * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
      * </p>
      * 
-     * @return Specifies the pricing plan for your map resource.</p>
+     * @return Optionally specifies the pricing plan for the map resource. Defaults to <code>RequestBasedUsage</code>
+     *         .</p>
      *         <p>
      *         For additional details and restrictions on each pricing plan option, see <a
      *         href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
@@ -399,7 +401,7 @@ public class CreateMapRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Specifies the pricing plan for your map resource.
+     * Optionally specifies the pricing plan for the map resource. Defaults to <code>RequestBasedUsage</code>.
      * </p>
      * <p>
      * For additional details and restrictions on each pricing plan option, see <a
@@ -407,7 +409,8 @@ public class CreateMapRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      * 
      * @param pricingPlan
-     *        Specifies the pricing plan for your map resource.</p>
+     *        Optionally specifies the pricing plan for the map resource. Defaults to <code>RequestBasedUsage</code>
+     *        .</p>
      *        <p>
      *        For additional details and restrictions on each pricing plan option, see <a
      *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
@@ -422,7 +425,7 @@ public class CreateMapRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Specifies the pricing plan for your map resource.
+     * Optionally specifies the pricing plan for the map resource. Defaults to <code>RequestBasedUsage</code>.
      * </p>
      * <p>
      * For additional details and restrictions on each pricing plan option, see <a
@@ -430,7 +433,8 @@ public class CreateMapRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      * 
      * @param pricingPlan
-     *        Specifies the pricing plan for your map resource.</p>
+     *        Optionally specifies the pricing plan for the map resource. Defaults to <code>RequestBasedUsage</code>
+     *        .</p>
      *        <p>
      *        For additional details and restrictions on each pricing plan option, see <a
      *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.

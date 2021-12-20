@@ -70,6 +70,19 @@ public class AwsAutoScalingAutoScalingGroupDetailsJsonUnmarshaller implements Un
                     context.nextToken();
                     awsAutoScalingAutoScalingGroupDetails.setCreatedTime(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("MixedInstancesPolicy", targetDepth)) {
+                    context.nextToken();
+                    awsAutoScalingAutoScalingGroupDetails.setMixedInstancesPolicy(AwsAutoScalingAutoScalingGroupMixedInstancesPolicyDetailsJsonUnmarshaller
+                            .getInstance().unmarshall(context));
+                }
+                if (context.testExpression("AvailabilityZones", targetDepth)) {
+                    context.nextToken();
+                    awsAutoScalingAutoScalingGroupDetails
+                            .setAvailabilityZones(new ListUnmarshaller<AwsAutoScalingAutoScalingGroupAvailabilityZonesListDetails>(
+                                    AwsAutoScalingAutoScalingGroupAvailabilityZonesListDetailsJsonUnmarshaller.getInstance())
+
+                            .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -96,6 +96,11 @@ public class AwsS3BucketDetailsJsonUnmarshaller implements Unmarshaller<AwsS3Buc
                     awsS3BucketDetails.setBucketNotificationConfiguration(AwsS3BucketNotificationConfigurationJsonUnmarshaller.getInstance()
                             .unmarshall(context));
                 }
+                if (context.testExpression("BucketVersioningConfiguration", targetDepth)) {
+                    context.nextToken();
+                    awsS3BucketDetails.setBucketVersioningConfiguration(AwsS3BucketBucketVersioningConfigurationJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

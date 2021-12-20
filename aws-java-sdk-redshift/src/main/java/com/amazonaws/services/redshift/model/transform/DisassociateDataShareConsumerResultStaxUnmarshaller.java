@@ -70,6 +70,10 @@ public class DisassociateDataShareConsumerResultStaxUnmarshaller implements Unma
                     continue;
                 }
 
+                if (context.testExpression("ManagedBy", targetDepth)) {
+                    disassociateDataShareConsumerResult.setManagedBy(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return disassociateDataShareConsumerResult;

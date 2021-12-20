@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Image tests configuration.
+ * Configure image tests for your pipeline build. Tests run after building the image, to verify that the AMI or
+ * container image is valid before distributing it.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/ImageTestsConfiguration"
@@ -30,7 +31,8 @@ public class ImageTestsConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Defines if tests should be executed when building this image.
+     * Determines if tests should run after building the image. Image Builder defaults to enable tests to run following
+     * the image build, before image distribution.
      * </p>
      */
     private Boolean imageTestsEnabled;
@@ -43,11 +45,13 @@ public class ImageTestsConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Defines if tests should be executed when building this image.
+     * Determines if tests should run after building the image. Image Builder defaults to enable tests to run following
+     * the image build, before image distribution.
      * </p>
      * 
      * @param imageTestsEnabled
-     *        Defines if tests should be executed when building this image.
+     *        Determines if tests should run after building the image. Image Builder defaults to enable tests to run
+     *        following the image build, before image distribution.
      */
 
     public void setImageTestsEnabled(Boolean imageTestsEnabled) {
@@ -56,10 +60,12 @@ public class ImageTestsConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Defines if tests should be executed when building this image.
+     * Determines if tests should run after building the image. Image Builder defaults to enable tests to run following
+     * the image build, before image distribution.
      * </p>
      * 
-     * @return Defines if tests should be executed when building this image.
+     * @return Determines if tests should run after building the image. Image Builder defaults to enable tests to run
+     *         following the image build, before image distribution.
      */
 
     public Boolean getImageTestsEnabled() {
@@ -68,11 +74,13 @@ public class ImageTestsConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Defines if tests should be executed when building this image.
+     * Determines if tests should run after building the image. Image Builder defaults to enable tests to run following
+     * the image build, before image distribution.
      * </p>
      * 
      * @param imageTestsEnabled
-     *        Defines if tests should be executed when building this image.
+     *        Determines if tests should run after building the image. Image Builder defaults to enable tests to run
+     *        following the image build, before image distribution.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,10 +91,12 @@ public class ImageTestsConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Defines if tests should be executed when building this image.
+     * Determines if tests should run after building the image. Image Builder defaults to enable tests to run following
+     * the image build, before image distribution.
      * </p>
      * 
-     * @return Defines if tests should be executed when building this image.
+     * @return Determines if tests should run after building the image. Image Builder defaults to enable tests to run
+     *         following the image build, before image distribution.
      */
 
     public Boolean isImageTestsEnabled() {

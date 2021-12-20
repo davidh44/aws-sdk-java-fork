@@ -128,6 +128,23 @@ public interface AWSDataSync {
 
     /**
      * <p>
+     * Creates an endpoint for an Amazon FSx for Lustre file system.
+     * </p>
+     * 
+     * @param createLocationFsxLustreRequest
+     * @return Result of the CreateLocationFsxLustre operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.CreateLocationFsxLustre
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationFsxLustre"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateLocationFsxLustreResult createLocationFsxLustre(CreateLocationFsxLustreRequest createLocationFsxLustreRequest);
+
+    /**
+     * <p>
      * Creates an endpoint for an Amazon FSx for Windows File Server file system.
      * </p>
      * 
@@ -373,6 +390,23 @@ public interface AWSDataSync {
      *      API Documentation</a>
      */
     DescribeLocationEfsResult describeLocationEfs(DescribeLocationEfsRequest describeLocationEfsRequest);
+
+    /**
+     * <p>
+     * Returns metadata, such as the path information about an Amazon FSx for Lustre location.
+     * </p>
+     * 
+     * @param describeLocationFsxLustreRequest
+     * @return Result of the DescribeLocationFsxLustre operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.DescribeLocationFsxLustre
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationFsxLustre"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeLocationFsxLustreResult describeLocationFsxLustre(DescribeLocationFsxLustreRequest describeLocationFsxLustreRequest);
 
     /**
      * <p>

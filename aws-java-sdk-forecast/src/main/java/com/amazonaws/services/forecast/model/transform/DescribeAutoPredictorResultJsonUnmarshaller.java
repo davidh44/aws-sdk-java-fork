@@ -70,6 +70,12 @@ public class DescribeAutoPredictorResultJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     describeAutoPredictorResult.setForecastFrequency(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ForecastDimensions", targetDepth)) {
+                    context.nextToken();
+                    describeAutoPredictorResult.setForecastDimensions(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("DatasetImportJobArns", targetDepth)) {
                     context.nextToken();
                     describeAutoPredictorResult.setDatasetImportJobArns(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))

@@ -49,6 +49,8 @@ public class AwsS3BucketDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BucketWebsiteConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> BUCKETNOTIFICATIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BucketNotificationConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> BUCKETVERSIONINGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BucketVersioningConfiguration").build();
 
     private static final AwsS3BucketDetailsMarshaller instance = new AwsS3BucketDetailsMarshaller();
 
@@ -77,6 +79,7 @@ public class AwsS3BucketDetailsMarshaller {
             protocolMarshaller.marshall(awsS3BucketDetails.getBucketLoggingConfiguration(), BUCKETLOGGINGCONFIGURATION_BINDING);
             protocolMarshaller.marshall(awsS3BucketDetails.getBucketWebsiteConfiguration(), BUCKETWEBSITECONFIGURATION_BINDING);
             protocolMarshaller.marshall(awsS3BucketDetails.getBucketNotificationConfiguration(), BUCKETNOTIFICATIONCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(awsS3BucketDetails.getBucketVersioningConfiguration(), BUCKETVERSIONINGCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

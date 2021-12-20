@@ -46,8 +46,10 @@ public class SearchProfilesRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * A searchable identifier of a customer profile. The predefined keys you can use to search include: _account,
-     * _profileId, _fullName, _phone, _email, _ctrContactId, _marketoLeadId, _salesforceAccountId, _salesforceContactId,
-     * _zendeskUserId, _zendeskExternalId, _serviceNowSystemId.
+     * _profileId, _assetId, _caseId, _orderId, _fullName, _phone, _email, _ctrContactId, _marketoLeadId,
+     * _salesforceAccountId, _salesforceContactId, _salesforceAssetId, _zendeskUserId, _zendeskExternalId,
+     * _zendeskTicketId, _serviceNowSystemId, _serviceNowIncidentId, _segmentUserId, _shopifyCustomerId,
+     * _shopifyOrderId.
      * </p>
      */
     private String keyName;
@@ -181,14 +183,18 @@ public class SearchProfilesRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * A searchable identifier of a customer profile. The predefined keys you can use to search include: _account,
-     * _profileId, _fullName, _phone, _email, _ctrContactId, _marketoLeadId, _salesforceAccountId, _salesforceContactId,
-     * _zendeskUserId, _zendeskExternalId, _serviceNowSystemId.
+     * _profileId, _assetId, _caseId, _orderId, _fullName, _phone, _email, _ctrContactId, _marketoLeadId,
+     * _salesforceAccountId, _salesforceContactId, _salesforceAssetId, _zendeskUserId, _zendeskExternalId,
+     * _zendeskTicketId, _serviceNowSystemId, _serviceNowIncidentId, _segmentUserId, _shopifyCustomerId,
+     * _shopifyOrderId.
      * </p>
      * 
      * @param keyName
      *        A searchable identifier of a customer profile. The predefined keys you can use to search include:
-     *        _account, _profileId, _fullName, _phone, _email, _ctrContactId, _marketoLeadId, _salesforceAccountId,
-     *        _salesforceContactId, _zendeskUserId, _zendeskExternalId, _serviceNowSystemId.
+     *        _account, _profileId, _assetId, _caseId, _orderId, _fullName, _phone, _email, _ctrContactId,
+     *        _marketoLeadId, _salesforceAccountId, _salesforceContactId, _salesforceAssetId, _zendeskUserId,
+     *        _zendeskExternalId, _zendeskTicketId, _serviceNowSystemId, _serviceNowIncidentId, _segmentUserId,
+     *        _shopifyCustomerId, _shopifyOrderId.
      */
 
     public void setKeyName(String keyName) {
@@ -198,13 +204,17 @@ public class SearchProfilesRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * A searchable identifier of a customer profile. The predefined keys you can use to search include: _account,
-     * _profileId, _fullName, _phone, _email, _ctrContactId, _marketoLeadId, _salesforceAccountId, _salesforceContactId,
-     * _zendeskUserId, _zendeskExternalId, _serviceNowSystemId.
+     * _profileId, _assetId, _caseId, _orderId, _fullName, _phone, _email, _ctrContactId, _marketoLeadId,
+     * _salesforceAccountId, _salesforceContactId, _salesforceAssetId, _zendeskUserId, _zendeskExternalId,
+     * _zendeskTicketId, _serviceNowSystemId, _serviceNowIncidentId, _segmentUserId, _shopifyCustomerId,
+     * _shopifyOrderId.
      * </p>
      * 
      * @return A searchable identifier of a customer profile. The predefined keys you can use to search include:
-     *         _account, _profileId, _fullName, _phone, _email, _ctrContactId, _marketoLeadId, _salesforceAccountId,
-     *         _salesforceContactId, _zendeskUserId, _zendeskExternalId, _serviceNowSystemId.
+     *         _account, _profileId, _assetId, _caseId, _orderId, _fullName, _phone, _email, _ctrContactId,
+     *         _marketoLeadId, _salesforceAccountId, _salesforceContactId, _salesforceAssetId, _zendeskUserId,
+     *         _zendeskExternalId, _zendeskTicketId, _serviceNowSystemId, _serviceNowIncidentId, _segmentUserId,
+     *         _shopifyCustomerId, _shopifyOrderId.
      */
 
     public String getKeyName() {
@@ -214,14 +224,18 @@ public class SearchProfilesRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * A searchable identifier of a customer profile. The predefined keys you can use to search include: _account,
-     * _profileId, _fullName, _phone, _email, _ctrContactId, _marketoLeadId, _salesforceAccountId, _salesforceContactId,
-     * _zendeskUserId, _zendeskExternalId, _serviceNowSystemId.
+     * _profileId, _assetId, _caseId, _orderId, _fullName, _phone, _email, _ctrContactId, _marketoLeadId,
+     * _salesforceAccountId, _salesforceContactId, _salesforceAssetId, _zendeskUserId, _zendeskExternalId,
+     * _zendeskTicketId, _serviceNowSystemId, _serviceNowIncidentId, _segmentUserId, _shopifyCustomerId,
+     * _shopifyOrderId.
      * </p>
      * 
      * @param keyName
      *        A searchable identifier of a customer profile. The predefined keys you can use to search include:
-     *        _account, _profileId, _fullName, _phone, _email, _ctrContactId, _marketoLeadId, _salesforceAccountId,
-     *        _salesforceContactId, _zendeskUserId, _zendeskExternalId, _serviceNowSystemId.
+     *        _account, _profileId, _assetId, _caseId, _orderId, _fullName, _phone, _email, _ctrContactId,
+     *        _marketoLeadId, _salesforceAccountId, _salesforceContactId, _salesforceAssetId, _zendeskUserId,
+     *        _zendeskExternalId, _zendeskTicketId, _serviceNowSystemId, _serviceNowIncidentId, _segmentUserId,
+     *        _shopifyCustomerId, _shopifyOrderId.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

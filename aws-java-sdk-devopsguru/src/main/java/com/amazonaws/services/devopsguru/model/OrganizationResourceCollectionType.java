@@ -22,7 +22,8 @@ public enum OrganizationResourceCollectionType {
 
     AWS_CLOUD_FORMATION("AWS_CLOUD_FORMATION"),
     AWS_SERVICE("AWS_SERVICE"),
-    AWS_ACCOUNT("AWS_ACCOUNT");
+    AWS_ACCOUNT("AWS_ACCOUNT"),
+    AWS_TAGS("AWS_TAGS");
 
     private String value;
 

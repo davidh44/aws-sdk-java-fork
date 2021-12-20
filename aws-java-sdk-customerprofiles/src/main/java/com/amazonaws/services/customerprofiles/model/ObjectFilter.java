@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * The filter applied to ListProfileObjects response to include profile objects with the specified index values. This
- * filter is only supported for ObjectTypeName _asset and _case.
+ * filter is only supported for ObjectTypeName _asset, _case and _order.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/ObjectFilter" target="_top">AWS API
@@ -33,7 +33,7 @@ public class ObjectFilter implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * A searchable identifier of a standard profile object. The predefined keys you can use to search for _asset
      * include: _assetId, _assetName, _serialNumber. The predefined keys you can use to search for _case include:
-     * _caseId.
+     * _caseId. The predefined keys you can use to search for _order include: _orderId.
      * </p>
      */
     private String keyName;
@@ -48,13 +48,13 @@ public class ObjectFilter implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * A searchable identifier of a standard profile object. The predefined keys you can use to search for _asset
      * include: _assetId, _assetName, _serialNumber. The predefined keys you can use to search for _case include:
-     * _caseId.
+     * _caseId. The predefined keys you can use to search for _order include: _orderId.
      * </p>
      * 
      * @param keyName
      *        A searchable identifier of a standard profile object. The predefined keys you can use to search for _asset
      *        include: _assetId, _assetName, _serialNumber. The predefined keys you can use to search for _case include:
-     *        _caseId.
+     *        _caseId. The predefined keys you can use to search for _order include: _orderId.
      */
 
     public void setKeyName(String keyName) {
@@ -65,12 +65,12 @@ public class ObjectFilter implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * A searchable identifier of a standard profile object. The predefined keys you can use to search for _asset
      * include: _assetId, _assetName, _serialNumber. The predefined keys you can use to search for _case include:
-     * _caseId.
+     * _caseId. The predefined keys you can use to search for _order include: _orderId.
      * </p>
      * 
      * @return A searchable identifier of a standard profile object. The predefined keys you can use to search for
      *         _asset include: _assetId, _assetName, _serialNumber. The predefined keys you can use to search for _case
-     *         include: _caseId.
+     *         include: _caseId. The predefined keys you can use to search for _order include: _orderId.
      */
 
     public String getKeyName() {
@@ -81,13 +81,13 @@ public class ObjectFilter implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * A searchable identifier of a standard profile object. The predefined keys you can use to search for _asset
      * include: _assetId, _assetName, _serialNumber. The predefined keys you can use to search for _case include:
-     * _caseId.
+     * _caseId. The predefined keys you can use to search for _order include: _orderId.
      * </p>
      * 
      * @param keyName
      *        A searchable identifier of a standard profile object. The predefined keys you can use to search for _asset
      *        include: _assetId, _assetName, _serialNumber. The predefined keys you can use to search for _case include:
-     *        _caseId.
+     *        _caseId. The predefined keys you can use to search for _order include: _orderId.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

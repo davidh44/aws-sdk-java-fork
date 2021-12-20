@@ -64,6 +64,16 @@ public class ListIntegrationItem implements Serializable, Cloneable, StructuredP
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * A map in which each key is an event type from an external application such as Segment or Shopify, and each value
+     * is an <code>ObjectTypeName</code> (template) used to ingest the event. It supports the following event types:
+     * <code>SegmentIdentify</code>, <code>ShopifyCreateCustomers</code>, <code>ShopifyUpdateCustomers</code>,
+     * <code>ShopifyCreateDraftOrders</code>, <code>ShopifyUpdateDraftOrders</code>, <code>ShopifyCreateOrders</code>,
+     * and <code>ShopifyUpdatedOrders</code>.
+     * </p>
+     */
+    private java.util.Map<String, String> objectTypeNames;
 
     /**
      * <p>
@@ -334,6 +344,101 @@ public class ListIntegrationItem implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * A map in which each key is an event type from an external application such as Segment or Shopify, and each value
+     * is an <code>ObjectTypeName</code> (template) used to ingest the event. It supports the following event types:
+     * <code>SegmentIdentify</code>, <code>ShopifyCreateCustomers</code>, <code>ShopifyUpdateCustomers</code>,
+     * <code>ShopifyCreateDraftOrders</code>, <code>ShopifyUpdateDraftOrders</code>, <code>ShopifyCreateOrders</code>,
+     * and <code>ShopifyUpdatedOrders</code>.
+     * </p>
+     * 
+     * @return A map in which each key is an event type from an external application such as Segment or Shopify, and
+     *         each value is an <code>ObjectTypeName</code> (template) used to ingest the event. It supports the
+     *         following event types: <code>SegmentIdentify</code>, <code>ShopifyCreateCustomers</code>,
+     *         <code>ShopifyUpdateCustomers</code>, <code>ShopifyCreateDraftOrders</code>,
+     *         <code>ShopifyUpdateDraftOrders</code>, <code>ShopifyCreateOrders</code>, and
+     *         <code>ShopifyUpdatedOrders</code>.
+     */
+
+    public java.util.Map<String, String> getObjectTypeNames() {
+        return objectTypeNames;
+    }
+
+    /**
+     * <p>
+     * A map in which each key is an event type from an external application such as Segment or Shopify, and each value
+     * is an <code>ObjectTypeName</code> (template) used to ingest the event. It supports the following event types:
+     * <code>SegmentIdentify</code>, <code>ShopifyCreateCustomers</code>, <code>ShopifyUpdateCustomers</code>,
+     * <code>ShopifyCreateDraftOrders</code>, <code>ShopifyUpdateDraftOrders</code>, <code>ShopifyCreateOrders</code>,
+     * and <code>ShopifyUpdatedOrders</code>.
+     * </p>
+     * 
+     * @param objectTypeNames
+     *        A map in which each key is an event type from an external application such as Segment or Shopify, and each
+     *        value is an <code>ObjectTypeName</code> (template) used to ingest the event. It supports the following
+     *        event types: <code>SegmentIdentify</code>, <code>ShopifyCreateCustomers</code>,
+     *        <code>ShopifyUpdateCustomers</code>, <code>ShopifyCreateDraftOrders</code>,
+     *        <code>ShopifyUpdateDraftOrders</code>, <code>ShopifyCreateOrders</code>, and
+     *        <code>ShopifyUpdatedOrders</code>.
+     */
+
+    public void setObjectTypeNames(java.util.Map<String, String> objectTypeNames) {
+        this.objectTypeNames = objectTypeNames;
+    }
+
+    /**
+     * <p>
+     * A map in which each key is an event type from an external application such as Segment or Shopify, and each value
+     * is an <code>ObjectTypeName</code> (template) used to ingest the event. It supports the following event types:
+     * <code>SegmentIdentify</code>, <code>ShopifyCreateCustomers</code>, <code>ShopifyUpdateCustomers</code>,
+     * <code>ShopifyCreateDraftOrders</code>, <code>ShopifyUpdateDraftOrders</code>, <code>ShopifyCreateOrders</code>,
+     * and <code>ShopifyUpdatedOrders</code>.
+     * </p>
+     * 
+     * @param objectTypeNames
+     *        A map in which each key is an event type from an external application such as Segment or Shopify, and each
+     *        value is an <code>ObjectTypeName</code> (template) used to ingest the event. It supports the following
+     *        event types: <code>SegmentIdentify</code>, <code>ShopifyCreateCustomers</code>,
+     *        <code>ShopifyUpdateCustomers</code>, <code>ShopifyCreateDraftOrders</code>,
+     *        <code>ShopifyUpdateDraftOrders</code>, <code>ShopifyCreateOrders</code>, and
+     *        <code>ShopifyUpdatedOrders</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListIntegrationItem withObjectTypeNames(java.util.Map<String, String> objectTypeNames) {
+        setObjectTypeNames(objectTypeNames);
+        return this;
+    }
+
+    /**
+     * Add a single ObjectTypeNames entry
+     *
+     * @see ListIntegrationItem#withObjectTypeNames
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListIntegrationItem addObjectTypeNamesEntry(String key, String value) {
+        if (null == this.objectTypeNames) {
+            this.objectTypeNames = new java.util.HashMap<String, String>();
+        }
+        if (this.objectTypeNames.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.objectTypeNames.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into ObjectTypeNames.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListIntegrationItem clearObjectTypeNamesEntries() {
+        this.objectTypeNames = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -356,7 +461,9 @@ public class ListIntegrationItem implements Serializable, Cloneable, StructuredP
         if (getLastUpdatedAt() != null)
             sb.append("LastUpdatedAt: ").append(getLastUpdatedAt()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getObjectTypeNames() != null)
+            sb.append("ObjectTypeNames: ").append(getObjectTypeNames());
         sb.append("}");
         return sb.toString();
     }
@@ -395,6 +502,10 @@ public class ListIntegrationItem implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getObjectTypeNames() == null ^ this.getObjectTypeNames() == null)
+            return false;
+        if (other.getObjectTypeNames() != null && other.getObjectTypeNames().equals(this.getObjectTypeNames()) == false)
+            return false;
         return true;
     }
 
@@ -409,6 +520,7 @@ public class ListIntegrationItem implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedAt() == null) ? 0 : getLastUpdatedAt().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getObjectTypeNames() == null) ? 0 : getObjectTypeNames().hashCode());
         return hashCode;
     }
 

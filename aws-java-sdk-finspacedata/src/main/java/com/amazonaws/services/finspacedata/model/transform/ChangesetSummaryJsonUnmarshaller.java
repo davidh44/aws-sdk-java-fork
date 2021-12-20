@@ -90,6 +90,10 @@ public class ChangesetSummaryJsonUnmarshaller implements Unmarshaller<ChangesetS
                     context.nextToken();
                     changesetSummary.setActiveUntilTimestamp(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
+                if (context.testExpression("activeFromTimestamp", targetDepth)) {
+                    context.nextToken();
+                    changesetSummary.setActiveFromTimestamp(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
                 if (context.testExpression("updatesChangesetId", targetDepth)) {
                     context.nextToken();
                     changesetSummary.setUpdatesChangesetId(context.getUnmarshaller(String.class).unmarshall(context));

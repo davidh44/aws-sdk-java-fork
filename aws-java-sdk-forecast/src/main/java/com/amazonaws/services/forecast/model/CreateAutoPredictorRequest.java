@@ -99,7 +99,11 @@ public class CreateAutoPredictorRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private String optimizationMetric;
-
+    /**
+     * <p>
+     * Create an Explainability resource for the predictor.
+     * </p>
+     */
     private Boolean explainPredictor;
     /**
      * <p>
@@ -726,7 +730,12 @@ public class CreateAutoPredictorRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * Create an Explainability resource for the predictor.
+     * </p>
+     * 
      * @param explainPredictor
+     *        Create an Explainability resource for the predictor.
      */
 
     public void setExplainPredictor(Boolean explainPredictor) {
@@ -734,7 +743,11 @@ public class CreateAutoPredictorRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @return
+     * <p>
+     * Create an Explainability resource for the predictor.
+     * </p>
+     * 
+     * @return Create an Explainability resource for the predictor.
      */
 
     public Boolean getExplainPredictor() {
@@ -742,7 +755,12 @@ public class CreateAutoPredictorRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * Create an Explainability resource for the predictor.
+     * </p>
+     * 
      * @param explainPredictor
+     *        Create an Explainability resource for the predictor.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -752,7 +770,11 @@ public class CreateAutoPredictorRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @return
+     * <p>
+     * Create an Explainability resource for the predictor.
+     * </p>
+     * 
+     * @return Create an Explainability resource for the predictor.
      */
 
     public Boolean isExplainPredictor() {

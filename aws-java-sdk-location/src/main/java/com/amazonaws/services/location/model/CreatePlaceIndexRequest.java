@@ -111,7 +111,7 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
     private String indexName;
     /**
      * <p>
-     * Specifies the pricing plan for your place index resource.
+     * Optionally specifies the pricing plan for the place index resource. Defaults to <code>RequestBasedUsage</code>.
      * </p>
      * <p>
      * For additional details and restrictions on each pricing plan option, see <a
@@ -681,7 +681,7 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Specifies the pricing plan for your place index resource.
+     * Optionally specifies the pricing plan for the place index resource. Defaults to <code>RequestBasedUsage</code>.
      * </p>
      * <p>
      * For additional details and restrictions on each pricing plan option, see <a
@@ -689,7 +689,8 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param pricingPlan
-     *        Specifies the pricing plan for your place index resource.</p>
+     *        Optionally specifies the pricing plan for the place index resource. Defaults to
+     *        <code>RequestBasedUsage</code>.</p>
      *        <p>
      *        For additional details and restrictions on each pricing plan option, see <a
      *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
@@ -702,14 +703,15 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Specifies the pricing plan for your place index resource.
+     * Optionally specifies the pricing plan for the place index resource. Defaults to <code>RequestBasedUsage</code>.
      * </p>
      * <p>
      * For additional details and restrictions on each pricing plan option, see <a
      * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
      * </p>
      * 
-     * @return Specifies the pricing plan for your place index resource.</p>
+     * @return Optionally specifies the pricing plan for the place index resource. Defaults to
+     *         <code>RequestBasedUsage</code>.</p>
      *         <p>
      *         For additional details and restrictions on each pricing plan option, see <a
      *         href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
@@ -722,7 +724,7 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Specifies the pricing plan for your place index resource.
+     * Optionally specifies the pricing plan for the place index resource. Defaults to <code>RequestBasedUsage</code>.
      * </p>
      * <p>
      * For additional details and restrictions on each pricing plan option, see <a
@@ -730,7 +732,8 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param pricingPlan
-     *        Specifies the pricing plan for your place index resource.</p>
+     *        Optionally specifies the pricing plan for the place index resource. Defaults to
+     *        <code>RequestBasedUsage</code>.</p>
      *        <p>
      *        For additional details and restrictions on each pricing plan option, see <a
      *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
@@ -745,7 +748,7 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Specifies the pricing plan for your place index resource.
+     * Optionally specifies the pricing plan for the place index resource. Defaults to <code>RequestBasedUsage</code>.
      * </p>
      * <p>
      * For additional details and restrictions on each pricing plan option, see <a
@@ -753,7 +756,8 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param pricingPlan
-     *        Specifies the pricing plan for your place index resource.</p>
+     *        Optionally specifies the pricing plan for the place index resource. Defaults to
+     *        <code>RequestBasedUsage</code>.</p>
      *        <p>
      *        For additional details and restrictions on each pricing plan option, see <a
      *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.

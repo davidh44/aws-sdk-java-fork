@@ -58,12 +58,18 @@ public class CreateExplainabilityRequest extends com.amazonaws.AmazonWebServiceR
      * If <code>TimePointGranularity</code> is set to <code>SPECIFIC</code>, define the first point for the
      * Explainability.
      * </p>
+     * <p>
+     * Use the following timestamp format: yyyy-MM-ddTHH:mm:ss (example: 2015-01-01T20:00:00)
+     * </p>
      */
     private String startDateTime;
     /**
      * <p>
      * If <code>TimePointGranularity</code> is set to <code>SPECIFIC</code>, define the last time point for the
      * Explainability.
+     * </p>
+     * <p>
+     * Use the following timestamp format: yyyy-MM-ddTHH:mm:ss (example: 2015-01-01T20:00:00)
      * </p>
      */
     private String endDateTime;
@@ -347,10 +353,15 @@ public class CreateExplainabilityRequest extends com.amazonaws.AmazonWebServiceR
      * If <code>TimePointGranularity</code> is set to <code>SPECIFIC</code>, define the first point for the
      * Explainability.
      * </p>
+     * <p>
+     * Use the following timestamp format: yyyy-MM-ddTHH:mm:ss (example: 2015-01-01T20:00:00)
+     * </p>
      * 
      * @param startDateTime
      *        If <code>TimePointGranularity</code> is set to <code>SPECIFIC</code>, define the first point for the
-     *        Explainability.
+     *        Explainability.</p>
+     *        <p>
+     *        Use the following timestamp format: yyyy-MM-ddTHH:mm:ss (example: 2015-01-01T20:00:00)
      */
 
     public void setStartDateTime(String startDateTime) {
@@ -362,9 +373,14 @@ public class CreateExplainabilityRequest extends com.amazonaws.AmazonWebServiceR
      * If <code>TimePointGranularity</code> is set to <code>SPECIFIC</code>, define the first point for the
      * Explainability.
      * </p>
+     * <p>
+     * Use the following timestamp format: yyyy-MM-ddTHH:mm:ss (example: 2015-01-01T20:00:00)
+     * </p>
      * 
      * @return If <code>TimePointGranularity</code> is set to <code>SPECIFIC</code>, define the first point for the
-     *         Explainability.
+     *         Explainability.</p>
+     *         <p>
+     *         Use the following timestamp format: yyyy-MM-ddTHH:mm:ss (example: 2015-01-01T20:00:00)
      */
 
     public String getStartDateTime() {
@@ -376,10 +392,15 @@ public class CreateExplainabilityRequest extends com.amazonaws.AmazonWebServiceR
      * If <code>TimePointGranularity</code> is set to <code>SPECIFIC</code>, define the first point for the
      * Explainability.
      * </p>
+     * <p>
+     * Use the following timestamp format: yyyy-MM-ddTHH:mm:ss (example: 2015-01-01T20:00:00)
+     * </p>
      * 
      * @param startDateTime
      *        If <code>TimePointGranularity</code> is set to <code>SPECIFIC</code>, define the first point for the
-     *        Explainability.
+     *        Explainability.</p>
+     *        <p>
+     *        Use the following timestamp format: yyyy-MM-ddTHH:mm:ss (example: 2015-01-01T20:00:00)
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -393,10 +414,15 @@ public class CreateExplainabilityRequest extends com.amazonaws.AmazonWebServiceR
      * If <code>TimePointGranularity</code> is set to <code>SPECIFIC</code>, define the last time point for the
      * Explainability.
      * </p>
+     * <p>
+     * Use the following timestamp format: yyyy-MM-ddTHH:mm:ss (example: 2015-01-01T20:00:00)
+     * </p>
      * 
      * @param endDateTime
      *        If <code>TimePointGranularity</code> is set to <code>SPECIFIC</code>, define the last time point for the
-     *        Explainability.
+     *        Explainability.</p>
+     *        <p>
+     *        Use the following timestamp format: yyyy-MM-ddTHH:mm:ss (example: 2015-01-01T20:00:00)
      */
 
     public void setEndDateTime(String endDateTime) {
@@ -408,9 +434,14 @@ public class CreateExplainabilityRequest extends com.amazonaws.AmazonWebServiceR
      * If <code>TimePointGranularity</code> is set to <code>SPECIFIC</code>, define the last time point for the
      * Explainability.
      * </p>
+     * <p>
+     * Use the following timestamp format: yyyy-MM-ddTHH:mm:ss (example: 2015-01-01T20:00:00)
+     * </p>
      * 
      * @return If <code>TimePointGranularity</code> is set to <code>SPECIFIC</code>, define the last time point for the
-     *         Explainability.
+     *         Explainability.</p>
+     *         <p>
+     *         Use the following timestamp format: yyyy-MM-ddTHH:mm:ss (example: 2015-01-01T20:00:00)
      */
 
     public String getEndDateTime() {
@@ -422,10 +453,15 @@ public class CreateExplainabilityRequest extends com.amazonaws.AmazonWebServiceR
      * If <code>TimePointGranularity</code> is set to <code>SPECIFIC</code>, define the last time point for the
      * Explainability.
      * </p>
+     * <p>
+     * Use the following timestamp format: yyyy-MM-ddTHH:mm:ss (example: 2015-01-01T20:00:00)
+     * </p>
      * 
      * @param endDateTime
      *        If <code>TimePointGranularity</code> is set to <code>SPECIFIC</code>, define the last time point for the
-     *        Explainability.
+     *        Explainability.</p>
+     *        <p>
+     *        Use the following timestamp format: yyyy-MM-ddTHH:mm:ss (example: 2015-01-01T20:00:00)
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -70,6 +70,10 @@ public class AuthorizeDataShareResultStaxUnmarshaller implements Unmarshaller<Au
                     continue;
                 }
 
+                if (context.testExpression("ManagedBy", targetDepth)) {
+                    authorizeDataShareResult.setManagedBy(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return authorizeDataShareResult;

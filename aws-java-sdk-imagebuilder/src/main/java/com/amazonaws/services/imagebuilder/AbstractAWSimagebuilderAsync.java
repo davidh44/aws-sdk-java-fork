@@ -387,6 +387,19 @@ public class AbstractAWSimagebuilderAsync extends AbstractAWSimagebuilder implem
     }
 
     @Override
+    public java.util.concurrent.Future<ImportVmImageResult> importVmImageAsync(ImportVmImageRequest request) {
+
+        return importVmImageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ImportVmImageResult> importVmImageAsync(ImportVmImageRequest request,
+            com.amazonaws.handlers.AsyncHandler<ImportVmImageRequest, ImportVmImageResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListComponentBuildVersionsResult> listComponentBuildVersionsAsync(ListComponentBuildVersionsRequest request) {
 
         return listComponentBuildVersionsAsync(request, null);

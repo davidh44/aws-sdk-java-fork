@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * Provides information about the Explainability resource.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/ExplainabilityInfo" target="_top">AWS API
  *      Documentation</a>
@@ -25,12 +28,48 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ExplainabilityInfo implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Explainability.
+     * </p>
+     */
     private String explainabilityArn;
-
+    /**
+     * <p>
+     * The status of the Explainability. States include:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ACTIVE</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CREATE_PENDING</code>, <code>CREATE_IN_PROGRESS</code>, <code>CREATE_FAILED</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CREATE_STOPPING</code>, <code>CREATE_STOPPED</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DELETE_PENDING</code>, <code>DELETE_IN_PROGRESS</code>, <code>DELETE_FAILED</code>
+     * </p>
+     * </li>
+     * </ul>
+     */
     private String status;
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Explainability.
+     * </p>
+     * 
      * @param explainabilityArn
+     *        The Amazon Resource Name (ARN) of the Explainability.
      */
 
     public void setExplainabilityArn(String explainabilityArn) {
@@ -38,7 +77,11 @@ public class ExplainabilityInfo implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The Amazon Resource Name (ARN) of the Explainability.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the Explainability.
      */
 
     public String getExplainabilityArn() {
@@ -46,7 +89,12 @@ public class ExplainabilityInfo implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Explainability.
+     * </p>
+     * 
      * @param explainabilityArn
+     *        The Amazon Resource Name (ARN) of the Explainability.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +104,55 @@ public class ExplainabilityInfo implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The status of the Explainability. States include:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ACTIVE</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CREATE_PENDING</code>, <code>CREATE_IN_PROGRESS</code>, <code>CREATE_FAILED</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CREATE_STOPPING</code>, <code>CREATE_STOPPED</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DELETE_PENDING</code>, <code>DELETE_IN_PROGRESS</code>, <code>DELETE_FAILED</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
      * @param status
+     *        The status of the Explainability. States include: </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>ACTIVE</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CREATE_PENDING</code>, <code>CREATE_IN_PROGRESS</code>, <code>CREATE_FAILED</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CREATE_STOPPING</code>, <code>CREATE_STOPPED</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>DELETE_PENDING</code>, <code>DELETE_IN_PROGRESS</code>, <code>DELETE_FAILED</code>
+     *        </p>
+     *        </li>
      */
 
     public void setStatus(String status) {
@@ -64,7 +160,54 @@ public class ExplainabilityInfo implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The status of the Explainability. States include:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ACTIVE</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CREATE_PENDING</code>, <code>CREATE_IN_PROGRESS</code>, <code>CREATE_FAILED</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CREATE_STOPPING</code>, <code>CREATE_STOPPED</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DELETE_PENDING</code>, <code>DELETE_IN_PROGRESS</code>, <code>DELETE_FAILED</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return The status of the Explainability. States include: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>ACTIVE</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>CREATE_PENDING</code>, <code>CREATE_IN_PROGRESS</code>, <code>CREATE_FAILED</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>CREATE_STOPPING</code>, <code>CREATE_STOPPED</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>DELETE_PENDING</code>, <code>DELETE_IN_PROGRESS</code>, <code>DELETE_FAILED</code>
+     *         </p>
+     *         </li>
      */
 
     public String getStatus() {
@@ -72,7 +215,55 @@ public class ExplainabilityInfo implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The status of the Explainability. States include:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ACTIVE</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CREATE_PENDING</code>, <code>CREATE_IN_PROGRESS</code>, <code>CREATE_FAILED</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CREATE_STOPPING</code>, <code>CREATE_STOPPED</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DELETE_PENDING</code>, <code>DELETE_IN_PROGRESS</code>, <code>DELETE_FAILED</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
      * @param status
+     *        The status of the Explainability. States include: </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>ACTIVE</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CREATE_PENDING</code>, <code>CREATE_IN_PROGRESS</code>, <code>CREATE_FAILED</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CREATE_STOPPING</code>, <code>CREATE_STOPPED</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>DELETE_PENDING</code>, <code>DELETE_IN_PROGRESS</code>, <code>DELETE_FAILED</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

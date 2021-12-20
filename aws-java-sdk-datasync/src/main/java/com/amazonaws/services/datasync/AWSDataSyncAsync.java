@@ -189,6 +189,37 @@ public interface AWSDataSyncAsync extends AWSDataSync {
 
     /**
      * <p>
+     * Creates an endpoint for an Amazon FSx for Lustre file system.
+     * </p>
+     * 
+     * @param createLocationFsxLustreRequest
+     * @return A Java Future containing the result of the CreateLocationFsxLustre operation returned by the service.
+     * @sample AWSDataSyncAsync.CreateLocationFsxLustre
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationFsxLustre"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateLocationFsxLustreResult> createLocationFsxLustreAsync(CreateLocationFsxLustreRequest createLocationFsxLustreRequest);
+
+    /**
+     * <p>
+     * Creates an endpoint for an Amazon FSx for Lustre file system.
+     * </p>
+     * 
+     * @param createLocationFsxLustreRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateLocationFsxLustre operation returned by the service.
+     * @sample AWSDataSyncAsyncHandler.CreateLocationFsxLustre
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationFsxLustre"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateLocationFsxLustreResult> createLocationFsxLustreAsync(CreateLocationFsxLustreRequest createLocationFsxLustreRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateLocationFsxLustreRequest, CreateLocationFsxLustreResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates an endpoint for an Amazon FSx for Windows File Server file system.
      * </p>
      * 
@@ -648,6 +679,39 @@ public interface AWSDataSyncAsync extends AWSDataSync {
      */
     java.util.concurrent.Future<DescribeLocationEfsResult> describeLocationEfsAsync(DescribeLocationEfsRequest describeLocationEfsRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeLocationEfsRequest, DescribeLocationEfsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns metadata, such as the path information about an Amazon FSx for Lustre location.
+     * </p>
+     * 
+     * @param describeLocationFsxLustreRequest
+     * @return A Java Future containing the result of the DescribeLocationFsxLustre operation returned by the service.
+     * @sample AWSDataSyncAsync.DescribeLocationFsxLustre
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationFsxLustre"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeLocationFsxLustreResult> describeLocationFsxLustreAsync(
+            DescribeLocationFsxLustreRequest describeLocationFsxLustreRequest);
+
+    /**
+     * <p>
+     * Returns metadata, such as the path information about an Amazon FSx for Lustre location.
+     * </p>
+     * 
+     * @param describeLocationFsxLustreRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeLocationFsxLustre operation returned by the service.
+     * @sample AWSDataSyncAsyncHandler.DescribeLocationFsxLustre
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationFsxLustre"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeLocationFsxLustreResult> describeLocationFsxLustreAsync(
+            DescribeLocationFsxLustreRequest describeLocationFsxLustreRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeLocationFsxLustreRequest, DescribeLocationFsxLustreResult> asyncHandler);
 
     /**
      * <p>

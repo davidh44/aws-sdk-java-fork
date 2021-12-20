@@ -17,8 +17,12 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Represents a usage plan than can specify who can assess associated API stages with specified request limits and
- * quotas.
+ * Represents a usage plan used to specify who can assess associated API stages. Optionally, target request rate and
+ * quota limits can be set. In some cases clients can exceed the targets that you set. Don’t rely on usage plans to
+ * control costs. Consider using <a
+ * href="https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html">AWS Budgets</a> to
+ * monitor costs and <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF</a> to
+ * manage API requests.
  * </p>
  * <div class="remarks">
  * <p>
@@ -58,13 +62,13 @@ public class CreateUsagePlanResult extends com.amazonaws.AmazonWebServiceResult<
     private java.util.List<ApiStage> apiStages;
     /**
      * <p>
-     * The request throttle limits of a usage plan.
+     * Map containing method level throttling information for API stage in a usage plan.
      * </p>
      */
     private ThrottleSettings throttle;
     /**
      * <p>
-     * The maximum number of permitted requests per a given unit time interval.
+     * The target maximum number of permitted requests per a given unit time interval.
      * </p>
      */
     private QuotaSettings quota;
@@ -273,11 +277,11 @@ public class CreateUsagePlanResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The request throttle limits of a usage plan.
+     * Map containing method level throttling information for API stage in a usage plan.
      * </p>
      * 
      * @param throttle
-     *        The request throttle limits of a usage plan.
+     *        Map containing method level throttling information for API stage in a usage plan.
      */
 
     public void setThrottle(ThrottleSettings throttle) {
@@ -286,10 +290,10 @@ public class CreateUsagePlanResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The request throttle limits of a usage plan.
+     * Map containing method level throttling information for API stage in a usage plan.
      * </p>
      * 
-     * @return The request throttle limits of a usage plan.
+     * @return Map containing method level throttling information for API stage in a usage plan.
      */
 
     public ThrottleSettings getThrottle() {
@@ -298,11 +302,11 @@ public class CreateUsagePlanResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The request throttle limits of a usage plan.
+     * Map containing method level throttling information for API stage in a usage plan.
      * </p>
      * 
      * @param throttle
-     *        The request throttle limits of a usage plan.
+     *        Map containing method level throttling information for API stage in a usage plan.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -313,11 +317,11 @@ public class CreateUsagePlanResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The maximum number of permitted requests per a given unit time interval.
+     * The target maximum number of permitted requests per a given unit time interval.
      * </p>
      * 
      * @param quota
-     *        The maximum number of permitted requests per a given unit time interval.
+     *        The target maximum number of permitted requests per a given unit time interval.
      */
 
     public void setQuota(QuotaSettings quota) {
@@ -326,10 +330,10 @@ public class CreateUsagePlanResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The maximum number of permitted requests per a given unit time interval.
+     * The target maximum number of permitted requests per a given unit time interval.
      * </p>
      * 
-     * @return The maximum number of permitted requests per a given unit time interval.
+     * @return The target maximum number of permitted requests per a given unit time interval.
      */
 
     public QuotaSettings getQuota() {
@@ -338,11 +342,11 @@ public class CreateUsagePlanResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The maximum number of permitted requests per a given unit time interval.
+     * The target maximum number of permitted requests per a given unit time interval.
      * </p>
      * 
      * @param quota
-     *        The maximum number of permitted requests per a given unit time interval.
+     *        The target maximum number of permitted requests per a given unit time interval.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

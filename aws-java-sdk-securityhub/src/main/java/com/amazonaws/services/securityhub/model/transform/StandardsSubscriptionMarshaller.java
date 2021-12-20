@@ -37,6 +37,8 @@ public class StandardsSubscriptionMarshaller {
             .marshallLocationName("StandardsInput").build();
     private static final MarshallingInfo<String> STANDARDSSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StandardsStatus").build();
+    private static final MarshallingInfo<StructuredPojo> STANDARDSSTATUSREASON_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StandardsStatusReason").build();
 
     private static final StandardsSubscriptionMarshaller instance = new StandardsSubscriptionMarshaller();
 
@@ -58,6 +60,7 @@ public class StandardsSubscriptionMarshaller {
             protocolMarshaller.marshall(standardsSubscription.getStandardsArn(), STANDARDSARN_BINDING);
             protocolMarshaller.marshall(standardsSubscription.getStandardsInput(), STANDARDSINPUT_BINDING);
             protocolMarshaller.marshall(standardsSubscription.getStandardsStatus(), STANDARDSSTATUS_BINDING);
+            protocolMarshaller.marshall(standardsSubscription.getStandardsStatusReason(), STANDARDSSTATUSREASON_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

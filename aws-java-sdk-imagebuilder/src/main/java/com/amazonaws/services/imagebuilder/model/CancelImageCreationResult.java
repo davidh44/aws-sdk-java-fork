@@ -31,7 +31,7 @@ public class CancelImageCreationResult extends com.amazonaws.AmazonWebServiceRes
     private String requestId;
     /**
      * <p>
-     * The idempotency token used to make this request idempotent.
+     * The idempotency token that was used for this request.
      * </p>
      */
     private String clientToken;
@@ -84,11 +84,11 @@ public class CancelImageCreationResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The idempotency token used to make this request idempotent.
+     * The idempotency token that was used for this request.
      * </p>
      * 
      * @param clientToken
-     *        The idempotency token used to make this request idempotent.
+     *        The idempotency token that was used for this request.
      */
 
     public void setClientToken(String clientToken) {
@@ -97,10 +97,10 @@ public class CancelImageCreationResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The idempotency token used to make this request idempotent.
+     * The idempotency token that was used for this request.
      * </p>
      * 
-     * @return The idempotency token used to make this request idempotent.
+     * @return The idempotency token that was used for this request.
      */
 
     public String getClientToken() {
@@ -109,11 +109,11 @@ public class CancelImageCreationResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The idempotency token used to make this request idempotent.
+     * The idempotency token that was used for this request.
      * </p>
      * 
      * @param clientToken
-     *        The idempotency token used to make this request idempotent.
+     *        The idempotency token that was used for this request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

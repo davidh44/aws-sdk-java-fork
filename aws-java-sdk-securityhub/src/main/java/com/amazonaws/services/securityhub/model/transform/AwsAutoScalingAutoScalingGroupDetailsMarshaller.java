@@ -38,6 +38,10 @@ public class AwsAutoScalingAutoScalingGroupDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HealthCheckGracePeriod").build();
     private static final MarshallingInfo<String> CREATEDTIME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreatedTime").build();
+    private static final MarshallingInfo<StructuredPojo> MIXEDINSTANCESPOLICY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MixedInstancesPolicy").build();
+    private static final MarshallingInfo<List> AVAILABILITYZONES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AvailabilityZones").build();
 
     private static final AwsAutoScalingAutoScalingGroupDetailsMarshaller instance = new AwsAutoScalingAutoScalingGroupDetailsMarshaller();
 
@@ -60,6 +64,8 @@ public class AwsAutoScalingAutoScalingGroupDetailsMarshaller {
             protocolMarshaller.marshall(awsAutoScalingAutoScalingGroupDetails.getHealthCheckType(), HEALTHCHECKTYPE_BINDING);
             protocolMarshaller.marshall(awsAutoScalingAutoScalingGroupDetails.getHealthCheckGracePeriod(), HEALTHCHECKGRACEPERIOD_BINDING);
             protocolMarshaller.marshall(awsAutoScalingAutoScalingGroupDetails.getCreatedTime(), CREATEDTIME_BINDING);
+            protocolMarshaller.marshall(awsAutoScalingAutoScalingGroupDetails.getMixedInstancesPolicy(), MIXEDINSTANCESPOLICY_BINDING);
+            protocolMarshaller.marshall(awsAutoScalingAutoScalingGroupDetails.getAvailabilityZones(), AVAILABILITYZONES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

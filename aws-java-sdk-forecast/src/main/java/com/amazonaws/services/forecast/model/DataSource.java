@@ -19,9 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The source of your training data, an AWS Identity and Access Management (IAM) role that allows Amazon Forecast to
- * access the data and, optionally, an AWS Key Management Service (KMS) key. This object is submitted in the
- * <a>CreateDatasetImportJob</a> request.
+ * The source of your data, an AWS Identity and Access Management (IAM) role that allows Amazon Forecast to access the
+ * data and, optionally, an AWS Key Management Service (KMS) key.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/DataSource" target="_top">AWS API
@@ -32,20 +31,20 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The path to the training data stored in an Amazon Simple Storage Service (Amazon S3) bucket along with the
-     * credentials to access the data.
+     * The path to the data stored in an Amazon Simple Storage Service (Amazon S3) bucket along with the credentials to
+     * access the data.
      * </p>
      */
     private S3Config s3Config;
 
     /**
      * <p>
-     * The path to the training data stored in an Amazon Simple Storage Service (Amazon S3) bucket along with the
-     * credentials to access the data.
+     * The path to the data stored in an Amazon Simple Storage Service (Amazon S3) bucket along with the credentials to
+     * access the data.
      * </p>
      * 
      * @param s3Config
-     *        The path to the training data stored in an Amazon Simple Storage Service (Amazon S3) bucket along with the
+     *        The path to the data stored in an Amazon Simple Storage Service (Amazon S3) bucket along with the
      *        credentials to access the data.
      */
 
@@ -55,12 +54,12 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The path to the training data stored in an Amazon Simple Storage Service (Amazon S3) bucket along with the
-     * credentials to access the data.
+     * The path to the data stored in an Amazon Simple Storage Service (Amazon S3) bucket along with the credentials to
+     * access the data.
      * </p>
      * 
-     * @return The path to the training data stored in an Amazon Simple Storage Service (Amazon S3) bucket along with
-     *         the credentials to access the data.
+     * @return The path to the data stored in an Amazon Simple Storage Service (Amazon S3) bucket along with the
+     *         credentials to access the data.
      */
 
     public S3Config getS3Config() {
@@ -69,12 +68,12 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The path to the training data stored in an Amazon Simple Storage Service (Amazon S3) bucket along with the
-     * credentials to access the data.
+     * The path to the data stored in an Amazon Simple Storage Service (Amazon S3) bucket along with the credentials to
+     * access the data.
      * </p>
      * 
      * @param s3Config
-     *        The path to the training data stored in an Amazon Simple Storage Service (Amazon S3) bucket along with the
+     *        The path to the data stored in an Amazon Simple Storage Service (Amazon S3) bucket along with the
      *        credentials to access the data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

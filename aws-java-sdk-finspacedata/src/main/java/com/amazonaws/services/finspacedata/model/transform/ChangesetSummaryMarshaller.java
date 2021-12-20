@@ -49,6 +49,8 @@ public class ChangesetSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("errorInfo").build();
     private static final MarshallingInfo<Long> ACTIVEUNTILTIMESTAMP_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("activeUntilTimestamp").build();
+    private static final MarshallingInfo<Long> ACTIVEFROMTIMESTAMP_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("activeFromTimestamp").build();
     private static final MarshallingInfo<String> UPDATESCHANGESETID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updatesChangesetId").build();
     private static final MarshallingInfo<String> UPDATEDBYCHANGESETID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -80,6 +82,7 @@ public class ChangesetSummaryMarshaller {
             protocolMarshaller.marshall(changesetSummary.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(changesetSummary.getErrorInfo(), ERRORINFO_BINDING);
             protocolMarshaller.marshall(changesetSummary.getActiveUntilTimestamp(), ACTIVEUNTILTIMESTAMP_BINDING);
+            protocolMarshaller.marshall(changesetSummary.getActiveFromTimestamp(), ACTIVEFROMTIMESTAMP_BINDING);
             protocolMarshaller.marshall(changesetSummary.getUpdatesChangesetId(), UPDATESCHANGESETID_BINDING);
             protocolMarshaller.marshall(changesetSummary.getUpdatedByChangesetId(), UPDATEDBYCHANGESETID_BINDING);
         } catch (Exception e) {

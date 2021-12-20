@@ -64,7 +64,7 @@ public class AdditionalDataset implements Serializable, Cloneable, StructuredPoj
      * <b>Holidays</b>
      * </p>
      * <p>
-     * To enable Holidays, specify a country with one of the following two-letter country codes:
+     * To enable Holidays, set <code>CountryCode</code> to one of the following two-letter country codes:
      * </p>
      * <ul>
      * <li>
@@ -452,7 +452,7 @@ public class AdditionalDataset implements Serializable, Cloneable, StructuredPoj
      * <b>Holidays</b>
      * </p>
      * <p>
-     * To enable Holidays, specify a country with one of the following two-letter country codes:
+     * To enable Holidays, set <code>CountryCode</code> to one of the following two-letter country codes:
      * </p>
      * <ul>
      * <li>
@@ -795,7 +795,7 @@ public class AdditionalDataset implements Serializable, Cloneable, StructuredPoj
      *         <b>Holidays</b>
      *         </p>
      *         <p>
-     *         To enable Holidays, specify a country with one of the following two-letter country codes:
+     *         To enable Holidays, set <code>CountryCode</code> to one of the following two-letter country codes:
      *         </p>
      *         <ul>
      *         <li>
@@ -1145,7 +1145,7 @@ public class AdditionalDataset implements Serializable, Cloneable, StructuredPoj
      * <b>Holidays</b>
      * </p>
      * <p>
-     * To enable Holidays, specify a country with one of the following two-letter country codes:
+     * To enable Holidays, set <code>CountryCode</code> to one of the following two-letter country codes:
      * </p>
      * <ul>
      * <li>
@@ -1489,7 +1489,7 @@ public class AdditionalDataset implements Serializable, Cloneable, StructuredPoj
      *        <b>Holidays</b>
      *        </p>
      *        <p>
-     *        To enable Holidays, specify a country with one of the following two-letter country codes:
+     *        To enable Holidays, set <code>CountryCode</code> to one of the following two-letter country codes:
      *        </p>
      *        <ul>
      *        <li>
@@ -1839,7 +1839,7 @@ public class AdditionalDataset implements Serializable, Cloneable, StructuredPoj
      * <b>Holidays</b>
      * </p>
      * <p>
-     * To enable Holidays, specify a country with one of the following two-letter country codes:
+     * To enable Holidays, set <code>CountryCode</code> to one of the following two-letter country codes:
      * </p>
      * <ul>
      * <li>
@@ -2183,7 +2183,7 @@ public class AdditionalDataset implements Serializable, Cloneable, StructuredPoj
      *        <b>Holidays</b>
      *        </p>
      *        <p>
-     *        To enable Holidays, specify a country with one of the following two-letter country codes:
+     *        To enable Holidays, set <code>CountryCode</code> to one of the following two-letter country codes:
      *        </p>
      *        <ul>
      *        <li>

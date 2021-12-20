@@ -163,6 +163,11 @@ public class AbstractAWSimagebuilder implements AWSimagebuilder {
     }
 
     @Override
+    public ImportVmImageResult importVmImage(ImportVmImageRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListComponentBuildVersionsResult listComponentBuildVersions(ListComponentBuildVersionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

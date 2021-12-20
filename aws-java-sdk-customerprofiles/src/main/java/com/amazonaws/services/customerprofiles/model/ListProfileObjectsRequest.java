@@ -58,7 +58,7 @@ public class ListProfileObjectsRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * Applies a filter to the response to include profile objects with the specified index values. This filter is only
-     * supported for ObjectTypeName _asset and _case.
+     * supported for ObjectTypeName _asset, _case and _order.
      * </p>
      */
     private ObjectFilter objectFilter;
@@ -266,12 +266,12 @@ public class ListProfileObjectsRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * Applies a filter to the response to include profile objects with the specified index values. This filter is only
-     * supported for ObjectTypeName _asset and _case.
+     * supported for ObjectTypeName _asset, _case and _order.
      * </p>
      * 
      * @param objectFilter
      *        Applies a filter to the response to include profile objects with the specified index values. This filter
-     *        is only supported for ObjectTypeName _asset and _case.
+     *        is only supported for ObjectTypeName _asset, _case and _order.
      */
 
     public void setObjectFilter(ObjectFilter objectFilter) {
@@ -281,11 +281,11 @@ public class ListProfileObjectsRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * Applies a filter to the response to include profile objects with the specified index values. This filter is only
-     * supported for ObjectTypeName _asset and _case.
+     * supported for ObjectTypeName _asset, _case and _order.
      * </p>
      * 
      * @return Applies a filter to the response to include profile objects with the specified index values. This filter
-     *         is only supported for ObjectTypeName _asset and _case.
+     *         is only supported for ObjectTypeName _asset, _case and _order.
      */
 
     public ObjectFilter getObjectFilter() {
@@ -295,12 +295,12 @@ public class ListProfileObjectsRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * Applies a filter to the response to include profile objects with the specified index values. This filter is only
-     * supported for ObjectTypeName _asset and _case.
+     * supported for ObjectTypeName _asset, _case and _order.
      * </p>
      * 
      * @param objectFilter
      *        Applies a filter to the response to include profile objects with the specified index values. This filter
-     *        is only supported for ObjectTypeName _asset and _case.
+     *        is only supported for ObjectTypeName _asset, _case and _order.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

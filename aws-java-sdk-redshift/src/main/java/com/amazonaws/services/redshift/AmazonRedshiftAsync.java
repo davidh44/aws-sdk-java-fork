@@ -234,8 +234,9 @@ public interface AmazonRedshiftAsync extends AmazonRedshift {
 
     /**
      * <p>
-     * From a data producer account, authorizes the sharing of a datashare with one or more consumer accounts. To
-     * authorize a datashare for a data consumer, the producer account must have the correct access privileges.
+     * From a data producer account, authorizes the sharing of a datashare with one or more consumer accounts or
+     * managing entities. To authorize a datashare for a data consumer, the producer account must have the correct
+     * access privileges.
      * </p>
      * 
      * @param authorizeDataShareRequest
@@ -248,8 +249,9 @@ public interface AmazonRedshiftAsync extends AmazonRedshift {
 
     /**
      * <p>
-     * From a data producer account, authorizes the sharing of a datashare with one or more consumer accounts. To
-     * authorize a datashare for a data consumer, the producer account must have the correct access privileges.
+     * From a data producer account, authorizes the sharing of a datashare with one or more consumer accounts or
+     * managing entities. To authorize a datashare for a data consumer, the producer account must have the correct
+     * access privileges.
      * </p>
      * 
      * @param authorizeDataShareRequest

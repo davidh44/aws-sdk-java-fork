@@ -27,7 +27,7 @@ public class CreateLocationFsxWindowsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * A subdirectory in the location’s path. This subdirectory in the Amazon FSx for Windows File Server file system is
+     * A subdirectory in the location's path. This subdirectory in the Amazon FSx for Windows File Server file system is
      * used to read data from the Amazon FSx for Windows File Server source location or write data to the FSx for
      * Windows File Server destination.
      * </p>
@@ -41,7 +41,7 @@ public class CreateLocationFsxWindowsRequest extends com.amazonaws.AmazonWebServ
     private String fsxFilesystemArn;
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) of the security groups that are to use to configure the FSx for Windows File
+     * The Amazon Resource Names (ARNs) of the security groups that are used to configure the FSx for Windows File
      * Server file system.
      * </p>
      */
@@ -80,13 +80,13 @@ public class CreateLocationFsxWindowsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * A subdirectory in the location’s path. This subdirectory in the Amazon FSx for Windows File Server file system is
+     * A subdirectory in the location's path. This subdirectory in the Amazon FSx for Windows File Server file system is
      * used to read data from the Amazon FSx for Windows File Server source location or write data to the FSx for
      * Windows File Server destination.
      * </p>
      * 
      * @param subdirectory
-     *        A subdirectory in the location’s path. This subdirectory in the Amazon FSx for Windows File Server file
+     *        A subdirectory in the location's path. This subdirectory in the Amazon FSx for Windows File Server file
      *        system is used to read data from the Amazon FSx for Windows File Server source location or write data to
      *        the FSx for Windows File Server destination.
      */
@@ -97,12 +97,12 @@ public class CreateLocationFsxWindowsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * A subdirectory in the location’s path. This subdirectory in the Amazon FSx for Windows File Server file system is
+     * A subdirectory in the location's path. This subdirectory in the Amazon FSx for Windows File Server file system is
      * used to read data from the Amazon FSx for Windows File Server source location or write data to the FSx for
      * Windows File Server destination.
      * </p>
      * 
-     * @return A subdirectory in the location’s path. This subdirectory in the Amazon FSx for Windows File Server file
+     * @return A subdirectory in the location's path. This subdirectory in the Amazon FSx for Windows File Server file
      *         system is used to read data from the Amazon FSx for Windows File Server source location or write data to
      *         the FSx for Windows File Server destination.
      */
@@ -113,13 +113,13 @@ public class CreateLocationFsxWindowsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * A subdirectory in the location’s path. This subdirectory in the Amazon FSx for Windows File Server file system is
+     * A subdirectory in the location's path. This subdirectory in the Amazon FSx for Windows File Server file system is
      * used to read data from the Amazon FSx for Windows File Server source location or write data to the FSx for
      * Windows File Server destination.
      * </p>
      * 
      * @param subdirectory
-     *        A subdirectory in the location’s path. This subdirectory in the Amazon FSx for Windows File Server file
+     *        A subdirectory in the location's path. This subdirectory in the Amazon FSx for Windows File Server file
      *        system is used to read data from the Amazon FSx for Windows File Server source location or write data to
      *        the FSx for Windows File Server destination.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -172,11 +172,11 @@ public class CreateLocationFsxWindowsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) of the security groups that are to use to configure the FSx for Windows File
+     * The Amazon Resource Names (ARNs) of the security groups that are used to configure the FSx for Windows File
      * Server file system.
      * </p>
      * 
-     * @return The Amazon Resource Names (ARNs) of the security groups that are to use to configure the FSx for Windows
+     * @return The Amazon Resource Names (ARNs) of the security groups that are used to configure the FSx for Windows
      *         File Server file system.
      */
 
@@ -186,12 +186,12 @@ public class CreateLocationFsxWindowsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) of the security groups that are to use to configure the FSx for Windows File
+     * The Amazon Resource Names (ARNs) of the security groups that are used to configure the FSx for Windows File
      * Server file system.
      * </p>
      * 
      * @param securityGroupArns
-     *        The Amazon Resource Names (ARNs) of the security groups that are to use to configure the FSx for Windows
+     *        The Amazon Resource Names (ARNs) of the security groups that are used to configure the FSx for Windows
      *        File Server file system.
      */
 
@@ -206,7 +206,7 @@ public class CreateLocationFsxWindowsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) of the security groups that are to use to configure the FSx for Windows File
+     * The Amazon Resource Names (ARNs) of the security groups that are used to configure the FSx for Windows File
      * Server file system.
      * </p>
      * <p>
@@ -216,7 +216,7 @@ public class CreateLocationFsxWindowsRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @param securityGroupArns
-     *        The Amazon Resource Names (ARNs) of the security groups that are to use to configure the FSx for Windows
+     *        The Amazon Resource Names (ARNs) of the security groups that are used to configure the FSx for Windows
      *        File Server file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -233,12 +233,12 @@ public class CreateLocationFsxWindowsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) of the security groups that are to use to configure the FSx for Windows File
+     * The Amazon Resource Names (ARNs) of the security groups that are used to configure the FSx for Windows File
      * Server file system.
      * </p>
      * 
      * @param securityGroupArns
-     *        The Amazon Resource Names (ARNs) of the security groups that are to use to configure the FSx for Windows
+     *        The Amazon Resource Names (ARNs) of the security groups that are used to configure the FSx for Windows
      *        File Server file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

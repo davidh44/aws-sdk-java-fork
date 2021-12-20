@@ -60,6 +60,12 @@ public class DescribeAutoPredictorResult extends com.amazonaws.AmazonWebServiceR
     private String forecastFrequency;
     /**
      * <p>
+     * An array of dimension (field) names that specify the attributes used to group your time series.
+     * </p>
+     */
+    private java.util.List<String> forecastDimensions;
+    /**
+     * <p>
      * An array of the ARNs of the dataset import jobs used to import training data for the predictor.
      * </p>
      */
@@ -163,7 +169,11 @@ public class DescribeAutoPredictorResult extends com.amazonaws.AmazonWebServiceR
      * </p>
      */
     private String optimizationMetric;
-
+    /**
+     * <p>
+     * Provides the status and ARN of the Predictor Explainability.
+     * </p>
+     */
     private ExplainabilityInfo explainabilityInfo;
 
     /**
@@ -423,6 +433,76 @@ public class DescribeAutoPredictorResult extends com.amazonaws.AmazonWebServiceR
 
     public DescribeAutoPredictorResult withForecastFrequency(String forecastFrequency) {
         setForecastFrequency(forecastFrequency);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An array of dimension (field) names that specify the attributes used to group your time series.
+     * </p>
+     * 
+     * @return An array of dimension (field) names that specify the attributes used to group your time series.
+     */
+
+    public java.util.List<String> getForecastDimensions() {
+        return forecastDimensions;
+    }
+
+    /**
+     * <p>
+     * An array of dimension (field) names that specify the attributes used to group your time series.
+     * </p>
+     * 
+     * @param forecastDimensions
+     *        An array of dimension (field) names that specify the attributes used to group your time series.
+     */
+
+    public void setForecastDimensions(java.util.Collection<String> forecastDimensions) {
+        if (forecastDimensions == null) {
+            this.forecastDimensions = null;
+            return;
+        }
+
+        this.forecastDimensions = new java.util.ArrayList<String>(forecastDimensions);
+    }
+
+    /**
+     * <p>
+     * An array of dimension (field) names that specify the attributes used to group your time series.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setForecastDimensions(java.util.Collection)} or {@link #withForecastDimensions(java.util.Collection)} if
+     * you want to override the existing values.
+     * </p>
+     * 
+     * @param forecastDimensions
+     *        An array of dimension (field) names that specify the attributes used to group your time series.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeAutoPredictorResult withForecastDimensions(String... forecastDimensions) {
+        if (this.forecastDimensions == null) {
+            setForecastDimensions(new java.util.ArrayList<String>(forecastDimensions.length));
+        }
+        for (String ele : forecastDimensions) {
+            this.forecastDimensions.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * An array of dimension (field) names that specify the attributes used to group your time series.
+     * </p>
+     * 
+     * @param forecastDimensions
+     *        An array of dimension (field) names that specify the attributes used to group your time series.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeAutoPredictorResult withForecastDimensions(java.util.Collection<String> forecastDimensions) {
+        setForecastDimensions(forecastDimensions);
         return this;
     }
 
@@ -1153,7 +1233,12 @@ public class DescribeAutoPredictorResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * Provides the status and ARN of the Predictor Explainability.
+     * </p>
+     * 
      * @param explainabilityInfo
+     *        Provides the status and ARN of the Predictor Explainability.
      */
 
     public void setExplainabilityInfo(ExplainabilityInfo explainabilityInfo) {
@@ -1161,7 +1246,11 @@ public class DescribeAutoPredictorResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * @return
+     * <p>
+     * Provides the status and ARN of the Predictor Explainability.
+     * </p>
+     * 
+     * @return Provides the status and ARN of the Predictor Explainability.
      */
 
     public ExplainabilityInfo getExplainabilityInfo() {
@@ -1169,7 +1258,12 @@ public class DescribeAutoPredictorResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * Provides the status and ARN of the Predictor Explainability.
+     * </p>
+     * 
      * @param explainabilityInfo
+     *        Provides the status and ARN of the Predictor Explainability.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1200,6 +1294,8 @@ public class DescribeAutoPredictorResult extends com.amazonaws.AmazonWebServiceR
             sb.append("ForecastTypes: ").append(getForecastTypes()).append(",");
         if (getForecastFrequency() != null)
             sb.append("ForecastFrequency: ").append(getForecastFrequency()).append(",");
+        if (getForecastDimensions() != null)
+            sb.append("ForecastDimensions: ").append(getForecastDimensions()).append(",");
         if (getDatasetImportJobArns() != null)
             sb.append("DatasetImportJobArns: ").append(getDatasetImportJobArns()).append(",");
         if (getDataConfig() != null)
@@ -1255,6 +1351,10 @@ public class DescribeAutoPredictorResult extends com.amazonaws.AmazonWebServiceR
         if (other.getForecastFrequency() == null ^ this.getForecastFrequency() == null)
             return false;
         if (other.getForecastFrequency() != null && other.getForecastFrequency().equals(this.getForecastFrequency()) == false)
+            return false;
+        if (other.getForecastDimensions() == null ^ this.getForecastDimensions() == null)
+            return false;
+        if (other.getForecastDimensions() != null && other.getForecastDimensions().equals(this.getForecastDimensions()) == false)
             return false;
         if (other.getDatasetImportJobArns() == null ^ this.getDatasetImportJobArns() == null)
             return false;
@@ -1314,6 +1414,7 @@ public class DescribeAutoPredictorResult extends com.amazonaws.AmazonWebServiceR
         hashCode = prime * hashCode + ((getForecastHorizon() == null) ? 0 : getForecastHorizon().hashCode());
         hashCode = prime * hashCode + ((getForecastTypes() == null) ? 0 : getForecastTypes().hashCode());
         hashCode = prime * hashCode + ((getForecastFrequency() == null) ? 0 : getForecastFrequency().hashCode());
+        hashCode = prime * hashCode + ((getForecastDimensions() == null) ? 0 : getForecastDimensions().hashCode());
         hashCode = prime * hashCode + ((getDatasetImportJobArns() == null) ? 0 : getDatasetImportJobArns().hashCode());
         hashCode = prime * hashCode + ((getDataConfig() == null) ? 0 : getDataConfig().hashCode());
         hashCode = prime * hashCode + ((getEncryptionConfig() == null) ? 0 : getEncryptionConfig().hashCode());

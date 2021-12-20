@@ -64,6 +64,18 @@ public class AwsAutoScalingAutoScalingGroupDetails implements Serializable, Clon
      * </p>
      */
     private String createdTime;
+    /**
+     * <p>
+     * The mixed instances policy for the automatic scaling group.
+     * </p>
+     */
+    private AwsAutoScalingAutoScalingGroupMixedInstancesPolicyDetails mixedInstancesPolicy;
+    /**
+     * <p>
+     * The list of Availability Zones for the automatic scaling group.
+     * </p>
+     */
+    private java.util.List<AwsAutoScalingAutoScalingGroupAvailabilityZonesListDetails> availabilityZones;
 
     /**
      * <p>
@@ -329,6 +341,117 @@ public class AwsAutoScalingAutoScalingGroupDetails implements Serializable, Clon
     }
 
     /**
+     * <p>
+     * The mixed instances policy for the automatic scaling group.
+     * </p>
+     * 
+     * @param mixedInstancesPolicy
+     *        The mixed instances policy for the automatic scaling group.
+     */
+
+    public void setMixedInstancesPolicy(AwsAutoScalingAutoScalingGroupMixedInstancesPolicyDetails mixedInstancesPolicy) {
+        this.mixedInstancesPolicy = mixedInstancesPolicy;
+    }
+
+    /**
+     * <p>
+     * The mixed instances policy for the automatic scaling group.
+     * </p>
+     * 
+     * @return The mixed instances policy for the automatic scaling group.
+     */
+
+    public AwsAutoScalingAutoScalingGroupMixedInstancesPolicyDetails getMixedInstancesPolicy() {
+        return this.mixedInstancesPolicy;
+    }
+
+    /**
+     * <p>
+     * The mixed instances policy for the automatic scaling group.
+     * </p>
+     * 
+     * @param mixedInstancesPolicy
+     *        The mixed instances policy for the automatic scaling group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsAutoScalingAutoScalingGroupDetails withMixedInstancesPolicy(AwsAutoScalingAutoScalingGroupMixedInstancesPolicyDetails mixedInstancesPolicy) {
+        setMixedInstancesPolicy(mixedInstancesPolicy);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The list of Availability Zones for the automatic scaling group.
+     * </p>
+     * 
+     * @return The list of Availability Zones for the automatic scaling group.
+     */
+
+    public java.util.List<AwsAutoScalingAutoScalingGroupAvailabilityZonesListDetails> getAvailabilityZones() {
+        return availabilityZones;
+    }
+
+    /**
+     * <p>
+     * The list of Availability Zones for the automatic scaling group.
+     * </p>
+     * 
+     * @param availabilityZones
+     *        The list of Availability Zones for the automatic scaling group.
+     */
+
+    public void setAvailabilityZones(java.util.Collection<AwsAutoScalingAutoScalingGroupAvailabilityZonesListDetails> availabilityZones) {
+        if (availabilityZones == null) {
+            this.availabilityZones = null;
+            return;
+        }
+
+        this.availabilityZones = new java.util.ArrayList<AwsAutoScalingAutoScalingGroupAvailabilityZonesListDetails>(availabilityZones);
+    }
+
+    /**
+     * <p>
+     * The list of Availability Zones for the automatic scaling group.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAvailabilityZones(java.util.Collection)} or {@link #withAvailabilityZones(java.util.Collection)} if
+     * you want to override the existing values.
+     * </p>
+     * 
+     * @param availabilityZones
+     *        The list of Availability Zones for the automatic scaling group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsAutoScalingAutoScalingGroupDetails withAvailabilityZones(AwsAutoScalingAutoScalingGroupAvailabilityZonesListDetails... availabilityZones) {
+        if (this.availabilityZones == null) {
+            setAvailabilityZones(new java.util.ArrayList<AwsAutoScalingAutoScalingGroupAvailabilityZonesListDetails>(availabilityZones.length));
+        }
+        for (AwsAutoScalingAutoScalingGroupAvailabilityZonesListDetails ele : availabilityZones) {
+            this.availabilityZones.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The list of Availability Zones for the automatic scaling group.
+     * </p>
+     * 
+     * @param availabilityZones
+     *        The list of Availability Zones for the automatic scaling group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsAutoScalingAutoScalingGroupDetails withAvailabilityZones(
+            java.util.Collection<AwsAutoScalingAutoScalingGroupAvailabilityZonesListDetails> availabilityZones) {
+        setAvailabilityZones(availabilityZones);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -349,7 +472,11 @@ public class AwsAutoScalingAutoScalingGroupDetails implements Serializable, Clon
         if (getHealthCheckGracePeriod() != null)
             sb.append("HealthCheckGracePeriod: ").append(getHealthCheckGracePeriod()).append(",");
         if (getCreatedTime() != null)
-            sb.append("CreatedTime: ").append(getCreatedTime());
+            sb.append("CreatedTime: ").append(getCreatedTime()).append(",");
+        if (getMixedInstancesPolicy() != null)
+            sb.append("MixedInstancesPolicy: ").append(getMixedInstancesPolicy()).append(",");
+        if (getAvailabilityZones() != null)
+            sb.append("AvailabilityZones: ").append(getAvailabilityZones());
         sb.append("}");
         return sb.toString();
     }
@@ -384,6 +511,14 @@ public class AwsAutoScalingAutoScalingGroupDetails implements Serializable, Clon
             return false;
         if (other.getCreatedTime() != null && other.getCreatedTime().equals(this.getCreatedTime()) == false)
             return false;
+        if (other.getMixedInstancesPolicy() == null ^ this.getMixedInstancesPolicy() == null)
+            return false;
+        if (other.getMixedInstancesPolicy() != null && other.getMixedInstancesPolicy().equals(this.getMixedInstancesPolicy()) == false)
+            return false;
+        if (other.getAvailabilityZones() == null ^ this.getAvailabilityZones() == null)
+            return false;
+        if (other.getAvailabilityZones() != null && other.getAvailabilityZones().equals(this.getAvailabilityZones()) == false)
+            return false;
         return true;
     }
 
@@ -397,6 +532,8 @@ public class AwsAutoScalingAutoScalingGroupDetails implements Serializable, Clon
         hashCode = prime * hashCode + ((getHealthCheckType() == null) ? 0 : getHealthCheckType().hashCode());
         hashCode = prime * hashCode + ((getHealthCheckGracePeriod() == null) ? 0 : getHealthCheckGracePeriod().hashCode());
         hashCode = prime * hashCode + ((getCreatedTime() == null) ? 0 : getCreatedTime().hashCode());
+        hashCode = prime * hashCode + ((getMixedInstancesPolicy() == null) ? 0 : getMixedInstancesPolicy().hashCode());
+        hashCode = prime * hashCode + ((getAvailabilityZones() == null) ? 0 : getAvailabilityZones().hashCode());
         return hashCode;
     }
 

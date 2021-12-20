@@ -134,6 +134,8 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private Long activeUntilTimestamp;
+
+    private Long activeFromTimestamp;
     /**
      * <p>
      * The unique identifier of the Changeset that is updated.
@@ -1001,6 +1003,32 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * @param activeFromTimestamp
+     */
+
+    public void setActiveFromTimestamp(Long activeFromTimestamp) {
+        this.activeFromTimestamp = activeFromTimestamp;
+    }
+
+    /**
+     * @return
+     */
+
+    public Long getActiveFromTimestamp() {
+        return this.activeFromTimestamp;
+    }
+
+    /**
+     * @param activeFromTimestamp
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ChangesetSummary withActiveFromTimestamp(Long activeFromTimestamp) {
+        setActiveFromTimestamp(activeFromTimestamp);
+        return this;
+    }
+
+    /**
      * <p>
      * The unique identifier of the Changeset that is updated.
      * </p>
@@ -1112,6 +1140,8 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
             sb.append("ErrorInfo: ").append(getErrorInfo()).append(",");
         if (getActiveUntilTimestamp() != null)
             sb.append("ActiveUntilTimestamp: ").append(getActiveUntilTimestamp()).append(",");
+        if (getActiveFromTimestamp() != null)
+            sb.append("ActiveFromTimestamp: ").append(getActiveFromTimestamp()).append(",");
         if (getUpdatesChangesetId() != null)
             sb.append("UpdatesChangesetId: ").append(getUpdatesChangesetId()).append(",");
         if (getUpdatedByChangesetId() != null)
@@ -1170,6 +1200,10 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getActiveUntilTimestamp() != null && other.getActiveUntilTimestamp().equals(this.getActiveUntilTimestamp()) == false)
             return false;
+        if (other.getActiveFromTimestamp() == null ^ this.getActiveFromTimestamp() == null)
+            return false;
+        if (other.getActiveFromTimestamp() != null && other.getActiveFromTimestamp().equals(this.getActiveFromTimestamp()) == false)
+            return false;
         if (other.getUpdatesChangesetId() == null ^ this.getUpdatesChangesetId() == null)
             return false;
         if (other.getUpdatesChangesetId() != null && other.getUpdatesChangesetId().equals(this.getUpdatesChangesetId()) == false)
@@ -1196,6 +1230,7 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getErrorInfo() == null) ? 0 : getErrorInfo().hashCode());
         hashCode = prime * hashCode + ((getActiveUntilTimestamp() == null) ? 0 : getActiveUntilTimestamp().hashCode());
+        hashCode = prime * hashCode + ((getActiveFromTimestamp() == null) ? 0 : getActiveFromTimestamp().hashCode());
         hashCode = prime * hashCode + ((getUpdatesChangesetId() == null) ? 0 : getUpdatesChangesetId().hashCode());
         hashCode = prime * hashCode + ((getUpdatedByChangesetId() == null) ? 0 : getUpdatedByChangesetId().hashCode());
         return hashCode;

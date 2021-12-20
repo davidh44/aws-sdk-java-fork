@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.finspacedata.model.transform;
 
+import java.util.Map;
+
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -29,6 +31,10 @@ public class DataViewDestinationTypeParamsMarshaller {
 
     private static final MarshallingInfo<String> DESTINATIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("destinationType").build();
+    private static final MarshallingInfo<String> S3DESTINATIONEXPORTFILEFORMAT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("s3DestinationExportFileFormat").build();
+    private static final MarshallingInfo<Map> S3DESTINATIONEXPORTFILEFORMATOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("s3DestinationExportFileFormatOptions").build();
 
     private static final DataViewDestinationTypeParamsMarshaller instance = new DataViewDestinationTypeParamsMarshaller();
 
@@ -47,6 +53,8 @@ public class DataViewDestinationTypeParamsMarshaller {
 
         try {
             protocolMarshaller.marshall(dataViewDestinationTypeParams.getDestinationType(), DESTINATIONTYPE_BINDING);
+            protocolMarshaller.marshall(dataViewDestinationTypeParams.getS3DestinationExportFileFormat(), S3DESTINATIONEXPORTFILEFORMAT_BINDING);
+            protocolMarshaller.marshall(dataViewDestinationTypeParams.getS3DestinationExportFileFormatOptions(), S3DESTINATIONEXPORTFILEFORMATOPTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

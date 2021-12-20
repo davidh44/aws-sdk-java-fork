@@ -99,6 +99,12 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private AwsS3BucketNotificationConfiguration bucketNotificationConfiguration;
+    /**
+     * <p>
+     * The versioning state of an S3 bucket.
+     * </p>
+     */
+    private AwsS3BucketBucketVersioningConfiguration bucketVersioningConfiguration;
 
     /**
      * <p>
@@ -568,6 +574,46 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The versioning state of an S3 bucket.
+     * </p>
+     * 
+     * @param bucketVersioningConfiguration
+     *        The versioning state of an S3 bucket.
+     */
+
+    public void setBucketVersioningConfiguration(AwsS3BucketBucketVersioningConfiguration bucketVersioningConfiguration) {
+        this.bucketVersioningConfiguration = bucketVersioningConfiguration;
+    }
+
+    /**
+     * <p>
+     * The versioning state of an S3 bucket.
+     * </p>
+     * 
+     * @return The versioning state of an S3 bucket.
+     */
+
+    public AwsS3BucketBucketVersioningConfiguration getBucketVersioningConfiguration() {
+        return this.bucketVersioningConfiguration;
+    }
+
+    /**
+     * <p>
+     * The versioning state of an S3 bucket.
+     * </p>
+     * 
+     * @param bucketVersioningConfiguration
+     *        The versioning state of an S3 bucket.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsS3BucketDetails withBucketVersioningConfiguration(AwsS3BucketBucketVersioningConfiguration bucketVersioningConfiguration) {
+        setBucketVersioningConfiguration(bucketVersioningConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -600,7 +646,9 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
         if (getBucketWebsiteConfiguration() != null)
             sb.append("BucketWebsiteConfiguration: ").append(getBucketWebsiteConfiguration()).append(",");
         if (getBucketNotificationConfiguration() != null)
-            sb.append("BucketNotificationConfiguration: ").append(getBucketNotificationConfiguration());
+            sb.append("BucketNotificationConfiguration: ").append(getBucketNotificationConfiguration()).append(",");
+        if (getBucketVersioningConfiguration() != null)
+            sb.append("BucketVersioningConfiguration: ").append(getBucketVersioningConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -662,6 +710,11 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
         if (other.getBucketNotificationConfiguration() != null
                 && other.getBucketNotificationConfiguration().equals(this.getBucketNotificationConfiguration()) == false)
             return false;
+        if (other.getBucketVersioningConfiguration() == null ^ this.getBucketVersioningConfiguration() == null)
+            return false;
+        if (other.getBucketVersioningConfiguration() != null
+                && other.getBucketVersioningConfiguration().equals(this.getBucketVersioningConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -681,6 +734,7 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getBucketLoggingConfiguration() == null) ? 0 : getBucketLoggingConfiguration().hashCode());
         hashCode = prime * hashCode + ((getBucketWebsiteConfiguration() == null) ? 0 : getBucketWebsiteConfiguration().hashCode());
         hashCode = prime * hashCode + ((getBucketNotificationConfiguration() == null) ? 0 : getBucketNotificationConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getBucketVersioningConfiguration() == null) ? 0 : getBucketVersioningConfiguration().hashCode());
         return hashCode;
     }
 

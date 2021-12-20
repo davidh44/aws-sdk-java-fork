@@ -41,7 +41,7 @@ public class LocationListEntry implements Serializable, Cloneable, StructuredPoj
     private String locationArn;
     /**
      * <p>
-     * Represents a list of URLs of a location. <code>LocationUri</code> returns an array that contains a list of
+     * Represents a list of URIs of a location. <code>LocationUri</code> returns an array that contains a list of
      * locations when the <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/API_ListLocations.html">ListLocations</a> operation
      * is called.
@@ -120,7 +120,7 @@ public class LocationListEntry implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Represents a list of URLs of a location. <code>LocationUri</code> returns an array that contains a list of
+     * Represents a list of URIs of a location. <code>LocationUri</code> returns an array that contains a list of
      * locations when the <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/API_ListLocations.html">ListLocations</a> operation
      * is called.
@@ -144,7 +144,7 @@ public class LocationListEntry implements Serializable, Cloneable, StructuredPoj
      * <p/>
      * 
      * @param locationUri
-     *        Represents a list of URLs of a location. <code>LocationUri</code> returns an array that contains a list of
+     *        Represents a list of URIs of a location. <code>LocationUri</code> returns an array that contains a list of
      *        locations when the <a
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/API_ListLocations.html">ListLocations</a>
      *        operation is called.
@@ -174,7 +174,7 @@ public class LocationListEntry implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Represents a list of URLs of a location. <code>LocationUri</code> returns an array that contains a list of
+     * Represents a list of URIs of a location. <code>LocationUri</code> returns an array that contains a list of
      * locations when the <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/API_ListLocations.html">ListLocations</a> operation
      * is called.
@@ -197,7 +197,7 @@ public class LocationListEntry implements Serializable, Cloneable, StructuredPoj
      * </p>
      * <p/>
      * 
-     * @return Represents a list of URLs of a location. <code>LocationUri</code> returns an array that contains a list
+     * @return Represents a list of URIs of a location. <code>LocationUri</code> returns an array that contains a list
      *         of locations when the <a
      *         href="https://docs.aws.amazon.com/datasync/latest/userguide/API_ListLocations.html">ListLocations</a>
      *         operation is called.
@@ -227,7 +227,7 @@ public class LocationListEntry implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Represents a list of URLs of a location. <code>LocationUri</code> returns an array that contains a list of
+     * Represents a list of URIs of a location. <code>LocationUri</code> returns an array that contains a list of
      * locations when the <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/API_ListLocations.html">ListLocations</a> operation
      * is called.
@@ -251,7 +251,7 @@ public class LocationListEntry implements Serializable, Cloneable, StructuredPoj
      * <p/>
      * 
      * @param locationUri
-     *        Represents a list of URLs of a location. <code>LocationUri</code> returns an array that contains a list of
+     *        Represents a list of URIs of a location. <code>LocationUri</code> returns an array that contains a list of
      *        locations when the <a
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/API_ListLocations.html">ListLocations</a>
      *        operation is called.
