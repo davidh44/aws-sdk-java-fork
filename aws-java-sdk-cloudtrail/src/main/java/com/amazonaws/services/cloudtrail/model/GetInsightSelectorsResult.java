@@ -31,8 +31,8 @@ public class GetInsightSelectorsResult extends com.amazonaws.AmazonWebServiceRes
     private String trailARN;
     /**
      * <p>
-     * A JSON string that contains the insight types you want to log on a trail. In this release, only
-     * <code>ApiCallRateInsight</code> is supported as an insight type.
+     * A JSON string that contains the insight types you want to log on a trail. In this release,
+     * <code>ApiErrorRateInsight</code> and <code>ApiCallRateInsight</code> are supported as insight types.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<InsightSelector> insightSelectors;
@@ -79,12 +79,12 @@ public class GetInsightSelectorsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * A JSON string that contains the insight types you want to log on a trail. In this release, only
-     * <code>ApiCallRateInsight</code> is supported as an insight type.
+     * A JSON string that contains the insight types you want to log on a trail. In this release,
+     * <code>ApiErrorRateInsight</code> and <code>ApiCallRateInsight</code> are supported as insight types.
      * </p>
      * 
-     * @return A JSON string that contains the insight types you want to log on a trail. In this release, only
-     *         <code>ApiCallRateInsight</code> is supported as an insight type.
+     * @return A JSON string that contains the insight types you want to log on a trail. In this release,
+     *         <code>ApiErrorRateInsight</code> and <code>ApiCallRateInsight</code> are supported as insight types.
      */
 
     public java.util.List<InsightSelector> getInsightSelectors() {
@@ -96,13 +96,13 @@ public class GetInsightSelectorsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * A JSON string that contains the insight types you want to log on a trail. In this release, only
-     * <code>ApiCallRateInsight</code> is supported as an insight type.
+     * A JSON string that contains the insight types you want to log on a trail. In this release,
+     * <code>ApiErrorRateInsight</code> and <code>ApiCallRateInsight</code> are supported as insight types.
      * </p>
      * 
      * @param insightSelectors
-     *        A JSON string that contains the insight types you want to log on a trail. In this release, only
-     *        <code>ApiCallRateInsight</code> is supported as an insight type.
+     *        A JSON string that contains the insight types you want to log on a trail. In this release,
+     *        <code>ApiErrorRateInsight</code> and <code>ApiCallRateInsight</code> are supported as insight types.
      */
 
     public void setInsightSelectors(java.util.Collection<InsightSelector> insightSelectors) {
@@ -116,8 +116,8 @@ public class GetInsightSelectorsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * A JSON string that contains the insight types you want to log on a trail. In this release, only
-     * <code>ApiCallRateInsight</code> is supported as an insight type.
+     * A JSON string that contains the insight types you want to log on a trail. In this release,
+     * <code>ApiErrorRateInsight</code> and <code>ApiCallRateInsight</code> are supported as insight types.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -126,8 +126,8 @@ public class GetInsightSelectorsResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * 
      * @param insightSelectors
-     *        A JSON string that contains the insight types you want to log on a trail. In this release, only
-     *        <code>ApiCallRateInsight</code> is supported as an insight type.
+     *        A JSON string that contains the insight types you want to log on a trail. In this release,
+     *        <code>ApiErrorRateInsight</code> and <code>ApiCallRateInsight</code> are supported as insight types.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -143,13 +143,13 @@ public class GetInsightSelectorsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * A JSON string that contains the insight types you want to log on a trail. In this release, only
-     * <code>ApiCallRateInsight</code> is supported as an insight type.
+     * A JSON string that contains the insight types you want to log on a trail. In this release,
+     * <code>ApiErrorRateInsight</code> and <code>ApiCallRateInsight</code> are supported as insight types.
      * </p>
      * 
      * @param insightSelectors
-     *        A JSON string that contains the insight types you want to log on a trail. In this release, only
-     *        <code>ApiCallRateInsight</code> is supported as an insight type.
+     *        A JSON string that contains the insight types you want to log on a trail. In this release,
+     *        <code>ApiErrorRateInsight</code> and <code>ApiCallRateInsight</code> are supported as insight types.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

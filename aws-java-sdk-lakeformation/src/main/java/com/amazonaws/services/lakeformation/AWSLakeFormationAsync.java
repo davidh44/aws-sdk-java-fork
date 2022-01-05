@@ -738,6 +738,86 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
 
     /**
      * <p>
+     * This API is identical to <code>GetTemporaryTableCredentials</code> except that this is used when the target Data
+     * Catalog resource is of type Partition. Lake Formation restricts the permission of the vended credentials with the
+     * same scope down policy which restricts access to a single Amazon S3 prefix.
+     * </p>
+     * 
+     * @param getTemporaryGluePartitionCredentialsRequest
+     * @return A Java Future containing the result of the GetTemporaryGluePartitionCredentials operation returned by the
+     *         service.
+     * @sample AWSLakeFormationAsync.GetTemporaryGluePartitionCredentials
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/GetTemporaryGluePartitionCredentials"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetTemporaryGluePartitionCredentialsResult> getTemporaryGluePartitionCredentialsAsync(
+            GetTemporaryGluePartitionCredentialsRequest getTemporaryGluePartitionCredentialsRequest);
+
+    /**
+     * <p>
+     * This API is identical to <code>GetTemporaryTableCredentials</code> except that this is used when the target Data
+     * Catalog resource is of type Partition. Lake Formation restricts the permission of the vended credentials with the
+     * same scope down policy which restricts access to a single Amazon S3 prefix.
+     * </p>
+     * 
+     * @param getTemporaryGluePartitionCredentialsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetTemporaryGluePartitionCredentials operation returned by the
+     *         service.
+     * @sample AWSLakeFormationAsyncHandler.GetTemporaryGluePartitionCredentials
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/GetTemporaryGluePartitionCredentials"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetTemporaryGluePartitionCredentialsResult> getTemporaryGluePartitionCredentialsAsync(
+            GetTemporaryGluePartitionCredentialsRequest getTemporaryGluePartitionCredentialsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetTemporaryGluePartitionCredentialsRequest, GetTemporaryGluePartitionCredentialsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Allows a caller in a secure environment to assume a role with permission to access Amazon S3. In order to vend
+     * such credentials, Lake Formation assumes the role associated with a registered location, for example an Amazon S3
+     * bucket, with a scope down policy which restricts the access to a single prefix.
+     * </p>
+     * 
+     * @param getTemporaryGlueTableCredentialsRequest
+     * @return A Java Future containing the result of the GetTemporaryGlueTableCredentials operation returned by the
+     *         service.
+     * @sample AWSLakeFormationAsync.GetTemporaryGlueTableCredentials
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/GetTemporaryGlueTableCredentials"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetTemporaryGlueTableCredentialsResult> getTemporaryGlueTableCredentialsAsync(
+            GetTemporaryGlueTableCredentialsRequest getTemporaryGlueTableCredentialsRequest);
+
+    /**
+     * <p>
+     * Allows a caller in a secure environment to assume a role with permission to access Amazon S3. In order to vend
+     * such credentials, Lake Formation assumes the role associated with a registered location, for example an Amazon S3
+     * bucket, with a scope down policy which restricts the access to a single prefix.
+     * </p>
+     * 
+     * @param getTemporaryGlueTableCredentialsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetTemporaryGlueTableCredentials operation returned by the
+     *         service.
+     * @sample AWSLakeFormationAsyncHandler.GetTemporaryGlueTableCredentials
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/GetTemporaryGlueTableCredentials"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetTemporaryGlueTableCredentialsResult> getTemporaryGlueTableCredentialsAsync(
+            GetTemporaryGlueTableCredentialsRequest getTemporaryGlueTableCredentialsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetTemporaryGlueTableCredentialsRequest, GetTemporaryGlueTableCredentialsResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns the work units resulting from the query. Work units can be executed in any order and in parallel.
      * </p>
      * 

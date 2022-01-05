@@ -133,6 +133,16 @@ public class AbstractAWSLakeFormation implements AWSLakeFormation {
     }
 
     @Override
+    public GetTemporaryGluePartitionCredentialsResult getTemporaryGluePartitionCredentials(GetTemporaryGluePartitionCredentialsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetTemporaryGlueTableCredentialsResult getTemporaryGlueTableCredentials(GetTemporaryGlueTableCredentialsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetWorkUnitResultsResult getWorkUnitResults(GetWorkUnitResultsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

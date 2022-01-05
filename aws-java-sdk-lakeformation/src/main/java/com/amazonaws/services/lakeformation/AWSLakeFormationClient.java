@@ -118,6 +118,9 @@ public class AWSLakeFormationClient extends AmazonWebServiceClient implements AW
                             new JsonErrorShapeMetadata().withErrorCode("GlueEncryptionException").withExceptionUnmarshaller(
                                     com.amazonaws.services.lakeformation.model.transform.GlueEncryptionExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("PermissionTypeMismatchException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.lakeformation.model.transform.PermissionTypeMismatchExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("WorkUnitsNotReadyYetException").withExceptionUnmarshaller(
                                     com.amazonaws.services.lakeformation.model.transform.WorkUnitsNotReadyYetExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -1589,6 +1592,157 @@ public class AWSLakeFormationClient extends AmazonWebServiceClient implements AW
 
             HttpResponseHandler<AmazonWebServiceResponse<GetTableObjectsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetTableObjectsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * This API is identical to <code>GetTemporaryTableCredentials</code> except that this is used when the target Data
+     * Catalog resource is of type Partition. Lake Formation restricts the permission of the vended credentials with the
+     * same scope down policy which restricts access to a single Amazon S3 prefix.
+     * </p>
+     * 
+     * @param getTemporaryGluePartitionCredentialsRequest
+     * @return Result of the GetTemporaryGluePartitionCredentials operation returned by the service.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws PermissionTypeMismatchException
+     *         The engine does not support filtering data based on the enforced permissions. For example, if you call
+     *         the <code>GetTemporaryGlueTableCredentials</code> operation with <code>SupportedPermissionType</code>
+     *         equal to <code>ColumnPermission</code>, but cell-level permissions exist on the table, this exception is
+     *         thrown.
+     * @sample AWSLakeFormation.GetTemporaryGluePartitionCredentials
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/GetTemporaryGluePartitionCredentials"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetTemporaryGluePartitionCredentialsResult getTemporaryGluePartitionCredentials(GetTemporaryGluePartitionCredentialsRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetTemporaryGluePartitionCredentials(request);
+    }
+
+    @SdkInternalApi
+    final GetTemporaryGluePartitionCredentialsResult executeGetTemporaryGluePartitionCredentials(
+            GetTemporaryGluePartitionCredentialsRequest getTemporaryGluePartitionCredentialsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getTemporaryGluePartitionCredentialsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetTemporaryGluePartitionCredentialsRequest> request = null;
+        Response<GetTemporaryGluePartitionCredentialsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetTemporaryGluePartitionCredentialsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getTemporaryGluePartitionCredentialsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "LakeFormation");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetTemporaryGluePartitionCredentials");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetTemporaryGluePartitionCredentialsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetTemporaryGluePartitionCredentialsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Allows a caller in a secure environment to assume a role with permission to access Amazon S3. In order to vend
+     * such credentials, Lake Formation assumes the role associated with a registered location, for example an Amazon S3
+     * bucket, with a scope down policy which restricts the access to a single prefix.
+     * </p>
+     * 
+     * @param getTemporaryGlueTableCredentialsRequest
+     * @return Result of the GetTemporaryGlueTableCredentials operation returned by the service.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws PermissionTypeMismatchException
+     *         The engine does not support filtering data based on the enforced permissions. For example, if you call
+     *         the <code>GetTemporaryGlueTableCredentials</code> operation with <code>SupportedPermissionType</code>
+     *         equal to <code>ColumnPermission</code>, but cell-level permissions exist on the table, this exception is
+     *         thrown.
+     * @sample AWSLakeFormation.GetTemporaryGlueTableCredentials
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/GetTemporaryGlueTableCredentials"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetTemporaryGlueTableCredentialsResult getTemporaryGlueTableCredentials(GetTemporaryGlueTableCredentialsRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetTemporaryGlueTableCredentials(request);
+    }
+
+    @SdkInternalApi
+    final GetTemporaryGlueTableCredentialsResult executeGetTemporaryGlueTableCredentials(
+            GetTemporaryGlueTableCredentialsRequest getTemporaryGlueTableCredentialsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getTemporaryGlueTableCredentialsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetTemporaryGlueTableCredentialsRequest> request = null;
+        Response<GetTemporaryGlueTableCredentialsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetTemporaryGlueTableCredentialsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getTemporaryGlueTableCredentialsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "LakeFormation");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetTemporaryGlueTableCredentials");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetTemporaryGlueTableCredentialsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetTemporaryGlueTableCredentialsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

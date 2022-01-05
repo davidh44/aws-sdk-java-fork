@@ -148,6 +148,8 @@ public class Crawler implements Serializable, Cloneable, StructuredPojo {
      */
     private String crawlerSecurityConfiguration;
 
+    private LakeFormationConfiguration lakeFormationConfiguration;
+
     /**
      * <p>
      * The name of the crawler.
@@ -988,6 +990,32 @@ public class Crawler implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * @param lakeFormationConfiguration
+     */
+
+    public void setLakeFormationConfiguration(LakeFormationConfiguration lakeFormationConfiguration) {
+        this.lakeFormationConfiguration = lakeFormationConfiguration;
+    }
+
+    /**
+     * @return
+     */
+
+    public LakeFormationConfiguration getLakeFormationConfiguration() {
+        return this.lakeFormationConfiguration;
+    }
+
+    /**
+     * @param lakeFormationConfiguration
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Crawler withLakeFormationConfiguration(LakeFormationConfiguration lakeFormationConfiguration) {
+        setLakeFormationConfiguration(lakeFormationConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1036,7 +1064,9 @@ public class Crawler implements Serializable, Cloneable, StructuredPojo {
         if (getConfiguration() != null)
             sb.append("Configuration: ").append(getConfiguration()).append(",");
         if (getCrawlerSecurityConfiguration() != null)
-            sb.append("CrawlerSecurityConfiguration: ").append(getCrawlerSecurityConfiguration());
+            sb.append("CrawlerSecurityConfiguration: ").append(getCrawlerSecurityConfiguration()).append(",");
+        if (getLakeFormationConfiguration() != null)
+            sb.append("LakeFormationConfiguration: ").append(getLakeFormationConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -1127,6 +1157,10 @@ public class Crawler implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getCrawlerSecurityConfiguration() != null && other.getCrawlerSecurityConfiguration().equals(this.getCrawlerSecurityConfiguration()) == false)
             return false;
+        if (other.getLakeFormationConfiguration() == null ^ this.getLakeFormationConfiguration() == null)
+            return false;
+        if (other.getLakeFormationConfiguration() != null && other.getLakeFormationConfiguration().equals(this.getLakeFormationConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -1154,6 +1188,7 @@ public class Crawler implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getVersion() == null) ? 0 : getVersion().hashCode());
         hashCode = prime * hashCode + ((getConfiguration() == null) ? 0 : getConfiguration().hashCode());
         hashCode = prime * hashCode + ((getCrawlerSecurityConfiguration() == null) ? 0 : getCrawlerSecurityConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getLakeFormationConfiguration() == null) ? 0 : getLakeFormationConfiguration().hashCode());
         return hashCode;
     }
 

@@ -58,7 +58,15 @@ public enum TrainingInstanceType {
     MlC5n2xlarge("ml.c5n.2xlarge"),
     MlC5n4xlarge("ml.c5n.4xlarge"),
     MlC5n9xlarge("ml.c5n.9xlarge"),
-    MlC5n18xlarge("ml.c5n.18xlarge");
+    MlC5n18xlarge("ml.c5n.18xlarge"),
+    MlG5Xlarge("ml.g5.xlarge"),
+    MlG52xlarge("ml.g5.2xlarge"),
+    MlG54xlarge("ml.g5.4xlarge"),
+    MlG58xlarge("ml.g5.8xlarge"),
+    MlG516xlarge("ml.g5.16xlarge"),
+    MlG512xlarge("ml.g5.12xlarge"),
+    MlG524xlarge("ml.g5.24xlarge"),
+    MlG548xlarge("ml.g5.48xlarge");
 
     private String value;
 

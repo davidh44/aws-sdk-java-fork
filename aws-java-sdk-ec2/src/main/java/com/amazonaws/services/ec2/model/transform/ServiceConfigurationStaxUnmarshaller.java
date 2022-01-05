@@ -130,6 +130,11 @@ public class ServiceConfigurationStaxUnmarshaller implements Unmarshaller<Servic
                     continue;
                 }
 
+                if (context.testExpression("payerResponsibility", targetDepth)) {
+                    serviceConfiguration.setPayerResponsibility(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("tagSet", targetDepth)) {
                     serviceConfiguration.withTags(new ArrayList<Tag>());
                     continue;

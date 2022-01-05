@@ -33,8 +33,8 @@ public class PutInsightSelectorsRequest extends com.amazonaws.AmazonWebServiceRe
     private String trailName;
     /**
      * <p>
-     * A JSON string that contains the Insights types that you want to log on a trail. The valid Insights type in this
-     * release is <code>ApiCallRateInsight</code>.
+     * A JSON string that contains the insight types you want to log on a trail. <code>ApiCallRateInsight</code> and
+     * <code>ApiErrorRateInsight</code> are valid insight types.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<InsightSelector> insightSelectors;
@@ -81,12 +81,12 @@ public class PutInsightSelectorsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A JSON string that contains the Insights types that you want to log on a trail. The valid Insights type in this
-     * release is <code>ApiCallRateInsight</code>.
+     * A JSON string that contains the insight types you want to log on a trail. <code>ApiCallRateInsight</code> and
+     * <code>ApiErrorRateInsight</code> are valid insight types.
      * </p>
      * 
-     * @return A JSON string that contains the Insights types that you want to log on a trail. The valid Insights type
-     *         in this release is <code>ApiCallRateInsight</code>.
+     * @return A JSON string that contains the insight types you want to log on a trail. <code>ApiCallRateInsight</code>
+     *         and <code>ApiErrorRateInsight</code> are valid insight types.
      */
 
     public java.util.List<InsightSelector> getInsightSelectors() {
@@ -98,13 +98,13 @@ public class PutInsightSelectorsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A JSON string that contains the Insights types that you want to log on a trail. The valid Insights type in this
-     * release is <code>ApiCallRateInsight</code>.
+     * A JSON string that contains the insight types you want to log on a trail. <code>ApiCallRateInsight</code> and
+     * <code>ApiErrorRateInsight</code> are valid insight types.
      * </p>
      * 
      * @param insightSelectors
-     *        A JSON string that contains the Insights types that you want to log on a trail. The valid Insights type in
-     *        this release is <code>ApiCallRateInsight</code>.
+     *        A JSON string that contains the insight types you want to log on a trail. <code>ApiCallRateInsight</code>
+     *        and <code>ApiErrorRateInsight</code> are valid insight types.
      */
 
     public void setInsightSelectors(java.util.Collection<InsightSelector> insightSelectors) {
@@ -118,8 +118,8 @@ public class PutInsightSelectorsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A JSON string that contains the Insights types that you want to log on a trail. The valid Insights type in this
-     * release is <code>ApiCallRateInsight</code>.
+     * A JSON string that contains the insight types you want to log on a trail. <code>ApiCallRateInsight</code> and
+     * <code>ApiErrorRateInsight</code> are valid insight types.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -128,8 +128,8 @@ public class PutInsightSelectorsRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param insightSelectors
-     *        A JSON string that contains the Insights types that you want to log on a trail. The valid Insights type in
-     *        this release is <code>ApiCallRateInsight</code>.
+     *        A JSON string that contains the insight types you want to log on a trail. <code>ApiCallRateInsight</code>
+     *        and <code>ApiErrorRateInsight</code> are valid insight types.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -145,13 +145,13 @@ public class PutInsightSelectorsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A JSON string that contains the Insights types that you want to log on a trail. The valid Insights type in this
-     * release is <code>ApiCallRateInsight</code>.
+     * A JSON string that contains the insight types you want to log on a trail. <code>ApiCallRateInsight</code> and
+     * <code>ApiErrorRateInsight</code> are valid insight types.
      * </p>
      * 
      * @param insightSelectors
-     *        A JSON string that contains the Insights types that you want to log on a trail. The valid Insights type in
-     *        this release is <code>ApiCallRateInsight</code>.
+     *        A JSON string that contains the insight types you want to log on a trail. <code>ApiCallRateInsight</code>
+     *        and <code>ApiErrorRateInsight</code> are valid insight types.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

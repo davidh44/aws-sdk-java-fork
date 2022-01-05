@@ -9261,6 +9261,20 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Modifies the payer responsibility for your VPC endpoint service.
+     * </p>
+     * 
+     * @param modifyVpcEndpointServicePayerResponsibilityRequest
+     * @return Result of the ModifyVpcEndpointServicePayerResponsibility operation returned by the service.
+     * @sample AmazonEC2.ModifyVpcEndpointServicePayerResponsibility
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyVpcEndpointServicePayerResponsibility"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ModifyVpcEndpointServicePayerResponsibilityResult modifyVpcEndpointServicePayerResponsibility(
+            ModifyVpcEndpointServicePayerResponsibilityRequest modifyVpcEndpointServicePayerResponsibilityRequest);
+
+    /**
+     * <p>
      * Modifies the permissions for your <a
      * href="https://docs.aws.amazon.com/vpc/latest/userguide/endpoint-service.html">VPC endpoint service</a>. You can
      * add or remove permissions for service consumers (IAM users, IAM roles, and Amazon Web Services accounts) to

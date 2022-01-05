@@ -21207,6 +21207,41 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Modifies the payer responsibility for your VPC endpoint service.
+     * </p>
+     * 
+     * @param modifyVpcEndpointServicePayerResponsibilityRequest
+     * @return A Java Future containing the result of the ModifyVpcEndpointServicePayerResponsibility operation returned
+     *         by the service.
+     * @sample AmazonEC2Async.ModifyVpcEndpointServicePayerResponsibility
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyVpcEndpointServicePayerResponsibility"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyVpcEndpointServicePayerResponsibilityResult> modifyVpcEndpointServicePayerResponsibilityAsync(
+            ModifyVpcEndpointServicePayerResponsibilityRequest modifyVpcEndpointServicePayerResponsibilityRequest);
+
+    /**
+     * <p>
+     * Modifies the payer responsibility for your VPC endpoint service.
+     * </p>
+     * 
+     * @param modifyVpcEndpointServicePayerResponsibilityRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ModifyVpcEndpointServicePayerResponsibility operation returned
+     *         by the service.
+     * @sample AmazonEC2AsyncHandler.ModifyVpcEndpointServicePayerResponsibility
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyVpcEndpointServicePayerResponsibility"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyVpcEndpointServicePayerResponsibilityResult> modifyVpcEndpointServicePayerResponsibilityAsync(
+            ModifyVpcEndpointServicePayerResponsibilityRequest modifyVpcEndpointServicePayerResponsibilityRequest,
+            com.amazonaws.handlers.AsyncHandler<ModifyVpcEndpointServicePayerResponsibilityRequest, ModifyVpcEndpointServicePayerResponsibilityResult> asyncHandler);
+
+    /**
+     * <p>
      * Modifies the permissions for your <a
      * href="https://docs.aws.amazon.com/vpc/latest/userguide/endpoint-service.html">VPC endpoint service</a>. You can
      * add or remove permissions for service consumers (IAM users, IAM roles, and Amazon Web Services accounts) to

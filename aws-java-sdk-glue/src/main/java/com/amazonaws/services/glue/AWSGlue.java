@@ -2477,6 +2477,66 @@ public interface AWSGlue {
     GetTriggersResult getTriggers(GetTriggersRequest getTriggersRequest);
 
     /**
+     * @param getUnfilteredPartitionMetadataRequest
+     * @return Result of the GetUnfilteredPartitionMetadata operation returned by the service.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws GlueEncryptionException
+     *         An encryption operation failed.
+     * @throws PermissionTypeMismatchException
+     * @sample AWSGlue.GetUnfilteredPartitionMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetUnfilteredPartitionMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetUnfilteredPartitionMetadataResult getUnfilteredPartitionMetadata(GetUnfilteredPartitionMetadataRequest getUnfilteredPartitionMetadataRequest);
+
+    /**
+     * @param getUnfilteredPartitionsMetadataRequest
+     * @return Result of the GetUnfilteredPartitionsMetadata operation returned by the service.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws GlueEncryptionException
+     *         An encryption operation failed.
+     * @throws PermissionTypeMismatchException
+     * @sample AWSGlue.GetUnfilteredPartitionsMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetUnfilteredPartitionsMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetUnfilteredPartitionsMetadataResult getUnfilteredPartitionsMetadata(GetUnfilteredPartitionsMetadataRequest getUnfilteredPartitionsMetadataRequest);
+
+    /**
+     * @param getUnfilteredTableMetadataRequest
+     * @return Result of the GetUnfilteredTableMetadata operation returned by the service.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws GlueEncryptionException
+     *         An encryption operation failed.
+     * @throws PermissionTypeMismatchException
+     * @sample AWSGlue.GetUnfilteredTableMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetUnfilteredTableMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetUnfilteredTableMetadataResult getUnfilteredTableMetadata(GetUnfilteredTableMetadataRequest getUnfilteredTableMetadataRequest);
+
+    /**
      * <p>
      * Retrieves a specified function definition from the Data Catalog.
      * </p>

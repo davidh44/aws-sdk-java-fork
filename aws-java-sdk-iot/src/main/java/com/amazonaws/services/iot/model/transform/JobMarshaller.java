@@ -67,6 +67,8 @@ public class JobMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("namespaceId").build();
     private static final MarshallingInfo<String> JOBTEMPLATEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("jobTemplateArn").build();
+    private static final MarshallingInfo<StructuredPojo> JOBEXECUTIONSRETRYCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("jobExecutionsRetryConfig").build();
     private static final MarshallingInfo<Map> DOCUMENTPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("documentParameters").build();
 
@@ -105,6 +107,7 @@ public class JobMarshaller {
             protocolMarshaller.marshall(job.getTimeoutConfig(), TIMEOUTCONFIG_BINDING);
             protocolMarshaller.marshall(job.getNamespaceId(), NAMESPACEID_BINDING);
             protocolMarshaller.marshall(job.getJobTemplateArn(), JOBTEMPLATEARN_BINDING);
+            protocolMarshaller.marshall(job.getJobExecutionsRetryConfig(), JOBEXECUTIONSRETRYCONFIG_BINDING);
             protocolMarshaller.marshall(job.getDocumentParameters(), DOCUMENTPARAMETERS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

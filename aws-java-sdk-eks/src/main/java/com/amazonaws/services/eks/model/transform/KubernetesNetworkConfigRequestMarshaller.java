@@ -29,6 +29,8 @@ public class KubernetesNetworkConfigRequestMarshaller {
 
     private static final MarshallingInfo<String> SERVICEIPV4CIDR_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("serviceIpv4Cidr").build();
+    private static final MarshallingInfo<String> IPFAMILY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("ipFamily").build();
 
     private static final KubernetesNetworkConfigRequestMarshaller instance = new KubernetesNetworkConfigRequestMarshaller();
 
@@ -47,6 +49,7 @@ public class KubernetesNetworkConfigRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(kubernetesNetworkConfigRequest.getServiceIpv4Cidr(), SERVICEIPV4CIDR_BINDING);
+            protocolMarshaller.marshall(kubernetesNetworkConfigRequest.getIpFamily(), IPFAMILY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

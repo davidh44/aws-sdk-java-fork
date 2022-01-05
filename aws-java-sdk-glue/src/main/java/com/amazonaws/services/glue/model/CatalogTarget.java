@@ -40,6 +40,13 @@ public class CatalogTarget implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<String> tables;
+    /**
+     * <p>
+     * The name of the connection for an Amazon S3-backed Data Catalog table to be a target of the crawl when using a
+     * <code>Catalog</code> connection type paired with a <code>NETWORK</code> Connection type.
+     * </p>
+     */
+    private String connectionName;
 
     /**
      * <p>
@@ -152,6 +159,52 @@ public class CatalogTarget implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The name of the connection for an Amazon S3-backed Data Catalog table to be a target of the crawl when using a
+     * <code>Catalog</code> connection type paired with a <code>NETWORK</code> Connection type.
+     * </p>
+     * 
+     * @param connectionName
+     *        The name of the connection for an Amazon S3-backed Data Catalog table to be a target of the crawl when
+     *        using a <code>Catalog</code> connection type paired with a <code>NETWORK</code> Connection type.
+     */
+
+    public void setConnectionName(String connectionName) {
+        this.connectionName = connectionName;
+    }
+
+    /**
+     * <p>
+     * The name of the connection for an Amazon S3-backed Data Catalog table to be a target of the crawl when using a
+     * <code>Catalog</code> connection type paired with a <code>NETWORK</code> Connection type.
+     * </p>
+     * 
+     * @return The name of the connection for an Amazon S3-backed Data Catalog table to be a target of the crawl when
+     *         using a <code>Catalog</code> connection type paired with a <code>NETWORK</code> Connection type.
+     */
+
+    public String getConnectionName() {
+        return this.connectionName;
+    }
+
+    /**
+     * <p>
+     * The name of the connection for an Amazon S3-backed Data Catalog table to be a target of the crawl when using a
+     * <code>Catalog</code> connection type paired with a <code>NETWORK</code> Connection type.
+     * </p>
+     * 
+     * @param connectionName
+     *        The name of the connection for an Amazon S3-backed Data Catalog table to be a target of the crawl when
+     *        using a <code>Catalog</code> connection type paired with a <code>NETWORK</code> Connection type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CatalogTarget withConnectionName(String connectionName) {
+        setConnectionName(connectionName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -166,7 +219,9 @@ public class CatalogTarget implements Serializable, Cloneable, StructuredPojo {
         if (getDatabaseName() != null)
             sb.append("DatabaseName: ").append(getDatabaseName()).append(",");
         if (getTables() != null)
-            sb.append("Tables: ").append(getTables());
+            sb.append("Tables: ").append(getTables()).append(",");
+        if (getConnectionName() != null)
+            sb.append("ConnectionName: ").append(getConnectionName());
         sb.append("}");
         return sb.toString();
     }
@@ -189,6 +244,10 @@ public class CatalogTarget implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getTables() != null && other.getTables().equals(this.getTables()) == false)
             return false;
+        if (other.getConnectionName() == null ^ this.getConnectionName() == null)
+            return false;
+        if (other.getConnectionName() != null && other.getConnectionName().equals(this.getConnectionName()) == false)
+            return false;
         return true;
     }
 
@@ -199,6 +258,7 @@ public class CatalogTarget implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getDatabaseName() == null) ? 0 : getDatabaseName().hashCode());
         hashCode = prime * hashCode + ((getTables() == null) ? 0 : getTables().hashCode());
+        hashCode = prime * hashCode + ((getConnectionName() == null) ? 0 : getConnectionName().hashCode());
         return hashCode;
     }
 

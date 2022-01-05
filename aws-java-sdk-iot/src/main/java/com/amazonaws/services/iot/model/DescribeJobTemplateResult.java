@@ -62,6 +62,12 @@ public class DescribeJobTemplateResult extends com.amazonaws.AmazonWebServiceRes
     private AbortConfig abortConfig;
 
     private TimeoutConfig timeoutConfig;
+    /**
+     * <p>
+     * The configuration that determines how many retries are allowed for each failure type for a job.
+     * </p>
+     */
+    private JobExecutionsRetryConfig jobExecutionsRetryConfig;
 
     /**
      * <p>
@@ -408,6 +414,46 @@ public class DescribeJobTemplateResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
+     * <p>
+     * The configuration that determines how many retries are allowed for each failure type for a job.
+     * </p>
+     * 
+     * @param jobExecutionsRetryConfig
+     *        The configuration that determines how many retries are allowed for each failure type for a job.
+     */
+
+    public void setJobExecutionsRetryConfig(JobExecutionsRetryConfig jobExecutionsRetryConfig) {
+        this.jobExecutionsRetryConfig = jobExecutionsRetryConfig;
+    }
+
+    /**
+     * <p>
+     * The configuration that determines how many retries are allowed for each failure type for a job.
+     * </p>
+     * 
+     * @return The configuration that determines how many retries are allowed for each failure type for a job.
+     */
+
+    public JobExecutionsRetryConfig getJobExecutionsRetryConfig() {
+        return this.jobExecutionsRetryConfig;
+    }
+
+    /**
+     * <p>
+     * The configuration that determines how many retries are allowed for each failure type for a job.
+     * </p>
+     * 
+     * @param jobExecutionsRetryConfig
+     *        The configuration that determines how many retries are allowed for each failure type for a job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeJobTemplateResult withJobExecutionsRetryConfig(JobExecutionsRetryConfig jobExecutionsRetryConfig) {
+        setJobExecutionsRetryConfig(jobExecutionsRetryConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -438,7 +484,9 @@ public class DescribeJobTemplateResult extends com.amazonaws.AmazonWebServiceRes
         if (getAbortConfig() != null)
             sb.append("AbortConfig: ").append(getAbortConfig()).append(",");
         if (getTimeoutConfig() != null)
-            sb.append("TimeoutConfig: ").append(getTimeoutConfig());
+            sb.append("TimeoutConfig: ").append(getTimeoutConfig()).append(",");
+        if (getJobExecutionsRetryConfig() != null)
+            sb.append("JobExecutionsRetryConfig: ").append(getJobExecutionsRetryConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -493,6 +541,10 @@ public class DescribeJobTemplateResult extends com.amazonaws.AmazonWebServiceRes
             return false;
         if (other.getTimeoutConfig() != null && other.getTimeoutConfig().equals(this.getTimeoutConfig()) == false)
             return false;
+        if (other.getJobExecutionsRetryConfig() == null ^ this.getJobExecutionsRetryConfig() == null)
+            return false;
+        if (other.getJobExecutionsRetryConfig() != null && other.getJobExecutionsRetryConfig().equals(this.getJobExecutionsRetryConfig()) == false)
+            return false;
         return true;
     }
 
@@ -511,6 +563,7 @@ public class DescribeJobTemplateResult extends com.amazonaws.AmazonWebServiceRes
         hashCode = prime * hashCode + ((getJobExecutionsRolloutConfig() == null) ? 0 : getJobExecutionsRolloutConfig().hashCode());
         hashCode = prime * hashCode + ((getAbortConfig() == null) ? 0 : getAbortConfig().hashCode());
         hashCode = prime * hashCode + ((getTimeoutConfig() == null) ? 0 : getTimeoutConfig().hashCode());
+        hashCode = prime * hashCode + ((getJobExecutionsRetryConfig() == null) ? 0 : getJobExecutionsRetryConfig().hashCode());
         return hashCode;
     }
 

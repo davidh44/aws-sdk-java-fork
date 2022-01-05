@@ -33,6 +33,8 @@ public class StorageDescriptorMarshaller {
             .marshallLocationName("Columns").build();
     private static final MarshallingInfo<String> LOCATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Location").build();
+    private static final MarshallingInfo<List> ADDITIONALLOCATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AdditionalLocations").build();
     private static final MarshallingInfo<String> INPUTFORMAT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InputFormat").build();
     private static final MarshallingInfo<String> OUTPUTFORMAT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -74,6 +76,7 @@ public class StorageDescriptorMarshaller {
         try {
             protocolMarshaller.marshall(storageDescriptor.getColumns(), COLUMNS_BINDING);
             protocolMarshaller.marshall(storageDescriptor.getLocation(), LOCATION_BINDING);
+            protocolMarshaller.marshall(storageDescriptor.getAdditionalLocations(), ADDITIONALLOCATIONS_BINDING);
             protocolMarshaller.marshall(storageDescriptor.getInputFormat(), INPUTFORMAT_BINDING);
             protocolMarshaller.marshall(storageDescriptor.getOutputFormat(), OUTPUTFORMAT_BINDING);
             protocolMarshaller.marshall(storageDescriptor.getCompressed(), COMPRESSED_BINDING);

@@ -41,6 +41,21 @@ public class AbstractAmazonAppStreamAsync extends AbstractAmazonAppStream implem
     }
 
     @Override
+    public java.util.concurrent.Future<AssociateApplicationToEntitlementResult> associateApplicationToEntitlementAsync(
+            AssociateApplicationToEntitlementRequest request) {
+
+        return associateApplicationToEntitlementAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateApplicationToEntitlementResult> associateApplicationToEntitlementAsync(
+            AssociateApplicationToEntitlementRequest request,
+            com.amazonaws.handlers.AsyncHandler<AssociateApplicationToEntitlementRequest, AssociateApplicationToEntitlementResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<AssociateFleetResult> associateFleetAsync(AssociateFleetRequest request) {
 
         return associateFleetAsync(request, null);
@@ -127,6 +142,19 @@ public class AbstractAmazonAppStreamAsync extends AbstractAmazonAppStream implem
     @Override
     public java.util.concurrent.Future<CreateDirectoryConfigResult> createDirectoryConfigAsync(CreateDirectoryConfigRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateDirectoryConfigRequest, CreateDirectoryConfigResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateEntitlementResult> createEntitlementAsync(CreateEntitlementRequest request) {
+
+        return createEntitlementAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateEntitlementResult> createEntitlementAsync(CreateEntitlementRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateEntitlementRequest, CreateEntitlementResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -270,6 +298,19 @@ public class AbstractAmazonAppStreamAsync extends AbstractAmazonAppStream implem
     @Override
     public java.util.concurrent.Future<DeleteDirectoryConfigResult> deleteDirectoryConfigAsync(DeleteDirectoryConfigRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteDirectoryConfigRequest, DeleteDirectoryConfigResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEntitlementResult> deleteEntitlementAsync(DeleteEntitlementRequest request) {
+
+        return deleteEntitlementAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEntitlementResult> deleteEntitlementAsync(DeleteEntitlementRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteEntitlementRequest, DeleteEntitlementResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -420,6 +461,19 @@ public class AbstractAmazonAppStreamAsync extends AbstractAmazonAppStream implem
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeEntitlementsResult> describeEntitlementsAsync(DescribeEntitlementsRequest request) {
+
+        return describeEntitlementsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeEntitlementsResult> describeEntitlementsAsync(DescribeEntitlementsRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeEntitlementsRequest, DescribeEntitlementsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeFleetsResult> describeFleetsAsync(DescribeFleetsRequest request) {
 
         return describeFleetsAsync(request, null);
@@ -565,6 +619,21 @@ public class AbstractAmazonAppStreamAsync extends AbstractAmazonAppStream implem
     }
 
     @Override
+    public java.util.concurrent.Future<DisassociateApplicationFromEntitlementResult> disassociateApplicationFromEntitlementAsync(
+            DisassociateApplicationFromEntitlementRequest request) {
+
+        return disassociateApplicationFromEntitlementAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateApplicationFromEntitlementResult> disassociateApplicationFromEntitlementAsync(
+            DisassociateApplicationFromEntitlementRequest request,
+            com.amazonaws.handlers.AsyncHandler<DisassociateApplicationFromEntitlementRequest, DisassociateApplicationFromEntitlementResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DisassociateFleetResult> disassociateFleetAsync(DisassociateFleetRequest request) {
 
         return disassociateFleetAsync(request, null);
@@ -625,6 +694,19 @@ public class AbstractAmazonAppStreamAsync extends AbstractAmazonAppStream implem
     @Override
     public java.util.concurrent.Future<ListAssociatedStacksResult> listAssociatedStacksAsync(ListAssociatedStacksRequest request,
             com.amazonaws.handlers.AsyncHandler<ListAssociatedStacksRequest, ListAssociatedStacksResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEntitledApplicationsResult> listEntitledApplicationsAsync(ListEntitledApplicationsRequest request) {
+
+        return listEntitledApplicationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEntitledApplicationsResult> listEntitledApplicationsAsync(ListEntitledApplicationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListEntitledApplicationsRequest, ListEntitledApplicationsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -742,6 +824,19 @@ public class AbstractAmazonAppStreamAsync extends AbstractAmazonAppStream implem
     @Override
     public java.util.concurrent.Future<UpdateDirectoryConfigResult> updateDirectoryConfigAsync(UpdateDirectoryConfigRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateDirectoryConfigRequest, UpdateDirectoryConfigResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEntitlementResult> updateEntitlementAsync(UpdateEntitlementRequest request) {
+
+        return updateEntitlementAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEntitlementResult> updateEntitlementAsync(UpdateEntitlementRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateEntitlementRequest, UpdateEntitlementResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

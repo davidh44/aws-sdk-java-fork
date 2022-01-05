@@ -58,6 +58,12 @@ public class StorageDescriptorJsonUnmarshaller implements Unmarshaller<StorageDe
                     context.nextToken();
                     storageDescriptor.setLocation(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("AdditionalLocations", targetDepth)) {
+                    context.nextToken();
+                    storageDescriptor.setAdditionalLocations(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("InputFormat", targetDepth)) {
                     context.nextToken();
                     storageDescriptor.setInputFormat(context.getUnmarshaller(String.class).unmarshall(context));

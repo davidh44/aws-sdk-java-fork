@@ -31,8 +31,8 @@ public class PutInsightSelectorsResult extends com.amazonaws.AmazonWebServiceRes
     private String trailARN;
     /**
      * <p>
-     * A JSON string that contains the Insights event types that you want to log on a trail. The valid Insights type in
-     * this release is <code>ApiCallRateInsight</code>.
+     * A JSON string that contains the Insights event types that you want to log on a trail. The valid Insights types in
+     * this release are <code>ApiErrorRateInsight</code> and <code>ApiCallRateInsight</code>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<InsightSelector> insightSelectors;
@@ -79,12 +79,12 @@ public class PutInsightSelectorsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * A JSON string that contains the Insights event types that you want to log on a trail. The valid Insights type in
-     * this release is <code>ApiCallRateInsight</code>.
+     * A JSON string that contains the Insights event types that you want to log on a trail. The valid Insights types in
+     * this release are <code>ApiErrorRateInsight</code> and <code>ApiCallRateInsight</code>.
      * </p>
      * 
      * @return A JSON string that contains the Insights event types that you want to log on a trail. The valid Insights
-     *         type in this release is <code>ApiCallRateInsight</code>.
+     *         types in this release are <code>ApiErrorRateInsight</code> and <code>ApiCallRateInsight</code>.
      */
 
     public java.util.List<InsightSelector> getInsightSelectors() {
@@ -96,13 +96,13 @@ public class PutInsightSelectorsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * A JSON string that contains the Insights event types that you want to log on a trail. The valid Insights type in
-     * this release is <code>ApiCallRateInsight</code>.
+     * A JSON string that contains the Insights event types that you want to log on a trail. The valid Insights types in
+     * this release are <code>ApiErrorRateInsight</code> and <code>ApiCallRateInsight</code>.
      * </p>
      * 
      * @param insightSelectors
      *        A JSON string that contains the Insights event types that you want to log on a trail. The valid Insights
-     *        type in this release is <code>ApiCallRateInsight</code>.
+     *        types in this release are <code>ApiErrorRateInsight</code> and <code>ApiCallRateInsight</code>.
      */
 
     public void setInsightSelectors(java.util.Collection<InsightSelector> insightSelectors) {
@@ -116,8 +116,8 @@ public class PutInsightSelectorsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * A JSON string that contains the Insights event types that you want to log on a trail. The valid Insights type in
-     * this release is <code>ApiCallRateInsight</code>.
+     * A JSON string that contains the Insights event types that you want to log on a trail. The valid Insights types in
+     * this release are <code>ApiErrorRateInsight</code> and <code>ApiCallRateInsight</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -127,7 +127,7 @@ public class PutInsightSelectorsResult extends com.amazonaws.AmazonWebServiceRes
      * 
      * @param insightSelectors
      *        A JSON string that contains the Insights event types that you want to log on a trail. The valid Insights
-     *        type in this release is <code>ApiCallRateInsight</code>.
+     *        types in this release are <code>ApiErrorRateInsight</code> and <code>ApiCallRateInsight</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -143,13 +143,13 @@ public class PutInsightSelectorsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * A JSON string that contains the Insights event types that you want to log on a trail. The valid Insights type in
-     * this release is <code>ApiCallRateInsight</code>.
+     * A JSON string that contains the Insights event types that you want to log on a trail. The valid Insights types in
+     * this release are <code>ApiErrorRateInsight</code> and <code>ApiCallRateInsight</code>.
      * </p>
      * 
      * @param insightSelectors
      *        A JSON string that contains the Insights event types that you want to log on a trail. The valid Insights
-     *        type in this release is <code>ApiCallRateInsight</code>.
+     *        types in this release are <code>ApiErrorRateInsight</code> and <code>ApiCallRateInsight</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

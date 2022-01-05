@@ -37,6 +37,8 @@ public class ListJobExecutionsForThingRequestMarshaller {
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("maxResults").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("nextToken").build();
+    private static final MarshallingInfo<String> JOBID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.QUERY_PARAM)
+            .marshallLocationName("jobId").build();
 
     private static final ListJobExecutionsForThingRequestMarshaller instance = new ListJobExecutionsForThingRequestMarshaller();
 
@@ -59,6 +61,7 @@ public class ListJobExecutionsForThingRequestMarshaller {
             protocolMarshaller.marshall(listJobExecutionsForThingRequest.getNamespaceId(), NAMESPACEID_BINDING);
             protocolMarshaller.marshall(listJobExecutionsForThingRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listJobExecutionsForThingRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(listJobExecutionsForThingRequest.getJobId(), JOBID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

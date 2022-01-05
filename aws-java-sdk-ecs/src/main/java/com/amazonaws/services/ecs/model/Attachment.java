@@ -43,8 +43,8 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The status of the attachment. Valid values are <code>PRECREATED</code>, <code>CREATED</code>,
-     * <code>ATTACHING</code>, <code>ATTACHED</code>, <code>DETACHING</code>, <code>DETACHED</code>, and
-     * <code>DELETED</code>.
+     * <code>ATTACHING</code>, <code>ATTACHED</code>, <code>DETACHING</code>, <code>DETACHED</code>,
+     * <code>DELETED</code>, and <code>FAILED</code>.
      * </p>
      */
     private String status;
@@ -139,14 +139,14 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The status of the attachment. Valid values are <code>PRECREATED</code>, <code>CREATED</code>,
-     * <code>ATTACHING</code>, <code>ATTACHED</code>, <code>DETACHING</code>, <code>DETACHED</code>, and
-     * <code>DELETED</code>.
+     * <code>ATTACHING</code>, <code>ATTACHED</code>, <code>DETACHING</code>, <code>DETACHED</code>,
+     * <code>DELETED</code>, and <code>FAILED</code>.
      * </p>
      * 
      * @param status
      *        The status of the attachment. Valid values are <code>PRECREATED</code>, <code>CREATED</code>,
-     *        <code>ATTACHING</code>, <code>ATTACHED</code>, <code>DETACHING</code>, <code>DETACHED</code>, and
-     *        <code>DELETED</code>.
+     *        <code>ATTACHING</code>, <code>ATTACHED</code>, <code>DETACHING</code>, <code>DETACHED</code>,
+     *        <code>DELETED</code>, and <code>FAILED</code>.
      */
 
     public void setStatus(String status) {
@@ -156,13 +156,13 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The status of the attachment. Valid values are <code>PRECREATED</code>, <code>CREATED</code>,
-     * <code>ATTACHING</code>, <code>ATTACHED</code>, <code>DETACHING</code>, <code>DETACHED</code>, and
-     * <code>DELETED</code>.
+     * <code>ATTACHING</code>, <code>ATTACHED</code>, <code>DETACHING</code>, <code>DETACHED</code>,
+     * <code>DELETED</code>, and <code>FAILED</code>.
      * </p>
      * 
      * @return The status of the attachment. Valid values are <code>PRECREATED</code>, <code>CREATED</code>,
-     *         <code>ATTACHING</code>, <code>ATTACHED</code>, <code>DETACHING</code>, <code>DETACHED</code>, and
-     *         <code>DELETED</code>.
+     *         <code>ATTACHING</code>, <code>ATTACHED</code>, <code>DETACHING</code>, <code>DETACHED</code>,
+     *         <code>DELETED</code>, and <code>FAILED</code>.
      */
 
     public String getStatus() {
@@ -172,14 +172,14 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The status of the attachment. Valid values are <code>PRECREATED</code>, <code>CREATED</code>,
-     * <code>ATTACHING</code>, <code>ATTACHED</code>, <code>DETACHING</code>, <code>DETACHED</code>, and
-     * <code>DELETED</code>.
+     * <code>ATTACHING</code>, <code>ATTACHED</code>, <code>DETACHING</code>, <code>DETACHED</code>,
+     * <code>DELETED</code>, and <code>FAILED</code>.
      * </p>
      * 
      * @param status
      *        The status of the attachment. Valid values are <code>PRECREATED</code>, <code>CREATED</code>,
-     *        <code>ATTACHING</code>, <code>ATTACHED</code>, <code>DETACHING</code>, <code>DETACHED</code>, and
-     *        <code>DELETED</code>.
+     *        <code>ATTACHING</code>, <code>ATTACHED</code>, <code>DETACHING</code>, <code>DETACHED</code>,
+     *        <code>DELETED</code>, and <code>FAILED</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

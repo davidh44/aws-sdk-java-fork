@@ -126,6 +126,10 @@ public class CrawlerJsonUnmarshaller implements Unmarshaller<Crawler, JsonUnmars
                     context.nextToken();
                     crawler.setCrawlerSecurityConfiguration(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("LakeFormationConfiguration", targetDepth)) {
+                    context.nextToken();
+                    crawler.setLakeFormationConfiguration(LakeFormationConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

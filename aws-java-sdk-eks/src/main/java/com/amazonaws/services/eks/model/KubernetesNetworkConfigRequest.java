@@ -30,10 +30,11 @@ public class KubernetesNetworkConfigRequest implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The CIDR block to assign Kubernetes service IP addresses from. If you don't specify a block, Kubernetes assigns
-     * addresses from either the 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks. We recommend that you specify a block that
-     * does not overlap with resources in other networks that are peered or connected to your VPC. The block must meet
-     * the following requirements:
+     * Don't specify a value if you select <code>ipv6</code> for <b>ipFamily</b>. The CIDR block to assign Kubernetes
+     * service IP addresses from. If you don't specify a block, Kubernetes assigns addresses from either the
+     * 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks. We recommend that you specify a block that does not overlap with
+     * resources in other networks that are peered or connected to your VPC. The block must meet the following
+     * requirements:
      * </p>
      * <ul>
      * <li>
@@ -60,13 +61,31 @@ public class KubernetesNetworkConfigRequest implements Serializable, Cloneable, 
      * </important>
      */
     private String serviceIpv4Cidr;
+    /**
+     * <p>
+     * Specify which IP version is used to assign Kubernetes Pod and Service IP addresses. If you don't specify a value,
+     * <code>ipv4</code> is used by default. You can only specify an IP family when you create a cluster and can't
+     * change this value once the cluster is created. If you specify <code>ipv6</code>, the VPC and subnets that you
+     * specify for cluster creation must have both IPv4 and IPv6 CIDR blocks assigned to them.
+     * </p>
+     * <p>
+     * You can only specify <code>ipv6</code> for 1.21 and later clusters that use version 1.10.0 or later of the Amazon
+     * VPC CNI add-on. If you specify <code>ipv6</code>, then ensure that your VPC meets the requirements and that
+     * you're familiar with the considerations listed in <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/cni-ipv6.html">Assigning IPv6 addresses to Pods and
+     * Services</a> in the Amazon EKS User Guide. If you specify <code>ipv6</code>, Kubernetes assigns Service and Pod
+     * addresses from the unique local address range (fc00::/7). You can't specify a custom IPv6 CIDR block.
+     * </p>
+     */
+    private String ipFamily;
 
     /**
      * <p>
-     * The CIDR block to assign Kubernetes service IP addresses from. If you don't specify a block, Kubernetes assigns
-     * addresses from either the 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks. We recommend that you specify a block that
-     * does not overlap with resources in other networks that are peered or connected to your VPC. The block must meet
-     * the following requirements:
+     * Don't specify a value if you select <code>ipv6</code> for <b>ipFamily</b>. The CIDR block to assign Kubernetes
+     * service IP addresses from. If you don't specify a block, Kubernetes assigns addresses from either the
+     * 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks. We recommend that you specify a block that does not overlap with
+     * resources in other networks that are peered or connected to your VPC. The block must meet the following
+     * requirements:
      * </p>
      * <ul>
      * <li>
@@ -93,10 +112,11 @@ public class KubernetesNetworkConfigRequest implements Serializable, Cloneable, 
      * </important>
      * 
      * @param serviceIpv4Cidr
-     *        The CIDR block to assign Kubernetes service IP addresses from. If you don't specify a block, Kubernetes
-     *        assigns addresses from either the 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks. We recommend that you
-     *        specify a block that does not overlap with resources in other networks that are peered or connected to
-     *        your VPC. The block must meet the following requirements:</p>
+     *        Don't specify a value if you select <code>ipv6</code> for <b>ipFamily</b>. The CIDR block to assign
+     *        Kubernetes service IP addresses from. If you don't specify a block, Kubernetes assigns addresses from
+     *        either the 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks. We recommend that you specify a block that does not
+     *        overlap with resources in other networks that are peered or connected to your VPC. The block must meet the
+     *        following requirements:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -127,10 +147,11 @@ public class KubernetesNetworkConfigRequest implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The CIDR block to assign Kubernetes service IP addresses from. If you don't specify a block, Kubernetes assigns
-     * addresses from either the 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks. We recommend that you specify a block that
-     * does not overlap with resources in other networks that are peered or connected to your VPC. The block must meet
-     * the following requirements:
+     * Don't specify a value if you select <code>ipv6</code> for <b>ipFamily</b>. The CIDR block to assign Kubernetes
+     * service IP addresses from. If you don't specify a block, Kubernetes assigns addresses from either the
+     * 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks. We recommend that you specify a block that does not overlap with
+     * resources in other networks that are peered or connected to your VPC. The block must meet the following
+     * requirements:
      * </p>
      * <ul>
      * <li>
@@ -156,10 +177,11 @@ public class KubernetesNetworkConfigRequest implements Serializable, Cloneable, 
      * </p>
      * </important>
      * 
-     * @return The CIDR block to assign Kubernetes service IP addresses from. If you don't specify a block, Kubernetes
-     *         assigns addresses from either the 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks. We recommend that you
-     *         specify a block that does not overlap with resources in other networks that are peered or connected to
-     *         your VPC. The block must meet the following requirements:</p>
+     * @return Don't specify a value if you select <code>ipv6</code> for <b>ipFamily</b>. The CIDR block to assign
+     *         Kubernetes service IP addresses from. If you don't specify a block, Kubernetes assigns addresses from
+     *         either the 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks. We recommend that you specify a block that does
+     *         not overlap with resources in other networks that are peered or connected to your VPC. The block must
+     *         meet the following requirements:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -190,10 +212,11 @@ public class KubernetesNetworkConfigRequest implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The CIDR block to assign Kubernetes service IP addresses from. If you don't specify a block, Kubernetes assigns
-     * addresses from either the 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks. We recommend that you specify a block that
-     * does not overlap with resources in other networks that are peered or connected to your VPC. The block must meet
-     * the following requirements:
+     * Don't specify a value if you select <code>ipv6</code> for <b>ipFamily</b>. The CIDR block to assign Kubernetes
+     * service IP addresses from. If you don't specify a block, Kubernetes assigns addresses from either the
+     * 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks. We recommend that you specify a block that does not overlap with
+     * resources in other networks that are peered or connected to your VPC. The block must meet the following
+     * requirements:
      * </p>
      * <ul>
      * <li>
@@ -220,10 +243,11 @@ public class KubernetesNetworkConfigRequest implements Serializable, Cloneable, 
      * </important>
      * 
      * @param serviceIpv4Cidr
-     *        The CIDR block to assign Kubernetes service IP addresses from. If you don't specify a block, Kubernetes
-     *        assigns addresses from either the 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks. We recommend that you
-     *        specify a block that does not overlap with resources in other networks that are peered or connected to
-     *        your VPC. The block must meet the following requirements:</p>
+     *        Don't specify a value if you select <code>ipv6</code> for <b>ipFamily</b>. The CIDR block to assign
+     *        Kubernetes service IP addresses from. If you don't specify a block, Kubernetes assigns addresses from
+     *        either the 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks. We recommend that you specify a block that does not
+     *        overlap with resources in other networks that are peered or connected to your VPC. The block must meet the
+     *        following requirements:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -255,6 +279,157 @@ public class KubernetesNetworkConfigRequest implements Serializable, Cloneable, 
     }
 
     /**
+     * <p>
+     * Specify which IP version is used to assign Kubernetes Pod and Service IP addresses. If you don't specify a value,
+     * <code>ipv4</code> is used by default. You can only specify an IP family when you create a cluster and can't
+     * change this value once the cluster is created. If you specify <code>ipv6</code>, the VPC and subnets that you
+     * specify for cluster creation must have both IPv4 and IPv6 CIDR blocks assigned to them.
+     * </p>
+     * <p>
+     * You can only specify <code>ipv6</code> for 1.21 and later clusters that use version 1.10.0 or later of the Amazon
+     * VPC CNI add-on. If you specify <code>ipv6</code>, then ensure that your VPC meets the requirements and that
+     * you're familiar with the considerations listed in <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/cni-ipv6.html">Assigning IPv6 addresses to Pods and
+     * Services</a> in the Amazon EKS User Guide. If you specify <code>ipv6</code>, Kubernetes assigns Service and Pod
+     * addresses from the unique local address range (fc00::/7). You can't specify a custom IPv6 CIDR block.
+     * </p>
+     * 
+     * @param ipFamily
+     *        Specify which IP version is used to assign Kubernetes Pod and Service IP addresses. If you don't specify a
+     *        value, <code>ipv4</code> is used by default. You can only specify an IP family when you create a cluster
+     *        and can't change this value once the cluster is created. If you specify <code>ipv6</code>, the VPC and
+     *        subnets that you specify for cluster creation must have both IPv4 and IPv6 CIDR blocks assigned to them.
+     *        </p>
+     *        <p>
+     *        You can only specify <code>ipv6</code> for 1.21 and later clusters that use version 1.10.0 or later of the
+     *        Amazon VPC CNI add-on. If you specify <code>ipv6</code>, then ensure that your VPC meets the requirements
+     *        and that you're familiar with the considerations listed in <a
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/cni-ipv6.html">Assigning IPv6 addresses to Pods and
+     *        Services</a> in the Amazon EKS User Guide. If you specify <code>ipv6</code>, Kubernetes assigns Service
+     *        and Pod addresses from the unique local address range (fc00::/7). You can't specify a custom IPv6 CIDR
+     *        block.
+     * @see IpFamily
+     */
+
+    public void setIpFamily(String ipFamily) {
+        this.ipFamily = ipFamily;
+    }
+
+    /**
+     * <p>
+     * Specify which IP version is used to assign Kubernetes Pod and Service IP addresses. If you don't specify a value,
+     * <code>ipv4</code> is used by default. You can only specify an IP family when you create a cluster and can't
+     * change this value once the cluster is created. If you specify <code>ipv6</code>, the VPC and subnets that you
+     * specify for cluster creation must have both IPv4 and IPv6 CIDR blocks assigned to them.
+     * </p>
+     * <p>
+     * You can only specify <code>ipv6</code> for 1.21 and later clusters that use version 1.10.0 or later of the Amazon
+     * VPC CNI add-on. If you specify <code>ipv6</code>, then ensure that your VPC meets the requirements and that
+     * you're familiar with the considerations listed in <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/cni-ipv6.html">Assigning IPv6 addresses to Pods and
+     * Services</a> in the Amazon EKS User Guide. If you specify <code>ipv6</code>, Kubernetes assigns Service and Pod
+     * addresses from the unique local address range (fc00::/7). You can't specify a custom IPv6 CIDR block.
+     * </p>
+     * 
+     * @return Specify which IP version is used to assign Kubernetes Pod and Service IP addresses. If you don't specify
+     *         a value, <code>ipv4</code> is used by default. You can only specify an IP family when you create a
+     *         cluster and can't change this value once the cluster is created. If you specify <code>ipv6</code>, the
+     *         VPC and subnets that you specify for cluster creation must have both IPv4 and IPv6 CIDR blocks assigned
+     *         to them. </p>
+     *         <p>
+     *         You can only specify <code>ipv6</code> for 1.21 and later clusters that use version 1.10.0 or later of
+     *         the Amazon VPC CNI add-on. If you specify <code>ipv6</code>, then ensure that your VPC meets the
+     *         requirements and that you're familiar with the considerations listed in <a
+     *         href="https://docs.aws.amazon.com/eks/latest/userguide/cni-ipv6.html">Assigning IPv6 addresses to Pods
+     *         and Services</a> in the Amazon EKS User Guide. If you specify <code>ipv6</code>, Kubernetes assigns
+     *         Service and Pod addresses from the unique local address range (fc00::/7). You can't specify a custom IPv6
+     *         CIDR block.
+     * @see IpFamily
+     */
+
+    public String getIpFamily() {
+        return this.ipFamily;
+    }
+
+    /**
+     * <p>
+     * Specify which IP version is used to assign Kubernetes Pod and Service IP addresses. If you don't specify a value,
+     * <code>ipv4</code> is used by default. You can only specify an IP family when you create a cluster and can't
+     * change this value once the cluster is created. If you specify <code>ipv6</code>, the VPC and subnets that you
+     * specify for cluster creation must have both IPv4 and IPv6 CIDR blocks assigned to them.
+     * </p>
+     * <p>
+     * You can only specify <code>ipv6</code> for 1.21 and later clusters that use version 1.10.0 or later of the Amazon
+     * VPC CNI add-on. If you specify <code>ipv6</code>, then ensure that your VPC meets the requirements and that
+     * you're familiar with the considerations listed in <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/cni-ipv6.html">Assigning IPv6 addresses to Pods and
+     * Services</a> in the Amazon EKS User Guide. If you specify <code>ipv6</code>, Kubernetes assigns Service and Pod
+     * addresses from the unique local address range (fc00::/7). You can't specify a custom IPv6 CIDR block.
+     * </p>
+     * 
+     * @param ipFamily
+     *        Specify which IP version is used to assign Kubernetes Pod and Service IP addresses. If you don't specify a
+     *        value, <code>ipv4</code> is used by default. You can only specify an IP family when you create a cluster
+     *        and can't change this value once the cluster is created. If you specify <code>ipv6</code>, the VPC and
+     *        subnets that you specify for cluster creation must have both IPv4 and IPv6 CIDR blocks assigned to them.
+     *        </p>
+     *        <p>
+     *        You can only specify <code>ipv6</code> for 1.21 and later clusters that use version 1.10.0 or later of the
+     *        Amazon VPC CNI add-on. If you specify <code>ipv6</code>, then ensure that your VPC meets the requirements
+     *        and that you're familiar with the considerations listed in <a
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/cni-ipv6.html">Assigning IPv6 addresses to Pods and
+     *        Services</a> in the Amazon EKS User Guide. If you specify <code>ipv6</code>, Kubernetes assigns Service
+     *        and Pod addresses from the unique local address range (fc00::/7). You can't specify a custom IPv6 CIDR
+     *        block.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see IpFamily
+     */
+
+    public KubernetesNetworkConfigRequest withIpFamily(String ipFamily) {
+        setIpFamily(ipFamily);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specify which IP version is used to assign Kubernetes Pod and Service IP addresses. If you don't specify a value,
+     * <code>ipv4</code> is used by default. You can only specify an IP family when you create a cluster and can't
+     * change this value once the cluster is created. If you specify <code>ipv6</code>, the VPC and subnets that you
+     * specify for cluster creation must have both IPv4 and IPv6 CIDR blocks assigned to them.
+     * </p>
+     * <p>
+     * You can only specify <code>ipv6</code> for 1.21 and later clusters that use version 1.10.0 or later of the Amazon
+     * VPC CNI add-on. If you specify <code>ipv6</code>, then ensure that your VPC meets the requirements and that
+     * you're familiar with the considerations listed in <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/cni-ipv6.html">Assigning IPv6 addresses to Pods and
+     * Services</a> in the Amazon EKS User Guide. If you specify <code>ipv6</code>, Kubernetes assigns Service and Pod
+     * addresses from the unique local address range (fc00::/7). You can't specify a custom IPv6 CIDR block.
+     * </p>
+     * 
+     * @param ipFamily
+     *        Specify which IP version is used to assign Kubernetes Pod and Service IP addresses. If you don't specify a
+     *        value, <code>ipv4</code> is used by default. You can only specify an IP family when you create a cluster
+     *        and can't change this value once the cluster is created. If you specify <code>ipv6</code>, the VPC and
+     *        subnets that you specify for cluster creation must have both IPv4 and IPv6 CIDR blocks assigned to them.
+     *        </p>
+     *        <p>
+     *        You can only specify <code>ipv6</code> for 1.21 and later clusters that use version 1.10.0 or later of the
+     *        Amazon VPC CNI add-on. If you specify <code>ipv6</code>, then ensure that your VPC meets the requirements
+     *        and that you're familiar with the considerations listed in <a
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/cni-ipv6.html">Assigning IPv6 addresses to Pods and
+     *        Services</a> in the Amazon EKS User Guide. If you specify <code>ipv6</code>, Kubernetes assigns Service
+     *        and Pod addresses from the unique local address range (fc00::/7). You can't specify a custom IPv6 CIDR
+     *        block.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see IpFamily
+     */
+
+    public KubernetesNetworkConfigRequest withIpFamily(IpFamily ipFamily) {
+        this.ipFamily = ipFamily.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -267,7 +442,9 @@ public class KubernetesNetworkConfigRequest implements Serializable, Cloneable, 
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getServiceIpv4Cidr() != null)
-            sb.append("ServiceIpv4Cidr: ").append(getServiceIpv4Cidr());
+            sb.append("ServiceIpv4Cidr: ").append(getServiceIpv4Cidr()).append(",");
+        if (getIpFamily() != null)
+            sb.append("IpFamily: ").append(getIpFamily());
         sb.append("}");
         return sb.toString();
     }
@@ -286,6 +463,10 @@ public class KubernetesNetworkConfigRequest implements Serializable, Cloneable, 
             return false;
         if (other.getServiceIpv4Cidr() != null && other.getServiceIpv4Cidr().equals(this.getServiceIpv4Cidr()) == false)
             return false;
+        if (other.getIpFamily() == null ^ this.getIpFamily() == null)
+            return false;
+        if (other.getIpFamily() != null && other.getIpFamily().equals(this.getIpFamily()) == false)
+            return false;
         return true;
     }
 
@@ -295,6 +476,7 @@ public class KubernetesNetworkConfigRequest implements Serializable, Cloneable, 
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getServiceIpv4Cidr() == null) ? 0 : getServiceIpv4Cidr().hashCode());
+        hashCode = prime * hashCode + ((getIpFamily() == null) ? 0 : getIpFamily().hashCode());
         return hashCode;
     }
 

@@ -62,6 +62,12 @@ public class ListJobExecutionsForThingRequest extends com.amazonaws.AmazonWebSer
      * </p>
      */
     private String nextToken;
+    /**
+     * <p>
+     * The unique identifier you assigned to this job when it was created.
+     * </p>
+     */
+    private String jobId;
 
     /**
      * <p>
@@ -352,6 +358,46 @@ public class ListJobExecutionsForThingRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * The unique identifier you assigned to this job when it was created.
+     * </p>
+     * 
+     * @param jobId
+     *        The unique identifier you assigned to this job when it was created.
+     */
+
+    public void setJobId(String jobId) {
+        this.jobId = jobId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier you assigned to this job when it was created.
+     * </p>
+     * 
+     * @return The unique identifier you assigned to this job when it was created.
+     */
+
+    public String getJobId() {
+        return this.jobId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier you assigned to this job when it was created.
+     * </p>
+     * 
+     * @param jobId
+     *        The unique identifier you assigned to this job when it was created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListJobExecutionsForThingRequest withJobId(String jobId) {
+        setJobId(jobId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -372,7 +418,9 @@ public class ListJobExecutionsForThingRequest extends com.amazonaws.AmazonWebSer
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getJobId() != null)
+            sb.append("JobId: ").append(getJobId());
         sb.append("}");
         return sb.toString();
     }
@@ -407,6 +455,10 @@ public class ListJobExecutionsForThingRequest extends com.amazonaws.AmazonWebSer
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
+        if (other.getJobId() == null ^ this.getJobId() == null)
+            return false;
+        if (other.getJobId() != null && other.getJobId().equals(this.getJobId()) == false)
+            return false;
         return true;
     }
 
@@ -420,6 +472,7 @@ public class ListJobExecutionsForThingRequest extends com.amazonaws.AmazonWebSer
         hashCode = prime * hashCode + ((getNamespaceId() == null) ? 0 : getNamespaceId().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getJobId() == null) ? 0 : getJobId().hashCode());
         return hashCode;
     }
 

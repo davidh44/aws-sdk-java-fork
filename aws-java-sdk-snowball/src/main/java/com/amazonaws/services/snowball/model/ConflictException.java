@@ -24,6 +24,12 @@ import javax.annotation.Generated;
 public class ConflictException extends com.amazonaws.services.snowball.model.AmazonSnowballException {
     private static final long serialVersionUID = 1L;
 
+    /**
+     * <p>
+     * You get this resource when you call <code>CreateReturnShippingLabel</code> more than once when other requests are
+     * not completed. .
+     * </p>
+     */
     private String conflictResource;
 
     /**
@@ -37,7 +43,14 @@ public class ConflictException extends com.amazonaws.services.snowball.model.Ama
     }
 
     /**
+     * <p>
+     * You get this resource when you call <code>CreateReturnShippingLabel</code> more than once when other requests are
+     * not completed. .
+     * </p>
+     * 
      * @param conflictResource
+     *        You get this resource when you call <code>CreateReturnShippingLabel</code> more than once when other
+     *        requests are not completed. .
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("ConflictResource")
@@ -46,7 +59,13 @@ public class ConflictException extends com.amazonaws.services.snowball.model.Ama
     }
 
     /**
-     * @return
+     * <p>
+     * You get this resource when you call <code>CreateReturnShippingLabel</code> more than once when other requests are
+     * not completed. .
+     * </p>
+     * 
+     * @return You get this resource when you call <code>CreateReturnShippingLabel</code> more than once when other
+     *         requests are not completed. .
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("ConflictResource")
@@ -55,7 +74,14 @@ public class ConflictException extends com.amazonaws.services.snowball.model.Ama
     }
 
     /**
+     * <p>
+     * You get this resource when you call <code>CreateReturnShippingLabel</code> more than once when other requests are
+     * not completed. .
+     * </p>
+     * 
      * @param conflictResource
+     *        You get this resource when you call <code>CreateReturnShippingLabel</code> more than once when other
+     *        requests are not completed. .
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

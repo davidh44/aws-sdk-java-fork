@@ -36,6 +36,12 @@ public class DataLakeSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreateTableDefaultPermissions").build();
     private static final MarshallingInfo<List> TRUSTEDRESOURCEOWNERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TrustedResourceOwners").build();
+    private static final MarshallingInfo<Boolean> ALLOWEXTERNALDATAFILTERING_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AllowExternalDataFiltering").build();
+    private static final MarshallingInfo<List> EXTERNALDATAFILTERINGALLOWLIST_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExternalDataFilteringAllowList").build();
+    private static final MarshallingInfo<List> AUTHORIZEDSESSIONTAGVALUELIST_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AuthorizedSessionTagValueList").build();
 
     private static final DataLakeSettingsMarshaller instance = new DataLakeSettingsMarshaller();
 
@@ -57,6 +63,9 @@ public class DataLakeSettingsMarshaller {
             protocolMarshaller.marshall(dataLakeSettings.getCreateDatabaseDefaultPermissions(), CREATEDATABASEDEFAULTPERMISSIONS_BINDING);
             protocolMarshaller.marshall(dataLakeSettings.getCreateTableDefaultPermissions(), CREATETABLEDEFAULTPERMISSIONS_BINDING);
             protocolMarshaller.marshall(dataLakeSettings.getTrustedResourceOwners(), TRUSTEDRESOURCEOWNERS_BINDING);
+            protocolMarshaller.marshall(dataLakeSettings.getAllowExternalDataFiltering(), ALLOWEXTERNALDATAFILTERING_BINDING);
+            protocolMarshaller.marshall(dataLakeSettings.getExternalDataFilteringAllowList(), EXTERNALDATAFILTERINGALLOWLIST_BINDING);
+            protocolMarshaller.marshall(dataLakeSettings.getAuthorizedSessionTagValueList(), AUTHORIZEDSESSIONTAGVALUELIST_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

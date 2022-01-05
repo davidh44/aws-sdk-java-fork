@@ -102,6 +102,12 @@ public class ServiceConfiguration implements Serializable, Cloneable {
     private PrivateDnsNameConfiguration privateDnsNameConfiguration;
     /**
      * <p>
+     * The payer responsibility.
+     * </p>
+     */
+    private String payerResponsibility;
+    /**
+     * <p>
      * Any tags assigned to the service.
      * </p>
      */
@@ -813,6 +819,65 @@ public class ServiceConfiguration implements Serializable, Cloneable {
 
     /**
      * <p>
+     * The payer responsibility.
+     * </p>
+     * 
+     * @param payerResponsibility
+     *        The payer responsibility.
+     * @see PayerResponsibility
+     */
+
+    public void setPayerResponsibility(String payerResponsibility) {
+        this.payerResponsibility = payerResponsibility;
+    }
+
+    /**
+     * <p>
+     * The payer responsibility.
+     * </p>
+     * 
+     * @return The payer responsibility.
+     * @see PayerResponsibility
+     */
+
+    public String getPayerResponsibility() {
+        return this.payerResponsibility;
+    }
+
+    /**
+     * <p>
+     * The payer responsibility.
+     * </p>
+     * 
+     * @param payerResponsibility
+     *        The payer responsibility.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PayerResponsibility
+     */
+
+    public ServiceConfiguration withPayerResponsibility(String payerResponsibility) {
+        setPayerResponsibility(payerResponsibility);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The payer responsibility.
+     * </p>
+     * 
+     * @param payerResponsibility
+     *        The payer responsibility.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PayerResponsibility
+     */
+
+    public ServiceConfiguration withPayerResponsibility(PayerResponsibility payerResponsibility) {
+        this.payerResponsibility = payerResponsibility.toString();
+        return this;
+    }
+
+    /**
+     * <p>
      * Any tags assigned to the service.
      * </p>
      * 
@@ -920,6 +985,8 @@ public class ServiceConfiguration implements Serializable, Cloneable {
             sb.append("PrivateDnsName: ").append(getPrivateDnsName()).append(",");
         if (getPrivateDnsNameConfiguration() != null)
             sb.append("PrivateDnsNameConfiguration: ").append(getPrivateDnsNameConfiguration()).append(",");
+        if (getPayerResponsibility() != null)
+            sb.append("PayerResponsibility: ").append(getPayerResponsibility()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -984,6 +1051,10 @@ public class ServiceConfiguration implements Serializable, Cloneable {
             return false;
         if (other.getPrivateDnsNameConfiguration() != null && other.getPrivateDnsNameConfiguration().equals(this.getPrivateDnsNameConfiguration()) == false)
             return false;
+        if (other.getPayerResponsibility() == null ^ this.getPayerResponsibility() == null)
+            return false;
+        if (other.getPayerResponsibility() != null && other.getPayerResponsibility().equals(this.getPayerResponsibility()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -1008,6 +1079,7 @@ public class ServiceConfiguration implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getBaseEndpointDnsNames() == null) ? 0 : getBaseEndpointDnsNames().hashCode());
         hashCode = prime * hashCode + ((getPrivateDnsName() == null) ? 0 : getPrivateDnsName().hashCode());
         hashCode = prime * hashCode + ((getPrivateDnsNameConfiguration() == null) ? 0 : getPrivateDnsNameConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getPayerResponsibility() == null) ? 0 : getPayerResponsibility().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

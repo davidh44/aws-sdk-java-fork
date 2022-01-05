@@ -160,6 +160,12 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
     private String jobTemplateArn;
     /**
      * <p>
+     * The configuration for the criteria to retry the job.
+     * </p>
+     */
+    private JobExecutionsRetryConfig jobExecutionsRetryConfig;
+    /**
+     * <p>
      * A key-value map that pairs the patterns that need to be replaced in a managed template job document schema. You
      * can use the description of each key as a guidance to specify the inputs during runtime when creating a job.
      * </p>
@@ -1133,6 +1139,46 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The configuration for the criteria to retry the job.
+     * </p>
+     * 
+     * @param jobExecutionsRetryConfig
+     *        The configuration for the criteria to retry the job.
+     */
+
+    public void setJobExecutionsRetryConfig(JobExecutionsRetryConfig jobExecutionsRetryConfig) {
+        this.jobExecutionsRetryConfig = jobExecutionsRetryConfig;
+    }
+
+    /**
+     * <p>
+     * The configuration for the criteria to retry the job.
+     * </p>
+     * 
+     * @return The configuration for the criteria to retry the job.
+     */
+
+    public JobExecutionsRetryConfig getJobExecutionsRetryConfig() {
+        return this.jobExecutionsRetryConfig;
+    }
+
+    /**
+     * <p>
+     * The configuration for the criteria to retry the job.
+     * </p>
+     * 
+     * @param jobExecutionsRetryConfig
+     *        The configuration for the criteria to retry the job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Job withJobExecutionsRetryConfig(JobExecutionsRetryConfig jobExecutionsRetryConfig) {
+        setJobExecutionsRetryConfig(jobExecutionsRetryConfig);
+        return this;
+    }
+
+    /**
+     * <p>
      * A key-value map that pairs the patterns that need to be replaced in a managed template job document schema. You
      * can use the description of each key as a guidance to specify the inputs during runtime when creating a job.
      * </p>
@@ -1258,6 +1304,8 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
             sb.append("NamespaceId: ").append(getNamespaceId()).append(",");
         if (getJobTemplateArn() != null)
             sb.append("JobTemplateArn: ").append(getJobTemplateArn()).append(",");
+        if (getJobExecutionsRetryConfig() != null)
+            sb.append("JobExecutionsRetryConfig: ").append(getJobExecutionsRetryConfig()).append(",");
         if (getDocumentParameters() != null)
             sb.append("DocumentParameters: ").append(getDocumentParameters());
         sb.append("}");
@@ -1350,6 +1398,10 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getJobTemplateArn() != null && other.getJobTemplateArn().equals(this.getJobTemplateArn()) == false)
             return false;
+        if (other.getJobExecutionsRetryConfig() == null ^ this.getJobExecutionsRetryConfig() == null)
+            return false;
+        if (other.getJobExecutionsRetryConfig() != null && other.getJobExecutionsRetryConfig().equals(this.getJobExecutionsRetryConfig()) == false)
+            return false;
         if (other.getDocumentParameters() == null ^ this.getDocumentParameters() == null)
             return false;
         if (other.getDocumentParameters() != null && other.getDocumentParameters().equals(this.getDocumentParameters()) == false)
@@ -1381,6 +1433,7 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getTimeoutConfig() == null) ? 0 : getTimeoutConfig().hashCode());
         hashCode = prime * hashCode + ((getNamespaceId() == null) ? 0 : getNamespaceId().hashCode());
         hashCode = prime * hashCode + ((getJobTemplateArn() == null) ? 0 : getJobTemplateArn().hashCode());
+        hashCode = prime * hashCode + ((getJobExecutionsRetryConfig() == null) ? 0 : getJobExecutionsRetryConfig().hashCode());
         hashCode = prime * hashCode + ((getDocumentParameters() == null) ? 0 : getDocumentParameters().hashCode());
         return hashCode;
     }

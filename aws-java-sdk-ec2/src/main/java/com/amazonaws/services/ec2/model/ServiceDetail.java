@@ -95,6 +95,12 @@ public class ServiceDetail implements Serializable, Cloneable {
     private Boolean managesVpcEndpoints;
     /**
      * <p>
+     * The payer responsibility.
+     * </p>
+     */
+    private String payerResponsibility;
+    /**
+     * <p>
      * Any tags assigned to the service.
      * </p>
      */
@@ -727,6 +733,65 @@ public class ServiceDetail implements Serializable, Cloneable {
 
     /**
      * <p>
+     * The payer responsibility.
+     * </p>
+     * 
+     * @param payerResponsibility
+     *        The payer responsibility.
+     * @see PayerResponsibility
+     */
+
+    public void setPayerResponsibility(String payerResponsibility) {
+        this.payerResponsibility = payerResponsibility;
+    }
+
+    /**
+     * <p>
+     * The payer responsibility.
+     * </p>
+     * 
+     * @return The payer responsibility.
+     * @see PayerResponsibility
+     */
+
+    public String getPayerResponsibility() {
+        return this.payerResponsibility;
+    }
+
+    /**
+     * <p>
+     * The payer responsibility.
+     * </p>
+     * 
+     * @param payerResponsibility
+     *        The payer responsibility.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PayerResponsibility
+     */
+
+    public ServiceDetail withPayerResponsibility(String payerResponsibility) {
+        setPayerResponsibility(payerResponsibility);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The payer responsibility.
+     * </p>
+     * 
+     * @param payerResponsibility
+     *        The payer responsibility.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PayerResponsibility
+     */
+
+    public ServiceDetail withPayerResponsibility(PayerResponsibility payerResponsibility) {
+        this.payerResponsibility = payerResponsibility.toString();
+        return this;
+    }
+
+    /**
+     * <p>
      * Any tags assigned to the service.
      * </p>
      * 
@@ -911,6 +976,8 @@ public class ServiceDetail implements Serializable, Cloneable {
             sb.append("AcceptanceRequired: ").append(getAcceptanceRequired()).append(",");
         if (getManagesVpcEndpoints() != null)
             sb.append("ManagesVpcEndpoints: ").append(getManagesVpcEndpoints()).append(",");
+        if (getPayerResponsibility() != null)
+            sb.append("PayerResponsibility: ").append(getPayerResponsibility()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getPrivateDnsNameVerificationState() != null)
@@ -973,6 +1040,10 @@ public class ServiceDetail implements Serializable, Cloneable {
             return false;
         if (other.getManagesVpcEndpoints() != null && other.getManagesVpcEndpoints().equals(this.getManagesVpcEndpoints()) == false)
             return false;
+        if (other.getPayerResponsibility() == null ^ this.getPayerResponsibility() == null)
+            return false;
+        if (other.getPayerResponsibility() != null && other.getPayerResponsibility().equals(this.getPayerResponsibility()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -1001,6 +1072,7 @@ public class ServiceDetail implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getVpcEndpointPolicySupported() == null) ? 0 : getVpcEndpointPolicySupported().hashCode());
         hashCode = prime * hashCode + ((getAcceptanceRequired() == null) ? 0 : getAcceptanceRequired().hashCode());
         hashCode = prime * hashCode + ((getManagesVpcEndpoints() == null) ? 0 : getManagesVpcEndpoints().hashCode());
+        hashCode = prime * hashCode + ((getPayerResponsibility() == null) ? 0 : getPayerResponsibility().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getPrivateDnsNameVerificationState() == null) ? 0 : getPrivateDnsNameVerificationState().hashCode());
         return hashCode;

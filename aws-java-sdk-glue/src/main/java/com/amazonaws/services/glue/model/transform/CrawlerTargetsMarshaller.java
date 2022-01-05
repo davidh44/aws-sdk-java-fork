@@ -38,6 +38,8 @@ public class CrawlerTargetsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DynamoDBTargets").build();
     private static final MarshallingInfo<List> CATALOGTARGETS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CatalogTargets").build();
+    private static final MarshallingInfo<List> DELTATARGETS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("DeltaTargets").build();
 
     private static final CrawlerTargetsMarshaller instance = new CrawlerTargetsMarshaller();
 
@@ -60,6 +62,7 @@ public class CrawlerTargetsMarshaller {
             protocolMarshaller.marshall(crawlerTargets.getMongoDBTargets(), MONGODBTARGETS_BINDING);
             protocolMarshaller.marshall(crawlerTargets.getDynamoDBTargets(), DYNAMODBTARGETS_BINDING);
             protocolMarshaller.marshall(crawlerTargets.getCatalogTargets(), CATALOGTARGETS_BINDING);
+            protocolMarshaller.marshall(crawlerTargets.getDeltaTargets(), DELTATARGETS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

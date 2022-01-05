@@ -41,6 +41,8 @@ public class StorageDescriptor implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private String location;
+
+    private java.util.List<String> additionalLocations;
     /**
      * <p>
      * The input format: <code>SequenceFileInputFormat</code> (binary), or <code>TextInputFormat</code>, or a custom
@@ -226,6 +228,58 @@ public class StorageDescriptor implements Serializable, Cloneable, StructuredPoj
 
     public StorageDescriptor withLocation(String location) {
         setLocation(location);
+        return this;
+    }
+
+    /**
+     * @return
+     */
+
+    public java.util.List<String> getAdditionalLocations() {
+        return additionalLocations;
+    }
+
+    /**
+     * @param additionalLocations
+     */
+
+    public void setAdditionalLocations(java.util.Collection<String> additionalLocations) {
+        if (additionalLocations == null) {
+            this.additionalLocations = null;
+            return;
+        }
+
+        this.additionalLocations = new java.util.ArrayList<String>(additionalLocations);
+    }
+
+    /**
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAdditionalLocations(java.util.Collection)} or {@link #withAdditionalLocations(java.util.Collection)}
+     * if you want to override the existing values.
+     * </p>
+     * 
+     * @param additionalLocations
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StorageDescriptor withAdditionalLocations(String... additionalLocations) {
+        if (this.additionalLocations == null) {
+            setAdditionalLocations(new java.util.ArrayList<String>(additionalLocations.length));
+        }
+        for (String ele : additionalLocations) {
+            this.additionalLocations.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * @param additionalLocations
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StorageDescriptor withAdditionalLocations(java.util.Collection<String> additionalLocations) {
+        setAdditionalLocations(additionalLocations);
         return this;
     }
 
@@ -827,6 +881,8 @@ public class StorageDescriptor implements Serializable, Cloneable, StructuredPoj
             sb.append("Columns: ").append(getColumns()).append(",");
         if (getLocation() != null)
             sb.append("Location: ").append(getLocation()).append(",");
+        if (getAdditionalLocations() != null)
+            sb.append("AdditionalLocations: ").append(getAdditionalLocations()).append(",");
         if (getInputFormat() != null)
             sb.append("InputFormat: ").append(getInputFormat()).append(",");
         if (getOutputFormat() != null)
@@ -870,6 +926,10 @@ public class StorageDescriptor implements Serializable, Cloneable, StructuredPoj
         if (other.getLocation() == null ^ this.getLocation() == null)
             return false;
         if (other.getLocation() != null && other.getLocation().equals(this.getLocation()) == false)
+            return false;
+        if (other.getAdditionalLocations() == null ^ this.getAdditionalLocations() == null)
+            return false;
+        if (other.getAdditionalLocations() != null && other.getAdditionalLocations().equals(this.getAdditionalLocations()) == false)
             return false;
         if (other.getInputFormat() == null ^ this.getInputFormat() == null)
             return false;
@@ -925,6 +985,7 @@ public class StorageDescriptor implements Serializable, Cloneable, StructuredPoj
 
         hashCode = prime * hashCode + ((getColumns() == null) ? 0 : getColumns().hashCode());
         hashCode = prime * hashCode + ((getLocation() == null) ? 0 : getLocation().hashCode());
+        hashCode = prime * hashCode + ((getAdditionalLocations() == null) ? 0 : getAdditionalLocations().hashCode());
         hashCode = prime * hashCode + ((getInputFormat() == null) ? 0 : getInputFormat().hashCode());
         hashCode = prime * hashCode + ((getOutputFormat() == null) ? 0 : getOutputFormat().hashCode());
         hashCode = prime * hashCode + ((getCompressed() == null) ? 0 : getCompressed().hashCode());

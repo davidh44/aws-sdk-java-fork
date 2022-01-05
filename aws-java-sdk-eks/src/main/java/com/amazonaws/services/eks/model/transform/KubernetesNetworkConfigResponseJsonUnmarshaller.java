@@ -52,6 +52,14 @@ public class KubernetesNetworkConfigResponseJsonUnmarshaller implements Unmarsha
                     context.nextToken();
                     kubernetesNetworkConfigResponse.setServiceIpv4Cidr(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("serviceIpv6Cidr", targetDepth)) {
+                    context.nextToken();
+                    kubernetesNetworkConfigResponse.setServiceIpv6Cidr(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("ipFamily", targetDepth)) {
+                    context.nextToken();
+                    kubernetesNetworkConfigResponse.setIpFamily(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

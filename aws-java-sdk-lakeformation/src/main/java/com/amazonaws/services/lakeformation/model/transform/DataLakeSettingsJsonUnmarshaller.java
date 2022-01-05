@@ -74,6 +74,22 @@ public class DataLakeSettingsJsonUnmarshaller implements Unmarshaller<DataLakeSe
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("AllowExternalDataFiltering", targetDepth)) {
+                    context.nextToken();
+                    dataLakeSettings.setAllowExternalDataFiltering(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("ExternalDataFilteringAllowList", targetDepth)) {
+                    context.nextToken();
+                    dataLakeSettings.setExternalDataFilteringAllowList(new ListUnmarshaller<DataLakePrincipal>(DataLakePrincipalJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("AuthorizedSessionTagValueList", targetDepth)) {
+                    context.nextToken();
+                    dataLakeSettings.setAuthorizedSessionTagValueList(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

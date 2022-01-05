@@ -126,6 +126,10 @@ public class JobJsonUnmarshaller implements Unmarshaller<Job, JsonUnmarshallerCo
                     context.nextToken();
                     job.setJobTemplateArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("jobExecutionsRetryConfig", targetDepth)) {
+                    context.nextToken();
+                    job.setJobExecutionsRetryConfig(JobExecutionsRetryConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("documentParameters", targetDepth)) {
                     context.nextToken();
                     job.setDocumentParameters(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))

@@ -1398,6 +1398,47 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     }
 
     @Override
+    public java.util.concurrent.Future<GetUnfilteredPartitionMetadataResult> getUnfilteredPartitionMetadataAsync(GetUnfilteredPartitionMetadataRequest request) {
+
+        return getUnfilteredPartitionMetadataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetUnfilteredPartitionMetadataResult> getUnfilteredPartitionMetadataAsync(GetUnfilteredPartitionMetadataRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetUnfilteredPartitionMetadataRequest, GetUnfilteredPartitionMetadataResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetUnfilteredPartitionsMetadataResult> getUnfilteredPartitionsMetadataAsync(
+            GetUnfilteredPartitionsMetadataRequest request) {
+
+        return getUnfilteredPartitionsMetadataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetUnfilteredPartitionsMetadataResult> getUnfilteredPartitionsMetadataAsync(
+            GetUnfilteredPartitionsMetadataRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetUnfilteredPartitionsMetadataRequest, GetUnfilteredPartitionsMetadataResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetUnfilteredTableMetadataResult> getUnfilteredTableMetadataAsync(GetUnfilteredTableMetadataRequest request) {
+
+        return getUnfilteredTableMetadataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetUnfilteredTableMetadataResult> getUnfilteredTableMetadataAsync(GetUnfilteredTableMetadataRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetUnfilteredTableMetadataRequest, GetUnfilteredTableMetadataResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetUserDefinedFunctionResult> getUserDefinedFunctionAsync(GetUserDefinedFunctionRequest request) {
 
         return getUserDefinedFunctionAsync(request, null);

@@ -16458,6 +16458,41 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<ModifyVpcEndpointServicePayerResponsibilityResult> modifyVpcEndpointServicePayerResponsibilityAsync(
+            ModifyVpcEndpointServicePayerResponsibilityRequest request) {
+
+        return modifyVpcEndpointServicePayerResponsibilityAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyVpcEndpointServicePayerResponsibilityResult> modifyVpcEndpointServicePayerResponsibilityAsync(
+            final ModifyVpcEndpointServicePayerResponsibilityRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ModifyVpcEndpointServicePayerResponsibilityRequest, ModifyVpcEndpointServicePayerResponsibilityResult> asyncHandler) {
+        final ModifyVpcEndpointServicePayerResponsibilityRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ModifyVpcEndpointServicePayerResponsibilityResult>() {
+            @Override
+            public ModifyVpcEndpointServicePayerResponsibilityResult call() throws Exception {
+                ModifyVpcEndpointServicePayerResponsibilityResult result = null;
+
+                try {
+                    result = executeModifyVpcEndpointServicePayerResponsibility(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ModifyVpcEndpointServicePermissionsResult> modifyVpcEndpointServicePermissionsAsync(
             ModifyVpcEndpointServicePermissionsRequest request) {
 

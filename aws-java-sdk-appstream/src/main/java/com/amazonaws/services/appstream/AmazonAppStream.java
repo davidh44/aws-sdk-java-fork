@@ -148,6 +148,29 @@ public interface AmazonAppStream {
 
     /**
      * <p>
+     * Associates an application to entitle.
+     * </p>
+     * 
+     * @param associateApplicationToEntitlementRequest
+     * @return Result of the AssociateApplicationToEntitlement operation returned by the service.
+     * @throws OperationNotPermittedException
+     *         The attempted operation is not permitted.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws EntitlementNotFoundException
+     *         The entitlement can't be found.
+     * @throws LimitExceededException
+     *         The requested limit exceeds the permitted limit for an account.
+     * @throws OperationNotPermittedException
+     *         The attempted operation is not permitted.
+     * @sample AmazonAppStream.AssociateApplicationToEntitlement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/AssociateApplicationToEntitlement"
+     *      target="_top">AWS API Documentation</a>
+     */
+    AssociateApplicationToEntitlementResult associateApplicationToEntitlement(AssociateApplicationToEntitlementRequest associateApplicationToEntitlementRequest);
+
+    /**
+     * <p>
      * Associates the specified fleet with the specified stack.
      * </p>
      * 
@@ -322,6 +345,30 @@ public interface AmazonAppStream {
      *      target="_top">AWS API Documentation</a>
      */
     CreateDirectoryConfigResult createDirectoryConfig(CreateDirectoryConfigRequest createDirectoryConfigRequest);
+
+    /**
+     * <p>
+     * Creates a new entitlement. Entitlements control access to specific applications within a stack, based on user
+     * attributes. Entitlements apply to SAML 2.0 federated user identities. Amazon AppStream 2.0 user pool and
+     * streaming URL users are entitled to all applications in a stack. Entitlements don't apply to the desktop stream
+     * view application, or to applications managed by a dynamic app provider using the Dynamic Application Framework.
+     * </p>
+     * 
+     * @param createEntitlementRequest
+     * @return Result of the CreateEntitlement operation returned by the service.
+     * @throws OperationNotPermittedException
+     *         The attempted operation is not permitted.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws LimitExceededException
+     *         The requested limit exceeds the permitted limit for an account.
+     * @throws EntitlementAlreadyExistsException
+     *         The entitlement already exists.
+     * @sample AmazonAppStream.CreateEntitlement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/CreateEntitlement" target="_top">AWS
+     *      API Documentation</a>
+     */
+    CreateEntitlementResult createEntitlement(CreateEntitlementRequest createEntitlementRequest);
 
     /**
      * <p>
@@ -607,6 +654,29 @@ public interface AmazonAppStream {
 
     /**
      * <p>
+     * Deletes the specified entitlement.
+     * </p>
+     * 
+     * @param deleteEntitlementRequest
+     * @return Result of the DeleteEntitlement operation returned by the service.
+     * @throws OperationNotPermittedException
+     *         The attempted operation is not permitted.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws EntitlementNotFoundException
+     *         The entitlement can't be found.
+     * @throws OperationNotPermittedException
+     *         The attempted operation is not permitted.
+     * @throws ConcurrentModificationException
+     *         An API error occurred. Wait a few minutes and try again.
+     * @sample AmazonAppStream.DeleteEntitlement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DeleteEntitlement" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeleteEntitlementResult deleteEntitlement(DeleteEntitlementRequest deleteEntitlementRequest);
+
+    /**
+     * <p>
      * Deletes the specified fleet.
      * </p>
      * 
@@ -696,6 +766,8 @@ public interface AmazonAppStream {
      *         The specified resource is in use.
      * @throws ResourceNotFoundException
      *         The specified resource was not found.
+     * @throws OperationNotPermittedException
+     *         The attempted operation is not permitted.
      * @throws ConcurrentModificationException
      *         An API error occurred. Wait a few minutes and try again.
      * @sample AmazonAppStream.DeleteStack
@@ -811,6 +883,25 @@ public interface AmazonAppStream {
      *      target="_top">AWS API Documentation</a>
      */
     DescribeDirectoryConfigsResult describeDirectoryConfigs(DescribeDirectoryConfigsRequest describeDirectoryConfigsRequest);
+
+    /**
+     * <p>
+     * Retrieves a list that describes one of more entitlements.
+     * </p>
+     * 
+     * @param describeEntitlementsRequest
+     * @return Result of the DescribeEntitlements operation returned by the service.
+     * @throws OperationNotPermittedException
+     *         The attempted operation is not permitted.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws EntitlementNotFoundException
+     *         The entitlement can't be found.
+     * @sample AmazonAppStream.DescribeEntitlements
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DescribeEntitlements" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DescribeEntitlementsResult describeEntitlements(DescribeEntitlementsRequest describeEntitlementsRequest);
 
     /**
      * <p>
@@ -1014,6 +1105,28 @@ public interface AmazonAppStream {
 
     /**
      * <p>
+     * Deletes the specified application from the specified entitlement.
+     * </p>
+     * 
+     * @param disassociateApplicationFromEntitlementRequest
+     * @return Result of the DisassociateApplicationFromEntitlement operation returned by the service.
+     * @throws OperationNotPermittedException
+     *         The attempted operation is not permitted.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws EntitlementNotFoundException
+     *         The entitlement can't be found.
+     * @throws OperationNotPermittedException
+     *         The attempted operation is not permitted.
+     * @sample AmazonAppStream.DisassociateApplicationFromEntitlement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DisassociateApplicationFromEntitlement"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DisassociateApplicationFromEntitlementResult disassociateApplicationFromEntitlement(
+            DisassociateApplicationFromEntitlementRequest disassociateApplicationFromEntitlementRequest);
+
+    /**
+     * <p>
      * Disassociates the specified fleet from the specified stack.
      * </p>
      * 
@@ -1090,6 +1203,25 @@ public interface AmazonAppStream {
      *      API Documentation</a>
      */
     ListAssociatedStacksResult listAssociatedStacks(ListAssociatedStacksRequest listAssociatedStacksRequest);
+
+    /**
+     * <p>
+     * Retrieves a list of entitled applications.
+     * </p>
+     * 
+     * @param listEntitledApplicationsRequest
+     * @return Result of the ListEntitledApplications operation returned by the service.
+     * @throws OperationNotPermittedException
+     *         The attempted operation is not permitted.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws EntitlementNotFoundException
+     *         The entitlement can't be found.
+     * @sample AmazonAppStream.ListEntitledApplications
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/ListEntitledApplications"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListEntitledApplicationsResult listEntitledApplications(ListEntitledApplicationsRequest listEntitledApplicationsRequest);
 
     /**
      * <p>
@@ -1302,6 +1434,27 @@ public interface AmazonAppStream {
      *      target="_top">AWS API Documentation</a>
      */
     UpdateDirectoryConfigResult updateDirectoryConfig(UpdateDirectoryConfigRequest updateDirectoryConfigRequest);
+
+    /**
+     * <p>
+     * Updates the specified entitlement.
+     * </p>
+     * 
+     * @param updateEntitlementRequest
+     * @return Result of the UpdateEntitlement operation returned by the service.
+     * @throws OperationNotPermittedException
+     *         The attempted operation is not permitted.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws EntitlementNotFoundException
+     *         The entitlement can't be found.
+     * @throws ConcurrentModificationException
+     *         An API error occurred. Wait a few minutes and try again.
+     * @sample AmazonAppStream.UpdateEntitlement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/UpdateEntitlement" target="_top">AWS
+     *      API Documentation</a>
+     */
+    UpdateEntitlementResult updateEntitlement(UpdateEntitlementRequest updateEntitlementRequest);
 
     /**
      * <p>

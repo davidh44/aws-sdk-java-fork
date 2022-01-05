@@ -32,6 +32,8 @@ public class CatalogTargetMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DatabaseName").build();
     private static final MarshallingInfo<List> TABLES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tables").build();
+    private static final MarshallingInfo<String> CONNECTIONNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ConnectionName").build();
 
     private static final CatalogTargetMarshaller instance = new CatalogTargetMarshaller();
 
@@ -51,6 +53,7 @@ public class CatalogTargetMarshaller {
         try {
             protocolMarshaller.marshall(catalogTarget.getDatabaseName(), DATABASENAME_BINDING);
             protocolMarshaller.marshall(catalogTarget.getTables(), TABLES_BINDING);
+            protocolMarshaller.marshall(catalogTarget.getConnectionName(), CONNECTIONNAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -96,6 +96,41 @@ public interface AmazonAppStreamAsync extends AmazonAppStream {
 
     /**
      * <p>
+     * Associates an application to entitle.
+     * </p>
+     * 
+     * @param associateApplicationToEntitlementRequest
+     * @return A Java Future containing the result of the AssociateApplicationToEntitlement operation returned by the
+     *         service.
+     * @sample AmazonAppStreamAsync.AssociateApplicationToEntitlement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/AssociateApplicationToEntitlement"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateApplicationToEntitlementResult> associateApplicationToEntitlementAsync(
+            AssociateApplicationToEntitlementRequest associateApplicationToEntitlementRequest);
+
+    /**
+     * <p>
+     * Associates an application to entitle.
+     * </p>
+     * 
+     * @param associateApplicationToEntitlementRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AssociateApplicationToEntitlement operation returned by the
+     *         service.
+     * @sample AmazonAppStreamAsyncHandler.AssociateApplicationToEntitlement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/AssociateApplicationToEntitlement"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateApplicationToEntitlementResult> associateApplicationToEntitlementAsync(
+            AssociateApplicationToEntitlementRequest associateApplicationToEntitlementRequest,
+            com.amazonaws.handlers.AsyncHandler<AssociateApplicationToEntitlementRequest, AssociateApplicationToEntitlementResult> asyncHandler);
+
+    /**
+     * <p>
      * Associates the specified fleet with the specified stack.
      * </p>
      * 
@@ -354,6 +389,43 @@ public interface AmazonAppStreamAsync extends AmazonAppStream {
      */
     java.util.concurrent.Future<CreateDirectoryConfigResult> createDirectoryConfigAsync(CreateDirectoryConfigRequest createDirectoryConfigRequest,
             com.amazonaws.handlers.AsyncHandler<CreateDirectoryConfigRequest, CreateDirectoryConfigResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a new entitlement. Entitlements control access to specific applications within a stack, based on user
+     * attributes. Entitlements apply to SAML 2.0 federated user identities. Amazon AppStream 2.0 user pool and
+     * streaming URL users are entitled to all applications in a stack. Entitlements don't apply to the desktop stream
+     * view application, or to applications managed by a dynamic app provider using the Dynamic Application Framework.
+     * </p>
+     * 
+     * @param createEntitlementRequest
+     * @return A Java Future containing the result of the CreateEntitlement operation returned by the service.
+     * @sample AmazonAppStreamAsync.CreateEntitlement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/CreateEntitlement" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateEntitlementResult> createEntitlementAsync(CreateEntitlementRequest createEntitlementRequest);
+
+    /**
+     * <p>
+     * Creates a new entitlement. Entitlements control access to specific applications within a stack, based on user
+     * attributes. Entitlements apply to SAML 2.0 federated user identities. Amazon AppStream 2.0 user pool and
+     * streaming URL users are entitled to all applications in a stack. Entitlements don't apply to the desktop stream
+     * view application, or to applications managed by a dynamic app provider using the Dynamic Application Framework.
+     * </p>
+     * 
+     * @param createEntitlementRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateEntitlement operation returned by the service.
+     * @sample AmazonAppStreamAsyncHandler.CreateEntitlement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/CreateEntitlement" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateEntitlementResult> createEntitlementAsync(CreateEntitlementRequest createEntitlementRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateEntitlementRequest, CreateEntitlementResult> asyncHandler);
 
     /**
      * <p>
@@ -732,6 +804,37 @@ public interface AmazonAppStreamAsync extends AmazonAppStream {
 
     /**
      * <p>
+     * Deletes the specified entitlement.
+     * </p>
+     * 
+     * @param deleteEntitlementRequest
+     * @return A Java Future containing the result of the DeleteEntitlement operation returned by the service.
+     * @sample AmazonAppStreamAsync.DeleteEntitlement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DeleteEntitlement" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteEntitlementResult> deleteEntitlementAsync(DeleteEntitlementRequest deleteEntitlementRequest);
+
+    /**
+     * <p>
+     * Deletes the specified entitlement.
+     * </p>
+     * 
+     * @param deleteEntitlementRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteEntitlement operation returned by the service.
+     * @sample AmazonAppStreamAsyncHandler.DeleteEntitlement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DeleteEntitlement" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteEntitlementResult> deleteEntitlementAsync(DeleteEntitlementRequest deleteEntitlementRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteEntitlementRequest, DeleteEntitlementResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes the specified fleet.
      * </p>
      * 
@@ -1102,6 +1205,37 @@ public interface AmazonAppStreamAsync extends AmazonAppStream {
      */
     java.util.concurrent.Future<DescribeDirectoryConfigsResult> describeDirectoryConfigsAsync(DescribeDirectoryConfigsRequest describeDirectoryConfigsRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeDirectoryConfigsRequest, DescribeDirectoryConfigsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves a list that describes one of more entitlements.
+     * </p>
+     * 
+     * @param describeEntitlementsRequest
+     * @return A Java Future containing the result of the DescribeEntitlements operation returned by the service.
+     * @sample AmazonAppStreamAsync.DescribeEntitlements
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DescribeEntitlements" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeEntitlementsResult> describeEntitlementsAsync(DescribeEntitlementsRequest describeEntitlementsRequest);
+
+    /**
+     * <p>
+     * Retrieves a list that describes one of more entitlements.
+     * </p>
+     * 
+     * @param describeEntitlementsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeEntitlements operation returned by the service.
+     * @sample AmazonAppStreamAsyncHandler.DescribeEntitlements
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DescribeEntitlements" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeEntitlementsResult> describeEntitlementsAsync(DescribeEntitlementsRequest describeEntitlementsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeEntitlementsRequest, DescribeEntitlementsResult> asyncHandler);
 
     /**
      * <p>
@@ -1498,6 +1632,41 @@ public interface AmazonAppStreamAsync extends AmazonAppStream {
 
     /**
      * <p>
+     * Deletes the specified application from the specified entitlement.
+     * </p>
+     * 
+     * @param disassociateApplicationFromEntitlementRequest
+     * @return A Java Future containing the result of the DisassociateApplicationFromEntitlement operation returned by
+     *         the service.
+     * @sample AmazonAppStreamAsync.DisassociateApplicationFromEntitlement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DisassociateApplicationFromEntitlement"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateApplicationFromEntitlementResult> disassociateApplicationFromEntitlementAsync(
+            DisassociateApplicationFromEntitlementRequest disassociateApplicationFromEntitlementRequest);
+
+    /**
+     * <p>
+     * Deletes the specified application from the specified entitlement.
+     * </p>
+     * 
+     * @param disassociateApplicationFromEntitlementRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisassociateApplicationFromEntitlement operation returned by
+     *         the service.
+     * @sample AmazonAppStreamAsyncHandler.DisassociateApplicationFromEntitlement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DisassociateApplicationFromEntitlement"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateApplicationFromEntitlementResult> disassociateApplicationFromEntitlementAsync(
+            DisassociateApplicationFromEntitlementRequest disassociateApplicationFromEntitlementRequest,
+            com.amazonaws.handlers.AsyncHandler<DisassociateApplicationFromEntitlementRequest, DisassociateApplicationFromEntitlementResult> asyncHandler);
+
+    /**
+     * <p>
      * Disassociates the specified fleet from the specified stack.
      * </p>
      * 
@@ -1652,6 +1821,37 @@ public interface AmazonAppStreamAsync extends AmazonAppStream {
      */
     java.util.concurrent.Future<ListAssociatedStacksResult> listAssociatedStacksAsync(ListAssociatedStacksRequest listAssociatedStacksRequest,
             com.amazonaws.handlers.AsyncHandler<ListAssociatedStacksRequest, ListAssociatedStacksResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves a list of entitled applications.
+     * </p>
+     * 
+     * @param listEntitledApplicationsRequest
+     * @return A Java Future containing the result of the ListEntitledApplications operation returned by the service.
+     * @sample AmazonAppStreamAsync.ListEntitledApplications
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/ListEntitledApplications"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEntitledApplicationsResult> listEntitledApplicationsAsync(ListEntitledApplicationsRequest listEntitledApplicationsRequest);
+
+    /**
+     * <p>
+     * Retrieves a list of entitled applications.
+     * </p>
+     * 
+     * @param listEntitledApplicationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListEntitledApplications operation returned by the service.
+     * @sample AmazonAppStreamAsyncHandler.ListEntitledApplications
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/ListEntitledApplications"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEntitledApplicationsResult> listEntitledApplicationsAsync(ListEntitledApplicationsRequest listEntitledApplicationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListEntitledApplicationsRequest, ListEntitledApplicationsResult> asyncHandler);
 
     /**
      * <p>
@@ -1989,6 +2189,37 @@ public interface AmazonAppStreamAsync extends AmazonAppStream {
      */
     java.util.concurrent.Future<UpdateDirectoryConfigResult> updateDirectoryConfigAsync(UpdateDirectoryConfigRequest updateDirectoryConfigRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateDirectoryConfigRequest, UpdateDirectoryConfigResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the specified entitlement.
+     * </p>
+     * 
+     * @param updateEntitlementRequest
+     * @return A Java Future containing the result of the UpdateEntitlement operation returned by the service.
+     * @sample AmazonAppStreamAsync.UpdateEntitlement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/UpdateEntitlement" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateEntitlementResult> updateEntitlementAsync(UpdateEntitlementRequest updateEntitlementRequest);
+
+    /**
+     * <p>
+     * Updates the specified entitlement.
+     * </p>
+     * 
+     * @param updateEntitlementRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateEntitlement operation returned by the service.
+     * @sample AmazonAppStreamAsyncHandler.UpdateEntitlement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/UpdateEntitlement" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateEntitlementResult> updateEntitlementAsync(UpdateEntitlementRequest updateEntitlementRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateEntitlementRequest, UpdateEntitlementResult> asyncHandler);
 
     /**
      * <p>

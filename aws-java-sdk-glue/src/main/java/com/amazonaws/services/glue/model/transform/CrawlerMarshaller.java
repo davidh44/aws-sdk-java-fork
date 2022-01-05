@@ -66,6 +66,8 @@ public class CrawlerMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Configuration").build();
     private static final MarshallingInfo<String> CRAWLERSECURITYCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CrawlerSecurityConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> LAKEFORMATIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LakeFormationConfiguration").build();
 
     private static final CrawlerMarshaller instance = new CrawlerMarshaller();
 
@@ -102,6 +104,7 @@ public class CrawlerMarshaller {
             protocolMarshaller.marshall(crawler.getVersion(), VERSION_BINDING);
             protocolMarshaller.marshall(crawler.getConfiguration(), CONFIGURATION_BINDING);
             protocolMarshaller.marshall(crawler.getCrawlerSecurityConfiguration(), CRAWLERSECURITYCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(crawler.getLakeFormationConfiguration(), LAKEFORMATIONCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

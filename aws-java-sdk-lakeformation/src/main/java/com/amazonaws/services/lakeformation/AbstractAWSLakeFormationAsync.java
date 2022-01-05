@@ -301,6 +301,36 @@ public class AbstractAWSLakeFormationAsync extends AbstractAWSLakeFormation impl
     }
 
     @Override
+    public java.util.concurrent.Future<GetTemporaryGluePartitionCredentialsResult> getTemporaryGluePartitionCredentialsAsync(
+            GetTemporaryGluePartitionCredentialsRequest request) {
+
+        return getTemporaryGluePartitionCredentialsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTemporaryGluePartitionCredentialsResult> getTemporaryGluePartitionCredentialsAsync(
+            GetTemporaryGluePartitionCredentialsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetTemporaryGluePartitionCredentialsRequest, GetTemporaryGluePartitionCredentialsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTemporaryGlueTableCredentialsResult> getTemporaryGlueTableCredentialsAsync(
+            GetTemporaryGlueTableCredentialsRequest request) {
+
+        return getTemporaryGlueTableCredentialsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTemporaryGlueTableCredentialsResult> getTemporaryGlueTableCredentialsAsync(
+            GetTemporaryGlueTableCredentialsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetTemporaryGlueTableCredentialsRequest, GetTemporaryGlueTableCredentialsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetWorkUnitResultsResult> getWorkUnitResultsAsync(GetWorkUnitResultsRequest request) {
 
         return getWorkUnitResultsAsync(request, null);

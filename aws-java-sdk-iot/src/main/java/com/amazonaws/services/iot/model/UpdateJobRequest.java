@@ -76,6 +76,12 @@ public class UpdateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </note>
      */
     private String namespaceId;
+    /**
+     * <p>
+     * Allows you to create the criteria to retry a job.
+     * </p>
+     */
+    private JobExecutionsRetryConfig jobExecutionsRetryConfig;
 
     /**
      * <p>
@@ -440,6 +446,46 @@ public class UpdateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     }
 
     /**
+     * <p>
+     * Allows you to create the criteria to retry a job.
+     * </p>
+     * 
+     * @param jobExecutionsRetryConfig
+     *        Allows you to create the criteria to retry a job.
+     */
+
+    public void setJobExecutionsRetryConfig(JobExecutionsRetryConfig jobExecutionsRetryConfig) {
+        this.jobExecutionsRetryConfig = jobExecutionsRetryConfig;
+    }
+
+    /**
+     * <p>
+     * Allows you to create the criteria to retry a job.
+     * </p>
+     * 
+     * @return Allows you to create the criteria to retry a job.
+     */
+
+    public JobExecutionsRetryConfig getJobExecutionsRetryConfig() {
+        return this.jobExecutionsRetryConfig;
+    }
+
+    /**
+     * <p>
+     * Allows you to create the criteria to retry a job.
+     * </p>
+     * 
+     * @param jobExecutionsRetryConfig
+     *        Allows you to create the criteria to retry a job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateJobRequest withJobExecutionsRetryConfig(JobExecutionsRetryConfig jobExecutionsRetryConfig) {
+        setJobExecutionsRetryConfig(jobExecutionsRetryConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -464,7 +510,9 @@ public class UpdateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
         if (getTimeoutConfig() != null)
             sb.append("TimeoutConfig: ").append(getTimeoutConfig()).append(",");
         if (getNamespaceId() != null)
-            sb.append("NamespaceId: ").append(getNamespaceId());
+            sb.append("NamespaceId: ").append(getNamespaceId()).append(",");
+        if (getJobExecutionsRetryConfig() != null)
+            sb.append("JobExecutionsRetryConfig: ").append(getJobExecutionsRetryConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -507,6 +555,10 @@ public class UpdateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
             return false;
         if (other.getNamespaceId() != null && other.getNamespaceId().equals(this.getNamespaceId()) == false)
             return false;
+        if (other.getJobExecutionsRetryConfig() == null ^ this.getJobExecutionsRetryConfig() == null)
+            return false;
+        if (other.getJobExecutionsRetryConfig() != null && other.getJobExecutionsRetryConfig().equals(this.getJobExecutionsRetryConfig()) == false)
+            return false;
         return true;
     }
 
@@ -522,6 +574,7 @@ public class UpdateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
         hashCode = prime * hashCode + ((getAbortConfig() == null) ? 0 : getAbortConfig().hashCode());
         hashCode = prime * hashCode + ((getTimeoutConfig() == null) ? 0 : getTimeoutConfig().hashCode());
         hashCode = prime * hashCode + ((getNamespaceId() == null) ? 0 : getNamespaceId().hashCode());
+        hashCode = prime * hashCode + ((getJobExecutionsRetryConfig() == null) ? 0 : getJobExecutionsRetryConfig().hashCode());
         return hashCode;
     }
 

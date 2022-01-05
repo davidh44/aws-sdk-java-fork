@@ -88,6 +88,10 @@ public class DescribeJobTemplateResultJsonUnmarshaller implements Unmarshaller<D
                     context.nextToken();
                     describeJobTemplateResult.setTimeoutConfig(TimeoutConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("jobExecutionsRetryConfig", targetDepth)) {
+                    context.nextToken();
+                    describeJobTemplateResult.setJobExecutionsRetryConfig(JobExecutionsRetryConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

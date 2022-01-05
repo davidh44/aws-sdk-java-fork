@@ -172,6 +172,10 @@ public interface AWSCloudTrail {
      * @throws InvalidTagParameterException
      *         This exception is thrown when the specified tag key or values are not valid. It can also occur if there
      *         are duplicate tags or too many tags on the resource.
+     * @throws InactiveEventDataStoreException
+     *         The event data store against which you ran your query is inactive.
+     * @throws EventDataStoreNotFoundException
+     *         The specified event data store was not found.
      * @throws UnsupportedOperationException
      *         This exception is thrown when the requested operation is not supported.
      * @throws OperationNotPermittedException
@@ -182,11 +186,110 @@ public interface AWSCloudTrail {
      *         information, see <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
      *         >Prepare For Creating a Trail For Your Organization</a>.
+     * @throws ConflictException
+     *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
+     *         you try to run an operation on a trail before CloudTrail has time to fully load the trail. If this
+     *         exception occurs, wait a few minutes, and then try the operation again.
      * @sample AWSCloudTrail.AddTags
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/AddTags" target="_top">AWS API
      *      Documentation</a>
      */
     AddTagsResult addTags(AddTagsRequest addTagsRequest);
+
+    /**
+     * <p>
+     * Cancels a query if the query is not in a terminated state, such as <code>CANCELLED</code>, <code>FAILED</code> or
+     * <code>FINISHED</code>. You must specify an ARN value for <code>EventDataStore</code>. The ID of the query that
+     * you want to cancel is also required. When you run <code>CancelQuery</code>, the query status might show as
+     * <code>CANCELLED</code> even if the operation is not yet finished.
+     * </p>
+     * 
+     * @param cancelQueryRequest
+     * @return Result of the CancelQuery operation returned by the service.
+     * @throws EventDataStoreARNInvalidException
+     *         The specified event data store ARN is not valid or does not map to an event data store in your account.
+     * @throws EventDataStoreNotFoundException
+     *         The specified event data store was not found.
+     * @throws InactiveEventDataStoreException
+     *         The event data store against which you ran your query is inactive.
+     * @throws InactiveQueryException
+     *         The specified query cannot be canceled because it is in the <code>FINISHED</code>, <code>FAILED</code>,
+     *         or <code>CANCELLED</code> state.
+     * @throws InvalidParameterException
+     *         The request includes a parameter that is not valid.
+     * @throws QueryIdNotFoundException
+     *         The query ID does not exist or does not map to a query.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @throws ConflictException
+     *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
+     *         you try to run an operation on a trail before CloudTrail has time to fully load the trail. If this
+     *         exception occurs, wait a few minutes, and then try the operation again.
+     * @sample AWSCloudTrail.CancelQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/CancelQuery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CancelQueryResult cancelQuery(CancelQueryRequest cancelQueryRequest);
+
+    /**
+     * <p>
+     * Creates a new event data store.
+     * </p>
+     * 
+     * @param createEventDataStoreRequest
+     * @return Result of the CreateEventDataStore operation returned by the service.
+     * @throws EventDataStoreAlreadyExistsException
+     *         An event data store with that name already exists.
+     * @throws EventDataStoreMaxLimitExceededException
+     *         Your account has used the maximum number of event data stores.
+     * @throws InvalidParameterException
+     *         The request includes a parameter that is not valid.
+     * @throws InvalidTagParameterException
+     *         This exception is thrown when the specified tag key or values are not valid. It can also occur if there
+     *         are duplicate tags or too many tags on the resource.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @throws ConflictException
+     *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
+     *         you try to run an operation on a trail before CloudTrail has time to fully load the trail. If this
+     *         exception occurs, wait a few minutes, and then try the operation again.
+     * @throws CloudTrailAccessNotEnabledException
+     *         This exception is thrown when trusted access has not been enabled between CloudTrail and Organizations.
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">Enabling
+     *         Trusted Access with Other Amazon Web Services Services</a> and <a href=
+     *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
+     *         >Prepare For Creating a Trail For Your Organization</a>.
+     * @throws InsufficientDependencyServiceAccessPermissionException
+     *         This exception is thrown when the IAM user or role that is used to create the organization trail is
+     *         lacking one or more required permissions for creating an organization trail in a required service. For
+     *         more information, see <a href=
+     *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
+     *         >Prepare For Creating a Trail For Your Organization</a>.
+     * @throws NotOrganizationMasterAccountException
+     *         This exception is thrown when the Amazon Web Services account making the request to create or update an
+     *         organization trail is not the management account for an organization in Organizations. For more
+     *         information, see <a href=
+     *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
+     *         >Prepare For Creating a Trail For Your Organization</a>.
+     * @throws OrganizationsNotInUseException
+     *         This exception is thrown when the request is made from an Amazon Web Services account that is not a
+     *         member of an organization. To make this request, sign in using the credentials of an account that belongs
+     *         to an organization.
+     * @throws OrganizationNotInAllFeaturesModeException
+     *         This exception is thrown when Organizations is not configured to support all features. All features must
+     *         be enabled in Organizations to support creating an organization trail. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
+     *         >Prepare For Creating a Trail For Your Organization</a>.
+     * @sample AWSCloudTrail.CreateEventDataStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/CreateEventDataStore"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateEventDataStoreResult createEventDataStore(CreateEventDataStoreRequest createEventDataStoreRequest);
 
     /**
      * <p>
@@ -304,11 +407,60 @@ public interface AWSCloudTrail {
      *         This exception is thrown when a call results in the <code>InvalidClientTokenId</code> error code. This
      *         can occur when you are creating or updating a trail to send notifications to an Amazon SNS topic that is
      *         in a suspended Amazon Web Services account.
+     * @throws ConflictException
+     *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
+     *         you try to run an operation on a trail before CloudTrail has time to fully load the trail. If this
+     *         exception occurs, wait a few minutes, and then try the operation again.
      * @sample AWSCloudTrail.CreateTrail
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/CreateTrail" target="_top">AWS API
      *      Documentation</a>
      */
     CreateTrailResult createTrail(CreateTrailRequest createTrailRequest);
+
+    /**
+     * <p>
+     * Disables the event data store specified by <code>EventDataStore</code>, which accepts an event data store ARN.
+     * After you run <code>DeleteEventDataStore</code>, the event data store is automatically deleted after a wait
+     * period of seven days. <code>TerminationProtectionEnabled</code> must be set to <code>False</code> on the event
+     * data store; this operation cannot work if <code>TerminationProtectionEnabled</code> is <code>True</code>.
+     * </p>
+     * <p>
+     * After you run <code>DeleteEventDataStore</code> on an event data store, you cannot run <code>ListQueries</code>,
+     * <code>DescribeQuery</code>, or <code>GetQueryResults</code> on queries that are using an event data store in a
+     * <code>PENDING_DELETION</code> state.
+     * </p>
+     * 
+     * @param deleteEventDataStoreRequest
+     * @return Result of the DeleteEventDataStore operation returned by the service.
+     * @throws EventDataStoreARNInvalidException
+     *         The specified event data store ARN is not valid or does not map to an event data store in your account.
+     * @throws EventDataStoreNotFoundException
+     *         The specified event data store was not found.
+     * @throws EventDataStoreTerminationProtectedException
+     *         The event data store cannot be deleted because termination protection is enabled for it.
+     * @throws InvalidParameterException
+     *         The request includes a parameter that is not valid.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @throws NotOrganizationMasterAccountException
+     *         This exception is thrown when the Amazon Web Services account making the request to create or update an
+     *         organization trail is not the management account for an organization in Organizations. For more
+     *         information, see <a href=
+     *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
+     *         >Prepare For Creating a Trail For Your Organization</a>.
+     * @throws InsufficientDependencyServiceAccessPermissionException
+     *         This exception is thrown when the IAM user or role that is used to create the organization trail is
+     *         lacking one or more required permissions for creating an organization trail in a required service. For
+     *         more information, see <a href=
+     *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
+     *         >Prepare For Creating a Trail For Your Organization</a>.
+     * @sample AWSCloudTrail.DeleteEventDataStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/DeleteEventDataStore"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteEventDataStoreResult deleteEventDataStore(DeleteEventDataStoreRequest deleteEventDataStoreRequest);
 
     /**
      * <p>
@@ -383,6 +535,34 @@ public interface AWSCloudTrail {
 
     /**
      * <p>
+     * Returns metadata about a query, including query run time in milliseconds, number of events scanned and matched,
+     * and query status. You must specify an ARN for <code>EventDataStore</code>, and a value for <code>QueryID</code>.
+     * </p>
+     * 
+     * @param describeQueryRequest
+     * @return Result of the DescribeQuery operation returned by the service.
+     * @throws EventDataStoreARNInvalidException
+     *         The specified event data store ARN is not valid or does not map to an event data store in your account.
+     * @throws EventDataStoreNotFoundException
+     *         The specified event data store was not found.
+     * @throws InactiveEventDataStoreException
+     *         The event data store against which you ran your query is inactive.
+     * @throws InvalidParameterException
+     *         The request includes a parameter that is not valid.
+     * @throws QueryIdNotFoundException
+     *         The query ID does not exist or does not map to a query.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @sample AWSCloudTrail.DescribeQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/DescribeQuery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeQueryResult describeQuery(DescribeQueryRequest describeQueryRequest);
+
+    /**
+     * <p>
      * Retrieves settings for one or more trails associated with the current region for your account.
      * </p>
      * 
@@ -435,6 +615,29 @@ public interface AWSCloudTrail {
      * @see #describeTrails(DescribeTrailsRequest)
      */
     DescribeTrailsResult describeTrails();
+
+    /**
+     * <p>
+     * Returns information about an event data store specified as either an ARN or the ID portion of the ARN.
+     * </p>
+     * 
+     * @param getEventDataStoreRequest
+     * @return Result of the GetEventDataStore operation returned by the service.
+     * @throws EventDataStoreARNInvalidException
+     *         The specified event data store ARN is not valid or does not map to an event data store in your account.
+     * @throws EventDataStoreNotFoundException
+     *         The specified event data store was not found.
+     * @throws InvalidParameterException
+     *         The request includes a parameter that is not valid.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @sample AWSCloudTrail.GetEventDataStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/GetEventDataStore" target="_top">AWS
+     *      API Documentation</a>
+     */
+    GetEventDataStoreResult getEventDataStore(GetEventDataStoreRequest getEventDataStoreRequest);
 
     /**
      * <p>
@@ -571,6 +774,39 @@ public interface AWSCloudTrail {
 
     /**
      * <p>
+     * Gets event data results of a query. You must specify the <code>QueryID</code> value returned by the
+     * <code>StartQuery</code> operation, and an ARN for <code>EventDataStore</code>.
+     * </p>
+     * 
+     * @param getQueryResultsRequest
+     * @return Result of the GetQueryResults operation returned by the service.
+     * @throws EventDataStoreARNInvalidException
+     *         The specified event data store ARN is not valid or does not map to an event data store in your account.
+     * @throws EventDataStoreNotFoundException
+     *         The specified event data store was not found.
+     * @throws InactiveEventDataStoreException
+     *         The event data store against which you ran your query is inactive.
+     * @throws InvalidMaxResultsException
+     *         This exception is thrown if the limit specified is not valid.
+     * @throws InvalidNextTokenException
+     *         A token that is not valid, or a token that was previously used in a request with different parameters.
+     *         This exception is thrown if the token is not valid.
+     * @throws InvalidParameterException
+     *         The request includes a parameter that is not valid.
+     * @throws QueryIdNotFoundException
+     *         The query ID does not exist or does not map to a query.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @sample AWSCloudTrail.GetQueryResults
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/GetQueryResults" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetQueryResultsResult getQueryResults(GetQueryResultsRequest getQueryResultsRequest);
+
+    /**
+     * <p>
      * Returns settings information for a specified trail.
      * </p>
      * 
@@ -673,6 +909,28 @@ public interface AWSCloudTrail {
 
     /**
      * <p>
+     * Returns information about all event data stores in the account, in the current region.
+     * </p>
+     * 
+     * @param listEventDataStoresRequest
+     * @return Result of the ListEventDataStores operation returned by the service.
+     * @throws InvalidMaxResultsException
+     *         This exception is thrown if the limit specified is not valid.
+     * @throws InvalidNextTokenException
+     *         A token that is not valid, or a token that was previously used in a request with different parameters.
+     *         This exception is thrown if the token is not valid.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @sample AWSCloudTrail.ListEventDataStores
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/ListEventDataStores" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListEventDataStoresResult listEventDataStores(ListEventDataStoresRequest listEventDataStoresRequest);
+
+    /**
+     * <p>
      * Returns all public keys whose private keys were used to sign the digest files within the specified time range.
      * The public key is needed to validate digest files that were signed with its corresponding private key.
      * </p>
@@ -708,6 +966,47 @@ public interface AWSCloudTrail {
      * @see #listPublicKeys(ListPublicKeysRequest)
      */
     ListPublicKeysResult listPublicKeys();
+
+    /**
+     * <p>
+     * Returns a list of queries and query statuses for the past seven days. You must specify an ARN value for
+     * <code>EventDataStore</code>. Optionally, to shorten the list of results, you can specify a time range, formatted
+     * as timestamps, by adding <code>StartTime</code> and <code>EndTime</code> parameters, and a
+     * <code>QueryStatus</code> value. Valid values for <code>QueryStatus</code> include <code>QUEUED</code>,
+     * <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, or <code>CANCELLED</code>.
+     * </p>
+     * 
+     * @param listQueriesRequest
+     * @return Result of the ListQueries operation returned by the service.
+     * @throws EventDataStoreARNInvalidException
+     *         The specified event data store ARN is not valid or does not map to an event data store in your account.
+     * @throws EventDataStoreNotFoundException
+     *         The specified event data store was not found.
+     * @throws InactiveEventDataStoreException
+     *         The event data store against which you ran your query is inactive.
+     * @throws InvalidDateRangeException
+     *         A date range for the query was specified that is not valid. For more information about writing a query,
+     *         see <a
+     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-create-edit-query.html">Create or
+     *         edit a query</a> in the <i>CloudTrail User Guide</i>.
+     * @throws InvalidMaxResultsException
+     *         This exception is thrown if the limit specified is not valid.
+     * @throws InvalidNextTokenException
+     *         A token that is not valid, or a token that was previously used in a request with different parameters.
+     *         This exception is thrown if the token is not valid.
+     * @throws InvalidParameterException
+     *         The request includes a parameter that is not valid.
+     * @throws InvalidQueryStatusException
+     *         The query status is not valid for the operation.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @sample AWSCloudTrail.ListQueries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/ListQueries" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListQueriesResult listQueries(ListQueriesRequest listQueriesRequest);
 
     /**
      * <p>
@@ -757,6 +1056,10 @@ public interface AWSCloudTrail {
      *         Not be in IP address format (for example, 192.168.5.4)
      *         </p>
      *         </li>
+     * @throws InactiveEventDataStoreException
+     *         The event data store against which you ran your query is inactive.
+     * @throws EventDataStoreNotFoundException
+     *         The specified event data store was not found.
      * @throws UnsupportedOperationException
      *         This exception is thrown when the requested operation is not supported.
      * @throws OperationNotPermittedException
@@ -1060,7 +1363,8 @@ public interface AWSCloudTrail {
      * <p>
      * Lets you enable Insights event logging by specifying the Insights selectors that you want to enable on an
      * existing trail. You also use <code>PutInsightSelectors</code> to turn off Insights event logging, by passing an
-     * empty list of insight types. The valid Insights event type in this release is <code>ApiCallRateInsight</code>.
+     * empty list of insight types. The valid Insights event types in this release are <code>ApiErrorRateInsight</code>
+     * and <code>ApiCallRateInsight</code>.
      * </p>
      * 
      * @param putInsightSelectorsRequest
@@ -1180,6 +1484,10 @@ public interface AWSCloudTrail {
      * @throws InvalidTagParameterException
      *         This exception is thrown when the specified tag key or values are not valid. It can also occur if there
      *         are duplicate tags or too many tags on the resource.
+     * @throws InactiveEventDataStoreException
+     *         The event data store against which you ran your query is inactive.
+     * @throws EventDataStoreNotFoundException
+     *         The specified event data store was not found.
      * @throws UnsupportedOperationException
      *         This exception is thrown when the requested operation is not supported.
      * @throws OperationNotPermittedException
@@ -1195,6 +1503,63 @@ public interface AWSCloudTrail {
      *      Documentation</a>
      */
     RemoveTagsResult removeTags(RemoveTagsRequest removeTagsRequest);
+
+    /**
+     * <p>
+     * Restores a deleted event data store specified by <code>EventDataStore</code>, which accepts an event data store
+     * ARN. You can only restore a deleted event data store within the seven-day wait period after deletion. Restoring
+     * an event data store can take several minutes, depending on the size of the event data store.
+     * </p>
+     * 
+     * @param restoreEventDataStoreRequest
+     * @return Result of the RestoreEventDataStore operation returned by the service.
+     * @throws EventDataStoreARNInvalidException
+     *         The specified event data store ARN is not valid or does not map to an event data store in your account.
+     * @throws EventDataStoreNotFoundException
+     *         The specified event data store was not found.
+     * @throws EventDataStoreMaxLimitExceededException
+     *         Your account has used the maximum number of event data stores.
+     * @throws InvalidEventDataStoreStatusException
+     *         The event data store is not in a status that supports the operation.
+     * @throws InvalidParameterException
+     *         The request includes a parameter that is not valid.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @throws CloudTrailAccessNotEnabledException
+     *         This exception is thrown when trusted access has not been enabled between CloudTrail and Organizations.
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">Enabling
+     *         Trusted Access with Other Amazon Web Services Services</a> and <a href=
+     *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
+     *         >Prepare For Creating a Trail For Your Organization</a>.
+     * @throws InsufficientDependencyServiceAccessPermissionException
+     *         This exception is thrown when the IAM user or role that is used to create the organization trail is
+     *         lacking one or more required permissions for creating an organization trail in a required service. For
+     *         more information, see <a href=
+     *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
+     *         >Prepare For Creating a Trail For Your Organization</a>.
+     * @throws OrganizationsNotInUseException
+     *         This exception is thrown when the request is made from an Amazon Web Services account that is not a
+     *         member of an organization. To make this request, sign in using the credentials of an account that belongs
+     *         to an organization.
+     * @throws NotOrganizationMasterAccountException
+     *         This exception is thrown when the Amazon Web Services account making the request to create or update an
+     *         organization trail is not the management account for an organization in Organizations. For more
+     *         information, see <a href=
+     *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
+     *         >Prepare For Creating a Trail For Your Organization</a>.
+     * @throws OrganizationNotInAllFeaturesModeException
+     *         This exception is thrown when Organizations is not configured to support all features. All features must
+     *         be enabled in Organizations to support creating an organization trail. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
+     *         >Prepare For Creating a Trail For Your Organization</a>.
+     * @sample AWSCloudTrail.RestoreEventDataStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/RestoreEventDataStore"
+     *      target="_top">AWS API Documentation</a>
+     */
+    RestoreEventDataStoreResult restoreEventDataStore(RestoreEventDataStoreRequest restoreEventDataStoreRequest);
 
     /**
      * <p>
@@ -1266,6 +1631,40 @@ public interface AWSCloudTrail {
 
     /**
      * <p>
+     * Starts a CloudTrail Lake query. The required <code>QueryStatement</code> parameter provides your SQL query,
+     * enclosed in single quotation marks.
+     * </p>
+     * 
+     * @param startQueryRequest
+     * @return Result of the StartQuery operation returned by the service.
+     * @throws EventDataStoreARNInvalidException
+     *         The specified event data store ARN is not valid or does not map to an event data store in your account.
+     * @throws EventDataStoreNotFoundException
+     *         The specified event data store was not found.
+     * @throws InactiveEventDataStoreException
+     *         The event data store against which you ran your query is inactive.
+     * @throws InvalidParameterException
+     *         The request includes a parameter that is not valid.
+     * @throws InvalidQueryStatementException
+     *         The query that was submitted has validation errors, or uses incorrect syntax or unsupported keywords. For
+     *         more information about writing a query, see <a
+     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-create-edit-query.html">Create or
+     *         edit a query</a> in the <i>CloudTrail User Guide</i>.
+     * @throws MaxConcurrentQueriesException
+     *         You are already running the maximum number of concurrent queries. Wait a minute for some queries to
+     *         finish, and then run the query again.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @sample AWSCloudTrail.StartQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/StartQuery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    StartQueryResult startQuery(StartQueryRequest startQueryRequest);
+
+    /**
+     * <p>
      * Suspends the recording of Amazon Web Services API calls and log file delivery for the specified trail. Under most
      * circumstances, there is no need to use this action. You can update a trail without stopping it first. This action
      * is the only way to stop recording. For a trail enabled in all regions, this operation must be called from the
@@ -1332,6 +1731,64 @@ public interface AWSCloudTrail {
      *      Documentation</a>
      */
     StopLoggingResult stopLogging(StopLoggingRequest stopLoggingRequest);
+
+    /**
+     * <p>
+     * Updates an event data store. The required <code>EventDataStore</code> value is an ARN or the ID portion of the
+     * ARN. Other parameters are optional, but at least one optional parameter must be specified, or CloudTrail throws
+     * an error. <code>RetentionPeriod</code> is in days, and valid values are integers between 90 and 2555. By default,
+     * <code>TerminationProtection</code> is enabled. <code>AdvancedEventSelectors</code> includes or excludes
+     * management and data events in your event data store; for more information about
+     * <code>AdvancedEventSelectors</code>, see <a>PutEventSelectorsRequest$AdvancedEventSelectors</a>.
+     * </p>
+     * 
+     * @param updateEventDataStoreRequest
+     * @return Result of the UpdateEventDataStore operation returned by the service.
+     * @throws EventDataStoreARNInvalidException
+     *         The specified event data store ARN is not valid or does not map to an event data store in your account.
+     * @throws EventDataStoreNotFoundException
+     *         The specified event data store was not found.
+     * @throws InactiveEventDataStoreException
+     *         The event data store against which you ran your query is inactive.
+     * @throws InvalidParameterException
+     *         The request includes a parameter that is not valid.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @throws CloudTrailAccessNotEnabledException
+     *         This exception is thrown when trusted access has not been enabled between CloudTrail and Organizations.
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">Enabling
+     *         Trusted Access with Other Amazon Web Services Services</a> and <a href=
+     *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
+     *         >Prepare For Creating a Trail For Your Organization</a>.
+     * @throws InsufficientDependencyServiceAccessPermissionException
+     *         This exception is thrown when the IAM user or role that is used to create the organization trail is
+     *         lacking one or more required permissions for creating an organization trail in a required service. For
+     *         more information, see <a href=
+     *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
+     *         >Prepare For Creating a Trail For Your Organization</a>.
+     * @throws OrganizationsNotInUseException
+     *         This exception is thrown when the request is made from an Amazon Web Services account that is not a
+     *         member of an organization. To make this request, sign in using the credentials of an account that belongs
+     *         to an organization.
+     * @throws NotOrganizationMasterAccountException
+     *         This exception is thrown when the Amazon Web Services account making the request to create or update an
+     *         organization trail is not the management account for an organization in Organizations. For more
+     *         information, see <a href=
+     *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
+     *         >Prepare For Creating a Trail For Your Organization</a>.
+     * @throws OrganizationNotInAllFeaturesModeException
+     *         This exception is thrown when Organizations is not configured to support all features. All features must
+     *         be enabled in Organizations to support creating an organization trail. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
+     *         >Prepare For Creating a Trail For Your Organization</a>.
+     * @sample AWSCloudTrail.UpdateEventDataStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/UpdateEventDataStore"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateEventDataStoreResult updateEventDataStore(UpdateEventDataStoreRequest updateEventDataStoreRequest);
 
     /**
      * <p>

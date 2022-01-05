@@ -43,7 +43,7 @@ public class AutoScalingGroupProvider implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The managed termination protection setting to use for the Auto Scaling group capacity provider. This determines
-     * whether the Auto Scaling group has managed termination protection.
+     * whether the Auto Scaling group has managed termination protection. The default is disabled.
      * </p>
      * <important>
      * <p>
@@ -149,7 +149,7 @@ public class AutoScalingGroupProvider implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The managed termination protection setting to use for the Auto Scaling group capacity provider. This determines
-     * whether the Auto Scaling group has managed termination protection.
+     * whether the Auto Scaling group has managed termination protection. The default is disabled.
      * </p>
      * <important>
      * <p>
@@ -172,7 +172,8 @@ public class AutoScalingGroupProvider implements Serializable, Cloneable, Struct
      * 
      * @param managedTerminationProtection
      *        The managed termination protection setting to use for the Auto Scaling group capacity provider. This
-     *        determines whether the Auto Scaling group has managed termination protection.</p> <important>
+     *        determines whether the Auto Scaling group has managed termination protection. The default is disabled.</p>
+     *        <important>
      *        <p>
      *        When using managed termination protection, managed scaling must also be used otherwise managed termination
      *        protection doesn't work.
@@ -199,7 +200,7 @@ public class AutoScalingGroupProvider implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The managed termination protection setting to use for the Auto Scaling group capacity provider. This determines
-     * whether the Auto Scaling group has managed termination protection.
+     * whether the Auto Scaling group has managed termination protection. The default is disabled.
      * </p>
      * <important>
      * <p>
@@ -221,7 +222,8 @@ public class AutoScalingGroupProvider implements Serializable, Cloneable, Struct
      * </p>
      * 
      * @return The managed termination protection setting to use for the Auto Scaling group capacity provider. This
-     *         determines whether the Auto Scaling group has managed termination protection.</p> <important>
+     *         determines whether the Auto Scaling group has managed termination protection. The default is
+     *         disabled.</p> <important>
      *         <p>
      *         When using managed termination protection, managed scaling must also be used otherwise managed
      *         termination protection doesn't work.
@@ -248,7 +250,7 @@ public class AutoScalingGroupProvider implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The managed termination protection setting to use for the Auto Scaling group capacity provider. This determines
-     * whether the Auto Scaling group has managed termination protection.
+     * whether the Auto Scaling group has managed termination protection. The default is disabled.
      * </p>
      * <important>
      * <p>
@@ -271,7 +273,8 @@ public class AutoScalingGroupProvider implements Serializable, Cloneable, Struct
      * 
      * @param managedTerminationProtection
      *        The managed termination protection setting to use for the Auto Scaling group capacity provider. This
-     *        determines whether the Auto Scaling group has managed termination protection.</p> <important>
+     *        determines whether the Auto Scaling group has managed termination protection. The default is disabled.</p>
+     *        <important>
      *        <p>
      *        When using managed termination protection, managed scaling must also be used otherwise managed termination
      *        protection doesn't work.
@@ -300,7 +303,7 @@ public class AutoScalingGroupProvider implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The managed termination protection setting to use for the Auto Scaling group capacity provider. This determines
-     * whether the Auto Scaling group has managed termination protection.
+     * whether the Auto Scaling group has managed termination protection. The default is disabled.
      * </p>
      * <important>
      * <p>
@@ -323,7 +326,8 @@ public class AutoScalingGroupProvider implements Serializable, Cloneable, Struct
      * 
      * @param managedTerminationProtection
      *        The managed termination protection setting to use for the Auto Scaling group capacity provider. This
-     *        determines whether the Auto Scaling group has managed termination protection.</p> <important>
+     *        determines whether the Auto Scaling group has managed termination protection. The default is disabled.</p>
+     *        <important>
      *        <p>
      *        When using managed termination protection, managed scaling must also be used otherwise managed termination
      *        protection doesn't work.

@@ -56,6 +56,12 @@ public class JobExecutionSummary implements Serializable, Cloneable, StructuredP
      * </p>
      */
     private Long executionNumber;
+    /**
+     * <p>
+     * The number that indicates how many retry attempts have been completed for this job on this device.
+     * </p>
+     */
+    private Integer retryAttempt;
 
     /**
      * <p>
@@ -284,6 +290,46 @@ public class JobExecutionSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The number that indicates how many retry attempts have been completed for this job on this device.
+     * </p>
+     * 
+     * @param retryAttempt
+     *        The number that indicates how many retry attempts have been completed for this job on this device.
+     */
+
+    public void setRetryAttempt(Integer retryAttempt) {
+        this.retryAttempt = retryAttempt;
+    }
+
+    /**
+     * <p>
+     * The number that indicates how many retry attempts have been completed for this job on this device.
+     * </p>
+     * 
+     * @return The number that indicates how many retry attempts have been completed for this job on this device.
+     */
+
+    public Integer getRetryAttempt() {
+        return this.retryAttempt;
+    }
+
+    /**
+     * <p>
+     * The number that indicates how many retry attempts have been completed for this job on this device.
+     * </p>
+     * 
+     * @param retryAttempt
+     *        The number that indicates how many retry attempts have been completed for this job on this device.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobExecutionSummary withRetryAttempt(Integer retryAttempt) {
+        setRetryAttempt(retryAttempt);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -304,7 +350,9 @@ public class JobExecutionSummary implements Serializable, Cloneable, StructuredP
         if (getLastUpdatedAt() != null)
             sb.append("LastUpdatedAt: ").append(getLastUpdatedAt()).append(",");
         if (getExecutionNumber() != null)
-            sb.append("ExecutionNumber: ").append(getExecutionNumber());
+            sb.append("ExecutionNumber: ").append(getExecutionNumber()).append(",");
+        if (getRetryAttempt() != null)
+            sb.append("RetryAttempt: ").append(getRetryAttempt());
         sb.append("}");
         return sb.toString();
     }
@@ -339,6 +387,10 @@ public class JobExecutionSummary implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getExecutionNumber() != null && other.getExecutionNumber().equals(this.getExecutionNumber()) == false)
             return false;
+        if (other.getRetryAttempt() == null ^ this.getRetryAttempt() == null)
+            return false;
+        if (other.getRetryAttempt() != null && other.getRetryAttempt().equals(this.getRetryAttempt()) == false)
+            return false;
         return true;
     }
 
@@ -352,6 +404,7 @@ public class JobExecutionSummary implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getStartedAt() == null) ? 0 : getStartedAt().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedAt() == null) ? 0 : getLastUpdatedAt().hashCode());
         hashCode = prime * hashCode + ((getExecutionNumber() == null) ? 0 : getExecutionNumber().hashCode());
+        hashCode = prime * hashCode + ((getRetryAttempt() == null) ? 0 : getRetryAttempt().hashCode());
         return hashCode;
     }
 

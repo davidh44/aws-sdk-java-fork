@@ -3547,6 +3547,108 @@ public class AWSGlueAsyncClient extends AWSGlueClient implements AWSGlueAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<GetUnfilteredPartitionMetadataResult> getUnfilteredPartitionMetadataAsync(GetUnfilteredPartitionMetadataRequest request) {
+
+        return getUnfilteredPartitionMetadataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetUnfilteredPartitionMetadataResult> getUnfilteredPartitionMetadataAsync(
+            final GetUnfilteredPartitionMetadataRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetUnfilteredPartitionMetadataRequest, GetUnfilteredPartitionMetadataResult> asyncHandler) {
+        final GetUnfilteredPartitionMetadataRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetUnfilteredPartitionMetadataResult>() {
+            @Override
+            public GetUnfilteredPartitionMetadataResult call() throws Exception {
+                GetUnfilteredPartitionMetadataResult result = null;
+
+                try {
+                    result = executeGetUnfilteredPartitionMetadata(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetUnfilteredPartitionsMetadataResult> getUnfilteredPartitionsMetadataAsync(
+            GetUnfilteredPartitionsMetadataRequest request) {
+
+        return getUnfilteredPartitionsMetadataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetUnfilteredPartitionsMetadataResult> getUnfilteredPartitionsMetadataAsync(
+            final GetUnfilteredPartitionsMetadataRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetUnfilteredPartitionsMetadataRequest, GetUnfilteredPartitionsMetadataResult> asyncHandler) {
+        final GetUnfilteredPartitionsMetadataRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetUnfilteredPartitionsMetadataResult>() {
+            @Override
+            public GetUnfilteredPartitionsMetadataResult call() throws Exception {
+                GetUnfilteredPartitionsMetadataResult result = null;
+
+                try {
+                    result = executeGetUnfilteredPartitionsMetadata(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetUnfilteredTableMetadataResult> getUnfilteredTableMetadataAsync(GetUnfilteredTableMetadataRequest request) {
+
+        return getUnfilteredTableMetadataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetUnfilteredTableMetadataResult> getUnfilteredTableMetadataAsync(final GetUnfilteredTableMetadataRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetUnfilteredTableMetadataRequest, GetUnfilteredTableMetadataResult> asyncHandler) {
+        final GetUnfilteredTableMetadataRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetUnfilteredTableMetadataResult>() {
+            @Override
+            public GetUnfilteredTableMetadataResult call() throws Exception {
+                GetUnfilteredTableMetadataResult result = null;
+
+                try {
+                    result = executeGetUnfilteredTableMetadata(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetUserDefinedFunctionResult> getUserDefinedFunctionAsync(GetUserDefinedFunctionRequest request) {
 
         return getUserDefinedFunctionAsync(request, null);

@@ -88,7 +88,7 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private JobExecutionsRolloutConfig jobExecutionsRolloutConfig;
     /**
      * <p>
-     * Allows you to create criteria to abort a job.
+     * Allows you to create the criteria to abort a job.
      * </p>
      */
     private AbortConfig abortConfig;
@@ -130,6 +130,12 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      */
     private String jobTemplateArn;
+    /**
+     * <p>
+     * Allows you to create the criteria to retry a job.
+     * </p>
+     */
+    private JobExecutionsRetryConfig jobExecutionsRetryConfig;
     /**
      * <p>
      * Parameters of a managed template that you can specify to create the job document.
@@ -623,11 +629,11 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Allows you to create criteria to abort a job.
+     * Allows you to create the criteria to abort a job.
      * </p>
      * 
      * @param abortConfig
-     *        Allows you to create criteria to abort a job.
+     *        Allows you to create the criteria to abort a job.
      */
 
     public void setAbortConfig(AbortConfig abortConfig) {
@@ -636,10 +642,10 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Allows you to create criteria to abort a job.
+     * Allows you to create the criteria to abort a job.
      * </p>
      * 
-     * @return Allows you to create criteria to abort a job.
+     * @return Allows you to create the criteria to abort a job.
      */
 
     public AbortConfig getAbortConfig() {
@@ -648,11 +654,11 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Allows you to create criteria to abort a job.
+     * Allows you to create the criteria to abort a job.
      * </p>
      * 
      * @param abortConfig
-     *        Allows you to create criteria to abort a job.
+     *        Allows you to create the criteria to abort a job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -935,6 +941,46 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
+     * Allows you to create the criteria to retry a job.
+     * </p>
+     * 
+     * @param jobExecutionsRetryConfig
+     *        Allows you to create the criteria to retry a job.
+     */
+
+    public void setJobExecutionsRetryConfig(JobExecutionsRetryConfig jobExecutionsRetryConfig) {
+        this.jobExecutionsRetryConfig = jobExecutionsRetryConfig;
+    }
+
+    /**
+     * <p>
+     * Allows you to create the criteria to retry a job.
+     * </p>
+     * 
+     * @return Allows you to create the criteria to retry a job.
+     */
+
+    public JobExecutionsRetryConfig getJobExecutionsRetryConfig() {
+        return this.jobExecutionsRetryConfig;
+    }
+
+    /**
+     * <p>
+     * Allows you to create the criteria to retry a job.
+     * </p>
+     * 
+     * @param jobExecutionsRetryConfig
+     *        Allows you to create the criteria to retry a job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateJobRequest withJobExecutionsRetryConfig(JobExecutionsRetryConfig jobExecutionsRetryConfig) {
+        setJobExecutionsRetryConfig(jobExecutionsRetryConfig);
+        return this;
+    }
+
+    /**
+     * <p>
      * Parameters of a managed template that you can specify to create the job document.
      * </p>
      * 
@@ -1039,6 +1085,8 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
             sb.append("NamespaceId: ").append(getNamespaceId()).append(",");
         if (getJobTemplateArn() != null)
             sb.append("JobTemplateArn: ").append(getJobTemplateArn()).append(",");
+        if (getJobExecutionsRetryConfig() != null)
+            sb.append("JobExecutionsRetryConfig: ").append(getJobExecutionsRetryConfig()).append(",");
         if (getDocumentParameters() != null)
             sb.append("DocumentParameters: ").append(getDocumentParameters());
         sb.append("}");
@@ -1107,6 +1155,10 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
             return false;
         if (other.getJobTemplateArn() != null && other.getJobTemplateArn().equals(this.getJobTemplateArn()) == false)
             return false;
+        if (other.getJobExecutionsRetryConfig() == null ^ this.getJobExecutionsRetryConfig() == null)
+            return false;
+        if (other.getJobExecutionsRetryConfig() != null && other.getJobExecutionsRetryConfig().equals(this.getJobExecutionsRetryConfig()) == false)
+            return false;
         if (other.getDocumentParameters() == null ^ this.getDocumentParameters() == null)
             return false;
         if (other.getDocumentParameters() != null && other.getDocumentParameters().equals(this.getDocumentParameters()) == false)
@@ -1132,6 +1184,7 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getNamespaceId() == null) ? 0 : getNamespaceId().hashCode());
         hashCode = prime * hashCode + ((getJobTemplateArn() == null) ? 0 : getJobTemplateArn().hashCode());
+        hashCode = prime * hashCode + ((getJobExecutionsRetryConfig() == null) ? 0 : getJobExecutionsRetryConfig().hashCode());
         hashCode = prime * hashCode + ((getDocumentParameters() == null) ? 0 : getDocumentParameters().hashCode());
         return hashCode;
     }

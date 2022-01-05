@@ -28513,6 +28513,65 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Modifies the payer responsibility for your VPC endpoint service.
+     * </p>
+     * 
+     * @param modifyVpcEndpointServicePayerResponsibilityRequest
+     * @return Result of the ModifyVpcEndpointServicePayerResponsibility operation returned by the service.
+     * @sample AmazonEC2.ModifyVpcEndpointServicePayerResponsibility
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyVpcEndpointServicePayerResponsibility"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ModifyVpcEndpointServicePayerResponsibilityResult modifyVpcEndpointServicePayerResponsibility(
+            ModifyVpcEndpointServicePayerResponsibilityRequest request) {
+        request = beforeClientExecution(request);
+        return executeModifyVpcEndpointServicePayerResponsibility(request);
+    }
+
+    @SdkInternalApi
+    final ModifyVpcEndpointServicePayerResponsibilityResult executeModifyVpcEndpointServicePayerResponsibility(
+            ModifyVpcEndpointServicePayerResponsibilityRequest modifyVpcEndpointServicePayerResponsibilityRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(modifyVpcEndpointServicePayerResponsibilityRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ModifyVpcEndpointServicePayerResponsibilityRequest> request = null;
+        Response<ModifyVpcEndpointServicePayerResponsibilityResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ModifyVpcEndpointServicePayerResponsibilityRequestMarshaller().marshall(super
+                        .beforeMarshalling(modifyVpcEndpointServicePayerResponsibilityRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ModifyVpcEndpointServicePayerResponsibility");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<ModifyVpcEndpointServicePayerResponsibilityResult> responseHandler = new StaxResponseHandler<ModifyVpcEndpointServicePayerResponsibilityResult>(
+                    new ModifyVpcEndpointServicePayerResponsibilityResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Modifies the permissions for your <a
      * href="https://docs.aws.amazon.com/vpc/latest/userguide/endpoint-service.html">VPC endpoint service</a>. You can
      * add or remove permissions for service consumers (IAM users, IAM roles, and Amazon Web Services accounts) to

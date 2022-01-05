@@ -68,6 +68,9 @@ public class DataCellsFilter implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * A wildcard with exclusions.
      * </p>
+     * <p>
+     * You must specify either a <code>ColumnNames</code> list or the <code>ColumnWildCard</code>.
+     * </p>
      */
     private ColumnWildcard columnWildcard;
 
@@ -345,9 +348,14 @@ public class DataCellsFilter implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * A wildcard with exclusions.
      * </p>
+     * <p>
+     * You must specify either a <code>ColumnNames</code> list or the <code>ColumnWildCard</code>.
+     * </p>
      * 
      * @param columnWildcard
-     *        A wildcard with exclusions.
+     *        A wildcard with exclusions.</p>
+     *        <p>
+     *        You must specify either a <code>ColumnNames</code> list or the <code>ColumnWildCard</code>.
      */
 
     public void setColumnWildcard(ColumnWildcard columnWildcard) {
@@ -358,8 +366,13 @@ public class DataCellsFilter implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * A wildcard with exclusions.
      * </p>
+     * <p>
+     * You must specify either a <code>ColumnNames</code> list or the <code>ColumnWildCard</code>.
+     * </p>
      * 
-     * @return A wildcard with exclusions.
+     * @return A wildcard with exclusions.</p>
+     *         <p>
+     *         You must specify either a <code>ColumnNames</code> list or the <code>ColumnWildCard</code>.
      */
 
     public ColumnWildcard getColumnWildcard() {
@@ -370,9 +383,14 @@ public class DataCellsFilter implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * A wildcard with exclusions.
      * </p>
+     * <p>
+     * You must specify either a <code>ColumnNames</code> list or the <code>ColumnWildCard</code>.
+     * </p>
      * 
      * @param columnWildcard
-     *        A wildcard with exclusions.
+     *        A wildcard with exclusions.</p>
+     *        <p>
+     *        You must specify either a <code>ColumnNames</code> list or the <code>ColumnWildCard</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

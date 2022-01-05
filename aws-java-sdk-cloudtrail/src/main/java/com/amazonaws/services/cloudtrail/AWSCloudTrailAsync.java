@@ -97,6 +97,74 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
 
     /**
      * <p>
+     * Cancels a query if the query is not in a terminated state, such as <code>CANCELLED</code>, <code>FAILED</code> or
+     * <code>FINISHED</code>. You must specify an ARN value for <code>EventDataStore</code>. The ID of the query that
+     * you want to cancel is also required. When you run <code>CancelQuery</code>, the query status might show as
+     * <code>CANCELLED</code> even if the operation is not yet finished.
+     * </p>
+     * 
+     * @param cancelQueryRequest
+     * @return A Java Future containing the result of the CancelQuery operation returned by the service.
+     * @sample AWSCloudTrailAsync.CancelQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/CancelQuery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CancelQueryResult> cancelQueryAsync(CancelQueryRequest cancelQueryRequest);
+
+    /**
+     * <p>
+     * Cancels a query if the query is not in a terminated state, such as <code>CANCELLED</code>, <code>FAILED</code> or
+     * <code>FINISHED</code>. You must specify an ARN value for <code>EventDataStore</code>. The ID of the query that
+     * you want to cancel is also required. When you run <code>CancelQuery</code>, the query status might show as
+     * <code>CANCELLED</code> even if the operation is not yet finished.
+     * </p>
+     * 
+     * @param cancelQueryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CancelQuery operation returned by the service.
+     * @sample AWSCloudTrailAsyncHandler.CancelQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/CancelQuery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CancelQueryResult> cancelQueryAsync(CancelQueryRequest cancelQueryRequest,
+            com.amazonaws.handlers.AsyncHandler<CancelQueryRequest, CancelQueryResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a new event data store.
+     * </p>
+     * 
+     * @param createEventDataStoreRequest
+     * @return A Java Future containing the result of the CreateEventDataStore operation returned by the service.
+     * @sample AWSCloudTrailAsync.CreateEventDataStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/CreateEventDataStore"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateEventDataStoreResult> createEventDataStoreAsync(CreateEventDataStoreRequest createEventDataStoreRequest);
+
+    /**
+     * <p>
+     * Creates a new event data store.
+     * </p>
+     * 
+     * @param createEventDataStoreRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateEventDataStore operation returned by the service.
+     * @sample AWSCloudTrailAsyncHandler.CreateEventDataStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/CreateEventDataStore"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateEventDataStoreResult> createEventDataStoreAsync(CreateEventDataStoreRequest createEventDataStoreRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateEventDataStoreRequest, CreateEventDataStoreResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a trail that specifies the settings for delivery of log data to an Amazon S3 bucket.
      * </p>
      * 
@@ -127,6 +195,53 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
      */
     java.util.concurrent.Future<CreateTrailResult> createTrailAsync(CreateTrailRequest createTrailRequest,
             com.amazonaws.handlers.AsyncHandler<CreateTrailRequest, CreateTrailResult> asyncHandler);
+
+    /**
+     * <p>
+     * Disables the event data store specified by <code>EventDataStore</code>, which accepts an event data store ARN.
+     * After you run <code>DeleteEventDataStore</code>, the event data store is automatically deleted after a wait
+     * period of seven days. <code>TerminationProtectionEnabled</code> must be set to <code>False</code> on the event
+     * data store; this operation cannot work if <code>TerminationProtectionEnabled</code> is <code>True</code>.
+     * </p>
+     * <p>
+     * After you run <code>DeleteEventDataStore</code> on an event data store, you cannot run <code>ListQueries</code>,
+     * <code>DescribeQuery</code>, or <code>GetQueryResults</code> on queries that are using an event data store in a
+     * <code>PENDING_DELETION</code> state.
+     * </p>
+     * 
+     * @param deleteEventDataStoreRequest
+     * @return A Java Future containing the result of the DeleteEventDataStore operation returned by the service.
+     * @sample AWSCloudTrailAsync.DeleteEventDataStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/DeleteEventDataStore"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteEventDataStoreResult> deleteEventDataStoreAsync(DeleteEventDataStoreRequest deleteEventDataStoreRequest);
+
+    /**
+     * <p>
+     * Disables the event data store specified by <code>EventDataStore</code>, which accepts an event data store ARN.
+     * After you run <code>DeleteEventDataStore</code>, the event data store is automatically deleted after a wait
+     * period of seven days. <code>TerminationProtectionEnabled</code> must be set to <code>False</code> on the event
+     * data store; this operation cannot work if <code>TerminationProtectionEnabled</code> is <code>True</code>.
+     * </p>
+     * <p>
+     * After you run <code>DeleteEventDataStore</code> on an event data store, you cannot run <code>ListQueries</code>,
+     * <code>DescribeQuery</code>, or <code>GetQueryResults</code> on queries that are using an event data store in a
+     * <code>PENDING_DELETION</code> state.
+     * </p>
+     * 
+     * @param deleteEventDataStoreRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteEventDataStore operation returned by the service.
+     * @sample AWSCloudTrailAsyncHandler.DeleteEventDataStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/DeleteEventDataStore"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteEventDataStoreResult> deleteEventDataStoreAsync(DeleteEventDataStoreRequest deleteEventDataStoreRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteEventDataStoreRequest, DeleteEventDataStoreResult> asyncHandler);
 
     /**
      * <p>
@@ -164,6 +279,39 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
      */
     java.util.concurrent.Future<DeleteTrailResult> deleteTrailAsync(DeleteTrailRequest deleteTrailRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteTrailRequest, DeleteTrailResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns metadata about a query, including query run time in milliseconds, number of events scanned and matched,
+     * and query status. You must specify an ARN for <code>EventDataStore</code>, and a value for <code>QueryID</code>.
+     * </p>
+     * 
+     * @param describeQueryRequest
+     * @return A Java Future containing the result of the DescribeQuery operation returned by the service.
+     * @sample AWSCloudTrailAsync.DescribeQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/DescribeQuery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeQueryResult> describeQueryAsync(DescribeQueryRequest describeQueryRequest);
+
+    /**
+     * <p>
+     * Returns metadata about a query, including query run time in milliseconds, number of events scanned and matched,
+     * and query status. You must specify an ARN for <code>EventDataStore</code>, and a value for <code>QueryID</code>.
+     * </p>
+     * 
+     * @param describeQueryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeQuery operation returned by the service.
+     * @sample AWSCloudTrailAsyncHandler.DescribeQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/DescribeQuery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeQueryResult> describeQueryAsync(DescribeQueryRequest describeQueryRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeQueryRequest, DescribeQueryResult> asyncHandler);
 
     /**
      * <p>
@@ -212,6 +360,37 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
      */
     java.util.concurrent.Future<DescribeTrailsResult> describeTrailsAsync(
             com.amazonaws.handlers.AsyncHandler<DescribeTrailsRequest, DescribeTrailsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns information about an event data store specified as either an ARN or the ID portion of the ARN.
+     * </p>
+     * 
+     * @param getEventDataStoreRequest
+     * @return A Java Future containing the result of the GetEventDataStore operation returned by the service.
+     * @sample AWSCloudTrailAsync.GetEventDataStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/GetEventDataStore" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetEventDataStoreResult> getEventDataStoreAsync(GetEventDataStoreRequest getEventDataStoreRequest);
+
+    /**
+     * <p>
+     * Returns information about an event data store specified as either an ARN or the ID portion of the ARN.
+     * </p>
+     * 
+     * @param getEventDataStoreRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetEventDataStore operation returned by the service.
+     * @sample AWSCloudTrailAsyncHandler.GetEventDataStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/GetEventDataStore" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetEventDataStoreResult> getEventDataStoreAsync(GetEventDataStoreRequest getEventDataStoreRequest,
+            com.amazonaws.handlers.AsyncHandler<GetEventDataStoreRequest, GetEventDataStoreResult> asyncHandler);
 
     /**
      * <p>
@@ -341,6 +520,39 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
 
     /**
      * <p>
+     * Gets event data results of a query. You must specify the <code>QueryID</code> value returned by the
+     * <code>StartQuery</code> operation, and an ARN for <code>EventDataStore</code>.
+     * </p>
+     * 
+     * @param getQueryResultsRequest
+     * @return A Java Future containing the result of the GetQueryResults operation returned by the service.
+     * @sample AWSCloudTrailAsync.GetQueryResults
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/GetQueryResults" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetQueryResultsResult> getQueryResultsAsync(GetQueryResultsRequest getQueryResultsRequest);
+
+    /**
+     * <p>
+     * Gets event data results of a query. You must specify the <code>QueryID</code> value returned by the
+     * <code>StartQuery</code> operation, and an ARN for <code>EventDataStore</code>.
+     * </p>
+     * 
+     * @param getQueryResultsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetQueryResults operation returned by the service.
+     * @sample AWSCloudTrailAsyncHandler.GetQueryResults
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/GetQueryResults" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetQueryResultsResult> getQueryResultsAsync(GetQueryResultsRequest getQueryResultsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetQueryResultsRequest, GetQueryResultsResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns settings information for a specified trail.
      * </p>
      * 
@@ -411,6 +623,37 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
 
     /**
      * <p>
+     * Returns information about all event data stores in the account, in the current region.
+     * </p>
+     * 
+     * @param listEventDataStoresRequest
+     * @return A Java Future containing the result of the ListEventDataStores operation returned by the service.
+     * @sample AWSCloudTrailAsync.ListEventDataStores
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/ListEventDataStores" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEventDataStoresResult> listEventDataStoresAsync(ListEventDataStoresRequest listEventDataStoresRequest);
+
+    /**
+     * <p>
+     * Returns information about all event data stores in the account, in the current region.
+     * </p>
+     * 
+     * @param listEventDataStoresRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListEventDataStores operation returned by the service.
+     * @sample AWSCloudTrailAsyncHandler.ListEventDataStores
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/ListEventDataStores" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEventDataStoresResult> listEventDataStoresAsync(ListEventDataStoresRequest listEventDataStoresRequest,
+            com.amazonaws.handlers.AsyncHandler<ListEventDataStoresRequest, ListEventDataStoresResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns all public keys whose private keys were used to sign the digest files within the specified time range.
      * The public key is needed to validate digest files that were signed with its corresponding private key.
      * </p>
@@ -472,6 +715,45 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
      */
     java.util.concurrent.Future<ListPublicKeysResult> listPublicKeysAsync(
             com.amazonaws.handlers.AsyncHandler<ListPublicKeysRequest, ListPublicKeysResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a list of queries and query statuses for the past seven days. You must specify an ARN value for
+     * <code>EventDataStore</code>. Optionally, to shorten the list of results, you can specify a time range, formatted
+     * as timestamps, by adding <code>StartTime</code> and <code>EndTime</code> parameters, and a
+     * <code>QueryStatus</code> value. Valid values for <code>QueryStatus</code> include <code>QUEUED</code>,
+     * <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, or <code>CANCELLED</code>.
+     * </p>
+     * 
+     * @param listQueriesRequest
+     * @return A Java Future containing the result of the ListQueries operation returned by the service.
+     * @sample AWSCloudTrailAsync.ListQueries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/ListQueries" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListQueriesResult> listQueriesAsync(ListQueriesRequest listQueriesRequest);
+
+    /**
+     * <p>
+     * Returns a list of queries and query statuses for the past seven days. You must specify an ARN value for
+     * <code>EventDataStore</code>. Optionally, to shorten the list of results, you can specify a time range, formatted
+     * as timestamps, by adding <code>StartTime</code> and <code>EndTime</code> parameters, and a
+     * <code>QueryStatus</code> value. Valid values for <code>QueryStatus</code> include <code>QUEUED</code>,
+     * <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, or <code>CANCELLED</code>.
+     * </p>
+     * 
+     * @param listQueriesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListQueries operation returned by the service.
+     * @sample AWSCloudTrailAsyncHandler.ListQueries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/ListQueries" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListQueriesResult> listQueriesAsync(ListQueriesRequest listQueriesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListQueriesRequest, ListQueriesResult> asyncHandler);
 
     /**
      * <p>
@@ -889,7 +1171,8 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
      * <p>
      * Lets you enable Insights event logging by specifying the Insights selectors that you want to enable on an
      * existing trail. You also use <code>PutInsightSelectors</code> to turn off Insights event logging, by passing an
-     * empty list of insight types. The valid Insights event type in this release is <code>ApiCallRateInsight</code>.
+     * empty list of insight types. The valid Insights event types in this release are <code>ApiErrorRateInsight</code>
+     * and <code>ApiCallRateInsight</code>.
      * </p>
      * 
      * @param putInsightSelectorsRequest
@@ -904,7 +1187,8 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
      * <p>
      * Lets you enable Insights event logging by specifying the Insights selectors that you want to enable on an
      * existing trail. You also use <code>PutInsightSelectors</code> to turn off Insights event logging, by passing an
-     * empty list of insight types. The valid Insights event type in this release is <code>ApiCallRateInsight</code>.
+     * empty list of insight types. The valid Insights event types in this release are <code>ApiErrorRateInsight</code>
+     * and <code>ApiCallRateInsight</code>.
      * </p>
      * 
      * @param putInsightSelectorsRequest
@@ -955,6 +1239,41 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
 
     /**
      * <p>
+     * Restores a deleted event data store specified by <code>EventDataStore</code>, which accepts an event data store
+     * ARN. You can only restore a deleted event data store within the seven-day wait period after deletion. Restoring
+     * an event data store can take several minutes, depending on the size of the event data store.
+     * </p>
+     * 
+     * @param restoreEventDataStoreRequest
+     * @return A Java Future containing the result of the RestoreEventDataStore operation returned by the service.
+     * @sample AWSCloudTrailAsync.RestoreEventDataStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/RestoreEventDataStore"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<RestoreEventDataStoreResult> restoreEventDataStoreAsync(RestoreEventDataStoreRequest restoreEventDataStoreRequest);
+
+    /**
+     * <p>
+     * Restores a deleted event data store specified by <code>EventDataStore</code>, which accepts an event data store
+     * ARN. You can only restore a deleted event data store within the seven-day wait period after deletion. Restoring
+     * an event data store can take several minutes, depending on the size of the event data store.
+     * </p>
+     * 
+     * @param restoreEventDataStoreRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the RestoreEventDataStore operation returned by the service.
+     * @sample AWSCloudTrailAsyncHandler.RestoreEventDataStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/RestoreEventDataStore"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<RestoreEventDataStoreResult> restoreEventDataStoreAsync(RestoreEventDataStoreRequest restoreEventDataStoreRequest,
+            com.amazonaws.handlers.AsyncHandler<RestoreEventDataStoreRequest, RestoreEventDataStoreResult> asyncHandler);
+
+    /**
+     * <p>
      * Starts the recording of Amazon Web Services API calls and log file delivery for a trail. For a trail that is
      * enabled in all regions, this operation must be called from the region in which the trail was created. This
      * operation cannot be called on the shadow trails (replicated trails in other regions) of a trail that is enabled
@@ -991,6 +1310,39 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
      */
     java.util.concurrent.Future<StartLoggingResult> startLoggingAsync(StartLoggingRequest startLoggingRequest,
             com.amazonaws.handlers.AsyncHandler<StartLoggingRequest, StartLoggingResult> asyncHandler);
+
+    /**
+     * <p>
+     * Starts a CloudTrail Lake query. The required <code>QueryStatement</code> parameter provides your SQL query,
+     * enclosed in single quotation marks.
+     * </p>
+     * 
+     * @param startQueryRequest
+     * @return A Java Future containing the result of the StartQuery operation returned by the service.
+     * @sample AWSCloudTrailAsync.StartQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/StartQuery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StartQueryResult> startQueryAsync(StartQueryRequest startQueryRequest);
+
+    /**
+     * <p>
+     * Starts a CloudTrail Lake query. The required <code>QueryStatement</code> parameter provides your SQL query,
+     * enclosed in single quotation marks.
+     * </p>
+     * 
+     * @param startQueryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartQuery operation returned by the service.
+     * @sample AWSCloudTrailAsyncHandler.StartQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/StartQuery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StartQueryResult> startQueryAsync(StartQueryRequest startQueryRequest,
+            com.amazonaws.handlers.AsyncHandler<StartQueryRequest, StartQueryResult> asyncHandler);
 
     /**
      * <p>
@@ -1032,6 +1384,47 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
      */
     java.util.concurrent.Future<StopLoggingResult> stopLoggingAsync(StopLoggingRequest stopLoggingRequest,
             com.amazonaws.handlers.AsyncHandler<StopLoggingRequest, StopLoggingResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates an event data store. The required <code>EventDataStore</code> value is an ARN or the ID portion of the
+     * ARN. Other parameters are optional, but at least one optional parameter must be specified, or CloudTrail throws
+     * an error. <code>RetentionPeriod</code> is in days, and valid values are integers between 90 and 2555. By default,
+     * <code>TerminationProtection</code> is enabled. <code>AdvancedEventSelectors</code> includes or excludes
+     * management and data events in your event data store; for more information about
+     * <code>AdvancedEventSelectors</code>, see <a>PutEventSelectorsRequest$AdvancedEventSelectors</a>.
+     * </p>
+     * 
+     * @param updateEventDataStoreRequest
+     * @return A Java Future containing the result of the UpdateEventDataStore operation returned by the service.
+     * @sample AWSCloudTrailAsync.UpdateEventDataStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/UpdateEventDataStore"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateEventDataStoreResult> updateEventDataStoreAsync(UpdateEventDataStoreRequest updateEventDataStoreRequest);
+
+    /**
+     * <p>
+     * Updates an event data store. The required <code>EventDataStore</code> value is an ARN or the ID portion of the
+     * ARN. Other parameters are optional, but at least one optional parameter must be specified, or CloudTrail throws
+     * an error. <code>RetentionPeriod</code> is in days, and valid values are integers between 90 and 2555. By default,
+     * <code>TerminationProtection</code> is enabled. <code>AdvancedEventSelectors</code> includes or excludes
+     * management and data events in your event data store; for more information about
+     * <code>AdvancedEventSelectors</code>, see <a>PutEventSelectorsRequest$AdvancedEventSelectors</a>.
+     * </p>
+     * 
+     * @param updateEventDataStoreRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateEventDataStore operation returned by the service.
+     * @sample AWSCloudTrailAsyncHandler.UpdateEventDataStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/UpdateEventDataStore"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateEventDataStoreResult> updateEventDataStoreAsync(UpdateEventDataStoreRequest updateEventDataStoreRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateEventDataStoreRequest, UpdateEventDataStoreResult> asyncHandler);
 
     /**
      * <p>

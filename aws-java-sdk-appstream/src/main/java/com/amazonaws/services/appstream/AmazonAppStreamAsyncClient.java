@@ -320,6 +320,41 @@ public class AmazonAppStreamAsyncClient extends AmazonAppStreamClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<AssociateApplicationToEntitlementResult> associateApplicationToEntitlementAsync(
+            AssociateApplicationToEntitlementRequest request) {
+
+        return associateApplicationToEntitlementAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateApplicationToEntitlementResult> associateApplicationToEntitlementAsync(
+            final AssociateApplicationToEntitlementRequest request,
+            final com.amazonaws.handlers.AsyncHandler<AssociateApplicationToEntitlementRequest, AssociateApplicationToEntitlementResult> asyncHandler) {
+        final AssociateApplicationToEntitlementRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<AssociateApplicationToEntitlementResult>() {
+            @Override
+            public AssociateApplicationToEntitlementResult call() throws Exception {
+                AssociateApplicationToEntitlementResult result = null;
+
+                try {
+                    result = executeAssociateApplicationToEntitlement(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<AssociateFleetResult> associateFleetAsync(AssociateFleetRequest request) {
 
         return associateFleetAsync(request, null);
@@ -535,6 +570,39 @@ public class AmazonAppStreamAsyncClient extends AmazonAppStreamClient implements
 
                 try {
                     result = executeCreateDirectoryConfig(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateEntitlementResult> createEntitlementAsync(CreateEntitlementRequest request) {
+
+        return createEntitlementAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateEntitlementResult> createEntitlementAsync(final CreateEntitlementRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateEntitlementRequest, CreateEntitlementResult> asyncHandler) {
+        final CreateEntitlementRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateEntitlementResult>() {
+            @Override
+            public CreateEntitlementResult call() throws Exception {
+                CreateEntitlementResult result = null;
+
+                try {
+                    result = executeCreateEntitlement(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -900,6 +968,39 @@ public class AmazonAppStreamAsyncClient extends AmazonAppStreamClient implements
 
                 try {
                     result = executeDeleteDirectoryConfig(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEntitlementResult> deleteEntitlementAsync(DeleteEntitlementRequest request) {
+
+        return deleteEntitlementAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEntitlementResult> deleteEntitlementAsync(final DeleteEntitlementRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteEntitlementRequest, DeleteEntitlementResult> asyncHandler) {
+        final DeleteEntitlementRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteEntitlementResult>() {
+            @Override
+            public DeleteEntitlementResult call() throws Exception {
+                DeleteEntitlementResult result = null;
+
+                try {
+                    result = executeDeleteEntitlement(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1282,6 +1383,39 @@ public class AmazonAppStreamAsyncClient extends AmazonAppStreamClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeEntitlementsResult> describeEntitlementsAsync(DescribeEntitlementsRequest request) {
+
+        return describeEntitlementsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeEntitlementsResult> describeEntitlementsAsync(final DescribeEntitlementsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeEntitlementsRequest, DescribeEntitlementsResult> asyncHandler) {
+        final DescribeEntitlementsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeEntitlementsResult>() {
+            @Override
+            public DescribeEntitlementsResult call() throws Exception {
+                DescribeEntitlementsResult result = null;
+
+                try {
+                    result = executeDescribeEntitlements(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeFleetsResult> describeFleetsAsync(DescribeFleetsRequest request) {
 
         return describeFleetsAsync(request, null);
@@ -1648,6 +1782,41 @@ public class AmazonAppStreamAsyncClient extends AmazonAppStreamClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<DisassociateApplicationFromEntitlementResult> disassociateApplicationFromEntitlementAsync(
+            DisassociateApplicationFromEntitlementRequest request) {
+
+        return disassociateApplicationFromEntitlementAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateApplicationFromEntitlementResult> disassociateApplicationFromEntitlementAsync(
+            final DisassociateApplicationFromEntitlementRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DisassociateApplicationFromEntitlementRequest, DisassociateApplicationFromEntitlementResult> asyncHandler) {
+        final DisassociateApplicationFromEntitlementRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DisassociateApplicationFromEntitlementResult>() {
+            @Override
+            public DisassociateApplicationFromEntitlementResult call() throws Exception {
+                DisassociateApplicationFromEntitlementResult result = null;
+
+                try {
+                    result = executeDisassociateApplicationFromEntitlement(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DisassociateFleetResult> disassociateFleetAsync(DisassociateFleetRequest request) {
 
         return disassociateFleetAsync(request, null);
@@ -1797,6 +1966,39 @@ public class AmazonAppStreamAsyncClient extends AmazonAppStreamClient implements
 
                 try {
                     result = executeListAssociatedStacks(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEntitledApplicationsResult> listEntitledApplicationsAsync(ListEntitledApplicationsRequest request) {
+
+        return listEntitledApplicationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEntitledApplicationsResult> listEntitledApplicationsAsync(final ListEntitledApplicationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListEntitledApplicationsRequest, ListEntitledApplicationsResult> asyncHandler) {
+        final ListEntitledApplicationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListEntitledApplicationsResult>() {
+            @Override
+            public ListEntitledApplicationsResult call() throws Exception {
+                ListEntitledApplicationsResult result = null;
+
+                try {
+                    result = executeListEntitledApplications(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -2094,6 +2296,39 @@ public class AmazonAppStreamAsyncClient extends AmazonAppStreamClient implements
 
                 try {
                     result = executeUpdateDirectoryConfig(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEntitlementResult> updateEntitlementAsync(UpdateEntitlementRequest request) {
+
+        return updateEntitlementAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEntitlementResult> updateEntitlementAsync(final UpdateEntitlementRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateEntitlementRequest, UpdateEntitlementResult> asyncHandler) {
+        final UpdateEntitlementRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateEntitlementResult>() {
+            @Override
+            public UpdateEntitlementResult call() throws Exception {
+                UpdateEntitlementResult result = null;
+
+                try {
+                    result = executeUpdateEntitlement(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

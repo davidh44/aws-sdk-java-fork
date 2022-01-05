@@ -7286,6 +7286,21 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<ModifyVpcEndpointServicePayerResponsibilityResult> modifyVpcEndpointServicePayerResponsibilityAsync(
+            ModifyVpcEndpointServicePayerResponsibilityRequest request) {
+
+        return modifyVpcEndpointServicePayerResponsibilityAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyVpcEndpointServicePayerResponsibilityResult> modifyVpcEndpointServicePayerResponsibilityAsync(
+            ModifyVpcEndpointServicePayerResponsibilityRequest request,
+            com.amazonaws.handlers.AsyncHandler<ModifyVpcEndpointServicePayerResponsibilityRequest, ModifyVpcEndpointServicePayerResponsibilityResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ModifyVpcEndpointServicePermissionsResult> modifyVpcEndpointServicePermissionsAsync(
             ModifyVpcEndpointServicePermissionsRequest request) {
 

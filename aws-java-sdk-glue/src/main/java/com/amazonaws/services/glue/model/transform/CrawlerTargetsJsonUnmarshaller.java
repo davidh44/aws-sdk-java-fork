@@ -78,6 +78,12 @@ public class CrawlerTargetsJsonUnmarshaller implements Unmarshaller<CrawlerTarge
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("DeltaTargets", targetDepth)) {
+                    context.nextToken();
+                    crawlerTargets.setDeltaTargets(new ListUnmarshaller<DeltaTarget>(DeltaTargetJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

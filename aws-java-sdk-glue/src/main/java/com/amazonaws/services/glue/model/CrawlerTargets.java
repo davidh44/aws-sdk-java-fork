@@ -58,6 +58,12 @@ public class CrawlerTargets implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<CatalogTarget> catalogTargets;
+    /**
+     * <p>
+     * Specifies Delta data store targets.
+     * </p>
+     */
+    private java.util.List<DeltaTarget> deltaTargets;
 
     /**
      * <p>
@@ -410,6 +416,76 @@ public class CrawlerTargets implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Specifies Delta data store targets.
+     * </p>
+     * 
+     * @return Specifies Delta data store targets.
+     */
+
+    public java.util.List<DeltaTarget> getDeltaTargets() {
+        return deltaTargets;
+    }
+
+    /**
+     * <p>
+     * Specifies Delta data store targets.
+     * </p>
+     * 
+     * @param deltaTargets
+     *        Specifies Delta data store targets.
+     */
+
+    public void setDeltaTargets(java.util.Collection<DeltaTarget> deltaTargets) {
+        if (deltaTargets == null) {
+            this.deltaTargets = null;
+            return;
+        }
+
+        this.deltaTargets = new java.util.ArrayList<DeltaTarget>(deltaTargets);
+    }
+
+    /**
+     * <p>
+     * Specifies Delta data store targets.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setDeltaTargets(java.util.Collection)} or {@link #withDeltaTargets(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param deltaTargets
+     *        Specifies Delta data store targets.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CrawlerTargets withDeltaTargets(DeltaTarget... deltaTargets) {
+        if (this.deltaTargets == null) {
+            setDeltaTargets(new java.util.ArrayList<DeltaTarget>(deltaTargets.length));
+        }
+        for (DeltaTarget ele : deltaTargets) {
+            this.deltaTargets.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies Delta data store targets.
+     * </p>
+     * 
+     * @param deltaTargets
+     *        Specifies Delta data store targets.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CrawlerTargets withDeltaTargets(java.util.Collection<DeltaTarget> deltaTargets) {
+        setDeltaTargets(deltaTargets);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -430,7 +506,9 @@ public class CrawlerTargets implements Serializable, Cloneable, StructuredPojo {
         if (getDynamoDBTargets() != null)
             sb.append("DynamoDBTargets: ").append(getDynamoDBTargets()).append(",");
         if (getCatalogTargets() != null)
-            sb.append("CatalogTargets: ").append(getCatalogTargets());
+            sb.append("CatalogTargets: ").append(getCatalogTargets()).append(",");
+        if (getDeltaTargets() != null)
+            sb.append("DeltaTargets: ").append(getDeltaTargets());
         sb.append("}");
         return sb.toString();
     }
@@ -465,6 +543,10 @@ public class CrawlerTargets implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getCatalogTargets() != null && other.getCatalogTargets().equals(this.getCatalogTargets()) == false)
             return false;
+        if (other.getDeltaTargets() == null ^ this.getDeltaTargets() == null)
+            return false;
+        if (other.getDeltaTargets() != null && other.getDeltaTargets().equals(this.getDeltaTargets()) == false)
+            return false;
         return true;
     }
 
@@ -478,6 +560,7 @@ public class CrawlerTargets implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getMongoDBTargets() == null) ? 0 : getMongoDBTargets().hashCode());
         hashCode = prime * hashCode + ((getDynamoDBTargets() == null) ? 0 : getDynamoDBTargets().hashCode());
         hashCode = prime * hashCode + ((getCatalogTargets() == null) ? 0 : getCatalogTargets().hashCode());
+        hashCode = prime * hashCode + ((getDeltaTargets() == null) ? 0 : getDeltaTargets().hashCode());
         return hashCode;
     }
 

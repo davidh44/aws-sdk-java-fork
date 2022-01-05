@@ -3647,6 +3647,85 @@ public interface AWSGlueAsync extends AWSGlue {
             com.amazonaws.handlers.AsyncHandler<GetTriggersRequest, GetTriggersResult> asyncHandler);
 
     /**
+     * @param getUnfilteredPartitionMetadataRequest
+     * @return A Java Future containing the result of the GetUnfilteredPartitionMetadata operation returned by the
+     *         service.
+     * @sample AWSGlueAsync.GetUnfilteredPartitionMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetUnfilteredPartitionMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetUnfilteredPartitionMetadataResult> getUnfilteredPartitionMetadataAsync(
+            GetUnfilteredPartitionMetadataRequest getUnfilteredPartitionMetadataRequest);
+
+    /**
+     * @param getUnfilteredPartitionMetadataRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetUnfilteredPartitionMetadata operation returned by the
+     *         service.
+     * @sample AWSGlueAsyncHandler.GetUnfilteredPartitionMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetUnfilteredPartitionMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetUnfilteredPartitionMetadataResult> getUnfilteredPartitionMetadataAsync(
+            GetUnfilteredPartitionMetadataRequest getUnfilteredPartitionMetadataRequest,
+            com.amazonaws.handlers.AsyncHandler<GetUnfilteredPartitionMetadataRequest, GetUnfilteredPartitionMetadataResult> asyncHandler);
+
+    /**
+     * @param getUnfilteredPartitionsMetadataRequest
+     * @return A Java Future containing the result of the GetUnfilteredPartitionsMetadata operation returned by the
+     *         service.
+     * @sample AWSGlueAsync.GetUnfilteredPartitionsMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetUnfilteredPartitionsMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetUnfilteredPartitionsMetadataResult> getUnfilteredPartitionsMetadataAsync(
+            GetUnfilteredPartitionsMetadataRequest getUnfilteredPartitionsMetadataRequest);
+
+    /**
+     * @param getUnfilteredPartitionsMetadataRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetUnfilteredPartitionsMetadata operation returned by the
+     *         service.
+     * @sample AWSGlueAsyncHandler.GetUnfilteredPartitionsMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetUnfilteredPartitionsMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetUnfilteredPartitionsMetadataResult> getUnfilteredPartitionsMetadataAsync(
+            GetUnfilteredPartitionsMetadataRequest getUnfilteredPartitionsMetadataRequest,
+            com.amazonaws.handlers.AsyncHandler<GetUnfilteredPartitionsMetadataRequest, GetUnfilteredPartitionsMetadataResult> asyncHandler);
+
+    /**
+     * @param getUnfilteredTableMetadataRequest
+     * @return A Java Future containing the result of the GetUnfilteredTableMetadata operation returned by the service.
+     * @sample AWSGlueAsync.GetUnfilteredTableMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetUnfilteredTableMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetUnfilteredTableMetadataResult> getUnfilteredTableMetadataAsync(
+            GetUnfilteredTableMetadataRequest getUnfilteredTableMetadataRequest);
+
+    /**
+     * @param getUnfilteredTableMetadataRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetUnfilteredTableMetadata operation returned by the service.
+     * @sample AWSGlueAsyncHandler.GetUnfilteredTableMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetUnfilteredTableMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetUnfilteredTableMetadataResult> getUnfilteredTableMetadataAsync(
+            GetUnfilteredTableMetadataRequest getUnfilteredTableMetadataRequest,
+            com.amazonaws.handlers.AsyncHandler<GetUnfilteredTableMetadataRequest, GetUnfilteredTableMetadataResult> asyncHandler);
+
+    /**
      * <p>
      * Retrieves a specified function definition from the Data Catalog.
      * </p>

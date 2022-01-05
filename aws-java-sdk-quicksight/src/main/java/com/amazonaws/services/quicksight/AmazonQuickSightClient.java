@@ -501,7 +501,7 @@ public class AmazonQuickSightClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Creates a dataset.
+     * Creates a dataset. This operation doesn't support datasets that include uploaded files as a source.
      * </p>
      * 
      * @param createDataSetRequest
@@ -1044,7 +1044,9 @@ public class AmazonQuickSightClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Creates and starts a new SPICE ingestion on a dataset
+     * Creates and starts a new SPICE ingestion for a dataset. You can manually refresh datasets in an Enterprise
+     * edition account 32 times in a 24-hour period. You can manually refresh datasets in a Standard edition account 8
+     * times in a 24-hour period. Each 24-hour period is measured starting 24 hours before the current date and time.
      * </p>
      * <p>
      * Any ingestions operating on tagged datasets inherit the same tags automatically for use in access control. For an
@@ -3250,7 +3252,7 @@ public class AmazonQuickSightClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Describes a dataset.
+     * Describes a dataset. This operation doesn't support datasets that include uploaded files as a source.
      * </p>
      * 
      * @param describeDataSetRequest
@@ -7723,7 +7725,7 @@ public class AmazonQuickSightClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Updates a dataset.
+     * Updates a dataset. This operation doesn't support datasets that include uploaded files as a source.
      * </p>
      * 
      * @param updateDataSetRequest

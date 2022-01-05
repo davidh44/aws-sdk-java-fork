@@ -771,6 +771,76 @@ public class AWSLakeFormationAsyncClient extends AWSLakeFormationClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<GetTemporaryGluePartitionCredentialsResult> getTemporaryGluePartitionCredentialsAsync(
+            GetTemporaryGluePartitionCredentialsRequest request) {
+
+        return getTemporaryGluePartitionCredentialsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTemporaryGluePartitionCredentialsResult> getTemporaryGluePartitionCredentialsAsync(
+            final GetTemporaryGluePartitionCredentialsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetTemporaryGluePartitionCredentialsRequest, GetTemporaryGluePartitionCredentialsResult> asyncHandler) {
+        final GetTemporaryGluePartitionCredentialsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetTemporaryGluePartitionCredentialsResult>() {
+            @Override
+            public GetTemporaryGluePartitionCredentialsResult call() throws Exception {
+                GetTemporaryGluePartitionCredentialsResult result = null;
+
+                try {
+                    result = executeGetTemporaryGluePartitionCredentials(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTemporaryGlueTableCredentialsResult> getTemporaryGlueTableCredentialsAsync(
+            GetTemporaryGlueTableCredentialsRequest request) {
+
+        return getTemporaryGlueTableCredentialsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTemporaryGlueTableCredentialsResult> getTemporaryGlueTableCredentialsAsync(
+            final GetTemporaryGlueTableCredentialsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetTemporaryGlueTableCredentialsRequest, GetTemporaryGlueTableCredentialsResult> asyncHandler) {
+        final GetTemporaryGlueTableCredentialsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetTemporaryGlueTableCredentialsResult>() {
+            @Override
+            public GetTemporaryGlueTableCredentialsResult call() throws Exception {
+                GetTemporaryGlueTableCredentialsResult result = null;
+
+                try {
+                    result = executeGetTemporaryGlueTableCredentials(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetWorkUnitResultsResult> getWorkUnitResultsAsync(GetWorkUnitResultsRequest request) {
 
         return getWorkUnitResultsAsync(request, null);

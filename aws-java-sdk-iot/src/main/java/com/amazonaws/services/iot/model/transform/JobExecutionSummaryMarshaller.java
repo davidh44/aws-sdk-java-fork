@@ -37,6 +37,8 @@ public class JobExecutionSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lastUpdatedAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<Long> EXECUTIONNUMBER_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("executionNumber").build();
+    private static final MarshallingInfo<Integer> RETRYATTEMPT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("retryAttempt").build();
 
     private static final JobExecutionSummaryMarshaller instance = new JobExecutionSummaryMarshaller();
 
@@ -59,6 +61,7 @@ public class JobExecutionSummaryMarshaller {
             protocolMarshaller.marshall(jobExecutionSummary.getStartedAt(), STARTEDAT_BINDING);
             protocolMarshaller.marshall(jobExecutionSummary.getLastUpdatedAt(), LASTUPDATEDAT_BINDING);
             protocolMarshaller.marshall(jobExecutionSummary.getExecutionNumber(), EXECUTIONNUMBER_BINDING);
+            protocolMarshaller.marshall(jobExecutionSummary.getRetryAttempt(), RETRYATTEMPT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

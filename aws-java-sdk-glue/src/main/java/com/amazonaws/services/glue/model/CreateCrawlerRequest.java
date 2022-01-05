@@ -97,6 +97,8 @@ public class CreateCrawlerRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private LineageConfiguration lineageConfiguration;
+
+    private LakeFormationConfiguration lakeFormationConfiguration;
     /**
      * <p>
      * Crawler configuration information. This versioned JSON string allows users to specify aspects of a crawler's
@@ -636,6 +638,32 @@ public class CreateCrawlerRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * @param lakeFormationConfiguration
+     */
+
+    public void setLakeFormationConfiguration(LakeFormationConfiguration lakeFormationConfiguration) {
+        this.lakeFormationConfiguration = lakeFormationConfiguration;
+    }
+
+    /**
+     * @return
+     */
+
+    public LakeFormationConfiguration getLakeFormationConfiguration() {
+        return this.lakeFormationConfiguration;
+    }
+
+    /**
+     * @param lakeFormationConfiguration
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateCrawlerRequest withLakeFormationConfiguration(LakeFormationConfiguration lakeFormationConfiguration) {
+        setLakeFormationConfiguration(lakeFormationConfiguration);
+        return this;
+    }
+
+    /**
      * <p>
      * Crawler configuration information. This versioned JSON string allows users to specify aspects of a crawler's
      * behavior. For more information, see <a
@@ -844,6 +872,8 @@ public class CreateCrawlerRequest extends com.amazonaws.AmazonWebServiceRequest 
             sb.append("RecrawlPolicy: ").append(getRecrawlPolicy()).append(",");
         if (getLineageConfiguration() != null)
             sb.append("LineageConfiguration: ").append(getLineageConfiguration()).append(",");
+        if (getLakeFormationConfiguration() != null)
+            sb.append("LakeFormationConfiguration: ").append(getLakeFormationConfiguration()).append(",");
         if (getConfiguration() != null)
             sb.append("Configuration: ").append(getConfiguration()).append(",");
         if (getCrawlerSecurityConfiguration() != null)
@@ -908,6 +938,10 @@ public class CreateCrawlerRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getLineageConfiguration() != null && other.getLineageConfiguration().equals(this.getLineageConfiguration()) == false)
             return false;
+        if (other.getLakeFormationConfiguration() == null ^ this.getLakeFormationConfiguration() == null)
+            return false;
+        if (other.getLakeFormationConfiguration() != null && other.getLakeFormationConfiguration().equals(this.getLakeFormationConfiguration()) == false)
+            return false;
         if (other.getConfiguration() == null ^ this.getConfiguration() == null)
             return false;
         if (other.getConfiguration() != null && other.getConfiguration().equals(this.getConfiguration()) == false)
@@ -939,6 +973,7 @@ public class CreateCrawlerRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getSchemaChangePolicy() == null) ? 0 : getSchemaChangePolicy().hashCode());
         hashCode = prime * hashCode + ((getRecrawlPolicy() == null) ? 0 : getRecrawlPolicy().hashCode());
         hashCode = prime * hashCode + ((getLineageConfiguration() == null) ? 0 : getLineageConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getLakeFormationConfiguration() == null) ? 0 : getLakeFormationConfiguration().hashCode());
         hashCode = prime * hashCode + ((getConfiguration() == null) ? 0 : getConfiguration().hashCode());
         hashCode = prime * hashCode + ((getCrawlerSecurityConfiguration() == null) ? 0 : getCrawlerSecurityConfiguration().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
