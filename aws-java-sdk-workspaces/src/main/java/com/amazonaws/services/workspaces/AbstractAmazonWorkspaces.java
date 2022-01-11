@@ -58,6 +58,11 @@ public class AbstractAmazonWorkspaces implements AmazonWorkspaces {
     }
 
     @Override
+    public CreateConnectClientAddInResult createConnectClientAddIn(CreateConnectClientAddInRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateConnectionAliasResult createConnectionAlias(CreateConnectionAliasRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -84,6 +89,11 @@ public class AbstractAmazonWorkspaces implements AmazonWorkspaces {
 
     @Override
     public CreateWorkspacesResult createWorkspaces(CreateWorkspacesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteConnectClientAddInResult deleteConnectClientAddIn(DeleteConnectClientAddInRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -129,6 +139,11 @@ public class AbstractAmazonWorkspaces implements AmazonWorkspaces {
 
     @Override
     public DescribeClientPropertiesResult describeClientProperties(DescribeClientPropertiesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeConnectClientAddInsResult describeConnectClientAddIns(DescribeConnectClientAddInsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -299,6 +314,11 @@ public class AbstractAmazonWorkspaces implements AmazonWorkspaces {
 
     @Override
     public TerminateWorkspacesResult terminateWorkspaces(TerminateWorkspacesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateConnectClientAddInResult updateConnectClientAddIn(UpdateConnectClientAddInRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

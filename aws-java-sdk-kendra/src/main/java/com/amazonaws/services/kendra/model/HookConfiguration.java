@@ -21,10 +21,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * Provides the configuration information for invoking a Lambda function in Lambda to alter document metadata and
  * content when ingesting documents into Amazon Kendra. You can configure your Lambda function using <a
- * href="https://docs.aws.amazon.com/kendra/latest/dg/API_PreExtractionHookConfiguration.html"
+ * href="https://docs.aws.amazon.com/kendra/latest/dg/API_CustomDocumentEnrichmentConfiguration.html"
  * >PreExtractionHookConfiguration</a> if you want to apply advanced alterations on the original or raw documents. If
  * you want to apply advanced alterations on the Amazon Kendra structured documents, you must configure your Lambda
- * function using <a href="https://docs.aws.amazon.com/kendra/latest/dg/API_PostExtractionHookConfiguration.html">
+ * function using <a href="https://docs.aws.amazon.com/kendra/latest/dg/API_CustomDocumentEnrichmentConfiguration.html">
  * PostExtractionHookConfiguration</a>. You can only invoke one Lambda function. However, this function can invoke other
  * functions it requires.
  * </p>

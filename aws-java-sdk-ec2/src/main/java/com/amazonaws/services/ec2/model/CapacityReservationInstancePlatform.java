@@ -30,7 +30,13 @@ public enum CapacityReservationInstancePlatform {
     WindowsWithSQLServerWeb("Windows with SQL Server Web"),
     LinuxWithSQLServerStandard("Linux with SQL Server Standard"),
     LinuxWithSQLServerWeb("Linux with SQL Server Web"),
-    LinuxWithSQLServerEnterprise("Linux with SQL Server Enterprise");
+    LinuxWithSQLServerEnterprise("Linux with SQL Server Enterprise"),
+    RHELWithSQLServerStandard("RHEL with SQL Server Standard"),
+    RHELWithSQLServerEnterprise("RHEL with SQL Server Enterprise"),
+    RHELWithSQLServerWeb("RHEL with SQL Server Web"),
+    RHELWithHA("RHEL with HA"),
+    RHELWithHAAndSQLServerStandard("RHEL with HA and SQL Server Standard"),
+    RHELWithHAAndSQLServerEnterprise("RHEL with HA and SQL Server Enterprise");
 
     private String value;
 

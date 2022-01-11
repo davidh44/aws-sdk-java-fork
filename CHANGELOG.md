@@ -1,3 +1,32 @@
+# __1.12.138__ __2022-01-11__
+## __AWS Cost Explorer Service__
+  - ### Features
+    - Doc only update for Cost Explorer API that fixes missing clarifications for MatchOptions definitions
+
+## __AWS IoT Events Data__
+  - ### Features
+    - This release provides documentation updates for Timer.timestamp in the IoT Events API Reference Guide.
+
+## __AWSKendraFrontendService__
+  - ### Features
+    - Amazon Kendra now supports advanced query language and query-less search.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - EC2 Capacity Reservations now supports RHEL instance platforms (RHEL with SQL Server Standard, RHEL with SQL Server Enterprise, RHEL with SQL Server Web, RHEL with HA, RHEL with HA and SQL Server Standard, RHEL with HA and SQL Server Enterprise)
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - This release adds the db-proxy event type to support subscribing to RDS Proxy events.
+
+## __Amazon WorkSpaces__
+  - ### Features
+    - Introducing new APIs for Workspaces audio optimization with Amazon Connect: CreateConnectClientAddIn, DescribeConnectClientAddIns, UpdateConnectClientAddIn and DeleteConnectClientAddIn.
+
+## __FinSpace Public API__
+  - ### Features
+    - Documentation updates for FinSpace.
+
 # __1.12.137__ __2022-01-10__
 ## __AWS Compute Optimizer__
   - ### Features

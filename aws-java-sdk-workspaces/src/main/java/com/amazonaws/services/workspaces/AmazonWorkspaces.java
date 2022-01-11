@@ -231,6 +231,33 @@ public interface AmazonWorkspaces {
 
     /**
      * <p>
+     * Creates a client-add-in for Amazon Connect within a directory. You can create only one Amazon Connect client
+     * add-in within a directory.
+     * </p>
+     * <p>
+     * This client add-in allows WorkSpaces users to seamlessly connect to Amazon Connect.
+     * </p>
+     * 
+     * @param createConnectClientAddInRequest
+     * @return Result of the CreateConnectClientAddIn operation returned by the service.
+     * @throws InvalidParameterValuesException
+     *         One or more parameter values are not valid.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ResourceCreationFailedException
+     *         The resource could not be created.
+     * @throws ResourceAlreadyExistsException
+     *         The specified resource already exists.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @sample AmazonWorkspaces.CreateConnectClientAddIn
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/CreateConnectClientAddIn"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateConnectClientAddInResult createConnectClientAddIn(CreateConnectClientAddInRequest createConnectClientAddInRequest);
+
+    /**
+     * <p>
      * Creates the specified connection alias for use with cross-Region redirection. For more information, see <a
      * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/cross-region-redirection.html"> Cross-Region
      * Redirection for Amazon WorkSpaces</a>.
@@ -410,6 +437,25 @@ public interface AmazonWorkspaces {
      *      API Documentation</a>
      */
     CreateWorkspacesResult createWorkspaces(CreateWorkspacesRequest createWorkspacesRequest);
+
+    /**
+     * <p>
+     * Deletes a client-add-in for Amazon Connect that is configured within a directory.
+     * </p>
+     * 
+     * @param deleteConnectClientAddInRequest
+     * @return Result of the DeleteConnectClientAddIn operation returned by the service.
+     * @throws InvalidParameterValuesException
+     *         One or more parameter values are not valid.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @sample AmazonWorkspaces.DeleteConnectClientAddIn
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DeleteConnectClientAddIn"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteConnectClientAddInResult deleteConnectClientAddIn(DeleteConnectClientAddInRequest deleteConnectClientAddInRequest);
 
     /**
      * <p>
@@ -626,6 +672,25 @@ public interface AmazonWorkspaces {
      *      target="_top">AWS API Documentation</a>
      */
     DescribeClientPropertiesResult describeClientProperties(DescribeClientPropertiesRequest describeClientPropertiesRequest);
+
+    /**
+     * <p>
+     * Retrieves a list of Amazon Connect client add-ins that have been created.
+     * </p>
+     * 
+     * @param describeConnectClientAddInsRequest
+     * @return Result of the DescribeConnectClientAddIns operation returned by the service.
+     * @throws InvalidParameterValuesException
+     *         One or more parameter values are not valid.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @sample AmazonWorkspaces.DescribeConnectClientAddIns
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeConnectClientAddIns"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeConnectClientAddInsResult describeConnectClientAddIns(DescribeConnectClientAddInsRequest describeConnectClientAddInsRequest);
 
     /**
      * <p>
@@ -1372,6 +1437,26 @@ public interface AmazonWorkspaces {
      *      API Documentation</a>
      */
     TerminateWorkspacesResult terminateWorkspaces(TerminateWorkspacesRequest terminateWorkspacesRequest);
+
+    /**
+     * <p>
+     * Updates a Amazon Connect client add-in. Use this action to update the name and endpoint URL of a Amazon Connect
+     * client add-in.
+     * </p>
+     * 
+     * @param updateConnectClientAddInRequest
+     * @return Result of the UpdateConnectClientAddIn operation returned by the service.
+     * @throws InvalidParameterValuesException
+     *         One or more parameter values are not valid.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @sample AmazonWorkspaces.UpdateConnectClientAddIn
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/UpdateConnectClientAddIn"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateConnectClientAddInResult updateConnectClientAddIn(UpdateConnectClientAddInRequest updateConnectClientAddInRequest);
 
     /**
      * <p>

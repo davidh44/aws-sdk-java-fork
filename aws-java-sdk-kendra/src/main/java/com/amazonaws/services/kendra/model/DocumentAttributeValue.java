@@ -52,7 +52,7 @@ public class DocumentAttributeValue implements Serializable, Cloneable, Structur
      * </p>
      * <p>
      * It is important for the time zone to be included in the ISO 8601 date-time format. For example,
-     * 20120325T123010+01:00 is the ISO 8601 date-time format for March 25th 2012 at 12:30PM (plus 10 seconds) in
+     * 2012-03-25T12:30:10+01:00 is the ISO 8601 date-time format for March 25th 2012 at 12:30PM (plus 10 seconds) in
      * Central European Time.
      * </p>
      */
@@ -214,7 +214,7 @@ public class DocumentAttributeValue implements Serializable, Cloneable, Structur
      * </p>
      * <p>
      * It is important for the time zone to be included in the ISO 8601 date-time format. For example,
-     * 20120325T123010+01:00 is the ISO 8601 date-time format for March 25th 2012 at 12:30PM (plus 10 seconds) in
+     * 2012-03-25T12:30:10+01:00 is the ISO 8601 date-time format for March 25th 2012 at 12:30PM (plus 10 seconds) in
      * Central European Time.
      * </p>
      * 
@@ -222,8 +222,8 @@ public class DocumentAttributeValue implements Serializable, Cloneable, Structur
      *        A date expressed as an ISO 8601 string.</p>
      *        <p>
      *        It is important for the time zone to be included in the ISO 8601 date-time format. For example,
-     *        20120325T123010+01:00 is the ISO 8601 date-time format for March 25th 2012 at 12:30PM (plus 10 seconds) in
-     *        Central European Time.
+     *        2012-03-25T12:30:10+01:00 is the ISO 8601 date-time format for March 25th 2012 at 12:30PM (plus 10
+     *        seconds) in Central European Time.
      */
 
     public void setDateValue(java.util.Date dateValue) {
@@ -236,15 +236,15 @@ public class DocumentAttributeValue implements Serializable, Cloneable, Structur
      * </p>
      * <p>
      * It is important for the time zone to be included in the ISO 8601 date-time format. For example,
-     * 20120325T123010+01:00 is the ISO 8601 date-time format for March 25th 2012 at 12:30PM (plus 10 seconds) in
+     * 2012-03-25T12:30:10+01:00 is the ISO 8601 date-time format for March 25th 2012 at 12:30PM (plus 10 seconds) in
      * Central European Time.
      * </p>
      * 
      * @return A date expressed as an ISO 8601 string.</p>
      *         <p>
      *         It is important for the time zone to be included in the ISO 8601 date-time format. For example,
-     *         20120325T123010+01:00 is the ISO 8601 date-time format for March 25th 2012 at 12:30PM (plus 10 seconds)
-     *         in Central European Time.
+     *         2012-03-25T12:30:10+01:00 is the ISO 8601 date-time format for March 25th 2012 at 12:30PM (plus 10
+     *         seconds) in Central European Time.
      */
 
     public java.util.Date getDateValue() {
@@ -257,7 +257,7 @@ public class DocumentAttributeValue implements Serializable, Cloneable, Structur
      * </p>
      * <p>
      * It is important for the time zone to be included in the ISO 8601 date-time format. For example,
-     * 20120325T123010+01:00 is the ISO 8601 date-time format for March 25th 2012 at 12:30PM (plus 10 seconds) in
+     * 2012-03-25T12:30:10+01:00 is the ISO 8601 date-time format for March 25th 2012 at 12:30PM (plus 10 seconds) in
      * Central European Time.
      * </p>
      * 
@@ -265,8 +265,8 @@ public class DocumentAttributeValue implements Serializable, Cloneable, Structur
      *        A date expressed as an ISO 8601 string.</p>
      *        <p>
      *        It is important for the time zone to be included in the ISO 8601 date-time format. For example,
-     *        20120325T123010+01:00 is the ISO 8601 date-time format for March 25th 2012 at 12:30PM (plus 10 seconds) in
-     *        Central European Time.
+     *        2012-03-25T12:30:10+01:00 is the ISO 8601 date-time format for March 25th 2012 at 12:30PM (plus 10
+     *        seconds) in Central European Time.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

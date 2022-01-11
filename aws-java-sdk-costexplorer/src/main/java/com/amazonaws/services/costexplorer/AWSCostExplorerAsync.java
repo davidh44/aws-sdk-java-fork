@@ -973,6 +973,15 @@ public interface AWSCostExplorerAsync extends AWSCostExplorer {
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * <code>GetSavingsPlansCoverage</code> doesn't support filtering by tags. <code>GetSavingsPlansCoverage</code> also
+     * doesn't support the <code>OR</code> operator between filter dimensions. For the full request syntax with
+     * supported parameters, see <a href=
+     * "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetSavingsPlansCoverage.html#API_GetSavingsPlansCoverage_Examples"
+     * >Examples</a>.
+     * </p>
+     * </note>
      * <p>
      * To determine valid values for a dimension, use the <code>GetDimensionValues</code> operation.
      * </p>
@@ -1014,6 +1023,15 @@ public interface AWSCostExplorerAsync extends AWSCostExplorer {
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * <code>GetSavingsPlansCoverage</code> doesn't support filtering by tags. <code>GetSavingsPlansCoverage</code> also
+     * doesn't support the <code>OR</code> operator between filter dimensions. For the full request syntax with
+     * supported parameters, see <a href=
+     * "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetSavingsPlansCoverage.html#API_GetSavingsPlansCoverage_Examples"
+     * >Examples</a>.
+     * </p>
+     * </note>
      * <p>
      * To determine valid values for a dimension, use the <code>GetDimensionValues</code> operation.
      * </p>
@@ -1076,6 +1094,13 @@ public interface AWSCostExplorerAsync extends AWSCostExplorer {
      * <p>
      * You cannot group by any dimension values for <code>GetSavingsPlansUtilization</code>.
      * </p>
+     * <p>
+     * <code>GetSavingsPlansUtilization</code> doesn't support filtering by tags.
+     * <code>GetSavingsPlansUtilization</code> also doesn't support the <code>OR</code> operator between filter
+     * dimensions. For the full request syntax with supported parameters, see <a href=
+     * "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetSavingsPlansUtilization.html#API_GetSavingsPlansUtilization_Examples"
+     * >Examples</a>.
+     * </p>
      * </note>
      * 
      * @param getSavingsPlansUtilizationRequest
@@ -1096,6 +1121,13 @@ public interface AWSCostExplorerAsync extends AWSCostExplorer {
      * <note>
      * <p>
      * You cannot group by any dimension values for <code>GetSavingsPlansUtilization</code>.
+     * </p>
+     * <p>
+     * <code>GetSavingsPlansUtilization</code> doesn't support filtering by tags.
+     * <code>GetSavingsPlansUtilization</code> also doesn't support the <code>OR</code> operator between filter
+     * dimensions. For the full request syntax with supported parameters, see <a href=
+     * "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetSavingsPlansUtilization.html#API_GetSavingsPlansUtilization_Examples"
+     * >Examples</a>.
      * </p>
      * </note>
      * 
@@ -1125,6 +1157,13 @@ public interface AWSCostExplorerAsync extends AWSCostExplorer {
      * <p>
      * <code>GetSavingsPlanUtilizationDetails</code> internally groups data by <code>SavingsPlansArn</code>.
      * </p>
+     * <p>
+     * <code>GetSavingsPlansUtilizationDetails</code> doesn't support filtering by tags.
+     * <code>GetSavingsPlansUtilizationDetails</code> also doesn't support the <code>OR</code> operator between filter
+     * dimensions. For the full request syntax with supported parameters, see <a href=
+     * "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetSavingsPlansUtilizationDetails.html#API_GetSavingsPlansUtilizationDetails_Examples"
+     * >Examples</a>.
+     * </p>
      * </note>
      * 
      * @param getSavingsPlansUtilizationDetailsRequest
@@ -1148,6 +1187,13 @@ public interface AWSCostExplorerAsync extends AWSCostExplorer {
      * <note>
      * <p>
      * <code>GetSavingsPlanUtilizationDetails</code> internally groups data by <code>SavingsPlansArn</code>.
+     * </p>
+     * <p>
+     * <code>GetSavingsPlansUtilizationDetails</code> doesn't support filtering by tags.
+     * <code>GetSavingsPlansUtilizationDetails</code> also doesn't support the <code>OR</code> operator between filter
+     * dimensions. For the full request syntax with supported parameters, see <a href=
+     * "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetSavingsPlansUtilizationDetails.html#API_GetSavingsPlansUtilizationDetails_Examples"
+     * >Examples</a>.
      * </p>
      * </note>
      * 

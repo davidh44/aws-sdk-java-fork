@@ -718,6 +718,9 @@ public class AWSkendraClient extends AmazonWebServiceClient implements AWSkendra
      * <p>
      * Creates an new set of frequently asked question (FAQ) questions and answers.
      * </p>
+     * <p>
+     * Adding FAQs to an index is an asynchronous operation.
+     * </p>
      * 
      * @param createFaqRequest
      * @return Result of the CreateFaq operation returned by the service.

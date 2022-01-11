@@ -28,7 +28,7 @@ public class CreateDatasetRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A token used to ensure idempotency.
+     * A token that ensures idempotency. This token expires in 10 minutes.
      * </p>
      */
     private String clientToken;
@@ -89,11 +89,11 @@ public class CreateDatasetRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A token used to ensure idempotency.
+     * A token that ensures idempotency. This token expires in 10 minutes.
      * </p>
      * 
      * @param clientToken
-     *        A token used to ensure idempotency.
+     *        A token that ensures idempotency. This token expires in 10 minutes.
      */
 
     public void setClientToken(String clientToken) {
@@ -102,10 +102,10 @@ public class CreateDatasetRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A token used to ensure idempotency.
+     * A token that ensures idempotency. This token expires in 10 minutes.
      * </p>
      * 
-     * @return A token used to ensure idempotency.
+     * @return A token that ensures idempotency. This token expires in 10 minutes.
      */
 
     public String getClientToken() {
@@ -114,11 +114,11 @@ public class CreateDatasetRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A token used to ensure idempotency.
+     * A token that ensures idempotency. This token expires in 10 minutes.
      * </p>
      * 
      * @param clientToken
-     *        A token used to ensure idempotency.
+     *        A token that ensures idempotency. This token expires in 10 minutes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

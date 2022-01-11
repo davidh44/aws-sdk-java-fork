@@ -49,6 +49,18 @@ public class QueryResult extends com.amazonaws.AmazonWebServiceResult<com.amazon
      * </p>
      */
     private Integer totalNumberOfResults;
+    /**
+     * <p>
+     * A list of warning codes and their messages on problems with your query.
+     * </p>
+     * <p>
+     * Amazon Kendra currently only supports one type of warning, which is a warning on invalid syntax used in the
+     * query. For examples of invalid query syntax, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/searching-example.html#searching-index-query-syntax">Searching
+     * with advanced query syntax</a>.
+     * </p>
+     */
+    private java.util.List<Warning> warnings;
 
     /**
      * <p>
@@ -291,6 +303,120 @@ public class QueryResult extends com.amazonaws.AmazonWebServiceResult<com.amazon
     }
 
     /**
+     * <p>
+     * A list of warning codes and their messages on problems with your query.
+     * </p>
+     * <p>
+     * Amazon Kendra currently only supports one type of warning, which is a warning on invalid syntax used in the
+     * query. For examples of invalid query syntax, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/searching-example.html#searching-index-query-syntax">Searching
+     * with advanced query syntax</a>.
+     * </p>
+     * 
+     * @return A list of warning codes and their messages on problems with your query.</p>
+     *         <p>
+     *         Amazon Kendra currently only supports one type of warning, which is a warning on invalid syntax used in
+     *         the query. For examples of invalid query syntax, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/searching-example.html#searching-index-query-syntax"
+     *         >Searching with advanced query syntax</a>.
+     */
+
+    public java.util.List<Warning> getWarnings() {
+        return warnings;
+    }
+
+    /**
+     * <p>
+     * A list of warning codes and their messages on problems with your query.
+     * </p>
+     * <p>
+     * Amazon Kendra currently only supports one type of warning, which is a warning on invalid syntax used in the
+     * query. For examples of invalid query syntax, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/searching-example.html#searching-index-query-syntax">Searching
+     * with advanced query syntax</a>.
+     * </p>
+     * 
+     * @param warnings
+     *        A list of warning codes and their messages on problems with your query.</p>
+     *        <p>
+     *        Amazon Kendra currently only supports one type of warning, which is a warning on invalid syntax used in
+     *        the query. For examples of invalid query syntax, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/searching-example.html#searching-index-query-syntax"
+     *        >Searching with advanced query syntax</a>.
+     */
+
+    public void setWarnings(java.util.Collection<Warning> warnings) {
+        if (warnings == null) {
+            this.warnings = null;
+            return;
+        }
+
+        this.warnings = new java.util.ArrayList<Warning>(warnings);
+    }
+
+    /**
+     * <p>
+     * A list of warning codes and their messages on problems with your query.
+     * </p>
+     * <p>
+     * Amazon Kendra currently only supports one type of warning, which is a warning on invalid syntax used in the
+     * query. For examples of invalid query syntax, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/searching-example.html#searching-index-query-syntax">Searching
+     * with advanced query syntax</a>.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setWarnings(java.util.Collection)} or {@link #withWarnings(java.util.Collection)} if you want to override
+     * the existing values.
+     * </p>
+     * 
+     * @param warnings
+     *        A list of warning codes and their messages on problems with your query.</p>
+     *        <p>
+     *        Amazon Kendra currently only supports one type of warning, which is a warning on invalid syntax used in
+     *        the query. For examples of invalid query syntax, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/searching-example.html#searching-index-query-syntax"
+     *        >Searching with advanced query syntax</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public QueryResult withWarnings(Warning... warnings) {
+        if (this.warnings == null) {
+            setWarnings(new java.util.ArrayList<Warning>(warnings.length));
+        }
+        for (Warning ele : warnings) {
+            this.warnings.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of warning codes and their messages on problems with your query.
+     * </p>
+     * <p>
+     * Amazon Kendra currently only supports one type of warning, which is a warning on invalid syntax used in the
+     * query. For examples of invalid query syntax, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/searching-example.html#searching-index-query-syntax">Searching
+     * with advanced query syntax</a>.
+     * </p>
+     * 
+     * @param warnings
+     *        A list of warning codes and their messages on problems with your query.</p>
+     *        <p>
+     *        Amazon Kendra currently only supports one type of warning, which is a warning on invalid syntax used in
+     *        the query. For examples of invalid query syntax, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/searching-example.html#searching-index-query-syntax"
+     *        >Searching with advanced query syntax</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public QueryResult withWarnings(java.util.Collection<Warning> warnings) {
+        setWarnings(warnings);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -309,7 +435,9 @@ public class QueryResult extends com.amazonaws.AmazonWebServiceResult<com.amazon
         if (getFacetResults() != null)
             sb.append("FacetResults: ").append(getFacetResults()).append(",");
         if (getTotalNumberOfResults() != null)
-            sb.append("TotalNumberOfResults: ").append(getTotalNumberOfResults());
+            sb.append("TotalNumberOfResults: ").append(getTotalNumberOfResults()).append(",");
+        if (getWarnings() != null)
+            sb.append("Warnings: ").append(getWarnings());
         sb.append("}");
         return sb.toString();
     }
@@ -340,6 +468,10 @@ public class QueryResult extends com.amazonaws.AmazonWebServiceResult<com.amazon
             return false;
         if (other.getTotalNumberOfResults() != null && other.getTotalNumberOfResults().equals(this.getTotalNumberOfResults()) == false)
             return false;
+        if (other.getWarnings() == null ^ this.getWarnings() == null)
+            return false;
+        if (other.getWarnings() != null && other.getWarnings().equals(this.getWarnings()) == false)
+            return false;
         return true;
     }
 
@@ -352,6 +484,7 @@ public class QueryResult extends com.amazonaws.AmazonWebServiceResult<com.amazon
         hashCode = prime * hashCode + ((getResultItems() == null) ? 0 : getResultItems().hashCode());
         hashCode = prime * hashCode + ((getFacetResults() == null) ? 0 : getFacetResults().hashCode());
         hashCode = prime * hashCode + ((getTotalNumberOfResults() == null) ? 0 : getTotalNumberOfResults().hashCode());
+        hashCode = prime * hashCode + ((getWarnings() == null) ? 0 : getWarnings().hashCode());
         return hashCode;
     }
 

@@ -28,11 +28,12 @@ public class DescribeEventCategoriesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The type of source that is generating the events.
+     * The type of source that is generating the events. For RDS Proxy events, specify <code>db-proxy</code>.
      * </p>
      * <p>
      * Valid values: <code>db-instance</code> | <code>db-cluster</code> | <code>db-parameter-group</code> |
-     * <code>db-security-group</code> | <code>db-snapshot</code> | <code>db-cluster-snapshot</code>
+     * <code>db-security-group</code> | <code>db-snapshot</code> | <code>db-cluster-snapshot</code> |
+     * <code>db-proxy</code>
      * </p>
      */
     private String sourceType;
@@ -45,18 +46,20 @@ public class DescribeEventCategoriesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The type of source that is generating the events.
+     * The type of source that is generating the events. For RDS Proxy events, specify <code>db-proxy</code>.
      * </p>
      * <p>
      * Valid values: <code>db-instance</code> | <code>db-cluster</code> | <code>db-parameter-group</code> |
-     * <code>db-security-group</code> | <code>db-snapshot</code> | <code>db-cluster-snapshot</code>
+     * <code>db-security-group</code> | <code>db-snapshot</code> | <code>db-cluster-snapshot</code> |
+     * <code>db-proxy</code>
      * </p>
      * 
      * @param sourceType
-     *        The type of source that is generating the events.</p>
+     *        The type of source that is generating the events. For RDS Proxy events, specify <code>db-proxy</code>.</p>
      *        <p>
      *        Valid values: <code>db-instance</code> | <code>db-cluster</code> | <code>db-parameter-group</code> |
-     *        <code>db-security-group</code> | <code>db-snapshot</code> | <code>db-cluster-snapshot</code>
+     *        <code>db-security-group</code> | <code>db-snapshot</code> | <code>db-cluster-snapshot</code> |
+     *        <code>db-proxy</code>
      */
 
     public void setSourceType(String sourceType) {
@@ -65,17 +68,20 @@ public class DescribeEventCategoriesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The type of source that is generating the events.
+     * The type of source that is generating the events. For RDS Proxy events, specify <code>db-proxy</code>.
      * </p>
      * <p>
      * Valid values: <code>db-instance</code> | <code>db-cluster</code> | <code>db-parameter-group</code> |
-     * <code>db-security-group</code> | <code>db-snapshot</code> | <code>db-cluster-snapshot</code>
+     * <code>db-security-group</code> | <code>db-snapshot</code> | <code>db-cluster-snapshot</code> |
+     * <code>db-proxy</code>
      * </p>
      * 
-     * @return The type of source that is generating the events.</p>
+     * @return The type of source that is generating the events. For RDS Proxy events, specify <code>db-proxy</code>
+     *         .</p>
      *         <p>
      *         Valid values: <code>db-instance</code> | <code>db-cluster</code> | <code>db-parameter-group</code> |
-     *         <code>db-security-group</code> | <code>db-snapshot</code> | <code>db-cluster-snapshot</code>
+     *         <code>db-security-group</code> | <code>db-snapshot</code> | <code>db-cluster-snapshot</code> |
+     *         <code>db-proxy</code>
      */
 
     public String getSourceType() {
@@ -84,18 +90,20 @@ public class DescribeEventCategoriesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The type of source that is generating the events.
+     * The type of source that is generating the events. For RDS Proxy events, specify <code>db-proxy</code>.
      * </p>
      * <p>
      * Valid values: <code>db-instance</code> | <code>db-cluster</code> | <code>db-parameter-group</code> |
-     * <code>db-security-group</code> | <code>db-snapshot</code> | <code>db-cluster-snapshot</code>
+     * <code>db-security-group</code> | <code>db-snapshot</code> | <code>db-cluster-snapshot</code> |
+     * <code>db-proxy</code>
      * </p>
      * 
      * @param sourceType
-     *        The type of source that is generating the events.</p>
+     *        The type of source that is generating the events. For RDS Proxy events, specify <code>db-proxy</code>.</p>
      *        <p>
      *        Valid values: <code>db-instance</code> | <code>db-cluster</code> | <code>db-parameter-group</code> |
-     *        <code>db-security-group</code> | <code>db-snapshot</code> | <code>db-cluster-snapshot</code>
+     *        <code>db-security-group</code> | <code>db-snapshot</code> | <code>db-cluster-snapshot</code> |
+     *        <code>db-proxy</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

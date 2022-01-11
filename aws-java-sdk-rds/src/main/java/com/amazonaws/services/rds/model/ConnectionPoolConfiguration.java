@@ -29,9 +29,9 @@ public class ConnectionPoolConfiguration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The maximum size of the connection pool for each target in a target group. For Aurora MySQL, it is expressed as a
-     * percentage of the <code>max_connections</code> setting for the RDS DB instance or Aurora DB cluster used by the
-     * target group.
+     * The maximum size of the connection pool for each target in a target group. The value is expressed as a percentage
+     * of the <code>max_connections</code> setting for the RDS DB instance or Aurora DB cluster used by the target
+     * group.
      * </p>
      * <p>
      * Default: 100
@@ -43,11 +43,10 @@ public class ConnectionPoolConfiguration implements Serializable, Cloneable {
     private Integer maxConnectionsPercent;
     /**
      * <p>
-     * Controls how actively the proxy closes idle database connections in the connection pool. A high value enables the
-     * proxy to leave a high percentage of idle connections open. A low value causes the proxy to close idle client
-     * connections and return the underlying database connections to the connection pool. For Aurora MySQL, it is
-     * expressed as a percentage of the <code>max_connections</code> setting for the RDS DB instance or Aurora DB
-     * cluster used by the target group.
+     * Controls how actively the proxy closes idle database connections in the connection pool. The value is expressed
+     * as a percentage of the <code>max_connections</code> setting for the RDS DB instance or Aurora DB cluster used by
+     * the target group. With a high value, the proxy leaves a high percentage of idle database connections open. A low
+     * value causes the proxy to close more idle connections and return them to the database.
      * </p>
      * <p>
      * Default: 50
@@ -97,9 +96,9 @@ public class ConnectionPoolConfiguration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The maximum size of the connection pool for each target in a target group. For Aurora MySQL, it is expressed as a
-     * percentage of the <code>max_connections</code> setting for the RDS DB instance or Aurora DB cluster used by the
-     * target group.
+     * The maximum size of the connection pool for each target in a target group. The value is expressed as a percentage
+     * of the <code>max_connections</code> setting for the RDS DB instance or Aurora DB cluster used by the target
+     * group.
      * </p>
      * <p>
      * Default: 100
@@ -109,9 +108,9 @@ public class ConnectionPoolConfiguration implements Serializable, Cloneable {
      * </p>
      * 
      * @param maxConnectionsPercent
-     *        The maximum size of the connection pool for each target in a target group. For Aurora MySQL, it is
-     *        expressed as a percentage of the <code>max_connections</code> setting for the RDS DB instance or Aurora DB
-     *        cluster used by the target group.</p>
+     *        The maximum size of the connection pool for each target in a target group. The value is expressed as a
+     *        percentage of the <code>max_connections</code> setting for the RDS DB instance or Aurora DB cluster used
+     *        by the target group.</p>
      *        <p>
      *        Default: 100
      *        </p>
@@ -125,9 +124,9 @@ public class ConnectionPoolConfiguration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The maximum size of the connection pool for each target in a target group. For Aurora MySQL, it is expressed as a
-     * percentage of the <code>max_connections</code> setting for the RDS DB instance or Aurora DB cluster used by the
-     * target group.
+     * The maximum size of the connection pool for each target in a target group. The value is expressed as a percentage
+     * of the <code>max_connections</code> setting for the RDS DB instance or Aurora DB cluster used by the target
+     * group.
      * </p>
      * <p>
      * Default: 100
@@ -136,9 +135,9 @@ public class ConnectionPoolConfiguration implements Serializable, Cloneable {
      * Constraints: between 1 and 100
      * </p>
      * 
-     * @return The maximum size of the connection pool for each target in a target group. For Aurora MySQL, it is
-     *         expressed as a percentage of the <code>max_connections</code> setting for the RDS DB instance or Aurora
-     *         DB cluster used by the target group.</p>
+     * @return The maximum size of the connection pool for each target in a target group. The value is expressed as a
+     *         percentage of the <code>max_connections</code> setting for the RDS DB instance or Aurora DB cluster used
+     *         by the target group.</p>
      *         <p>
      *         Default: 100
      *         </p>
@@ -152,9 +151,9 @@ public class ConnectionPoolConfiguration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The maximum size of the connection pool for each target in a target group. For Aurora MySQL, it is expressed as a
-     * percentage of the <code>max_connections</code> setting for the RDS DB instance or Aurora DB cluster used by the
-     * target group.
+     * The maximum size of the connection pool for each target in a target group. The value is expressed as a percentage
+     * of the <code>max_connections</code> setting for the RDS DB instance or Aurora DB cluster used by the target
+     * group.
      * </p>
      * <p>
      * Default: 100
@@ -164,9 +163,9 @@ public class ConnectionPoolConfiguration implements Serializable, Cloneable {
      * </p>
      * 
      * @param maxConnectionsPercent
-     *        The maximum size of the connection pool for each target in a target group. For Aurora MySQL, it is
-     *        expressed as a percentage of the <code>max_connections</code> setting for the RDS DB instance or Aurora DB
-     *        cluster used by the target group.</p>
+     *        The maximum size of the connection pool for each target in a target group. The value is expressed as a
+     *        percentage of the <code>max_connections</code> setting for the RDS DB instance or Aurora DB cluster used
+     *        by the target group.</p>
      *        <p>
      *        Default: 100
      *        </p>
@@ -182,11 +181,10 @@ public class ConnectionPoolConfiguration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Controls how actively the proxy closes idle database connections in the connection pool. A high value enables the
-     * proxy to leave a high percentage of idle connections open. A low value causes the proxy to close idle client
-     * connections and return the underlying database connections to the connection pool. For Aurora MySQL, it is
-     * expressed as a percentage of the <code>max_connections</code> setting for the RDS DB instance or Aurora DB
-     * cluster used by the target group.
+     * Controls how actively the proxy closes idle database connections in the connection pool. The value is expressed
+     * as a percentage of the <code>max_connections</code> setting for the RDS DB instance or Aurora DB cluster used by
+     * the target group. With a high value, the proxy leaves a high percentage of idle database connections open. A low
+     * value causes the proxy to close more idle connections and return them to the database.
      * </p>
      * <p>
      * Default: 50
@@ -196,11 +194,11 @@ public class ConnectionPoolConfiguration implements Serializable, Cloneable {
      * </p>
      * 
      * @param maxIdleConnectionsPercent
-     *        Controls how actively the proxy closes idle database connections in the connection pool. A high value
-     *        enables the proxy to leave a high percentage of idle connections open. A low value causes the proxy to
-     *        close idle client connections and return the underlying database connections to the connection pool. For
-     *        Aurora MySQL, it is expressed as a percentage of the <code>max_connections</code> setting for the RDS DB
-     *        instance or Aurora DB cluster used by the target group. </p>
+     *        Controls how actively the proxy closes idle database connections in the connection pool. The value is
+     *        expressed as a percentage of the <code>max_connections</code> setting for the RDS DB instance or Aurora DB
+     *        cluster used by the target group. With a high value, the proxy leaves a high percentage of idle database
+     *        connections open. A low value causes the proxy to close more idle connections and return them to the
+     *        database. </p>
      *        <p>
      *        Default: 50
      *        </p>
@@ -214,11 +212,10 @@ public class ConnectionPoolConfiguration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Controls how actively the proxy closes idle database connections in the connection pool. A high value enables the
-     * proxy to leave a high percentage of idle connections open. A low value causes the proxy to close idle client
-     * connections and return the underlying database connections to the connection pool. For Aurora MySQL, it is
-     * expressed as a percentage of the <code>max_connections</code> setting for the RDS DB instance or Aurora DB
-     * cluster used by the target group.
+     * Controls how actively the proxy closes idle database connections in the connection pool. The value is expressed
+     * as a percentage of the <code>max_connections</code> setting for the RDS DB instance or Aurora DB cluster used by
+     * the target group. With a high value, the proxy leaves a high percentage of idle database connections open. A low
+     * value causes the proxy to close more idle connections and return them to the database.
      * </p>
      * <p>
      * Default: 50
@@ -227,11 +224,11 @@ public class ConnectionPoolConfiguration implements Serializable, Cloneable {
      * Constraints: between 0 and <code>MaxConnectionsPercent</code>
      * </p>
      * 
-     * @return Controls how actively the proxy closes idle database connections in the connection pool. A high value
-     *         enables the proxy to leave a high percentage of idle connections open. A low value causes the proxy to
-     *         close idle client connections and return the underlying database connections to the connection pool. For
-     *         Aurora MySQL, it is expressed as a percentage of the <code>max_connections</code> setting for the RDS DB
-     *         instance or Aurora DB cluster used by the target group. </p>
+     * @return Controls how actively the proxy closes idle database connections in the connection pool. The value is
+     *         expressed as a percentage of the <code>max_connections</code> setting for the RDS DB instance or Aurora
+     *         DB cluster used by the target group. With a high value, the proxy leaves a high percentage of idle
+     *         database connections open. A low value causes the proxy to close more idle connections and return them to
+     *         the database. </p>
      *         <p>
      *         Default: 50
      *         </p>
@@ -245,11 +242,10 @@ public class ConnectionPoolConfiguration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Controls how actively the proxy closes idle database connections in the connection pool. A high value enables the
-     * proxy to leave a high percentage of idle connections open. A low value causes the proxy to close idle client
-     * connections and return the underlying database connections to the connection pool. For Aurora MySQL, it is
-     * expressed as a percentage of the <code>max_connections</code> setting for the RDS DB instance or Aurora DB
-     * cluster used by the target group.
+     * Controls how actively the proxy closes idle database connections in the connection pool. The value is expressed
+     * as a percentage of the <code>max_connections</code> setting for the RDS DB instance or Aurora DB cluster used by
+     * the target group. With a high value, the proxy leaves a high percentage of idle database connections open. A low
+     * value causes the proxy to close more idle connections and return them to the database.
      * </p>
      * <p>
      * Default: 50
@@ -259,11 +255,11 @@ public class ConnectionPoolConfiguration implements Serializable, Cloneable {
      * </p>
      * 
      * @param maxIdleConnectionsPercent
-     *        Controls how actively the proxy closes idle database connections in the connection pool. A high value
-     *        enables the proxy to leave a high percentage of idle connections open. A low value causes the proxy to
-     *        close idle client connections and return the underlying database connections to the connection pool. For
-     *        Aurora MySQL, it is expressed as a percentage of the <code>max_connections</code> setting for the RDS DB
-     *        instance or Aurora DB cluster used by the target group. </p>
+     *        Controls how actively the proxy closes idle database connections in the connection pool. The value is
+     *        expressed as a percentage of the <code>max_connections</code> setting for the RDS DB instance or Aurora DB
+     *        cluster used by the target group. With a high value, the proxy leaves a high percentage of idle database
+     *        connections open. A low value causes the proxy to close more idle connections and return them to the
+     *        database. </p>
      *        <p>
      *        Default: 50
      *        </p>

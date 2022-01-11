@@ -26,7 +26,8 @@ public enum SourceType {
     DbSnapshot("db-snapshot"),
     DbCluster("db-cluster"),
     DbClusterSnapshot("db-cluster-snapshot"),
-    CustomEngineVersion("custom-engine-version");
+    CustomEngineVersion("custom-engine-version"),
+    DbProxy("db-proxy");
 
     private String value;
 

@@ -228,6 +228,45 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
 
     /**
      * <p>
+     * Creates a client-add-in for Amazon Connect within a directory. You can create only one Amazon Connect client
+     * add-in within a directory.
+     * </p>
+     * <p>
+     * This client add-in allows WorkSpaces users to seamlessly connect to Amazon Connect.
+     * </p>
+     * 
+     * @param createConnectClientAddInRequest
+     * @return A Java Future containing the result of the CreateConnectClientAddIn operation returned by the service.
+     * @sample AmazonWorkspacesAsync.CreateConnectClientAddIn
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/CreateConnectClientAddIn"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateConnectClientAddInResult> createConnectClientAddInAsync(CreateConnectClientAddInRequest createConnectClientAddInRequest);
+
+    /**
+     * <p>
+     * Creates a client-add-in for Amazon Connect within a directory. You can create only one Amazon Connect client
+     * add-in within a directory.
+     * </p>
+     * <p>
+     * This client add-in allows WorkSpaces users to seamlessly connect to Amazon Connect.
+     * </p>
+     * 
+     * @param createConnectClientAddInRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateConnectClientAddIn operation returned by the service.
+     * @sample AmazonWorkspacesAsyncHandler.CreateConnectClientAddIn
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/CreateConnectClientAddIn"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateConnectClientAddInResult> createConnectClientAddInAsync(CreateConnectClientAddInRequest createConnectClientAddInRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateConnectClientAddInRequest, CreateConnectClientAddInResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates the specified connection alias for use with cross-Region redirection. For more information, see <a
      * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/cross-region-redirection.html"> Cross-Region
      * Redirection for Amazon WorkSpaces</a>.
@@ -505,6 +544,37 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
      */
     java.util.concurrent.Future<CreateWorkspacesResult> createWorkspacesAsync(CreateWorkspacesRequest createWorkspacesRequest,
             com.amazonaws.handlers.AsyncHandler<CreateWorkspacesRequest, CreateWorkspacesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a client-add-in for Amazon Connect that is configured within a directory.
+     * </p>
+     * 
+     * @param deleteConnectClientAddInRequest
+     * @return A Java Future containing the result of the DeleteConnectClientAddIn operation returned by the service.
+     * @sample AmazonWorkspacesAsync.DeleteConnectClientAddIn
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DeleteConnectClientAddIn"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteConnectClientAddInResult> deleteConnectClientAddInAsync(DeleteConnectClientAddInRequest deleteConnectClientAddInRequest);
+
+    /**
+     * <p>
+     * Deletes a client-add-in for Amazon Connect that is configured within a directory.
+     * </p>
+     * 
+     * @param deleteConnectClientAddInRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteConnectClientAddIn operation returned by the service.
+     * @sample AmazonWorkspacesAsyncHandler.DeleteConnectClientAddIn
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DeleteConnectClientAddIn"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteConnectClientAddInResult> deleteConnectClientAddInAsync(DeleteConnectClientAddInRequest deleteConnectClientAddInRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteConnectClientAddInRequest, DeleteConnectClientAddInResult> asyncHandler);
 
     /**
      * <p>
@@ -874,6 +944,39 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
      */
     java.util.concurrent.Future<DescribeClientPropertiesResult> describeClientPropertiesAsync(DescribeClientPropertiesRequest describeClientPropertiesRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeClientPropertiesRequest, DescribeClientPropertiesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves a list of Amazon Connect client add-ins that have been created.
+     * </p>
+     * 
+     * @param describeConnectClientAddInsRequest
+     * @return A Java Future containing the result of the DescribeConnectClientAddIns operation returned by the service.
+     * @sample AmazonWorkspacesAsync.DescribeConnectClientAddIns
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeConnectClientAddIns"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeConnectClientAddInsResult> describeConnectClientAddInsAsync(
+            DescribeConnectClientAddInsRequest describeConnectClientAddInsRequest);
+
+    /**
+     * <p>
+     * Retrieves a list of Amazon Connect client add-ins that have been created.
+     * </p>
+     * 
+     * @param describeConnectClientAddInsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeConnectClientAddIns operation returned by the service.
+     * @sample AmazonWorkspacesAsyncHandler.DescribeConnectClientAddIns
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeConnectClientAddIns"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeConnectClientAddInsResult> describeConnectClientAddInsAsync(
+            DescribeConnectClientAddInsRequest describeConnectClientAddInsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeConnectClientAddInsRequest, DescribeConnectClientAddInsResult> asyncHandler);
 
     /**
      * <p>
@@ -2196,6 +2299,39 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
      */
     java.util.concurrent.Future<TerminateWorkspacesResult> terminateWorkspacesAsync(TerminateWorkspacesRequest terminateWorkspacesRequest,
             com.amazonaws.handlers.AsyncHandler<TerminateWorkspacesRequest, TerminateWorkspacesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates a Amazon Connect client add-in. Use this action to update the name and endpoint URL of a Amazon Connect
+     * client add-in.
+     * </p>
+     * 
+     * @param updateConnectClientAddInRequest
+     * @return A Java Future containing the result of the UpdateConnectClientAddIn operation returned by the service.
+     * @sample AmazonWorkspacesAsync.UpdateConnectClientAddIn
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/UpdateConnectClientAddIn"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateConnectClientAddInResult> updateConnectClientAddInAsync(UpdateConnectClientAddInRequest updateConnectClientAddInRequest);
+
+    /**
+     * <p>
+     * Updates a Amazon Connect client add-in. Use this action to update the name and endpoint URL of a Amazon Connect
+     * client add-in.
+     * </p>
+     * 
+     * @param updateConnectClientAddInRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateConnectClientAddIn operation returned by the service.
+     * @sample AmazonWorkspacesAsyncHandler.UpdateConnectClientAddIn
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/UpdateConnectClientAddIn"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateConnectClientAddInResult> updateConnectClientAddInAsync(UpdateConnectClientAddInRequest updateConnectClientAddInRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateConnectClientAddInRequest, UpdateConnectClientAddInResult> asyncHandler);
 
     /**
      * <p>

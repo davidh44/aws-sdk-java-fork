@@ -408,6 +408,9 @@ public interface AWSkendraAsync extends AWSkendra {
      * <p>
      * Creates an new set of frequently asked question (FAQ) questions and answers.
      * </p>
+     * <p>
+     * Adding FAQs to an index is an asynchronous operation.
+     * </p>
      * 
      * @param createFaqRequest
      * @return A Java Future containing the result of the CreateFaq operation returned by the service.
@@ -420,6 +423,9 @@ public interface AWSkendraAsync extends AWSkendra {
     /**
      * <p>
      * Creates an new set of frequently asked question (FAQ) questions and answers.
+     * </p>
+     * <p>
+     * Adding FAQs to an index is an asynchronous operation.
      * </p>
      * 
      * @param createFaqRequest

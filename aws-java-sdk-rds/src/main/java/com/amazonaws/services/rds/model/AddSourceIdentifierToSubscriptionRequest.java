@@ -70,6 +70,11 @@ public class AddSourceIdentifierToSubscriptionRequest extends com.amazonaws.Amaz
      * If the source type is a DB cluster snapshot, a <code>DBClusterSnapshotIdentifier</code> value must be supplied.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * If the source type is an RDS Proxy, a <code>DBProxyName</code> value must be supplied.
+     * </p>
+     * </li>
      * </ul>
      */
     private String sourceIdentifier;
@@ -152,6 +157,11 @@ public class AddSourceIdentifierToSubscriptionRequest extends com.amazonaws.Amaz
      * If the source type is a DB cluster snapshot, a <code>DBClusterSnapshotIdentifier</code> value must be supplied.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * If the source type is an RDS Proxy, a <code>DBProxyName</code> value must be supplied.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param sourceIdentifier
@@ -189,6 +199,11 @@ public class AddSourceIdentifierToSubscriptionRequest extends com.amazonaws.Amaz
      *        <p>
      *        If the source type is a DB cluster snapshot, a <code>DBClusterSnapshotIdentifier</code> value must be
      *        supplied.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If the source type is an RDS Proxy, a <code>DBProxyName</code> value must be supplied.
      *        </p>
      *        </li>
      */
@@ -235,6 +250,11 @@ public class AddSourceIdentifierToSubscriptionRequest extends com.amazonaws.Amaz
      * If the source type is a DB cluster snapshot, a <code>DBClusterSnapshotIdentifier</code> value must be supplied.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * If the source type is an RDS Proxy, a <code>DBProxyName</code> value must be supplied.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return The identifier of the event source to be added.</p>
@@ -271,6 +291,11 @@ public class AddSourceIdentifierToSubscriptionRequest extends com.amazonaws.Amaz
      *         <p>
      *         If the source type is a DB cluster snapshot, a <code>DBClusterSnapshotIdentifier</code> value must be
      *         supplied.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         If the source type is an RDS Proxy, a <code>DBProxyName</code> value must be supplied.
      *         </p>
      *         </li>
      */
@@ -317,6 +342,11 @@ public class AddSourceIdentifierToSubscriptionRequest extends com.amazonaws.Amaz
      * If the source type is a DB cluster snapshot, a <code>DBClusterSnapshotIdentifier</code> value must be supplied.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * If the source type is an RDS Proxy, a <code>DBProxyName</code> value must be supplied.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param sourceIdentifier
@@ -354,6 +384,11 @@ public class AddSourceIdentifierToSubscriptionRequest extends com.amazonaws.Amaz
      *        <p>
      *        If the source type is a DB cluster snapshot, a <code>DBClusterSnapshotIdentifier</code> value must be
      *        supplied.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If the source type is an RDS Proxy, a <code>DBProxyName</code> value must be supplied.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

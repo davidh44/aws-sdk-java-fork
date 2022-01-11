@@ -28,7 +28,7 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A token used to ensure idempotency.
+     * A token that ensures idempotency. This token expires in 10 minutes.
      * </p>
      */
     private String clientToken;
@@ -63,7 +63,23 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
     private String changeType;
     /**
      * <p>
-     * Options that define the location of the data being ingested.
+     * Options that define the location of the data being ingested (<code>s3SourcePath</code>) and the source of the
+     * changeset (<code>sourceType</code>).
+     * </p>
+     * <p>
+     * Both <code>s3SourcePath</code> and <code>sourceType</code> are required attributes.
+     * </p>
+     * <p>
+     * Here is an example of how you could specify the <code>sourceParams</code>:
+     * </p>
+     * <p>
+     * <code> "sourceParams": { "s3SourcePath": "s3://finspace-landing-us-east-2-bk7gcfvitndqa6ebnvys4d/scratch/wr5hh8pwkpqqkxa4sxrmcw/ingestion/equity.csv", "sourceType": "S3" } </code>
+     * </p>
+     * <p>
+     * The S3 path that you specify must allow the FinSpace role access. To do that, you first need to configure the IAM
+     * policy on S3 bucket. For more information, see <a
+     * href="https://docs.aws.amazon.com/finspace/latest/data-api/fs-using-the-finspace-api.html#access-s3-buckets"
+     * >Loading data from an Amazon S3 Bucket using the FinSpace API</a>section.
      * </p>
      */
     private java.util.Map<String, String> sourceParams;
@@ -99,19 +115,33 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * </ul>
      * <p>
-     * For example, you could specify the following for <code>formatParams</code>:
+     * Here is an example of how you could specify the <code>formatParams</code>:
+     * </p>
+     * <p>
      * <code> "formatParams": { "formatType": "CSV", "withHeader": "true", "separator": ",", "compression":"None" } </code>
+     * </p>
+     * <p>
+     * Note that if you only provide <code>formatType</code> as <code>CSV</code>, the rest of the attributes will
+     * automatically default to CSV values as following:
+     * </p>
+     * <p>
+     * <code> { "withHeader": "true", "separator": "," } </code>
+     * </p>
+     * <p>
+     * For more information about supported file formats, see <a
+     * href="https://docs.aws.amazon.com/finspace/latest/userguide/supported-data-types.html">Supported Data Types and
+     * File Formats</a> in the FinSpace User Guide.
      * </p>
      */
     private java.util.Map<String, String> formatParams;
 
     /**
      * <p>
-     * A token used to ensure idempotency.
+     * A token that ensures idempotency. This token expires in 10 minutes.
      * </p>
      * 
      * @param clientToken
-     *        A token used to ensure idempotency.
+     *        A token that ensures idempotency. This token expires in 10 minutes.
      */
 
     public void setClientToken(String clientToken) {
@@ -120,10 +150,10 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A token used to ensure idempotency.
+     * A token that ensures idempotency. This token expires in 10 minutes.
      * </p>
      * 
-     * @return A token used to ensure idempotency.
+     * @return A token that ensures idempotency. This token expires in 10 minutes.
      */
 
     public String getClientToken() {
@@ -132,11 +162,11 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A token used to ensure idempotency.
+     * A token that ensures idempotency. This token expires in 10 minutes.
      * </p>
      * 
      * @param clientToken
-     *        A token used to ensure idempotency.
+     *        A token that ensures idempotency. This token expires in 10 minutes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -382,10 +412,41 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Options that define the location of the data being ingested.
+     * Options that define the location of the data being ingested (<code>s3SourcePath</code>) and the source of the
+     * changeset (<code>sourceType</code>).
+     * </p>
+     * <p>
+     * Both <code>s3SourcePath</code> and <code>sourceType</code> are required attributes.
+     * </p>
+     * <p>
+     * Here is an example of how you could specify the <code>sourceParams</code>:
+     * </p>
+     * <p>
+     * <code> "sourceParams": { "s3SourcePath": "s3://finspace-landing-us-east-2-bk7gcfvitndqa6ebnvys4d/scratch/wr5hh8pwkpqqkxa4sxrmcw/ingestion/equity.csv", "sourceType": "S3" } </code>
+     * </p>
+     * <p>
+     * The S3 path that you specify must allow the FinSpace role access. To do that, you first need to configure the IAM
+     * policy on S3 bucket. For more information, see <a
+     * href="https://docs.aws.amazon.com/finspace/latest/data-api/fs-using-the-finspace-api.html#access-s3-buckets"
+     * >Loading data from an Amazon S3 Bucket using the FinSpace API</a>section.
      * </p>
      * 
-     * @return Options that define the location of the data being ingested.
+     * @return Options that define the location of the data being ingested (<code>s3SourcePath</code>) and the source of
+     *         the changeset (<code>sourceType</code>).</p>
+     *         <p>
+     *         Both <code>s3SourcePath</code> and <code>sourceType</code> are required attributes.
+     *         </p>
+     *         <p>
+     *         Here is an example of how you could specify the <code>sourceParams</code>:
+     *         </p>
+     *         <p>
+     *         <code> "sourceParams": { "s3SourcePath": "s3://finspace-landing-us-east-2-bk7gcfvitndqa6ebnvys4d/scratch/wr5hh8pwkpqqkxa4sxrmcw/ingestion/equity.csv", "sourceType": "S3" } </code>
+     *         </p>
+     *         <p>
+     *         The S3 path that you specify must allow the FinSpace role access. To do that, you first need to configure
+     *         the IAM policy on S3 bucket. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/finspace/latest/data-api/fs-using-the-finspace-api.html#access-s3-buckets"
+     *         >Loading data from an Amazon S3 Bucket using the FinSpace API</a>section.
      */
 
     public java.util.Map<String, String> getSourceParams() {
@@ -394,11 +455,42 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Options that define the location of the data being ingested.
+     * Options that define the location of the data being ingested (<code>s3SourcePath</code>) and the source of the
+     * changeset (<code>sourceType</code>).
+     * </p>
+     * <p>
+     * Both <code>s3SourcePath</code> and <code>sourceType</code> are required attributes.
+     * </p>
+     * <p>
+     * Here is an example of how you could specify the <code>sourceParams</code>:
+     * </p>
+     * <p>
+     * <code> "sourceParams": { "s3SourcePath": "s3://finspace-landing-us-east-2-bk7gcfvitndqa6ebnvys4d/scratch/wr5hh8pwkpqqkxa4sxrmcw/ingestion/equity.csv", "sourceType": "S3" } </code>
+     * </p>
+     * <p>
+     * The S3 path that you specify must allow the FinSpace role access. To do that, you first need to configure the IAM
+     * policy on S3 bucket. For more information, see <a
+     * href="https://docs.aws.amazon.com/finspace/latest/data-api/fs-using-the-finspace-api.html#access-s3-buckets"
+     * >Loading data from an Amazon S3 Bucket using the FinSpace API</a>section.
      * </p>
      * 
      * @param sourceParams
-     *        Options that define the location of the data being ingested.
+     *        Options that define the location of the data being ingested (<code>s3SourcePath</code>) and the source of
+     *        the changeset (<code>sourceType</code>).</p>
+     *        <p>
+     *        Both <code>s3SourcePath</code> and <code>sourceType</code> are required attributes.
+     *        </p>
+     *        <p>
+     *        Here is an example of how you could specify the <code>sourceParams</code>:
+     *        </p>
+     *        <p>
+     *        <code> "sourceParams": { "s3SourcePath": "s3://finspace-landing-us-east-2-bk7gcfvitndqa6ebnvys4d/scratch/wr5hh8pwkpqqkxa4sxrmcw/ingestion/equity.csv", "sourceType": "S3" } </code>
+     *        </p>
+     *        <p>
+     *        The S3 path that you specify must allow the FinSpace role access. To do that, you first need to configure
+     *        the IAM policy on S3 bucket. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/finspace/latest/data-api/fs-using-the-finspace-api.html#access-s3-buckets"
+     *        >Loading data from an Amazon S3 Bucket using the FinSpace API</a>section.
      */
 
     public void setSourceParams(java.util.Map<String, String> sourceParams) {
@@ -407,11 +499,42 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Options that define the location of the data being ingested.
+     * Options that define the location of the data being ingested (<code>s3SourcePath</code>) and the source of the
+     * changeset (<code>sourceType</code>).
+     * </p>
+     * <p>
+     * Both <code>s3SourcePath</code> and <code>sourceType</code> are required attributes.
+     * </p>
+     * <p>
+     * Here is an example of how you could specify the <code>sourceParams</code>:
+     * </p>
+     * <p>
+     * <code> "sourceParams": { "s3SourcePath": "s3://finspace-landing-us-east-2-bk7gcfvitndqa6ebnvys4d/scratch/wr5hh8pwkpqqkxa4sxrmcw/ingestion/equity.csv", "sourceType": "S3" } </code>
+     * </p>
+     * <p>
+     * The S3 path that you specify must allow the FinSpace role access. To do that, you first need to configure the IAM
+     * policy on S3 bucket. For more information, see <a
+     * href="https://docs.aws.amazon.com/finspace/latest/data-api/fs-using-the-finspace-api.html#access-s3-buckets"
+     * >Loading data from an Amazon S3 Bucket using the FinSpace API</a>section.
      * </p>
      * 
      * @param sourceParams
-     *        Options that define the location of the data being ingested.
+     *        Options that define the location of the data being ingested (<code>s3SourcePath</code>) and the source of
+     *        the changeset (<code>sourceType</code>).</p>
+     *        <p>
+     *        Both <code>s3SourcePath</code> and <code>sourceType</code> are required attributes.
+     *        </p>
+     *        <p>
+     *        Here is an example of how you could specify the <code>sourceParams</code>:
+     *        </p>
+     *        <p>
+     *        <code> "sourceParams": { "s3SourcePath": "s3://finspace-landing-us-east-2-bk7gcfvitndqa6ebnvys4d/scratch/wr5hh8pwkpqqkxa4sxrmcw/ingestion/equity.csv", "sourceType": "S3" } </code>
+     *        </p>
+     *        <p>
+     *        The S3 path that you specify must allow the FinSpace role access. To do that, you first need to configure
+     *        the IAM policy on S3 bucket. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/finspace/latest/data-api/fs-using-the-finspace-api.html#access-s3-buckets"
+     *        >Loading data from an Amazon S3 Bucket using the FinSpace API</a>section.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -480,8 +603,22 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * </ul>
      * <p>
-     * For example, you could specify the following for <code>formatParams</code>:
+     * Here is an example of how you could specify the <code>formatParams</code>:
+     * </p>
+     * <p>
      * <code> "formatParams": { "formatType": "CSV", "withHeader": "true", "separator": ",", "compression":"None" } </code>
+     * </p>
+     * <p>
+     * Note that if you only provide <code>formatType</code> as <code>CSV</code>, the rest of the attributes will
+     * automatically default to CSV values as following:
+     * </p>
+     * <p>
+     * <code> { "withHeader": "true", "separator": "," } </code>
+     * </p>
+     * <p>
+     * For more information about supported file formats, see <a
+     * href="https://docs.aws.amazon.com/finspace/latest/userguide/supported-data-types.html">Supported Data Types and
+     * File Formats</a> in the FinSpace User Guide.
      * </p>
      * 
      * @return Options that define the structure of the source file(s) including the format type (
@@ -513,8 +650,22 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      *         </li>
      *         </ul>
      *         <p>
-     *         For example, you could specify the following for <code>formatParams</code>:
+     *         Here is an example of how you could specify the <code>formatParams</code>:
+     *         </p>
+     *         <p>
      *         <code> "formatParams": { "formatType": "CSV", "withHeader": "true", "separator": ",", "compression":"None" } </code>
+     *         </p>
+     *         <p>
+     *         Note that if you only provide <code>formatType</code> as <code>CSV</code>, the rest of the attributes
+     *         will automatically default to CSV values as following:
+     *         </p>
+     *         <p>
+     *         <code> { "withHeader": "true", "separator": "," } </code>
+     *         </p>
+     *         <p>
+     *         For more information about supported file formats, see <a
+     *         href="https://docs.aws.amazon.com/finspace/latest/userguide/supported-data-types.html">Supported Data
+     *         Types and File Formats</a> in the FinSpace User Guide.
      */
 
     public java.util.Map<String, String> getFormatParams() {
@@ -553,8 +704,22 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * </ul>
      * <p>
-     * For example, you could specify the following for <code>formatParams</code>:
+     * Here is an example of how you could specify the <code>formatParams</code>:
+     * </p>
+     * <p>
      * <code> "formatParams": { "formatType": "CSV", "withHeader": "true", "separator": ",", "compression":"None" } </code>
+     * </p>
+     * <p>
+     * Note that if you only provide <code>formatType</code> as <code>CSV</code>, the rest of the attributes will
+     * automatically default to CSV values as following:
+     * </p>
+     * <p>
+     * <code> { "withHeader": "true", "separator": "," } </code>
+     * </p>
+     * <p>
+     * For more information about supported file formats, see <a
+     * href="https://docs.aws.amazon.com/finspace/latest/userguide/supported-data-types.html">Supported Data Types and
+     * File Formats</a> in the FinSpace User Guide.
      * </p>
      * 
      * @param formatParams
@@ -587,8 +752,22 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        </ul>
      *        <p>
-     *        For example, you could specify the following for <code>formatParams</code>:
+     *        Here is an example of how you could specify the <code>formatParams</code>:
+     *        </p>
+     *        <p>
      *        <code> "formatParams": { "formatType": "CSV", "withHeader": "true", "separator": ",", "compression":"None" } </code>
+     *        </p>
+     *        <p>
+     *        Note that if you only provide <code>formatType</code> as <code>CSV</code>, the rest of the attributes will
+     *        automatically default to CSV values as following:
+     *        </p>
+     *        <p>
+     *        <code> { "withHeader": "true", "separator": "," } </code>
+     *        </p>
+     *        <p>
+     *        For more information about supported file formats, see <a
+     *        href="https://docs.aws.amazon.com/finspace/latest/userguide/supported-data-types.html">Supported Data
+     *        Types and File Formats</a> in the FinSpace User Guide.
      */
 
     public void setFormatParams(java.util.Map<String, String> formatParams) {
@@ -627,8 +806,22 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * </ul>
      * <p>
-     * For example, you could specify the following for <code>formatParams</code>:
+     * Here is an example of how you could specify the <code>formatParams</code>:
+     * </p>
+     * <p>
      * <code> "formatParams": { "formatType": "CSV", "withHeader": "true", "separator": ",", "compression":"None" } </code>
+     * </p>
+     * <p>
+     * Note that if you only provide <code>formatType</code> as <code>CSV</code>, the rest of the attributes will
+     * automatically default to CSV values as following:
+     * </p>
+     * <p>
+     * <code> { "withHeader": "true", "separator": "," } </code>
+     * </p>
+     * <p>
+     * For more information about supported file formats, see <a
+     * href="https://docs.aws.amazon.com/finspace/latest/userguide/supported-data-types.html">Supported Data Types and
+     * File Formats</a> in the FinSpace User Guide.
      * </p>
      * 
      * @param formatParams
@@ -661,8 +854,22 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        </ul>
      *        <p>
-     *        For example, you could specify the following for <code>formatParams</code>:
+     *        Here is an example of how you could specify the <code>formatParams</code>:
+     *        </p>
+     *        <p>
      *        <code> "formatParams": { "formatType": "CSV", "withHeader": "true", "separator": ",", "compression":"None" } </code>
+     *        </p>
+     *        <p>
+     *        Note that if you only provide <code>formatType</code> as <code>CSV</code>, the rest of the attributes will
+     *        automatically default to CSV values as following:
+     *        </p>
+     *        <p>
+     *        <code> { "withHeader": "true", "separator": "," } </code>
+     *        </p>
+     *        <p>
+     *        For more information about supported file formats, see <a
+     *        href="https://docs.aws.amazon.com/finspace/latest/userguide/supported-data-types.html">Supported Data
+     *        Types and File Formats</a> in the FinSpace User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

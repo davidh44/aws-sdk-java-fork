@@ -134,7 +134,12 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private Long activeUntilTimestamp;
-
+    /**
+     * <p>
+     * Beginning time from which the Changeset is active. The value is determined as Epoch time in milliseconds. For
+     * example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
+     * </p>
+     */
     private Long activeFromTimestamp;
     /**
      * <p>
@@ -1003,7 +1008,14 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * Beginning time from which the Changeset is active. The value is determined as Epoch time in milliseconds. For
+     * example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
+     * </p>
+     * 
      * @param activeFromTimestamp
+     *        Beginning time from which the Changeset is active. The value is determined as Epoch time in milliseconds.
+     *        For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      */
 
     public void setActiveFromTimestamp(Long activeFromTimestamp) {
@@ -1011,7 +1023,13 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * Beginning time from which the Changeset is active. The value is determined as Epoch time in milliseconds. For
+     * example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
+     * </p>
+     * 
+     * @return Beginning time from which the Changeset is active. The value is determined as Epoch time in milliseconds.
+     *         For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      */
 
     public Long getActiveFromTimestamp() {
@@ -1019,7 +1037,14 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * Beginning time from which the Changeset is active. The value is determined as Epoch time in milliseconds. For
+     * example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
+     * </p>
+     * 
      * @param activeFromTimestamp
+     *        Beginning time from which the Changeset is active. The value is determined as Epoch time in milliseconds.
+     *        For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

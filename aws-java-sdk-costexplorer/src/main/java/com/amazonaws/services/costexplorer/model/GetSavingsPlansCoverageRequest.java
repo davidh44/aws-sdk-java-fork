@@ -81,11 +81,10 @@ public class GetSavingsPlansCoverageRequest extends com.amazonaws.AmazonWebServi
      * <p>
      * <code>GetSavingsPlansCoverage</code> uses the same <a
      * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html">Expression</a>
-     * object as the other operations, but only <code>AND</code> is supported among each dimension. If there are
-     * multiple values for a dimension, they are OR'd together.
+     * object as the other operations, but only <code>AND</code> is supported among each dimension.
      * </p>
      * <p>
-     * Cost category is also supported.
+     * Cost category is supported. Tags are not supported.
      * </p>
      */
     private Expression filter;
@@ -415,11 +414,10 @@ public class GetSavingsPlansCoverageRequest extends com.amazonaws.AmazonWebServi
      * <p>
      * <code>GetSavingsPlansCoverage</code> uses the same <a
      * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html">Expression</a>
-     * object as the other operations, but only <code>AND</code> is supported among each dimension. If there are
-     * multiple values for a dimension, they are OR'd together.
+     * object as the other operations, but only <code>AND</code> is supported among each dimension.
      * </p>
      * <p>
-     * Cost category is also supported.
+     * Cost category is supported. Tags are not supported.
      * </p>
      * 
      * @param filter
@@ -451,10 +449,10 @@ public class GetSavingsPlansCoverageRequest extends com.amazonaws.AmazonWebServi
      *        <code>GetSavingsPlansCoverage</code> uses the same <a
      *        href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html"
      *        >Expression</a> object as the other operations, but only <code>AND</code> is supported among each
-     *        dimension. If there are multiple values for a dimension, they are OR'd together.
+     *        dimension.
      *        </p>
      *        <p>
-     *        Cost category is also supported.
+     *        Cost category is supported. Tags are not supported.
      */
 
     public void setFilter(Expression filter) {
@@ -491,11 +489,10 @@ public class GetSavingsPlansCoverageRequest extends com.amazonaws.AmazonWebServi
      * <p>
      * <code>GetSavingsPlansCoverage</code> uses the same <a
      * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html">Expression</a>
-     * object as the other operations, but only <code>AND</code> is supported among each dimension. If there are
-     * multiple values for a dimension, they are OR'd together.
+     * object as the other operations, but only <code>AND</code> is supported among each dimension.
      * </p>
      * <p>
-     * Cost category is also supported.
+     * Cost category is supported. Tags are not supported.
      * </p>
      * 
      * @return Filters Savings Plans coverage data by dimensions. You can filter data for Savings Plans usage with the
@@ -526,10 +523,10 @@ public class GetSavingsPlansCoverageRequest extends com.amazonaws.AmazonWebServi
      *         <code>GetSavingsPlansCoverage</code> uses the same <a
      *         href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html"
      *         >Expression</a> object as the other operations, but only <code>AND</code> is supported among each
-     *         dimension. If there are multiple values for a dimension, they are OR'd together.
+     *         dimension.
      *         </p>
      *         <p>
-     *         Cost category is also supported.
+     *         Cost category is supported. Tags are not supported.
      */
 
     public Expression getFilter() {
@@ -566,11 +563,10 @@ public class GetSavingsPlansCoverageRequest extends com.amazonaws.AmazonWebServi
      * <p>
      * <code>GetSavingsPlansCoverage</code> uses the same <a
      * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html">Expression</a>
-     * object as the other operations, but only <code>AND</code> is supported among each dimension. If there are
-     * multiple values for a dimension, they are OR'd together.
+     * object as the other operations, but only <code>AND</code> is supported among each dimension.
      * </p>
      * <p>
-     * Cost category is also supported.
+     * Cost category is supported. Tags are not supported.
      * </p>
      * 
      * @param filter
@@ -602,10 +598,10 @@ public class GetSavingsPlansCoverageRequest extends com.amazonaws.AmazonWebServi
      *        <code>GetSavingsPlansCoverage</code> uses the same <a
      *        href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html"
      *        >Expression</a> object as the other operations, but only <code>AND</code> is supported among each
-     *        dimension. If there are multiple values for a dimension, they are OR'd together.
+     *        dimension.
      *        </p>
      *        <p>
-     *        Cost category is also supported.
+     *        Cost category is supported. Tags are not supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

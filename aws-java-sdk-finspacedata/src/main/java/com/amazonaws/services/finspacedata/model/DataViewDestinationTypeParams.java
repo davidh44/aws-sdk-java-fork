@@ -38,12 +38,43 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
      * <code>GLUE_TABLE</code> - Glue table destination type.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>S3</code> - S3 destination type.
+     * </p>
+     * </li>
      * </ul>
      */
     private String destinationType;
-
+    /**
+     * <p>
+     * Data view export file format.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>PARQUET</code> - Parquet export file format.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DELIMITED_TEXT</code> - Delimited text export file format.
+     * </p>
+     * </li>
+     * </ul>
+     */
     private String s3DestinationExportFileFormat;
-
+    /**
+     * <p>
+     * Format Options for S3 Destination type.
+     * </p>
+     * <p>
+     * Here is an example of how you could specify the <code>s3DestinationExportFileFormatOptions</code>
+     * </p>
+     * <p>
+     * <code> { "header": "true", "delimiter": ",", "compression": "gzip" }</code>
+     * </p>
+     */
     private java.util.Map<String, String> s3DestinationExportFileFormatOptions;
 
     /**
@@ -56,6 +87,11 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
      * <code>GLUE_TABLE</code> - Glue table destination type.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>S3</code> - S3 destination type.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param destinationType
@@ -64,6 +100,11 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
      *        <li>
      *        <p>
      *        <code>GLUE_TABLE</code> - Glue table destination type.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>S3</code> - S3 destination type.
      *        </p>
      *        </li>
      */
@@ -82,6 +123,11 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
      * <code>GLUE_TABLE</code> - Glue table destination type.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>S3</code> - S3 destination type.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return Destination type for a Dataview.</p>
@@ -89,6 +135,11 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
      *         <li>
      *         <p>
      *         <code>GLUE_TABLE</code> - Glue table destination type.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>S3</code> - S3 destination type.
      *         </p>
      *         </li>
      */
@@ -107,6 +158,11 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
      * <code>GLUE_TABLE</code> - Glue table destination type.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>S3</code> - S3 destination type.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param destinationType
@@ -115,6 +171,11 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
      *        <li>
      *        <p>
      *        <code>GLUE_TABLE</code> - Glue table destination type.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>S3</code> - S3 destination type.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -126,7 +187,35 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
     }
 
     /**
+     * <p>
+     * Data view export file format.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>PARQUET</code> - Parquet export file format.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DELIMITED_TEXT</code> - Delimited text export file format.
+     * </p>
+     * </li>
+     * </ul>
+     * 
      * @param s3DestinationExportFileFormat
+     *        Data view export file format.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>PARQUET</code> - Parquet export file format.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>DELIMITED_TEXT</code> - Delimited text export file format.
+     *        </p>
+     *        </li>
      * @see ExportFileFormat
      */
 
@@ -135,7 +224,34 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
     }
 
     /**
-     * @return
+     * <p>
+     * Data view export file format.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>PARQUET</code> - Parquet export file format.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DELIMITED_TEXT</code> - Delimited text export file format.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return Data view export file format.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>PARQUET</code> - Parquet export file format.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>DELIMITED_TEXT</code> - Delimited text export file format.
+     *         </p>
+     *         </li>
      * @see ExportFileFormat
      */
 
@@ -144,7 +260,35 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
     }
 
     /**
+     * <p>
+     * Data view export file format.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>PARQUET</code> - Parquet export file format.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DELIMITED_TEXT</code> - Delimited text export file format.
+     * </p>
+     * </li>
+     * </ul>
+     * 
      * @param s3DestinationExportFileFormat
+     *        Data view export file format.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>PARQUET</code> - Parquet export file format.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>DELIMITED_TEXT</code> - Delimited text export file format.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ExportFileFormat
      */
@@ -155,7 +299,35 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
     }
 
     /**
+     * <p>
+     * Data view export file format.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>PARQUET</code> - Parquet export file format.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DELIMITED_TEXT</code> - Delimited text export file format.
+     * </p>
+     * </li>
+     * </ul>
+     * 
      * @param s3DestinationExportFileFormat
+     *        Data view export file format.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>PARQUET</code> - Parquet export file format.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>DELIMITED_TEXT</code> - Delimited text export file format.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ExportFileFormat
      */
@@ -166,7 +338,22 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
     }
 
     /**
-     * @return
+     * <p>
+     * Format Options for S3 Destination type.
+     * </p>
+     * <p>
+     * Here is an example of how you could specify the <code>s3DestinationExportFileFormatOptions</code>
+     * </p>
+     * <p>
+     * <code> { "header": "true", "delimiter": ",", "compression": "gzip" }</code>
+     * </p>
+     * 
+     * @return Format Options for S3 Destination type.</p>
+     *         <p>
+     *         Here is an example of how you could specify the <code>s3DestinationExportFileFormatOptions</code>
+     *         </p>
+     *         <p>
+     *         <code> { "header": "true", "delimiter": ",", "compression": "gzip" }</code>
      */
 
     public java.util.Map<String, String> getS3DestinationExportFileFormatOptions() {
@@ -174,7 +361,23 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
     }
 
     /**
+     * <p>
+     * Format Options for S3 Destination type.
+     * </p>
+     * <p>
+     * Here is an example of how you could specify the <code>s3DestinationExportFileFormatOptions</code>
+     * </p>
+     * <p>
+     * <code> { "header": "true", "delimiter": ",", "compression": "gzip" }</code>
+     * </p>
+     * 
      * @param s3DestinationExportFileFormatOptions
+     *        Format Options for S3 Destination type.</p>
+     *        <p>
+     *        Here is an example of how you could specify the <code>s3DestinationExportFileFormatOptions</code>
+     *        </p>
+     *        <p>
+     *        <code> { "header": "true", "delimiter": ",", "compression": "gzip" }</code>
      */
 
     public void setS3DestinationExportFileFormatOptions(java.util.Map<String, String> s3DestinationExportFileFormatOptions) {
@@ -182,7 +385,23 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
     }
 
     /**
+     * <p>
+     * Format Options for S3 Destination type.
+     * </p>
+     * <p>
+     * Here is an example of how you could specify the <code>s3DestinationExportFileFormatOptions</code>
+     * </p>
+     * <p>
+     * <code> { "header": "true", "delimiter": ",", "compression": "gzip" }</code>
+     * </p>
+     * 
      * @param s3DestinationExportFileFormatOptions
+     *        Format Options for S3 Destination type.</p>
+     *        <p>
+     *        Here is an example of how you could specify the <code>s3DestinationExportFileFormatOptions</code>
+     *        </p>
+     *        <p>
+     *        <code> { "header": "true", "delimiter": ",", "compression": "gzip" }</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -72,6 +72,11 @@ public class DescribeEventsRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
+     * If the source type is an RDS Proxy, a <code>DBProxyName</code> value must be supplied.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Can't end with a hyphen or contain two consecutive hyphens.
      * </p>
      * </li>
@@ -193,6 +198,11 @@ public class DescribeEventsRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
+     * If the source type is an RDS Proxy, a <code>DBProxyName</code> value must be supplied.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Can't end with a hyphen or contain two consecutive hyphens.
      * </p>
      * </li>
@@ -239,6 +249,11 @@ public class DescribeEventsRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <p>
      *        If the source type is a DB cluster snapshot, a <code>DBClusterSnapshotIdentifier</code> value must be
      *        supplied.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If the source type is an RDS Proxy, a <code>DBProxyName</code> value must be supplied.
      *        </p>
      *        </li>
      *        <li>
@@ -298,6 +313,11 @@ public class DescribeEventsRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
+     * If the source type is an RDS Proxy, a <code>DBProxyName</code> value must be supplied.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Can't end with a hyphen or contain two consecutive hyphens.
      * </p>
      * </li>
@@ -343,6 +363,11 @@ public class DescribeEventsRequest extends com.amazonaws.AmazonWebServiceRequest
      *         <p>
      *         If the source type is a DB cluster snapshot, a <code>DBClusterSnapshotIdentifier</code> value must be
      *         supplied.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         If the source type is an RDS Proxy, a <code>DBProxyName</code> value must be supplied.
      *         </p>
      *         </li>
      *         <li>
@@ -402,6 +427,11 @@ public class DescribeEventsRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
+     * If the source type is an RDS Proxy, a <code>DBProxyName</code> value must be supplied.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Can't end with a hyphen or contain two consecutive hyphens.
      * </p>
      * </li>
@@ -448,6 +478,11 @@ public class DescribeEventsRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <p>
      *        If the source type is a DB cluster snapshot, a <code>DBClusterSnapshotIdentifier</code> value must be
      *        supplied.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If the source type is an RDS Proxy, a <code>DBProxyName</code> value must be supplied.
      *        </p>
      *        </li>
      *        <li>

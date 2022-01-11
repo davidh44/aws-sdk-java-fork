@@ -54,7 +54,7 @@ public class InstanceDetails implements Serializable, Cloneable, StructuredPojo 
     private ElastiCacheInstanceDetails elastiCacheInstanceDetails;
     /**
      * <p>
-     * The Amazon ES instances that Amazon Web Services recommends that you purchase.
+     * The Amazon OpenSearch Service instances that Amazon Web Services recommends that you purchase.
      * </p>
      */
     private ESInstanceDetails eSInstanceDetails;
@@ -221,11 +221,11 @@ public class InstanceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon ES instances that Amazon Web Services recommends that you purchase.
+     * The Amazon OpenSearch Service instances that Amazon Web Services recommends that you purchase.
      * </p>
      * 
      * @param eSInstanceDetails
-     *        The Amazon ES instances that Amazon Web Services recommends that you purchase.
+     *        The Amazon OpenSearch Service instances that Amazon Web Services recommends that you purchase.
      */
 
     public void setESInstanceDetails(ESInstanceDetails eSInstanceDetails) {
@@ -234,10 +234,10 @@ public class InstanceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon ES instances that Amazon Web Services recommends that you purchase.
+     * The Amazon OpenSearch Service instances that Amazon Web Services recommends that you purchase.
      * </p>
      * 
-     * @return The Amazon ES instances that Amazon Web Services recommends that you purchase.
+     * @return The Amazon OpenSearch Service instances that Amazon Web Services recommends that you purchase.
      */
 
     public ESInstanceDetails getESInstanceDetails() {
@@ -246,11 +246,11 @@ public class InstanceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon ES instances that Amazon Web Services recommends that you purchase.
+     * The Amazon OpenSearch Service instances that Amazon Web Services recommends that you purchase.
      * </p>
      * 
      * @param eSInstanceDetails
-     *        The Amazon ES instances that Amazon Web Services recommends that you purchase.
+     *        The Amazon OpenSearch Service instances that Amazon Web Services recommends that you purchase.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

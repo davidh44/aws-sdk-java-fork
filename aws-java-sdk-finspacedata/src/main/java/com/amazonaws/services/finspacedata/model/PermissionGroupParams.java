@@ -21,6 +21,12 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * Permission group parameters for Dataset permissions.
  * </p>
+ * <p>
+ * Here is an example of how you could specify the <code>PermissionGroupParams</code>:
+ * </p>
+ * <p>
+ * <code> { "permissionGroupId": "0r6fCRtSTUk4XPfXQe3M0g", "datasetPermissions": [ {"permission": "ViewDatasetDetails"}, {"permission": "AddDatasetData"}, {"permission": "EditDatasetMetadata"}, {"permission": "DeleteDataset"} ] } </code>
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/PermissionGroupParams" target="_top">AWS API
  *      Documentation</a>
