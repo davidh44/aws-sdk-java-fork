@@ -33,11 +33,11 @@ import java.util.concurrent.ExecutorService;
  * </p>
  * <p>
  * When Performance Insights is enabled, the Amazon RDS Performance Insights API provides visibility into the
- * performance of your DB instance. Amazon CloudWatch provides the authoritative source for AWS service-vended
- * monitoring metrics. Performance Insights offers a domain-specific view of DB load.
+ * performance of your DB instance. Amazon CloudWatch provides the authoritative source for Amazon Web Services
+ * service-vended monitoring metrics. Performance Insights offers a domain-specific view of DB load.
  * </p>
  * <p>
- * DB load is measured as Average Active Sessions. Performance Insights provides the data to API consumers as a
+ * DB load is measured as average active sessions. Performance Insights provides the data to API consumers as a
  * two-dimensional time-series dataset. The time dimension provides DB load data for each time point in the queried time
  * range. Each time point decomposes overall load in relation to the requested dimensions, measured at that time point.
  * Examples include SQL, Wait event, User, and Host.
@@ -46,14 +46,14 @@ import java.util.concurrent.ExecutorService;
  * <li>
  * <p>
  * To learn more about Performance Insights and Amazon Aurora DB instances, go to the <a
- * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights.html">Amazon Aurora User
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights.html"> Amazon Aurora User
  * Guide</a>.
  * </p>
  * </li>
  * <li>
  * <p>
  * To learn more about Performance Insights and Amazon RDS DB instances, go to the <a
- * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Amazon RDS User Guide</a>.
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html"> Amazon RDS User Guide</a>.
  * </p>
  * </li>
  * </ul>
@@ -169,6 +169,39 @@ public class AWSPIAsyncClient extends AWSPIClient implements AWSPIAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<GetResourceMetadataResult> getResourceMetadataAsync(GetResourceMetadataRequest request) {
+
+        return getResourceMetadataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetResourceMetadataResult> getResourceMetadataAsync(final GetResourceMetadataRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetResourceMetadataRequest, GetResourceMetadataResult> asyncHandler) {
+        final GetResourceMetadataRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetResourceMetadataResult>() {
+            @Override
+            public GetResourceMetadataResult call() throws Exception {
+                GetResourceMetadataResult result = null;
+
+                try {
+                    result = executeGetResourceMetadata(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetResourceMetricsResult> getResourceMetricsAsync(GetResourceMetricsRequest request) {
 
         return getResourceMetricsAsync(request, null);
@@ -186,6 +219,74 @@ public class AWSPIAsyncClient extends AWSPIClient implements AWSPIAsync {
 
                 try {
                     result = executeGetResourceMetrics(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAvailableResourceDimensionsResult> listAvailableResourceDimensionsAsync(
+            ListAvailableResourceDimensionsRequest request) {
+
+        return listAvailableResourceDimensionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAvailableResourceDimensionsResult> listAvailableResourceDimensionsAsync(
+            final ListAvailableResourceDimensionsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListAvailableResourceDimensionsRequest, ListAvailableResourceDimensionsResult> asyncHandler) {
+        final ListAvailableResourceDimensionsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListAvailableResourceDimensionsResult>() {
+            @Override
+            public ListAvailableResourceDimensionsResult call() throws Exception {
+                ListAvailableResourceDimensionsResult result = null;
+
+                try {
+                    result = executeListAvailableResourceDimensions(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAvailableResourceMetricsResult> listAvailableResourceMetricsAsync(ListAvailableResourceMetricsRequest request) {
+
+        return listAvailableResourceMetricsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAvailableResourceMetricsResult> listAvailableResourceMetricsAsync(final ListAvailableResourceMetricsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListAvailableResourceMetricsRequest, ListAvailableResourceMetricsResult> asyncHandler) {
+        final ListAvailableResourceMetricsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListAvailableResourceMetricsResult>() {
+            @Override
+            public ListAvailableResourceMetricsResult call() throws Exception {
+                ListAvailableResourceMetricsResult result = null;
+
+                try {
+                    result = executeListAvailableResourceMetrics(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

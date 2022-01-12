@@ -37,7 +37,8 @@ public class UpdateExportResult extends com.amazonaws.AmazonWebServiceResult<com
     private ExportResourceSpecification resourceSpecification;
     /**
      * <p>
-     * The file format used for the files that define the resource.
+     * The file format used for the files that define the resource. The <code>TSV</code> format is required to export a
+     * custom vocabulary only; otherwise use <code>LexJson</code> format.
      * </p>
      */
     private String fileFormat;
@@ -142,11 +143,13 @@ public class UpdateExportResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The file format used for the files that define the resource.
+     * The file format used for the files that define the resource. The <code>TSV</code> format is required to export a
+     * custom vocabulary only; otherwise use <code>LexJson</code> format.
      * </p>
      * 
      * @param fileFormat
-     *        The file format used for the files that define the resource.
+     *        The file format used for the files that define the resource. The <code>TSV</code> format is required to
+     *        export a custom vocabulary only; otherwise use <code>LexJson</code> format.
      * @see ImportExportFileFormat
      */
 
@@ -156,10 +159,12 @@ public class UpdateExportResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The file format used for the files that define the resource.
+     * The file format used for the files that define the resource. The <code>TSV</code> format is required to export a
+     * custom vocabulary only; otherwise use <code>LexJson</code> format.
      * </p>
      * 
-     * @return The file format used for the files that define the resource.
+     * @return The file format used for the files that define the resource. The <code>TSV</code> format is required to
+     *         export a custom vocabulary only; otherwise use <code>LexJson</code> format.
      * @see ImportExportFileFormat
      */
 
@@ -169,11 +174,13 @@ public class UpdateExportResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The file format used for the files that define the resource.
+     * The file format used for the files that define the resource. The <code>TSV</code> format is required to export a
+     * custom vocabulary only; otherwise use <code>LexJson</code> format.
      * </p>
      * 
      * @param fileFormat
-     *        The file format used for the files that define the resource.
+     *        The file format used for the files that define the resource. The <code>TSV</code> format is required to
+     *        export a custom vocabulary only; otherwise use <code>LexJson</code> format.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ImportExportFileFormat
      */
@@ -185,11 +192,13 @@ public class UpdateExportResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The file format used for the files that define the resource.
+     * The file format used for the files that define the resource. The <code>TSV</code> format is required to export a
+     * custom vocabulary only; otherwise use <code>LexJson</code> format.
      * </p>
      * 
      * @param fileFormat
-     *        The file format used for the files that define the resource.
+     *        The file format used for the files that define the resource. The <code>TSV</code> format is required to
+     *        export a custom vocabulary only; otherwise use <code>LexJson</code> format.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ImportExportFileFormat
      */

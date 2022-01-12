@@ -27,15 +27,16 @@ public class GetDimensionKeyDetailsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The AWS service for which Performance Insights returns data. The only valid value is <code>RDS</code>.
+     * The Amazon Web Services service for which Performance Insights returns data. The only valid value is
+     * <code>RDS</code>.
      * </p>
      */
     private String serviceType;
     /**
      * <p>
-     * The ID for a data source from which to gather dimension data. This ID must be immutable and unique within an AWS
-     * Region. When a DB instance is the data source, specify its <code>DbiResourceId</code> value. For example, specify
-     * <code>db-ABCDEFGHIJKLMNOPQRSTU1VW2X</code>.
+     * The ID for a data source from which to gather dimension data. This ID must be immutable and unique within an
+     * Amazon Web Services Region. When a DB instance is the data source, specify its <code>DbiResourceId</code> value.
+     * For example, specify <code>db-ABCDEFGHIJKLMNOPQRSTU1VW2X</code>.
      * </p>
      */
     private String identifier;
@@ -65,11 +66,13 @@ public class GetDimensionKeyDetailsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The AWS service for which Performance Insights returns data. The only valid value is <code>RDS</code>.
+     * The Amazon Web Services service for which Performance Insights returns data. The only valid value is
+     * <code>RDS</code>.
      * </p>
      * 
      * @param serviceType
-     *        The AWS service for which Performance Insights returns data. The only valid value is <code>RDS</code>.
+     *        The Amazon Web Services service for which Performance Insights returns data. The only valid value is
+     *        <code>RDS</code>.
      * @see ServiceType
      */
 
@@ -79,10 +82,12 @@ public class GetDimensionKeyDetailsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The AWS service for which Performance Insights returns data. The only valid value is <code>RDS</code>.
+     * The Amazon Web Services service for which Performance Insights returns data. The only valid value is
+     * <code>RDS</code>.
      * </p>
      * 
-     * @return The AWS service for which Performance Insights returns data. The only valid value is <code>RDS</code>.
+     * @return The Amazon Web Services service for which Performance Insights returns data. The only valid value is
+     *         <code>RDS</code>.
      * @see ServiceType
      */
 
@@ -92,11 +97,13 @@ public class GetDimensionKeyDetailsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The AWS service for which Performance Insights returns data. The only valid value is <code>RDS</code>.
+     * The Amazon Web Services service for which Performance Insights returns data. The only valid value is
+     * <code>RDS</code>.
      * </p>
      * 
      * @param serviceType
-     *        The AWS service for which Performance Insights returns data. The only valid value is <code>RDS</code>.
+     *        The Amazon Web Services service for which Performance Insights returns data. The only valid value is
+     *        <code>RDS</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceType
      */
@@ -108,11 +115,13 @@ public class GetDimensionKeyDetailsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The AWS service for which Performance Insights returns data. The only valid value is <code>RDS</code>.
+     * The Amazon Web Services service for which Performance Insights returns data. The only valid value is
+     * <code>RDS</code>.
      * </p>
      * 
      * @param serviceType
-     *        The AWS service for which Performance Insights returns data. The only valid value is <code>RDS</code>.
+     *        The Amazon Web Services service for which Performance Insights returns data. The only valid value is
+     *        <code>RDS</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceType
      */
@@ -124,15 +133,15 @@ public class GetDimensionKeyDetailsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The ID for a data source from which to gather dimension data. This ID must be immutable and unique within an AWS
-     * Region. When a DB instance is the data source, specify its <code>DbiResourceId</code> value. For example, specify
-     * <code>db-ABCDEFGHIJKLMNOPQRSTU1VW2X</code>.
+     * The ID for a data source from which to gather dimension data. This ID must be immutable and unique within an
+     * Amazon Web Services Region. When a DB instance is the data source, specify its <code>DbiResourceId</code> value.
+     * For example, specify <code>db-ABCDEFGHIJKLMNOPQRSTU1VW2X</code>.
      * </p>
      * 
      * @param identifier
      *        The ID for a data source from which to gather dimension data. This ID must be immutable and unique within
-     *        an AWS Region. When a DB instance is the data source, specify its <code>DbiResourceId</code> value. For
-     *        example, specify <code>db-ABCDEFGHIJKLMNOPQRSTU1VW2X</code>.
+     *        an Amazon Web Services Region. When a DB instance is the data source, specify its
+     *        <code>DbiResourceId</code> value. For example, specify <code>db-ABCDEFGHIJKLMNOPQRSTU1VW2X</code>.
      */
 
     public void setIdentifier(String identifier) {
@@ -141,14 +150,14 @@ public class GetDimensionKeyDetailsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The ID for a data source from which to gather dimension data. This ID must be immutable and unique within an AWS
-     * Region. When a DB instance is the data source, specify its <code>DbiResourceId</code> value. For example, specify
-     * <code>db-ABCDEFGHIJKLMNOPQRSTU1VW2X</code>.
+     * The ID for a data source from which to gather dimension data. This ID must be immutable and unique within an
+     * Amazon Web Services Region. When a DB instance is the data source, specify its <code>DbiResourceId</code> value.
+     * For example, specify <code>db-ABCDEFGHIJKLMNOPQRSTU1VW2X</code>.
      * </p>
      * 
      * @return The ID for a data source from which to gather dimension data. This ID must be immutable and unique within
-     *         an AWS Region. When a DB instance is the data source, specify its <code>DbiResourceId</code> value. For
-     *         example, specify <code>db-ABCDEFGHIJKLMNOPQRSTU1VW2X</code>.
+     *         an Amazon Web Services Region. When a DB instance is the data source, specify its
+     *         <code>DbiResourceId</code> value. For example, specify <code>db-ABCDEFGHIJKLMNOPQRSTU1VW2X</code>.
      */
 
     public String getIdentifier() {
@@ -157,15 +166,15 @@ public class GetDimensionKeyDetailsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The ID for a data source from which to gather dimension data. This ID must be immutable and unique within an AWS
-     * Region. When a DB instance is the data source, specify its <code>DbiResourceId</code> value. For example, specify
-     * <code>db-ABCDEFGHIJKLMNOPQRSTU1VW2X</code>.
+     * The ID for a data source from which to gather dimension data. This ID must be immutable and unique within an
+     * Amazon Web Services Region. When a DB instance is the data source, specify its <code>DbiResourceId</code> value.
+     * For example, specify <code>db-ABCDEFGHIJKLMNOPQRSTU1VW2X</code>.
      * </p>
      * 
      * @param identifier
      *        The ID for a data source from which to gather dimension data. This ID must be immutable and unique within
-     *        an AWS Region. When a DB instance is the data source, specify its <code>DbiResourceId</code> value. For
-     *        example, specify <code>db-ABCDEFGHIJKLMNOPQRSTU1VW2X</code>.
+     *        an Amazon Web Services Region. When a DB instance is the data source, specify its
+     *        <code>DbiResourceId</code> value. For example, specify <code>db-ABCDEFGHIJKLMNOPQRSTU1VW2X</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

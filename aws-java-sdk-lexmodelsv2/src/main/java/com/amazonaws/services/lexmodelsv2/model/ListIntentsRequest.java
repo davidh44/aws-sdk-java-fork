@@ -69,8 +69,12 @@ public class ListIntentsRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * If the response from the <code>ListIntents</code> operation contains more results than specified in the
-     * <code>maxResults</code> parameter, a token is returned in the response. Use that token in the
-     * <code>nextToken</code> parameter to return the next page of results.
+     * <code>maxResults</code> parameter, a token is returned in the response.
+     * </p>
+     * <p>
+     * Use the returned token in the <code>nextToken</code> parameter of a <code>ListIntents</code> request to return
+     * the next page of results. For a complete set of results, call the <code>ListIntents</code> operation until the
+     * <code>nextToken</code> returned in the response is null.
      * </p>
      */
     private String nextToken;
@@ -380,14 +384,21 @@ public class ListIntentsRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * If the response from the <code>ListIntents</code> operation contains more results than specified in the
-     * <code>maxResults</code> parameter, a token is returned in the response. Use that token in the
-     * <code>nextToken</code> parameter to return the next page of results.
+     * <code>maxResults</code> parameter, a token is returned in the response.
+     * </p>
+     * <p>
+     * Use the returned token in the <code>nextToken</code> parameter of a <code>ListIntents</code> request to return
+     * the next page of results. For a complete set of results, call the <code>ListIntents</code> operation until the
+     * <code>nextToken</code> returned in the response is null.
      * </p>
      * 
      * @param nextToken
      *        If the response from the <code>ListIntents</code> operation contains more results than specified in the
-     *        <code>maxResults</code> parameter, a token is returned in the response. Use that token in the
-     *        <code>nextToken</code> parameter to return the next page of results.
+     *        <code>maxResults</code> parameter, a token is returned in the response.</p>
+     *        <p>
+     *        Use the returned token in the <code>nextToken</code> parameter of a <code>ListIntents</code> request to
+     *        return the next page of results. For a complete set of results, call the <code>ListIntents</code>
+     *        operation until the <code>nextToken</code> returned in the response is null.
      */
 
     public void setNextToken(String nextToken) {
@@ -397,13 +408,20 @@ public class ListIntentsRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * If the response from the <code>ListIntents</code> operation contains more results than specified in the
-     * <code>maxResults</code> parameter, a token is returned in the response. Use that token in the
-     * <code>nextToken</code> parameter to return the next page of results.
+     * <code>maxResults</code> parameter, a token is returned in the response.
+     * </p>
+     * <p>
+     * Use the returned token in the <code>nextToken</code> parameter of a <code>ListIntents</code> request to return
+     * the next page of results. For a complete set of results, call the <code>ListIntents</code> operation until the
+     * <code>nextToken</code> returned in the response is null.
      * </p>
      * 
      * @return If the response from the <code>ListIntents</code> operation contains more results than specified in the
-     *         <code>maxResults</code> parameter, a token is returned in the response. Use that token in the
-     *         <code>nextToken</code> parameter to return the next page of results.
+     *         <code>maxResults</code> parameter, a token is returned in the response.</p>
+     *         <p>
+     *         Use the returned token in the <code>nextToken</code> parameter of a <code>ListIntents</code> request to
+     *         return the next page of results. For a complete set of results, call the <code>ListIntents</code>
+     *         operation until the <code>nextToken</code> returned in the response is null.
      */
 
     public String getNextToken() {
@@ -413,14 +431,21 @@ public class ListIntentsRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * If the response from the <code>ListIntents</code> operation contains more results than specified in the
-     * <code>maxResults</code> parameter, a token is returned in the response. Use that token in the
-     * <code>nextToken</code> parameter to return the next page of results.
+     * <code>maxResults</code> parameter, a token is returned in the response.
+     * </p>
+     * <p>
+     * Use the returned token in the <code>nextToken</code> parameter of a <code>ListIntents</code> request to return
+     * the next page of results. For a complete set of results, call the <code>ListIntents</code> operation until the
+     * <code>nextToken</code> returned in the response is null.
      * </p>
      * 
      * @param nextToken
      *        If the response from the <code>ListIntents</code> operation contains more results than specified in the
-     *        <code>maxResults</code> parameter, a token is returned in the response. Use that token in the
-     *        <code>nextToken</code> parameter to return the next page of results.
+     *        <code>maxResults</code> parameter, a token is returned in the response.</p>
+     *        <p>
+     *        Use the returned token in the <code>nextToken</code> parameter of a <code>ListIntents</code> request to
+     *        return the next page of results. For a complete set of results, call the <code>ListIntents</code>
+     *        operation until the <code>nextToken</code> returned in the response is null.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

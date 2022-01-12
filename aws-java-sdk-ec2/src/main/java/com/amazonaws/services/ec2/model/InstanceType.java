@@ -169,6 +169,7 @@ public enum InstanceType {
     G5g16xlarge("g5g.16xlarge"),
     G5gMetal("g5g.metal"),
     Hi14xlarge("hi1.4xlarge"),
+    Hpc6a48xlarge("hpc6a.48xlarge"),
     Hs18xlarge("hs1.8xlarge"),
     H12xlarge("h1.2xlarge"),
     H14xlarge("h1.4xlarge"),

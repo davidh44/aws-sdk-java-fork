@@ -56,6 +56,11 @@ public class ImportResourceSpecificationJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     importResourceSpecification.setBotLocaleImportSpecification(BotLocaleImportSpecificationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("customVocabularyImportSpecification", targetDepth)) {
+                    context.nextToken();
+                    importResourceSpecification.setCustomVocabularyImportSpecification(CustomVocabularyImportSpecificationJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

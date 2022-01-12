@@ -57,6 +57,11 @@ public class DimensionKeyDescriptionJsonUnmarshaller implements Unmarshaller<Dim
                     context.nextToken();
                     dimensionKeyDescription.setTotal(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
+                if (context.testExpression("AdditionalMetrics", targetDepth)) {
+                    context.nextToken();
+                    dimensionKeyDescription.setAdditionalMetrics(new MapUnmarshaller<String, Double>(context.getUnmarshaller(String.class), context
+                            .getUnmarshaller(Double.class)).unmarshall(context));
+                }
                 if (context.testExpression("Partitions", targetDepth)) {
                     context.nextToken();
                     dimensionKeyDescription.setPartitions(new ListUnmarshaller<Double>(context.getUnmarshaller(Double.class))

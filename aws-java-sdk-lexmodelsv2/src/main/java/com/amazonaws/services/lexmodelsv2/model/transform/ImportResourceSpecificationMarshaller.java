@@ -31,6 +31,8 @@ public class ImportResourceSpecificationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("botImportSpecification").build();
     private static final MarshallingInfo<StructuredPojo> BOTLOCALEIMPORTSPECIFICATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("botLocaleImportSpecification").build();
+    private static final MarshallingInfo<StructuredPojo> CUSTOMVOCABULARYIMPORTSPECIFICATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("customVocabularyImportSpecification").build();
 
     private static final ImportResourceSpecificationMarshaller instance = new ImportResourceSpecificationMarshaller();
 
@@ -50,6 +52,7 @@ public class ImportResourceSpecificationMarshaller {
         try {
             protocolMarshaller.marshall(importResourceSpecification.getBotImportSpecification(), BOTIMPORTSPECIFICATION_BINDING);
             protocolMarshaller.marshall(importResourceSpecification.getBotLocaleImportSpecification(), BOTLOCALEIMPORTSPECIFICATION_BINDING);
+            protocolMarshaller.marshall(importResourceSpecification.getCustomVocabularyImportSpecification(), CUSTOMVOCABULARYIMPORTSPECIFICATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -51,6 +51,12 @@ public class ListImportsResult extends com.amazonaws.AmazonWebServiceResult<com.
      * </p>
      */
     private String nextToken;
+    /**
+     * <p>
+     * The locale specified in the request.
+     * </p>
+     */
+    private String localeId;
 
     /**
      * <p>
@@ -274,6 +280,46 @@ public class ListImportsResult extends com.amazonaws.AmazonWebServiceResult<com.
     }
 
     /**
+     * <p>
+     * The locale specified in the request.
+     * </p>
+     * 
+     * @param localeId
+     *        The locale specified in the request.
+     */
+
+    public void setLocaleId(String localeId) {
+        this.localeId = localeId;
+    }
+
+    /**
+     * <p>
+     * The locale specified in the request.
+     * </p>
+     * 
+     * @return The locale specified in the request.
+     */
+
+    public String getLocaleId() {
+        return this.localeId;
+    }
+
+    /**
+     * <p>
+     * The locale specified in the request.
+     * </p>
+     * 
+     * @param localeId
+     *        The locale specified in the request.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListImportsResult withLocaleId(String localeId) {
+        setLocaleId(localeId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -292,7 +338,9 @@ public class ListImportsResult extends com.amazonaws.AmazonWebServiceResult<com.
         if (getImportSummaries() != null)
             sb.append("ImportSummaries: ").append(getImportSummaries()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getLocaleId() != null)
+            sb.append("LocaleId: ").append(getLocaleId());
         sb.append("}");
         return sb.toString();
     }
@@ -323,6 +371,10 @@ public class ListImportsResult extends com.amazonaws.AmazonWebServiceResult<com.
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
+        if (other.getLocaleId() == null ^ this.getLocaleId() == null)
+            return false;
+        if (other.getLocaleId() != null && other.getLocaleId().equals(this.getLocaleId()) == false)
+            return false;
         return true;
     }
 
@@ -335,6 +387,7 @@ public class ListImportsResult extends com.amazonaws.AmazonWebServiceResult<com.
         hashCode = prime * hashCode + ((getBotVersion() == null) ? 0 : getBotVersion().hashCode());
         hashCode = prime * hashCode + ((getImportSummaries() == null) ? 0 : getImportSummaries().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getLocaleId() == null) ? 0 : getLocaleId().hashCode());
         return hashCode;
     }
 

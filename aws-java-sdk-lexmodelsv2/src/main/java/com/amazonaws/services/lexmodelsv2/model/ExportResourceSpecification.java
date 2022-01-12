@@ -41,6 +41,12 @@ public class ExportResourceSpecification implements Serializable, Cloneable, Str
      * </p>
      */
     private BotLocaleExportSpecification botLocaleExportSpecification;
+    /**
+     * <p>
+     * The parameters required to export a custom vocabulary.
+     * </p>
+     */
+    private CustomVocabularyExportSpecification customVocabularyExportSpecification;
 
     /**
      * <p>
@@ -123,6 +129,46 @@ public class ExportResourceSpecification implements Serializable, Cloneable, Str
     }
 
     /**
+     * <p>
+     * The parameters required to export a custom vocabulary.
+     * </p>
+     * 
+     * @param customVocabularyExportSpecification
+     *        The parameters required to export a custom vocabulary.
+     */
+
+    public void setCustomVocabularyExportSpecification(CustomVocabularyExportSpecification customVocabularyExportSpecification) {
+        this.customVocabularyExportSpecification = customVocabularyExportSpecification;
+    }
+
+    /**
+     * <p>
+     * The parameters required to export a custom vocabulary.
+     * </p>
+     * 
+     * @return The parameters required to export a custom vocabulary.
+     */
+
+    public CustomVocabularyExportSpecification getCustomVocabularyExportSpecification() {
+        return this.customVocabularyExportSpecification;
+    }
+
+    /**
+     * <p>
+     * The parameters required to export a custom vocabulary.
+     * </p>
+     * 
+     * @param customVocabularyExportSpecification
+     *        The parameters required to export a custom vocabulary.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ExportResourceSpecification withCustomVocabularyExportSpecification(CustomVocabularyExportSpecification customVocabularyExportSpecification) {
+        setCustomVocabularyExportSpecification(customVocabularyExportSpecification);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -137,7 +183,9 @@ public class ExportResourceSpecification implements Serializable, Cloneable, Str
         if (getBotExportSpecification() != null)
             sb.append("BotExportSpecification: ").append(getBotExportSpecification()).append(",");
         if (getBotLocaleExportSpecification() != null)
-            sb.append("BotLocaleExportSpecification: ").append(getBotLocaleExportSpecification());
+            sb.append("BotLocaleExportSpecification: ").append(getBotLocaleExportSpecification()).append(",");
+        if (getCustomVocabularyExportSpecification() != null)
+            sb.append("CustomVocabularyExportSpecification: ").append(getCustomVocabularyExportSpecification());
         sb.append("}");
         return sb.toString();
     }
@@ -160,6 +208,11 @@ public class ExportResourceSpecification implements Serializable, Cloneable, Str
             return false;
         if (other.getBotLocaleExportSpecification() != null && other.getBotLocaleExportSpecification().equals(this.getBotLocaleExportSpecification()) == false)
             return false;
+        if (other.getCustomVocabularyExportSpecification() == null ^ this.getCustomVocabularyExportSpecification() == null)
+            return false;
+        if (other.getCustomVocabularyExportSpecification() != null
+                && other.getCustomVocabularyExportSpecification().equals(this.getCustomVocabularyExportSpecification()) == false)
+            return false;
         return true;
     }
 
@@ -170,6 +223,7 @@ public class ExportResourceSpecification implements Serializable, Cloneable, Str
 
         hashCode = prime * hashCode + ((getBotExportSpecification() == null) ? 0 : getBotExportSpecification().hashCode());
         hashCode = prime * hashCode + ((getBotLocaleExportSpecification() == null) ? 0 : getBotLocaleExportSpecification().hashCode());
+        hashCode = prime * hashCode + ((getCustomVocabularyExportSpecification() == null) ? 0 : getCustomVocabularyExportSpecification().hashCode());
         return hashCode;
     }
 

@@ -30,7 +30,7 @@ public class MetricKeyDataPoints implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The dimension(s) to which the data points apply.
+     * The dimensions to which the data points apply.
      * </p>
      */
     private ResponseResourceMetricKey key;
@@ -43,11 +43,11 @@ public class MetricKeyDataPoints implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The dimension(s) to which the data points apply.
+     * The dimensions to which the data points apply.
      * </p>
      * 
      * @param key
-     *        The dimension(s) to which the data points apply.
+     *        The dimensions to which the data points apply.
      */
 
     public void setKey(ResponseResourceMetricKey key) {
@@ -56,10 +56,10 @@ public class MetricKeyDataPoints implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The dimension(s) to which the data points apply.
+     * The dimensions to which the data points apply.
      * </p>
      * 
-     * @return The dimension(s) to which the data points apply.
+     * @return The dimensions to which the data points apply.
      */
 
     public ResponseResourceMetricKey getKey() {
@@ -68,11 +68,11 @@ public class MetricKeyDataPoints implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The dimension(s) to which the data points apply.
+     * The dimensions to which the data points apply.
      * </p>
      * 
      * @param key
-     *        The dimension(s) to which the data points apply.
+     *        The dimensions to which the data points apply.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

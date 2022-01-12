@@ -53,6 +53,19 @@ public class AbstractAWSPIAsync extends AbstractAWSPI implements AWSPIAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<GetResourceMetadataResult> getResourceMetadataAsync(GetResourceMetadataRequest request) {
+
+        return getResourceMetadataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetResourceMetadataResult> getResourceMetadataAsync(GetResourceMetadataRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetResourceMetadataRequest, GetResourceMetadataResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetResourceMetricsResult> getResourceMetricsAsync(GetResourceMetricsRequest request) {
 
         return getResourceMetricsAsync(request, null);
@@ -61,6 +74,34 @@ public class AbstractAWSPIAsync extends AbstractAWSPI implements AWSPIAsync {
     @Override
     public java.util.concurrent.Future<GetResourceMetricsResult> getResourceMetricsAsync(GetResourceMetricsRequest request,
             com.amazonaws.handlers.AsyncHandler<GetResourceMetricsRequest, GetResourceMetricsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAvailableResourceDimensionsResult> listAvailableResourceDimensionsAsync(
+            ListAvailableResourceDimensionsRequest request) {
+
+        return listAvailableResourceDimensionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAvailableResourceDimensionsResult> listAvailableResourceDimensionsAsync(
+            ListAvailableResourceDimensionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListAvailableResourceDimensionsRequest, ListAvailableResourceDimensionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAvailableResourceMetricsResult> listAvailableResourceMetricsAsync(ListAvailableResourceMetricsRequest request) {
+
+        return listAvailableResourceMetricsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAvailableResourceMetricsResult> listAvailableResourceMetricsAsync(ListAvailableResourceMetricsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListAvailableResourceMetricsRequest, ListAvailableResourceMetricsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

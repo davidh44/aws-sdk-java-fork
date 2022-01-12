@@ -20,9 +20,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * A single query to be processed. You must provide the metric to query. If no other parameters are specified,
- * Performance Insights returns all of the data points for that metric. You can optionally request that the data points
- * be aggregated by dimension group ( <code>GroupBy</code>), and return only those data points that match your criteria
- * (<code>Filter</code>).
+ * Performance Insights returns all data points for the specified metric. Optionally, you can request that the data
+ * points be aggregated by dimension group (<code>GroupBy</code>), and return only those data points that match your
+ * criteria (<code>Filter</code>).
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pi-2018-02-27/MetricQuery" target="_top">AWS API

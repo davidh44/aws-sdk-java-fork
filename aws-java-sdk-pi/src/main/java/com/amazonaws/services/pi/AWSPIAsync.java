@@ -33,11 +33,11 @@ import com.amazonaws.services.pi.model.*;
  * </p>
  * <p>
  * When Performance Insights is enabled, the Amazon RDS Performance Insights API provides visibility into the
- * performance of your DB instance. Amazon CloudWatch provides the authoritative source for AWS service-vended
- * monitoring metrics. Performance Insights offers a domain-specific view of DB load.
+ * performance of your DB instance. Amazon CloudWatch provides the authoritative source for Amazon Web Services
+ * service-vended monitoring metrics. Performance Insights offers a domain-specific view of DB load.
  * </p>
  * <p>
- * DB load is measured as Average Active Sessions. Performance Insights provides the data to API consumers as a
+ * DB load is measured as average active sessions. Performance Insights provides the data to API consumers as a
  * two-dimensional time-series dataset. The time dimension provides DB load data for each time point in the queried time
  * range. Each time point decomposes overall load in relation to the requested dimensions, measured at that time point.
  * Examples include SQL, Wait event, User, and Host.
@@ -46,14 +46,14 @@ import com.amazonaws.services.pi.model.*;
  * <li>
  * <p>
  * To learn more about Performance Insights and Amazon Aurora DB instances, go to the <a
- * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights.html">Amazon Aurora User
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights.html"> Amazon Aurora User
  * Guide</a>.
  * </p>
  * </li>
  * <li>
  * <p>
  * To learn more about Performance Insights and Amazon RDS DB instances, go to the <a
- * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Amazon RDS User Guide</a>.
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html"> Amazon RDS User Guide</a>.
  * </p>
  * </li>
  * </ul>
@@ -108,7 +108,7 @@ public interface AWSPIAsync extends AWSPI {
      * <p>
      * Get the attributes of the specified dimension group for a DB instance or data source. For example, if you specify
      * a SQL ID, <code>GetDimensionKeyDetails</code> retrieves the full text of the dimension
-     * <code>db.sql.statement</code> associated with this ID. This operation is useful because
+     * <code>db.sql.statement</code>cassociated with this ID. This operation is useful because
      * <code>GetResourceMetrics</code> and <code>DescribeDimensionKeys</code> don't support retrieval of large SQL
      * statement text.
      * </p>
@@ -125,7 +125,7 @@ public interface AWSPIAsync extends AWSPI {
      * <p>
      * Get the attributes of the specified dimension group for a DB instance or data source. For example, if you specify
      * a SQL ID, <code>GetDimensionKeyDetails</code> retrieves the full text of the dimension
-     * <code>db.sql.statement</code> associated with this ID. This operation is useful because
+     * <code>db.sql.statement</code>cassociated with this ID. This operation is useful because
      * <code>GetResourceMetrics</code> and <code>DescribeDimensionKeys</code> don't support retrieval of large SQL
      * statement text.
      * </p>
@@ -142,6 +142,39 @@ public interface AWSPIAsync extends AWSPI {
      */
     java.util.concurrent.Future<GetDimensionKeyDetailsResult> getDimensionKeyDetailsAsync(GetDimensionKeyDetailsRequest getDimensionKeyDetailsRequest,
             com.amazonaws.handlers.AsyncHandler<GetDimensionKeyDetailsRequest, GetDimensionKeyDetailsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieve the metadata for different features. For example, the metadata might indicate that a feature is turned
+     * on or off on a specific DB instance.
+     * </p>
+     * 
+     * @param getResourceMetadataRequest
+     * @return A Java Future containing the result of the GetResourceMetadata operation returned by the service.
+     * @sample AWSPIAsync.GetResourceMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pi-2018-02-27/GetResourceMetadata" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetResourceMetadataResult> getResourceMetadataAsync(GetResourceMetadataRequest getResourceMetadataRequest);
+
+    /**
+     * <p>
+     * Retrieve the metadata for different features. For example, the metadata might indicate that a feature is turned
+     * on or off on a specific DB instance.
+     * </p>
+     * 
+     * @param getResourceMetadataRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetResourceMetadata operation returned by the service.
+     * @sample AWSPIAsyncHandler.GetResourceMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pi-2018-02-27/GetResourceMetadata" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetResourceMetadataResult> getResourceMetadataAsync(GetResourceMetadataRequest getResourceMetadataRequest,
+            com.amazonaws.handlers.AsyncHandler<GetResourceMetadataRequest, GetResourceMetadataResult> asyncHandler);
 
     /**
      * <p>
@@ -187,5 +220,75 @@ public interface AWSPIAsync extends AWSPI {
      */
     java.util.concurrent.Future<GetResourceMetricsResult> getResourceMetricsAsync(GetResourceMetricsRequest getResourceMetricsRequest,
             com.amazonaws.handlers.AsyncHandler<GetResourceMetricsRequest, GetResourceMetricsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieve the dimensions that can be queried for each specified metric type on a specified DB instance.
+     * </p>
+     * 
+     * @param listAvailableResourceDimensionsRequest
+     * @return A Java Future containing the result of the ListAvailableResourceDimensions operation returned by the
+     *         service.
+     * @sample AWSPIAsync.ListAvailableResourceDimensions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pi-2018-02-27/ListAvailableResourceDimensions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAvailableResourceDimensionsResult> listAvailableResourceDimensionsAsync(
+            ListAvailableResourceDimensionsRequest listAvailableResourceDimensionsRequest);
+
+    /**
+     * <p>
+     * Retrieve the dimensions that can be queried for each specified metric type on a specified DB instance.
+     * </p>
+     * 
+     * @param listAvailableResourceDimensionsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListAvailableResourceDimensions operation returned by the
+     *         service.
+     * @sample AWSPIAsyncHandler.ListAvailableResourceDimensions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pi-2018-02-27/ListAvailableResourceDimensions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAvailableResourceDimensionsResult> listAvailableResourceDimensionsAsync(
+            ListAvailableResourceDimensionsRequest listAvailableResourceDimensionsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListAvailableResourceDimensionsRequest, ListAvailableResourceDimensionsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieve metrics of the specified types that can be queried for a specified DB instance.
+     * </p>
+     * 
+     * @param listAvailableResourceMetricsRequest
+     * @return A Java Future containing the result of the ListAvailableResourceMetrics operation returned by the
+     *         service.
+     * @sample AWSPIAsync.ListAvailableResourceMetrics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pi-2018-02-27/ListAvailableResourceMetrics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAvailableResourceMetricsResult> listAvailableResourceMetricsAsync(
+            ListAvailableResourceMetricsRequest listAvailableResourceMetricsRequest);
+
+    /**
+     * <p>
+     * Retrieve metrics of the specified types that can be queried for a specified DB instance.
+     * </p>
+     * 
+     * @param listAvailableResourceMetricsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListAvailableResourceMetrics operation returned by the
+     *         service.
+     * @sample AWSPIAsyncHandler.ListAvailableResourceMetrics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pi-2018-02-27/ListAvailableResourceMetrics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAvailableResourceMetricsResult> listAvailableResourceMetricsAsync(
+            ListAvailableResourceMetricsRequest listAvailableResourceMetricsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListAvailableResourceMetricsRequest, ListAvailableResourceMetricsResult> asyncHandler);
 
 }

@@ -76,6 +76,10 @@ public class ImportSummaryJsonUnmarshaller implements Unmarshaller<ImportSummary
                     context.nextToken();
                     importSummary.setLastUpdatedDateTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("importedResourceType", targetDepth)) {
+                    context.nextToken();
+                    importSummary.setImportedResourceType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

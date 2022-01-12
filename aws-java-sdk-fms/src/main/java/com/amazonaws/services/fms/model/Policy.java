@@ -62,11 +62,11 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      * type of <code>ResourceTypeList</code> and then specify the resource types in a <code>ResourceTypeList</code>.
      * </p>
      * <p>
-     * For WAF and Shield Advanced, example resource types include
-     * <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code> and <code>AWS::CloudFront::Distribution</code>. For a
-     * security group common policy, valid values are <code>AWS::EC2::NetworkInterface</code> and
-     * <code>AWS::EC2::Instance</code>. For a security group content audit policy, valid values are
-     * <code>AWS::EC2::SecurityGroup</code>, <code>AWS::EC2::NetworkInterface</code>, and
+     * For WAF and Shield Advanced, resource types include <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code>,
+     * <code>AWS::ElasticLoadBalancing::LoadBalancer</code>, <code>AWS::EC2::EIP</code>, and
+     * <code>AWS::CloudFront::Distribution</code>. For a security group common policy, valid values are
+     * <code>AWS::EC2::NetworkInterface</code> and <code>AWS::EC2::Instance</code>. For a security group content audit
+     * policy, valid values are <code>AWS::EC2::SecurityGroup</code>, <code>AWS::EC2::NetworkInterface</code>, and
      * <code>AWS::EC2::Instance</code>. For a security group usage audit policy, the value is
      * <code>AWS::EC2::SecurityGroup</code>. For an Network Firewall policy or DNS Firewall policy, the value is
      * <code>AWS::EC2::VPC</code>.
@@ -102,10 +102,16 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
     private Boolean remediationEnabled;
     /**
      * <p>
-     * Indicates whether Firewall Manager should delete Firewall Manager managed resources, such as web ACLs and
-     * security groups, when they are not in use by the Firewall Manager policy. By default, Firewall Manager doesn't
-     * delete unused Firewall Manager managed resources. This option is not available for Shield Advanced or WAF Classic
-     * policies.
+     * Indicates whether Firewall Manager should automatically remove protections from resources that leave the policy
+     * scope and clean up resources that Firewall Manager is managing for accounts when those accounts leave policy
+     * scope. For example, Firewall Manager will disassociate a Firewall Manager managed web ACL from a protected
+     * customer resource when the customer resource leaves policy scope.
+     * </p>
+     * <p>
+     * By default, Firewall Manager doesn't remove protections or delete Firewall Manager managed resources.
+     * </p>
+     * <p>
+     * This option is not available for Shield Advanced or WAF Classic policies.
      * </p>
      */
     private Boolean deleteUnusedFMManagedResources;
@@ -370,11 +376,11 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      * type of <code>ResourceTypeList</code> and then specify the resource types in a <code>ResourceTypeList</code>.
      * </p>
      * <p>
-     * For WAF and Shield Advanced, example resource types include
-     * <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code> and <code>AWS::CloudFront::Distribution</code>. For a
-     * security group common policy, valid values are <code>AWS::EC2::NetworkInterface</code> and
-     * <code>AWS::EC2::Instance</code>. For a security group content audit policy, valid values are
-     * <code>AWS::EC2::SecurityGroup</code>, <code>AWS::EC2::NetworkInterface</code>, and
+     * For WAF and Shield Advanced, resource types include <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code>,
+     * <code>AWS::ElasticLoadBalancing::LoadBalancer</code>, <code>AWS::EC2::EIP</code>, and
+     * <code>AWS::CloudFront::Distribution</code>. For a security group common policy, valid values are
+     * <code>AWS::EC2::NetworkInterface</code> and <code>AWS::EC2::Instance</code>. For a security group content audit
+     * policy, valid values are <code>AWS::EC2::SecurityGroup</code>, <code>AWS::EC2::NetworkInterface</code>, and
      * <code>AWS::EC2::Instance</code>. For a security group usage audit policy, the value is
      * <code>AWS::EC2::SecurityGroup</code>. For an Network Firewall policy or DNS Firewall policy, the value is
      * <code>AWS::EC2::VPC</code>.
@@ -387,14 +393,13 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      *        specify a resource type of <code>ResourceTypeList</code> and then specify the resource types in a
      *        <code>ResourceTypeList</code>.</p>
      *        <p>
-     *        For WAF and Shield Advanced, example resource types include
-     *        <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code> and <code>AWS::CloudFront::Distribution</code>. For
-     *        a security group common policy, valid values are <code>AWS::EC2::NetworkInterface</code> and
-     *        <code>AWS::EC2::Instance</code>. For a security group content audit policy, valid values are
-     *        <code>AWS::EC2::SecurityGroup</code>, <code>AWS::EC2::NetworkInterface</code>, and
-     *        <code>AWS::EC2::Instance</code>. For a security group usage audit policy, the value is
-     *        <code>AWS::EC2::SecurityGroup</code>. For an Network Firewall policy or DNS Firewall policy, the value is
-     *        <code>AWS::EC2::VPC</code>.
+     *        For WAF and Shield Advanced, resource types include <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code>, <code>AWS::ElasticLoadBalancing::LoadBalancer</code>, <code>AWS::EC2::EIP</code>, and
+     *        <code>AWS::CloudFront::Distribution</code>. For a security group common policy, valid values are
+     *        <code>AWS::EC2::NetworkInterface</code> and <code>AWS::EC2::Instance</code>. For a security group content
+     *        audit policy, valid values are <code>AWS::EC2::SecurityGroup</code>,
+     *        <code>AWS::EC2::NetworkInterface</code>, and <code>AWS::EC2::Instance</code>. For a security group usage
+     *        audit policy, the value is <code>AWS::EC2::SecurityGroup</code>. For an Network Firewall policy or DNS
+     *        Firewall policy, the value is <code>AWS::EC2::VPC</code>.
      */
 
     public void setResourceType(String resourceType) {
@@ -409,11 +414,11 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      * type of <code>ResourceTypeList</code> and then specify the resource types in a <code>ResourceTypeList</code>.
      * </p>
      * <p>
-     * For WAF and Shield Advanced, example resource types include
-     * <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code> and <code>AWS::CloudFront::Distribution</code>. For a
-     * security group common policy, valid values are <code>AWS::EC2::NetworkInterface</code> and
-     * <code>AWS::EC2::Instance</code>. For a security group content audit policy, valid values are
-     * <code>AWS::EC2::SecurityGroup</code>, <code>AWS::EC2::NetworkInterface</code>, and
+     * For WAF and Shield Advanced, resource types include <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code>,
+     * <code>AWS::ElasticLoadBalancing::LoadBalancer</code>, <code>AWS::EC2::EIP</code>, and
+     * <code>AWS::CloudFront::Distribution</code>. For a security group common policy, valid values are
+     * <code>AWS::EC2::NetworkInterface</code> and <code>AWS::EC2::Instance</code>. For a security group content audit
+     * policy, valid values are <code>AWS::EC2::SecurityGroup</code>, <code>AWS::EC2::NetworkInterface</code>, and
      * <code>AWS::EC2::Instance</code>. For a security group usage audit policy, the value is
      * <code>AWS::EC2::SecurityGroup</code>. For an Network Firewall policy or DNS Firewall policy, the value is
      * <code>AWS::EC2::VPC</code>.
@@ -425,14 +430,15 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      *         specify a resource type of <code>ResourceTypeList</code> and then specify the resource types in a
      *         <code>ResourceTypeList</code>.</p>
      *         <p>
-     *         For WAF and Shield Advanced, example resource types include
-     *         <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code> and <code>AWS::CloudFront::Distribution</code>.
-     *         For a security group common policy, valid values are <code>AWS::EC2::NetworkInterface</code> and
-     *         <code>AWS::EC2::Instance</code>. For a security group content audit policy, valid values are
-     *         <code>AWS::EC2::SecurityGroup</code>, <code>AWS::EC2::NetworkInterface</code>, and
-     *         <code>AWS::EC2::Instance</code>. For a security group usage audit policy, the value is
-     *         <code>AWS::EC2::SecurityGroup</code>. For an Network Firewall policy or DNS Firewall policy, the value is
-     *         <code>AWS::EC2::VPC</code>.
+     *         For WAF and Shield Advanced, resource types include
+     *         <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code>,
+     *         <code>AWS::ElasticLoadBalancing::LoadBalancer</code>, <code>AWS::EC2::EIP</code>, and
+     *         <code>AWS::CloudFront::Distribution</code>. For a security group common policy, valid values are
+     *         <code>AWS::EC2::NetworkInterface</code> and <code>AWS::EC2::Instance</code>. For a security group content
+     *         audit policy, valid values are <code>AWS::EC2::SecurityGroup</code>,
+     *         <code>AWS::EC2::NetworkInterface</code>, and <code>AWS::EC2::Instance</code>. For a security group usage
+     *         audit policy, the value is <code>AWS::EC2::SecurityGroup</code>. For an Network Firewall policy or DNS
+     *         Firewall policy, the value is <code>AWS::EC2::VPC</code>.
      */
 
     public String getResourceType() {
@@ -447,11 +453,11 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      * type of <code>ResourceTypeList</code> and then specify the resource types in a <code>ResourceTypeList</code>.
      * </p>
      * <p>
-     * For WAF and Shield Advanced, example resource types include
-     * <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code> and <code>AWS::CloudFront::Distribution</code>. For a
-     * security group common policy, valid values are <code>AWS::EC2::NetworkInterface</code> and
-     * <code>AWS::EC2::Instance</code>. For a security group content audit policy, valid values are
-     * <code>AWS::EC2::SecurityGroup</code>, <code>AWS::EC2::NetworkInterface</code>, and
+     * For WAF and Shield Advanced, resource types include <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code>,
+     * <code>AWS::ElasticLoadBalancing::LoadBalancer</code>, <code>AWS::EC2::EIP</code>, and
+     * <code>AWS::CloudFront::Distribution</code>. For a security group common policy, valid values are
+     * <code>AWS::EC2::NetworkInterface</code> and <code>AWS::EC2::Instance</code>. For a security group content audit
+     * policy, valid values are <code>AWS::EC2::SecurityGroup</code>, <code>AWS::EC2::NetworkInterface</code>, and
      * <code>AWS::EC2::Instance</code>. For a security group usage audit policy, the value is
      * <code>AWS::EC2::SecurityGroup</code>. For an Network Firewall policy or DNS Firewall policy, the value is
      * <code>AWS::EC2::VPC</code>.
@@ -464,14 +470,13 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      *        specify a resource type of <code>ResourceTypeList</code> and then specify the resource types in a
      *        <code>ResourceTypeList</code>.</p>
      *        <p>
-     *        For WAF and Shield Advanced, example resource types include
-     *        <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code> and <code>AWS::CloudFront::Distribution</code>. For
-     *        a security group common policy, valid values are <code>AWS::EC2::NetworkInterface</code> and
-     *        <code>AWS::EC2::Instance</code>. For a security group content audit policy, valid values are
-     *        <code>AWS::EC2::SecurityGroup</code>, <code>AWS::EC2::NetworkInterface</code>, and
-     *        <code>AWS::EC2::Instance</code>. For a security group usage audit policy, the value is
-     *        <code>AWS::EC2::SecurityGroup</code>. For an Network Firewall policy or DNS Firewall policy, the value is
-     *        <code>AWS::EC2::VPC</code>.
+     *        For WAF and Shield Advanced, resource types include <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code>, <code>AWS::ElasticLoadBalancing::LoadBalancer</code>, <code>AWS::EC2::EIP</code>, and
+     *        <code>AWS::CloudFront::Distribution</code>. For a security group common policy, valid values are
+     *        <code>AWS::EC2::NetworkInterface</code> and <code>AWS::EC2::Instance</code>. For a security group content
+     *        audit policy, valid values are <code>AWS::EC2::SecurityGroup</code>,
+     *        <code>AWS::EC2::NetworkInterface</code>, and <code>AWS::EC2::Instance</code>. For a security group usage
+     *        audit policy, the value is <code>AWS::EC2::SecurityGroup</code>. For an Network Firewall policy or DNS
+     *        Firewall policy, the value is <code>AWS::EC2::VPC</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -750,17 +755,28 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether Firewall Manager should delete Firewall Manager managed resources, such as web ACLs and
-     * security groups, when they are not in use by the Firewall Manager policy. By default, Firewall Manager doesn't
-     * delete unused Firewall Manager managed resources. This option is not available for Shield Advanced or WAF Classic
-     * policies.
+     * Indicates whether Firewall Manager should automatically remove protections from resources that leave the policy
+     * scope and clean up resources that Firewall Manager is managing for accounts when those accounts leave policy
+     * scope. For example, Firewall Manager will disassociate a Firewall Manager managed web ACL from a protected
+     * customer resource when the customer resource leaves policy scope.
+     * </p>
+     * <p>
+     * By default, Firewall Manager doesn't remove protections or delete Firewall Manager managed resources.
+     * </p>
+     * <p>
+     * This option is not available for Shield Advanced or WAF Classic policies.
      * </p>
      * 
      * @param deleteUnusedFMManagedResources
-     *        Indicates whether Firewall Manager should delete Firewall Manager managed resources, such as web ACLs and
-     *        security groups, when they are not in use by the Firewall Manager policy. By default, Firewall Manager
-     *        doesn't delete unused Firewall Manager managed resources. This option is not available for Shield Advanced
-     *        or WAF Classic policies.
+     *        Indicates whether Firewall Manager should automatically remove protections from resources that leave the
+     *        policy scope and clean up resources that Firewall Manager is managing for accounts when those accounts
+     *        leave policy scope. For example, Firewall Manager will disassociate a Firewall Manager managed web ACL
+     *        from a protected customer resource when the customer resource leaves policy scope. </p>
+     *        <p>
+     *        By default, Firewall Manager doesn't remove protections or delete Firewall Manager managed resources.
+     *        </p>
+     *        <p>
+     *        This option is not available for Shield Advanced or WAF Classic policies.
      */
 
     public void setDeleteUnusedFMManagedResources(Boolean deleteUnusedFMManagedResources) {
@@ -769,16 +785,27 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether Firewall Manager should delete Firewall Manager managed resources, such as web ACLs and
-     * security groups, when they are not in use by the Firewall Manager policy. By default, Firewall Manager doesn't
-     * delete unused Firewall Manager managed resources. This option is not available for Shield Advanced or WAF Classic
-     * policies.
+     * Indicates whether Firewall Manager should automatically remove protections from resources that leave the policy
+     * scope and clean up resources that Firewall Manager is managing for accounts when those accounts leave policy
+     * scope. For example, Firewall Manager will disassociate a Firewall Manager managed web ACL from a protected
+     * customer resource when the customer resource leaves policy scope.
+     * </p>
+     * <p>
+     * By default, Firewall Manager doesn't remove protections or delete Firewall Manager managed resources.
+     * </p>
+     * <p>
+     * This option is not available for Shield Advanced or WAF Classic policies.
      * </p>
      * 
-     * @return Indicates whether Firewall Manager should delete Firewall Manager managed resources, such as web ACLs and
-     *         security groups, when they are not in use by the Firewall Manager policy. By default, Firewall Manager
-     *         doesn't delete unused Firewall Manager managed resources. This option is not available for Shield
-     *         Advanced or WAF Classic policies.
+     * @return Indicates whether Firewall Manager should automatically remove protections from resources that leave the
+     *         policy scope and clean up resources that Firewall Manager is managing for accounts when those accounts
+     *         leave policy scope. For example, Firewall Manager will disassociate a Firewall Manager managed web ACL
+     *         from a protected customer resource when the customer resource leaves policy scope. </p>
+     *         <p>
+     *         By default, Firewall Manager doesn't remove protections or delete Firewall Manager managed resources.
+     *         </p>
+     *         <p>
+     *         This option is not available for Shield Advanced or WAF Classic policies.
      */
 
     public Boolean getDeleteUnusedFMManagedResources() {
@@ -787,17 +814,28 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether Firewall Manager should delete Firewall Manager managed resources, such as web ACLs and
-     * security groups, when they are not in use by the Firewall Manager policy. By default, Firewall Manager doesn't
-     * delete unused Firewall Manager managed resources. This option is not available for Shield Advanced or WAF Classic
-     * policies.
+     * Indicates whether Firewall Manager should automatically remove protections from resources that leave the policy
+     * scope and clean up resources that Firewall Manager is managing for accounts when those accounts leave policy
+     * scope. For example, Firewall Manager will disassociate a Firewall Manager managed web ACL from a protected
+     * customer resource when the customer resource leaves policy scope.
+     * </p>
+     * <p>
+     * By default, Firewall Manager doesn't remove protections or delete Firewall Manager managed resources.
+     * </p>
+     * <p>
+     * This option is not available for Shield Advanced or WAF Classic policies.
      * </p>
      * 
      * @param deleteUnusedFMManagedResources
-     *        Indicates whether Firewall Manager should delete Firewall Manager managed resources, such as web ACLs and
-     *        security groups, when they are not in use by the Firewall Manager policy. By default, Firewall Manager
-     *        doesn't delete unused Firewall Manager managed resources. This option is not available for Shield Advanced
-     *        or WAF Classic policies.
+     *        Indicates whether Firewall Manager should automatically remove protections from resources that leave the
+     *        policy scope and clean up resources that Firewall Manager is managing for accounts when those accounts
+     *        leave policy scope. For example, Firewall Manager will disassociate a Firewall Manager managed web ACL
+     *        from a protected customer resource when the customer resource leaves policy scope. </p>
+     *        <p>
+     *        By default, Firewall Manager doesn't remove protections or delete Firewall Manager managed resources.
+     *        </p>
+     *        <p>
+     *        This option is not available for Shield Advanced or WAF Classic policies.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -808,16 +846,27 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether Firewall Manager should delete Firewall Manager managed resources, such as web ACLs and
-     * security groups, when they are not in use by the Firewall Manager policy. By default, Firewall Manager doesn't
-     * delete unused Firewall Manager managed resources. This option is not available for Shield Advanced or WAF Classic
-     * policies.
+     * Indicates whether Firewall Manager should automatically remove protections from resources that leave the policy
+     * scope and clean up resources that Firewall Manager is managing for accounts when those accounts leave policy
+     * scope. For example, Firewall Manager will disassociate a Firewall Manager managed web ACL from a protected
+     * customer resource when the customer resource leaves policy scope.
+     * </p>
+     * <p>
+     * By default, Firewall Manager doesn't remove protections or delete Firewall Manager managed resources.
+     * </p>
+     * <p>
+     * This option is not available for Shield Advanced or WAF Classic policies.
      * </p>
      * 
-     * @return Indicates whether Firewall Manager should delete Firewall Manager managed resources, such as web ACLs and
-     *         security groups, when they are not in use by the Firewall Manager policy. By default, Firewall Manager
-     *         doesn't delete unused Firewall Manager managed resources. This option is not available for Shield
-     *         Advanced or WAF Classic policies.
+     * @return Indicates whether Firewall Manager should automatically remove protections from resources that leave the
+     *         policy scope and clean up resources that Firewall Manager is managing for accounts when those accounts
+     *         leave policy scope. For example, Firewall Manager will disassociate a Firewall Manager managed web ACL
+     *         from a protected customer resource when the customer resource leaves policy scope. </p>
+     *         <p>
+     *         By default, Firewall Manager doesn't remove protections or delete Firewall Manager managed resources.
+     *         </p>
+     *         <p>
+     *         This option is not available for Shield Advanced or WAF Classic policies.
      */
 
     public Boolean isDeleteUnusedFMManagedResources() {

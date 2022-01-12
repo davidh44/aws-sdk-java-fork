@@ -41,8 +41,8 @@ public class GetResourceMetricsResult extends com.amazonaws.AmazonWebServiceResu
     private java.util.Date alignedEndTime;
     /**
      * <p>
-     * An immutable, AWS Region-unique identifier for a data source. Performance Insights gathers metrics from this data
-     * source.
+     * An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights gathers
+     * metrics from this data source.
      * </p>
      * <p>
      * To use a DB instance as a data source, you specify its <code>DbiResourceId</code> value - for example:
@@ -170,8 +170,8 @@ public class GetResourceMetricsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * An immutable, AWS Region-unique identifier for a data source. Performance Insights gathers metrics from this data
-     * source.
+     * An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights gathers
+     * metrics from this data source.
      * </p>
      * <p>
      * To use a DB instance as a data source, you specify its <code>DbiResourceId</code> value - for example:
@@ -179,8 +179,8 @@ public class GetResourceMetricsResult extends com.amazonaws.AmazonWebServiceResu
      * </p>
      * 
      * @param identifier
-     *        An immutable, AWS Region-unique identifier for a data source. Performance Insights gathers metrics from
-     *        this data source.</p>
+     *        An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights gathers
+     *        metrics from this data source. </p>
      *        <p>
      *        To use a DB instance as a data source, you specify its <code>DbiResourceId</code> value - for example:
      *        <code>db-FAIHNTYBKTGAUSUZQYPDS2GW4A</code>
@@ -192,16 +192,16 @@ public class GetResourceMetricsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * An immutable, AWS Region-unique identifier for a data source. Performance Insights gathers metrics from this data
-     * source.
+     * An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights gathers
+     * metrics from this data source.
      * </p>
      * <p>
      * To use a DB instance as a data source, you specify its <code>DbiResourceId</code> value - for example:
      * <code>db-FAIHNTYBKTGAUSUZQYPDS2GW4A</code>
      * </p>
      * 
-     * @return An immutable, AWS Region-unique identifier for a data source. Performance Insights gathers metrics from
-     *         this data source.</p>
+     * @return An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights
+     *         gathers metrics from this data source. </p>
      *         <p>
      *         To use a DB instance as a data source, you specify its <code>DbiResourceId</code> value - for example:
      *         <code>db-FAIHNTYBKTGAUSUZQYPDS2GW4A</code>
@@ -213,8 +213,8 @@ public class GetResourceMetricsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * An immutable, AWS Region-unique identifier for a data source. Performance Insights gathers metrics from this data
-     * source.
+     * An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights gathers
+     * metrics from this data source.
      * </p>
      * <p>
      * To use a DB instance as a data source, you specify its <code>DbiResourceId</code> value - for example:
@@ -222,8 +222,8 @@ public class GetResourceMetricsResult extends com.amazonaws.AmazonWebServiceResu
      * </p>
      * 
      * @param identifier
-     *        An immutable, AWS Region-unique identifier for a data source. Performance Insights gathers metrics from
-     *        this data source.</p>
+     *        An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights gathers
+     *        metrics from this data source. </p>
      *        <p>
      *        To use a DB instance as a data source, you specify its <code>DbiResourceId</code> value - for example:
      *        <code>db-FAIHNTYBKTGAUSUZQYPDS2GW4A</code>

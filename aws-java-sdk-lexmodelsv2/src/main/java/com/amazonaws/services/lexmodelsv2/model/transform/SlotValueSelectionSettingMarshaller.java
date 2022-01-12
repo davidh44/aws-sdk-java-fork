@@ -31,6 +31,8 @@ public class SlotValueSelectionSettingMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resolutionStrategy").build();
     private static final MarshallingInfo<StructuredPojo> REGEXFILTER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("regexFilter").build();
+    private static final MarshallingInfo<StructuredPojo> ADVANCEDRECOGNITIONSETTING_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("advancedRecognitionSetting").build();
 
     private static final SlotValueSelectionSettingMarshaller instance = new SlotValueSelectionSettingMarshaller();
 
@@ -50,6 +52,7 @@ public class SlotValueSelectionSettingMarshaller {
         try {
             protocolMarshaller.marshall(slotValueSelectionSetting.getResolutionStrategy(), RESOLUTIONSTRATEGY_BINDING);
             protocolMarshaller.marshall(slotValueSelectionSetting.getRegexFilter(), REGEXFILTER_BINDING);
+            protocolMarshaller.marshall(slotValueSelectionSetting.getAdvancedRecognitionSetting(), ADVANCEDRECOGNITIONSETTING_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

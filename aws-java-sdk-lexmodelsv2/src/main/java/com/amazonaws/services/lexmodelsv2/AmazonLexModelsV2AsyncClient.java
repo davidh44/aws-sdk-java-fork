@@ -601,6 +601,39 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteCustomVocabularyResult> deleteCustomVocabularyAsync(DeleteCustomVocabularyRequest request) {
+
+        return deleteCustomVocabularyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteCustomVocabularyResult> deleteCustomVocabularyAsync(final DeleteCustomVocabularyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteCustomVocabularyRequest, DeleteCustomVocabularyResult> asyncHandler) {
+        final DeleteCustomVocabularyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteCustomVocabularyResult>() {
+            @Override
+            public DeleteCustomVocabularyResult call() throws Exception {
+                DeleteCustomVocabularyResult result = null;
+
+                try {
+                    result = executeDeleteCustomVocabulary(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteExportResult> deleteExportAsync(DeleteExportRequest request) {
 
         return deleteExportAsync(request, null);
@@ -1015,6 +1048,41 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
 
                 try {
                     result = executeDescribeBotVersion(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeCustomVocabularyMetadataResult> describeCustomVocabularyMetadataAsync(
+            DescribeCustomVocabularyMetadataRequest request) {
+
+        return describeCustomVocabularyMetadataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeCustomVocabularyMetadataResult> describeCustomVocabularyMetadataAsync(
+            final DescribeCustomVocabularyMetadataRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeCustomVocabularyMetadataRequest, DescribeCustomVocabularyMetadataResult> asyncHandler) {
+        final DescribeCustomVocabularyMetadataRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeCustomVocabularyMetadataResult>() {
+            @Override
+            public DescribeCustomVocabularyMetadataResult call() throws Exception {
+                DescribeCustomVocabularyMetadataResult result = null;
+
+                try {
+                    result = executeDescribeCustomVocabularyMetadata(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

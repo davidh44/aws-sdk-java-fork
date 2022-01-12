@@ -27,15 +27,15 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The AWS service for which Performance Insights returns metrics. The only valid value for <i>ServiceType</i> is
-     * <code>RDS</code>.
+     * The Amazon Web Services service for which Performance Insights returns metrics. The only valid value for
+     * <i>ServiceType</i> is <code>RDS</code>.
      * </p>
      */
     private String serviceType;
     /**
      * <p>
-     * An immutable, AWS Region-unique identifier for a data source. Performance Insights gathers metrics from this data
-     * source.
+     * An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights gathers
+     * metrics from this data source.
      * </p>
      * <p>
      * To use a DB instance as a data source, specify its <code>DbiResourceId</code> value. For example, specify
@@ -127,12 +127,12 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The AWS service for which Performance Insights returns metrics. The only valid value for <i>ServiceType</i> is
-     * <code>RDS</code>.
+     * The Amazon Web Services service for which Performance Insights returns metrics. The only valid value for
+     * <i>ServiceType</i> is <code>RDS</code>.
      * </p>
      * 
      * @param serviceType
-     *        The AWS service for which Performance Insights returns metrics. The only valid value for
+     *        The Amazon Web Services service for which Performance Insights returns metrics. The only valid value for
      *        <i>ServiceType</i> is <code>RDS</code>.
      * @see ServiceType
      */
@@ -143,11 +143,11 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The AWS service for which Performance Insights returns metrics. The only valid value for <i>ServiceType</i> is
-     * <code>RDS</code>.
+     * The Amazon Web Services service for which Performance Insights returns metrics. The only valid value for
+     * <i>ServiceType</i> is <code>RDS</code>.
      * </p>
      * 
-     * @return The AWS service for which Performance Insights returns metrics. The only valid value for
+     * @return The Amazon Web Services service for which Performance Insights returns metrics. The only valid value for
      *         <i>ServiceType</i> is <code>RDS</code>.
      * @see ServiceType
      */
@@ -158,12 +158,12 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The AWS service for which Performance Insights returns metrics. The only valid value for <i>ServiceType</i> is
-     * <code>RDS</code>.
+     * The Amazon Web Services service for which Performance Insights returns metrics. The only valid value for
+     * <i>ServiceType</i> is <code>RDS</code>.
      * </p>
      * 
      * @param serviceType
-     *        The AWS service for which Performance Insights returns metrics. The only valid value for
+     *        The Amazon Web Services service for which Performance Insights returns metrics. The only valid value for
      *        <i>ServiceType</i> is <code>RDS</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceType
@@ -176,12 +176,12 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The AWS service for which Performance Insights returns metrics. The only valid value for <i>ServiceType</i> is
-     * <code>RDS</code>.
+     * The Amazon Web Services service for which Performance Insights returns metrics. The only valid value for
+     * <i>ServiceType</i> is <code>RDS</code>.
      * </p>
      * 
      * @param serviceType
-     *        The AWS service for which Performance Insights returns metrics. The only valid value for
+     *        The Amazon Web Services service for which Performance Insights returns metrics. The only valid value for
      *        <i>ServiceType</i> is <code>RDS</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceType
@@ -194,8 +194,8 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * An immutable, AWS Region-unique identifier for a data source. Performance Insights gathers metrics from this data
-     * source.
+     * An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights gathers
+     * metrics from this data source.
      * </p>
      * <p>
      * To use a DB instance as a data source, specify its <code>DbiResourceId</code> value. For example, specify
@@ -203,8 +203,8 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @param identifier
-     *        An immutable, AWS Region-unique identifier for a data source. Performance Insights gathers metrics from
-     *        this data source.</p>
+     *        An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights gathers
+     *        metrics from this data source.</p>
      *        <p>
      *        To use a DB instance as a data source, specify its <code>DbiResourceId</code> value. For example, specify
      *        <code>db-FAIHNTYBKTGAUSUZQYPDS2GW4A</code>.
@@ -216,16 +216,16 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * An immutable, AWS Region-unique identifier for a data source. Performance Insights gathers metrics from this data
-     * source.
+     * An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights gathers
+     * metrics from this data source.
      * </p>
      * <p>
      * To use a DB instance as a data source, specify its <code>DbiResourceId</code> value. For example, specify
      * <code>db-FAIHNTYBKTGAUSUZQYPDS2GW4A</code>.
      * </p>
      * 
-     * @return An immutable, AWS Region-unique identifier for a data source. Performance Insights gathers metrics from
-     *         this data source.</p>
+     * @return An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights
+     *         gathers metrics from this data source.</p>
      *         <p>
      *         To use a DB instance as a data source, specify its <code>DbiResourceId</code> value. For example, specify
      *         <code>db-FAIHNTYBKTGAUSUZQYPDS2GW4A</code>.
@@ -237,8 +237,8 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * An immutable, AWS Region-unique identifier for a data source. Performance Insights gathers metrics from this data
-     * source.
+     * An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights gathers
+     * metrics from this data source.
      * </p>
      * <p>
      * To use a DB instance as a data source, specify its <code>DbiResourceId</code> value. For example, specify
@@ -246,8 +246,8 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @param identifier
-     *        An immutable, AWS Region-unique identifier for a data source. Performance Insights gathers metrics from
-     *        this data source.</p>
+     *        An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights gathers
+     *        metrics from this data source.</p>
      *        <p>
      *        To use a DB instance as a data source, specify its <code>DbiResourceId</code> value. For example, specify
      *        <code>db-FAIHNTYBKTGAUSUZQYPDS2GW4A</code>.

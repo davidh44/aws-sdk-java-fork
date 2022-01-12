@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An array of descriptions and aggregated values for each dimension within a dimension group.
+ * An object that includes the requested dimension key values and aggregated metric values within a dimension group.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pi-2018-02-27/DimensionKeyDescription" target="_top">AWS API
@@ -36,10 +36,16 @@ public class DimensionKeyDescription implements Serializable, Cloneable, Structu
     private java.util.Map<String, String> dimensions;
     /**
      * <p>
-     * The aggregated metric value for the dimension(s), over the requested time range.
+     * The aggregated metric value for the dimensions, over the requested time range.
      * </p>
      */
     private Double total;
+    /**
+     * <p>
+     * A map that contains the value for each additional metric.
+     * </p>
+     */
+    private java.util.Map<String, Double> additionalMetrics;
     /**
      * <p>
      * If <code>PartitionBy</code> was specified, <code>PartitionKeys</code> contains the dimensions that were.
@@ -117,11 +123,11 @@ public class DimensionKeyDescription implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The aggregated metric value for the dimension(s), over the requested time range.
+     * The aggregated metric value for the dimensions, over the requested time range.
      * </p>
      * 
      * @param total
-     *        The aggregated metric value for the dimension(s), over the requested time range.
+     *        The aggregated metric value for the dimensions, over the requested time range.
      */
 
     public void setTotal(Double total) {
@@ -130,10 +136,10 @@ public class DimensionKeyDescription implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The aggregated metric value for the dimension(s), over the requested time range.
+     * The aggregated metric value for the dimensions, over the requested time range.
      * </p>
      * 
-     * @return The aggregated metric value for the dimension(s), over the requested time range.
+     * @return The aggregated metric value for the dimensions, over the requested time range.
      */
 
     public Double getTotal() {
@@ -142,16 +148,84 @@ public class DimensionKeyDescription implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The aggregated metric value for the dimension(s), over the requested time range.
+     * The aggregated metric value for the dimensions, over the requested time range.
      * </p>
      * 
      * @param total
-     *        The aggregated metric value for the dimension(s), over the requested time range.
+     *        The aggregated metric value for the dimensions, over the requested time range.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public DimensionKeyDescription withTotal(Double total) {
         setTotal(total);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A map that contains the value for each additional metric.
+     * </p>
+     * 
+     * @return A map that contains the value for each additional metric.
+     */
+
+    public java.util.Map<String, Double> getAdditionalMetrics() {
+        return additionalMetrics;
+    }
+
+    /**
+     * <p>
+     * A map that contains the value for each additional metric.
+     * </p>
+     * 
+     * @param additionalMetrics
+     *        A map that contains the value for each additional metric.
+     */
+
+    public void setAdditionalMetrics(java.util.Map<String, Double> additionalMetrics) {
+        this.additionalMetrics = additionalMetrics;
+    }
+
+    /**
+     * <p>
+     * A map that contains the value for each additional metric.
+     * </p>
+     * 
+     * @param additionalMetrics
+     *        A map that contains the value for each additional metric.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DimensionKeyDescription withAdditionalMetrics(java.util.Map<String, Double> additionalMetrics) {
+        setAdditionalMetrics(additionalMetrics);
+        return this;
+    }
+
+    /**
+     * Add a single AdditionalMetrics entry
+     *
+     * @see DimensionKeyDescription#withAdditionalMetrics
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DimensionKeyDescription addAdditionalMetricsEntry(String key, Double value) {
+        if (null == this.additionalMetrics) {
+            this.additionalMetrics = new java.util.HashMap<String, Double>();
+        }
+        if (this.additionalMetrics.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.additionalMetrics.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into AdditionalMetrics.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DimensionKeyDescription clearAdditionalMetricsEntries() {
+        this.additionalMetrics = null;
         return this;
     }
 
@@ -241,6 +315,8 @@ public class DimensionKeyDescription implements Serializable, Cloneable, Structu
             sb.append("Dimensions: ").append(getDimensions()).append(",");
         if (getTotal() != null)
             sb.append("Total: ").append(getTotal()).append(",");
+        if (getAdditionalMetrics() != null)
+            sb.append("AdditionalMetrics: ").append(getAdditionalMetrics()).append(",");
         if (getPartitions() != null)
             sb.append("Partitions: ").append(getPartitions());
         sb.append("}");
@@ -265,6 +341,10 @@ public class DimensionKeyDescription implements Serializable, Cloneable, Structu
             return false;
         if (other.getTotal() != null && other.getTotal().equals(this.getTotal()) == false)
             return false;
+        if (other.getAdditionalMetrics() == null ^ this.getAdditionalMetrics() == null)
+            return false;
+        if (other.getAdditionalMetrics() != null && other.getAdditionalMetrics().equals(this.getAdditionalMetrics()) == false)
+            return false;
         if (other.getPartitions() == null ^ this.getPartitions() == null)
             return false;
         if (other.getPartitions() != null && other.getPartitions().equals(this.getPartitions()) == false)
@@ -279,6 +359,7 @@ public class DimensionKeyDescription implements Serializable, Cloneable, Structu
 
         hashCode = prime * hashCode + ((getDimensions() == null) ? 0 : getDimensions().hashCode());
         hashCode = prime * hashCode + ((getTotal() == null) ? 0 : getTotal().hashCode());
+        hashCode = prime * hashCode + ((getAdditionalMetrics() == null) ? 0 : getAdditionalMetrics().hashCode());
         hashCode = prime * hashCode + ((getPartitions() == null) ? 0 : getPartitions().hashCode());
         return hashCode;
     }

@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum ImportExportFileFormat {
 
-    LexJson("LexJson");
+    LexJson("LexJson"),
+    TSV("TSV");
 
     private String value;
 

@@ -356,6 +356,34 @@ public interface AmazonHoneycode {
 
     /**
      * <p>
+     * The ListTagsForResource API allows you to return a resource's tags.
+     * </p>
+     * 
+     * @param listTagsForResourceRequest
+     * @return Result of the ListTagsForResource operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. Check that the workbook is owned by you and
+     *         your IAM policy allows access to the resource in the request.
+     * @throws InternalServerException
+     *         There were unexpected errors from the server.
+     * @throws RequestTimeoutException
+     *         The request timed out.
+     * @throws ResourceNotFoundException
+     *         A Workbook, Table, App, Screen or Screen Automation was not found with the given ID.
+     * @throws ServiceUnavailableException
+     *         Remote service is unreachable.
+     * @throws ThrottlingException
+     *         Tps(transactions per second) rate reached.
+     * @throws ValidationException
+     *         Request is invalid. The message in the response contains details on why the request is invalid.
+     * @sample AmazonHoneycode.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/honeycode-2020-03-01/ListTagsForResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
      * The QueryTableRows API allows you to use a filter formula to query for specific rows in a table.
      * </p>
      * 
@@ -409,6 +437,64 @@ public interface AmazonHoneycode {
      *      target="_top">AWS API Documentation</a>
      */
     StartTableDataImportJobResult startTableDataImportJob(StartTableDataImportJobRequest startTableDataImportJobRequest);
+
+    /**
+     * <p>
+     * The TagResource API allows you to add tags to an ARN-able resource. Resource includes workbook, table, screen and
+     * screen-automation.
+     * </p>
+     * 
+     * @param tagResourceRequest
+     * @return Result of the TagResource operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. Check that the workbook is owned by you and
+     *         your IAM policy allows access to the resource in the request.
+     * @throws InternalServerException
+     *         There were unexpected errors from the server.
+     * @throws RequestTimeoutException
+     *         The request timed out.
+     * @throws ResourceNotFoundException
+     *         A Workbook, Table, App, Screen or Screen Automation was not found with the given ID.
+     * @throws ServiceUnavailableException
+     *         Remote service is unreachable.
+     * @throws ThrottlingException
+     *         Tps(transactions per second) rate reached.
+     * @throws ValidationException
+     *         Request is invalid. The message in the response contains details on why the request is invalid.
+     * @sample AmazonHoneycode.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/honeycode-2020-03-01/TagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    TagResourceResult tagResource(TagResourceRequest tagResourceRequest);
+
+    /**
+     * <p>
+     * The UntagResource API allows you to removes tags from an ARN-able resource. Resource includes workbook, table,
+     * screen and screen-automation.
+     * </p>
+     * 
+     * @param untagResourceRequest
+     * @return Result of the UntagResource operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. Check that the workbook is owned by you and
+     *         your IAM policy allows access to the resource in the request.
+     * @throws InternalServerException
+     *         There were unexpected errors from the server.
+     * @throws RequestTimeoutException
+     *         The request timed out.
+     * @throws ResourceNotFoundException
+     *         A Workbook, Table, App, Screen or Screen Automation was not found with the given ID.
+     * @throws ServiceUnavailableException
+     *         Remote service is unreachable.
+     * @throws ThrottlingException
+     *         Tps(transactions per second) rate reached.
+     * @throws ValidationException
+     *         Request is invalid. The message in the response contains details on why the request is invalid.
+     * @sample AmazonHoneycode.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/honeycode-2020-03-01/UntagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

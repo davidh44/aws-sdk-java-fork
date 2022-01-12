@@ -61,11 +61,22 @@ public class ListExportsRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * If the response from the <code>ListExports</code> operation contains more results that specified in the
-     * <code>maxResults</code> parameter, a token is returned in the response. Use that token in the
-     * <code>nextToken</code> parameter to return the next page of results.
+     * <code>maxResults</code> parameter, a token is returned in the response.
+     * </p>
+     * <p>
+     * Use the returned token in the <code>nextToken</code> parameter of a <code>ListExports</code> request to return
+     * the next page of results. For a complete set of results, call the <code>ListExports</code> operation until the
+     * <code>nextToken</code> returned in the response is null.
      * </p>
      */
     private String nextToken;
+    /**
+     * <p>
+     * Specifies the resources that should be exported. If you don't specify a resource type in the <code>filters</code>
+     * parameter, both bot locales and custom vocabularies are exported.
+     * </p>
+     */
+    private String localeId;
 
     /**
      * <p>
@@ -320,14 +331,21 @@ public class ListExportsRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * If the response from the <code>ListExports</code> operation contains more results that specified in the
-     * <code>maxResults</code> parameter, a token is returned in the response. Use that token in the
-     * <code>nextToken</code> parameter to return the next page of results.
+     * <code>maxResults</code> parameter, a token is returned in the response.
+     * </p>
+     * <p>
+     * Use the returned token in the <code>nextToken</code> parameter of a <code>ListExports</code> request to return
+     * the next page of results. For a complete set of results, call the <code>ListExports</code> operation until the
+     * <code>nextToken</code> returned in the response is null.
      * </p>
      * 
      * @param nextToken
      *        If the response from the <code>ListExports</code> operation contains more results that specified in the
-     *        <code>maxResults</code> parameter, a token is returned in the response. Use that token in the
-     *        <code>nextToken</code> parameter to return the next page of results.
+     *        <code>maxResults</code> parameter, a token is returned in the response. </p>
+     *        <p>
+     *        Use the returned token in the <code>nextToken</code> parameter of a <code>ListExports</code> request to
+     *        return the next page of results. For a complete set of results, call the <code>ListExports</code>
+     *        operation until the <code>nextToken</code> returned in the response is null.
      */
 
     public void setNextToken(String nextToken) {
@@ -337,13 +355,20 @@ public class ListExportsRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * If the response from the <code>ListExports</code> operation contains more results that specified in the
-     * <code>maxResults</code> parameter, a token is returned in the response. Use that token in the
-     * <code>nextToken</code> parameter to return the next page of results.
+     * <code>maxResults</code> parameter, a token is returned in the response.
+     * </p>
+     * <p>
+     * Use the returned token in the <code>nextToken</code> parameter of a <code>ListExports</code> request to return
+     * the next page of results. For a complete set of results, call the <code>ListExports</code> operation until the
+     * <code>nextToken</code> returned in the response is null.
      * </p>
      * 
      * @return If the response from the <code>ListExports</code> operation contains more results that specified in the
-     *         <code>maxResults</code> parameter, a token is returned in the response. Use that token in the
-     *         <code>nextToken</code> parameter to return the next page of results.
+     *         <code>maxResults</code> parameter, a token is returned in the response. </p>
+     *         <p>
+     *         Use the returned token in the <code>nextToken</code> parameter of a <code>ListExports</code> request to
+     *         return the next page of results. For a complete set of results, call the <code>ListExports</code>
+     *         operation until the <code>nextToken</code> returned in the response is null.
      */
 
     public String getNextToken() {
@@ -353,19 +378,72 @@ public class ListExportsRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * If the response from the <code>ListExports</code> operation contains more results that specified in the
-     * <code>maxResults</code> parameter, a token is returned in the response. Use that token in the
-     * <code>nextToken</code> parameter to return the next page of results.
+     * <code>maxResults</code> parameter, a token is returned in the response.
+     * </p>
+     * <p>
+     * Use the returned token in the <code>nextToken</code> parameter of a <code>ListExports</code> request to return
+     * the next page of results. For a complete set of results, call the <code>ListExports</code> operation until the
+     * <code>nextToken</code> returned in the response is null.
      * </p>
      * 
      * @param nextToken
      *        If the response from the <code>ListExports</code> operation contains more results that specified in the
-     *        <code>maxResults</code> parameter, a token is returned in the response. Use that token in the
-     *        <code>nextToken</code> parameter to return the next page of results.
+     *        <code>maxResults</code> parameter, a token is returned in the response. </p>
+     *        <p>
+     *        Use the returned token in the <code>nextToken</code> parameter of a <code>ListExports</code> request to
+     *        return the next page of results. For a complete set of results, call the <code>ListExports</code>
+     *        operation until the <code>nextToken</code> returned in the response is null.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public ListExportsRequest withNextToken(String nextToken) {
         setNextToken(nextToken);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the resources that should be exported. If you don't specify a resource type in the <code>filters</code>
+     * parameter, both bot locales and custom vocabularies are exported.
+     * </p>
+     * 
+     * @param localeId
+     *        Specifies the resources that should be exported. If you don't specify a resource type in the
+     *        <code>filters</code> parameter, both bot locales and custom vocabularies are exported.
+     */
+
+    public void setLocaleId(String localeId) {
+        this.localeId = localeId;
+    }
+
+    /**
+     * <p>
+     * Specifies the resources that should be exported. If you don't specify a resource type in the <code>filters</code>
+     * parameter, both bot locales and custom vocabularies are exported.
+     * </p>
+     * 
+     * @return Specifies the resources that should be exported. If you don't specify a resource type in the
+     *         <code>filters</code> parameter, both bot locales and custom vocabularies are exported.
+     */
+
+    public String getLocaleId() {
+        return this.localeId;
+    }
+
+    /**
+     * <p>
+     * Specifies the resources that should be exported. If you don't specify a resource type in the <code>filters</code>
+     * parameter, both bot locales and custom vocabularies are exported.
+     * </p>
+     * 
+     * @param localeId
+     *        Specifies the resources that should be exported. If you don't specify a resource type in the
+     *        <code>filters</code> parameter, both bot locales and custom vocabularies are exported.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListExportsRequest withLocaleId(String localeId) {
+        setLocaleId(localeId);
         return this;
     }
 
@@ -392,7 +470,9 @@ public class ListExportsRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getLocaleId() != null)
+            sb.append("LocaleId: ").append(getLocaleId());
         sb.append("}");
         return sb.toString();
     }
@@ -431,6 +511,10 @@ public class ListExportsRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
+        if (other.getLocaleId() == null ^ this.getLocaleId() == null)
+            return false;
+        if (other.getLocaleId() != null && other.getLocaleId().equals(this.getLocaleId()) == false)
+            return false;
         return true;
     }
 
@@ -445,6 +529,7 @@ public class ListExportsRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getFilters() == null) ? 0 : getFilters().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getLocaleId() == null) ? 0 : getLocaleId().hashCode());
         return hashCode;
     }
 

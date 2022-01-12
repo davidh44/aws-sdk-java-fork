@@ -31,7 +31,7 @@ public class DescribeImportResult extends com.amazonaws.AmazonWebServiceResult<c
     private String importId;
     /**
      * <p>
-     * The specifications of the imported bot or bot locale.
+     * The specifications of the imported bot, bot locale, or custom vocabulary.
      * </p>
      */
     private ImportResourceSpecification resourceSpecification;
@@ -122,11 +122,11 @@ public class DescribeImportResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The specifications of the imported bot or bot locale.
+     * The specifications of the imported bot, bot locale, or custom vocabulary.
      * </p>
      * 
      * @param resourceSpecification
-     *        The specifications of the imported bot or bot locale.
+     *        The specifications of the imported bot, bot locale, or custom vocabulary.
      */
 
     public void setResourceSpecification(ImportResourceSpecification resourceSpecification) {
@@ -135,10 +135,10 @@ public class DescribeImportResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The specifications of the imported bot or bot locale.
+     * The specifications of the imported bot, bot locale, or custom vocabulary.
      * </p>
      * 
-     * @return The specifications of the imported bot or bot locale.
+     * @return The specifications of the imported bot, bot locale, or custom vocabulary.
      */
 
     public ImportResourceSpecification getResourceSpecification() {
@@ -147,11 +147,11 @@ public class DescribeImportResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The specifications of the imported bot or bot locale.
+     * The specifications of the imported bot, bot locale, or custom vocabulary.
      * </p>
      * 
      * @param resourceSpecification
-     *        The specifications of the imported bot or bot locale.
+     *        The specifications of the imported bot, bot locale, or custom vocabulary.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

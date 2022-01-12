@@ -109,6 +109,11 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
     }
 
     @Override
+    public DeleteCustomVocabularyResult deleteCustomVocabulary(DeleteCustomVocabularyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteExportResult deleteExport(DeleteExportRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -170,6 +175,11 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
 
     @Override
     public DescribeBotVersionResult describeBotVersion(DescribeBotVersionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeCustomVocabularyMetadataResult describeCustomVocabularyMetadata(DescribeCustomVocabularyMetadataRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

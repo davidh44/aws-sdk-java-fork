@@ -57,6 +57,12 @@ public class SlotValueSelectionSetting implements Serializable, Cloneable, Struc
      * </p>
      */
     private SlotValueRegexFilter regexFilter;
+    /**
+     * <p>
+     * Provides settings that enable advanced recognition settings for slot values.
+     * </p>
+     */
+    private AdvancedRecognitionSetting advancedRecognitionSetting;
 
     /**
      * <p>
@@ -290,6 +296,46 @@ public class SlotValueSelectionSetting implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * Provides settings that enable advanced recognition settings for slot values.
+     * </p>
+     * 
+     * @param advancedRecognitionSetting
+     *        Provides settings that enable advanced recognition settings for slot values.
+     */
+
+    public void setAdvancedRecognitionSetting(AdvancedRecognitionSetting advancedRecognitionSetting) {
+        this.advancedRecognitionSetting = advancedRecognitionSetting;
+    }
+
+    /**
+     * <p>
+     * Provides settings that enable advanced recognition settings for slot values.
+     * </p>
+     * 
+     * @return Provides settings that enable advanced recognition settings for slot values.
+     */
+
+    public AdvancedRecognitionSetting getAdvancedRecognitionSetting() {
+        return this.advancedRecognitionSetting;
+    }
+
+    /**
+     * <p>
+     * Provides settings that enable advanced recognition settings for slot values.
+     * </p>
+     * 
+     * @param advancedRecognitionSetting
+     *        Provides settings that enable advanced recognition settings for slot values.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SlotValueSelectionSetting withAdvancedRecognitionSetting(AdvancedRecognitionSetting advancedRecognitionSetting) {
+        setAdvancedRecognitionSetting(advancedRecognitionSetting);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -304,7 +350,9 @@ public class SlotValueSelectionSetting implements Serializable, Cloneable, Struc
         if (getResolutionStrategy() != null)
             sb.append("ResolutionStrategy: ").append(getResolutionStrategy()).append(",");
         if (getRegexFilter() != null)
-            sb.append("RegexFilter: ").append(getRegexFilter());
+            sb.append("RegexFilter: ").append(getRegexFilter()).append(",");
+        if (getAdvancedRecognitionSetting() != null)
+            sb.append("AdvancedRecognitionSetting: ").append(getAdvancedRecognitionSetting());
         sb.append("}");
         return sb.toString();
     }
@@ -327,6 +375,10 @@ public class SlotValueSelectionSetting implements Serializable, Cloneable, Struc
             return false;
         if (other.getRegexFilter() != null && other.getRegexFilter().equals(this.getRegexFilter()) == false)
             return false;
+        if (other.getAdvancedRecognitionSetting() == null ^ this.getAdvancedRecognitionSetting() == null)
+            return false;
+        if (other.getAdvancedRecognitionSetting() != null && other.getAdvancedRecognitionSetting().equals(this.getAdvancedRecognitionSetting()) == false)
+            return false;
         return true;
     }
 
@@ -337,6 +389,7 @@ public class SlotValueSelectionSetting implements Serializable, Cloneable, Struc
 
         hashCode = prime * hashCode + ((getResolutionStrategy() == null) ? 0 : getResolutionStrategy().hashCode());
         hashCode = prime * hashCode + ((getRegexFilter() == null) ? 0 : getRegexFilter().hashCode());
+        hashCode = prime * hashCode + ((getAdvancedRecognitionSetting() == null) ? 0 : getAdvancedRecognitionSetting().hashCode());
         return hashCode;
     }
 

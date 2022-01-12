@@ -564,6 +564,33 @@ public interface AmazonLexModelsV2 {
 
     /**
      * <p>
+     * Removes a custom vocabulary from the specified locale in the specified bot.
+     * </p>
+     * 
+     * @param deleteCustomVocabularyRequest
+     * @return Result of the DeleteCustomVocabulary operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
+     * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.DeleteCustomVocabulary
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DeleteCustomVocabulary"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteCustomVocabularyResult deleteCustomVocabulary(DeleteCustomVocabularyRequest deleteCustomVocabularyRequest);
+
+    /**
+     * <p>
      * Removes a previous export and the associated files stored in an S3 bucket.
      * </p>
      * 
@@ -897,6 +924,30 @@ public interface AmazonLexModelsV2 {
      *      target="_top">AWS API Documentation</a>
      */
     DescribeBotVersionResult describeBotVersion(DescribeBotVersionRequest describeBotVersionRequest);
+
+    /**
+     * <p>
+     * Provides metadata information about a custom vocabulary.
+     * </p>
+     * 
+     * @param describeCustomVocabularyMetadataRequest
+     * @return Result of the DescribeCustomVocabularyMetadata operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.DescribeCustomVocabularyMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DescribeCustomVocabularyMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeCustomVocabularyMetadataResult describeCustomVocabularyMetadata(DescribeCustomVocabularyMetadataRequest describeCustomVocabularyMetadataRequest);
 
     /**
      * <p>
@@ -1251,7 +1302,7 @@ public interface AmazonLexModelsV2 {
 
     /**
      * <p>
-     * Lists the exports for a bot or bot locale. Exports are kept in the list for 7 days.
+     * Lists the exports for a bot, bot locale, or custom vocabulary. Exports are kept in the list for 7 days.
      * </p>
      * 
      * @param listExportsRequest
@@ -1270,7 +1321,7 @@ public interface AmazonLexModelsV2 {
 
     /**
      * <p>
-     * Lists the imports for a bot or bot locale. Imports are kept in the list for 7 days.
+     * Lists the imports for a bot, bot locale, or custom vocabulary. Imports are kept in the list for 7 days.
      * </p>
      * 
      * @param listImportsRequest
@@ -1456,7 +1507,7 @@ public interface AmazonLexModelsV2 {
 
     /**
      * <p>
-     * Starts importing a bot or bot locale from a zip archive that you uploaded to an S3 bucket.
+     * Starts importing a bot, bot locale, or custom vocabulary from a zip archive that you uploaded to an S3 bucket.
      * </p>
      * 
      * @param startImportRequest

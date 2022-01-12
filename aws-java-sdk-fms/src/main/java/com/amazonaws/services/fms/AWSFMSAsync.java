@@ -864,7 +864,7 @@ public interface AWSFMSAsync extends AWSFMS {
      * </li>
      * <li>
      * <p>
-     * A DNS Firewall policy, which provides Route 53 Resolver DNS Firewall rules to filter DNS queries for specified
+     * A DNS Firewall policy, which provides Route 53 Resolver DNS Firewall rules to filter DNS queries for specified
      * VPCs.
      * </p>
      * </li>
@@ -924,7 +924,7 @@ public interface AWSFMSAsync extends AWSFMS {
      * </li>
      * <li>
      * <p>
-     * A DNS Firewall policy, which provides Route 53 Resolver DNS Firewall rules to filter DNS queries for specified
+     * A DNS Firewall policy, which provides Route 53 Resolver DNS Firewall rules to filter DNS queries for specified
      * VPCs.
      * </p>
      * </li>

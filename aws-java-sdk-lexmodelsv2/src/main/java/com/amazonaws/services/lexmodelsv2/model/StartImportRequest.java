@@ -34,7 +34,7 @@ public class StartImportRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String importId;
     /**
      * <p>
-     * Parameters for creating the bot or bot locale.
+     * Parameters for creating the bot, bot locale or custom vocabulary.
      * </p>
      */
     private ImportResourceSpecification resourceSpecification;
@@ -47,8 +47,8 @@ public class StartImportRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String mergeStrategy;
     /**
      * <p>
-     * The password used to encrypt the zip archive that contains the bot or bot locale definition. You should always
-     * encrypt the zip archive to protect it during transit between your site and Amazon Lex.
+     * The password used to encrypt the zip archive that contains the resource definition. You should always encrypt the
+     * zip archive to protect it during transit between your site and Amazon Lex.
      * </p>
      */
     private String filePassword;
@@ -102,11 +102,11 @@ public class StartImportRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Parameters for creating the bot or bot locale.
+     * Parameters for creating the bot, bot locale or custom vocabulary.
      * </p>
      * 
      * @param resourceSpecification
-     *        Parameters for creating the bot or bot locale.
+     *        Parameters for creating the bot, bot locale or custom vocabulary.
      */
 
     public void setResourceSpecification(ImportResourceSpecification resourceSpecification) {
@@ -115,10 +115,10 @@ public class StartImportRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Parameters for creating the bot or bot locale.
+     * Parameters for creating the bot, bot locale or custom vocabulary.
      * </p>
      * 
-     * @return Parameters for creating the bot or bot locale.
+     * @return Parameters for creating the bot, bot locale or custom vocabulary.
      */
 
     public ImportResourceSpecification getResourceSpecification() {
@@ -127,11 +127,11 @@ public class StartImportRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Parameters for creating the bot or bot locale.
+     * Parameters for creating the bot, bot locale or custom vocabulary.
      * </p>
      * 
      * @param resourceSpecification
-     *        Parameters for creating the bot or bot locale.
+     *        Parameters for creating the bot, bot locale or custom vocabulary.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -213,13 +213,13 @@ public class StartImportRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The password used to encrypt the zip archive that contains the bot or bot locale definition. You should always
-     * encrypt the zip archive to protect it during transit between your site and Amazon Lex.
+     * The password used to encrypt the zip archive that contains the resource definition. You should always encrypt the
+     * zip archive to protect it during transit between your site and Amazon Lex.
      * </p>
      * 
      * @param filePassword
-     *        The password used to encrypt the zip archive that contains the bot or bot locale definition. You should
-     *        always encrypt the zip archive to protect it during transit between your site and Amazon Lex.
+     *        The password used to encrypt the zip archive that contains the resource definition. You should always
+     *        encrypt the zip archive to protect it during transit between your site and Amazon Lex.
      */
 
     public void setFilePassword(String filePassword) {
@@ -228,12 +228,12 @@ public class StartImportRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The password used to encrypt the zip archive that contains the bot or bot locale definition. You should always
-     * encrypt the zip archive to protect it during transit between your site and Amazon Lex.
+     * The password used to encrypt the zip archive that contains the resource definition. You should always encrypt the
+     * zip archive to protect it during transit between your site and Amazon Lex.
      * </p>
      * 
-     * @return The password used to encrypt the zip archive that contains the bot or bot locale definition. You should
-     *         always encrypt the zip archive to protect it during transit between your site and Amazon Lex.
+     * @return The password used to encrypt the zip archive that contains the resource definition. You should always
+     *         encrypt the zip archive to protect it during transit between your site and Amazon Lex.
      */
 
     public String getFilePassword() {
@@ -242,13 +242,13 @@ public class StartImportRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The password used to encrypt the zip archive that contains the bot or bot locale definition. You should always
-     * encrypt the zip archive to protect it during transit between your site and Amazon Lex.
+     * The password used to encrypt the zip archive that contains the resource definition. You should always encrypt the
+     * zip archive to protect it during transit between your site and Amazon Lex.
      * </p>
      * 
      * @param filePassword
-     *        The password used to encrypt the zip archive that contains the bot or bot locale definition. You should
-     *        always encrypt the zip archive to protect it during transit between your site and Amazon Lex.
+     *        The password used to encrypt the zip archive that contains the resource definition. You should always
+     *        encrypt the zip archive to protect it during transit between your site and Amazon Lex.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

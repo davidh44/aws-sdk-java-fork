@@ -43,8 +43,8 @@ public class DimensionGroup implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>db</code> - The name of the database to which the client is connected (only Aurora PostgreSQL, RDS
-     * PostgreSQL, Aurora MySQL, RDS MySQL, and MariaDB)
+     * <code>db</code> - The name of the database to which the client is connected (only Aurora PostgreSQL, Amazon RDS
+     * PostgreSQL, Aurora MySQL, Amazon RDS MySQL, and MariaDB)
      * </p>
      * </li>
      * <li>
@@ -118,8 +118,8 @@ public class DimensionGroup implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>db.name</code> - The name of the database to which the client is connected (only Aurora PostgreSQL, RDS
-     * PostgreSQL, Aurora MySQL, RDS MySQL, and MariaDB)
+     * <code>db.name</code> - The name of the database to which the client is connected (only Aurora PostgreSQL, Amazon
+     * RDS PostgreSQL, Aurora MySQL, Amazon RDS MySQL, and MariaDB)
      * </p>
      * </li>
      * <li>
@@ -204,8 +204,8 @@ public class DimensionGroup implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>db</code> - The name of the database to which the client is connected (only Aurora PostgreSQL, RDS
-     * PostgreSQL, Aurora MySQL, RDS MySQL, and MariaDB)
+     * <code>db</code> - The name of the database to which the client is connected (only Aurora PostgreSQL, Amazon RDS
+     * PostgreSQL, Aurora MySQL, Amazon RDS MySQL, and MariaDB)
      * </p>
      * </li>
      * <li>
@@ -256,8 +256,8 @@ public class DimensionGroup implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>db</code> - The name of the database to which the client is connected (only Aurora PostgreSQL, RDS
-     *        PostgreSQL, Aurora MySQL, RDS MySQL, and MariaDB)
+     *        <code>db</code> - The name of the database to which the client is connected (only Aurora PostgreSQL,
+     *        Amazon RDS PostgreSQL, Aurora MySQL, Amazon RDS MySQL, and MariaDB)
      *        </p>
      *        </li>
      *        <li>
@@ -315,8 +315,8 @@ public class DimensionGroup implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>db</code> - The name of the database to which the client is connected (only Aurora PostgreSQL, RDS
-     * PostgreSQL, Aurora MySQL, RDS MySQL, and MariaDB)
+     * <code>db</code> - The name of the database to which the client is connected (only Aurora PostgreSQL, Amazon RDS
+     * PostgreSQL, Aurora MySQL, Amazon RDS MySQL, and MariaDB)
      * </p>
      * </li>
      * <li>
@@ -366,8 +366,8 @@ public class DimensionGroup implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>db</code> - The name of the database to which the client is connected (only Aurora PostgreSQL, RDS
-     *         PostgreSQL, Aurora MySQL, RDS MySQL, and MariaDB)
+     *         <code>db</code> - The name of the database to which the client is connected (only Aurora PostgreSQL,
+     *         Amazon RDS PostgreSQL, Aurora MySQL, Amazon RDS MySQL, and MariaDB)
      *         </p>
      *         </li>
      *         <li>
@@ -426,8 +426,8 @@ public class DimensionGroup implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>db</code> - The name of the database to which the client is connected (only Aurora PostgreSQL, RDS
-     * PostgreSQL, Aurora MySQL, RDS MySQL, and MariaDB)
+     * <code>db</code> - The name of the database to which the client is connected (only Aurora PostgreSQL, Amazon RDS
+     * PostgreSQL, Aurora MySQL, Amazon RDS MySQL, and MariaDB)
      * </p>
      * </li>
      * <li>
@@ -478,8 +478,8 @@ public class DimensionGroup implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>db</code> - The name of the database to which the client is connected (only Aurora PostgreSQL, RDS
-     *        PostgreSQL, Aurora MySQL, RDS MySQL, and MariaDB)
+     *        <code>db</code> - The name of the database to which the client is connected (only Aurora PostgreSQL,
+     *        Amazon RDS PostgreSQL, Aurora MySQL, Amazon RDS MySQL, and MariaDB)
      *        </p>
      *        </li>
      *        <li>
@@ -559,8 +559,8 @@ public class DimensionGroup implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>db.name</code> - The name of the database to which the client is connected (only Aurora PostgreSQL, RDS
-     * PostgreSQL, Aurora MySQL, RDS MySQL, and MariaDB)
+     * <code>db.name</code> - The name of the database to which the client is connected (only Aurora PostgreSQL, Amazon
+     * RDS PostgreSQL, Aurora MySQL, Amazon RDS MySQL, and MariaDB)
      * </p>
      * </li>
      * <li>
@@ -655,7 +655,7 @@ public class DimensionGroup implements Serializable, Cloneable, StructuredPojo {
      *         <li>
      *         <p>
      *         <code>db.name</code> - The name of the database to which the client is connected (only Aurora PostgreSQL,
-     *         RDS PostgreSQL, Aurora MySQL, RDS MySQL, and MariaDB)
+     *         Amazon RDS PostgreSQL, Aurora MySQL, Amazon RDS MySQL, and MariaDB)
      *         </p>
      *         </li>
      *         <li>
@@ -758,8 +758,8 @@ public class DimensionGroup implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>db.name</code> - The name of the database to which the client is connected (only Aurora PostgreSQL, RDS
-     * PostgreSQL, Aurora MySQL, RDS MySQL, and MariaDB)
+     * <code>db.name</code> - The name of the database to which the client is connected (only Aurora PostgreSQL, Amazon
+     * RDS PostgreSQL, Aurora MySQL, Amazon RDS MySQL, and MariaDB)
      * </p>
      * </li>
      * <li>
@@ -855,7 +855,7 @@ public class DimensionGroup implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>db.name</code> - The name of the database to which the client is connected (only Aurora PostgreSQL,
-     *        RDS PostgreSQL, Aurora MySQL, RDS MySQL, and MariaDB)
+     *        Amazon RDS PostgreSQL, Aurora MySQL, Amazon RDS MySQL, and MariaDB)
      *        </p>
      *        </li>
      *        <li>
@@ -963,8 +963,8 @@ public class DimensionGroup implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>db.name</code> - The name of the database to which the client is connected (only Aurora PostgreSQL, RDS
-     * PostgreSQL, Aurora MySQL, RDS MySQL, and MariaDB)
+     * <code>db.name</code> - The name of the database to which the client is connected (only Aurora PostgreSQL, Amazon
+     * RDS PostgreSQL, Aurora MySQL, Amazon RDS MySQL, and MariaDB)
      * </p>
      * </li>
      * <li>
@@ -1065,7 +1065,7 @@ public class DimensionGroup implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>db.name</code> - The name of the database to which the client is connected (only Aurora PostgreSQL,
-     *        RDS PostgreSQL, Aurora MySQL, RDS MySQL, and MariaDB)
+     *        Amazon RDS PostgreSQL, Aurora MySQL, Amazon RDS MySQL, and MariaDB)
      *        </p>
      *        </li>
      *        <li>
@@ -1175,8 +1175,8 @@ public class DimensionGroup implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>db.name</code> - The name of the database to which the client is connected (only Aurora PostgreSQL, RDS
-     * PostgreSQL, Aurora MySQL, RDS MySQL, and MariaDB)
+     * <code>db.name</code> - The name of the database to which the client is connected (only Aurora PostgreSQL, Amazon
+     * RDS PostgreSQL, Aurora MySQL, Amazon RDS MySQL, and MariaDB)
      * </p>
      * </li>
      * <li>
@@ -1272,7 +1272,7 @@ public class DimensionGroup implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>db.name</code> - The name of the database to which the client is connected (only Aurora PostgreSQL,
-     *        RDS PostgreSQL, Aurora MySQL, RDS MySQL, and MariaDB)
+     *        Amazon RDS PostgreSQL, Aurora MySQL, Amazon RDS MySQL, and MariaDB)
      *        </p>
      *        </li>
      *        <li>

@@ -56,6 +56,10 @@ public class SlotValueSelectionSettingJsonUnmarshaller implements Unmarshaller<S
                     context.nextToken();
                     slotValueSelectionSetting.setRegexFilter(SlotValueRegexFilterJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("advancedRecognitionSetting", targetDepth)) {
+                    context.nextToken();
+                    slotValueSelectionSetting.setAdvancedRecognitionSetting(AdvancedRecognitionSettingJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

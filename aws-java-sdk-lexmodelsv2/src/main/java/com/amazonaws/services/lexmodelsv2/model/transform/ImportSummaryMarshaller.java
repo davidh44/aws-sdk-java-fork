@@ -41,6 +41,8 @@ public class ImportSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("creationDateTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> LASTUPDATEDDATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lastUpdatedDateTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<String> IMPORTEDRESOURCETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("importedResourceType").build();
 
     private static final ImportSummaryMarshaller instance = new ImportSummaryMarshaller();
 
@@ -65,6 +67,7 @@ public class ImportSummaryMarshaller {
             protocolMarshaller.marshall(importSummary.getMergeStrategy(), MERGESTRATEGY_BINDING);
             protocolMarshaller.marshall(importSummary.getCreationDateTime(), CREATIONDATETIME_BINDING);
             protocolMarshaller.marshall(importSummary.getLastUpdatedDateTime(), LASTUPDATEDDATETIME_BINDING);
+            protocolMarshaller.marshall(importSummary.getImportedResourceType(), IMPORTEDRESOURCETYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

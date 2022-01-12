@@ -37,7 +37,8 @@ public class ImportFilter implements Serializable, Cloneable, StructuredPojo {
     private String name;
     /**
      * <p>
-     * The values to use to filter the response.
+     * The values to use to filter the response. The values must be <code>Bot</code>, <code>BotLocale</code>, or
+     * <code>CustomVocabulary</code>.
      * </p>
      */
     private java.util.List<String> values;
@@ -111,10 +112,12 @@ public class ImportFilter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The values to use to filter the response.
+     * The values to use to filter the response. The values must be <code>Bot</code>, <code>BotLocale</code>, or
+     * <code>CustomVocabulary</code>.
      * </p>
      * 
-     * @return The values to use to filter the response.
+     * @return The values to use to filter the response. The values must be <code>Bot</code>, <code>BotLocale</code>, or
+     *         <code>CustomVocabulary</code>.
      */
 
     public java.util.List<String> getValues() {
@@ -123,11 +126,13 @@ public class ImportFilter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The values to use to filter the response.
+     * The values to use to filter the response. The values must be <code>Bot</code>, <code>BotLocale</code>, or
+     * <code>CustomVocabulary</code>.
      * </p>
      * 
      * @param values
-     *        The values to use to filter the response.
+     *        The values to use to filter the response. The values must be <code>Bot</code>, <code>BotLocale</code>, or
+     *        <code>CustomVocabulary</code>.
      */
 
     public void setValues(java.util.Collection<String> values) {
@@ -141,7 +146,8 @@ public class ImportFilter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The values to use to filter the response.
+     * The values to use to filter the response. The values must be <code>Bot</code>, <code>BotLocale</code>, or
+     * <code>CustomVocabulary</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -150,7 +156,8 @@ public class ImportFilter implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param values
-     *        The values to use to filter the response.
+     *        The values to use to filter the response. The values must be <code>Bot</code>, <code>BotLocale</code>, or
+     *        <code>CustomVocabulary</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -166,11 +173,13 @@ public class ImportFilter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The values to use to filter the response.
+     * The values to use to filter the response. The values must be <code>Bot</code>, <code>BotLocale</code>, or
+     * <code>CustomVocabulary</code>.
      * </p>
      * 
      * @param values
-     *        The values to use to filter the response.
+     *        The values to use to filter the response. The values must be <code>Bot</code>, <code>BotLocale</code>, or
+     *        <code>CustomVocabulary</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -31,7 +31,7 @@ public class StartImportResult extends com.amazonaws.AmazonWebServiceResult<com.
     private String importId;
     /**
      * <p>
-     * The parameters used when importing the bot or bot locale.
+     * The parameters used when importing the resource.
      * </p>
      */
     private ImportResourceSpecification resourceSpecification;
@@ -44,7 +44,8 @@ public class StartImportResult extends com.amazonaws.AmazonWebServiceResult<com.
     private String mergeStrategy;
     /**
      * <p>
-     * The current status of the import. When the status is <code>Complete</code> the bot or bot alias is ready to use.
+     * The current status of the import. When the status is <code>Complete</code> the bot, bot alias, or custom
+     * vocabulary is ready to use.
      * </p>
      */
     private String importStatus;
@@ -97,11 +98,11 @@ public class StartImportResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The parameters used when importing the bot or bot locale.
+     * The parameters used when importing the resource.
      * </p>
      * 
      * @param resourceSpecification
-     *        The parameters used when importing the bot or bot locale.
+     *        The parameters used when importing the resource.
      */
 
     public void setResourceSpecification(ImportResourceSpecification resourceSpecification) {
@@ -110,10 +111,10 @@ public class StartImportResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The parameters used when importing the bot or bot locale.
+     * The parameters used when importing the resource.
      * </p>
      * 
-     * @return The parameters used when importing the bot or bot locale.
+     * @return The parameters used when importing the resource.
      */
 
     public ImportResourceSpecification getResourceSpecification() {
@@ -122,11 +123,11 @@ public class StartImportResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The parameters used when importing the bot or bot locale.
+     * The parameters used when importing the resource.
      * </p>
      * 
      * @param resourceSpecification
-     *        The parameters used when importing the bot or bot locale.
+     *        The parameters used when importing the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -208,12 +209,13 @@ public class StartImportResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The current status of the import. When the status is <code>Complete</code> the bot or bot alias is ready to use.
+     * The current status of the import. When the status is <code>Complete</code> the bot, bot alias, or custom
+     * vocabulary is ready to use.
      * </p>
      * 
      * @param importStatus
-     *        The current status of the import. When the status is <code>Complete</code> the bot or bot alias is ready
-     *        to use.
+     *        The current status of the import. When the status is <code>Complete</code> the bot, bot alias, or custom
+     *        vocabulary is ready to use.
      * @see ImportStatus
      */
 
@@ -223,11 +225,12 @@ public class StartImportResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The current status of the import. When the status is <code>Complete</code> the bot or bot alias is ready to use.
+     * The current status of the import. When the status is <code>Complete</code> the bot, bot alias, or custom
+     * vocabulary is ready to use.
      * </p>
      * 
-     * @return The current status of the import. When the status is <code>Complete</code> the bot or bot alias is ready
-     *         to use.
+     * @return The current status of the import. When the status is <code>Complete</code> the bot, bot alias, or custom
+     *         vocabulary is ready to use.
      * @see ImportStatus
      */
 
@@ -237,12 +240,13 @@ public class StartImportResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The current status of the import. When the status is <code>Complete</code> the bot or bot alias is ready to use.
+     * The current status of the import. When the status is <code>Complete</code> the bot, bot alias, or custom
+     * vocabulary is ready to use.
      * </p>
      * 
      * @param importStatus
-     *        The current status of the import. When the status is <code>Complete</code> the bot or bot alias is ready
-     *        to use.
+     *        The current status of the import. When the status is <code>Complete</code> the bot, bot alias, or custom
+     *        vocabulary is ready to use.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ImportStatus
      */
@@ -254,12 +258,13 @@ public class StartImportResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The current status of the import. When the status is <code>Complete</code> the bot or bot alias is ready to use.
+     * The current status of the import. When the status is <code>Complete</code> the bot, bot alias, or custom
+     * vocabulary is ready to use.
      * </p>
      * 
      * @param importStatus
-     *        The current status of the import. When the status is <code>Complete</code> the bot or bot alias is ready
-     *        to use.
+     *        The current status of the import. When the status is <code>Complete</code> the bot, bot alias, or custom
+     *        vocabulary is ready to use.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ImportStatus
      */

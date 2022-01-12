@@ -33,7 +33,7 @@ public class GetScreenDataRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String workbookId;
     /**
      * <p>
-     * The ID of the app that contains the screem.
+     * The ID of the app that contains the screen.
      * </p>
      */
     private String appId;
@@ -115,11 +115,11 @@ public class GetScreenDataRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The ID of the app that contains the screem.
+     * The ID of the app that contains the screen.
      * </p>
      * 
      * @param appId
-     *        The ID of the app that contains the screem.
+     *        The ID of the app that contains the screen.
      */
 
     public void setAppId(String appId) {
@@ -128,10 +128,10 @@ public class GetScreenDataRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The ID of the app that contains the screem.
+     * The ID of the app that contains the screen.
      * </p>
      * 
-     * @return The ID of the app that contains the screem.
+     * @return The ID of the app that contains the screen.
      */
 
     public String getAppId() {
@@ -140,11 +140,11 @@ public class GetScreenDataRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The ID of the app that contains the screem.
+     * The ID of the app that contains the screen.
      * </p>
      * 
      * @param appId
-     *        The ID of the app that contains the screem.
+     *        The ID of the app that contains the screen.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

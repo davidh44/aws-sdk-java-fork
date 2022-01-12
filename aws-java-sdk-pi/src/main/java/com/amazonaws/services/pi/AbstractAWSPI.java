@@ -38,7 +38,22 @@ public class AbstractAWSPI implements AWSPI {
     }
 
     @Override
+    public GetResourceMetadataResult getResourceMetadata(GetResourceMetadataRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetResourceMetricsResult getResourceMetrics(GetResourceMetricsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListAvailableResourceDimensionsResult listAvailableResourceDimensions(ListAvailableResourceDimensionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListAvailableResourceMetricsResult listAvailableResourceMetrics(ListAvailableResourceMetricsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

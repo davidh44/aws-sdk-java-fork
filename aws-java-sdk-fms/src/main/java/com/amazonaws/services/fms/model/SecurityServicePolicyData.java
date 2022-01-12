@@ -39,8 +39,7 @@ public class SecurityServicePolicyData implements Serializable, Cloneable, Struc
     private String type;
     /**
      * <p>
-     * Details about the service that are specific to the service type, in JSON format. For service type
-     * <code>SHIELD_ADVANCED</code>, this is an empty string.
+     * Details about the service that are specific to the service type, in JSON format.
      * </p>
      * <ul>
      * <li>
@@ -62,6 +61,27 @@ public class SecurityServicePolicyData implements Serializable, Cloneable, Struc
      * </p>
      * <p>
      * <code>"{\"type\":\"NETWORK_FIREWALL\",\"networkFirewallStatelessRuleGroupReferences\":[{\"resourceARN\":\"arn:aws:network-firewall:us-west-1:1234567891011:stateless-rulegroup/rulegroup2\",\"priority\":10}],\"networkFirewallStatelessDefaultActions\":[\"aws:pass\",\"custom1\"],\"networkFirewallStatelessFragmentDefaultActions\":[\"custom2\",\"aws:pass\"],\"networkFirewallStatelessCustomActions\":[{\"actionName\":\"custom1\",\"actionDefinition\":{\"publishMetricAction\":{\"dimensions\":[{\"value\":\"dimension1\"}]}}},{\"actionName\":\"custom2\",\"actionDefinition\":{\"publishMetricAction\":{\"dimensions\":[{\"value\":\"dimension2\"}]}}}],\"networkFirewallStatefulRuleGroupReferences\":[{\"resourceARN\":\"arn:aws:network-firewall:us-west-1:1234567891011:stateful-rulegroup/rulegroup1\"}],\"networkFirewallOrchestrationConfig\":{\"singleFirewallEndpointPerVPC\":true,\"allowedIPV4CidrList\":[\"10.24.34.0/28\"]} }"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Specification for <code>SHIELD_ADVANCED</code> for Amazon CloudFront distributions
+     * </p>
+     * <p>
+     * <code>"{\"type\":\"SHIELD_ADVANCED\",\"automaticResponseConfiguration\": {\"automaticResponseStatus\":\"ENABLED|IGNORED|DISABLED\", \"automaticResponseAction\":\"BLOCK|COUNT\"}, \"overrideCustomerWebaclClassic\":true|false}"</code>
+     * </p>
+     * <p>
+     * For example:
+     * <code>"{\"type\":\"SHIELD_ADVANCED\",\"automaticResponseConfiguration\": {\"automaticResponseStatus\":\"ENABLED\", \"automaticResponseAction\":\"COUNT\"}}"</code>
+     * </p>
+     * <p>
+     * The default value for <code>automaticResponseStatus</code> is <code>IGNORED</code>. The value for
+     * <code>automaticResponseAction</code> is only required when <code>automaticResponseStatus</code> is set to
+     * <code>ENABLED</code>. The default value for <code>overrideCustomerWebaclClassic</code> is <code>false</code>.
+     * </p>
+     * <p>
+     * For other resource types that you can protect with a Shield Advanced policy, this <code>ManagedServiceData</code>
+     * configuration is an empty string.
      * </p>
      * </li>
      * <li>
@@ -213,8 +233,7 @@ public class SecurityServicePolicyData implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Details about the service that are specific to the service type, in JSON format. For service type
-     * <code>SHIELD_ADVANCED</code>, this is an empty string.
+     * Details about the service that are specific to the service type, in JSON format.
      * </p>
      * <ul>
      * <li>
@@ -236,6 +255,27 @@ public class SecurityServicePolicyData implements Serializable, Cloneable, Struc
      * </p>
      * <p>
      * <code>"{\"type\":\"NETWORK_FIREWALL\",\"networkFirewallStatelessRuleGroupReferences\":[{\"resourceARN\":\"arn:aws:network-firewall:us-west-1:1234567891011:stateless-rulegroup/rulegroup2\",\"priority\":10}],\"networkFirewallStatelessDefaultActions\":[\"aws:pass\",\"custom1\"],\"networkFirewallStatelessFragmentDefaultActions\":[\"custom2\",\"aws:pass\"],\"networkFirewallStatelessCustomActions\":[{\"actionName\":\"custom1\",\"actionDefinition\":{\"publishMetricAction\":{\"dimensions\":[{\"value\":\"dimension1\"}]}}},{\"actionName\":\"custom2\",\"actionDefinition\":{\"publishMetricAction\":{\"dimensions\":[{\"value\":\"dimension2\"}]}}}],\"networkFirewallStatefulRuleGroupReferences\":[{\"resourceARN\":\"arn:aws:network-firewall:us-west-1:1234567891011:stateful-rulegroup/rulegroup1\"}],\"networkFirewallOrchestrationConfig\":{\"singleFirewallEndpointPerVPC\":true,\"allowedIPV4CidrList\":[\"10.24.34.0/28\"]} }"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Specification for <code>SHIELD_ADVANCED</code> for Amazon CloudFront distributions
+     * </p>
+     * <p>
+     * <code>"{\"type\":\"SHIELD_ADVANCED\",\"automaticResponseConfiguration\": {\"automaticResponseStatus\":\"ENABLED|IGNORED|DISABLED\", \"automaticResponseAction\":\"BLOCK|COUNT\"}, \"overrideCustomerWebaclClassic\":true|false}"</code>
+     * </p>
+     * <p>
+     * For example:
+     * <code>"{\"type\":\"SHIELD_ADVANCED\",\"automaticResponseConfiguration\": {\"automaticResponseStatus\":\"ENABLED\", \"automaticResponseAction\":\"COUNT\"}}"</code>
+     * </p>
+     * <p>
+     * The default value for <code>automaticResponseStatus</code> is <code>IGNORED</code>. The value for
+     * <code>automaticResponseAction</code> is only required when <code>automaticResponseStatus</code> is set to
+     * <code>ENABLED</code>. The default value for <code>overrideCustomerWebaclClassic</code> is <code>false</code>.
+     * </p>
+     * <p>
+     * For other resource types that you can protect with a Shield Advanced policy, this <code>ManagedServiceData</code>
+     * configuration is an empty string.
      * </p>
      * </li>
      * <li>
@@ -301,8 +341,7 @@ public class SecurityServicePolicyData implements Serializable, Cloneable, Struc
      * </ul>
      * 
      * @param managedServiceData
-     *        Details about the service that are specific to the service type, in JSON format. For service type
-     *        <code>SHIELD_ADVANCED</code>, this is an empty string.</p>
+     *        Details about the service that are specific to the service type, in JSON format. </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -323,6 +362,28 @@ public class SecurityServicePolicyData implements Serializable, Cloneable, Struc
      *        </p>
      *        <p>
      *        <code>"{\"type\":\"NETWORK_FIREWALL\",\"networkFirewallStatelessRuleGroupReferences\":[{\"resourceARN\":\"arn:aws:network-firewall:us-west-1:1234567891011:stateless-rulegroup/rulegroup2\",\"priority\":10}],\"networkFirewallStatelessDefaultActions\":[\"aws:pass\",\"custom1\"],\"networkFirewallStatelessFragmentDefaultActions\":[\"custom2\",\"aws:pass\"],\"networkFirewallStatelessCustomActions\":[{\"actionName\":\"custom1\",\"actionDefinition\":{\"publishMetricAction\":{\"dimensions\":[{\"value\":\"dimension1\"}]}}},{\"actionName\":\"custom2\",\"actionDefinition\":{\"publishMetricAction\":{\"dimensions\":[{\"value\":\"dimension2\"}]}}}],\"networkFirewallStatefulRuleGroupReferences\":[{\"resourceARN\":\"arn:aws:network-firewall:us-west-1:1234567891011:stateful-rulegroup/rulegroup1\"}],\"networkFirewallOrchestrationConfig\":{\"singleFirewallEndpointPerVPC\":true,\"allowedIPV4CidrList\":[\"10.24.34.0/28\"]} }"</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Specification for <code>SHIELD_ADVANCED</code> for Amazon CloudFront distributions
+     *        </p>
+     *        <p>
+     *        <code>"{\"type\":\"SHIELD_ADVANCED\",\"automaticResponseConfiguration\": {\"automaticResponseStatus\":\"ENABLED|IGNORED|DISABLED\", \"automaticResponseAction\":\"BLOCK|COUNT\"}, \"overrideCustomerWebaclClassic\":true|false}"</code>
+     *        </p>
+     *        <p>
+     *        For example:
+     *        <code>"{\"type\":\"SHIELD_ADVANCED\",\"automaticResponseConfiguration\": {\"automaticResponseStatus\":\"ENABLED\", \"automaticResponseAction\":\"COUNT\"}}"</code>
+     *        </p>
+     *        <p>
+     *        The default value for <code>automaticResponseStatus</code> is <code>IGNORED</code>. The value for
+     *        <code>automaticResponseAction</code> is only required when <code>automaticResponseStatus</code> is set to
+     *        <code>ENABLED</code>. The default value for <code>overrideCustomerWebaclClassic</code> is
+     *        <code>false</code>.
+     *        </p>
+     *        <p>
+     *        For other resource types that you can protect with a Shield Advanced policy, this
+     *        <code>ManagedServiceData</code> configuration is an empty string.
      *        </p>
      *        </li>
      *        <li>
@@ -393,8 +454,7 @@ public class SecurityServicePolicyData implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Details about the service that are specific to the service type, in JSON format. For service type
-     * <code>SHIELD_ADVANCED</code>, this is an empty string.
+     * Details about the service that are specific to the service type, in JSON format.
      * </p>
      * <ul>
      * <li>
@@ -416,6 +476,27 @@ public class SecurityServicePolicyData implements Serializable, Cloneable, Struc
      * </p>
      * <p>
      * <code>"{\"type\":\"NETWORK_FIREWALL\",\"networkFirewallStatelessRuleGroupReferences\":[{\"resourceARN\":\"arn:aws:network-firewall:us-west-1:1234567891011:stateless-rulegroup/rulegroup2\",\"priority\":10}],\"networkFirewallStatelessDefaultActions\":[\"aws:pass\",\"custom1\"],\"networkFirewallStatelessFragmentDefaultActions\":[\"custom2\",\"aws:pass\"],\"networkFirewallStatelessCustomActions\":[{\"actionName\":\"custom1\",\"actionDefinition\":{\"publishMetricAction\":{\"dimensions\":[{\"value\":\"dimension1\"}]}}},{\"actionName\":\"custom2\",\"actionDefinition\":{\"publishMetricAction\":{\"dimensions\":[{\"value\":\"dimension2\"}]}}}],\"networkFirewallStatefulRuleGroupReferences\":[{\"resourceARN\":\"arn:aws:network-firewall:us-west-1:1234567891011:stateful-rulegroup/rulegroup1\"}],\"networkFirewallOrchestrationConfig\":{\"singleFirewallEndpointPerVPC\":true,\"allowedIPV4CidrList\":[\"10.24.34.0/28\"]} }"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Specification for <code>SHIELD_ADVANCED</code> for Amazon CloudFront distributions
+     * </p>
+     * <p>
+     * <code>"{\"type\":\"SHIELD_ADVANCED\",\"automaticResponseConfiguration\": {\"automaticResponseStatus\":\"ENABLED|IGNORED|DISABLED\", \"automaticResponseAction\":\"BLOCK|COUNT\"}, \"overrideCustomerWebaclClassic\":true|false}"</code>
+     * </p>
+     * <p>
+     * For example:
+     * <code>"{\"type\":\"SHIELD_ADVANCED\",\"automaticResponseConfiguration\": {\"automaticResponseStatus\":\"ENABLED\", \"automaticResponseAction\":\"COUNT\"}}"</code>
+     * </p>
+     * <p>
+     * The default value for <code>automaticResponseStatus</code> is <code>IGNORED</code>. The value for
+     * <code>automaticResponseAction</code> is only required when <code>automaticResponseStatus</code> is set to
+     * <code>ENABLED</code>. The default value for <code>overrideCustomerWebaclClassic</code> is <code>false</code>.
+     * </p>
+     * <p>
+     * For other resource types that you can protect with a Shield Advanced policy, this <code>ManagedServiceData</code>
+     * configuration is an empty string.
      * </p>
      * </li>
      * <li>
@@ -480,8 +561,7 @@ public class SecurityServicePolicyData implements Serializable, Cloneable, Struc
      * </li>
      * </ul>
      * 
-     * @return Details about the service that are specific to the service type, in JSON format. For service type
-     *         <code>SHIELD_ADVANCED</code>, this is an empty string.</p>
+     * @return Details about the service that are specific to the service type, in JSON format. </p>
      *         <ul>
      *         <li>
      *         <p>
@@ -502,6 +582,28 @@ public class SecurityServicePolicyData implements Serializable, Cloneable, Struc
      *         </p>
      *         <p>
      *         <code>"{\"type\":\"NETWORK_FIREWALL\",\"networkFirewallStatelessRuleGroupReferences\":[{\"resourceARN\":\"arn:aws:network-firewall:us-west-1:1234567891011:stateless-rulegroup/rulegroup2\",\"priority\":10}],\"networkFirewallStatelessDefaultActions\":[\"aws:pass\",\"custom1\"],\"networkFirewallStatelessFragmentDefaultActions\":[\"custom2\",\"aws:pass\"],\"networkFirewallStatelessCustomActions\":[{\"actionName\":\"custom1\",\"actionDefinition\":{\"publishMetricAction\":{\"dimensions\":[{\"value\":\"dimension1\"}]}}},{\"actionName\":\"custom2\",\"actionDefinition\":{\"publishMetricAction\":{\"dimensions\":[{\"value\":\"dimension2\"}]}}}],\"networkFirewallStatefulRuleGroupReferences\":[{\"resourceARN\":\"arn:aws:network-firewall:us-west-1:1234567891011:stateful-rulegroup/rulegroup1\"}],\"networkFirewallOrchestrationConfig\":{\"singleFirewallEndpointPerVPC\":true,\"allowedIPV4CidrList\":[\"10.24.34.0/28\"]} }"</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Specification for <code>SHIELD_ADVANCED</code> for Amazon CloudFront distributions
+     *         </p>
+     *         <p>
+     *         <code>"{\"type\":\"SHIELD_ADVANCED\",\"automaticResponseConfiguration\": {\"automaticResponseStatus\":\"ENABLED|IGNORED|DISABLED\", \"automaticResponseAction\":\"BLOCK|COUNT\"}, \"overrideCustomerWebaclClassic\":true|false}"</code>
+     *         </p>
+     *         <p>
+     *         For example:
+     *         <code>"{\"type\":\"SHIELD_ADVANCED\",\"automaticResponseConfiguration\": {\"automaticResponseStatus\":\"ENABLED\", \"automaticResponseAction\":\"COUNT\"}}"</code>
+     *         </p>
+     *         <p>
+     *         The default value for <code>automaticResponseStatus</code> is <code>IGNORED</code>. The value for
+     *         <code>automaticResponseAction</code> is only required when <code>automaticResponseStatus</code> is set to
+     *         <code>ENABLED</code>. The default value for <code>overrideCustomerWebaclClassic</code> is
+     *         <code>false</code>.
+     *         </p>
+     *         <p>
+     *         For other resource types that you can protect with a Shield Advanced policy, this
+     *         <code>ManagedServiceData</code> configuration is an empty string.
      *         </p>
      *         </li>
      *         <li>
@@ -572,8 +674,7 @@ public class SecurityServicePolicyData implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Details about the service that are specific to the service type, in JSON format. For service type
-     * <code>SHIELD_ADVANCED</code>, this is an empty string.
+     * Details about the service that are specific to the service type, in JSON format.
      * </p>
      * <ul>
      * <li>
@@ -595,6 +696,27 @@ public class SecurityServicePolicyData implements Serializable, Cloneable, Struc
      * </p>
      * <p>
      * <code>"{\"type\":\"NETWORK_FIREWALL\",\"networkFirewallStatelessRuleGroupReferences\":[{\"resourceARN\":\"arn:aws:network-firewall:us-west-1:1234567891011:stateless-rulegroup/rulegroup2\",\"priority\":10}],\"networkFirewallStatelessDefaultActions\":[\"aws:pass\",\"custom1\"],\"networkFirewallStatelessFragmentDefaultActions\":[\"custom2\",\"aws:pass\"],\"networkFirewallStatelessCustomActions\":[{\"actionName\":\"custom1\",\"actionDefinition\":{\"publishMetricAction\":{\"dimensions\":[{\"value\":\"dimension1\"}]}}},{\"actionName\":\"custom2\",\"actionDefinition\":{\"publishMetricAction\":{\"dimensions\":[{\"value\":\"dimension2\"}]}}}],\"networkFirewallStatefulRuleGroupReferences\":[{\"resourceARN\":\"arn:aws:network-firewall:us-west-1:1234567891011:stateful-rulegroup/rulegroup1\"}],\"networkFirewallOrchestrationConfig\":{\"singleFirewallEndpointPerVPC\":true,\"allowedIPV4CidrList\":[\"10.24.34.0/28\"]} }"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Specification for <code>SHIELD_ADVANCED</code> for Amazon CloudFront distributions
+     * </p>
+     * <p>
+     * <code>"{\"type\":\"SHIELD_ADVANCED\",\"automaticResponseConfiguration\": {\"automaticResponseStatus\":\"ENABLED|IGNORED|DISABLED\", \"automaticResponseAction\":\"BLOCK|COUNT\"}, \"overrideCustomerWebaclClassic\":true|false}"</code>
+     * </p>
+     * <p>
+     * For example:
+     * <code>"{\"type\":\"SHIELD_ADVANCED\",\"automaticResponseConfiguration\": {\"automaticResponseStatus\":\"ENABLED\", \"automaticResponseAction\":\"COUNT\"}}"</code>
+     * </p>
+     * <p>
+     * The default value for <code>automaticResponseStatus</code> is <code>IGNORED</code>. The value for
+     * <code>automaticResponseAction</code> is only required when <code>automaticResponseStatus</code> is set to
+     * <code>ENABLED</code>. The default value for <code>overrideCustomerWebaclClassic</code> is <code>false</code>.
+     * </p>
+     * <p>
+     * For other resource types that you can protect with a Shield Advanced policy, this <code>ManagedServiceData</code>
+     * configuration is an empty string.
      * </p>
      * </li>
      * <li>
@@ -660,8 +782,7 @@ public class SecurityServicePolicyData implements Serializable, Cloneable, Struc
      * </ul>
      * 
      * @param managedServiceData
-     *        Details about the service that are specific to the service type, in JSON format. For service type
-     *        <code>SHIELD_ADVANCED</code>, this is an empty string.</p>
+     *        Details about the service that are specific to the service type, in JSON format. </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -682,6 +803,28 @@ public class SecurityServicePolicyData implements Serializable, Cloneable, Struc
      *        </p>
      *        <p>
      *        <code>"{\"type\":\"NETWORK_FIREWALL\",\"networkFirewallStatelessRuleGroupReferences\":[{\"resourceARN\":\"arn:aws:network-firewall:us-west-1:1234567891011:stateless-rulegroup/rulegroup2\",\"priority\":10}],\"networkFirewallStatelessDefaultActions\":[\"aws:pass\",\"custom1\"],\"networkFirewallStatelessFragmentDefaultActions\":[\"custom2\",\"aws:pass\"],\"networkFirewallStatelessCustomActions\":[{\"actionName\":\"custom1\",\"actionDefinition\":{\"publishMetricAction\":{\"dimensions\":[{\"value\":\"dimension1\"}]}}},{\"actionName\":\"custom2\",\"actionDefinition\":{\"publishMetricAction\":{\"dimensions\":[{\"value\":\"dimension2\"}]}}}],\"networkFirewallStatefulRuleGroupReferences\":[{\"resourceARN\":\"arn:aws:network-firewall:us-west-1:1234567891011:stateful-rulegroup/rulegroup1\"}],\"networkFirewallOrchestrationConfig\":{\"singleFirewallEndpointPerVPC\":true,\"allowedIPV4CidrList\":[\"10.24.34.0/28\"]} }"</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Specification for <code>SHIELD_ADVANCED</code> for Amazon CloudFront distributions
+     *        </p>
+     *        <p>
+     *        <code>"{\"type\":\"SHIELD_ADVANCED\",\"automaticResponseConfiguration\": {\"automaticResponseStatus\":\"ENABLED|IGNORED|DISABLED\", \"automaticResponseAction\":\"BLOCK|COUNT\"}, \"overrideCustomerWebaclClassic\":true|false}"</code>
+     *        </p>
+     *        <p>
+     *        For example:
+     *        <code>"{\"type\":\"SHIELD_ADVANCED\",\"automaticResponseConfiguration\": {\"automaticResponseStatus\":\"ENABLED\", \"automaticResponseAction\":\"COUNT\"}}"</code>
+     *        </p>
+     *        <p>
+     *        The default value for <code>automaticResponseStatus</code> is <code>IGNORED</code>. The value for
+     *        <code>automaticResponseAction</code> is only required when <code>automaticResponseStatus</code> is set to
+     *        <code>ENABLED</code>. The default value for <code>overrideCustomerWebaclClassic</code> is
+     *        <code>false</code>.
+     *        </p>
+     *        <p>
+     *        For other resource types that you can protect with a Shield Advanced policy, this
+     *        <code>ManagedServiceData</code> configuration is an empty string.
      *        </p>
      *        </li>
      *        <li>

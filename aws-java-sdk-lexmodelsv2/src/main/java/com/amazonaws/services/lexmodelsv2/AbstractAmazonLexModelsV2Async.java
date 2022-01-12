@@ -236,6 +236,19 @@ public class AbstractAmazonLexModelsV2Async extends AbstractAmazonLexModelsV2 im
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteCustomVocabularyResult> deleteCustomVocabularyAsync(DeleteCustomVocabularyRequest request) {
+
+        return deleteCustomVocabularyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteCustomVocabularyResult> deleteCustomVocabularyAsync(DeleteCustomVocabularyRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteCustomVocabularyRequest, DeleteCustomVocabularyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteExportResult> deleteExportAsync(DeleteExportRequest request) {
 
         return deleteExportAsync(request, null);
@@ -400,6 +413,21 @@ public class AbstractAmazonLexModelsV2Async extends AbstractAmazonLexModelsV2 im
     @Override
     public java.util.concurrent.Future<DescribeBotVersionResult> describeBotVersionAsync(DescribeBotVersionRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeBotVersionRequest, DescribeBotVersionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeCustomVocabularyMetadataResult> describeCustomVocabularyMetadataAsync(
+            DescribeCustomVocabularyMetadataRequest request) {
+
+        return describeCustomVocabularyMetadataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeCustomVocabularyMetadataResult> describeCustomVocabularyMetadataAsync(
+            DescribeCustomVocabularyMetadataRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeCustomVocabularyMetadataRequest, DescribeCustomVocabularyMetadataResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

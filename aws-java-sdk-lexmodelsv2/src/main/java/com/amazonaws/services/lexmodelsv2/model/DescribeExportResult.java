@@ -37,7 +37,7 @@ public class DescribeExportResult extends com.amazonaws.AmazonWebServiceResult<c
     private ExportResourceSpecification resourceSpecification;
     /**
      * <p>
-     * The file format used in the files that describe the bot or bot locale.
+     * The file format used in the files that describe the resource.
      * </p>
      */
     private String fileFormat;
@@ -156,11 +156,11 @@ public class DescribeExportResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The file format used in the files that describe the bot or bot locale.
+     * The file format used in the files that describe the resource.
      * </p>
      * 
      * @param fileFormat
-     *        The file format used in the files that describe the bot or bot locale.
+     *        The file format used in the files that describe the resource.
      * @see ImportExportFileFormat
      */
 
@@ -170,10 +170,10 @@ public class DescribeExportResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The file format used in the files that describe the bot or bot locale.
+     * The file format used in the files that describe the resource.
      * </p>
      * 
-     * @return The file format used in the files that describe the bot or bot locale.
+     * @return The file format used in the files that describe the resource.
      * @see ImportExportFileFormat
      */
 
@@ -183,11 +183,11 @@ public class DescribeExportResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The file format used in the files that describe the bot or bot locale.
+     * The file format used in the files that describe the resource.
      * </p>
      * 
      * @param fileFormat
-     *        The file format used in the files that describe the bot or bot locale.
+     *        The file format used in the files that describe the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ImportExportFileFormat
      */
@@ -199,11 +199,11 @@ public class DescribeExportResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The file format used in the files that describe the bot or bot locale.
+     * The file format used in the files that describe the resource.
      * </p>
      * 
      * @param fileFormat
-     *        The file format used in the files that describe the bot or bot locale.
+     *        The file format used in the files that describe the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ImportExportFileFormat
      */

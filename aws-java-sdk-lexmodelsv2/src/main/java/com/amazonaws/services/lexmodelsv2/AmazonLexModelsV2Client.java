@@ -1345,6 +1345,76 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
 
     /**
      * <p>
+     * Removes a custom vocabulary from the specified locale in the specified bot.
+     * </p>
+     * 
+     * @param deleteCustomVocabularyRequest
+     * @return Result of the DeleteCustomVocabulary operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
+     * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.DeleteCustomVocabulary
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DeleteCustomVocabulary"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteCustomVocabularyResult deleteCustomVocabulary(DeleteCustomVocabularyRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteCustomVocabulary(request);
+    }
+
+    @SdkInternalApi
+    final DeleteCustomVocabularyResult executeDeleteCustomVocabulary(DeleteCustomVocabularyRequest deleteCustomVocabularyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteCustomVocabularyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteCustomVocabularyRequest> request = null;
+        Response<DeleteCustomVocabularyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteCustomVocabularyRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteCustomVocabularyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Lex Models V2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteCustomVocabulary");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteCustomVocabularyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteCustomVocabularyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Removes a previous export and the associated files stored in an S3 bucket.
      * </p>
      * 
@@ -2219,6 +2289,75 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
 
             HttpResponseHandler<AmazonWebServiceResponse<DescribeBotVersionResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeBotVersionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Provides metadata information about a custom vocabulary.
+     * </p>
+     * 
+     * @param describeCustomVocabularyMetadataRequest
+     * @return Result of the DescribeCustomVocabularyMetadata operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.DescribeCustomVocabularyMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DescribeCustomVocabularyMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeCustomVocabularyMetadataResult describeCustomVocabularyMetadata(DescribeCustomVocabularyMetadataRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeCustomVocabularyMetadata(request);
+    }
+
+    @SdkInternalApi
+    final DescribeCustomVocabularyMetadataResult executeDescribeCustomVocabularyMetadata(
+            DescribeCustomVocabularyMetadataRequest describeCustomVocabularyMetadataRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeCustomVocabularyMetadataRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeCustomVocabularyMetadataRequest> request = null;
+        Response<DescribeCustomVocabularyMetadataResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeCustomVocabularyMetadataRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeCustomVocabularyMetadataRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Lex Models V2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeCustomVocabularyMetadata");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeCustomVocabularyMetadataResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeCustomVocabularyMetadataResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3174,7 +3313,7 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Lists the exports for a bot or bot locale. Exports are kept in the list for 7 days.
+     * Lists the exports for a bot, bot locale, or custom vocabulary. Exports are kept in the list for 7 days.
      * </p>
      * 
      * @param listExportsRequest
@@ -3235,7 +3374,7 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Lists the imports for a bot or bot locale. Imports are kept in the list for 7 days.
+     * Lists the imports for a bot, bot locale, or custom vocabulary. Imports are kept in the list for 7 days.
      * </p>
      * 
      * @param listImportsRequest
@@ -3761,7 +3900,7 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Starts importing a bot or bot locale from a zip archive that you uploaded to an S3 bucket.
+     * Starts importing a bot, bot locale, or custom vocabulary from a zip archive that you uploaded to an S3 bucket.
      * </p>
      * 
      * @param startImportRequest

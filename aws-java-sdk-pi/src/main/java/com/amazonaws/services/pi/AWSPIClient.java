@@ -58,11 +58,11 @@ import com.amazonaws.services.pi.model.transform.*;
  * </p>
  * <p>
  * When Performance Insights is enabled, the Amazon RDS Performance Insights API provides visibility into the
- * performance of your DB instance. Amazon CloudWatch provides the authoritative source for AWS service-vended
- * monitoring metrics. Performance Insights offers a domain-specific view of DB load.
+ * performance of your DB instance. Amazon CloudWatch provides the authoritative source for Amazon Web Services
+ * service-vended monitoring metrics. Performance Insights offers a domain-specific view of DB load.
  * </p>
  * <p>
- * DB load is measured as Average Active Sessions. Performance Insights provides the data to API consumers as a
+ * DB load is measured as average active sessions. Performance Insights provides the data to API consumers as a
  * two-dimensional time-series dataset. The time dimension provides DB load data for each time point in the queried time
  * range. Each time point decomposes overall load in relation to the requested dimensions, measured at that time point.
  * Examples include SQL, Wait event, User, and Host.
@@ -71,14 +71,14 @@ import com.amazonaws.services.pi.model.transform.*;
  * <li>
  * <p>
  * To learn more about Performance Insights and Amazon Aurora DB instances, go to the <a
- * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights.html">Amazon Aurora User
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights.html"> Amazon Aurora User
  * Guide</a>.
  * </p>
  * </li>
  * <li>
  * <p>
  * To learn more about Performance Insights and Amazon RDS DB instances, go to the <a
- * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Amazon RDS User Guide</a>.
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html"> Amazon RDS User Guide</a>.
  * </p>
  * </li>
  * </ul>
@@ -234,7 +234,7 @@ public class AWSPIClient extends AmazonWebServiceClient implements AWSPI {
      * <p>
      * Get the attributes of the specified dimension group for a DB instance or data source. For example, if you specify
      * a SQL ID, <code>GetDimensionKeyDetails</code> retrieves the full text of the dimension
-     * <code>db.sql.statement</code> associated with this ID. This operation is useful because
+     * <code>db.sql.statement</code>cassociated with this ID. This operation is useful because
      * <code>GetResourceMetrics</code> and <code>DescribeDimensionKeys</code> don't support retrieval of large SQL
      * statement text.
      * </p>
@@ -286,6 +286,68 @@ public class AWSPIClient extends AmazonWebServiceClient implements AWSPI {
             HttpResponseHandler<AmazonWebServiceResponse<GetDimensionKeyDetailsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new GetDimensionKeyDetailsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieve the metadata for different features. For example, the metadata might indicate that a feature is turned
+     * on or off on a specific DB instance.
+     * </p>
+     * 
+     * @param getResourceMetadataRequest
+     * @return Result of the GetResourceMetadata operation returned by the service.
+     * @throws InvalidArgumentException
+     *         One of the arguments provided is invalid for this request.
+     * @throws InternalServiceErrorException
+     *         The request failed due to an unknown error.
+     * @throws NotAuthorizedException
+     *         The user is not authorized to perform this request.
+     * @sample AWSPI.GetResourceMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pi-2018-02-27/GetResourceMetadata" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetResourceMetadataResult getResourceMetadata(GetResourceMetadataRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetResourceMetadata(request);
+    }
+
+    @SdkInternalApi
+    final GetResourceMetadataResult executeGetResourceMetadata(GetResourceMetadataRequest getResourceMetadataRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getResourceMetadataRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetResourceMetadataRequest> request = null;
+        Response<GetResourceMetadataResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetResourceMetadataRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getResourceMetadataRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "PI");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetResourceMetadata");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetResourceMetadataResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetResourceMetadataResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -354,6 +416,133 @@ public class AWSPIClient extends AmazonWebServiceClient implements AWSPI {
 
             HttpResponseHandler<AmazonWebServiceResponse<GetResourceMetricsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetResourceMetricsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieve the dimensions that can be queried for each specified metric type on a specified DB instance.
+     * </p>
+     * 
+     * @param listAvailableResourceDimensionsRequest
+     * @return Result of the ListAvailableResourceDimensions operation returned by the service.
+     * @throws InvalidArgumentException
+     *         One of the arguments provided is invalid for this request.
+     * @throws InternalServiceErrorException
+     *         The request failed due to an unknown error.
+     * @throws NotAuthorizedException
+     *         The user is not authorized to perform this request.
+     * @sample AWSPI.ListAvailableResourceDimensions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pi-2018-02-27/ListAvailableResourceDimensions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListAvailableResourceDimensionsResult listAvailableResourceDimensions(ListAvailableResourceDimensionsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListAvailableResourceDimensions(request);
+    }
+
+    @SdkInternalApi
+    final ListAvailableResourceDimensionsResult executeListAvailableResourceDimensions(
+            ListAvailableResourceDimensionsRequest listAvailableResourceDimensionsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listAvailableResourceDimensionsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListAvailableResourceDimensionsRequest> request = null;
+        Response<ListAvailableResourceDimensionsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListAvailableResourceDimensionsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listAvailableResourceDimensionsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "PI");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListAvailableResourceDimensions");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListAvailableResourceDimensionsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListAvailableResourceDimensionsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieve metrics of the specified types that can be queried for a specified DB instance.
+     * </p>
+     * 
+     * @param listAvailableResourceMetricsRequest
+     * @return Result of the ListAvailableResourceMetrics operation returned by the service.
+     * @throws InvalidArgumentException
+     *         One of the arguments provided is invalid for this request.
+     * @throws InternalServiceErrorException
+     *         The request failed due to an unknown error.
+     * @throws NotAuthorizedException
+     *         The user is not authorized to perform this request.
+     * @sample AWSPI.ListAvailableResourceMetrics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pi-2018-02-27/ListAvailableResourceMetrics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListAvailableResourceMetricsResult listAvailableResourceMetrics(ListAvailableResourceMetricsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListAvailableResourceMetrics(request);
+    }
+
+    @SdkInternalApi
+    final ListAvailableResourceMetricsResult executeListAvailableResourceMetrics(ListAvailableResourceMetricsRequest listAvailableResourceMetricsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listAvailableResourceMetricsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListAvailableResourceMetricsRequest> request = null;
+        Response<ListAvailableResourceMetricsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListAvailableResourceMetricsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listAvailableResourceMetricsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "PI");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListAvailableResourceMetrics");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListAvailableResourceMetricsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListAvailableResourceMetricsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

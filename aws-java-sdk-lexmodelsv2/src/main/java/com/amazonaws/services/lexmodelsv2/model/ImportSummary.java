@@ -70,6 +70,12 @@ public class ImportSummary implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Date lastUpdatedDateTime;
+    /**
+     * <p>
+     * The type of resource that was imported.
+     * </p>
+     */
+    private String importedResourceType;
 
     /**
      * <p>
@@ -390,6 +396,65 @@ public class ImportSummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The type of resource that was imported.
+     * </p>
+     * 
+     * @param importedResourceType
+     *        The type of resource that was imported.
+     * @see ImportResourceType
+     */
+
+    public void setImportedResourceType(String importedResourceType) {
+        this.importedResourceType = importedResourceType;
+    }
+
+    /**
+     * <p>
+     * The type of resource that was imported.
+     * </p>
+     * 
+     * @return The type of resource that was imported.
+     * @see ImportResourceType
+     */
+
+    public String getImportedResourceType() {
+        return this.importedResourceType;
+    }
+
+    /**
+     * <p>
+     * The type of resource that was imported.
+     * </p>
+     * 
+     * @param importedResourceType
+     *        The type of resource that was imported.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ImportResourceType
+     */
+
+    public ImportSummary withImportedResourceType(String importedResourceType) {
+        setImportedResourceType(importedResourceType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of resource that was imported.
+     * </p>
+     * 
+     * @param importedResourceType
+     *        The type of resource that was imported.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ImportResourceType
+     */
+
+    public ImportSummary withImportedResourceType(ImportResourceType importedResourceType) {
+        this.importedResourceType = importedResourceType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -414,7 +479,9 @@ public class ImportSummary implements Serializable, Cloneable, StructuredPojo {
         if (getCreationDateTime() != null)
             sb.append("CreationDateTime: ").append(getCreationDateTime()).append(",");
         if (getLastUpdatedDateTime() != null)
-            sb.append("LastUpdatedDateTime: ").append(getLastUpdatedDateTime());
+            sb.append("LastUpdatedDateTime: ").append(getLastUpdatedDateTime()).append(",");
+        if (getImportedResourceType() != null)
+            sb.append("ImportedResourceType: ").append(getImportedResourceType());
         sb.append("}");
         return sb.toString();
     }
@@ -457,6 +524,10 @@ public class ImportSummary implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getLastUpdatedDateTime() != null && other.getLastUpdatedDateTime().equals(this.getLastUpdatedDateTime()) == false)
             return false;
+        if (other.getImportedResourceType() == null ^ this.getImportedResourceType() == null)
+            return false;
+        if (other.getImportedResourceType() != null && other.getImportedResourceType().equals(this.getImportedResourceType()) == false)
+            return false;
         return true;
     }
 
@@ -472,6 +543,7 @@ public class ImportSummary implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getMergeStrategy() == null) ? 0 : getMergeStrategy().hashCode());
         hashCode = prime * hashCode + ((getCreationDateTime() == null) ? 0 : getCreationDateTime().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedDateTime() == null) ? 0 : getLastUpdatedDateTime().hashCode());
+        hashCode = prime * hashCode + ((getImportedResourceType() == null) ? 0 : getImportedResourceType().hashCode());
         return hashCode;
     }
 

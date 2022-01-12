@@ -2170,7 +2170,7 @@ public interface AmazonElastiCache {
      * <p>
      * If you make changes to parameters that require a Redis (cluster mode enabled) cluster reboot for the changes to
      * be applied, see <a
-     * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.Rebooting.html">Rebooting a Cluster</a>
+     * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes.rebooting.html">Rebooting a Cluster</a>
      * for an alternate process.
      * </p>
      * 

@@ -710,6 +710,37 @@ public interface AmazonLexModelsV2Async extends AmazonLexModelsV2 {
 
     /**
      * <p>
+     * Removes a custom vocabulary from the specified locale in the specified bot.
+     * </p>
+     * 
+     * @param deleteCustomVocabularyRequest
+     * @return A Java Future containing the result of the DeleteCustomVocabulary operation returned by the service.
+     * @sample AmazonLexModelsV2Async.DeleteCustomVocabulary
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DeleteCustomVocabulary"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteCustomVocabularyResult> deleteCustomVocabularyAsync(DeleteCustomVocabularyRequest deleteCustomVocabularyRequest);
+
+    /**
+     * <p>
+     * Removes a custom vocabulary from the specified locale in the specified bot.
+     * </p>
+     * 
+     * @param deleteCustomVocabularyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteCustomVocabulary operation returned by the service.
+     * @sample AmazonLexModelsV2AsyncHandler.DeleteCustomVocabulary
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DeleteCustomVocabulary"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteCustomVocabularyResult> deleteCustomVocabularyAsync(DeleteCustomVocabularyRequest deleteCustomVocabularyRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteCustomVocabularyRequest, DeleteCustomVocabularyResult> asyncHandler);
+
+    /**
+     * <p>
      * Removes a previous export and the associated files stored in an S3 bucket.
      * </p>
      * 
@@ -1164,6 +1195,41 @@ public interface AmazonLexModelsV2Async extends AmazonLexModelsV2 {
      */
     java.util.concurrent.Future<DescribeBotVersionResult> describeBotVersionAsync(DescribeBotVersionRequest describeBotVersionRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeBotVersionRequest, DescribeBotVersionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Provides metadata information about a custom vocabulary.
+     * </p>
+     * 
+     * @param describeCustomVocabularyMetadataRequest
+     * @return A Java Future containing the result of the DescribeCustomVocabularyMetadata operation returned by the
+     *         service.
+     * @sample AmazonLexModelsV2Async.DescribeCustomVocabularyMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DescribeCustomVocabularyMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeCustomVocabularyMetadataResult> describeCustomVocabularyMetadataAsync(
+            DescribeCustomVocabularyMetadataRequest describeCustomVocabularyMetadataRequest);
+
+    /**
+     * <p>
+     * Provides metadata information about a custom vocabulary.
+     * </p>
+     * 
+     * @param describeCustomVocabularyMetadataRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeCustomVocabularyMetadata operation returned by the
+     *         service.
+     * @sample AmazonLexModelsV2AsyncHandler.DescribeCustomVocabularyMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DescribeCustomVocabularyMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeCustomVocabularyMetadataResult> describeCustomVocabularyMetadataAsync(
+            DescribeCustomVocabularyMetadataRequest describeCustomVocabularyMetadataRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeCustomVocabularyMetadataRequest, DescribeCustomVocabularyMetadataResult> asyncHandler);
 
     /**
      * <p>
@@ -1691,7 +1757,7 @@ public interface AmazonLexModelsV2Async extends AmazonLexModelsV2 {
 
     /**
      * <p>
-     * Lists the exports for a bot or bot locale. Exports are kept in the list for 7 days.
+     * Lists the exports for a bot, bot locale, or custom vocabulary. Exports are kept in the list for 7 days.
      * </p>
      * 
      * @param listExportsRequest
@@ -1704,7 +1770,7 @@ public interface AmazonLexModelsV2Async extends AmazonLexModelsV2 {
 
     /**
      * <p>
-     * Lists the exports for a bot or bot locale. Exports are kept in the list for 7 days.
+     * Lists the exports for a bot, bot locale, or custom vocabulary. Exports are kept in the list for 7 days.
      * </p>
      * 
      * @param listExportsRequest
@@ -1722,7 +1788,7 @@ public interface AmazonLexModelsV2Async extends AmazonLexModelsV2 {
 
     /**
      * <p>
-     * Lists the imports for a bot or bot locale. Imports are kept in the list for 7 days.
+     * Lists the imports for a bot, bot locale, or custom vocabulary. Imports are kept in the list for 7 days.
      * </p>
      * 
      * @param listImportsRequest
@@ -1735,7 +1801,7 @@ public interface AmazonLexModelsV2Async extends AmazonLexModelsV2 {
 
     /**
      * <p>
-     * Lists the imports for a bot or bot locale. Imports are kept in the list for 7 days.
+     * Lists the imports for a bot, bot locale, or custom vocabulary. Imports are kept in the list for 7 days.
      * </p>
      * 
      * @param listImportsRequest
@@ -1974,7 +2040,7 @@ public interface AmazonLexModelsV2Async extends AmazonLexModelsV2 {
 
     /**
      * <p>
-     * Starts importing a bot or bot locale from a zip archive that you uploaded to an S3 bucket.
+     * Starts importing a bot, bot locale, or custom vocabulary from a zip archive that you uploaded to an S3 bucket.
      * </p>
      * 
      * @param startImportRequest
@@ -1987,7 +2053,7 @@ public interface AmazonLexModelsV2Async extends AmazonLexModelsV2 {
 
     /**
      * <p>
-     * Starts importing a bot or bot locale from a zip archive that you uploaded to an S3 bucket.
+     * Starts importing a bot, bot locale, or custom vocabulary from a zip archive that you uploaded to an S3 bucket.
      * </p>
      * 
      * @param startImportRequest

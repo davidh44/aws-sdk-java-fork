@@ -40,6 +40,8 @@ public class ListExportsRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("nextToken").build();
+    private static final MarshallingInfo<String> LOCALEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("localeId").build();
 
     private static final ListExportsRequestMarshaller instance = new ListExportsRequestMarshaller();
 
@@ -63,6 +65,7 @@ public class ListExportsRequestMarshaller {
             protocolMarshaller.marshall(listExportsRequest.getFilters(), FILTERS_BINDING);
             protocolMarshaller.marshall(listExportsRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listExportsRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(listExportsRequest.getLocaleId(), LOCALEID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -42,6 +42,8 @@ public class ImportResourceSpecification implements Serializable, Cloneable, Str
      */
     private BotLocaleImportSpecification botLocaleImportSpecification;
 
+    private CustomVocabularyImportSpecification customVocabularyImportSpecification;
+
     /**
      * <p>
      * Parameters for importing a bot.
@@ -123,6 +125,32 @@ public class ImportResourceSpecification implements Serializable, Cloneable, Str
     }
 
     /**
+     * @param customVocabularyImportSpecification
+     */
+
+    public void setCustomVocabularyImportSpecification(CustomVocabularyImportSpecification customVocabularyImportSpecification) {
+        this.customVocabularyImportSpecification = customVocabularyImportSpecification;
+    }
+
+    /**
+     * @return
+     */
+
+    public CustomVocabularyImportSpecification getCustomVocabularyImportSpecification() {
+        return this.customVocabularyImportSpecification;
+    }
+
+    /**
+     * @param customVocabularyImportSpecification
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImportResourceSpecification withCustomVocabularyImportSpecification(CustomVocabularyImportSpecification customVocabularyImportSpecification) {
+        setCustomVocabularyImportSpecification(customVocabularyImportSpecification);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -137,7 +165,9 @@ public class ImportResourceSpecification implements Serializable, Cloneable, Str
         if (getBotImportSpecification() != null)
             sb.append("BotImportSpecification: ").append(getBotImportSpecification()).append(",");
         if (getBotLocaleImportSpecification() != null)
-            sb.append("BotLocaleImportSpecification: ").append(getBotLocaleImportSpecification());
+            sb.append("BotLocaleImportSpecification: ").append(getBotLocaleImportSpecification()).append(",");
+        if (getCustomVocabularyImportSpecification() != null)
+            sb.append("CustomVocabularyImportSpecification: ").append(getCustomVocabularyImportSpecification());
         sb.append("}");
         return sb.toString();
     }
@@ -160,6 +190,11 @@ public class ImportResourceSpecification implements Serializable, Cloneable, Str
             return false;
         if (other.getBotLocaleImportSpecification() != null && other.getBotLocaleImportSpecification().equals(this.getBotLocaleImportSpecification()) == false)
             return false;
+        if (other.getCustomVocabularyImportSpecification() == null ^ this.getCustomVocabularyImportSpecification() == null)
+            return false;
+        if (other.getCustomVocabularyImportSpecification() != null
+                && other.getCustomVocabularyImportSpecification().equals(this.getCustomVocabularyImportSpecification()) == false)
+            return false;
         return true;
     }
 
@@ -170,6 +205,7 @@ public class ImportResourceSpecification implements Serializable, Cloneable, Str
 
         hashCode = prime * hashCode + ((getBotImportSpecification() == null) ? 0 : getBotImportSpecification().hashCode());
         hashCode = prime * hashCode + ((getBotLocaleImportSpecification() == null) ? 0 : getBotLocaleImportSpecification().hashCode());
+        hashCode = prime * hashCode + ((getCustomVocabularyImportSpecification() == null) ? 0 : getCustomVocabularyImportSpecification().hashCode());
         return hashCode;
     }
 
