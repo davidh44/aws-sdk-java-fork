@@ -342,6 +342,39 @@ public class AmazonLocationAsyncClient extends AmazonLocationClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<CalculateRouteMatrixResult> calculateRouteMatrixAsync(CalculateRouteMatrixRequest request) {
+
+        return calculateRouteMatrixAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CalculateRouteMatrixResult> calculateRouteMatrixAsync(final CalculateRouteMatrixRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CalculateRouteMatrixRequest, CalculateRouteMatrixResult> asyncHandler) {
+        final CalculateRouteMatrixRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CalculateRouteMatrixResult>() {
+            @Override
+            public CalculateRouteMatrixResult call() throws Exception {
+                CalculateRouteMatrixResult result = null;
+
+                try {
+                    result = executeCalculateRouteMatrix(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateGeofenceCollectionResult> createGeofenceCollectionAsync(CreateGeofenceCollectionRequest request) {
 
         return createGeofenceCollectionAsync(request, null);

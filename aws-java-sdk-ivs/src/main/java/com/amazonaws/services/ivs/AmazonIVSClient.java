@@ -1783,6 +1783,7 @@ public class AmazonIVSClient extends AmazonWebServiceClient implements AmazonIVS
      * @param listStreamsRequest
      * @return Result of the ListStreams operation returned by the service.
      * @throws AccessDeniedException
+     * @throws ValidationException
      * @sample AmazonIVS.ListStreams
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/ListStreams" target="_top">AWS API
      *      Documentation</a>

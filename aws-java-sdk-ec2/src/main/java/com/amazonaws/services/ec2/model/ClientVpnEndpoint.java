@@ -159,6 +159,10 @@ public class ClientVpnEndpoint implements Serializable, Cloneable {
      */
     private ClientConnectResponseOptions clientConnectOptions;
 
+    private Integer sessionTimeoutHours;
+
+    private ClientLoginBannerResponseOptions clientLoginBannerOptions;
+
     /**
      * <p>
      * The ID of the Client VPN endpoint.
@@ -1251,6 +1255,58 @@ public class ClientVpnEndpoint implements Serializable, Cloneable {
     }
 
     /**
+     * @param sessionTimeoutHours
+     */
+
+    public void setSessionTimeoutHours(Integer sessionTimeoutHours) {
+        this.sessionTimeoutHours = sessionTimeoutHours;
+    }
+
+    /**
+     * @return
+     */
+
+    public Integer getSessionTimeoutHours() {
+        return this.sessionTimeoutHours;
+    }
+
+    /**
+     * @param sessionTimeoutHours
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ClientVpnEndpoint withSessionTimeoutHours(Integer sessionTimeoutHours) {
+        setSessionTimeoutHours(sessionTimeoutHours);
+        return this;
+    }
+
+    /**
+     * @param clientLoginBannerOptions
+     */
+
+    public void setClientLoginBannerOptions(ClientLoginBannerResponseOptions clientLoginBannerOptions) {
+        this.clientLoginBannerOptions = clientLoginBannerOptions;
+    }
+
+    /**
+     * @return
+     */
+
+    public ClientLoginBannerResponseOptions getClientLoginBannerOptions() {
+        return this.clientLoginBannerOptions;
+    }
+
+    /**
+     * @param clientLoginBannerOptions
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ClientVpnEndpoint withClientLoginBannerOptions(ClientLoginBannerResponseOptions clientLoginBannerOptions) {
+        setClientLoginBannerOptions(clientLoginBannerOptions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1303,7 +1359,11 @@ public class ClientVpnEndpoint implements Serializable, Cloneable {
         if (getSelfServicePortalUrl() != null)
             sb.append("SelfServicePortalUrl: ").append(getSelfServicePortalUrl()).append(",");
         if (getClientConnectOptions() != null)
-            sb.append("ClientConnectOptions: ").append(getClientConnectOptions());
+            sb.append("ClientConnectOptions: ").append(getClientConnectOptions()).append(",");
+        if (getSessionTimeoutHours() != null)
+            sb.append("SessionTimeoutHours: ").append(getSessionTimeoutHours()).append(",");
+        if (getClientLoginBannerOptions() != null)
+            sb.append("ClientLoginBannerOptions: ").append(getClientLoginBannerOptions());
         sb.append("}");
         return sb.toString();
     }
@@ -1402,6 +1462,14 @@ public class ClientVpnEndpoint implements Serializable, Cloneable {
             return false;
         if (other.getClientConnectOptions() != null && other.getClientConnectOptions().equals(this.getClientConnectOptions()) == false)
             return false;
+        if (other.getSessionTimeoutHours() == null ^ this.getSessionTimeoutHours() == null)
+            return false;
+        if (other.getSessionTimeoutHours() != null && other.getSessionTimeoutHours().equals(this.getSessionTimeoutHours()) == false)
+            return false;
+        if (other.getClientLoginBannerOptions() == null ^ this.getClientLoginBannerOptions() == null)
+            return false;
+        if (other.getClientLoginBannerOptions() != null && other.getClientLoginBannerOptions().equals(this.getClientLoginBannerOptions()) == false)
+            return false;
         return true;
     }
 
@@ -1431,6 +1499,8 @@ public class ClientVpnEndpoint implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getVpcId() == null) ? 0 : getVpcId().hashCode());
         hashCode = prime * hashCode + ((getSelfServicePortalUrl() == null) ? 0 : getSelfServicePortalUrl().hashCode());
         hashCode = prime * hashCode + ((getClientConnectOptions() == null) ? 0 : getClientConnectOptions().hashCode());
+        hashCode = prime * hashCode + ((getSessionTimeoutHours() == null) ? 0 : getSessionTimeoutHours().hashCode());
+        hashCode = prime * hashCode + ((getClientLoginBannerOptions() == null) ? 0 : getClientLoginBannerOptions().hashCode());
         return hashCode;
     }
 

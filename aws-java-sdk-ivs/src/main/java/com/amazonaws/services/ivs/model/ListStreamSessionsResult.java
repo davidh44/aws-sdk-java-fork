@@ -30,7 +30,11 @@ public class ListStreamSessionsResult extends com.amazonaws.AmazonWebServiceResu
      * </p>
      */
     private String nextToken;
-    /** <p/> */
+    /**
+     * <p>
+     * List of stream sessions.
+     * </p>
+     */
     private java.util.List<StreamSessionSummary> streamSessions;
 
     /**
@@ -80,9 +84,11 @@ public class ListStreamSessionsResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
-     * <p/>
+     * <p>
+     * List of stream sessions.
+     * </p>
      * 
-     * @return
+     * @return List of stream sessions.
      */
 
     public java.util.List<StreamSessionSummary> getStreamSessions() {
@@ -90,9 +96,12 @@ public class ListStreamSessionsResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
-     * <p/>
+     * <p>
+     * List of stream sessions.
+     * </p>
      * 
      * @param streamSessions
+     *        List of stream sessions.
      */
 
     public void setStreamSessions(java.util.Collection<StreamSessionSummary> streamSessions) {
@@ -105,7 +114,9 @@ public class ListStreamSessionsResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
-     * <p/>
+     * <p>
+     * List of stream sessions.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setStreamSessions(java.util.Collection)} or {@link #withStreamSessions(java.util.Collection)} if you want
@@ -113,6 +124,7 @@ public class ListStreamSessionsResult extends com.amazonaws.AmazonWebServiceResu
      * </p>
      * 
      * @param streamSessions
+     *        List of stream sessions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -127,9 +139,12 @@ public class ListStreamSessionsResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
-     * <p/>
+     * <p>
+     * List of stream sessions.
+     * </p>
      * 
      * @param streamSessions
+     *        List of stream sessions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

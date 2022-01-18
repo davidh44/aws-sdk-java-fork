@@ -755,7 +755,7 @@ public class AmazonLocationClient extends AmazonWebServiceClient implements Amaz
     /**
      * <p>
      * <a href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html">Calculates a route</a>
-     * given the following required parameters: <code>DeparturePostiton</code> and <code>DestinationPosition</code>.
+     * given the following required parameters: <code>DeparturePosition</code> and <code>DestinationPosition</code>.
      * Requires that you first <a
      * href="https://docs.aws.amazon.com/location-routes/latest/APIReference/API_CreateRouteCalculator.html">create a
      * route calculator resource</a>.
@@ -770,27 +770,25 @@ public class AmazonLocationClient extends AmazonWebServiceClient implements Amaz
      * <ul>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#departure-time">
-     * Specifying a departure time</a> using either <code>DepartureTime</code> or <code>DepartureNow</code>. This
-     * calculates a route based on predictive traffic data at the given time.
+     * <a href="https://docs.aws.amazon.com/location/latest/developerguide/departure-time.html">Specifying a departure
+     * time</a> using either <code>DepartureTime</code> or <code>DepartNow</code>. This calculates a route based on
+     * predictive traffic data at the given time.
      * </p>
      * <note>
      * <p>
-     * You can't specify both <code>DepartureTime</code> and <code>DepartureNow</code> in a single request. Specifying
-     * both parameters returns a validation error.
+     * You can't specify both <code>DepartureTime</code> and <code>DepartNow</code> in a single request. Specifying both
+     * parameters returns a validation error.
      * </p>
      * </note></li>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#travel-mode">Specifying
-     * a travel mode</a> using TravelMode. This lets you specify an additional route preference such as
-     * <code>CarModeOptions</code> if traveling by <code>Car</code>, or <code>TruckModeOptions</code> if traveling by
-     * <code>Truck</code>.
+     * <a href="https://docs.aws.amazon.com/location/latest/developerguide/travel-mode.html">Specifying a travel
+     * mode</a> using TravelMode sets the transportation mode used to calculate the routes. This also lets you specify
+     * additional route preferences in <code>CarModeOptions</code> if traveling by <code>Car</code>, or
+     * <code>TruckModeOptions</code> if traveling by <code>Truck</code>.
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * </p>
      * 
      * @param calculateRouteRequest
      * @return Result of the CalculateRoute operation returned by the service.
@@ -852,6 +850,127 @@ public class AmazonLocationClient extends AmazonWebServiceClient implements Amaz
 
             HttpResponseHandler<AmazonWebServiceResponse<CalculateRouteResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CalculateRouteResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * <a href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route-matrix.html"> Calculates a
+     * route matrix</a> given the following required parameters: <code>DeparturePositions</code> and
+     * <code>DestinationPositions</code>. <code>CalculateRouteMatrix</code> calculates routes and returns the travel
+     * time and travel distance from each departure position to each destination position in the request. For example,
+     * given departure positions A and B, and destination positions X and Y, <code>CalculateRouteMatrix</code> will
+     * return time and distance for routes from A to X, A to Y, B to X, and B to Y (in that order). The number of
+     * results returned (and routes calculated) will be the number of <code>DeparturePositions</code> times the number
+     * of <code>DestinationPositions</code>.
+     * </p>
+     * <note>
+     * <p>
+     * Your account is charged for each route calculated, not the number of requests.
+     * </p>
+     * </note>
+     * <p>
+     * Requires that you first <a
+     * href="https://docs.aws.amazon.com/location-routes/latest/APIReference/API_CreateRouteCalculator.html">create a
+     * route calculator resource</a>.
+     * </p>
+     * <p>
+     * By default, a request that doesn't specify a departure time uses the best time of day to travel with the best
+     * traffic conditions when calculating routes.
+     * </p>
+     * <p>
+     * Additional options include:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/location/latest/developerguide/departure-time.html"> Specifying a departure
+     * time</a> using either <code>DepartureTime</code> or <code>DepartNow</code>. This calculates routes based on
+     * predictive traffic data at the given time.
+     * </p>
+     * <note>
+     * <p>
+     * You can't specify both <code>DepartureTime</code> and <code>DepartNow</code> in a single request. Specifying both
+     * parameters returns a validation error.
+     * </p>
+     * </note></li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/location/latest/developerguide/travel-mode.html">Specifying a travel
+     * mode</a> using TravelMode sets the transportation mode used to calculate the routes. This also lets you specify
+     * additional route preferences in <code>CarModeOptions</code> if traveling by <code>Car</code>, or
+     * <code>TruckModeOptions</code> if traveling by <code>Truck</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param calculateRouteMatrixRequest
+     * @return Result of the CalculateRouteMatrix operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed to process because of an unknown server error, exception, or failure.
+     * @throws ResourceNotFoundException
+     *         The resource that you've entered was not found in your AWS account.
+     * @throws AccessDeniedException
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
+     * @throws ValidationException
+     *         The input failed to meet the constraints specified by the AWS service.
+     * @throws ThrottlingException
+     *         The request was denied because of request throttling.
+     * @sample AmazonLocation.CalculateRouteMatrix
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/CalculateRouteMatrix" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public CalculateRouteMatrixResult calculateRouteMatrix(CalculateRouteMatrixRequest request) {
+        request = beforeClientExecution(request);
+        return executeCalculateRouteMatrix(request);
+    }
+
+    @SdkInternalApi
+    final CalculateRouteMatrixResult executeCalculateRouteMatrix(CalculateRouteMatrixRequest calculateRouteMatrixRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(calculateRouteMatrixRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CalculateRouteMatrixRequest> request = null;
+        Response<CalculateRouteMatrixResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CalculateRouteMatrixRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(calculateRouteMatrixRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Location");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CalculateRouteMatrix");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "routes.";
+                String resolvedHostPrefix = String.format("routes.");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CalculateRouteMatrixResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CalculateRouteMatrixResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
             return response.getAwsResponse();
@@ -944,6 +1063,13 @@ public class AmazonLocationClient extends AmazonWebServiceClient implements Amaz
      * Creates a map resource in your AWS account, which provides map tiles of different styles sourced from global
      * location data providers.
      * </p>
+     * <note>
+     * <p>
+     * If your application is tracking or routing assets you use in your business, such as delivery vehicles or
+     * employees, you may only use HERE as your geolocation provider. See section 82 of the <a
+     * href="http://aws.amazon.com/service-terms">AWS service terms</a> for more details.
+     * </p>
+     * </note>
      * 
      * @param createMapRequest
      * @return Result of the CreateMap operation returned by the service.
@@ -1022,6 +1148,13 @@ public class AmazonLocationClient extends AmazonWebServiceClient implements Amaz
      * using the <code>SearchPlaceIndexForPosition</code> operation, and enable autosuggestions by using the
      * <code>SearchPlaceIndexForSuggestions</code> operation.
      * </p>
+     * <note>
+     * <p>
+     * If your application is tracking or routing assets you use in your business, such as delivery vehicles or
+     * employees, you may only use HERE as your geolocation provider. See section 82 of the <a
+     * href="http://aws.amazon.com/service-terms">AWS service terms</a> for more details.
+     * </p>
+     * </note>
      * 
      * @param createPlaceIndexRequest
      * @return Result of the CreatePlaceIndex operation returned by the service.
@@ -1101,6 +1234,13 @@ public class AmazonLocationClient extends AmazonWebServiceClient implements Amaz
      * You can send requests to a route calculator resource to estimate travel time, distance, and get directions. A
      * route calculator sources traffic and road network data from your chosen data provider.
      * </p>
+     * <note>
+     * <p>
+     * If your application is tracking or routing assets you use in your business, such as delivery vehicles or
+     * employees, you may only use HERE as your geolocation provider. See section 82 of the <a
+     * href="http://aws.amazon.com/service-terms">AWS service terms</a> for more details.
+     * </p>
+     * </note>
      * 
      * @param createRouteCalculatorRequest
      * @return Result of the CreateRouteCalculator operation returned by the service.

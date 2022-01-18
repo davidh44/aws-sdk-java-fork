@@ -59,6 +59,13 @@ public class RecordingConfiguration implements Serializable, Cloneable, Structur
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * A complex type that allows you to enable/disable the recording of thumbnails for a live session and modify the
+     * interval at which thumbnails are generated for the live session.
+     * </p>
+     */
+    private ThumbnailConfiguration thumbnailConfiguration;
 
     /**
      * <p>
@@ -316,6 +323,52 @@ public class RecordingConfiguration implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * A complex type that allows you to enable/disable the recording of thumbnails for a live session and modify the
+     * interval at which thumbnails are generated for the live session.
+     * </p>
+     * 
+     * @param thumbnailConfiguration
+     *        A complex type that allows you to enable/disable the recording of thumbnails for a live session and modify
+     *        the interval at which thumbnails are generated for the live session.
+     */
+
+    public void setThumbnailConfiguration(ThumbnailConfiguration thumbnailConfiguration) {
+        this.thumbnailConfiguration = thumbnailConfiguration;
+    }
+
+    /**
+     * <p>
+     * A complex type that allows you to enable/disable the recording of thumbnails for a live session and modify the
+     * interval at which thumbnails are generated for the live session.
+     * </p>
+     * 
+     * @return A complex type that allows you to enable/disable the recording of thumbnails for a live session and
+     *         modify the interval at which thumbnails are generated for the live session.
+     */
+
+    public ThumbnailConfiguration getThumbnailConfiguration() {
+        return this.thumbnailConfiguration;
+    }
+
+    /**
+     * <p>
+     * A complex type that allows you to enable/disable the recording of thumbnails for a live session and modify the
+     * interval at which thumbnails are generated for the live session.
+     * </p>
+     * 
+     * @param thumbnailConfiguration
+     *        A complex type that allows you to enable/disable the recording of thumbnails for a live session and modify
+     *        the interval at which thumbnails are generated for the live session.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RecordingConfiguration withThumbnailConfiguration(ThumbnailConfiguration thumbnailConfiguration) {
+        setThumbnailConfiguration(thumbnailConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -336,7 +389,9 @@ public class RecordingConfiguration implements Serializable, Cloneable, Structur
         if (getState() != null)
             sb.append("State: ").append(getState()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getThumbnailConfiguration() != null)
+            sb.append("ThumbnailConfiguration: ").append(getThumbnailConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -371,6 +426,10 @@ public class RecordingConfiguration implements Serializable, Cloneable, Structur
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getThumbnailConfiguration() == null ^ this.getThumbnailConfiguration() == null)
+            return false;
+        if (other.getThumbnailConfiguration() != null && other.getThumbnailConfiguration().equals(this.getThumbnailConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -384,6 +443,7 @@ public class RecordingConfiguration implements Serializable, Cloneable, Structur
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getThumbnailConfiguration() == null) ? 0 : getThumbnailConfiguration().hashCode());
         return hashCode;
     }
 

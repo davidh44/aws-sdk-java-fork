@@ -35,6 +35,8 @@ public class CreateRecordingConfigurationRequestMarshaller {
             .marshallLocationName("name").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<StructuredPojo> THUMBNAILCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("thumbnailConfiguration").build();
 
     private static final CreateRecordingConfigurationRequestMarshaller instance = new CreateRecordingConfigurationRequestMarshaller();
 
@@ -55,6 +57,7 @@ public class CreateRecordingConfigurationRequestMarshaller {
             protocolMarshaller.marshall(createRecordingConfigurationRequest.getDestinationConfiguration(), DESTINATIONCONFIGURATION_BINDING);
             protocolMarshaller.marshall(createRecordingConfigurationRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(createRecordingConfigurationRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createRecordingConfigurationRequest.getThumbnailConfiguration(), THUMBNAILCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -80,13 +80,10 @@ public class ListRouteCalculatorsResponseEntry implements Serializable, Cloneabl
     private String description;
     /**
      * <p>
-     * The pricing plan for the specified route calculator resource.
-     * </p>
-     * <p>
-     * For additional details and restrictions on each pricing plan option, see <a
-     * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
+     * Always returns <code>RequestBasedUsage</code>.
      * </p>
      */
+    @Deprecated
     private String pricingPlan;
     /**
      * <p>
@@ -416,63 +413,42 @@ public class ListRouteCalculatorsResponseEntry implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The pricing plan for the specified route calculator resource.
-     * </p>
-     * <p>
-     * For additional details and restrictions on each pricing plan option, see <a
-     * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
+     * Always returns <code>RequestBasedUsage</code>.
      * </p>
      * 
      * @param pricingPlan
-     *        The pricing plan for the specified route calculator resource.</p>
-     *        <p>
-     *        For additional details and restrictions on each pricing plan option, see <a
-     *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
+     *        Always returns <code>RequestBasedUsage</code>.
      * @see PricingPlan
      */
-
+    @Deprecated
     public void setPricingPlan(String pricingPlan) {
         this.pricingPlan = pricingPlan;
     }
 
     /**
      * <p>
-     * The pricing plan for the specified route calculator resource.
-     * </p>
-     * <p>
-     * For additional details and restrictions on each pricing plan option, see <a
-     * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
+     * Always returns <code>RequestBasedUsage</code>.
      * </p>
      * 
-     * @return The pricing plan for the specified route calculator resource.</p>
-     *         <p>
-     *         For additional details and restrictions on each pricing plan option, see <a
-     *         href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
+     * @return Always returns <code>RequestBasedUsage</code>.
      * @see PricingPlan
      */
-
+    @Deprecated
     public String getPricingPlan() {
         return this.pricingPlan;
     }
 
     /**
      * <p>
-     * The pricing plan for the specified route calculator resource.
-     * </p>
-     * <p>
-     * For additional details and restrictions on each pricing plan option, see <a
-     * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
+     * Always returns <code>RequestBasedUsage</code>.
      * </p>
      * 
      * @param pricingPlan
-     *        The pricing plan for the specified route calculator resource.</p>
-     *        <p>
-     *        For additional details and restrictions on each pricing plan option, see <a
-     *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
+     *        Always returns <code>RequestBasedUsage</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PricingPlan
      */
-
+    @Deprecated
     public ListRouteCalculatorsResponseEntry withPricingPlan(String pricingPlan) {
         setPricingPlan(pricingPlan);
         return this;
@@ -480,22 +456,15 @@ public class ListRouteCalculatorsResponseEntry implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The pricing plan for the specified route calculator resource.
-     * </p>
-     * <p>
-     * For additional details and restrictions on each pricing plan option, see <a
-     * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
+     * Always returns <code>RequestBasedUsage</code>.
      * </p>
      * 
      * @param pricingPlan
-     *        The pricing plan for the specified route calculator resource.</p>
-     *        <p>
-     *        For additional details and restrictions on each pricing plan option, see <a
-     *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
+     *        Always returns <code>RequestBasedUsage</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PricingPlan
      */
-
+    @Deprecated
     public ListRouteCalculatorsResponseEntry withPricingPlan(PricingPlan pricingPlan) {
         this.pricingPlan = pricingPlan.toString();
         return this;

@@ -68,6 +68,11 @@ public class AbstractAmazonLocation implements AmazonLocation {
     }
 
     @Override
+    public CalculateRouteMatrixResult calculateRouteMatrix(CalculateRouteMatrixRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateGeofenceCollectionResult createGeofenceCollection(CreateGeofenceCollectionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

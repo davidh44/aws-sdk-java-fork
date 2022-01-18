@@ -43,6 +43,13 @@ public class CreateRecordingConfigurationRequest extends com.amazonaws.AmazonWeb
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * A complex type that allows you to enable/disable the recording of thumbnails for a live session and modify the
+     * interval at which thumbnails are generated for the live session.
+     * </p>
+     */
+    private ThumbnailConfiguration thumbnailConfiguration;
 
     /**
      * <p>
@@ -193,6 +200,52 @@ public class CreateRecordingConfigurationRequest extends com.amazonaws.AmazonWeb
     }
 
     /**
+     * <p>
+     * A complex type that allows you to enable/disable the recording of thumbnails for a live session and modify the
+     * interval at which thumbnails are generated for the live session.
+     * </p>
+     * 
+     * @param thumbnailConfiguration
+     *        A complex type that allows you to enable/disable the recording of thumbnails for a live session and modify
+     *        the interval at which thumbnails are generated for the live session.
+     */
+
+    public void setThumbnailConfiguration(ThumbnailConfiguration thumbnailConfiguration) {
+        this.thumbnailConfiguration = thumbnailConfiguration;
+    }
+
+    /**
+     * <p>
+     * A complex type that allows you to enable/disable the recording of thumbnails for a live session and modify the
+     * interval at which thumbnails are generated for the live session.
+     * </p>
+     * 
+     * @return A complex type that allows you to enable/disable the recording of thumbnails for a live session and
+     *         modify the interval at which thumbnails are generated for the live session.
+     */
+
+    public ThumbnailConfiguration getThumbnailConfiguration() {
+        return this.thumbnailConfiguration;
+    }
+
+    /**
+     * <p>
+     * A complex type that allows you to enable/disable the recording of thumbnails for a live session and modify the
+     * interval at which thumbnails are generated for the live session.
+     * </p>
+     * 
+     * @param thumbnailConfiguration
+     *        A complex type that allows you to enable/disable the recording of thumbnails for a live session and modify
+     *        the interval at which thumbnails are generated for the live session.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateRecordingConfigurationRequest withThumbnailConfiguration(ThumbnailConfiguration thumbnailConfiguration) {
+        setThumbnailConfiguration(thumbnailConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -209,7 +262,9 @@ public class CreateRecordingConfigurationRequest extends com.amazonaws.AmazonWeb
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getThumbnailConfiguration() != null)
+            sb.append("ThumbnailConfiguration: ").append(getThumbnailConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -236,6 +291,10 @@ public class CreateRecordingConfigurationRequest extends com.amazonaws.AmazonWeb
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getThumbnailConfiguration() == null ^ this.getThumbnailConfiguration() == null)
+            return false;
+        if (other.getThumbnailConfiguration() != null && other.getThumbnailConfiguration().equals(this.getThumbnailConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -247,6 +306,7 @@ public class CreateRecordingConfigurationRequest extends com.amazonaws.AmazonWeb
         hashCode = prime * hashCode + ((getDestinationConfiguration() == null) ? 0 : getDestinationConfiguration().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getThumbnailConfiguration() == null) ? 0 : getThumbnailConfiguration().hashCode());
         return hashCode;
     }
 

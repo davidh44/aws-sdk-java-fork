@@ -154,6 +154,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <code>AWS::DynamoDB::Stream</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Glue::Table</code>
+     * </p>
+     * </li>
      * </ul>
      */
     private String type;
@@ -278,6 +283,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <code>AWS::DynamoDB::Stream</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Glue::Table</code>
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param type
@@ -334,6 +344,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>AWS::DynamoDB::Stream</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::Glue::Table</code>
      *        </p>
      *        </li>
      */
@@ -400,6 +415,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <code>AWS::DynamoDB::Stream</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Glue::Table</code>
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return The resource type in which you want to log data events. You can specify the following <i>basic</i> event
@@ -455,6 +475,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *         <li>
      *         <p>
      *         <code>AWS::DynamoDB::Stream</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::Glue::Table</code>
      *         </p>
      *         </li>
      */
@@ -521,6 +546,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <code>AWS::DynamoDB::Stream</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Glue::Table</code>
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param type
@@ -577,6 +607,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>AWS::DynamoDB::Stream</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::Glue::Table</code>
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

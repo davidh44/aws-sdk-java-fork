@@ -132,6 +132,10 @@ public class ModifyClientVpnEndpointRequest extends AmazonWebServiceRequest impl
      */
     private ClientConnectOptions clientConnectOptions;
 
+    private Integer sessionTimeoutHours;
+
+    private ClientLoginBannerOptions clientLoginBannerOptions;
+
     /**
      * <p>
      * The ID of the Client VPN endpoint to modify.
@@ -871,6 +875,58 @@ public class ModifyClientVpnEndpointRequest extends AmazonWebServiceRequest impl
     }
 
     /**
+     * @param sessionTimeoutHours
+     */
+
+    public void setSessionTimeoutHours(Integer sessionTimeoutHours) {
+        this.sessionTimeoutHours = sessionTimeoutHours;
+    }
+
+    /**
+     * @return
+     */
+
+    public Integer getSessionTimeoutHours() {
+        return this.sessionTimeoutHours;
+    }
+
+    /**
+     * @param sessionTimeoutHours
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyClientVpnEndpointRequest withSessionTimeoutHours(Integer sessionTimeoutHours) {
+        setSessionTimeoutHours(sessionTimeoutHours);
+        return this;
+    }
+
+    /**
+     * @param clientLoginBannerOptions
+     */
+
+    public void setClientLoginBannerOptions(ClientLoginBannerOptions clientLoginBannerOptions) {
+        this.clientLoginBannerOptions = clientLoginBannerOptions;
+    }
+
+    /**
+     * @return
+     */
+
+    public ClientLoginBannerOptions getClientLoginBannerOptions() {
+        return this.clientLoginBannerOptions;
+    }
+
+    /**
+     * @param clientLoginBannerOptions
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyClientVpnEndpointRequest withClientLoginBannerOptions(ClientLoginBannerOptions clientLoginBannerOptions) {
+        setClientLoginBannerOptions(clientLoginBannerOptions);
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -914,7 +970,11 @@ public class ModifyClientVpnEndpointRequest extends AmazonWebServiceRequest impl
         if (getSelfServicePortal() != null)
             sb.append("SelfServicePortal: ").append(getSelfServicePortal()).append(",");
         if (getClientConnectOptions() != null)
-            sb.append("ClientConnectOptions: ").append(getClientConnectOptions());
+            sb.append("ClientConnectOptions: ").append(getClientConnectOptions()).append(",");
+        if (getSessionTimeoutHours() != null)
+            sb.append("SessionTimeoutHours: ").append(getSessionTimeoutHours()).append(",");
+        if (getClientLoginBannerOptions() != null)
+            sb.append("ClientLoginBannerOptions: ").append(getClientLoginBannerOptions());
         sb.append("}");
         return sb.toString();
     }
@@ -973,6 +1033,14 @@ public class ModifyClientVpnEndpointRequest extends AmazonWebServiceRequest impl
             return false;
         if (other.getClientConnectOptions() != null && other.getClientConnectOptions().equals(this.getClientConnectOptions()) == false)
             return false;
+        if (other.getSessionTimeoutHours() == null ^ this.getSessionTimeoutHours() == null)
+            return false;
+        if (other.getSessionTimeoutHours() != null && other.getSessionTimeoutHours().equals(this.getSessionTimeoutHours()) == false)
+            return false;
+        if (other.getClientLoginBannerOptions() == null ^ this.getClientLoginBannerOptions() == null)
+            return false;
+        if (other.getClientLoginBannerOptions() != null && other.getClientLoginBannerOptions().equals(this.getClientLoginBannerOptions()) == false)
+            return false;
         return true;
     }
 
@@ -992,6 +1060,8 @@ public class ModifyClientVpnEndpointRequest extends AmazonWebServiceRequest impl
         hashCode = prime * hashCode + ((getVpcId() == null) ? 0 : getVpcId().hashCode());
         hashCode = prime * hashCode + ((getSelfServicePortal() == null) ? 0 : getSelfServicePortal().hashCode());
         hashCode = prime * hashCode + ((getClientConnectOptions() == null) ? 0 : getClientConnectOptions().hashCode());
+        hashCode = prime * hashCode + ((getSessionTimeoutHours() == null) ? 0 : getSessionTimeoutHours().hashCode());
+        hashCode = prime * hashCode + ((getClientLoginBannerOptions() == null) ? 0 : getClientLoginBannerOptions().hashCode());
         return hashCode;
     }
 

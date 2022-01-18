@@ -66,41 +66,17 @@ public class CreateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
     private String kmsKeyId;
     /**
      * <p>
-     * Optionally specifies the pricing plan for the geofence collection. Defaults to <code>RequestBasedUsage</code>.
-     * </p>
-     * <p>
-     * For additional details and restrictions on each pricing plan option, see the <a
-     * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing page</a>.
+     * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * </p>
      */
+    @Deprecated
     private String pricingPlan;
     /**
      * <p>
-     * Specifies the data provider for the geofence collection.
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Required value for the following pricing plans: <code>MobileAssetTracking </code>|
-     * <code>MobileAssetManagement</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * For more information about <a href="https://aws.amazon.com/location/data-providers/">Data Providers</a>, and <a
-     * href="https://aws.amazon.com/location/pricing/">Pricing plans</a>, see the Amazon Location Service product page.
-     * </p>
-     * <note>
-     * <p>
-     * Amazon Location Service only uses <code>PricingPlanDataSource</code> to calculate billing for your geofence
-     * collection. Your data won't be shared with the data provider, and will remain in your AWS account or Region
-     * unless you move it.
-     * </p>
-     * </note>
-     * <p>
-     * Valid Values: <code>Esri </code>| <code>Here</code>
+     * This parameter is no longer used.
      * </p>
      */
+    @Deprecated
     private String pricingPlanDataSource;
     /**
      * <p>
@@ -396,66 +372,42 @@ public class CreateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Optionally specifies the pricing plan for the geofence collection. Defaults to <code>RequestBasedUsage</code>.
-     * </p>
-     * <p>
-     * For additional details and restrictions on each pricing plan option, see the <a
-     * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing page</a>.
+     * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * </p>
      * 
      * @param pricingPlan
-     *        Optionally specifies the pricing plan for the geofence collection. Defaults to
-     *        <code>RequestBasedUsage</code>.</p>
-     *        <p>
-     *        For additional details and restrictions on each pricing plan option, see the <a
-     *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing page</a>.
+     *        No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * @see PricingPlan
      */
-
+    @Deprecated
     public void setPricingPlan(String pricingPlan) {
         this.pricingPlan = pricingPlan;
     }
 
     /**
      * <p>
-     * Optionally specifies the pricing plan for the geofence collection. Defaults to <code>RequestBasedUsage</code>.
-     * </p>
-     * <p>
-     * For additional details and restrictions on each pricing plan option, see the <a
-     * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing page</a>.
+     * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * </p>
      * 
-     * @return Optionally specifies the pricing plan for the geofence collection. Defaults to
-     *         <code>RequestBasedUsage</code>.</p>
-     *         <p>
-     *         For additional details and restrictions on each pricing plan option, see the <a
-     *         href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing page</a>.
+     * @return No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * @see PricingPlan
      */
-
+    @Deprecated
     public String getPricingPlan() {
         return this.pricingPlan;
     }
 
     /**
      * <p>
-     * Optionally specifies the pricing plan for the geofence collection. Defaults to <code>RequestBasedUsage</code>.
-     * </p>
-     * <p>
-     * For additional details and restrictions on each pricing plan option, see the <a
-     * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing page</a>.
+     * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * </p>
      * 
      * @param pricingPlan
-     *        Optionally specifies the pricing plan for the geofence collection. Defaults to
-     *        <code>RequestBasedUsage</code>.</p>
-     *        <p>
-     *        For additional details and restrictions on each pricing plan option, see the <a
-     *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing page</a>.
+     *        No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PricingPlan
      */
-
+    @Deprecated
     public CreateGeofenceCollectionRequest withPricingPlan(String pricingPlan) {
         setPricingPlan(pricingPlan);
         return this;
@@ -463,23 +415,15 @@ public class CreateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Optionally specifies the pricing plan for the geofence collection. Defaults to <code>RequestBasedUsage</code>.
-     * </p>
-     * <p>
-     * For additional details and restrictions on each pricing plan option, see the <a
-     * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing page</a>.
+     * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * </p>
      * 
      * @param pricingPlan
-     *        Optionally specifies the pricing plan for the geofence collection. Defaults to
-     *        <code>RequestBasedUsage</code>.</p>
-     *        <p>
-     *        For additional details and restrictions on each pricing plan option, see the <a
-     *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing page</a>.
+     *        No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PricingPlan
      */
-
+    @Deprecated
     public CreateGeofenceCollectionRequest withPricingPlan(PricingPlan pricingPlan) {
         this.pricingPlan = pricingPlan.toString();
         return this;
@@ -487,171 +431,39 @@ public class CreateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Specifies the data provider for the geofence collection.
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Required value for the following pricing plans: <code>MobileAssetTracking </code>|
-     * <code>MobileAssetManagement</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * For more information about <a href="https://aws.amazon.com/location/data-providers/">Data Providers</a>, and <a
-     * href="https://aws.amazon.com/location/pricing/">Pricing plans</a>, see the Amazon Location Service product page.
-     * </p>
-     * <note>
-     * <p>
-     * Amazon Location Service only uses <code>PricingPlanDataSource</code> to calculate billing for your geofence
-     * collection. Your data won't be shared with the data provider, and will remain in your AWS account or Region
-     * unless you move it.
-     * </p>
-     * </note>
-     * <p>
-     * Valid Values: <code>Esri </code>| <code>Here</code>
+     * This parameter is no longer used.
      * </p>
      * 
      * @param pricingPlanDataSource
-     *        Specifies the data provider for the geofence collection.</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        Required value for the following pricing plans: <code>MobileAssetTracking </code>|
-     *        <code>MobileAssetManagement</code>
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <p>
-     *        For more information about <a href="https://aws.amazon.com/location/data-providers/">Data Providers</a>,
-     *        and <a href="https://aws.amazon.com/location/pricing/">Pricing plans</a>, see the Amazon Location Service
-     *        product page.
-     *        </p>
-     *        <note>
-     *        <p>
-     *        Amazon Location Service only uses <code>PricingPlanDataSource</code> to calculate billing for your
-     *        geofence collection. Your data won't be shared with the data provider, and will remain in your AWS account
-     *        or Region unless you move it.
-     *        </p>
-     *        </note>
-     *        <p>
-     *        Valid Values: <code>Esri </code>| <code>Here</code>
+     *        This parameter is no longer used.
      */
-
+    @Deprecated
     public void setPricingPlanDataSource(String pricingPlanDataSource) {
         this.pricingPlanDataSource = pricingPlanDataSource;
     }
 
     /**
      * <p>
-     * Specifies the data provider for the geofence collection.
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Required value for the following pricing plans: <code>MobileAssetTracking </code>|
-     * <code>MobileAssetManagement</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * For more information about <a href="https://aws.amazon.com/location/data-providers/">Data Providers</a>, and <a
-     * href="https://aws.amazon.com/location/pricing/">Pricing plans</a>, see the Amazon Location Service product page.
-     * </p>
-     * <note>
-     * <p>
-     * Amazon Location Service only uses <code>PricingPlanDataSource</code> to calculate billing for your geofence
-     * collection. Your data won't be shared with the data provider, and will remain in your AWS account or Region
-     * unless you move it.
-     * </p>
-     * </note>
-     * <p>
-     * Valid Values: <code>Esri </code>| <code>Here</code>
+     * This parameter is no longer used.
      * </p>
      * 
-     * @return Specifies the data provider for the geofence collection.</p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         Required value for the following pricing plans: <code>MobileAssetTracking </code>|
-     *         <code>MobileAssetManagement</code>
-     *         </p>
-     *         </li>
-     *         </ul>
-     *         <p>
-     *         For more information about <a href="https://aws.amazon.com/location/data-providers/">Data Providers</a>,
-     *         and <a href="https://aws.amazon.com/location/pricing/">Pricing plans</a>, see the Amazon Location Service
-     *         product page.
-     *         </p>
-     *         <note>
-     *         <p>
-     *         Amazon Location Service only uses <code>PricingPlanDataSource</code> to calculate billing for your
-     *         geofence collection. Your data won't be shared with the data provider, and will remain in your AWS
-     *         account or Region unless you move it.
-     *         </p>
-     *         </note>
-     *         <p>
-     *         Valid Values: <code>Esri </code>| <code>Here</code>
+     * @return This parameter is no longer used.
      */
-
+    @Deprecated
     public String getPricingPlanDataSource() {
         return this.pricingPlanDataSource;
     }
 
     /**
      * <p>
-     * Specifies the data provider for the geofence collection.
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Required value for the following pricing plans: <code>MobileAssetTracking </code>|
-     * <code>MobileAssetManagement</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * For more information about <a href="https://aws.amazon.com/location/data-providers/">Data Providers</a>, and <a
-     * href="https://aws.amazon.com/location/pricing/">Pricing plans</a>, see the Amazon Location Service product page.
-     * </p>
-     * <note>
-     * <p>
-     * Amazon Location Service only uses <code>PricingPlanDataSource</code> to calculate billing for your geofence
-     * collection. Your data won't be shared with the data provider, and will remain in your AWS account or Region
-     * unless you move it.
-     * </p>
-     * </note>
-     * <p>
-     * Valid Values: <code>Esri </code>| <code>Here</code>
+     * This parameter is no longer used.
      * </p>
      * 
      * @param pricingPlanDataSource
-     *        Specifies the data provider for the geofence collection.</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        Required value for the following pricing plans: <code>MobileAssetTracking </code>|
-     *        <code>MobileAssetManagement</code>
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <p>
-     *        For more information about <a href="https://aws.amazon.com/location/data-providers/">Data Providers</a>,
-     *        and <a href="https://aws.amazon.com/location/pricing/">Pricing plans</a>, see the Amazon Location Service
-     *        product page.
-     *        </p>
-     *        <note>
-     *        <p>
-     *        Amazon Location Service only uses <code>PricingPlanDataSource</code> to calculate billing for your
-     *        geofence collection. Your data won't be shared with the data provider, and will remain in your AWS account
-     *        or Region unless you move it.
-     *        </p>
-     *        </note>
-     *        <p>
-     *        Valid Values: <code>Esri </code>| <code>Here</code>
+     *        This parameter is no longer used.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public CreateGeofenceCollectionRequest withPricingPlanDataSource(String pricingPlanDataSource) {
         setPricingPlanDataSource(pricingPlanDataSource);
         return this;

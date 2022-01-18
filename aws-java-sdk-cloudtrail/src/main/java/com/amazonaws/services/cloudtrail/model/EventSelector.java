@@ -90,7 +90,7 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
      * trail. In this release, the list can be empty (disables the filter), or it can filter out Key Management Service
      * or Amazon RDS Data API events by containing <code>kms.amazonaws.com</code> or <code>rdsdata.amazonaws.com</code>.
      * By default, <code>ExcludeManagementEventSources</code> is empty, and KMS and Amazon RDS Data API events are
-     * logged to your trail.
+     * logged to your trail. You can exclude management event sources only in regions that support the event source.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> excludeManagementEventSources;
@@ -520,14 +520,15 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
      * trail. In this release, the list can be empty (disables the filter), or it can filter out Key Management Service
      * or Amazon RDS Data API events by containing <code>kms.amazonaws.com</code> or <code>rdsdata.amazonaws.com</code>.
      * By default, <code>ExcludeManagementEventSources</code> is empty, and KMS and Amazon RDS Data API events are
-     * logged to your trail.
+     * logged to your trail. You can exclude management event sources only in regions that support the event source.
      * </p>
      * 
      * @return An optional list of service event sources from which you do not want management events to be logged on
      *         your trail. In this release, the list can be empty (disables the filter), or it can filter out Key
      *         Management Service or Amazon RDS Data API events by containing <code>kms.amazonaws.com</code> or
      *         <code>rdsdata.amazonaws.com</code>. By default, <code>ExcludeManagementEventSources</code> is empty, and
-     *         KMS and Amazon RDS Data API events are logged to your trail.
+     *         KMS and Amazon RDS Data API events are logged to your trail. You can exclude management event sources
+     *         only in regions that support the event source.
      */
 
     public java.util.List<String> getExcludeManagementEventSources() {
@@ -543,7 +544,7 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
      * trail. In this release, the list can be empty (disables the filter), or it can filter out Key Management Service
      * or Amazon RDS Data API events by containing <code>kms.amazonaws.com</code> or <code>rdsdata.amazonaws.com</code>.
      * By default, <code>ExcludeManagementEventSources</code> is empty, and KMS and Amazon RDS Data API events are
-     * logged to your trail.
+     * logged to your trail. You can exclude management event sources only in regions that support the event source.
      * </p>
      * 
      * @param excludeManagementEventSources
@@ -551,7 +552,8 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
      *        your trail. In this release, the list can be empty (disables the filter), or it can filter out Key
      *        Management Service or Amazon RDS Data API events by containing <code>kms.amazonaws.com</code> or
      *        <code>rdsdata.amazonaws.com</code>. By default, <code>ExcludeManagementEventSources</code> is empty, and
-     *        KMS and Amazon RDS Data API events are logged to your trail.
+     *        KMS and Amazon RDS Data API events are logged to your trail. You can exclude management event sources only
+     *        in regions that support the event source.
      */
 
     public void setExcludeManagementEventSources(java.util.Collection<String> excludeManagementEventSources) {
@@ -569,7 +571,7 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
      * trail. In this release, the list can be empty (disables the filter), or it can filter out Key Management Service
      * or Amazon RDS Data API events by containing <code>kms.amazonaws.com</code> or <code>rdsdata.amazonaws.com</code>.
      * By default, <code>ExcludeManagementEventSources</code> is empty, and KMS and Amazon RDS Data API events are
-     * logged to your trail.
+     * logged to your trail. You can exclude management event sources only in regions that support the event source.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -582,7 +584,8 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
      *        your trail. In this release, the list can be empty (disables the filter), or it can filter out Key
      *        Management Service or Amazon RDS Data API events by containing <code>kms.amazonaws.com</code> or
      *        <code>rdsdata.amazonaws.com</code>. By default, <code>ExcludeManagementEventSources</code> is empty, and
-     *        KMS and Amazon RDS Data API events are logged to your trail.
+     *        KMS and Amazon RDS Data API events are logged to your trail. You can exclude management event sources only
+     *        in regions that support the event source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -602,7 +605,7 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
      * trail. In this release, the list can be empty (disables the filter), or it can filter out Key Management Service
      * or Amazon RDS Data API events by containing <code>kms.amazonaws.com</code> or <code>rdsdata.amazonaws.com</code>.
      * By default, <code>ExcludeManagementEventSources</code> is empty, and KMS and Amazon RDS Data API events are
-     * logged to your trail.
+     * logged to your trail. You can exclude management event sources only in regions that support the event source.
      * </p>
      * 
      * @param excludeManagementEventSources
@@ -610,7 +613,8 @@ public class EventSelector implements Serializable, Cloneable, StructuredPojo {
      *        your trail. In this release, the list can be empty (disables the filter), or it can filter out Key
      *        Management Service or Amazon RDS Data API events by containing <code>kms.amazonaws.com</code> or
      *        <code>rdsdata.amazonaws.com</code>. By default, <code>ExcludeManagementEventSources</code> is empty, and
-     *        KMS and Amazon RDS Data API events are logged to your trail.
+     *        KMS and Amazon RDS Data API events are logged to your trail. You can exclude management event sources only
+     *        in regions that support the event source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

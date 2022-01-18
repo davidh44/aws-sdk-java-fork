@@ -69,9 +69,9 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * <note>
      * <p>
      * If you specify a departure that's not located on a road, Amazon Location <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road">moves
-     * the position to the nearest road</a>. If Esri is the provider for your route calculator, specifying a route that
-     * is longer than 400 km returns a <code>400 RoutesValidationException</code> error.
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">moves the position to
+     * the nearest road</a>. If Esri is the provider for your route calculator, specifying a route that is longer than
+     * 400 km returns a <code>400 RoutesValidationException</code> error.
      * </p>
      * </note>
      * <p>
@@ -114,8 +114,8 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * <note>
      * <p>
      * If you specify a destination that's not located on a road, Amazon Location <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road">moves
-     * the position to the nearest road</a>.
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">moves the position to
+     * the nearest road</a>.
      * </p>
      * </note>
      * <p>
@@ -150,7 +150,7 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * compatibility.
      * </p>
      * <p>
-     * The <code>TravelMode</code> you specify determines how you specify route preferences:
+     * The <code>TravelMode</code> you specify also determines how you specify route preferences:
      * </p>
      * <ul>
      * <li>
@@ -195,8 +195,8 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * <note>
      * <p>
      * If you specify a waypoint position that's not located on a road, Amazon Location <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road">moves
-     * the position to the nearest road</a>.
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">moves the position to
+     * the nearest road</a>.
      * </p>
      * <p>
      * Specifying more than 23 waypoints returns a <code>400 ValidationException</code> error.
@@ -432,9 +432,9 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * <note>
      * <p>
      * If you specify a departure that's not located on a road, Amazon Location <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road">moves
-     * the position to the nearest road</a>. If Esri is the provider for your route calculator, specifying a route that
-     * is longer than 400 km returns a <code>400 RoutesValidationException</code> error.
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">moves the position to
+     * the nearest road</a>. If Esri is the provider for your route calculator, specifying a route that is longer than
+     * 400 km returns a <code>400 RoutesValidationException</code> error.
      * </p>
      * </note>
      * <p>
@@ -453,10 +453,10 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      *         </ul>
      *         <note>
      *         <p>
-     *         If you specify a departure that's not located on a road, Amazon Location <a href=
-     *         "https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     *         >moves the position to the nearest road</a>. If Esri is the provider for your route calculator,
-     *         specifying a route that is longer than 400 km returns a <code>400 RoutesValidationException</code> error.
+     *         If you specify a departure that's not located on a road, Amazon Location <a
+     *         href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">moves the
+     *         position to the nearest road</a>. If Esri is the provider for your route calculator, specifying a route
+     *         that is longer than 400 km returns a <code>400 RoutesValidationException</code> error.
      *         </p>
      *         </note>
      *         <p>
@@ -482,9 +482,9 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * <note>
      * <p>
      * If you specify a departure that's not located on a road, Amazon Location <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road">moves
-     * the position to the nearest road</a>. If Esri is the provider for your route calculator, specifying a route that
-     * is longer than 400 km returns a <code>400 RoutesValidationException</code> error.
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">moves the position to
+     * the nearest road</a>. If Esri is the provider for your route calculator, specifying a route that is longer than
+     * 400 km returns a <code>400 RoutesValidationException</code> error.
      * </p>
      * </note>
      * <p>
@@ -504,10 +504,10 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      *        </ul>
      *        <note>
      *        <p>
-     *        If you specify a departure that's not located on a road, Amazon Location <a href=
-     *        "https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     *        >moves the position to the nearest road</a>. If Esri is the provider for your route calculator, specifying
-     *        a route that is longer than 400 km returns a <code>400 RoutesValidationException</code> error.
+     *        If you specify a departure that's not located on a road, Amazon Location <a
+     *        href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">moves the
+     *        position to the nearest road</a>. If Esri is the provider for your route calculator, specifying a route
+     *        that is longer than 400 km returns a <code>400 RoutesValidationException</code> error.
      *        </p>
      *        </note>
      *        <p>
@@ -538,9 +538,9 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * <note>
      * <p>
      * If you specify a departure that's not located on a road, Amazon Location <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road">moves
-     * the position to the nearest road</a>. If Esri is the provider for your route calculator, specifying a route that
-     * is longer than 400 km returns a <code>400 RoutesValidationException</code> error.
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">moves the position to
+     * the nearest road</a>. If Esri is the provider for your route calculator, specifying a route that is longer than
+     * 400 km returns a <code>400 RoutesValidationException</code> error.
      * </p>
      * </note>
      * <p>
@@ -565,10 +565,10 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      *        </ul>
      *        <note>
      *        <p>
-     *        If you specify a departure that's not located on a road, Amazon Location <a href=
-     *        "https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     *        >moves the position to the nearest road</a>. If Esri is the provider for your route calculator, specifying
-     *        a route that is longer than 400 km returns a <code>400 RoutesValidationException</code> error.
+     *        If you specify a departure that's not located on a road, Amazon Location <a
+     *        href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">moves the
+     *        position to the nearest road</a>. If Esri is the provider for your route calculator, specifying a route
+     *        that is longer than 400 km returns a <code>400 RoutesValidationException</code> error.
      *        </p>
      *        </note>
      *        <p>
@@ -601,9 +601,9 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * <note>
      * <p>
      * If you specify a departure that's not located on a road, Amazon Location <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road">moves
-     * the position to the nearest road</a>. If Esri is the provider for your route calculator, specifying a route that
-     * is longer than 400 km returns a <code>400 RoutesValidationException</code> error.
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">moves the position to
+     * the nearest road</a>. If Esri is the provider for your route calculator, specifying a route that is longer than
+     * 400 km returns a <code>400 RoutesValidationException</code> error.
      * </p>
      * </note>
      * <p>
@@ -623,10 +623,10 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      *        </ul>
      *        <note>
      *        <p>
-     *        If you specify a departure that's not located on a road, Amazon Location <a href=
-     *        "https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     *        >moves the position to the nearest road</a>. If Esri is the provider for your route calculator, specifying
-     *        a route that is longer than 400 km returns a <code>400 RoutesValidationException</code> error.
+     *        If you specify a departure that's not located on a road, Amazon Location <a
+     *        href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">moves the
+     *        position to the nearest road</a>. If Esri is the provider for your route calculator, specifying a route
+     *        that is longer than 400 km returns a <code>400 RoutesValidationException</code> error.
      *        </p>
      *        </note>
      *        <p>
@@ -772,8 +772,8 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * <note>
      * <p>
      * If you specify a destination that's not located on a road, Amazon Location <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road">moves
-     * the position to the nearest road</a>.
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">moves the position to
+     * the nearest road</a>.
      * </p>
      * </note>
      * <p>
@@ -792,9 +792,9 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      *         </ul>
      *         <note>
      *         <p>
-     *         If you specify a destination that's not located on a road, Amazon Location <a href=
-     *         "https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     *         >moves the position to the nearest road</a>.
+     *         If you specify a destination that's not located on a road, Amazon Location <a
+     *         href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">moves the
+     *         position to the nearest road</a>.
      *         </p>
      *         </note>
      *         <p>
@@ -820,8 +820,8 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * <note>
      * <p>
      * If you specify a destination that's not located on a road, Amazon Location <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road">moves
-     * the position to the nearest road</a>.
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">moves the position to
+     * the nearest road</a>.
      * </p>
      * </note>
      * <p>
@@ -841,9 +841,9 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      *        </ul>
      *        <note>
      *        <p>
-     *        If you specify a destination that's not located on a road, Amazon Location <a href=
-     *        "https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     *        >moves the position to the nearest road</a>.
+     *        If you specify a destination that's not located on a road, Amazon Location <a
+     *        href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">moves the
+     *        position to the nearest road</a>.
      *        </p>
      *        </note>
      *        <p>
@@ -874,8 +874,8 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * <note>
      * <p>
      * If you specify a destination that's not located on a road, Amazon Location <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road">moves
-     * the position to the nearest road</a>.
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">moves the position to
+     * the nearest road</a>.
      * </p>
      * </note>
      * <p>
@@ -900,9 +900,9 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      *        </ul>
      *        <note>
      *        <p>
-     *        If you specify a destination that's not located on a road, Amazon Location <a href=
-     *        "https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     *        >moves the position to the nearest road</a>.
+     *        If you specify a destination that's not located on a road, Amazon Location <a
+     *        href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">moves the
+     *        position to the nearest road</a>.
      *        </p>
      *        </note>
      *        <p>
@@ -935,8 +935,8 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * <note>
      * <p>
      * If you specify a destination that's not located on a road, Amazon Location <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road">moves
-     * the position to the nearest road</a>.
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">moves the position to
+     * the nearest road</a>.
      * </p>
      * </note>
      * <p>
@@ -956,9 +956,9 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      *        </ul>
      *        <note>
      *        <p>
-     *        If you specify a destination that's not located on a road, Amazon Location <a href=
-     *        "https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     *        >moves the position to the nearest road</a>.
+     *        If you specify a destination that's not located on a road, Amazon Location <a
+     *        href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">moves the
+     *        position to the nearest road</a>.
      *        </p>
      *        </note>
      *        <p>
@@ -1152,7 +1152,7 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * compatibility.
      * </p>
      * <p>
-     * The <code>TravelMode</code> you specify determines how you specify route preferences:
+     * The <code>TravelMode</code> you specify also determines how you specify route preferences:
      * </p>
      * <ul>
      * <li>
@@ -1174,7 +1174,7 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      *        Specifies the mode of transport when calculating a route. Used in estimating the speed of travel and road
      *        compatibility.</p>
      *        <p>
-     *        The <code>TravelMode</code> you specify determines how you specify route preferences:
+     *        The <code>TravelMode</code> you specify also determines how you specify route preferences:
      *        </p>
      *        <ul>
      *        <li>
@@ -1203,7 +1203,7 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * compatibility.
      * </p>
      * <p>
-     * The <code>TravelMode</code> you specify determines how you specify route preferences:
+     * The <code>TravelMode</code> you specify also determines how you specify route preferences:
      * </p>
      * <ul>
      * <li>
@@ -1224,7 +1224,7 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * @return Specifies the mode of transport when calculating a route. Used in estimating the speed of travel and road
      *         compatibility.</p>
      *         <p>
-     *         The <code>TravelMode</code> you specify determines how you specify route preferences:
+     *         The <code>TravelMode</code> you specify also determines how you specify route preferences:
      *         </p>
      *         <ul>
      *         <li>
@@ -1253,7 +1253,7 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * compatibility.
      * </p>
      * <p>
-     * The <code>TravelMode</code> you specify determines how you specify route preferences:
+     * The <code>TravelMode</code> you specify also determines how you specify route preferences:
      * </p>
      * <ul>
      * <li>
@@ -1275,7 +1275,7 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      *        Specifies the mode of transport when calculating a route. Used in estimating the speed of travel and road
      *        compatibility.</p>
      *        <p>
-     *        The <code>TravelMode</code> you specify determines how you specify route preferences:
+     *        The <code>TravelMode</code> you specify also determines how you specify route preferences:
      *        </p>
      *        <ul>
      *        <li>
@@ -1306,7 +1306,7 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * compatibility.
      * </p>
      * <p>
-     * The <code>TravelMode</code> you specify determines how you specify route preferences:
+     * The <code>TravelMode</code> you specify also determines how you specify route preferences:
      * </p>
      * <ul>
      * <li>
@@ -1328,7 +1328,7 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      *        Specifies the mode of transport when calculating a route. Used in estimating the speed of travel and road
      *        compatibility.</p>
      *        <p>
-     *        The <code>TravelMode</code> you specify determines how you specify route preferences:
+     *        The <code>TravelMode</code> you specify also determines how you specify route preferences:
      *        </p>
      *        <ul>
      *        <li>
@@ -1430,8 +1430,8 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * <note>
      * <p>
      * If you specify a waypoint position that's not located on a road, Amazon Location <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road">moves
-     * the position to the nearest road</a>.
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">moves the position to
+     * the nearest road</a>.
      * </p>
      * <p>
      * Specifying more than 23 waypoints returns a <code>400 ValidationException</code> error.
@@ -1457,9 +1457,9 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      *         </ul>
      *         <note>
      *         <p>
-     *         If you specify a waypoint position that's not located on a road, Amazon Location <a href=
-     *         "https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     *         >moves the position to the nearest road</a>.
+     *         If you specify a waypoint position that's not located on a road, Amazon Location <a
+     *         href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">moves the
+     *         position to the nearest road</a>.
      *         </p>
      *         <p>
      *         Specifying more than 23 waypoints returns a <code>400 ValidationException</code> error.
@@ -1493,8 +1493,8 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * <note>
      * <p>
      * If you specify a waypoint position that's not located on a road, Amazon Location <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road">moves
-     * the position to the nearest road</a>.
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">moves the position to
+     * the nearest road</a>.
      * </p>
      * <p>
      * Specifying more than 23 waypoints returns a <code>400 ValidationException</code> error.
@@ -1521,9 +1521,9 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      *        </ul>
      *        <note>
      *        <p>
-     *        If you specify a waypoint position that's not located on a road, Amazon Location <a href=
-     *        "https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     *        >moves the position to the nearest road</a>.
+     *        If you specify a waypoint position that's not located on a road, Amazon Location <a
+     *        href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">moves the
+     *        position to the nearest road</a>.
      *        </p>
      *        <p>
      *        Specifying more than 23 waypoints returns a <code>400 ValidationException</code> error.
@@ -1562,8 +1562,8 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * <note>
      * <p>
      * If you specify a waypoint position that's not located on a road, Amazon Location <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road">moves
-     * the position to the nearest road</a>.
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">moves the position to
+     * the nearest road</a>.
      * </p>
      * <p>
      * Specifying more than 23 waypoints returns a <code>400 ValidationException</code> error.
@@ -1595,9 +1595,9 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      *        </ul>
      *        <note>
      *        <p>
-     *        If you specify a waypoint position that's not located on a road, Amazon Location <a href=
-     *        "https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     *        >moves the position to the nearest road</a>.
+     *        If you specify a waypoint position that's not located on a road, Amazon Location <a
+     *        href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">moves the
+     *        position to the nearest road</a>.
      *        </p>
      *        <p>
      *        Specifying more than 23 waypoints returns a <code>400 ValidationException</code> error.
@@ -1638,8 +1638,8 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * <note>
      * <p>
      * If you specify a waypoint position that's not located on a road, Amazon Location <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road">moves
-     * the position to the nearest road</a>.
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">moves the position to
+     * the nearest road</a>.
      * </p>
      * <p>
      * Specifying more than 23 waypoints returns a <code>400 ValidationException</code> error.
@@ -1666,9 +1666,9 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      *        </ul>
      *        <note>
      *        <p>
-     *        If you specify a waypoint position that's not located on a road, Amazon Location <a href=
-     *        "https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     *        >moves the position to the nearest road</a>.
+     *        If you specify a waypoint position that's not located on a road, Amazon Location <a
+     *        href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">moves the
+     *        position to the nearest road</a>.
      *        </p>
      *        <p>
      *        Specifying more than 23 waypoints returns a <code>400 ValidationException</code> error.

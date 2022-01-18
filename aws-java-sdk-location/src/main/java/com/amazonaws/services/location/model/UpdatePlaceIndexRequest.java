@@ -45,13 +45,10 @@ public class UpdatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
     private String indexName;
     /**
      * <p>
-     * Updates the pricing plan for the place index resource.
-     * </p>
-     * <p>
-     * For more information about each pricing plan option restrictions, see <a
-     * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
+     * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * </p>
      */
+    @Deprecated
     private String pricingPlan;
 
     /**
@@ -176,63 +173,42 @@ public class UpdatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Updates the pricing plan for the place index resource.
-     * </p>
-     * <p>
-     * For more information about each pricing plan option restrictions, see <a
-     * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
+     * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * </p>
      * 
      * @param pricingPlan
-     *        Updates the pricing plan for the place index resource.</p>
-     *        <p>
-     *        For more information about each pricing plan option restrictions, see <a
-     *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
+     *        No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * @see PricingPlan
      */
-
+    @Deprecated
     public void setPricingPlan(String pricingPlan) {
         this.pricingPlan = pricingPlan;
     }
 
     /**
      * <p>
-     * Updates the pricing plan for the place index resource.
-     * </p>
-     * <p>
-     * For more information about each pricing plan option restrictions, see <a
-     * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
+     * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * </p>
      * 
-     * @return Updates the pricing plan for the place index resource.</p>
-     *         <p>
-     *         For more information about each pricing plan option restrictions, see <a
-     *         href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
+     * @return No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * @see PricingPlan
      */
-
+    @Deprecated
     public String getPricingPlan() {
         return this.pricingPlan;
     }
 
     /**
      * <p>
-     * Updates the pricing plan for the place index resource.
-     * </p>
-     * <p>
-     * For more information about each pricing plan option restrictions, see <a
-     * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
+     * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * </p>
      * 
      * @param pricingPlan
-     *        Updates the pricing plan for the place index resource.</p>
-     *        <p>
-     *        For more information about each pricing plan option restrictions, see <a
-     *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
+     *        No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PricingPlan
      */
-
+    @Deprecated
     public UpdatePlaceIndexRequest withPricingPlan(String pricingPlan) {
         setPricingPlan(pricingPlan);
         return this;
@@ -240,22 +216,15 @@ public class UpdatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Updates the pricing plan for the place index resource.
-     * </p>
-     * <p>
-     * For more information about each pricing plan option restrictions, see <a
-     * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
+     * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * </p>
      * 
      * @param pricingPlan
-     *        Updates the pricing plan for the place index resource.</p>
-     *        <p>
-     *        For more information about each pricing plan option restrictions, see <a
-     *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
+     *        No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PricingPlan
      */
-
+    @Deprecated
     public UpdatePlaceIndexRequest withPricingPlan(PricingPlan pricingPlan) {
         this.pricingPlan = pricingPlan.toString();
         return this;

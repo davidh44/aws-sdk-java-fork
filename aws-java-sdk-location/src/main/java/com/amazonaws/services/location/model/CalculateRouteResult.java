@@ -35,9 +35,8 @@ public class CalculateRouteResult extends com.amazonaws.AmazonWebServiceResult<c
      * </p>
      * <p>
      * For example, a route with a departure position and destination position returns one leg with the positions <a
-     * href
-     * ="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road">snapped to
-     * a nearby road</a>:
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">snapped to a nearby
+     * road</a>:
      * </p>
      * <ul>
      * <li>
@@ -88,9 +87,8 @@ public class CalculateRouteResult extends com.amazonaws.AmazonWebServiceResult<c
      * </p>
      * <p>
      * For example, a route with a departure position and destination position returns one leg with the positions <a
-     * href
-     * ="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road">snapped to
-     * a nearby road</a>:
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">snapped to a nearby
+     * road</a>:
      * </p>
      * <ul>
      * <li>
@@ -129,9 +127,9 @@ public class CalculateRouteResult extends com.amazonaws.AmazonWebServiceResult<c
      *         than the total number of positions in the request. </p>
      *         <p>
      *         For example, a route with a departure position and destination position returns one leg with the
-     *         positions <a href=
-     *         "https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     *         >snapped to a nearby road</a>:
+     *         positions <a
+     *         href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">snapped to a
+     *         nearby road</a>:
      *         </p>
      *         <ul>
      *         <li>
@@ -177,9 +175,8 @@ public class CalculateRouteResult extends com.amazonaws.AmazonWebServiceResult<c
      * </p>
      * <p>
      * For example, a route with a departure position and destination position returns one leg with the positions <a
-     * href
-     * ="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road">snapped to
-     * a nearby road</a>:
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">snapped to a nearby
+     * road</a>:
      * </p>
      * <ul>
      * <li>
@@ -219,9 +216,8 @@ public class CalculateRouteResult extends com.amazonaws.AmazonWebServiceResult<c
      *        the total number of positions in the request. </p>
      *        <p>
      *        For example, a route with a departure position and destination position returns one leg with the positions
-     *        <a href=
-     *        "https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     *        >snapped to a nearby road</a>:
+     *        <a href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">snapped to a
+     *        nearby road</a>:
      *        </p>
      *        <ul>
      *        <li>
@@ -272,9 +268,8 @@ public class CalculateRouteResult extends com.amazonaws.AmazonWebServiceResult<c
      * </p>
      * <p>
      * For example, a route with a departure position and destination position returns one leg with the positions <a
-     * href
-     * ="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road">snapped to
-     * a nearby road</a>:
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">snapped to a nearby
+     * road</a>:
      * </p>
      * <ul>
      * <li>
@@ -319,9 +314,8 @@ public class CalculateRouteResult extends com.amazonaws.AmazonWebServiceResult<c
      *        the total number of positions in the request. </p>
      *        <p>
      *        For example, a route with a departure position and destination position returns one leg with the positions
-     *        <a href=
-     *        "https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     *        >snapped to a nearby road</a>:
+     *        <a href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">snapped to a
+     *        nearby road</a>:
      *        </p>
      *        <ul>
      *        <li>
@@ -374,9 +368,8 @@ public class CalculateRouteResult extends com.amazonaws.AmazonWebServiceResult<c
      * </p>
      * <p>
      * For example, a route with a departure position and destination position returns one leg with the positions <a
-     * href
-     * ="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road">snapped to
-     * a nearby road</a>:
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">snapped to a nearby
+     * road</a>:
      * </p>
      * <ul>
      * <li>
@@ -416,9 +409,8 @@ public class CalculateRouteResult extends com.amazonaws.AmazonWebServiceResult<c
      *        the total number of positions in the request. </p>
      *        <p>
      *        For example, a route with a departure position and destination position returns one leg with the positions
-     *        <a href=
-     *        "https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     *        >snapped to a nearby road</a>:
+     *        <a href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">snapped to a
+     *        nearby road</a>:
      *        </p>
      *        <ul>
      *        <li>

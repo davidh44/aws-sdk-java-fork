@@ -24,8 +24,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </p>
  * <p>
  * For example, a route with a departure position and destination position returns one leg with the positions <a
- * href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road">snapped to
- * a nearby road</a>:
+ * href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">snapped to a nearby
+ * road</a>:
  * </p>
  * <ul>
  * <li>
@@ -91,8 +91,8 @@ public class Leg implements Serializable, Cloneable, StructuredPojo {
      * <note>
      * <p>
      * If the <code>EndPosition</code> isn't located on a road, it's <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     * >snapped to a nearby road</a>.
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/nap-to-nearby-road.html">snapped to a nearby
+     * road</a>.
      * </p>
      * </note>
      */
@@ -110,8 +110,8 @@ public class Leg implements Serializable, Cloneable, StructuredPojo {
      * <note>
      * <p>
      * If the <code>StartPosition</code> isn't located on a road, it's <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     * >snapped to a nearby road</a>.
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">snapped to a nearby
+     * road</a>.
      * </p>
      * </note>
      */
@@ -266,16 +266,16 @@ public class Leg implements Serializable, Cloneable, StructuredPojo {
      * <note>
      * <p>
      * If the <code>EndPosition</code> isn't located on a road, it's <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     * >snapped to a nearby road</a>.
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/nap-to-nearby-road.html">snapped to a nearby
+     * road</a>.
      * </p>
      * </note>
      * 
      * @return The terminating position of the leg. Follows the format <code>[longitude,latitude]</code>.</p> <note>
      *         <p>
      *         If the <code>EndPosition</code> isn't located on a road, it's <a
-     *         href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     *         >snapped to a nearby road</a>.
+     *         href="https://docs.aws.amazon.com/location/latest/developerguide/nap-to-nearby-road.html">snapped to a
+     *         nearby road</a>.
      *         </p>
      */
 
@@ -290,8 +290,8 @@ public class Leg implements Serializable, Cloneable, StructuredPojo {
      * <note>
      * <p>
      * If the <code>EndPosition</code> isn't located on a road, it's <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     * >snapped to a nearby road</a>.
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/nap-to-nearby-road.html">snapped to a nearby
+     * road</a>.
      * </p>
      * </note>
      * 
@@ -299,8 +299,8 @@ public class Leg implements Serializable, Cloneable, StructuredPojo {
      *        The terminating position of the leg. Follows the format <code>[longitude,latitude]</code>.</p> <note>
      *        <p>
      *        If the <code>EndPosition</code> isn't located on a road, it's <a
-     *        href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     *        >snapped to a nearby road</a>.
+     *        href="https://docs.aws.amazon.com/location/latest/developerguide/nap-to-nearby-road.html">snapped to a
+     *        nearby road</a>.
      *        </p>
      */
 
@@ -320,8 +320,8 @@ public class Leg implements Serializable, Cloneable, StructuredPojo {
      * <note>
      * <p>
      * If the <code>EndPosition</code> isn't located on a road, it's <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     * >snapped to a nearby road</a>.
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/nap-to-nearby-road.html">snapped to a nearby
+     * road</a>.
      * </p>
      * </note>
      * <p>
@@ -334,8 +334,8 @@ public class Leg implements Serializable, Cloneable, StructuredPojo {
      *        The terminating position of the leg. Follows the format <code>[longitude,latitude]</code>.</p> <note>
      *        <p>
      *        If the <code>EndPosition</code> isn't located on a road, it's <a
-     *        href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     *        >snapped to a nearby road</a>.
+     *        href="https://docs.aws.amazon.com/location/latest/developerguide/nap-to-nearby-road.html">snapped to a
+     *        nearby road</a>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -357,8 +357,8 @@ public class Leg implements Serializable, Cloneable, StructuredPojo {
      * <note>
      * <p>
      * If the <code>EndPosition</code> isn't located on a road, it's <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     * >snapped to a nearby road</a>.
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/nap-to-nearby-road.html">snapped to a nearby
+     * road</a>.
      * </p>
      * </note>
      * 
@@ -366,8 +366,8 @@ public class Leg implements Serializable, Cloneable, StructuredPojo {
      *        The terminating position of the leg. Follows the format <code>[longitude,latitude]</code>.</p> <note>
      *        <p>
      *        If the <code>EndPosition</code> isn't located on a road, it's <a
-     *        href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     *        >snapped to a nearby road</a>.
+     *        href="https://docs.aws.amazon.com/location/latest/developerguide/nap-to-nearby-road.html">snapped to a
+     *        nearby road</a>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -424,16 +424,16 @@ public class Leg implements Serializable, Cloneable, StructuredPojo {
      * <note>
      * <p>
      * If the <code>StartPosition</code> isn't located on a road, it's <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     * >snapped to a nearby road</a>.
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">snapped to a nearby
+     * road</a>.
      * </p>
      * </note>
      * 
      * @return The starting position of the leg. Follows the format <code>[longitude,latitude]</code>.</p> <note>
      *         <p>
      *         If the <code>StartPosition</code> isn't located on a road, it's <a
-     *         href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     *         >snapped to a nearby road</a>.
+     *         href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">snapped to a
+     *         nearby road</a>.
      *         </p>
      */
 
@@ -448,8 +448,8 @@ public class Leg implements Serializable, Cloneable, StructuredPojo {
      * <note>
      * <p>
      * If the <code>StartPosition</code> isn't located on a road, it's <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     * >snapped to a nearby road</a>.
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">snapped to a nearby
+     * road</a>.
      * </p>
      * </note>
      * 
@@ -457,8 +457,8 @@ public class Leg implements Serializable, Cloneable, StructuredPojo {
      *        The starting position of the leg. Follows the format <code>[longitude,latitude]</code>.</p> <note>
      *        <p>
      *        If the <code>StartPosition</code> isn't located on a road, it's <a
-     *        href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     *        >snapped to a nearby road</a>.
+     *        href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">snapped to a
+     *        nearby road</a>.
      *        </p>
      */
 
@@ -478,8 +478,8 @@ public class Leg implements Serializable, Cloneable, StructuredPojo {
      * <note>
      * <p>
      * If the <code>StartPosition</code> isn't located on a road, it's <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     * >snapped to a nearby road</a>.
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">snapped to a nearby
+     * road</a>.
      * </p>
      * </note>
      * <p>
@@ -492,8 +492,8 @@ public class Leg implements Serializable, Cloneable, StructuredPojo {
      *        The starting position of the leg. Follows the format <code>[longitude,latitude]</code>.</p> <note>
      *        <p>
      *        If the <code>StartPosition</code> isn't located on a road, it's <a
-     *        href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     *        >snapped to a nearby road</a>.
+     *        href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">snapped to a
+     *        nearby road</a>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -515,8 +515,8 @@ public class Leg implements Serializable, Cloneable, StructuredPojo {
      * <note>
      * <p>
      * If the <code>StartPosition</code> isn't located on a road, it's <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     * >snapped to a nearby road</a>.
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">snapped to a nearby
+     * road</a>.
      * </p>
      * </note>
      * 
@@ -524,8 +524,8 @@ public class Leg implements Serializable, Cloneable, StructuredPojo {
      *        The starting position of the leg. Follows the format <code>[longitude,latitude]</code>.</p> <note>
      *        <p>
      *        If the <code>StartPosition</code> isn't located on a road, it's <a
-     *        href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#snap-to-nearby-road"
-     *        >snapped to a nearby road</a>.
+     *        href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">snapped to a
+     *        nearby road</a>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

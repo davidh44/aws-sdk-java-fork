@@ -134,6 +134,19 @@ public class AbstractAmazonLocationAsync extends AbstractAmazonLocation implemen
     }
 
     @Override
+    public java.util.concurrent.Future<CalculateRouteMatrixResult> calculateRouteMatrixAsync(CalculateRouteMatrixRequest request) {
+
+        return calculateRouteMatrixAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CalculateRouteMatrixResult> calculateRouteMatrixAsync(CalculateRouteMatrixRequest request,
+            com.amazonaws.handlers.AsyncHandler<CalculateRouteMatrixRequest, CalculateRouteMatrixResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateGeofenceCollectionResult> createGeofenceCollectionAsync(CreateGeofenceCollectionRequest request) {
 
         return createGeofenceCollectionAsync(request, null);

@@ -50,19 +50,17 @@ public class ListGeofenceCollectionsResponseEntry implements Serializable, Clone
     private String description;
     /**
      * <p>
-     * The pricing plan for the specified geofence collection.
-     * </p>
-     * <p>
-     * For additional details and restrictions on each pricing plan option, see the <a
-     * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing page</a>.
+     * No longer used. Always returns <code>RequestBasedUsage</code>.
      * </p>
      */
+    @Deprecated
     private String pricingPlan;
     /**
      * <p>
-     * The specified data provider for the geofence collection.
+     * No longer used. Always returns an empty string.
      * </p>
      */
+    @Deprecated
     private String pricingPlanDataSource;
     /**
      * <p>
@@ -207,63 +205,42 @@ public class ListGeofenceCollectionsResponseEntry implements Serializable, Clone
 
     /**
      * <p>
-     * The pricing plan for the specified geofence collection.
-     * </p>
-     * <p>
-     * For additional details and restrictions on each pricing plan option, see the <a
-     * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing page</a>.
+     * No longer used. Always returns <code>RequestBasedUsage</code>.
      * </p>
      * 
      * @param pricingPlan
-     *        The pricing plan for the specified geofence collection.</p>
-     *        <p>
-     *        For additional details and restrictions on each pricing plan option, see the <a
-     *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing page</a>.
+     *        No longer used. Always returns <code>RequestBasedUsage</code>.
      * @see PricingPlan
      */
-
+    @Deprecated
     public void setPricingPlan(String pricingPlan) {
         this.pricingPlan = pricingPlan;
     }
 
     /**
      * <p>
-     * The pricing plan for the specified geofence collection.
-     * </p>
-     * <p>
-     * For additional details and restrictions on each pricing plan option, see the <a
-     * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing page</a>.
+     * No longer used. Always returns <code>RequestBasedUsage</code>.
      * </p>
      * 
-     * @return The pricing plan for the specified geofence collection.</p>
-     *         <p>
-     *         For additional details and restrictions on each pricing plan option, see the <a
-     *         href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing page</a>.
+     * @return No longer used. Always returns <code>RequestBasedUsage</code>.
      * @see PricingPlan
      */
-
+    @Deprecated
     public String getPricingPlan() {
         return this.pricingPlan;
     }
 
     /**
      * <p>
-     * The pricing plan for the specified geofence collection.
-     * </p>
-     * <p>
-     * For additional details and restrictions on each pricing plan option, see the <a
-     * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing page</a>.
+     * No longer used. Always returns <code>RequestBasedUsage</code>.
      * </p>
      * 
      * @param pricingPlan
-     *        The pricing plan for the specified geofence collection.</p>
-     *        <p>
-     *        For additional details and restrictions on each pricing plan option, see the <a
-     *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing page</a>.
+     *        No longer used. Always returns <code>RequestBasedUsage</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PricingPlan
      */
-
+    @Deprecated
     public ListGeofenceCollectionsResponseEntry withPricingPlan(String pricingPlan) {
         setPricingPlan(pricingPlan);
         return this;
@@ -271,22 +248,15 @@ public class ListGeofenceCollectionsResponseEntry implements Serializable, Clone
 
     /**
      * <p>
-     * The pricing plan for the specified geofence collection.
-     * </p>
-     * <p>
-     * For additional details and restrictions on each pricing plan option, see the <a
-     * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing page</a>.
+     * No longer used. Always returns <code>RequestBasedUsage</code>.
      * </p>
      * 
      * @param pricingPlan
-     *        The pricing plan for the specified geofence collection.</p>
-     *        <p>
-     *        For additional details and restrictions on each pricing plan option, see the <a
-     *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing page</a>.
+     *        No longer used. Always returns <code>RequestBasedUsage</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PricingPlan
      */
-
+    @Deprecated
     public ListGeofenceCollectionsResponseEntry withPricingPlan(PricingPlan pricingPlan) {
         this.pricingPlan = pricingPlan.toString();
         return this;
@@ -294,39 +264,39 @@ public class ListGeofenceCollectionsResponseEntry implements Serializable, Clone
 
     /**
      * <p>
-     * The specified data provider for the geofence collection.
+     * No longer used. Always returns an empty string.
      * </p>
      * 
      * @param pricingPlanDataSource
-     *        The specified data provider for the geofence collection.
+     *        No longer used. Always returns an empty string.
      */
-
+    @Deprecated
     public void setPricingPlanDataSource(String pricingPlanDataSource) {
         this.pricingPlanDataSource = pricingPlanDataSource;
     }
 
     /**
      * <p>
-     * The specified data provider for the geofence collection.
+     * No longer used. Always returns an empty string.
      * </p>
      * 
-     * @return The specified data provider for the geofence collection.
+     * @return No longer used. Always returns an empty string.
      */
-
+    @Deprecated
     public String getPricingPlanDataSource() {
         return this.pricingPlanDataSource;
     }
 
     /**
      * <p>
-     * The specified data provider for the geofence collection.
+     * No longer used. Always returns an empty string.
      * </p>
      * 
      * @param pricingPlanDataSource
-     *        The specified data provider for the geofence collection.
+     *        No longer used. Always returns an empty string.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public ListGeofenceCollectionsResponseEntry withPricingPlanDataSource(String pricingPlanDataSource) {
         setPricingPlanDataSource(pricingPlanDataSource);
         return this;

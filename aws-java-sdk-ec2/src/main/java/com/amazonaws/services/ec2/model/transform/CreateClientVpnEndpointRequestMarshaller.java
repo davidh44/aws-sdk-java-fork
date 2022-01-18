@@ -213,6 +213,22 @@ public class CreateClientVpnEndpointRequestMarshaller implements Marshaller<Requ
             }
         }
 
+        if (createClientVpnEndpointRequest.getSessionTimeoutHours() != null) {
+            request.addParameter("SessionTimeoutHours", StringUtils.fromInteger(createClientVpnEndpointRequest.getSessionTimeoutHours()));
+        }
+
+        ClientLoginBannerOptions clientLoginBannerOptions = createClientVpnEndpointRequest.getClientLoginBannerOptions();
+        if (clientLoginBannerOptions != null) {
+
+            if (clientLoginBannerOptions.getEnabled() != null) {
+                request.addParameter("ClientLoginBannerOptions.Enabled", StringUtils.fromBoolean(clientLoginBannerOptions.getEnabled()));
+            }
+
+            if (clientLoginBannerOptions.getBannerText() != null) {
+                request.addParameter("ClientLoginBannerOptions.BannerText", StringUtils.fromString(clientLoginBannerOptions.getBannerText()));
+            }
+        }
+
         return request;
     }
 

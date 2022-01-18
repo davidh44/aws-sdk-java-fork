@@ -70,13 +70,10 @@ public class DescribeMapResult extends com.amazonaws.AmazonWebServiceResult<com.
     private String mapName;
     /**
      * <p>
-     * The pricing plan selected for the specified map resource.
+     * No longer used. Always returns <code>RequestBasedUsage</code>.
      * </p>
-     * 
-     * <pre>
-     * <code> &lt;p&gt;For additional details and restrictions on each pricing plan option, see &lt;a href=&quot;https://aws.amazon.com/location/pricing/&quot;&gt;Amazon Location Service pricing&lt;/a&gt;.&lt;/p&gt; </code>
-     * </pre>
      */
+    @Deprecated
     private String pricingPlan;
     /**
      * <p>
@@ -386,63 +383,42 @@ public class DescribeMapResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The pricing plan selected for the specified map resource.
+     * No longer used. Always returns <code>RequestBasedUsage</code>.
      * </p>
      * 
-     * <pre>
-     * <code> &lt;p&gt;For additional details and restrictions on each pricing plan option, see &lt;a href=&quot;https://aws.amazon.com/location/pricing/&quot;&gt;Amazon Location Service pricing&lt;/a&gt;.&lt;/p&gt; </code>
-     * </pre>
-     * 
      * @param pricingPlan
-     *        The pricing plan selected for the specified map resource.</p>
-     * 
-     *        <pre>
-     * <code> &lt;p&gt;For additional details and restrictions on each pricing plan option, see &lt;a href=&quot;https://aws.amazon.com/location/pricing/&quot;&gt;Amazon Location Service pricing&lt;/a&gt;.&lt;/p&gt; </code>
+     *        No longer used. Always returns <code>RequestBasedUsage</code>.
      * @see PricingPlan
      */
-
+    @Deprecated
     public void setPricingPlan(String pricingPlan) {
         this.pricingPlan = pricingPlan;
     }
 
     /**
      * <p>
-     * The pricing plan selected for the specified map resource.
+     * No longer used. Always returns <code>RequestBasedUsage</code>.
      * </p>
      * 
-     * <pre>
-     * <code> &lt;p&gt;For additional details and restrictions on each pricing plan option, see &lt;a href=&quot;https://aws.amazon.com/location/pricing/&quot;&gt;Amazon Location Service pricing&lt;/a&gt;.&lt;/p&gt; </code>
-     * </pre>
-     * 
-     * @return The pricing plan selected for the specified map resource.</p>
-     * 
-     *         <pre>
-     * <code> &lt;p&gt;For additional details and restrictions on each pricing plan option, see &lt;a href=&quot;https://aws.amazon.com/location/pricing/&quot;&gt;Amazon Location Service pricing&lt;/a&gt;.&lt;/p&gt; </code>
+     * @return No longer used. Always returns <code>RequestBasedUsage</code>.
      * @see PricingPlan
      */
-
+    @Deprecated
     public String getPricingPlan() {
         return this.pricingPlan;
     }
 
     /**
      * <p>
-     * The pricing plan selected for the specified map resource.
+     * No longer used. Always returns <code>RequestBasedUsage</code>.
      * </p>
      * 
-     * <pre>
-     * <code> &lt;p&gt;For additional details and restrictions on each pricing plan option, see &lt;a href=&quot;https://aws.amazon.com/location/pricing/&quot;&gt;Amazon Location Service pricing&lt;/a&gt;.&lt;/p&gt; </code>
-     * </pre>
-     * 
      * @param pricingPlan
-     *        The pricing plan selected for the specified map resource.</p>
-     * 
-     *        <pre>
-     * <code> &lt;p&gt;For additional details and restrictions on each pricing plan option, see &lt;a href=&quot;https://aws.amazon.com/location/pricing/&quot;&gt;Amazon Location Service pricing&lt;/a&gt;.&lt;/p&gt; </code>
+     *        No longer used. Always returns <code>RequestBasedUsage</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PricingPlan
      */
-
+    @Deprecated
     public DescribeMapResult withPricingPlan(String pricingPlan) {
         setPricingPlan(pricingPlan);
         return this;
@@ -450,22 +426,15 @@ public class DescribeMapResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The pricing plan selected for the specified map resource.
+     * No longer used. Always returns <code>RequestBasedUsage</code>.
      * </p>
      * 
-     * <pre>
-     * <code> &lt;p&gt;For additional details and restrictions on each pricing plan option, see &lt;a href=&quot;https://aws.amazon.com/location/pricing/&quot;&gt;Amazon Location Service pricing&lt;/a&gt;.&lt;/p&gt; </code>
-     * </pre>
-     * 
      * @param pricingPlan
-     *        The pricing plan selected for the specified map resource.</p>
-     * 
-     *        <pre>
-     * <code> &lt;p&gt;For additional details and restrictions on each pricing plan option, see &lt;a href=&quot;https://aws.amazon.com/location/pricing/&quot;&gt;Amazon Location Service pricing&lt;/a&gt;.&lt;/p&gt; </code>
+     *        No longer used. Always returns <code>RequestBasedUsage</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PricingPlan
      */
-
+    @Deprecated
     public DescribeMapResult withPricingPlan(PricingPlan pricingPlan) {
         this.pricingPlan = pricingPlan.toString();
         return this;

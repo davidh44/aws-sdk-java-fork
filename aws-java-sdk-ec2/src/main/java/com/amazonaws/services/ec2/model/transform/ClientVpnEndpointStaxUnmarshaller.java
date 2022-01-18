@@ -174,6 +174,16 @@ public class ClientVpnEndpointStaxUnmarshaller implements Unmarshaller<ClientVpn
                     clientVpnEndpoint.setClientConnectOptions(ClientConnectResponseOptionsStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("sessionTimeoutHours", targetDepth)) {
+                    clientVpnEndpoint.setSessionTimeoutHours(IntegerStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("clientLoginBannerOptions", targetDepth)) {
+                    clientVpnEndpoint.setClientLoginBannerOptions(ClientLoginBannerResponseOptionsStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return clientVpnEndpoint;

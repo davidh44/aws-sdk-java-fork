@@ -52,19 +52,17 @@ public class DescribeTrackerResult extends com.amazonaws.AmazonWebServiceResult<
     private String positionFiltering;
     /**
      * <p>
-     * The pricing plan selected for the specified tracker resource.
-     * </p>
-     * <p>
-     * For additional details and restrictions on each pricing plan option, see <a
-     * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
+     * Always returns <code>RequestBasedUsage</code>.
      * </p>
      */
+    @Deprecated
     private String pricingPlan;
     /**
      * <p>
-     * The specified data provider for the tracker resource.
+     * No longer used. Always returns an empty string.
      * </p>
      */
+    @Deprecated
     private String pricingPlanDataSource;
     /**
      * <p>
@@ -302,63 +300,42 @@ public class DescribeTrackerResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The pricing plan selected for the specified tracker resource.
-     * </p>
-     * <p>
-     * For additional details and restrictions on each pricing plan option, see <a
-     * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
+     * Always returns <code>RequestBasedUsage</code>.
      * </p>
      * 
      * @param pricingPlan
-     *        The pricing plan selected for the specified tracker resource.</p>
-     *        <p>
-     *        For additional details and restrictions on each pricing plan option, see <a
-     *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
+     *        Always returns <code>RequestBasedUsage</code>.
      * @see PricingPlan
      */
-
+    @Deprecated
     public void setPricingPlan(String pricingPlan) {
         this.pricingPlan = pricingPlan;
     }
 
     /**
      * <p>
-     * The pricing plan selected for the specified tracker resource.
-     * </p>
-     * <p>
-     * For additional details and restrictions on each pricing plan option, see <a
-     * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
+     * Always returns <code>RequestBasedUsage</code>.
      * </p>
      * 
-     * @return The pricing plan selected for the specified tracker resource.</p>
-     *         <p>
-     *         For additional details and restrictions on each pricing plan option, see <a
-     *         href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
+     * @return Always returns <code>RequestBasedUsage</code>.
      * @see PricingPlan
      */
-
+    @Deprecated
     public String getPricingPlan() {
         return this.pricingPlan;
     }
 
     /**
      * <p>
-     * The pricing plan selected for the specified tracker resource.
-     * </p>
-     * <p>
-     * For additional details and restrictions on each pricing plan option, see <a
-     * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
+     * Always returns <code>RequestBasedUsage</code>.
      * </p>
      * 
      * @param pricingPlan
-     *        The pricing plan selected for the specified tracker resource.</p>
-     *        <p>
-     *        For additional details and restrictions on each pricing plan option, see <a
-     *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
+     *        Always returns <code>RequestBasedUsage</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PricingPlan
      */
-
+    @Deprecated
     public DescribeTrackerResult withPricingPlan(String pricingPlan) {
         setPricingPlan(pricingPlan);
         return this;
@@ -366,22 +343,15 @@ public class DescribeTrackerResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The pricing plan selected for the specified tracker resource.
-     * </p>
-     * <p>
-     * For additional details and restrictions on each pricing plan option, see <a
-     * href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
+     * Always returns <code>RequestBasedUsage</code>.
      * </p>
      * 
      * @param pricingPlan
-     *        The pricing plan selected for the specified tracker resource.</p>
-     *        <p>
-     *        For additional details and restrictions on each pricing plan option, see <a
-     *        href="https://aws.amazon.com/location/pricing/">Amazon Location Service pricing</a>.
+     *        Always returns <code>RequestBasedUsage</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PricingPlan
      */
-
+    @Deprecated
     public DescribeTrackerResult withPricingPlan(PricingPlan pricingPlan) {
         this.pricingPlan = pricingPlan.toString();
         return this;
@@ -389,39 +359,39 @@ public class DescribeTrackerResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The specified data provider for the tracker resource.
+     * No longer used. Always returns an empty string.
      * </p>
      * 
      * @param pricingPlanDataSource
-     *        The specified data provider for the tracker resource.
+     *        No longer used. Always returns an empty string.
      */
-
+    @Deprecated
     public void setPricingPlanDataSource(String pricingPlanDataSource) {
         this.pricingPlanDataSource = pricingPlanDataSource;
     }
 
     /**
      * <p>
-     * The specified data provider for the tracker resource.
+     * No longer used. Always returns an empty string.
      * </p>
      * 
-     * @return The specified data provider for the tracker resource.
+     * @return No longer used. Always returns an empty string.
      */
-
+    @Deprecated
     public String getPricingPlanDataSource() {
         return this.pricingPlanDataSource;
     }
 
     /**
      * <p>
-     * The specified data provider for the tracker resource.
+     * No longer used. Always returns an empty string.
      * </p>
      * 
      * @param pricingPlanDataSource
-     *        The specified data provider for the tracker resource.
+     *        No longer used. Always returns an empty string.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public DescribeTrackerResult withPricingPlanDataSource(String pricingPlanDataSource) {
         setPricingPlanDataSource(pricingPlanDataSource);
         return this;

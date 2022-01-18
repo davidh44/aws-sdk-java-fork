@@ -37,7 +37,9 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <b> <code>readOnly</code> </b> - Optional. Can be set to <code>Equals</code> a value of <code>true</code> or
-     * <code>false</code>. A value of <code>false</code> logs both <code>read</code> and <code>write</code> events.
+     * <code>false</code>. If you do not add this field, CloudTrail logs both both <code>read</code> and
+     * <code>write</code> events. A value of <code>true</code> logs only <code>read</code> events. A value of
+     * <code>false</code> logs only <code>write</code> events.
      * </p>
      * </li>
      * <li>
@@ -108,6 +110,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::DynamoDB::Stream</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Glue::Table</code>
      * </p>
      * </li>
      * </ul>
@@ -233,6 +240,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;/stream/&lt;date_time&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::Glue::Table</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:glue:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;database_name&gt;/&lt;table_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -293,7 +311,9 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <b> <code>readOnly</code> </b> - Optional. Can be set to <code>Equals</code> a value of <code>true</code> or
-     * <code>false</code>. A value of <code>false</code> logs both <code>read</code> and <code>write</code> events.
+     * <code>false</code>. If you do not add this field, CloudTrail logs both both <code>read</code> and
+     * <code>write</code> events. A value of <code>true</code> logs only <code>read</code> events. A value of
+     * <code>false</code> logs only <code>write</code> events.
      * </p>
      * </li>
      * <li>
@@ -364,6 +384,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::DynamoDB::Stream</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Glue::Table</code>
      * </p>
      * </li>
      * </ul>
@@ -492,6 +517,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::Glue::Table</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:glue:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;database_name&gt;/&lt;table_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
      * </li>
      * </ul>
      * 
@@ -503,8 +539,9 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <b> <code>readOnly</code> </b> - Optional. Can be set to <code>Equals</code> a value of <code>true</code>
-     *        or <code>false</code>. A value of <code>false</code> logs both <code>read</code> and <code>write</code>
-     *        events.
+     *        or <code>false</code>. If you do not add this field, CloudTrail logs both both <code>read</code> and
+     *        <code>write</code> events. A value of <code>true</code> logs only <code>read</code> events. A value of
+     *        <code>false</code> logs only <code>write</code> events.
      *        </p>
      *        </li>
      *        <li>
@@ -575,6 +612,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>AWS::DynamoDB::Stream</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::Glue::Table</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -703,6 +745,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </p>
      *        </li>
      *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::Glue::Table</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:glue:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;database_name&gt;/&lt;table_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
      *        </li>
      */
 
@@ -719,7 +772,9 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <b> <code>readOnly</code> </b> - Optional. Can be set to <code>Equals</code> a value of <code>true</code> or
-     * <code>false</code>. A value of <code>false</code> logs both <code>read</code> and <code>write</code> events.
+     * <code>false</code>. If you do not add this field, CloudTrail logs both both <code>read</code> and
+     * <code>write</code> events. A value of <code>true</code> logs only <code>read</code> events. A value of
+     * <code>false</code> logs only <code>write</code> events.
      * </p>
      * </li>
      * <li>
@@ -790,6 +845,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::DynamoDB::Stream</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Glue::Table</code>
      * </p>
      * </li>
      * </ul>
@@ -918,6 +978,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::Glue::Table</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:glue:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;database_name&gt;/&lt;table_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
      * </li>
      * </ul>
      * 
@@ -928,8 +999,9 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <li>
      *         <p>
      *         <b> <code>readOnly</code> </b> - Optional. Can be set to <code>Equals</code> a value of <code>true</code>
-     *         or <code>false</code>. A value of <code>false</code> logs both <code>read</code> and <code>write</code>
-     *         events.
+     *         or <code>false</code>. If you do not add this field, CloudTrail logs both both <code>read</code> and
+     *         <code>write</code> events. A value of <code>true</code> logs only <code>read</code> events. A value of
+     *         <code>false</code> logs only <code>write</code> events.
      *         </p>
      *         </li>
      *         <li>
@@ -1000,6 +1072,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <li>
      *         <p>
      *         <code>AWS::DynamoDB::Stream</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::Glue::Table</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -1128,6 +1205,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </p>
      *         </li>
      *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::Glue::Table</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:glue:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;database_name&gt;/&lt;table_name&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
      *         </li>
      */
 
@@ -1144,7 +1232,9 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <b> <code>readOnly</code> </b> - Optional. Can be set to <code>Equals</code> a value of <code>true</code> or
-     * <code>false</code>. A value of <code>false</code> logs both <code>read</code> and <code>write</code> events.
+     * <code>false</code>. If you do not add this field, CloudTrail logs both both <code>read</code> and
+     * <code>write</code> events. A value of <code>true</code> logs only <code>read</code> events. A value of
+     * <code>false</code> logs only <code>write</code> events.
      * </p>
      * </li>
      * <li>
@@ -1215,6 +1305,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::DynamoDB::Stream</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Glue::Table</code>
      * </p>
      * </li>
      * </ul>
@@ -1343,6 +1438,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::Glue::Table</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:glue:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;database_name&gt;/&lt;table_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
      * </li>
      * </ul>
      * 
@@ -1354,8 +1460,9 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <b> <code>readOnly</code> </b> - Optional. Can be set to <code>Equals</code> a value of <code>true</code>
-     *        or <code>false</code>. A value of <code>false</code> logs both <code>read</code> and <code>write</code>
-     *        events.
+     *        or <code>false</code>. If you do not add this field, CloudTrail logs both both <code>read</code> and
+     *        <code>write</code> events. A value of <code>true</code> logs only <code>read</code> events. A value of
+     *        <code>false</code> logs only <code>write</code> events.
      *        </p>
      *        </li>
      *        <li>
@@ -1426,6 +1533,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>AWS::DynamoDB::Stream</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::Glue::Table</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -1551,6 +1663,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;/stream/&lt;date_time&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::Glue::Table</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:glue:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;database_name&gt;/&lt;table_name&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
