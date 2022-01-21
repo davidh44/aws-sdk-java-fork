@@ -56,6 +56,12 @@ public class ContentRedactionJsonUnmarshaller implements Unmarshaller<ContentRed
                     context.nextToken();
                     contentRedaction.setRedactionOutput(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("PiiEntityTypes", targetDepth)) {
+                    context.nextToken();
+                    contentRedaction.setPiiEntityTypes(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

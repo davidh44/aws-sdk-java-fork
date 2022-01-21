@@ -48,6 +48,10 @@ public class WebvttDestinationSettingsJsonUnmarshaller implements Unmarshaller<W
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("accessibility", targetDepth)) {
+                    context.nextToken();
+                    webvttDestinationSettings.setAccessibility(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("stylePassthrough", targetDepth)) {
                     context.nextToken();
                     webvttDestinationSettings.setStylePassthrough(context.getUnmarshaller(String.class).unmarshall(context));

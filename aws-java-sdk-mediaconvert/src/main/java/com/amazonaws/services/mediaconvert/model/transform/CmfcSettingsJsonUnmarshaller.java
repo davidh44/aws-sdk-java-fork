@@ -80,6 +80,10 @@ public class CmfcSettingsJsonUnmarshaller implements Unmarshaller<CmfcSettings, 
                     context.nextToken();
                     cmfcSettings.setScte35Source(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("timedMetadata", targetDepth)) {
+                    context.nextToken();
+                    cmfcSettings.setTimedMetadata(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

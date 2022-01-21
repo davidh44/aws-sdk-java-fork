@@ -31,12 +31,103 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 public class WebvttDestinationSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
+     * Specify whether to flag this caption track as accessibility in your HLS/CMAF parent manifest. When you choose
+     * ENABLED, MediaConvert includes the parameters
+     * CHARACTERISTICS="public.accessibility.describes-spoken-dialog,public.accessibility.describes-music-and-sound" and
+     * AUTOSELECT="YES" in the EXT-X-MEDIA entry for this track. When you keep the default choice, DISABLED, MediaConvert
+     * leaves this parameter out.
+     */
+    private String accessibility;
+    /**
      * Set Style passthrough (StylePassthrough) to ENABLED to use the available style, color, and position information
      * from your input captions. MediaConvert uses default settings for any missing style and position information in
      * your input captions. Set Style passthrough to DISABLED, or leave blank, to ignore the style and position
      * information from your input captions and use simplified output captions.
      */
     private String stylePassthrough;
+
+    /**
+     * Specify whether to flag this caption track as accessibility in your HLS/CMAF parent manifest. When you choose
+     * ENABLED, MediaConvert includes the parameters
+     * CHARACTERISTICS="public.accessibility.describes-spoken-dialog,public.accessibility.describes-music-and-sound" and
+     * AUTOSELECT="YES" in the EXT-X-MEDIA entry for this track. When you keep the default choice, DISABLED, MediaConvert
+     * leaves this parameter out.
+     * 
+     * @param accessibility
+     *        Specify whether to flag this caption track as accessibility in your HLS/CMAF parent manifest. When you
+     *        choose ENABLED, MediaConvert includes the parameters CHARACTERISTICS=
+     *        "public.accessibility.describes-spoken-dialog,public.accessibility.describes-music-and-sound" and
+     *        AUTOSELECT="YES" in the EXT-X-MEDIA entry for this track. When you keep the default choice, DISABLED,
+     *        MediaConvert leaves this parameter out.
+     * @see WebvttAccessibilitySubs
+     */
+
+    public void setAccessibility(String accessibility) {
+        this.accessibility = accessibility;
+    }
+
+    /**
+     * Specify whether to flag this caption track as accessibility in your HLS/CMAF parent manifest. When you choose
+     * ENABLED, MediaConvert includes the parameters
+     * CHARACTERISTICS="public.accessibility.describes-spoken-dialog,public.accessibility.describes-music-and-sound" and
+     * AUTOSELECT="YES" in the EXT-X-MEDIA entry for this track. When you keep the default choice, DISABLED, MediaConvert
+     * leaves this parameter out.
+     * 
+     * @return Specify whether to flag this caption track as accessibility in your HLS/CMAF parent manifest. When you
+     *         choose ENABLED, MediaConvert includes the parameters CHARACTERISTICS=
+     *         "public.accessibility.describes-spoken-dialog,public.accessibility.describes-music-and-sound" and
+     *         AUTOSELECT="YES" in the EXT-X-MEDIA entry for this track. When you keep the default choice, DISABLED,
+     *         MediaConvert leaves this parameter out.
+     * @see WebvttAccessibilitySubs
+     */
+
+    public String getAccessibility() {
+        return this.accessibility;
+    }
+
+    /**
+     * Specify whether to flag this caption track as accessibility in your HLS/CMAF parent manifest. When you choose
+     * ENABLED, MediaConvert includes the parameters
+     * CHARACTERISTICS="public.accessibility.describes-spoken-dialog,public.accessibility.describes-music-and-sound" and
+     * AUTOSELECT="YES" in the EXT-X-MEDIA entry for this track. When you keep the default choice, DISABLED, MediaConvert
+     * leaves this parameter out.
+     * 
+     * @param accessibility
+     *        Specify whether to flag this caption track as accessibility in your HLS/CMAF parent manifest. When you
+     *        choose ENABLED, MediaConvert includes the parameters CHARACTERISTICS=
+     *        "public.accessibility.describes-spoken-dialog,public.accessibility.describes-music-and-sound" and
+     *        AUTOSELECT="YES" in the EXT-X-MEDIA entry for this track. When you keep the default choice, DISABLED,
+     *        MediaConvert leaves this parameter out.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see WebvttAccessibilitySubs
+     */
+
+    public WebvttDestinationSettings withAccessibility(String accessibility) {
+        setAccessibility(accessibility);
+        return this;
+    }
+
+    /**
+     * Specify whether to flag this caption track as accessibility in your HLS/CMAF parent manifest. When you choose
+     * ENABLED, MediaConvert includes the parameters
+     * CHARACTERISTICS="public.accessibility.describes-spoken-dialog,public.accessibility.describes-music-and-sound" and
+     * AUTOSELECT="YES" in the EXT-X-MEDIA entry for this track. When you keep the default choice, DISABLED, MediaConvert
+     * leaves this parameter out.
+     * 
+     * @param accessibility
+     *        Specify whether to flag this caption track as accessibility in your HLS/CMAF parent manifest. When you
+     *        choose ENABLED, MediaConvert includes the parameters CHARACTERISTICS=
+     *        "public.accessibility.describes-spoken-dialog,public.accessibility.describes-music-and-sound" and
+     *        AUTOSELECT="YES" in the EXT-X-MEDIA entry for this track. When you keep the default choice, DISABLED,
+     *        MediaConvert leaves this parameter out.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see WebvttAccessibilitySubs
+     */
+
+    public WebvttDestinationSettings withAccessibility(WebvttAccessibilitySubs accessibility) {
+        this.accessibility = accessibility.toString();
+        return this;
+    }
 
     /**
      * Set Style passthrough (StylePassthrough) to ENABLED to use the available style, color, and position information
@@ -125,6 +216,8 @@ public class WebvttDestinationSettings implements Serializable, Cloneable, Struc
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getAccessibility() != null)
+            sb.append("Accessibility: ").append(getAccessibility()).append(",");
         if (getStylePassthrough() != null)
             sb.append("StylePassthrough: ").append(getStylePassthrough());
         sb.append("}");
@@ -141,6 +234,10 @@ public class WebvttDestinationSettings implements Serializable, Cloneable, Struc
         if (obj instanceof WebvttDestinationSettings == false)
             return false;
         WebvttDestinationSettings other = (WebvttDestinationSettings) obj;
+        if (other.getAccessibility() == null ^ this.getAccessibility() == null)
+            return false;
+        if (other.getAccessibility() != null && other.getAccessibility().equals(this.getAccessibility()) == false)
+            return false;
         if (other.getStylePassthrough() == null ^ this.getStylePassthrough() == null)
             return false;
         if (other.getStylePassthrough() != null && other.getStylePassthrough().equals(this.getStylePassthrough()) == false)
@@ -153,6 +250,7 @@ public class WebvttDestinationSettings implements Serializable, Cloneable, Struc
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getAccessibility() == null) ? 0 : getAccessibility().hashCode());
         hashCode = prime * hashCode + ((getStylePassthrough() == null) ? 0 : getStylePassthrough().hashCode());
         return hashCode;
     }

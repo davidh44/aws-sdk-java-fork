@@ -43,6 +43,8 @@ public class InputMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("decryptionSettings").build();
     private static final MarshallingInfo<String> DENOISEFILTER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("denoiseFilter").build();
+    private static final MarshallingInfo<String> DOLBYVISIONMETADATAXML_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dolbyVisionMetadataXml").build();
     private static final MarshallingInfo<String> FILEINPUT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("fileInput").build();
     private static final MarshallingInfo<String> FILTERENABLE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -93,6 +95,7 @@ public class InputMarshaller {
             protocolMarshaller.marshall(input.getDeblockFilter(), DEBLOCKFILTER_BINDING);
             protocolMarshaller.marshall(input.getDecryptionSettings(), DECRYPTIONSETTINGS_BINDING);
             protocolMarshaller.marshall(input.getDenoiseFilter(), DENOISEFILTER_BINDING);
+            protocolMarshaller.marshall(input.getDolbyVisionMetadataXml(), DOLBYVISIONMETADATAXML_BINDING);
             protocolMarshaller.marshall(input.getFileInput(), FILEINPUT_BINDING);
             protocolMarshaller.marshall(input.getFilterEnable(), FILTERENABLE_BINDING);
             protocolMarshaller.marshall(input.getFilterStrength(), FILTERSTRENGTH_BINDING);

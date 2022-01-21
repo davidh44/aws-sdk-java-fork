@@ -104,6 +104,11 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      * want those SCTE-35 markers in this output.
      */
     private String scte35Source;
+    /**
+     * Applies to CMAF outputs. Use this setting to specify whether the service inserts the ID3 timed metadata from the
+     * input in this output.
+     */
+    private String timedMetadata;
 
     /**
      * Specify this setting only when your output will be consumed by a downstream repackaging workflow that is
@@ -826,6 +831,65 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * Applies to CMAF outputs. Use this setting to specify whether the service inserts the ID3 timed metadata from the
+     * input in this output.
+     * 
+     * @param timedMetadata
+     *        Applies to CMAF outputs. Use this setting to specify whether the service inserts the ID3 timed metadata
+     *        from the input in this output.
+     * @see CmfcTimedMetadata
+     */
+
+    public void setTimedMetadata(String timedMetadata) {
+        this.timedMetadata = timedMetadata;
+    }
+
+    /**
+     * Applies to CMAF outputs. Use this setting to specify whether the service inserts the ID3 timed metadata from the
+     * input in this output.
+     * 
+     * @return Applies to CMAF outputs. Use this setting to specify whether the service inserts the ID3 timed metadata
+     *         from the input in this output.
+     * @see CmfcTimedMetadata
+     */
+
+    public String getTimedMetadata() {
+        return this.timedMetadata;
+    }
+
+    /**
+     * Applies to CMAF outputs. Use this setting to specify whether the service inserts the ID3 timed metadata from the
+     * input in this output.
+     * 
+     * @param timedMetadata
+     *        Applies to CMAF outputs. Use this setting to specify whether the service inserts the ID3 timed metadata
+     *        from the input in this output.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CmfcTimedMetadata
+     */
+
+    public CmfcSettings withTimedMetadata(String timedMetadata) {
+        setTimedMetadata(timedMetadata);
+        return this;
+    }
+
+    /**
+     * Applies to CMAF outputs. Use this setting to specify whether the service inserts the ID3 timed metadata from the
+     * input in this output.
+     * 
+     * @param timedMetadata
+     *        Applies to CMAF outputs. Use this setting to specify whether the service inserts the ID3 timed metadata
+     *        from the input in this output.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CmfcTimedMetadata
+     */
+
+    public CmfcSettings withTimedMetadata(CmfcTimedMetadata timedMetadata) {
+        this.timedMetadata = timedMetadata.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -852,7 +916,9 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
         if (getScte35Esam() != null)
             sb.append("Scte35Esam: ").append(getScte35Esam()).append(",");
         if (getScte35Source() != null)
-            sb.append("Scte35Source: ").append(getScte35Source());
+            sb.append("Scte35Source: ").append(getScte35Source()).append(",");
+        if (getTimedMetadata() != null)
+            sb.append("TimedMetadata: ").append(getTimedMetadata());
         sb.append("}");
         return sb.toString();
     }
@@ -899,6 +965,10 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getScte35Source() != null && other.getScte35Source().equals(this.getScte35Source()) == false)
             return false;
+        if (other.getTimedMetadata() == null ^ this.getTimedMetadata() == null)
+            return false;
+        if (other.getTimedMetadata() != null && other.getTimedMetadata().equals(this.getTimedMetadata()) == false)
+            return false;
         return true;
     }
 
@@ -915,6 +985,7 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getIFrameOnlyManifest() == null) ? 0 : getIFrameOnlyManifest().hashCode());
         hashCode = prime * hashCode + ((getScte35Esam() == null) ? 0 : getScte35Esam().hashCode());
         hashCode = prime * hashCode + ((getScte35Source() == null) ? 0 : getScte35Source().hashCode());
+        hashCode = prime * hashCode + ((getTimedMetadata() == null) ? 0 : getTimedMetadata().hashCode());
         return hashCode;
     }
 

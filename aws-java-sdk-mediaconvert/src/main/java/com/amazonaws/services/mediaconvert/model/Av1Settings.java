@@ -31,6 +31,8 @@ public class Av1Settings implements Serializable, Cloneable, StructuredPojo {
      * to Spatial adaptive quantization (spatialAdaptiveQuantization).
      */
     private String adaptiveQuantization;
+    /** Specify the Bit depth (Av1BitDepth). You can choose 8-bit (BIT_8) or 10-bit (BIT_10). */
+    private String bitDepth;
     /**
      * If you are using the console, use the Framerate setting to specify the frame rate for this output. If you want to
      * keep the same frame rate as the input video, choose Follow source. If you want to do frame rate conversion,
@@ -168,6 +170,57 @@ public class Av1Settings implements Serializable, Cloneable, StructuredPojo {
 
     public Av1Settings withAdaptiveQuantization(Av1AdaptiveQuantization adaptiveQuantization) {
         this.adaptiveQuantization = adaptiveQuantization.toString();
+        return this;
+    }
+
+    /**
+     * Specify the Bit depth (Av1BitDepth). You can choose 8-bit (BIT_8) or 10-bit (BIT_10).
+     * 
+     * @param bitDepth
+     *        Specify the Bit depth (Av1BitDepth). You can choose 8-bit (BIT_8) or 10-bit (BIT_10).
+     * @see Av1BitDepth
+     */
+
+    public void setBitDepth(String bitDepth) {
+        this.bitDepth = bitDepth;
+    }
+
+    /**
+     * Specify the Bit depth (Av1BitDepth). You can choose 8-bit (BIT_8) or 10-bit (BIT_10).
+     * 
+     * @return Specify the Bit depth (Av1BitDepth). You can choose 8-bit (BIT_8) or 10-bit (BIT_10).
+     * @see Av1BitDepth
+     */
+
+    public String getBitDepth() {
+        return this.bitDepth;
+    }
+
+    /**
+     * Specify the Bit depth (Av1BitDepth). You can choose 8-bit (BIT_8) or 10-bit (BIT_10).
+     * 
+     * @param bitDepth
+     *        Specify the Bit depth (Av1BitDepth). You can choose 8-bit (BIT_8) or 10-bit (BIT_10).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see Av1BitDepth
+     */
+
+    public Av1Settings withBitDepth(String bitDepth) {
+        setBitDepth(bitDepth);
+        return this;
+    }
+
+    /**
+     * Specify the Bit depth (Av1BitDepth). You can choose 8-bit (BIT_8) or 10-bit (BIT_10).
+     * 
+     * @param bitDepth
+     *        Specify the Bit depth (Av1BitDepth). You can choose 8-bit (BIT_8) or 10-bit (BIT_10).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see Av1BitDepth
+     */
+
+    public Av1Settings withBitDepth(Av1BitDepth bitDepth) {
+        this.bitDepth = bitDepth.toString();
         return this;
     }
 
@@ -910,6 +963,8 @@ public class Av1Settings implements Serializable, Cloneable, StructuredPojo {
         sb.append("{");
         if (getAdaptiveQuantization() != null)
             sb.append("AdaptiveQuantization: ").append(getAdaptiveQuantization()).append(",");
+        if (getBitDepth() != null)
+            sb.append("BitDepth: ").append(getBitDepth()).append(",");
         if (getFramerateControl() != null)
             sb.append("FramerateControl: ").append(getFramerateControl()).append(",");
         if (getFramerateConversionAlgorithm() != null)
@@ -949,6 +1004,10 @@ public class Av1Settings implements Serializable, Cloneable, StructuredPojo {
         if (other.getAdaptiveQuantization() == null ^ this.getAdaptiveQuantization() == null)
             return false;
         if (other.getAdaptiveQuantization() != null && other.getAdaptiveQuantization().equals(this.getAdaptiveQuantization()) == false)
+            return false;
+        if (other.getBitDepth() == null ^ this.getBitDepth() == null)
+            return false;
+        if (other.getBitDepth() != null && other.getBitDepth().equals(this.getBitDepth()) == false)
             return false;
         if (other.getFramerateControl() == null ^ this.getFramerateControl() == null)
             return false;
@@ -1004,6 +1063,7 @@ public class Av1Settings implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAdaptiveQuantization() == null) ? 0 : getAdaptiveQuantization().hashCode());
+        hashCode = prime * hashCode + ((getBitDepth() == null) ? 0 : getBitDepth().hashCode());
         hashCode = prime * hashCode + ((getFramerateControl() == null) ? 0 : getFramerateControl().hashCode());
         hashCode = prime * hashCode + ((getFramerateConversionAlgorithm() == null) ? 0 : getFramerateConversionAlgorithm().hashCode());
         hashCode = prime * hashCode + ((getFramerateDenominator() == null) ? 0 : getFramerateDenominator().hashCode());

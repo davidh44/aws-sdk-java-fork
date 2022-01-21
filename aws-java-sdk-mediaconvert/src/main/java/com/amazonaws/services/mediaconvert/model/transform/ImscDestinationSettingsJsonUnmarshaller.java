@@ -48,6 +48,10 @@ public class ImscDestinationSettingsJsonUnmarshaller implements Unmarshaller<Ims
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("accessibility", targetDepth)) {
+                    context.nextToken();
+                    imscDestinationSettings.setAccessibility(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("stylePassthrough", targetDepth)) {
                     context.nextToken();
                     imscDestinationSettings.setStylePassthrough(context.getUnmarshaller(String.class).unmarshall(context));

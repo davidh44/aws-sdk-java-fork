@@ -47,6 +47,12 @@ public class ContentRedaction implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private String redactionOutput;
+    /**
+     * <p>
+     * The types of personally identifiable information (PII) you want to redact in your transcript.
+     * </p>
+     */
+    private java.util.List<String> piiEntityTypes;
 
     /**
      * <p>
@@ -219,6 +225,104 @@ public class ContentRedaction implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The types of personally identifiable information (PII) you want to redact in your transcript.
+     * </p>
+     * 
+     * @return The types of personally identifiable information (PII) you want to redact in your transcript.
+     * @see PiiEntityType
+     */
+
+    public java.util.List<String> getPiiEntityTypes() {
+        return piiEntityTypes;
+    }
+
+    /**
+     * <p>
+     * The types of personally identifiable information (PII) you want to redact in your transcript.
+     * </p>
+     * 
+     * @param piiEntityTypes
+     *        The types of personally identifiable information (PII) you want to redact in your transcript.
+     * @see PiiEntityType
+     */
+
+    public void setPiiEntityTypes(java.util.Collection<String> piiEntityTypes) {
+        if (piiEntityTypes == null) {
+            this.piiEntityTypes = null;
+            return;
+        }
+
+        this.piiEntityTypes = new java.util.ArrayList<String>(piiEntityTypes);
+    }
+
+    /**
+     * <p>
+     * The types of personally identifiable information (PII) you want to redact in your transcript.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setPiiEntityTypes(java.util.Collection)} or {@link #withPiiEntityTypes(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param piiEntityTypes
+     *        The types of personally identifiable information (PII) you want to redact in your transcript.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PiiEntityType
+     */
+
+    public ContentRedaction withPiiEntityTypes(String... piiEntityTypes) {
+        if (this.piiEntityTypes == null) {
+            setPiiEntityTypes(new java.util.ArrayList<String>(piiEntityTypes.length));
+        }
+        for (String ele : piiEntityTypes) {
+            this.piiEntityTypes.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The types of personally identifiable information (PII) you want to redact in your transcript.
+     * </p>
+     * 
+     * @param piiEntityTypes
+     *        The types of personally identifiable information (PII) you want to redact in your transcript.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PiiEntityType
+     */
+
+    public ContentRedaction withPiiEntityTypes(java.util.Collection<String> piiEntityTypes) {
+        setPiiEntityTypes(piiEntityTypes);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The types of personally identifiable information (PII) you want to redact in your transcript.
+     * </p>
+     * 
+     * @param piiEntityTypes
+     *        The types of personally identifiable information (PII) you want to redact in your transcript.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PiiEntityType
+     */
+
+    public ContentRedaction withPiiEntityTypes(PiiEntityType... piiEntityTypes) {
+        java.util.ArrayList<String> piiEntityTypesCopy = new java.util.ArrayList<String>(piiEntityTypes.length);
+        for (PiiEntityType value : piiEntityTypes) {
+            piiEntityTypesCopy.add(value.toString());
+        }
+        if (getPiiEntityTypes() == null) {
+            setPiiEntityTypes(piiEntityTypesCopy);
+        } else {
+            getPiiEntityTypes().addAll(piiEntityTypesCopy);
+        }
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -233,7 +337,9 @@ public class ContentRedaction implements Serializable, Cloneable, StructuredPojo
         if (getRedactionType() != null)
             sb.append("RedactionType: ").append(getRedactionType()).append(",");
         if (getRedactionOutput() != null)
-            sb.append("RedactionOutput: ").append(getRedactionOutput());
+            sb.append("RedactionOutput: ").append(getRedactionOutput()).append(",");
+        if (getPiiEntityTypes() != null)
+            sb.append("PiiEntityTypes: ").append(getPiiEntityTypes());
         sb.append("}");
         return sb.toString();
     }
@@ -256,6 +362,10 @@ public class ContentRedaction implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getRedactionOutput() != null && other.getRedactionOutput().equals(this.getRedactionOutput()) == false)
             return false;
+        if (other.getPiiEntityTypes() == null ^ this.getPiiEntityTypes() == null)
+            return false;
+        if (other.getPiiEntityTypes() != null && other.getPiiEntityTypes().equals(this.getPiiEntityTypes()) == false)
+            return false;
         return true;
     }
 
@@ -266,6 +376,7 @@ public class ContentRedaction implements Serializable, Cloneable, StructuredPojo
 
         hashCode = prime * hashCode + ((getRedactionType() == null) ? 0 : getRedactionType().hashCode());
         hashCode = prime * hashCode + ((getRedactionOutput() == null) ? 0 : getRedactionOutput().hashCode());
+        hashCode = prime * hashCode + ((getPiiEntityTypes() == null) ? 0 : getPiiEntityTypes().hashCode());
         return hashCode;
     }
 

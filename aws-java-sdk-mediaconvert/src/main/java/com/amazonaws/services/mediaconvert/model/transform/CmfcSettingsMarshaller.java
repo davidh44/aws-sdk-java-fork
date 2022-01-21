@@ -43,6 +43,8 @@ public class CmfcSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("scte35Esam").build();
     private static final MarshallingInfo<String> SCTE35SOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("scte35Source").build();
+    private static final MarshallingInfo<String> TIMEDMETADATA_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("timedMetadata").build();
 
     private static final CmfcSettingsMarshaller instance = new CmfcSettingsMarshaller();
 
@@ -68,6 +70,7 @@ public class CmfcSettingsMarshaller {
             protocolMarshaller.marshall(cmfcSettings.getIFrameOnlyManifest(), IFRAMEONLYMANIFEST_BINDING);
             protocolMarshaller.marshall(cmfcSettings.getScte35Esam(), SCTE35ESAM_BINDING);
             protocolMarshaller.marshall(cmfcSettings.getScte35Source(), SCTE35SOURCE_BINDING);
+            protocolMarshaller.marshall(cmfcSettings.getTimedMetadata(), TIMEDMETADATA_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

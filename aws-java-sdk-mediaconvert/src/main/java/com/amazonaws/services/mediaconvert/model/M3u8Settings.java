@@ -94,8 +94,8 @@ public class M3u8Settings implements Serializable, Cloneable, StructuredPojo {
      */
     private String scte35Source;
     /**
-     * Applies only to HLS outputs. Use this setting to specify whether the service inserts the ID3 timed metadata from
-     * the input in this output.
+     * Applies to HLS outputs. Use this setting to specify whether the service inserts the ID3 timed metadata from the
+     * input in this output.
      */
     private String timedMetadata;
     /** Packet Identifier (PID) of the timed metadata stream in the transport stream. */
@@ -893,12 +893,12 @@ public class M3u8Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Applies only to HLS outputs. Use this setting to specify whether the service inserts the ID3 timed metadata from
-     * the input in this output.
+     * Applies to HLS outputs. Use this setting to specify whether the service inserts the ID3 timed metadata from the
+     * input in this output.
      * 
      * @param timedMetadata
-     *        Applies only to HLS outputs. Use this setting to specify whether the service inserts the ID3 timed
-     *        metadata from the input in this output.
+     *        Applies to HLS outputs. Use this setting to specify whether the service inserts the ID3 timed metadata
+     *        from the input in this output.
      * @see TimedMetadata
      */
 
@@ -907,11 +907,11 @@ public class M3u8Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Applies only to HLS outputs. Use this setting to specify whether the service inserts the ID3 timed metadata from
-     * the input in this output.
+     * Applies to HLS outputs. Use this setting to specify whether the service inserts the ID3 timed metadata from the
+     * input in this output.
      * 
-     * @return Applies only to HLS outputs. Use this setting to specify whether the service inserts the ID3 timed
-     *         metadata from the input in this output.
+     * @return Applies to HLS outputs. Use this setting to specify whether the service inserts the ID3 timed metadata
+     *         from the input in this output.
      * @see TimedMetadata
      */
 
@@ -920,12 +920,12 @@ public class M3u8Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Applies only to HLS outputs. Use this setting to specify whether the service inserts the ID3 timed metadata from
-     * the input in this output.
+     * Applies to HLS outputs. Use this setting to specify whether the service inserts the ID3 timed metadata from the
+     * input in this output.
      * 
      * @param timedMetadata
-     *        Applies only to HLS outputs. Use this setting to specify whether the service inserts the ID3 timed
-     *        metadata from the input in this output.
+     *        Applies to HLS outputs. Use this setting to specify whether the service inserts the ID3 timed metadata
+     *        from the input in this output.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TimedMetadata
      */
@@ -936,12 +936,12 @@ public class M3u8Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Applies only to HLS outputs. Use this setting to specify whether the service inserts the ID3 timed metadata from
-     * the input in this output.
+     * Applies to HLS outputs. Use this setting to specify whether the service inserts the ID3 timed metadata from the
+     * input in this output.
      * 
      * @param timedMetadata
-     *        Applies only to HLS outputs. Use this setting to specify whether the service inserts the ID3 timed
-     *        metadata from the input in this output.
+     *        Applies to HLS outputs. Use this setting to specify whether the service inserts the ID3 timed metadata
+     *        from the input in this output.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TimedMetadata
      */

@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.transcribe.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -31,6 +32,8 @@ public class ContentRedactionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RedactionType").build();
     private static final MarshallingInfo<String> REDACTIONOUTPUT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RedactionOutput").build();
+    private static final MarshallingInfo<List> PIIENTITYTYPES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PiiEntityTypes").build();
 
     private static final ContentRedactionMarshaller instance = new ContentRedactionMarshaller();
 
@@ -50,6 +53,7 @@ public class ContentRedactionMarshaller {
         try {
             protocolMarshaller.marshall(contentRedaction.getRedactionType(), REDACTIONTYPE_BINDING);
             protocolMarshaller.marshall(contentRedaction.getRedactionOutput(), REDACTIONOUTPUT_BINDING);
+            protocolMarshaller.marshall(contentRedaction.getPiiEntityTypes(), PIIENTITYTYPES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

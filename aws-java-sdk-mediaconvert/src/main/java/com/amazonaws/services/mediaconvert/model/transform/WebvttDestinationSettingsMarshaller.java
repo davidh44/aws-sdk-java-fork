@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class WebvttDestinationSettingsMarshaller {
 
+    private static final MarshallingInfo<String> ACCESSIBILITY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("accessibility").build();
     private static final MarshallingInfo<String> STYLEPASSTHROUGH_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("stylePassthrough").build();
 
@@ -46,6 +48,7 @@ public class WebvttDestinationSettingsMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(webvttDestinationSettings.getAccessibility(), ACCESSIBILITY_BINDING);
             protocolMarshaller.marshall(webvttDestinationSettings.getStylePassthrough(), STYLEPASSTHROUGH_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

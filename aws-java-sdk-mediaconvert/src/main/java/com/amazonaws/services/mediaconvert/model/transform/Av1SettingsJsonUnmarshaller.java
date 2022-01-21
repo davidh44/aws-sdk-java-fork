@@ -52,6 +52,10 @@ public class Av1SettingsJsonUnmarshaller implements Unmarshaller<Av1Settings, Js
                     context.nextToken();
                     av1Settings.setAdaptiveQuantization(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("bitDepth", targetDepth)) {
+                    context.nextToken();
+                    av1Settings.setBitDepth(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("framerateControl", targetDepth)) {
                     context.nextToken();
                     av1Settings.setFramerateControl(context.getUnmarshaller(String.class).unmarshall(context));

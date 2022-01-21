@@ -75,6 +75,10 @@ public class InputTemplateJsonUnmarshaller implements Unmarshaller<InputTemplate
                     context.nextToken();
                     inputTemplate.setDenoiseFilter(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("dolbyVisionMetadataXml", targetDepth)) {
+                    context.nextToken();
+                    inputTemplate.setDolbyVisionMetadataXml(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("filterEnable", targetDepth)) {
                     context.nextToken();
                     inputTemplate.setFilterEnable(context.getUnmarshaller(String.class).unmarshall(context));

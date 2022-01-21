@@ -37,6 +37,8 @@ public class MpdSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("scte35Esam").build();
     private static final MarshallingInfo<String> SCTE35SOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("scte35Source").build();
+    private static final MarshallingInfo<String> TIMEDMETADATA_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("timedMetadata").build();
 
     private static final MpdSettingsMarshaller instance = new MpdSettingsMarshaller();
 
@@ -59,6 +61,7 @@ public class MpdSettingsMarshaller {
             protocolMarshaller.marshall(mpdSettings.getCaptionContainerType(), CAPTIONCONTAINERTYPE_BINDING);
             protocolMarshaller.marshall(mpdSettings.getScte35Esam(), SCTE35ESAM_BINDING);
             protocolMarshaller.marshall(mpdSettings.getScte35Source(), SCTE35SOURCE_BINDING);
+            protocolMarshaller.marshall(mpdSettings.getTimedMetadata(), TIMEDMETADATA_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

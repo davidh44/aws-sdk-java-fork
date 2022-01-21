@@ -27,9 +27,13 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 public class H265Settings implements Serializable, Cloneable, StructuredPojo {
 
     /**
-     * Specify the strength of any adaptive quantization filters that you enable. The value that you choose here applies
-     * to the following settings: Flicker adaptive quantization (flickerAdaptiveQuantization), Spatial adaptive
-     * quantization (spatialAdaptiveQuantization), and Temporal adaptive quantization (temporalAdaptiveQuantization).
+     * When you set Adaptive Quantization (H265AdaptiveQuantization) to Auto (AUTO), or leave blank, MediaConvert
+     * automatically applies quantization to improve the video quality of your output. Set Adaptive Quantization to Low
+     * (LOW), Medium (MEDIUM), High (HIGH), Higher (HIGHER), or Max (MAX) to manually control the strength of the
+     * quantization filter. When you do, you can specify a value for Spatial Adaptive Quantization
+     * (H265SpatialAdaptiveQuantization), Temporal Adaptive Quantization (H265TemporalAdaptiveQuantization), and Flicker
+     * Adaptive Quantization (H265FlickerAdaptiveQuantization), to further control the quantization filter. Set Adaptive
+     * Quantization to Off (OFF) to apply no quantization to your output.
      */
     private String adaptiveQuantization;
     /**
@@ -305,15 +309,22 @@ public class H265Settings implements Serializable, Cloneable, StructuredPojo {
     private String writeMp4PackagingType;
 
     /**
-     * Specify the strength of any adaptive quantization filters that you enable. The value that you choose here applies
-     * to the following settings: Flicker adaptive quantization (flickerAdaptiveQuantization), Spatial adaptive
-     * quantization (spatialAdaptiveQuantization), and Temporal adaptive quantization (temporalAdaptiveQuantization).
+     * When you set Adaptive Quantization (H265AdaptiveQuantization) to Auto (AUTO), or leave blank, MediaConvert
+     * automatically applies quantization to improve the video quality of your output. Set Adaptive Quantization to Low
+     * (LOW), Medium (MEDIUM), High (HIGH), Higher (HIGHER), or Max (MAX) to manually control the strength of the
+     * quantization filter. When you do, you can specify a value for Spatial Adaptive Quantization
+     * (H265SpatialAdaptiveQuantization), Temporal Adaptive Quantization (H265TemporalAdaptiveQuantization), and Flicker
+     * Adaptive Quantization (H265FlickerAdaptiveQuantization), to further control the quantization filter. Set Adaptive
+     * Quantization to Off (OFF) to apply no quantization to your output.
      * 
      * @param adaptiveQuantization
-     *        Specify the strength of any adaptive quantization filters that you enable. The value that you choose here
-     *        applies to the following settings: Flicker adaptive quantization (flickerAdaptiveQuantization), Spatial
-     *        adaptive quantization (spatialAdaptiveQuantization), and Temporal adaptive quantization
-     *        (temporalAdaptiveQuantization).
+     *        When you set Adaptive Quantization (H265AdaptiveQuantization) to Auto (AUTO), or leave blank, MediaConvert
+     *        automatically applies quantization to improve the video quality of your output. Set Adaptive Quantization
+     *        to Low (LOW), Medium (MEDIUM), High (HIGH), Higher (HIGHER), or Max (MAX) to manually control the strength
+     *        of the quantization filter. When you do, you can specify a value for Spatial Adaptive Quantization
+     *        (H265SpatialAdaptiveQuantization), Temporal Adaptive Quantization (H265TemporalAdaptiveQuantization), and
+     *        Flicker Adaptive Quantization (H265FlickerAdaptiveQuantization), to further control the quantization
+     *        filter. Set Adaptive Quantization to Off (OFF) to apply no quantization to your output.
      * @see H265AdaptiveQuantization
      */
 
@@ -322,14 +333,22 @@ public class H265Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the strength of any adaptive quantization filters that you enable. The value that you choose here applies
-     * to the following settings: Flicker adaptive quantization (flickerAdaptiveQuantization), Spatial adaptive
-     * quantization (spatialAdaptiveQuantization), and Temporal adaptive quantization (temporalAdaptiveQuantization).
+     * When you set Adaptive Quantization (H265AdaptiveQuantization) to Auto (AUTO), or leave blank, MediaConvert
+     * automatically applies quantization to improve the video quality of your output. Set Adaptive Quantization to Low
+     * (LOW), Medium (MEDIUM), High (HIGH), Higher (HIGHER), or Max (MAX) to manually control the strength of the
+     * quantization filter. When you do, you can specify a value for Spatial Adaptive Quantization
+     * (H265SpatialAdaptiveQuantization), Temporal Adaptive Quantization (H265TemporalAdaptiveQuantization), and Flicker
+     * Adaptive Quantization (H265FlickerAdaptiveQuantization), to further control the quantization filter. Set Adaptive
+     * Quantization to Off (OFF) to apply no quantization to your output.
      * 
-     * @return Specify the strength of any adaptive quantization filters that you enable. The value that you choose here
-     *         applies to the following settings: Flicker adaptive quantization (flickerAdaptiveQuantization), Spatial
-     *         adaptive quantization (spatialAdaptiveQuantization), and Temporal adaptive quantization
-     *         (temporalAdaptiveQuantization).
+     * @return When you set Adaptive Quantization (H265AdaptiveQuantization) to Auto (AUTO), or leave blank,
+     *         MediaConvert automatically applies quantization to improve the video quality of your output. Set Adaptive
+     *         Quantization to Low (LOW), Medium (MEDIUM), High (HIGH), Higher (HIGHER), or Max (MAX) to manually
+     *         control the strength of the quantization filter. When you do, you can specify a value for Spatial
+     *         Adaptive Quantization (H265SpatialAdaptiveQuantization), Temporal Adaptive Quantization
+     *         (H265TemporalAdaptiveQuantization), and Flicker Adaptive Quantization (H265FlickerAdaptiveQuantization),
+     *         to further control the quantization filter. Set Adaptive Quantization to Off (OFF) to apply no
+     *         quantization to your output.
      * @see H265AdaptiveQuantization
      */
 
@@ -338,15 +357,22 @@ public class H265Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the strength of any adaptive quantization filters that you enable. The value that you choose here applies
-     * to the following settings: Flicker adaptive quantization (flickerAdaptiveQuantization), Spatial adaptive
-     * quantization (spatialAdaptiveQuantization), and Temporal adaptive quantization (temporalAdaptiveQuantization).
+     * When you set Adaptive Quantization (H265AdaptiveQuantization) to Auto (AUTO), or leave blank, MediaConvert
+     * automatically applies quantization to improve the video quality of your output. Set Adaptive Quantization to Low
+     * (LOW), Medium (MEDIUM), High (HIGH), Higher (HIGHER), or Max (MAX) to manually control the strength of the
+     * quantization filter. When you do, you can specify a value for Spatial Adaptive Quantization
+     * (H265SpatialAdaptiveQuantization), Temporal Adaptive Quantization (H265TemporalAdaptiveQuantization), and Flicker
+     * Adaptive Quantization (H265FlickerAdaptiveQuantization), to further control the quantization filter. Set Adaptive
+     * Quantization to Off (OFF) to apply no quantization to your output.
      * 
      * @param adaptiveQuantization
-     *        Specify the strength of any adaptive quantization filters that you enable. The value that you choose here
-     *        applies to the following settings: Flicker adaptive quantization (flickerAdaptiveQuantization), Spatial
-     *        adaptive quantization (spatialAdaptiveQuantization), and Temporal adaptive quantization
-     *        (temporalAdaptiveQuantization).
+     *        When you set Adaptive Quantization (H265AdaptiveQuantization) to Auto (AUTO), or leave blank, MediaConvert
+     *        automatically applies quantization to improve the video quality of your output. Set Adaptive Quantization
+     *        to Low (LOW), Medium (MEDIUM), High (HIGH), Higher (HIGHER), or Max (MAX) to manually control the strength
+     *        of the quantization filter. When you do, you can specify a value for Spatial Adaptive Quantization
+     *        (H265SpatialAdaptiveQuantization), Temporal Adaptive Quantization (H265TemporalAdaptiveQuantization), and
+     *        Flicker Adaptive Quantization (H265FlickerAdaptiveQuantization), to further control the quantization
+     *        filter. Set Adaptive Quantization to Off (OFF) to apply no quantization to your output.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see H265AdaptiveQuantization
      */
@@ -357,15 +383,22 @@ public class H265Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the strength of any adaptive quantization filters that you enable. The value that you choose here applies
-     * to the following settings: Flicker adaptive quantization (flickerAdaptiveQuantization), Spatial adaptive
-     * quantization (spatialAdaptiveQuantization), and Temporal adaptive quantization (temporalAdaptiveQuantization).
+     * When you set Adaptive Quantization (H265AdaptiveQuantization) to Auto (AUTO), or leave blank, MediaConvert
+     * automatically applies quantization to improve the video quality of your output. Set Adaptive Quantization to Low
+     * (LOW), Medium (MEDIUM), High (HIGH), Higher (HIGHER), or Max (MAX) to manually control the strength of the
+     * quantization filter. When you do, you can specify a value for Spatial Adaptive Quantization
+     * (H265SpatialAdaptiveQuantization), Temporal Adaptive Quantization (H265TemporalAdaptiveQuantization), and Flicker
+     * Adaptive Quantization (H265FlickerAdaptiveQuantization), to further control the quantization filter. Set Adaptive
+     * Quantization to Off (OFF) to apply no quantization to your output.
      * 
      * @param adaptiveQuantization
-     *        Specify the strength of any adaptive quantization filters that you enable. The value that you choose here
-     *        applies to the following settings: Flicker adaptive quantization (flickerAdaptiveQuantization), Spatial
-     *        adaptive quantization (spatialAdaptiveQuantization), and Temporal adaptive quantization
-     *        (temporalAdaptiveQuantization).
+     *        When you set Adaptive Quantization (H265AdaptiveQuantization) to Auto (AUTO), or leave blank, MediaConvert
+     *        automatically applies quantization to improve the video quality of your output. Set Adaptive Quantization
+     *        to Low (LOW), Medium (MEDIUM), High (HIGH), Higher (HIGHER), or Max (MAX) to manually control the strength
+     *        of the quantization filter. When you do, you can specify a value for Spatial Adaptive Quantization
+     *        (H265SpatialAdaptiveQuantization), Temporal Adaptive Quantization (H265TemporalAdaptiveQuantization), and
+     *        Flicker Adaptive Quantization (H265FlickerAdaptiveQuantization), to further control the quantization
+     *        filter. Set Adaptive Quantization to Off (OFF) to apply no quantization to your output.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see H265AdaptiveQuantization
      */

@@ -211,7 +211,8 @@ public enum LanguageCode {
     ZUL("ZUL"),
     ORJ("ORJ"),
     QPC("QPC"),
-    TNG("TNG");
+    TNG("TNG"),
+    SRP("SRP");
 
     private String value;
 

@@ -79,6 +79,10 @@ public class InputJsonUnmarshaller implements Unmarshaller<Input, JsonUnmarshall
                     context.nextToken();
                     input.setDenoiseFilter(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("dolbyVisionMetadataXml", targetDepth)) {
+                    context.nextToken();
+                    input.setDolbyVisionMetadataXml(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("fileInput", targetDepth)) {
                     context.nextToken();
                     input.setFileInput(context.getUnmarshaller(String.class).unmarshall(context));
