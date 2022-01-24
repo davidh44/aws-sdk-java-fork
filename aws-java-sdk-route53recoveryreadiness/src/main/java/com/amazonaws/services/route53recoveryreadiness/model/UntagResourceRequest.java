@@ -26,20 +26,25 @@ import com.amazonaws.AmazonWebServiceRequest;
 public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
     /**
-     * The Amazon Resource Name (ARN) for the resource. You can get this from the response to any request to the
-     * resource.
+     * <p>
+     * The Amazon Resource Name (ARN) for a resource.
+     * </p>
      */
     private String resourceArn;
-    /** A comma-separated list of the tag keys to remove from the resource. */
+    /**
+     * <p>
+     * The keys for tags you add to resources.
+     * </p>
+     */
     private java.util.List<String> tagKeys;
 
     /**
-     * The Amazon Resource Name (ARN) for the resource. You can get this from the response to any request to the
-     * resource.
+     * <p>
+     * The Amazon Resource Name (ARN) for a resource.
+     * </p>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) for the resource. You can get this from the response to any request to the
-     *        resource.
+     *        The Amazon Resource Name (ARN) for a resource.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -47,11 +52,11 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * The Amazon Resource Name (ARN) for the resource. You can get this from the response to any request to the
-     * resource.
+     * <p>
+     * The Amazon Resource Name (ARN) for a resource.
+     * </p>
      * 
-     * @return The Amazon Resource Name (ARN) for the resource. You can get this from the response to any request to the
-     *         resource.
+     * @return The Amazon Resource Name (ARN) for a resource.
      */
 
     public String getResourceArn() {
@@ -59,12 +64,12 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * The Amazon Resource Name (ARN) for the resource. You can get this from the response to any request to the
-     * resource.
+     * <p>
+     * The Amazon Resource Name (ARN) for a resource.
+     * </p>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) for the resource. You can get this from the response to any request to the
-     *        resource.
+     *        The Amazon Resource Name (ARN) for a resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -74,9 +79,11 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * A comma-separated list of the tag keys to remove from the resource.
+     * <p>
+     * The keys for tags you add to resources.
+     * </p>
      * 
-     * @return A comma-separated list of the tag keys to remove from the resource.
+     * @return The keys for tags you add to resources.
      */
 
     public java.util.List<String> getTagKeys() {
@@ -84,10 +91,12 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * A comma-separated list of the tag keys to remove from the resource.
+     * <p>
+     * The keys for tags you add to resources.
+     * </p>
      * 
      * @param tagKeys
-     *        A comma-separated list of the tag keys to remove from the resource.
+     *        The keys for tags you add to resources.
      */
 
     public void setTagKeys(java.util.Collection<String> tagKeys) {
@@ -100,7 +109,9 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * A comma-separated list of the tag keys to remove from the resource.
+     * <p>
+     * The keys for tags you add to resources.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setTagKeys(java.util.Collection)} or {@link #withTagKeys(java.util.Collection)} if you want to override
@@ -108,7 +119,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param tagKeys
-     *        A comma-separated list of the tag keys to remove from the resource.
+     *        The keys for tags you add to resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -123,10 +134,12 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * A comma-separated list of the tag keys to remove from the resource.
+     * <p>
+     * The keys for tags you add to resources.
+     * </p>
      * 
      * @param tagKeys
-     *        A comma-separated list of the tag keys to remove from the resource.
+     *        The keys for tags you add to resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

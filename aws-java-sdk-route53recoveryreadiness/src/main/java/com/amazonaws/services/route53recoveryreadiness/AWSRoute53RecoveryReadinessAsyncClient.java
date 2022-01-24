@@ -25,7 +25,9 @@ import java.util.concurrent.ExecutorService;
  * Future object representing the asynchronous operation; overloads which accept an {@code AsyncHandler} can be used to
  * receive notification when an asynchronous operation completes.
  * <p>
- * AWS Route53 Recovery Readiness
+ * <p>
+ * Recovery readiness
+ * </p>
  */
 @ThreadSafe
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

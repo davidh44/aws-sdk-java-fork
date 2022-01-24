@@ -50,7 +50,9 @@ import com.amazonaws.services.route53recoveryreadiness.model.transform.*;
  * Client for accessing AWS Route53 Recovery Readiness. All service calls made using this client are blocking, and will
  * not return until the service call completes.
  * <p>
- * AWS Route53 Recovery Readiness
+ * <p>
+ * Recovery readiness
+ * </p>
  */
 @ThreadSafe
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -144,21 +146,23 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Creates a new Cell.
+     * <p>
+     * Creates a cell in an account.
+     * </p>
      * 
      * @param createCellRequest
-     *        The Cell to create
      * @return Result of the CreateCell operation returned by the service.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws ConflictException
-     *         Updating or deleting a resource can cause an inconsistent state.
+     *         409 response - Conflict exception. You might be using a predefined variable.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.CreateCell
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/CreateCell"
      *      target="_top">AWS API Documentation</a>
@@ -208,21 +212,24 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Create a new cross account readiness authorization.
+     * <p>
+     * Creates a cross-account readiness authorization. This lets you authorize another account to work with Route 53
+     * Application Recovery Controller, for example, to check the readiness status of resources in a separate account.
+     * </p>
      * 
      * @param createCrossAccountAuthorizationRequest
-     *        The cross account authorization
      * @return Result of the CreateCrossAccountAuthorization operation returned by the service.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws ConflictException
-     *         Updating or deleting a resource can cause an inconsistent state.
+     *         409 response - Conflict exception. You might be using a predefined variable.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.CreateCrossAccountAuthorization
      * @see <a
      *      href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/CreateCrossAccountAuthorization"
@@ -276,21 +283,25 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Creates a new Readiness Check.
+     * <p>
+     * Creates a readiness check in an account. A readiness check monitors a resource set in your application, such as a
+     * set of Amazon Aurora instances, that Application Recovery Controller is auditing recovery readiness for. The
+     * audits run once every minute on every resource that's associated with a readiness check.
+     * </p>
      * 
      * @param createReadinessCheckRequest
-     *        The ReadinessCheck to create
      * @return Result of the CreateReadinessCheck operation returned by the service.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws ConflictException
-     *         Updating or deleting a resource can cause an inconsistent state.
+     *         409 response - Conflict exception. You might be using a predefined variable.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.CreateReadinessCheck
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/CreateReadinessCheck"
      *      target="_top">AWS API Documentation</a>
@@ -340,21 +351,24 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Creates a new Recovery Group.
+     * <p>
+     * Creates a recovery group in an account. A recovery group corresponds to an application and includes a list of the
+     * cells that make up the application.
+     * </p>
      * 
      * @param createRecoveryGroupRequest
-     *        The RecoveryGroup to create
      * @return Result of the CreateRecoveryGroup operation returned by the service.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws ConflictException
-     *         Updating or deleting a resource can cause an inconsistent state.
+     *         409 response - Conflict exception. You might be using a predefined variable.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.CreateRecoveryGroup
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/CreateRecoveryGroup"
      *      target="_top">AWS API Documentation</a>
@@ -404,21 +418,24 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Creates a new Resource Set.
+     * <p>
+     * Creates a resource set. A resource set is a set of resources of one type that span multiple cells. You can
+     * associate a resource set with a readiness check to monitor the resources for failover readiness.
+     * </p>
      * 
      * @param createResourceSetRequest
-     *        The ResourceSet to create
      * @return Result of the CreateResourceSet operation returned by the service.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws ConflictException
-     *         Updating or deleting a resource can cause an inconsistent state.
+     *         409 response - Conflict exception. You might be using a predefined variable.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.CreateResourceSet
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/CreateResourceSet"
      *      target="_top">AWS API Documentation</a>
@@ -468,20 +485,23 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Deletes an existing Cell.
+     * <p>
+     * Delete a cell. When successful, the response code is 204, with no response body.
+     * </p>
      * 
      * @param deleteCellRequest
      * @return Result of the DeleteCell operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The requested resource does not exist.
+     *         404 response - Malformed query string. The query string contains a syntax error or resource not found.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.DeleteCell
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/DeleteCell"
      *      target="_top">AWS API Documentation</a>
@@ -531,18 +551,21 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Delete cross account readiness authorization
+     * <p>
+     * Deletes cross account readiness authorization.
+     * </p>
      * 
      * @param deleteCrossAccountAuthorizationRequest
      * @return Result of the DeleteCrossAccountAuthorization operation returned by the service.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.DeleteCrossAccountAuthorization
      * @see <a
      *      href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/DeleteCrossAccountAuthorization"
@@ -596,20 +619,23 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Deletes an existing Readiness Check.
+     * <p>
+     * Deletes a readiness check.
+     * </p>
      * 
      * @param deleteReadinessCheckRequest
      * @return Result of the DeleteReadinessCheck operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The requested resource does not exist.
+     *         404 response - Malformed query string. The query string contains a syntax error or resource not found.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.DeleteReadinessCheck
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/DeleteReadinessCheck"
      *      target="_top">AWS API Documentation</a>
@@ -659,20 +685,23 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Deletes an existing Recovery Group.
+     * <p>
+     * Deletes a recovery group.
+     * </p>
      * 
      * @param deleteRecoveryGroupRequest
      * @return Result of the DeleteRecoveryGroup operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The requested resource does not exist.
+     *         404 response - Malformed query string. The query string contains a syntax error or resource not found.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.DeleteRecoveryGroup
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/DeleteRecoveryGroup"
      *      target="_top">AWS API Documentation</a>
@@ -722,20 +751,23 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Deletes an existing Resource Set.
+     * <p>
+     * Deletes a resource set.
+     * </p>
      * 
      * @param deleteResourceSetRequest
      * @return Result of the DeleteResourceSet operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The requested resource does not exist.
+     *         404 response - Malformed query string. The query string contains a syntax error or resource not found.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.DeleteResourceSet
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/DeleteResourceSet"
      *      target="_top">AWS API Documentation</a>
@@ -785,20 +817,24 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Returns a collection of recommendations to improve resilliance and readiness check quality for a Recovery Group.
+     * <p>
+     * Gets recommendations about architecture designs for improving resiliency for an application, based on a recovery
+     * group.
+     * </p>
      * 
      * @param getArchitectureRecommendationsRequest
      * @return Result of the GetArchitectureRecommendations operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The requested resource does not exist.
+     *         404 response - Malformed query string. The query string contains a syntax error or resource not found.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.GetArchitectureRecommendations
      * @see <a
      *      href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/GetArchitectureRecommendations"
@@ -851,20 +887,24 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Returns information about a Cell.
+     * <p>
+     * Gets information about a cell including cell name, cell Amazon Resource Name (ARN), ARNs of nested cells for this
+     * cell, and a list of those cell ARNs with their associated recovery group ARNs.
+     * </p>
      * 
      * @param getCellRequest
      * @return Result of the GetCell operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The requested resource does not exist.
+     *         404 response - Malformed query string. The query string contains a syntax error or resource not found.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.GetCell
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/GetCell"
      *      target="_top">AWS API Documentation</a>
@@ -914,20 +954,24 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Returns information about readiness of a Cell.
+     * <p>
+     * Gets readiness for a cell. Aggregates the readiness of all the resources that are associated with the cell into a
+     * single value.
+     * </p>
      * 
      * @param getCellReadinessSummaryRequest
      * @return Result of the GetCellReadinessSummary operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The requested resource does not exist.
+     *         404 response - Malformed query string. The query string contains a syntax error or resource not found.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.GetCellReadinessSummary
      * @see <a
      *      href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/GetCellReadinessSummary"
@@ -980,20 +1024,23 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Returns information about a ReadinessCheck.
+     * <p>
+     * Gets details about a readiness check.
+     * </p>
      * 
      * @param getReadinessCheckRequest
      * @return Result of the GetReadinessCheck operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The requested resource does not exist.
+     *         404 response - Malformed query string. The query string contains a syntax error or resource not found.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.GetReadinessCheck
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/GetReadinessCheck"
      *      target="_top">AWS API Documentation</a>
@@ -1043,20 +1090,25 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Returns detailed information about the status of an individual resource within a Readiness Check's Resource Set.
+     * <p>
+     * Gets individual readiness status for a readiness check. To see the overall readiness status for a recovery group,
+     * that considers the readiness status for all the readiness checks in the recovery group, use
+     * GetRecoveryGroupReadinessSummary.
+     * </p>
      * 
      * @param getReadinessCheckResourceStatusRequest
      * @return Result of the GetReadinessCheckResourceStatus operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The requested resource does not exist.
+     *         404 response - Malformed query string. The query string contains a syntax error or resource not found.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.GetReadinessCheckResourceStatus
      * @see <a
      *      href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/GetReadinessCheckResourceStatus"
@@ -1110,20 +1162,25 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Returns information about the status of a Readiness Check.
+     * <p>
+     * Gets the readiness status for an individual readiness check. To see the overall readiness status for a recovery
+     * group, that considers the readiness status for all the readiness checks in a recovery group, use
+     * GetRecoveryGroupReadinessSummary.
+     * </p>
      * 
      * @param getReadinessCheckStatusRequest
      * @return Result of the GetReadinessCheckStatus operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The requested resource does not exist.
+     *         404 response - Malformed query string. The query string contains a syntax error or resource not found.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.GetReadinessCheckStatus
      * @see <a
      *      href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/GetReadinessCheckStatus"
@@ -1176,20 +1233,23 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Returns information about a Recovery Group.
+     * <p>
+     * Gets details about a recovery group, including a list of the cells that are included in it.
+     * </p>
      * 
      * @param getRecoveryGroupRequest
      * @return Result of the GetRecoveryGroup operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The requested resource does not exist.
+     *         404 response - Malformed query string. The query string contains a syntax error or resource not found.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.GetRecoveryGroup
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/GetRecoveryGroup"
      *      target="_top">AWS API Documentation</a>
@@ -1239,20 +1299,24 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Returns information about a Recovery Group.
+     * <p>
+     * Displays a summary of information about a recovery group's readiness status. Includes the readiness checks for
+     * resources in the recovery group and the readiness status of each one.
+     * </p>
      * 
      * @param getRecoveryGroupReadinessSummaryRequest
      * @return Result of the GetRecoveryGroupReadinessSummary operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The requested resource does not exist.
+     *         404 response - Malformed query string. The query string contains a syntax error or resource not found.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.GetRecoveryGroupReadinessSummary
      * @see <a
      *      href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/GetRecoveryGroupReadinessSummary"
@@ -1306,20 +1370,23 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Returns information about a Resource Set.
+     * <p>
+     * Displays the details about a resource set, including a list of the resources in the set.
+     * </p>
      * 
      * @param getResourceSetRequest
      * @return Result of the GetResourceSet operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The requested resource does not exist.
+     *         404 response - Malformed query string. The query string contains a syntax error or resource not found.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.GetResourceSet
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/GetResourceSet"
      *      target="_top">AWS API Documentation</a>
@@ -1369,18 +1436,21 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Returns a collection of Cells.
+     * <p>
+     * Lists the cells for an account.
+     * </p>
      * 
      * @param listCellsRequest
      * @return Result of the ListCells operation returned by the service.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.ListCells
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/ListCells"
      *      target="_top">AWS API Documentation</a>
@@ -1430,18 +1500,21 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Returns a collection of cross account readiness authorizations.
+     * <p>
+     * Lists the cross-account readiness authorizations that are in place for an account.
+     * </p>
      * 
      * @param listCrossAccountAuthorizationsRequest
      * @return Result of the ListCrossAccountAuthorizations operation returned by the service.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.ListCrossAccountAuthorizations
      * @see <a
      *      href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/ListCrossAccountAuthorizations"
@@ -1494,18 +1567,21 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Returns a collection of Readiness Checks.
+     * <p>
+     * Lists the readiness checks for an account.
+     * </p>
      * 
      * @param listReadinessChecksRequest
      * @return Result of the ListReadinessChecks operation returned by the service.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.ListReadinessChecks
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/ListReadinessChecks"
      *      target="_top">AWS API Documentation</a>
@@ -1555,18 +1631,21 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Returns a collection of Recovery Groups.
+     * <p>
+     * Lists the recovery groups in an account.
+     * </p>
      * 
      * @param listRecoveryGroupsRequest
      * @return Result of the ListRecoveryGroups operation returned by the service.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.ListRecoveryGroups
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/ListRecoveryGroups"
      *      target="_top">AWS API Documentation</a>
@@ -1616,18 +1695,21 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Returns a collection of Resource Sets.
+     * <p>
+     * Lists the resource sets in an account.
+     * </p>
      * 
      * @param listResourceSetsRequest
      * @return Result of the ListResourceSets operation returned by the service.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.ListResourceSets
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/ListResourceSets"
      *      target="_top">AWS API Documentation</a>
@@ -1677,18 +1759,21 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Returns a collection of rules that are applied as part of Readiness Checks.
+     * <p>
+     * Lists all readiness rules, or lists the readiness rules for a specific resource type.
+     * </p>
      * 
      * @param listRulesRequest
      * @return Result of the ListRules operation returned by the service.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.ListRules
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/ListRules"
      *      target="_top">AWS API Documentation</a>
@@ -1738,16 +1823,19 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Returns a list of the tags assigned to the specified resource.
+     * <p>
+     * Lists the tags for a resource.
+     * </p>
      * 
      * @param listTagsForResourcesRequest
      * @return Result of the ListTagsForResources operation returned by the service.
      * @throws ResourceNotFoundException
-     *         requested resource was not found
+     *         404 response - Malformed query string. The query string contains a syntax error or resource not found.
      * @throws ValidationException
-     *         an invalid request
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         Internal service error
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @sample AWSRoute53RecoveryReadiness.ListTagsForResources
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/ListTagsForResources"
      *      target="_top">AWS API Documentation</a>
@@ -1797,16 +1885,19 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Adds tags to the specified resource. You can specify one or more tags to add.
+     * <p>
+     * Adds a tag to a resource.
+     * </p>
      * 
      * @param tagResourceRequest
      * @return Result of the TagResource operation returned by the service.
      * @throws ResourceNotFoundException
-     *         requested resource was not found
+     *         404 response - Malformed query string. The query string contains a syntax error or resource not found.
      * @throws ValidationException
-     *         an invalid request
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         Internal service error
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @sample AWSRoute53RecoveryReadiness.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/TagResource"
      *      target="_top">AWS API Documentation</a>
@@ -1856,16 +1947,19 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Removes tags from the specified resource. You can specify one or more tags to remove.
+     * <p>
+     * Removes a tag from a resource.
+     * </p>
      * 
      * @param untagResourceRequest
      * @return Result of the UntagResource operation returned by the service.
      * @throws ResourceNotFoundException
-     *         requested resource was not found
+     *         404 response - Malformed query string. The query string contains a syntax error or resource not found.
      * @throws ValidationException
-     *         an invalid request
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         Internal service error
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @sample AWSRoute53RecoveryReadiness.UntagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/UntagResource"
      *      target="_top">AWS API Documentation</a>
@@ -1915,21 +2009,23 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Updates an existing Cell.
+     * <p>
+     * Updates a cell to replace the list of nested cells with a new list of nested cells.
+     * </p>
      * 
      * @param updateCellRequest
-     *        Parameters to update for the Cell
      * @return Result of the UpdateCell operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The requested resource does not exist.
+     *         404 response - Malformed query string. The query string contains a syntax error or resource not found.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.UpdateCell
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/UpdateCell"
      *      target="_top">AWS API Documentation</a>
@@ -1979,21 +2075,24 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Updates an exisiting Readiness Check.
+     * <p>
+     * Updates a readiness check.
+     * </p>
      * 
      * @param updateReadinessCheckRequest
-     *        The new Readiness Check values
+     *        Name of a readiness check to describe.
      * @return Result of the UpdateReadinessCheck operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The requested resource does not exist.
+     *         404 response - Malformed query string. The query string contains a syntax error or resource not found.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.UpdateReadinessCheck
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/UpdateReadinessCheck"
      *      target="_top">AWS API Documentation</a>
@@ -2043,21 +2142,24 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Updates an existing Recovery Group.
+     * <p>
+     * Updates a recovery group.
+     * </p>
      * 
      * @param updateRecoveryGroupRequest
-     *        Parameters to update for the RecoveryGroup
+     *        Name of a recovery group.
      * @return Result of the UpdateRecoveryGroup operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The requested resource does not exist.
+     *         404 response - Malformed query string. The query string contains a syntax error or resource not found.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.UpdateRecoveryGroup
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/UpdateRecoveryGroup"
      *      target="_top">AWS API Documentation</a>
@@ -2107,21 +2209,24 @@ public class AWSRoute53RecoveryReadinessClient extends AmazonWebServiceClient im
     }
 
     /**
-     * Updates an existing Resource Set.
+     * <p>
+     * Updates a resource set.
+     * </p>
      * 
      * @param updateResourceSetRequest
-     *        configuration for the desired
+     *        Name of a resource set.
      * @return Result of the UpdateResourceSet operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The requested resource does not exist.
+     *         404 response - Malformed query string. The query string contains a syntax error or resource not found.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         429 response - Limit exceeded exception or too many requests exception.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         400 response - Multiple causes. For example, you might have a malformed query string, an input parameter
+     *         might be out of range, or you used parameters together incorrectly.
      * @throws InternalServerException
-     *         An unexpected error occurred.
+     *         500 response - Internal service error or temporary service error. Retry the request.
      * @throws AccessDeniedException
-     *         User does not have sufficient access to perform this action.
+     *         403 response - Access denied exception. You do not have sufficient access to perform this action.
      * @sample AWSRoute53RecoveryReadiness.UpdateResourceSet
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/UpdateResourceSet"
      *      target="_top">AWS API Documentation</a>

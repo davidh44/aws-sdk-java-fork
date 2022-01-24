@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * Result with status for an individual rule..
+ * <p>
+ * The result of a successful Rule request, with status for an individual rule.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/RuleResult"
  *      target="_top">AWS API Documentation</a>
@@ -26,17 +28,35 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class RuleResult implements Serializable, Cloneable, StructuredPojo {
 
-    /** The time the resource was last checked for readiness, in ISO-8601 format, UTC. */
+    /**
+     * <p>
+     * The time the resource was last checked for readiness, in ISO-8601 format, UTC.
+     * </p>
+     */
     private java.util.Date lastCheckedTimestamp;
-    /** Details about the resource's readiness */
+    /**
+     * <p>
+     * Details about the resource's readiness.
+     * </p>
+     */
     private java.util.List<Message> messages;
-    /** The readiness at rule level. */
+    /**
+     * <p>
+     * The readiness at rule level.
+     * </p>
+     */
     private String readiness;
-    /** The identifier of the rule. */
+    /**
+     * <p>
+     * The identifier of the rule.
+     * </p>
+     */
     private String ruleId;
 
     /**
+     * <p>
      * The time the resource was last checked for readiness, in ISO-8601 format, UTC.
+     * </p>
      * 
      * @param lastCheckedTimestamp
      *        The time the resource was last checked for readiness, in ISO-8601 format, UTC.
@@ -47,7 +67,9 @@ public class RuleResult implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
      * The time the resource was last checked for readiness, in ISO-8601 format, UTC.
+     * </p>
      * 
      * @return The time the resource was last checked for readiness, in ISO-8601 format, UTC.
      */
@@ -57,7 +79,9 @@ public class RuleResult implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
      * The time the resource was last checked for readiness, in ISO-8601 format, UTC.
+     * </p>
      * 
      * @param lastCheckedTimestamp
      *        The time the resource was last checked for readiness, in ISO-8601 format, UTC.
@@ -70,9 +94,11 @@ public class RuleResult implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Details about the resource's readiness
+     * <p>
+     * Details about the resource's readiness.
+     * </p>
      * 
-     * @return Details about the resource's readiness
+     * @return Details about the resource's readiness.
      */
 
     public java.util.List<Message> getMessages() {
@@ -80,10 +106,12 @@ public class RuleResult implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Details about the resource's readiness
+     * <p>
+     * Details about the resource's readiness.
+     * </p>
      * 
      * @param messages
-     *        Details about the resource's readiness
+     *        Details about the resource's readiness.
      */
 
     public void setMessages(java.util.Collection<Message> messages) {
@@ -96,7 +124,9 @@ public class RuleResult implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Details about the resource's readiness
+     * <p>
+     * Details about the resource's readiness.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setMessages(java.util.Collection)} or {@link #withMessages(java.util.Collection)} if you want to override
@@ -104,7 +134,7 @@ public class RuleResult implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param messages
-     *        Details about the resource's readiness
+     *        Details about the resource's readiness.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -119,10 +149,12 @@ public class RuleResult implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Details about the resource's readiness
+     * <p>
+     * Details about the resource's readiness.
+     * </p>
      * 
      * @param messages
-     *        Details about the resource's readiness
+     *        Details about the resource's readiness.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -132,7 +164,9 @@ public class RuleResult implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
      * The readiness at rule level.
+     * </p>
      * 
      * @param readiness
      *        The readiness at rule level.
@@ -144,7 +178,9 @@ public class RuleResult implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
      * The readiness at rule level.
+     * </p>
      * 
      * @return The readiness at rule level.
      * @see Readiness
@@ -155,7 +191,9 @@ public class RuleResult implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
      * The readiness at rule level.
+     * </p>
      * 
      * @param readiness
      *        The readiness at rule level.
@@ -169,7 +207,9 @@ public class RuleResult implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
      * The readiness at rule level.
+     * </p>
      * 
      * @param readiness
      *        The readiness at rule level.
@@ -183,7 +223,9 @@ public class RuleResult implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
      * The identifier of the rule.
+     * </p>
      * 
      * @param ruleId
      *        The identifier of the rule.
@@ -194,7 +236,9 @@ public class RuleResult implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
      * The identifier of the rule.
+     * </p>
      * 
      * @return The identifier of the rule.
      */
@@ -204,7 +248,9 @@ public class RuleResult implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
      * The identifier of the rule.
+     * </p>
      * 
      * @param ruleId
      *        The identifier of the rule.

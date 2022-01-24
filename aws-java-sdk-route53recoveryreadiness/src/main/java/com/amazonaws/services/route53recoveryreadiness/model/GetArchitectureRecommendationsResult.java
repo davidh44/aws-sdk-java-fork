@@ -25,18 +25,32 @@ import javax.annotation.Generated;
 public class GetArchitectureRecommendationsResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable,
         Cloneable {
 
-    /** The time a Recovery Group was last assessed for recommendations in UTC ISO-8601 format. */
+    /**
+     * <p>
+     * The time that a recovery group was last assessed for recommendations, in UTC ISO-8601 format.
+     * </p>
+     */
     private java.util.Date lastAuditTimestamp;
-    /** A token that can be used to resume pagination from the end of the collection */
+    /**
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
+     */
     private String nextToken;
-    /** A list of recommendations for the customer's application */
+    /**
+     * <p>
+     * A list of the recommendations for the customer's application.
+     * </p>
+     */
     private java.util.List<Recommendation> recommendations;
 
     /**
-     * The time a Recovery Group was last assessed for recommendations in UTC ISO-8601 format.
+     * <p>
+     * The time that a recovery group was last assessed for recommendations, in UTC ISO-8601 format.
+     * </p>
      * 
      * @param lastAuditTimestamp
-     *        The time a Recovery Group was last assessed for recommendations in UTC ISO-8601 format.
+     *        The time that a recovery group was last assessed for recommendations, in UTC ISO-8601 format.
      */
 
     public void setLastAuditTimestamp(java.util.Date lastAuditTimestamp) {
@@ -44,9 +58,11 @@ public class GetArchitectureRecommendationsResult extends com.amazonaws.AmazonWe
     }
 
     /**
-     * The time a Recovery Group was last assessed for recommendations in UTC ISO-8601 format.
+     * <p>
+     * The time that a recovery group was last assessed for recommendations, in UTC ISO-8601 format.
+     * </p>
      * 
-     * @return The time a Recovery Group was last assessed for recommendations in UTC ISO-8601 format.
+     * @return The time that a recovery group was last assessed for recommendations, in UTC ISO-8601 format.
      */
 
     public java.util.Date getLastAuditTimestamp() {
@@ -54,10 +70,12 @@ public class GetArchitectureRecommendationsResult extends com.amazonaws.AmazonWe
     }
 
     /**
-     * The time a Recovery Group was last assessed for recommendations in UTC ISO-8601 format.
+     * <p>
+     * The time that a recovery group was last assessed for recommendations, in UTC ISO-8601 format.
+     * </p>
      * 
      * @param lastAuditTimestamp
-     *        The time a Recovery Group was last assessed for recommendations in UTC ISO-8601 format.
+     *        The time that a recovery group was last assessed for recommendations, in UTC ISO-8601 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -67,10 +85,12 @@ public class GetArchitectureRecommendationsResult extends com.amazonaws.AmazonWe
     }
 
     /**
-     * A token that can be used to resume pagination from the end of the collection
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token that can be used to resume pagination from the end of the collection
+     *        The token that identifies which batch of results you want to see.
      */
 
     public void setNextToken(String nextToken) {
@@ -78,9 +98,11 @@ public class GetArchitectureRecommendationsResult extends com.amazonaws.AmazonWe
     }
 
     /**
-     * A token that can be used to resume pagination from the end of the collection
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
-     * @return A token that can be used to resume pagination from the end of the collection
+     * @return The token that identifies which batch of results you want to see.
      */
 
     public String getNextToken() {
@@ -88,10 +110,12 @@ public class GetArchitectureRecommendationsResult extends com.amazonaws.AmazonWe
     }
 
     /**
-     * A token that can be used to resume pagination from the end of the collection
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token that can be used to resume pagination from the end of the collection
+     *        The token that identifies which batch of results you want to see.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -101,9 +125,11 @@ public class GetArchitectureRecommendationsResult extends com.amazonaws.AmazonWe
     }
 
     /**
-     * A list of recommendations for the customer's application
+     * <p>
+     * A list of the recommendations for the customer's application.
+     * </p>
      * 
-     * @return A list of recommendations for the customer's application
+     * @return A list of the recommendations for the customer's application.
      */
 
     public java.util.List<Recommendation> getRecommendations() {
@@ -111,10 +137,12 @@ public class GetArchitectureRecommendationsResult extends com.amazonaws.AmazonWe
     }
 
     /**
-     * A list of recommendations for the customer's application
+     * <p>
+     * A list of the recommendations for the customer's application.
+     * </p>
      * 
      * @param recommendations
-     *        A list of recommendations for the customer's application
+     *        A list of the recommendations for the customer's application.
      */
 
     public void setRecommendations(java.util.Collection<Recommendation> recommendations) {
@@ -127,7 +155,9 @@ public class GetArchitectureRecommendationsResult extends com.amazonaws.AmazonWe
     }
 
     /**
-     * A list of recommendations for the customer's application
+     * <p>
+     * A list of the recommendations for the customer's application.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setRecommendations(java.util.Collection)} or {@link #withRecommendations(java.util.Collection)} if you
@@ -135,7 +165,7 @@ public class GetArchitectureRecommendationsResult extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @param recommendations
-     *        A list of recommendations for the customer's application
+     *        A list of the recommendations for the customer's application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -150,10 +180,12 @@ public class GetArchitectureRecommendationsResult extends com.amazonaws.AmazonWe
     }
 
     /**
-     * A list of recommendations for the customer's application
+     * <p>
+     * A list of the recommendations for the customer's application.
+     * </p>
      * 
      * @param recommendations
-     *        A list of recommendations for the customer's application
+     *        A list of the recommendations for the customer's application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

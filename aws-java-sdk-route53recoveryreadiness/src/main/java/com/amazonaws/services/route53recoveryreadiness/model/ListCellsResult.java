@@ -23,15 +23,25 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListCellsResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
-    /** A list of Cells */
+    /**
+     * <p>
+     * A list of cells.
+     * </p>
+     */
     private java.util.List<CellOutput> cells;
-    /** A token that can be used to resume pagination from the end of the collection. */
+    /**
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
+     */
     private String nextToken;
 
     /**
-     * A list of Cells
+     * <p>
+     * A list of cells.
+     * </p>
      * 
-     * @return A list of Cells
+     * @return A list of cells.
      */
 
     public java.util.List<CellOutput> getCells() {
@@ -39,10 +49,12 @@ public class ListCellsResult extends com.amazonaws.AmazonWebServiceResult<com.am
     }
 
     /**
-     * A list of Cells
+     * <p>
+     * A list of cells.
+     * </p>
      * 
      * @param cells
-     *        A list of Cells
+     *        A list of cells.
      */
 
     public void setCells(java.util.Collection<CellOutput> cells) {
@@ -55,7 +67,9 @@ public class ListCellsResult extends com.amazonaws.AmazonWebServiceResult<com.am
     }
 
     /**
-     * A list of Cells
+     * <p>
+     * A list of cells.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCells(java.util.Collection)} or {@link #withCells(java.util.Collection)} if you want to override the
@@ -63,7 +77,7 @@ public class ListCellsResult extends com.amazonaws.AmazonWebServiceResult<com.am
      * </p>
      * 
      * @param cells
-     *        A list of Cells
+     *        A list of cells.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -78,10 +92,12 @@ public class ListCellsResult extends com.amazonaws.AmazonWebServiceResult<com.am
     }
 
     /**
-     * A list of Cells
+     * <p>
+     * A list of cells.
+     * </p>
      * 
      * @param cells
-     *        A list of Cells
+     *        A list of cells.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -91,10 +107,12 @@ public class ListCellsResult extends com.amazonaws.AmazonWebServiceResult<com.am
     }
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token that can be used to resume pagination from the end of the collection.
+     *        The token that identifies which batch of results you want to see.
      */
 
     public void setNextToken(String nextToken) {
@@ -102,9 +120,11 @@ public class ListCellsResult extends com.amazonaws.AmazonWebServiceResult<com.am
     }
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
-     * @return A token that can be used to resume pagination from the end of the collection.
+     * @return The token that identifies which batch of results you want to see.
      */
 
     public String getNextToken() {
@@ -112,10 +132,12 @@ public class ListCellsResult extends com.amazonaws.AmazonWebServiceResult<com.am
     }
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token that can be used to resume pagination from the end of the collection.
+     *        The token that identifies which batch of results you want to see.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

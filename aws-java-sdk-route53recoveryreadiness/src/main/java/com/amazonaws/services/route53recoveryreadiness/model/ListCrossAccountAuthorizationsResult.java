@@ -25,15 +25,25 @@ import javax.annotation.Generated;
 public class ListCrossAccountAuthorizationsResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable,
         Cloneable {
 
-    /** A list of CrossAccountAuthorizations */
+    /**
+     * <p>
+     * A list of cross-account authorizations.
+     * </p>
+     */
     private java.util.List<String> crossAccountAuthorizations;
-    /** A token that can be used to resume pagination from the end of the collection. */
+    /**
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
+     */
     private String nextToken;
 
     /**
-     * A list of CrossAccountAuthorizations
+     * <p>
+     * A list of cross-account authorizations.
+     * </p>
      * 
-     * @return A list of CrossAccountAuthorizations
+     * @return A list of cross-account authorizations.
      */
 
     public java.util.List<String> getCrossAccountAuthorizations() {
@@ -41,10 +51,12 @@ public class ListCrossAccountAuthorizationsResult extends com.amazonaws.AmazonWe
     }
 
     /**
-     * A list of CrossAccountAuthorizations
+     * <p>
+     * A list of cross-account authorizations.
+     * </p>
      * 
      * @param crossAccountAuthorizations
-     *        A list of CrossAccountAuthorizations
+     *        A list of cross-account authorizations.
      */
 
     public void setCrossAccountAuthorizations(java.util.Collection<String> crossAccountAuthorizations) {
@@ -57,7 +69,9 @@ public class ListCrossAccountAuthorizationsResult extends com.amazonaws.AmazonWe
     }
 
     /**
-     * A list of CrossAccountAuthorizations
+     * <p>
+     * A list of cross-account authorizations.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCrossAccountAuthorizations(java.util.Collection)} or
@@ -65,7 +79,7 @@ public class ListCrossAccountAuthorizationsResult extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @param crossAccountAuthorizations
-     *        A list of CrossAccountAuthorizations
+     *        A list of cross-account authorizations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,10 +94,12 @@ public class ListCrossAccountAuthorizationsResult extends com.amazonaws.AmazonWe
     }
 
     /**
-     * A list of CrossAccountAuthorizations
+     * <p>
+     * A list of cross-account authorizations.
+     * </p>
      * 
      * @param crossAccountAuthorizations
-     *        A list of CrossAccountAuthorizations
+     *        A list of cross-account authorizations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,10 +109,12 @@ public class ListCrossAccountAuthorizationsResult extends com.amazonaws.AmazonWe
     }
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token that can be used to resume pagination from the end of the collection.
+     *        The token that identifies which batch of results you want to see.
      */
 
     public void setNextToken(String nextToken) {
@@ -104,9 +122,11 @@ public class ListCrossAccountAuthorizationsResult extends com.amazonaws.AmazonWe
     }
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
-     * @return A token that can be used to resume pagination from the end of the collection.
+     * @return The token that identifies which batch of results you want to see.
      */
 
     public String getNextToken() {
@@ -114,10 +134,12 @@ public class ListCrossAccountAuthorizationsResult extends com.amazonaws.AmazonWe
     }
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token that can be used to resume pagination from the end of the collection.
+     *        The token that identifies which batch of results you want to see.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

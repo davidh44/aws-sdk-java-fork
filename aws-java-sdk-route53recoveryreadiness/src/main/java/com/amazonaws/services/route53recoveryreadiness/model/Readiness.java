@@ -15,7 +15,9 @@ package com.amazonaws.services.route53recoveryreadiness.model;
 import javax.annotation.Generated;
 
 /**
- * The readiness of an entire ReadinessCheck or an individual resource ARN.
+ * <p>
+ * The readiness status.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum Readiness {

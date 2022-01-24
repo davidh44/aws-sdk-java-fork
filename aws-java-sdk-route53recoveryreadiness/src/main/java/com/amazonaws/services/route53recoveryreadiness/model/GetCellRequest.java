@@ -25,14 +25,20 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetCellRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** The Cell to get */
+    /**
+     * <p>
+     * The name of the cell.
+     * </p>
+     */
     private String cellName;
 
     /**
-     * The Cell to get
+     * <p>
+     * The name of the cell.
+     * </p>
      * 
      * @param cellName
-     *        The Cell to get
+     *        The name of the cell.
      */
 
     public void setCellName(String cellName) {
@@ -40,9 +46,11 @@ public class GetCellRequest extends com.amazonaws.AmazonWebServiceRequest implem
     }
 
     /**
-     * The Cell to get
+     * <p>
+     * The name of the cell.
+     * </p>
      * 
-     * @return The Cell to get
+     * @return The name of the cell.
      */
 
     public String getCellName() {
@@ -50,10 +58,12 @@ public class GetCellRequest extends com.amazonaws.AmazonWebServiceRequest implem
     }
 
     /**
-     * The Cell to get
+     * <p>
+     * The name of the cell.
+     * </p>
      * 
      * @param cellName
-     *        The Cell to get
+     *        The name of the cell.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

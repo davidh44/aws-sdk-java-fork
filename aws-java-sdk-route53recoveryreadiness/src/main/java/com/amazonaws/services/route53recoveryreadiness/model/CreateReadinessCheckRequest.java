@@ -18,7 +18,6 @@ import javax.annotation.Generated;
 import com.amazonaws.AmazonWebServiceRequest;
 
 /**
- * The ReadinessCheck to create
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/CreateReadinessCheck"
  *      target="_top">AWS API Documentation</a>
@@ -26,18 +25,28 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CreateReadinessCheckRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** The name of the ReadinessCheck to create */
+    /**
+     * <p>
+     * The name of the readiness check to create.
+     * </p>
+     */
     private String readinessCheckName;
-    /** The name of the ResourceSet to check */
+    /**
+     * <p>
+     * The name of the resource set to check.
+     * </p>
+     */
     private String resourceSetName;
 
     private java.util.Map<String, String> tags;
 
     /**
-     * The name of the ReadinessCheck to create
+     * <p>
+     * The name of the readiness check to create.
+     * </p>
      * 
      * @param readinessCheckName
-     *        The name of the ReadinessCheck to create
+     *        The name of the readiness check to create.
      */
 
     public void setReadinessCheckName(String readinessCheckName) {
@@ -45,9 +54,11 @@ public class CreateReadinessCheckRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * The name of the ReadinessCheck to create
+     * <p>
+     * The name of the readiness check to create.
+     * </p>
      * 
-     * @return The name of the ReadinessCheck to create
+     * @return The name of the readiness check to create.
      */
 
     public String getReadinessCheckName() {
@@ -55,10 +66,12 @@ public class CreateReadinessCheckRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * The name of the ReadinessCheck to create
+     * <p>
+     * The name of the readiness check to create.
+     * </p>
      * 
      * @param readinessCheckName
-     *        The name of the ReadinessCheck to create
+     *        The name of the readiness check to create.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -68,10 +81,12 @@ public class CreateReadinessCheckRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * The name of the ResourceSet to check
+     * <p>
+     * The name of the resource set to check.
+     * </p>
      * 
      * @param resourceSetName
-     *        The name of the ResourceSet to check
+     *        The name of the resource set to check.
      */
 
     public void setResourceSetName(String resourceSetName) {
@@ -79,9 +94,11 @@ public class CreateReadinessCheckRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * The name of the ResourceSet to check
+     * <p>
+     * The name of the resource set to check.
+     * </p>
      * 
-     * @return The name of the ResourceSet to check
+     * @return The name of the resource set to check.
      */
 
     public String getResourceSetName() {
@@ -89,10 +106,12 @@ public class CreateReadinessCheckRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * The name of the ResourceSet to check
+     * <p>
+     * The name of the resource set to check.
+     * </p>
      * 
      * @param resourceSetName
-     *        The name of the ResourceSet to check
+     *        The name of the resource set to check.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

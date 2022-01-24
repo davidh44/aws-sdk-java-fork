@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * The target resource the R53 record points to
+ * <p>
+ * The target resource that the Route 53 record points to.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/TargetResource"
  *      target="_top">AWS API Documentation</a>
@@ -26,12 +28,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class TargetResource implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The Network Load Balancer Resource.
+     * </p>
+     */
     private NLBResource nLBResource;
-
+    /**
+     * <p>
+     * The Route 53 resource.
+     * </p>
+     */
     private R53ResourceRecord r53Resource;
 
     /**
+     * <p>
+     * The Network Load Balancer Resource.
+     * </p>
+     * 
      * @param nLBResource
+     *        The Network Load Balancer Resource.
      */
 
     public void setNLBResource(NLBResource nLBResource) {
@@ -39,7 +55,11 @@ public class TargetResource implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The Network Load Balancer Resource.
+     * </p>
+     * 
+     * @return The Network Load Balancer Resource.
      */
 
     public NLBResource getNLBResource() {
@@ -47,7 +67,12 @@ public class TargetResource implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The Network Load Balancer Resource.
+     * </p>
+     * 
      * @param nLBResource
+     *        The Network Load Balancer Resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -57,7 +82,12 @@ public class TargetResource implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The Route 53 resource.
+     * </p>
+     * 
      * @param r53Resource
+     *        The Route 53 resource.
      */
 
     public void setR53Resource(R53ResourceRecord r53Resource) {
@@ -65,7 +95,11 @@ public class TargetResource implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The Route 53 resource.
+     * </p>
+     * 
+     * @return The Route 53 resource.
      */
 
     public R53ResourceRecord getR53Resource() {
@@ -73,7 +107,12 @@ public class TargetResource implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The Route 53 resource.
+     * </p>
+     * 
      * @param r53Resource
+     *        The Route 53 resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

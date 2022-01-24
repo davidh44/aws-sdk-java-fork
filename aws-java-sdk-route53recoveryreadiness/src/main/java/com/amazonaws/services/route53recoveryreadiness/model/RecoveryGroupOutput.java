@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * A Recovery Group generally containing multiple Cells
+ * <p>
+ * A representation of the application, typically containing multiple cells.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/RecoveryGroupOutput"
  *      target="_top">AWS API Documentation</a>
@@ -26,19 +28,37 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class RecoveryGroupOutput implements Serializable, Cloneable, StructuredPojo {
 
-    /** A list of Cell arns */
+    /**
+     * <p>
+     * A list of a cell's Amazon Resource Names (ARNs).
+     * </p>
+     */
     private java.util.List<String> cells;
-    /** The arn for the RecoveryGroup */
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) for the recovery group.
+     * </p>
+     */
     private String recoveryGroupArn;
-    /** The name of the RecoveryGroup */
+    /**
+     * <p>
+     * The name of the recovery group.
+     * </p>
+     */
     private String recoveryGroupName;
-
+    /**
+     * <p>
+     * The tags associated with the recovery group.
+     * </p>
+     */
     private java.util.Map<String, String> tags;
 
     /**
-     * A list of Cell arns
+     * <p>
+     * A list of a cell's Amazon Resource Names (ARNs).
+     * </p>
      * 
-     * @return A list of Cell arns
+     * @return A list of a cell's Amazon Resource Names (ARNs).
      */
 
     public java.util.List<String> getCells() {
@@ -46,10 +66,12 @@ public class RecoveryGroupOutput implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * A list of Cell arns
+     * <p>
+     * A list of a cell's Amazon Resource Names (ARNs).
+     * </p>
      * 
      * @param cells
-     *        A list of Cell arns
+     *        A list of a cell's Amazon Resource Names (ARNs).
      */
 
     public void setCells(java.util.Collection<String> cells) {
@@ -62,7 +84,9 @@ public class RecoveryGroupOutput implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * A list of Cell arns
+     * <p>
+     * A list of a cell's Amazon Resource Names (ARNs).
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCells(java.util.Collection)} or {@link #withCells(java.util.Collection)} if you want to override the
@@ -70,7 +94,7 @@ public class RecoveryGroupOutput implements Serializable, Cloneable, StructuredP
      * </p>
      * 
      * @param cells
-     *        A list of Cell arns
+     *        A list of a cell's Amazon Resource Names (ARNs).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -85,10 +109,12 @@ public class RecoveryGroupOutput implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * A list of Cell arns
+     * <p>
+     * A list of a cell's Amazon Resource Names (ARNs).
+     * </p>
      * 
      * @param cells
-     *        A list of Cell arns
+     *        A list of a cell's Amazon Resource Names (ARNs).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -98,10 +124,12 @@ public class RecoveryGroupOutput implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * The arn for the RecoveryGroup
+     * <p>
+     * The Amazon Resource Name (ARN) for the recovery group.
+     * </p>
      * 
      * @param recoveryGroupArn
-     *        The arn for the RecoveryGroup
+     *        The Amazon Resource Name (ARN) for the recovery group.
      */
 
     public void setRecoveryGroupArn(String recoveryGroupArn) {
@@ -109,9 +137,11 @@ public class RecoveryGroupOutput implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * The arn for the RecoveryGroup
+     * <p>
+     * The Amazon Resource Name (ARN) for the recovery group.
+     * </p>
      * 
-     * @return The arn for the RecoveryGroup
+     * @return The Amazon Resource Name (ARN) for the recovery group.
      */
 
     public String getRecoveryGroupArn() {
@@ -119,10 +149,12 @@ public class RecoveryGroupOutput implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * The arn for the RecoveryGroup
+     * <p>
+     * The Amazon Resource Name (ARN) for the recovery group.
+     * </p>
      * 
      * @param recoveryGroupArn
-     *        The arn for the RecoveryGroup
+     *        The Amazon Resource Name (ARN) for the recovery group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -132,10 +164,12 @@ public class RecoveryGroupOutput implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * The name of the RecoveryGroup
+     * <p>
+     * The name of the recovery group.
+     * </p>
      * 
      * @param recoveryGroupName
-     *        The name of the RecoveryGroup
+     *        The name of the recovery group.
      */
 
     public void setRecoveryGroupName(String recoveryGroupName) {
@@ -143,9 +177,11 @@ public class RecoveryGroupOutput implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * The name of the RecoveryGroup
+     * <p>
+     * The name of the recovery group.
+     * </p>
      * 
-     * @return The name of the RecoveryGroup
+     * @return The name of the recovery group.
      */
 
     public String getRecoveryGroupName() {
@@ -153,10 +189,12 @@ public class RecoveryGroupOutput implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * The name of the RecoveryGroup
+     * <p>
+     * The name of the recovery group.
+     * </p>
      * 
      * @param recoveryGroupName
-     *        The name of the RecoveryGroup
+     *        The name of the recovery group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -166,7 +204,11 @@ public class RecoveryGroupOutput implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * The tags associated with the recovery group.
+     * </p>
+     * 
+     * @return The tags associated with the recovery group.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -174,7 +216,12 @@ public class RecoveryGroupOutput implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The tags associated with the recovery group.
+     * </p>
+     * 
      * @param tags
+     *        The tags associated with the recovery group.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -182,7 +229,12 @@ public class RecoveryGroupOutput implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The tags associated with the recovery group.
+     * </p>
+     * 
      * @param tags
+     *        The tags associated with the recovery group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

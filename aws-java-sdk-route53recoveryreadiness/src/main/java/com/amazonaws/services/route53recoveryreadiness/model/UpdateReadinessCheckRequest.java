@@ -18,7 +18,9 @@ import javax.annotation.Generated;
 import com.amazonaws.AmazonWebServiceRequest;
 
 /**
- * The new Readiness Check values
+ * <p>
+ * Name of a readiness check to describe.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/UpdateReadinessCheck"
  *      target="_top">AWS API Documentation</a>
@@ -26,16 +28,26 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdateReadinessCheckRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** The ReadinessCheck to update */
+    /**
+     * <p>
+     * Name of a readiness check.
+     * </p>
+     */
     private String readinessCheckName;
-    /** The name of the ResourceSet to check */
+    /**
+     * <p>
+     * The name of the resource set to be checked.
+     * </p>
+     */
     private String resourceSetName;
 
     /**
-     * The ReadinessCheck to update
+     * <p>
+     * Name of a readiness check.
+     * </p>
      * 
      * @param readinessCheckName
-     *        The ReadinessCheck to update
+     *        Name of a readiness check.
      */
 
     public void setReadinessCheckName(String readinessCheckName) {
@@ -43,9 +55,11 @@ public class UpdateReadinessCheckRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * The ReadinessCheck to update
+     * <p>
+     * Name of a readiness check.
+     * </p>
      * 
-     * @return The ReadinessCheck to update
+     * @return Name of a readiness check.
      */
 
     public String getReadinessCheckName() {
@@ -53,10 +67,12 @@ public class UpdateReadinessCheckRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * The ReadinessCheck to update
+     * <p>
+     * Name of a readiness check.
+     * </p>
      * 
      * @param readinessCheckName
-     *        The ReadinessCheck to update
+     *        Name of a readiness check.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -66,10 +82,12 @@ public class UpdateReadinessCheckRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * The name of the ResourceSet to check
+     * <p>
+     * The name of the resource set to be checked.
+     * </p>
      * 
      * @param resourceSetName
-     *        The name of the ResourceSet to check
+     *        The name of the resource set to be checked.
      */
 
     public void setResourceSetName(String resourceSetName) {
@@ -77,9 +95,11 @@ public class UpdateReadinessCheckRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * The name of the ResourceSet to check
+     * <p>
+     * The name of the resource set to be checked.
+     * </p>
      * 
-     * @return The name of the ResourceSet to check
+     * @return The name of the resource set to be checked.
      */
 
     public String getResourceSetName() {
@@ -87,10 +107,12 @@ public class UpdateReadinessCheckRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * The name of the ResourceSet to check
+     * <p>
+     * The name of the resource set to be checked.
+     * </p>
      * 
      * @param resourceSetName
-     *        The name of the ResourceSet to check
+     *        The name of the resource set to be checked.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

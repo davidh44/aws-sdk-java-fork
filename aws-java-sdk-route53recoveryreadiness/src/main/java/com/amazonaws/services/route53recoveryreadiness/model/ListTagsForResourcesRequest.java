@@ -26,18 +26,19 @@ import com.amazonaws.AmazonWebServiceRequest;
 public class ListTagsForResourcesRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
     /**
-     * The Amazon Resource Name (ARN) for the resource. You can get this from the response to any request to the
-     * resource.
+     * <p>
+     * The Amazon Resource Name (ARN) for a resource.
+     * </p>
      */
     private String resourceArn;
 
     /**
-     * The Amazon Resource Name (ARN) for the resource. You can get this from the response to any request to the
-     * resource.
+     * <p>
+     * The Amazon Resource Name (ARN) for a resource.
+     * </p>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) for the resource. You can get this from the response to any request to the
-     *        resource.
+     *        The Amazon Resource Name (ARN) for a resource.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -45,11 +46,11 @@ public class ListTagsForResourcesRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * The Amazon Resource Name (ARN) for the resource. You can get this from the response to any request to the
-     * resource.
+     * <p>
+     * The Amazon Resource Name (ARN) for a resource.
+     * </p>
      * 
-     * @return The Amazon Resource Name (ARN) for the resource. You can get this from the response to any request to the
-     *         resource.
+     * @return The Amazon Resource Name (ARN) for a resource.
      */
 
     public String getResourceArn() {
@@ -57,12 +58,12 @@ public class ListTagsForResourcesRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * The Amazon Resource Name (ARN) for the resource. You can get this from the response to any request to the
-     * resource.
+     * <p>
+     * The Amazon Resource Name (ARN) for a resource.
+     * </p>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) for the resource. You can get this from the response to any request to the
-     *        resource.
+     *        The Amazon Resource Name (ARN) for a resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

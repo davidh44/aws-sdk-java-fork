@@ -23,16 +23,26 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListRulesResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
-    /** A token that can be used to resume pagination from the end of the collection. */
+    /**
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
+     */
     private String nextToken;
-    /** A list of rules */
+    /**
+     * <p>
+     * A list of readiness rules for a specific resource type.
+     * </p>
+     */
     private java.util.List<ListRulesOutput> rules;
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token that can be used to resume pagination from the end of the collection.
+     *        The token that identifies which batch of results you want to see.
      */
 
     public void setNextToken(String nextToken) {
@@ -40,9 +50,11 @@ public class ListRulesResult extends com.amazonaws.AmazonWebServiceResult<com.am
     }
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
-     * @return A token that can be used to resume pagination from the end of the collection.
+     * @return The token that identifies which batch of results you want to see.
      */
 
     public String getNextToken() {
@@ -50,10 +62,12 @@ public class ListRulesResult extends com.amazonaws.AmazonWebServiceResult<com.am
     }
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token that can be used to resume pagination from the end of the collection.
+     *        The token that identifies which batch of results you want to see.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -63,9 +77,11 @@ public class ListRulesResult extends com.amazonaws.AmazonWebServiceResult<com.am
     }
 
     /**
-     * A list of rules
+     * <p>
+     * A list of readiness rules for a specific resource type.
+     * </p>
      * 
-     * @return A list of rules
+     * @return A list of readiness rules for a specific resource type.
      */
 
     public java.util.List<ListRulesOutput> getRules() {
@@ -73,10 +89,12 @@ public class ListRulesResult extends com.amazonaws.AmazonWebServiceResult<com.am
     }
 
     /**
-     * A list of rules
+     * <p>
+     * A list of readiness rules for a specific resource type.
+     * </p>
      * 
      * @param rules
-     *        A list of rules
+     *        A list of readiness rules for a specific resource type.
      */
 
     public void setRules(java.util.Collection<ListRulesOutput> rules) {
@@ -89,7 +107,9 @@ public class ListRulesResult extends com.amazonaws.AmazonWebServiceResult<com.am
     }
 
     /**
-     * A list of rules
+     * <p>
+     * A list of readiness rules for a specific resource type.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setRules(java.util.Collection)} or {@link #withRules(java.util.Collection)} if you want to override the
@@ -97,7 +117,7 @@ public class ListRulesResult extends com.amazonaws.AmazonWebServiceResult<com.am
      * </p>
      * 
      * @param rules
-     *        A list of rules
+     *        A list of readiness rules for a specific resource type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -112,10 +132,12 @@ public class ListRulesResult extends com.amazonaws.AmazonWebServiceResult<com.am
     }
 
     /**
-     * A list of rules
+     * <p>
+     * A list of readiness rules for a specific resource type.
+     * </p>
      * 
      * @param rules
-     *        A list of rules
+     *        A list of readiness rules for a specific resource type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

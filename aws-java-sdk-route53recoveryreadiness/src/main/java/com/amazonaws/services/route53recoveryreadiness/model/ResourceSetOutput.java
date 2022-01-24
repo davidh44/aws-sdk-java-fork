@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * A collection of resources of the same type
+ * <p>
+ * A collection of resources of the same type.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/ResourceSetOutput"
  *      target="_top">AWS API Documentation</a>
@@ -26,22 +28,47 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ResourceSetOutput implements Serializable, Cloneable, StructuredPojo {
 
-    /** The arn for the ResourceSet */
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) for the resource set.
+     * </p>
+     */
     private String resourceSetArn;
-    /** The name of the ResourceSet */
+    /**
+     * <p>
+     * The name of the resource set.
+     * </p>
+     */
     private String resourceSetName;
-    /** AWS Resource Type of the resources in the ResourceSet */
+    /**
+     * <p>
+     * The resource type of the resources in the resource set. Enter one of the following values for resource type:
+     * </p>
+     * <p>
+     * AWS::ApiGateway::Stage, AWS::ApiGatewayV2::Stage, AWS::AutoScaling::AutoScalingGroup, AWS::CloudWatch::Alarm,
+     * AWS::EC2::CustomerGateway, AWS::DynamoDB::Table, AWS::EC2::Volume, AWS::ElasticLoadBalancing::LoadBalancer,
+     * AWS::ElasticLoadBalancingV2::LoadBalancer, AWS::Lambda::Function, AWS::MSK::Cluster, AWS::RDS::DBCluster,
+     * AWS::Route53::HealthCheck, AWS::SQS::Queue, AWS::SNS::Topic, AWS::SNS::Subscription, AWS::EC2::VPC,
+     * AWS::EC2::VPNConnection, AWS::EC2::VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource
+     * </p>
+     */
     private String resourceSetType;
-    /** A list of Resource objects */
+    /**
+     * <p>
+     * A list of resource objects.
+     * </p>
+     */
     private java.util.List<Resource> resources;
 
     private java.util.Map<String, String> tags;
 
     /**
-     * The arn for the ResourceSet
+     * <p>
+     * The Amazon Resource Name (ARN) for the resource set.
+     * </p>
      * 
      * @param resourceSetArn
-     *        The arn for the ResourceSet
+     *        The Amazon Resource Name (ARN) for the resource set.
      */
 
     public void setResourceSetArn(String resourceSetArn) {
@@ -49,9 +76,11 @@ public class ResourceSetOutput implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * The arn for the ResourceSet
+     * <p>
+     * The Amazon Resource Name (ARN) for the resource set.
+     * </p>
      * 
-     * @return The arn for the ResourceSet
+     * @return The Amazon Resource Name (ARN) for the resource set.
      */
 
     public String getResourceSetArn() {
@@ -59,10 +88,12 @@ public class ResourceSetOutput implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * The arn for the ResourceSet
+     * <p>
+     * The Amazon Resource Name (ARN) for the resource set.
+     * </p>
      * 
      * @param resourceSetArn
-     *        The arn for the ResourceSet
+     *        The Amazon Resource Name (ARN) for the resource set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -72,10 +103,12 @@ public class ResourceSetOutput implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * The name of the ResourceSet
+     * <p>
+     * The name of the resource set.
+     * </p>
      * 
      * @param resourceSetName
-     *        The name of the ResourceSet
+     *        The name of the resource set.
      */
 
     public void setResourceSetName(String resourceSetName) {
@@ -83,9 +116,11 @@ public class ResourceSetOutput implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * The name of the ResourceSet
+     * <p>
+     * The name of the resource set.
+     * </p>
      * 
-     * @return The name of the ResourceSet
+     * @return The name of the resource set.
      */
 
     public String getResourceSetName() {
@@ -93,10 +128,12 @@ public class ResourceSetOutput implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * The name of the ResourceSet
+     * <p>
+     * The name of the resource set.
+     * </p>
      * 
      * @param resourceSetName
-     *        The name of the ResourceSet
+     *        The name of the resource set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -106,10 +143,27 @@ public class ResourceSetOutput implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * AWS Resource Type of the resources in the ResourceSet
+     * <p>
+     * The resource type of the resources in the resource set. Enter one of the following values for resource type:
+     * </p>
+     * <p>
+     * AWS::ApiGateway::Stage, AWS::ApiGatewayV2::Stage, AWS::AutoScaling::AutoScalingGroup, AWS::CloudWatch::Alarm,
+     * AWS::EC2::CustomerGateway, AWS::DynamoDB::Table, AWS::EC2::Volume, AWS::ElasticLoadBalancing::LoadBalancer,
+     * AWS::ElasticLoadBalancingV2::LoadBalancer, AWS::Lambda::Function, AWS::MSK::Cluster, AWS::RDS::DBCluster,
+     * AWS::Route53::HealthCheck, AWS::SQS::Queue, AWS::SNS::Topic, AWS::SNS::Subscription, AWS::EC2::VPC,
+     * AWS::EC2::VPNConnection, AWS::EC2::VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource
+     * </p>
      * 
      * @param resourceSetType
-     *        AWS Resource Type of the resources in the ResourceSet
+     *        The resource type of the resources in the resource set. Enter one of the following values for resource
+     *        type:</p>
+     *        <p>
+     *        AWS::ApiGateway::Stage, AWS::ApiGatewayV2::Stage, AWS::AutoScaling::AutoScalingGroup,
+     *        AWS::CloudWatch::Alarm, AWS::EC2::CustomerGateway, AWS::DynamoDB::Table, AWS::EC2::Volume,
+     *        AWS::ElasticLoadBalancing::LoadBalancer, AWS::ElasticLoadBalancingV2::LoadBalancer, AWS::Lambda::Function,
+     *        AWS::MSK::Cluster, AWS::RDS::DBCluster, AWS::Route53::HealthCheck, AWS::SQS::Queue, AWS::SNS::Topic,
+     *        AWS::SNS::Subscription, AWS::EC2::VPC, AWS::EC2::VPNConnection, AWS::EC2::VPNGateway,
+     *        AWS::Route53RecoveryReadiness::DNSTargetResource
      */
 
     public void setResourceSetType(String resourceSetType) {
@@ -117,9 +171,26 @@ public class ResourceSetOutput implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * AWS Resource Type of the resources in the ResourceSet
+     * <p>
+     * The resource type of the resources in the resource set. Enter one of the following values for resource type:
+     * </p>
+     * <p>
+     * AWS::ApiGateway::Stage, AWS::ApiGatewayV2::Stage, AWS::AutoScaling::AutoScalingGroup, AWS::CloudWatch::Alarm,
+     * AWS::EC2::CustomerGateway, AWS::DynamoDB::Table, AWS::EC2::Volume, AWS::ElasticLoadBalancing::LoadBalancer,
+     * AWS::ElasticLoadBalancingV2::LoadBalancer, AWS::Lambda::Function, AWS::MSK::Cluster, AWS::RDS::DBCluster,
+     * AWS::Route53::HealthCheck, AWS::SQS::Queue, AWS::SNS::Topic, AWS::SNS::Subscription, AWS::EC2::VPC,
+     * AWS::EC2::VPNConnection, AWS::EC2::VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource
+     * </p>
      * 
-     * @return AWS Resource Type of the resources in the ResourceSet
+     * @return The resource type of the resources in the resource set. Enter one of the following values for resource
+     *         type:</p>
+     *         <p>
+     *         AWS::ApiGateway::Stage, AWS::ApiGatewayV2::Stage, AWS::AutoScaling::AutoScalingGroup,
+     *         AWS::CloudWatch::Alarm, AWS::EC2::CustomerGateway, AWS::DynamoDB::Table, AWS::EC2::Volume,
+     *         AWS::ElasticLoadBalancing::LoadBalancer, AWS::ElasticLoadBalancingV2::LoadBalancer,
+     *         AWS::Lambda::Function, AWS::MSK::Cluster, AWS::RDS::DBCluster, AWS::Route53::HealthCheck,
+     *         AWS::SQS::Queue, AWS::SNS::Topic, AWS::SNS::Subscription, AWS::EC2::VPC, AWS::EC2::VPNConnection,
+     *         AWS::EC2::VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource
      */
 
     public String getResourceSetType() {
@@ -127,10 +198,27 @@ public class ResourceSetOutput implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * AWS Resource Type of the resources in the ResourceSet
+     * <p>
+     * The resource type of the resources in the resource set. Enter one of the following values for resource type:
+     * </p>
+     * <p>
+     * AWS::ApiGateway::Stage, AWS::ApiGatewayV2::Stage, AWS::AutoScaling::AutoScalingGroup, AWS::CloudWatch::Alarm,
+     * AWS::EC2::CustomerGateway, AWS::DynamoDB::Table, AWS::EC2::Volume, AWS::ElasticLoadBalancing::LoadBalancer,
+     * AWS::ElasticLoadBalancingV2::LoadBalancer, AWS::Lambda::Function, AWS::MSK::Cluster, AWS::RDS::DBCluster,
+     * AWS::Route53::HealthCheck, AWS::SQS::Queue, AWS::SNS::Topic, AWS::SNS::Subscription, AWS::EC2::VPC,
+     * AWS::EC2::VPNConnection, AWS::EC2::VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource
+     * </p>
      * 
      * @param resourceSetType
-     *        AWS Resource Type of the resources in the ResourceSet
+     *        The resource type of the resources in the resource set. Enter one of the following values for resource
+     *        type:</p>
+     *        <p>
+     *        AWS::ApiGateway::Stage, AWS::ApiGatewayV2::Stage, AWS::AutoScaling::AutoScalingGroup,
+     *        AWS::CloudWatch::Alarm, AWS::EC2::CustomerGateway, AWS::DynamoDB::Table, AWS::EC2::Volume,
+     *        AWS::ElasticLoadBalancing::LoadBalancer, AWS::ElasticLoadBalancingV2::LoadBalancer, AWS::Lambda::Function,
+     *        AWS::MSK::Cluster, AWS::RDS::DBCluster, AWS::Route53::HealthCheck, AWS::SQS::Queue, AWS::SNS::Topic,
+     *        AWS::SNS::Subscription, AWS::EC2::VPC, AWS::EC2::VPNConnection, AWS::EC2::VPNGateway,
+     *        AWS::Route53RecoveryReadiness::DNSTargetResource
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -140,9 +228,11 @@ public class ResourceSetOutput implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * A list of Resource objects
+     * <p>
+     * A list of resource objects.
+     * </p>
      * 
-     * @return A list of Resource objects
+     * @return A list of resource objects.
      */
 
     public java.util.List<Resource> getResources() {
@@ -150,10 +240,12 @@ public class ResourceSetOutput implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * A list of Resource objects
+     * <p>
+     * A list of resource objects.
+     * </p>
      * 
      * @param resources
-     *        A list of Resource objects
+     *        A list of resource objects.
      */
 
     public void setResources(java.util.Collection<Resource> resources) {
@@ -166,7 +258,9 @@ public class ResourceSetOutput implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * A list of Resource objects
+     * <p>
+     * A list of resource objects.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setResources(java.util.Collection)} or {@link #withResources(java.util.Collection)} if you want to
@@ -174,7 +268,7 @@ public class ResourceSetOutput implements Serializable, Cloneable, StructuredPoj
      * </p>
      * 
      * @param resources
-     *        A list of Resource objects
+     *        A list of resource objects.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -189,10 +283,12 @@ public class ResourceSetOutput implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * A list of Resource objects
+     * <p>
+     * A list of resource objects.
+     * </p>
      * 
      * @param resources
-     *        A list of Resource objects
+     *        A list of resource objects.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

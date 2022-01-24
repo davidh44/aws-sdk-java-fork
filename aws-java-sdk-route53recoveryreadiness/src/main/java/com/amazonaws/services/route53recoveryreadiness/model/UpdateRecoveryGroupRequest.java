@@ -18,7 +18,9 @@ import javax.annotation.Generated;
 import com.amazonaws.AmazonWebServiceRequest;
 
 /**
- * Parameters to update for the RecoveryGroup
+ * <p>
+ * Name of a recovery group.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/UpdateRecoveryGroup"
  *      target="_top">AWS API Documentation</a>
@@ -26,15 +28,25 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdateRecoveryGroupRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** A list of Cell arns, completely replaces previous list */
+    /**
+     * <p>
+     * A list of cell Amazon Resource Names (ARNs). This list completely replaces the previous list.
+     * </p>
+     */
     private java.util.List<String> cells;
-    /** The RecoveryGroup to update */
+    /**
+     * <p>
+     * The name of a recovery group.
+     * </p>
+     */
     private String recoveryGroupName;
 
     /**
-     * A list of Cell arns, completely replaces previous list
+     * <p>
+     * A list of cell Amazon Resource Names (ARNs). This list completely replaces the previous list.
+     * </p>
      * 
-     * @return A list of Cell arns, completely replaces previous list
+     * @return A list of cell Amazon Resource Names (ARNs). This list completely replaces the previous list.
      */
 
     public java.util.List<String> getCells() {
@@ -42,10 +54,12 @@ public class UpdateRecoveryGroupRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * A list of Cell arns, completely replaces previous list
+     * <p>
+     * A list of cell Amazon Resource Names (ARNs). This list completely replaces the previous list.
+     * </p>
      * 
      * @param cells
-     *        A list of Cell arns, completely replaces previous list
+     *        A list of cell Amazon Resource Names (ARNs). This list completely replaces the previous list.
      */
 
     public void setCells(java.util.Collection<String> cells) {
@@ -58,7 +72,9 @@ public class UpdateRecoveryGroupRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * A list of Cell arns, completely replaces previous list
+     * <p>
+     * A list of cell Amazon Resource Names (ARNs). This list completely replaces the previous list.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCells(java.util.Collection)} or {@link #withCells(java.util.Collection)} if you want to override the
@@ -66,7 +82,7 @@ public class UpdateRecoveryGroupRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param cells
-     *        A list of Cell arns, completely replaces previous list
+     *        A list of cell Amazon Resource Names (ARNs). This list completely replaces the previous list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -81,10 +97,12 @@ public class UpdateRecoveryGroupRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * A list of Cell arns, completely replaces previous list
+     * <p>
+     * A list of cell Amazon Resource Names (ARNs). This list completely replaces the previous list.
+     * </p>
      * 
      * @param cells
-     *        A list of Cell arns, completely replaces previous list
+     *        A list of cell Amazon Resource Names (ARNs). This list completely replaces the previous list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -94,10 +112,12 @@ public class UpdateRecoveryGroupRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * The RecoveryGroup to update
+     * <p>
+     * The name of a recovery group.
+     * </p>
      * 
      * @param recoveryGroupName
-     *        The RecoveryGroup to update
+     *        The name of a recovery group.
      */
 
     public void setRecoveryGroupName(String recoveryGroupName) {
@@ -105,9 +125,11 @@ public class UpdateRecoveryGroupRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * The RecoveryGroup to update
+     * <p>
+     * The name of a recovery group.
+     * </p>
      * 
-     * @return The RecoveryGroup to update
+     * @return The name of a recovery group.
      */
 
     public String getRecoveryGroupName() {
@@ -115,10 +137,12 @@ public class UpdateRecoveryGroupRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * The RecoveryGroup to update
+     * <p>
+     * The name of a recovery group.
+     * </p>
      * 
      * @param recoveryGroupName
-     *        The RecoveryGroup to update
+     *        The name of a recovery group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

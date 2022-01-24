@@ -18,7 +18,6 @@ import javax.annotation.Generated;
 import com.amazonaws.AmazonWebServiceRequest;
 
 /**
- * The RecoveryGroup to create
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/CreateRecoveryGroup"
  *      target="_top">AWS API Documentation</a>
@@ -26,17 +25,27 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CreateRecoveryGroupRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** A list of Cell arns */
+    /**
+     * <p>
+     * A list of the cell Amazon Resource Names (ARNs) in the recovery group.
+     * </p>
+     */
     private java.util.List<String> cells;
-    /** The name of the RecoveryGroup to create */
+    /**
+     * <p>
+     * The name of the recovery group to create.
+     * </p>
+     */
     private String recoveryGroupName;
 
     private java.util.Map<String, String> tags;
 
     /**
-     * A list of Cell arns
+     * <p>
+     * A list of the cell Amazon Resource Names (ARNs) in the recovery group.
+     * </p>
      * 
-     * @return A list of Cell arns
+     * @return A list of the cell Amazon Resource Names (ARNs) in the recovery group.
      */
 
     public java.util.List<String> getCells() {
@@ -44,10 +53,12 @@ public class CreateRecoveryGroupRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * A list of Cell arns
+     * <p>
+     * A list of the cell Amazon Resource Names (ARNs) in the recovery group.
+     * </p>
      * 
      * @param cells
-     *        A list of Cell arns
+     *        A list of the cell Amazon Resource Names (ARNs) in the recovery group.
      */
 
     public void setCells(java.util.Collection<String> cells) {
@@ -60,7 +71,9 @@ public class CreateRecoveryGroupRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * A list of Cell arns
+     * <p>
+     * A list of the cell Amazon Resource Names (ARNs) in the recovery group.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCells(java.util.Collection)} or {@link #withCells(java.util.Collection)} if you want to override the
@@ -68,7 +81,7 @@ public class CreateRecoveryGroupRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param cells
-     *        A list of Cell arns
+     *        A list of the cell Amazon Resource Names (ARNs) in the recovery group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,10 +96,12 @@ public class CreateRecoveryGroupRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * A list of Cell arns
+     * <p>
+     * A list of the cell Amazon Resource Names (ARNs) in the recovery group.
+     * </p>
      * 
      * @param cells
-     *        A list of Cell arns
+     *        A list of the cell Amazon Resource Names (ARNs) in the recovery group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -96,10 +111,12 @@ public class CreateRecoveryGroupRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * The name of the RecoveryGroup to create
+     * <p>
+     * The name of the recovery group to create.
+     * </p>
      * 
      * @param recoveryGroupName
-     *        The name of the RecoveryGroup to create
+     *        The name of the recovery group to create.
      */
 
     public void setRecoveryGroupName(String recoveryGroupName) {
@@ -107,9 +124,11 @@ public class CreateRecoveryGroupRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * The name of the RecoveryGroup to create
+     * <p>
+     * The name of the recovery group to create.
+     * </p>
      * 
-     * @return The name of the RecoveryGroup to create
+     * @return The name of the recovery group to create.
      */
 
     public String getRecoveryGroupName() {
@@ -117,10 +136,12 @@ public class CreateRecoveryGroupRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * The name of the RecoveryGroup to create
+     * <p>
+     * The name of the recovery group to create.
+     * </p>
      * 
      * @param recoveryGroupName
-     *        The name of the RecoveryGroup to create
+     *        The name of the recovery group to create.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

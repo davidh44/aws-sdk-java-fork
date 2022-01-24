@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * Result with status for an individual resource.
+ * <p>
+ * The result of a successful Resource request, with status for an individual resource.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/ResourceResult"
  *      target="_top">AWS API Documentation</a>
@@ -26,20 +28,38 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ResourceResult implements Serializable, Cloneable, StructuredPojo {
 
-    /** The component id of the resource */
+    /**
+     * <p>
+     * The component id of the resource.
+     * </p>
+     */
     private String componentId;
-    /** The time the resource was last checked for readiness, in ISO-8601 format, UTC. */
+    /**
+     * <p>
+     * The time (UTC) that the resource was last checked for readiness, in ISO-8601 format.
+     * </p>
+     */
     private java.util.Date lastCheckedTimestamp;
-    /** The readiness of the resource. */
+    /**
+     * <p>
+     * The readiness of a resource.
+     * </p>
+     */
     private String readiness;
-    /** The ARN of the resource */
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the resource.
+     * </p>
+     */
     private String resourceArn;
 
     /**
-     * The component id of the resource
+     * <p>
+     * The component id of the resource.
+     * </p>
      * 
      * @param componentId
-     *        The component id of the resource
+     *        The component id of the resource.
      */
 
     public void setComponentId(String componentId) {
@@ -47,9 +67,11 @@ public class ResourceResult implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * The component id of the resource
+     * <p>
+     * The component id of the resource.
+     * </p>
      * 
-     * @return The component id of the resource
+     * @return The component id of the resource.
      */
 
     public String getComponentId() {
@@ -57,10 +79,12 @@ public class ResourceResult implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * The component id of the resource
+     * <p>
+     * The component id of the resource.
+     * </p>
      * 
      * @param componentId
-     *        The component id of the resource
+     *        The component id of the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -70,10 +94,12 @@ public class ResourceResult implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * The time the resource was last checked for readiness, in ISO-8601 format, UTC.
+     * <p>
+     * The time (UTC) that the resource was last checked for readiness, in ISO-8601 format.
+     * </p>
      * 
      * @param lastCheckedTimestamp
-     *        The time the resource was last checked for readiness, in ISO-8601 format, UTC.
+     *        The time (UTC) that the resource was last checked for readiness, in ISO-8601 format.
      */
 
     public void setLastCheckedTimestamp(java.util.Date lastCheckedTimestamp) {
@@ -81,9 +107,11 @@ public class ResourceResult implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * The time the resource was last checked for readiness, in ISO-8601 format, UTC.
+     * <p>
+     * The time (UTC) that the resource was last checked for readiness, in ISO-8601 format.
+     * </p>
      * 
-     * @return The time the resource was last checked for readiness, in ISO-8601 format, UTC.
+     * @return The time (UTC) that the resource was last checked for readiness, in ISO-8601 format.
      */
 
     public java.util.Date getLastCheckedTimestamp() {
@@ -91,10 +119,12 @@ public class ResourceResult implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * The time the resource was last checked for readiness, in ISO-8601 format, UTC.
+     * <p>
+     * The time (UTC) that the resource was last checked for readiness, in ISO-8601 format.
+     * </p>
      * 
      * @param lastCheckedTimestamp
-     *        The time the resource was last checked for readiness, in ISO-8601 format, UTC.
+     *        The time (UTC) that the resource was last checked for readiness, in ISO-8601 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -104,10 +134,12 @@ public class ResourceResult implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * The readiness of the resource.
+     * <p>
+     * The readiness of a resource.
+     * </p>
      * 
      * @param readiness
-     *        The readiness of the resource.
+     *        The readiness of a resource.
      * @see Readiness
      */
 
@@ -116,9 +148,11 @@ public class ResourceResult implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * The readiness of the resource.
+     * <p>
+     * The readiness of a resource.
+     * </p>
      * 
-     * @return The readiness of the resource.
+     * @return The readiness of a resource.
      * @see Readiness
      */
 
@@ -127,10 +161,12 @@ public class ResourceResult implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * The readiness of the resource.
+     * <p>
+     * The readiness of a resource.
+     * </p>
      * 
      * @param readiness
-     *        The readiness of the resource.
+     *        The readiness of a resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Readiness
      */
@@ -141,10 +177,12 @@ public class ResourceResult implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * The readiness of the resource.
+     * <p>
+     * The readiness of a resource.
+     * </p>
      * 
      * @param readiness
-     *        The readiness of the resource.
+     *        The readiness of a resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Readiness
      */
@@ -155,10 +193,12 @@ public class ResourceResult implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * The ARN of the resource
+     * <p>
+     * The Amazon Resource Name (ARN) of the resource.
+     * </p>
      * 
      * @param resourceArn
-     *        The ARN of the resource
+     *        The Amazon Resource Name (ARN) of the resource.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -166,9 +206,11 @@ public class ResourceResult implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * The ARN of the resource
+     * <p>
+     * The Amazon Resource Name (ARN) of the resource.
+     * </p>
      * 
-     * @return The ARN of the resource
+     * @return The Amazon Resource Name (ARN) of the resource.
      */
 
     public String getResourceArn() {
@@ -176,10 +218,12 @@ public class ResourceResult implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * The ARN of the resource
+     * <p>
+     * The Amazon Resource Name (ARN) of the resource.
+     * </p>
      * 
      * @param resourceArn
-     *        The ARN of the resource
+     *        The Amazon Resource Name (ARN) of the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

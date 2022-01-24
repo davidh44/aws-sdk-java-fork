@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * A collection of rules used in a readiness check
+ * <p>
+ * Readiness rule information, including the resource type, rule ID, and rule description.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/ListRulesOutput"
  *      target="_top">AWS API Documentation</a>
@@ -26,18 +28,32 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListRulesOutput implements Serializable, Cloneable, StructuredPojo {
 
-    /** The resource type the rule applies to. */
+    /**
+     * <p>
+     * The resource type that the readiness rule applies to.
+     * </p>
+     */
     private String resourceType;
-    /** A description of the rule */
+    /**
+     * <p>
+     * The description of a readiness rule.
+     * </p>
+     */
     private String ruleDescription;
-    /** The Rule's ID. */
+    /**
+     * <p>
+     * The ID for the readiness rule.
+     * </p>
+     */
     private String ruleId;
 
     /**
-     * The resource type the rule applies to.
+     * <p>
+     * The resource type that the readiness rule applies to.
+     * </p>
      * 
      * @param resourceType
-     *        The resource type the rule applies to.
+     *        The resource type that the readiness rule applies to.
      */
 
     public void setResourceType(String resourceType) {
@@ -45,9 +61,11 @@ public class ListRulesOutput implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * The resource type the rule applies to.
+     * <p>
+     * The resource type that the readiness rule applies to.
+     * </p>
      * 
-     * @return The resource type the rule applies to.
+     * @return The resource type that the readiness rule applies to.
      */
 
     public String getResourceType() {
@@ -55,10 +73,12 @@ public class ListRulesOutput implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * The resource type the rule applies to.
+     * <p>
+     * The resource type that the readiness rule applies to.
+     * </p>
      * 
      * @param resourceType
-     *        The resource type the rule applies to.
+     *        The resource type that the readiness rule applies to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -68,10 +88,12 @@ public class ListRulesOutput implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * A description of the rule
+     * <p>
+     * The description of a readiness rule.
+     * </p>
      * 
      * @param ruleDescription
-     *        A description of the rule
+     *        The description of a readiness rule.
      */
 
     public void setRuleDescription(String ruleDescription) {
@@ -79,9 +101,11 @@ public class ListRulesOutput implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * A description of the rule
+     * <p>
+     * The description of a readiness rule.
+     * </p>
      * 
-     * @return A description of the rule
+     * @return The description of a readiness rule.
      */
 
     public String getRuleDescription() {
@@ -89,10 +113,12 @@ public class ListRulesOutput implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * A description of the rule
+     * <p>
+     * The description of a readiness rule.
+     * </p>
      * 
      * @param ruleDescription
-     *        A description of the rule
+     *        The description of a readiness rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -102,10 +128,12 @@ public class ListRulesOutput implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * The Rule's ID.
+     * <p>
+     * The ID for the readiness rule.
+     * </p>
      * 
      * @param ruleId
-     *        The Rule's ID.
+     *        The ID for the readiness rule.
      */
 
     public void setRuleId(String ruleId) {
@@ -113,9 +141,11 @@ public class ListRulesOutput implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * The Rule's ID.
+     * <p>
+     * The ID for the readiness rule.
+     * </p>
      * 
-     * @return The Rule's ID.
+     * @return The ID for the readiness rule.
      */
 
     public String getRuleId() {
@@ -123,10 +153,12 @@ public class ListRulesOutput implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * The Rule's ID.
+     * <p>
+     * The ID for the readiness rule.
+     * </p>
      * 
      * @param ruleId
-     *        The Rule's ID.
+     *        The ID for the readiness rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

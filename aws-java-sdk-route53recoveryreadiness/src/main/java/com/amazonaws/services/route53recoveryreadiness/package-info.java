@@ -12,7 +12,9 @@
  */
 
 /**
- * AWS Route53 Recovery Readiness
+ * <p>
+ * Recovery readiness
+ * </p>
  */
 package com.amazonaws.services.route53recoveryreadiness;
 

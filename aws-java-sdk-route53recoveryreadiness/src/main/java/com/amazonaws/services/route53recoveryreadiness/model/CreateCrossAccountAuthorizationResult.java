@@ -25,14 +25,20 @@ import javax.annotation.Generated;
 public class CreateCrossAccountAuthorizationResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable,
         Cloneable {
 
-    /** The cross account authorization */
+    /**
+     * <p>
+     * The cross-account authorization.
+     * </p>
+     */
     private String crossAccountAuthorization;
 
     /**
-     * The cross account authorization
+     * <p>
+     * The cross-account authorization.
+     * </p>
      * 
      * @param crossAccountAuthorization
-     *        The cross account authorization
+     *        The cross-account authorization.
      */
 
     public void setCrossAccountAuthorization(String crossAccountAuthorization) {
@@ -40,9 +46,11 @@ public class CreateCrossAccountAuthorizationResult extends com.amazonaws.AmazonW
     }
 
     /**
-     * The cross account authorization
+     * <p>
+     * The cross-account authorization.
+     * </p>
      * 
-     * @return The cross account authorization
+     * @return The cross-account authorization.
      */
 
     public String getCrossAccountAuthorization() {
@@ -50,10 +58,12 @@ public class CreateCrossAccountAuthorizationResult extends com.amazonaws.AmazonW
     }
 
     /**
-     * The cross account authorization
+     * <p>
+     * The cross-account authorization.
+     * </p>
      * 
      * @param crossAccountAuthorization
-     *        The cross account authorization
+     *        The cross-account authorization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

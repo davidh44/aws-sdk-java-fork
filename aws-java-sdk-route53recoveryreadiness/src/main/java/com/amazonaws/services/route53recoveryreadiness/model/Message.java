@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * Information relating to readiness check status
+ * <p>
+ * Information relating to readiness check status.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/Message" target="_top">AWS
  *      API Documentation</a>
@@ -26,14 +28,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class Message implements Serializable, Cloneable, StructuredPojo {
 
-    /** The text of a readiness check message */
+    /**
+     * <p>
+     * The text of a readiness check message.
+     * </p>
+     */
     private String messageText;
 
     /**
-     * The text of a readiness check message
+     * <p>
+     * The text of a readiness check message.
+     * </p>
      * 
      * @param messageText
-     *        The text of a readiness check message
+     *        The text of a readiness check message.
      */
 
     public void setMessageText(String messageText) {
@@ -41,9 +49,11 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * The text of a readiness check message
+     * <p>
+     * The text of a readiness check message.
+     * </p>
      * 
-     * @return The text of a readiness check message
+     * @return The text of a readiness check message.
      */
 
     public String getMessageText() {
@@ -51,10 +61,12 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * The text of a readiness check message
+     * <p>
+     * The text of a readiness check message.
+     * </p>
      * 
      * @param messageText
-     *        The text of a readiness check message
+     *        The text of a readiness check message.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

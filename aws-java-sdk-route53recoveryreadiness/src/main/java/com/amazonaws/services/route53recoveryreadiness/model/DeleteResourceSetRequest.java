@@ -25,14 +25,20 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DeleteResourceSetRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** The ResourceSet to delete */
+    /**
+     * <p>
+     * Name of a resource set.
+     * </p>
+     */
     private String resourceSetName;
 
     /**
-     * The ResourceSet to delete
+     * <p>
+     * Name of a resource set.
+     * </p>
      * 
      * @param resourceSetName
-     *        The ResourceSet to delete
+     *        Name of a resource set.
      */
 
     public void setResourceSetName(String resourceSetName) {
@@ -40,9 +46,11 @@ public class DeleteResourceSetRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * The ResourceSet to delete
+     * <p>
+     * Name of a resource set.
+     * </p>
      * 
-     * @return The ResourceSet to delete
+     * @return Name of a resource set.
      */
 
     public String getResourceSetName() {
@@ -50,10 +58,12 @@ public class DeleteResourceSetRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * The ResourceSet to delete
+     * <p>
+     * Name of a resource set.
+     * </p>
      * 
      * @param resourceSetName
-     *        The ResourceSet to delete
+     *        Name of a resource set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

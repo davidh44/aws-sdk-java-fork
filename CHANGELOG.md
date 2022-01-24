@@ -1,3 +1,8 @@
+# __1.12.146__ __2022-01-24__
+## __AWS Route53 Recovery Readiness__
+  - ### Features
+    - Updated documentation for Route53 Recovery Readiness APIs.
+
 # __1.12.145__ __2022-01-21__
 ## __AWS Elemental MediaConvert__
   - ### Features

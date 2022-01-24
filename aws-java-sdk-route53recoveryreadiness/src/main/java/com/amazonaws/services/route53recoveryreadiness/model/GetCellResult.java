@@ -23,22 +23,45 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetCellResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
-    /** The arn for the Cell */
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) for the cell.
+     * </p>
+     */
     private String cellArn;
-    /** The name of the Cell */
+    /**
+     * <p>
+     * The name of the cell.
+     * </p>
+     */
     private String cellName;
-    /** A list of Cell arns */
+    /**
+     * <p>
+     * A list of cell ARNs.
+     * </p>
+     */
     private java.util.List<String> cells;
-    /** A list of Cell ARNs and/or RecoveryGroup ARNs */
+    /**
+     * <p>
+     * The readiness scope for the cell, which can be a cell Amazon Resource Name (ARN) or a recovery group ARN. This is
+     * a list but currently can have only one element.
+     * </p>
+     */
     private java.util.List<String> parentReadinessScopes;
-
+    /**
+     * <p>
+     * Tags on the resources.
+     * </p>
+     */
     private java.util.Map<String, String> tags;
 
     /**
-     * The arn for the Cell
+     * <p>
+     * The Amazon Resource Name (ARN) for the cell.
+     * </p>
      * 
      * @param cellArn
-     *        The arn for the Cell
+     *        The Amazon Resource Name (ARN) for the cell.
      */
 
     public void setCellArn(String cellArn) {
@@ -46,9 +69,11 @@ public class GetCellResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
     }
 
     /**
-     * The arn for the Cell
+     * <p>
+     * The Amazon Resource Name (ARN) for the cell.
+     * </p>
      * 
-     * @return The arn for the Cell
+     * @return The Amazon Resource Name (ARN) for the cell.
      */
 
     public String getCellArn() {
@@ -56,10 +81,12 @@ public class GetCellResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
     }
 
     /**
-     * The arn for the Cell
+     * <p>
+     * The Amazon Resource Name (ARN) for the cell.
+     * </p>
      * 
      * @param cellArn
-     *        The arn for the Cell
+     *        The Amazon Resource Name (ARN) for the cell.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -69,10 +96,12 @@ public class GetCellResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
     }
 
     /**
-     * The name of the Cell
+     * <p>
+     * The name of the cell.
+     * </p>
      * 
      * @param cellName
-     *        The name of the Cell
+     *        The name of the cell.
      */
 
     public void setCellName(String cellName) {
@@ -80,9 +109,11 @@ public class GetCellResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
     }
 
     /**
-     * The name of the Cell
+     * <p>
+     * The name of the cell.
+     * </p>
      * 
-     * @return The name of the Cell
+     * @return The name of the cell.
      */
 
     public String getCellName() {
@@ -90,10 +121,12 @@ public class GetCellResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
     }
 
     /**
-     * The name of the Cell
+     * <p>
+     * The name of the cell.
+     * </p>
      * 
      * @param cellName
-     *        The name of the Cell
+     *        The name of the cell.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -103,9 +136,11 @@ public class GetCellResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
     }
 
     /**
-     * A list of Cell arns
+     * <p>
+     * A list of cell ARNs.
+     * </p>
      * 
-     * @return A list of Cell arns
+     * @return A list of cell ARNs.
      */
 
     public java.util.List<String> getCells() {
@@ -113,10 +148,12 @@ public class GetCellResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
     }
 
     /**
-     * A list of Cell arns
+     * <p>
+     * A list of cell ARNs.
+     * </p>
      * 
      * @param cells
-     *        A list of Cell arns
+     *        A list of cell ARNs.
      */
 
     public void setCells(java.util.Collection<String> cells) {
@@ -129,7 +166,9 @@ public class GetCellResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
     }
 
     /**
-     * A list of Cell arns
+     * <p>
+     * A list of cell ARNs.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCells(java.util.Collection)} or {@link #withCells(java.util.Collection)} if you want to override the
@@ -137,7 +176,7 @@ public class GetCellResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
      * </p>
      * 
      * @param cells
-     *        A list of Cell arns
+     *        A list of cell ARNs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -152,10 +191,12 @@ public class GetCellResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
     }
 
     /**
-     * A list of Cell arns
+     * <p>
+     * A list of cell ARNs.
+     * </p>
      * 
      * @param cells
-     *        A list of Cell arns
+     *        A list of cell ARNs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -165,9 +206,13 @@ public class GetCellResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
     }
 
     /**
-     * A list of Cell ARNs and/or RecoveryGroup ARNs
+     * <p>
+     * The readiness scope for the cell, which can be a cell Amazon Resource Name (ARN) or a recovery group ARN. This is
+     * a list but currently can have only one element.
+     * </p>
      * 
-     * @return A list of Cell ARNs and/or RecoveryGroup ARNs
+     * @return The readiness scope for the cell, which can be a cell Amazon Resource Name (ARN) or a recovery group ARN.
+     *         This is a list but currently can have only one element.
      */
 
     public java.util.List<String> getParentReadinessScopes() {
@@ -175,10 +220,14 @@ public class GetCellResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
     }
 
     /**
-     * A list of Cell ARNs and/or RecoveryGroup ARNs
+     * <p>
+     * The readiness scope for the cell, which can be a cell Amazon Resource Name (ARN) or a recovery group ARN. This is
+     * a list but currently can have only one element.
+     * </p>
      * 
      * @param parentReadinessScopes
-     *        A list of Cell ARNs and/or RecoveryGroup ARNs
+     *        The readiness scope for the cell, which can be a cell Amazon Resource Name (ARN) or a recovery group ARN.
+     *        This is a list but currently can have only one element.
      */
 
     public void setParentReadinessScopes(java.util.Collection<String> parentReadinessScopes) {
@@ -191,7 +240,10 @@ public class GetCellResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
     }
 
     /**
-     * A list of Cell ARNs and/or RecoveryGroup ARNs
+     * <p>
+     * The readiness scope for the cell, which can be a cell Amazon Resource Name (ARN) or a recovery group ARN. This is
+     * a list but currently can have only one element.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setParentReadinessScopes(java.util.Collection)} or
@@ -199,7 +251,8 @@ public class GetCellResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
      * </p>
      * 
      * @param parentReadinessScopes
-     *        A list of Cell ARNs and/or RecoveryGroup ARNs
+     *        The readiness scope for the cell, which can be a cell Amazon Resource Name (ARN) or a recovery group ARN.
+     *        This is a list but currently can have only one element.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -214,10 +267,14 @@ public class GetCellResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
     }
 
     /**
-     * A list of Cell ARNs and/or RecoveryGroup ARNs
+     * <p>
+     * The readiness scope for the cell, which can be a cell Amazon Resource Name (ARN) or a recovery group ARN. This is
+     * a list but currently can have only one element.
+     * </p>
      * 
      * @param parentReadinessScopes
-     *        A list of Cell ARNs and/or RecoveryGroup ARNs
+     *        The readiness scope for the cell, which can be a cell Amazon Resource Name (ARN) or a recovery group ARN.
+     *        This is a list but currently can have only one element.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -227,7 +284,11 @@ public class GetCellResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
     }
 
     /**
-     * @return
+     * <p>
+     * Tags on the resources.
+     * </p>
+     * 
+     * @return Tags on the resources.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -235,7 +296,12 @@ public class GetCellResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
     }
 
     /**
+     * <p>
+     * Tags on the resources.
+     * </p>
+     * 
      * @param tags
+     *        Tags on the resources.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -243,7 +309,12 @@ public class GetCellResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
     }
 
     /**
+     * <p>
+     * Tags on the resources.
+     * </p>
+     * 
      * @param tags
+     *        Tags on the resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

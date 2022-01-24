@@ -25,18 +25,32 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetReadinessCheckStatusRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** Upper bound on number of records to return. */
+    /**
+     * <p>
+     * The number of objects that you want to return with this call.
+     * </p>
+     */
     private Integer maxResults;
-    /** A token used to resume pagination from the end of a previous request. */
+    /**
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
+     */
     private String nextToken;
-    /** The ReadinessCheck to get */
+    /**
+     * <p>
+     * Name of a readiness check.
+     * </p>
+     */
     private String readinessCheckName;
 
     /**
-     * Upper bound on number of records to return.
+     * <p>
+     * The number of objects that you want to return with this call.
+     * </p>
      * 
      * @param maxResults
-     *        Upper bound on number of records to return.
+     *        The number of objects that you want to return with this call.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -44,9 +58,11 @@ public class GetReadinessCheckStatusRequest extends com.amazonaws.AmazonWebServi
     }
 
     /**
-     * Upper bound on number of records to return.
+     * <p>
+     * The number of objects that you want to return with this call.
+     * </p>
      * 
-     * @return Upper bound on number of records to return.
+     * @return The number of objects that you want to return with this call.
      */
 
     public Integer getMaxResults() {
@@ -54,10 +70,12 @@ public class GetReadinessCheckStatusRequest extends com.amazonaws.AmazonWebServi
     }
 
     /**
-     * Upper bound on number of records to return.
+     * <p>
+     * The number of objects that you want to return with this call.
+     * </p>
      * 
      * @param maxResults
-     *        Upper bound on number of records to return.
+     *        The number of objects that you want to return with this call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -67,10 +85,12 @@ public class GetReadinessCheckStatusRequest extends com.amazonaws.AmazonWebServi
     }
 
     /**
-     * A token used to resume pagination from the end of a previous request.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token used to resume pagination from the end of a previous request.
+     *        The token that identifies which batch of results you want to see.
      */
 
     public void setNextToken(String nextToken) {
@@ -78,9 +98,11 @@ public class GetReadinessCheckStatusRequest extends com.amazonaws.AmazonWebServi
     }
 
     /**
-     * A token used to resume pagination from the end of a previous request.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
-     * @return A token used to resume pagination from the end of a previous request.
+     * @return The token that identifies which batch of results you want to see.
      */
 
     public String getNextToken() {
@@ -88,10 +110,12 @@ public class GetReadinessCheckStatusRequest extends com.amazonaws.AmazonWebServi
     }
 
     /**
-     * A token used to resume pagination from the end of a previous request.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token used to resume pagination from the end of a previous request.
+     *        The token that identifies which batch of results you want to see.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -101,10 +125,12 @@ public class GetReadinessCheckStatusRequest extends com.amazonaws.AmazonWebServi
     }
 
     /**
-     * The ReadinessCheck to get
+     * <p>
+     * Name of a readiness check.
+     * </p>
      * 
      * @param readinessCheckName
-     *        The ReadinessCheck to get
+     *        Name of a readiness check.
      */
 
     public void setReadinessCheckName(String readinessCheckName) {
@@ -112,9 +138,11 @@ public class GetReadinessCheckStatusRequest extends com.amazonaws.AmazonWebServi
     }
 
     /**
-     * The ReadinessCheck to get
+     * <p>
+     * Name of a readiness check.
+     * </p>
      * 
-     * @return The ReadinessCheck to get
+     * @return Name of a readiness check.
      */
 
     public String getReadinessCheckName() {
@@ -122,10 +150,12 @@ public class GetReadinessCheckStatusRequest extends com.amazonaws.AmazonWebServi
     }
 
     /**
-     * The ReadinessCheck to get
+     * <p>
+     * Name of a readiness check.
+     * </p>
      * 
      * @param readinessCheckName
-     *        The ReadinessCheck to get
+     *        Name of a readiness check.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

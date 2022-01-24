@@ -18,7 +18,6 @@ import javax.annotation.Generated;
 import com.amazonaws.AmazonWebServiceRequest;
 
 /**
- * The ResourceSet to create
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/CreateResourceSet"
  *      target="_top">AWS API Documentation</a>
@@ -26,20 +25,45 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CreateResourceSetRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** The name of the ResourceSet to create */
+    /**
+     * <p>
+     * The name of the resource set to create.
+     * </p>
+     */
     private String resourceSetName;
-    /** AWS Resource type of the resources in the ResourceSet */
+    /**
+     * <p>
+     * The resource type of the resources in the resource set. Enter one of the following values for resource type:
+     * </p>
+     * <p>
+     * AWS::ApiGateway::Stage, AWS::ApiGatewayV2::Stage, AWS::AutoScaling::AutoScalingGroup, AWS::CloudWatch::Alarm,
+     * AWS::EC2::CustomerGateway, AWS::DynamoDB::Table, AWS::EC2::Volume, AWS::ElasticLoadBalancing::LoadBalancer,
+     * AWS::ElasticLoadBalancingV2::LoadBalancer, AWS::Lambda::Function, AWS::MSK::Cluster, AWS::RDS::DBCluster,
+     * AWS::Route53::HealthCheck, AWS::SQS::Queue, AWS::SNS::Topic, AWS::SNS::Subscription, AWS::EC2::VPC,
+     * AWS::EC2::VPNConnection, AWS::EC2::VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource
+     * </p>
+     */
     private String resourceSetType;
-    /** A list of Resource objects */
+    /**
+     * <p>
+     * A list of resource objects in the resource set.
+     * </p>
+     */
     private java.util.List<Resource> resources;
-
+    /**
+     * <p>
+     * A tag to associate with the parameters for a resource set.
+     * </p>
+     */
     private java.util.Map<String, String> tags;
 
     /**
-     * The name of the ResourceSet to create
+     * <p>
+     * The name of the resource set to create.
+     * </p>
      * 
      * @param resourceSetName
-     *        The name of the ResourceSet to create
+     *        The name of the resource set to create.
      */
 
     public void setResourceSetName(String resourceSetName) {
@@ -47,9 +71,11 @@ public class CreateResourceSetRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * The name of the ResourceSet to create
+     * <p>
+     * The name of the resource set to create.
+     * </p>
      * 
-     * @return The name of the ResourceSet to create
+     * @return The name of the resource set to create.
      */
 
     public String getResourceSetName() {
@@ -57,10 +83,12 @@ public class CreateResourceSetRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * The name of the ResourceSet to create
+     * <p>
+     * The name of the resource set to create.
+     * </p>
      * 
      * @param resourceSetName
-     *        The name of the ResourceSet to create
+     *        The name of the resource set to create.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -70,10 +98,27 @@ public class CreateResourceSetRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * AWS Resource type of the resources in the ResourceSet
+     * <p>
+     * The resource type of the resources in the resource set. Enter one of the following values for resource type:
+     * </p>
+     * <p>
+     * AWS::ApiGateway::Stage, AWS::ApiGatewayV2::Stage, AWS::AutoScaling::AutoScalingGroup, AWS::CloudWatch::Alarm,
+     * AWS::EC2::CustomerGateway, AWS::DynamoDB::Table, AWS::EC2::Volume, AWS::ElasticLoadBalancing::LoadBalancer,
+     * AWS::ElasticLoadBalancingV2::LoadBalancer, AWS::Lambda::Function, AWS::MSK::Cluster, AWS::RDS::DBCluster,
+     * AWS::Route53::HealthCheck, AWS::SQS::Queue, AWS::SNS::Topic, AWS::SNS::Subscription, AWS::EC2::VPC,
+     * AWS::EC2::VPNConnection, AWS::EC2::VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource
+     * </p>
      * 
      * @param resourceSetType
-     *        AWS Resource type of the resources in the ResourceSet
+     *        The resource type of the resources in the resource set. Enter one of the following values for resource
+     *        type:</p>
+     *        <p>
+     *        AWS::ApiGateway::Stage, AWS::ApiGatewayV2::Stage, AWS::AutoScaling::AutoScalingGroup,
+     *        AWS::CloudWatch::Alarm, AWS::EC2::CustomerGateway, AWS::DynamoDB::Table, AWS::EC2::Volume,
+     *        AWS::ElasticLoadBalancing::LoadBalancer, AWS::ElasticLoadBalancingV2::LoadBalancer, AWS::Lambda::Function,
+     *        AWS::MSK::Cluster, AWS::RDS::DBCluster, AWS::Route53::HealthCheck, AWS::SQS::Queue, AWS::SNS::Topic,
+     *        AWS::SNS::Subscription, AWS::EC2::VPC, AWS::EC2::VPNConnection, AWS::EC2::VPNGateway,
+     *        AWS::Route53RecoveryReadiness::DNSTargetResource
      */
 
     public void setResourceSetType(String resourceSetType) {
@@ -81,9 +126,26 @@ public class CreateResourceSetRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * AWS Resource type of the resources in the ResourceSet
+     * <p>
+     * The resource type of the resources in the resource set. Enter one of the following values for resource type:
+     * </p>
+     * <p>
+     * AWS::ApiGateway::Stage, AWS::ApiGatewayV2::Stage, AWS::AutoScaling::AutoScalingGroup, AWS::CloudWatch::Alarm,
+     * AWS::EC2::CustomerGateway, AWS::DynamoDB::Table, AWS::EC2::Volume, AWS::ElasticLoadBalancing::LoadBalancer,
+     * AWS::ElasticLoadBalancingV2::LoadBalancer, AWS::Lambda::Function, AWS::MSK::Cluster, AWS::RDS::DBCluster,
+     * AWS::Route53::HealthCheck, AWS::SQS::Queue, AWS::SNS::Topic, AWS::SNS::Subscription, AWS::EC2::VPC,
+     * AWS::EC2::VPNConnection, AWS::EC2::VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource
+     * </p>
      * 
-     * @return AWS Resource type of the resources in the ResourceSet
+     * @return The resource type of the resources in the resource set. Enter one of the following values for resource
+     *         type:</p>
+     *         <p>
+     *         AWS::ApiGateway::Stage, AWS::ApiGatewayV2::Stage, AWS::AutoScaling::AutoScalingGroup,
+     *         AWS::CloudWatch::Alarm, AWS::EC2::CustomerGateway, AWS::DynamoDB::Table, AWS::EC2::Volume,
+     *         AWS::ElasticLoadBalancing::LoadBalancer, AWS::ElasticLoadBalancingV2::LoadBalancer,
+     *         AWS::Lambda::Function, AWS::MSK::Cluster, AWS::RDS::DBCluster, AWS::Route53::HealthCheck,
+     *         AWS::SQS::Queue, AWS::SNS::Topic, AWS::SNS::Subscription, AWS::EC2::VPC, AWS::EC2::VPNConnection,
+     *         AWS::EC2::VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource
      */
 
     public String getResourceSetType() {
@@ -91,10 +153,27 @@ public class CreateResourceSetRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * AWS Resource type of the resources in the ResourceSet
+     * <p>
+     * The resource type of the resources in the resource set. Enter one of the following values for resource type:
+     * </p>
+     * <p>
+     * AWS::ApiGateway::Stage, AWS::ApiGatewayV2::Stage, AWS::AutoScaling::AutoScalingGroup, AWS::CloudWatch::Alarm,
+     * AWS::EC2::CustomerGateway, AWS::DynamoDB::Table, AWS::EC2::Volume, AWS::ElasticLoadBalancing::LoadBalancer,
+     * AWS::ElasticLoadBalancingV2::LoadBalancer, AWS::Lambda::Function, AWS::MSK::Cluster, AWS::RDS::DBCluster,
+     * AWS::Route53::HealthCheck, AWS::SQS::Queue, AWS::SNS::Topic, AWS::SNS::Subscription, AWS::EC2::VPC,
+     * AWS::EC2::VPNConnection, AWS::EC2::VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource
+     * </p>
      * 
      * @param resourceSetType
-     *        AWS Resource type of the resources in the ResourceSet
+     *        The resource type of the resources in the resource set. Enter one of the following values for resource
+     *        type:</p>
+     *        <p>
+     *        AWS::ApiGateway::Stage, AWS::ApiGatewayV2::Stage, AWS::AutoScaling::AutoScalingGroup,
+     *        AWS::CloudWatch::Alarm, AWS::EC2::CustomerGateway, AWS::DynamoDB::Table, AWS::EC2::Volume,
+     *        AWS::ElasticLoadBalancing::LoadBalancer, AWS::ElasticLoadBalancingV2::LoadBalancer, AWS::Lambda::Function,
+     *        AWS::MSK::Cluster, AWS::RDS::DBCluster, AWS::Route53::HealthCheck, AWS::SQS::Queue, AWS::SNS::Topic,
+     *        AWS::SNS::Subscription, AWS::EC2::VPC, AWS::EC2::VPNConnection, AWS::EC2::VPNGateway,
+     *        AWS::Route53RecoveryReadiness::DNSTargetResource
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -104,9 +183,11 @@ public class CreateResourceSetRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * A list of Resource objects
+     * <p>
+     * A list of resource objects in the resource set.
+     * </p>
      * 
-     * @return A list of Resource objects
+     * @return A list of resource objects in the resource set.
      */
 
     public java.util.List<Resource> getResources() {
@@ -114,10 +195,12 @@ public class CreateResourceSetRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * A list of Resource objects
+     * <p>
+     * A list of resource objects in the resource set.
+     * </p>
      * 
      * @param resources
-     *        A list of Resource objects
+     *        A list of resource objects in the resource set.
      */
 
     public void setResources(java.util.Collection<Resource> resources) {
@@ -130,7 +213,9 @@ public class CreateResourceSetRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * A list of Resource objects
+     * <p>
+     * A list of resource objects in the resource set.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setResources(java.util.Collection)} or {@link #withResources(java.util.Collection)} if you want to
@@ -138,7 +223,7 @@ public class CreateResourceSetRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * 
      * @param resources
-     *        A list of Resource objects
+     *        A list of resource objects in the resource set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -153,10 +238,12 @@ public class CreateResourceSetRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * A list of Resource objects
+     * <p>
+     * A list of resource objects in the resource set.
+     * </p>
      * 
      * @param resources
-     *        A list of Resource objects
+     *        A list of resource objects in the resource set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -166,7 +253,11 @@ public class CreateResourceSetRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * @return
+     * <p>
+     * A tag to associate with the parameters for a resource set.
+     * </p>
+     * 
+     * @return A tag to associate with the parameters for a resource set.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -174,7 +265,12 @@ public class CreateResourceSetRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * A tag to associate with the parameters for a resource set.
+     * </p>
+     * 
      * @param tags
+     *        A tag to associate with the parameters for a resource set.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -182,7 +278,12 @@ public class CreateResourceSetRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * A tag to associate with the parameters for a resource set.
+     * </p>
+     * 
      * @param tags
+     *        A tag to associate with the parameters for a resource set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

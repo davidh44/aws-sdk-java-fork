@@ -23,16 +23,26 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListRecoveryGroupsResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
-    /** A token that can be used to resume pagination from the end of the collection. */
+    /**
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
+     */
     private String nextToken;
-    /** A list of RecoveryGroups */
+    /**
+     * <p>
+     * A list of recovery groups.
+     * </p>
+     */
     private java.util.List<RecoveryGroupOutput> recoveryGroups;
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token that can be used to resume pagination from the end of the collection.
+     *        The token that identifies which batch of results you want to see.
      */
 
     public void setNextToken(String nextToken) {
@@ -40,9 +50,11 @@ public class ListRecoveryGroupsResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
-     * @return A token that can be used to resume pagination from the end of the collection.
+     * @return The token that identifies which batch of results you want to see.
      */
 
     public String getNextToken() {
@@ -50,10 +62,12 @@ public class ListRecoveryGroupsResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token that can be used to resume pagination from the end of the collection.
+     *        The token that identifies which batch of results you want to see.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -63,9 +77,11 @@ public class ListRecoveryGroupsResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
-     * A list of RecoveryGroups
+     * <p>
+     * A list of recovery groups.
+     * </p>
      * 
-     * @return A list of RecoveryGroups
+     * @return A list of recovery groups.
      */
 
     public java.util.List<RecoveryGroupOutput> getRecoveryGroups() {
@@ -73,10 +89,12 @@ public class ListRecoveryGroupsResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
-     * A list of RecoveryGroups
+     * <p>
+     * A list of recovery groups.
+     * </p>
      * 
      * @param recoveryGroups
-     *        A list of RecoveryGroups
+     *        A list of recovery groups.
      */
 
     public void setRecoveryGroups(java.util.Collection<RecoveryGroupOutput> recoveryGroups) {
@@ -89,7 +107,9 @@ public class ListRecoveryGroupsResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
-     * A list of RecoveryGroups
+     * <p>
+     * A list of recovery groups.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setRecoveryGroups(java.util.Collection)} or {@link #withRecoveryGroups(java.util.Collection)} if you want
@@ -97,7 +117,7 @@ public class ListRecoveryGroupsResult extends com.amazonaws.AmazonWebServiceResu
      * </p>
      * 
      * @param recoveryGroups
-     *        A list of RecoveryGroups
+     *        A list of recovery groups.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -112,10 +132,12 @@ public class ListRecoveryGroupsResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
-     * A list of RecoveryGroups
+     * <p>
+     * A list of recovery groups.
+     * </p>
      * 
      * @param recoveryGroups
-     *        A list of RecoveryGroups
+     *        A list of recovery groups.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

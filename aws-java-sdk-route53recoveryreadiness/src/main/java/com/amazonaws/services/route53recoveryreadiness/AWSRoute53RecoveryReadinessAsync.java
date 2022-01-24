@@ -25,16 +25,19 @@ import com.amazonaws.services.route53recoveryreadiness.model.*;
  * {@link com.amazonaws.services.route53recoveryreadiness.AbstractAWSRoute53RecoveryReadinessAsync} instead.
  * </p>
  * <p>
- * AWS Route53 Recovery Readiness
+ * <p>
+ * Recovery readiness
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryReadiness {
 
     /**
-     * Creates a new Cell.
+     * <p>
+     * Creates a cell in an account.
+     * </p>
      * 
      * @param createCellRequest
-     *        The Cell to create
      * @return A Java Future containing the result of the CreateCell operation returned by the service.
      * @sample AWSRoute53RecoveryReadinessAsync.CreateCell
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/CreateCell"
@@ -43,10 +46,11 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
     java.util.concurrent.Future<CreateCellResult> createCellAsync(CreateCellRequest createCellRequest);
 
     /**
-     * Creates a new Cell.
+     * <p>
+     * Creates a cell in an account.
+     * </p>
      * 
      * @param createCellRequest
-     *        The Cell to create
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -60,10 +64,12 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<CreateCellRequest, CreateCellResult> asyncHandler);
 
     /**
-     * Create a new cross account readiness authorization.
+     * <p>
+     * Creates a cross-account readiness authorization. This lets you authorize another account to work with Route 53
+     * Application Recovery Controller, for example, to check the readiness status of resources in a separate account.
+     * </p>
      * 
      * @param createCrossAccountAuthorizationRequest
-     *        The cross account authorization
      * @return A Java Future containing the result of the CreateCrossAccountAuthorization operation returned by the
      *         service.
      * @sample AWSRoute53RecoveryReadinessAsync.CreateCrossAccountAuthorization
@@ -75,10 +81,12 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             CreateCrossAccountAuthorizationRequest createCrossAccountAuthorizationRequest);
 
     /**
-     * Create a new cross account readiness authorization.
+     * <p>
+     * Creates a cross-account readiness authorization. This lets you authorize another account to work with Route 53
+     * Application Recovery Controller, for example, to check the readiness status of resources in a separate account.
+     * </p>
      * 
      * @param createCrossAccountAuthorizationRequest
-     *        The cross account authorization
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -95,10 +103,13 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<CreateCrossAccountAuthorizationRequest, CreateCrossAccountAuthorizationResult> asyncHandler);
 
     /**
-     * Creates a new Readiness Check.
+     * <p>
+     * Creates a readiness check in an account. A readiness check monitors a resource set in your application, such as a
+     * set of Amazon Aurora instances, that Application Recovery Controller is auditing recovery readiness for. The
+     * audits run once every minute on every resource that's associated with a readiness check.
+     * </p>
      * 
      * @param createReadinessCheckRequest
-     *        The ReadinessCheck to create
      * @return A Java Future containing the result of the CreateReadinessCheck operation returned by the service.
      * @sample AWSRoute53RecoveryReadinessAsync.CreateReadinessCheck
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/CreateReadinessCheck"
@@ -107,10 +118,13 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
     java.util.concurrent.Future<CreateReadinessCheckResult> createReadinessCheckAsync(CreateReadinessCheckRequest createReadinessCheckRequest);
 
     /**
-     * Creates a new Readiness Check.
+     * <p>
+     * Creates a readiness check in an account. A readiness check monitors a resource set in your application, such as a
+     * set of Amazon Aurora instances, that Application Recovery Controller is auditing recovery readiness for. The
+     * audits run once every minute on every resource that's associated with a readiness check.
+     * </p>
      * 
      * @param createReadinessCheckRequest
-     *        The ReadinessCheck to create
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -124,10 +138,12 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<CreateReadinessCheckRequest, CreateReadinessCheckResult> asyncHandler);
 
     /**
-     * Creates a new Recovery Group.
+     * <p>
+     * Creates a recovery group in an account. A recovery group corresponds to an application and includes a list of the
+     * cells that make up the application.
+     * </p>
      * 
      * @param createRecoveryGroupRequest
-     *        The RecoveryGroup to create
      * @return A Java Future containing the result of the CreateRecoveryGroup operation returned by the service.
      * @sample AWSRoute53RecoveryReadinessAsync.CreateRecoveryGroup
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/CreateRecoveryGroup"
@@ -136,10 +152,12 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
     java.util.concurrent.Future<CreateRecoveryGroupResult> createRecoveryGroupAsync(CreateRecoveryGroupRequest createRecoveryGroupRequest);
 
     /**
-     * Creates a new Recovery Group.
+     * <p>
+     * Creates a recovery group in an account. A recovery group corresponds to an application and includes a list of the
+     * cells that make up the application.
+     * </p>
      * 
      * @param createRecoveryGroupRequest
-     *        The RecoveryGroup to create
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -153,10 +171,12 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<CreateRecoveryGroupRequest, CreateRecoveryGroupResult> asyncHandler);
 
     /**
-     * Creates a new Resource Set.
+     * <p>
+     * Creates a resource set. A resource set is a set of resources of one type that span multiple cells. You can
+     * associate a resource set with a readiness check to monitor the resources for failover readiness.
+     * </p>
      * 
      * @param createResourceSetRequest
-     *        The ResourceSet to create
      * @return A Java Future containing the result of the CreateResourceSet operation returned by the service.
      * @sample AWSRoute53RecoveryReadinessAsync.CreateResourceSet
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/CreateResourceSet"
@@ -165,10 +185,12 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
     java.util.concurrent.Future<CreateResourceSetResult> createResourceSetAsync(CreateResourceSetRequest createResourceSetRequest);
 
     /**
-     * Creates a new Resource Set.
+     * <p>
+     * Creates a resource set. A resource set is a set of resources of one type that span multiple cells. You can
+     * associate a resource set with a readiness check to monitor the resources for failover readiness.
+     * </p>
      * 
      * @param createResourceSetRequest
-     *        The ResourceSet to create
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -182,7 +204,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<CreateResourceSetRequest, CreateResourceSetResult> asyncHandler);
 
     /**
-     * Deletes an existing Cell.
+     * <p>
+     * Delete a cell. When successful, the response code is 204, with no response body.
+     * </p>
      * 
      * @param deleteCellRequest
      * @return A Java Future containing the result of the DeleteCell operation returned by the service.
@@ -193,7 +217,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
     java.util.concurrent.Future<DeleteCellResult> deleteCellAsync(DeleteCellRequest deleteCellRequest);
 
     /**
-     * Deletes an existing Cell.
+     * <p>
+     * Delete a cell. When successful, the response code is 204, with no response body.
+     * </p>
      * 
      * @param deleteCellRequest
      * @param asyncHandler
@@ -209,7 +235,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<DeleteCellRequest, DeleteCellResult> asyncHandler);
 
     /**
-     * Delete cross account readiness authorization
+     * <p>
+     * Deletes cross account readiness authorization.
+     * </p>
      * 
      * @param deleteCrossAccountAuthorizationRequest
      * @return A Java Future containing the result of the DeleteCrossAccountAuthorization operation returned by the
@@ -223,7 +251,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             DeleteCrossAccountAuthorizationRequest deleteCrossAccountAuthorizationRequest);
 
     /**
-     * Delete cross account readiness authorization
+     * <p>
+     * Deletes cross account readiness authorization.
+     * </p>
      * 
      * @param deleteCrossAccountAuthorizationRequest
      * @param asyncHandler
@@ -242,7 +272,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<DeleteCrossAccountAuthorizationRequest, DeleteCrossAccountAuthorizationResult> asyncHandler);
 
     /**
-     * Deletes an existing Readiness Check.
+     * <p>
+     * Deletes a readiness check.
+     * </p>
      * 
      * @param deleteReadinessCheckRequest
      * @return A Java Future containing the result of the DeleteReadinessCheck operation returned by the service.
@@ -253,7 +285,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
     java.util.concurrent.Future<DeleteReadinessCheckResult> deleteReadinessCheckAsync(DeleteReadinessCheckRequest deleteReadinessCheckRequest);
 
     /**
-     * Deletes an existing Readiness Check.
+     * <p>
+     * Deletes a readiness check.
+     * </p>
      * 
      * @param deleteReadinessCheckRequest
      * @param asyncHandler
@@ -269,7 +303,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<DeleteReadinessCheckRequest, DeleteReadinessCheckResult> asyncHandler);
 
     /**
-     * Deletes an existing Recovery Group.
+     * <p>
+     * Deletes a recovery group.
+     * </p>
      * 
      * @param deleteRecoveryGroupRequest
      * @return A Java Future containing the result of the DeleteRecoveryGroup operation returned by the service.
@@ -280,7 +316,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
     java.util.concurrent.Future<DeleteRecoveryGroupResult> deleteRecoveryGroupAsync(DeleteRecoveryGroupRequest deleteRecoveryGroupRequest);
 
     /**
-     * Deletes an existing Recovery Group.
+     * <p>
+     * Deletes a recovery group.
+     * </p>
      * 
      * @param deleteRecoveryGroupRequest
      * @param asyncHandler
@@ -296,7 +334,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<DeleteRecoveryGroupRequest, DeleteRecoveryGroupResult> asyncHandler);
 
     /**
-     * Deletes an existing Resource Set.
+     * <p>
+     * Deletes a resource set.
+     * </p>
      * 
      * @param deleteResourceSetRequest
      * @return A Java Future containing the result of the DeleteResourceSet operation returned by the service.
@@ -307,7 +347,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
     java.util.concurrent.Future<DeleteResourceSetResult> deleteResourceSetAsync(DeleteResourceSetRequest deleteResourceSetRequest);
 
     /**
-     * Deletes an existing Resource Set.
+     * <p>
+     * Deletes a resource set.
+     * </p>
      * 
      * @param deleteResourceSetRequest
      * @param asyncHandler
@@ -323,7 +365,10 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<DeleteResourceSetRequest, DeleteResourceSetResult> asyncHandler);
 
     /**
-     * Returns a collection of recommendations to improve resilliance and readiness check quality for a Recovery Group.
+     * <p>
+     * Gets recommendations about architecture designs for improving resiliency for an application, based on a recovery
+     * group.
+     * </p>
      * 
      * @param getArchitectureRecommendationsRequest
      * @return A Java Future containing the result of the GetArchitectureRecommendations operation returned by the
@@ -337,7 +382,10 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             GetArchitectureRecommendationsRequest getArchitectureRecommendationsRequest);
 
     /**
-     * Returns a collection of recommendations to improve resilliance and readiness check quality for a Recovery Group.
+     * <p>
+     * Gets recommendations about architecture designs for improving resiliency for an application, based on a recovery
+     * group.
+     * </p>
      * 
      * @param getArchitectureRecommendationsRequest
      * @param asyncHandler
@@ -356,7 +404,10 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<GetArchitectureRecommendationsRequest, GetArchitectureRecommendationsResult> asyncHandler);
 
     /**
-     * Returns information about a Cell.
+     * <p>
+     * Gets information about a cell including cell name, cell Amazon Resource Name (ARN), ARNs of nested cells for this
+     * cell, and a list of those cell ARNs with their associated recovery group ARNs.
+     * </p>
      * 
      * @param getCellRequest
      * @return A Java Future containing the result of the GetCell operation returned by the service.
@@ -367,7 +418,10 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
     java.util.concurrent.Future<GetCellResult> getCellAsync(GetCellRequest getCellRequest);
 
     /**
-     * Returns information about a Cell.
+     * <p>
+     * Gets information about a cell including cell name, cell Amazon Resource Name (ARN), ARNs of nested cells for this
+     * cell, and a list of those cell ARNs with their associated recovery group ARNs.
+     * </p>
      * 
      * @param getCellRequest
      * @param asyncHandler
@@ -383,7 +437,10 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<GetCellRequest, GetCellResult> asyncHandler);
 
     /**
-     * Returns information about readiness of a Cell.
+     * <p>
+     * Gets readiness for a cell. Aggregates the readiness of all the resources that are associated with the cell into a
+     * single value.
+     * </p>
      * 
      * @param getCellReadinessSummaryRequest
      * @return A Java Future containing the result of the GetCellReadinessSummary operation returned by the service.
@@ -395,7 +452,10 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
     java.util.concurrent.Future<GetCellReadinessSummaryResult> getCellReadinessSummaryAsync(GetCellReadinessSummaryRequest getCellReadinessSummaryRequest);
 
     /**
-     * Returns information about readiness of a Cell.
+     * <p>
+     * Gets readiness for a cell. Aggregates the readiness of all the resources that are associated with the cell into a
+     * single value.
+     * </p>
      * 
      * @param getCellReadinessSummaryRequest
      * @param asyncHandler
@@ -412,7 +472,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<GetCellReadinessSummaryRequest, GetCellReadinessSummaryResult> asyncHandler);
 
     /**
-     * Returns information about a ReadinessCheck.
+     * <p>
+     * Gets details about a readiness check.
+     * </p>
      * 
      * @param getReadinessCheckRequest
      * @return A Java Future containing the result of the GetReadinessCheck operation returned by the service.
@@ -423,7 +485,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
     java.util.concurrent.Future<GetReadinessCheckResult> getReadinessCheckAsync(GetReadinessCheckRequest getReadinessCheckRequest);
 
     /**
-     * Returns information about a ReadinessCheck.
+     * <p>
+     * Gets details about a readiness check.
+     * </p>
      * 
      * @param getReadinessCheckRequest
      * @param asyncHandler
@@ -439,7 +503,11 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<GetReadinessCheckRequest, GetReadinessCheckResult> asyncHandler);
 
     /**
-     * Returns detailed information about the status of an individual resource within a Readiness Check's Resource Set.
+     * <p>
+     * Gets individual readiness status for a readiness check. To see the overall readiness status for a recovery group,
+     * that considers the readiness status for all the readiness checks in the recovery group, use
+     * GetRecoveryGroupReadinessSummary.
+     * </p>
      * 
      * @param getReadinessCheckResourceStatusRequest
      * @return A Java Future containing the result of the GetReadinessCheckResourceStatus operation returned by the
@@ -453,7 +521,11 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             GetReadinessCheckResourceStatusRequest getReadinessCheckResourceStatusRequest);
 
     /**
-     * Returns detailed information about the status of an individual resource within a Readiness Check's Resource Set.
+     * <p>
+     * Gets individual readiness status for a readiness check. To see the overall readiness status for a recovery group,
+     * that considers the readiness status for all the readiness checks in the recovery group, use
+     * GetRecoveryGroupReadinessSummary.
+     * </p>
      * 
      * @param getReadinessCheckResourceStatusRequest
      * @param asyncHandler
@@ -472,7 +544,11 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<GetReadinessCheckResourceStatusRequest, GetReadinessCheckResourceStatusResult> asyncHandler);
 
     /**
-     * Returns information about the status of a Readiness Check.
+     * <p>
+     * Gets the readiness status for an individual readiness check. To see the overall readiness status for a recovery
+     * group, that considers the readiness status for all the readiness checks in a recovery group, use
+     * GetRecoveryGroupReadinessSummary.
+     * </p>
      * 
      * @param getReadinessCheckStatusRequest
      * @return A Java Future containing the result of the GetReadinessCheckStatus operation returned by the service.
@@ -484,7 +560,11 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
     java.util.concurrent.Future<GetReadinessCheckStatusResult> getReadinessCheckStatusAsync(GetReadinessCheckStatusRequest getReadinessCheckStatusRequest);
 
     /**
-     * Returns information about the status of a Readiness Check.
+     * <p>
+     * Gets the readiness status for an individual readiness check. To see the overall readiness status for a recovery
+     * group, that considers the readiness status for all the readiness checks in a recovery group, use
+     * GetRecoveryGroupReadinessSummary.
+     * </p>
      * 
      * @param getReadinessCheckStatusRequest
      * @param asyncHandler
@@ -501,7 +581,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<GetReadinessCheckStatusRequest, GetReadinessCheckStatusResult> asyncHandler);
 
     /**
-     * Returns information about a Recovery Group.
+     * <p>
+     * Gets details about a recovery group, including a list of the cells that are included in it.
+     * </p>
      * 
      * @param getRecoveryGroupRequest
      * @return A Java Future containing the result of the GetRecoveryGroup operation returned by the service.
@@ -512,7 +594,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
     java.util.concurrent.Future<GetRecoveryGroupResult> getRecoveryGroupAsync(GetRecoveryGroupRequest getRecoveryGroupRequest);
 
     /**
-     * Returns information about a Recovery Group.
+     * <p>
+     * Gets details about a recovery group, including a list of the cells that are included in it.
+     * </p>
      * 
      * @param getRecoveryGroupRequest
      * @param asyncHandler
@@ -528,7 +612,10 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<GetRecoveryGroupRequest, GetRecoveryGroupResult> asyncHandler);
 
     /**
-     * Returns information about a Recovery Group.
+     * <p>
+     * Displays a summary of information about a recovery group's readiness status. Includes the readiness checks for
+     * resources in the recovery group and the readiness status of each one.
+     * </p>
      * 
      * @param getRecoveryGroupReadinessSummaryRequest
      * @return A Java Future containing the result of the GetRecoveryGroupReadinessSummary operation returned by the
@@ -542,7 +629,10 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             GetRecoveryGroupReadinessSummaryRequest getRecoveryGroupReadinessSummaryRequest);
 
     /**
-     * Returns information about a Recovery Group.
+     * <p>
+     * Displays a summary of information about a recovery group's readiness status. Includes the readiness checks for
+     * resources in the recovery group and the readiness status of each one.
+     * </p>
      * 
      * @param getRecoveryGroupReadinessSummaryRequest
      * @param asyncHandler
@@ -561,7 +651,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<GetRecoveryGroupReadinessSummaryRequest, GetRecoveryGroupReadinessSummaryResult> asyncHandler);
 
     /**
-     * Returns information about a Resource Set.
+     * <p>
+     * Displays the details about a resource set, including a list of the resources in the set.
+     * </p>
      * 
      * @param getResourceSetRequest
      * @return A Java Future containing the result of the GetResourceSet operation returned by the service.
@@ -572,7 +664,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
     java.util.concurrent.Future<GetResourceSetResult> getResourceSetAsync(GetResourceSetRequest getResourceSetRequest);
 
     /**
-     * Returns information about a Resource Set.
+     * <p>
+     * Displays the details about a resource set, including a list of the resources in the set.
+     * </p>
      * 
      * @param getResourceSetRequest
      * @param asyncHandler
@@ -588,7 +682,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<GetResourceSetRequest, GetResourceSetResult> asyncHandler);
 
     /**
-     * Returns a collection of Cells.
+     * <p>
+     * Lists the cells for an account.
+     * </p>
      * 
      * @param listCellsRequest
      * @return A Java Future containing the result of the ListCells operation returned by the service.
@@ -599,7 +695,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
     java.util.concurrent.Future<ListCellsResult> listCellsAsync(ListCellsRequest listCellsRequest);
 
     /**
-     * Returns a collection of Cells.
+     * <p>
+     * Lists the cells for an account.
+     * </p>
      * 
      * @param listCellsRequest
      * @param asyncHandler
@@ -615,7 +713,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<ListCellsRequest, ListCellsResult> asyncHandler);
 
     /**
-     * Returns a collection of cross account readiness authorizations.
+     * <p>
+     * Lists the cross-account readiness authorizations that are in place for an account.
+     * </p>
      * 
      * @param listCrossAccountAuthorizationsRequest
      * @return A Java Future containing the result of the ListCrossAccountAuthorizations operation returned by the
@@ -629,7 +729,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             ListCrossAccountAuthorizationsRequest listCrossAccountAuthorizationsRequest);
 
     /**
-     * Returns a collection of cross account readiness authorizations.
+     * <p>
+     * Lists the cross-account readiness authorizations that are in place for an account.
+     * </p>
      * 
      * @param listCrossAccountAuthorizationsRequest
      * @param asyncHandler
@@ -648,7 +750,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<ListCrossAccountAuthorizationsRequest, ListCrossAccountAuthorizationsResult> asyncHandler);
 
     /**
-     * Returns a collection of Readiness Checks.
+     * <p>
+     * Lists the readiness checks for an account.
+     * </p>
      * 
      * @param listReadinessChecksRequest
      * @return A Java Future containing the result of the ListReadinessChecks operation returned by the service.
@@ -659,7 +763,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
     java.util.concurrent.Future<ListReadinessChecksResult> listReadinessChecksAsync(ListReadinessChecksRequest listReadinessChecksRequest);
 
     /**
-     * Returns a collection of Readiness Checks.
+     * <p>
+     * Lists the readiness checks for an account.
+     * </p>
      * 
      * @param listReadinessChecksRequest
      * @param asyncHandler
@@ -675,7 +781,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<ListReadinessChecksRequest, ListReadinessChecksResult> asyncHandler);
 
     /**
-     * Returns a collection of Recovery Groups.
+     * <p>
+     * Lists the recovery groups in an account.
+     * </p>
      * 
      * @param listRecoveryGroupsRequest
      * @return A Java Future containing the result of the ListRecoveryGroups operation returned by the service.
@@ -686,7 +794,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
     java.util.concurrent.Future<ListRecoveryGroupsResult> listRecoveryGroupsAsync(ListRecoveryGroupsRequest listRecoveryGroupsRequest);
 
     /**
-     * Returns a collection of Recovery Groups.
+     * <p>
+     * Lists the recovery groups in an account.
+     * </p>
      * 
      * @param listRecoveryGroupsRequest
      * @param asyncHandler
@@ -702,7 +812,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<ListRecoveryGroupsRequest, ListRecoveryGroupsResult> asyncHandler);
 
     /**
-     * Returns a collection of Resource Sets.
+     * <p>
+     * Lists the resource sets in an account.
+     * </p>
      * 
      * @param listResourceSetsRequest
      * @return A Java Future containing the result of the ListResourceSets operation returned by the service.
@@ -713,7 +825,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
     java.util.concurrent.Future<ListResourceSetsResult> listResourceSetsAsync(ListResourceSetsRequest listResourceSetsRequest);
 
     /**
-     * Returns a collection of Resource Sets.
+     * <p>
+     * Lists the resource sets in an account.
+     * </p>
      * 
      * @param listResourceSetsRequest
      * @param asyncHandler
@@ -729,7 +843,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<ListResourceSetsRequest, ListResourceSetsResult> asyncHandler);
 
     /**
-     * Returns a collection of rules that are applied as part of Readiness Checks.
+     * <p>
+     * Lists all readiness rules, or lists the readiness rules for a specific resource type.
+     * </p>
      * 
      * @param listRulesRequest
      * @return A Java Future containing the result of the ListRules operation returned by the service.
@@ -740,7 +856,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
     java.util.concurrent.Future<ListRulesResult> listRulesAsync(ListRulesRequest listRulesRequest);
 
     /**
-     * Returns a collection of rules that are applied as part of Readiness Checks.
+     * <p>
+     * Lists all readiness rules, or lists the readiness rules for a specific resource type.
+     * </p>
      * 
      * @param listRulesRequest
      * @param asyncHandler
@@ -756,7 +874,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<ListRulesRequest, ListRulesResult> asyncHandler);
 
     /**
-     * Returns a list of the tags assigned to the specified resource.
+     * <p>
+     * Lists the tags for a resource.
+     * </p>
      * 
      * @param listTagsForResourcesRequest
      * @return A Java Future containing the result of the ListTagsForResources operation returned by the service.
@@ -767,7 +887,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
     java.util.concurrent.Future<ListTagsForResourcesResult> listTagsForResourcesAsync(ListTagsForResourcesRequest listTagsForResourcesRequest);
 
     /**
-     * Returns a list of the tags assigned to the specified resource.
+     * <p>
+     * Lists the tags for a resource.
+     * </p>
      * 
      * @param listTagsForResourcesRequest
      * @param asyncHandler
@@ -783,7 +905,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourcesRequest, ListTagsForResourcesResult> asyncHandler);
 
     /**
-     * Adds tags to the specified resource. You can specify one or more tags to add.
+     * <p>
+     * Adds a tag to a resource.
+     * </p>
      * 
      * @param tagResourceRequest
      * @return A Java Future containing the result of the TagResource operation returned by the service.
@@ -794,7 +918,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
     java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest tagResourceRequest);
 
     /**
-     * Adds tags to the specified resource. You can specify one or more tags to add.
+     * <p>
+     * Adds a tag to a resource.
+     * </p>
      * 
      * @param tagResourceRequest
      * @param asyncHandler
@@ -810,7 +936,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<TagResourceRequest, TagResourceResult> asyncHandler);
 
     /**
-     * Removes tags from the specified resource. You can specify one or more tags to remove.
+     * <p>
+     * Removes a tag from a resource.
+     * </p>
      * 
      * @param untagResourceRequest
      * @return A Java Future containing the result of the UntagResource operation returned by the service.
@@ -821,7 +949,9 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
     java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest);
 
     /**
-     * Removes tags from the specified resource. You can specify one or more tags to remove.
+     * <p>
+     * Removes a tag from a resource.
+     * </p>
      * 
      * @param untagResourceRequest
      * @param asyncHandler
@@ -837,10 +967,11 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler);
 
     /**
-     * Updates an existing Cell.
+     * <p>
+     * Updates a cell to replace the list of nested cells with a new list of nested cells.
+     * </p>
      * 
      * @param updateCellRequest
-     *        Parameters to update for the Cell
      * @return A Java Future containing the result of the UpdateCell operation returned by the service.
      * @sample AWSRoute53RecoveryReadinessAsync.UpdateCell
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/UpdateCell"
@@ -849,10 +980,11 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
     java.util.concurrent.Future<UpdateCellResult> updateCellAsync(UpdateCellRequest updateCellRequest);
 
     /**
-     * Updates an existing Cell.
+     * <p>
+     * Updates a cell to replace the list of nested cells with a new list of nested cells.
+     * </p>
      * 
      * @param updateCellRequest
-     *        Parameters to update for the Cell
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -866,10 +998,12 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<UpdateCellRequest, UpdateCellResult> asyncHandler);
 
     /**
-     * Updates an exisiting Readiness Check.
+     * <p>
+     * Updates a readiness check.
+     * </p>
      * 
      * @param updateReadinessCheckRequest
-     *        The new Readiness Check values
+     *        Name of a readiness check to describe.
      * @return A Java Future containing the result of the UpdateReadinessCheck operation returned by the service.
      * @sample AWSRoute53RecoveryReadinessAsync.UpdateReadinessCheck
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/UpdateReadinessCheck"
@@ -878,10 +1012,12 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
     java.util.concurrent.Future<UpdateReadinessCheckResult> updateReadinessCheckAsync(UpdateReadinessCheckRequest updateReadinessCheckRequest);
 
     /**
-     * Updates an exisiting Readiness Check.
+     * <p>
+     * Updates a readiness check.
+     * </p>
      * 
      * @param updateReadinessCheckRequest
-     *        The new Readiness Check values
+     *        Name of a readiness check to describe.
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -895,10 +1031,12 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<UpdateReadinessCheckRequest, UpdateReadinessCheckResult> asyncHandler);
 
     /**
-     * Updates an existing Recovery Group.
+     * <p>
+     * Updates a recovery group.
+     * </p>
      * 
      * @param updateRecoveryGroupRequest
-     *        Parameters to update for the RecoveryGroup
+     *        Name of a recovery group.
      * @return A Java Future containing the result of the UpdateRecoveryGroup operation returned by the service.
      * @sample AWSRoute53RecoveryReadinessAsync.UpdateRecoveryGroup
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/UpdateRecoveryGroup"
@@ -907,10 +1045,12 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
     java.util.concurrent.Future<UpdateRecoveryGroupResult> updateRecoveryGroupAsync(UpdateRecoveryGroupRequest updateRecoveryGroupRequest);
 
     /**
-     * Updates an existing Recovery Group.
+     * <p>
+     * Updates a recovery group.
+     * </p>
      * 
      * @param updateRecoveryGroupRequest
-     *        Parameters to update for the RecoveryGroup
+     *        Name of a recovery group.
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -924,10 +1064,12 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
             com.amazonaws.handlers.AsyncHandler<UpdateRecoveryGroupRequest, UpdateRecoveryGroupResult> asyncHandler);
 
     /**
-     * Updates an existing Resource Set.
+     * <p>
+     * Updates a resource set.
+     * </p>
      * 
      * @param updateResourceSetRequest
-     *        configuration for the desired
+     *        Name of a resource set.
      * @return A Java Future containing the result of the UpdateResourceSet operation returned by the service.
      * @sample AWSRoute53RecoveryReadinessAsync.UpdateResourceSet
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/UpdateResourceSet"
@@ -936,10 +1078,12 @@ public interface AWSRoute53RecoveryReadinessAsync extends AWSRoute53RecoveryRead
     java.util.concurrent.Future<UpdateResourceSetResult> updateResourceSetAsync(UpdateResourceSetRequest updateResourceSetRequest);
 
     /**
-     * Updates an existing Resource Set.
+     * <p>
+     * Updates a resource set.
+     * </p>
      * 
      * @param updateResourceSetRequest
-     *        configuration for the desired
+     *        Name of a resource set.
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or

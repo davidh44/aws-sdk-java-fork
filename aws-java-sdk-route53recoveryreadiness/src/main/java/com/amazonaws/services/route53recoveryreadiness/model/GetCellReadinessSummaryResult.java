@@ -23,18 +23,32 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetCellReadinessSummaryResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
-    /** A token that can be used to resume pagination from the end of the collection. */
+    /**
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
+     */
     private String nextToken;
-    /** The readiness at Cell level. */
+    /**
+     * <p>
+     * The readiness at a cell level.
+     * </p>
+     */
     private String readiness;
-    /** Summaries for the ReadinessChecks making up the Cell */
+    /**
+     * <p>
+     * Summaries for the readiness checks that make up the cell.
+     * </p>
+     */
     private java.util.List<ReadinessCheckSummary> readinessChecks;
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token that can be used to resume pagination from the end of the collection.
+     *        The token that identifies which batch of results you want to see.
      */
 
     public void setNextToken(String nextToken) {
@@ -42,9 +56,11 @@ public class GetCellReadinessSummaryResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
-     * @return A token that can be used to resume pagination from the end of the collection.
+     * @return The token that identifies which batch of results you want to see.
      */
 
     public String getNextToken() {
@@ -52,10 +68,12 @@ public class GetCellReadinessSummaryResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token that can be used to resume pagination from the end of the collection.
+     *        The token that identifies which batch of results you want to see.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -65,10 +83,12 @@ public class GetCellReadinessSummaryResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * The readiness at Cell level.
+     * <p>
+     * The readiness at a cell level.
+     * </p>
      * 
      * @param readiness
-     *        The readiness at Cell level.
+     *        The readiness at a cell level.
      * @see Readiness
      */
 
@@ -77,9 +97,11 @@ public class GetCellReadinessSummaryResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * The readiness at Cell level.
+     * <p>
+     * The readiness at a cell level.
+     * </p>
      * 
-     * @return The readiness at Cell level.
+     * @return The readiness at a cell level.
      * @see Readiness
      */
 
@@ -88,10 +110,12 @@ public class GetCellReadinessSummaryResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * The readiness at Cell level.
+     * <p>
+     * The readiness at a cell level.
+     * </p>
      * 
      * @param readiness
-     *        The readiness at Cell level.
+     *        The readiness at a cell level.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Readiness
      */
@@ -102,10 +126,12 @@ public class GetCellReadinessSummaryResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * The readiness at Cell level.
+     * <p>
+     * The readiness at a cell level.
+     * </p>
      * 
      * @param readiness
-     *        The readiness at Cell level.
+     *        The readiness at a cell level.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Readiness
      */
@@ -116,9 +142,11 @@ public class GetCellReadinessSummaryResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * Summaries for the ReadinessChecks making up the Cell
+     * <p>
+     * Summaries for the readiness checks that make up the cell.
+     * </p>
      * 
-     * @return Summaries for the ReadinessChecks making up the Cell
+     * @return Summaries for the readiness checks that make up the cell.
      */
 
     public java.util.List<ReadinessCheckSummary> getReadinessChecks() {
@@ -126,10 +154,12 @@ public class GetCellReadinessSummaryResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * Summaries for the ReadinessChecks making up the Cell
+     * <p>
+     * Summaries for the readiness checks that make up the cell.
+     * </p>
      * 
      * @param readinessChecks
-     *        Summaries for the ReadinessChecks making up the Cell
+     *        Summaries for the readiness checks that make up the cell.
      */
 
     public void setReadinessChecks(java.util.Collection<ReadinessCheckSummary> readinessChecks) {
@@ -142,7 +172,9 @@ public class GetCellReadinessSummaryResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * Summaries for the ReadinessChecks making up the Cell
+     * <p>
+     * Summaries for the readiness checks that make up the cell.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setReadinessChecks(java.util.Collection)} or {@link #withReadinessChecks(java.util.Collection)} if you
@@ -150,7 +182,7 @@ public class GetCellReadinessSummaryResult extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param readinessChecks
-     *        Summaries for the ReadinessChecks making up the Cell
+     *        Summaries for the readiness checks that make up the cell.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -165,10 +197,12 @@ public class GetCellReadinessSummaryResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * Summaries for the ReadinessChecks making up the Cell
+     * <p>
+     * Summaries for the readiness checks that make up the cell.
+     * </p>
      * 
      * @param readinessChecks
-     *        Summaries for the ReadinessChecks making up the Cell
+     *        Summaries for the readiness checks that make up the cell.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

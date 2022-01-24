@@ -18,7 +18,6 @@ import javax.annotation.Generated;
 import com.amazonaws.AmazonWebServiceRequest;
 
 /**
- * The cross account authorization
  * 
  * @see <a
  *      href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/CreateCrossAccountAuthorization"
@@ -27,14 +26,20 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CreateCrossAccountAuthorizationRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** The cross account authorization */
+    /**
+     * <p>
+     * The cross-account authorization.
+     * </p>
+     */
     private String crossAccountAuthorization;
 
     /**
-     * The cross account authorization
+     * <p>
+     * The cross-account authorization.
+     * </p>
      * 
      * @param crossAccountAuthorization
-     *        The cross account authorization
+     *        The cross-account authorization.
      */
 
     public void setCrossAccountAuthorization(String crossAccountAuthorization) {
@@ -42,9 +47,11 @@ public class CreateCrossAccountAuthorizationRequest extends com.amazonaws.Amazon
     }
 
     /**
-     * The cross account authorization
+     * <p>
+     * The cross-account authorization.
+     * </p>
      * 
-     * @return The cross account authorization
+     * @return The cross-account authorization.
      */
 
     public String getCrossAccountAuthorization() {
@@ -52,10 +59,12 @@ public class CreateCrossAccountAuthorizationRequest extends com.amazonaws.Amazon
     }
 
     /**
-     * The cross account authorization
+     * <p>
+     * The cross-account authorization.
+     * </p>
      * 
      * @param crossAccountAuthorization
-     *        The cross account authorization
+     *        The cross-account authorization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,14 +25,20 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetResourceSetRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** The ResourceSet to get */
+    /**
+     * <p>
+     * Name of a resource set.
+     * </p>
+     */
     private String resourceSetName;
 
     /**
-     * The ResourceSet to get
+     * <p>
+     * Name of a resource set.
+     * </p>
      * 
      * @param resourceSetName
-     *        The ResourceSet to get
+     *        Name of a resource set.
      */
 
     public void setResourceSetName(String resourceSetName) {
@@ -40,9 +46,11 @@ public class GetResourceSetRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
-     * The ResourceSet to get
+     * <p>
+     * Name of a resource set.
+     * </p>
      * 
-     * @return The ResourceSet to get
+     * @return Name of a resource set.
      */
 
     public String getResourceSetName() {
@@ -50,10 +58,12 @@ public class GetResourceSetRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
-     * The ResourceSet to get
+     * <p>
+     * Name of a resource set.
+     * </p>
      * 
      * @param resourceSetName
-     *        The ResourceSet to get
+     *        Name of a resource set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

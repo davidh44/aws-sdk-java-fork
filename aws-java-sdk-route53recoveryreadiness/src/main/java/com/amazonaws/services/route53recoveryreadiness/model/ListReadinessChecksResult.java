@@ -23,16 +23,26 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListReadinessChecksResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
-    /** A token that can be used to resume pagination from the end of the collection. */
+    /**
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
+     */
     private String nextToken;
-    /** A list of ReadinessCheck associated with the account */
+    /**
+     * <p>
+     * A list of readiness checks associated with the account.
+     * </p>
+     */
     private java.util.List<ReadinessCheckOutput> readinessChecks;
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token that can be used to resume pagination from the end of the collection.
+     *        The token that identifies which batch of results you want to see.
      */
 
     public void setNextToken(String nextToken) {
@@ -40,9 +50,11 @@ public class ListReadinessChecksResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
-     * @return A token that can be used to resume pagination from the end of the collection.
+     * @return The token that identifies which batch of results you want to see.
      */
 
     public String getNextToken() {
@@ -50,10 +62,12 @@ public class ListReadinessChecksResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token that can be used to resume pagination from the end of the collection.
+     *        The token that identifies which batch of results you want to see.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -63,9 +77,11 @@ public class ListReadinessChecksResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
-     * A list of ReadinessCheck associated with the account
+     * <p>
+     * A list of readiness checks associated with the account.
+     * </p>
      * 
-     * @return A list of ReadinessCheck associated with the account
+     * @return A list of readiness checks associated with the account.
      */
 
     public java.util.List<ReadinessCheckOutput> getReadinessChecks() {
@@ -73,10 +89,12 @@ public class ListReadinessChecksResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
-     * A list of ReadinessCheck associated with the account
+     * <p>
+     * A list of readiness checks associated with the account.
+     * </p>
      * 
      * @param readinessChecks
-     *        A list of ReadinessCheck associated with the account
+     *        A list of readiness checks associated with the account.
      */
 
     public void setReadinessChecks(java.util.Collection<ReadinessCheckOutput> readinessChecks) {
@@ -89,7 +107,9 @@ public class ListReadinessChecksResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
-     * A list of ReadinessCheck associated with the account
+     * <p>
+     * A list of readiness checks associated with the account.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setReadinessChecks(java.util.Collection)} or {@link #withReadinessChecks(java.util.Collection)} if you
@@ -97,7 +117,7 @@ public class ListReadinessChecksResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * 
      * @param readinessChecks
-     *        A list of ReadinessCheck associated with the account
+     *        A list of readiness checks associated with the account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -112,10 +132,12 @@ public class ListReadinessChecksResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
-     * A list of ReadinessCheck associated with the account
+     * <p>
+     * A list of readiness checks associated with the account.
+     * </p>
      * 
      * @param readinessChecks
-     *        A list of ReadinessCheck associated with the account
+     *        A list of readiness checks associated with the account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * The Route 53 resource a DNS Target Resource record points to
+ * <p>
+ * The Route 53 resource that a DNS target resource record points to.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/R53ResourceRecord"
  *      target="_top">AWS API Documentation</a>
@@ -26,16 +28,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class R53ResourceRecord implements Serializable, Cloneable, StructuredPojo {
 
-    /** The DNS target name */
+    /**
+     * <p>
+     * The DNS target domain name.
+     * </p>
+     */
     private String domainName;
-    /** The Resource Record set id */
+    /**
+     * <p>
+     * The Route 53 Resource Record Set ID.
+     * </p>
+     */
     private String recordSetId;
 
     /**
-     * The DNS target name
+     * <p>
+     * The DNS target domain name.
+     * </p>
      * 
      * @param domainName
-     *        The DNS target name
+     *        The DNS target domain name.
      */
 
     public void setDomainName(String domainName) {
@@ -43,9 +55,11 @@ public class R53ResourceRecord implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * The DNS target name
+     * <p>
+     * The DNS target domain name.
+     * </p>
      * 
-     * @return The DNS target name
+     * @return The DNS target domain name.
      */
 
     public String getDomainName() {
@@ -53,10 +67,12 @@ public class R53ResourceRecord implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * The DNS target name
+     * <p>
+     * The DNS target domain name.
+     * </p>
      * 
      * @param domainName
-     *        The DNS target name
+     *        The DNS target domain name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -66,10 +82,12 @@ public class R53ResourceRecord implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * The Resource Record set id
+     * <p>
+     * The Route 53 Resource Record Set ID.
+     * </p>
      * 
      * @param recordSetId
-     *        The Resource Record set id
+     *        The Route 53 Resource Record Set ID.
      */
 
     public void setRecordSetId(String recordSetId) {
@@ -77,9 +95,11 @@ public class R53ResourceRecord implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * The Resource Record set id
+     * <p>
+     * The Route 53 Resource Record Set ID.
+     * </p>
      * 
-     * @return The Resource Record set id
+     * @return The Route 53 Resource Record Set ID.
      */
 
     public String getRecordSetId() {
@@ -87,10 +107,12 @@ public class R53ResourceRecord implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * The Resource Record set id
+     * <p>
+     * The Route 53 Resource Record Set ID.
+     * </p>
      * 
      * @param recordSetId
-     *        The Resource Record set id
+     *        The Route 53 Resource Record Set ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

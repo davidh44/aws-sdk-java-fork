@@ -23,17 +23,35 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetReadinessCheckStatusResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
-    /** Top level messages for readiness check status */
+    /**
+     * <p>
+     * Top level messages for readiness check status
+     * </p>
+     */
     private java.util.List<Message> messages;
-    /** A token that can be used to resume pagination from the end of the collection. */
+    /**
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
+     */
     private String nextToken;
-    /** The readiness at rule level. */
+    /**
+     * <p>
+     * The readiness at rule level.
+     * </p>
+     */
     private String readiness;
-    /** Summary of resources's readiness */
+    /**
+     * <p>
+     * Summary of the readiness of resources.
+     * </p>
+     */
     private java.util.List<ResourceResult> resources;
 
     /**
+     * <p>
      * Top level messages for readiness check status
+     * </p>
      * 
      * @return Top level messages for readiness check status
      */
@@ -43,7 +61,9 @@ public class GetReadinessCheckStatusResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
      * Top level messages for readiness check status
+     * </p>
      * 
      * @param messages
      *        Top level messages for readiness check status
@@ -59,7 +79,9 @@ public class GetReadinessCheckStatusResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
      * Top level messages for readiness check status
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setMessages(java.util.Collection)} or {@link #withMessages(java.util.Collection)} if you want to override
@@ -82,7 +104,9 @@ public class GetReadinessCheckStatusResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
      * Top level messages for readiness check status
+     * </p>
      * 
      * @param messages
      *        Top level messages for readiness check status
@@ -95,10 +119,12 @@ public class GetReadinessCheckStatusResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token that can be used to resume pagination from the end of the collection.
+     *        The token that identifies which batch of results you want to see.
      */
 
     public void setNextToken(String nextToken) {
@@ -106,9 +132,11 @@ public class GetReadinessCheckStatusResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
-     * @return A token that can be used to resume pagination from the end of the collection.
+     * @return The token that identifies which batch of results you want to see.
      */
 
     public String getNextToken() {
@@ -116,10 +144,12 @@ public class GetReadinessCheckStatusResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token that can be used to resume pagination from the end of the collection.
+     *        The token that identifies which batch of results you want to see.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -129,7 +159,9 @@ public class GetReadinessCheckStatusResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
      * The readiness at rule level.
+     * </p>
      * 
      * @param readiness
      *        The readiness at rule level.
@@ -141,7 +173,9 @@ public class GetReadinessCheckStatusResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
      * The readiness at rule level.
+     * </p>
      * 
      * @return The readiness at rule level.
      * @see Readiness
@@ -152,7 +186,9 @@ public class GetReadinessCheckStatusResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
      * The readiness at rule level.
+     * </p>
      * 
      * @param readiness
      *        The readiness at rule level.
@@ -166,7 +202,9 @@ public class GetReadinessCheckStatusResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
      * The readiness at rule level.
+     * </p>
      * 
      * @param readiness
      *        The readiness at rule level.
@@ -180,9 +218,11 @@ public class GetReadinessCheckStatusResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * Summary of resources's readiness
+     * <p>
+     * Summary of the readiness of resources.
+     * </p>
      * 
-     * @return Summary of resources's readiness
+     * @return Summary of the readiness of resources.
      */
 
     public java.util.List<ResourceResult> getResources() {
@@ -190,10 +230,12 @@ public class GetReadinessCheckStatusResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * Summary of resources's readiness
+     * <p>
+     * Summary of the readiness of resources.
+     * </p>
      * 
      * @param resources
-     *        Summary of resources's readiness
+     *        Summary of the readiness of resources.
      */
 
     public void setResources(java.util.Collection<ResourceResult> resources) {
@@ -206,7 +248,9 @@ public class GetReadinessCheckStatusResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * Summary of resources's readiness
+     * <p>
+     * Summary of the readiness of resources.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setResources(java.util.Collection)} or {@link #withResources(java.util.Collection)} if you want to
@@ -214,7 +258,7 @@ public class GetReadinessCheckStatusResult extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param resources
-     *        Summary of resources's readiness
+     *        Summary of the readiness of resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -229,10 +273,12 @@ public class GetReadinessCheckStatusResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * Summary of resources's readiness
+     * <p>
+     * Summary of the readiness of resources.
+     * </p>
      * 
      * @param resources
-     *        Summary of resources's readiness
+     *        Summary of the readiness of resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

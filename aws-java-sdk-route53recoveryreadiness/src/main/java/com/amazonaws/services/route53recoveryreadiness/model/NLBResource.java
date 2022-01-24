@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * The NLB resource a DNS Target Resource points to
+ * <p>
+ * The Network Load Balancer resource that a DNS target resource points to.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/NLBResource"
  *      target="_top">AWS API Documentation</a>
@@ -26,14 +28,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class NLBResource implements Serializable, Cloneable, StructuredPojo {
 
-    /** An NLB resource arn */
+    /**
+     * <p>
+     * The Network Load Balancer resource Amazon Resource Name (ARN).
+     * </p>
+     */
     private String arn;
 
     /**
-     * An NLB resource arn
+     * <p>
+     * The Network Load Balancer resource Amazon Resource Name (ARN).
+     * </p>
      * 
      * @param arn
-     *        An NLB resource arn
+     *        The Network Load Balancer resource Amazon Resource Name (ARN).
      */
 
     public void setArn(String arn) {
@@ -41,9 +49,11 @@ public class NLBResource implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * An NLB resource arn
+     * <p>
+     * The Network Load Balancer resource Amazon Resource Name (ARN).
+     * </p>
      * 
-     * @return An NLB resource arn
+     * @return The Network Load Balancer resource Amazon Resource Name (ARN).
      */
 
     public String getArn() {
@@ -51,10 +61,12 @@ public class NLBResource implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * An NLB resource arn
+     * <p>
+     * The Network Load Balancer resource Amazon Resource Name (ARN).
+     * </p>
      * 
      * @param arn
-     *        An NLB resource arn
+     *        The Network Load Balancer resource Amazon Resource Name (ARN).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,16 +25,26 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListResourceSetsRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** Upper bound on number of records to return. */
+    /**
+     * <p>
+     * The number of objects that you want to return with this call.
+     * </p>
+     */
     private Integer maxResults;
-    /** A token used to resume pagination from the end of a previous request. */
+    /**
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
+     */
     private String nextToken;
 
     /**
-     * Upper bound on number of records to return.
+     * <p>
+     * The number of objects that you want to return with this call.
+     * </p>
      * 
      * @param maxResults
-     *        Upper bound on number of records to return.
+     *        The number of objects that you want to return with this call.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -42,9 +52,11 @@ public class ListResourceSetsRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * Upper bound on number of records to return.
+     * <p>
+     * The number of objects that you want to return with this call.
+     * </p>
      * 
-     * @return Upper bound on number of records to return.
+     * @return The number of objects that you want to return with this call.
      */
 
     public Integer getMaxResults() {
@@ -52,10 +64,12 @@ public class ListResourceSetsRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * Upper bound on number of records to return.
+     * <p>
+     * The number of objects that you want to return with this call.
+     * </p>
      * 
      * @param maxResults
-     *        Upper bound on number of records to return.
+     *        The number of objects that you want to return with this call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -65,10 +79,12 @@ public class ListResourceSetsRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * A token used to resume pagination from the end of a previous request.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token used to resume pagination from the end of a previous request.
+     *        The token that identifies which batch of results you want to see.
      */
 
     public void setNextToken(String nextToken) {
@@ -76,9 +92,11 @@ public class ListResourceSetsRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * A token used to resume pagination from the end of a previous request.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
-     * @return A token used to resume pagination from the end of a previous request.
+     * @return The token that identifies which batch of results you want to see.
      */
 
     public String getNextToken() {
@@ -86,10 +104,12 @@ public class ListResourceSetsRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * A token used to resume pagination from the end of a previous request.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token used to resume pagination from the end of a previous request.
+     *        The token that identifies which batch of results you want to see.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

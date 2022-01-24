@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * Guidance for improving Recovery Group resilliancy
+ * <p>
+ * Recommendations that are provided to make an application more recovery resilient.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/Recommendation"
  *      target="_top">AWS API Documentation</a>
@@ -26,14 +28,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class Recommendation implements Serializable, Cloneable, StructuredPojo {
 
-    /** Guidance text for recommendation */
+    /**
+     * <p>
+     * Text of the recommendations that are provided to make an application more recovery resilient.
+     * </p>
+     */
     private String recommendationText;
 
     /**
-     * Guidance text for recommendation
+     * <p>
+     * Text of the recommendations that are provided to make an application more recovery resilient.
+     * </p>
      * 
      * @param recommendationText
-     *        Guidance text for recommendation
+     *        Text of the recommendations that are provided to make an application more recovery resilient.
      */
 
     public void setRecommendationText(String recommendationText) {
@@ -41,9 +49,11 @@ public class Recommendation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Guidance text for recommendation
+     * <p>
+     * Text of the recommendations that are provided to make an application more recovery resilient.
+     * </p>
      * 
-     * @return Guidance text for recommendation
+     * @return Text of the recommendations that are provided to make an application more recovery resilient.
      */
 
     public String getRecommendationText() {
@@ -51,10 +61,12 @@ public class Recommendation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Guidance text for recommendation
+     * <p>
+     * Text of the recommendations that are provided to make an application more recovery resilient.
+     * </p>
      * 
      * @param recommendationText
-     *        Guidance text for recommendation
+     *        Text of the recommendations that are provided to make an application more recovery resilient.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

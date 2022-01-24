@@ -26,18 +26,32 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetArchitectureRecommendationsRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** Upper bound on number of records to return. */
+    /**
+     * <p>
+     * The number of objects that you want to return with this call.
+     * </p>
+     */
     private Integer maxResults;
-    /** A token that can be used to resume pagination from the end of the collection. */
+    /**
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
+     */
     private String nextToken;
-    /** Name of RecoveryGroup (top level resource) to be analyzed. */
+    /**
+     * <p>
+     * The name of a recovery group.
+     * </p>
+     */
     private String recoveryGroupName;
 
     /**
-     * Upper bound on number of records to return.
+     * <p>
+     * The number of objects that you want to return with this call.
+     * </p>
      * 
      * @param maxResults
-     *        Upper bound on number of records to return.
+     *        The number of objects that you want to return with this call.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -45,9 +59,11 @@ public class GetArchitectureRecommendationsRequest extends com.amazonaws.AmazonW
     }
 
     /**
-     * Upper bound on number of records to return.
+     * <p>
+     * The number of objects that you want to return with this call.
+     * </p>
      * 
-     * @return Upper bound on number of records to return.
+     * @return The number of objects that you want to return with this call.
      */
 
     public Integer getMaxResults() {
@@ -55,10 +71,12 @@ public class GetArchitectureRecommendationsRequest extends com.amazonaws.AmazonW
     }
 
     /**
-     * Upper bound on number of records to return.
+     * <p>
+     * The number of objects that you want to return with this call.
+     * </p>
      * 
      * @param maxResults
-     *        Upper bound on number of records to return.
+     *        The number of objects that you want to return with this call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -68,10 +86,12 @@ public class GetArchitectureRecommendationsRequest extends com.amazonaws.AmazonW
     }
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token that can be used to resume pagination from the end of the collection.
+     *        The token that identifies which batch of results you want to see.
      */
 
     public void setNextToken(String nextToken) {
@@ -79,9 +99,11 @@ public class GetArchitectureRecommendationsRequest extends com.amazonaws.AmazonW
     }
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
-     * @return A token that can be used to resume pagination from the end of the collection.
+     * @return The token that identifies which batch of results you want to see.
      */
 
     public String getNextToken() {
@@ -89,10 +111,12 @@ public class GetArchitectureRecommendationsRequest extends com.amazonaws.AmazonW
     }
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token that can be used to resume pagination from the end of the collection.
+     *        The token that identifies which batch of results you want to see.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -102,10 +126,12 @@ public class GetArchitectureRecommendationsRequest extends com.amazonaws.AmazonW
     }
 
     /**
-     * Name of RecoveryGroup (top level resource) to be analyzed.
+     * <p>
+     * The name of a recovery group.
+     * </p>
      * 
      * @param recoveryGroupName
-     *        Name of RecoveryGroup (top level resource) to be analyzed.
+     *        The name of a recovery group.
      */
 
     public void setRecoveryGroupName(String recoveryGroupName) {
@@ -113,9 +139,11 @@ public class GetArchitectureRecommendationsRequest extends com.amazonaws.AmazonW
     }
 
     /**
-     * Name of RecoveryGroup (top level resource) to be analyzed.
+     * <p>
+     * The name of a recovery group.
+     * </p>
      * 
-     * @return Name of RecoveryGroup (top level resource) to be analyzed.
+     * @return The name of a recovery group.
      */
 
     public String getRecoveryGroupName() {
@@ -123,10 +151,12 @@ public class GetArchitectureRecommendationsRequest extends com.amazonaws.AmazonW
     }
 
     /**
-     * Name of RecoveryGroup (top level resource) to be analyzed.
+     * <p>
+     * The name of a recovery group.
+     * </p>
      * 
      * @param recoveryGroupName
-     *        Name of RecoveryGroup (top level resource) to be analyzed.
+     *        The name of a recovery group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -18,7 +18,6 @@ import javax.annotation.Generated;
 import com.amazonaws.AmazonWebServiceRequest;
 
 /**
- * The Cell to create
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/CreateCell"
  *      target="_top">AWS API Documentation</a>
@@ -26,18 +25,29 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CreateCellRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** The name of the Cell to create */
+    /**
+     * <p>
+     * The name of the cell to create.
+     * </p>
+     */
     private String cellName;
-    /** A list of Cell arns contained within this Cell (for use in nested Cells, e.g. regions within which AZs) */
+    /**
+     * <p>
+     * A list of cell Amazon Resource Names (ARNs) contained within this cell, for use in nested cells. For example,
+     * Availability Zones within specific Amazon Web Services Regions.
+     * </p>
+     */
     private java.util.List<String> cells;
 
     private java.util.Map<String, String> tags;
 
     /**
-     * The name of the Cell to create
+     * <p>
+     * The name of the cell to create.
+     * </p>
      * 
      * @param cellName
-     *        The name of the Cell to create
+     *        The name of the cell to create.
      */
 
     public void setCellName(String cellName) {
@@ -45,9 +55,11 @@ public class CreateCellRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
-     * The name of the Cell to create
+     * <p>
+     * The name of the cell to create.
+     * </p>
      * 
-     * @return The name of the Cell to create
+     * @return The name of the cell to create.
      */
 
     public String getCellName() {
@@ -55,10 +67,12 @@ public class CreateCellRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
-     * The name of the Cell to create
+     * <p>
+     * The name of the cell to create.
+     * </p>
      * 
      * @param cellName
-     *        The name of the Cell to create
+     *        The name of the cell to create.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -68,9 +82,13 @@ public class CreateCellRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
-     * A list of Cell arns contained within this Cell (for use in nested Cells, e.g. regions within which AZs)
+     * <p>
+     * A list of cell Amazon Resource Names (ARNs) contained within this cell, for use in nested cells. For example,
+     * Availability Zones within specific Amazon Web Services Regions.
+     * </p>
      * 
-     * @return A list of Cell arns contained within this Cell (for use in nested Cells, e.g. regions within which AZs)
+     * @return A list of cell Amazon Resource Names (ARNs) contained within this cell, for use in nested cells. For
+     *         example, Availability Zones within specific Amazon Web Services Regions.
      */
 
     public java.util.List<String> getCells() {
@@ -78,10 +96,14 @@ public class CreateCellRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
-     * A list of Cell arns contained within this Cell (for use in nested Cells, e.g. regions within which AZs)
+     * <p>
+     * A list of cell Amazon Resource Names (ARNs) contained within this cell, for use in nested cells. For example,
+     * Availability Zones within specific Amazon Web Services Regions.
+     * </p>
      * 
      * @param cells
-     *        A list of Cell arns contained within this Cell (for use in nested Cells, e.g. regions within which AZs)
+     *        A list of cell Amazon Resource Names (ARNs) contained within this cell, for use in nested cells. For
+     *        example, Availability Zones within specific Amazon Web Services Regions.
      */
 
     public void setCells(java.util.Collection<String> cells) {
@@ -94,7 +116,10 @@ public class CreateCellRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
-     * A list of Cell arns contained within this Cell (for use in nested Cells, e.g. regions within which AZs)
+     * <p>
+     * A list of cell Amazon Resource Names (ARNs) contained within this cell, for use in nested cells. For example,
+     * Availability Zones within specific Amazon Web Services Regions.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCells(java.util.Collection)} or {@link #withCells(java.util.Collection)} if you want to override the
@@ -102,7 +127,8 @@ public class CreateCellRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      * 
      * @param cells
-     *        A list of Cell arns contained within this Cell (for use in nested Cells, e.g. regions within which AZs)
+     *        A list of cell Amazon Resource Names (ARNs) contained within this cell, for use in nested cells. For
+     *        example, Availability Zones within specific Amazon Web Services Regions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -117,10 +143,14 @@ public class CreateCellRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
-     * A list of Cell arns contained within this Cell (for use in nested Cells, e.g. regions within which AZs)
+     * <p>
+     * A list of cell Amazon Resource Names (ARNs) contained within this cell, for use in nested cells. For example,
+     * Availability Zones within specific Amazon Web Services Regions.
+     * </p>
      * 
      * @param cells
-     *        A list of Cell arns contained within this Cell (for use in nested Cells, e.g. regions within which AZs)
+     *        A list of cell Amazon Resource Names (ARNs) contained within this cell, for use in nested cells. For
+     *        example, Availability Zones within specific Amazon Web Services Regions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

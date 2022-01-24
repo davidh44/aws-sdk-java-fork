@@ -26,14 +26,20 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DeleteCrossAccountAuthorizationRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** The cross account authorization */
+    /**
+     * <p>
+     * The cross-account authorization.
+     * </p>
+     */
     private String crossAccountAuthorization;
 
     /**
-     * The cross account authorization
+     * <p>
+     * The cross-account authorization.
+     * </p>
      * 
      * @param crossAccountAuthorization
-     *        The cross account authorization
+     *        The cross-account authorization.
      */
 
     public void setCrossAccountAuthorization(String crossAccountAuthorization) {
@@ -41,9 +47,11 @@ public class DeleteCrossAccountAuthorizationRequest extends com.amazonaws.Amazon
     }
 
     /**
-     * The cross account authorization
+     * <p>
+     * The cross-account authorization.
+     * </p>
      * 
-     * @return The cross account authorization
+     * @return The cross-account authorization.
      */
 
     public String getCrossAccountAuthorization() {
@@ -51,10 +59,12 @@ public class DeleteCrossAccountAuthorizationRequest extends com.amazonaws.Amazon
     }
 
     /**
-     * The cross account authorization
+     * <p>
+     * The cross-account authorization.
+     * </p>
      * 
      * @param crossAccountAuthorization
-     *        The cross account authorization
+     *        The cross-account authorization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

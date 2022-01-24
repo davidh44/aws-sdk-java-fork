@@ -26,20 +26,39 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetReadinessCheckResourceStatusRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** Upper bound on number of records to return. */
+    /**
+     * <p>
+     * The number of objects that you want to return with this call.
+     * </p>
+     */
     private Integer maxResults;
-    /** A token used to resume pagination from the end of a previous request. */
+    /**
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
+     */
     private String nextToken;
-    /** The ReadinessCheck to get */
+    /**
+     * <p>
+     * Name of a readiness check.
+     * </p>
+     */
     private String readinessCheckName;
-    /** The resource ARN or component Id to get */
+    /**
+     * <p>
+     * The resource identifier, which is the Amazon Resource Name (ARN) or the identifier generated for the resource by
+     * Application Recovery Controller (for example, for a DNS target resource).
+     * </p>
+     */
     private String resourceIdentifier;
 
     /**
-     * Upper bound on number of records to return.
+     * <p>
+     * The number of objects that you want to return with this call.
+     * </p>
      * 
      * @param maxResults
-     *        Upper bound on number of records to return.
+     *        The number of objects that you want to return with this call.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -47,9 +66,11 @@ public class GetReadinessCheckResourceStatusRequest extends com.amazonaws.Amazon
     }
 
     /**
-     * Upper bound on number of records to return.
+     * <p>
+     * The number of objects that you want to return with this call.
+     * </p>
      * 
-     * @return Upper bound on number of records to return.
+     * @return The number of objects that you want to return with this call.
      */
 
     public Integer getMaxResults() {
@@ -57,10 +78,12 @@ public class GetReadinessCheckResourceStatusRequest extends com.amazonaws.Amazon
     }
 
     /**
-     * Upper bound on number of records to return.
+     * <p>
+     * The number of objects that you want to return with this call.
+     * </p>
      * 
      * @param maxResults
-     *        Upper bound on number of records to return.
+     *        The number of objects that you want to return with this call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -70,10 +93,12 @@ public class GetReadinessCheckResourceStatusRequest extends com.amazonaws.Amazon
     }
 
     /**
-     * A token used to resume pagination from the end of a previous request.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token used to resume pagination from the end of a previous request.
+     *        The token that identifies which batch of results you want to see.
      */
 
     public void setNextToken(String nextToken) {
@@ -81,9 +106,11 @@ public class GetReadinessCheckResourceStatusRequest extends com.amazonaws.Amazon
     }
 
     /**
-     * A token used to resume pagination from the end of a previous request.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
-     * @return A token used to resume pagination from the end of a previous request.
+     * @return The token that identifies which batch of results you want to see.
      */
 
     public String getNextToken() {
@@ -91,10 +118,12 @@ public class GetReadinessCheckResourceStatusRequest extends com.amazonaws.Amazon
     }
 
     /**
-     * A token used to resume pagination from the end of a previous request.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token used to resume pagination from the end of a previous request.
+     *        The token that identifies which batch of results you want to see.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -104,10 +133,12 @@ public class GetReadinessCheckResourceStatusRequest extends com.amazonaws.Amazon
     }
 
     /**
-     * The ReadinessCheck to get
+     * <p>
+     * Name of a readiness check.
+     * </p>
      * 
      * @param readinessCheckName
-     *        The ReadinessCheck to get
+     *        Name of a readiness check.
      */
 
     public void setReadinessCheckName(String readinessCheckName) {
@@ -115,9 +146,11 @@ public class GetReadinessCheckResourceStatusRequest extends com.amazonaws.Amazon
     }
 
     /**
-     * The ReadinessCheck to get
+     * <p>
+     * Name of a readiness check.
+     * </p>
      * 
-     * @return The ReadinessCheck to get
+     * @return Name of a readiness check.
      */
 
     public String getReadinessCheckName() {
@@ -125,10 +158,12 @@ public class GetReadinessCheckResourceStatusRequest extends com.amazonaws.Amazon
     }
 
     /**
-     * The ReadinessCheck to get
+     * <p>
+     * Name of a readiness check.
+     * </p>
      * 
      * @param readinessCheckName
-     *        The ReadinessCheck to get
+     *        Name of a readiness check.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -138,10 +173,14 @@ public class GetReadinessCheckResourceStatusRequest extends com.amazonaws.Amazon
     }
 
     /**
-     * The resource ARN or component Id to get
+     * <p>
+     * The resource identifier, which is the Amazon Resource Name (ARN) or the identifier generated for the resource by
+     * Application Recovery Controller (for example, for a DNS target resource).
+     * </p>
      * 
      * @param resourceIdentifier
-     *        The resource ARN or component Id to get
+     *        The resource identifier, which is the Amazon Resource Name (ARN) or the identifier generated for the
+     *        resource by Application Recovery Controller (for example, for a DNS target resource).
      */
 
     public void setResourceIdentifier(String resourceIdentifier) {
@@ -149,9 +188,13 @@ public class GetReadinessCheckResourceStatusRequest extends com.amazonaws.Amazon
     }
 
     /**
-     * The resource ARN or component Id to get
+     * <p>
+     * The resource identifier, which is the Amazon Resource Name (ARN) or the identifier generated for the resource by
+     * Application Recovery Controller (for example, for a DNS target resource).
+     * </p>
      * 
-     * @return The resource ARN or component Id to get
+     * @return The resource identifier, which is the Amazon Resource Name (ARN) or the identifier generated for the
+     *         resource by Application Recovery Controller (for example, for a DNS target resource).
      */
 
     public String getResourceIdentifier() {
@@ -159,10 +202,14 @@ public class GetReadinessCheckResourceStatusRequest extends com.amazonaws.Amazon
     }
 
     /**
-     * The resource ARN or component Id to get
+     * <p>
+     * The resource identifier, which is the Amazon Resource Name (ARN) or the identifier generated for the resource by
+     * Application Recovery Controller (for example, for a DNS target resource).
+     * </p>
      * 
      * @param resourceIdentifier
-     *        The resource ARN or component Id to get
+     *        The resource identifier, which is the Amazon Resource Name (ARN) or the identifier generated for the
+     *        resource by Application Recovery Controller (for example, for a DNS target resource).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

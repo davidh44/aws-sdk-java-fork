@@ -18,7 +18,10 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * Summary of ReadinessCheck status, paginated in GetRecoveryGroupReadinessSummary and GetCellReadinessSummary
+ * <p>
+ * Summary of all readiness check statuses in a recovery group, paginated in GetRecoveryGroupReadinessSummary and
+ * GetCellReadinessSummary.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/ReadinessCheckSummary"
  *      target="_top">AWS API Documentation</a>
@@ -26,16 +29,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ReadinessCheckSummary implements Serializable, Cloneable, StructuredPojo {
 
-    /** The readiness of this ReadinessCheck */
+    /**
+     * <p>
+     * The readiness status of this readiness check.
+     * </p>
+     */
     private String readiness;
-    /** The name of a ReadinessCheck which is part of the given RecoveryGroup or Cell */
+    /**
+     * <p>
+     * The name of a readiness check.
+     * </p>
+     */
     private String readinessCheckName;
 
     /**
-     * The readiness of this ReadinessCheck
+     * <p>
+     * The readiness status of this readiness check.
+     * </p>
      * 
      * @param readiness
-     *        The readiness of this ReadinessCheck
+     *        The readiness status of this readiness check.
      * @see Readiness
      */
 
@@ -44,9 +57,11 @@ public class ReadinessCheckSummary implements Serializable, Cloneable, Structure
     }
 
     /**
-     * The readiness of this ReadinessCheck
+     * <p>
+     * The readiness status of this readiness check.
+     * </p>
      * 
-     * @return The readiness of this ReadinessCheck
+     * @return The readiness status of this readiness check.
      * @see Readiness
      */
 
@@ -55,10 +70,12 @@ public class ReadinessCheckSummary implements Serializable, Cloneable, Structure
     }
 
     /**
-     * The readiness of this ReadinessCheck
+     * <p>
+     * The readiness status of this readiness check.
+     * </p>
      * 
      * @param readiness
-     *        The readiness of this ReadinessCheck
+     *        The readiness status of this readiness check.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Readiness
      */
@@ -69,10 +86,12 @@ public class ReadinessCheckSummary implements Serializable, Cloneable, Structure
     }
 
     /**
-     * The readiness of this ReadinessCheck
+     * <p>
+     * The readiness status of this readiness check.
+     * </p>
      * 
      * @param readiness
-     *        The readiness of this ReadinessCheck
+     *        The readiness status of this readiness check.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Readiness
      */
@@ -83,10 +102,12 @@ public class ReadinessCheckSummary implements Serializable, Cloneable, Structure
     }
 
     /**
-     * The name of a ReadinessCheck which is part of the given RecoveryGroup or Cell
+     * <p>
+     * The name of a readiness check.
+     * </p>
      * 
      * @param readinessCheckName
-     *        The name of a ReadinessCheck which is part of the given RecoveryGroup or Cell
+     *        The name of a readiness check.
      */
 
     public void setReadinessCheckName(String readinessCheckName) {
@@ -94,9 +115,11 @@ public class ReadinessCheckSummary implements Serializable, Cloneable, Structure
     }
 
     /**
-     * The name of a ReadinessCheck which is part of the given RecoveryGroup or Cell
+     * <p>
+     * The name of a readiness check.
+     * </p>
      * 
-     * @return The name of a ReadinessCheck which is part of the given RecoveryGroup or Cell
+     * @return The name of a readiness check.
      */
 
     public String getReadinessCheckName() {
@@ -104,10 +127,12 @@ public class ReadinessCheckSummary implements Serializable, Cloneable, Structure
     }
 
     /**
-     * The name of a ReadinessCheck which is part of the given RecoveryGroup or Cell
+     * <p>
+     * The name of a readiness check.
+     * </p>
      * 
      * @param readinessCheckName
-     *        The name of a ReadinessCheck which is part of the given RecoveryGroup or Cell
+     *        The name of a readiness check.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

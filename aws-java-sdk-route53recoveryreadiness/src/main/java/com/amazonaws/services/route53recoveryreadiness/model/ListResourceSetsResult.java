@@ -23,16 +23,26 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListResourceSetsResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
-    /** A token that can be used to resume pagination from the end of the collection. */
+    /**
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
+     */
     private String nextToken;
-    /** A list of ResourceSets associated with the account */
+    /**
+     * <p>
+     * A list of resource sets associated with the account.
+     * </p>
+     */
     private java.util.List<ResourceSetOutput> resourceSets;
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token that can be used to resume pagination from the end of the collection.
+     *        The token that identifies which batch of results you want to see.
      */
 
     public void setNextToken(String nextToken) {
@@ -40,9 +50,11 @@ public class ListResourceSetsResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
-     * @return A token that can be used to resume pagination from the end of the collection.
+     * @return The token that identifies which batch of results you want to see.
      */
 
     public String getNextToken() {
@@ -50,10 +62,12 @@ public class ListResourceSetsResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token that can be used to resume pagination from the end of the collection.
+     *        The token that identifies which batch of results you want to see.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -63,9 +77,11 @@ public class ListResourceSetsResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
-     * A list of ResourceSets associated with the account
+     * <p>
+     * A list of resource sets associated with the account.
+     * </p>
      * 
-     * @return A list of ResourceSets associated with the account
+     * @return A list of resource sets associated with the account.
      */
 
     public java.util.List<ResourceSetOutput> getResourceSets() {
@@ -73,10 +89,12 @@ public class ListResourceSetsResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
-     * A list of ResourceSets associated with the account
+     * <p>
+     * A list of resource sets associated with the account.
+     * </p>
      * 
      * @param resourceSets
-     *        A list of ResourceSets associated with the account
+     *        A list of resource sets associated with the account.
      */
 
     public void setResourceSets(java.util.Collection<ResourceSetOutput> resourceSets) {
@@ -89,7 +107,9 @@ public class ListResourceSetsResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
-     * A list of ResourceSets associated with the account
+     * <p>
+     * A list of resource sets associated with the account.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setResourceSets(java.util.Collection)} or {@link #withResourceSets(java.util.Collection)} if you want to
@@ -97,7 +117,7 @@ public class ListResourceSetsResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      * 
      * @param resourceSets
-     *        A list of ResourceSets associated with the account
+     *        A list of resource sets associated with the account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -112,10 +132,12 @@ public class ListResourceSetsResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
-     * A list of ResourceSets associated with the account
+     * <p>
+     * A list of resource sets associated with the account.
+     * </p>
      * 
      * @param resourceSets
-     *        A list of ResourceSets associated with the account
+     *        A list of resource sets associated with the account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

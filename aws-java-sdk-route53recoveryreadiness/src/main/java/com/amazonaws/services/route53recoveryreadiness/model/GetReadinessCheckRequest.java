@@ -25,14 +25,20 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetReadinessCheckRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** The ReadinessCheck to get */
+    /**
+     * <p>
+     * Name of a readiness check.
+     * </p>
+     */
     private String readinessCheckName;
 
     /**
-     * The ReadinessCheck to get
+     * <p>
+     * Name of a readiness check.
+     * </p>
      * 
      * @param readinessCheckName
-     *        The ReadinessCheck to get
+     *        Name of a readiness check.
      */
 
     public void setReadinessCheckName(String readinessCheckName) {
@@ -40,9 +46,11 @@ public class GetReadinessCheckRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * The ReadinessCheck to get
+     * <p>
+     * Name of a readiness check.
+     * </p>
      * 
-     * @return The ReadinessCheck to get
+     * @return Name of a readiness check.
      */
 
     public String getReadinessCheckName() {
@@ -50,10 +58,12 @@ public class GetReadinessCheckRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * The ReadinessCheck to get
+     * <p>
+     * Name of a readiness check.
+     * </p>
      * 
      * @param readinessCheckName
-     *        The ReadinessCheck to get
+     *        Name of a readiness check.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

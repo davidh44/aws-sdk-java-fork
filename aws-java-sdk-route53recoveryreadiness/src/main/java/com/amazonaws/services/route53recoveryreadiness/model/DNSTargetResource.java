@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * A component for DNS/Routing Control Readiness Checks
+ * <p>
+ * A component for DNS/routing control readiness checks and architecture checks.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-readiness-2019-12-02/DNSTargetResource"
  *      target="_top">AWS API Documentation</a>
@@ -26,22 +28,45 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DNSTargetResource implements Serializable, Cloneable, StructuredPojo {
 
-    /** The DNS Name that acts as ingress point to a portion of application */
+    /**
+     * <p>
+     * The domain name that acts as an ingress point to a portion of the customer application.
+     * </p>
+     */
     private String domainName;
-    /** The Hosted Zone ARN that contains the DNS record with the provided name of target resource. */
+    /**
+     * <p>
+     * The hosted zone Amazon Resource Name (ARN) that contains the DNS record with the provided name of the target
+     * resource.
+     * </p>
+     */
     private String hostedZoneArn;
-    /** The R53 Set Id to uniquely identify a record given a Name and a Type */
+    /**
+     * <p>
+     * The Route 53 record set ID that uniquely identifies a DNS record, given a name and a type.
+     * </p>
+     */
     private String recordSetId;
-    /** The Type of DNS Record of target resource */
+    /**
+     * <p>
+     * The type of DNS record of the target resource.
+     * </p>
+     */
     private String recordType;
-
+    /**
+     * <p>
+     * The target resource of the DNS target resource.
+     * </p>
+     */
     private TargetResource targetResource;
 
     /**
-     * The DNS Name that acts as ingress point to a portion of application
+     * <p>
+     * The domain name that acts as an ingress point to a portion of the customer application.
+     * </p>
      * 
      * @param domainName
-     *        The DNS Name that acts as ingress point to a portion of application
+     *        The domain name that acts as an ingress point to a portion of the customer application.
      */
 
     public void setDomainName(String domainName) {
@@ -49,9 +74,11 @@ public class DNSTargetResource implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * The DNS Name that acts as ingress point to a portion of application
+     * <p>
+     * The domain name that acts as an ingress point to a portion of the customer application.
+     * </p>
      * 
-     * @return The DNS Name that acts as ingress point to a portion of application
+     * @return The domain name that acts as an ingress point to a portion of the customer application.
      */
 
     public String getDomainName() {
@@ -59,10 +86,12 @@ public class DNSTargetResource implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * The DNS Name that acts as ingress point to a portion of application
+     * <p>
+     * The domain name that acts as an ingress point to a portion of the customer application.
+     * </p>
      * 
      * @param domainName
-     *        The DNS Name that acts as ingress point to a portion of application
+     *        The domain name that acts as an ingress point to a portion of the customer application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -72,10 +101,14 @@ public class DNSTargetResource implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * The Hosted Zone ARN that contains the DNS record with the provided name of target resource.
+     * <p>
+     * The hosted zone Amazon Resource Name (ARN) that contains the DNS record with the provided name of the target
+     * resource.
+     * </p>
      * 
      * @param hostedZoneArn
-     *        The Hosted Zone ARN that contains the DNS record with the provided name of target resource.
+     *        The hosted zone Amazon Resource Name (ARN) that contains the DNS record with the provided name of the
+     *        target resource.
      */
 
     public void setHostedZoneArn(String hostedZoneArn) {
@@ -83,9 +116,13 @@ public class DNSTargetResource implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * The Hosted Zone ARN that contains the DNS record with the provided name of target resource.
+     * <p>
+     * The hosted zone Amazon Resource Name (ARN) that contains the DNS record with the provided name of the target
+     * resource.
+     * </p>
      * 
-     * @return The Hosted Zone ARN that contains the DNS record with the provided name of target resource.
+     * @return The hosted zone Amazon Resource Name (ARN) that contains the DNS record with the provided name of the
+     *         target resource.
      */
 
     public String getHostedZoneArn() {
@@ -93,10 +130,14 @@ public class DNSTargetResource implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * The Hosted Zone ARN that contains the DNS record with the provided name of target resource.
+     * <p>
+     * The hosted zone Amazon Resource Name (ARN) that contains the DNS record with the provided name of the target
+     * resource.
+     * </p>
      * 
      * @param hostedZoneArn
-     *        The Hosted Zone ARN that contains the DNS record with the provided name of target resource.
+     *        The hosted zone Amazon Resource Name (ARN) that contains the DNS record with the provided name of the
+     *        target resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -106,10 +147,12 @@ public class DNSTargetResource implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * The R53 Set Id to uniquely identify a record given a Name and a Type
+     * <p>
+     * The Route 53 record set ID that uniquely identifies a DNS record, given a name and a type.
+     * </p>
      * 
      * @param recordSetId
-     *        The R53 Set Id to uniquely identify a record given a Name and a Type
+     *        The Route 53 record set ID that uniquely identifies a DNS record, given a name and a type.
      */
 
     public void setRecordSetId(String recordSetId) {
@@ -117,9 +160,11 @@ public class DNSTargetResource implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * The R53 Set Id to uniquely identify a record given a Name and a Type
+     * <p>
+     * The Route 53 record set ID that uniquely identifies a DNS record, given a name and a type.
+     * </p>
      * 
-     * @return The R53 Set Id to uniquely identify a record given a Name and a Type
+     * @return The Route 53 record set ID that uniquely identifies a DNS record, given a name and a type.
      */
 
     public String getRecordSetId() {
@@ -127,10 +172,12 @@ public class DNSTargetResource implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * The R53 Set Id to uniquely identify a record given a Name and a Type
+     * <p>
+     * The Route 53 record set ID that uniquely identifies a DNS record, given a name and a type.
+     * </p>
      * 
      * @param recordSetId
-     *        The R53 Set Id to uniquely identify a record given a Name and a Type
+     *        The Route 53 record set ID that uniquely identifies a DNS record, given a name and a type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -140,10 +187,12 @@ public class DNSTargetResource implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * The Type of DNS Record of target resource
+     * <p>
+     * The type of DNS record of the target resource.
+     * </p>
      * 
      * @param recordType
-     *        The Type of DNS Record of target resource
+     *        The type of DNS record of the target resource.
      */
 
     public void setRecordType(String recordType) {
@@ -151,9 +200,11 @@ public class DNSTargetResource implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * The Type of DNS Record of target resource
+     * <p>
+     * The type of DNS record of the target resource.
+     * </p>
      * 
-     * @return The Type of DNS Record of target resource
+     * @return The type of DNS record of the target resource.
      */
 
     public String getRecordType() {
@@ -161,10 +212,12 @@ public class DNSTargetResource implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * The Type of DNS Record of target resource
+     * <p>
+     * The type of DNS record of the target resource.
+     * </p>
      * 
      * @param recordType
-     *        The Type of DNS Record of target resource
+     *        The type of DNS record of the target resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -174,7 +227,12 @@ public class DNSTargetResource implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The target resource of the DNS target resource.
+     * </p>
+     * 
      * @param targetResource
+     *        The target resource of the DNS target resource.
      */
 
     public void setTargetResource(TargetResource targetResource) {
@@ -182,7 +240,11 @@ public class DNSTargetResource implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * @return
+     * <p>
+     * The target resource of the DNS target resource.
+     * </p>
+     * 
+     * @return The target resource of the DNS target resource.
      */
 
     public TargetResource getTargetResource() {
@@ -190,7 +252,12 @@ public class DNSTargetResource implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The target resource of the DNS target resource.
+     * </p>
+     * 
      * @param targetResource
+     *        The target resource of the DNS target resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

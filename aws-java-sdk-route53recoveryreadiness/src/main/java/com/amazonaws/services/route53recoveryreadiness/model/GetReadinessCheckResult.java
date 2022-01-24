@@ -23,20 +23,34 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetReadinessCheckResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
-    /** Arn associated with ReadinessCheck */
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) associated with a readiness check.
+     * </p>
+     */
     private String readinessCheckArn;
-    /** Name for a ReadinessCheck */
+    /**
+     * <p>
+     * Name of a readiness check.
+     * </p>
+     */
     private String readinessCheckName;
-    /** Name of the ResourceSet to be checked */
+    /**
+     * <p>
+     * Name of the resource set to be checked.
+     * </p>
+     */
     private String resourceSet;
 
     private java.util.Map<String, String> tags;
 
     /**
-     * Arn associated with ReadinessCheck
+     * <p>
+     * The Amazon Resource Name (ARN) associated with a readiness check.
+     * </p>
      * 
      * @param readinessCheckArn
-     *        Arn associated with ReadinessCheck
+     *        The Amazon Resource Name (ARN) associated with a readiness check.
      */
 
     public void setReadinessCheckArn(String readinessCheckArn) {
@@ -44,9 +58,11 @@ public class GetReadinessCheckResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
-     * Arn associated with ReadinessCheck
+     * <p>
+     * The Amazon Resource Name (ARN) associated with a readiness check.
+     * </p>
      * 
-     * @return Arn associated with ReadinessCheck
+     * @return The Amazon Resource Name (ARN) associated with a readiness check.
      */
 
     public String getReadinessCheckArn() {
@@ -54,10 +70,12 @@ public class GetReadinessCheckResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
-     * Arn associated with ReadinessCheck
+     * <p>
+     * The Amazon Resource Name (ARN) associated with a readiness check.
+     * </p>
      * 
      * @param readinessCheckArn
-     *        Arn associated with ReadinessCheck
+     *        The Amazon Resource Name (ARN) associated with a readiness check.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -67,10 +85,12 @@ public class GetReadinessCheckResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
-     * Name for a ReadinessCheck
+     * <p>
+     * Name of a readiness check.
+     * </p>
      * 
      * @param readinessCheckName
-     *        Name for a ReadinessCheck
+     *        Name of a readiness check.
      */
 
     public void setReadinessCheckName(String readinessCheckName) {
@@ -78,9 +98,11 @@ public class GetReadinessCheckResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
-     * Name for a ReadinessCheck
+     * <p>
+     * Name of a readiness check.
+     * </p>
      * 
-     * @return Name for a ReadinessCheck
+     * @return Name of a readiness check.
      */
 
     public String getReadinessCheckName() {
@@ -88,10 +110,12 @@ public class GetReadinessCheckResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
-     * Name for a ReadinessCheck
+     * <p>
+     * Name of a readiness check.
+     * </p>
      * 
      * @param readinessCheckName
-     *        Name for a ReadinessCheck
+     *        Name of a readiness check.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -101,10 +125,12 @@ public class GetReadinessCheckResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
-     * Name of the ResourceSet to be checked
+     * <p>
+     * Name of the resource set to be checked.
+     * </p>
      * 
      * @param resourceSet
-     *        Name of the ResourceSet to be checked
+     *        Name of the resource set to be checked.
      */
 
     public void setResourceSet(String resourceSet) {
@@ -112,9 +138,11 @@ public class GetReadinessCheckResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
-     * Name of the ResourceSet to be checked
+     * <p>
+     * Name of the resource set to be checked.
+     * </p>
      * 
-     * @return Name of the ResourceSet to be checked
+     * @return Name of the resource set to be checked.
      */
 
     public String getResourceSet() {
@@ -122,10 +150,12 @@ public class GetReadinessCheckResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
-     * Name of the ResourceSet to be checked
+     * <p>
+     * Name of the resource set to be checked.
+     * </p>
      * 
      * @param resourceSet
-     *        Name of the ResourceSet to be checked
+     *        Name of the resource set to be checked.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

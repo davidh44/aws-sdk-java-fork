@@ -25,14 +25,20 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetRecoveryGroupRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** The RecoveryGroup to get */
+    /**
+     * <p>
+     * The name of a recovery group.
+     * </p>
+     */
     private String recoveryGroupName;
 
     /**
-     * The RecoveryGroup to get
+     * <p>
+     * The name of a recovery group.
+     * </p>
      * 
      * @param recoveryGroupName
-     *        The RecoveryGroup to get
+     *        The name of a recovery group.
      */
 
     public void setRecoveryGroupName(String recoveryGroupName) {
@@ -40,9 +46,11 @@ public class GetRecoveryGroupRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * The RecoveryGroup to get
+     * <p>
+     * The name of a recovery group.
+     * </p>
      * 
-     * @return The RecoveryGroup to get
+     * @return The name of a recovery group.
      */
 
     public String getRecoveryGroupName() {
@@ -50,10 +58,12 @@ public class GetRecoveryGroupRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * The RecoveryGroup to get
+     * <p>
+     * The name of a recovery group.
+     * </p>
      * 
      * @param recoveryGroupName
-     *        The RecoveryGroup to get
+     *        The name of a recovery group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

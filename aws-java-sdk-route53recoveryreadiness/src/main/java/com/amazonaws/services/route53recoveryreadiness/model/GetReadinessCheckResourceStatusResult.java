@@ -25,18 +25,32 @@ import javax.annotation.Generated;
 public class GetReadinessCheckResourceStatusResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable,
         Cloneable {
 
-    /** A token that can be used to resume pagination from the end of the collection. */
+    /**
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
+     */
     private String nextToken;
-    /** The readiness at rule level. */
+    /**
+     * <p>
+     * The readiness at a rule level.
+     * </p>
+     */
     private String readiness;
-    /** Details of the rules's results */
+    /**
+     * <p>
+     * Details of the rule's results.
+     * </p>
+     */
     private java.util.List<RuleResult> rules;
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token that can be used to resume pagination from the end of the collection.
+     *        The token that identifies which batch of results you want to see.
      */
 
     public void setNextToken(String nextToken) {
@@ -44,9 +58,11 @@ public class GetReadinessCheckResourceStatusResult extends com.amazonaws.AmazonW
     }
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
-     * @return A token that can be used to resume pagination from the end of the collection.
+     * @return The token that identifies which batch of results you want to see.
      */
 
     public String getNextToken() {
@@ -54,10 +70,12 @@ public class GetReadinessCheckResourceStatusResult extends com.amazonaws.AmazonW
     }
 
     /**
-     * A token that can be used to resume pagination from the end of the collection.
+     * <p>
+     * The token that identifies which batch of results you want to see.
+     * </p>
      * 
      * @param nextToken
-     *        A token that can be used to resume pagination from the end of the collection.
+     *        The token that identifies which batch of results you want to see.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -67,10 +85,12 @@ public class GetReadinessCheckResourceStatusResult extends com.amazonaws.AmazonW
     }
 
     /**
-     * The readiness at rule level.
+     * <p>
+     * The readiness at a rule level.
+     * </p>
      * 
      * @param readiness
-     *        The readiness at rule level.
+     *        The readiness at a rule level.
      * @see Readiness
      */
 
@@ -79,9 +99,11 @@ public class GetReadinessCheckResourceStatusResult extends com.amazonaws.AmazonW
     }
 
     /**
-     * The readiness at rule level.
+     * <p>
+     * The readiness at a rule level.
+     * </p>
      * 
-     * @return The readiness at rule level.
+     * @return The readiness at a rule level.
      * @see Readiness
      */
 
@@ -90,10 +112,12 @@ public class GetReadinessCheckResourceStatusResult extends com.amazonaws.AmazonW
     }
 
     /**
-     * The readiness at rule level.
+     * <p>
+     * The readiness at a rule level.
+     * </p>
      * 
      * @param readiness
-     *        The readiness at rule level.
+     *        The readiness at a rule level.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Readiness
      */
@@ -104,10 +128,12 @@ public class GetReadinessCheckResourceStatusResult extends com.amazonaws.AmazonW
     }
 
     /**
-     * The readiness at rule level.
+     * <p>
+     * The readiness at a rule level.
+     * </p>
      * 
      * @param readiness
-     *        The readiness at rule level.
+     *        The readiness at a rule level.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Readiness
      */
@@ -118,9 +144,11 @@ public class GetReadinessCheckResourceStatusResult extends com.amazonaws.AmazonW
     }
 
     /**
-     * Details of the rules's results
+     * <p>
+     * Details of the rule's results.
+     * </p>
      * 
-     * @return Details of the rules's results
+     * @return Details of the rule's results.
      */
 
     public java.util.List<RuleResult> getRules() {
@@ -128,10 +156,12 @@ public class GetReadinessCheckResourceStatusResult extends com.amazonaws.AmazonW
     }
 
     /**
-     * Details of the rules's results
+     * <p>
+     * Details of the rule's results.
+     * </p>
      * 
      * @param rules
-     *        Details of the rules's results
+     *        Details of the rule's results.
      */
 
     public void setRules(java.util.Collection<RuleResult> rules) {
@@ -144,7 +174,9 @@ public class GetReadinessCheckResourceStatusResult extends com.amazonaws.AmazonW
     }
 
     /**
-     * Details of the rules's results
+     * <p>
+     * Details of the rule's results.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setRules(java.util.Collection)} or {@link #withRules(java.util.Collection)} if you want to override the
@@ -152,7 +184,7 @@ public class GetReadinessCheckResourceStatusResult extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param rules
-     *        Details of the rules's results
+     *        Details of the rule's results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -167,10 +199,12 @@ public class GetReadinessCheckResourceStatusResult extends com.amazonaws.AmazonW
     }
 
     /**
-     * Details of the rules's results
+     * <p>
+     * Details of the rule's results.
+     * </p>
      * 
      * @param rules
-     *        Details of the rules's results
+     *        Details of the rule's results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
