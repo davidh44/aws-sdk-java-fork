@@ -27,12 +27,12 @@ import com.amazonaws.services.elasticfilesystem.model.*;
  * <p>
  * <fullname>Amazon Elastic File System</fullname>
  * <p>
- * Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in
- * the Amazon Web Services Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as
- * you add and remove files, so your applications have the storage they need, when they need it. For more information,
- * see the <a href="https://docs.aws.amazon.com/efs/latest/ug/api-reference.html">Amazon Elastic File System API
- * Reference</a> and the <a href="https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html">Amazon Elastic File System
- * User Guide</a>.
+ * Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 Linux and Mac
+ * instances in the Amazon Web Services Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking
+ * automatically as you add and remove files, so your applications have the storage they need, when they need it. For
+ * more information, see the <a href="https://docs.aws.amazon.com/efs/latest/ug/api-reference.html">Amazon Elastic File
+ * System API Reference</a> and the <a href="https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html">Amazon Elastic
+ * File System User Guide</a>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -628,6 +628,205 @@ public interface AmazonElasticFileSystemAsync extends AmazonElasticFileSystem {
             com.amazonaws.handlers.AsyncHandler<CreateMountTargetRequest, CreateMountTargetResult> asyncHandler);
 
     /**
+     * <p>
+     * Creates a replication configuration that replicates an existing EFS file system to a new, read-only file system.
+     * For more information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/efs-replication.html">Amazon EFS
+     * replication</a>. The replication configuration specifies the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>Source file system</b> - an existing EFS file system that you want replicated. The source file system cannot
+     * be a destination file system in an existing replication configuration.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Destination file system configuration</b> - the configuration of the destination file system to which the
+     * source file system will be replicated. There can only be one destination file system in a replication
+     * configuration.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>Amazon Web Services Region</b> - The Amazon Web Services Region in which the destination file system is
+     * created. EFS Replication is available in all Amazon Web Services Region that Amazon EFS is available in, except
+     * the following regions: Asia Pacific (Hong Kong) Europe (Milan), Middle East (Bahrain), Africa (Cape Town), and
+     * Asia Pacific (Jakarta).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Availability zone</b> - If you want the destination file system to use One Zone availability and durability,
+     * you must specify the Availability Zone to create the file system in. For more information about EFS storage
+     * classes, see <a href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html"> Amazon EFS storage
+     * classes</a> in the <i>Amazon EFS User Guide</i>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Encryption</b> - All destination file systems are created with encryption at rest enabled. You can specify the
+     * KMS key that is used to encrypt the destination file system. Your service-managed KMS key for Amazon EFS is used
+     * if you don't specify a KMS key. You cannot change this after the file system is created.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <p>
+     * The following properties are set by default:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>Performance mode</b> - The destination file system's performance mode will match that of the source file
+     * system, unless the destination file system uses One Zone storage. In that case, the <i>General Purpose</i>
+     * performance mode is used. The Performance mode cannot be changed.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Throughput mode</b> - The destination file system use the Bursting throughput mode by default. You can modify
+     * the throughput mode once the file system is created.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The following properties are turned off by default:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>Lifecycle management</b> - EFS lifecycle management and intelligent tiering are not enabled on the destination
+     * file system. You can enable EFS lifecycle management and intelligent tiering after the destination file system is
+     * created.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Automatic backups</b> - Automatic daily backups not enabled on the destination file system. You can change
+     * this setting after the file system is created.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/efs-replication.html">Amazon EFS
+     * replication</a>.
+     * </p>
+     * 
+     * @param createReplicationConfigurationRequest
+     * @return A Java Future containing the result of the CreateReplicationConfiguration operation returned by the
+     *         service.
+     * @sample AmazonElasticFileSystemAsync.CreateReplicationConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/CreateReplicationConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateReplicationConfigurationResult> createReplicationConfigurationAsync(
+            CreateReplicationConfigurationRequest createReplicationConfigurationRequest);
+
+    /**
+     * <p>
+     * Creates a replication configuration that replicates an existing EFS file system to a new, read-only file system.
+     * For more information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/efs-replication.html">Amazon EFS
+     * replication</a>. The replication configuration specifies the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>Source file system</b> - an existing EFS file system that you want replicated. The source file system cannot
+     * be a destination file system in an existing replication configuration.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Destination file system configuration</b> - the configuration of the destination file system to which the
+     * source file system will be replicated. There can only be one destination file system in a replication
+     * configuration.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>Amazon Web Services Region</b> - The Amazon Web Services Region in which the destination file system is
+     * created. EFS Replication is available in all Amazon Web Services Region that Amazon EFS is available in, except
+     * the following regions: Asia Pacific (Hong Kong) Europe (Milan), Middle East (Bahrain), Africa (Cape Town), and
+     * Asia Pacific (Jakarta).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Availability zone</b> - If you want the destination file system to use One Zone availability and durability,
+     * you must specify the Availability Zone to create the file system in. For more information about EFS storage
+     * classes, see <a href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html"> Amazon EFS storage
+     * classes</a> in the <i>Amazon EFS User Guide</i>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Encryption</b> - All destination file systems are created with encryption at rest enabled. You can specify the
+     * KMS key that is used to encrypt the destination file system. Your service-managed KMS key for Amazon EFS is used
+     * if you don't specify a KMS key. You cannot change this after the file system is created.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <p>
+     * The following properties are set by default:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>Performance mode</b> - The destination file system's performance mode will match that of the source file
+     * system, unless the destination file system uses One Zone storage. In that case, the <i>General Purpose</i>
+     * performance mode is used. The Performance mode cannot be changed.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Throughput mode</b> - The destination file system use the Bursting throughput mode by default. You can modify
+     * the throughput mode once the file system is created.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The following properties are turned off by default:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>Lifecycle management</b> - EFS lifecycle management and intelligent tiering are not enabled on the destination
+     * file system. You can enable EFS lifecycle management and intelligent tiering after the destination file system is
+     * created.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Automatic backups</b> - Automatic daily backups not enabled on the destination file system. You can change
+     * this setting after the file system is created.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/efs-replication.html">Amazon EFS
+     * replication</a>.
+     * </p>
+     * 
+     * @param createReplicationConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateReplicationConfiguration operation returned by the
+     *         service.
+     * @sample AmazonElasticFileSystemAsyncHandler.CreateReplicationConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/CreateReplicationConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateReplicationConfigurationResult> createReplicationConfigurationAsync(
+            CreateReplicationConfigurationRequest createReplicationConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateReplicationConfigurationRequest, CreateReplicationConfigurationResult> asyncHandler);
+
+    /**
      * <note>
      * <p>
      * DEPRECATED - CreateTags is deprecated and not maintained. Please use the API action to create tags for EFS
@@ -935,6 +1134,47 @@ public interface AmazonElasticFileSystemAsync extends AmazonElasticFileSystem {
      */
     java.util.concurrent.Future<DeleteMountTargetResult> deleteMountTargetAsync(DeleteMountTargetRequest deleteMountTargetRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteMountTargetRequest, DeleteMountTargetResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes an existing replication configuration. To delete a replication configuration, you must make the request
+     * from the Amazon Web Services Region in which the destination file system is located. Deleting a replication
+     * configuration ends the replication process. You can write to the destination file system once it's status becomes
+     * <code>Writeable</code>.
+     * </p>
+     * 
+     * @param deleteReplicationConfigurationRequest
+     * @return A Java Future containing the result of the DeleteReplicationConfiguration operation returned by the
+     *         service.
+     * @sample AmazonElasticFileSystemAsync.DeleteReplicationConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DeleteReplicationConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteReplicationConfigurationResult> deleteReplicationConfigurationAsync(
+            DeleteReplicationConfigurationRequest deleteReplicationConfigurationRequest);
+
+    /**
+     * <p>
+     * Deletes an existing replication configuration. To delete a replication configuration, you must make the request
+     * from the Amazon Web Services Region in which the destination file system is located. Deleting a replication
+     * configuration ends the replication process. You can write to the destination file system once it's status becomes
+     * <code>Writeable</code>.
+     * </p>
+     * 
+     * @param deleteReplicationConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteReplicationConfiguration operation returned by the
+     *         service.
+     * @sample AmazonElasticFileSystemAsyncHandler.DeleteReplicationConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DeleteReplicationConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteReplicationConfigurationResult> deleteReplicationConfigurationAsync(
+            DeleteReplicationConfigurationRequest deleteReplicationConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteReplicationConfigurationRequest, DeleteReplicationConfigurationResult> asyncHandler);
 
     /**
      * <note>
@@ -1399,6 +1639,45 @@ public interface AmazonElasticFileSystemAsync extends AmazonElasticFileSystem {
      */
     java.util.concurrent.Future<DescribeMountTargetsResult> describeMountTargetsAsync(DescribeMountTargetsRequest describeMountTargetsRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeMountTargetsRequest, DescribeMountTargetsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves the replication configurations for either a specific file system, or all configurations for the Amazon
+     * Web Services account in an Amazon Web Services Region if a file system is not specified.
+     * </p>
+     * 
+     * @param describeReplicationConfigurationsRequest
+     * @return A Java Future containing the result of the DescribeReplicationConfigurations operation returned by the
+     *         service.
+     * @sample AmazonElasticFileSystemAsync.DescribeReplicationConfigurations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DescribeReplicationConfigurations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeReplicationConfigurationsResult> describeReplicationConfigurationsAsync(
+            DescribeReplicationConfigurationsRequest describeReplicationConfigurationsRequest);
+
+    /**
+     * <p>
+     * Retrieves the replication configurations for either a specific file system, or all configurations for the Amazon
+     * Web Services account in an Amazon Web Services Region if a file system is not specified.
+     * </p>
+     * 
+     * @param describeReplicationConfigurationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeReplicationConfigurations operation returned by the
+     *         service.
+     * @sample AmazonElasticFileSystemAsyncHandler.DescribeReplicationConfigurations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DescribeReplicationConfigurations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeReplicationConfigurationsResult> describeReplicationConfigurationsAsync(
+            DescribeReplicationConfigurationsRequest describeReplicationConfigurationsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeReplicationConfigurationsRequest, DescribeReplicationConfigurationsResult> asyncHandler);
 
     /**
      * <note>

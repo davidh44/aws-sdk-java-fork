@@ -64,6 +64,10 @@ public class AwsApiCallActionJsonUnmarshaller implements Unmarshaller<AwsApiCall
                     context.nextToken();
                     awsApiCallAction.setErrorCode(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("userAgent", targetDepth)) {
+                    context.nextToken();
+                    awsApiCallAction.setUserAgent(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("remoteIpDetails", targetDepth)) {
                     context.nextToken();
                     awsApiCallAction.setRemoteIpDetails(RemoteIpDetailsJsonUnmarshaller.getInstance().unmarshall(context));

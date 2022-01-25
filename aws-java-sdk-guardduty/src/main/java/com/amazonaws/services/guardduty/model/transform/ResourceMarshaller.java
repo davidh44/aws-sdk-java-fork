@@ -34,6 +34,10 @@ public class ResourceMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("s3BucketDetails").build();
     private static final MarshallingInfo<StructuredPojo> INSTANCEDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instanceDetails").build();
+    private static final MarshallingInfo<StructuredPojo> EKSCLUSTERDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("eksClusterDetails").build();
+    private static final MarshallingInfo<StructuredPojo> KUBERNETESDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("kubernetesDetails").build();
     private static final MarshallingInfo<String> RESOURCETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resourceType").build();
 
@@ -56,6 +60,8 @@ public class ResourceMarshaller {
             protocolMarshaller.marshall(resource.getAccessKeyDetails(), ACCESSKEYDETAILS_BINDING);
             protocolMarshaller.marshall(resource.getS3BucketDetails(), S3BUCKETDETAILS_BINDING);
             protocolMarshaller.marshall(resource.getInstanceDetails(), INSTANCEDETAILS_BINDING);
+            protocolMarshaller.marshall(resource.getEksClusterDetails(), EKSCLUSTERDETAILS_BINDING);
+            protocolMarshaller.marshall(resource.getKubernetesDetails(), KUBERNETESDETAILS_BINDING);
             protocolMarshaller.marshall(resource.getResourceType(), RESOURCETYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

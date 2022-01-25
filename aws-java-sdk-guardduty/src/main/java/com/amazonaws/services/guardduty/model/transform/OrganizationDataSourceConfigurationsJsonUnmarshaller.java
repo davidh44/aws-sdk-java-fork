@@ -52,6 +52,10 @@ public class OrganizationDataSourceConfigurationsJsonUnmarshaller implements Unm
                     context.nextToken();
                     organizationDataSourceConfigurations.setS3Logs(OrganizationS3LogsConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("kubernetes", targetDepth)) {
+                    context.nextToken();
+                    organizationDataSourceConfigurations.setKubernetes(OrganizationKubernetesConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

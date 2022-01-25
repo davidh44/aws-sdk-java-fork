@@ -43,9 +43,9 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     private String clientRequestToken;
     /**
      * <p>
-     * Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server or Amazon FSx for
-     * Lustre file system. Specifies the storage capacity target value, in GiB, to increase the storage capacity for the
-     * file system that you're updating.
+     * Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server, Amazon FSx for
+     * Lustre, or Amazon FSx for NetApp ONTAP file system. Specifies the storage capacity target value, in GiB, to
+     * increase the storage capacity for the file system that you're updating.
      * </p>
      * <note>
      * <p>
@@ -56,7 +56,9 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For Windows file systems, the storage capacity target value must be at least 10 percent greater than the current
      * storage capacity value. To increase storage capacity, the file system must have at least 16 MBps of throughput
-     * capacity.
+     * capacity. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
+     * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>.
      * </p>
      * <p>
      * For Lustre file systems, the storage capacity target value can be the following:
@@ -64,8 +66,8 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * For <code>SCRATCH_2</code> and <code>PERSISTENT_1 SSD</code> deployment types, valid values are in multiples of
-     * 2400 GiB. The value must be greater than the current storage capacity.
+     * For <code>SCRATCH_2</code>, <code>PERSISTENT_1</code>, and <code>PERSISTENT_2 SSD</code> deployment types, valid
+     * values are in multiples of 2400 GiB. The value must be greater than the current storage capacity.
      * </p>
      * </li>
      * <li>
@@ -82,18 +84,15 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * <p>
-     * For OpenZFS file systems, the input/output operations per second (IOPS) automatically scale with increases to the
-     * storage capacity if IOPS is configured for automatic scaling. If the storage capacity increase would result in
-     * less than 3 IOPS per GiB of storage, this operation returns an error.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage and
+     * throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>.
      * </p>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
-     * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>, <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage and
-     * throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>, and <a
-     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-storage-capacity.html">Managing storage
-     * capacity</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
+     * For ONTAP file systems, the storage capacity target value must be at least 10 percent greater than the current
+     * storage capacity value. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-storage-capacity.html">Managing storage capacity
+     * and provisioned IOPS</a> in the <i>Amazon FSx for NetApp ONTAP User Guide</i>.
      * </p>
      */
     private Integer storageCapacity;
@@ -205,9 +204,9 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server or Amazon FSx for
-     * Lustre file system. Specifies the storage capacity target value, in GiB, to increase the storage capacity for the
-     * file system that you're updating.
+     * Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server, Amazon FSx for
+     * Lustre, or Amazon FSx for NetApp ONTAP file system. Specifies the storage capacity target value, in GiB, to
+     * increase the storage capacity for the file system that you're updating.
      * </p>
      * <note>
      * <p>
@@ -218,7 +217,9 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For Windows file systems, the storage capacity target value must be at least 10 percent greater than the current
      * storage capacity value. To increase storage capacity, the file system must have at least 16 MBps of throughput
-     * capacity.
+     * capacity. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
+     * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>.
      * </p>
      * <p>
      * For Lustre file systems, the storage capacity target value can be the following:
@@ -226,8 +227,8 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * For <code>SCRATCH_2</code> and <code>PERSISTENT_1 SSD</code> deployment types, valid values are in multiples of
-     * 2400 GiB. The value must be greater than the current storage capacity.
+     * For <code>SCRATCH_2</code>, <code>PERSISTENT_1</code>, and <code>PERSISTENT_2 SSD</code> deployment types, valid
+     * values are in multiples of 2400 GiB. The value must be greater than the current storage capacity.
      * </p>
      * </li>
      * <li>
@@ -244,24 +245,21 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * <p>
-     * For OpenZFS file systems, the input/output operations per second (IOPS) automatically scale with increases to the
-     * storage capacity if IOPS is configured for automatic scaling. If the storage capacity increase would result in
-     * less than 3 IOPS per GiB of storage, this operation returns an error.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage and
+     * throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>.
      * </p>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
-     * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>, <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage and
-     * throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>, and <a
-     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-storage-capacity.html">Managing storage
-     * capacity</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
+     * For ONTAP file systems, the storage capacity target value must be at least 10 percent greater than the current
+     * storage capacity value. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-storage-capacity.html">Managing storage capacity
+     * and provisioned IOPS</a> in the <i>Amazon FSx for NetApp ONTAP User Guide</i>.
      * </p>
      * 
      * @param storageCapacity
-     *        Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server or Amazon FSx
-     *        for Lustre file system. Specifies the storage capacity target value, in GiB, to increase the storage
-     *        capacity for the file system that you're updating. </p> <note>
+     *        Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server, Amazon FSx
+     *        for Lustre, or Amazon FSx for NetApp ONTAP file system. Specifies the storage capacity target value, in
+     *        GiB, to increase the storage capacity for the file system that you're updating. </p> <note>
      *        <p>
      *        You can't make a storage capacity increase request if there is an existing storage capacity increase
      *        request in progress.
@@ -270,7 +268,9 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        For Windows file systems, the storage capacity target value must be at least 10 percent greater than the
      *        current storage capacity value. To increase storage capacity, the file system must have at least 16 MBps
-     *        of throughput capacity.
+     *        of throughput capacity. For more information, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
+     *        capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>.
      *        </p>
      *        <p>
      *        For Lustre file systems, the storage capacity target value can be the following:
@@ -278,8 +278,8 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        For <code>SCRATCH_2</code> and <code>PERSISTENT_1 SSD</code> deployment types, valid values are in
-     *        multiples of 2400 GiB. The value must be greater than the current storage capacity.
+     *        For <code>SCRATCH_2</code>, <code>PERSISTENT_1</code>, and <code>PERSISTENT_2 SSD</code> deployment types,
+     *        valid values are in multiples of 2400 GiB. The value must be greater than the current storage capacity.
      *        </p>
      *        </li>
      *        <li>
@@ -296,18 +296,15 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        <p>
-     *        For OpenZFS file systems, the input/output operations per second (IOPS) automatically scale with increases
-     *        to the storage capacity if IOPS is configured for automatic scaling. If the storage capacity increase
-     *        would result in less than 3 IOPS per GiB of storage, this operation returns an error.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage
+     *        and throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>.
      *        </p>
      *        <p>
-     *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
-     *        capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>, <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage
-     *        and throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>, and <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-storage-capacity.html">Managing storage
-     *        capacity</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
+     *        For ONTAP file systems, the storage capacity target value must be at least 10 percent greater than the
+     *        current storage capacity value. For more information, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-storage-capacity.html">Managing storage
+     *        capacity and provisioned IOPS</a> in the <i>Amazon FSx for NetApp ONTAP User Guide</i>.
      */
 
     public void setStorageCapacity(Integer storageCapacity) {
@@ -316,9 +313,9 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server or Amazon FSx for
-     * Lustre file system. Specifies the storage capacity target value, in GiB, to increase the storage capacity for the
-     * file system that you're updating.
+     * Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server, Amazon FSx for
+     * Lustre, or Amazon FSx for NetApp ONTAP file system. Specifies the storage capacity target value, in GiB, to
+     * increase the storage capacity for the file system that you're updating.
      * </p>
      * <note>
      * <p>
@@ -329,7 +326,9 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For Windows file systems, the storage capacity target value must be at least 10 percent greater than the current
      * storage capacity value. To increase storage capacity, the file system must have at least 16 MBps of throughput
-     * capacity.
+     * capacity. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
+     * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>.
      * </p>
      * <p>
      * For Lustre file systems, the storage capacity target value can be the following:
@@ -337,8 +336,8 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * For <code>SCRATCH_2</code> and <code>PERSISTENT_1 SSD</code> deployment types, valid values are in multiples of
-     * 2400 GiB. The value must be greater than the current storage capacity.
+     * For <code>SCRATCH_2</code>, <code>PERSISTENT_1</code>, and <code>PERSISTENT_2 SSD</code> deployment types, valid
+     * values are in multiples of 2400 GiB. The value must be greater than the current storage capacity.
      * </p>
      * </li>
      * <li>
@@ -355,23 +354,20 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * <p>
-     * For OpenZFS file systems, the input/output operations per second (IOPS) automatically scale with increases to the
-     * storage capacity if IOPS is configured for automatic scaling. If the storage capacity increase would result in
-     * less than 3 IOPS per GiB of storage, this operation returns an error.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage and
+     * throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>.
      * </p>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
-     * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>, <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage and
-     * throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>, and <a
-     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-storage-capacity.html">Managing storage
-     * capacity</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
+     * For ONTAP file systems, the storage capacity target value must be at least 10 percent greater than the current
+     * storage capacity value. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-storage-capacity.html">Managing storage capacity
+     * and provisioned IOPS</a> in the <i>Amazon FSx for NetApp ONTAP User Guide</i>.
      * </p>
      * 
-     * @return Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server or Amazon
-     *         FSx for Lustre file system. Specifies the storage capacity target value, in GiB, to increase the storage
-     *         capacity for the file system that you're updating. </p> <note>
+     * @return Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server, Amazon FSx
+     *         for Lustre, or Amazon FSx for NetApp ONTAP file system. Specifies the storage capacity target value, in
+     *         GiB, to increase the storage capacity for the file system that you're updating. </p> <note>
      *         <p>
      *         You can't make a storage capacity increase request if there is an existing storage capacity increase
      *         request in progress.
@@ -380,7 +376,9 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *         <p>
      *         For Windows file systems, the storage capacity target value must be at least 10 percent greater than the
      *         current storage capacity value. To increase storage capacity, the file system must have at least 16 MBps
-     *         of throughput capacity.
+     *         of throughput capacity. For more information, see <a
+     *         href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing
+     *         storage capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>.
      *         </p>
      *         <p>
      *         For Lustre file systems, the storage capacity target value can be the following:
@@ -388,8 +386,9 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *         <ul>
      *         <li>
      *         <p>
-     *         For <code>SCRATCH_2</code> and <code>PERSISTENT_1 SSD</code> deployment types, valid values are in
-     *         multiples of 2400 GiB. The value must be greater than the current storage capacity.
+     *         For <code>SCRATCH_2</code>, <code>PERSISTENT_1</code>, and <code>PERSISTENT_2 SSD</code> deployment
+     *         types, valid values are in multiples of 2400 GiB. The value must be greater than the current storage
+     *         capacity.
      *         </p>
      *         </li>
      *         <li>
@@ -406,18 +405,15 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *         </li>
      *         </ul>
      *         <p>
-     *         For OpenZFS file systems, the input/output operations per second (IOPS) automatically scale with
-     *         increases to the storage capacity if IOPS is configured for automatic scaling. If the storage capacity
-     *         increase would result in less than 3 IOPS per GiB of storage, this operation returns an error.
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage
+     *         and throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>.
      *         </p>
      *         <p>
-     *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing
-     *         storage capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>, <a
-     *         href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage
-     *         and throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>, and <a
-     *         href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-storage-capacity.html">Managing
-     *         storage capacity</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
+     *         For ONTAP file systems, the storage capacity target value must be at least 10 percent greater than the
+     *         current storage capacity value. For more information, see <a
+     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-storage-capacity.html">Managing storage
+     *         capacity and provisioned IOPS</a> in the <i>Amazon FSx for NetApp ONTAP User Guide</i>.
      */
 
     public Integer getStorageCapacity() {
@@ -426,9 +422,9 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server or Amazon FSx for
-     * Lustre file system. Specifies the storage capacity target value, in GiB, to increase the storage capacity for the
-     * file system that you're updating.
+     * Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server, Amazon FSx for
+     * Lustre, or Amazon FSx for NetApp ONTAP file system. Specifies the storage capacity target value, in GiB, to
+     * increase the storage capacity for the file system that you're updating.
      * </p>
      * <note>
      * <p>
@@ -439,7 +435,9 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For Windows file systems, the storage capacity target value must be at least 10 percent greater than the current
      * storage capacity value. To increase storage capacity, the file system must have at least 16 MBps of throughput
-     * capacity.
+     * capacity. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
+     * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>.
      * </p>
      * <p>
      * For Lustre file systems, the storage capacity target value can be the following:
@@ -447,8 +445,8 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * For <code>SCRATCH_2</code> and <code>PERSISTENT_1 SSD</code> deployment types, valid values are in multiples of
-     * 2400 GiB. The value must be greater than the current storage capacity.
+     * For <code>SCRATCH_2</code>, <code>PERSISTENT_1</code>, and <code>PERSISTENT_2 SSD</code> deployment types, valid
+     * values are in multiples of 2400 GiB. The value must be greater than the current storage capacity.
      * </p>
      * </li>
      * <li>
@@ -465,24 +463,21 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * <p>
-     * For OpenZFS file systems, the input/output operations per second (IOPS) automatically scale with increases to the
-     * storage capacity if IOPS is configured for automatic scaling. If the storage capacity increase would result in
-     * less than 3 IOPS per GiB of storage, this operation returns an error.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage and
+     * throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>.
      * </p>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
-     * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>, <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage and
-     * throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>, and <a
-     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-storage-capacity.html">Managing storage
-     * capacity</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
+     * For ONTAP file systems, the storage capacity target value must be at least 10 percent greater than the current
+     * storage capacity value. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-storage-capacity.html">Managing storage capacity
+     * and provisioned IOPS</a> in the <i>Amazon FSx for NetApp ONTAP User Guide</i>.
      * </p>
      * 
      * @param storageCapacity
-     *        Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server or Amazon FSx
-     *        for Lustre file system. Specifies the storage capacity target value, in GiB, to increase the storage
-     *        capacity for the file system that you're updating. </p> <note>
+     *        Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server, Amazon FSx
+     *        for Lustre, or Amazon FSx for NetApp ONTAP file system. Specifies the storage capacity target value, in
+     *        GiB, to increase the storage capacity for the file system that you're updating. </p> <note>
      *        <p>
      *        You can't make a storage capacity increase request if there is an existing storage capacity increase
      *        request in progress.
@@ -491,7 +486,9 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        For Windows file systems, the storage capacity target value must be at least 10 percent greater than the
      *        current storage capacity value. To increase storage capacity, the file system must have at least 16 MBps
-     *        of throughput capacity.
+     *        of throughput capacity. For more information, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
+     *        capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>.
      *        </p>
      *        <p>
      *        For Lustre file systems, the storage capacity target value can be the following:
@@ -499,8 +496,8 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        For <code>SCRATCH_2</code> and <code>PERSISTENT_1 SSD</code> deployment types, valid values are in
-     *        multiples of 2400 GiB. The value must be greater than the current storage capacity.
+     *        For <code>SCRATCH_2</code>, <code>PERSISTENT_1</code>, and <code>PERSISTENT_2 SSD</code> deployment types,
+     *        valid values are in multiples of 2400 GiB. The value must be greater than the current storage capacity.
      *        </p>
      *        </li>
      *        <li>
@@ -517,18 +514,15 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        <p>
-     *        For OpenZFS file systems, the input/output operations per second (IOPS) automatically scale with increases
-     *        to the storage capacity if IOPS is configured for automatic scaling. If the storage capacity increase
-     *        would result in less than 3 IOPS per GiB of storage, this operation returns an error.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage
+     *        and throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>.
      *        </p>
      *        <p>
-     *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
-     *        capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>, <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage
-     *        and throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>, and <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-storage-capacity.html">Managing storage
-     *        capacity</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
+     *        For ONTAP file systems, the storage capacity target value must be at least 10 percent greater than the
+     *        current storage capacity value. For more information, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-storage-capacity.html">Managing storage
+     *        capacity and provisioned IOPS</a> in the <i>Amazon FSx for NetApp ONTAP User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

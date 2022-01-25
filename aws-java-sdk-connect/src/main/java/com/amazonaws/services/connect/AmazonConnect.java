@@ -125,6 +125,30 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Associates an existing vocabulary as the default. Contact Lens for Amazon Connect uses the vocabulary in
+     * post-call and real-time analysis sessions for the given language.
+     * </p>
+     * 
+     * @param associateDefaultVocabularyRequest
+     * @return Result of the AssociateDefaultVocabulary operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @sample AmazonConnect.AssociateDefaultVocabulary
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/AssociateDefaultVocabulary"
+     *      target="_top">AWS API Documentation</a>
+     */
+    AssociateDefaultVocabularyResult associateDefaultVocabulary(AssociateDefaultVocabularyRequest associateDefaultVocabularyRequest);
+
+    /**
+     * <p>
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
@@ -679,6 +703,35 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Creates a custom vocabulary associated with your Amazon Connect instance. You can set a custom vocabulary to be
+     * your default vocabulary for a given language. Contact Lens for Amazon Connect uses the default vocabulary in
+     * post-call and real-time contact analysis sessions for that language.
+     * </p>
+     * 
+     * @param createVocabularyRequest
+     * @return Result of the CreateVocabulary operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws ResourceConflictException
+     *         A resource already has that name.
+     * @throws ServiceQuotaExceededException
+     *         The service quota has been exceeded.
+     * @sample AmazonConnect.CreateVocabulary
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreateVocabulary" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateVocabularyResult createVocabulary(CreateVocabularyRequest createVocabularyRequest);
+
+    /**
+     * <p>
      * Deletes a contact flow for the specified Amazon Connect instance.
      * </p>
      * 
@@ -930,6 +983,31 @@ public interface AmazonConnect {
      *      target="_top">AWS API Documentation</a>
      */
     DeleteUserHierarchyGroupResult deleteUserHierarchyGroup(DeleteUserHierarchyGroupRequest deleteUserHierarchyGroupRequest);
+
+    /**
+     * <p>
+     * Deletes the vocabulary that has the given identifier.
+     * </p>
+     * 
+     * @param deleteVocabularyRequest
+     * @return Result of the DeleteVocabulary operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws ResourceInUseException
+     *         That resource is already in use. Please try another.
+     * @sample AmazonConnect.DeleteVocabulary
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteVocabulary" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteVocabularyResult deleteVocabulary(DeleteVocabularyRequest deleteVocabularyRequest);
 
     /**
      * <p>
@@ -1314,6 +1392,29 @@ public interface AmazonConnect {
      *      target="_top">AWS API Documentation</a>
      */
     DescribeUserHierarchyStructureResult describeUserHierarchyStructure(DescribeUserHierarchyStructureRequest describeUserHierarchyStructureRequest);
+
+    /**
+     * <p>
+     * Describes the specified vocabulary.
+     * </p>
+     * 
+     * @param describeVocabularyRequest
+     * @return Result of the DescribeVocabulary operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @sample AmazonConnect.DescribeVocabulary
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeVocabulary" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeVocabularyResult describeVocabulary(DescribeVocabularyRequest describeVocabularyRequest);
 
     /**
      * <p>
@@ -1786,6 +1887,27 @@ public interface AmazonConnect {
      *      API Documentation</a>
      */
     ListContactReferencesResult listContactReferences(ListContactReferencesRequest listContactReferencesRequest);
+
+    /**
+     * <p>
+     * Lists the default vocabularies for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param listDefaultVocabulariesRequest
+     * @return Result of the ListDefaultVocabularies operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @sample AmazonConnect.ListDefaultVocabularies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListDefaultVocabularies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListDefaultVocabulariesResult listDefaultVocabularies(ListDefaultVocabulariesRequest listDefaultVocabulariesRequest);
 
     /**
      * <p>
@@ -2352,6 +2474,28 @@ public interface AmazonConnect {
      *      API Documentation</a>
      */
     ResumeContactRecordingResult resumeContactRecording(ResumeContactRecordingRequest resumeContactRecordingRequest);
+
+    /**
+     * <p>
+     * Searches for vocabularies within a specific Amazon Connect instance using <code>State</code>,
+     * <code>NameStartsWith</code>, and <code>LanguageCode</code>.
+     * </p>
+     * 
+     * @param searchVocabulariesRequest
+     * @return Result of the SearchVocabularies operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @sample AmazonConnect.SearchVocabularies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchVocabularies" target="_top">AWS API
+     *      Documentation</a>
+     */
+    SearchVocabulariesResult searchVocabularies(SearchVocabulariesRequest searchVocabulariesRequest);
 
     /**
      * <p>

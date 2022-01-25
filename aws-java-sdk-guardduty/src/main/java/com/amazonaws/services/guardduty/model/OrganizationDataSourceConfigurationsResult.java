@@ -35,6 +35,12 @@ public class OrganizationDataSourceConfigurationsResult implements Serializable,
      * </p>
      */
     private OrganizationS3LogsConfigurationResult s3Logs;
+    /**
+     * <p>
+     * Describes the configuration of Kubernetes data sources.
+     * </p>
+     */
+    private OrganizationKubernetesConfigurationResult kubernetes;
 
     /**
      * <p>
@@ -77,6 +83,46 @@ public class OrganizationDataSourceConfigurationsResult implements Serializable,
     }
 
     /**
+     * <p>
+     * Describes the configuration of Kubernetes data sources.
+     * </p>
+     * 
+     * @param kubernetes
+     *        Describes the configuration of Kubernetes data sources.
+     */
+
+    public void setKubernetes(OrganizationKubernetesConfigurationResult kubernetes) {
+        this.kubernetes = kubernetes;
+    }
+
+    /**
+     * <p>
+     * Describes the configuration of Kubernetes data sources.
+     * </p>
+     * 
+     * @return Describes the configuration of Kubernetes data sources.
+     */
+
+    public OrganizationKubernetesConfigurationResult getKubernetes() {
+        return this.kubernetes;
+    }
+
+    /**
+     * <p>
+     * Describes the configuration of Kubernetes data sources.
+     * </p>
+     * 
+     * @param kubernetes
+     *        Describes the configuration of Kubernetes data sources.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OrganizationDataSourceConfigurationsResult withKubernetes(OrganizationKubernetesConfigurationResult kubernetes) {
+        setKubernetes(kubernetes);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -89,7 +135,9 @@ public class OrganizationDataSourceConfigurationsResult implements Serializable,
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getS3Logs() != null)
-            sb.append("S3Logs: ").append(getS3Logs());
+            sb.append("S3Logs: ").append(getS3Logs()).append(",");
+        if (getKubernetes() != null)
+            sb.append("Kubernetes: ").append(getKubernetes());
         sb.append("}");
         return sb.toString();
     }
@@ -108,6 +156,10 @@ public class OrganizationDataSourceConfigurationsResult implements Serializable,
             return false;
         if (other.getS3Logs() != null && other.getS3Logs().equals(this.getS3Logs()) == false)
             return false;
+        if (other.getKubernetes() == null ^ this.getKubernetes() == null)
+            return false;
+        if (other.getKubernetes() != null && other.getKubernetes().equals(this.getKubernetes()) == false)
+            return false;
         return true;
     }
 
@@ -117,6 +169,7 @@ public class OrganizationDataSourceConfigurationsResult implements Serializable,
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getS3Logs() == null) ? 0 : getS3Logs().hashCode());
+        hashCode = prime * hashCode + ((getKubernetes() == null) ? 0 : getKubernetes().hashCode());
         return hashCode;
     }
 

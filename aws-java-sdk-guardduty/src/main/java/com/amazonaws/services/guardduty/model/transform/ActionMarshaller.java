@@ -37,6 +37,8 @@ public class ActionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("networkConnectionAction").build();
     private static final MarshallingInfo<StructuredPojo> PORTPROBEACTION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("portProbeAction").build();
+    private static final MarshallingInfo<StructuredPojo> KUBERNETESAPICALLACTION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("kubernetesApiCallAction").build();
 
     private static final ActionMarshaller instance = new ActionMarshaller();
 
@@ -59,6 +61,7 @@ public class ActionMarshaller {
             protocolMarshaller.marshall(action.getDnsRequestAction(), DNSREQUESTACTION_BINDING);
             protocolMarshaller.marshall(action.getNetworkConnectionAction(), NETWORKCONNECTIONACTION_BINDING);
             protocolMarshaller.marshall(action.getPortProbeAction(), PORTPROBEACTION_BINDING);
+            protocolMarshaller.marshall(action.getKubernetesApiCallAction(), KUBERNETESAPICALLACTION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

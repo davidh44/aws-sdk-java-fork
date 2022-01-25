@@ -67,6 +67,19 @@ public class AbstractAmazonElasticFileSystemAsync extends AbstractAmazonElasticF
     }
 
     @Override
+    public java.util.concurrent.Future<CreateReplicationConfigurationResult> createReplicationConfigurationAsync(CreateReplicationConfigurationRequest request) {
+
+        return createReplicationConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateReplicationConfigurationResult> createReplicationConfigurationAsync(CreateReplicationConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateReplicationConfigurationRequest, CreateReplicationConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     @Deprecated
     public java.util.concurrent.Future<CreateTagsResult> createTagsAsync(CreateTagsRequest request) {
 
@@ -129,6 +142,19 @@ public class AbstractAmazonElasticFileSystemAsync extends AbstractAmazonElasticF
     @Override
     public java.util.concurrent.Future<DeleteMountTargetResult> deleteMountTargetAsync(DeleteMountTargetRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteMountTargetRequest, DeleteMountTargetResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteReplicationConfigurationResult> deleteReplicationConfigurationAsync(DeleteReplicationConfigurationRequest request) {
+
+        return deleteReplicationConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteReplicationConfigurationResult> deleteReplicationConfigurationAsync(DeleteReplicationConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteReplicationConfigurationRequest, DeleteReplicationConfigurationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -273,6 +299,21 @@ public class AbstractAmazonElasticFileSystemAsync extends AbstractAmazonElasticF
     @Override
     public java.util.concurrent.Future<DescribeMountTargetsResult> describeMountTargetsAsync(DescribeMountTargetsRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeMountTargetsRequest, DescribeMountTargetsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeReplicationConfigurationsResult> describeReplicationConfigurationsAsync(
+            DescribeReplicationConfigurationsRequest request) {
+
+        return describeReplicationConfigurationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeReplicationConfigurationsResult> describeReplicationConfigurationsAsync(
+            DescribeReplicationConfigurationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeReplicationConfigurationsRequest, DescribeReplicationConfigurationsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

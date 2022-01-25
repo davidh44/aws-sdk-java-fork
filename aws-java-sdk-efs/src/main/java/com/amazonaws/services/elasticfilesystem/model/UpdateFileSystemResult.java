@@ -106,7 +106,7 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
     private Boolean encrypted;
     /**
      * <p>
-     * The ID of an Key Management Service customer master key (CMK) that was used to protect the encrypted file system.
+     * The ID of an KMS key used to protect the encrypted file system.
      * </p>
      */
     private String kmsKeyId;
@@ -745,12 +745,11 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The ID of an Key Management Service customer master key (CMK) that was used to protect the encrypted file system.
+     * The ID of an KMS key used to protect the encrypted file system.
      * </p>
      * 
      * @param kmsKeyId
-     *        The ID of an Key Management Service customer master key (CMK) that was used to protect the encrypted file
-     *        system.
+     *        The ID of an KMS key used to protect the encrypted file system.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -759,11 +758,10 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The ID of an Key Management Service customer master key (CMK) that was used to protect the encrypted file system.
+     * The ID of an KMS key used to protect the encrypted file system.
      * </p>
      * 
-     * @return The ID of an Key Management Service customer master key (CMK) that was used to protect the encrypted file
-     *         system.
+     * @return The ID of an KMS key used to protect the encrypted file system.
      */
 
     public String getKmsKeyId() {
@@ -772,12 +770,11 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The ID of an Key Management Service customer master key (CMK) that was used to protect the encrypted file system.
+     * The ID of an KMS key used to protect the encrypted file system.
      * </p>
      * 
      * @param kmsKeyId
-     *        The ID of an Key Management Service customer master key (CMK) that was used to protect the encrypted file
-     *        system.
+     *        The ID of an KMS key used to protect the encrypted file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

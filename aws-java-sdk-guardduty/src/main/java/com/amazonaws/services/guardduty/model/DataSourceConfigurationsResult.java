@@ -52,6 +52,12 @@ public class DataSourceConfigurationsResult implements Serializable, Cloneable, 
      * </p>
      */
     private S3LogsConfigurationResult s3Logs;
+    /**
+     * <p>
+     * An object that contains information on the status of all Kubernetes data sources.
+     * </p>
+     */
+    private KubernetesConfigurationResult kubernetes;
 
     /**
      * <p>
@@ -214,6 +220,46 @@ public class DataSourceConfigurationsResult implements Serializable, Cloneable, 
     }
 
     /**
+     * <p>
+     * An object that contains information on the status of all Kubernetes data sources.
+     * </p>
+     * 
+     * @param kubernetes
+     *        An object that contains information on the status of all Kubernetes data sources.
+     */
+
+    public void setKubernetes(KubernetesConfigurationResult kubernetes) {
+        this.kubernetes = kubernetes;
+    }
+
+    /**
+     * <p>
+     * An object that contains information on the status of all Kubernetes data sources.
+     * </p>
+     * 
+     * @return An object that contains information on the status of all Kubernetes data sources.
+     */
+
+    public KubernetesConfigurationResult getKubernetes() {
+        return this.kubernetes;
+    }
+
+    /**
+     * <p>
+     * An object that contains information on the status of all Kubernetes data sources.
+     * </p>
+     * 
+     * @param kubernetes
+     *        An object that contains information on the status of all Kubernetes data sources.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataSourceConfigurationsResult withKubernetes(KubernetesConfigurationResult kubernetes) {
+        setKubernetes(kubernetes);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -232,7 +278,9 @@ public class DataSourceConfigurationsResult implements Serializable, Cloneable, 
         if (getFlowLogs() != null)
             sb.append("FlowLogs: ").append(getFlowLogs()).append(",");
         if (getS3Logs() != null)
-            sb.append("S3Logs: ").append(getS3Logs());
+            sb.append("S3Logs: ").append(getS3Logs()).append(",");
+        if (getKubernetes() != null)
+            sb.append("Kubernetes: ").append(getKubernetes());
         sb.append("}");
         return sb.toString();
     }
@@ -263,6 +311,10 @@ public class DataSourceConfigurationsResult implements Serializable, Cloneable, 
             return false;
         if (other.getS3Logs() != null && other.getS3Logs().equals(this.getS3Logs()) == false)
             return false;
+        if (other.getKubernetes() == null ^ this.getKubernetes() == null)
+            return false;
+        if (other.getKubernetes() != null && other.getKubernetes().equals(this.getKubernetes()) == false)
+            return false;
         return true;
     }
 
@@ -275,6 +327,7 @@ public class DataSourceConfigurationsResult implements Serializable, Cloneable, 
         hashCode = prime * hashCode + ((getDNSLogs() == null) ? 0 : getDNSLogs().hashCode());
         hashCode = prime * hashCode + ((getFlowLogs() == null) ? 0 : getFlowLogs().hashCode());
         hashCode = prime * hashCode + ((getS3Logs() == null) ? 0 : getS3Logs().hashCode());
+        hashCode = prime * hashCode + ((getKubernetes() == null) ? 0 : getKubernetes().hashCode());
         return hashCode;
     }
 

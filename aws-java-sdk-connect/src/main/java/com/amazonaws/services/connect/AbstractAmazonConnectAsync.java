@@ -54,6 +54,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     }
 
     @Override
+    public java.util.concurrent.Future<AssociateDefaultVocabularyResult> associateDefaultVocabularyAsync(AssociateDefaultVocabularyRequest request) {
+
+        return associateDefaultVocabularyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateDefaultVocabularyResult> associateDefaultVocabularyAsync(AssociateDefaultVocabularyRequest request,
+            com.amazonaws.handlers.AsyncHandler<AssociateDefaultVocabularyRequest, AssociateDefaultVocabularyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<AssociateInstanceStorageConfigResult> associateInstanceStorageConfigAsync(AssociateInstanceStorageConfigRequest request) {
 
         return associateInstanceStorageConfigAsync(request, null);
@@ -301,6 +314,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     }
 
     @Override
+    public java.util.concurrent.Future<CreateVocabularyResult> createVocabularyAsync(CreateVocabularyRequest request) {
+
+        return createVocabularyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateVocabularyResult> createVocabularyAsync(CreateVocabularyRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateVocabularyRequest, CreateVocabularyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteContactFlowResult> deleteContactFlowAsync(DeleteContactFlowRequest request) {
 
         return deleteContactFlowAsync(request, null);
@@ -426,6 +452,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     @Override
     public java.util.concurrent.Future<DeleteUserHierarchyGroupResult> deleteUserHierarchyGroupAsync(DeleteUserHierarchyGroupRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteUserHierarchyGroupRequest, DeleteUserHierarchyGroupResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteVocabularyResult> deleteVocabularyAsync(DeleteVocabularyRequest request) {
+
+        return deleteVocabularyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteVocabularyResult> deleteVocabularyAsync(DeleteVocabularyRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteVocabularyRequest, DeleteVocabularyResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -621,6 +660,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     @Override
     public java.util.concurrent.Future<DescribeUserHierarchyStructureResult> describeUserHierarchyStructureAsync(DescribeUserHierarchyStructureRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeUserHierarchyStructureRequest, DescribeUserHierarchyStructureResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeVocabularyResult> describeVocabularyAsync(DescribeVocabularyRequest request) {
+
+        return describeVocabularyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeVocabularyResult> describeVocabularyAsync(DescribeVocabularyRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeVocabularyRequest, DescribeVocabularyResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -859,6 +911,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     @Override
     public java.util.concurrent.Future<ListContactReferencesResult> listContactReferencesAsync(ListContactReferencesRequest request,
             com.amazonaws.handlers.AsyncHandler<ListContactReferencesRequest, ListContactReferencesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDefaultVocabulariesResult> listDefaultVocabulariesAsync(ListDefaultVocabulariesRequest request) {
+
+        return listDefaultVocabulariesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDefaultVocabulariesResult> listDefaultVocabulariesAsync(ListDefaultVocabulariesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListDefaultVocabulariesRequest, ListDefaultVocabulariesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1145,6 +1210,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     @Override
     public java.util.concurrent.Future<ResumeContactRecordingResult> resumeContactRecordingAsync(ResumeContactRecordingRequest request,
             com.amazonaws.handlers.AsyncHandler<ResumeContactRecordingRequest, ResumeContactRecordingResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchVocabulariesResult> searchVocabulariesAsync(SearchVocabulariesRequest request) {
+
+        return searchVocabulariesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchVocabulariesResult> searchVocabulariesAsync(SearchVocabulariesRequest request,
+            com.amazonaws.handlers.AsyncHandler<SearchVocabulariesRequest, SearchVocabulariesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

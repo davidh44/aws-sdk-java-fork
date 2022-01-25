@@ -198,7 +198,7 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
     private OntapFileSystemConfiguration ontapConfiguration;
     /**
      * <p>
-     * The Lustre version of the Amazon FSx for Lustrefile system, either <code>2.10</code> or <code>2.12</code>.
+     * The Lustre version of the Amazon FSx for Lustre file system, either <code>2.10</code> or <code>2.12</code>.
      * </p>
      */
     private String fileSystemTypeVersion;
@@ -1596,11 +1596,12 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Lustre version of the Amazon FSx for Lustrefile system, either <code>2.10</code> or <code>2.12</code>.
+     * The Lustre version of the Amazon FSx for Lustre file system, either <code>2.10</code> or <code>2.12</code>.
      * </p>
      * 
      * @param fileSystemTypeVersion
-     *        The Lustre version of the Amazon FSx for Lustrefile system, either <code>2.10</code> or <code>2.12</code>.
+     *        The Lustre version of the Amazon FSx for Lustre file system, either <code>2.10</code> or <code>2.12</code>
+     *        .
      */
 
     public void setFileSystemTypeVersion(String fileSystemTypeVersion) {
@@ -1609,11 +1610,11 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Lustre version of the Amazon FSx for Lustrefile system, either <code>2.10</code> or <code>2.12</code>.
+     * The Lustre version of the Amazon FSx for Lustre file system, either <code>2.10</code> or <code>2.12</code>.
      * </p>
      * 
-     * @return The Lustre version of the Amazon FSx for Lustrefile system, either <code>2.10</code> or <code>2.12</code>
-     *         .
+     * @return The Lustre version of the Amazon FSx for Lustre file system, either <code>2.10</code> or
+     *         <code>2.12</code>.
      */
 
     public String getFileSystemTypeVersion() {
@@ -1622,11 +1623,12 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Lustre version of the Amazon FSx for Lustrefile system, either <code>2.10</code> or <code>2.12</code>.
+     * The Lustre version of the Amazon FSx for Lustre file system, either <code>2.10</code> or <code>2.12</code>.
      * </p>
      * 
      * @param fileSystemTypeVersion
-     *        The Lustre version of the Amazon FSx for Lustrefile system, either <code>2.10</code> or <code>2.12</code>.
+     *        The Lustre version of the Amazon FSx for Lustre file system, either <code>2.10</code> or <code>2.12</code>
+     *        .
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

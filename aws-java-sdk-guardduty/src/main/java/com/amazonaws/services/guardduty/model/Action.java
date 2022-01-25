@@ -58,6 +58,12 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private PortProbeAction portProbeAction;
+    /**
+     * <p>
+     * Information about the Kubernetes API call action described in this finding.
+     * </p>
+     */
+    private KubernetesApiCallAction kubernetesApiCallAction;
 
     /**
      * <p>
@@ -260,6 +266,46 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Information about the Kubernetes API call action described in this finding.
+     * </p>
+     * 
+     * @param kubernetesApiCallAction
+     *        Information about the Kubernetes API call action described in this finding.
+     */
+
+    public void setKubernetesApiCallAction(KubernetesApiCallAction kubernetesApiCallAction) {
+        this.kubernetesApiCallAction = kubernetesApiCallAction;
+    }
+
+    /**
+     * <p>
+     * Information about the Kubernetes API call action described in this finding.
+     * </p>
+     * 
+     * @return Information about the Kubernetes API call action described in this finding.
+     */
+
+    public KubernetesApiCallAction getKubernetesApiCallAction() {
+        return this.kubernetesApiCallAction;
+    }
+
+    /**
+     * <p>
+     * Information about the Kubernetes API call action described in this finding.
+     * </p>
+     * 
+     * @param kubernetesApiCallAction
+     *        Information about the Kubernetes API call action described in this finding.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Action withKubernetesApiCallAction(KubernetesApiCallAction kubernetesApiCallAction) {
+        setKubernetesApiCallAction(kubernetesApiCallAction);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -280,7 +326,9 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
         if (getNetworkConnectionAction() != null)
             sb.append("NetworkConnectionAction: ").append(getNetworkConnectionAction()).append(",");
         if (getPortProbeAction() != null)
-            sb.append("PortProbeAction: ").append(getPortProbeAction());
+            sb.append("PortProbeAction: ").append(getPortProbeAction()).append(",");
+        if (getKubernetesApiCallAction() != null)
+            sb.append("KubernetesApiCallAction: ").append(getKubernetesApiCallAction());
         sb.append("}");
         return sb.toString();
     }
@@ -315,6 +363,10 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getPortProbeAction() != null && other.getPortProbeAction().equals(this.getPortProbeAction()) == false)
             return false;
+        if (other.getKubernetesApiCallAction() == null ^ this.getKubernetesApiCallAction() == null)
+            return false;
+        if (other.getKubernetesApiCallAction() != null && other.getKubernetesApiCallAction().equals(this.getKubernetesApiCallAction()) == false)
+            return false;
         return true;
     }
 
@@ -328,6 +380,7 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getDnsRequestAction() == null) ? 0 : getDnsRequestAction().hashCode());
         hashCode = prime * hashCode + ((getNetworkConnectionAction() == null) ? 0 : getNetworkConnectionAction().hashCode());
         hashCode = prime * hashCode + ((getPortProbeAction() == null) ? 0 : getPortProbeAction().hashCode());
+        hashCode = prime * hashCode + ((getKubernetesApiCallAction() == null) ? 0 : getKubernetesApiCallAction().hashCode());
         return hashCode;
     }
 

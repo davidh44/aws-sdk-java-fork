@@ -52,6 +52,8 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private String errorCode;
+
+    private String userAgent;
     /**
      * <p>
      * The remote IP information of the connection that initiated the Amazon Web Services API call.
@@ -233,6 +235,32 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * @param userAgent
+     */
+
+    public void setUserAgent(String userAgent) {
+        this.userAgent = userAgent;
+    }
+
+    /**
+     * @return
+     */
+
+    public String getUserAgent() {
+        return this.userAgent;
+    }
+
+    /**
+     * @param userAgent
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsApiCallAction withUserAgent(String userAgent) {
+        setUserAgent(userAgent);
+        return this;
+    }
+
+    /**
      * <p>
      * The remote IP information of the connection that initiated the Amazon Web Services API call.
      * </p>
@@ -378,6 +406,8 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
             sb.append("DomainDetails: ").append(getDomainDetails()).append(",");
         if (getErrorCode() != null)
             sb.append("ErrorCode: ").append(getErrorCode()).append(",");
+        if (getUserAgent() != null)
+            sb.append("UserAgent: ").append(getUserAgent()).append(",");
         if (getRemoteIpDetails() != null)
             sb.append("RemoteIpDetails: ").append(getRemoteIpDetails()).append(",");
         if (getServiceName() != null)
@@ -414,6 +444,10 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getErrorCode() != null && other.getErrorCode().equals(this.getErrorCode()) == false)
             return false;
+        if (other.getUserAgent() == null ^ this.getUserAgent() == null)
+            return false;
+        if (other.getUserAgent() != null && other.getUserAgent().equals(this.getUserAgent()) == false)
+            return false;
         if (other.getRemoteIpDetails() == null ^ this.getRemoteIpDetails() == null)
             return false;
         if (other.getRemoteIpDetails() != null && other.getRemoteIpDetails().equals(this.getRemoteIpDetails()) == false)
@@ -438,6 +472,7 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getCallerType() == null) ? 0 : getCallerType().hashCode());
         hashCode = prime * hashCode + ((getDomainDetails() == null) ? 0 : getDomainDetails().hashCode());
         hashCode = prime * hashCode + ((getErrorCode() == null) ? 0 : getErrorCode().hashCode());
+        hashCode = prime * hashCode + ((getUserAgent() == null) ? 0 : getUserAgent().hashCode());
         hashCode = prime * hashCode + ((getRemoteIpDetails() == null) ? 0 : getRemoteIpDetails().hashCode());
         hashCode = prime * hashCode + ((getServiceName() == null) ? 0 : getServiceName().hashCode());
         hashCode = prime * hashCode + ((getRemoteAccountDetails() == null) ? 0 : getRemoteAccountDetails().hashCode());

@@ -38,6 +38,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public AssociateDefaultVocabularyResult associateDefaultVocabulary(AssociateDefaultVocabularyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public AssociateInstanceStorageConfigResult associateInstanceStorageConfig(AssociateInstanceStorageConfigRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -133,6 +138,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public CreateVocabularyResult createVocabulary(CreateVocabularyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteContactFlowResult deleteContactFlow(DeleteContactFlowRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -179,6 +189,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public DeleteUserHierarchyGroupResult deleteUserHierarchyGroup(DeleteUserHierarchyGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteVocabularyResult deleteVocabulary(DeleteVocabularyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -254,6 +269,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public DescribeUserHierarchyStructureResult describeUserHierarchyStructure(DescribeUserHierarchyStructureRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeVocabularyResult describeVocabulary(DescribeVocabularyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -344,6 +364,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public ListContactReferencesResult listContactReferences(ListContactReferencesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListDefaultVocabulariesResult listDefaultVocabularies(ListDefaultVocabulariesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -454,6 +479,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public ResumeContactRecordingResult resumeContactRecording(ResumeContactRecordingRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public SearchVocabulariesResult searchVocabularies(SearchVocabulariesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

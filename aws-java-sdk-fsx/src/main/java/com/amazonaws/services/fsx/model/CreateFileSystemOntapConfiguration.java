@@ -75,7 +75,8 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
     private java.util.List<String> routeTableIds;
     /**
      * <p>
-     * Sets the throughput capacity for the file system that you're creating. Valid values are 512, 1024, and 2048 MBps.
+     * Sets the throughput capacity for the file system that you're creating. Valid values are 128, 256, 512, 1024, and
+     * 2048 MBps.
      * </p>
      */
     private Integer throughputCapacity;
@@ -467,12 +468,13 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Sets the throughput capacity for the file system that you're creating. Valid values are 512, 1024, and 2048 MBps.
+     * Sets the throughput capacity for the file system that you're creating. Valid values are 128, 256, 512, 1024, and
+     * 2048 MBps.
      * </p>
      * 
      * @param throughputCapacity
-     *        Sets the throughput capacity for the file system that you're creating. Valid values are 512, 1024, and
-     *        2048 MBps.
+     *        Sets the throughput capacity for the file system that you're creating. Valid values are 128, 256, 512,
+     *        1024, and 2048 MBps.
      */
 
     public void setThroughputCapacity(Integer throughputCapacity) {
@@ -481,11 +483,12 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Sets the throughput capacity for the file system that you're creating. Valid values are 512, 1024, and 2048 MBps.
+     * Sets the throughput capacity for the file system that you're creating. Valid values are 128, 256, 512, 1024, and
+     * 2048 MBps.
      * </p>
      * 
-     * @return Sets the throughput capacity for the file system that you're creating. Valid values are 512, 1024, and
-     *         2048 MBps.
+     * @return Sets the throughput capacity for the file system that you're creating. Valid values are 128, 256, 512,
+     *         1024, and 2048 MBps.
      */
 
     public Integer getThroughputCapacity() {
@@ -494,12 +497,13 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Sets the throughput capacity for the file system that you're creating. Valid values are 512, 1024, and 2048 MBps.
+     * Sets the throughput capacity for the file system that you're creating. Valid values are 128, 256, 512, 1024, and
+     * 2048 MBps.
      * </p>
      * 
      * @param throughputCapacity
-     *        Sets the throughput capacity for the file system that you're creating. Valid values are 512, 1024, and
-     *        2048 MBps.
+     *        Sets the throughput capacity for the file system that you're creating. Valid values are 128, 256, 512,
+     *        1024, and 2048 MBps.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

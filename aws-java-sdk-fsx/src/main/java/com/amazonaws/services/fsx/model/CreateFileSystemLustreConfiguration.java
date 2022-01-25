@@ -131,7 +131,7 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * </p>
      * <p>
      * Choose <code>PERSISTENT_1</code> for longer-term storage and for throughput-focused workloads that aren’t
-     * latency-sensitive. a. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available in all
+     * latency-sensitive. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available in all
      * Amazon Web Services Regions in which FSx for Lustre is available.
      * </p>
      * <p>
@@ -728,7 +728,7 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * </p>
      * <p>
      * Choose <code>PERSISTENT_1</code> for longer-term storage and for throughput-focused workloads that aren’t
-     * latency-sensitive. a. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available in all
+     * latency-sensitive. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available in all
      * Amazon Web Services Regions in which FSx for Lustre is available.
      * </p>
      * <p>
@@ -765,8 +765,8 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      *        in-transit encryption of data and higher burst throughput capacity than <code>SCRATCH_1</code>.</p>
      *        <p>
      *        Choose <code>PERSISTENT_1</code> for longer-term storage and for throughput-focused workloads that aren’t
-     *        latency-sensitive. a. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available
-     *        in all Amazon Web Services Regions in which FSx for Lustre is available.
+     *        latency-sensitive. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available in
+     *        all Amazon Web Services Regions in which FSx for Lustre is available.
      *        </p>
      *        <p>
      *        Choose <code>PERSISTENT_2</code> for longer-term storage and for latency-sensitive workloads that require
@@ -809,7 +809,7 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * </p>
      * <p>
      * Choose <code>PERSISTENT_1</code> for longer-term storage and for throughput-focused workloads that aren’t
-     * latency-sensitive. a. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available in all
+     * latency-sensitive. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available in all
      * Amazon Web Services Regions in which FSx for Lustre is available.
      * </p>
      * <p>
@@ -846,8 +846,8 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      *         .</p>
      *         <p>
      *         Choose <code>PERSISTENT_1</code> for longer-term storage and for throughput-focused workloads that aren’t
-     *         latency-sensitive. a. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available
-     *         in all Amazon Web Services Regions in which FSx for Lustre is available.
+     *         latency-sensitive. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available in
+     *         all Amazon Web Services Regions in which FSx for Lustre is available.
      *         </p>
      *         <p>
      *         Choose <code>PERSISTENT_2</code> for longer-term storage and for latency-sensitive workloads that require
@@ -890,7 +890,7 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * </p>
      * <p>
      * Choose <code>PERSISTENT_1</code> for longer-term storage and for throughput-focused workloads that aren’t
-     * latency-sensitive. a. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available in all
+     * latency-sensitive. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available in all
      * Amazon Web Services Regions in which FSx for Lustre is available.
      * </p>
      * <p>
@@ -927,8 +927,8 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      *        in-transit encryption of data and higher burst throughput capacity than <code>SCRATCH_1</code>.</p>
      *        <p>
      *        Choose <code>PERSISTENT_1</code> for longer-term storage and for throughput-focused workloads that aren’t
-     *        latency-sensitive. a. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available
-     *        in all Amazon Web Services Regions in which FSx for Lustre is available.
+     *        latency-sensitive. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available in
+     *        all Amazon Web Services Regions in which FSx for Lustre is available.
      *        </p>
      *        <p>
      *        Choose <code>PERSISTENT_2</code> for longer-term storage and for latency-sensitive workloads that require
@@ -973,7 +973,7 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * </p>
      * <p>
      * Choose <code>PERSISTENT_1</code> for longer-term storage and for throughput-focused workloads that aren’t
-     * latency-sensitive. a. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available in all
+     * latency-sensitive. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available in all
      * Amazon Web Services Regions in which FSx for Lustre is available.
      * </p>
      * <p>
@@ -1010,8 +1010,8 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      *        in-transit encryption of data and higher burst throughput capacity than <code>SCRATCH_1</code>.</p>
      *        <p>
      *        Choose <code>PERSISTENT_1</code> for longer-term storage and for throughput-focused workloads that aren’t
-     *        latency-sensitive. a. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available
-     *        in all Amazon Web Services Regions in which FSx for Lustre is available.
+     *        latency-sensitive. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available in
+     *        all Amazon Web Services Regions in which FSx for Lustre is available.
      *        </p>
      *        <p>
      *        Choose <code>PERSISTENT_2</code> for longer-term storage and for latency-sensitive workloads that require

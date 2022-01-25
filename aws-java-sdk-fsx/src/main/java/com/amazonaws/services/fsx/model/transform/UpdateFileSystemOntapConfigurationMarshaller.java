@@ -35,6 +35,8 @@ public class UpdateFileSystemOntapConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FsxAdminPassword").build();
     private static final MarshallingInfo<String> WEEKLYMAINTENANCESTARTTIME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WeeklyMaintenanceStartTime").build();
+    private static final MarshallingInfo<StructuredPojo> DISKIOPSCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DiskIopsConfiguration").build();
 
     private static final UpdateFileSystemOntapConfigurationMarshaller instance = new UpdateFileSystemOntapConfigurationMarshaller();
 
@@ -56,6 +58,7 @@ public class UpdateFileSystemOntapConfigurationMarshaller {
             protocolMarshaller.marshall(updateFileSystemOntapConfiguration.getDailyAutomaticBackupStartTime(), DAILYAUTOMATICBACKUPSTARTTIME_BINDING);
             protocolMarshaller.marshall(updateFileSystemOntapConfiguration.getFsxAdminPassword(), FSXADMINPASSWORD_BINDING);
             protocolMarshaller.marshall(updateFileSystemOntapConfiguration.getWeeklyMaintenanceStartTime(), WEEKLYMAINTENANCESTARTTIME_BINDING);
+            protocolMarshaller.marshall(updateFileSystemOntapConfiguration.getDiskIopsConfiguration(), DISKIOPSCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

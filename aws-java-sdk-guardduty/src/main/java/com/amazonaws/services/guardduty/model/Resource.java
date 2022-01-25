@@ -51,6 +51,18 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
     private InstanceDetails instanceDetails;
     /**
      * <p>
+     * Details about the EKS cluster involved in a Kubernetes finding.
+     * </p>
+     */
+    private EksClusterDetails eksClusterDetails;
+    /**
+     * <p>
+     * Details about the Kubernetes user and workload involved in a Kubernetes finding.
+     * </p>
+     */
+    private KubernetesDetails kubernetesDetails;
+    /**
+     * <p>
      * The type of Amazon Web Services resource.
      * </p>
      */
@@ -220,6 +232,86 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Details about the EKS cluster involved in a Kubernetes finding.
+     * </p>
+     * 
+     * @param eksClusterDetails
+     *        Details about the EKS cluster involved in a Kubernetes finding.
+     */
+
+    public void setEksClusterDetails(EksClusterDetails eksClusterDetails) {
+        this.eksClusterDetails = eksClusterDetails;
+    }
+
+    /**
+     * <p>
+     * Details about the EKS cluster involved in a Kubernetes finding.
+     * </p>
+     * 
+     * @return Details about the EKS cluster involved in a Kubernetes finding.
+     */
+
+    public EksClusterDetails getEksClusterDetails() {
+        return this.eksClusterDetails;
+    }
+
+    /**
+     * <p>
+     * Details about the EKS cluster involved in a Kubernetes finding.
+     * </p>
+     * 
+     * @param eksClusterDetails
+     *        Details about the EKS cluster involved in a Kubernetes finding.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Resource withEksClusterDetails(EksClusterDetails eksClusterDetails) {
+        setEksClusterDetails(eksClusterDetails);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Details about the Kubernetes user and workload involved in a Kubernetes finding.
+     * </p>
+     * 
+     * @param kubernetesDetails
+     *        Details about the Kubernetes user and workload involved in a Kubernetes finding.
+     */
+
+    public void setKubernetesDetails(KubernetesDetails kubernetesDetails) {
+        this.kubernetesDetails = kubernetesDetails;
+    }
+
+    /**
+     * <p>
+     * Details about the Kubernetes user and workload involved in a Kubernetes finding.
+     * </p>
+     * 
+     * @return Details about the Kubernetes user and workload involved in a Kubernetes finding.
+     */
+
+    public KubernetesDetails getKubernetesDetails() {
+        return this.kubernetesDetails;
+    }
+
+    /**
+     * <p>
+     * Details about the Kubernetes user and workload involved in a Kubernetes finding.
+     * </p>
+     * 
+     * @param kubernetesDetails
+     *        Details about the Kubernetes user and workload involved in a Kubernetes finding.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Resource withKubernetesDetails(KubernetesDetails kubernetesDetails) {
+        setKubernetesDetails(kubernetesDetails);
+        return this;
+    }
+
+    /**
+     * <p>
      * The type of Amazon Web Services resource.
      * </p>
      * 
@@ -276,6 +368,10 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
             sb.append("S3BucketDetails: ").append(getS3BucketDetails()).append(",");
         if (getInstanceDetails() != null)
             sb.append("InstanceDetails: ").append(getInstanceDetails()).append(",");
+        if (getEksClusterDetails() != null)
+            sb.append("EksClusterDetails: ").append(getEksClusterDetails()).append(",");
+        if (getKubernetesDetails() != null)
+            sb.append("KubernetesDetails: ").append(getKubernetesDetails()).append(",");
         if (getResourceType() != null)
             sb.append("ResourceType: ").append(getResourceType());
         sb.append("}");
@@ -304,6 +400,14 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getInstanceDetails() != null && other.getInstanceDetails().equals(this.getInstanceDetails()) == false)
             return false;
+        if (other.getEksClusterDetails() == null ^ this.getEksClusterDetails() == null)
+            return false;
+        if (other.getEksClusterDetails() != null && other.getEksClusterDetails().equals(this.getEksClusterDetails()) == false)
+            return false;
+        if (other.getKubernetesDetails() == null ^ this.getKubernetesDetails() == null)
+            return false;
+        if (other.getKubernetesDetails() != null && other.getKubernetesDetails().equals(this.getKubernetesDetails()) == false)
+            return false;
         if (other.getResourceType() == null ^ this.getResourceType() == null)
             return false;
         if (other.getResourceType() != null && other.getResourceType().equals(this.getResourceType()) == false)
@@ -319,6 +423,8 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getAccessKeyDetails() == null) ? 0 : getAccessKeyDetails().hashCode());
         hashCode = prime * hashCode + ((getS3BucketDetails() == null) ? 0 : getS3BucketDetails().hashCode());
         hashCode = prime * hashCode + ((getInstanceDetails() == null) ? 0 : getInstanceDetails().hashCode());
+        hashCode = prime * hashCode + ((getEksClusterDetails() == null) ? 0 : getEksClusterDetails().hashCode());
+        hashCode = prime * hashCode + ((getKubernetesDetails() == null) ? 0 : getKubernetesDetails().hashCode());
         hashCode = prime * hashCode + ((getResourceType() == null) ? 0 : getResourceType().hashCode());
         return hashCode;
     }

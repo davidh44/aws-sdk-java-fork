@@ -54,6 +54,11 @@ public class OrganizationDataSourceConfigurationsResultJsonUnmarshaller implemen
                     organizationDataSourceConfigurationsResult.setS3Logs(OrganizationS3LogsConfigurationResultJsonUnmarshaller.getInstance()
                             .unmarshall(context));
                 }
+                if (context.testExpression("kubernetes", targetDepth)) {
+                    context.nextToken();
+                    organizationDataSourceConfigurationsResult.setKubernetes(OrganizationKubernetesConfigurationResultJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

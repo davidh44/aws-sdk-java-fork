@@ -130,6 +130,41 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Associates an existing vocabulary as the default. Contact Lens for Amazon Connect uses the vocabulary in
+     * post-call and real-time analysis sessions for the given language.
+     * </p>
+     * 
+     * @param associateDefaultVocabularyRequest
+     * @return A Java Future containing the result of the AssociateDefaultVocabulary operation returned by the service.
+     * @sample AmazonConnectAsync.AssociateDefaultVocabulary
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/AssociateDefaultVocabulary"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateDefaultVocabularyResult> associateDefaultVocabularyAsync(
+            AssociateDefaultVocabularyRequest associateDefaultVocabularyRequest);
+
+    /**
+     * <p>
+     * Associates an existing vocabulary as the default. Contact Lens for Amazon Connect uses the vocabulary in
+     * post-call and real-time analysis sessions for the given language.
+     * </p>
+     * 
+     * @param associateDefaultVocabularyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AssociateDefaultVocabulary operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.AssociateDefaultVocabulary
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/AssociateDefaultVocabulary"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateDefaultVocabularyResult> associateDefaultVocabularyAsync(
+            AssociateDefaultVocabularyRequest associateDefaultVocabularyRequest,
+            com.amazonaws.handlers.AsyncHandler<AssociateDefaultVocabularyRequest, AssociateDefaultVocabularyResult> asyncHandler);
+
+    /**
+     * <p>
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
@@ -839,6 +874,41 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Creates a custom vocabulary associated with your Amazon Connect instance. You can set a custom vocabulary to be
+     * your default vocabulary for a given language. Contact Lens for Amazon Connect uses the default vocabulary in
+     * post-call and real-time contact analysis sessions for that language.
+     * </p>
+     * 
+     * @param createVocabularyRequest
+     * @return A Java Future containing the result of the CreateVocabulary operation returned by the service.
+     * @sample AmazonConnectAsync.CreateVocabulary
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreateVocabulary" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateVocabularyResult> createVocabularyAsync(CreateVocabularyRequest createVocabularyRequest);
+
+    /**
+     * <p>
+     * Creates a custom vocabulary associated with your Amazon Connect instance. You can set a custom vocabulary to be
+     * your default vocabulary for a given language. Contact Lens for Amazon Connect uses the default vocabulary in
+     * post-call and real-time contact analysis sessions for that language.
+     * </p>
+     * 
+     * @param createVocabularyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateVocabulary operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.CreateVocabulary
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreateVocabulary" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateVocabularyResult> createVocabularyAsync(CreateVocabularyRequest createVocabularyRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateVocabularyRequest, CreateVocabularyResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes a contact flow for the specified Amazon Connect instance.
      * </p>
      * 
@@ -1194,6 +1264,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<DeleteUserHierarchyGroupResult> deleteUserHierarchyGroupAsync(DeleteUserHierarchyGroupRequest deleteUserHierarchyGroupRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteUserHierarchyGroupRequest, DeleteUserHierarchyGroupResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes the vocabulary that has the given identifier.
+     * </p>
+     * 
+     * @param deleteVocabularyRequest
+     * @return A Java Future containing the result of the DeleteVocabulary operation returned by the service.
+     * @sample AmazonConnectAsync.DeleteVocabulary
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteVocabulary" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteVocabularyResult> deleteVocabularyAsync(DeleteVocabularyRequest deleteVocabularyRequest);
+
+    /**
+     * <p>
+     * Deletes the vocabulary that has the given identifier.
+     * </p>
+     * 
+     * @param deleteVocabularyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteVocabulary operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.DeleteVocabulary
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteVocabulary" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteVocabularyResult> deleteVocabularyAsync(DeleteVocabularyRequest deleteVocabularyRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteVocabularyRequest, DeleteVocabularyResult> asyncHandler);
 
     /**
      * <p>
@@ -1751,6 +1852,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
     java.util.concurrent.Future<DescribeUserHierarchyStructureResult> describeUserHierarchyStructureAsync(
             DescribeUserHierarchyStructureRequest describeUserHierarchyStructureRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeUserHierarchyStructureRequest, DescribeUserHierarchyStructureResult> asyncHandler);
+
+    /**
+     * <p>
+     * Describes the specified vocabulary.
+     * </p>
+     * 
+     * @param describeVocabularyRequest
+     * @return A Java Future containing the result of the DescribeVocabulary operation returned by the service.
+     * @sample AmazonConnectAsync.DescribeVocabulary
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeVocabulary" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeVocabularyResult> describeVocabularyAsync(DescribeVocabularyRequest describeVocabularyRequest);
+
+    /**
+     * <p>
+     * Describes the specified vocabulary.
+     * </p>
+     * 
+     * @param describeVocabularyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeVocabulary operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.DescribeVocabulary
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeVocabulary" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeVocabularyResult> describeVocabularyAsync(DescribeVocabularyRequest describeVocabularyRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeVocabularyRequest, DescribeVocabularyResult> asyncHandler);
 
     /**
      * <p>
@@ -2449,6 +2581,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<ListContactReferencesResult> listContactReferencesAsync(ListContactReferencesRequest listContactReferencesRequest,
             com.amazonaws.handlers.AsyncHandler<ListContactReferencesRequest, ListContactReferencesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists the default vocabularies for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param listDefaultVocabulariesRequest
+     * @return A Java Future containing the result of the ListDefaultVocabularies operation returned by the service.
+     * @sample AmazonConnectAsync.ListDefaultVocabularies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListDefaultVocabularies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListDefaultVocabulariesResult> listDefaultVocabulariesAsync(ListDefaultVocabulariesRequest listDefaultVocabulariesRequest);
+
+    /**
+     * <p>
+     * Lists the default vocabularies for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param listDefaultVocabulariesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListDefaultVocabularies operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.ListDefaultVocabularies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListDefaultVocabularies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListDefaultVocabulariesResult> listDefaultVocabulariesAsync(ListDefaultVocabulariesRequest listDefaultVocabulariesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListDefaultVocabulariesRequest, ListDefaultVocabulariesResult> asyncHandler);
 
     /**
      * <p>
@@ -3287,6 +3450,39 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<ResumeContactRecordingResult> resumeContactRecordingAsync(ResumeContactRecordingRequest resumeContactRecordingRequest,
             com.amazonaws.handlers.AsyncHandler<ResumeContactRecordingRequest, ResumeContactRecordingResult> asyncHandler);
+
+    /**
+     * <p>
+     * Searches for vocabularies within a specific Amazon Connect instance using <code>State</code>,
+     * <code>NameStartsWith</code>, and <code>LanguageCode</code>.
+     * </p>
+     * 
+     * @param searchVocabulariesRequest
+     * @return A Java Future containing the result of the SearchVocabularies operation returned by the service.
+     * @sample AmazonConnectAsync.SearchVocabularies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchVocabularies" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<SearchVocabulariesResult> searchVocabulariesAsync(SearchVocabulariesRequest searchVocabulariesRequest);
+
+    /**
+     * <p>
+     * Searches for vocabularies within a specific Amazon Connect instance using <code>State</code>,
+     * <code>NameStartsWith</code>, and <code>LanguageCode</code>.
+     * </p>
+     * 
+     * @param searchVocabulariesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SearchVocabularies operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.SearchVocabularies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchVocabularies" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<SearchVocabulariesResult> searchVocabulariesAsync(SearchVocabulariesRequest searchVocabulariesRequest,
+            com.amazonaws.handlers.AsyncHandler<SearchVocabulariesRequest, SearchVocabulariesResult> asyncHandler);
 
     /**
      * <p>

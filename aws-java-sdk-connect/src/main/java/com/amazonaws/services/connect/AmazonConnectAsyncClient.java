@@ -162,6 +162,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<AssociateDefaultVocabularyResult> associateDefaultVocabularyAsync(AssociateDefaultVocabularyRequest request) {
+
+        return associateDefaultVocabularyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateDefaultVocabularyResult> associateDefaultVocabularyAsync(final AssociateDefaultVocabularyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<AssociateDefaultVocabularyRequest, AssociateDefaultVocabularyResult> asyncHandler) {
+        final AssociateDefaultVocabularyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<AssociateDefaultVocabularyResult>() {
+            @Override
+            public AssociateDefaultVocabularyResult call() throws Exception {
+                AssociateDefaultVocabularyResult result = null;
+
+                try {
+                    result = executeAssociateDefaultVocabulary(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<AssociateInstanceStorageConfigResult> associateInstanceStorageConfigAsync(AssociateInstanceStorageConfigRequest request) {
 
         return associateInstanceStorageConfigAsync(request, null);
@@ -791,6 +824,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<CreateVocabularyResult> createVocabularyAsync(CreateVocabularyRequest request) {
+
+        return createVocabularyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateVocabularyResult> createVocabularyAsync(final CreateVocabularyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateVocabularyRequest, CreateVocabularyResult> asyncHandler) {
+        final CreateVocabularyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateVocabularyResult>() {
+            @Override
+            public CreateVocabularyResult call() throws Exception {
+                CreateVocabularyResult result = null;
+
+                try {
+                    result = executeCreateVocabulary(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteContactFlowResult> deleteContactFlowAsync(DeleteContactFlowRequest request) {
 
         return deleteContactFlowAsync(request, null);
@@ -1105,6 +1171,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeDeleteUserHierarchyGroup(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteVocabularyResult> deleteVocabularyAsync(DeleteVocabularyRequest request) {
+
+        return deleteVocabularyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteVocabularyResult> deleteVocabularyAsync(final DeleteVocabularyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteVocabularyRequest, DeleteVocabularyResult> asyncHandler) {
+        final DeleteVocabularyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteVocabularyResult>() {
+            @Override
+            public DeleteVocabularyResult call() throws Exception {
+                DeleteVocabularyResult result = null;
+
+                try {
+                    result = executeDeleteVocabulary(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1602,6 +1701,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeDescribeUserHierarchyStructure(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeVocabularyResult> describeVocabularyAsync(DescribeVocabularyRequest request) {
+
+        return describeVocabularyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeVocabularyResult> describeVocabularyAsync(final DescribeVocabularyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeVocabularyRequest, DescribeVocabularyResult> asyncHandler) {
+        final DescribeVocabularyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeVocabularyResult>() {
+            @Override
+            public DescribeVocabularyResult call() throws Exception {
+                DescribeVocabularyResult result = null;
+
+                try {
+                    result = executeDescribeVocabulary(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -2201,6 +2333,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeListContactReferences(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDefaultVocabulariesResult> listDefaultVocabulariesAsync(ListDefaultVocabulariesRequest request) {
+
+        return listDefaultVocabulariesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDefaultVocabulariesResult> listDefaultVocabulariesAsync(final ListDefaultVocabulariesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListDefaultVocabulariesRequest, ListDefaultVocabulariesResult> asyncHandler) {
+        final ListDefaultVocabulariesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListDefaultVocabulariesResult>() {
+            @Override
+            public ListDefaultVocabulariesResult call() throws Exception {
+                ListDefaultVocabulariesResult result = null;
+
+                try {
+                    result = executeListDefaultVocabularies(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -2928,6 +3093,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeResumeContactRecording(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchVocabulariesResult> searchVocabulariesAsync(SearchVocabulariesRequest request) {
+
+        return searchVocabulariesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchVocabulariesResult> searchVocabulariesAsync(final SearchVocabulariesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<SearchVocabulariesRequest, SearchVocabulariesResult> asyncHandler) {
+        final SearchVocabulariesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<SearchVocabulariesResult>() {
+            @Override
+            public SearchVocabulariesResult call() throws Exception {
+                SearchVocabulariesResult result = null;
+
+                try {
+                    result = executeSearchVocabularies(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

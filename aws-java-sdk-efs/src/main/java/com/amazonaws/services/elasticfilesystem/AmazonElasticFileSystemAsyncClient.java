@@ -32,12 +32,12 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
  * <p>
  * <fullname>Amazon Elastic File System</fullname>
  * <p>
- * Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in
- * the Amazon Web Services Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as
- * you add and remove files, so your applications have the storage they need, when they need it. For more information,
- * see the <a href="https://docs.aws.amazon.com/efs/latest/ug/api-reference.html">Amazon Elastic File System API
- * Reference</a> and the <a href="https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html">Amazon Elastic File System
- * User Guide</a>.
+ * Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 Linux and Mac
+ * instances in the Amazon Web Services Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking
+ * automatically as you add and remove files, so your applications have the storage they need, when they need it. For
+ * more information, see the <a href="https://docs.aws.amazon.com/efs/latest/ug/api-reference.html">Amazon Elastic File
+ * System API Reference</a> and the <a href="https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html">Amazon Elastic
+ * File System User Guide</a>.
  * </p>
  */
 @ThreadSafe
@@ -362,6 +362,40 @@ public class AmazonElasticFileSystemAsyncClient extends AmazonElasticFileSystemC
     }
 
     @Override
+    public java.util.concurrent.Future<CreateReplicationConfigurationResult> createReplicationConfigurationAsync(CreateReplicationConfigurationRequest request) {
+
+        return createReplicationConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateReplicationConfigurationResult> createReplicationConfigurationAsync(
+            final CreateReplicationConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateReplicationConfigurationRequest, CreateReplicationConfigurationResult> asyncHandler) {
+        final CreateReplicationConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateReplicationConfigurationResult>() {
+            @Override
+            public CreateReplicationConfigurationResult call() throws Exception {
+                CreateReplicationConfigurationResult result = null;
+
+                try {
+                    result = executeCreateReplicationConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     @Deprecated
     public java.util.concurrent.Future<CreateTagsResult> createTagsAsync(CreateTagsRequest request) {
 
@@ -513,6 +547,40 @@ public class AmazonElasticFileSystemAsyncClient extends AmazonElasticFileSystemC
 
                 try {
                     result = executeDeleteMountTarget(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteReplicationConfigurationResult> deleteReplicationConfigurationAsync(DeleteReplicationConfigurationRequest request) {
+
+        return deleteReplicationConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteReplicationConfigurationResult> deleteReplicationConfigurationAsync(
+            final DeleteReplicationConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteReplicationConfigurationRequest, DeleteReplicationConfigurationResult> asyncHandler) {
+        final DeleteReplicationConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteReplicationConfigurationResult>() {
+            @Override
+            public DeleteReplicationConfigurationResult call() throws Exception {
+                DeleteReplicationConfigurationResult result = null;
+
+                try {
+                    result = executeDeleteReplicationConfiguration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -838,6 +906,41 @@ public class AmazonElasticFileSystemAsyncClient extends AmazonElasticFileSystemC
 
                 try {
                     result = executeDescribeMountTargets(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeReplicationConfigurationsResult> describeReplicationConfigurationsAsync(
+            DescribeReplicationConfigurationsRequest request) {
+
+        return describeReplicationConfigurationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeReplicationConfigurationsResult> describeReplicationConfigurationsAsync(
+            final DescribeReplicationConfigurationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeReplicationConfigurationsRequest, DescribeReplicationConfigurationsResult> asyncHandler) {
+        final DescribeReplicationConfigurationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeReplicationConfigurationsResult>() {
+            @Override
+            public DescribeReplicationConfigurationsResult call() throws Exception {
+                DescribeReplicationConfigurationsResult result = null;
+
+                try {
+                    result = executeDescribeReplicationConfigurations(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

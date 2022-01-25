@@ -62,6 +62,14 @@ public class ResourceJsonUnmarshaller implements Unmarshaller<Resource, JsonUnma
                     context.nextToken();
                     resource.setInstanceDetails(InstanceDetailsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("eksClusterDetails", targetDepth)) {
+                    context.nextToken();
+                    resource.setEksClusterDetails(EksClusterDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("kubernetesDetails", targetDepth)) {
+                    context.nextToken();
+                    resource.setKubernetesDetails(KubernetesDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("resourceType", targetDepth)) {
                     context.nextToken();
                     resource.setResourceType(context.getUnmarshaller(String.class).unmarshall(context));

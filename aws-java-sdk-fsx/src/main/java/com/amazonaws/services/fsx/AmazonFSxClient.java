@@ -836,6 +836,11 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * </li>
      * <li>
      * <p>
+     * Amazon FSx for OpenZFS
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Amazon FSx for Windows File Server
      * </p>
      * </li>
@@ -3024,7 +3029,7 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * </li>
      * </ul>
      * <p>
-     * For FSx for Lustre file systems, you can update the following properties:
+     * For Amazon FSx for Lustre file systems, you can update the following properties:
      * </p>
      * <ul>
      * <li>
@@ -3059,7 +3064,7 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * </li>
      * </ul>
      * <p>
-     * For FSx for ONTAP file systems, you can update the following properties:
+     * For Amazon FSx for NetApp ONTAP file systems, you can update the following properties:
      * </p>
      * <ul>
      * <li>
@@ -3074,7 +3079,17 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * </li>
      * <li>
      * <p>
+     * <code>DiskIopsConfiguration</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>FsxAdminPassword</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>StorageCapacity</code>
      * </p>
      * </li>
      * <li>
@@ -3105,11 +3120,6 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * <li>
      * <p>
      * <code>DailyAutomaticBackupStartTime</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>DiskIopsConfiguration</code>
      * </p>
      * </li>
      * <li>

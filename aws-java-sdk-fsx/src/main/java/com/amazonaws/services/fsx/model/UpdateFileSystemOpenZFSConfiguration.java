@@ -54,7 +54,7 @@ public class UpdateFileSystemOpenZFSConfiguration implements Serializable, Clone
     /**
      * <p>
      * The throughput of an Amazon FSx file system, measured in megabytes per second (MBps), in 2 to the nth increments,
-     * between 2^3 (8) and 2^11 (2048).
+     * between 2^3 (8) and 2^12 (4096).
      * </p>
      */
     private Integer throughputCapacity;
@@ -290,12 +290,12 @@ public class UpdateFileSystemOpenZFSConfiguration implements Serializable, Clone
     /**
      * <p>
      * The throughput of an Amazon FSx file system, measured in megabytes per second (MBps), in 2 to the nth increments,
-     * between 2^3 (8) and 2^11 (2048).
+     * between 2^3 (8) and 2^12 (4096).
      * </p>
      * 
      * @param throughputCapacity
      *        The throughput of an Amazon FSx file system, measured in megabytes per second (MBps), in 2 to the nth
-     *        increments, between 2^3 (8) and 2^11 (2048).
+     *        increments, between 2^3 (8) and 2^12 (4096).
      */
 
     public void setThroughputCapacity(Integer throughputCapacity) {
@@ -305,11 +305,11 @@ public class UpdateFileSystemOpenZFSConfiguration implements Serializable, Clone
     /**
      * <p>
      * The throughput of an Amazon FSx file system, measured in megabytes per second (MBps), in 2 to the nth increments,
-     * between 2^3 (8) and 2^11 (2048).
+     * between 2^3 (8) and 2^12 (4096).
      * </p>
      * 
      * @return The throughput of an Amazon FSx file system, measured in megabytes per second (MBps), in 2 to the nth
-     *         increments, between 2^3 (8) and 2^11 (2048).
+     *         increments, between 2^3 (8) and 2^12 (4096).
      */
 
     public Integer getThroughputCapacity() {
@@ -319,12 +319,12 @@ public class UpdateFileSystemOpenZFSConfiguration implements Serializable, Clone
     /**
      * <p>
      * The throughput of an Amazon FSx file system, measured in megabytes per second (MBps), in 2 to the nth increments,
-     * between 2^3 (8) and 2^11 (2048).
+     * between 2^3 (8) and 2^12 (4096).
      * </p>
      * 
      * @param throughputCapacity
      *        The throughput of an Amazon FSx file system, measured in megabytes per second (MBps), in 2 to the nth
-     *        increments, between 2^3 (8) and 2^11 (2048).
+     *        increments, between 2^3 (8) and 2^12 (4096).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

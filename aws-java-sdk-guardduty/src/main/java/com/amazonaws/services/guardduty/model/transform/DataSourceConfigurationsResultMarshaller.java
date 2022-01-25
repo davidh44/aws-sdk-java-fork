@@ -35,6 +35,8 @@ public class DataSourceConfigurationsResultMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("flowLogs").build();
     private static final MarshallingInfo<StructuredPojo> S3LOGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("s3Logs").build();
+    private static final MarshallingInfo<StructuredPojo> KUBERNETES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("kubernetes").build();
 
     private static final DataSourceConfigurationsResultMarshaller instance = new DataSourceConfigurationsResultMarshaller();
 
@@ -56,6 +58,7 @@ public class DataSourceConfigurationsResultMarshaller {
             protocolMarshaller.marshall(dataSourceConfigurationsResult.getDNSLogs(), DNSLOGS_BINDING);
             protocolMarshaller.marshall(dataSourceConfigurationsResult.getFlowLogs(), FLOWLOGS_BINDING);
             protocolMarshaller.marshall(dataSourceConfigurationsResult.getS3Logs(), S3LOGS_BINDING);
+            protocolMarshaller.marshall(dataSourceConfigurationsResult.getKubernetes(), KUBERNETES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

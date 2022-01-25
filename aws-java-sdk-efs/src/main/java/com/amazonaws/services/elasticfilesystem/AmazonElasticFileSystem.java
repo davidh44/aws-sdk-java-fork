@@ -28,12 +28,12 @@ import com.amazonaws.services.elasticfilesystem.model.*;
  * <p>
  * <fullname>Amazon Elastic File System</fullname>
  * <p>
- * Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in
- * the Amazon Web Services Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as
- * you add and remove files, so your applications have the storage they need, when they need it. For more information,
- * see the <a href="https://docs.aws.amazon.com/efs/latest/ug/api-reference.html">Amazon Elastic File System API
- * Reference</a> and the <a href="https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html">Amazon Elastic File System
- * User Guide</a>.
+ * Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 Linux and Mac
+ * instances in the Amazon Web Services Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking
+ * automatically as you add and remove files, so your applications have the storage they need, when they need it. For
+ * more information, see the <a href="https://docs.aws.amazon.com/efs/latest/ug/api-reference.html">Amazon Elastic File
+ * System API Reference</a> and the <a href="https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html">Amazon Elastic
+ * File System User Guide</a>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -461,6 +461,129 @@ public interface AmazonElasticFileSystem {
     CreateMountTargetResult createMountTarget(CreateMountTargetRequest createMountTargetRequest);
 
     /**
+     * <p>
+     * Creates a replication configuration that replicates an existing EFS file system to a new, read-only file system.
+     * For more information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/efs-replication.html">Amazon EFS
+     * replication</a>. The replication configuration specifies the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>Source file system</b> - an existing EFS file system that you want replicated. The source file system cannot
+     * be a destination file system in an existing replication configuration.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Destination file system configuration</b> - the configuration of the destination file system to which the
+     * source file system will be replicated. There can only be one destination file system in a replication
+     * configuration.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>Amazon Web Services Region</b> - The Amazon Web Services Region in which the destination file system is
+     * created. EFS Replication is available in all Amazon Web Services Region that Amazon EFS is available in, except
+     * the following regions: Asia Pacific (Hong Kong) Europe (Milan), Middle East (Bahrain), Africa (Cape Town), and
+     * Asia Pacific (Jakarta).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Availability zone</b> - If you want the destination file system to use One Zone availability and durability,
+     * you must specify the Availability Zone to create the file system in. For more information about EFS storage
+     * classes, see <a href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html"> Amazon EFS storage
+     * classes</a> in the <i>Amazon EFS User Guide</i>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Encryption</b> - All destination file systems are created with encryption at rest enabled. You can specify the
+     * KMS key that is used to encrypt the destination file system. Your service-managed KMS key for Amazon EFS is used
+     * if you don't specify a KMS key. You cannot change this after the file system is created.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <p>
+     * The following properties are set by default:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>Performance mode</b> - The destination file system's performance mode will match that of the source file
+     * system, unless the destination file system uses One Zone storage. In that case, the <i>General Purpose</i>
+     * performance mode is used. The Performance mode cannot be changed.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Throughput mode</b> - The destination file system use the Bursting throughput mode by default. You can modify
+     * the throughput mode once the file system is created.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The following properties are turned off by default:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>Lifecycle management</b> - EFS lifecycle management and intelligent tiering are not enabled on the destination
+     * file system. You can enable EFS lifecycle management and intelligent tiering after the destination file system is
+     * created.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Automatic backups</b> - Automatic daily backups not enabled on the destination file system. You can change
+     * this setting after the file system is created.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/efs-replication.html">Amazon EFS
+     * replication</a>.
+     * </p>
+     * 
+     * @param createReplicationConfigurationRequest
+     * @return Result of the CreateReplicationConfiguration operation returned by the service.
+     * @throws BadRequestException
+     *         Returned if the request is malformed or contains an error such as an invalid parameter value or a missing
+     *         required parameter.
+     * @throws IncorrectFileSystemLifeCycleStateException
+     *         Returned if the file system's lifecycle state is not "available".
+     * @throws ValidationException
+     *         Returned if the Backup service is not available in the Amazon Web Services Region in which the request
+     *         was made.
+     * @throws ReplicationNotFoundException
+     *         Returned if the specified file system did not have a replication configuration.
+     * @throws FileSystemNotFoundException
+     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
+     * @throws UnsupportedAvailabilityZoneException
+     *         Returned if the requested Amazon EFS functionality is not available in the specified Availability Zone.
+     * @throws FileSystemLimitExceededException
+     *         Returned if the Amazon Web Services account has already created the maximum number of file systems
+     *         allowed per account.
+     * @throws InsufficientThroughputCapacityException
+     *         Returned if there's not enough capacity to provision additional throughput. This value might be returned
+     *         when you try to create a file system in provisioned throughput mode, when you attempt to increase the
+     *         provisioned throughput of an existing file system, or when you attempt to change an existing file system
+     *         from bursting to provisioned throughput mode. Try again later.
+     * @throws ThroughputLimitExceededException
+     *         Returned if the throughput mode or amount of provisioned throughput can't be changed because the
+     *         throughput limit of 1024 MiB/s has been reached.
+     * @throws InternalServerErrorException
+     *         Returned if an error occurred on the server side.
+     * @sample AmazonElasticFileSystem.CreateReplicationConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/CreateReplicationConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateReplicationConfigurationResult createReplicationConfiguration(CreateReplicationConfigurationRequest createReplicationConfigurationRequest);
+
+    /**
      * <note>
      * <p>
      * DEPRECATED - CreateTags is deprecated and not maintained. Please use the API action to create tags for EFS
@@ -573,6 +696,9 @@ public interface AmazonElasticFileSystem {
      * 
      * @param deleteFileSystemPolicyRequest
      * @return Result of the DeleteFileSystemPolicy operation returned by the service.
+     * @throws BadRequestException
+     *         Returned if the request is malformed or contains an error such as an invalid parameter value or a missing
+     *         required parameter.
      * @throws InternalServerErrorException
      *         Returned if an error occurred on the server side.
      * @throws FileSystemNotFoundException
@@ -644,6 +770,32 @@ public interface AmazonElasticFileSystem {
      *      target="_top">AWS API Documentation</a>
      */
     DeleteMountTargetResult deleteMountTarget(DeleteMountTargetRequest deleteMountTargetRequest);
+
+    /**
+     * <p>
+     * Deletes an existing replication configuration. To delete a replication configuration, you must make the request
+     * from the Amazon Web Services Region in which the destination file system is located. Deleting a replication
+     * configuration ends the replication process. You can write to the destination file system once it's status becomes
+     * <code>Writeable</code>.
+     * </p>
+     * 
+     * @param deleteReplicationConfigurationRequest
+     * @return Result of the DeleteReplicationConfiguration operation returned by the service.
+     * @throws BadRequestException
+     *         Returned if the request is malformed or contains an error such as an invalid parameter value or a missing
+     *         required parameter.
+     * @throws InternalServerErrorException
+     *         Returned if an error occurred on the server side.
+     * @throws FileSystemNotFoundException
+     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
+     * @throws ReplicationNotFoundException
+     *         Returned if the specified file system did not have a replication configuration.
+     * @sample AmazonElasticFileSystem.DeleteReplicationConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DeleteReplicationConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteReplicationConfigurationResult deleteReplicationConfiguration(DeleteReplicationConfigurationRequest deleteReplicationConfigurationRequest);
 
     /**
      * <note>
@@ -761,6 +913,9 @@ public interface AmazonElasticFileSystem {
      * 
      * @param describeFileSystemPolicyRequest
      * @return Result of the DescribeFileSystemPolicy operation returned by the service.
+     * @throws BadRequestException
+     *         Returned if the request is malformed or contains an error such as an invalid parameter value or a missing
+     *         required parameter.
      * @throws InternalServerErrorException
      *         Returned if an error occurred on the server side.
      * @throws FileSystemNotFoundException
@@ -929,6 +1084,34 @@ public interface AmazonElasticFileSystem {
      *      target="_top">AWS API Documentation</a>
      */
     DescribeMountTargetsResult describeMountTargets(DescribeMountTargetsRequest describeMountTargetsRequest);
+
+    /**
+     * <p>
+     * Retrieves the replication configurations for either a specific file system, or all configurations for the Amazon
+     * Web Services account in an Amazon Web Services Region if a file system is not specified.
+     * </p>
+     * 
+     * @param describeReplicationConfigurationsRequest
+     * @return Result of the DescribeReplicationConfigurations operation returned by the service.
+     * @throws BadRequestException
+     *         Returned if the request is malformed or contains an error such as an invalid parameter value or a missing
+     *         required parameter.
+     * @throws FileSystemNotFoundException
+     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
+     * @throws InternalServerErrorException
+     *         Returned if an error occurred on the server side.
+     * @throws ReplicationNotFoundException
+     *         Returned if the specified file system did not have a replication configuration.
+     * @throws ValidationException
+     *         Returned if the Backup service is not available in the Amazon Web Services Region in which the request
+     *         was made.
+     * @sample AmazonElasticFileSystem.DescribeReplicationConfigurations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DescribeReplicationConfigurations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeReplicationConfigurationsResult describeReplicationConfigurations(DescribeReplicationConfigurationsRequest describeReplicationConfigurationsRequest);
 
     /**
      * <note>
@@ -1118,6 +1301,9 @@ public interface AmazonElasticFileSystem {
      * 
      * @param putFileSystemPolicyRequest
      * @return Result of the PutFileSystemPolicy operation returned by the service.
+     * @throws BadRequestException
+     *         Returned if the request is malformed or contains an error such as an invalid parameter value or a missing
+     *         required parameter.
      * @throws InternalServerErrorException
      *         Returned if an error occurred on the server side.
      * @throws FileSystemNotFoundException

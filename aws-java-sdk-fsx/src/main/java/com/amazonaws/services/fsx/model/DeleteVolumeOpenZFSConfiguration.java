@@ -30,17 +30,19 @@ public class DeleteVolumeOpenZFSConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * To delete the volume's children and snapshots, use the string <code>DELETE_CHILD_VOLUMES_AND_SNAPSHOTS</code>.
+     * To delete the volume's child volumes, snapshots, and clones, use the string
+     * <code>DELETE_CHILD_VOLUMES_AND_SNAPSHOTS</code>.
      * </p>
      */
     private java.util.List<String> options;
 
     /**
      * <p>
-     * To delete the volume's children and snapshots, use the string <code>DELETE_CHILD_VOLUMES_AND_SNAPSHOTS</code>.
+     * To delete the volume's child volumes, snapshots, and clones, use the string
+     * <code>DELETE_CHILD_VOLUMES_AND_SNAPSHOTS</code>.
      * </p>
      * 
-     * @return To delete the volume's children and snapshots, use the string
+     * @return To delete the volume's child volumes, snapshots, and clones, use the string
      *         <code>DELETE_CHILD_VOLUMES_AND_SNAPSHOTS</code>.
      * @see DeleteOpenZFSVolumeOption
      */
@@ -51,11 +53,12 @@ public class DeleteVolumeOpenZFSConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * To delete the volume's children and snapshots, use the string <code>DELETE_CHILD_VOLUMES_AND_SNAPSHOTS</code>.
+     * To delete the volume's child volumes, snapshots, and clones, use the string
+     * <code>DELETE_CHILD_VOLUMES_AND_SNAPSHOTS</code>.
      * </p>
      * 
      * @param options
-     *        To delete the volume's children and snapshots, use the string
+     *        To delete the volume's child volumes, snapshots, and clones, use the string
      *        <code>DELETE_CHILD_VOLUMES_AND_SNAPSHOTS</code>.
      * @see DeleteOpenZFSVolumeOption
      */
@@ -71,7 +74,8 @@ public class DeleteVolumeOpenZFSConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * To delete the volume's children and snapshots, use the string <code>DELETE_CHILD_VOLUMES_AND_SNAPSHOTS</code>.
+     * To delete the volume's child volumes, snapshots, and clones, use the string
+     * <code>DELETE_CHILD_VOLUMES_AND_SNAPSHOTS</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -80,7 +84,7 @@ public class DeleteVolumeOpenZFSConfiguration implements Serializable, Cloneable
      * </p>
      * 
      * @param options
-     *        To delete the volume's children and snapshots, use the string
+     *        To delete the volume's child volumes, snapshots, and clones, use the string
      *        <code>DELETE_CHILD_VOLUMES_AND_SNAPSHOTS</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DeleteOpenZFSVolumeOption
@@ -98,11 +102,12 @@ public class DeleteVolumeOpenZFSConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * To delete the volume's children and snapshots, use the string <code>DELETE_CHILD_VOLUMES_AND_SNAPSHOTS</code>.
+     * To delete the volume's child volumes, snapshots, and clones, use the string
+     * <code>DELETE_CHILD_VOLUMES_AND_SNAPSHOTS</code>.
      * </p>
      * 
      * @param options
-     *        To delete the volume's children and snapshots, use the string
+     *        To delete the volume's child volumes, snapshots, and clones, use the string
      *        <code>DELETE_CHILD_VOLUMES_AND_SNAPSHOTS</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DeleteOpenZFSVolumeOption
@@ -115,11 +120,12 @@ public class DeleteVolumeOpenZFSConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * To delete the volume's children and snapshots, use the string <code>DELETE_CHILD_VOLUMES_AND_SNAPSHOTS</code>.
+     * To delete the volume's child volumes, snapshots, and clones, use the string
+     * <code>DELETE_CHILD_VOLUMES_AND_SNAPSHOTS</code>.
      * </p>
      * 
      * @param options
-     *        To delete the volume's children and snapshots, use the string
+     *        To delete the volume's child volumes, snapshots, and clones, use the string
      *        <code>DELETE_CHILD_VOLUMES_AND_SNAPSHOTS</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DeleteOpenZFSVolumeOption

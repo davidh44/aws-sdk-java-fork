@@ -35,6 +35,12 @@ public class OrganizationDataSourceConfigurations implements Serializable, Clone
      * </p>
      */
     private OrganizationS3LogsConfiguration s3Logs;
+    /**
+     * <p>
+     * Describes the configuration of Kubernetes data sources for new members of the organization.
+     * </p>
+     */
+    private OrganizationKubernetesConfiguration kubernetes;
 
     /**
      * <p>
@@ -77,6 +83,46 @@ public class OrganizationDataSourceConfigurations implements Serializable, Clone
     }
 
     /**
+     * <p>
+     * Describes the configuration of Kubernetes data sources for new members of the organization.
+     * </p>
+     * 
+     * @param kubernetes
+     *        Describes the configuration of Kubernetes data sources for new members of the organization.
+     */
+
+    public void setKubernetes(OrganizationKubernetesConfiguration kubernetes) {
+        this.kubernetes = kubernetes;
+    }
+
+    /**
+     * <p>
+     * Describes the configuration of Kubernetes data sources for new members of the organization.
+     * </p>
+     * 
+     * @return Describes the configuration of Kubernetes data sources for new members of the organization.
+     */
+
+    public OrganizationKubernetesConfiguration getKubernetes() {
+        return this.kubernetes;
+    }
+
+    /**
+     * <p>
+     * Describes the configuration of Kubernetes data sources for new members of the organization.
+     * </p>
+     * 
+     * @param kubernetes
+     *        Describes the configuration of Kubernetes data sources for new members of the organization.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OrganizationDataSourceConfigurations withKubernetes(OrganizationKubernetesConfiguration kubernetes) {
+        setKubernetes(kubernetes);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -89,7 +135,9 @@ public class OrganizationDataSourceConfigurations implements Serializable, Clone
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getS3Logs() != null)
-            sb.append("S3Logs: ").append(getS3Logs());
+            sb.append("S3Logs: ").append(getS3Logs()).append(",");
+        if (getKubernetes() != null)
+            sb.append("Kubernetes: ").append(getKubernetes());
         sb.append("}");
         return sb.toString();
     }
@@ -108,6 +156,10 @@ public class OrganizationDataSourceConfigurations implements Serializable, Clone
             return false;
         if (other.getS3Logs() != null && other.getS3Logs().equals(this.getS3Logs()) == false)
             return false;
+        if (other.getKubernetes() == null ^ this.getKubernetes() == null)
+            return false;
+        if (other.getKubernetes() != null && other.getKubernetes().equals(this.getKubernetes()) == false)
+            return false;
         return true;
     }
 
@@ -117,6 +169,7 @@ public class OrganizationDataSourceConfigurations implements Serializable, Clone
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getS3Logs() == null) ? 0 : getS3Logs().hashCode());
+        hashCode = prime * hashCode + ((getKubernetes() == null) ? 0 : getKubernetes().hashCode());
         return hashCode;
     }
 

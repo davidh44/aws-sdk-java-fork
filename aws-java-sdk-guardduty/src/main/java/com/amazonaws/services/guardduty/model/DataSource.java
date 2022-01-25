@@ -23,7 +23,8 @@ public enum DataSource {
     FLOW_LOGS("FLOW_LOGS"),
     CLOUD_TRAIL("CLOUD_TRAIL"),
     DNS_LOGS("DNS_LOGS"),
-    S3_LOGS("S3_LOGS");
+    S3_LOGS("S3_LOGS"),
+    KUBERNETES_AUDIT_LOGS("KUBERNETES_AUDIT_LOGS");
 
     private String value;
 

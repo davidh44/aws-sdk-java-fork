@@ -110,7 +110,7 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * <li>
      * <p>
      * Set to <code>HDD</code> to use hard disk drive storage. HDD is supported on <code>SINGLE_AZ_2</code> and
-     * <code>MULTI_AZ_1</code> Windows file system deployment types, and on <code>PERSISTENT</code> Lustre file system
+     * <code>MULTI_AZ_1</code> Windows file system deployment types, and on <code>PERSISTENT_1</code> Lustre file system
      * deployment types.
      * </p>
      * </li>
@@ -659,7 +659,7 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * <li>
      * <p>
      * Set to <code>HDD</code> to use hard disk drive storage. HDD is supported on <code>SINGLE_AZ_2</code> and
-     * <code>MULTI_AZ_1</code> Windows file system deployment types, and on <code>PERSISTENT</code> Lustre file system
+     * <code>MULTI_AZ_1</code> Windows file system deployment types, and on <code>PERSISTENT_1</code> Lustre file system
      * deployment types.
      * </p>
      * </li>
@@ -685,7 +685,7 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *        <li>
      *        <p>
      *        Set to <code>HDD</code> to use hard disk drive storage. HDD is supported on <code>SINGLE_AZ_2</code> and
-     *        <code>MULTI_AZ_1</code> Windows file system deployment types, and on <code>PERSISTENT</code> Lustre file
+     *        <code>MULTI_AZ_1</code> Windows file system deployment types, and on <code>PERSISTENT_1</code> Lustre file
      *        system deployment types.
      *        </p>
      *        </li>
@@ -718,7 +718,7 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * <li>
      * <p>
      * Set to <code>HDD</code> to use hard disk drive storage. HDD is supported on <code>SINGLE_AZ_2</code> and
-     * <code>MULTI_AZ_1</code> Windows file system deployment types, and on <code>PERSISTENT</code> Lustre file system
+     * <code>MULTI_AZ_1</code> Windows file system deployment types, and on <code>PERSISTENT_1</code> Lustre file system
      * deployment types.
      * </p>
      * </li>
@@ -743,8 +743,8 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *         <li>
      *         <p>
      *         Set to <code>HDD</code> to use hard disk drive storage. HDD is supported on <code>SINGLE_AZ_2</code> and
-     *         <code>MULTI_AZ_1</code> Windows file system deployment types, and on <code>PERSISTENT</code> Lustre file
-     *         system deployment types.
+     *         <code>MULTI_AZ_1</code> Windows file system deployment types, and on <code>PERSISTENT_1</code> Lustre
+     *         file system deployment types.
      *         </p>
      *         </li>
      *         </ul>
@@ -776,7 +776,7 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * <li>
      * <p>
      * Set to <code>HDD</code> to use hard disk drive storage. HDD is supported on <code>SINGLE_AZ_2</code> and
-     * <code>MULTI_AZ_1</code> Windows file system deployment types, and on <code>PERSISTENT</code> Lustre file system
+     * <code>MULTI_AZ_1</code> Windows file system deployment types, and on <code>PERSISTENT_1</code> Lustre file system
      * deployment types.
      * </p>
      * </li>
@@ -802,7 +802,7 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *        <li>
      *        <p>
      *        Set to <code>HDD</code> to use hard disk drive storage. HDD is supported on <code>SINGLE_AZ_2</code> and
-     *        <code>MULTI_AZ_1</code> Windows file system deployment types, and on <code>PERSISTENT</code> Lustre file
+     *        <code>MULTI_AZ_1</code> Windows file system deployment types, and on <code>PERSISTENT_1</code> Lustre file
      *        system deployment types.
      *        </p>
      *        </li>
@@ -837,7 +837,7 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * <li>
      * <p>
      * Set to <code>HDD</code> to use hard disk drive storage. HDD is supported on <code>SINGLE_AZ_2</code> and
-     * <code>MULTI_AZ_1</code> Windows file system deployment types, and on <code>PERSISTENT</code> Lustre file system
+     * <code>MULTI_AZ_1</code> Windows file system deployment types, and on <code>PERSISTENT_1</code> Lustre file system
      * deployment types.
      * </p>
      * </li>
@@ -863,7 +863,7 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *        <li>
      *        <p>
      *        Set to <code>HDD</code> to use hard disk drive storage. HDD is supported on <code>SINGLE_AZ_2</code> and
-     *        <code>MULTI_AZ_1</code> Windows file system deployment types, and on <code>PERSISTENT</code> Lustre file
+     *        <code>MULTI_AZ_1</code> Windows file system deployment types, and on <code>PERSISTENT_1</code> Lustre file
      *        system deployment types.
      *        </p>
      *        </li>

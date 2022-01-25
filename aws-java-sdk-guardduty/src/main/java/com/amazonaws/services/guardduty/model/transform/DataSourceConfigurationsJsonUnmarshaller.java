@@ -52,6 +52,10 @@ public class DataSourceConfigurationsJsonUnmarshaller implements Unmarshaller<Da
                     context.nextToken();
                     dataSourceConfigurations.setS3Logs(S3LogsConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("kubernetes", targetDepth)) {
+                    context.nextToken();
+                    dataSourceConfigurations.setKubernetes(KubernetesConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -68,6 +68,10 @@ public class ActionJsonUnmarshaller implements Unmarshaller<Action, JsonUnmarsha
                     context.nextToken();
                     action.setPortProbeAction(PortProbeActionJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("kubernetesApiCallAction", targetDepth)) {
+                    context.nextToken();
+                    action.setKubernetesApiCallAction(KubernetesApiCallActionJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

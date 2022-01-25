@@ -39,6 +39,15 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
     private String fsxAdminPassword;
 
     private String weeklyMaintenanceStartTime;
+    /**
+     * <p>
+     * The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for NetApp ONTAP file system.
+     * The default is 3 IOPS per GB of storage capacity, but you can provision additional IOPS per GB of storage. The
+     * configuration consists of an IOPS mode (<code>AUTOMATIC</code> or <code>USER_PROVISIONED</code>), and in the case
+     * of <code>USER_PROVISIONED</code> IOPS, the total number of SSD IOPS provisioned.
+     * </p>
+     */
+    private DiskIopsConfiguration diskIopsConfiguration;
 
     /**
      * @param automaticBackupRetentionDays
@@ -159,6 +168,67 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
     }
 
     /**
+     * <p>
+     * The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for NetApp ONTAP file system.
+     * The default is 3 IOPS per GB of storage capacity, but you can provision additional IOPS per GB of storage. The
+     * configuration consists of an IOPS mode (<code>AUTOMATIC</code> or <code>USER_PROVISIONED</code>), and in the case
+     * of <code>USER_PROVISIONED</code> IOPS, the total number of SSD IOPS provisioned.
+     * </p>
+     * 
+     * @param diskIopsConfiguration
+     *        The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for NetApp ONTAP file
+     *        system. The default is 3 IOPS per GB of storage capacity, but you can provision additional IOPS per GB of
+     *        storage. The configuration consists of an IOPS mode (<code>AUTOMATIC</code> or
+     *        <code>USER_PROVISIONED</code>), and in the case of <code>USER_PROVISIONED</code> IOPS, the total number of
+     *        SSD IOPS provisioned.
+     */
+
+    public void setDiskIopsConfiguration(DiskIopsConfiguration diskIopsConfiguration) {
+        this.diskIopsConfiguration = diskIopsConfiguration;
+    }
+
+    /**
+     * <p>
+     * The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for NetApp ONTAP file system.
+     * The default is 3 IOPS per GB of storage capacity, but you can provision additional IOPS per GB of storage. The
+     * configuration consists of an IOPS mode (<code>AUTOMATIC</code> or <code>USER_PROVISIONED</code>), and in the case
+     * of <code>USER_PROVISIONED</code> IOPS, the total number of SSD IOPS provisioned.
+     * </p>
+     * 
+     * @return The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for NetApp ONTAP file
+     *         system. The default is 3 IOPS per GB of storage capacity, but you can provision additional IOPS per GB of
+     *         storage. The configuration consists of an IOPS mode (<code>AUTOMATIC</code> or
+     *         <code>USER_PROVISIONED</code>), and in the case of <code>USER_PROVISIONED</code> IOPS, the total number
+     *         of SSD IOPS provisioned.
+     */
+
+    public DiskIopsConfiguration getDiskIopsConfiguration() {
+        return this.diskIopsConfiguration;
+    }
+
+    /**
+     * <p>
+     * The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for NetApp ONTAP file system.
+     * The default is 3 IOPS per GB of storage capacity, but you can provision additional IOPS per GB of storage. The
+     * configuration consists of an IOPS mode (<code>AUTOMATIC</code> or <code>USER_PROVISIONED</code>), and in the case
+     * of <code>USER_PROVISIONED</code> IOPS, the total number of SSD IOPS provisioned.
+     * </p>
+     * 
+     * @param diskIopsConfiguration
+     *        The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for NetApp ONTAP file
+     *        system. The default is 3 IOPS per GB of storage capacity, but you can provision additional IOPS per GB of
+     *        storage. The configuration consists of an IOPS mode (<code>AUTOMATIC</code> or
+     *        <code>USER_PROVISIONED</code>), and in the case of <code>USER_PROVISIONED</code> IOPS, the total number of
+     *        SSD IOPS provisioned.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateFileSystemOntapConfiguration withDiskIopsConfiguration(DiskIopsConfiguration diskIopsConfiguration) {
+        setDiskIopsConfiguration(diskIopsConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -177,7 +247,9 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
         if (getFsxAdminPassword() != null)
             sb.append("FsxAdminPassword: ").append("***Sensitive Data Redacted***").append(",");
         if (getWeeklyMaintenanceStartTime() != null)
-            sb.append("WeeklyMaintenanceStartTime: ").append(getWeeklyMaintenanceStartTime());
+            sb.append("WeeklyMaintenanceStartTime: ").append(getWeeklyMaintenanceStartTime()).append(",");
+        if (getDiskIopsConfiguration() != null)
+            sb.append("DiskIopsConfiguration: ").append(getDiskIopsConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -209,6 +281,10 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
             return false;
         if (other.getWeeklyMaintenanceStartTime() != null && other.getWeeklyMaintenanceStartTime().equals(this.getWeeklyMaintenanceStartTime()) == false)
             return false;
+        if (other.getDiskIopsConfiguration() == null ^ this.getDiskIopsConfiguration() == null)
+            return false;
+        if (other.getDiskIopsConfiguration() != null && other.getDiskIopsConfiguration().equals(this.getDiskIopsConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -221,6 +297,7 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
         hashCode = prime * hashCode + ((getDailyAutomaticBackupStartTime() == null) ? 0 : getDailyAutomaticBackupStartTime().hashCode());
         hashCode = prime * hashCode + ((getFsxAdminPassword() == null) ? 0 : getFsxAdminPassword().hashCode());
         hashCode = prime * hashCode + ((getWeeklyMaintenanceStartTime() == null) ? 0 : getWeeklyMaintenanceStartTime().hashCode());
+        hashCode = prime * hashCode + ((getDiskIopsConfiguration() == null) ? 0 : getDiskIopsConfiguration().hashCode());
         return hashCode;
     }
 

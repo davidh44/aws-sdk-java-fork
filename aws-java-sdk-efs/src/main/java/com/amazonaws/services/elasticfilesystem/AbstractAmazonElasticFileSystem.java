@@ -53,6 +53,11 @@ public class AbstractAmazonElasticFileSystem implements AmazonElasticFileSystem 
     }
 
     @Override
+    public CreateReplicationConfigurationResult createReplicationConfiguration(CreateReplicationConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     @Deprecated
     public CreateTagsResult createTags(CreateTagsRequest request) {
         throw new java.lang.UnsupportedOperationException();
@@ -75,6 +80,11 @@ public class AbstractAmazonElasticFileSystem implements AmazonElasticFileSystem 
 
     @Override
     public DeleteMountTargetResult deleteMountTarget(DeleteMountTargetRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteReplicationConfigurationResult deleteReplicationConfiguration(DeleteReplicationConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -126,6 +136,11 @@ public class AbstractAmazonElasticFileSystem implements AmazonElasticFileSystem 
 
     @Override
     public DescribeMountTargetsResult describeMountTargets(DescribeMountTargetsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeReplicationConfigurationsResult describeReplicationConfigurations(DescribeReplicationConfigurationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

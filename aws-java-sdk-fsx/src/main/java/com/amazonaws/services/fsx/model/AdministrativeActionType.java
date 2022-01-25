@@ -33,17 +33,12 @@ import javax.annotation.Generated;
  * <ul>
  * <li>
  * <p>
- * For Windows, storage optimization is the process of migrating the file system data to the new, larger disks.
+ * For Windows and ONTAP, storage optimization is the process of migrating the file system data to newer larger disks.
  * </p>
  * </li>
  * <li>
  * <p>
  * For Lustre, storage optimization consists of rebalancing the data across the existing and newly added file servers.
- * </p>
- * </li>
- * <li>
- * <p>
- * For OpenZFS, storage optimization consists of migrating data from the older smaller disks to the newer larger disks.
  * </p>
  * </li>
  * </ul>
@@ -55,8 +50,8 @@ import javax.annotation.Generated;
  * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>, <a
  * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage and
  * throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>, and <a
- * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-storage-capacity.html">Managing storage
- * capacity</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
+ * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-storage-capacity.html">Managing storage capacity and
+ * provisioned IOPS</a> in the <i>Amazon FSx for NetApp ONTAP User Guide</i>.
  * </p>
  * </li>
  * <li>

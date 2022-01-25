@@ -64,6 +64,10 @@ public class UpdateFileSystemOntapConfigurationJsonUnmarshaller implements Unmar
                     context.nextToken();
                     updateFileSystemOntapConfiguration.setWeeklyMaintenanceStartTime(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("DiskIopsConfiguration", targetDepth)) {
+                    context.nextToken();
+                    updateFileSystemOntapConfiguration.setDiskIopsConfiguration(DiskIopsConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
