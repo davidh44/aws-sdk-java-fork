@@ -51,6 +51,8 @@ public class PipelineExecutionStepMetadataMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ClarifyCheck").build();
     private static final MarshallingInfo<StructuredPojo> EMR_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EMR").build();
+    private static final MarshallingInfo<StructuredPojo> FAIL_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Fail").build();
 
     private static final PipelineExecutionStepMetadataMarshaller instance = new PipelineExecutionStepMetadataMarshaller();
 
@@ -80,6 +82,7 @@ public class PipelineExecutionStepMetadataMarshaller {
             protocolMarshaller.marshall(pipelineExecutionStepMetadata.getQualityCheck(), QUALITYCHECK_BINDING);
             protocolMarshaller.marshall(pipelineExecutionStepMetadata.getClarifyCheck(), CLARIFYCHECK_BINDING);
             protocolMarshaller.marshall(pipelineExecutionStepMetadata.getEMR(), EMR_BINDING);
+            protocolMarshaller.marshall(pipelineExecutionStepMetadata.getFail(), FAIL_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

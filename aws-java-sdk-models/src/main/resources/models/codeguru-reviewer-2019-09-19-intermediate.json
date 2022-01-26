@@ -15500,7 +15500,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "MaxResults",
-        "c2jShape" : "MaxResults",
+        "c2jShape" : "ListRecommendationsMaxResults",
         "deprecated" : false,
         "documentation" : "<p> The maximum number of results that are returned per call. The default is 100. </p>",
         "endpointDiscoveryId" : false,
@@ -15710,7 +15710,7 @@
         },
         "MaxResults" : {
           "c2jName" : "MaxResults",
-          "c2jShape" : "MaxResults",
+          "c2jShape" : "ListRecommendationsMaxResults",
           "deprecated" : false,
           "documentation" : "<p> The maximum number of results that are returned per call. The default is 100. </p>",
           "endpointDiscoveryId" : false,

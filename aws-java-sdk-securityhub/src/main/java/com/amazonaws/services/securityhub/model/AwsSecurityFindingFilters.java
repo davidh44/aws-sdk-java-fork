@@ -729,6 +729,12 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * </p>
      */
     private java.util.List<StringFilter> findingProviderFieldsTypes;
+    /**
+     * <p>
+     * Indicates whether or not sample findings are included in the filter results.
+     * </p>
+     */
+    private java.util.List<BooleanFilter> sample;
 
     /**
      * <p>
@@ -8334,6 +8340,76 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * Indicates whether or not sample findings are included in the filter results.
+     * </p>
+     * 
+     * @return Indicates whether or not sample findings are included in the filter results.
+     */
+
+    public java.util.List<BooleanFilter> getSample() {
+        return sample;
+    }
+
+    /**
+     * <p>
+     * Indicates whether or not sample findings are included in the filter results.
+     * </p>
+     * 
+     * @param sample
+     *        Indicates whether or not sample findings are included in the filter results.
+     */
+
+    public void setSample(java.util.Collection<BooleanFilter> sample) {
+        if (sample == null) {
+            this.sample = null;
+            return;
+        }
+
+        this.sample = new java.util.ArrayList<BooleanFilter>(sample);
+    }
+
+    /**
+     * <p>
+     * Indicates whether or not sample findings are included in the filter results.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setSample(java.util.Collection)} or {@link #withSample(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param sample
+     *        Indicates whether or not sample findings are included in the filter results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFindingFilters withSample(BooleanFilter... sample) {
+        if (this.sample == null) {
+            setSample(new java.util.ArrayList<BooleanFilter>(sample.length));
+        }
+        for (BooleanFilter ele : sample) {
+            this.sample.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether or not sample findings are included in the filter results.
+     * </p>
+     * 
+     * @param sample
+     *        Indicates whether or not sample findings are included in the filter results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFindingFilters withSample(java.util.Collection<BooleanFilter> sample) {
+        setSample(sample);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -8532,7 +8608,9 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
         if (getFindingProviderFieldsSeverityOriginal() != null)
             sb.append("FindingProviderFieldsSeverityOriginal: ").append(getFindingProviderFieldsSeverityOriginal()).append(",");
         if (getFindingProviderFieldsTypes() != null)
-            sb.append("FindingProviderFieldsTypes: ").append(getFindingProviderFieldsTypes());
+            sb.append("FindingProviderFieldsTypes: ").append(getFindingProviderFieldsTypes()).append(",");
+        if (getSample() != null)
+            sb.append("Sample: ").append(getSample());
         sb.append("}");
         return sb.toString();
     }
@@ -8942,6 +9020,10 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
             return false;
         if (other.getFindingProviderFieldsTypes() != null && other.getFindingProviderFieldsTypes().equals(this.getFindingProviderFieldsTypes()) == false)
             return false;
+        if (other.getSample() == null ^ this.getSample() == null)
+            return false;
+        if (other.getSample() != null && other.getSample().equals(this.getSample()) == false)
+            return false;
         return true;
     }
 
@@ -9046,6 +9128,7 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
         hashCode = prime * hashCode + ((getFindingProviderFieldsSeverityLabel() == null) ? 0 : getFindingProviderFieldsSeverityLabel().hashCode());
         hashCode = prime * hashCode + ((getFindingProviderFieldsSeverityOriginal() == null) ? 0 : getFindingProviderFieldsSeverityOriginal().hashCode());
         hashCode = prime * hashCode + ((getFindingProviderFieldsTypes() == null) ? 0 : getFindingProviderFieldsTypes().hashCode());
+        hashCode = prime * hashCode + ((getSample() == null) ? 0 : getSample().hashCode());
         return hashCode;
     }
 

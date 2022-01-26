@@ -187,6 +187,12 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
      * </p>
      */
     private EMRStepMetadata eMR;
+    /**
+     * <p>
+     * The configurations and outcomes of a Fail step execution.
+     * </p>
+     */
+    private FailStepMetadata fail;
 
     /**
      * <p>
@@ -1191,6 +1197,46 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
     }
 
     /**
+     * <p>
+     * The configurations and outcomes of a Fail step execution.
+     * </p>
+     * 
+     * @param fail
+     *        The configurations and outcomes of a Fail step execution.
+     */
+
+    public void setFail(FailStepMetadata fail) {
+        this.fail = fail;
+    }
+
+    /**
+     * <p>
+     * The configurations and outcomes of a Fail step execution.
+     * </p>
+     * 
+     * @return The configurations and outcomes of a Fail step execution.
+     */
+
+    public FailStepMetadata getFail() {
+        return this.fail;
+    }
+
+    /**
+     * <p>
+     * The configurations and outcomes of a Fail step execution.
+     * </p>
+     * 
+     * @param fail
+     *        The configurations and outcomes of a Fail step execution.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipelineExecutionStepMetadata withFail(FailStepMetadata fail) {
+        setFail(fail);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1225,7 +1271,9 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
         if (getClarifyCheck() != null)
             sb.append("ClarifyCheck: ").append(getClarifyCheck()).append(",");
         if (getEMR() != null)
-            sb.append("EMR: ").append(getEMR());
+            sb.append("EMR: ").append(getEMR()).append(",");
+        if (getFail() != null)
+            sb.append("Fail: ").append(getFail());
         sb.append("}");
         return sb.toString();
     }
@@ -1288,6 +1336,10 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
             return false;
         if (other.getEMR() != null && other.getEMR().equals(this.getEMR()) == false)
             return false;
+        if (other.getFail() == null ^ this.getFail() == null)
+            return false;
+        if (other.getFail() != null && other.getFail().equals(this.getFail()) == false)
+            return false;
         return true;
     }
 
@@ -1308,6 +1360,7 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
         hashCode = prime * hashCode + ((getQualityCheck() == null) ? 0 : getQualityCheck().hashCode());
         hashCode = prime * hashCode + ((getClarifyCheck() == null) ? 0 : getClarifyCheck().hashCode());
         hashCode = prime * hashCode + ((getEMR() == null) ? 0 : getEMR().hashCode());
+        hashCode = prime * hashCode + ((getFail() == null) ? 0 : getFail().hashCode());
         return hashCode;
     }
 

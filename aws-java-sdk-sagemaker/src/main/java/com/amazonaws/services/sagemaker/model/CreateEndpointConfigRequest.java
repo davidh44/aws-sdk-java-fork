@@ -109,8 +109,8 @@ public class CreateEndpointConfigRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * Specifies configuration for how an endpoint performs asynchronous inference. This is a required field in order
      * for your Endpoint to be invoked using <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html">
-     * <code>InvokeEndpointAsync</code> </a>.
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpointAsync.html"
+     * >InvokeEndpointAsync</a>.
      * </p>
      */
     private AsyncInferenceConfig asyncInferenceConfig;
@@ -704,15 +704,15 @@ public class CreateEndpointConfigRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * Specifies configuration for how an endpoint performs asynchronous inference. This is a required field in order
      * for your Endpoint to be invoked using <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html">
-     * <code>InvokeEndpointAsync</code> </a>.
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpointAsync.html"
+     * >InvokeEndpointAsync</a>.
      * </p>
      * 
      * @param asyncInferenceConfig
      *        Specifies configuration for how an endpoint performs asynchronous inference. This is a required field in
      *        order for your Endpoint to be invoked using <a
-     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html">
-     *        <code>InvokeEndpointAsync</code> </a>.
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpointAsync.html"
+     *        >InvokeEndpointAsync</a>.
      */
 
     public void setAsyncInferenceConfig(AsyncInferenceConfig asyncInferenceConfig) {
@@ -723,14 +723,14 @@ public class CreateEndpointConfigRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * Specifies configuration for how an endpoint performs asynchronous inference. This is a required field in order
      * for your Endpoint to be invoked using <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html">
-     * <code>InvokeEndpointAsync</code> </a>.
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpointAsync.html"
+     * >InvokeEndpointAsync</a>.
      * </p>
      * 
      * @return Specifies configuration for how an endpoint performs asynchronous inference. This is a required field in
      *         order for your Endpoint to be invoked using <a
-     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html">
-     *         <code>InvokeEndpointAsync</code> </a>.
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpointAsync.html"
+     *         >InvokeEndpointAsync</a>.
      */
 
     public AsyncInferenceConfig getAsyncInferenceConfig() {
@@ -741,15 +741,15 @@ public class CreateEndpointConfigRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * Specifies configuration for how an endpoint performs asynchronous inference. This is a required field in order
      * for your Endpoint to be invoked using <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html">
-     * <code>InvokeEndpointAsync</code> </a>.
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpointAsync.html"
+     * >InvokeEndpointAsync</a>.
      * </p>
      * 
      * @param asyncInferenceConfig
      *        Specifies configuration for how an endpoint performs asynchronous inference. This is a required field in
      *        order for your Endpoint to be invoked using <a
-     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html">
-     *        <code>InvokeEndpointAsync</code> </a>.
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpointAsync.html"
+     *        >InvokeEndpointAsync</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -1352,6 +1352,41 @@ public interface AmazonFraudDetectorAsync extends AmazonFraudDetector {
 
     /**
      * <p>
+     * Gets details of the past fraud predictions for the specified event ID, event type, detector ID, and detector
+     * version ID that was generated in the specified time period.
+     * </p>
+     * 
+     * @param getEventPredictionMetadataRequest
+     * @return A Java Future containing the result of the GetEventPredictionMetadata operation returned by the service.
+     * @sample AmazonFraudDetectorAsync.GetEventPredictionMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/GetEventPredictionMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetEventPredictionMetadataResult> getEventPredictionMetadataAsync(
+            GetEventPredictionMetadataRequest getEventPredictionMetadataRequest);
+
+    /**
+     * <p>
+     * Gets details of the past fraud predictions for the specified event ID, event type, detector ID, and detector
+     * version ID that was generated in the specified time period.
+     * </p>
+     * 
+     * @param getEventPredictionMetadataRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetEventPredictionMetadata operation returned by the service.
+     * @sample AmazonFraudDetectorAsyncHandler.GetEventPredictionMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/GetEventPredictionMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetEventPredictionMetadataResult> getEventPredictionMetadataAsync(
+            GetEventPredictionMetadataRequest getEventPredictionMetadataRequest,
+            com.amazonaws.handlers.AsyncHandler<GetEventPredictionMetadataRequest, GetEventPredictionMetadataResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets all event types or a specific event type if name is provided. This is a paginated API. If you provide a null
      * <code>maxResults</code>, this action retrieves a maximum of 10 records per page. If you provide a
      * <code>maxResults</code>, the value must be between 5 and 10. To get the next page results, provide the pagination
@@ -1696,6 +1731,59 @@ public interface AmazonFraudDetectorAsync extends AmazonFraudDetector {
      */
     java.util.concurrent.Future<GetVariablesResult> getVariablesAsync(GetVariablesRequest getVariablesRequest,
             com.amazonaws.handlers.AsyncHandler<GetVariablesRequest, GetVariablesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets a list of past predictions. The list can be filtered by detector ID, detector version ID, event ID, event
+     * type, or by specifying a time period. If filter is not specified, the most recent prediction is returned.
+     * </p>
+     * <p>
+     * For example, the following filter lists all past predictions for <code>xyz</code> event type -
+     * <code>{ "eventType":{ "value": "xyz" }” } </code>
+     * </p>
+     * <p>
+     * This is a paginated API. If you provide a null <code>maxResults</code>, this action will retrieve a maximum of 10
+     * records per page. If you provide a <code>maxResults</code>, the value must be between 50 and 100. To get the next
+     * page results, provide the <code>nextToken</code> from the response as part of your request. A null
+     * <code>nextToken</code> fetches the records from the beginning.
+     * </p>
+     * 
+     * @param listEventPredictionsRequest
+     * @return A Java Future containing the result of the ListEventPredictions operation returned by the service.
+     * @sample AmazonFraudDetectorAsync.ListEventPredictions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/ListEventPredictions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEventPredictionsResult> listEventPredictionsAsync(ListEventPredictionsRequest listEventPredictionsRequest);
+
+    /**
+     * <p>
+     * Gets a list of past predictions. The list can be filtered by detector ID, detector version ID, event ID, event
+     * type, or by specifying a time period. If filter is not specified, the most recent prediction is returned.
+     * </p>
+     * <p>
+     * For example, the following filter lists all past predictions for <code>xyz</code> event type -
+     * <code>{ "eventType":{ "value": "xyz" }” } </code>
+     * </p>
+     * <p>
+     * This is a paginated API. If you provide a null <code>maxResults</code>, this action will retrieve a maximum of 10
+     * records per page. If you provide a <code>maxResults</code>, the value must be between 50 and 100. To get the next
+     * page results, provide the <code>nextToken</code> from the response as part of your request. A null
+     * <code>nextToken</code> fetches the records from the beginning.
+     * </p>
+     * 
+     * @param listEventPredictionsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListEventPredictions operation returned by the service.
+     * @sample AmazonFraudDetectorAsyncHandler.ListEventPredictions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/ListEventPredictions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEventPredictionsResult> listEventPredictionsAsync(ListEventPredictionsRequest listEventPredictionsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListEventPredictionsRequest, ListEventPredictionsResult> asyncHandler);
 
     /**
      * <p>

@@ -619,6 +619,12 @@ public class AwsSecurityFindingFiltersJsonUnmarshaller implements Unmarshaller<A
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("Sample", targetDepth)) {
+                    context.nextToken();
+                    awsSecurityFindingFilters.setSample(new ListUnmarshaller<BooleanFilter>(BooleanFilterJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

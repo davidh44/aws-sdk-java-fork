@@ -35,11 +35,22 @@ public class ListSnapshotBlocksRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * The token to request the next page of results.
      * </p>
+     * <p>
+     * If you specify <b>NextToken</b>, then <b>StartingBlockIndex</b> is ignored.
+     * </p>
      */
     private String nextToken;
     /**
      * <p>
-     * The number of results to return.
+     * The maximum number of blocks to be returned by the request.
+     * </p>
+     * <p>
+     * Even if additional blocks can be retrieved from the snapshot, the request can return less blocks than
+     * <b>MaxResults</b> or an empty array of blocks.
+     * </p>
+     * <p>
+     * To retrieve the next set of blocks from the snapshot, make another request with the returned <b>NextToken</b>
+     * value. The value of <b>NextToken</b> is <code>null</code> when there are no more blocks to return.
      * </p>
      */
     private Integer maxResults;
@@ -47,6 +58,9 @@ public class ListSnapshotBlocksRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * The block index from which the list should start. The list in the response will start from this block index or
      * the next valid block index in the snapshot.
+     * </p>
+     * <p>
+     * If you specify <b>NextToken</b>, then <b>StartingBlockIndex</b> is ignored.
      * </p>
      */
     private Integer startingBlockIndex;
@@ -95,9 +109,14 @@ public class ListSnapshotBlocksRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * The token to request the next page of results.
      * </p>
+     * <p>
+     * If you specify <b>NextToken</b>, then <b>StartingBlockIndex</b> is ignored.
+     * </p>
      * 
      * @param nextToken
-     *        The token to request the next page of results.
+     *        The token to request the next page of results.</p>
+     *        <p>
+     *        If you specify <b>NextToken</b>, then <b>StartingBlockIndex</b> is ignored.
      */
 
     public void setNextToken(String nextToken) {
@@ -108,8 +127,13 @@ public class ListSnapshotBlocksRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * The token to request the next page of results.
      * </p>
+     * <p>
+     * If you specify <b>NextToken</b>, then <b>StartingBlockIndex</b> is ignored.
+     * </p>
      * 
-     * @return The token to request the next page of results.
+     * @return The token to request the next page of results.</p>
+     *         <p>
+     *         If you specify <b>NextToken</b>, then <b>StartingBlockIndex</b> is ignored.
      */
 
     public String getNextToken() {
@@ -120,9 +144,14 @@ public class ListSnapshotBlocksRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * The token to request the next page of results.
      * </p>
+     * <p>
+     * If you specify <b>NextToken</b>, then <b>StartingBlockIndex</b> is ignored.
+     * </p>
      * 
      * @param nextToken
-     *        The token to request the next page of results.
+     *        The token to request the next page of results.</p>
+     *        <p>
+     *        If you specify <b>NextToken</b>, then <b>StartingBlockIndex</b> is ignored.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -133,11 +162,27 @@ public class ListSnapshotBlocksRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The number of results to return.
+     * The maximum number of blocks to be returned by the request.
+     * </p>
+     * <p>
+     * Even if additional blocks can be retrieved from the snapshot, the request can return less blocks than
+     * <b>MaxResults</b> or an empty array of blocks.
+     * </p>
+     * <p>
+     * To retrieve the next set of blocks from the snapshot, make another request with the returned <b>NextToken</b>
+     * value. The value of <b>NextToken</b> is <code>null</code> when there are no more blocks to return.
      * </p>
      * 
      * @param maxResults
-     *        The number of results to return.
+     *        The maximum number of blocks to be returned by the request.</p>
+     *        <p>
+     *        Even if additional blocks can be retrieved from the snapshot, the request can return less blocks than
+     *        <b>MaxResults</b> or an empty array of blocks.
+     *        </p>
+     *        <p>
+     *        To retrieve the next set of blocks from the snapshot, make another request with the returned
+     *        <b>NextToken</b> value. The value of <b>NextToken</b> is <code>null</code> when there are no more blocks
+     *        to return.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -146,10 +191,26 @@ public class ListSnapshotBlocksRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The number of results to return.
+     * The maximum number of blocks to be returned by the request.
+     * </p>
+     * <p>
+     * Even if additional blocks can be retrieved from the snapshot, the request can return less blocks than
+     * <b>MaxResults</b> or an empty array of blocks.
+     * </p>
+     * <p>
+     * To retrieve the next set of blocks from the snapshot, make another request with the returned <b>NextToken</b>
+     * value. The value of <b>NextToken</b> is <code>null</code> when there are no more blocks to return.
      * </p>
      * 
-     * @return The number of results to return.
+     * @return The maximum number of blocks to be returned by the request.</p>
+     *         <p>
+     *         Even if additional blocks can be retrieved from the snapshot, the request can return less blocks than
+     *         <b>MaxResults</b> or an empty array of blocks.
+     *         </p>
+     *         <p>
+     *         To retrieve the next set of blocks from the snapshot, make another request with the returned
+     *         <b>NextToken</b> value. The value of <b>NextToken</b> is <code>null</code> when there are no more blocks
+     *         to return.
      */
 
     public Integer getMaxResults() {
@@ -158,11 +219,27 @@ public class ListSnapshotBlocksRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The number of results to return.
+     * The maximum number of blocks to be returned by the request.
+     * </p>
+     * <p>
+     * Even if additional blocks can be retrieved from the snapshot, the request can return less blocks than
+     * <b>MaxResults</b> or an empty array of blocks.
+     * </p>
+     * <p>
+     * To retrieve the next set of blocks from the snapshot, make another request with the returned <b>NextToken</b>
+     * value. The value of <b>NextToken</b> is <code>null</code> when there are no more blocks to return.
      * </p>
      * 
      * @param maxResults
-     *        The number of results to return.
+     *        The maximum number of blocks to be returned by the request.</p>
+     *        <p>
+     *        Even if additional blocks can be retrieved from the snapshot, the request can return less blocks than
+     *        <b>MaxResults</b> or an empty array of blocks.
+     *        </p>
+     *        <p>
+     *        To retrieve the next set of blocks from the snapshot, make another request with the returned
+     *        <b>NextToken</b> value. The value of <b>NextToken</b> is <code>null</code> when there are no more blocks
+     *        to return.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -176,10 +253,15 @@ public class ListSnapshotBlocksRequest extends com.amazonaws.AmazonWebServiceReq
      * The block index from which the list should start. The list in the response will start from this block index or
      * the next valid block index in the snapshot.
      * </p>
+     * <p>
+     * If you specify <b>NextToken</b>, then <b>StartingBlockIndex</b> is ignored.
+     * </p>
      * 
      * @param startingBlockIndex
      *        The block index from which the list should start. The list in the response will start from this block
-     *        index or the next valid block index in the snapshot.
+     *        index or the next valid block index in the snapshot.</p>
+     *        <p>
+     *        If you specify <b>NextToken</b>, then <b>StartingBlockIndex</b> is ignored.
      */
 
     public void setStartingBlockIndex(Integer startingBlockIndex) {
@@ -191,9 +273,14 @@ public class ListSnapshotBlocksRequest extends com.amazonaws.AmazonWebServiceReq
      * The block index from which the list should start. The list in the response will start from this block index or
      * the next valid block index in the snapshot.
      * </p>
+     * <p>
+     * If you specify <b>NextToken</b>, then <b>StartingBlockIndex</b> is ignored.
+     * </p>
      * 
      * @return The block index from which the list should start. The list in the response will start from this block
-     *         index or the next valid block index in the snapshot.
+     *         index or the next valid block index in the snapshot.</p>
+     *         <p>
+     *         If you specify <b>NextToken</b>, then <b>StartingBlockIndex</b> is ignored.
      */
 
     public Integer getStartingBlockIndex() {
@@ -205,10 +292,15 @@ public class ListSnapshotBlocksRequest extends com.amazonaws.AmazonWebServiceReq
      * The block index from which the list should start. The list in the response will start from this block index or
      * the next valid block index in the snapshot.
      * </p>
+     * <p>
+     * If you specify <b>NextToken</b>, then <b>StartingBlockIndex</b> is ignored.
+     * </p>
      * 
      * @param startingBlockIndex
      *        The block index from which the list should start. The list in the response will start from this block
-     *        index or the next valid block index in the snapshot.
+     *        index or the next valid block index in the snapshot.</p>
+     *        <p>
+     *        If you specify <b>NextToken</b>, then <b>StartingBlockIndex</b> is ignored.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -51,8 +51,9 @@ public class AmazonCodeGuruReviewerWaiters {
 
         return new WaiterBuilder<DescribeRepositoryAssociationRequest, DescribeRepositoryAssociationResult>()
                 .withSdkFunction(new DescribeRepositoryAssociationFunction(client))
-                .withAcceptors(new RepositoryAssociationSucceeded.IsAssociatedMatcher(), new RepositoryAssociationSucceeded.IsAssociatingMatcher())
-                .withDefaultPollingStrategy(new PollingStrategy(new MaxAttemptsRetryStrategy(20), new FixedDelayStrategy(10)))
+                .withAcceptors(new RepositoryAssociationSucceeded.IsAssociatedMatcher(), new RepositoryAssociationSucceeded.IsFailedMatcher(),
+                        new RepositoryAssociationSucceeded.IsAssociatingMatcher())
+                .withDefaultPollingStrategy(new PollingStrategy(new MaxAttemptsRetryStrategy(30), new FixedDelayStrategy(10)))
                 .withExecutorService(executorService).build();
     }
 
@@ -63,9 +64,11 @@ public class AmazonCodeGuruReviewerWaiters {
      */
     public Waiter<DescribeCodeReviewRequest> codeReviewCompleted() {
 
-        return new WaiterBuilder<DescribeCodeReviewRequest, DescribeCodeReviewResult>().withSdkFunction(new DescribeCodeReviewFunction(client))
-                .withAcceptors(new CodeReviewCompleted.IsCompletedMatcher(), new CodeReviewCompleted.IsPendingMatcher())
-                .withDefaultPollingStrategy(new PollingStrategy(new MaxAttemptsRetryStrategy(60), new FixedDelayStrategy(10)))
+        return new WaiterBuilder<DescribeCodeReviewRequest, DescribeCodeReviewResult>()
+                .withSdkFunction(new DescribeCodeReviewFunction(client))
+                .withAcceptors(new CodeReviewCompleted.IsCompletedMatcher(), new CodeReviewCompleted.IsFailedMatcher(),
+                        new CodeReviewCompleted.IsPendingMatcher())
+                .withDefaultPollingStrategy(new PollingStrategy(new MaxAttemptsRetryStrategy(180), new FixedDelayStrategy(10)))
                 .withExecutorService(executorService).build();
     }
 

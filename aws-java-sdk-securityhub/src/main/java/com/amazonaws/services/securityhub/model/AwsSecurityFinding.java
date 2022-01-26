@@ -362,6 +362,12 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private FindingProviderFields findingProviderFields;
+    /**
+     * <p>
+     * Indicates whether the finding is a sample finding.
+     * </p>
+     */
+    private Boolean sample;
 
     /**
      * <p>
@@ -2777,6 +2783,58 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * Indicates whether the finding is a sample finding.
+     * </p>
+     * 
+     * @param sample
+     *        Indicates whether the finding is a sample finding.
+     */
+
+    public void setSample(Boolean sample) {
+        this.sample = sample;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the finding is a sample finding.
+     * </p>
+     * 
+     * @return Indicates whether the finding is a sample finding.
+     */
+
+    public Boolean getSample() {
+        return this.sample;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the finding is a sample finding.
+     * </p>
+     * 
+     * @param sample
+     *        Indicates whether the finding is a sample finding.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFinding withSample(Boolean sample) {
+        setSample(sample);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the finding is a sample finding.
+     * </p>
+     * 
+     * @return Indicates whether the finding is a sample finding.
+     */
+
+    public Boolean isSample() {
+        return this.sample;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2865,7 +2923,9 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
         if (getAction() != null)
             sb.append("Action: ").append(getAction()).append(",");
         if (getFindingProviderFields() != null)
-            sb.append("FindingProviderFields: ").append(getFindingProviderFields());
+            sb.append("FindingProviderFields: ").append(getFindingProviderFields()).append(",");
+        if (getSample() != null)
+            sb.append("Sample: ").append(getSample());
         sb.append("}");
         return sb.toString();
     }
@@ -3036,6 +3096,10 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getFindingProviderFields() != null && other.getFindingProviderFields().equals(this.getFindingProviderFields()) == false)
             return false;
+        if (other.getSample() == null ^ this.getSample() == null)
+            return false;
+        if (other.getSample() != null && other.getSample().equals(this.getSample()) == false)
+            return false;
         return true;
     }
 
@@ -3083,6 +3147,7 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getPatchSummary() == null) ? 0 : getPatchSummary().hashCode());
         hashCode = prime * hashCode + ((getAction() == null) ? 0 : getAction().hashCode());
         hashCode = prime * hashCode + ((getFindingProviderFields() == null) ? 0 : getFindingProviderFields().hashCode());
+        hashCode = prime * hashCode + ((getSample() == null) ? 0 : getSample().hashCode());
         return hashCode;
     }
 

@@ -73,8 +73,8 @@ public class PipelineExecutionStep implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The current attempt of the execution step. For more information, see <a
-     * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/sagemaker/latest/dg/pipelines-retry-policy.html"
-     * >Retry Policy for Amazon SageMaker Pipelines steps</a>.
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines-retry-policy.html">Retry Policy for SageMaker
+     * Pipelines steps</a>.
      * </p>
      */
     private Integer attemptCount;
@@ -393,14 +393,14 @@ public class PipelineExecutionStep implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The current attempt of the execution step. For more information, see <a
-     * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/sagemaker/latest/dg/pipelines-retry-policy.html"
-     * >Retry Policy for Amazon SageMaker Pipelines steps</a>.
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines-retry-policy.html">Retry Policy for SageMaker
+     * Pipelines steps</a>.
      * </p>
      * 
      * @param attemptCount
-     *        The current attempt of the execution step. For more information, see <a href=
-     *        "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/sagemaker/latest/dg/pipelines-retry-policy.html"
-     *        >Retry Policy for Amazon SageMaker Pipelines steps</a>.
+     *        The current attempt of the execution step. For more information, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines-retry-policy.html">Retry Policy for
+     *        SageMaker Pipelines steps</a>.
      */
 
     public void setAttemptCount(Integer attemptCount) {
@@ -410,13 +410,13 @@ public class PipelineExecutionStep implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The current attempt of the execution step. For more information, see <a
-     * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/sagemaker/latest/dg/pipelines-retry-policy.html"
-     * >Retry Policy for Amazon SageMaker Pipelines steps</a>.
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines-retry-policy.html">Retry Policy for SageMaker
+     * Pipelines steps</a>.
      * </p>
      * 
      * @return The current attempt of the execution step. For more information, see <a
-     *         href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/sagemaker/latest/dg/pipelines-retry-policy.html"
-     *         >Retry Policy for Amazon SageMaker Pipelines steps</a>.
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines-retry-policy.html">Retry Policy for
+     *         SageMaker Pipelines steps</a>.
      */
 
     public Integer getAttemptCount() {
@@ -426,14 +426,14 @@ public class PipelineExecutionStep implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The current attempt of the execution step. For more information, see <a
-     * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/sagemaker/latest/dg/pipelines-retry-policy.html"
-     * >Retry Policy for Amazon SageMaker Pipelines steps</a>.
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines-retry-policy.html">Retry Policy for SageMaker
+     * Pipelines steps</a>.
      * </p>
      * 
      * @param attemptCount
-     *        The current attempt of the execution step. For more information, see <a href=
-     *        "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/sagemaker/latest/dg/pipelines-retry-policy.html"
-     *        >Retry Policy for Amazon SageMaker Pipelines steps</a>.
+     *        The current attempt of the execution step. For more information, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines-retry-policy.html">Retry Policy for
+     *        SageMaker Pipelines steps</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

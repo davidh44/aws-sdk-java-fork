@@ -208,6 +208,11 @@ public class AbstractAmazonFraudDetector implements AmazonFraudDetector {
     }
 
     @Override
+    public GetEventPredictionMetadataResult getEventPredictionMetadata(GetEventPredictionMetadataRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetEventTypesResult getEventTypes(GetEventTypesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -249,6 +254,11 @@ public class AbstractAmazonFraudDetector implements AmazonFraudDetector {
 
     @Override
     public GetVariablesResult getVariables(GetVariablesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListEventPredictionsResult listEventPredictions(ListEventPredictionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

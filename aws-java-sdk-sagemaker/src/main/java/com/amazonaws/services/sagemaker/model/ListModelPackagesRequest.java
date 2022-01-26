@@ -64,17 +64,18 @@ public class ListModelPackagesRequest extends com.amazonaws.AmazonWebServiceRequ
     private String modelPackageGroupName;
     /**
      * <p>
-     * A filter that returns onlyl the model packages of the specified type. This can be one of the following values.
+     * A filter that returns only the model packages of the specified type. This can be one of the following values.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>VERSIONED</code> - List only versioned models.
+     * <code>UNVERSIONED</code> - List only unversioined models. This is the default value if no
+     * <code>ModelPackageType</code> is specified.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNVERSIONED</code> - List only unversioined models.
+     * <code>VERSIONED</code> - List only versioned models.
      * </p>
      * </li>
      * <li>
@@ -372,17 +373,18 @@ public class ListModelPackagesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A filter that returns onlyl the model packages of the specified type. This can be one of the following values.
+     * A filter that returns only the model packages of the specified type. This can be one of the following values.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>VERSIONED</code> - List only versioned models.
+     * <code>UNVERSIONED</code> - List only unversioined models. This is the default value if no
+     * <code>ModelPackageType</code> is specified.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNVERSIONED</code> - List only unversioined models.
+     * <code>VERSIONED</code> - List only versioned models.
      * </p>
      * </li>
      * <li>
@@ -393,17 +395,18 @@ public class ListModelPackagesRequest extends com.amazonaws.AmazonWebServiceRequ
      * </ul>
      * 
      * @param modelPackageType
-     *        A filter that returns onlyl the model packages of the specified type. This can be one of the following
+     *        A filter that returns only the model packages of the specified type. This can be one of the following
      *        values.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>VERSIONED</code> - List only versioned models.
+     *        <code>UNVERSIONED</code> - List only unversioined models. This is the default value if no
+     *        <code>ModelPackageType</code> is specified.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UNVERSIONED</code> - List only unversioined models.
+     *        <code>VERSIONED</code> - List only versioned models.
      *        </p>
      *        </li>
      *        <li>
@@ -420,17 +423,18 @@ public class ListModelPackagesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A filter that returns onlyl the model packages of the specified type. This can be one of the following values.
+     * A filter that returns only the model packages of the specified type. This can be one of the following values.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>VERSIONED</code> - List only versioned models.
+     * <code>UNVERSIONED</code> - List only unversioined models. This is the default value if no
+     * <code>ModelPackageType</code> is specified.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNVERSIONED</code> - List only unversioined models.
+     * <code>VERSIONED</code> - List only versioned models.
      * </p>
      * </li>
      * <li>
@@ -440,17 +444,18 @@ public class ListModelPackagesRequest extends com.amazonaws.AmazonWebServiceRequ
      * </li>
      * </ul>
      * 
-     * @return A filter that returns onlyl the model packages of the specified type. This can be one of the following
+     * @return A filter that returns only the model packages of the specified type. This can be one of the following
      *         values.</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>VERSIONED</code> - List only versioned models.
+     *         <code>UNVERSIONED</code> - List only unversioined models. This is the default value if no
+     *         <code>ModelPackageType</code> is specified.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>UNVERSIONED</code> - List only unversioined models.
+     *         <code>VERSIONED</code> - List only versioned models.
      *         </p>
      *         </li>
      *         <li>
@@ -467,17 +472,18 @@ public class ListModelPackagesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A filter that returns onlyl the model packages of the specified type. This can be one of the following values.
+     * A filter that returns only the model packages of the specified type. This can be one of the following values.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>VERSIONED</code> - List only versioned models.
+     * <code>UNVERSIONED</code> - List only unversioined models. This is the default value if no
+     * <code>ModelPackageType</code> is specified.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNVERSIONED</code> - List only unversioined models.
+     * <code>VERSIONED</code> - List only versioned models.
      * </p>
      * </li>
      * <li>
@@ -488,17 +494,18 @@ public class ListModelPackagesRequest extends com.amazonaws.AmazonWebServiceRequ
      * </ul>
      * 
      * @param modelPackageType
-     *        A filter that returns onlyl the model packages of the specified type. This can be one of the following
+     *        A filter that returns only the model packages of the specified type. This can be one of the following
      *        values.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>VERSIONED</code> - List only versioned models.
+     *        <code>UNVERSIONED</code> - List only unversioined models. This is the default value if no
+     *        <code>ModelPackageType</code> is specified.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UNVERSIONED</code> - List only unversioined models.
+     *        <code>VERSIONED</code> - List only versioned models.
      *        </p>
      *        </li>
      *        <li>
@@ -517,17 +524,18 @@ public class ListModelPackagesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A filter that returns onlyl the model packages of the specified type. This can be one of the following values.
+     * A filter that returns only the model packages of the specified type. This can be one of the following values.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>VERSIONED</code> - List only versioned models.
+     * <code>UNVERSIONED</code> - List only unversioined models. This is the default value if no
+     * <code>ModelPackageType</code> is specified.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNVERSIONED</code> - List only unversioined models.
+     * <code>VERSIONED</code> - List only versioned models.
      * </p>
      * </li>
      * <li>
@@ -538,17 +546,18 @@ public class ListModelPackagesRequest extends com.amazonaws.AmazonWebServiceRequ
      * </ul>
      * 
      * @param modelPackageType
-     *        A filter that returns onlyl the model packages of the specified type. This can be one of the following
+     *        A filter that returns only the model packages of the specified type. This can be one of the following
      *        values.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>VERSIONED</code> - List only versioned models.
+     *        <code>UNVERSIONED</code> - List only unversioined models. This is the default value if no
+     *        <code>ModelPackageType</code> is specified.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UNVERSIONED</code> - List only unversioined models.
+     *        <code>VERSIONED</code> - List only versioned models.
      *        </p>
      *        </li>
      *        <li>

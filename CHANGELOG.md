@@ -1,3 +1,24 @@
+# __1.12.148__ __2022-01-26__
+## __AWS SecurityHub__
+  - ### Features
+    - Adding top level Sample boolean field
+
+## __Amazon CodeGuru Reviewer__
+  - ### Features
+    - Added failure state and adjusted timeout in waiter
+
+## __Amazon Elastic Block Store__
+  - ### Features
+    - Documentation updates for Amazon EBS Direct APIs.
+
+## __Amazon Fraud Detector__
+  - ### Features
+    - Added new APIs for viewing past predictions and obtaining prediction metadata including prediction explanations: ListEventPredictions and GetEventPredictionMetadata
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - API changes relating to Fail steps in model building pipeline and add PipelineExecutionFailureReason in PipelineExecutionSummary.
+
 # __1.12.147__ __2022-01-25__
 ## __Amazon Connect Service__
   - ### Features

@@ -498,6 +498,19 @@ public class AbstractAmazonFraudDetectorAsync extends AbstractAmazonFraudDetecto
     }
 
     @Override
+    public java.util.concurrent.Future<GetEventPredictionMetadataResult> getEventPredictionMetadataAsync(GetEventPredictionMetadataRequest request) {
+
+        return getEventPredictionMetadataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEventPredictionMetadataResult> getEventPredictionMetadataAsync(GetEventPredictionMetadataRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetEventPredictionMetadataRequest, GetEventPredictionMetadataResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetEventTypesResult> getEventTypesAsync(GetEventTypesRequest request) {
 
         return getEventTypesAsync(request, null);
@@ -610,6 +623,19 @@ public class AbstractAmazonFraudDetectorAsync extends AbstractAmazonFraudDetecto
     @Override
     public java.util.concurrent.Future<GetVariablesResult> getVariablesAsync(GetVariablesRequest request,
             com.amazonaws.handlers.AsyncHandler<GetVariablesRequest, GetVariablesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEventPredictionsResult> listEventPredictionsAsync(ListEventPredictionsRequest request) {
+
+        return listEventPredictionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEventPredictionsResult> listEventPredictionsAsync(ListEventPredictionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListEventPredictionsRequest, ListEventPredictionsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

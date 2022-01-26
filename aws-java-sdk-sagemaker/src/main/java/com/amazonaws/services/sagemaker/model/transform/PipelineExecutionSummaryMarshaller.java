@@ -37,6 +37,8 @@ public class PipelineExecutionSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PipelineExecutionDescription").build();
     private static final MarshallingInfo<String> PIPELINEEXECUTIONDISPLAYNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PipelineExecutionDisplayName").build();
+    private static final MarshallingInfo<String> PIPELINEEXECUTIONFAILUREREASON_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PipelineExecutionFailureReason").build();
 
     private static final PipelineExecutionSummaryMarshaller instance = new PipelineExecutionSummaryMarshaller();
 
@@ -59,6 +61,7 @@ public class PipelineExecutionSummaryMarshaller {
             protocolMarshaller.marshall(pipelineExecutionSummary.getPipelineExecutionStatus(), PIPELINEEXECUTIONSTATUS_BINDING);
             protocolMarshaller.marshall(pipelineExecutionSummary.getPipelineExecutionDescription(), PIPELINEEXECUTIONDESCRIPTION_BINDING);
             protocolMarshaller.marshall(pipelineExecutionSummary.getPipelineExecutionDisplayName(), PIPELINEEXECUTIONDISPLAYNAME_BINDING);
+            protocolMarshaller.marshall(pipelineExecutionSummary.getPipelineExecutionFailureReason(), PIPELINEEXECUTIONFAILUREREASON_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

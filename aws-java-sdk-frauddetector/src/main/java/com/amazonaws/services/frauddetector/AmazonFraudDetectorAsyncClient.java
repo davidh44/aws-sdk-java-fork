@@ -1268,6 +1268,39 @@ public class AmazonFraudDetectorAsyncClient extends AmazonFraudDetectorClient im
     }
 
     @Override
+    public java.util.concurrent.Future<GetEventPredictionMetadataResult> getEventPredictionMetadataAsync(GetEventPredictionMetadataRequest request) {
+
+        return getEventPredictionMetadataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEventPredictionMetadataResult> getEventPredictionMetadataAsync(final GetEventPredictionMetadataRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetEventPredictionMetadataRequest, GetEventPredictionMetadataResult> asyncHandler) {
+        final GetEventPredictionMetadataRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetEventPredictionMetadataResult>() {
+            @Override
+            public GetEventPredictionMetadataResult call() throws Exception {
+                GetEventPredictionMetadataResult result = null;
+
+                try {
+                    result = executeGetEventPredictionMetadata(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetEventTypesResult> getEventTypesAsync(GetEventTypesRequest request) {
 
         return getEventTypesAsync(request, null);
@@ -1549,6 +1582,39 @@ public class AmazonFraudDetectorAsyncClient extends AmazonFraudDetectorClient im
 
                 try {
                     result = executeGetVariables(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEventPredictionsResult> listEventPredictionsAsync(ListEventPredictionsRequest request) {
+
+        return listEventPredictionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEventPredictionsResult> listEventPredictionsAsync(final ListEventPredictionsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListEventPredictionsRequest, ListEventPredictionsResult> asyncHandler) {
+        final ListEventPredictionsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListEventPredictionsResult>() {
+            @Override
+            public ListEventPredictionsResult call() throws Exception {
+                ListEventPredictionsResult result = null;
+
+                try {
+                    result = executeListEventPredictions(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

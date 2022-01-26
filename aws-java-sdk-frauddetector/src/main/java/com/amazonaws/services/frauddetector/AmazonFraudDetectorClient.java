@@ -2663,6 +2663,76 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
+     * Gets details of the past fraud predictions for the specified event ID, event type, detector ID, and detector
+     * version ID that was generated in the specified time period.
+     * </p>
+     * 
+     * @param getEventPredictionMetadataRequest
+     * @return Result of the GetEventPredictionMetadata operation returned by the service.
+     * @throws ValidationException
+     *         An exception indicating a specified value is not allowed.
+     * @throws ResourceNotFoundException
+     *         An exception indicating the specified resource was not found.
+     * @throws AccessDeniedException
+     *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
+     *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
+     *         account.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
+     * @throws InternalServerException
+     *         An exception indicating an internal server error.
+     * @sample AmazonFraudDetector.GetEventPredictionMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/GetEventPredictionMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetEventPredictionMetadataResult getEventPredictionMetadata(GetEventPredictionMetadataRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetEventPredictionMetadata(request);
+    }
+
+    @SdkInternalApi
+    final GetEventPredictionMetadataResult executeGetEventPredictionMetadata(GetEventPredictionMetadataRequest getEventPredictionMetadataRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getEventPredictionMetadataRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetEventPredictionMetadataRequest> request = null;
+        Response<GetEventPredictionMetadataResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetEventPredictionMetadataRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getEventPredictionMetadataRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "FraudDetector");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetEventPredictionMetadata");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetEventPredictionMetadataResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetEventPredictionMetadataResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets all event types or a specific event type if name is provided. This is a paginated API. If you provide a null
      * <code>maxResults</code>, this action retrieves a maximum of 10 records per page. If you provide a
      * <code>maxResults</code>, the value must be between 5 and 10. To get the next page results, provide the pagination
@@ -3286,6 +3356,82 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
 
             HttpResponseHandler<AmazonWebServiceResponse<GetVariablesResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetVariablesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets a list of past predictions. The list can be filtered by detector ID, detector version ID, event ID, event
+     * type, or by specifying a time period. If filter is not specified, the most recent prediction is returned.
+     * </p>
+     * <p>
+     * For example, the following filter lists all past predictions for <code>xyz</code> event type -
+     * <code>{ "eventType":{ "value": "xyz" }” } </code>
+     * </p>
+     * <p>
+     * This is a paginated API. If you provide a null <code>maxResults</code>, this action will retrieve a maximum of 10
+     * records per page. If you provide a <code>maxResults</code>, the value must be between 50 and 100. To get the next
+     * page results, provide the <code>nextToken</code> from the response as part of your request. A null
+     * <code>nextToken</code> fetches the records from the beginning.
+     * </p>
+     * 
+     * @param listEventPredictionsRequest
+     * @return Result of the ListEventPredictions operation returned by the service.
+     * @throws ValidationException
+     *         An exception indicating a specified value is not allowed.
+     * @throws AccessDeniedException
+     *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
+     *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
+     *         account.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
+     * @throws InternalServerException
+     *         An exception indicating an internal server error.
+     * @sample AmazonFraudDetector.ListEventPredictions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/ListEventPredictions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListEventPredictionsResult listEventPredictions(ListEventPredictionsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListEventPredictions(request);
+    }
+
+    @SdkInternalApi
+    final ListEventPredictionsResult executeListEventPredictions(ListEventPredictionsRequest listEventPredictionsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listEventPredictionsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListEventPredictionsRequest> request = null;
+        Response<ListEventPredictionsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListEventPredictionsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listEventPredictionsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "FraudDetector");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListEventPredictions");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListEventPredictionsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListEventPredictionsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
